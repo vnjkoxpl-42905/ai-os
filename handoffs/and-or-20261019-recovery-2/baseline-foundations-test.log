@@ -1,0 +1,849 @@
+
+> vite_react_shadcn_ts@0.0.0 test
+> vitest run src/bootcamps/conditionals/components/OpeningFoundations.test.tsx --maxWorkers=1 --no-file-parallelism --testTimeout=90000
+
+
+ RUN  v3.2.4 C:/Users/Joshu/dev/ai-os-projects/lsatu-and-or-baseline-20261019
+
+Browserslist: browsers data (caniuse-lite) is 6 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+ ❯ src/bootcamps/conditionals/components/OpeningFoundations.test.tsx (2 tests | 1 failed) 768ms
+   × shows one foundation question at a time and retains checked feedback when returning 725ms
+     → Unable to find an element with the text: /You treated the rule as a weather report/. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m"opening-course-content"[39m
+    [36m>[39m
+      [36m<section[39m
+        [33maria-label[39m=[32m"Spot the condition questions"[39m
+        [33mclass[39m=[32m"d1-experience"[39m
+      [36m>[39m
+        [36m<header[39m
+          [33mclass[39m=[32m"cd-progress"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"cd-progress-labels"[39m
+          [36m>[39m
+            [36m<span>[39m
+              [0mQuestion 2 of 24[0m
+            [36m</span>[39m
+            [36m<strong>[39m
+              [0m8[0m
+              [0m% [0m
+              [36m<small>[39m
+                [0mcomplete[0m
+              [36m</small>[39m
+            [36m</strong>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33maria-label[39m=[32m"Questions answered"[39m
+            [33maria-valuemax[39m=[32m"24"[39m
+            [33maria-valuemin[39m=[32m"0"[39m
+            [33maria-valuenow[39m=[32m"2"[39m
+            [33maria-valuetext[39m=[32m"8% complete. 2 of 24 questions completed."[39m
+            [33mclass[39m=[32m"cd-progress-track"[39m
+            [33mrole[39m=[32m"progressbar"[39m
+          [36m>[39m
+            [36m<span[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mdata-complete[39m=[32m"true"[39m
+              [33mdata-current[39m=[32m"false"[39m
+            [36m/>[39m
+            [36m<span[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mdata-complete[39m=[32m"true"[39m
+              [33mdata-current[39m=[32m"true"[39m
+            [36m/>[39m
+            [36m<span[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mdata-complete[39m=[32m"false"[39m
+              [33mdata-current[39m=[32m"false"[39m
+            [36m/>[39m
+            [36m<span[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mdata-complete[39m=[32m"false"[39m
+              [33mdata-current[39m=[32m"false"[39m
+            [36m/>[39m
+            [36m<span[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mdata-complete[39m=[32m"false"[39m
+              [33mdata-current[39m=[32m"false"[39m
+            [36m/>[39m
+            [36m<span[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mdata-complete[39m=[32m"false"[39m
+              [33mdata-current[39m=[32m"false"[39m
+            [36m/>[39m
+            [36m<span[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mdata-complete[39m=[32m"false"[39m
+              [33mdata-current[39m=[32m"false"[39m
+            [36m/>[39m
+            [36m<span[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mdata-complete[39m=[32m"false"[39m
+              [33mdata-current[39m=[32m"false"[39m
+            [36m/>[39m
+            [36m<span[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mdata-complete[39m=[32m"false"[39m
+              [33mdata-current[39m=[32m"false"[39m
+            [36m/>[39m
+            [36m<span[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mdata-complete[39m=[32m"false"[39m
+              [33mdata-current[39m=[32m"false"[39m
+            [36m/>[39m
+            [36m<span[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mdata-complete[39m=[32m"false"[39m
+              [33mdata-current[39m=[32m"false"[39m
+            [36m/>[39m
+            [36m<span[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mdata-complete[39m=[32m"false"[39m
+              [33mdata-current[39m=[32m"false"[39m
+            [36m/>[39m
+            [36m<span[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mdata-complete[39m=[32m"false"[39m
+              [33mdata-current[39m=[32m"false"[39m
+            [36m/>[39m
+            [36m<span[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mdata-complete[39m=[32m"false"[39m
+              [33mdata-current[39m=[32m"false"[39m
+            [36m/>[39m
+            [36m<span[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mdata-complete[39m=[32m"false"[39m
+              [33mdata-current[39m=[32m"false"[39m
+            [36m/>[39m
+            [36m<span[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mdata-complete[39m=[32m"false"[39m
+              [33mdata-current[39m=[32m"false"[39m
+            [36m/>[39m
+            [36m<span[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mdata-complete[39m=[32m"false"[39m
+              [33mdata-current[39m=[32m"false"[39m
+            [36m/>[39m
+            [36m<span[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mdata-complete[39m=[32m"false"[39m
+              [33mdata-current[39m=[32m"false"[39m
+            [36m/>[39m
+            [36m<span[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mdata-complete[39m=[32m"false"[39m
+              [33mdata-current[39m=[32m"false"[39m
+            [36m/>[39m
+            [36m<span[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mdata-complete[39m=[32m"false"[39m
+              [33mdata-current[39m=[32m"false"[39m
+            [36m/>[39m
+            [36m<span[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mdata-complete[39m=[32m"false"[39m
+              [33mdata-current[39m=[32m"false"[39m
+            [36m/>[39m
+            [36m<span[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mdata-complete[39m=[32m"false"[39m
+              [33mdata-current[39m=[32m"false"[39m
+            [36m/>[39m
+            [36m<span[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mdata-complete[39m=[32m"false"[39m
+              [33mdata-current[39m=[32m"false"[39m
+            [36m/>[39m
+            [36m<span[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mdata-complete[39m=[32m"false"[39m
+              [33mdata-current[39m=[32m"false"[39m
+            [36m/>[39m
+          [36m</div>[39m
+        [36m</header>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"d1-question-scene"[39m
+          [33mdata-practice-task[39m=[32m"2"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"d1-rule-panel"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"d1-rule-top"[39m
+            [36m>[39m
+              [36m<span[39m
+                [33mclass[39m=[32m"d1-eyebrow"[39m
+              [36m>[39m
+                [0mGiven rule[0m
+              [36m</span>[39m
+              [36m<span[39m
+                [33maria-hidden[39m=[32m"true"[39m
+                [33mclass[39m=[32m"d1-rule-number"[39m
+              [36m>[39m
+                [0m02[0m
+              [36m</span>[39m
+            [36m</div>[39m
+            [36m<blockquote>[39m
+              [0mIf it rains on Saturday, the market moves into the town hall.[0m
+            [36m</blockquote>[39m
+            [36m<div[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mclass[39m=[32m"d1-rule-foot"[39m
+            [36m>[39m
+              [36m<span />[39m
+              [36m<span />[39m
+              [36m<span />[39m
+            [36m</div>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"d1-question-body"[39m
+          [36m>[39m
+            [36m<h2[39m
+              [33mid[39m=[32m":r0:-question"[39m
+              [33mtabindex[39m=[32m"-1"[39m
+            [36m>[39m
+              [0mIt's Friday. You've read this rule and nothing else. Where will the market be on Saturday?[0m
+            [36m</h2>[39m
+            [36m<div[39m
+              [33maria-labelledby[39m=[32m":r0:-question"[39m
+              [33mclass[39m=[32m"d1-options"[39m
+              [33mrole[39m=[32m"group"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33maria-pressed[39m=[32m"true"[39m
+                [33mclass[39m=[32m"d1-option"[39m
+                [33mdata-correct[39m=[32m"false"[39m
+                [33mdata-incorrect[39m=[32m"true"[39m
+                [33mdata-selected[39m=[32m"true"[39m
+                [33mdisabled[39m=[32m""[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [36m<span[39m
+                  [33maria-hidden[39m=[32m"true"[39m
+                  [33mclass[39m=[32m"d1-option-letter"[39m
+                [36m>[39m
+                  [0mA[0m
+                [36m</span>[39m
+                [36m<span>[39m
+                  [0mIn the town hall.[0m
+                [36m</span>[39m
+              [36m</button>[39m
+              [36m<button[39m
+                [33maria-pressed[39m=[32m"false"[39m
+                [33mclass[39m=[32m"d1-option"[39m
+                [33mdata-correct[39m=[32m"false"[39m
+                [33mdata-incorrect[39m=[32m"false"[39m
+                [33mdata-selected[39m=[32m"false"[39m
+                [33mdisabled[39m=[32m""[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [36m<span[39m
+                  [33maria-hidden[39m=[32m"true"[39m
+                  [33mclass[39m=[32m"d1-option-letter"[39m
+                [36m>[39m
+                  [0mB[0m
+                [36m</span>[39m
+                [36m<span>[39m
+                  [0mOutdoors, as usual.[0m
+                [36m</span>[39m
+              [36m</button>[39m
+              [36m<button[39m
+                [33maria-pressed[39m=[32m"false"[39m
+                [33mclass[39m=[32m"d1-option"[39m
+                [33mdata-correct[39m=[32m"false"[39m
+                [33mdata-incorrect[39m=[32m"false"[39m
+                [33mdata-selected[39m=[32m"false"[39m
+                [33mdisabled[39m=[32m""[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [36m<span[39m
+                  [33maria-hidden[39m=[32m"true"[39m
+                  [33mclass[39m=[32m"d1-option-letter"[39m
+                [36m>[39m
+                  [0mC[0m
+                [36m</span>[39m
+                [36m<span>[39m
+                  [0mThe rule alone doesn't settle it.[0m
+                [36m</span>[39m
+              [36m</button>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"d1-feedback-region"[39m
+            [36m>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"d1-feedback d1-feedback-halo"[39m
+                [33mdata-correct[39m=[32m"false"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"d1-feedback-surface"[39m
+                [36m>[39m
+                  [36m<h3[39m
+                    [33maria-describedby[39m=[32m":r0:-explanation"[39m
+                    [33mclass[39m=[32m"d1-feedback-title"[39m
+                    [33mtabindex[39m=[32m"-1"[39m
+                  [36m>[39m
+                    [36m<span[39m
+                      [33maria-hidden[39m=[32m"true"[39m
+                      [33mclass[39m=[32m"d1-feedback-icon"[39m
+                    [36m>[39m
+                      [36m<svg[39m
+                        [33mclass[39m=[32m"lucide lucide-rotate-ccw"[39m
+                        [33mfill[39m=[32m"none"[39m
+                        [33mheight[39m=[32m"23"[39m
+                        [33mstroke[39m=[32m"currentColor"[39m
+                        [33mstroke-linecap[39m=[32m"round"[39m
+                        [33mstroke-linejoin[39m=[32m"round"[39m
+                        [33mstroke-width[39m=[32m"1.7"[39m
+                        [33mviewBox[39m=[32m"0 0 24 24"[39m
+                        [33mwidth[39m=[32m"23"[39m
+                        [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+                      [36m>[39m
+                        [36m<path[39m
+                          [33md[39m=[32m"M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"[39m
+                        [36m/>[39m
+                        [36m<path[39m
+                          [33md[39m=[32m"M3 3v5h5"[39m
+                        [36m/>[39m
+                      [36m</svg>[39m
+                    [36m</span>[39m
+                    [0mNot quite.[0m
+                  [36m</h3>[39m
+                  [36m<p[39m
+                    [33mid[39m=[32m":r0:-explanation"[39m
+                  [36m>[39m
+                    [0mCheck whether you have been told that it will rain on Saturday. A rule about rain is not a weather forecast.[0m
+                  [36m</p>[39m
+                [36m</div>[39m
+              [36m</div>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"d1-answer-actions"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"d1-retry"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [36m<svg[39m
+                  [33mclass[39m=[32m"lucide lucide-rotate-ccw"[39m
+                  [33mfill[39m=[32m"none"[39m
+                  [33mheight[39m=[32m"15"[39m
+                  [33mstroke[39m=[32m"currentColor"[39m
+                  [33mstroke-linecap[39m=[32m"round"[39m
+                  [33mstroke-linejoin[39m=[32m"round"[39m
+                  [33mstroke-width[39m=[32m"2"[39m
+                  [33mviewBox[39m=[32m"0 0 24 24"[39m
+                  [33mwidth[39m=[32m"15"[39m
+                  [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+                [36m>[39m
+                  [36m<path[39m
+                    [33md[39m=[32m"M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"[39m
+                  [36m/>[39m
+                  [36m<path[39m
+                    [33md[39m=[32m"M3 3v5h5"[39m
+                  [36m/>[39m
+                [36m</svg>[39m
+                [0mTry again[0m
+              [36m</button>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+        [36m<nav[39m
+          [33maria-label[39m=[32m"Question navigation"[39m
+          [33mclass[39m=[32m"d1-navigation"[39m
+        [36m>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"d1-previous"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [36m<svg[39m
+              [33mclass[39m=[32m"lucide lucide-arrow-left"[39m
+              [33mfill[39m=[32m"none"[39m
+              [33mheight[39m=[32m"16"[39m
+              [33mstroke[39m=[32m"currentColor"[39m
+              [33mstroke-linecap[39m=[32m"round"[39m
+              [33mstroke-linejoin[39m=[32m"round"[39m
+              [33mstroke-width[39m=[32m"2"[39m
+              [33mviewBox[39m=[32m"0 0 24 24"[39m
+              [33mwidth[39m=[32m"16"[39m
+              [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+            [36m>[39m
+              [36m<path[39m
+                [33md[39m=[32m"m12 19-7-7 7-7"[39m
+              [36m/>[39m
+              [36m<path[39m
+                [33md[39m=[32m"M19 12H5"[39m
+              [36m/>[39m
+            [36m</svg>[39m
+            [0mPrevious question[0m
+          [36m</button>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"d1-next"[39m
+            [33mdisabled[39m=[32m""[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mNext question[0m
+            [36m<svg[39m
+              [33mclass[39m=[32m"lucide lucide-arrow-right"[39m
+              [33mfill[39m=[32m"none"[39m
+              [33mheight[39m=[32m"17"[39m
+              [33mstroke[39m=[32m"currentColor"[39m
+              [33mstroke-linecap[39m=[32m"round"[39m
+              [33mstroke-linejoin[39m=[32m"round"[39m
+              [33mstroke-width[39m=[32m"2"[39m
+              [33mviewBox[39m=[32m"0 0 24 24"[39m
+              [33mwidth[39m=[32m"17"[39m
+              [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+            [36m>[39m
+              [36m<path[39m
+                [33md[39m=[32m"M5 12h14"[39m
+              [36m/>[39m
+              [36m<path[39m
+                [33md[39m=[32m"m12 5 7 7-7 7"[39m
+              [36m/>[39m
+            [36m</svg>[39m
+          [36m</button>[39m
+        [36m</nav>[39m
+      [36m</section>[39m
+    [36m</div>[39m
+  [36m</div>[39m
+[36m</body>[39m
+   ✓ runs sufficient-side practice as the staged drill and keeps a fresh counterexample item 41ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/bootcamps/conditionals/components/OpeningFoundations.test.tsx > shows one foundation question at a time and retains checked feedback when returning
+TestingLibraryElementError: Unable to find an element with the text: /You treated the rule as a weather report/. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+<body>
+  <div>
+    <div
+      class="opening-course-content"
+    >
+      <section
+        aria-label="Spot the condition questions"
+        class="d1-experience"
+      >
+        <header
+          class="cd-progress"
+        >
+          <div
+            class="cd-progress-labels"
+          >
+            <span>
+              Question 2 of 24
+            </span>
+            <strong>
+              8
+              % 
+              <small>
+                complete
+              </small>
+            </strong>
+          </div>
+          <div
+            aria-label="Questions answered"
+            aria-valuemax="24"
+            aria-valuemin="0"
+            aria-valuenow="2"
+            aria-valuetext="8% complete. 2 of 24 questions completed."
+            class="cd-progress-track"
+            role="progressbar"
+          >
+            <span
+              aria-hidden="true"
+              data-complete="true"
+              data-current="false"
+            />
+            <span
+              aria-hidden="true"
+              data-complete="true"
+              data-current="true"
+            />
+            <span
+              aria-hidden="true"
+              data-complete="false"
+              data-current="false"
+            />
+            <span
+              aria-hidden="true"
+              data-complete="false"
+              data-current="false"
+            />
+            <span
+              aria-hidden="true"
+              data-complete="false"
+              data-current="false"
+            />
+            <span
+              aria-hidden="true"
+              data-complete="false"
+              data-current="false"
+            />
+            <span
+              aria-hidden="true"
+              data-complete="false"
+              data-current="false"
+            />
+            <span
+              aria-hidden="true"
+              data-complete="false"
+              data-current="false"
+            />
+            <span
+              aria-hidden="true"
+              data-complete="false"
+              data-current="false"
+            />
+            <span
+              aria-hidden="true"
+              data-complete="false"
+              data-current="false"
+            />
+            <span
+              aria-hidden="true"
+              data-complete="false"
+              data-current="false"
+            />
+            <span
+              aria-hidden="true"
+              data-complete="false"
+              data-current="false"
+            />
+            <span
+              aria-hidden="true"
+              data-complete="false"
+              data-current="false"
+            />
+            <span
+              aria-hidden="true"
+              data-complete="false"
+              data-current="false"
+            />
+            <span
+              aria-hidden="true"
+              data-complete="false"
+              data-current="false"
+            />
+            <span
+              aria-hidden="true"
+              data-complete="false"
+              data-current="false"
+            />
+            <span
+              aria-hidden="true"
+              data-complete="false"
+              data-current="false"
+            />
+            <span
+              aria-hidden="true"
+              data-complete="false"
+              data-current="false"
+            />
+            <span
+              aria-hidden="true"
+              data-complete="false"
+              data-current="false"
+            />
+            <span
+              aria-hidden="true"
+              data-complete="false"
+              data-current="false"
+            />
+            <span
+              aria-hidden="true"
+              data-complete="false"
+              data-current="false"
+            />
+            <span
+              aria-hidden="true"
+              data-complete="false"
+              data-current="false"
+            />
+            <span
+              aria-hidden="true"
+              data-complete="false"
+              data-current="false"
+            />
+            <span
+              aria-hidden="true"
+              data-complete="false"
+              data-current="false"
+            />
+          </div>
+        </header>
+        <div
+          class="d1-question-scene"
+          data-practice-task="2"
+        >
+          <div
+            class="d1-rule-panel"
+          >
+            <div
+              class="d1-rule-top"
+            >
+              <span
+                class="d1-eyebrow"
+              >
+                Given rule
+              </span>
+              <span
+                aria-hidden="true"
+                class="d1-rule-number"
+              >
+                02
+              </span>
+            </div>
+            <blockquote>
+              If it rains on Saturday, the market moves into the town hall.
+            </blockquote>
+            <div
+              aria-hidden="true"
+              class="d1-rule-foot"
+            >
+              <span />
+              <span />
+              <span />
+            </div>
+          </div>
+          <div
+            class="d1-question-body"
+          >
+            <h2
+              id=":r0:-question"
+              tabindex="-1"
+            >
+              It's Friday. You've read this rule and nothing else. Where will the market be on Saturday?
+            </h2>
+            <div
+              aria-labelledby=":r0:-question"
+              class="d1-options"
+              role="group"
+            >
+              <button
+                aria-pressed="true"
+                class="d1-option"
+                data-correct="false"
+                data-incorrect="true"
+                data-selected="true"
+                disabled=""
+                type="button"
+              >
+                <span
+                  aria-hidden="true"
+                  class="d1-option-letter"
+                >
+                  A
+                </span>
+                <span>
+                  In the town hall.
+                </span>
+              </button>
+              <button
+                aria-pressed="false"
+                class="d1-option"
+                data-correct="false"
+                data-incorrect="false"
+                data-selected="false"
+                disabled=""
+                type="button"
+              >
+                <span
+                  aria-hidden="true"
+                  class="d1-option-letter"
+                >
+                  B
+                </span>
+                <span>
+                  Outdoors, as usual.
+                </span>
+              </button>
+              <button
+                aria-pressed="false"
+                class="d1-option"
+                data-correct="false"
+                data-incorrect="false"
+                data-selected="false"
+                disabled=""
+                type="button"
+              >
+                <span
+                  aria-hidden="true"
+                  class="d1-option-letter"
+                >
+                  C
+                </span>
+                <span>
+                  The rule alone doesn't settle it.
+                </span>
+              </button>
+            </div>
+            <div
+              class="d1-feedback-region"
+            >
+              <div
+                class="d1-feedback d1-feedback-halo"
+                data-correct="false"
+              >
+                <div
+                  class="d1-feedback-surface"
+                >
+                  <h3
+                    aria-describedby=":r0:-explanation"
+                    class="d1-feedback-title"
+                    tabindex="-1"
+                  >
+                    <span
+                      aria-hidden="true"
+                      class="d1-feedback-icon"
+                    >
+                      <svg
+                        class="lucide lucide-rotate-ccw"
+                        fill="none"
+                        height="23"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.7"
+                        viewBox="0 0 24 24"
+                        width="23"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"
+                        />
+                        <path
+                          d="M3 3v5h5"
+                        />
+                      </svg>
+                    </span>
+                    Not quite.
+                  </h3>
+                  <p
+                    id=":r0:-explanation"
+                  >
+                    Check whether you have been told that it will rain on Saturday. A rule about rain is not a weather forecast.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="d1-answer-actions"
+            >
+              <button
+                class="d1-retry"
+                type="button"
+              >
+                <svg
+                  class="lucide lucide-rotate-ccw"
+                  fill="none"
+                  height="15"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="15"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"
+                  />
+                  <path
+                    d="M3 3v5h5"
+                  />
+                </svg>
+                Try again
+              </button>
+            </div>
+          </div>
+        </div>
+        <nav
+          aria-label="Question navigation"
+          class="d1-navigation"
+        >
+          <button
+            class="d1-previous"
+            type="button"
+          >
+            <svg
+              class="lucide lucide-arrow-left"
+              fill="none"
+              height="16"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m12 19-7-7 7-7"
+              />
+              <path
+                d="M19 12H5"
+              />
+            </svg>
+            Previous question
+          </button>
+          <button
+            class="d1-next"
+            disabled=""
+            type="button"
+          >
+            Next question
+            <svg
+              class="lucide lucide-arrow-right"
+              fill="none"
+              height="17"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="17"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5 12h14"
+              />
+              <path
+                d="m12 5 7 7-7 7"
+              />
+            </svg>
+          </button>
+        </nav>
+      </section>
+    </div>
+  </div>
+</body>
+ ❯ Object.getElementError ../../../AppData/Local/Temp/lsatu-and-or-dom-20261019/node_modules/@testing-library/dom/dist/config.js:37:19
+ ❯ ../../../AppData/Local/Temp/lsatu-and-or-dom-20261019/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ ❯ ../../../AppData/Local/Temp/lsatu-and-or-dom-20261019/node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ ❯ getByText ../../../AppData/Local/Temp/lsatu-and-or-dom-20261019/node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ ❯ src/bootcamps/conditionals/components/OpeningFoundations.test.tsx:23:17
+     21|   expect(screen.queryByText(/You treated the rule as a weather report/…
+     22|   fireEvent.click(screen.getByRole('button', { name: 'Check answer' })…
+     23|   expect(screen.getByText(/You treated the rule as a weather report/))…
+       |                 ^
+     24|   expect(screen.getByRole('button', { name: 'Next question' })).toBeDi…
+     25|   fireEvent.click(screen.getByRole('button', { name: 'Try again' }));
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 1 passed (2)
+   Start at  03:32:48
+   Duration  6.28s (transform 1.77s, setup 260ms, collect 2.48s, tests 768ms, environment 2.05s, prepare 467ms)
+

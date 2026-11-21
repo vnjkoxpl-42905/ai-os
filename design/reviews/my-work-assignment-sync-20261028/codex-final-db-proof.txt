@@ -1,0 +1,14 @@
+2026-10-28T15:50:52.210Z
+{
+  "20261028140000_student_work_delivery.sql": "73e0cc2032f8f28f89f7e6dbfaa8c1e15f3b49dce45af8a5557415b0b3774007",
+  "20261028141000_student_work_mcp_writers.sql": "1db1f16076623264da0b885b6233e8493a566a028e20d2399c40f98069fe904f",
+  "20261028142000_reading_center_delivery_policy.sql": "88bcfa49e4a4cd8183c4a0af7ef80b8c6db089101799b81a90030ee8cd174141",
+  "20261028143000_section_attempt_delivery_policy.sql": "bc4eed432dc3316f74ae36ddff172cbbfbd94f038ce53cf79170024aa0554b14",
+  "20261028144000_session_bundle_materialization.sql": "5f3a3aab0562c5c24b0f733624e5e83373c6cd2d01b63722b8da9b69c64e02c7"
+}
+PASS PostgreSQL baseline old-index=false: owner/RLS, source/mirror, gates, generation, receipts, group/schedule/recovery, seven-day flows, lifetime delivery and silent replay
+PASS PostgreSQL baseline old-index=true: owner/RLS, source/mirror, gates, generation, receipts, group/schedule/recovery, seven-day flows, lifetime delivery and silent replay
+
+Coverage: all five migrations; owner/RLS+protected identity; future source/mirror publication and current issuance; receipt/read/completion separation; actual legacy route mapping; explicit plan collection versus unrelated work; internal groups/outbox inaccessible directly; durable deferred message policy for recap/smartboard/announcement; no duplicate assignment ping; successful load clears mapped message without reading Inbox; managed recovery and lifetime delivery; phase-one off + activation guard; old-index/live-index variants; silent migration replay.
+Fifth migration: admin-only exact draft/student match; only approved/included student-facing part; expected authored state check; draft row lock + per-draft advisory lock; existing items unchanged; only current part posted/id patched atomically; newer unrelated part content preserved; class_id not fabricated; separate durable recap message group. Real separate PostgreSQL sessions test same-part race (one creator), different-part race (shared group and both posted flags), and optional-channel claim race (one winner). Future claim false, generic delivered plan claim once, student claim denied.
+Limits: disposable PG17 contract schema, not full production restore. Actual pg_cron registration/readback and all-student production preservation checks remain release steps. Optional Inbox/email is a claimed at-most-once best-effort attempt; durable in-app bell is independent. No production changes performed.

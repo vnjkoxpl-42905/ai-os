@@ -1,0 +1,1195 @@
+Release regression file count: 49
+
+ RUN  v3.2.7 C:/Users/Joshu/dev/ai-os-projects/lsatu-my-work-20261026
+
+stderr | src/components/my-work/TeachingNotesArchive.test.tsx > TeachingNotesArchive > makes read archive notes visible and opens the current detail route with return state
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/lib/assignmentWriterInventory.test.ts (1 test) 2687ms
+   ✓ assignment writer coverage > inventories each native insert and shared Classroom writer, and requires an explicit persisted policy on native payloads  2682ms
+stderr | src/hooks/useClassroomMotion.test.tsx > reference motion safety > composes the real My Work policy with assigned loading without a content entrance
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/components/my-work/TeachingNotesArchive.test.tsx (37 tests) 10422ms
+   ✓ TeachingNotesArchive > makes read archive notes visible and opens the current detail route with return state  776ms
+   ✓ TeachingNotesArchive > searches body text beyond the initial twelve and preserves query in the URL  350ms
+   ✓ TeachingNotesArchive > loads the next group and stores a user-scoped return anchor  579ms
+   ✓ TeachingNotesArchive > signals pointer pagination separately from filtering and does not re-enable keyboard pagination  593ms
+   ✓ TeachingNotesArchive > signals filter intent before pointer Unread, search and Clear URL changes  424ms
+   ✓ TeachingNotesArchive > does not focus search when a pointer All types choice removes the focused selector  542ms
+   ✓ TeachingNotesArchive > uses the final pointer modality inside the portal rather than its opening modality  307ms
+   ✓ TeachingNotesArchive > uses the final keyboard modality inside the portal rather than its opening modality  333ms
+   ✓ TeachingNotesArchive > signals a portaled type choice against the archive ref before committing the URL  397ms
+   ✓ TeachingNotesArchive > stores the lead identity on detail navigation and restores its focus on return  342ms
+   ✓ TeachingNotesArchive > ignores a stale anchor when a portal filter reaches its saved URL  329ms
+   ✓ TeachingNotesArchive > restores a true reader POP to the original stored archive history entry  304ms
+   ✓ TeachingNotesArchive > does not save a return anchor for ctrlKey clicks or restore on filter Back  328ms
+   ✓ TeachingNotesArchive > does not save a return anchor for metaKey clicks or restore on filter Back  317ms
+   ✓ TeachingNotesArchive > does not save a return anchor for shiftKey clicks or restore on filter Back  302ms
+   ✓ TeachingNotesArchive > combines exact type with unread and search while preserving type on detail links  503ms
+   ✓ TeachingNotesArchive > keeps a valid absent type selectable so its empty result can recover  314ms
+   ✓ TeachingNotesArchive > makes read-state counts predict results within the selected type and search  331ms
+   ✓ TeachingNotesArchive > uses a labelled keyboard-operated portal without changing filters on open  431ms
+ ✓ src/hooks/useClassroomMotion.test.tsx (95 tests) 9092ms
+   ✓ reference motion safety > opts reading lists into crisp bounded stagger beyond the ordinary group and page caps  354ms
+   ✓ real notes archive motion composition > settles real pointer type filtering and reveals new pointer Load more rows in order  1557ms
+   ✓ real notes archive motion composition > settles real pointer unread filtering and reveals new pointer Load more rows in order  1263ms
+   ✓ real notes archive motion composition > restores cached focus in the first layout commit without hiding surrounding rows  658ms
+   ✓ real notes archive motion composition > leaves marked cached reader blocks to their dedicated motion owner  959ms
+   ✓ real notes archive motion composition > settles actual assigned-work portal filtering through its section ref without animating newly matched rows  1286ms
+stderr | src/pages/MyWorkPage.organization.test.tsx > My Work organization > recovers focus after failed-empty Clear with 0-detail keyboard activation
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+stderr | src/components/classroom/shell/ClassroomLayout.test.tsx > shares the shell context with the real orientation hook across layout remounts
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+stderr | src/components/classroom/shell/ClassroomLayout.test.tsx > classroom rail access > places an assigned Reading Center directly after My Work with no broad Classroom flag
+Warning: An update to ClassroomLayout inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at ClassroomLayout (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\classroom\shell\ClassroomLayout.tsx:1484:44)
+    at RenderedRoute (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:535:7)
+    at Routes (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1269:7)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: An update to ClassroomLayout inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at ClassroomLayout (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\classroom\shell\ClassroomLayout.tsx:1484:44)
+    at RenderedRoute (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:535:7)
+    at Routes (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1269:7)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: An update to ClassroomLayout inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at ClassroomLayout (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\classroom\shell\ClassroomLayout.tsx:1484:44)
+    at RenderedRoute (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:535:7)
+    at Routes (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1269:7)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+
+stderr | src/components/classroom/shell/ClassroomLayout.test.tsx > classroom rail access > keeps student access assignment-based and gives teachers a direct Reading Center launcher
+Warning: An update to ClassroomLayout inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at ClassroomLayout (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\classroom\shell\ClassroomLayout.tsx:1484:44)
+    at RenderedRoute (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:535:7)
+    at Routes (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1269:7)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: An update to ClassroomLayout inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at ClassroomLayout (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\classroom\shell\ClassroomLayout.tsx:1484:44)
+    at RenderedRoute (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:535:7)
+    at Routes (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1269:7)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: An update to ClassroomLayout inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at ClassroomLayout (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\classroom\shell\ClassroomLayout.tsx:1484:44)
+    at RenderedRoute (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:535:7)
+    at Routes (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1269:7)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+
+stderr | src/components/classroom/shell/ClassroomLayout.test.tsx > classroom rail access > keeps a fully locked destination reachable so its page can explain the lock
+Warning: An update to ClassroomLayout inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at ClassroomLayout (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\classroom\shell\ClassroomLayout.tsx:1484:44)
+    at RenderedRoute (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:535:7)
+    at Routes (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1269:7)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: An update to ClassroomLayout inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at ClassroomLayout (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\classroom\shell\ClassroomLayout.tsx:1484:44)
+    at RenderedRoute (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:535:7)
+    at Routes (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1269:7)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: An update to ClassroomLayout inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at ClassroomLayout (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\classroom\shell\ClassroomLayout.tsx:1484:44)
+    at RenderedRoute (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:535:7)
+    at Routes (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1269:7)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+
+stderr | src/components/classroom/shell/ClassroomLayout.test.tsx > classroom rail access > opens a partly locked destination on a tab the account can use
+Warning: An update to ClassroomLayout inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at ClassroomLayout (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\classroom\shell\ClassroomLayout.tsx:1484:44)
+    at RenderedRoute (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:535:7)
+    at Routes (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1269:7)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: An update to ClassroomLayout inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at ClassroomLayout (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\classroom\shell\ClassroomLayout.tsx:1484:44)
+    at RenderedRoute (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:535:7)
+    at Routes (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1269:7)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: An update to ClassroomLayout inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at ClassroomLayout (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\classroom\shell\ClassroomLayout.tsx:1484:44)
+    at RenderedRoute (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:535:7)
+    at Routes (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1269:7)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+
+stderr | src/components/classroom/shell/ClassroomLayout.test.tsx > classroom rail access > keeps Schedule in the student rail
+Warning: An update to ClassroomLayout inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at ClassroomLayout (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\classroom\shell\ClassroomLayout.tsx:1484:44)
+    at RenderedRoute (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:535:7)
+    at Routes (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1269:7)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: An update to ClassroomLayout inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at ClassroomLayout (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\classroom\shell\ClassroomLayout.tsx:1484:44)
+    at RenderedRoute (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:535:7)
+    at Routes (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1269:7)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: An update to ClassroomLayout inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at ClassroomLayout (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\classroom\shell\ClassroomLayout.tsx:1484:44)
+    at RenderedRoute (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:535:7)
+    at Routes (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1269:7)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+
+ ✓ src/pages/MyWorkPage.organization.test.tsx (22 tests) 12866ms
+   ✓ My Work organization > recovers focus after failed-empty Clear with 0-detail keyboard activation  1596ms
+   ✓ My Work organization > does not open the search keyboard after pointer Clear filters  409ms
+   ✓ My Work organization > keeps pointer portal reset away from Search: kind=Activity  941ms
+   ✓ My Work organization > keeps pointer portal reset away from Search: subject=rc  711ms
+   ✓ My Work organization > returns keyboard focus to Search after Clear filters removes the no-match action  443ms
+   ✓ My Work organization > keeps a valid Reading Center filter across denied, granted and revoked access without exposing other work  1180ms
+   ✓ My Work organization > recovers keyboard focus when clearing an absent selected filter: kind=Activity  674ms
+   ✓ My Work organization > recovers keyboard focus when clearing an absent selected filter: subject=rc  613ms
+   ✓ My Work organization > does not move focus when a feed refresh removes an unselected picker  600ms
+   ✓ My Work organization > keeps a valid absent work type selected during a partial feed refresh  384ms
+   ✓ My Work organization > keeps both valid selected options and Clear filters when no rows exist  341ms
+   ✓ My Work organization > combines subject and search filters and preserves the query on guided drill return  1165ms
+   ✓ My Work organization > combines work type with search and retains that filter when opening assigned work  1136ms
+   ✓ My Work organization > keeps repeated completed assignments and labels the available date as assigned  457ms
+   ✓ shows unread independently of saved progress and completed work  881ms
+stderr | src/components/classroom/shell/ClassroomLayout.test.tsx > classroom rail access > opens Messages and Find a question for an entitled account
+Warning: An update to ClassroomLayout inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at ClassroomLayout (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\classroom\shell\ClassroomLayout.tsx:1484:44)
+    at RenderedRoute (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:535:7)
+    at Routes (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1269:7)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: An update to ClassroomLayout inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at ClassroomLayout (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\classroom\shell\ClassroomLayout.tsx:1484:44)
+    at RenderedRoute (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:535:7)
+    at Routes (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1269:7)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: An update to ClassroomLayout inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at ClassroomLayout (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\classroom\shell\ClassroomLayout.tsx:1484:44)
+    at RenderedRoute (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:535:7)
+    at Routes (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1269:7)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+
+stderr | src/components/classroom/shell/ClassroomLayout.test.tsx > classroom rail access > carries the sidebar's current route and query into question lookup
+Warning: An update to ClassroomLayout inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at ClassroomLayout (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\classroom\shell\ClassroomLayout.tsx:1484:44)
+    at RenderedRoute (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:535:7)
+    at Routes (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1269:7)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: An update to ClassroomLayout inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at ClassroomLayout (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\classroom\shell\ClassroomLayout.tsx:1484:44)
+    at RenderedRoute (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:535:7)
+    at Routes (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1269:7)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: An update to ClassroomLayout inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at ClassroomLayout (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\classroom\shell\ClassroomLayout.tsx:1484:44)
+    at RenderedRoute (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:535:7)
+    at Routes (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1269:7)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+
+ ✓ src/components/classroom/shell/ClassroomLayout.test.tsx (19 tests) 4852ms
+   ✓ shares the shell context with the real orientation hook across layout remounts  370ms
+   ✓ classroom rail access > places an assigned Reading Center directly after My Work with no broad Classroom flag  522ms
+   ✓ classroom rail access > restores only hidden My Work for an assigned tool while retaining other custom navigation  302ms
+   ✓ classroom rail access > keeps student access assignment-based and gives teachers a direct Reading Center launcher  434ms
+   ✓ mobile menu > dismisses on Escape and returns focus to the menu button  796ms
+   ✓ mobile menu > closes after a rail navigation  642ms
+stderr | src/features/activity-centre/components/ActivityRunner.practice.test.tsx > saved General sessions > resumes an owned legacy standalone snapshot inside the bootcamp without rewriting it or its original assignment
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+stderr | src/components/classroom/ClassroomNotesJourney.test.tsx > returns archive A through real rail B to the nearest surviving filtered row, preserving return filters
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/features/activity-centre/components/ActivityRunner.practice.test.tsx (15 tests) 3064ms
+   ✓ saved General sessions > resumes an owned legacy standalone snapshot inside the bootcamp without rewriting it or its original assignment  574ms
+   ✓ saved General sessions > restores paper stage, selected choices, feedback and completed state without touching assignment scores  890ms
+   ✓ saved General sessions > persists the timed question deadline and hides the statement when it expires  570ms
+ ✓ src/components/classroom/ClassroomNotesJourney.test.tsx (4 tests) 4509ms
+   ✓ returns archive A through real rail B to the nearest surviving filtered row, preserving return filters  1985ms
+   ✓ does not restore an unrelated stale archive anchor when a reader has no explicit origin  603ms
+   ✓ preserves archive origin through native history Back from B to A to archive  1547ms
+   ✓ does not revive a same-id stale anchor from a reader opened without archive origin  370ms
+ ✓ src/features/conditional-refresher/ConditionalIndicatorsRefresher.test.tsx (1 test) 1736ms
+   ✓ retains an atomic feedback region and moves focus through check and retry  1732ms
+stderr | src/features/activity-centre/components/ActivityRunner.sectionreport.test.tsx > RRC canonical assignment navigation > preserves the legacy assignment launch query, hash and recorder launch state
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+stderr | src/features/activity-centre/components/ActivityRunner.sectionreport.test.tsx > RRC canonical assignment navigation > preserves the legacy assignment launch query, hash and recorder launch state
+Error: Not implemented: HTMLMediaElement.prototype.load
+    at module.exports (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\browser\not-implemented.js:9:17)
+    at HTMLVideoElementImpl.load (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\living\nodes\HTMLMediaElement-impl.js:112:5)
+    at HTMLVideoElement.load (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\living\generated\HTMLMediaElement.js:111:34)
+    at C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\features\activity-centre\components\SectionDemos.tsx:76:7
+    at commitHookEffectListMount (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:23189:26)
+    at commitPassiveMountOnFiber (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24970:11)
+    at commitPassiveMountEffects_complete (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24930:9)
+    at commitPassiveMountEffects_begin (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24917:7)
+    at commitPassiveMountEffects (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24905:3)
+    at flushPassiveEffectsImpl (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:27078:3) undefined
+Error: Not implemented: HTMLMediaElement.prototype.pause
+    at module.exports (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\browser\not-implemented.js:9:17)
+    at HTMLVideoElementImpl.pause (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\living\nodes\HTMLMediaElement-impl.js:121:5)
+    at HTMLVideoElement.pause (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\living\generated\HTMLMediaElement.js:162:34)
+    at C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\features\activity-centre\components\SectionDemos.tsx:85:27
+    at safelyCallDestroy (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:22971:5)
+    at commitHookEffectListUnmount (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:23139:11)
+    at commitPassiveUnmountInsideDeletedTreeOnFiber (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:25140:11)
+    at commitPassiveUnmountEffectsInsideOfDeletedTree_begin (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:25087:5)
+    at commitPassiveUnmountEffects_begin (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24995:11)
+    at commitPassiveUnmountEffects (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24980:3) undefined
+
+stderr | src/features/activity-centre/components/ActivityRunner.sectionreport.test.tsx > RRC canonical assignment navigation > does not canonicalize an assignment belonging to another student
+Error: Not implemented: HTMLMediaElement.prototype.load
+    at module.exports (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\browser\not-implemented.js:9:17)
+    at HTMLVideoElementImpl.load (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\living\nodes\HTMLMediaElement-impl.js:112:5)
+    at HTMLVideoElement.load (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\living\generated\HTMLMediaElement.js:111:34)
+    at C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\features\activity-centre\components\SectionDemos.tsx:76:7
+    at commitHookEffectListMount (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:23189:26)
+    at commitPassiveMountOnFiber (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24970:11)
+    at commitPassiveMountEffects_complete (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24930:9)
+    at commitPassiveMountEffects_begin (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24917:7)
+    at commitPassiveMountEffects (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24905:3)
+    at flushPassiveEffectsImpl (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:27078:3) undefined
+
+stderr | src/features/activity-centre/components/ActivityRunner.sectionreport.test.tsx > RRC canonical assignment navigation > does not canonicalize an assignment belonging to another student
+Error: Not implemented: HTMLMediaElement.prototype.pause
+    at module.exports (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\browser\not-implemented.js:9:17)
+    at HTMLVideoElementImpl.pause (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\living\nodes\HTMLMediaElement-impl.js:121:5)
+    at HTMLVideoElement.pause (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\living\generated\HTMLMediaElement.js:162:34)
+    at C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\features\activity-centre\components\SectionDemos.tsx:85:27
+    at safelyCallDestroy (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:22971:5)
+    at commitHookEffectListUnmount (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:23139:11)
+    at commitPassiveUnmountInsideDeletedTreeOnFiber (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:25140:11)
+    at commitPassiveUnmountEffectsInsideOfDeletedTree_begin (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:25087:5)
+    at commitPassiveUnmountEffects_begin (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24995:11)
+    at commitPassiveUnmountEffects (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24980:3) undefined
+
+stderr | src/features/activity-centre/components/ActivityRunner.sectionreport.test.tsx > RRC canonical assignment navigation > leaves the new section briefing for its RRC collection
+Error: Not implemented: HTMLMediaElement.prototype.load
+    at module.exports (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\browser\not-implemented.js:9:17)
+    at HTMLVideoElementImpl.load (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\living\nodes\HTMLMediaElement-impl.js:112:5)
+    at HTMLVideoElement.load (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\living\generated\HTMLMediaElement.js:111:34)
+    at C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\features\activity-centre\components\SectionDemos.tsx:76:7
+    at commitHookEffectListMount (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:23189:26)
+    at commitPassiveMountOnFiber (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24970:11)
+    at commitPassiveMountEffects_complete (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24930:9)
+    at commitPassiveMountEffects_begin (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24917:7)
+    at commitPassiveMountEffects (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24905:3)
+    at flushPassiveEffectsImpl (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:27078:3) undefined
+
+stderr | src/features/activity-centre/components/ActivityRunner.sectionreport.test.tsx > RRC canonical assignment navigation > leaves the new section briefing for its RRC collection
+Error: Not implemented: HTMLMediaElement.prototype.pause
+    at module.exports (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\browser\not-implemented.js:9:17)
+    at HTMLVideoElementImpl.pause (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\living\nodes\HTMLMediaElement-impl.js:121:5)
+    at HTMLVideoElement.pause (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\living\generated\HTMLMediaElement.js:162:34)
+    at C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\features\activity-centre\components\SectionDemos.tsx:85:27
+    at safelyCallDestroy (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:22971:5)
+    at commitHookEffectListUnmount (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:23139:11)
+    at commitPassiveUnmountInsideDeletedTreeOnFiber (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:25140:11)
+    at commitPassiveUnmountEffectsInsideOfDeletedTree_begin (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:25087:5)
+    at commitPassiveUnmountEffects_begin (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24995:11)
+    at commitPassiveUnmountEffects (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24980:3) undefined
+
+stderr | src/features/activity-centre/components/ActivityRunner.sectionreport.test.tsx > RRC canonical assignment navigation > returns an individually assigned legacy section to assigned work without a library grant
+Error: Not implemented: HTMLMediaElement.prototype.load
+    at module.exports (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\browser\not-implemented.js:9:17)
+    at HTMLVideoElementImpl.load (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\living\nodes\HTMLMediaElement-impl.js:112:5)
+    at HTMLVideoElement.load (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\living\generated\HTMLMediaElement.js:111:34)
+    at C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\features\activity-centre\components\SectionDemos.tsx:76:7
+    at commitHookEffectListMount (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:23189:26)
+    at commitPassiveMountOnFiber (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24970:11)
+    at commitPassiveMountEffects_complete (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24930:9)
+    at commitPassiveMountEffects_begin (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24917:7)
+    at commitPassiveMountEffects (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24905:3)
+    at flushPassiveEffectsImpl (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:27078:3) undefined
+
+stderr | src/features/activity-centre/components/ActivityRunner.sectionreport.test.tsx > RRC canonical assignment navigation > returns an individually assigned legacy section to assigned work without a library grant
+Error: Not implemented: HTMLMediaElement.prototype.pause
+    at module.exports (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\browser\not-implemented.js:9:17)
+    at HTMLVideoElementImpl.pause (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\living\nodes\HTMLMediaElement-impl.js:121:5)
+    at HTMLVideoElement.pause (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\living\generated\HTMLMediaElement.js:162:34)
+    at C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\features\activity-centre\components\SectionDemos.tsx:85:27
+    at safelyCallDestroy (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:22971:5)
+    at commitHookEffectListUnmount (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:23139:11)
+    at commitPassiveUnmountInsideDeletedTreeOnFiber (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:25140:11)
+    at commitPassiveUnmountEffectsInsideOfDeletedTree_begin (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:25087:5)
+    at commitPassiveUnmountEffects_begin (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24995:11)
+    at commitPassiveUnmountEffects (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24980:3) undefined
+
+stderr | src/features/activity-centre/components/ActivityRunner.sectionreport.test.tsx > recovering an acknowledged-evidence RRC closeout after reload > keeps retry saving on a lost completion response
+[activity:complete] failed Error: lost response
+    at C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\features\activity-centre\components\ActivityRunner.sectionreport.test.tsx:225:46
+    at file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:155:11
+    at file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:752:26
+    at file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:1863:10)
+    at runTest (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:1574:12)
+    at runSuite (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:1729:8)
+    at runSuite (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:1729:8)
+    at runFiles (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:1787:3)
+
+stderr | src/features/activity-centre/components/ActivityRunner.sectionreport.test.tsx > recovering an acknowledged-evidence RRC closeout after reload > blocks reopening on a failed evidence read
+[rrc:closeout:load] failed Error: offline
+    at C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\features\activity-centre\components\ActivityRunner.sectionreport.test.tsx:234:82
+    at file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:155:11
+    at file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:752:26
+    at file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:1863:10)
+    at runTest (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:1574:12)
+    at runSuite (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:1729:8)
+    at runSuite (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:1729:8)
+    at runFiles (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:1787:3)
+
+stderr | src/features/activity-centre/components/ActivityRunner.sectionreport.test.tsx > recovering an acknowledged-evidence RRC closeout after reload > does not mix rows from different takes into completion
+[rrc:closeout:load] failed Error: Some saved section answers could not be verified. Retry loading.
+    at Module.requireSectionEvidence (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\features\activity-centre\recall\sectionCompletion.ts:42:11)
+    at C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\features\activity-centre\components\ActivityRunner.tsx:525:13
+
+stderr | src/features/activity-centre/components/ActivityRunner.sectionreport.test.tsx > recovering an acknowledged-evidence RRC closeout after reload > blocks closeout while the recording is absent from account storage
+[rrc:closeout:load] failed Error: Your section recording has not reached your account yet.
+    at Module.requireSectionRecording (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\features\activity-centre\recall\sectionCompletion.ts:54:11)
+    at C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\features\activity-centre\components\ActivityRunner.tsx:526:13
+
+stderr | src/features/activity-centre/components/ActivityRunner.sectionreport.test.tsx > reopening a finished Read, Recall, Colour section > does not treat historical rows without a finished-take marker as closeout evidence
+Error: Not implemented: HTMLMediaElement.prototype.load
+    at module.exports (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\browser\not-implemented.js:9:17)
+    at HTMLVideoElementImpl.load (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\living\nodes\HTMLMediaElement-impl.js:112:5)
+    at HTMLVideoElement.load (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\living\generated\HTMLMediaElement.js:111:34)
+    at C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\features\activity-centre\components\SectionDemos.tsx:76:7
+    at commitHookEffectListMount (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:23189:26)
+    at commitPassiveMountOnFiber (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24970:11)
+    at commitPassiveMountEffects_complete (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24930:9)
+    at commitPassiveMountEffects_begin (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24917:7)
+    at commitPassiveMountEffects (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24905:3)
+    at flushPassiveEffectsImpl (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:27078:3) undefined
+
+stderr | src/features/activity-centre/components/ActivityRunner.sectionreport.test.tsx > reopening a finished Read, Recall, Colour section > does not treat historical rows without a finished-take marker as closeout evidence
+Error: Not implemented: HTMLMediaElement.prototype.pause
+    at module.exports (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\browser\not-implemented.js:9:17)
+    at HTMLVideoElementImpl.pause (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\living\nodes\HTMLMediaElement-impl.js:121:5)
+    at HTMLVideoElement.pause (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\living\generated\HTMLMediaElement.js:162:34)
+    at C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\features\activity-centre\components\SectionDemos.tsx:85:27
+    at safelyCallDestroy (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:22971:5)
+    at commitHookEffectListUnmount (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:23139:11)
+    at commitPassiveUnmountInsideDeletedTreeOnFiber (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:25140:11)
+    at commitPassiveUnmountEffectsInsideOfDeletedTree_begin (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:25087:5)
+    at commitPassiveUnmountEffects_begin (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24995:11)
+    at commitPassiveUnmountEffects (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24980:3) undefined
+
+stderr | src/features/activity-centre/components/ActivityRunner.sectionreport.test.tsx > the goal an accommodated student is timed against > hands the runner her own accommodation, not the standard one
+Error: Not implemented: HTMLMediaElement.prototype.load
+    at module.exports (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\browser\not-implemented.js:9:17)
+    at HTMLVideoElementImpl.load (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\living\nodes\HTMLMediaElement-impl.js:112:5)
+    at HTMLVideoElement.load (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\living\generated\HTMLMediaElement.js:111:34)
+    at C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\features\activity-centre\components\SectionDemos.tsx:76:7
+    at commitHookEffectListMount (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:23189:26)
+    at commitPassiveMountOnFiber (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24970:11)
+    at commitPassiveMountEffects_complete (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24930:9)
+    at commitPassiveMountEffects_begin (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24917:7)
+    at commitPassiveMountEffects (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24905:3)
+    at flushPassiveEffectsImpl (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:27078:3) undefined
+
+stderr | src/features/activity-centre/components/ActivityRunner.sectionreport.test.tsx > the goal an accommodated student is timed against > hands the runner her own accommodation, not the standard one
+Error: Not implemented: HTMLMediaElement.prototype.pause
+    at module.exports (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\browser\not-implemented.js:9:17)
+    at HTMLVideoElementImpl.pause (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\living\nodes\HTMLMediaElement-impl.js:121:5)
+    at HTMLVideoElement.pause (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\living\generated\HTMLMediaElement.js:162:34)
+    at C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\features\activity-centre\components\SectionDemos.tsx:85:27
+    at safelyCallDestroy (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:22971:5)
+    at commitHookEffectListUnmount (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:23139:11)
+    at commitPassiveUnmountInsideDeletedTreeOnFiber (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:25140:11)
+    at commitPassiveUnmountEffectsInsideOfDeletedTree_begin (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:25087:5)
+    at commitPassiveUnmountEffects_begin (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24995:11)
+    at commitPassiveUnmountEffects (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24980:3) undefined
+
+stderr | src/features/activity-centre/components/ActivityRunner.sectionreport.test.tsx > the goal an accommodated student is timed against > shows the full instructions page first, even when started from the library
+Error: Not implemented: HTMLMediaElement.prototype.load
+    at module.exports (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\browser\not-implemented.js:9:17)
+    at HTMLVideoElementImpl.load (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\living\nodes\HTMLMediaElement-impl.js:112:5)
+    at HTMLVideoElement.load (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\living\generated\HTMLMediaElement.js:111:34)
+    at C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\features\activity-centre\components\SectionDemos.tsx:76:7
+    at commitHookEffectListMount (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:23189:26)
+    at commitPassiveMountOnFiber (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24970:11)
+    at commitPassiveMountEffects_complete (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24930:9)
+    at commitPassiveMountEffects_begin (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24917:7)
+    at commitPassiveMountEffects (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24905:3)
+    at flushPassiveEffectsImpl (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:27078:3) undefined
+
+stderr | src/features/activity-centre/components/ActivityRunner.sectionreport.test.tsx > the goal an accommodated student is timed against > shows the full instructions page first, even when started from the library
+Error: Not implemented: HTMLMediaElement.prototype.pause
+    at module.exports (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\browser\not-implemented.js:9:17)
+    at HTMLVideoElementImpl.pause (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\living\nodes\HTMLMediaElement-impl.js:121:5)
+    at HTMLVideoElement.pause (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\living\generated\HTMLMediaElement.js:162:34)
+    at C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\features\activity-centre\components\SectionDemos.tsx:85:27
+    at safelyCallDestroy (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:22971:5)
+    at commitHookEffectListUnmount (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:23139:11)
+    at commitPassiveUnmountInsideDeletedTreeOnFiber (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:25140:11)
+    at commitPassiveUnmountEffectsInsideOfDeletedTree_begin (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:25087:5)
+    at commitPassiveUnmountEffects_begin (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24995:11)
+    at commitPassiveUnmountEffects (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24980:3) undefined
+
+stderr | src/features/activity-centre/components/ActivityRunner.sectionreport.test.tsx > the goal an accommodated student is timed against > asks for it under the student's own id
+Error: Not implemented: HTMLMediaElement.prototype.load
+    at module.exports (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\browser\not-implemented.js:9:17)
+    at HTMLVideoElementImpl.load (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\living\nodes\HTMLMediaElement-impl.js:112:5)
+    at HTMLVideoElement.load (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\living\generated\HTMLMediaElement.js:111:34)
+    at C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\features\activity-centre\components\SectionDemos.tsx:76:7
+    at commitHookEffectListMount (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:23189:26)
+    at commitPassiveMountOnFiber (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24970:11)
+    at commitPassiveMountEffects_complete (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24930:9)
+    at commitPassiveMountEffects_begin (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24917:7)
+    at commitPassiveMountEffects (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24905:3)
+    at flushPassiveEffectsImpl (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:27078:3) undefined
+
+stderr | src/features/activity-centre/components/ActivityRunner.sectionreport.test.tsx > the goal an accommodated student is timed against > asks for it under the student's own id
+Error: Not implemented: HTMLMediaElement.prototype.pause
+    at module.exports (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\browser\not-implemented.js:9:17)
+    at HTMLVideoElementImpl.pause (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\living\nodes\HTMLMediaElement-impl.js:121:5)
+    at HTMLVideoElement.pause (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\living\generated\HTMLMediaElement.js:162:34)
+    at C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\features\activity-centre\components\SectionDemos.tsx:85:27
+    at safelyCallDestroy (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:22971:5)
+    at commitHookEffectListUnmount (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:23139:11)
+    at commitPassiveUnmountInsideDeletedTreeOnFiber (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:25140:11)
+    at commitPassiveUnmountEffectsInsideOfDeletedTree_begin (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:25087:5)
+    at commitPassiveUnmountEffects_begin (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24995:11)
+    at commitPassiveUnmountEffects (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24980:3) undefined
+
+stderr | src/features/activity-centre/components/ActivityRunner.sectionreport.test.tsx > the goal an accommodated student is timed against > uses standard when she has none
+Error: Not implemented: HTMLMediaElement.prototype.load
+    at module.exports (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\browser\not-implemented.js:9:17)
+    at HTMLVideoElementImpl.load (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\living\nodes\HTMLMediaElement-impl.js:112:5)
+    at HTMLVideoElement.load (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\living\generated\HTMLMediaElement.js:111:34)
+    at C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\features\activity-centre\components\SectionDemos.tsx:76:7
+    at commitHookEffectListMount (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:23189:26)
+    at commitPassiveMountOnFiber (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24970:11)
+    at commitPassiveMountEffects_complete (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24930:9)
+    at commitPassiveMountEffects_begin (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24917:7)
+    at commitPassiveMountEffects (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24905:3)
+    at flushPassiveEffectsImpl (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:27078:3) undefined
+
+stderr | src/features/activity-centre/components/ActivityRunner.sectionreport.test.tsx > the goal an accommodated student is timed against > uses standard when she has none
+Error: Not implemented: HTMLMediaElement.prototype.pause
+    at module.exports (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\browser\not-implemented.js:9:17)
+    at HTMLVideoElementImpl.pause (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\living\nodes\HTMLMediaElement-impl.js:121:5)
+    at HTMLVideoElement.pause (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\living\generated\HTMLMediaElement.js:162:34)
+    at C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\features\activity-centre\components\SectionDemos.tsx:85:27
+    at safelyCallDestroy (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:22971:5)
+    at commitHookEffectListUnmount (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:23139:11)
+    at commitPassiveUnmountInsideDeletedTreeOnFiber (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:25140:11)
+    at commitPassiveUnmountEffectsInsideOfDeletedTree_begin (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:25087:5)
+    at commitPassiveUnmountEffects_begin (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24995:11)
+    at commitPassiveUnmountEffects (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24980:3) undefined
+
+stderr | src/features/activity-centre/components/ActivityRunner.sectionreport.test.tsx > a section never resumes > opens an in-progress section on its briefing, not in a live run
+Error: Not implemented: HTMLMediaElement.prototype.load
+    at module.exports (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\browser\not-implemented.js:9:17)
+    at HTMLVideoElementImpl.load (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\living\nodes\HTMLMediaElement-impl.js:112:5)
+    at HTMLVideoElement.load (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\living\generated\HTMLMediaElement.js:111:34)
+    at C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\features\activity-centre\components\SectionDemos.tsx:76:7
+    at commitHookEffectListMount (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:23189:26)
+    at commitPassiveMountOnFiber (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24970:11)
+    at commitPassiveMountEffects_complete (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24930:9)
+    at commitPassiveMountEffects_begin (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24917:7)
+    at commitPassiveMountEffects (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24905:3)
+    at flushPassiveEffectsImpl (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:27078:3) undefined
+
+stderr | src/features/activity-centre/components/ActivityRunner.sectionreport.test.tsx > a section never resumes > opens an in-progress section on its briefing, not in a live run
+Error: Not implemented: HTMLMediaElement.prototype.pause
+    at module.exports (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\browser\not-implemented.js:9:17)
+    at HTMLVideoElementImpl.pause (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\living\nodes\HTMLMediaElement-impl.js:121:5)
+    at HTMLVideoElement.pause (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\living\generated\HTMLMediaElement.js:162:34)
+    at C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\features\activity-centre\components\SectionDemos.tsx:85:27
+    at safelyCallDestroy (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:22971:5)
+    at commitHookEffectListUnmount (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:23139:11)
+    at commitPassiveUnmountInsideDeletedTreeOnFiber (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:25140:11)
+    at commitPassiveUnmountEffectsInsideOfDeletedTree_begin (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:25087:5)
+    at commitPassiveUnmountEffects_begin (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24995:11)
+    at commitPassiveUnmountEffects (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24980:3) undefined
+
+stderr | src/features/activity-centre/components/ActivityRunner.sectionreport.test.tsx > a section never resumes > opens on the briefing even with stimuli already on record
+Error: Not implemented: HTMLMediaElement.prototype.load
+    at module.exports (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\browser\not-implemented.js:9:17)
+    at HTMLVideoElementImpl.load (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\living\nodes\HTMLMediaElement-impl.js:112:5)
+    at HTMLVideoElement.load (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\living\generated\HTMLMediaElement.js:111:34)
+    at C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\features\activity-centre\components\SectionDemos.tsx:76:7
+    at commitHookEffectListMount (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:23189:26)
+    at commitPassiveMountOnFiber (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24970:11)
+    at commitPassiveMountEffects_complete (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24930:9)
+    at commitPassiveMountEffects_begin (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24917:7)
+    at commitPassiveMountEffects (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24905:3)
+    at flushPassiveEffectsImpl (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:27078:3) undefined
+
+stderr | src/features/activity-centre/components/ActivityRunner.sectionreport.test.tsx > a section never resumes > opens on the briefing even with stimuli already on record
+Error: Not implemented: HTMLMediaElement.prototype.pause
+    at module.exports (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\browser\not-implemented.js:9:17)
+    at HTMLVideoElementImpl.pause (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\living\nodes\HTMLMediaElement-impl.js:121:5)
+    at HTMLVideoElement.pause (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\living\generated\HTMLMediaElement.js:162:34)
+    at C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\features\activity-centre\components\SectionDemos.tsx:85:27
+    at safelyCallDestroy (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:22971:5)
+    at commitHookEffectListUnmount (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:23139:11)
+    at commitPassiveUnmountInsideDeletedTreeOnFiber (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:25140:11)
+    at commitPassiveUnmountEffectsInsideOfDeletedTree_begin (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:25087:5)
+    at commitPassiveUnmountEffects_begin (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24995:11)
+    at commitPassiveUnmountEffects (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24980:3) undefined
+
+stderr | src/features/activity-centre/components/ActivityRunner.sectionreport.test.tsx > a section never resumes > reaches the runner once she presses Start
+Error: Not implemented: HTMLMediaElement.prototype.load
+    at module.exports (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\browser\not-implemented.js:9:17)
+    at HTMLVideoElementImpl.load (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\living\nodes\HTMLMediaElement-impl.js:112:5)
+    at HTMLVideoElement.load (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\living\generated\HTMLMediaElement.js:111:34)
+    at C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\features\activity-centre\components\SectionDemos.tsx:76:7
+    at commitHookEffectListMount (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:23189:26)
+    at commitPassiveMountOnFiber (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24970:11)
+    at commitPassiveMountEffects_complete (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24930:9)
+    at commitPassiveMountEffects_begin (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24917:7)
+    at commitPassiveMountEffects (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24905:3)
+    at flushPassiveEffectsImpl (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:27078:3) undefined
+
+stderr | src/features/activity-centre/components/ActivityRunner.sectionreport.test.tsx > a section never resumes > reaches the runner once she presses Start
+Error: Not implemented: HTMLMediaElement.prototype.pause
+    at module.exports (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\browser\not-implemented.js:9:17)
+    at HTMLVideoElementImpl.pause (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\living\nodes\HTMLMediaElement-impl.js:121:5)
+    at HTMLVideoElement.pause (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\living\generated\HTMLMediaElement.js:162:34)
+    at C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\features\activity-centre\components\SectionDemos.tsx:85:27
+    at safelyCallDestroy (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:22971:5)
+    at commitHookEffectListUnmount (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:23139:11)
+    at commitPassiveUnmountInsideDeletedTreeOnFiber (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:25140:11)
+    at commitPassiveUnmountEffectsInsideOfDeletedTree_begin (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:25087:5)
+    at commitPassiveUnmountEffects_begin (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24995:11)
+    at commitPassiveUnmountEffects (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24980:3) undefined
+
+ ✓ src/features/activity-centre/components/ActivityRunner.sectionreport.test.tsx (20 tests) 2543ms
+   ✓ RRC canonical assignment navigation > leaves the new section briefing for its RRC collection  397ms
+   ✓ RRC canonical assignment navigation > returns an individually assigned legacy section to assigned work without a library grant  301ms
+stderr | src/features/activity-centre/components/ActivityRunner.exit.test.tsx > ActivityRunner exit > offers a way out of the intro screen, and it goes to the Activity Centre
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+stderr | src/pages/MyWorkNotesPage.test.tsx > My Work notebook > defaults to teaching notes with a secondary personal notebook
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/features/activity-centre/components/ActivityRunner.exit.test.tsx (7 tests) 3330ms
+   ✓ ActivityRunner exit > offers a way out of the intro screen, and it goes to the Activity Centre  1044ms
+   ✓ ActivityRunner exit > backs out of a question to the Activity's own intro, not the Activity Centre  966ms
+   ✓ ActivityRunner exit > resumes on the same question after backing out to the intro  600ms
+ ✓ src/pages/MyWorkNotesPage.test.tsx (6 tests) 2605ms
+   ✓ My Work notebook > defaults to teaching notes with a secondary personal notebook  750ms
+   ✓ My Work notebook > confirms close and view changes and recovers unsaved drafts after remount  703ms
+   ✓ My Work notebook > retains failed saves and does not expose another user's draft  348ms
+stderr | src/pages/MyWorkPage.readingCenter.test.tsx > My Work with a specific Reading Center grant > shows only the assigned tool without broad Classroom access or weekly plans
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/pages/MyWorkPage.readingCenter.test.tsx (7 tests) 1036ms
+   ✓ My Work with a specific Reading Center grant > shows only the assigned tool without broad Classroom access or weekly plans  735ms
+stderr | src/features/activity-centre/components/ActivityRunner.resume.test.tsx > ActivityRunner resume > opens on the question the student stopped at, not on question one
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+stderr | src/features/activity-centre/components/ActivityRunner.resume.test.tsx > ActivityRunner resume > never overwrites real progress with a blank run when the log cannot be read
+[activity:resume:load] failed Error: network
+    at C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\features\activity-centre\components\ActivityRunner.resume.test.tsx:224:41
+    at file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:155:11
+    at file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:752:26
+    at file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:1863:10)
+    at runTest (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:1574:12)
+    at runSuite (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:1729:8)
+    at runSuite (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:1729:8)
+    at runFiles (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:1787:3)
+
+stderr | src/features/activity-centre/components/ActivityRunner.resume.test.tsx > ActivityRunner resume > blocks false reports when completed-row responses fail to load (timestamp null)
+[activity:resume:load] failed Error: network
+    at C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\features\activity-centre\components\ActivityRunner.resume.test.tsx:261:41
+    at file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:863:59
+    at file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:155:11
+    at file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:752:26
+    at file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:1863:10)
+    at runTest (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:1574:12)
+    at runSuite (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:1729:8)
+    at runSuite (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:1729:8)
+
+stderr | src/features/activity-centre/components/ActivityRunner.resume.test.tsx > ActivityRunner resume > blocks false reports when completed-row responses fail to load (timestamp 2026-09-30T10:00:00Z)
+[activity:resume:load] failed Error: network
+    at C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\features\activity-centre\components\ActivityRunner.resume.test.tsx:261:41
+    at file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:863:59
+    at file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:155:11
+    at file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:752:26
+    at file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:1863:10)
+    at runTest (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:1574:12)
+    at runSuite (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:1729:8)
+    at runSuite (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:1729:8)
+
+stderr | src/features/activity-centre/components/ActivityRunner.resume.test.tsx > ActivityRunner resume > waits for rescued closeout and retries failure with the same answers and score
+[activity:complete] failed Error: offline
+    at C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\features\activity-centre\components\ActivityRunner.resume.test.tsx:277:21
+    at file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:752:20
+
+ ✓ src/features/activity-centre/components/ActivityRunner.resume.test.tsx (17 tests) 1633ms
+stderr | src/components/classroom/home/useClassroomHome.homeMessage.test.tsx > Home message card visibility > shows assigned Reading Center with Classroom off without opening ordinary activities
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/components/classroom/home/useClassroomHome.homeMessage.test.tsx (13 tests) 690ms
+stderr | src/pages/MyWorkPage.refetch.test.tsx > My Work while weekly plan status refreshes > keeps assigned rows visible during a refetch and after its failure
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+stderr | src/pages/TimedPracticeTestRun.test.tsx > acknowledged parent controls > opens a section only after start-leg acknowledgement
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/pages/MyWorkPage.refetch.test.tsx (2 tests) 881ms
+   ✓ My Work while weekly plan status refreshes > keeps assigned rows visible during a refetch and after its failure  595ms
+ ✓ src/pages/TimedPracticeTestRun.test.tsx (10 tests) 854ms
+stderr | src/components/my-work/AssignmentUpdate.test.tsx > shows exact mixed note and assignment members with independent read labels
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/components/my-work/AssignmentUpdate.test.tsx (6 tests) 518ms
+   ✓ shows exact mixed note and assignment members with independent read labels  387ms
+stderr | src/features/activity-centre/components/ActivityRunner.completion.test.tsx > does not complete while a local answer has not reached the account, then retries without reanswering
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+stderr | src/features/activity-centre/components/ActivityRunner.completion.test.tsx > does not complete while a local answer has not reached the account, then retries without reanswering
+[activity:complete] failed Error: Some answers have not reached your account yet.
+    at C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\features\activity-centre\components\ActivityRunner.tsx:416:17
+    at C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\features\activity-centre\components\ActivityRunner.tsx:750:5
+
+stderr | src/features/activity-centre/components/ActivityRunner.completion.test.tsx > normal Finish waits for acknowledgment and retries a failed completion without publishing classroom status
+[activity:complete] failed Error: offline
+    at C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\features\activity-centre\components\ActivityRunner.completion.test.tsx:58:21
+    at file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:752:20
+
+ ✓ src/features/activity-centre/components/ActivityRunner.completion.test.tsx (2 tests) 552ms
+   ✓ does not complete while a local answer has not reached the account, then retries without reanswering  351ms
+stderr | src/pages/StudentDestination.test.tsx > visible locked destination sections > gives My Work content a list-only policy without changing its separate heading owner
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/pages/StudentDestination.test.tsx (20 tests) 793ms
+stderr | src/components/classroom/ClassroomRouteViews.notes.test.tsx > note detail return links > registers an interactive note as a ready locally owned reader without changing its iframe contract
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+stderr | src/components/classroom/ClassroomRouteViews.notes.test.tsx > note detail return links > registers an interactive note as a ready locally owned reader without changing its iframe contract
+Warning: An update to ClassroomItemView inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at ClassroomItemView (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\classroom\ClassroomRouteViews.tsx:252:46)
+    at RenderedRoute (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:535:7)
+    at Routes (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1269:7)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+    at QueryClientProvider (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@tanstack/react-query/build/modern/QueryClientProvider.js:41:32)
+
+stderr | src/components/classroom/ClassroomRouteViews.notes.test.tsx > note detail return links > waits for interactive content load before acknowledging it
+Warning: An update to ClassroomItemView inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at ClassroomItemView (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\classroom\ClassroomRouteViews.tsx:252:46)
+    at RenderedRoute (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:535:7)
+    at Routes (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1269:7)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+    at QueryClientProvider (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@tanstack/react-query/build/modern/QueryClientProvider.js:41:32)
+
+ ✓ src/components/classroom/ClassroomRouteViews.notes.test.tsx (10 tests) 838ms
+stderr | src/features/activity-centre/components/ActivityRunner.adminview.test.tsx > ActivityRunner, admin viewing a student's assignment > opens the activity instead of refusing it
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+stderr | src/features/activity-centre/components/ActivityRunner.adminview.test.tsx > ActivityRunner, admin viewing a student's assignment > does not claim saved answers on a section library, which has no items
+Error: Not implemented: HTMLMediaElement.prototype.load
+    at module.exports (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\browser\not-implemented.js:9:17)
+    at HTMLVideoElementImpl.load (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\living\nodes\HTMLMediaElement-impl.js:112:5)
+    at HTMLVideoElement.load (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\living\generated\HTMLMediaElement.js:111:34)
+    at C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\features\activity-centre\components\SectionDemos.tsx:76:7
+    at commitHookEffectListMount (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:23189:26)
+    at commitPassiveMountOnFiber (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24970:11)
+    at commitPassiveMountEffects_complete (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24930:9)
+    at commitPassiveMountEffects_begin (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24917:7)
+    at commitPassiveMountEffects (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24905:3)
+    at flushPassiveEffectsImpl (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:27078:3) undefined
+
+stderr | src/features/activity-centre/components/ActivityRunner.adminview.test.tsx > ActivityRunner, admin viewing a student's assignment > does not claim saved answers on a section library, which has no items
+Error: Not implemented: HTMLMediaElement.prototype.pause
+    at module.exports (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\browser\not-implemented.js:9:17)
+    at HTMLVideoElementImpl.pause (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\living\nodes\HTMLMediaElement-impl.js:121:5)
+    at HTMLVideoElement.pause (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\jsdom\lib\jsdom\living\generated\HTMLMediaElement.js:162:34)
+    at C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\features\activity-centre\components\SectionDemos.tsx:85:27
+    at safelyCallDestroy (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:22971:5)
+    at commitHookEffectListUnmount (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:23139:11)
+    at commitPassiveUnmountInsideDeletedTreeOnFiber (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:25140:11)
+    at commitPassiveUnmountEffectsInsideOfDeletedTree_begin (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:25087:5)
+    at commitPassiveUnmountEffects_begin (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24995:11)
+    at commitPassiveUnmountEffects (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-dom\cjs\react-dom.development.js:24980:3) undefined
+
+ ✓ src/features/activity-centre/components/ActivityRunner.adminview.test.tsx (8 tests) 1017ms
+   ✓ ActivityRunner, admin viewing a student's assignment > does not claim saved answers on a section library, which has no items  395ms
+stderr | src/features/activity-centre/components/ActivityRunner.redrill.test.tsx > re-drilling the misses > shows the ledger on a completed run, counting the misses
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/features/activity-centre/components/ActivityRunner.redrill.test.tsx (4 tests) 496ms
+ ✓ src/hooks/useNoteReaderTransition.test.tsx (18 tests) 570ms
+stderr | src/pages/SectionDirections.test.tsx > SectionDirectionsPage > shows the section, the clock, the count, and the LR directions
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/pages/SectionDirections.test.tsx (7 tests) 390ms
+ ✓ src/hooks/useClassroomItems.test.tsx (3 tests) 312ms
+stderr | src/features/activity-centre/components/ActivityRunner.wrongaccount.test.tsx > ActivityRunner, wrong account > says the assignment belongs to another account when it really does
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/features/activity-centre/components/ActivityRunner.wrongaccount.test.tsx (9 tests) 307ms
+stderr | src/pages/PracticeTestRun.test.tsx > official practice test dispatch > routes protected rows before mounting a legacy writer
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/pages/PracticeTestRun.test.tsx (6 tests) 349ms
+stderr | src/features/reading-center/pages/ReadingCenterHome.test.tsx > Reading dashboard > starts with truthful empty states and links to separate activities
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/features/reading-center/pages/ReadingCenterHome.test.tsx (5 tests) 285ms
+stderr | src/components/hub/BootcampGate.receipts.test.tsx > bootcamp receipts do not change assignment authorization > keeps assigned content open when receipt projection is pending
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/components/hub/BootcampGate.receipts.test.tsx (4 tests) 242ms
+stderr | src/hooks/useStudentWorkState.test.tsx > successful foreground work acknowledgement > shares one actor subscription across consumers and removes it after the last consumer leaves
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/hooks/useStudentWorkState.test.tsx (7 tests) 270ms
+stderr | src/components/hub/BootcampGate.test.tsx > takes signed-out visitors to sign-in with the exact lesson query and hash preserved
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/components/hub/BootcampGate.test.tsx (4 tests) 181ms
+ ✓ src/components/classroom/classroomData.test.ts (10 tests) 113ms
+stderr | src/lib/assignWork.test.ts > assignWork > rolls the row back when the classroom item cannot be created
+[assignWork] student failed {
+  studentId: 'student-a',
+  written: [
+    {
+      assignmentId: 'guided_drill_assignments-row-1',
+      classroomItemId: null,
+      table: 'guided_drill_assignments',
+      kind: 'guided_drill'
+    }
+  ],
+  error: Error: rls said no
+      at C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\lib\assignWork.test.ts:132:51
+      at file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:155:11
+      at file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:752:26
+      at file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:1897:20
+      at new Promise (<anonymous>)
+      at runWithTimeout (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:1863:10)
+      at runTest (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:1574:12)
+      at processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at runSuite (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:1729:8)
+      at runSuite (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:1729:8)
+}
+
+stderr | src/lib/assignWork.test.ts > assignWork > isolates one student failing from the rest of the batch
+[assignWork] student failed {
+  studentId: 'student-b',
+  written: [
+    {
+      assignmentId: 'guided_drill_assignments-row-2',
+      classroomItemId: null,
+      table: 'guided_drill_assignments',
+      kind: 'guided_drill'
+    }
+  ],
+  error: Error: rls said no
+      at C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\lib\assignWork.test.ts:180:30
+      at file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:155:11
+      at file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:752:26
+      at file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:1897:20
+      at new Promise (<anonymous>)
+      at runWithTimeout (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:1863:10)
+      at runTest (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:1574:12)
+      at processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at runSuite (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:1729:8)
+      at runSuite (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:1729:8)
+}
+
+stderr | src/lib/assignWork.test.ts > assignWorkBundle > rolls the earlier items back when a later one fails
+[assignWork] student failed {
+  studentId: 'student-a',
+  written: [
+    {
+      assignmentId: 'guided_drill_assignments-row-1',
+      classroomItemId: 'item-1',
+      table: 'guided_drill_assignments',
+      kind: 'guided_drill'
+    },
+    {
+      assignmentId: null,
+      classroomItemId: null,
+      table: 'homework_assignments',
+      kind: 'homework_set'
+    }
+  ],
+  error: Error: insert blew up
+      at Object.single (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\lib\assignWork.test.ts:85:92)
+      at Object.insertRow (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\lib\assignWork.ts:200:14)
+      at runAssign (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\lib\assignWork.ts:603:42)
+      at processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\lib\assignWork.test.ts:356:20
+      at file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:752:20
+}
+
+stderr | src/lib/assignWork.test.ts > assignWorkBundle > keeps one student's bundle failing from costing the next student theirs
+[assignWork] student failed {
+  studentId: 'student-a',
+  written: [
+    {
+      assignmentId: 'guided_drill_assignments-row-1',
+      classroomItemId: null,
+      table: 'guided_drill_assignments',
+      kind: 'guided_drill'
+    }
+  ],
+  error: Error: classroom item refused
+      at C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\lib\assignWork.test.ts:374:15
+      at mockCall (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/spy/dist/index.js:96:15)
+      at mockCreateClassroomItem (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/tinyspy/dist/index.js:47:80)
+      at Proxy.createClassroomItem (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\lib\assignWork.test.ts:10:43)
+      at runAssign (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\lib\assignWork.ts:610:37)
+      at processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\lib\assignWork.test.ts:378:20
+      at file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:752:20
+}
+
+stderr | src/lib/assignWork.test.ts > assignWork — student level on guided drills > still assigns, unlevelled, if the column is not deployed to this DB yet
+[assignWork] profiles.proficiency_level is not deployed yet; assigning unlevelled
+
+stderr | src/lib/assignWork.test.ts > stops a student bundle at its shared deadline and rolls back only this attempt before notification
+[assignWork] student failed {
+  studentId: 'student-a',
+  written: [
+    {
+      assignmentId: 'guided_drill_assignments-row-1',
+      classroomItemId: null,
+      table: 'guided_drill_assignments',
+      kind: 'guided_drill'
+    }
+  ],
+  error: AssertionError: expected undefined to be AbortSignal{ …(1) } // Object.is equality
+      at C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\lib\assignWork.test.ts:686:90
+      at mockCall (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/spy/dist/index.js:96:15)
+      at mockCreateClassroomItem (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/tinyspy/dist/index.js:47:80)
+      at Proxy.createClassroomItem (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\lib\assignWork.test.ts:10:43)
+      at runAssign (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\lib\assignWork.ts:610:37)
+      at processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\lib\assignWork.test.ts:687:24
+      at file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:752:20 {
+    actual: undefined,
+    expected: AbortSignal {},
+    showDiff: true,
+    operator: 'strictEqual'
+  }
+}
+
+ ✓ src/lib/assignWork.test.ts (44 tests) 131ms
+ ✓ src/hooks/useAssignedTodoFeed.test.ts (32 tests) 72ms
+ ✓ src/lib/weeklyPlanPublish.test.ts (12 tests) 58ms
+ ✓ src/hooks/useNotesArchiveScroll.test.ts (6 tests) 80ms
+ ✓ src/lib/studentWorkIdentity.test.ts (5 tests) 47ms
+ ✓ src/lib/myWorkNotesNavigation.test.ts (11 tests) 37ms
+ ✓ src/components/my-work/teachingNoteDates.test.ts (5 tests) 77ms
+ ✓ src/lib/assignmentNotificationRoute.test.ts (25 tests) 38ms
+stderr | src/lib/classroomNotify.test.ts > assignment delivery channels > publishes the one generic plan summary and retries only its bell
+[classroomNotify:inbox] failed {
+  studentId: 'student',
+  error: Error: inbox unavailable
+      at Object.<anonymous> (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\lib\classroomNotify.test.ts:7:140)
+      at Object.mockCall (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/spy/dist/index.js:96:15)
+      at Object.from (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/tinyspy/dist/index.js:47:80)
+      at findOrCreateThread (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\lib\classroomNotify.ts:46:6)
+      at Module.notifyStudentOfClassroomItem (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\lib\classroomNotify.ts:119:34)
+      at processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\lib\classroomNotify.test.ts:11:20
+      at file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:752:20
+}
+
+stderr | src/lib/classroomNotify.test.ts > assignment delivery channels > offers retry for the same durable bell group without repeating email or inbox
+[classroomNotify:inbox] failed {
+  studentId: 'student',
+  error: Error: inbox unavailable
+      at Object.<anonymous> (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\lib\classroomNotify.test.ts:7:140)
+      at Object.mockCall (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/spy/dist/index.js:96:15)
+      at Object.from (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/tinyspy/dist/index.js:47:80)
+      at findOrCreateThread (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\lib\classroomNotify.ts:46:6)
+      at Module.notifyStudentOfClassroomItem (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\lib\classroomNotify.ts:119:34)
+      at processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\lib\classroomNotify.test.ts:25:20
+      at file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:752:20
+}
+
+stderr | src/lib/classroomNotify.test.ts > assignment delivery channels > records thrown email failures without throwing away committed assignment success
+[classroomNotify:inbox] failed {
+  studentId: 'student',
+  error: Error: inbox unavailable
+      at Object.<anonymous> (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\lib\classroomNotify.test.ts:7:140)
+      at Object.mockCall (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/spy/dist/index.js:96:15)
+      at Object.from (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/tinyspy/dist/index.js:47:80)
+      at findOrCreateThread (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\lib\classroomNotify.ts:46:6)
+      at Module.notifyStudentOfClassroomItem (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\lib\classroomNotify.ts:119:34)
+      at processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\lib\classroomNotify.test.ts:32:20
+      at file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@vitest/runner/dist/chunk-hooks.js:752:20
+}
+
+ ✓ src/lib/classroomNotify.test.ts (5 tests) 29ms
+ ✓ src/lib/classroomItems.test.ts (30 tests) 24ms
+ ✓ src/lib/readingCenterAccess.test.ts (8 tests) 31ms
+ ✓ src/lib/markNoteRead.test.ts (6 tests) 25ms
+ ✓ src/lib/studentWorkState.test.ts (5 tests) 20ms
+ ✓ src/lib/assignmentDelivery.test.ts (12 tests) 11ms
+ ✓ src/components/mainhub/useTodayFocus.notification.test.ts (3 tests) 22ms
+ ✓ src/components/classroom/home/homeNextAction.test.ts (4 tests) 10ms
+
+ Test Files  48 passed (48)
+      Tests  612 passed (612)
+   Start at  08:58:47
+   Duration  134.21s (transform 10.02s, setup 12.54s, collect 59.99s, tests 70.75s, environment 79.52s, prepare 14.41s)
+
+
+RELEASE_TEST_EXIT_CODE=0

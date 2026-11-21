@@ -1,0 +1,78 @@
+{
+ "qid": "PT158-S4-Q11",
+ "type": "Most Strongly Supported",
+ "difficulty": "3",
+ "key_db": "A",
+ "stimulus_db": "In the past, infants who were not breast-fed were fed cow's milk. Then doctors began advising that cow's milk fed to infants should be boiled, as the boiling would sterilize the milk and prevent gastrointestinal infections potentially fatal to infants. Once this advice was widely implemented, there was an alarming increase among infants in the incidence of scurvy, caused by vitamin C deficiency. Breast-fed infants, however, did not contract scurvy.",
+ "stem_db": "Which one of the following is most strongly supported by the information above?",
+ "choices_db": {
+  "A": "Boiled cow's milk makes less vitamin C available to infants than does the same amount of mother's milk.",
+  "B": "Infants who consume cow's milk that has not been boiled frequently contract potentially fatal gastrointestinal infections.",
+  "C": "Mother's milk can cause gastrointestinal infections in infants.",
+  "D": "When doctors advised that cow's milk fed to infants should be boiled, they did not know that scurvy was caused by vitamin C deficiency.",
+  "E": "When doctors advised that cow's milk fed to infants should be boiled, most mothers did not breast-feed their infants."
+ },
+ "bank": {
+  "stimulus": "In the past, infants who were not breast-fed were fed\n cow’s milk. Then doctors began advising that cow’s milk\n fed to infants should be boiled, as the boiling would\n sterilize the milk and prevent gastrointestinal infections\n potentially fatal to infants. Once this advice was widely\n implemented, there was an alarming increase among\n infants in the incidence of scurvy, caused by vitamin C\n deficiency. Breast-fed infants, however, did not contract\n scurvy.",
+  "stem": "Which one of the following is most strongly supported\n by the information above?",
+  "choices": {
+   "A": "Boiled cow’s milk makes less vitamin C available to infants than does the same amount of mother’s milk.",
+   "B": "Infants who consume cow’s milk that has not been boiled frequently contract potentially fatal gastrointestinal infections.",
+   "C": "Mother’s milk can cause gastrointestinal infections in infants.",
+   "D": "When doctors advised that cow’s milk fed to infants should be boiled, they did not know that scurvy was caused by vitamin C deficiency.",
+   "E": "When doctors advised that cow’s milk fed to infants should be boiled, most mothers did not breast-feed their infants."
+  },
+  "key": "A"
+ },
+ "explanation_id": "0271be89-9f3d-4040-a0cc-cbd7f9339d03",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "1022806f-ccbe-4ddc-bce5-e4e2b7094421",
+   "position": 0,
+   "label": "Information",
+   "body": "It used to be that infants who weren't breastfed were fed cow's milk.\nDoctors said it should be boiled to sterilize it, thus preventing potentially fatal GI infections in infants.\nOnce people started boiling their cow's milk, there was an alarming increase of scurvy (caused by vitamin C deficiency) in infants fed boiled cow's milk but not among kids who were breastfed."
+  },
+  {
+   "row_id": "70b5db2e-ad06-426b-865b-d18a2658ac18",
+   "position": 1,
+   "label": "Evaluate",
+   "body": "There seems to be a lot of Comparison / Contrast and Causality in this fact set. We have support for thinking that the reason breastfed infants didn't get scurvy is because there is vitamin C in breastmilk. Meanwhile, the infants fed boiled cow's milk got scurvy because either cow's milk doesn't have much vitamin C to begin with or it does but got boiled off."
+  },
+  {
+   "row_id": "d704cfb4-caee-401d-b748-0ee675cad940",
+   "position": 2,
+   "label": "Goal",
+   "body": "These are pretty speculative inferences to draw, but because it's Most Supported, our answer doesn't have to be bulletproof. They love to have One Difference Explain Another Difference. So it's very likely that they're enticing us to believe that the difference between being breastfed and being fed with boiled cow's milk explains the difference between no scurvy and scurvy."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "f2093996-b3cf-4ee8-a342-b41e2cf75833",
+   "letter": "A",
+   "body": "The passage establishes that infants fed boiled cow's milk developed scurvy (a vitamin C deficiency disease) while breast-fed infants did not. The most direct inference: boiled cow's milk makes less vitamin C available than mother's milk. This explains both observations simultaneously — breast-fed infants received adequate vitamin C and stayed healthy, while infants on boiled cow's milk did not receive enough and developed scurvy.\n\nThis inference requires minimal additional assumptions. It simply connects the known cause of scurvy (vitamin C deficiency) with the observed difference in outcomes between the two feeding methods. The boiling process likely destroyed vitamin C in the cow's milk, but even without knowing the mechanism, the conclusion about relative vitamin C levels is strongly supported by the evidence."
+  },
+  {
+   "row_id": "2a142f2c-1ddd-49a2-8588-7b0389f2655f",
+   "letter": "B",
+   "body": "The passage never discusses how frequently infants consuming unboiled cow's milk contracted fatal infections. The word \"frequently\" introduces a claim about rate or regularity that the evidence does not support. The passage mentions that doctors advised boiling to prevent gastrointestinal infections, but it does not state how common those infections were among infants drinking unboiled milk, nor does it say the infections were fatal. This answer adds two unsupported intensifiers — \"frequently\" and \"fatal\" — going well beyond what the passage establishes."
+  },
+  {
+   "row_id": "70063f86-d63a-4ef7-bc2e-a068ffcc7d5b",
+   "letter": "C",
+   "body": "The passage states that breast-fed infants did not contract scurvy — a finding consistent with breast milk being nutritionally adequate. It provides no evidence whatsoever that mother's milk can cause gastrointestinal infections. In fact, the passage implicitly contrasts breast milk favorably against cow's milk: breast-fed infants avoided scurvy, while the boiling needed to make cow's milk safe had the side effect of causing scurvy. Nothing in the passage supports the claim that breast milk itself poses an infection risk."
+  },
+  {
+   "row_id": "ba3e0fe2-b08c-42db-add7-55d3f35b3946",
+   "letter": "D",
+   "body": "The passage describes the link between scurvy and vitamin C deficiency, but says nothing about what doctors at the time knew or did not know about this connection. Whether doctors understood the cause of scurvy is a claim about their state of knowledge — a topic the passage simply does not address. On Most Strongly Supported questions, every element of the correct answer must be traceable to the passage's evidence. Claims about historical figures' awareness require evidence about their mental states or documented beliefs, which this passage does not provide."
+  },
+  {
+   "row_id": "fef97640-a56c-45b4-9f03-26afd4f00a30",
+   "letter": "E",
+   "body": "The passage mentions that infants who were not breast-fed were given cow's milk, but it does not specify what proportion of mothers breast-fed. The word \"most\" requires data about a majority, which the passage does not provide. The passage's structure — beginning with \"infants who were not breast-fed\" — tells us some infants were bottle-fed, but nothing about whether this was the common or uncommon situation. On Most Strongly Supported questions, quantifiers like \"most\" are red flags when the passage provides no proportional data."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (10.9 em-dashes per 1k words; wrong-answer notes average 83.8 words).",
+ "tags": "emdash-heavy; pt157-158-register; possible-misquote"
+}

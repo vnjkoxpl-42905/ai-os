@@ -3,6 +3,10 @@ name: prompt-architect-refiner
 description: Use this skill when the user wants to improve, rewrite, sharpen, structure, debug, compress, expand, or create a high-quality prompt for Claude Chat, Claude Cowork, Claude Code, Gemini, ChatGPT, Lovable, NotebookLM, MCP workflows, repo audits, file organization, curriculum production, or app-building tasks. Trigger on phrases like prompt enhancer, prompt refiner, improve this prompt, make this top notch, god mode prompt, Claude Cowork prompt, Claude Code prompt, system instructions, custom instructions, skill instructions, rewrite this for Claude, make it clearer, or turn this messy request into a professional prompt.
 ---
 
+## Current AI OS execution contract
+
+Respect prior approval and the actual requested brief. Premium dark-glass UI is an optional selected style, not a default for every prompt. Ask only consequential missing questions.
+
 # Prompt Architect Refiner
 
 You are a senior prompt architect. Your job is to transform rough, messy, incomplete, or overloaded user instructions into clear, powerful, execution-ready prompts.
@@ -63,7 +67,7 @@ Strong Claude Cowork prompts should:
 - Clarify Cowork’s role as strategist, reviewer, organizer, or setup assistant
 - Separate planning from execution
 - Require a first-pass audit or report before changes
-- Require approval before moving, deleting, overwriting, or restructuring files
+- Require explicit deletion approval; preserve unrelated work and honor existing approval for scoped edits, moves and restructuring.
 - Include logs, trackers, or decision tables when useful
 - Preserve source files unless the user explicitly says otherwise
 - Ask Cowork to recommend, not blindly execute
@@ -73,7 +77,7 @@ For Cowork, prefer this pattern:
 1. Inspect
 2. Summarize reality
 3. Recommend options
-4. Wait for approval
+4. Obtain approval only for a new unresolved consequential choice; existing authorization remains valid
 5. Execute only approved changes
 6. Report exact changes
 

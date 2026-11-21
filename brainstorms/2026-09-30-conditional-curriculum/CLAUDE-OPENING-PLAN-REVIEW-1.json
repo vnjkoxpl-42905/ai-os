@@ -1,0 +1,173 @@
+{
+  "status": "completed",
+  "mode": "review",
+  "provider": "claude",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "claude",
+    "builder": "codex",
+    "inspector": "claude"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-conditional-bootcamp",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os\\brainstorms\\2026-09-30-conditional-curriculum\\OPENING-VISUAL-BUILD-REVIEW.md",
+  "plan_sha256": "42403400e10c646d17e3f71b350071b3fb6c4c0a9712b6d246d3af5141222857",
+  "requested_model": null,
+  "requested_effort": null,
+  "base": null,
+  "snapshot": null,
+  "previous": null,
+  "started_at": 1790952114.431717,
+  "artifacts": "C:\\Users\\Joshu\\AppData\\Local\\Temp\\claudex-exfw6q2j",
+  "cli_version": "2.1.280 (Claude Code)",
+  "executable": [
+    "C:\\Users\\Joshu\\AppData\\Roaming\\npm\\node_modules\\@anthropic-ai\\claude-code\\bin\\claude.exe"
+  ],
+  "exit_code": 0,
+  "session_id": "1be68579-bfde-4282-94e0-b56874a5e70f",
+  "response": {
+    "verdict": "REVISE",
+    "summary": "The plan's goals are sound, but it conflicts with how the app is built today. Course order is fixed by the curriculum JSON and puts truth-validity, negation and contraposition between sufficient-necessary and group-1. The current orientation, rules-facts, group-1 and group-2 content already teaches chaining, contrapositives and a \"six steps\" method. Neither of those fits the plan's \"ends at Group 2, no chaining or full contraposition\" scope. The plan also never maps its six lessons onto the current unit IDs. Running `npm run build` triggers a prebuild step that regenerates two of the files the plan says to preserve. Embedded practice isn't connected to the saved-progress model, and the existing tests assert the old orientation and group-2 rendering. One draft translation also contradicts the app's existing teaching on \"must\".",
+    "findings": [
+      {
+        "id": "F1",
+        "severity": "high",
+        "path": "src/bootcamps/conditionals/data/curriculum.generated.json; src/bootcamps/conditionals/curriculumPath.ts:42-46; src/bootcamps/conditionals/content/foundations.source.ts:181,213",
+        "evidence": "Course order comes from the generated JSON in this order: orientation, rules-facts, sufficient-necessary, truth-validity, negation, contraposition, group-1, group-2. `getCurriculumUnits` preserves that order, and group-1 lists `prerequisites: ['contraposition']`. A course or stage assignment followed \"through Group 2\" therefore takes the student through the full contraposition unit, which the plan's scope forbids (\"Do not silently teach ... full contraposition\"). The plan's order (conditionals → sufficient → necessary → Group 1 → Group 2) can't be delivered without reordering units or changing prerequisites, and the plan says neither.",
+        "fix": "Say explicitly how the opening sits in the course order. Either (a) reorder so group-1 and group-2 follow sufficient-necessary and move contraposition, negation and truth-validity after them (update prerequisites, regenerate the JSON, and confirm that stage assignments with `start=` still resolve), or (b) keep the order and state that those three units are taught in between. Then reconcile that choice with the scope bullet."
+      },
+      {
+        "id": "F2",
+        "severity": "high",
+        "path": "src/bootcamps/conditionals/content/foundations.source.ts:59-63,77,84,224,226,242,258,270; src/bootcamps/conditionals/components/LessonInteractions.tsx:4-9,69",
+        "evidence": "Reused content already teaches material the plan excludes. rules-facts teaches chaining (\"Two rules can create a new rule\") and contrapositive reasoning, and its drills m1 and a3 are chain items. FourCaseExplorer, used for orientation and sufficient-necessary, shows \"not updated → not scanned\". The group-1 and group-2 methods include \"Find the contrapositive\". The group-1 guided prompt says \"run the six steps\", and group-1-a3 and group-2-m2 require a contrapositive. The plan says to \"reuse adequate existing activities\" without checking any of this. The Shell reference dialog (routes.tsx:167) and the GuidedActivity method list (routes.tsx:197) both render `unit.method`, so the six-step method with its contrapositive step would appear inside the opening even if the new component leaves it out.",
+        "fix": "Add an audit step for each item reused by the opening units (teaching, method, guidedExample, beginner drills, interactions). Mark each one as in scope or replace it. Decide whether the opening's methods mention the contrapositive at all; Sandra's five steps include it. Remove \"six steps\" wording from opening-unit prompts so no step count is presented as canonical."
+      },
+      {
+        "id": "F3",
+        "severity": "high",
+        "path": "package.json:8 (prebuild); public/data/_bank.generated.json; public/data/finder-address-index.json",
+        "evidence": "`npm run build` runs `prebuild` automatically. That runs `build-question-bank.mjs` and `build-finder-address-index.mjs`, which write the same two files the plan says to preserve, and both already have uncommitted changes. The plan's own proof step would overwrite them. It also runs `import-content.ts --check`, which fails whenever the content source changes and the JSON isn't regenerated.",
+        "fix": "Before building, record the SHA256 of each preserved file and keep a backup copy, or set the changes aside in a temporary WIP commit. Afterwards, confirm the files are byte-identical or restore them, and report the result. If content source changes, run `npm run content:conditionals` before the build."
+      },
+      {
+        "id": "F4",
+        "severity": "medium",
+        "path": "Plan 'What must work' bullets 1-2; src/bootcamps/conditionals/content/validate.ts:9",
+        "evidence": "The draft has six lessons: guarantee, direction, sufficient, necessary, Group 1, Group 2. The plan requires keeping the current unit IDs, where one unit (sufficient-necessary) covers lessons 3 and 4. The validator requires exactly 30 units. The plan doesn't say which lessons render under orientation, rules-facts and sufficient-necessary, or what `hasOpeningLesson` covers. Lesson 2 has no obvious home except rules-facts, whose own teaching covers chaining (see F2).",
+        "fix": "Add a table that maps each draft lesson and sublesson to a unit ID and to the guided activity and drills it uses. Keep 30 units, and say how sufficient and necessary appear as two lessons inside one unit page."
+      },
+      {
+        "id": "F5",
+        "severity": "medium",
+        "path": "src/bootcamps/conditionals/routes.tsx:48-62,188-197",
+        "evidence": "`nextSelectedStep` moves a student on only after three things are saved: `progress.lessons[id]`, an attempt on `unit.guidedExample.id`, and attempts on every drill at the assigned level. The plan puts guided and independent practice inside each sublesson but never says whether those answers are saved. If they aren't, the student does the lesson's practice and is still sent to the separate guided activity and drill, so practice is duplicated and answers aren't recorded. If saved under new question IDs, attempts may not match ActionGate or Diagnostics, which look up questions only in `unit.guidedExample` or `unit.drills` (routes.tsx:273).",
+        "fix": "State whether in-lesson checks are unsaved formative feedback (and say so to the student) or are saved through the existing progress `update` path with IDs Diagnostics can resolve. Make sure the student's next step after the lesson isn't a repeat of the same items."
+      },
+      {
+        "id": "F6",
+        "severity": "medium",
+        "path": "src/bootcamps/conditionals/components/ConditionalLessonNote.test.tsx:16-37",
+        "evidence": "The existing tests check that orientation renders the heading \"A promise about qualifying cases\", every `unit.teaching` paragraph, and the FourCaseExplorer buttons. They also check that group-2 shows \"Find the target\" and \"Entry → current pass.\". The pending change at ConditionalLessonNote.tsx:25 sends opening units to `ConditionalOpeningLesson`, so these tests will fail or turn into stale contracts. The plan only says \"run relevant existing conditional tests\".",
+        "fix": "Update the tests in the plan: replace the orientation and group-2 assertions with the new opening contract, covering answer-specific feedback, target selection, the Group 1/2 \"if\" versus \"only if\" contrast, keyboard operation of the visual controls, and a check that no difficulty selector appears. Keep the direct-linking test unchanged."
+      },
+      {
+        "id": "F7",
+        "severity": "medium",
+        "path": "C:/Users/Joshu/dev/ai-os/brainstorms/2026-09-30-conditional-curriculum/CONDITIONAL-OPENING-LESSONS-DRAFT.md:305; src/bootcamps/conditionals/content/foundations.source.ts:252,275",
+        "evidence": "The draft translates \"A finalist must attend the interview\" as \"Finalist → Attends interview\". The current group-2 teaching says: \"Do not turn must wear into actually wears unless compliance is separately assumed\", and drill group-2-a2 marks \"actually submitted\" as wrong. The opening would contradict a later unit and the unit's own drills.",
+        "fix": "Write the translation as \"Finalist → Must attend interview\" and add a short note that \"must\" sets an obligation. It doesn't show that the person actually attended."
+      },
+      {
+        "id": "F8",
+        "severity": "medium",
+        "path": "C:/Users/Joshu/dev/ai-os/brainstorms/2026-09-30-conditional-curriculum/notebooklm-opening-assets/manifest.json",
+        "evidence": "All nine manifest assets are \"submitted/pending\", and there's no Group 2 video. The plan says to \"show only completed reviewed assets\" but doesn't say where review approval is recorded, how the component reads it, or where downloaded files are stored. Without a gate in code, a missing file or a pending entry could produce the broken or placeholder links the plan forbids. Large video files would also end up in `public/`.",
+        "fix": "Define a static list of reviewed media (slug, reviewed-by and date, local path or approved host, captions or transcript). The component renders only those entries and nothing for the rest. Document where the files live and confirm that `preload` is not set and nothing autoplays."
+      },
+      {
+        "id": "F9",
+        "severity": "low",
+        "path": "src/bootcamps/conditionals/components/ConditionalLessonNote.tsx:6,25",
+        "evidence": "The working tree already imports `./ConditionalOpeningLesson`, but that file doesn't exist; the components glob shows only three files. `npm run typecheck` fails at the current baseline. The plan lists three preexisting changes to preserve but not this one, so whether this edit is part of the opening work or an unrelated change is unclear.",
+        "fix": "Record ConditionalLessonNote.tsx as part of the worker's opening baseline. Keep the existing non-opening render path unchanged and make the new module export `hasOpeningLesson` and `ConditionalOpeningLesson`."
+      },
+      {
+        "id": "F10",
+        "severity": "low",
+        "path": "src/bootcamps/conditionals/content/validate.ts:31",
+        "evidence": "The em-dash ban runs only on unit JSON. Copy written into the new opening component or its content module isn't checked, though COPY-CORRECTIONS applies to it too.",
+        "fix": "Add a test that runs the opening content module through the same em-dash and copy checks."
+      },
+      {
+        "id": "F11",
+        "severity": "low",
+        "path": "src/bootcamps/conditionals/routes.tsx:16,156,212",
+        "evidence": "Students see \"3. Skill drill · Level 1\" and \"Level 1 · Skill drill\" around the opening lessons. That's difficulty framing next to a requirement for no stage or sequence jargon. The routes file is outside the worker's stated ownership, so the conflict won't get resolved.",
+        "fix": "Decide whether the Level labels are acceptable around the opening. If not, add routes.tsx label changes to scope, keeping assignment and difficulty logic unchanged."
+      },
+      {
+        "id": "F12",
+        "severity": "low",
+        "path": "src/bootcamps/conditionals/routes.tsx:124-138",
+        "evidence": "ActionGate renders lessons only for admins or students with a matching assignment, and the plan rules out assigning students. The browser passes don't say how a local session reaches the pages (admin login, local Supabase, or teacher preview), so the visual checks might never run.",
+        "fix": "Name the local auth path for the browser passes (for example, an admin account against local Supabase) and the exact URLs for each opening unit."
+      }
+    ],
+    "coverage": [
+      "Read the full plan (OPENING-VISUAL-BUILD-REVIEW.md) and the primary draft CONDITIONAL-OPENING-LESSONS-DRAFT.md",
+      "Read ConditionalLessonNote.tsx (including the pending import of the missing ConditionalOpeningLesson) and LessonInteractions.tsx",
+      "Read lines 1-295 of foundations.source.ts, covering units orientation through group-2 and the start of group-3",
+      "Read curriculumPath.ts, assignments.ts, routes.tsx (progress, ActionGate, guided activity, practice, flashcards, diagnostics), content/index.ts and validate.ts",
+      "Read ConditionalLessonNote.test.tsx",
+      "Read package.json scripts (prebuild side effects)",
+      "Read the NotebookLM manifest.json; searched teaching-source.md for method-step references"
+    ],
+    "limitations": [
+      "I couldn't run typecheck, tests, build or a browser. Nothing here confirms the rendered result or that any test passes.",
+      "The ConditionalOpeningLesson implementation doesn't exist yet, so this is a review of the plan and the code it touches, not of an implementation diff.",
+      "I didn't read the second half of foundations.source.ts, applications.source.ts, the generated JSON directly, notes.css or styles.css (reduced-motion support), the Intro to LR source, wiki/teaching-voice.md, COPY-CORRECTIONS.md, the Sandra transcript or the corpus notes.",
+      "I didn't check the NotebookLM source upload for student personal details beyond the manifest and a keyword search.",
+      "I assumed unit order in curriculum.generated.json matches foundations.source.ts order, based on how getCurriculumUnits works and the 26-conditional/quantifier-last validator rule; I didn't open the JSON to confirm."
+    ]
+  },
+  "usage": {
+    "input_tokens": 18,
+    "cache_creation_input_tokens": 69404,
+    "cache_read_input_tokens": 325896,
+    "output_tokens": 11345,
+    "output_tokens_details": {
+      "thinking_tokens": 4658
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 69404,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 6219,
+        "cache_read_input_tokens": 70912,
+        "cache_creation_input_tokens": 1855,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1855
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "permission_denials": [],
+  "total_cost_usd": 0.8473831999999999,
+  "elapsed_seconds": 126.98
+}

@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-23",
+  "C_free_bytes_at_initial_check": 9427132416,
+  "RAM_total_KiB": 16101444,
+  "RAM_free_KiB": 1884312,
+  "pagefile_allocated_MiB": 45851,
+  "pagefile_used_MiB": 6505,
+  "pagefile_peak_MiB": 13166,
+  "active_sync_temp": "github-sync-ya0qrtw1",
+  "active_sync_process_chain": [
+    9512,
+    12448,
+    46600
+  ],
+  "backup_task_last_result": 1,
+  "github_sync_prior_result": 2147946720,
+  "events": [
+    {
+      "date": "2026-10-22",
+      "provider": "Volsnap",
+      "id": 25,
+      "finding": "Shadow copies deleted; storage could not grow in time"
+    },
+    {
+      "date": "2026-10-20",
+      "provider": "Volsnap",
+      "id": 36,
+      "finding": "Shadow copies aborted; imposed storage limit"
+    },
+    {
+      "date": "2026-10-23",
+      "provider": "Application Hang",
+      "id": 1002,
+      "finding": "Three dllhost hangs; PowerToys PowerRename, ImageResizer, FileLocksmith context extensions"
+    }
+  ],
+  "limitations": [
+    "No deletions",
+    "No file-content audit",
+    "No SSD physical diagnostic",
+    "No battery wear assessment",
+    "No Windows update compliance verification",
+    "Startup entries counted, not individually evaluated",
+    "WER 141 reports not established as fresh GPU failures"
+  ]
+}

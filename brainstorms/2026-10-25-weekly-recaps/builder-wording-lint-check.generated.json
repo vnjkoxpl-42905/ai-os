@@ -1,0 +1,46 @@
+{
+  "status": "passed",
+  "probes": [
+    {
+      "sample": "<title>Session Manual</title>",
+      "rejected": true,
+      "message": "Student-facing copy contains banned word: manual"
+    },
+    {
+      "sample": "<p>man&#117;al</p>",
+      "rejected": true,
+      "message": "Student-facing copy contains banned word: manual"
+    },
+    {
+      "sample": "<button aria-label=\"Use man&#117;al\">Open</button>",
+      "rejected": true,
+      "message": "Student-facing copy contains banned word: manual"
+    },
+    {
+      "sample": "<img alt=\"Manual\">",
+      "rejected": true,
+      "message": "Student-facing copy contains banned word: manual"
+    },
+    {
+      "sample": "<input placeholder=\"manual\">",
+      "rejected": true,
+      "message": "Student-facing copy contains banned word: manual"
+    },
+    {
+      "sample": "<input value=\"manual\">",
+      "rejected": true,
+      "message": "Student-facing copy contains banned word: manual"
+    },
+    {
+      "sample": "<a title=\"manual\">Go</a>",
+      "rejected": true,
+      "message": "Student-facing copy contains banned word: manual"
+    }
+  ],
+  "atomic_preflight": {
+    "status": "passed",
+    "invalid_companion_rejected": true,
+    "all_existing_outputs_preserved": true,
+    "temporary_directory_only": true
+  }
+}

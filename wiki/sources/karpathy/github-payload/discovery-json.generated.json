@@ -1,0 +1,111 @@
+{
+  "bytes": 33511,
+  "characters": 33511,
+  "lines": 1029,
+  "wordlike_tokens": 2654,
+  "distinct_characters": 84,
+  "structured": {
+    "root_type": "dict",
+    "node_types": {
+      "dict": 102,
+      "list": 15,
+      "str": 563,
+      "bool": 126,
+      "int": 63,
+      "NoneType": 43
+    },
+    "key_counts": {
+      "repos": 1,
+      "gists": 1,
+      "id": 13,
+      "html_url": 76,
+      "description": 76,
+      "created_at": 76,
+      "files": 13,
+      "full_name": 63,
+      "fork": 63,
+      "license": 63,
+      "pushed_at": 63,
+      "default_branch": 63,
+      "size": 63,
+      "archived": 63,
+      "key": 25,
+      "name": 25,
+      "spdx_id": 25,
+      "url": 25,
+      "node_id": 25
+    },
+    "array_count": 15,
+    "arrays": [
+      {
+        "path": "$.gists",
+        "length": 13
+      },
+      {
+        "path": "$.gists[].files",
+        "length": 1
+      },
+      {
+        "path": "$.gists[].files",
+        "length": 1
+      },
+      {
+        "path": "$.gists[].files",
+        "length": 1
+      },
+      {
+        "path": "$.gists[].files",
+        "length": 1
+      },
+      {
+        "path": "$.gists[].files",
+        "length": 1
+      },
+      {
+        "path": "$.gists[].files",
+        "length": 1
+      },
+      {
+        "path": "$.gists[].files",
+        "length": 1
+      },
+      {
+        "path": "$.gists[].files",
+        "length": 1
+      },
+      {
+        "path": "$.gists[].files",
+        "length": 1
+      },
+      {
+        "path": "$.gists[].files",
+        "length": 1
+      },
+      {
+        "path": "$.gists[].files",
+        "length": 1
+      },
+      {
+        "path": "$.gists[].files",
+        "length": 1
+      },
+      {
+        "path": "$.gists[].files",
+        "length": 1
+      },
+      {
+        "path": "$.repos",
+        "length": 63
+      }
+    ],
+    "numeric_values": 63,
+    "numeric_min": 2,
+    "numeric_max": 757882,
+    "string_count": 563,
+    "string_characters": 15566
+  },
+  "source_path": "DISCOVERY.json",
+  "source_sha256": "88935125c5f6b9a371e916b8146559f175ad3359de68fc34c2b73bb1b00539f8",
+  "method": "json_parse_all_nodes",
+  "parse_error": null
+}

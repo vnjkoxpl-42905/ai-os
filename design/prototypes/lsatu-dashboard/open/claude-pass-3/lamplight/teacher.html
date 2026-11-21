@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lamplight · Teacher home · LSAT U</title>
+
+
+<link href="../../../vendor/4aca9b235de69bee1d.css" rel="stylesheet">
+<link rel="stylesheet" href="lamplight.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="mark" href="#">LSAT <span>U</span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#" aria-current="page">Home</a>
+      <a href="#">Teacher workspace</a>
+      <a href="#">Students</a>
+      <a href="#">Whiteboard</a>
+      <a href="#">Library</a>
+      <a href="#">Reading center</a>
+    </nav>
+    <div class="top__end">
+      <button class="inbox-btn" type="button" data-act="inbox">Inbox <b id="inbox-count">3</b></button>
+      <span class="avatar" aria-label="Joshua Fisseha, teacher">J</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="stage" aria-label="Who needs you">
+      <div class="lit">
+        <div class="cone" aria-hidden="true"></div>
+        <div class="lamp" aria-hidden="true">
+          <div class="lamp__cord"></div>
+          <svg class="lamp__shade" viewBox="0 0 220 70">
+            <defs>
+              <linearGradient id="shade" x1="0" x2="1">
+                <stop offset="0" stop-color="#1d2029"/><stop offset=".42" stop-color="#4a4f5d"/><stop offset=".55" stop-color="#5a5f6c"/><stop offset="1" stop-color="#1a1d25"/>
+              </linearGradient>
+              <radialGradient id="rim" cx=".5" cy=".5" r=".5">
+                <stop offset="0" stop-color="#fff6e2"/><stop offset=".55" stop-color="#ffd598"/><stop offset="1" stop-color="#b36d1e"/>
+              </radialGradient>
+            </defs>
+            <rect x="104" y="0" width="12" height="9" rx="2" fill="#3a3e49"/>
+            <path d="M96 8 h28 C 186 16 212 42 218 61 H2 C 8 42 34 16 96 8 Z" fill="url(#shade)"/>
+            <path d="M40 30 C 70 18 110 15 150 20" stroke="rgba(255,255,255,.18)" stroke-width="1.5" fill="none"/>
+            <ellipse class="lamp__rim" cx="110" cy="62" rx="108" ry="7" fill="url(#rim)"/>
+          </svg>
+          <div class="lamp__glow"></div>
+        </div>
+        <div id="paper-slot"></div>
+      </div>
+
+      <div class="side">
+        <div class="hello">
+          <p class="hello__date">Thursday evening, October 22</p>
+          <h1>Good evening, Joshua.</h1>
+          <p id="summary">Three people wrote to you, and Dakota's session starts at 6:00 pm.</p>
+        </div>
+
+        <section class="waiting" aria-labelledby="waiting-h">
+          <div class="side-h"><h2 id="waiting-h">Also waiting</h2><span>Ordered by what's soonest</span></div>
+          <ul class="q" id="queue"></ul>
+        </section>
+      </div>
+    </section>
+
+    <section class="band" id="assign" aria-labelledby="assign-h">
+      <div class="band-h">
+        <h2 id="assign-h">Assign work</h2>
+        <p>Pick the kind of work and a student. You'll choose the exact set in Assignments.</p>
+      </div>
+      <div class="console">
+        <span class="console__lead" aria-hidden="true">Assign</span>
+        <div class="console__to">
+          <div class="seg" role="group" aria-label="Kind of work" id="seg"></div>
+          <div class="console__who">
+            <label for="who">to</label>
+            <select id="who"></select>
+          </div>
+        </div>
+        <button class="pill pill--solid" type="button" data-act="assign" style="height:46px;padding:0 22px">Continue in Assignments</button>
+      </div>
+    </section>
+
+    <section class="band" aria-labelledby="names-h">
+      <div class="band-h">
+        <h2 id="names-h">Students</h2>
+        <p>Brighter names were active more recently. Type to find someone.</p>
+      </div>
+      <div class="field names-search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <label class="sr" for="find">Find a student</label>
+        <input id="find" type="search" placeholder="Find a student" autocomplete="off">
+      </div>
+      <div class="names" id="names" aria-live="polite"></div>
+    </section>
+
+    <section class="band" aria-labelledby="week-h">
+      <div class="band-h">
+        <h2 id="week-h">The week, by evening</h2>
+        <p>Lit windows are sessions booked on the platform.</p>
+      </div>
+      <div class="windows" id="windows"></div>
+      <p class="caveat">Platform sessions only. Bookings made elsewhere don't appear, so a dark window isn't proof of a free evening.</p>
+    </section>
+  </main>
+
+  <footer class="foot"><span>LSAT U · Lamplight direction</span><span>Prototype with sample data. Actions are simulated.</span></footer>
+</div>
+
+<script src="../../../vendor/cb9c6262bdd703dd5f.js"></script>
+<script src="../../../vendor/efd91b7922887dd22e.js"></script>
+<script src="../../../vendor/36c29c028158e48195.js"></script>
+<script src="../shared/sample.js"></script>
+<script>
+(function () {
+  const { teacher: T, mountSampleBar, toast, Word, word, esc, reduced } = window.LSATU;
+  const state = mountSampleBar({ other: 'student.html', otherLabel: 'Student home' });
+  const hasGsap = !!window.gsap;
+  if (hasGsap) gsap.registerPlugin(Flip, ScrollTrigger);
+  const $ = (s, r = document) => r.querySelector(s);
+  document.body.classList.add('is-' + state);
+
+  let people = state === 'full' ? T.people.map((p) => JSON.parse(JSON.stringify(p))) : [];
+  const roster = state === 'loading' || state === 'error' ? [] : T.roster;
+  let kind = 'Drill';
+  let who = '';
+
+  function signals(p) {
+    const s = [];
+    if (p.session) s.push(`<span class="sig sig--ses"><i></i>Session ${esc(p.session.when.toLowerCase().replace('today', 'today'))}</span>`);
+    if (p.message) s.push(`<span class="sig sig--msg${p.message.unread ? '' : ' is-read'}"><i></i>${p.message.unread ? 'Wrote at ' + esc(p.message.time) + ', unread' : 'Read'}</span>`);
+    return `<span class="signals">${s.join('')}</span>`;
+  }
+
+  function paperHTML(p) {
+    if (state === 'loading') return `<article class="paper" aria-busy="true"><div class="paper__meta"><span class="bar" style="width:220px"></span></div><h2><span class="bar" style="height:56px;width:60%"></span></h2><p class="paper__blurb"><span class="bar" style="width:85%"></span></p><p class="ledger-note">Checking conversations and sessions. Counts appear once they load.</p></article>`;
+    if (state === 'error') return `<article class="paper"><div class="paper__meta"><strong>Conversations didn't load</strong></div><h2>Can't see who's waiting yet.</h2><p class="paper__blurb">The unread count is unknown until this loads. Nothing has been marked read. You can still assign work below.</p><div class="paper__actions"><button class="btn-ink" type="button" data-act="retry">Try again</button><button class="btn-line" type="button" data-act="inbox">Open the inbox</button></div></article>`;
+    if (!p) return `<article class="paper"><div class="paper__meta"><span>All clear</span></div><h2>Nobody is waiting on you.</h2><p class="paper__blurb">No unread conversations, and no sessions on the platform today.</p><div class="paper__actions"><button class="btn-ink" type="button" data-act="goassign">Assign work</button><button class="btn-line" type="button" data-act="students">Open students</button></div></article>`;
+    const m = p.message, ses = p.session;
+    const soon = ses && ses.inMins ? `<strong>Starts in ${ses.inMins} minutes</strong>` : '';
+    const facts = [];
+    if (ses) facts.push(`<li><span>Session</span>${esc(ses.when)}, ${ses.mins} minutes</li>`);
+    facts.push(`<li><span>Activity</span>${esc(p.active)}</li>`);
+    const primary = m && m.unread ? `<button class="btn-ink" type="button" data-act="convo" data-id="${p.id}">Open conversation</button>` : `<button class="btn-ink" type="button" data-act="student" data-id="${p.id}">Open ${esc(p.first)}'s page</button>`;
+    return `<article class="paper" data-flip-id="${p.id}">
+      <div class="paper__meta">${soon}${signals(p)}</div>
+      <h2>${esc(p.name)}</h2>
+      ${m ? `<p class="paper__quote">“${esc(m.text)}”</p>` : ''}
+      ${m && m.attachment ? `<p class="paper__attach"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m21 11-8.5 8.5a5 5 0 0 1-7-7L14 4a3.5 3.5 0 0 1 5 5l-8.5 8.5a2 2 0 0 1-3-3L15 7"/></svg>${esc(m.attachment)}</p>` : ''}
+      <ul class="paper__facts">${facts.join('')}</ul>
+      <div class="paper__actions">${primary}
+        <button class="btn-line" type="button" data-act="assignfor" data-id="${p.id}">Assign work</button>
+        ${m && m.unread ? `<button class="btn-line" type="button" data-act="student" data-id="${p.id}">Open ${esc(p.first)}'s page</button>` : ''}
+      </div></article>`;
+  }
+
+  function queueHTML() {
+    if (state === 'loading') return [1, 2, 3].map(() => `<li><div class="q-row"><div><span class="bar" style="width:80px;height:10px"></span><span class="bar" style="width:60%;height:22px;margin-top:10px"></span></div></div></li>`).join('');
+    if (state === 'error') return `<li><p class="notice">Unknown until conversations load.</p></li>`;
+    const rest = people.slice(1);
+    if (!rest.length) return `<li><p class="notice">${people.length ? 'Nobody else right now.' : 'Nobody is waiting.'}</p></li>`;
+    return rest.map((p) => `<li><div class="q-row" data-flip-id="${p.id}">
+      <button class="q-look" type="button" data-act="look" data-id="${p.id}" aria-label="Look at ${esc(p.name)}">
+        <span class="q-title">${esc(p.name)}</span>
+        ${signals(p)}
+        ${p.message ? `<span class="q-meta">${esc(p.message.text.length > 64 ? p.message.text.slice(0, 62) + '…' : p.message.text)}</span>` : ''}
+        <span class="q-hint">Bring them under the lamp</span>
+      </button>
+      <div class="q-acts">${p.message && p.message.unread ? `<button class="pill" type="button" data-act="convo" data-id="${p.id}">Open</button>` : `<button class="pill" type="button" data-act="student" data-id="${p.id}">Student</button>`}</div>
+    </div></li>`).join('');
+  }
+
+  function summary() {
+    const s = $('#summary'), c = $('#inbox-count');
+    if (state === 'loading') { s.textContent = 'Checking who needs you.'; c.textContent = '—'; return; }
+    if (state === 'error') { s.textContent = 'Conversations didn’t load, so the unread count is unknown.'; c.textContent = '?'; return; }
+    const unread = people.filter((p) => p.message && p.message.unread).length;
+    const next = people.find((p) => p.session && p.session.inMins);
+    c.textContent = unread; c.classList.toggle('is-zero', !unread);
+    let t = unread ? `${Word(unread)} ${unread === 1 ? 'person wrote' : 'people wrote'} to you` : 'Nobody is waiting on a reply';
+    t += next ? `, and ${next.first}'s session starts at ${next.session.short}.` : '.';
+    s.textContent = t;
+  }
+
+  function render() {
+    $('#paper-slot').innerHTML = paperHTML(people[0]);
+    $('#queue').innerHTML = queueHTML();
+    summary();
+  }
+
+  function consoleRender() {
+    $('#seg').innerHTML = T.workTypes.map((k) => `<button type="button" aria-pressed="${k === kind}" data-kind="${k}">${k}</button>`).join('');
+    $('#who').innerHTML = `<option value="">Choose a student</option>` + T.roster.map((r) => `<option${r.name === who ? ' selected' : ''}>${esc(r.name)}</option>`).join('');
+  }
+
+  function namesRender(q = '') {
+    const box = $('#names');
+    if (state === 'loading') { box.innerHTML = `<span class="names__empty">Loading students.</span>`; return; }
+    if (state === 'error') { box.innerHTML = `<span class="names__empty">Students didn't load. Try again in a moment.</span>`; return; }
+    q = q.trim().toLowerCase();
+    box.innerHTML = roster.map((r) => {
+      const hit = q && r.name.toLowerCase().includes(q);
+      const cls = q ? (hit ? 'is-match' : 'is-miss') : '';
+      return `<button type="button" class="${cls}" style="--a:${(0.32 + r.recency * 0.6).toFixed(2)}" data-act="name" data-name="${esc(r.name)}" title="${esc(r.active)}">${esc(r.name)}<span class="sr">, ${esc(r.active)}</span></button>`;
+    }).join('');
+    if (q && !roster.some((r) => r.name.toLowerCase().includes(q))) box.insertAdjacentHTML('beforeend', `<span class="names__empty">No student matches “${esc(q)}”.</span>`);
+  }
+
+  function windowsRender() {
+    $('#windows').innerHTML = T.week.map((d) => {
+      const items = state === 'full' ? d.items : [];
+      const pane = items.length
+        ? `<div class="pane is-cool" data-lit>${items.map((x) => `<div><div class="pane__t">${esc(x.t)}</div><div class="pane__s">${esc(x.s)}</div></div>`).join('')}</div>`
+        : `<div class="pane"><span class="pane__empty">${state === 'loading' ? 'Loading' : state === 'error' ? 'Unknown' : 'Nothing on the platform'}</span></div>`;
+      return `<div class="win${d.today ? ' is-today' : ''}"><div class="win__label"><span>${d.today ? 'Tonight' : d.dow}</span><b>${d.d}</b></div>${pane}</div>`;
+    }).join('');
+  }
+
+  render(); consoleRender(); namesRender(); windowsRender();
+
+  const lamp = $('.lamp');
+  function swingLamp(a) { if (hasGsap && !reduced()) gsap.fromTo(lamp, { rotation: a }, { rotation: 0, duration: 2.4, ease: 'elastic.out(1, 0.28)', overwrite: true }); }
+
+  let swapping = false;
+  function bringForward(id) {
+    const i = people.findIndex((x) => x.id === id);
+    if (i <= 0 || swapping) return;
+    const commit = () => { const [p] = people.splice(i, 1); people.unshift(p); const y = window.scrollY; render(); window.scrollTo(0, y); };
+    const focusBtn = () => { const b = $('.paper .btn-ink'); if (b) b.focus({ preventScroll: true }); };
+    if (!hasGsap || reduced()) { commit(); focusBtn(); return; }
+    swapping = true;
+    gsap.timeline({ onComplete: () => {
+      const rows = Flip.getState('.q-row');
+      commit();
+      Flip.from(rows, { targets: '.q-row', duration: .55, ease: 'power3.inOut',
+        onEnter: (els) => gsap.fromTo(els, { opacity: 0, x: -24 }, { opacity: 1, x: 0, duration: .45, delay: .42, ease: 'power2.out' }) });
+      gsap.fromTo('.paper', { x: 70, y: -18, rotation: 2.4, opacity: 0 },
+        { x: 0, y: 0, rotation: -0.4, opacity: 1, duration: .7, ease: 'power3.out', clearProps: 'opacity', onComplete: () => { swapping = false; } });
+      // the lamp flickers as something new is set down under it
+      gsap.timeline().to(['.cone', '.lamp__glow'], { opacity: .45, duration: .06 }).to(['.cone', '.lamp__glow'], { opacity: 1, duration: .08 }).to(['.cone', '.lamp__glow'], { opacity: .7, duration: .05 }).to(['.cone', '.lamp__glow'], { opacity: 1, duration: .3 });
+      swingLamp(-5);
+      focusBtn();
+    } })
+      .to('.paper', { x: -50, y: 26, rotation: -2.5, opacity: 0, duration: .32, ease: 'power2.in' }, 0)
+      .to(`.q-row[data-flip-id="${id}"]`, { x: -18, opacity: 0, duration: .24, ease: 'power2.in' }, 0);
+    setTimeout(() => { swapping = false; }, 1600);
+  }
+
+  if (!reduced()) {
+    let raf = 0, px = 0, py = 0;
+    window.addEventListener('pointermove', (e) => {
+      px = e.clientX; py = e.clientY;
+      if (raf) return;
+      raf = requestAnimationFrame(() => {
+        raf = 0;
+        document.body.style.setProperty('--mx', px + 'px');
+        document.body.style.setProperty('--my', (py + window.scrollY) + 'px');
+        const row = document.elementFromPoint(px, py)?.closest('.q-row');
+        if (row) { const r = row.getBoundingClientRect(); row.style.setProperty('--lx', (px - r.left) + 'px'); row.style.setProperty('--ly', (py - r.top) + 'px'); }
+        if (hasGsap) { const r = lamp.getBoundingClientRect(); gsap.to(lamp, { rotation: gsap.utils.clamp(-3, 3, (px - (r.left + r.width / 2)) / window.innerWidth * 5), duration: 1.8, ease: 'power3.out', overwrite: 'auto' }); }
+      });
+    }, { passive: true });
+  }
+
+  if (hasGsap && !reduced()) {
+    const L = ['.cone', '.lamp__glow', '.lamp__rim'];
+    gsap.set(L, { opacity: 0 }); gsap.set('.lamp__rim', { opacity: .25 });
+    gsap.set('.paper', { filter: 'brightness(.42) saturate(.6)' });
+    const tl = gsap.timeline({ defaults: { ease: 'power2.out' } })
+      .to(L, { opacity: 1, duration: .06 }, .35).to(L, { opacity: .35, duration: .07 }).to(L, { opacity: 1, duration: .5 })
+      .to('.paper', { filter: 'brightness(1) saturate(1)', duration: .9, clearProps: 'filter' }, .4);
+    swingLamp(-4);
+    setTimeout(() => { if (tl.progress() < 1) tl.progress(1); }, 2200);
+    const lit = gsap.utils.toArray('.pane[data-lit]');
+    lit.forEach((p) => gsap.set(p, { filter: 'brightness(.18) saturate(.3)' }));
+    ScrollTrigger.create({ trigger: '#windows', start: 'top 80%', once: true, onEnter: () => lit.forEach((p, i) => {
+      gsap.timeline({ delay: i * .3 }).to(p, { filter: 'brightness(1) saturate(1)', duration: .05 }).to(p, { filter: 'brightness(.5)', duration: .06 }).to(p, { filter: 'brightness(1) saturate(1)', duration: .45, clearProps: 'filter' });
+      setTimeout(() => gsap.set(p, { clearProps: 'filter' }), 2600);
+    }) });
+  }
+
+  const byId = (id) => people.find((p) => p.id === id);
+  document.addEventListener('click', (e) => {
+    const k = e.target.closest('[data-kind]');
+    if (k) { kind = k.dataset.kind; consoleRender(); $(`[data-kind="${kind}"]`).focus(); return; }
+    const b = e.target.closest('[data-act]');
+    if (!b) return;
+    const act = b.dataset.act, p = b.dataset.id && byId(b.dataset.id);
+    if (act === 'look') return bringForward(b.dataset.id);
+    if (act === 'convo' && p) {
+      p.message.unread = false;
+      const y = window.scrollY; render(); window.scrollTo(0, y);
+      return toast(`Opened ${p.first}'s conversation. It's marked read; nothing is deleted.`);
+    }
+    if (act === 'student' && p) return toast(`Opening ${p.name}'s page.`);
+    if (act === 'assignfor' && p) { who = p.name; consoleRender(); $('#assign').scrollIntoView({ behavior: reduced() ? 'auto' : 'smooth', block: 'center' }); setTimeout(() => $('#who').focus({ preventScroll: true }), 500); return; }
+    if (act === 'goassign') { $('#assign').scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+    if (act === 'assign') {
+      const w = $('#who').value;
+      if (!w) { $('#who').focus(); return toast('Choose a student first.'); }
+      return toast(`Opening Assignments: ${kind.toLowerCase()} for ${w}.`);
+    }
+    if (act === 'name') { who = b.dataset.name; consoleRender(); return toast(`Opening ${b.dataset.name}'s page.`); }
+    if (act === 'students') return toast('Opening Students.');
+    if (act === 'inbox') return toast('Opening the inbox.');
+    if (act === 'retry') { const u = new URL(location.href); u.searchParams.set('state', 'full'); location.href = u; }
+  });
+  $('#who').addEventListener('change', (e) => { who = e.target.value; });
+  $('#find').addEventListener('input', (e) => namesRender(e.target.value));
+  $('#find').addEventListener('keydown', (e) => {
+    if (e.key !== 'Enter') return;
+    const hit = $('#names .is-match'); if (hit) hit.click();
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+{
+  "status": "completed",
+  "recovered_after_adapter_timeout": true,
+  "session_id": "8d0a73b1-8ead-4ea6-b995-afa977d3404a",
+  "requested_model": "gemini-4-argon",
+  "requested_effort": "high",
+  "model_enum": "MODEL_PLACEHOLDER_M417",
+  "read_only_audit": "passed",
+  "response": {
+    "verdict": "REVISE",
+    "summary": "Read-only code and visual artifact review of the My Work scroll stagger, date grouping/labeling, and assigned-work filter implementation identified five concrete correctness and spec-fidelity defects (1 high, 3 medium, 1 low). Most notably: (1) pointer-driven filter toggles and portaled Radix Select changes do not trigger useClassroomMotion's list-interaction settlement, leaving previously offscreen rows paused at opacity 0 until resize/scroll timers fire and allowing newly paginated/filtered rows to animate on filter changes; (2) in-view [data-motion-list] items compute stagger index per list container rather than DOM reading order and clamp delays at 150ms after row 3, causing out-of-order reveals across status/month sections and simultaneous 150ms-delayed batch animations on 'Load more notes'; (3) returning from a note reader runs useEffect after useClassroomMotion's useLayoutEffect, measuring and jumping to below-the-fold notes while sibling rows remain paused at opacity 0; (4) MyWorkPage validates URL subject/kind filters against currently loaded visible rows rather than valid domain values, dropping active filters during partial multi-query loads or when a filtered category becomes empty; and (5) non-list/empty/loading My Work states fall back to the 10px blur CLASSROOM_REVEAL on parent containers while role='status' loading nodes ignore data-motion-ready='false'.",
+    "findings": [
+      {
+        "id": "MW-MOTION-01",
+        "severity": "high",
+        "path": "src/hooks/useClassroomMotion.ts",
+        "evidence": "At src/hooks/useClassroomMotion.ts:192-198, `useList` (which sets `listInteraction = true` and settles all `records.filter(r => r.list)`) is only attached to `keydown`, `input`, and `change` events on `root`. In `src/components/my-work/TeachingNotesArchive.tsx:112-113` and `src/pages/MyWorkPage.tsx:69,75`, the `All`/`Unread` filter buttons, `Clear filters` buttons, and `WorkFilterSelect` Radix `<Select>` menus (whose `SelectContent` portals to `document.body` via `src/components/ui/select.tsx:76`) update React state or URL search params on pointer click without firing `keydown`, `input`, or native `change` on `root`. When a user filters with a mouse/touch pointer: (a) `listInteraction` stays `false`; (b) rows that were initially below the fold (`reachable === true`, set to `opacity: 0, y: 8, paused: true` at `useClassroomMotion.ts:157-165`) and move into the viewport when above-the-fold rows are filtered out remain invisible (`opacity: 0`) until the 100ms `ResizeObserver` debounce (`useClassroomMotion.ts:179`) or a scroll event fires; and (c) in `TeachingNotesArchive.tsx:40`, notes beyond the initial `PAGE_SIZE = 12` slice that were not mounted on initial render (`!completedIds.has(id)`) and enter the filtered slice animate as newly discovered items (or hide at `opacity: 0` if below the fold), violating the brief's 'no filter-driven replay' requirement.",
+        "fix": "Mark list interaction active and settle all list records (`useList()`) when pointer/click filter controls or portaled select controls associated with the motion root are activated (for example, by handling pointer/click activation on `[data-motion-filter]` controls or dispatching a custom event / attribute update on `root` from `TeachingNotesArchive` and `MyWorkPage` filter handlers before state changes), and add a unit test in `src/hooks/useClassroomMotion.test.tsx` verifying that pointer-driven filter state updates do not hide or animate newly surfaced list items."
+      },
+      {
+        "id": "MW-MOTION-02",
+        "severity": "medium",
+        "path": "src/hooks/useClassroomMotion.ts",
+        "evidence": "At src/hooks/useClassroomMotion.ts:132-139 and 160, each `[data-motion-list]` element (`<div className=\"teaching-notes-grid\" data-motion-list>` per month in `TeachingNotesArchive.tsx:113` and `<ul data-motion-list>` per status section in `MyWorkPage.tsx:77`) receives its own `groupId` and per-group `index` counter starting at 0, and in-view items (`!reachable`) use `delay: Math.min(index * 0.05, 0.15)` instead of `queueListEntry` (`useClassroomMotion.ts:84-97`). This causes three concrete defects: (1) When multiple status groups (`In progress`, `To start`, `Progress to confirm` in `MyWorkPage.tsx`) or multiple month groups (`TeachingNotesArchive.tsx`) are simultaneously in view above the fold, the first row of each group gets `index = 0` (`delay = 0s`) while the second row of an earlier group gets `index = 1` (`delay = 0.05s`), so lower groups start animating before earlier groups finish—violating 'actual reading order'; (2) When clicking `Load more notes` (`TeachingNotesArchive.tsx:114`) appends notes into an existing month group whose counter in `groups.get(groupId)` is already `>= 3`, every newly appended note that lands inside the viewport (`!reachable`) gets clamped to the exact same `delay = 0.15s`, pausing 150ms and revealing simultaneously with zero stagger; (3) Any single in-view list with more than 4 visible rows gives rows 3..N identical `0.15s` delays instead of distributing the entering batch across at most 150ms.",
+        "fix": "Route in-view (`!reachable`) list items through `queueListEntry` (creating their `fromTo` tween with `paused: true, immediateRender: true, delay: 0` and queuing them in `entering` so `flushList` sorts all entering list items across all visible `[data-motion-list]` containers in DOM reading order and distributes delays via `Math.min(0.05, 0.15 / Math.max(1, batch.length - 1))`). Reset or bypass per-group cumulative counters for subsequent batches such as `Load more notes`."
+      },
+      {
+        "id": "MW-MOTION-03",
+        "severity": "medium",
+        "path": "src/components/my-work/TeachingNotesArchive.tsx",
+        "evidence": "When returning from `/classroom/item/:id` to `/my-work/notes`, `useClassroomMotion` executes in `useLayoutEffect` (`src/hooks/useClassroomMotion.ts:38`) before `TeachingNotesArchive`'s return-anchor `useEffect` (`src/components/my-work/TeachingNotesArchive.tsx:56-69`). During `useLayoutEffect`, scroll position is still at the top of the document and `document.activeElement` is not yet on the restored note link, so `discover(true)` marks below-the-fold note cards (e.g., notes 4..11) as `reachable` with `opacity: 0, y: 8, paused: true`. When `TeachingNotesArchive`'s `useEffect` then calls `target.focus({ preventScroll: true })` and `returnToNote(target, ...)` (`src/hooks/useNotesArchiveScroll.ts:11-26`), `focusin` only triggers `interact` (`useClassroomMotion.ts:187-191`), which settles only `target` itself and not sibling list rows. On instant return (`navigationType === 'POP'`, keyboard return, or coarse/reduced pointer) or smooth scroll to a lower note, the viewport jumps to `target` while adjacent visible note rows remain at `opacity: 0` until `ScrollTrigger` fires and animates them, and if `query.data` resolves asynchronously after mount, `returnToNote` measures `target.getBoundingClientRect().top` while `target` still has its `+8px` GSAP offset.",
+        "fix": "Settle all list items (`useList()`) when restoring a `returnNoteId` in `TeachingNotesArchive.tsx` (or treat `focusin` inside `[data-motion-list]` as `useList()` in `useClassroomMotion.ts:187-191`) before `returnToNote` measures `target.getBoundingClientRect()` and scrolls."
+      },
+      {
+        "id": "MW-WORK-01",
+        "severity": "medium",
+        "path": "src/pages/MyWorkPage.tsx",
+        "evidence": "In `src/pages/MyWorkPage.tsx:40-43` and `69`, `subjects` and `kinds` are derived solely from currently loaded `visible` rows, and `subject` / `kind` are coerced to `''` whenever `subjects.includes(requestedSubject)` or `kinds.includes(requestedKind)` is false (`const subject = subjects.includes(requestedSubject) ? requestedSubject : ''; const kind = kinds.includes(requestedKind) ? requestedKind : '';`). This breaks filter fidelity in two scenarios: (1) `useAssignedTodoFeed.ts:368` sets `loading = false` as soon as any of its five parallel queries populates `rows.length > 0` (`rows.length === 0 && (hwLoading || ...)`). When navigating to `/my-work/to-do?kind=Guided+drill` (e.g., returning from a guided drill via `returnTo`), if `homework_assignments` or `classroom_items` resolves before `todo-feed:guided`, `kinds` initially contains only `['Practice set']`, causing `kind` to evaluate to `''` and flashing unfiltered Practice set rows until `todo-feed:guided` resolves; (2) If a student filters by `?kind=Guided+drill` (or `?subject=rc`), completes the last matching To-Do item, and returns via `returnTo`, `visible` on the To-Do tab has 0 matching rows, so `kinds.includes('Guided drill')` is false and `MyWorkPage` silently drops the filter and displays unrelated assignments instead of rendering the empty-filter state (`No assignments match these filters.` + `Clear filters`) as `TeachingNotesArchive.tsx:36,41-42,112` does.",
+        "fix": "Validate `requestedSubject` and `requestedKind` against the known domain sets in `src/components/my-work/assignedWorkOrganization.ts` (`lr`, `rc`, `mixed`, `unknown` for subject; `Practice set`, `Assignment`, `Activity`, `Guided drill`, `Course`, `Weekly task`, `Reading Center` for work kind), keep the active filter value in the `Select` options when `requestedSubject`/`requestedKind` is valid even if 0 rows in the current tab match, and gate `useAssignedTodoFeed.loading` (or filter fallback) so partial multi-source loads do not transiently clear active URL filters."
+      },
+      {
+        "id": "MW-MOTION-04",
+        "severity": "low",
+        "path": "src/pages/MyWorkPage.tsx",
+        "evidence": "First, `src/pages/MyWorkPage.tsx:17` and `52` render `<p data-motion-item data-motion-ready=\"false\" role=\"status\" className=\"student-destination-message\">Loading your work…</p>`, but `src/hooks/useClassroomMotion.ts:67` explicitly excludes `[role=\"status\"]` in `eligible()`, making `data-motion-item data-motion-ready=\"false\"` on those paragraphs dead attributes that never register in `pending`. Second, when `StudentDestination` (`src/pages/StudentDestination.tsx:97`, `<div data-motion-enter=\"\" className=\"student-destination-content\">`) or `<section data-motion-item className=\"student-work-list my-work-organized\">` (`MyWorkPage.tsx:61`) renders without eligible child `[data-motion-item]` rows—which occurs during `TeachingNotesArchive` loading/error/empty states (`TeachingNotesArchive.tsx:110`), on Personal Notes `?view=mine` (`MyWorkNotesPage.tsx:133`), during `MyWorkGate` access checks (`MyWorkGate.tsx:16`), on an empty `Completed` tab (`MyWorkPage.tsx:61`), or when filters match 0 rows on initial load (`MyWorkPage.tsx:70`)—`useClassroomMotion` falls back to animating the parent container with `CLASSROOM_REVEAL` (`filter: 'blur(10px)', y: 14, duration: 0.3` at `useClassroomMotion.ts:9,161`), violating the brief requirement 'No gold/navy, broad blur or unrelated decorative cards.'",
+        "fix": "Remove the dead `data-motion-item data-motion-ready=\"false\"` attributes from the `role=\"status\"` paragraphs in `MyWorkPage.tsx:17,52`, remove `data-motion-item` from the outer `<section>` wrapper at `MyWorkPage.tsx:61` so only `<li data-motion-item>` rows animate, and either omit `data-motion-enter` on `StudentDestination.tsx:97` when `destination === 'my-work'` or use a non-blurred entrance preset for My Work containers."
+      }
+    ],
+    "coverage": [
+      "docs/plans/my-work-scroll-filters-gemini-review.md",
+      "src/hooks/useClassroomMotion.ts",
+      "src/hooks/useClassroomMotion.test.tsx",
+      "src/components/classroom/shell/ClassroomMotionContent.tsx",
+      "src/pages/StudentDestination.tsx",
+      "src/components/classroom/shell/ClassroomLayout.tsx",
+      "src/pages/teacher/shell/TeacherWorkspaceShell.tsx",
+      "src/pages/teacher/students/StudentDossier.tsx",
+      "src/features/reading-center/index.tsx",
+      "src/features/reading-center/components/AppShell.tsx",
+      "src/pages/teacher/tools/TeacherReadingCenter.tsx",
+      "src/components/my-work/TeachingNotesArchive.tsx",
+      "src/components/my-work/TeachingNotesArchive.test.tsx",
+      "src/components/my-work/teachingNoteDates.ts",
+      "src/components/my-work/teachingNoteDates.test.ts",
+      "src/components/my-work/teachingNotesArchiveData.ts",
+      "src/components/my-work/WorkFilterSelect.tsx",
+      "src/hooks/useNotesArchiveScroll.ts",
+      "src/hooks/useNotesSelectMotion.ts",
+      "src/pages/MyWorkPage.tsx",
+      "src/pages/MyWorkPage.organization.test.tsx",
+      "src/pages/MyWorkPage.readingCenter.test.tsx",
+      "src/pages/MyWorkPage.refetch.test.tsx",
+      "src/components/my-work/assignedWorkOrganization.ts",
+      "src/hooks/useAssignedTodoFeed.ts",
+      "src/pages/MyWorkNotesPage.tsx",
+      "src/lib/myWorkNotesNavigation.ts",
+      "src/components/classroom/ClassroomRouteViews.tsx",
+      "src/components/MyWorkGate.tsx",
+      "src/App.tsx",
+      "src/pages/myWorkNotesRefinement.css",
+      "src/pages/myWorkNotes.css",
+      "src/pages/myWorkOrganization.css",
+      "src/components/ui/select.tsx",
+      "src/components/classroom/classroom.css",
+      "src/styles/classroom-motion.css",
+      "src/index.css",
+      "scripts/verification/my-work-preview.tsx",
+      "scripts/verification/start-my-work-preview.mjs",
+      "docs/verification/platform-motion-20261022.md",
+      "C:/Users/Joshu/dev/ai-os/design/reviews/my-work-taste-v2-20261027/REPORT.md",
+      "C:/Users/Joshu/dev/ai-os/design/reviews/my-work-taste-v2-20261027/stagger-scroll-trace.json",
+      "C:/Users/Joshu/dev/ai-os/design/reviews/my-work-taste-v2-20261027/stagger-viewport-checks.json",
+      "C:/Users/Joshu/dev/ai-os/design/reviews/my-work-taste-v2-20261027/stagger-notes-desktop.png (visually inspected via read_file)",
+      "C:/Users/Joshu/dev/ai-os/design/reviews/my-work-taste-v2-20261027/stagger-notes-phone.png (visually inspected via read_file)",
+      "C:/Users/Joshu/dev/ai-os/design/reviews/my-work-taste-v2-20261027/stagger-work-desktop.png (visually inspected via read_file)",
+      "C:/Users/Joshu/dev/ai-os/design/reviews/my-work-taste-v2-20261027/stagger-work-phone.png (visually inspected via read_file)"
+    ],
+    "limitations": [
+      "Review performed strictly read-only per instructions; no commands, unit tests, typechecks, builds, or live browser sessions were executed by the reviewer.",
+      "Host-reported test results (56 passing tests), build/typecheck status, and JSON scroll/viewport traces were inspected as static evidence only, not independently re-executed.",
+      "Visual inspection was performed on the four static PNG screenshots in C:/Users/Joshu/dev/ai-os/design/reviews/my-work-taste-v2-20261027/; live frame-by-frame motion cadence, physical mobile Safari rendering, and live Supabase RLS/read-state persistence were not exercised."
+    ]
+  }
+}

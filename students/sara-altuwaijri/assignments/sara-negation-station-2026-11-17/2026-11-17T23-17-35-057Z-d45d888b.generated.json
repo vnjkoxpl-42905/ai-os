@@ -1,0 +1,36 @@
+{
+  "plan_id": "sara-negation-station-2026-11-17",
+  "student": "Sara",
+  "student_id": "f005fbda-0ace-4c01-9c89-9fa242dbe918",
+  "dry_run": true,
+  "verify_existing": false,
+  "results": [
+    {
+      "kind": "activity",
+      "title": "Negation Station",
+      "action": "would_assign",
+      "day": "2026-11-17",
+      "due": "2026-11-21",
+      "verified": false
+    }
+  ],
+  "metrics": {
+    "sign_ins": 1,
+    "student_lookups": 1,
+    "bank_reads": 0,
+    "planned": 1,
+    "assigned": 0,
+    "elapsed_ms": 1586
+  },
+  "runtime": {
+    "lock_ms": 8,
+    "fetch_ms": 290,
+    "setup_ms": 1112,
+    "execute_ms": 5519,
+    "total_ms": 6929,
+    "cache_hit": true,
+    "ops_commit": "75d683a81e7a103f563a735bc19c51893908f056",
+    "source_sha256": "f73382a84d027bbce3dfbdd5eb26a0a7b37ae918782b62a4094e7335c806e0e6"
+  },
+  "audit_file": "C:\\Users\\Joshu\\dev\\ai-os\\students\\sara-altuwaijri\\assignments\\sara-negation-station-2026-11-17\\2026-11-17T23-17-35-057Z-d45d888b.generated.json"
+}

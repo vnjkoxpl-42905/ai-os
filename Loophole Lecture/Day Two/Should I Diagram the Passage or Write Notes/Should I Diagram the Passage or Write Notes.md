@@ -1,0 +1,265 @@
+# Should I Diagram the Passage or Write Notes?
+
+Source: https://new.theloophole.com/training-camp/browse/stage/learn/video/should-i-diagram-the-passage-or-write-notes?source=timeline&plan=rc-plan
+
+Duration: 3:27. Captured: 2026-10-14.
+
+Transcript origin: English auto-generated native captions. Complete caption extraction, not a human-verified verbatim transcript. Original wording retained.
+
+[00:00:00.000 - 00:00:01.885]
+Alright, you are about to see me display the greatest
+
+[00:00:01.885 - 00:00:04.085]
+degree of flexibility that I will in this entire course.
+
+[00:00:04.105 - 00:00:06.685]
+And so get ready. Should you diagram
+
+[00:00:07.265 - 00:00:09.165]
+or write any notes during the RC passage?
+
+[00:00:10.255 - 00:00:11.525]
+Short answer, I don't really care,
+
+[00:00:12.705 - 00:00:14.565]
+but I will tell you what to watch out for
+
+[00:00:14.565 - 00:00:15.645]
+as you make your own decisions.
+
+[00:00:15.665 - 00:00:17.445]
+And the reason why I don't really care,
+
+[00:00:17.785 - 00:00:21.205]
+the reason why I don't have like a super firm opinion on
+
+[00:00:21.615 - 00:00:24.685]
+notes or markup of like, highlight, underline, all of
+
+[00:00:24.685 - 00:00:26.885]
+that kind of stuff is because in my experience,
+
+[00:00:26.885 - 00:00:28.285]
+they don't really change the score at all.
+
+[00:00:28.595 - 00:00:30.605]
+It's, you know, you can do it if it
+
+[00:00:30.605 - 00:00:31.765]
+really makes you feel better.
+
+[00:00:31.905 - 00:00:34.805]
+Um, but most of the impact is gonna be psychological comfort
+
+[00:00:34.945 - 00:00:36.245]
+of how it makes you feel.
+
+[00:00:36.745 - 00:00:38.325]
+And you know, whether there's a time
+
+[00:00:38.325 - 00:00:39.885]
+investment component to that.
+
+[00:00:40.385 - 00:00:41.725]
+Uh, beyond that,
+
+[00:00:41.865 - 00:00:45.365]
+the score doesn't really get affected whether you mark up
+
+[00:00:45.425 - 00:00:46.445]
+or don't mark up.
+
+[00:00:46.785 - 00:00:48.005]
+And same thing with notes.
+
+[00:00:48.225 - 00:00:50.445]
+The score doesn't really change whether you take notes
+
+[00:00:50.545 - 00:00:52.285]
+or don't take notes typically.
+
+[00:00:52.675 - 00:00:55.085]
+That said, maybe there is something special about you
+
+[00:00:55.175 - 00:00:57.565]
+where something is extremely valuable to you.
+
+[00:00:57.565 - 00:01:00.125]
+And that is why I say follow your bliss.
+
+[00:01:00.625 - 00:01:05.005]
+If it works for you in time to take some notes, wonderful,
+
+[00:01:05.275 - 00:01:06.365]
+have a great time with it.
+
+[00:01:06.785 - 00:01:09.485]
+But one small caveat, just make sure
+
+[00:01:09.485 - 00:01:10.765]
+that your translation skills
+
+[00:01:11.635 - 00:01:14.215]
+and especially your translation recall, are not
+
+[00:01:14.815 - 00:01:16.935]
+dependent on those notes that you're taking.
+
+[00:01:17.275 - 00:01:19.375]
+For instance, I don't want you to be like, oh, well I,
+
+[00:01:19.815 - 00:01:22.695]
+I could remember the second paragraph if I
+
+[00:01:22.695 - 00:01:23.735]
+read my notes on it.
+
+[00:01:24.055 - 00:01:26.295]
+I was like, okay, that's not really recalling the second
+
+[00:01:26.295 - 00:01:28.575]
+paragraph and I just don't want those notes
+
+[00:01:28.595 - 00:01:30.695]
+to undercut the quality of the translation.
+
+[00:01:30.695 - 00:01:33.095]
+Basically taking off the hook from your real passage
+
+[00:01:33.415 - 00:01:35.655]
+retention skills that we wanna build those
+
+[00:01:36.235 - 00:01:39.175]
+in isolation from a reliance on note taking.
+
+[00:01:39.515 - 00:01:41.135]
+And so then one other thing about
+
+[00:01:41.135 - 00:01:42.615]
+highlighting and underlining.
+
+[00:01:42.955 - 00:01:46.455]
+So sometimes students will really overlook things like
+
+[00:01:46.705 - 00:01:50.135]
+adjectives or certain modifier words
+
+[00:01:50.355 - 00:01:53.215]
+or the word like only or whatever.
+
+[00:01:53.595 - 00:01:55.615]
+And maybe they'll wanna be working on their ability
+
+[00:01:55.755 - 00:01:57.695]
+to not overlook those certain words.
+
+[00:01:58.045 - 00:02:02.255]
+Then sometimes in a short term drill environment, I'll say,
+
+[00:02:02.255 - 00:02:04.255]
+okay, for your next, let's say two
+
+[00:02:04.255 - 00:02:07.015]
+or three sections, highlight all the adjectives
+
+[00:02:07.235 - 00:02:09.375]
+or highlight all the only never,
+
+[00:02:09.555 - 00:02:11.335]
+always is or whatever it might be.
+
+[00:02:11.875 - 00:02:14.375]
+And that is a nice little drill to have somebody
+
+[00:02:14.435 - 00:02:16.855]
+for a temporary period remedy
+
+[00:02:17.075 - 00:02:20.895]
+and imbalance so that we can live that reality of every word
+
+[00:02:20.895 - 00:02:24.015]
+of the stimulus slash passage being the most important word
+
+[00:02:24.015 - 00:02:25.495]
+of the stimulus slash passage.
+
+[00:02:25.875 - 00:02:28.055]
+We don't want to elevate certain words over others.
+
+[00:02:28.515 - 00:02:31.255]
+And so as long as you're highlighting
+
+[00:02:31.255 - 00:02:34.495]
+and underlining is more conceptually based, you know, oh,
+
+[00:02:34.525 - 00:02:36.775]
+okay, this is a, a really important point highlight.
+
+[00:02:37.365 - 00:02:38.935]
+Sure, go for it. Wonderful.
+
+[00:02:39.475 - 00:02:42.455]
+As long as it's not elevating certain levels of text
+
+[00:02:42.555 - 00:02:44.575]
+as like this is the part I have to remember, all the stuff
+
+[00:02:44.575 - 00:02:46.375]
+that isn't highlighted is unimportant
+
+[00:02:46.435 - 00:02:47.775]
+and I don't care or whatever.
+
+[00:02:47.955 - 00:02:49.535]
+As long as it's not manifesting like that
+
+[00:02:49.555 - 00:02:50.935]
+and it's really just kind of like a,
+
+[00:02:51.335 - 00:02:54.655]
+a mental note taking device of certain marks on the passage,
+
+[00:02:55.075 - 00:02:56.215]
+no problem with it whatsoever.
+
+[00:02:56.555 - 00:02:58.735]
+Um, you just need to make sure that you're not
+
+[00:02:59.275 - 00:03:02.725]
+Letting that technique become the star of the show
+
+[00:03:02.785 - 00:03:04.605]
+to the point where you're focusing more on highlighting
+
+[00:03:04.605 - 00:03:06.405]
+and underlining or note taking than
+
+[00:03:06.405 - 00:03:07.525]
+you are the passage itself.
+
+[00:03:07.785 - 00:03:11.765]
+Uh, you want it to be really quick and fluid messy even
+
+[00:03:11.765 - 00:03:13.925]
+because it's not that important, uh, so
+
+[00:03:13.925 - 00:03:15.045]
+that it doesn't detract from the things
+
+[00:03:15.045 - 00:03:16.845]
+that really are important, which is the context
+
+[00:03:16.845 - 00:03:18.925]
+of the passage and your relationship
+
+[00:03:18.925 - 00:03:20.045]
+with the context of the passage.
+
+[00:03:20.425 - 00:03:21.925]
+And so I hope that helps
+
+[00:03:22.105 - 00:03:24.405]
+and I've given you, you know, so much freedom.
+
+[00:03:24.765 - 00:03:26.845]
+I hope you appreciate it. Alright, I'll see you soon.

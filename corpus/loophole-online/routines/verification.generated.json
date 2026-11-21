@@ -1,0 +1,853 @@
+{
+  "routine_count": 58,
+  "overview_count": 58,
+  "detail_count": 58,
+  "sequence_step_count": 228,
+  "other_task_step_count": 3,
+  "embedded_unique_workout_bodies_per_routine": 222,
+  "supplemental_training_block_count": 7,
+  "canonical_footnote_reuse_steps": 152,
+  "source_reference_errors": [
+    {
+      "routine": "Abstract Answer Training Regimen",
+      "order": 1,
+      "url": "https://new.theloophole.com/workouts-and-routines/workouts/undefined",
+      "status": "source emitted invalid workout URL; task text preserved without invented workout identity"
+    },
+    {
+      "routine": "Abstract Answer Training Regimen",
+      "order": 4,
+      "url": "https://new.theloophole.com/workouts-and-routines/workouts/undefined",
+      "status": "source emitted invalid workout URL; task text preserved without invented workout identity"
+    },
+    {
+      "routine": "Beginner Accuracy Routine (Day 1)",
+      "order": 3,
+      "url": "https://new.theloophole.com/workouts-and-routines/workouts/undefined",
+      "status": "source emitted invalid workout URL; task text preserved without invented workout identity"
+    }
+  ],
+  "source_blank_tasks": [
+    {
+      "routine": "Beginner Accuracy Routine (Day 1)",
+      "url": "https://new.theloophole.com/workouts-and-routines/routines/beginner-accuracy-routine-day-1",
+      "order": 3,
+      "name": "Beginner Accuracy Routine (Day 1) 3",
+      "status": "source supplies no authored instructions; preserved without invention"
+    }
+  ],
+  "workout_filter_source_discrepancies": [
+    {
+      "routine": "AC Primer + Decaf Routine",
+      "sequence_only": [
+        "Vocab Training"
+      ],
+      "filter_only": []
+    },
+    {
+      "routine": "Beginner Accuracy Routine (Day 2)",
+      "sequence_only": [
+        "Basic Warmup"
+      ],
+      "filter_only": [
+        "Translation + CLIR Drill"
+      ]
+    },
+    {
+      "routine": "Caffeinated + LR Sections Routine",
+      "sequence_only": [
+        "Vocab Training"
+      ],
+      "filter_only": [
+        "Caffeinated RC Translation Drill Failsafe",
+        "Mini-Cycle"
+      ]
+    },
+    {
+      "routine": "Cappuccino + LR Sections Routine",
+      "sequence_only": [
+        "Vocab Training"
+      ],
+      "filter_only": [
+        "Acronym LR Section",
+        "Cappuccino RC Translation Drill (35 Version)"
+      ]
+    },
+    {
+      "routine": "Decaf + LR Sections Routine",
+      "sequence_only": [
+        "Vocab Training"
+      ],
+      "filter_only": [
+        "Acronym LR Section"
+      ]
+    },
+    {
+      "routine": "Failsafe Marathon Routine",
+      "sequence_only": [
+        "Timing Failsafe"
+      ],
+      "filter_only": [
+        "Light Failsafe",
+        "Pacing Practice"
+      ]
+    },
+    {
+      "routine": "Non-Native Speaker Accuracy Routine",
+      "sequence_only": [
+        "Cappuccino RC Translation Drill"
+      ],
+      "filter_only": [
+        "Highlight Reel"
+      ]
+    },
+    {
+      "routine": "Non-Native Speaker Perform Routine",
+      "sequence_only": [],
+      "filter_only": [
+        "Highlight Reel"
+      ]
+    },
+    {
+      "routine": "The Fast and Slow Routine I",
+      "sequence_only": [],
+      "filter_only": [
+        "LR Straight Through",
+        "RC Straight Through",
+        "RC Thunderdome"
+      ]
+    },
+    {
+      "routine": "The Fast and Slow Routine II",
+      "sequence_only": [],
+      "filter_only": [
+        "LR Straight Through",
+        "RC HIIT (High Intensity Interval Training)",
+        "RC Straight Through"
+      ]
+    },
+    {
+      "routine": "The LR Independence Routine",
+      "sequence_only": [
+        "Light Warmup"
+      ],
+      "filter_only": [
+        "Light Failsafe"
+      ]
+    },
+    {
+      "routine": "The RC Masterpiece Routine",
+      "sequence_only": [
+        "Vocab Training"
+      ],
+      "filter_only": [
+        "Vocabulary Translation Drill"
+      ]
+    },
+    {
+      "routine": "Timing Failsafe Routine",
+      "sequence_only": [],
+      "filter_only": [
+        "Light Failsafe",
+        "Pacing Practice"
+      ]
+    },
+    {
+      "routine": "Translation + Decaf Routine",
+      "sequence_only": [
+        "Vocab Training"
+      ],
+      "filter_only": []
+    },
+    {
+      "routine": "Translation Foundation Routine",
+      "sequence_only": [
+        "Vocab Training"
+      ],
+      "filter_only": []
+    },
+    {
+      "routine": "Welcome to Accuracy Routine",
+      "sequence_only": [
+        "Vocab Training"
+      ],
+      "filter_only": [
+        "Inside Out",
+        "Mini-Cycle"
+      ]
+    },
+    {
+      "routine": "Welcome to Accuracy Routine (But Really, I Don't Want to Party Trick)",
+      "sequence_only": [],
+      "filter_only": [
+        "RC Straight Through"
+      ]
+    }
+  ],
+  "unarchived_instructional_documents": [],
+  "filter_mapping_counts": {
+    "section_impact": 58,
+    "prep_stage": 58,
+    "challenge_index": 58,
+    "routine_progression_listed": 58,
+    "Level": 58,
+    "Study Block Length": 58,
+    "Workout Included": 58
+  },
+  "complete_within_captured_inventory": false,
+  "issues": [],
+  "all_filter_mappings_present": true,
+  "unknown_filter_mappings": [],
+  "filter_membership_checks": [
+    {
+      "group": "Study Block Length",
+      "name": "1 Hour",
+      "observed": 6,
+      "compiled": 6,
+      "matches": true
+    },
+    {
+      "group": "Study Block Length",
+      "name": "2 Hours",
+      "observed": 37,
+      "compiled": 37,
+      "matches": true
+    },
+    {
+      "group": "Study Block Length",
+      "name": "3 Hours",
+      "observed": 52,
+      "compiled": 52,
+      "matches": true
+    },
+    {
+      "group": "Study Block Length",
+      "name": "4 Hours",
+      "observed": 58,
+      "compiled": 58,
+      "matches": true
+    },
+    {
+      "group": "Study Block Length",
+      "name": "5+ Hours",
+      "observed": 0,
+      "compiled": 0,
+      "matches": true
+    },
+    {
+      "group": "Challenge Index",
+      "name": "Pretty Chill",
+      "observed": 20,
+      "compiled": 20,
+      "matches": true
+    },
+    {
+      "group": "Challenge Index",
+      "name": "Buckle Up",
+      "observed": 17,
+      "compiled": 17,
+      "matches": true
+    },
+    {
+      "group": "Challenge Index",
+      "name": "Ellen Whyyy",
+      "observed": 21,
+      "compiled": 21,
+      "matches": true
+    },
+    {
+      "group": "Routine Progression",
+      "name": "Core Speed Routine Progression",
+      "observed": 7,
+      "compiled": 7,
+      "matches": true
+    },
+    {
+      "group": "Routine Progression",
+      "name": "Core Translation Routine Progression",
+      "observed": 7,
+      "compiled": 7,
+      "matches": true
+    },
+    {
+      "group": "Routine Progression",
+      "name": "Get Rid of Your Bad Habits By Test Day",
+      "observed": 2,
+      "compiled": 2,
+      "matches": true
+    },
+    {
+      "group": "Routine Progression",
+      "name": "I Just Want to Focus on LR",
+      "observed": 11,
+      "compiled": 11,
+      "matches": true
+    },
+    {
+      "group": "Routine Progression",
+      "name": "I Just Want to Focus on RC",
+      "observed": 7,
+      "compiled": 7,
+      "matches": true
+    },
+    {
+      "group": "Routine Progression",
+      "name": "I Only Have 75 Minutes",
+      "observed": 4,
+      "compiled": 4,
+      "matches": true
+    },
+    {
+      "group": "Routine Progression",
+      "name": "I'm Afraid of RC",
+      "observed": 4,
+      "compiled": 4,
+      "matches": true
+    },
+    {
+      "group": "Routine Progression",
+      "name": "Intro Accuracy Routine Progression",
+      "observed": 2,
+      "compiled": 2,
+      "matches": true
+    },
+    {
+      "group": "Routine Progression",
+      "name": "Non-Native Speaker Routine Progression",
+      "observed": 6,
+      "compiled": 6,
+      "matches": true
+    },
+    {
+      "group": "Routine Progression",
+      "name": "PT Routines",
+      "observed": 7,
+      "compiled": 7,
+      "matches": true
+    },
+    {
+      "group": "Routine Progression",
+      "name": "Spaccuracy Routines",
+      "observed": 4,
+      "compiled": 4,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Acronym LR Section",
+      "observed": 6,
+      "compiled": 6,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Answer Choice Translation Primer",
+      "observed": 1,
+      "compiled": 1,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Answer Choice Warmup",
+      "observed": 2,
+      "compiled": 2,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Basic Warmup",
+      "observed": 10,
+      "compiled": 10,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Caffeinated RC Translation Drill",
+      "observed": 8,
+      "compiled": 8,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Caffeinated RC Translation Drill Failsafe",
+      "observed": 1,
+      "compiled": 1,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Caffeinated RC Translation Marathon",
+      "observed": 1,
+      "compiled": 1,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Camo Review",
+      "observed": 14,
+      "compiled": 14,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Cappuccino RC Translation Drill",
+      "observed": 3,
+      "compiled": 3,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Cappuccino RC Translation Drill (35 Version)",
+      "observed": 2,
+      "compiled": 2,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Cappuccino RC Translation Marathon",
+      "observed": 1,
+      "compiled": 1,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Circle Warmup",
+      "observed": 2,
+      "compiled": 2,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "DARE Section",
+      "observed": 1,
+      "compiled": 1,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Decaf RC Translation Drill",
+      "observed": 8,
+      "compiled": 8,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Decaf RC Translation Marathon",
+      "observed": 2,
+      "compiled": 2,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Density Buckets",
+      "observed": 1,
+      "compiled": 1,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "E Blackout",
+      "observed": 2,
+      "compiled": 2,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Extracurricular Reading",
+      "observed": 11,
+      "compiled": 11,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Failsafe Marathon",
+      "observed": 1,
+      "compiled": 1,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "HIIT (High Intensity Interval Training)",
+      "observed": 2,
+      "compiled": 2,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Heavy Warmup",
+      "observed": 1,
+      "compiled": 1,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Highlight Reel",
+      "observed": 3,
+      "compiled": 3,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Hit List",
+      "observed": 2,
+      "compiled": 2,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Inside Out",
+      "observed": 2,
+      "compiled": 2,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "LR Straight Through",
+      "observed": 3,
+      "compiled": 3,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Light Failsafe",
+      "observed": 3,
+      "compiled": 3,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Light Inside Out",
+      "observed": 1,
+      "compiled": 1,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Light Warmup",
+      "observed": 2,
+      "compiled": 2,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Marathon",
+      "observed": 1,
+      "compiled": 1,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Masterpiece",
+      "observed": 2,
+      "compiled": 2,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Medium Warmup",
+      "observed": 1,
+      "compiled": 1,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "MemAC (Memory Answer Choice Translation)",
+      "observed": 6,
+      "compiled": 6,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Method Vocab Remix",
+      "observed": 3,
+      "compiled": 3,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Method/Flaw/Argument Part Answer Choice Translation Spreadsheet",
+      "observed": 3,
+      "compiled": 3,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Mini-Cycle",
+      "observed": 6,
+      "compiled": 6,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Mini-Marathon",
+      "observed": 1,
+      "compiled": 1,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Mixed Section Marathon",
+      "observed": 1,
+      "compiled": 1,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Mixed Timing Marathon",
+      "observed": 1,
+      "compiled": 1,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Modified Inside Out",
+      "observed": 2,
+      "compiled": 2,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Pacing Practice",
+      "observed": 6,
+      "compiled": 6,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Party Tricking Jail",
+      "observed": 2,
+      "compiled": 2,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Passage Rebounds",
+      "observed": 1,
+      "compiled": 1,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Practice Test (PT)",
+      "observed": 6,
+      "compiled": 6,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Proto-Stimulus Rebound",
+      "observed": 1,
+      "compiled": 1,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Question Stem Training",
+      "observed": 2,
+      "compiled": 2,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "RC HIIT (High Intensity Interval Training)",
+      "observed": 2,
+      "compiled": 2,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "RC Question Stem Translation Drill",
+      "observed": 2,
+      "compiled": 2,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "RC Straight Through",
+      "observed": 5,
+      "compiled": 5,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "RC Thunderdome",
+      "observed": 2,
+      "compiled": 2,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Reverse Shuffle",
+      "observed": 2,
+      "compiled": 2,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Scavenger Hunt",
+      "observed": 1,
+      "compiled": 1,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Spoiled Read",
+      "observed": 1,
+      "compiled": 1,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Stimulus Rebounds",
+      "observed": 1,
+      "compiled": 1,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Test-Day Timed Section",
+      "observed": 3,
+      "compiled": 3,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Test-Day Timing Marathon",
+      "observed": 1,
+      "compiled": 1,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "The Island",
+      "observed": 7,
+      "compiled": 7,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Thunderdome",
+      "observed": 4,
+      "compiled": 4,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Thunderdome Mod: Skeleton Style",
+      "observed": 1,
+      "compiled": 1,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Time Awareness Training",
+      "observed": 2,
+      "compiled": 2,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Timing Failsafe",
+      "observed": 1,
+      "compiled": 1,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Tone Training",
+      "observed": 2,
+      "compiled": 2,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Translation + CLIR Drill",
+      "observed": 19,
+      "compiled": 19,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Translation Marathon",
+      "observed": 2,
+      "compiled": 2,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Unless Practice Routine",
+      "observed": 1,
+      "compiled": 1,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Unofficial Diagramming Marathon",
+      "observed": 1,
+      "compiled": 1,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Vocab Training",
+      "observed": 6,
+      "compiled": 6,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Vocabulary Translation Drill",
+      "observed": 7,
+      "compiled": 7,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Write In",
+      "observed": 4,
+      "compiled": 4,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "Wrong Answer Journal",
+      "observed": 13,
+      "compiled": 13,
+      "matches": true
+    },
+    {
+      "group": "Workout Included",
+      "name": "☠️Anti-PT☠️",
+      "observed": 1,
+      "compiled": 1,
+      "matches": true
+    }
+  ],
+  "facet_source": "raw\\sources\\loophole-routines-2026-10-15\\facets.json",
+  "facet_sha256": "1103ca2ae00baebc29e22ddf8020e08ec8b1d1bf3a8897d338b3320548216cfa",
+  "source_archive": "raw/sources/loophole-routines-2026-10-15",
+  "archive_hash_verified": true,
+  "source_sha256": {
+    "attachments.json": "382d4ca66646731ed6e6b1cec7a1d030a543d1501c26ed513b692fc3007dbb57",
+    "capture-status.json": "bde6b49f9eb9dc0e089b664d65810327a44a07d409006f90901c10cb10835fde",
+    "details.json": "0ec302098a8d46cbb40e94b04edcb8f73048321c1cb2404c64d89a87a296d5fb",
+    "facets.json": "1103ca2ae00baebc29e22ddf8020e08ec8b1d1bf3a8897d338b3320548216cfa",
+    "inventory.json": "b1037b2b3c8a24c41ee5467cce7bdfa6e858283270d188dba5b0553e94708fda",
+    "options.json": "3ecfbfcf5e5cc372e2fa8f5c44ad3ed7c18f62807ee3502768a8a6c2833985a3",
+    "overviews.json": "9addfe21b534ab5dd24ca021aa04e97f8caa6e2d9012311d4b2e07151be441bc",
+    "page-1-rows.json": "d8314d7bafadf0beaaab155b004b31e23bc48e85b033b44fb1a2345b3fb93875",
+    "page-2-rows.json": "430eebc056b8349e09fb359ca0a24306a6a6334ba058b97c1b98a03d131bfb68",
+    "page-3-rows.json": "df31134b7ffaaa3616d359e4bc15afcbfa6180840ebc6c5877ba2551c5aef56b",
+    "pdf-source.json": "661ead5fc39cfecd6fe091eec6177fdf5f3a85b0cb662022ecc50521335634c8",
+    "prep-inventory.json": "298d2fb107562df29949f8ced65eef53f482c71884d73c3251b6685207516d2b",
+    "prep-points.json": "5f64a6036e954315af7b37e8fe591505dcc1b95c6149ab0cc39eaddc78e03a3b",
+    "source-blank-task.json": "0a34e488097630049153772cda424b8330efb2457eb4eb69168771bcc3a81194",
+    "supplement-inventory.json": "1dbcd6308a60624e1b843e9f9c2b8c3cf5ae5526b677c734e207772dacd534b5",
+    "training-blocks.json": "0b512e9595853fc470d7c4fabffa6f91a620afad2df64d124329eb73a14ec418"
+  },
+  "limits": [
+    "Completeness covers observed rendered inventory and explicit expanded step captures, not unseen server content.",
+    "Routine-specific step prescriptions remain authoritative for that routine; embedded canonical workout instructions are a separate complete sourcebook.",
+    "Related media URLs are retained, media bytes are not newly downloaded by this compiler."
+  ]
+}

@@ -1,0 +1,929 @@
+diff --git a/src/bootcamps/conditionals/components/OpeningCourse.test.tsx b/src/bootcamps/conditionals/components/OpeningCourse.test.tsx
+index d17bd3e6..9a4810bc 100644
+--- a/src/bootcamps/conditionals/components/OpeningCourse.test.tsx
++++ b/src/bootcamps/conditionals/components/OpeningCourse.test.tsx
+@@ -12,10 +12,10 @@ it('offers five numbered lessons in Chapter 1 and eleven interleaved drill entri
+   expect(screen.getByRole('region', { name: 'Chapter 1' })).toBeVisible();
+   expect(screen.getByRole('heading', { name: 'Chapter 1' })).toBeVisible();
+   expect(screen.queryByText('Part 1')).toBeNull();
+-  const list = document.querySelector<HTMLElement>('ol.oc-course-path')!;
+-  expect(list.children).toHaveLength(16);
+-  expect(screen.getAllByRole('link', { name: /Read lesson/ })).toHaveLength(5);
+-  expect(screen.getAllByRole('link', { name: /View drill/ })).toHaveLength(11);
++  const chapterOne = within(screen.getByRole('region', { name: 'Chapter 1' }));
++  expect(document.querySelector<HTMLElement>('ol.oc-course-path')!.children).toHaveLength(16);
++  expect(chapterOne.getAllByRole('link', { name: /Read lesson/ })).toHaveLength(5);
++  expect(chapterOne.getAllByRole('link', { name: /View drill/ })).toHaveLength(11);
+   expect(document.querySelector('.co-pages')).toBeNull();
+   expect(OPENING_COURSE_PATH.slice(0, 6).map(step => step.id)).toEqual(['meaning', 'sufficient', 'necessary', 'must-arrow', 'contrapositive', 'foundation-practice']);
+ });
+@@ -43,7 +43,7 @@ it('teaches each prerequisite before the source drills that use it', () => {
+ it.each(OPENING_COURSE_PATH)('renders the dedicated $id destination without an old reader index', async step => {
+   render(<MemoryRouter><OpeningCourseScreen view={step.id} run={step.type === 'drill'} url={url}/></MemoryRouter>);
+   expect(screen.getByRole('heading', { level: 1, name: step.title })).toBeVisible();
+-  if (step.lessonNumber) expect(screen.getByText(`Chapter 1 · Lesson ${step.lessonNumber}`)).toBeVisible();
++  if (step.lessonNumber) expect(screen.getByText(`Chapter ${step.part} · Lesson ${step.lessonNumber}`)).toBeVisible();
+   await waitFor(() => expect(document.querySelector('.opening-course-content')).not.toBeNull());
+   expect(document.querySelector('.co-pages')).toBeNull();
+   expect(screen.getByRole('navigation', { name: 'Course navigation' })).toBeVisible();
+@@ -135,7 +135,8 @@ it('focuses the destination after drawer navigation and restores the trigger aft
+ });
+ 
+ it('retains legacy destinations without duplicating the numbered course', () => {
+-  expect(OPENING_COURSE_PATH.filter(step => step.type === 'note').map(step => step.lessonNumber)).toEqual(['1.1', '1.2', '1.3', '1.4', '1.5']);
++  expect(OPENING_COURSE_PATH.filter(step => step.type === 'note').map(step => step.lessonNumber)).toEqual(['1.1', '1.2', '1.3', '1.4', '1.5', '2.1', '2.2', '2.3']);
++  expect(OPENING_COURSE_PATH.filter(step => step.part === 1 && step.type === 'note').map(step => step.lessonNumber)).toEqual(['1.1', '1.2', '1.3', '1.4', '1.5']);
+   expect(OPENING_COURSE_PATH.findIndex(step => step.id === 'contrapositive')).toBeLessThan(OPENING_COURSE_PATH.findIndex(step => step.id === 'foundation-practice'));
+   for (const step of LEGACY_OPENING_COURSE_STEPS) {
+     expect(openingCourseStep(step.id)).toBe(step);
+@@ -198,9 +199,10 @@ it('shows 100 percent only after all available course steps are done', () => {
+  expect(screen.getByText((_, node) => node?.tagName === 'STRONG' && node.textContent === '100% complete')).toBeVisible();
+ });
+ 
+-it('numbers the eleven active drills once and preserves the retired roles destination', () => {
++it('numbers the fifteen active drills once, Chapter 2 continuing after Chapter 1, and preserves the retired roles destination', () => {
+  const drills = OPENING_COURSE_PATH.filter(step => step.type === 'drill');
+- expect(drills.map(step => openingDrillNumber(step.id))).toEqual([1,2,3,4,5,6,7,8,9,10,11]);
++ expect(drills.map(step => openingDrillNumber(step.id))).toEqual([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]);
++ expect(drills.slice(11).map(step => step.id)).toEqual(['and-or-meaning-practice', 'and-or-placement-practice', 'and-or-whole-group-practice', 'and-or-transfer-practice']);
+  expect(drills.every(step => !/Drill \d/.test(step.title))).toBe(true);
+  expect(openingCourseStep('source-roles')?.title).toBe('Place the conditions');
+  expect(openingDrillNumber('source-roles')).toBeUndefined();
+diff --git a/src/bootcamps/conditionals/components/OpeningCourse.tsx b/src/bootcamps/conditionals/components/OpeningCourse.tsx
+index ab91ed26..851ac6b3 100644
+--- a/src/bootcamps/conditionals/components/OpeningCourse.tsx
++++ b/src/bootcamps/conditionals/components/OpeningCourse.tsx
+@@ -11,6 +11,9 @@ import { DrillOneEntry } from './DrillOneExperience';
+ import { mixedDrillStages } from './OpeningMixedDrill';
+ import { SourceWorksheetDrill } from './SourceWorksheetDrill';
+ import { getSourceWorksheetDrill } from '../content/sourceWorksheetDrills';
++import { getAndOrDrill } from '../content/andOrItems';
++import { AndOrDrill } from './AndOrPractice';
++import { DrillDemo } from './DrillDemo';
+ import './opening-course.css';
+ 
+ export type OpeningCourseUrl = (destination: string, run?: boolean) => string;
+@@ -44,7 +47,7 @@ export function OpeningCourseNavigation({ view, url, workspaceLinks }: { view: s
+ function CourseCard({ step, url }: { step: OpeningCourseStep; url: OpeningCourseUrl }) {
+   const saved = useCourseProgress()?.steps[step.id];
+   const drill = step.type === 'drill';
+-  const count = drill ? getSourceWorksheetDrill(step.id)?.items.length : undefined;
++  const count = drill ? (getSourceWorksheetDrill(step.id) ?? getAndOrDrill(step.id))?.items.length : undefined;
+   return <li className={`oc-path-card${drill ? ' oc-drill-card' : ''}`} data-progress={saved?.status ?? 'new'} data-kind={step.type}>
+     <span className="oc-timeline-node" aria-hidden="true">{drill ? <Dumbbell size={20}/> : <BookOpen size={20}/>}</span>
+     <span className="oc-label">{drill ? `Drill ${openingDrillNumber(step.id) ?? ''}`.trim() : <>Lesson <span>{step.lessonNumber}</span></>}</span><CardStatus saved={saved} drill={drill}/><h3>{step.title}</h3><p>{step.description}</p>
+@@ -65,6 +68,18 @@ const drillInstructions: Record<string, { summary: string; heading: string; step
+ 
+ function DrillEntry({ step, url, storageScope }: { step: OpeningCourseStep; url: OpeningCourseUrl; storageScope?: string }) {
+   if (getSourceWorksheetDrill(step.id)) return <SourceWorksheetDrill setId={step.id} title={step.title} run={false} startUrl={url(step.id, true)} storageScope={storageScope}/>;
++  const andOr = getAndOrDrill(step.id);
++  if (andOr) return <div className="oc-drill-landing">
++    <div className="oc-drill-overview"><Link className="oc-back" to={url('lessons')}><ArrowLeft size={16}/>Back to course</Link>
++      <header data-course-heading><h1>{step.title}</h1><p>{step.description}</p></header>
++    </div>
++    <section className="oc-drill-start" aria-label="Practice instructions">
++      <p className="oc-label">{andOr.items.length} questions</p><h2>One step at a time</h2>
++      <ol>{andOr.instructions.map(instruction => <li key={instruction}>{instruction}</li>)}</ol>
++      <DrillDemo drillId={step.id}/>
++      <Link className="oc-action" to={url(step.id, true)}>Start practice<ArrowRight size={16}/></Link>
++    </section>
++  </div>;
+   if (step.id === 'foundation-practice') return <DrillOneEntry startUrl={url(step.id, true)} lessonsUrl={url('lessons')}/>;
+   if (step.id === 'mixed-practice') return <div className="oc-drill-landing oc-translation-entry">
+     <div className="oc-drill-overview">
+@@ -183,7 +198,7 @@ function CourseScreen({ view, run, url, steps, recordedPractice, storageScope }:
+       </header> : <header><p className="oc-label">{openingDrillNumber(current.id) ? `Drill ${openingDrillNumber(current.id)}` : 'Practice'}</p><h1>{current.title}</h1></header>}</div>
+       {current.type === 'drill' && <Link className="oc-back oc-drill-back" to={url(view)}>Back to instructions</Link>}
+     </div>}
+-    <div className="oc-course-bodies">{steps.filter(step => visited.includes(step.id)).map(step => <div key={step.id} hidden={step.id !== view || (step.type === 'drill' && !run)} className={step.id === 'foundation-practice' ? 'oc-course-body d1-body' : 'oc-course-body co-opening cr-sequence'}><CourseFlashcardUrl.Provider value={url}>{getSourceWorksheetDrill(step.id) ? <SourceWorksheetDrill setId={step.id} run startUrl={url(step.id, true)} storageScope={storageScope}/> : <OpeningCourseContent id={step.id}/>}</CourseFlashcardUrl.Provider></div>)}</div>
++    <div className="oc-course-bodies">{steps.filter(step => visited.includes(step.id)).map(step => <div key={step.id} hidden={step.id !== view || (step.type === 'drill' && !run)} className={step.id === 'foundation-practice' ? 'oc-course-body d1-body' : 'oc-course-body co-opening cr-sequence'}><CourseFlashcardUrl.Provider value={url}>{getSourceWorksheetDrill(step.id) ? <SourceWorksheetDrill setId={step.id} run startUrl={url(step.id, true)} storageScope={storageScope}/> : getAndOrDrill(step.id) ? <AndOrDrill setId={step.id} run startUrl={url(step.id, true)} storageScope={storageScope}/> : <OpeningCourseContent id={step.id}/>}</CourseFlashcardUrl.Provider></div>)}</div>
+     {current?.type === 'note' && <LessonCompletion key={current.id} stepId={current.id}/>}
+     {current && (current.type === 'note' || run) && <nav className="oc-course-turn" aria-label="Course navigation">{prior ? <Link to={url(prior.id)}><span>Previous {prior.type === 'note' ? 'lesson' : 'drill'}</span><strong>{prior.title}</strong></Link> : <Link to={url('lessons')}>Course</Link>}{next ? <Link to={url(next.id)}><span>Next {next.type === 'note' ? 'lesson' : 'drill'}</span><strong>{next.title}<ArrowRight size={18}/></strong></Link> : <Link to={url('lessons')}>Return to course<ArrowRight size={18}/></Link>}</nav>}
+     {!isIndex && view !== 'tools' && !current && <div className="oc-course-note"><h1>This lesson is not available here.</h1><Link to={url('lessons')}>Return to course</Link></div>}
+diff --git a/src/bootcamps/conditionals/components/OpeningCourseContent.tsx b/src/bootcamps/conditionals/components/OpeningCourseContent.tsx
+index 89c55a49..c3f438a8 100644
+--- a/src/bootcamps/conditionals/components/OpeningCourseContent.tsx
++++ b/src/bootcamps/conditionals/components/OpeningCourseContent.tsx
+@@ -10,6 +10,7 @@ import './must-arrow-note.css';
+ import './missing-requirement-note.css';
+ import { MustArrowPractice } from './MustArrowPractice';
+ import { SufficientConditionFilm } from './SufficientConditionFilm';
++import { AndOrLesson } from './AndOrLessons';
+ 
+ type ContentSection = ReactElement<{ id?: string; number?: number; title?: string; children?: ReactNode; dark?: boolean; 'data-reference-boundary'?: boolean }>;
+ 
+@@ -438,6 +439,9 @@ function Content({ id }: { id: string }) {
+     case 'whole-meaning': return <WholeMeaningNote/>;
+     case 'missing-requirement': return <MissingRequirementNote/>;
+     case 'contrapositive': return <CombinedContrapositiveNote/>;
++    case 'and-or-both-or-either':
++    case 'and-or-either-side':
++    case 'and-or-negate-group': return <AndOrLesson id={id}/>;
+     case 'foundation-practice': return <FoundationPractice/>;
+     case 'sufficient-practice': return <StagedReasoningDrill mode="sufficient"/>;
+     case 'mixed-practice': return <StagedReasoningDrill mode="mixed"/>;
+diff --git a/src/bootcamps/conditionals/content/applications.source.ts b/src/bootcamps/conditionals/content/applications.source.ts
+index f5d54c17..c2f73143 100644
+--- a/src/bootcamps/conditionals/content/applications.source.ts
++++ b/src/bootcamps/conditionals/content/applications.source.ts
+@@ -47,7 +47,7 @@ export const applicationUnits: ConditionalUnit[] = [
+     prerequisites: ['triggering', 'negation'], goal: 'Distinguish joint requirements from alternative routes.',
+     teaching: ['AND requires both listed conditions. OR permits at least one and ordinarily permits both. In (license AND insurance) → entry, neither license alone nor insurance alone proves entry.', 'Scope matters. A → (B OR C) gives alternatives in the result. (A OR B) → C supplies two separate routes to C. A → (B AND C) requires both results. Do not replace a complete phrase with one convenient word.'],
+     method: ['Bracket the complete sufficient and necessary sides.', 'Read AND as both; read OR as at least one.', 'For a joint trigger, prove every part.', 'For an alternative result, retain the alternatives unless another fact removes one.'],
+-    workedExample: { statements: ['Visitors with a ticket and identification may enter.', 'Nora has a ticket, but no identification.'], reasoning: ['(Ticket AND identification) → entry.', 'Nora does not satisfy the complete trigger.'], conclusion: 'This rule does not prove whether Nora may enter.' },
++    workedExample: { statements: ['Visitors with a ticket and identification may enter.', 'Nora has a ticket, but no identification.'], reasoning: ['(Ticket AND identification) → may enter.', 'Nora does not satisfy the complete trigger.'], conclusion: 'This rule does not prove whether Nora may enter.' },
+     commonMistake: { mistake: 'Splitting a joint trigger into two sufficient routes.', repair: 'Hold the AND trigger together. Only an OR trigger supplies separate sufficient routes.' },
+     guided: ['Every finalist receives a medal or a grant. Jo is a finalist and receives no medal. What follows?', 'Jo receives a grant.', 'Jo receives neither.', 'Jo receives both.', 'Finalist proves at least one reward. No medal leaves the grant.', 'Eliminate the disjunct that the fact rules out.'],
+     practice: [
+@@ -65,7 +65,7 @@ export const applicationUnits: ConditionalUnit[] = [
+   unit({ id: 'de-morgan', title: 'Negate compound statements accurately', area: 'complex', phase: 'conditional',
+     prerequisites: ['and-or', 'contraposition'], goal: 'Negate a whole compound and use that negation in contraposition.',
+     teaching: ['The denial of A AND B is not A OR not B. At least one part must fail; both may fail. The denial of A OR B is not A AND not B. Every permitted alternative must fail.', 'When taking a contrapositive, negate each entire side, not just its first word. A → (B AND C) becomes (not B OR not C) → not A. (A OR B) → C becomes not C → (not A AND not B).'],
+-    method: ['Identify the whole condition being denied.', 'Switch AND with OR.', 'Negate each complete component.', 'If taking a contrapositive, reverse the sides as well.'],
++    method: ['Identify the whole condition being denied.', 'Switch AND with OR as part of denying the whole compound. This is not a free-standing swap on any AND or OR.', 'Negate each complete component.', 'If taking a contrapositive, reverse the sides as well.'],
+     workedExample: { statements: ['Every approved application is signed and dated.', 'Application R is not dated.'], reasoning: ['Approved → (signed AND dated).', 'The contrapositive is (not signed OR not dated) → not approved.', 'R satisfies the second alternative.'], conclusion: 'R is not approved.' },
+     commonMistake: { mistake: 'Negating AND by requiring both components to fail.', repair: 'One failed part already denies a claim that both hold. Requiring both failures is too strong.' },
+     guided: ['What denies “The gate is locked or guarded”?', 'The gate is neither locked nor guarded.', 'The gate is not locked or is not guarded.', 'The gate is locked and guarded.', 'Denying an inclusive OR requires denying both routes.', 'Remove every way the OR statement could be true.'],
+diff --git a/src/bootcamps/conditionals/content/drillDemos.ts b/src/bootcamps/conditionals/content/drillDemos.ts
+index 9827ac96..eb4c3569 100644
+--- a/src/bootcamps/conditionals/content/drillDemos.ts
++++ b/src/bootcamps/conditionals/content/drillDemos.ts
+@@ -49,6 +49,22 @@ export const drillDemos: Record<string, DrillDemo> = {
+     { title: 'Does the meaning change?', caption: 'Compare two wordings and decide whether they say the same thing.', frame: { kind: 'choose', question: 'Does “Only runners in red bibs get water first” say the same thing?', options: ['Yes, same rule', 'No, it changes the rule'], correct: 1 } },
+     { title: 'Try unfamiliar cases', caption: 'Use the same reasoning on new wording.', frame: { kind: 'choose', question: 'Guests must sign in. What does this tell you?', options: ['Every guest did sign in', 'Signing in is required of every guest'], correct: 1 } },
+   ] },
++  'and-or-meaning-practice': { sentence: 'A bike is ready to ride if the tires are full and the chain is oiled.', steps: [
++    { title: 'Read the facts', caption: 'Check each member of the group against the facts. AND needs every member.', frame: { kind: 'choose', question: 'The tires are full. Nothing is said about the chain. Do the facts establish the whole group?', options: ['Yes, established', 'No, ruled out', 'Not settled yet'], correct: 2 } },
++    { title: 'Try an OR', caption: 'OR needs at least one member, and both is allowed.', frame: { kind: 'choose', question: 'Group: the tires are full or the chain is oiled. Both are true. Established?', options: ['Yes, at least one is true', 'No, an OR allows only one'], correct: 0 } },
++  ] },
++  'and-or-placement-practice': { sentence: 'A ticket scans if the barcode is clear or the number is typed in.', steps: [
++    { title: 'Find the group', caption: 'Say which side of the rule holds the group, and whether it is AND or OR.', frame: { kind: 'place', left: 'Barcode clear OR number typed in', right: 'Ticket scans' } },
++    { title: 'Decide what the facts settle', caption: 'A fact that reaches one member may settle the rule, or may leave it open.', frame: { kind: 'choose', question: 'The number is typed in. Does the ticket scan?', options: ['It must scan', 'It cannot scan', 'It could be either'], correct: 0 } },
++  ] },
++  'and-or-whole-group-practice': { sentence: 'A lamp works if the bulb is fitted and the switch is on.', steps: [
++    { title: 'Say when the group fails', caption: 'A group fails differently from how it holds. Choose the statement true exactly when it fails.', frame: { kind: 'choose', question: 'Which is the opposite of: the bulb is fitted and the switch is on?', options: ['The bulb is not fitted or the switch is off', 'The bulb is not fitted and the switch is off', 'The bulb is fitted or the switch is off'], correct: 0 } },
++  ] },
++  'and-or-transfer-practice': { sentence: 'A room is booked if the form is sent and the fee is paid.', steps: [
++    { title: 'Shorten the conditions', caption: 'Write a short phrase for each condition. Keep who it concerns, any restriction, and any negative.', frame: { kind: 'type', lines: [{ label: 'The form is sent', text: 'Form sent' }, { label: 'The fee is paid', text: 'Fee paid' }, { label: 'The room is booked', text: 'Room booked' }] } },
++    { title: 'Build the diagram', caption: 'Put the group that is enough on the left and what it requires on the right.', frame: { kind: 'place', left: 'Form sent AND fee paid', right: 'Room booked' } },
++    { title: 'Flip it', caption: 'Switch the sides, put NOT on every member, and change the group’s connector.', frame: { kind: 'choose', question: 'Which is the contrapositive?', options: ['If the room is not booked, the form is not sent or the fee is not paid', 'If the room is not booked, the form is not sent and the fee is not paid'], correct: 0 } },
++  ] },
+   'source-intro-identify': { sentence: 'You can board only if you have a ticket.', steps: [
+     { title: 'Find the indicators', caption: 'Click each word of the indicator, then choose its group.', frame: { kind: 'pick', words: words('You can board only if you have a ticket.'), picks: [3, 4], chip: 'Group 2: necessary' } },
+   ] },
+diff --git a/src/bootcamps/conditionals/courseProgress.tsx b/src/bootcamps/conditionals/courseProgress.tsx
+index 0d6e60a9..4b8fdbdb 100644
+--- a/src/bootcamps/conditionals/courseProgress.tsx
++++ b/src/bootcamps/conditionals/courseProgress.tsx
+@@ -1,7 +1,7 @@
+ import { createContext, useCallback, useContext, useMemo, useState, type ReactNode } from 'react';
+ import type { CourseStepProgress } from './progress';
+ 
+-export type CourseStepPatch = Partial<Omit<CourseStepProgress, 'updatedAt'>>;
++export type CourseStepPatch = Partial<Omit<CourseStepProgress, 'updatedAt'>> & { reopen?: boolean };
+ export interface CourseProgressStore {
+   steps: Record<string, CourseStepProgress>;
+   save: (stepId: string, patch: CourseStepPatch) => void;
+@@ -37,8 +37,9 @@ export function useDeviceCourseProgress(scope = 'preview'): CourseProgressStore
+   });
+   const save = useCallback((stepId: string, patch: CourseStepPatch) => setSteps(previous => {
+     const prior = previous[stepId];
+-    const status = prior?.status === 'done' ? 'done' : patch.status ?? prior?.status ?? 'started';
+-    const next = { ...previous, [stepId]: { ...prior, ...patch, status, updatedAt: new Date().toISOString() } };
++    const { reopen, ...rest } = patch;
++    const status = prior?.status === 'done' && !reopen ? 'done' : rest.status ?? (reopen ? 'started' : prior?.status) ?? 'started';
++    const next = { ...previous, [stepId]: { ...prior, ...rest, status, updatedAt: new Date().toISOString() } };
+     try { localStorage.setItem(key, JSON.stringify(next)); } catch { /* keep in memory */ }
+     return next;
+   }), [key]);
+diff --git a/src/bootcamps/conditionals/data/curriculum.generated.json b/src/bootcamps/conditionals/data/curriculum.generated.json
+index 6a60d612..e034f25d 100644
+--- a/src/bootcamps/conditionals/data/curriculum.generated.json
++++ b/src/bootcamps/conditionals/data/curriculum.generated.json
+@@ -3562,7 +3562,7 @@
+         "Nora has a ticket, but no identification."
+       ],
+       "reasoning": [
+-        "(Ticket AND identification) → entry.",
++        "(Ticket AND identification) → may enter.",
+         "Nora does not satisfy the complete trigger."
+       ],
+       "conclusion": "This rule does not prove whether Nora may enter."
+@@ -3762,7 +3762,7 @@
+     ],
+     "method": [
+       "Identify the whole condition being denied.",
+-      "Switch AND with OR.",
++      "Switch AND with OR as part of denying the whole compound. This is not a free-standing swap on any AND or OR.",
+       "Negate each complete component.",
+       "If taking a contrapositive, reverse the sides as well."
+     ],
+diff --git a/src/bootcamps/conditionals/openingCoursePath.ts b/src/bootcamps/conditionals/openingCoursePath.ts
+index 0f8e8ec0..755c4a5c 100644
+--- a/src/bootcamps/conditionals/openingCoursePath.ts
++++ b/src/bootcamps/conditionals/openingCoursePath.ts
+@@ -5,8 +5,9 @@ export type OpeningCourseStep = {
+   description: string;
+   part?: number;
+   lessonNumber?: `${number}.${number}`;
+-  alsoAvailableIn?: Array<'orientation' | 'sufficient-necessary' | 'group-1' | 'group-2'>;
+-  unitId: 'orientation' | 'sufficient-necessary' | 'group-1' | 'group-2';
++  alsoAvailableIn?: Array<'orientation' | 'sufficient-necessary' | 'group-1' | 'group-2' | 'and-or' | 'de-morgan'>;
++  /** Access topic only. Chapter 2 steps use `and-or` and `de-morgan` to filter assignments; their progress lives under their own step IDs. */
++  unitId: 'orientation' | 'sufficient-necessary' | 'group-1' | 'group-2' | 'and-or' | 'de-morgan';
+ };
+ 
+ // Reading destinations are not legacy completion IDs. Visiting one records no completion.
+@@ -27,8 +28,22 @@ export const OPENING_COURSE_PATH: OpeningCourseStep[] = [
+   { id: 'contrapositive-practice', type: 'drill', part: 1, title: 'Check your contrapositive', description: 'Choose the correct transformation, including rules that already contain negative conditions.', unitId: 'orientation' },
+   { id: 'source-full-translation', type: 'drill', part: 1, title: 'Build both diagrams', description: 'Build the original and the contrapositive. Keep each complete condition intact.', unitId: 'group-2' },
+   { id: 'source-independent', type: 'drill', part: 1, title: 'Put it into practice', description: 'Run the full process on your own. Work in short sessions and return where you left off.', unitId: 'group-2' },
++  // Chapter 2. New IDs only: legacy and-or / de-morgan read marks and question runs are separate records and stay untouched.
++  { id: 'and-or-both-or-either', type: 'note', part: 2, lessonNumber: '2.1', title: 'Both, or at least one', description: 'What AND and OR ask for, and why the whole group counts.', unitId: 'and-or' },
++  { id: 'and-or-either-side', type: 'note', part: 2, lessonNumber: '2.2', title: 'Where the group sits', description: 'A group on the left is enough. A group on the right is required.', unitId: 'and-or' },
++  { id: 'and-or-negate-group', type: 'note', part: 2, lessonNumber: '2.3', title: 'Deny the whole group', description: 'Say when a group fails, then take the contrapositive of a rule that contains one.', unitId: 'de-morgan' },
++  { id: 'and-or-meaning-practice', type: 'drill', part: 2, title: 'Check the whole group', description: 'Decide whether the facts establish a group joined by AND or by OR. Keep every member in view.', unitId: 'and-or' },
++  { id: 'and-or-placement-practice', type: 'drill', part: 2, title: 'Read the rule with a group in it', description: 'Find which side the group is on, then decide what the rules and facts settle.', unitId: 'and-or' },
++  { id: 'and-or-whole-group-practice', type: 'drill', part: 2, title: 'Say the opposite of the group', description: 'Choose the statement that denies a whole group, member by member.', unitId: 'de-morgan' },
++  { id: 'and-or-transfer-practice', type: 'drill', part: 2, title: 'Diagram it and flip it', description: 'Build the diagram, take the contrapositive, and use it on fresh rules.', unitId: 'de-morgan' },
+ ];
+ 
++/**
++ * Legacy topics that Chapter 2 now teaches in the numbered course. They stay outside the opening-edition
++ * membership (CONDITIONAL_OPENING_UNIT_IDS): their lesson, guided and practice routes and saved runs are unchanged.
++ */
++export const CHAPTER_TWO_LEGACY_UNIT_IDS = ['and-or', 'de-morgan'] as const;
++
+ // Retained destinations preserve old links and saved progress without duplicating the course.
+ export const LEGACY_OPENING_COURSE_STEPS: OpeningCourseStep[] = [
+   { id: 'source-roles', type: 'drill', part: 1, title: 'Place the conditions', description: 'Put each condition on its side of the arrow.', unitId: 'group-2' },
+diff --git a/src/bootcamps/conditionals/progress.ts b/src/bootcamps/conditionals/progress.ts
+index 89dadcf9..63fdbdbd 100644
+--- a/src/bootcamps/conditionals/progress.ts
++++ b/src/bootcamps/conditionals/progress.ts
+@@ -56,11 +56,13 @@ export function markConditionalLessonRead(progress: ConditionalProgress, unitId:
+   const editionKey = conditionalOpeningEditionKey(unitId);
+   return { ...progress, lessons: { ...progress.lessons, [unitId]: readAt, ...(editionKey ? { [editionKey]: readAt } : {}) } };
+ }
+-export function recordCourseStep(progress: ConditionalProgress, stepId: string, patch: Partial<Omit<CourseStepProgress, 'updatedAt'>>, at = new Date().toISOString()): ConditionalProgress {
++/** `reopen` lets a step that tracks live work (Chapter 2 practice) drop from done to started when required work is invalidated. Without it, finishing is permanent. */
++export function recordCourseStep(progress: ConditionalProgress, stepId: string, patch: Partial<Omit<CourseStepProgress, 'updatedAt'>> & { reopen?: boolean }, at = new Date().toISOString()): ConditionalProgress {
+   const prior = progress.course?.[stepId];
+-  // Finishing is permanent: revisiting or resetting a drill never un-completes it.
+-  const status = prior?.status === 'done' ? 'done' : patch.status ?? prior?.status ?? 'started';
+-  return { ...progress, course: { ...progress.course, [stepId]: { ...prior, ...patch, status, updatedAt: at } } };
++  const { reopen, ...rest } = patch;
++  // Finishing is permanent: revisiting or resetting a drill never un-completes it, unless the step asks to reopen.
++  const status = prior?.status === 'done' && !reopen ? 'done' : rest.status ?? (reopen ? 'started' : prior?.status) ?? 'started';
++  return { ...progress, course: { ...progress.course, [stepId]: { ...prior, ...rest, status, updatedAt: at } } };
+ }
+ function cleanCourse(course: unknown): Record<string, CourseStepProgress> | undefined {
+   if (course === undefined) return undefined;
+diff --git a/src/bootcamps/conditionals/routes.test.tsx b/src/bootcamps/conditionals/routes.test.tsx
+index 51862665..004728a1 100644
+--- a/src/bootcamps/conditionals/routes.test.tsx
++++ b/src/bootcamps/conditionals/routes.test.tsx
+@@ -51,7 +51,9 @@ it.each(['', '/lessons'])('opens the same numbered Chapter 1 course at %s', path
+   state.progress!.lessons.orientation = '2026-10-01T12:00:00.000Z';
+   mount(`${base}${path}`);
+   expect(screen.getByText('Chapter 1')).toBeVisible();
+-  expect(screen.getAllByRole('link', { name: /Read lesson/ })).toHaveLength(5);
++  // The full course assignment also reaches the And/Or topics, so Chapter 2 follows Chapter 1.
++  expect(within(screen.getByRole('region', { name: 'Chapter 1' })).getAllByRole('link', { name: /Read lesson/ })).toHaveLength(5);
++  expect(within(screen.getByRole('region', { name: 'Chapter 2' })).getAllByRole('link', { name: /Read lesson/ })).toHaveLength(3);
+   expect(screen.getByText('1.5')).toBeVisible();
+   expect(screen.queryByRole('link', { name: 'Begin lesson' })).toBeNull();
+   expect(state.updateCalls).toBe(0);
+diff --git a/src/bootcamps/conditionals/routes.tsx b/src/bootcamps/conditionals/routes.tsx
+index 3382fe8d..28a11cbb 100644
+--- a/src/bootcamps/conditionals/routes.tsx
++++ b/src/bootcamps/conditionals/routes.tsx
+@@ -12,7 +12,7 @@ import { getCurriculumDifficulty, getCurriculumUnits } from './curriculumPath';
+ import { conditionalAssignmentAllowsAction, type ResolvedConditionalAssignment as ConditionalAssignment } from './assignments';
+ import { ConditionalLessonNote } from './components/ConditionalLessonNote';
+ import { OpeningCourseNavigation, OpeningCourseScreen, type OpeningCourseUrl } from './components/OpeningCourse';
+-import { OPENING_COURSE_PATH, openingCourseStep, openingStepAccessUnits } from './openingCoursePath';
++import { CHAPTER_TWO_LEGACY_UNIT_IDS, OPENING_COURSE_PATH, openingCourseStep, openingStepAccessUnits } from './openingCoursePath';
+ 
+ const BASE = '/bootcamp/conditionals';
+ const names: Record<ConditionalArea, string> = { understanding: 'Understand the rule', translation: 'Translate the language', linking: 'Link the rules', inference: 'Draw conclusions', complex: 'Handle complex rules', application: 'Apply to LR', quantifiers: 'Some, most, and all' };
+@@ -188,7 +188,8 @@ function OpeningCourseRoute({ view: surface }: { view?: string }) {
+   const steps = candidates.filter(step => isAdmin || !!active && openingStepAccessUnits(step).some(unitId => conditionalAssignmentAllowsAction(active, {
+     unitId, action: step.type === 'note' ? 'lesson' : 'guided', difficulty: active.difficulty ?? getCurriculumDifficulty(unitId),
+   })));
+-  const units = selectedUnits(selection).filter(unit => CONDITIONAL_OPENING_UNIT_IDS.some(id => id === unit.id));
++  // Chapter 2 topics keep their recorded skill drills reachable here without joining the opening-edition membership.
++  const units = selectedUnits(selection).filter(unit => CONDITIONAL_OPENING_UNIT_IDS.some(id => id === unit.id) || CHAPTER_TWO_LEGACY_UNIT_IDS.some(id => id === unit.id));
+   const recordedPractice = <section className="cb-card"><h2>Your assigned skill drills</h2><p>These drills record your responses and reasoning in your existing work.</p><div className="cb-actions">{units.filter(unit => isAdmin || !!active && conditionalAssignmentAllowsAction(active, { unitId: unit.id, action: 'practice', difficulty: active.difficulty ?? getCurriculumDifficulty(unit) })).map(unit => <Link key={unit.id} className="cb-button" to={actionUrl(unit, 'practice', selection)}>{unit.title}<ArrowRight size={16}/></Link>)}</div></section>;
+   return <OpeningCourseScreen view={surface ?? stepId} run={params.get('run') === '1'} url={courseUrl(location.search)} steps={steps} recordedPractice={recordedPractice} storageScope={userId} progressStore={progressStore}/>;
+ }
+@@ -220,7 +221,7 @@ function CourseLanding() {
+   })));
+   if (!hasCourseSteps) return <LearningPath/>;
+   const additionalUnits = !isAdmin && active ? selectedUnits(selection).filter(unit => !CONDITIONAL_OPENING_UNIT_IDS.some(id => id === unit.id)) : [];
+-  return <><OpeningCourseRoute view="lessons"/>{additionalUnits.length > 0 && <details className="cb-other-work"><summary>Additional assigned material</summary><p>This material remains available from your assignment, outside the numbered Part 1 course.</p><RecommendedForward selection={{ ...selection, allowedUnits: additionalUnits.map(unit => unit.id) }}/></details>}{assignments.length > 1 && !isAdmin && <section className="cb-other-work"><h2>Your other work</h2>{assignments.filter(item => item.id !== active?.id).map(item => <p key={item.id}><Link to={`${BASE}?assignment=${encodeURIComponent(item.id)}`}>{item.title}</Link></p>)}</section>}</>;
++  return <><OpeningCourseRoute view="lessons"/>{additionalUnits.length > 0 && <details className="cb-other-work"><summary>Additional assigned material</summary><p>This earlier or additional material remains available from your assignment, alongside the numbered course.</p><RecommendedForward selection={{ ...selection, allowedUnits: additionalUnits.map(unit => unit.id) }}/></details>}{assignments.length > 1 && !isAdmin && <section className="cb-other-work"><h2>Your other work</h2>{assignments.filter(item => item.id !== active?.id).map(item => <p key={item.id}><Link to={`${BASE}?assignment=${encodeURIComponent(item.id)}`}>{item.title}</Link></p>)}</section>}</>;
+ }
+ 
+ function LearningPath() {
+diff --git a/supabase/functions/mcp/index.ts b/supabase/functions/mcp/index.ts
+index 2c26ea46..d60cc500 100644
+--- a/supabase/functions/mcp/index.ts
++++ b/supabase/functions/mcp/index.ts
+@@ -2,594 +2,7 @@
+ // To take ownership, delete this banner line; the plugin then leaves the file alone.
+ // supabase function: mcp
+ // Bundled from src/lib/mcp/index.ts by @lovable.dev/mcp-js.
+-// src/lib/mcp/index.ts
+-import { auth, defineMcp } from "npm:@lovable.dev/mcp-js@0.20.0";
+-
+-// src/lib/mcp/tools/echo.ts
+-import { defineTool } from "npm:@lovable.dev/mcp-js@0.20.0";
+-import { z } from "npm:zod@^3.23.8";
+-var echo_default = defineTool({
+-  name: "echo",
+-  title: "Echo",
+-  description: "Echo the input text back. Useful to verify the LSAT U MCP connection is live.",
+-  inputSchema: { text: z.string().min(1).describe("Text to echo back.") },
+-  annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
+-  handler: ({ text }) => ({ content: [{ type: "text", text }] })
+-});
+-
+-// src/lib/mcp/tools/get-my-profile.ts
+-import { createClient } from "npm:@supabase/supabase-js@^2.101.1";
+-import { defineTool as defineTool2 } from "npm:@lovable.dev/mcp-js@0.20.0";
+-function supabaseForUser(ctx) {
+-  return createClient(
+-    process.env.SUPABASE_URL,
+-    process.env.SUPABASE_PUBLISHABLE_KEY ?? process.env.SUPABASE_ANON_KEY,
+-    {
+-      global: { headers: { Authorization: `Bearer ${ctx.getToken()}` } },
+-      auth: { persistSession: false, autoRefreshToken: false }
+-    }
+-  );
+-}
+-var get_my_profile_default = defineTool2({
+-  name: "get_my_profile",
+-  title: "Get my LSAT U profile",
+-  description: "Return the signed-in user's LSAT U profile: display name, level, streak, XP and layout preferences.",
+-  inputSchema: {},
+-  annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
+-  handler: async (_input, ctx) => {
+-    if (!ctx.isAuthenticated()) {
+-      return { content: [{ type: "text", text: "Not authenticated" }], isError: true };
+-    }
+-    const supabase = supabaseForUser(ctx);
+-    const { data, error } = await supabase.from("profiles").select(
+-      "class_id, display_name, level, xp_total, streak_current, longest_streak, daily_goal_questions, daily_goal_streak, last_practice_date, layout_prefs"
+-    ).eq("class_id", ctx.getUserId()).maybeSingle();
+-    if (error) {
+-      return { content: [{ type: "text", text: error.message }], isError: true };
+-    }
+-    return {
+-      content: [{ type: "text", text: JSON.stringify(data ?? {}, null, 2) }],
+-      structuredContent: { profile: data ?? null }
+-    };
+-  }
+-});
+-
+-// src/lib/mcp/tools/list-my-homework.ts
+-import { createClient as createClient2 } from "npm:@supabase/supabase-js@^2.101.1";
+-import { defineTool as defineTool3 } from "npm:@lovable.dev/mcp-js@0.20.0";
+-import { z as z2 } from "npm:zod@^3.23.8";
+-function supabaseForUser2(ctx) {
+-  return createClient2(
+-    process.env.SUPABASE_URL,
+-    process.env.SUPABASE_PUBLISHABLE_KEY ?? process.env.SUPABASE_ANON_KEY,
+-    {
+-      global: { headers: { Authorization: `Bearer ${ctx.getToken()}` } },
+-      auth: { persistSession: false, autoRefreshToken: false }
+-    }
+-  );
+-}
+-var list_my_homework_default = defineTool3({
+-  name: "list_my_homework",
+-  title: "List my homework assignments",
+-  description: "List homework assignments for the signed-in student, newest first. Optionally filter by status.",
+-  inputSchema: {
+-    status: z2.enum(["assigned", "in_progress", "completed"]).optional().describe("Optional status filter."),
+-    limit: z2.number().int().positive().optional().describe("Max rows to return. Defaults to 25.")
+-  },
+-  annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
+-  handler: async ({ status, limit }, ctx) => {
+-    if (!ctx.isAuthenticated()) {
+-      return { content: [{ type: "text", text: "Not authenticated" }], isError: true };
+-    }
+-    const supabase = supabaseForUser2(ctx);
+-    let query = supabase.from("homework_assignments").select("id, set_title, set_description, status, created_at, started_at, completed_at").eq("student_id", ctx.getUserId()).order("created_at", { ascending: false }).limit(Math.min(limit ?? 25, 100));
+-    if (status) query = query.eq("status", status);
+-    const { data, error } = await query;
+-    if (error) {
+-      return { content: [{ type: "text", text: error.message }], isError: true };
+-    }
+-    return {
+-      content: [{ type: "text", text: JSON.stringify(data ?? [], null, 2) }],
+-      structuredContent: { assignments: data ?? [] }
+-    };
+-  }
+-});
+-
+-// src/lib/mcp/tools/list-my-classroom-items.ts
+-import { createClient as createClient3 } from "npm:@supabase/supabase-js@^2.101.1";
+-import { defineTool as defineTool4 } from "npm:@lovable.dev/mcp-js@0.20.0";
+-import { z as z3 } from "npm:zod@^3.23.8";
+-function supabaseForUser3(ctx) {
+-  return createClient3(
+-    process.env.SUPABASE_URL,
+-    process.env.SUPABASE_PUBLISHABLE_KEY ?? process.env.SUPABASE_ANON_KEY,
+-    {
+-      global: { headers: { Authorization: `Bearer ${ctx.getToken()}` } },
+-      auth: { persistSession: false, autoRefreshToken: false }
+-    }
+-  );
+-}
+-var list_my_classroom_items_default = defineTool4({
+-  name: "list_my_classroom_items",
+-  title: "List my classroom items",
+-  description: "List classroom items (notes, drills, bootcamp modules, homework) shared with the signed-in student by their instructor.",
+-  inputSchema: {
+-    limit: z3.number().int().positive().optional().describe("Max items to return. Defaults to 25.")
+-  },
+-  annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
+-  handler: async ({ limit }, ctx) => {
+-    if (!ctx.isAuthenticated()) {
+-      return { content: [{ type: "text", text: "Not authenticated" }], isError: true };
+-    }
+-    const supabase = supabaseForUser3(ctx);
+-    const { data, error } = await supabase.from("classroom_items").select("id, type, title, description, status, created_at, metadata_json").eq("student_id", ctx.getUserId()).eq("visible_to_student", true).order("created_at", { ascending: false }).limit(Math.min(limit ?? 25, 100));
+-    if (error) {
+-      return { content: [{ type: "text", text: error.message }], isError: true };
+-    }
+-    return {
+-      content: [{ type: "text", text: JSON.stringify(data ?? [], null, 2) }],
+-      structuredContent: { items: data ?? [] }
+-    };
+-  }
+-});
+-
+-// src/lib/mcp/tools/find-students.ts
+-import { defineTool as defineTool5 } from "npm:@lovable.dev/mcp-js@0.20.0";
+-import { z as z4 } from "npm:zod@^3.23.8";
+-
+-// src/lib/mcp/admin-client.ts
+-import { createClient as createClient4 } from "npm:@supabase/supabase-js@^2.101.1";
+-function authenticatedSupabase(ctx) {
+-  if (!ctx.isAuthenticated()) {
+-    throw new Error("Not authenticated");
+-  }
+-  return createClient4(
+-    process.env.SUPABASE_URL,
+-    process.env.SUPABASE_PUBLISHABLE_KEY ?? process.env.SUPABASE_ANON_KEY,
+-    {
+-      global: { headers: { Authorization: `Bearer ${ctx.getToken()}` } },
+-      auth: { persistSession: false, autoRefreshToken: false }
+-    }
+-  );
+-}
+-async function adminRpc(client, functionName, args) {
+-  return client.rpc(functionName, args);
+-}
+-function toolError(error) {
+-  let text;
+-  if (error instanceof Error) {
+-    text = error.message;
+-  } else if (error && typeof error === "object") {
+-    const e = error;
+-    const parts = [
+-      e.message ? `message: ${e.message}` : null,
+-      e.code ? `code: ${e.code}` : null,
+-      e.details ? `details: ${e.details}` : null,
+-      e.hint ? `hint: ${e.hint}` : null
+-    ].filter(Boolean);
+-    text = parts.length > 0 ? parts.join(" | ") : JSON.stringify(error);
+-  } else {
+-    text = "LSAT U write failed";
+-  }
+-  return {
+-    content: [Object.freeze({ type: "text", text })],
+-    isError: true
+-  };
+-}
+-
+-// src/lib/mcp/tools/find-students.ts
+-var find_students_default = defineTool5({
+-  name: "find_students",
+-  title: "Find LSAT U students",
+-  description: "Admin-only. Resolve a student name or email to the exact LSAT U student ID before posting anything.",
+-  inputSchema: {
+-    query: z4.string().min(2).max(160).describe("Student name or email fragment."),
+-    limit: z4.number().int().min(1).max(25).optional()
+-  },
+-  annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
+-  handler: async ({ query, limit }, ctx) => {
+-    try {
+-      const supabase = authenticatedSupabase(ctx);
+-      const { data, error } = await adminRpc(supabase, "mcp_find_students", {
+-        p_query: query,
+-        p_limit: limit ?? 10
+-      });
+-      if (error) throw error;
+-      const students = data ?? [];
+-      return {
+-        content: [{ type: "text", text: JSON.stringify(students, null, 2) }],
+-        structuredContent: { students }
+-      };
+-    } catch (error) {
+-      return toolError(error);
+-    }
+-  }
+-});
+-
+-// src/lib/mcp/tools/post-classroom-note.ts
+-import { defineTool as defineTool6 } from "npm:@lovable.dev/mcp-js@0.20.0";
+-import { z as z5 } from "npm:zod@^3.23.8";
+-
+-// src/lib/mcp/notify-email.ts
+-async function sendNotifyEmail(client, params) {
+-  const { studentId, title, route, description, assignmentType } = params;
+-  try {
+-    const { data, error } = await client.functions.invoke("send-assignment-email", {
+-      body: {
+-        studentId,
+-        title,
+-        route,
+-        description,
+-        assignmentType: assignmentType ?? "assignment"
+-      }
+-    });
+-    if (error) return { ok: false, error: error.message };
+-    if (data && typeof data === "object" && "ok" in data && data.ok === true) {
+-      return { ok: true };
+-    }
+-    const errMsg = data && typeof data === "object" && "error" in data ? String(data.error) : "email failed";
+-    return { ok: false, error: errMsg };
+-  } catch (e) {
+-    return { ok: false, error: e instanceof Error ? e.message : "email failed" };
+-  }
+-}
+-
+-// src/lib/mcp/tools/post-classroom-note.ts
+-var post_classroom_note_default = defineTool6({
+-  name: "post_classroom_note",
+-  title: "Post a Classroom note",
+-  description: "Admin-only. Post a student-facing note under Notes and recaps, with optional bell and inbox notification. Resolve the student first.",
+-  inputSchema: {
+-    student_id: z5.string().uuid(),
+-    title: z5.string().min(1).max(160),
+-    content_html: z5.string().min(1).max(5e5),
+-    description: z5.string().max(500).optional(),
+-    notify: z5.boolean().optional().describe("Defaults to true."),
+-    idempotency_key: z5.string().min(8).max(160).describe("Stable unique key for this exact post. Reuse it only when retrying.")
+-  },
+-  annotations: { readOnlyHint: false, idempotentHint: true, openWorldHint: false },
+-  handler: async (input, ctx) => {
+-    try {
+-      const supabase = authenticatedSupabase(ctx);
+-      const { data, error } = await adminRpc(supabase, "mcp_post_classroom_note", {
+-        p_student_id: input.student_id,
+-        p_title: input.title,
+-        p_content_html: input.content_html,
+-        p_idempotency_key: input.idempotency_key,
+-        p_description: input.description ?? null,
+-        p_notify: input.notify ?? true
+-      });
+-      if (error) throw error;
+-      const notify = input.notify ?? true;
+-      let out = data;
+-      if (notify && out?.ok === true && out?.reused !== true && typeof out?.route === "string") {
+-        const email = await sendNotifyEmail(supabase, {
+-          studentId: input.student_id,
+-          title: input.title,
+-          route: out.route,
+-          description: input.description,
+-          assignmentType: "note"
+-        });
+-        out = { ...out, email_ok: email.ok, ...email.error ? { email_error: email.error } : {} };
+-      }
+-      return {
+-        content: [{ type: "text", text: JSON.stringify(out, null, 2) }],
+-        structuredContent: out
+-      };
+-    } catch (error) {
+-      return toolError(error);
+-    }
+-  }
+-});
+-
+-// src/lib/mcp/tools/assign-passage-map-homework.ts
+-import { defineTool as defineTool7 } from "npm:@lovable.dev/mcp-js@0.20.0";
+-import { z as z6 } from "npm:zod@^3.23.8";
+-var responseField = z6.object({
+-  id: z6.string().min(1).max(100),
+-  label: z6.string().min(1).max(200),
+-  kind: z6.enum(["short", "long"]).optional(),
+-  rows: z6.number().int().min(1).max(16).optional(),
+-  placeholder: z6.string().max(300).optional(),
+-  required: z6.boolean().optional()
+-});
+-var responseSection = z6.object({
+-  id: z6.string().min(1).max(100),
+-  title: z6.string().min(1).max(200),
+-  instructions: z6.string().max(1e3).optional(),
+-  fields: z6.array(responseField).min(1).max(80)
+-});
+-var assign_passage_map_homework_default = defineTool7({
+-  name: "assign_passage_map_homework",
+-  title: "Assign passage-map homework",
+-  description: "Admin-only. Publish structured passage-map homework under Assigned work. Student responses save in the Classroom; the attached answer key stays hidden until submission.",
+-  inputSchema: {
+-    student_id: z6.string().uuid(),
+-    title: z6.string().min(1).max(160),
+-    content_html: z6.string().min(1).max(5e5),
+-    response_schema: z6.object({
+-      version: z6.literal(1),
+-      sections: z6.array(responseSection).min(1).max(30)
+-    }),
+-    answer_key_html: z6.string().min(1).max(5e5),
+-    notify: z6.boolean().optional().describe("Defaults to true."),
+-    idempotency_key: z6.string().min(8).max(160).describe("Stable unique key for this exact assignment. Reuse it only when retrying.")
+-  },
+-  annotations: { readOnlyHint: false, idempotentHint: true, openWorldHint: false },
+-  handler: async (input, ctx) => {
+-    try {
+-      const supabase = authenticatedSupabase(ctx);
+-      const { data, error } = await adminRpc(
+-        supabase,
+-        "mcp_assign_passage_map_homework",
+-        {
+-          p_student_id: input.student_id,
+-          p_title: input.title,
+-          p_content_html: input.content_html,
+-          p_response_schema: input.response_schema,
+-          p_answer_key_html: input.answer_key_html,
+-          p_idempotency_key: input.idempotency_key,
+-          p_notify: input.notify ?? true
+-        }
+-      );
+-      if (error) throw error;
+-      const notify = input.notify ?? true;
+-      let out = data;
+-      if (notify && out?.ok === true && out?.reused !== true && typeof out?.route === "string") {
+-        const email = await sendNotifyEmail(supabase, {
+-          studentId: input.student_id,
+-          title: input.title,
+-          route: out.route,
+-          assignmentType: "homework"
+-        });
+-        out = { ...out, email_ok: email.ok, ...email.error ? { email_error: email.error } : {} };
+-      }
+-      return {
+-        content: [{ type: "text", text: JSON.stringify(out, null, 2) }],
+-        structuredContent: out
+-      };
+-    } catch (error) {
+-      return toolError(error);
+-    }
+-  }
+-});
+-
+-// src/lib/mcp/tools/get-assignment-status.ts
+-import { defineTool as defineTool8 } from "npm:@lovable.dev/mcp-js@0.20.0";
+-import { z as z7 } from "npm:zod@^3.23.8";
+-var get_assignment_status_default = defineTool8({
+-  name: "get_assignment_status",
+-  title: "Get assignment status",
+-  description: "Admin-only. Verify that a structured LSAT U assignment exists and report its view, save, submission, and answer-key state.",
+-  inputSchema: {
+-    assignment_id: z7.string().uuid()
+-  },
+-  annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
+-  handler: async ({ assignment_id }, ctx) => {
+-    try {
+-      const supabase = authenticatedSupabase(ctx);
+-      const { data, error } = await adminRpc(supabase, "mcp_get_assignment_status", {
+-        p_assignment_id: assignment_id
+-      });
+-      if (error) throw error;
+-      return {
+-        content: [{ type: "text", text: JSON.stringify(data, null, 2) }],
+-        structuredContent: data
+-      };
+-    } catch (error) {
+-      return toolError(error);
+-    }
+-  }
+-});
+-
+-// src/lib/mcp/tools/list-students.ts
+-import { defineTool as defineTool9 } from "npm:@lovable.dev/mcp-js@0.20.0";
+-import { z as z8 } from "npm:zod@^3.23.8";
+-
+-// src/lib/mcp/tools/_shared.ts
+-import { createClient as createClient5 } from "npm:@supabase/supabase-js@^2.101.1";
+-function supabaseForUser4(ctx) {
+-  return createClient5(
+-    process.env.SUPABASE_URL,
+-    process.env.SUPABASE_PUBLISHABLE_KEY ?? process.env.SUPABASE_ANON_KEY,
+-    {
+-      global: { headers: { Authorization: `Bearer ${ctx.getToken()}` } },
+-      auth: { persistSession: false, autoRefreshToken: false }
+-    }
+-  );
+-}
+-async function requireAdmin(ctx) {
+-  if (!ctx.isAuthenticated()) return { supabase: null, userId: null, error: "Not authenticated" };
+-  const supabase = supabaseForUser4(ctx);
+-  const userId = ctx.getUserId();
+-  const { data, error } = await supabase.from("user_roles").select("role").eq("user_id", userId).eq("role", "admin").maybeSingle();
+-  if (error) return { supabase: null, userId: null, error: error.message };
+-  if (!data) return { supabase: null, userId: null, error: "Admin role required to use this tool." };
+-  return { supabase, userId, error: null };
+-}
+-function textResult(text, isError = false) {
+-  return { content: [Object.freeze({ type: "text", text })], isError };
+-}
+-
+-// src/lib/mcp/tools/list-students.ts
+-var list_students_default = defineTool9({
+-  name: "list_students",
+-  title: "List students (admin)",
+-  description: "Admin only. List LSAT U students, optionally filtered by a case-insensitive name substring. Returns id (class_id = user_id) and display_name \u2014 use the id when calling assign_homework or send_note.",
+-  inputSchema: {
+-    query: z8.string().trim().min(1).optional().describe("Optional case-insensitive name substring."),
+-    limit: z8.number().int().positive().max(200).optional().describe("Max rows (default 50).")
+-  },
+-  annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
+-  handler: async ({ query, limit }, ctx) => {
+-    const admin = await requireAdmin(ctx);
+-    if (admin.error) return textResult(admin.error, true);
+-    let q = admin.supabase.from("profiles").select("class_id, display_name").order("display_name", { ascending: true }).limit(Math.min(limit ?? 50, 200));
+-    if (query) q = q.ilike("display_name", `%${query}%`);
+-    const { data, error } = await q;
+-    if (error) return textResult(error.message, true);
+-    const students = (data ?? []).map((r) => ({ id: r.class_id, display_name: r.display_name }));
+-    return {
+-      content: [{ type: "text", text: JSON.stringify(students, null, 2) }],
+-      structuredContent: { students }
+-    };
+-  }
+-});
+-
+-// src/lib/mcp/tools/list-homework-sets.ts
+-import { defineTool as defineTool10 } from "npm:@lovable.dev/mcp-js@0.20.0";
+-import { z as z9 } from "npm:zod@^3.23.8";
+-var list_homework_sets_default = defineTool10({
+-  name: "list_homework_sets",
+-  title: "List homework sets (admin)",
+-  description: "Admin only. List homework sets you have created. Use a set's id when calling assign_homework.",
+-  inputSchema: {
+-    query: z9.string().trim().min(1).optional().describe("Optional case-insensitive title substring."),
+-    limit: z9.number().int().positive().max(200).optional().describe("Max rows (default 50).")
+-  },
+-  annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
+-  handler: async ({ query, limit }, ctx) => {
+-    const admin = await requireAdmin(ctx);
+-    if (admin.error) return textResult(admin.error, true);
+-    let q = admin.supabase.from("homework_sets").select("id, title, description, created_at, question_qids").eq("created_by", admin.userId).order("created_at", { ascending: false }).limit(Math.min(limit ?? 50, 200));
+-    if (query) q = q.ilike("title", `%${query}%`);
+-    const { data, error } = await q;
+-    if (error) return textResult(error.message, true);
+-    const sets = (data ?? []).map((s) => ({
+-      id: s.id,
+-      title: s.title,
+-      description: s.description,
+-      question_count: Array.isArray(s.question_qids) ? s.question_qids.length : 0,
+-      created_at: s.created_at
+-    }));
+-    return {
+-      content: [{ type: "text", text: JSON.stringify(sets, null, 2) }],
+-      structuredContent: { sets }
+-    };
+-  }
+-});
+-
+-// src/lib/mcp/tools/assign-homework.ts
+-import { defineTool as defineTool11 } from "npm:@lovable.dev/mcp-js@0.20.0";
+-import { z as z10 } from "npm:zod@^3.23.8";
+-var assign_homework_default = defineTool11({
+-  name: "assign_homework",
+-  title: "Assign homework set to a student (admin)",
+-  description: "Admin only. Assign an existing homework set to a student and notify them (bell + inbox + email). Creates a homework_assignments row and a Classroom feed item. Get the set id from list_homework_sets and the student id from list_students.",
+-  inputSchema: {
+-    set_id: z10.string().uuid().describe("homework_sets.id to assign."),
+-    student_id: z10.string().uuid().describe("Target student's id (profiles.class_id / auth user id).")
+-  },
+-  annotations: { readOnlyHint: false, destructiveHint: false, openWorldHint: false },
+-  handler: async ({ set_id, student_id }, ctx) => {
+-    try {
+-      const supabase = authenticatedSupabase(ctx);
+-      const idempotencyKey = `assign_homework_set-${set_id}-${student_id}`;
+-      const { data, error } = await adminRpc(supabase, "mcp_assign_homework_set", {
+-        p_set_id: set_id,
+-        p_student_id: student_id,
+-        p_idempotency_key: idempotencyKey,
+-        p_notify: true
+-      });
+-      if (error) throw error;
+-      let out = data;
+-      if (out?.ok === true && out?.reused !== true && out?.already_assigned !== true && typeof out?.route === "string") {
+-        const email = await sendNotifyEmail(supabase, {
+-          studentId: student_id,
+-          title: typeof out.title === "string" ? out.title : "New homework",
+-          route: out.route,
+-          assignmentType: "homework"
+-        });
+-        out = { ...out, email_ok: email.ok, ...email.error ? { email_error: email.error } : {} };
+-      }
+-      return {
+-        content: [{ type: "text", text: JSON.stringify(out, null, 2) }],
+-        structuredContent: out
+-      };
+-    } catch (error) {
+-      return toolError(error);
+-    }
+-  }
+-});
+-
+-// src/lib/mcp/tools/send-note.ts
+-import { defineTool as defineTool12 } from "npm:@lovable.dev/mcp-js@0.20.0";
+-import { z as z11 } from "npm:zod@^3.23.8";
+-function textToHtml(text) {
+-  const escaped = text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+-  return escaped.split(/\n{2,}/).map((para) => `<p>${para.replace(/\n/g, "<br>")}</p>`).join("");
+-}
+-var send_note_default = defineTool12({
+-  name: "send_note",
+-  title: "Send a classroom note to a student (admin)",
+-  description: "Admin only. Post a plain-text note to a student's Classroom feed and notify them (bell + inbox + email). Line breaks are preserved. For rich HTML notes use post_classroom_note.",
+-  inputSchema: {
+-    student_id: z11.string().uuid().describe("Target student's id (profiles.class_id / auth user id)."),
+-    title: z11.string().trim().min(1).max(160).describe("Short note title."),
+-    body_markdown: z11.string().trim().min(1).max(2e4).describe("Note body (plain text; line breaks preserved).")
+-  },
+-  annotations: { readOnlyHint: false, destructiveHint: false, openWorldHint: false },
+-  handler: async ({ student_id, title, body_markdown }, ctx) => {
+-    try {
+-      const supabase = authenticatedSupabase(ctx);
+-      const idempotencyKey = `send_note-${crypto.randomUUID()}`;
+-      const { data, error } = await adminRpc(supabase, "mcp_post_classroom_note", {
+-        p_student_id: student_id,
+-        p_title: title,
+-        p_content_html: textToHtml(body_markdown),
+-        p_idempotency_key: idempotencyKey,
+-        p_description: body_markdown.slice(0, 240),
+-        p_notify: true
+-      });
+-      if (error) throw error;
+-      let out = data;
+-      if (out?.ok === true && typeof out?.route === "string") {
+-        const email = await sendNotifyEmail(supabase, {
+-          studentId: student_id,
+-          title,
+-          route: out.route,
+-          description: body_markdown.slice(0, 240),
+-          assignmentType: "note"
+-        });
+-        out = { ...out, email_ok: email.ok, ...email.error ? { email_error: email.error } : {} };
+-      }
+-      return {
+-        content: [{ type: "text", text: JSON.stringify(out, null, 2) }],
+-        structuredContent: out
+-      };
+-    } catch (error) {
+-      return toolError(error);
+-    }
+-  }
+-});
+-
+-// src/lib/mcp/index.ts
+-var projectRef = "atrcqxpmqrynmtvvyjju";
+-var mcp_default = defineMcp({
+-  name: "lsat-u-mcp",
+-  title: "LSAT U",
+-  version: "0.3.0",
+-  instructions: "Tools for LSAT U (Aspiring Attorneys). Students can read their own profile, homework, and classroom items. Admins can list and resolve students, inspect homework sets, assign standard or structured passage-map homework, publish Classroom notes, and verify assignment status. Always resolve the student first and use stable idempotency keys for structured writes.",
+-  auth: auth.oauth.issuer({
+-    issuer: `https://${projectRef}.supabase.co/auth/v1`,
+-    acceptedAudiences: "authenticated"
+-  }),
+-  tools: [
+-    echo_default,
+-    get_my_profile_default,
+-    list_my_homework_default,
+-    list_my_classroom_items_default,
+-    find_students_default,
+-    post_classroom_note_default,
+-    assign_passage_map_homework_default,
+-    get_assignment_status_default,
+-    list_students_default,
+-    list_homework_sets_default,
+-    assign_homework_default,
+-    send_note_default
+-  ]
+-});
+-
+ // lovable-mcp-supabase-entry.ts
++import mcp from "npm:C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-and-or-20261019\\src\\lib\\mcp\\index.ts";
+ import { createSupabaseHandler } from "npm:@lovable.dev/mcp-js@0.20.0/stacks/supabase";
+-Deno.serve(createSupabaseHandler(mcp_default, { functionName: "mcp" }));
++Deno.serve(createSupabaseHandler(mcp, { functionName: "mcp" }));

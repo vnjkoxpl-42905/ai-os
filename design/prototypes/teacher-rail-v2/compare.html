@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Teacher Rail Widths</title>
+<style>
+:root{--bg:#ecebe7;--ink:#1d1d1b;--mute:#6b6a66}
+body{margin:0;background:var(--bg);color:var(--ink);font:13px system-ui,sans-serif;padding:16px}
+h1{font-size:15px;margin:0 0 4px}p{margin:0 0 14px;color:var(--mute)}
+.wrap{display:flex;gap:16px;align-items:flex-start;overflow-x:auto;padding-bottom:16px}
+figure{margin:0;flex:none}figcaption{margin-bottom:6px;font-weight:600}
+iframe{border:1px solid #d5d4cf;border-radius:10px;background:#fff;display:block}
+</style></head><body>
+<h1>Teacher rail at three widths</h1>
+<p>Each frame is the same prototype with its own state. Real pixels, no scaling: scroll sideways to see the 1440 frame.</p>
+<div class="wrap">
+<figure><figcaption>Phone · 390 × 780</figcaption><iframe src="index.html?k=phone" width="390" height="780" title="Phone width"></iframe></figure>
+<figure><figcaption>Laptop · 924 × 780</figcaption><iframe src="index.html?k=924" width="924" height="780" title="924 width"></iframe></figure>
+<figure><figcaption>Desktop · 1440 × 860</figcaption><iframe src="index.html?k=1440" width="1440" height="860" title="1440 width"></iframe></figure>
+</div>
+</body></html>

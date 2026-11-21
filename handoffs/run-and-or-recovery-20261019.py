@@ -1,0 +1,40 @@
+from pathlib import Path
+import subprocess, json, time
+root=Path(r'C:/Users/Joshu/dev/ai-os-projects/lsatu-and-or-20261019')
+art=Path(r'C:/Users/Joshu/dev/ai-os/handoffs/and-or-20261019-recovery-1')
+art.mkdir(exist_ok=True)
+base='2348f76584ad642104fb3af1e8543765a6a9e185'
+(art/'baseline-status.txt').write_bytes(subprocess.check_output(['git','status','--short','--untracked-files=all'],cwd=root))
+(art/'baseline-diff.patch').write_bytes(subprocess.check_output(['git','diff',base],cwd=root))
+prompt='''Joshua explicitly authorizes you, Claude, to FINISH the existing local And/Or chapter and correct all five teaching defects. You own implementation; Codex runs commands and independent verification to conserve your nearly exhausted subscription. This is a new focused recovery turn after the previous runner timed out. Do not treat the failed runner result as successful. Preserve the current partial implementation and all unrelated work.
+
+Work only in C:/Users/Joshu/dev/ai-os-projects/lsatu-and-or-20261019. No commits, pushes, merges, deployment, provider/media calls, settings/trust changes or new dependencies. No shell tools are available by design: do not try alternate tools or delegate tests. The host handles tests and any generated-source build steps. No need to read huge prior conversation/transcripts or the complete source library again. Start from the current chapter files and the precise five defects below. You may consult the existing frozen build spec for acceptance: C:/Users/Joshu/dev/ai-os/brainstorms/2026-10-18-conditional-and-or-chapter.build-spec.md. Current chapter provenance is docs/conditionals/and-or-chapter-provenance.md. Keep existing Chapter1, old routes, IDs, question keys, legacy saved work and assignment access restrictions.
+
+Fix all five, with meaningful regressions using real authored data:
+1. components/AndOrVisuals.tsx (approx91), content/andOrItems.ts (approx262): No housing offer probe denies a required member of admitted -> scholarship AND housing. Thus NOT admitted follows. Evaluate a denied necessary side before fallback saying no additional conclusion.
+2. content/andOrItems.ts (approx127-128): library lets a visitor stay late expresses PERMISSION. Positive/negative/short labels and readbacks must express allowed/not allowed to stay, never actual staying/non-staying. Keep original rule meaning.
+3. content/andOrItems.ts (approx138,141): NOT under weight limit includes exactly at limit. Use precise complements, e.g. at or over. Test boundary meaning.
+4. components/AndOrLessons.tsx (approx45): photo ID known, proof of address UNKNOWN does not establish whole AND; it does not establish false. Replace One member leaves it unmet with precise not-established teaching, audit same ambiguity nearby.
+5. components/AndOrPractice.tsx (approx249,202-205): preserve useful hints/feedback while learner retries or edits wording; invalidate dependent arrangement/NOT/accepted grades correctly without erasing useful feedback. Ensure retained feedback never claims stale correctness after edits. Check success/firstwrong/retry/reveal/restoration.
+
+Finish pending chapter integration and relevant tests. Existing draft:3 lessons2.1-2.3 with4 quizzes each;4 practice sets6 items each; new unique progress.course step IDs; and-or/de-morgan access-topic IDs only; CONDITIONAL_OPENING_UNIT_IDS remains four foundational members; difficulty/action gates preserved; old legacy lesson/guided/practice routes reachable. No new advanced syllabus. Existing components/tests were added by your prior session, inspect them rather than recreate.
+
+Host interim typecheck passed. Early suite had395/412 passed and17 failures, mostly old5-lesson count expectations and timeouts; some assertions were subsequently updated by the prior session. Do not weaken behavioral tests or change untouched drills to hide test timeouts. Host will run serial tests and browser checks. If original scoped applications.source.ts permission-label clarification is still necessary, edit authored source only and tell host to run content:conditionals. Avoid any supabase/functions/mcp/index.ts edit; Vite generates a byproduct which host will restore.
+
+Return concise final report: exact files changed, five fixes with verification-test names, any unfinished requirements or blockers, and commands host must run. Do not claim tests/build/UI passed since you cannot run them. Complete useful work in this turn, minimize rereading and report honestly if quota ends.'''
+(art/'prompt.txt').write_text(prompt,encoding='utf-8')
+args=[r'C:/Users/Joshu/.local/bin/claude.exe','--print','--output-format','json','--permission-mode','acceptEdits','--tools','Read,Edit,Write,Glob,Grep','--strict-mcp-config','--mcp-config','{"mcpServers":{}}']
+(art/'command.json').write_text(json.dumps(args),encoding='utf-8')
+started=time.time()
+with (art/'stdout.json').open('wb') as out,(art/'stderr.txt').open('wb') as err:
+    p=subprocess.Popen(args,cwd=root,stdin=subprocess.PIPE,stdout=out,stderr=err)
+    try:
+        p.communicate(prompt.encode(),timeout=1200)
+        status={'status':'completed' if p.returncode==0 else 'failed','exit_code':p.returncode}
+    except subprocess.TimeoutExpired:
+        subprocess.run(['taskkill','/PID',str(p.pid),'/T','/F'],capture_output=True)
+        p.communicate()
+        status={'status':'failed','error':'Recovery timed out'}
+status.update(elapsed_seconds=time.time()-started,workflow='native Claude recovery; not runner resume',base=base)
+(art/'host-status.json').write_text(json.dumps(status,indent=2),encoding='utf-8')
+print(json.dumps(status))

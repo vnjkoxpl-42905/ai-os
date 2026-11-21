@@ -1,0 +1,136 @@
+{
+  "status": "completed",
+  "mode": "review",
+  "provider": "claude",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "claude",
+    "builder": "codex",
+    "inspector": "claude"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\ai-os",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os\\design\\prototypes\\lsatu-dashboard\\HOME-SURFACE-PLAN.md",
+  "plan_sha256": "d47918fcdaf054643319528b79c405f8a84ee784d323f17bca46f526ede0b2a7",
+  "requested_model": "claude-opus-5-5",
+  "requested_effort": "medium",
+  "base": null,
+  "snapshot": null,
+  "previous": null,
+  "started_at": 1793006990.0635762,
+  "artifacts": "C:\\Users\\Joshu\\.codex\\visualizations\\2026\\10\\25\\01a17081-6735-7fc2-b0e1-922ab635486c\\home-surface-20261026\\plan-review\\claudex-wnaild7v",
+  "cli_version": "2.1.309 (Claude Code)",
+  "executable": [
+    "C:\\Users\\Joshu\\.local\\bin\\claude.exe"
+  ],
+  "exit_code": 0,
+  "session_id": "4085e938-f79a-414e-a878-54cc347bf8ab",
+  "response": {
+    "verdict": "REVISE",
+    "summary": "The plan's direction and scope look sound. It limits changes to Home, keeps JS and HTML untouched, keeps the dark resume as the focus and treats the secondary sections as flat areas. But several decisions are underspecified in ways that the current stylesheet makes risky. First, the plan doesn't say where the Home ground colour is painted. `main` is a max-width box, and body/html already carry the linen gradient. Second, the coach/session rail separators have to follow four alternating `.desk-side` breakpoints that the plan doesn't list. Third, the contained active-row wash conflicts with how rows are padded now and with the per-breakpoint offsets for the old outside stripe. Fourth, Home-scoped padding would override the existing phone padding reductions. Finally, some nested tints and calendar tile borders lose contrast on the darker ground. I checked these against `style.css` and the `app.js` Home markup. I could not run the browser checks.",
+    "findings": [
+      {
+        "id": "F1-ground-paint-target",
+        "severity": "medium",
+        "path": "design/prototypes/lsatu-dashboard/new-versions/11-claude-studio/style.css",
+        "evidence": "Decision 2 says to put the #e8e9e3 ground on `main[data-route=home]`. The page background, though, comes from `html{background:var(--linen)}` and from the body radial gradient plus noise (lines 25-30). `main` has `max-width:1240px` and a left margin set from the rail (line 95). From 1600px up it is centred with a calculated margin (line 383). So a background on `main` would only fill a 1240px box: you'd see a linen band on the right or at the sides of wide screens, and a seam next to the sidebar. Its `min-height:100vh` box also wouldn't cover overscroll. On the other hand, painting `html`/`body` would change subpages too. The plan picks neither option.",
+        "fix": "State where the ground is painted, e.g. `body:has(main[data-route=home])` with an `html:has(...)` fallback, or a full-bleed pseudo-element. Check 1600+ and 1920 widths so no linen band or edge shows. Add a wide viewport (≥1680) to the capture cases."
+      },
+      {
+        "id": "F2-rail-separator-breakpoints",
+        "severity": "medium",
+        "path": "design/prototypes/lsatu-dashboard/new-versions/11-claude-studio/style.css",
+        "evidence": "`.desk-side` changes column count four times: stacked rows on desktop (line 170); 2 columns at ≤1279 (line 386); 1 column at ≤999 (line 408); 2 columns at ≤720 (line 421); 1 column at ≤640 (line 426). Decision 4 only says 'vertical separator at intermediate widths when side by side, horizontal at phone'. If the separators are tied to one breakpoint, the orientation will be wrong between 721 and 999 or between 641 and 720 (the plan's 700px case is side by side). The existing `gap:20px` on `.desk-side` would also break the 'continuous rail' into two pieces of ground unless the gap is set to 0.",
+        "fix": "List the exact ranges and repeat them in Home-scoped media blocks: horizontal rule on desktop (>1279), vertical at 1000–1279, horizontal at 721–999, vertical at 641–720, horizontal at ≤640. Set `gap:0` on the rail and put the spacing in child padding. Add 800px and 700px separator checks to the capture."
+      },
+      {
+        "id": "F3-active-row-wash-geometry",
+        "severity": "medium",
+        "path": "design/prototypes/lsatu-dashboard/new-versions/11-claude-studio/style.css",
+        "evidence": "Rows have no horizontal padding (`.assignment{padding:16px 0}`, line 193). The first row gets `padding-top:4px` (line 195), and the in-progress row, which is probably the first, gets `.is-current`. The current stripe is drawn outside the card at left:-24px, with separate offsets at ≤640 (-18px, line 438) and ≤380 (-16px, line 459). A wash 'contained' in the row would sit flush against the numeral and the Open button, with 4px at the top and 16px at the bottom. Adding horizontal padding to that row alone would push its numeral, chip and title out of line with the other rows. The two existing media-query `::before` rules stay in place, so a Home rule that doesn't override them at every breakpoint could still leave the stripe outside the sheet on phones.",
+        "fix": "Say how the wash is built. One option: a negative inline margin with matching padding (e.g. `margin-inline:-12px; padding-inline:12px`, with the sheet padding at 24px or more) so the text columns stay aligned. Give the current row symmetric vertical padding even when it is first. Set `::before` to sit inside the row (e.g. `left:0`) with a Home-scoped selector that overrides the ≤640 and ≤380 rules. Check the alignment of numerals, chips and Open buttons across rows at 1366, 1048, 390 and 320."
+      },
+      {
+        "id": "F4-phone-padding-override",
+        "severity": "medium",
+        "path": "design/prototypes/lsatu-dashboard/new-versions/11-claude-studio/style.css",
+        "evidence": "Decisions 4–6 set 'consistent internal padding' of 20–24px through `main[data-route=home]` selectors (specificity 0,2,1 or higher). The existing reductions `.card,.panel{padding:18px}` at ≤640 (line 430) and `{padding:16px}` at ≤380 (line 457) are 0,1,0 rules, so they would lose. At 320px with 200% text, an extra 6–8px per side shrinks the ledger and calendar content width. The risk is overflow or truncated control labels, which the acceptance criteria say must not happen.",
+        "fix": "Use logical padding values that keep the ≤640 and ≤380 reductions, e.g. Home-scoped media blocks set to 18px and 16px, or a clamp(). Name these in the plan and include them in the 320px/200% check."
+      },
+      {
+        "id": "F5-nested-tint-and-tile-contrast",
+        "severity": "low",
+        "path": "design/prototypes/lsatu-dashboard/new-versions/11-claude-studio/style.css",
+        "evidence": "`.prep-preview` in the session section uses `background:var(--sheet-2)` (#f2f1ec, line 187). If the rail ground is 'slightly below the assignment sheet' (#f7f4ee), it will be nearly the same tone and the preview box will vanish. The ledger's `.meter` and the `.work-type` chips use tints around #e7–#ea, close to the #e8e9e3 ground, though they sit on the sheet. When the calendar is wide (>36rem, e.g. 1048px where `.desk-lower` is one column), the 7-column day tiles use `border-color:var(--rule-soft)` (#dedfd7, line 389). On a transparent calendar over #e8e9e3, those borders would be almost invisible. The `.day:hover` #f2f1ec may also read as the tile's only edge.",
+        "fix": "Say whether the prep preview and the calendar day tiles get Home-scoped tones or borders checked against the new ground (e.g. `--rule` #d0d2c9 for tile edges). Have surfaces.cjs record these nested elements as well as the four section roles."
+      },
+      {
+        "id": "F6-ledger-double-edge",
+        "severity": "low",
+        "path": "design/prototypes/lsatu-dashboard/new-versions/11-claude-studio/style.css",
+        "evidence": "`.ledger` is a `.card` and takes `box-shadow:var(--lift)`. That shadow already contains a 1px ring (`0 0 0 1px rgb(37 43 38/.07)`) and an inset white highlight (line 20). Adding 'one thin neutral border' without replacing the whole box-shadow gives a doubled edge, and the white inset line shows on the #f7f4ee sheet.",
+        "fix": "Replace `box-shadow` on the Home ledger entirely, with the short drop shadow only, and draw the edge with a single `border` or a ring, not both."
+      },
+      {
+        "id": "F7-lstar-margin-and-rail-tone",
+        "severity": "low",
+        "path": "design/prototypes/lsatu-dashboard/HOME-SURFACE-PLAN.md",
+        "evidence": "By my calculation, #f7f4ee is about L* 96.3 and #e8e9e3 about L* 92.1, a ΔL* of about 4.2, just over the target of 4. The 'quiet top light toward #eeefe9' (about L* 94) cuts this to roughly 2 wherever it reaches the sheet or the upper rail. The rail tone isn't given at all, so the three-role separation (ground, rail, sheet) can't be checked from the plan.",
+        "fix": "Give a hex value for the rail and say how far the top light extends (e.g. it fades out before `.desk-lower`). Measure ΔL* for rail vs ground and sheet vs ground at the sheet's actual position."
+      }
+    ],
+    "coverage": [
+      "Read the full current runtime style.css (476 lines): root tokens, shared .card/.panel, Home desk and resume, coach/session, ledger/assignment, week/day/agenda, every media and container query, reduced-motion rule.",
+      "Checked app.js Home markup: .desk-side holds `section.card.coach` and the session card; `.desk-lower` holds `section.card.ledger` and `section.card.week`; rows are `article.assignment` with `.is-current` on the in-progress row; `.prep-preview` is in the session card; `main.dataset.route` is set in render().",
+      "Checked that teacher routes ('teacher', 'students') differ from 'home', so `main[data-route=home]` doesn't reach teacher views.",
+      "Confirmed the baseline archive in reviews/home-surfaces-before-20261026/ with style.css, app.js, index.html, assets and hashes.json. The recorded style.css hash matches the plan's fb0678…6b96.",
+      "Checked the new rules against existing breakpoints (1600/1279/1100/999/720/640/380) and the .week container queries (36rem/12rem) for specificity and layout conflicts."
+    ],
+    "limitations": [
+      "I couldn't run the browser checks (capture-11, calendar-internal, interactions, surfaces.cjs) or compute SHA-256 hashes myself. The baseline hash comparison relies on hashes.json.",
+      "I didn't view the user's screenshot in AppData Temp or the scripts under .codex/visualizations. surfaces.cjs doesn't exist yet (the plan says the host will write it).",
+      "Long minified lines in app.js (coach message, session card, render) were only partly visible through targeted matches.",
+      "The CIELAB values are my own hand calculations from hex values, not measurements of the rendered page."
+    ]
+  },
+  "usage": {
+    "input_tokens": 18,
+    "cache_creation_input_tokens": 36175,
+    "cache_read_input_tokens": 237413,
+    "output_tokens": 9006,
+    "output_tokens_details": {
+      "thinking_tokens": 3489
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 36175,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 3832,
+        "cache_read_input_tokens": 39468,
+        "cache_creation_input_tokens": 292,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 292
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "permission_denials": [],
+  "total_cost_usd": 0.5170745999999999,
+  "elapsed_seconds": 97.63
+}

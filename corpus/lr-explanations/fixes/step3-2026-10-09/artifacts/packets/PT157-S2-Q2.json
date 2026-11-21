@@ -1,0 +1,84 @@
+{
+ "qid": "PT157-S2-Q2",
+ "type": "Weaken",
+ "difficulty": "3",
+ "key_db": "A",
+ "stimulus_db": "The sculptor Barajas died before she could even begin sculpting the statue called *Sonora*. However, because *Sonora* was sculpted by Barajas’s assistants, working from three sketches Barajas drew in preparing to create the statue herself, the statue probably looks very much like it would have looked if she had lived to complete it.",
+ "stem_db": "Which one of the following, if true, most weakens the argument?",
+ "choices_db": {
+  "A": "Ordinarily, Barajas’s ideas for her statues were revised substantially throughout a series of dozens of preliminary sketches.",
+  "B": "One of the assistants who worked closely with Barajas in planning *Sonora* did not participate in sculpting it.",
+  "C": "*Sonora* is composed partly of materials that Barajas did not frequently use in the statues that she completed during her lifetime.",
+  "D": "Barajas always worked from sketches when she sculpted a statue.",
+  "E": "Barajas never took as long to complete a statue as the assistants did to sculpt *Sonora*."
+ },
+ "bank": {
+  "stimulus": "The sculptor Barajas died before she could even begin\n sculpting the statue called Sonora. However, because\n Sonora was sculpted by Barajas’s assistants, working\n from three sketches Barajas drew in preparing to create\n the statue herself, the statue probably looks very much\n like it would have looked if she had lived to complete it.",
+  "stem": "Which one of the following, if true, most weakens the\n argument?",
+  "choices": {
+   "A": "Ordinarily, Barajas’s ideas for her statues were revised substantially throughout a series of dozens of preliminary sketches.",
+   "B": "One of the assistants who worked closely with Barajas in planning Sonora did not participate in sculpting it.",
+   "C": "Sonora is composed partly of materials that Barajas did not frequently use in the statues that she completed during her lifetime.",
+   "D": "Barajas always worked from sketches when she sculpted a statue.",
+   "E": "Barajas never took as long to complete a statue as the assistants did to sculpt Sonora."
+  },
+  "key": "A"
+ },
+ "explanation_id": "db8c3e16-87a4-40fb-a0be-e2cb1a1f5c11",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "75b21cda-5a4f-4c37-afff-c0981c884fb5",
+   "position": 0,
+   "label": "Evidence (because)",
+   "body": "*Sonora* was sculpted by Barajas’s assistants, working from three sketches Barajas drew in preparing to create the statue herself."
+  },
+  {
+   "row_id": "3fed3c2c-98a9-48a3-9337-8129ba0b9d9b",
+   "position": 1,
+   "label": "Conclusion",
+   "body": "The statue probably looks very much like it would have looked if Barajas had lived to complete it."
+  },
+  {
+   "row_id": "2a173cf6-f9f7-4074-b0d7-31bd805631d4",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "The evidence in this argument is pretty flimsy, leaving the argument vulnerable to a host of different objections. Do we know if Barajas’s assistants were skilled enough to sculpt *Sonora* as well as Barajas could herself? Did the sketches provide enough information for the assistants to know how Barajas wanted the completed statue to look? What if Barajas' statues often ended up looking quite different from her sketches?"
+  },
+  {
+   "row_id": "f1f97302-da9c-4a73-b232-ef2eefc03b31",
+   "position": 3,
+   "label": "Goal",
+   "body": "A correct answer might bring up any of these possible objections. But correct answers to Weaken questions don't always match our predictions, so we'll need to keep an open mind and think about how each answer would impact the argument. Watch out for answers that have little impact, if any, or ones that strengthen the argument rather than weakening it."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "fecb34aa-1af3-4979-9429-e60201e67705",
+   "letter": "A",
+   "body": "This answer directly undermines the assumption that three sketches were sufficient to convey Barajas's final vision for *Sonora*. If Barajas ordinarily revised her ideas substantially throughout dozens of preliminary sketches, then three sketches represent a very early stage of her creative process — far from the refined vision she would have ultimately executed. The assistants were working from what amounts to the first chapter of a very long creative journey. With only three sketches, they lacked access to the extensive revisions Barajas would normally have made before arriving at her final design. This makes it much less likely that their version of *Sonora* resembles what Barajas would have produced."
+  },
+  {
+   "row_id": "2dcb5fab-5cbb-46b0-a7e0-9734b2b44113",
+   "letter": "B",
+   "body": "This answer states that one assistant who worked closely with Barajas in planning *Sonora* did not participate in sculpting it. While this might seem concerning, we do not know how many assistants were involved in total, how many participated in the planning phase, or how significant this one absent assistant's contribution would have been. For all we know, several other assistants who also planned with Barajas did participate in the sculpting. The impact of one single assistant's absence is uncertain and could range from negligible to significant, depending on unknown factors. This answer has some weakening potential but is far less definitive than the correct answer."
+  },
+  {
+   "row_id": "3ecafb41-601b-4759-978d-2ed2ffd2e866",
+   "letter": "C",
+   "body": "This answer notes that *Sonora* is composed partly of materials Barajas did not frequently use. At first glance, unfamiliar materials seem problematic. However, the answer is carefully hedged: \"partly\" of materials she did not \"frequently\" use. The unfamiliar materials could constitute a very small portion of the statue. And \"not frequently\" does not mean \"never\" — Barajas may have used these materials in some previous works, giving her assistants experience with how she handled them. The hedged language limits this answer's weakening force considerably."
+  },
+  {
+   "row_id": "822ff3ea-9fe8-4799-a549-7a2d9dd63a14",
+   "letter": "D",
+   "body": "This answer states that Barajas always worked from sketches when sculpting. If anything, this strengthens the argument rather than weakening it. If Barajas always used sketches as her guide, then her assistants' approach of working from sketches mirrors her own process. This makes it more plausible, not less, that the assistants could produce a statue resembling what Barajas would have created. The answer reinforces the relevance of the sketches as a guide rather than undermining it."
+  },
+  {
+   "row_id": "aaa7c821-6de5-403c-95e5-21502a96266c",
+   "letter": "E",
+   "body": "This answer states that Barajas never took as long to complete a statue as her assistants did to sculpt *Sonora*. The time required to complete the statue has no clear bearing on whether the finished product resembles what Barajas would have created. Working more slowly does not mean the result looks different — the assistants might have been more methodical precisely because they were trying to faithfully follow the sketches. The argument's conclusion is about resemblance, not efficiency. Speed of completion is an irrelevant variable."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (4.8 em-dashes per 1k words; wrong-answer notes average 87.2 words).",
+ "tags": "emdash-heavy; pt157-158-register; possible-misquote"
+}

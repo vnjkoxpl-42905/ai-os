@@ -1,0 +1,84 @@
+{
+ "qid": "PT158-S4-Q25",
+ "type": "Sufficient Assumption",
+ "difficulty": "5",
+ "key_db": "D",
+ "stimulus_db": "Most of the members of Bargaining Unit Number 17 of the government employees' union are computer programmers. Thus it is certain that some of the government employees who work in the Hanson Building are computer programmers, since _______.",
+ "stem_db": "The conclusion of the argument follows logically if which one of the following completes the passage?",
+ "choices_db": {
+  "A": "most of the government employees who belong to Bargaining Unit Number 17 but are not computer programmers work in the Hanson Building",
+  "B": "most members of the executive committee of Bargaining Unit Number 17 work in the Hanson Building",
+  "C": "most of the government employees who work in the Hanson Building are members of Bargaining Unit Number 17",
+  "D": "most of the members of Bargaining Unit Number 17 work in the Hanson Building",
+  "E": "most of the people who work in the Hanson building are government employees"
+ },
+ "bank": {
+  "stimulus": "Most of the members of Bargaining Unit Number 17 of the\n government employees’ union are computer programmers.\n Thus it is certain that some of the government employees\n who work in the Hanson Building are computer\n programmers, since _______.",
+  "stem": "The conclusion of the argument follows logically if which\n one of the following completes the passage?",
+  "choices": {
+   "A": "most of the government employees who belong to Bargaining Unit Number 17 but are not computer programmers work in the Hanson Building",
+   "B": "most members of the executive committee of Bargaining Unit Number 17 work in the Hanson Building",
+   "C": "most of the government employees who work in the Hanson Building are members of Bargaining Unit Number 17",
+   "D": "most of the members of Bargaining Unit Number 17 work in the Hanson Building",
+   "E": "most of the people who work in the Hanson building are government employees"
+  },
+  "key": "D"
+ },
+ "explanation_id": "e611baab-da22-438c-9ccf-ccc3af107a81",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "6b9ab90e-9128-4a0d-a8e6-696490172bcf",
+   "position": 0,
+   "label": "Conclusion (Thus)",
+   "body": "Some govt employees in Hanson Bldg are computer programmers.\n```\nsome HB are CP   or   HB <--s--> CP\n```"
+  },
+  {
+   "row_id": "c1a4ac94-a384-475f-9253-d31144c6ab21",
+   "position": 1,
+   "label": "Evidence",
+   "body": "Most ppl in BUN 17 are computer programmers\n```\nmost B17 are CP   or   B17 --m--> CP\n```"
+  },
+  {
+   "row_id": "39805444-6433-4dea-822c-9ca39c5ee1c0",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "Our 'fill-in-the-blank\" is prefaced by the Support Indicator \"since\", so we know we're supposed to provide Support for the conclusion announced by \"thus\".\nWe need to prove that at least one govt. employee in the Hanson Building is a computer programmer, and all we know is that \"most members of BUN 17 (all of whom are government employees)\" are computer programmers.\nSince computer programmers is the overlapping ingredient, we know we need information that ties together the dangling ingredients ...\nmembership of Bargaining Unit 17\nworking in the Hanson Building"
+  },
+  {
+   "row_id": "f38237d6-a747-4bb6-8a15-72901fcc9ff8",
+   "position": 3,
+   "label": "Goal",
+   "body": "Since we're trying to prove that some ppl in the Hanson Building are programmers, and we know that a bunch of people in BUN 17 are programmers, we want an answer to put BUN 17 into the Hanson Building.\nnote: the above is what a normal person would be thinking going to these answer choices. the below is for LSAT Supernerds\nWhen we see Quantifier words like \"most\" and \"some\", it triggers our awareness of a certain LSAT game where we use different quantifiers to prove there's some overlap.\nfor example,\n```\nSome A's are B\n+ All B's are C\n=================\nSome A's are C\n```\nThe vast majority of Trait Overlap inferences use conditional logic (like \"All B are C\"), but there's one special inference that doesn't — the most + most.\n```\nMost A's are B\n+ Most A's are C\n=================\nSome B's are C\n```\nSince this argument is providing a MOST premise and trying to conclude a SOME idea, we would suspect that we're missing the other MOST idea.\n```\nMost BUN 17 are programmers      prem\n+ Most BUN 17 are Hanson          answer\n=================\nSome Hanson are programmers      conc\n```"
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "6d046934-9a9e-4840-a4ac-7cc5d163f169",
+   "letter": "A",
+   "body": "This answer tells us where the non-programmer members of BU17 work. The conclusion requires programmers in the Hanson Building, but this answer places non-programmers there. Consider: BU17 has 100 members, 70 programmers and 30 non-programmers. This answer says most of the 30 non-programmers work in Hanson — placing perhaps 20 non-programmers there. But the 70 programmers could all work elsewhere. Knowing where the wrong subgroup works cannot establish that the right subgroup is present in the target location."
+  },
+  {
+   "row_id": "1525687a-700f-4618-8a6e-6a222632e3d5",
+   "letter": "B",
+   "body": "The executive committee is not mentioned anywhere in the argument's premises or conclusion. The argument involves three categories — BU17 members, programmers, and Hanson Building workers. Without any established relationship between the executive committee and these three categories, knowing where its members work is logically inert. A sufficient assumption must bridge the specific gap between BU17 programmers and the Hanson Building, and a completely foreign group cannot serve that function."
+  },
+  {
+   "row_id": "3dcb7988-0fd6-45b5-850b-9c57db05d75d",
+   "letter": "C",
+   "body": "This answer says most workers in the Hanson Building are members of BU17. But we need the reverse: most BU17 members work in the Hanson Building. The direction of the \"most\" statement matters critically. \"Most Hanson workers are BU17\" tells us Hanson is heavily populated by BU17 members, but it does not tell us which BU17 members are there. BU17 could have 1,000 members (700 programmers, 300 non-programmers) while Hanson has only 20 workers, 15 of whom are BU17 non-programmers. The \"most\" running from Hanson to BU17 does not force any BU17 programmers into the building."
+  },
+  {
+   "row_id": "1710fbd7-b36e-4232-8d7a-d05ad61378cb",
+   "letter": "D",
+   "body": "This answer leverages a fundamental principle of categorical logic: two \"most\" statements about the same group must overlap. The premise states that most BU17 members are programmers (more than 50%). This answer adds that most BU17 members work in the Hanson Building (more than 50%). Since both subsets — programmers and Hanson workers — each constitute more than half of BU17, they cannot be completely disjoint. At least some BU17 members must be both programmers and Hanson Building workers. Those individuals are government employees (as BU17 members) who work in the Hanson Building and are computer programmers — exactly what the conclusion states. The conclusion follows with mathematical certainty."
+  },
+  {
+   "row_id": "ce21e629-1fbd-4fe3-ab8e-4618f26f4bd0",
+   "letter": "E",
+   "body": "This answer introduces \"government employees\" as a category and says most Hanson Building workers belong to it. But the argument needs a connection between BU17 membership (and specifically its programmer subset) and working in the Hanson Building. Government employment is a fourth category with no established relationship to BU17 or to programming. Knowing that Hanson is staffed primarily by government employees tells us nothing about whether any of those employees are in BU17 or are programmers. It is a piece from a different puzzle."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (7.9 em-dashes per 1k words; wrong-answer notes average 83.5 words). Also: \"p.s. if you want to try another problem just like this, try this one.\" with no link.",
+ "tags": "emdash-heavy; pt157-158-register; possible-misquote; damage"
+}

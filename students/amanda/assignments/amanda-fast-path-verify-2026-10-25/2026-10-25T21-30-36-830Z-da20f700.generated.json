@@ -1,0 +1,120 @@
+{
+  "plan_id": "amanda-fast-path-verify-2026-10-25",
+  "student": "Amanda",
+  "student_id": "18319b53-3489-4e01-92aa-f04ade88858e",
+  "dry_run": false,
+  "verify_existing": true,
+  "results": [
+    {
+      "kind": "bootcamp",
+      "title": "Unless Drill",
+      "action": "already_assigned",
+      "day": null,
+      "due": "2026-11-01",
+      "assignment_id": null,
+      "classroom_item_id": "02c7fd40-ee63-43f8-9960-d064fdcd156d",
+      "verified": true,
+      "notification": "not_resent"
+    },
+    {
+      "kind": "activity",
+      "title": "Conditional Rephrase",
+      "action": "already_assigned",
+      "day": null,
+      "due": "2026-11-01",
+      "assignment_id": "53aec4e1-784b-4c57-97f9-92bdcad4b44a",
+      "classroom_item_id": "b1531045-0635-4b49-938c-204ddfb85886",
+      "verified": true,
+      "notification": "not_resent"
+    },
+    {
+      "kind": "guided_drill",
+      "title": "Must Be True - First Taste",
+      "action": "already_assigned",
+      "day": "2026-10-25",
+      "due": "2026-11-01",
+      "slug": "w2-03-must-be-true-first-taste",
+      "level": "beginner",
+      "count": 6,
+      "pool_count": 179,
+      "difficulty_min": 1,
+      "difficulty_max": 3,
+      "assignment_id": "047ab1ac-299c-4a9e-88c6-12cfb5c485c4",
+      "classroom_item_id": "51b66ba4-1495-453e-9f58-62dc2954089a",
+      "verified": true,
+      "notification": "not_resent"
+    },
+    {
+      "kind": "guided_drill",
+      "title": "Parallel Flaw + Famous Flaws (Set 2)",
+      "action": "already_assigned",
+      "day": "2026-10-25",
+      "due": "2026-11-01",
+      "slug": "w8-04-parallel-flaw-famous-flaws-set-2",
+      "level": "beginner",
+      "count": 5,
+      "pool_count": 44,
+      "difficulty_min": 2,
+      "difficulty_max": 3,
+      "assignment_id": "c8de0383-5c77-4aa6-b294-567fcb48d1b1",
+      "classroom_item_id": "ba73da4f-6d32-4ddb-a082-4ad7a5ac6cbd",
+      "verified": true,
+      "notification": "not_resent"
+    },
+    {
+      "kind": "interactive_note",
+      "title": "Unless Drill",
+      "action": "already_current",
+      "day": null,
+      "due": null,
+      "assignment_id": null,
+      "classroom_item_id": "94223a4d-675a-4c0c-95e7-6c05ab5cc344",
+      "verified": true,
+      "notification": "not_resent",
+      "html_sha256": "9de0081a19745237a6365619167662ef334607c2969b441e843eb5cb2dcd8223"
+    },
+    {
+      "kind": "interactive_note",
+      "title": "Parallel Reasoning",
+      "action": "already_current",
+      "day": null,
+      "due": null,
+      "assignment_id": null,
+      "classroom_item_id": "8a81d371-b9ac-479f-b077-20ab5de612b6",
+      "verified": true,
+      "notification": "not_resent",
+      "html_sha256": "b278ee2a4fd9b59d5419a061db771bd1081ba53e6c9066511ea5b516f0396260"
+    },
+    {
+      "kind": "interactive_note",
+      "title": "Rules, Facts, and What Follows",
+      "action": "already_current",
+      "day": null,
+      "due": null,
+      "assignment_id": null,
+      "classroom_item_id": "c30e1765-d04e-4cea-846c-b2381752bcf5",
+      "verified": true,
+      "notification": "not_resent",
+      "html_sha256": "d91e77803565ba9ab90841870a6ef281e5adf5f790970f4417b48b375721f5c7"
+    }
+  ],
+  "metrics": {
+    "sign_ins": 1,
+    "student_lookups": 1,
+    "bank_reads": 1,
+    "planned": 7,
+    "assigned": 0,
+    "elapsed_ms": 3226
+  },
+  "runtime": {
+    "lock_ms": 4,
+    "fetch_ms": 2241,
+    "setup_ms": 661,
+    "execute_ms": 5036,
+    "total_ms": 7941,
+    "cache_hit": true,
+    "ops_commit": "6a167c8555b4a404334310aad48a5d748b1b0861",
+    "source_sha256": "1ff796d93db0856d2141432d10ec28bae301eba377699f8266e33c5115d51ecb"
+  },
+  "audit_file": "C:\\Users\\Joshu\\dev\\ai-os\\students\\amanda\\assignments\\amanda-fast-path-verify-2026-10-25\\2026-10-25T21-30-36-830Z-da20f700.generated.json"
+}

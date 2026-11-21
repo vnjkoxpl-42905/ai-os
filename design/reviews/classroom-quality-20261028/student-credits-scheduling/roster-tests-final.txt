@@ -1,0 +1,29 @@
+
+[1m[46m RUN [49m[22m [36mv3.2.7 [39m[90mC:/Users/Joshu/dev/ai-os-projects/lsatu-my-work-20261026[39m
+
+ [32m✓[39m src/lib/adminRosterPagination.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32m✓[39m src/lib/accessTierClient.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+[90mstderr[2m | src/components/classroom/home/teacher/useTeachingDesk.test.tsx[2m > [22m[2mTeacher desk data boundaries[2m > [22m[2mreuses the manual draft operation on an unknown create outcome
+[22m[39mWarning: An update to TestComponent inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at TestComponent (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\@testing-library\react\dist\pure.js:337:5)
+    at QueryClientProvider (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@tanstack/react-query/build/modern/QueryClientProvider.js:41:32)
+    at wrapper (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\classroom\home\teacher\useTeachingDesk.test.tsx:49:21)
+
+ [32m✓[39m src/components/classroom/home/teacher/useTeachingDesk.test.tsx [2m([22m[2m9 tests[22m[2m)[22m[33m 833[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m3 passed[39m[22m[90m (3)[39m
+[2m      Tests [22m [1m[32m21 passed[39m[22m[90m (21)[39m
+[2m   Start at [22m 18:39:34
+[2m   Duration [22m 3.78s[2m (transform 304ms, setup 506ms, collect 615ms, tests 854ms, environment 2.91s, prepare 907ms)[22m
+
+
+EXIT_CODE=0

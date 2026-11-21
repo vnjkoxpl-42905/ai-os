@@ -1,0 +1,72 @@
+{
+ "qid": "PT143-S4-Q18",
+ "type": "Agree/Disagree",
+ "difficulty": "2",
+ "key_db": "A",
+ "stimulus_db": "Wong: Although all countries are better off as democracies, a transitional autocratic stage is sometimes required before a country can become democratic.\n\nTate: The freedom and autonomy that democracy provides are of genuine value, but the simple material needs of people are more important. Some countries can better meet these needs as autocracies than as democracies.",
+ "stem_db": "Wong's and Tate's statements provide the most support for the claim that they disagree over the truth of which one of the following?",
+ "choices_db": {
+  "A": "There are some countries that are better off as autocracies than as democracies.",
+  "B": "Nothing is more important to a country than the freedom and autonomy of the individuals who live in that country.",
+  "C": "In some cases, a country cannot become a democracy.",
+  "D": "The freedom and autonomy that democracy provides are of genuine value.",
+  "E": "All democracies succeed in meeting the simple material needs of people."
+ },
+ "bank": {
+  "stimulus": "Wong: Although all countries are better off as\ndemocracies, a transitional autocratic stage is\nsometimes required before a country can become\ndemocratic. Tate: The freedom and autonomy that democracy\nprovides are of genuine value, but the simple\nmaterial needs of people are more important. Some countries can better meet these needs as\nautocracies than as democracies.",
+  "stem": "Wong’s and Tate’s statements provide the most support\nfor the claim that they disagree over the truth of which\none of the following?",
+  "choices": {
+   "A": "There are some countries that are better off as autocracies than as democracies.",
+   "B": "Nothing is more important to a country than the freedom and autonomy of the individuals who live in that country.",
+   "C": "In some cases, a country cannot become a democracy.",
+   "D": "The freedom and autonomy that democracy provides are of genuine value.",
+   "E": "All democracies succeed in meeting the simple material needs of people."
+  },
+  "key": "A"
+ },
+ "explanation_id": "c8f7f015-04cf-4f30-b059-16e7d3f7511b",
+ "style": "single",
+ "steps": [
+  {
+   "row_id": "7eb788f2-beae-432d-9689-c06e21ce3040",
+   "position": 0,
+   "label": "Wong / Tate",
+   "body": "Wong:\nAll countries are better off as democracies.\nA transitional autocratic stage is sometimes required before a country can become democratic.\n\nTate:\nThe freedom and autonomy that democracy provides are of genuine value, but the simple material needs of people are more important.\nSome countries can better meet these needs as autocracies than as democracies."
+  },
+  {
+   "row_id": "9eb122d6-e8fc-476e-a270-ea0bc6b652d5",
+   "position": 1,
+   "label": "Evaluate",
+   "body": "Wong and Tate disagree about whether all countries are better off as democracies. Wong says they all are. Tate says some countries are better off as autocracies."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "129a49b3-bfdf-4aa7-a83c-5f5720b45195",
+   "letter": "A",
+   "body": "Tate would agree with this statement, while Wong would disagree with it."
+  },
+  {
+   "row_id": "17499598-763f-4132-9589-4c6c984dae87",
+   "letter": "B",
+   "body": "While Tate would disagree with this statement, Wong does not address it."
+  },
+  {
+   "row_id": "bebfb802-e001-40c5-be87-2afd037cd852",
+   "letter": "C",
+   "body": "Wong would disagree with this statement, but Tate does not address it."
+  },
+  {
+   "row_id": "b3cb96cf-5c96-44c9-ad5c-16ac358f867e",
+   "letter": "D",
+   "body": "Tate would agree with this statement, but Wong does not address it."
+  },
+  {
+   "row_id": "c0cf5f4d-61e8-4033-9956-1eab3bbac7f4",
+   "letter": "E",
+   "body": "Tate would disagree with this statement, but Wong does not address it."
+  }
+ ],
+ "known_problem": "Breakdown table is headed \"Graham / Adelaide\" (the speakers are Wong and Tate); Evaluate says they disagree whether countries are better off as democracies, when the issue is autocracies.",
+ "tags": "verdict-only; thin-correct-note; thin-notes; no-prediction; very-short"
+}

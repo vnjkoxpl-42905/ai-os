@@ -1,0 +1,127 @@
+# PT140.S4.Q17 Party Trick
+
+Source: https://new.theloophole.com/training-camp/browse/stage/accuracy/video/pt-140-s-4-q-17-party-trick
+
+Captured: 2026-10-18 (documented local date; original timestamp 2026-10-19T01:27:56.778Z). Displayed duration: 76.6.
+
+Caption origin: English (auto-generated). This is a complete native-caption extraction, not word-by-word listening verification. Caption wording is retained without editorial correction. Original cue bytes remain in source.vtt; rendered site transcript is preserved separately.
+
+[00:00:00.135 - 00:00:01.725]
+Which one of the following does the passage say?
+
+[00:00:01.755 - 00:00:03.565]
+It's usually necessary in order
+
+[00:00:03.565 - 00:00:04.805]
+for one to keep up intense practice.
+
+[00:00:04.805 - 00:00:06.845]
+Okay. What's usually necessary to keep up intense practice?
+
+[00:00:06.845 - 00:00:08.525]
+Well, you gotta wanna do it right? You gotta love it.
+
+[00:00:08.525 - 00:00:10.485]
+You gotta love the game. Why am I sitting here
+
+[00:00:10.575 - 00:00:11.605]
+doing this right now?
+
+[00:00:11.605 - 00:00:14.245]
+Because I freaking love the game. That's why. Okay.
+
+[00:00:14.465 - 00:00:17.925]
+And desire and interest seems, yeah. Yeah.
+
+[00:00:18.195 - 00:00:19.845]
+Like common sense. That seems true.
+
+[00:00:20.145 - 00:00:22.165]
+Um, I think I've also seen in the shadows of a couple
+
+[00:00:22.165 - 00:00:24.085]
+of these other answers that it's like that motivation
+
+[00:00:24.085 - 00:00:25.245]
+and interest in the material that makes
+
+[00:00:25.245 - 00:00:26.325]
+you do your practice.
+
+[00:00:26.625 - 00:00:28.885]
+Um, b emotional support from other people. Oh yeah.
+
+[00:00:28.885 - 00:00:29.925]
+You've got your, like your mom there
+
+[00:00:29.925 - 00:00:31.245]
+and they're like, go to the piano.
+
+[00:00:31.625 - 00:00:33.125]
+And it's like, no, that's not
+
+[00:00:33.125 - 00:00:34.685]
+what makes somebody intensely practice.
+
+[00:00:34.715 - 00:00:35.765]
+Like you gotta be,
+
+[00:00:36.145 - 00:00:38.005]
+you gotta be into it for the sake of the game.
+
+[00:00:38.305 - 00:00:39.885]
+See appropriate instruction at the right age.
+
+[00:00:39.885 - 00:00:41.845]
+Oh, you gotta have the right instruction at the right age.
+
+[00:00:41.915 - 00:00:43.525]
+Like, no, I don't think there,
+
+[00:00:43.525 - 00:00:45.605]
+we've seen anything about the importance of teachers here.
+
+[00:00:45.745 - 00:00:49.005]
+Um, at all. D sufficient leisure time to devote to practice.
+
+[00:00:49.005 - 00:00:50.685]
+You gotta have leisure to devote to the practice.
+
+[00:00:50.765 - 00:00:52.645]
+I mean, that's probably true.
+
+[00:00:53.065 - 00:00:54.925]
+Um, but I imagine the passage would be saying
+
+[00:00:54.925 - 00:00:56.445]
+that it's like you have to want it
+
+[00:00:56.725 - 00:00:58.525]
+'cause it's like that growth mindset oriented nature
+
+[00:00:58.525 - 00:01:00.765]
+that we saw in like answer choice a on the main point.
+
+[00:01:01.185 - 00:01:03.605]
+Um, and e self-discipline and control.
+
+[00:01:03.605 - 00:01:05.325]
+Well, yeah, you probably do have to have self-discipline
+
+[00:01:05.325 - 00:01:06.765]
+and control, but I, I feel like desire
+
+[00:01:06.785 - 00:01:09.005]
+and interest is, is the right answer here.
+
+[00:01:09.005 - 00:01:10.765]
+Because again, that kind of like growth mindset,
+
+[00:01:10.875 - 00:01:12.685]
+uplifting vibe, that's the kind
+
+[00:01:12.685 - 00:01:14.685]
+of thing I think they're trying to get at in this passage.
+
+[00:01:14.985 - 00:01:16.285]
+And so I'm gonna go with a.

@@ -1,0 +1,122 @@
+{
+  "status": "completed",
+  "mode": "review",
+  "provider": "claude",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "claude",
+    "builder": "codex",
+    "inspector": "claude"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-conditional-bootcamp",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os\\brainstorms\\2026-09-30-conditional-curriculum\\OPENING-VISUAL-BUILD-REVIEW.md",
+  "plan_sha256": "82ac7af9a063854e35ff457aed797060ac3ae19d42bbe4c544ced6e0e3fa69dd",
+  "requested_model": null,
+  "requested_effort": null,
+  "base": null,
+  "snapshot": null,
+  "previous": "C:/Users/Joshu/AppData/Local/Temp/claudex-exfw6q2j/result.json",
+  "started_at": 1790952326.45808,
+  "artifacts": "C:\\Users\\Joshu\\AppData\\Local\\Temp\\claudex-e4e5hutn",
+  "cli_version": "2.1.280 (Claude Code)",
+  "executable": [
+    "C:\\Users\\Joshu\\AppData\\Roaming\\npm\\node_modules\\@anthropic-ai\\claude-code\\bin\\claude.exe"
+  ],
+  "exit_code": 0,
+  "session_id": "1be68579-bfde-4282-94e0-b56874a5e70f",
+  "response": {
+    "verdict": "REVISE",
+    "summary": "The revision fixes all twelve first-round findings, and F9 is accepted as clarified. The new step that moves the five opening units ahead of truth-validity, negation and contraposition adds two problems. First, it silently changes what existing stage assignments contain, because a stage assignment's unit list is recomputed from the course order every time it loads. Second, it leaves the later contraposition unit pointing to a \"six-step process\" that the opening no longer teaches. There are also smaller gaps: the direct Vite build skips the postbuild canonical check, and one route test that hard-codes a level label isn't in the plan's test-update list.",
+    "findings": [
+      {
+        "id": "R2-F1",
+        "severity": "medium",
+        "path": "src/bootcamps/conditionals/assignments.ts:44-46; src/bootcamps/conditionals/curriculumPath.ts:42-46; src/lib/conditionalBootcampAssignment.ts:40-49",
+        "evidence": "A stage assignment stores only its starting `unitId`. `conditionalAssignmentUnitIds` rebuilds the unit list on every load with `getCurriculumUnits(conditionalUnits, target.unitId)`, which slices the current order. After the reorder: a stage row starting at truth-validity, negation or contraposition loses group-1 and group-2, and ActionGate will refuse those lessons that were reachable before. A stage row starting at group-1 or group-2 gains truth-validity, negation and contraposition. Course-scope students partway through contraposition will be sent back to group-1. That contradicts \"Keep the 30 unit IDs and teacher assignments\", and the plan doesn't mention it.",
+        "fix": "Before reordering, query existing `bootcamp_module` rows with `conditional_target.scope = 'stage'` or legacy `?start=` source IDs (read-only). Either confirm none are affected, or decide and record what happens to them: accept and tell the teacher, or map old start IDs to an equivalent new start. Add an assignments test that pins the expected `unitIds` for stages starting at group-1 and at contraposition after the reorder."
+      },
+      {
+        "id": "R2-F2",
+        "severity": "medium",
+        "path": "src/bootcamps/conditionals/content/foundations.source.ts:187-188",
+        "evidence": "The contraposition unit's teaching says \"The six-step process finishes by translating back to English\" and \"Use the six steps to learn and check translation\". Today those steps are introduced in group-1 and group-2, which come later. After the reorder, contraposition follows group-1 and group-2, and the revised opening carries no step count. So contraposition will refer to a process the student never saw, and treat \"six steps\" as canonical, which the plan rules out.",
+        "fix": "Bring the contraposition paragraphs into scope as a dependency of the reorder, which the 'unrelated curriculum' boundary shouldn't block. Reword them to build on the opening's diagram routine (indicator, readable ideas, side rule, English readback) without a step count, or accept and document the dangling reference. Grep all units that now follow the opening for 'six' and for references to earlier units that have moved."
+      },
+      {
+        "id": "R2-F3",
+        "severity": "low",
+        "path": "package.json:8,31",
+        "evidence": "Calling `node node_modules/vite/bin/vite.js build` directly avoids prebuild, but it also skips `postbuild` (`verify-no-canonical-in-build.mjs`) and the explanations-manifest step. The build proof would then omit the repository's own check that no canonical content ships in the bundle.",
+        "fix": "After the direct build, run `npm run verify:no-canonical` explicitly and report the result. Also say whether skipping `build-explanations-manifest.mjs` matters for the conditional bundle."
+      },
+      {
+        "id": "R2-F4",
+        "severity": "low",
+        "path": "src/bootcamps/conditionals/routes.test.tsx:83",
+        "evidence": "The routes test finds the group-2 guided-activity link by the name `/Next action: Level 3 skill drill/`. The plan removes student-facing level labels around lessons, and group-2 is an opening unit, so this test will fail. The plan's test-update list names only the opening render tests in ConditionalLessonNote.test.tsx.",
+        "fix": "Add routes.test.tsx:83 to the planned test updates. Assert the new link text, and keep the href assertions for `level=advanced`, `unit=group-2` and `assignment=skill` so assigned-difficulty logic is still covered."
+      },
+      {
+        "id": "R2-F5",
+        "severity": "low",
+        "path": "Plan 'Accepted review corrections' (DEV-only preview entry)",
+        "evidence": "The plan says the preview is DEV-only but doesn't say how it's kept out of production: a guard on `import.meta.env.DEV`, a separate HTML entry not listed in the Vite inputs, or a dev-server-only route. A route registered without the guard would ship an unauthenticated lesson renderer in the production bundle.",
+        "fix": "Name the mechanism, and add a check after the build (for example, grep `dist/` for the preview entry or its route path) showing it isn't in the production output."
+      }
+    ],
+    "coverage": [
+      "Re-read the amended plan text and host dispositions and checked them against first-round findings F1-F12. All are addressed in the plan; F9 is accepted as clarified.",
+      "Read scripts/conditionals/import-content.ts: the generator writes only curriculum.generated.json, from foundations.source.ts plus applications.source.ts in array order.",
+      "Traced how stage assignments resolve: conditionalBootcampAssignment.ts:40-49 (stores only the start unitId) → assignments.ts:44-46 → curriculumPath.ts:42-46 (slices the current order).",
+      "Searched the conditional test files for unit-order and level-label dependencies (routes.test.tsx, assignments.test.ts, progress.test.ts, ConditionalLessonNote.test.tsx).",
+      "Searched the content sources for 'six-step', 'six steps' and '6 step' references.",
+      "Re-checked package.json build, prebuild and postbuild scripts against the new direct-Vite build approach."
+    ],
+    "limitations": [
+      "This is a review of the amended plan only. No implementation diff was inspected, and I made no claim about typecheck, tests, build or rendering.",
+      "I couldn't query the Supabase assignment rows, so I can't tell whether any live stage assignments are affected by the reorder.",
+      "I didn't re-read the corrected primary draft to confirm the must-attend fix; I relied on the host's statement.",
+      "I didn't inspect the Vite config, the remaining content in applications.source.ts, Intro to LR source, voice and copy references, or NotebookLM outputs."
+    ]
+  },
+  "usage": {
+    "input_tokens": 8,
+    "cache_creation_input_tokens": 18745,
+    "cache_read_input_tokens": 330854,
+    "output_tokens": 5951,
+    "output_tokens_details": {
+      "thinking_tokens": 2468
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 18745,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2743,
+        "cache_read_input_tokens": 89636,
+        "cache_creation_input_tokens": 1876,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1876
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "permission_denials": [],
+  "total_cost_usd": 1.1825659999999998,
+  "elapsed_seconds": 68.2
+}

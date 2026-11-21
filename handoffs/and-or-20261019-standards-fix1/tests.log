@@ -1,0 +1,75 @@
+
+> vite_react_shadcn_ts@0.0.0 test
+> vitest run src/bootcamps/conditionals/components/AndOrLessonStandard.test.tsx src/bootcamps/conditionals/content/andOrItems.test.ts src/bootcamps/conditionals/components/AndOrPractice.test.tsx src/bootcamps/conditionals/components/AndOrTeachingRegressions.test.tsx src/bootcamps/conditionals/routes.andOr.test.tsx src/bootcamps/conditionals/components/OpeningCourse.test.tsx src/bootcamps/conditionals/progress.test.ts src/bootcamps/conditionals/routes.test.tsx --maxWorkers=1 --no-file-parallelism --testTimeout=90000
+
+
+ RUN  v3.2.4 C:/Users/Joshu/dev/ai-os-projects/lsatu-and-or-20261019
+
+Browserslist: browsers data (caniuse-lite) is 6 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+stderr | src/bootcamps/conditionals/components/AndOrLessonStandard.test.tsx > the approved seven-section lesson shape > puts 'and-or-both-or-either' in the standard order, with the film after the idea and before the procedure
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/bootcamps/conditionals/components/AndOrLessonStandard.test.tsx (20 tests) 1260ms
+stderr | src/bootcamps/conditionals/routes.test.tsx > opens the same numbered Chapter 1 course at 
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/bootcamps/conditionals/routes.test.tsx (77 tests) 15213ms
+   ✓ opens the same numbered Chapter 1 course at   1658ms
+   ✓ opens the same numbered Chapter 1 course at /lessons  1384ms
+   ✓ offers only the other real assignment entries  322ms
+   ✓ allows teacher preview through the same numbered course entry  710ms
+   ✓ keeps destinations in one course navigation and preserves assignment context  476ms
+   ✓ resumes a finished old run at the new work without losing its drafts, attempts, or timing  730ms
+   ✓ completes the available subset of a shared area practice run and keeps its other work  1197ms
+   ✓ completes the available subset of a shared phase practice run and keeps its other work  1033ms
+   ✓ completes the available subset of a shared area flashcards run and keeps its other work  1122ms
+   ✓ stamps the opening edition only when Mark lesson as read is clicked and keeps it after reloading practice  1558ms
+   ✓ filters the new course index by existing teacher authorization  471ms
+   ✓ keeps root-entry query context when opening the revised Lessons index  352ms
+stderr | src/bootcamps/conditionals/components/OpeningCourse.test.tsx > offers five numbered lessons in Chapter 1 and eleven interleaved drill entries
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/bootcamps/conditionals/components/OpeningCourse.test.tsx (43 tests) 6564ms
+   ✓ offers five numbered lessons in Chapter 1 and eleven interleaved drill entries  899ms
+   ✓ renders the dedicated 'sufficient' destination without an old reader index  313ms
+   ✓ renders the dedicated 'necessary' destination without an old reader index  374ms
+   ✓ retains a corrected answer when returning from another dedicated lesson  558ms
+   ✓ focuses the destination after drawer navigation and restores the trigger after Escape  349ms
+   ✓ continues the first unfinished course step without skipping prerequisites for a later draft  517ms
+stderr | src/bootcamps/conditionals/routes.andOr.test.tsx > shows the whole Chapter 2 to a teacher preview and to a full course assignment, after all of Chapter 1
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/bootcamps/conditionals/routes.andOr.test.tsx (14 tests) 4174ms
+   ✓ shows the whole Chapter 2 to a teacher preview and to a full course assignment, after all of Chapter 1  1235ms
+   ✓ shows each Chapter 2 step to exactly the assignment targets whose real unit membership reaches its topic  658ms
+   ✓ lists the recorded legacy practice for And/Or alongside the numbered chapter without joining the opening edition  1174ms
+stderr | src/bootcamps/conditionals/components/AndOrPractice.test.tsx > runs each lesson’s Pop Quiz one question at a time with a specific hint
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/bootcamps/conditionals/components/AndOrPractice.test.tsx (8 tests) 2146ms
+   ✓ gives a hint for the chosen wrong answer before any reveal, and unlocks the answer only after a second miss  350ms
+   ✓ checks a built diagram by structure, hints at the mistake, and clears the build when the wording changes  606ms
+   ✓ lets a revealed build step complete without calling it built correctly  356ms
+   ✓ runs each lesson’s Pop Quiz one question at a time with a specific hint  323ms
+stderr | src/bootcamps/conditionals/components/AndOrTeachingRegressions.test.tsx > teaches that one known AND member leaves the group not established, not false
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/bootcamps/conditionals/components/AndOrTeachingRegressions.test.tsx (14 tests) 1509ms
+   ✓ build feedback survives edits without going stale > reopens an accepted build when wording changes, keeps the text, and survives a reload  387ms
+   ✓ account-store path through the real course reducer > remembers a reveal through a wording edit and a later correct rebuild, and reloads it from the account  351ms
+ ✓ src/bootcamps/conditionals/content/andOrItems.test.ts (16 tests) 39ms
+ ✓ src/bootcamps/conditionals/progress.test.ts (25 tests) 16ms
+
+ Test Files  8 passed (8)
+      Tests  217 passed (217)
+   Start at  05:02:46
+   Duration  47.66s (transform 2.52s, setup 866ms, collect 7.59s, tests 30.92s, environment 5.40s, prepare 904ms)
+

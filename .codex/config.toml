@@ -1,0 +1,34 @@
+[features]
+hooks = true
+
+[mcp_servers.godly]
+command = 'C:\Program Files\nodejs\node.exe'
+args = ["C:/Users/Joshu/dev/ai-os-projects/godly-mcp-server/dist/index.js"]
+
+[mcp_servers.motionsites]
+enabled = false
+command = "npx"
+args = [
+    "-y",
+    "mcp-remote",
+    "https://xgdzyqfalbibzelpdpvr.supabase.co/functions/v1/mcp",
+]
+
+[mcp_servers.pinterest]
+command = 'C:\Program Files\nodejs\node.exe'
+args = ["C:/Users/Joshu/dev/ai-os-projects/pinterest-mcp-server/dist/index.js"]
+
+[mcp_servers.shadcn]
+command = "C:/Program Files/nodejs/node.exe"
+args = ["C:/Users/Joshu/dev/ai-os/system/scripts/start-shadcn-mcp.cjs"]
+
+[mcp_servers.21st-local]
+command = "C:/Program Files/nodejs/node.exe"
+args = ["C:/Users/Joshu/dev/ai-os/system/scripts/start-21st-mcp.mjs"]
+startup_timeout_sec = 30
+
+[mcp_servers.21st]
+url = "https://21st.dev/api/mcp"
+
+[mcp_servers.21st.env_http_headers]
+x-api-key = "API_KEY_21ST"

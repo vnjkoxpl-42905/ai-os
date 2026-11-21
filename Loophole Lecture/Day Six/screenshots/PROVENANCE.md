@@ -1,0 +1,1 @@
+User-supplied screenshots copied unchanged on 2026-10-14. They show the Cappuccino notes and a partial Day Six sidebar. inventory.json captures all13 video links in rendered sidebar order, including entries outside these crops.

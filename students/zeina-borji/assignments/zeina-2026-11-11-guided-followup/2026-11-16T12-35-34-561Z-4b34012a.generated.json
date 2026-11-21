@@ -1,0 +1,56 @@
+{
+  "plan_id": "zeina-2026-11-11-guided-followup",
+  "student": "Zeina",
+  "student_id": "aec4f2f8-d747-417f-937e-36bab513cb89",
+  "dry_run": true,
+  "verify_existing": false,
+  "results": [
+    {
+      "kind": "guided_drill",
+      "title": "Necessary Assumption - First Taste",
+      "action": "would_assign",
+      "day": "2026-11-16",
+      "due": "2026-11-19",
+      "slug": "w2-07-necessary-assumption-first-taste",
+      "level": "beginner",
+      "count": 10,
+      "pool_count": 109,
+      "difficulty_min": 1,
+      "difficulty_max": 3,
+      "verified": false
+    },
+    {
+      "kind": "guided_drill",
+      "title": "Missing Links: First Taste",
+      "action": "would_assign",
+      "day": "2026-11-18",
+      "due": "2026-11-21",
+      "slug": "w2-06-missing-links-first-taste",
+      "level": "beginner",
+      "count": 6,
+      "pool_count": 242,
+      "difficulty_min": 1,
+      "difficulty_max": 3,
+      "verified": false
+    }
+  ],
+  "metrics": {
+    "sign_ins": 1,
+    "student_lookups": 1,
+    "bank_reads": 1,
+    "planned": 2,
+    "assigned": 0,
+    "elapsed_ms": 3239
+  },
+  "runtime": {
+    "lock_ms": 8,
+    "fetch_ms": 3532,
+    "setup_ms": 1035,
+    "execute_ms": 6936,
+    "total_ms": 11512,
+    "cache_hit": true,
+    "ops_commit": "258d41b5b261a89f2413c7639ede62553e311c49",
+    "source_sha256": "1a88aac53391cfdb4c9b94159636a6a5c5bbb25379a75bdab2f7dc191334c403"
+  },
+  "audit_file": "C:\\Users\\Joshu\\dev\\ai-os\\students\\zeina-borji\\assignments\\zeina-2026-11-11-guided-followup\\2026-11-16T12-35-34-561Z-4b34012a.generated.json"
+}

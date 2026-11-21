@@ -1,0 +1,66 @@
+{
+ "qid": "PT132-S2-Q6",
+ "type": "Must Be True",
+ "difficulty": "2",
+ "key_db": "A",
+ "stimulus_db": "Although some nutritional facts about soft drinks are listed on their labels, exact caffeine content is not. Listing exact caffeine content would make it easier to limit, but not eliminate, one's caffeine intake. If it became easier for people to limit, but not eliminate, their caffeine intake, many people would do so, which would improve their health.",
+ "stem_db": "If all the statements above are true, which one of the following must be true?",
+ "choices_db": {
+  "A": "The health of at least some people would improve if exact caffeine content were listed on soft-drink labels.",
+  "B": "Many people will be unable to limit their caffeine intake if exact caffeine content is not listed on soft-drink labels.",
+  "C": "Many people will find it difficult to eliminate their caffeine intake if they have to guess exactly how much caffeine is in their soft drinks.",
+  "D": "People who wish to eliminate, rather than simply limit, their caffeine intake would benefit if exact caffeine content were listed on soft-drink labels.",
+  "E": "The health of at least some people would worsen if everyone knew exactly how much caffeine was in their soft drinks."
+ },
+ "bank": {
+  "stimulus": "Although some nutritional facts about soft drinks are listed on their labels, exact caffeine content is not. Listing exact caffeine content would make it easier to limit, but not eliminate, one's caffeine intake. If it became easier for people to limit, but not eliminate, their caffeine intake, many people would do so, which would improve their health.",
+  "stem": "If all the statements above are true, which one of the following must be true?",
+  "choices": {
+   "A": "The health of at least some people would improve if exact caffeine content were listed on soft-drink labels.",
+   "B": "Many people will be unable to limit their caffeine intake if exact caffeine content is not listed on soft-drink labels.",
+   "C": "Many people will find it difficult to eliminate their caffeine intake if they have to guess exactly how much caffeine is in their soft drinks.",
+   "D": "People who wish to eliminate, rather than simply limit, their caffeine intake would benefit if exact caffeine content were listed on soft-drink labels.",
+   "E": "The health of at least some people would worsen if everyone knew exactly how much caffeine was in their soft drinks."
+  },
+  "key": "A"
+ },
+ "explanation_id": "73c0e56c-6943-42cd-ac7c-f2720d27b25d",
+ "style": "single",
+ "steps": [
+  {
+   "row_id": "01749785-9dae-492e-b4b5-e0d8f392ec68",
+   "position": 0,
+   "label": "Given",
+   "body": "Although some nutritional facts about soft drinks are listed on their labels, exact caffeine content is not.\n\nListing exact caffeine content would make it easier to limit, but not eliminate, one's caffeine intake.\nLCC → ELC\n\nIf it became easier for people to limit, but not eliminate, their caffeine intake, many people would do so, which would improve their health.\nELC → IH"
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "0f5087ba-df7c-499e-bf24-5b56650c1294",
+   "letter": "A",
+   "body": "This follows from the second and third statements chained together.\n\nLCC → ELC → IH\n\nIf exact caffeine content were listed, limiting would be easier, many people would limit their intake, and their health would improve. So at least some people's health would improve."
+  },
+  {
+   "row_id": "ceecc249-0dfe-43e7-81fa-a32d74805625",
+   "letter": "B",
+   "body": "This negates the second statement.\n\n~LCC → ~ELC\n\nThe stimulus says listing makes limiting easier. It doesn't say that without listing, people can't limit their intake at all, so B treats \"easier\" as if it meant \"possible.\""
+  },
+  {
+   "row_id": "b88a2b33-fa8d-4d1e-b886-b2d24a79f699",
+   "letter": "C",
+   "body": "This negates the second statement, and it also switches from limiting to eliminating.\n\n~LCC → ~ELC\n\nThe stimulus says listing would make it easier to limit, \"but not eliminate,\" caffeine intake. It tells us nothing about how hard eliminating caffeine is when people have to guess."
+  },
+  {
+   "row_id": "0224bbef-1637-4b57-9346-4b054502ca87",
+   "letter": "D",
+   "body": "The statements say listing caffeine content would make it easier to limit, \"but not eliminate,\" one's caffeine intake. They say nothing about whether people who want to eliminate caffeine would benefit, so this does not have to be true."
+  },
+  {
+   "row_id": "46dd0aeb-c5da-48cd-aa91-fa90a4831a7d",
+   "letter": "E",
+   "body": "This goes against the inference from the second and third statements.\n\nLCC → ELC → IH\n\nThe only effect the stimulus describes from listing caffeine content is improved health. Nothing in it supports anyone's health getting worse, so E doesn't have to be true."
+  }
+ ],
+ "known_problem": "Diagram margin text is spliced into the stimulus copy; D note says people who wish to \"limit\" are out of scope, but D is about people who wish to eliminate.",
+ "tags": "short-breakdown; verdict-only; thin-correct-note; thin-notes; no-prediction; very-short"
+}

@@ -1,0 +1,78 @@
+{
+ "qid": "PT157-S2-Q11",
+ "type": "Paradox",
+ "difficulty": "3",
+ "key_db": "C",
+ "stimulus_db": "Wounds become infected because the break in the skin allows bacteria to enter. Infection slows healing. Often bacteria-killing ointment is applied to wounds after they have been cleaned, but a study at a Nigerian hospital found that cleaned wounds that were treated with honey—which contains significant quantities of bacteria—healed faster, on average, than both cleaned wounds treated with antibiotic ointment and wounds cleaned but not otherwise treated.",
+ "stem_db": "Which one of the following, if true, most helps to resolve the apparent discrepancy between the results of the study and the stated facts about wounds, bacteria, infection, and healing?",
+ "choices_db": {
+  "A": "Wounds that have simply been cleaned with soap and water and not otherwise treated heal faster than wounds that have been cleaned and then treated with antibiotic ointment.",
+  "B": "The bacteria found in honey are present in much lower concentrations than the concentrations of bacteria typically present in infected wounds, and applying antibiotic ointment to a wound rarely if ever kills all of the bacteria infecting the wound.",
+  "C": "Honey has properties that inhibit the growth of bacteria in wounds, including the bacteria the honey contains, and antibiotic ointments damage sensitive wound tissue, which slows healing.",
+  "D": "The high concentration of sugar in honey inhibits the growth of bacteria in wounds, including the bacteria contained in the honey itself.",
+  "E": "The antibiotic ointment used in the study damages sensitive tissue in wounds, which slows healing, but honey does not have this effect if the wound has been cleaned."
+ },
+ "bank": {
+  "stimulus": "Wounds become infected because the break in the\n skin allows bacteria to enter. Infection slows healing.\n Often bacteria-killing ointment is applied to wounds\n after they have been cleaned, but a study at a Nigerian\n hospital found that cleaned wounds that were treated\n with honey—which contains significant quantities of\n bacteria—healed faster, on average, than both cleaned\n wounds treated with antibiotic ointment and wounds\n cleaned but not otherwise treated.",
+  "stem": "Which one of the following, if true, most helps to resolve\n the apparent discrepancy between the results of the\n study and the stated facts about wounds, bacteria,\n infection, and healing?",
+  "choices": {
+   "A": "Wounds that have simply been cleaned with soap and water and not otherwise treated heal faster than wounds that have been cleaned and then treated with antibiotic ointment.",
+   "B": "The bacteria found in honey are present in much lower concentrations than the concentrations of bacteria typically present in infected wounds, and applying antibiotic ointment to a wound rarely if ever kills all of the bacteria infecting the wound.",
+   "C": "Honey has properties that inhibit the growth of bacteria in wounds, including the bacteria the honey contains, and antibiotic ointments damage sensitive wound tissue, which slows healing.",
+   "D": "The high concentration of sugar in honey inhibits the growth of bacteria in wounds, including the bacteria contained in the honey itself.",
+   "E": "The antibiotic ointment used in the study damages sensitive tissue in wounds, which slows healing, but honey does not have this effect if the wound has been cleaned."
+  },
+  "key": "C"
+ },
+ "explanation_id": "81d1646f-6fbf-4776-b92d-4513e9e09c52",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "45b9b28f-cd13-4107-b55b-1104f3d87ba5",
+   "position": 0,
+   "label": "Given that...",
+   "body": "Wounds become infected because the break in the skin allows bacteria to enter. Infection slows healing. Honey contains significant quantities of bacteria."
+  },
+  {
+   "row_id": "e18e207c-979a-4a6a-9e0d-c27bb76b2058",
+   "position": 1,
+   "label": "How can it be that...",
+   "body": "In a study at a Nigerian hospital, cleaned wounds that were treated with honey healed faster, on average, than both cleaned wounds treated with antibiotic ointment and wounds cleaned but not otherwise treated."
+  },
+  {
+   "row_id": "97b26917-cf91-49c0-b5de-1a4234051d82",
+   "position": 2,
+   "label": "Evaluate / Goal",
+   "body": "We need an answer to explain why the bacteria in the honey isn't causing the wounds to heal more slowly, and why the honey actually speeds healing. Maybe the bacteria in honey is different somehow from the bacteria that normally infects wounds. Or maybe something in honey speeds the healing of wounds to a much greater extent than the bacteria slows healing."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "8ace9c8d-0dcb-4137-b6fe-d80674b2b36d",
+   "letter": "A",
+   "body": "This answer tells us that simply-cleaned wounds heal faster than ointment-treated wounds. While this is an interesting finding, it does not address the core paradox — why honey, despite containing bacteria, helps wounds heal faster than either alternative. If anything, this deepens one mystery (why ointment seems to slow healing compared to no treatment) while completely ignoring the honey question. We need to know why honey works, not just that ointment does not."
+  },
+  {
+   "row_id": "48fec1a8-becb-40f9-be8c-58f5125db904",
+   "letter": "B",
+   "body": "This answer offers two facts: honey's bacteria are in lower concentrations than those in typical infections, and ointment rarely kills all bacteria. While these seem helpful at first, neither resolves the paradox. Lower concentrations of bacteria still means more bacteria being added to a wound — any additional bacteria should slow healing according to the stated facts. And ointment not killing all bacteria does not explain why honey (which adds bacteria) heals wounds faster. We need an explanation for honey's positive effect, not just a reduction in its expected negative effect."
+  },
+  {
+   "row_id": "ff6dc1a3-f0d7-4571-bdfd-e1ad449f330f",
+   "letter": "C",
+   "body": "This answer resolves both halves of the paradox beautifully. First, honey has properties that inhibit bacterial growth in wounds, including its own bacteria. This explains why honey does not cause infection despite containing bacteria — the honey itself neutralizes the threat. Second, antibiotic ointments damage sensitive wound tissue, which slows healing. This explains why honey outperforms ointment — while ointment kills bacteria, it also damages the wound. Honey gets the best of both worlds: it inhibits bacteria (like ointment) without damaging tissue (unlike ointment). Together, these two mechanisms explain why honey-treated wounds heal faster than both ointment-treated and untreated wounds."
+  },
+  {
+   "row_id": "e1db0eda-d40e-41d4-a5c8-e5b02526fd04",
+   "letter": "D",
+   "body": "This answer explains why honey's bacteria might not cause infection — the high sugar concentration inhibits bacterial growth, including honey's own bacteria. This resolves one half of the paradox: why honey does not make things worse. But it does not explain why honey heals wounds faster than ointment or faster than no treatment at all. Inhibiting bacteria puts honey on roughly equal footing with ointment (which kills bacteria) but does not explain honey's superior healing. We still need to know why the ointment is doing worse, and this answer does not address that."
+  },
+  {
+   "row_id": "aaa983bb-69f4-4402-98e6-d532088837aa",
+   "letter": "E",
+   "body": "This answer tells us that ointment damages wound tissue, explaining why ointment underperforms — but it does not explain why honey works. Even if ointment is harmful to tissue, that only explains the ointment-vs-cleaning comparison, not the honey-vs-cleaning comparison. Honey still contains bacteria, and we still need an explanation for why honey-treated wounds heal faster than wounds that were only cleaned. Without accounting for why honey's bacteria do not slow healing, this answer leaves the core paradox unresolved."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (10.8 em-dashes per 1k words; wrong-answer notes average 84.5 words).",
+ "tags": "emdash-heavy; pt157-158-register"
+}

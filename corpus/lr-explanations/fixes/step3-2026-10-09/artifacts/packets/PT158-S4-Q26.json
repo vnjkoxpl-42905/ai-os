@@ -1,0 +1,84 @@
+{
+ "qid": "PT158-S4-Q26",
+ "type": "Parallel Flaw",
+ "difficulty": "5",
+ "key_db": "B",
+ "stimulus_db": "Every Labrador retriever in my neighborhood is a well-behaved dog. However, no pet would be well behaved if it were not trained. Thus it is training, not the genetic makeup of the breed, that accounts for these Labrador retrievers' good behavior.",
+ "stem_db": "The flawed reasoning in which one of the following is most closely parallel to the flawed reasoning in the argument above?",
+ "choices_db": {
+  "A": "All the students at Bryker School excel in their studies. However, students at Bryker School would not excel if they did not have good teachers. Thus, all schools should hire good teachers if they want their students to excel.",
+  "B": "Whenever it snows there are relatively more car crashes on the highways. Yet in general, there would not be car crashes unless people were careless. So it is not icy roads, but carelessness, that causes car crashes when it snows.",
+  "C": "Every musician I know is a good dancer. Every mathematician I know is a bad dancer. Thus, it is a sense of rhythm, not the ability to count, that is most responsible for good dancing.",
+  "D": "All of the good cooks in my country use butter, not margarine, in their cooking. Thus, if you want to be a good cook, you must use butter, not margarine, in your cooking.",
+  "E": "All of the students in my algebra class received an A, even though none of them can solve word problems. No student who is unable to solve word problems has an adequate understanding of algebra. It follows that the students in my class received A's not because they did any good work."
+ },
+ "bank": {
+  "stimulus": "Every Labrador retriever in my neighborhood is a well-behaved dog. However, no pet would be well behaved\n if it were not trained. Thus it is training, not the genetic\n makeup of the breed, that accounts for these Labrador\n retrievers’ good behavior.",
+  "stem": "The flawed reasoning in which one of the following is\n most closely parallel to the flawed reasoning in the\n argument above?",
+  "choices": {
+   "A": "All the students at Bryker School excel in their studies. However, students at Bryker School would not excel if they did not have good teachers. Thus, all schools should hire good teachers if they want their students to excel.",
+   "B": "Whenever it snows there are relatively more car crashes on the highways. Yet in general, there would not be car crashes unless people were careless. So it is not icy roads, but carelessness, that causes car crashes when it snows.",
+   "C": "Every musician I know is a good dancer. Every mathematician I know is a bad dancer. Thus, it is a sense of rhythm, not the ability to count, that is most responsible for good dancing.",
+   "D": "All of the good cooks in my country use butter, not margarine, in their cooking. Thus, if you want to be a good cook, you must use butter, not margarine, in your cooking.",
+   "E": "All of the students in my algebra class received an A, even though none of them can solve word problems. No student who is unable to solve word problems has an adequate understanding of algebra. It follows that the students in my class received A’s not because they did any good work."
+  },
+  "key": "B"
+ },
+ "explanation_id": "a5a122a7-654b-4a28-a7e0-ffb84d0f6d78",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "50e0104b-9a4b-48f1-aeae-1182a36ca844",
+   "position": 0,
+   "label": "Evidence",
+   "body": "```\nEvery Lab in my neighborhood        X → Y\nis a well-behaved dog.\nBeing well behaved requires          Y → Z\nthat it was trained.\n```"
+  },
+  {
+   "row_id": "92d53954-bf8c-45f8-9456-0baf72f1d205",
+   "position": 1,
+   "label": "Conclusion",
+   "body": "```\nIt is training that accounts for     Z causes Y,\nwell-behaved, not Lab breed          not X*\n```"
+  },
+  {
+   "row_id": "3af3fb66-9fbb-4a9f-8969-596fe0678c0d",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "Because there are Conditionals / Quantifiers like \"Every\" and \"No\", it makes sense to think about diagramming this argument somewhat algebraically.\nAlso, there are overlapping ideas (well-behaved is in all three claims / training is in two / Labrador is in two), which also argues in favor of an algebraic approach.\nGiven our strong structural recipe, we might be able to find the correct answer just by matching up those parts. But sometimes we need to think more about why we're objecting to this logic.\nHow could we argue with the Conclusion?\nWe know that training is relevant to being well-behaved, since it's identified as a necessary characteristic. But couldn't the DNA of a Labrador also play a role? Maybe the author's conclusion is just messed up because she's saying, \"THIS is the cause, not THAT\", when we might object, \"couldn't they both be causal factors?\""
+  },
+  {
+   "row_id": "8b1dcb41-3d6a-4a0d-b99b-e172aeab7ff4",
+   "position": 3,
+   "label": "Goal",
+   "body": "Look for an answer with this structure:\n```\nP1: Every X is Y\nP2: Y requires Z\nConc: Y is due to Z, not to X\n```\nOr look for an answer whose conclusion is vulnerable to the same type of conversational objection, \"couldn't both of them be involved\"?"
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "6a014f5d-f409-495b-8e0c-c1e625c32521",
+   "letter": "A",
+   "body": "This argument's conclusion is a prescriptive recommendation: all schools should hire good teachers. The original's conclusion is explanatory: training, not genetics, explains good behavior. For a parallel flaw, the conclusion types must match. The original wrongly eliminates an alternative cause by pointing to a necessary condition. This answer makes a universal recommendation about what schools should do — a different type of reasoning error. An explanatory conclusion that dismisses an alternative cause is structurally different from a prescriptive recommendation, even if both involve some notion of necessary conditions."
+  },
+  {
+   "row_id": "b7c5165c-f1ad-4865-8691-d6bdf0473bcf",
+   "letter": "B",
+   "body": "This answer perfectly mirrors the original's structure and flaw. The original: all neighborhood Labs are well-behaved, no pet is well-behaved without training, therefore training — not genetics — explains the behavior. This answer: snowy days have more car crashes, no crash occurs without driver carelessness, therefore carelessness — not icy roads — explains the crashes. Both commit the identical error: identifying a necessary condition (training / carelessness) and using it to exclude an alternative contributing factor (genetics / icy roads) as the explanation for an observed phenomenon. But a necessary condition can coexist with other causes. Carelessness might be necessary for crashes AND icy roads might also contribute. Training might be necessary for good behavior AND genetics might also help. Both arguments wrongly elevate necessity to exclusive causation."
+  },
+  {
+   "row_id": "0dcf5505-af40-44e0-bf43-7eab1e7a888d",
+   "letter": "C",
+   "body": "This argument draws connections between musical ability and dance, and between mathematical ability and counting, in a way that involves faulty analogies between domains. The reasoning error here concerns improper category mapping — conflating distinct types of skills and drawing unsupported connections between them. The original's specific flaw is different: it identifies a necessary condition and uses it to exclude an alternative cause. This answer lacks the clear \"nothing happens without X, therefore X alone explains it\" structure that characterizes the original. The premises do not include a necessary condition claim that parallels \"no pet is well-behaved without training.\""
+  },
+  {
+   "row_id": "fddaf063-2025-4f33-8227-98b9578092c3",
+   "letter": "D",
+   "body": "This argument has a simpler structure: good cooks use butter, therefore you should use butter to cook well. It generalizes from a correlation to a recommendation. Crucially, there is no competing explanation being dismissed. The original says \"it is training, NOT genetics.\" This answer does not say \"it is butter, NOT skill\" or \"it is butter, NOT fresh ingredients.\" Without that explicit dismissal of an alternative factor, the argument lacks the signature element of the original's flaw. The original's error is specifically about pitting two potential causes against each other and wrongly declaring one the winner based on necessity alone. This answer does not create that two-factor competition."
+  },
+  {
+   "row_id": "371441c9-5e10-4638-b549-52607e70978f",
+   "letter": "E",
+   "body": "This argument highlights a disconnect between students' grades (they got A's) and their actual abilities (they cannot solve word problems), then concludes they did not do good work. The reasoning error concerns measurement validity — whether grades accurately reflect competence. The original's flaw is entirely different: it identifies a necessary condition, uses it to conclude that this condition is the sole explanation, and dismisses an alternative factor. This answer does not feature competing explanations for an outcome, a necessary condition claim, or the dismissal of an alternative cause. It operates in a different logical territory from the original."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (9.4 em-dashes per 1k words; wrong-answer notes average 98.0 words).",
+ "tags": "emdash-heavy; pt157-158-register; possible-misquote"
+}

@@ -1,0 +1,68 @@
+{
+  "bytes": 1740,
+  "characters": 1740,
+  "lines": 36,
+  "wordlike_tokens": 154,
+  "distinct_characters": 50,
+  "structured": {
+    "root_type": "dict",
+    "node_types": {
+      "dict": 16,
+      "list": 5,
+      "str": 28,
+      "int": 6
+    },
+    "key_counts": {
+      "version": 4,
+      "revision": 1,
+      "requires-python": 1,
+      "package": 1,
+      "name": 7,
+      "source": 3,
+      "dependencies": 1,
+      "metadata": 1,
+      "requires-dist": 1,
+      "specifier": 2,
+      "editable": 1,
+      "sdist": 2,
+      "wheels": 2,
+      "url": 4,
+      "hash": 4,
+      "size": 4,
+      "upload-time": 4,
+      "registry": 2
+    },
+    "array_count": 5,
+    "arrays": [
+      {
+        "path": "$.package",
+        "length": 3
+      },
+      {
+        "path": "$.package[].metadata.requires-dist",
+        "length": 2
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 2
+      },
+      {
+        "path": "$.package[].wheels",
+        "length": 1
+      },
+      {
+        "path": "$.package[].wheels",
+        "length": 1
+      }
+    ],
+    "numeric_values": 6,
+    "numeric_min": 1,
+    "numeric_max": 4968631,
+    "string_count": 28,
+    "string_characters": 1056
+  },
+  "source_path": "repos/karpathy/rendergit/uv.lock",
+  "source_sha256": "d2ba3e21d6bd54170149702ac4b3ac4c20ccb4c37e9edf495d9fd64197754ab8",
+  "method": "toml_parse_all_nodes",
+  "parse_error": null
+}

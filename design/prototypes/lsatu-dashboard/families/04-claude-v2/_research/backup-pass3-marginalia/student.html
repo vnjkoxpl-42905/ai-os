@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marginalia · Student home · LSAT U</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,300..700;1,7..72,300..600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="marginalia.css">
+</head>
+<body>
+<div class="page" id="page">
+  <header class="head">
+    <a class="head__mark" href="#">LSAT U</a>
+    <nav aria-label="Main">
+      <a href="#" aria-current="page">Home</a>
+      <a href="#">My work</a>
+      <a href="#">Practice</a>
+      <a href="#">Review</a>
+      <a href="#">Progress</a>
+      <a href="#">Library</a>
+    </nav>
+    <div class="head__end"><button class="inbox-link" type="button" data-act="inbox">Inbox <b id="inbox-count">1 unread</b></button><span>Ada</span></div>
+  </header>
+
+  <main id="letter"></main>
+
+  <footer class="row end"><div class="ml"></div><div class="tx">LSAT U, Marginalia direction. Prototype with sample data; actions are simulated.</div><div></div></footer>
+  <svg class="leader" id="leader" aria-hidden="true"><path id="leader-path" d=""/></svg>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="../shared/sample.js"></script>
+<script>
+(function () {
+  const { student: S, mountSampleBar, toast, Word, word, esc, reduced, daysBetween } = window.LSATU;
+  const state = mountSampleBar({ other: 'teacher.html', otherLabel: 'Teacher home' });
+  const G = window.gsap && !reduced() ? window.gsap : null;
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+
+  const done = new Set();
+  let firstPaint = true;
+  let msg = state === 'full' ? Object.assign({}, S.message) : null;
+  let msgCleared = false;
+  const days = daysBetween(S.now, S.testDay);
+
+  const tok = (n, text) => `<a class="tok" href="#note-${n}" data-n="${n}">${esc(text)}<sup>${n}</sup></a>`;
+  const note = (n, body) => `<div class="note" data-n="${n}" id="note-${n}"><span class="note__n">${n}</span>${body}</div>`;
+  const row = (label, tx, sn = '', cls = '') => `<section class="row para ${cls}"><div class="ml">${label}</div><div class="tx">${tx}</div><aside class="sn">${sn}</aside></section>`;
+  const play = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9-5.5z" fill="currentColor"/></svg>';
+
+  function tally(doneN, total) {
+    let svg = '';
+    const gates = Math.floor(doneN / 5), rem = doneN % 5;
+    let x = 0;
+    for (let g = 0; g < gates; g++) {
+      svg += [0, 7, 14, 21].map((o) => `<path class="st" d="M${x + o + 2} 4 L${x + o + 1} 28"/>`).join('') + `<path class="st" d="M${x - 2} 22 L${x + 27} 8"/>`;
+      x += 38;
+    }
+    for (let r = 0; r < rem; r++) svg += `<path class="st" d="M${x + r * 7 + 2} 4 L${x + r * 7 + 1} 28"/>`;
+    const w = x + rem * 7 + 6;
+    let todo = '';
+    for (let i = doneN; i < total; i++) todo += `<i class="${i === doneN ? 'next' : ''}"></i>`;
+    return `<div class="tally" role="img" aria-label="${doneN} of ${total} done"><svg width="${Math.max(w, 1)}" height="30" viewBox="0 0 ${Math.max(w, 1)} 30" style="stroke:var(--ink);stroke-width:2.2;stroke-linecap:round;fill:none">${svg}</svg><span class="todo">${todo}</span></div>`;
+  }
+
+  function ruler() {
+    let ticks = '';
+    for (let i = 0; i <= days; i++) ticks += `<i class="${i % 7 === 0 ? 'wk' : ''}"></i>`;
+    const sat = (2 / days) * 100;
+    return `<div class="ruler" role="img" aria-label="${days} days from tonight to test day"><div class="ruler__ticks">${ticks}</div>
+      <span class="ruler__mk ruler__mk--start" style="left:0"><span>Tonight</span></span>
+      <span class="ruler__mk" style="left:${sat}%;background:var(--ink-2);height:12px;top:-5px"></span>
+      <span class="ruler__mk ruler__mk--end" style="left:calc(100% - 2px)"><span>Nov 29</span></span></div>`;
+  }
+
+  function q(id) { return S.queue.find((x) => x.id === id); }
+  function spell(n) {
+    if (n < 13) return word(n);
+    const teens = ['thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'];
+    const tens = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
+    if (n < 20) return teens[n - 13];
+    if (n < 100) return tens[Math.floor(n / 10)] + (n % 10 ? '-' + word(n % 10) : '');
+    return String(n);
+  }
+
+  function render() {
+    const parts = [];
+    parts.push(`<section class="row opening"><div class="ml"><b>Thursday</b>October 22</div><div class="tx"><h1>Good evening, Ada.</h1></div><aside class="sn"></aside></section>`);
+
+    if (state === 'loading') {
+      parts.push(row('<b>Tonight</b>', `<p class="lead">Getting tonight’s work ready. <span class="skel" style="width:14em"></span> <span class="skel" style="width:9em"></span></p>`, `<div class="note"><span class="note__n">…</span><span class="skel" style="width:80%"></span></div>`));
+      parts.push(row('<b>From Joshua</b>', `<p>Checking for notes. The unread count appears once messages load.</p>`));
+    } else if (state === 'error') {
+      parts.push(row('<b>Tonight</b>', `<p class="lead">Your assignments didn’t load. Your saved work is safe; this is a loading problem, not a lost assignment.</p><div class="cta-row"><button class="cta" type="button" data-act="retry">Try again</button><button class="lnk" type="button" data-act="mywork">Open My work instead</button></div>`));
+      parts.push(row('<b>From Joshua</b>', `<p>Messages didn’t load either, so the unread count is unknown. Nothing has been marked read.</p>`));
+    } else if (state === 'empty') {
+      parts.push(row('<b>Tonight</b>', `<p class="lead">Nothing is assigned right now. If you want to practise, a ${tok(7, 'Smart Drill')} builds a set from the questions you’ve missed.</p><div class="cta-row"><button class="cta" type="button" data-act="smart">${play}Start a Smart Drill</button></div>`,
+        note(7, `<span class="note__t">Smart Drill</span><span class="note__m">A short set built from the questions you’ve missed. It doesn’t count against assignments.</span>`)));
+      parts.push(row('<b>From Joshua</b>', `<p>No new notes from Joshua. Your conversation is in the <button class="inline-btn" type="button" data-act="inbox">inbox</button>.</p>`));
+    } else {
+      const f = S.focus;
+      parts.push(row('<b>Tonight</b>due 11:59 pm',
+        `<p class="lead">Tonight is for ${tok(1, f.title)}. You’ve set ${word(f.done)} of its ${word(f.total)} prompts and the rest is saved, so you pick up at prompt ${word(f.done + 1)}. It’s due at 11:59&nbsp;pm.</p>
+         <div class="cta-row"><button class="cta" type="button" data-act="open" data-id="${f.id}">${play}${esc(f.action)}</button></div>`,
+        note(1, `<span class="note__t">${esc(f.title)}</span><span class="note__m">${esc(f.kind)}. ${esc(f.blurb)}</span>${tally(f.done, f.total)}<span class="note__m">${Word(f.done)} of ${word(f.total)} prompts set.</span>`)));
+
+      const flaw = q('a-flaw'), notes = q('a-notes'), recap = q('a-recap');
+      const waiting = [flaw, notes, recap].filter((x) => !done.has(x.id)).length;
+      parts.push(row('<b>After that</b>',
+        `<p>${waiting ? `${Word(waiting)} more ${waiting === 1 ? 'thing is' : 'things are'} waiting.` : 'Everything else is done.'} ${tok(2, flaw.title)} is due Friday at 9:00&nbsp;pm. Joshua left you ${tok(3, 'notes on PT105 S2')} yesterday, and the ${tok(4, 'recap on sufficient and necessary')} went up on October&nbsp;20.</p>`,
+        note(2, `<span class="note__t">Guided drill, new</span><span class="note__m">${esc(flaw.blurb)} Not started.</span><span class="note__acts"><button class="lnk" type="button" data-act="open" data-id="a-flaw">Start the drill</button></span>`) +
+        note(3, `<span class="note__t">From Joshua, new</span><span class="note__m">${esc(notes.blurb)}</span><span class="note__acts">${done.has('a-notes') ? '<span>Marked done. It’s in My work.</span>' : '<button class="lnk" type="button" data-act="open" data-id="a-notes">Open the notes</button><button class="lnk" type="button" data-act="done" data-id="a-notes">Mark done</button>'}</span>`) +
+        note(4, `<span class="note__t">Session recap, new</span><span class="note__m">${esc(recap.blurb)}</span><span class="note__acts"><button class="lnk" type="button" data-act="open" data-id="a-recap">Read the recap</button></span>`)));
+
+      if (msg && !msgCleared) {
+        parts.push(row(`<b>From Joshua</b>9:12 am<br><span class="mark-unread${msg.unread ? '' : ' is-read'}" id="unread-mark">Unread<span class="strike"></span></span>${msg.unread ? '' : '<br>read at 5:12 pm'}`,
+          `<p>Joshua wrote to you this morning:</p><blockquote class="letter">${esc(msg.text)}</blockquote>
+           <div class="cta-row">${msg.unread ? '<button class="lnk" type="button" data-act="read">Mark read</button>' : ''}<button class="lnk" type="button" data-act="reply">Reply</button><button class="lnk" type="button" data-act="clear">Clear from Home</button><span>Clearing only hides it here; the conversation stays in your inbox.</span></div>`,
+          '', 'row-msg'));
+      }
+    }
+
+    if (state !== 'error') {
+      const s = S.nextSession;
+      parts.push(row('<b>Ahead</b>',
+        `<p>Your next session with Joshua is ${tok(5, 'Saturday at 7:15 pm')}. Test day is ${tok(6, `${spell(days)} days away`)}, on Sunday, November&nbsp;29.</p>`,
+        note(5, `<span class="note__t">Session with Joshua</span><span class="note__m">${s.day}, ${s.date} at ${s.time}. Booked on the platform.</span><span class="note__acts"><button class="lnk" type="button" data-act="session">Session details</button></span>`) +
+        note(6, `<span class="note__t">${days} days to test day</span>${ruler()}<span class="note__m">Each tick is one day. The taller ticks mark weeks; the short pencil mark is Saturday’s session.</span>`)));
+    }
+
+    // the week, set as a table of contents
+    const toc = S.week.map((d) => {
+      let items = state === 'full' ? d.items.filter((x) => !(x.t === "Read Joshua's notes on PT105 S2" && done.has('a-notes'))) : state === 'empty' ? d.items.filter((x) => x.k === 'session') : [];
+      const v = items.length ? items.map((x) => `${esc(x.t)}<small>${esc(x.s)}</small>`).join('') : state === 'loading' ? 'loading' : state === 'error' ? 'unknown' : 'nothing listed';
+      return `<li class="${d.today ? 'is-today' : ''}${items.length ? '' : ' is-empty'}"><span class="d"><b>${d.dow} ${d.d}</b></span><span class="lead-dots"></span><span class="v">${v}</span></li>`;
+    }).join('');
+    parts.push(row('<b>The week</b>October 22 to 28', `<ol class="toc">${toc}</ol><p class="caveat">Assignments and platform sessions only. “Nothing listed” means nothing is listed here, not that the day is free.</p>`));
+
+    parts.push(row('<b>On your own</b>',
+      `<p>If you want more practice, look up a question like <label class="sr" for="q-search">Find a question</label><input class="blank" id="q-search" type="search" placeholder="PT105 S2 Q14" autocomplete="off">, start a <button class="inline-btn" type="button" data-act="smart" data-n="7">Smart Drill</button><sup style="font-family:var(--ui);font-size:11.5px;color:var(--pencil);font-weight:600">7</sup>, or sit a <button class="inline-btn" type="button" data-act="timed" data-n="8">timed section</button><sup style="font-family:var(--ui);font-size:11.5px;color:var(--pencil);font-weight:600">8</sup>.</p>`,
+      state === 'empty' ? note(8, `<span class="note__t">Timed section</span><span class="note__m">35 minutes, test conditions.</span>`) :
+      note(7, `<span class="note__t">Smart Drill</span><span class="note__m">Built from the questions you’ve missed.</span>`) + note(8, `<span class="note__t">Timed section</span><span class="note__m">35 minutes, test conditions.</span>`)));
+
+    $('#letter').innerHTML = parts.join('');
+    if (!firstPaint) $$('.tok').forEach((t) => t.classList.add('is-inked'));
+    if (typeof layoutNotes === 'function') requestAnimationFrame(layoutNotes);
+    // the empty state already numbered its Smart Drill note in the first paragraph
+    const c = $('#inbox-count');
+    c.textContent = state === 'loading' ? '—' : state === 'error' ? 'unknown' : msg && msg.unread && !msgCleared ? '1 unread' : 'nothing new';
+    wire();
+  }
+
+  /* ---- token and note linking, with a pencil leader line ---- */
+  const page = $('#page'), lp = $('#leader-path');
+  function clearHot() { $$('.is-hot').forEach((e) => e.classList.remove('is-hot')); lp.setAttribute('d', ''); }
+  function hot(n, draw) {
+    clearHot();
+    const t = $(`.tok[data-n="${n}"], .inline-btn[data-n="${n}"]`), nt = $(`#note-${n}`);
+    if (t) t.classList.add('is-hot');
+    if (!nt) return;
+    nt.classList.add('is-hot');
+    if (!draw || window.innerWidth <= 920 || !t) return;
+    const pr = page.getBoundingClientRect(), rects = t.getClientRects(), tr = rects[rects.length - 1], nr = nt.getBoundingClientRect();
+    const x1 = tr.right - pr.left + 4, y1 = tr.top - pr.top + tr.height * .62;
+    const x2 = nr.left - pr.left + 6, y2 = nr.top - pr.top + 22;
+    const mx = (x1 + x2) / 2;
+    lp.setAttribute('d', `M${x1} ${y1} C ${mx} ${y1}, ${mx} ${y2}, ${x2} ${y2}`);
+    if (G) { const L = lp.getTotalLength(); G.fromTo(lp, { strokeDasharray: L, strokeDashoffset: L }, { strokeDashoffset: 0, duration: .45, ease: 'power2.out', overwrite: true }); }
+  }
+  function wire() {
+    $$('.tok, .inline-btn[data-n]').forEach((t) => {
+      const n = t.dataset.n;
+      t.addEventListener('mouseenter', () => hot(n, true));
+      t.addEventListener('focus', () => hot(n, true));
+      t.addEventListener('mouseleave', clearHot);
+      t.addEventListener('blur', clearHot);
+    });
+    $$('.note[data-n]').forEach((nt) => {
+      nt.addEventListener('mouseenter', () => hot(nt.dataset.n, true));
+      nt.addEventListener('mouseleave', clearHot);
+    });
+    // reading position: the margin label of the paragraph you're on goes to ink
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((es) => es.forEach((e) => e.target.classList.toggle('is-here', e.isIntersecting)), { rootMargin: '-35% 0px -55% 0px' });
+      $$('.row.para').forEach((r) => io.observe(r));
+    }
+  }
+
+  /* Tufte-style sidenote placement: each note sits level with its phrase, pushed down only to avoid the note above */
+  function layoutNotes() {
+    const wide = window.innerWidth > 920;
+    let last = -Infinity;
+    $$('.row .sn').forEach((sn) => {
+      sn.style.position = wide ? 'relative' : '';
+      sn.style.height = wide ? '0px' : '';
+      const base = sn.getBoundingClientRect().top + window.scrollY;
+      [...sn.children].forEach((nt) => {
+        if (!wide) { nt.style.position = nt.style.top = nt.style.left = nt.style.right = ''; return; }
+        const a = nt.dataset.n && sn.closest('.row').querySelector(`.tok[data-n="${nt.dataset.n}"], .inline-btn[data-n="${nt.dataset.n}"]`);
+        const want = a ? a.getClientRects()[0].top + window.scrollY - 12 : base;
+        const top = Math.max(want, last + 10);
+        Object.assign(nt.style, { position: 'absolute', left: '0', right: '0', top: (top - base) + 'px' });
+        last = top + nt.offsetHeight;
+      });
+    });
+    const foot = $('.row.end');
+    if (foot) foot.style.marginTop = wide ? Math.max(0, last - (foot.getBoundingClientRect().top + window.scrollY) + 24) + 'px' : '';
+  }
+
+  render();
+  firstPaint = false;
+  layoutNotes();
+  if (document.fonts) document.fonts.ready.then(layoutNotes);
+  window.addEventListener('resize', layoutNotes);
+
+  // the one orchestrated moment: the pencil goes over the letter, underlining as it reads
+  const toks = $$('.tok');
+  if (G) {
+    document.documentElement.classList.add('js-ink');
+    toks.forEach((t, i) => t.style.setProperty('--d', (0.35 + i * 0.16) + 's'));
+    requestAnimationFrame(() => requestAnimationFrame(() => toks.forEach((t) => t.classList.add('is-inked'))));
+    setTimeout(() => toks.forEach((t) => t.classList.add('is-inked')), 300);
+    setTimeout(() => toks.forEach((t) => t.style.setProperty('--d', '0s')), 3600);
+    const tl = G.timeline({ delay: .3 });
+    tl.from('.note__n', { scale: 0, duration: .35, stagger: .08, ease: 'back.out(3)' }, .15)
+      .from('.tally .st', { strokeDasharray: 30, strokeDashoffset: 30, duration: .16, stagger: .1, ease: 'power1.in' }, .5)
+      .from('.tally .todo i', { opacity: 0, duration: .2, stagger: .03 }, '>-.1');
+    setTimeout(() => { if (tl.progress() < 1) tl.progress(1); }, 3200);
+  }
+
+  document.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-act], .tok');
+    if (!b) return;
+    if (b.classList.contains('tok')) {
+      e.preventDefault();
+      const nt = $(`#note-${b.dataset.n}`);
+      if (nt && window.innerWidth <= 920) nt.scrollIntoView({ behavior: reduced() ? 'auto' : 'smooth', block: 'center' });
+      hot(b.dataset.n, true);
+      return;
+    }
+    const act = b.dataset.act, id = b.dataset.id;
+    const it = id === S.focus.id ? S.focus : id && q(id);
+    if (act === 'open' && it) return toast(it === S.focus ? `Opening ${it.title} at prompt ${it.done + 1}.` : `Opening ${it.title}.`);
+    if (act === 'done') {
+      done.add(id);
+      render();
+      $('.tok[data-n="3"]').classList.add('is-done');
+      return toast('Marked done. You can still find it in My work.');
+    }
+    if (act === 'read' && msg) {
+      const m = $('#unread-mark');
+      const finish = () => { msg.unread = false; render(); toast('Marked read. The message stays in your conversation.'); };
+      if (G && m) { m.classList.add('is-read'); G.fromTo(m.querySelector('.strike'), { scaleX: 0 }, { scaleX: 1, duration: .35, ease: 'power2.inOut', onComplete: () => setTimeout(finish, 250) }); }
+      else finish();
+      return;
+    }
+    if (act === 'clear') {
+      const r = $('.row-msg');
+      const finish = () => { msgCleared = true; render(); toast('Cleared from Home. The conversation stays in your inbox.'); };
+      if (G && r) G.to(r, { opacity: 0, height: 0, paddingTop: 0, duration: .5, ease: 'power3.inOut', onComplete: finish }); else finish();
+      return;
+    }
+    if (act === 'reply') return toast('Opening your conversation with Joshua.');
+    if (act === 'inbox') return toast('Opening the inbox.');
+    if (act === 'session') return toast('Opening session details for Saturday at 7:15 pm.');
+    if (act === 'smart') return toast('Building a Smart Drill from your missed questions.');
+    if (act === 'timed') return toast('Setting up a 35-minute timed section.');
+    if (act === 'mywork') return toast('Opening My work.');
+    if (act === 'retry') { const u = new URL(location.href); u.searchParams.set('state', 'full'); location.href = u; }
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.target.id === 'q-search' && e.key === 'Enter' && e.target.value.trim()) toast(`Searching for “${e.target.value.trim()}”.`);
+  });
+})();
+</script>
+</body>
+</html>

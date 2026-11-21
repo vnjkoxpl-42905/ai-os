@@ -1,0 +1,2 @@
+const {chromium}=require('C:/Users/Joshu/dev/ai-os-projects/lsatu-role-home-20261022/node_modules/playwright');
+(async()=>{const b=await chromium.launch({channel:'msedge',headless:true});const p=await b.newPage({viewport:{width:1440,height:1000}});await p.goto('https://linear.app/docs/search',{waitUntil:'domcontentloaded'});await p.waitForTimeout(1200);await p.screenshot({path:__dirname+'/linear-search.png'});await b.close()})().catch(e=>{console.error(e);process.exit(1)});

@@ -4,6 +4,10 @@ description: Guidance for distinctive, intentional visual design when building n
 license: Complete terms in LICENSE.txt
 ---
 
+## Current scoped workflow
+
+Preserve the approved design brief, existing project visual language and factual content. Aesthetic font/palette bans are optional preset choices, not universal rules. Provide a static reduced-motion equivalent and keyboard-accessible states.
+
 # Frontend Design
 
 Approach this as the design lead at a design studio known for giving every client a distinct visual identity that is not mistaken for anyone else's. This client has already rejected proposals that felt cliché or templated, and is paying for a distinctive point of view: make deliberate, opinionated choices about palette, typography, and layout that are specific to this brief, and take aesthetic risk if justified.

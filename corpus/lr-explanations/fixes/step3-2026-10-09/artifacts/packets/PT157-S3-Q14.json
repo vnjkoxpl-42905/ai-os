@@ -1,0 +1,78 @@
+{
+ "qid": "PT157-S3-Q14",
+ "type": "Flaw",
+ "difficulty": "4",
+ "key_db": "D",
+ "stimulus_db": "Food critic: One of the chief competitors of Chris's restaurant claims that Chris's okra supplier cannot reliably supply fresh okra. If this claim were true, Chris's customers could not count on getting good seafood gumbo, Chris's specialty, because the best seafood gumbo requires fresh okra.",
+ "stem_db": "The food critic's argument is most subject to criticism because it",
+ "choices_db": {
+  "A": "relies upon testimony that is likely to be biased",
+  "B": "illicitly presumes that a dish must lack a certain quality if one of its ingredients lacks that quality",
+  "C": "confuses a necessary condition for the best seafood gumbo with a sufficient condition for good seafood gumbo",
+  "D": "takes for granted that a necessary ingredient of the best seafood gumbo is also a necessary ingredient of good seafood gumbo",
+  "E": "fails to consider the possibility that on some days Chris's might be serving seafood gumbo made with fresh okra"
+ },
+ "bank": {
+  "stimulus": "Food critic: One of the chief competitors of Chris’s\n restaurant claims that Chris’s okra supplier\n cannot reliably supply fresh okra. If this claim\n were true, Chris’s customers could not count on\n getting good seafood gumbo, Chris’s specialty,\n because the best seafood gumbo requires fresh\n okra.",
+  "stem": "The food critic’s argument is most subject to criticism\n because it",
+  "choices": {
+   "A": "relies upon testimony that is likely to be biased",
+   "B": "illicitly presumes that a dish must lack a certain quality if one of its ingredients lacks that quality",
+   "C": "confuses a necessary condition for the best seafood gumbo with a sufficient condition for good seafood gumbo",
+   "D": "takes for granted that a necessary ingredient of the best seafood gumbo is also a necessary ingredient of good seafood gumbo",
+   "E": "fails to consider the possibility that on some days Chris’s might be serving seafood gumbo made with fresh okra."
+  },
+  "key": "D"
+ },
+ "explanation_id": "7144db35-6bd3-4550-9829-c1e2610f865c",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "fb6a93e0-7d99-4b4b-a730-e135f8fcbd6c",
+   "position": 0,
+   "label": "Evidence",
+   "body": "The best seafood gumbo requires fresh okra."
+  },
+  {
+   "row_id": "45c591cd-94a4-4769-8338-35294d458f8a",
+   "position": 1,
+   "label": "Conclusion",
+   "body": "If this claim were true [Chris's okra supplier cannot reliably supply fresh okra], then Chris's customers could not count on getting good seafood gumbo."
+  },
+  {
+   "row_id": "be542e31-fdb8-4f27-9efd-47a6c021fbd1",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "The evidence is a conditional statement: `best gumbo → fresh okra`. Using the contrapositive, we can conclude that if we don't have fresh okra, we cannot have the best seafood gumbo: `~ fresh okra → ~ best gumbo`. The argument tries to make a very similar conclusion, but there is an important term shift. The conclusion of this argument is about getting good gumbo, not the best gumbo: `~ fresh okra → ~ good gumbo`. It might be possible to make good seafood gumbo without fresh okra, just not the best seafood gumbo."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "1177d3b7-2e6d-4096-8dd2-a3876ba58b4e",
+   "letter": "A",
+   "body": "The conclusion is conditional: if the claim is true, then the consequence follows. The argument does not assume the competitor's claim is true. It evaluates what would happen if the claim were true, which avoids the bias concern."
+  },
+  {
+   "row_id": "cf58bda1-3e22-45e9-8c00-3387c0935a20",
+   "letter": "B",
+   "body": "This would apply if the argument claimed the gumbo is not fresh because the okra is not fresh. But the argument is about quality levels — best versus good — not about transferring a quality from ingredient to dish."
+  },
+  {
+   "row_id": "b4c437ea-852d-4294-9b3f-193db0fa2049",
+   "letter": "C",
+   "body": "This claims fresh okra is treated as sufficient for good gumbo. But the argument does not conclude that having fresh okra guarantees good gumbo. It concludes that lacking fresh okra prevents good gumbo. The actual flaw is conflating what is necessary for the best gumbo with what is necessary for good gumbo."
+  },
+  {
+   "row_id": "2be07b0a-184d-41e2-b0ea-8a07fb664d5f",
+   "letter": "D",
+   "body": "The evidence establishes fresh okra as a necessary ingredient for the best seafood gumbo. The conclusion assumes fresh okra is also necessary for good gumbo. But the best and good are different quality thresholds. Good gumbo might be achievable without fresh okra — you just cannot make the best gumbo. This answer precisely identifies the unjustified assumption that what is necessary for the highest quality is also necessary for adequate quality."
+  },
+  {
+   "row_id": "6c2276ea-19e0-4752-90b1-72fb354b9a8b",
+   "letter": "E",
+   "body": "Even if Chris occasionally gets fresh okra, the conclusion is about customers being able to count on good gumbo reliably. Occasional availability does not address the reliability concern or the best-versus-good distinction that is the actual flaw."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (8.5 em-dashes per 1k words; wrong-answer notes average 41.5 words).",
+ "tags": "no-prediction; emdash-heavy; pt157-158-register"
+}

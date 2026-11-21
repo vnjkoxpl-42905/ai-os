@@ -1,0 +1,749 @@
+{
+  "status": "failed",
+  "mode": "inspect",
+  "provider": "claude",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "claude",
+    "builder": "codex",
+    "inspector": "claude"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-my-work-20261026",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-my-work-20261026\\docs\\plans\\my-work-assignment-sync-20261028.md",
+  "plan_sha256": "a545aeb7e95e5680f3ecd6b4df542b6749a563c3d34a4dec15c54be9599a4800",
+  "requested_model": "claude-opus-5-5",
+  "requested_effort": "medium",
+  "base": "dbf78f7e68f995e68cdbe9fa1d83337f9d386ad2",
+  "snapshot": {
+    "base": "dbf78f7e68f995e68cdbe9fa1d83337f9d386ad2",
+    "files": [
+      {
+        "path": "docs/plans/my-work-assignment-sync-20261028.md",
+        "kind": "file",
+        "sha256": "a545aeb7e95e5680f3ecd6b4df542b6749a563c3d34a4dec15c54be9599a4800"
+      },
+      {
+        "path": "docs/plans/my-work-assignment-writer-inventory-20261028.md",
+        "kind": "file",
+        "sha256": "b3930a026dfd95710e9e776cf59daa6d5b383318ce8e1fc476f7a99c7139823b"
+      },
+      {
+        "path": "scripts/sql/student-work-assertions.sql",
+        "kind": "file",
+        "sha256": "e1ad65c53d5236eefe4c2ed536b147c1c9cb57e043a645bc7dfdee34f87ae9ec"
+      },
+      {
+        "path": "scripts/sql/student-work-baseline.sql",
+        "kind": "file",
+        "sha256": "0844c18b3402da40975c17316dbe2081d2d4c4ad8d9c77abee1cf72184d631ef"
+      },
+      {
+        "path": "scripts/sql/student-work-preservation-audit.sql",
+        "kind": "file",
+        "sha256": "6b9d7ba2821eb3de0369ef10e0db7635326f0c902b32687df89ae856395f0537"
+      },
+      {
+        "path": "scripts/sql/student-work-release-audit.sql",
+        "kind": "file",
+        "sha256": "cc9f362e0a09a40a51cf2321b3341b769ead43b91dbf29cdc1bce285b50d26d4"
+      },
+      {
+        "path": "scripts/test-student-work-delivery.mjs",
+        "kind": "file",
+        "sha256": "a6b75aab92c33895de800a9ed8809cceaa6f796f767e9bce9de8ddee91595f08"
+      },
+      {
+        "path": "scripts/verification/my-work-preview.tsx",
+        "kind": "file",
+        "sha256": "b027652ac234b268e92b9f4f0277e757e89412954b1cac4aebd77d0b93b30254"
+      },
+      {
+        "path": "scripts/verification/start-my-work-preview.mjs",
+        "kind": "file",
+        "sha256": "122d24fce2a8b8bf51d42a81753d13937f75a690afce090de7f5ad3f93f760e9"
+      },
+      {
+        "path": "src/components/classroom/ClassroomNotesJourney.test.tsx",
+        "kind": "file",
+        "sha256": "6bb8e4eeb50b20311c861bf5c097a4ed7e12d6c2d787094654bccd59e3473751"
+      },
+      {
+        "path": "src/components/classroom/ClassroomRouteViews.notes.test.tsx",
+        "kind": "file",
+        "sha256": "26673c35a4ebc153e8ff40667b9361d2bc8db481f7946d6de2cc37ea815f255d"
+      },
+      {
+        "path": "src/components/classroom/ClassroomRouteViews.tsx",
+        "kind": "file",
+        "sha256": "09ad426b7477d0a54bec8fa4faa907ed2d0f57db37db074107fc2273f317e037"
+      },
+      {
+        "path": "src/components/classroom/classroom.css",
+        "kind": "file",
+        "sha256": "8583bf2645c30f611aedfa980128909cfaeb2d01a29271d5d58ab01118f619aa"
+      },
+      {
+        "path": "src/components/classroom/home/homeModel.ts",
+        "kind": "file",
+        "sha256": "4f919b87bae77f1a1d71cac816e0634b8cedf116bfd17ecdf58a6e1dbcd50f02"
+      },
+      {
+        "path": "src/components/classroom/home/useClassroomHome.ts",
+        "kind": "file",
+        "sha256": "6435584d6b3ea78f577e3a967366cdf24c9cfd9d10809969c3ef07225446646d"
+      },
+      {
+        "path": "src/components/classroom/shell/ClassroomLayout.test.tsx",
+        "kind": "file",
+        "sha256": "c8521cbe19cd439f84aa88ae6828344170065dddd386b739f068b5700047cb1a"
+      },
+      {
+        "path": "src/components/classroom/shell/ClassroomLayout.tsx",
+        "kind": "file",
+        "sha256": "0fec7ee450c7c937640befee9b24d0f108f68a1332978754f78c3967a8584c0d"
+      },
+      {
+        "path": "src/components/hub/BootcampGate.test.tsx",
+        "kind": "file",
+        "sha256": "2f32a92aa488fce87adb893398d97f73664dd193029b07b8fb94d3e151427239"
+      },
+      {
+        "path": "src/components/hub/BootcampGate.tsx",
+        "kind": "file",
+        "sha256": "c771f8921f400049082123272758bc75383cb08027486dfade9a3f76f9ff1b83"
+      },
+      {
+        "path": "src/components/inbox/StudentCornerBubble.tsx",
+        "kind": "file",
+        "sha256": "fc01acc71c5b81fec041161f9217865ff8ddb034fcc0f56dcc45780522e06995"
+      },
+      {
+        "path": "src/components/mainhub/useTodayFocus.notification.test.ts",
+        "kind": "file",
+        "sha256": "f3bb1b97db9e3319552e39c3a8400fbeb3d37c8242611a19287c0273866bd52b"
+      },
+      {
+        "path": "src/components/mainhub/useTodayFocus.ts",
+        "kind": "file",
+        "sha256": "2a0d552a007e8c899b89adedc646c5bc3ed43f86607d3407e0772a15d5c075ab"
+      },
+      {
+        "path": "src/components/my-work/AssignmentUpdate.test.tsx",
+        "kind": "file",
+        "sha256": "5e63693beb6151f1acdc59ec851fd6c1d9f0eceed492a69019e4738e596e1775"
+      },
+      {
+        "path": "src/components/my-work/AssignmentUpdate.tsx",
+        "kind": "file",
+        "sha256": "48330702a4c149e281f26e04293433f78e947d41149a76d9bdde9a13d8cfa9a9"
+      },
+      {
+        "path": "src/components/my-work/TeachingNotesArchive.test.tsx",
+        "kind": "file",
+        "sha256": "89a5af49edd53d806236139d1f05da9475368333add222de12a660771ff05238"
+      },
+      {
+        "path": "src/components/my-work/TeachingNotesArchive.tsx",
+        "kind": "file",
+        "sha256": "789b540508871cae76bbc79c7cf314962b3e5dfce9470b7b0a189f3ae6d0f44c"
+      },
+      {
+        "path": "src/components/my-work/WorkFilterSelect.tsx",
+        "kind": "file",
+        "sha256": "13eee43accb2c23ad53a442c55182e2d17c4cabebe0a75b50e9c86c4d2a173ee"
+      },
+      {
+        "path": "src/components/my-work/assignedWorkOrganization.ts",
+        "kind": "file",
+        "sha256": "8fbf2ab4e0d5a94e744f8d706361b8986b20d1cec1e45214eede3777c8dc12f2"
+      },
+      {
+        "path": "src/components/my-work/teachingNoteDates.test.ts",
+        "kind": "file",
+        "sha256": "3c5d8d86bcc9cd5f9c861f5aa9790bc78eb3ea3119f5e0d48a4c07e2a54fc881"
+      },
+      {
+        "path": "src/components/my-work/teachingNoteDates.ts",
+        "kind": "file",
+        "sha256": "e1befb8937e2980a136abb668a4640df5b94a3634de07a9a0a257816166a2b11"
+      },
+      {
+        "path": "src/components/notifications/NotificationBell.tsx",
+        "kind": "file",
+        "sha256": "df5cacda23cf2f9bda348ff1f31fa23c1f25e551f2ebffe58d635d6d12a91941"
+      },
+      {
+        "path": "src/components/ta/DraftCard.tsx",
+        "kind": "file",
+        "sha256": "1c45c400f0f1abb8161b37b66f6e86110f59f529456021a34c98de1e27f0a1d0"
+      },
+      {
+        "path": "src/components/teacher/AssignmentBuilder.tsx",
+        "kind": "file",
+        "sha256": "2af961392702d6f7e3c64b4f0cd96c538c4779a1df1664dd6f69b9c749095f11"
+      },
+      {
+        "path": "src/components/teacher/schedule/StudentSchedulePanel.tsx",
+        "kind": "file",
+        "sha256": "67038a279cb1828477fe0ec2ffb21b88a163fc010f588d77566baf030bee74a9"
+      },
+      {
+        "path": "src/features/activity-centre/components/ActivityRunner.adminview.test.tsx",
+        "kind": "file",
+        "sha256": "189e119c801242b090eaffb9fac4e0a38ca50b6b7c4f5cdc253b7f46f6f687fb"
+      },
+      {
+        "path": "src/features/activity-centre/components/ActivityRunner.completion.test.tsx",
+        "kind": "file",
+        "sha256": "2403b158a7848fb609d1a05d347c462687f25dd5015a06254555da25b56141df"
+      },
+      {
+        "path": "src/features/activity-centre/components/ActivityRunner.exit.test.tsx",
+        "kind": "file",
+        "sha256": "18bdbea2714c0b703847aade06d85f31a495031be5b96761b9b49736ee130039"
+      },
+      {
+        "path": "src/features/activity-centre/components/ActivityRunner.practice.test.tsx",
+        "kind": "file",
+        "sha256": "2f58ddd1208f688d7647ce5301445dc7f81081828919087686febc7dcb43ea86"
+      },
+      {
+        "path": "src/features/activity-centre/components/ActivityRunner.redrill.test.tsx",
+        "kind": "file",
+        "sha256": "9b49e93a6ac53dc24c67f65aa186b1cb94a309056d9f3165caab56f4b8dc5fdd"
+      },
+      {
+        "path": "src/features/activity-centre/components/ActivityRunner.resume.test.tsx",
+        "kind": "file",
+        "sha256": "3295a6007cb2e685e058118be456ab986766225bee3645e3c8b78756cb4c7fce"
+      },
+      {
+        "path": "src/features/activity-centre/components/ActivityRunner.sectionreport.test.tsx",
+        "kind": "file",
+        "sha256": "79d14fac13b6a7a08fce2cc55ca8862095440e43f12b17a7412b495fe23fb315"
+      },
+      {
+        "path": "src/features/activity-centre/components/ActivityRunner.tsx",
+        "kind": "file",
+        "sha256": "59d278b0d1594eb0e332fa5841d0f87146a7707d90bd9706dd2751a5515dde59"
+      },
+      {
+        "path": "src/features/activity-centre/components/ActivityRunner.wrongaccount.test.tsx",
+        "kind": "file",
+        "sha256": "d655cd6161202d39f7c30a93343901a1fa83519559eea913b1bf6ac148fde8d2"
+      },
+      {
+        "path": "src/features/conditional-refresher/ConditionalIndicatorsRefresher.test.tsx",
+        "kind": "file",
+        "sha256": "d090ea2b0f9a5430ecb7b8aacaed140e36039a91e87fe68027bfdca4ad599200"
+      },
+      {
+        "path": "src/features/conditional-refresher/ConditionalIndicatorsRefresher.tsx",
+        "kind": "file",
+        "sha256": "f11a15d1c87fc08b619db435418b572162130a89ac14957851fc52ee45e12940"
+      },
+      {
+        "path": "src/features/quick-drills/unless-drill/UnlessDrillPage.tsx",
+        "kind": "file",
+        "sha256": "6b4fe5ecf4b78de97c35887cf4c39aa50633f4c540427e755665ab93a4d7ffdc"
+      },
+      {
+        "path": "src/features/reading-center/pages/ReadingCenterHome.test.tsx",
+        "kind": "file",
+        "sha256": "d3aaeb8da094c8011bf7c4472f7c640cbd5771ab087be4a01ae95d4335004adb"
+      },
+      {
+        "path": "src/features/reading-center/pages/ReadingCenterHome.tsx",
+        "kind": "file",
+        "sha256": "3855b181e56d1dca59d32a28abf018dac4f0cd39a5d3625f4178d3069a3ab7c8"
+      },
+      {
+        "path": "src/hooks/useAssignedTodoFeed.test.ts",
+        "kind": "file",
+        "sha256": "c7f4228aa58a80009f06fa3f371dcb37e383bb401d2da59fb4ceed3891072972"
+      },
+      {
+        "path": "src/hooks/useAssignedTodoFeed.ts",
+        "kind": "file",
+        "sha256": "623cbdbdb3a06eb9c7ea7e8bb55ab9ff073f1b825f55d971fcb121530a858996"
+      },
+      {
+        "path": "src/hooks/useClassroomDestinationAcknowledgment.ts",
+        "kind": "file",
+        "sha256": "128e30f9085f3ad7d78b4436a9955cdee5468027487702c560d5862644e1bc11"
+      },
+      {
+        "path": "src/hooks/useClassroomItems.test.tsx",
+        "kind": "file",
+        "sha256": "d02fc72eb3a8a0d0ebae9426a2c1998410ecc666b66a4ee0278b4844a87be446"
+      },
+      {
+        "path": "src/hooks/useClassroomItems.ts",
+        "kind": "file",
+        "sha256": "7d0314999f2af92ea934091ebcd6b13b7cd3bdb6418c81bef609a7684b1b2d6d"
+      },
+      {
+        "path": "src/hooks/useClassroomMotion.test.tsx",
+        "kind": "file",
+        "sha256": "afe32f69bef1b90aab66cc11a648493aba611b23b2fe635dd84ab512b6868cb9"
+      },
+      {
+        "path": "src/hooks/useClassroomMotion.ts",
+        "kind": "file",
+        "sha256": "0ae56d204dfc1441bc6f44de45f2c5eb6315ae0c6e1f102e34447de38ceb7b7f"
+      },
+      {
+        "path": "src/hooks/useNoteReaderTransition.test.tsx",
+        "kind": "file",
+        "sha256": "25d3c24285e3b9fc4db75e739712e3ca8279cb5e6211eabc76f001d154c92343"
+      },
+      {
+        "path": "src/hooks/useNoteReaderTransition.ts",
+        "kind": "file",
+        "sha256": "680b81cc450b84fdc5bb2e5ef03241f2f845578596eb707985eb5e5953eb92f4"
+      },
+      {
+        "path": "src/hooks/useNotesArchiveScroll.test.ts",
+        "kind": "file",
+        "sha256": "3916c8525fffeb504427614c9282127c9c3081cbf5183fd4de6fa91b9c6fdb9d"
+      },
+      {
+        "path": "src/hooks/useNotesArchiveScroll.ts",
+        "kind": "file",
+        "sha256": "9249bd891d54f1c17dec3c81ccfa02a750bed0e872a6dd13345a8e4c5e436cff"
+      },
+      {
+        "path": "src/hooks/useNotesSelectMotion.ts",
+        "kind": "file",
+        "sha256": "8ffbbde6358a34638ff4df937496e537ba66037c302b486ed1c0462711fec0aa"
+      },
+      {
+        "path": "src/hooks/useNotifications.ts",
+        "kind": "file",
+        "sha256": "54bd58c3c6cd58370f4aea50a8757c605fea27c22369291b0bf6032a84407304"
+      },
+      {
+        "path": "src/hooks/useStudentWorkState.test.tsx",
+        "kind": "file",
+        "sha256": "ea15854ae793f4d38179e3a222f353f0b7a9d59221609f6f6d1b2c72c3def120"
+      },
+      {
+        "path": "src/hooks/useStudentWorkState.ts",
+        "kind": "file",
+        "sha256": "46779636933dc272f6338598a7200dac898fe5051fc4a266e75fd7c927e3eddc"
+      },
+      {
+        "path": "src/lib/accessTierClient.ts",
+        "kind": "file",
+        "sha256": "fdcdd77716517df7b60632d93f0076cbb505d3a8019022a578442432507a02ad"
+      },
+      {
+        "path": "src/lib/agentActions.ts",
+        "kind": "file",
+        "sha256": "c7ef6e225c02206336625bb9f9e8f78b261ffd05d6b8002531f6e1440ab661dd"
+      },
+      {
+        "path": "src/lib/assignWork.test.ts",
+        "kind": "file",
+        "sha256": "03b4a22da548c365cd6a6283e7ff3f2c13ab57a3f80729dc8cfbd47dd9893291"
+      },
+      {
+        "path": "src/lib/assignWork.ts",
+        "kind": "file",
+        "sha256": "a2ddbae8100398e19ac4b85874f4c92165c268ee859840b27333159759e788cd"
+      },
+      {
+        "path": "src/lib/assignmentDelivery.test.ts",
+        "kind": "file",
+        "sha256": "c20325f595cd5488c9a73caf9505ba1b7dfbec4a91f49c2e28a384ad90ee2406"
+      },
+      {
+        "path": "src/lib/assignmentDelivery.ts",
+        "kind": "file",
+        "sha256": "9d5d5a471ab0ebc11d14867e9706d70f8c174e4729abe1f1d13ae320f9c92c47"
+      },
+      {
+        "path": "src/lib/assignmentNotificationRoute.test.ts",
+        "kind": "file",
+        "sha256": "44a39b1351b6f5cdb825316fb301e6ded43ce46372136b9bbdbead4047ed70ac"
+      },
+      {
+        "path": "src/lib/assignmentNotificationRoute.ts",
+        "kind": "file",
+        "sha256": "665a5fe1eaed7c88fde5c113784c2102f184b8f7b012099d84a8e535838e025c"
+      },
+      {
+        "path": "src/lib/assignmentWriterInventory.test.ts",
+        "kind": "file",
+        "sha256": "0c79aa819e5a7bafa16d3c5c50f00586f911328a8b22a8f8646887fe693c7ec5"
+      },
+      {
+        "path": "src/lib/classroomItems.ts",
+        "kind": "file",
+        "sha256": "13152abd1208b7571380fb381c003f025d6f12d172bf5a654f6ac8245051c956"
+      },
+      {
+        "path": "src/lib/classroomNotify.test.ts",
+        "kind": "file",
+        "sha256": "0de8feea946a1657248665b5a77c63fe002cc72cf24e54dfed5cac034836cc9d"
+      },
+      {
+        "path": "src/lib/classroomNotify.ts",
+        "kind": "file",
+        "sha256": "b16e479a0bf28719e1401bd01bdb96c035b73bcad8d0d604a36d2ee7c2a64605"
+      },
+      {
+        "path": "src/lib/markNoteRead.test.ts",
+        "kind": "file",
+        "sha256": "d1dd39c8dea433223079880fda7578bea25a447b535b67019f0725e6a52e43aa"
+      },
+      {
+        "path": "src/lib/markNoteRead.ts",
+        "kind": "file",
+        "sha256": "d4b9f4ab17683a7f0fb435b0147f56e067766175c92347f2f2c359267d34a427"
+      },
+      {
+        "path": "src/lib/myWorkNotesNavigation.test.ts",
+        "kind": "file",
+        "sha256": "bfbd144ae18733b7c7f61d13d81072c2b1bbcef8f70528223a77bd4df0641da8"
+      },
+      {
+        "path": "src/lib/myWorkNotesNavigation.ts",
+        "kind": "file",
+        "sha256": "1dde456ba677abc61121333a3945a4696337d50c6c8c91533380e7fe8984a7b4"
+      },
+      {
+        "path": "src/lib/publishSessionBundle.ts",
+        "kind": "file",
+        "sha256": "4803103f3bb840ce3e4d2d2e7d8bcaab7302598b9f421f9d609a94a75d199597"
+      },
+      {
+        "path": "src/lib/readingCenterAccess.test.ts",
+        "kind": "file",
+        "sha256": "d678e391a6b27ebb08e7025ea422a7c20525d54fb086ddf02ea221c2ab5335e5"
+      },
+      {
+        "path": "src/lib/readingCenterAccess.ts",
+        "kind": "file",
+        "sha256": "2639dbbb983d7c6598824907e5b7c15c3fb8f485a9ebe1ba6c7e163279b1dafc"
+      },
+      {
+        "path": "src/lib/studentWorkIdentity.test.ts",
+        "kind": "file",
+        "sha256": "6e878993caae8badc9c7f058c0352957b129408625539b0e384dca277c31702e"
+      },
+      {
+        "path": "src/lib/studentWorkIdentity.ts",
+        "kind": "file",
+        "sha256": "c7867ff19a9708be875379a91a3988bfb9871893e458d5594f118dc94e7b31a3"
+      },
+      {
+        "path": "src/lib/studentWorkState.test.ts",
+        "kind": "file",
+        "sha256": "c6e7815b121056aaaf917dfe05b5f37c9b8e0b6bba56d65edc3dabeca33af78c"
+      },
+      {
+        "path": "src/lib/studentWorkState.ts",
+        "kind": "file",
+        "sha256": "c7d814a1f81d3fe7e277d410ec8650fbccb6c7ebd1a0d031d340dda4c5edcd5d"
+      },
+      {
+        "path": "src/lib/teacherAssignResource.ts",
+        "kind": "file",
+        "sha256": "1ab50380343c72614716c7de8bf7602669b47c590397ca87f14003d4dc4b98c0"
+      },
+      {
+        "path": "src/lib/weeklyPlanPublish.test.ts",
+        "kind": "file",
+        "sha256": "99d3f0e38a1a862203a1b409958f336d1beaec2ce64aded5f3412843e02e66e1"
+      },
+      {
+        "path": "src/lib/weeklyPlanPublish.ts",
+        "kind": "file",
+        "sha256": "8e94a351a36a212afffb332f144bf8bfab115913e6800d9107a19acd5cecfb4e"
+      },
+      {
+        "path": "src/pages/GuidedDrillStart.tsx",
+        "kind": "file",
+        "sha256": "6d951f6b3c180062d621897e2c7789e7926ed6cafac9d6cc8c527c92cca8bd9d"
+      },
+      {
+        "path": "src/pages/MyWorkNotesPage.tsx",
+        "kind": "file",
+        "sha256": "52bd7e593540d0539e74c5e9ecdf24ec52abeb0e960dc69a65101a85aaecdec9"
+      },
+      {
+        "path": "src/pages/MyWorkPage.organization.test.tsx",
+        "kind": "file",
+        "sha256": "d298bfe5dc55d83c3c929cf93b2aa5a676a771349c93388e3f3a00c629da2d25"
+      },
+      {
+        "path": "src/pages/MyWorkPage.readingCenter.test.tsx",
+        "kind": "file",
+        "sha256": "fe2afcdb3dd2eab2e62d4508ee1c871b8f76b425b01c5a1669f4b5f5a4156bdc"
+      },
+      {
+        "path": "src/pages/MyWorkPage.refetch.test.tsx",
+        "kind": "file",
+        "sha256": "5a96b4e8229bb1d19370182aaa143eb008a0de3dade7328a3f5f9ab7fb53691b"
+      },
+      {
+        "path": "src/pages/MyWorkPage.tsx",
+        "kind": "file",
+        "sha256": "727716a2bd8cedfb14439394dc7e7626210867e57a8c5d606e07870125bd9037"
+      },
+      {
+        "path": "src/pages/PracticeTestRun.test.tsx",
+        "kind": "file",
+        "sha256": "29f6a184697b41d3a96d0eeb4fdb738e0b7e22284e8a6fc3bc619ac86a2cc623"
+      },
+      {
+        "path": "src/pages/PracticeTestRun.tsx",
+        "kind": "file",
+        "sha256": "6355abdc9754d29728b5c30e12ce3823d65e4210de736a1b1b60f341a2cbf937"
+      },
+      {
+        "path": "src/pages/SectionDirections.test.tsx",
+        "kind": "file",
+        "sha256": "3f7cd497a3d36c295b9762a1cc3c41594424967298555d7ee8bc7bb82d2631bf"
+      },
+      {
+        "path": "src/pages/SectionDirections.tsx",
+        "kind": "file",
+        "sha256": "b5f325dd4bb88dcc8975b3352053bdfae2609aa7a8d4de66f11eb06a9b59d9e6"
+      },
+      {
+        "path": "src/pages/StudentDestination.test.tsx",
+        "kind": "file",
+        "sha256": "e2a663fcbc111c5f97548609f388508d4785e86785a526490ac0b722c300febf"
+      },
+      {
+        "path": "src/pages/StudentDestination.tsx",
+        "kind": "file",
+        "sha256": "4c9fc2666e54a0fc5122f3fd6e2399d6926294be31f84a04d61ca1fefccc8bf7"
+      },
+      {
+        "path": "src/pages/TestingCentre.tsx",
+        "kind": "file",
+        "sha256": "f2c4757f971b167ee0325532a0daa97745dfa6477359858654c9007dd6c7cfb3"
+      },
+      {
+        "path": "src/pages/TimedPracticeTestRun.test.tsx",
+        "kind": "file",
+        "sha256": "381fcc8de7e10563e9708d0fa86b6727eb1943d01c03ea9cc159273cec650aa8"
+      },
+      {
+        "path": "src/pages/TimedPracticeTestRun.tsx",
+        "kind": "file",
+        "sha256": "eac21bb9b31f6ef316587d8888bbfce27669d13783a9b9a0153d663e701adfc3"
+      },
+      {
+        "path": "src/pages/myWorkNotes.css",
+        "kind": "file",
+        "sha256": "3e8816afc285ee16f10997bdddc3d0bfc0dc9d79da12f2554df7416ccab32234"
+      },
+      {
+        "path": "src/pages/myWorkNotesRefinement.css",
+        "kind": "file",
+        "sha256": "97ab44a311fb41718ac53b658090f1b2719c6d0023245c6bce92532149263b0c"
+      },
+      {
+        "path": "src/pages/myWorkOrganization.css",
+        "kind": "file",
+        "sha256": "9f5d897f38d12ae4554475795368fdd80a88fccf1f77ef886a7a426dad43d4c4"
+      },
+      {
+        "path": "src/pages/teacher/TeacherBootcamps.tsx",
+        "kind": "file",
+        "sha256": "7bc51143ce4467362abe58e4f58b8e8a3bc6fbba97a5990bf091b8d13d69911e"
+      },
+      {
+        "path": "src/pages/teacher/TeacherWeeklyPlans.tsx",
+        "kind": "file",
+        "sha256": "979cdfa806a751cb808ba09c5722af924126935dcb752c979eec0d36b86a4533"
+      },
+      {
+        "path": "src/styles/note-reader-transition.css",
+        "kind": "file",
+        "sha256": "d67a365ee620c10aa7fe52c8a7c923a2994c1e4efc3cda81046b3c3ba0fef9ae"
+      },
+      {
+        "path": "supabase/migrations/20261028140000_student_work_delivery.sql",
+        "kind": "file",
+        "sha256": "36f74accea5a232bb101904c6869700ed9642cfa59b82e56a319b7bae4ef6578"
+      },
+      {
+        "path": "supabase/migrations/20261028141000_student_work_mcp_writers.sql",
+        "kind": "file",
+        "sha256": "1db1f16076623264da0b885b6233e8493a566a028e20d2399c40f98069fe904f"
+      },
+      {
+        "path": "supabase/migrations/20261028142000_reading_center_delivery_policy.sql",
+        "kind": "file",
+        "sha256": "88bcfa49e4a4cd8183c4a0af7ef80b8c6db089101799b81a90030ee8cd174141"
+      }
+    ],
+    "diff_sha256": "a68facab2e333891e092cb0f6259dc51655420f0eb8b15238cf5e078437be32e",
+    "scope": [
+      "docs/plans/my-work-assignment-sync-20261028.md",
+      "docs/plans/my-work-assignment-writer-inventory-20261028.md",
+      "scripts/sql",
+      "scripts/test-student-work-delivery.mjs",
+      "scripts/verification/my-work-preview.tsx",
+      "scripts/verification/start-my-work-preview.mjs",
+      "src",
+      "supabase/migrations/20261028140000_student_work_delivery.sql",
+      "supabase/migrations/20261028141000_student_work_mcp_writers.sql",
+      "supabase/migrations/20261028142000_reading_center_delivery_policy.sql"
+    ],
+    "sha256": "31753b7d3b7d8cd027b846dd76f3ad8b95cafdc1b73f44a4899366cf6baca3b6"
+  },
+  "previous": null,
+  "started_at": 1793189041.2779684,
+  "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\design\\reviews\\my-work-assignment-sync-20261028\\claudex-_97ca_yy",
+  "scope": [
+    "docs/plans/my-work-assignment-sync-20261028.md",
+    "docs/plans/my-work-assignment-writer-inventory-20261028.md",
+    "scripts/sql",
+    "scripts/test-student-work-delivery.mjs",
+    "scripts/verification/my-work-preview.tsx",
+    "scripts/verification/start-my-work-preview.mjs",
+    "src",
+    "supabase/migrations/20261028140000_student_work_delivery.sql",
+    "supabase/migrations/20261028141000_student_work_mcp_writers.sql",
+    "supabase/migrations/20261028142000_reading_center_delivery_policy.sql"
+  ],
+  "cli_version": "2.1.309 (Claude Code)",
+  "executable": [
+    "C:\\Users\\Joshu\\.local\\bin\\claude.EXE"
+  ],
+  "exit_code": 0,
+  "session_id": "7b8170fa-5dcb-4a8e-a82e-a307b5c2f997",
+  "response": {
+    "verdict": "REVISE",
+    "summary": "I'm asking for revisions: this change has two high-severity defects and several medium ones. (1) The new rule for whether work counts as \"active\" only accepts the statuses assigned/in_progress/completed/published/active. The app's own student writers set 'viewed' on TA assignments and 'read'/'started' on guided drills. Once a student opens TA or guided work, it drops out of My Work, can no longer be acknowledged, and the student's later \"completed\" write is rejected as a teacher-controlled reissue. (2) The feed now rewrites every mirror that isn't backed by a native assignment table to source_table 'classroom_items'. That erases Reading Center classification: My Work, the sidebar badge and Home all lose their Reading Center handling, and students who only have Reading Center access can no longer see their launcher. The medium issues are: the bootcamp gate can lock students out; the cron release queue can be starved by work that isn't due yet; every single-item alert now opens the group collection page; read announcements lose their read state; and recap message alerts are no longer cleared when the recap is read. Nothing was run or tested; every finding comes from reading the source.",
+    "findings": [
+      {
+        "id": "F1-status-vocabulary-deactivates-opened-work",
+        "severity": "high",
+        "path": "supabase/migrations/20261028140000_student_work_delivery.sql",
+        "evidence": "student_work_row_active (line 105-111) treats only status in ('assigned','in_progress','completed','published','active') as active. Existing student writers set other statuses: src/hooks/useStudentAssignments.ts:285 sets ta_assignments.status='viewed'; src/lib/guidedDrills.ts:246 sets 'read' and :254 sets 'started'. Scenario: a student opens a TA assignment, markTAAssignmentViewed sets status 'viewed', and student_work_state now returns active=false/available=false. get_student_work_access stops listing it, and buildAssignedRows (useAssignedTodoFeed.ts:293) filters it out of My Work, Home and the badge. acknowledge_student_work also raises 'unavailable'. Then useStudentAssignments.ts:303 updates status to 'completed'. guard_student_work_identity computes reissue = not active(old) and active(new) = true for a non-admin and raises 'Assignment delivery identity and publication are teacher-controlled' (line 213-218). The student can no longer complete the work. Guided drills fail the same way after read/started → completed. Homework and practice-test status vocabularies were not verified and may have the same problem.",
+        "fix": "Base activity on an explicit inactive set rather than an allow-list (e.g. status not in ('archived','draft','revoked','hidden') plus visible_to_student). Alternatively, enumerate every status each source table actually uses (viewed, read, started, submitted, etc.). Add disposable-PG tests that apply the real student status transitions (assigned→viewed→completed, assigned→read→started→completed) and assert that the work stays listed and no exception is raised."
+      },
+      {
+        "id": "F2-reading-center-identity-erased",
+        "severity": "high",
+        "path": "src/hooks/useAssignedTodoFeed.ts",
+        "evidence": "Line 246: `if (!['homework_assignments',...].includes(sourceTable)) { sourceTable='classroom_items'; refId=item.id; }`. The Reading Center launcher is a classroom_items row with source_table='reading_center' and source_id='library' (readingCenterAccess.ts:10). After the rewrite its row has sourceTable 'classroom_items', so: MyWorkPage.tsx:47 no longer takes the readingCenterAllowed && refId==='library' branch and gates it on generalAccess instead, which hides it from Reading-Center-only students and shows it to classroom students regardless of Reading Center access; workKindLabel stops returning 'Reading Center'; ClassroomLayout.tsx:136 and useClassroomHome.ts:189/204 lose their reading_center gating. MyWorkPage.readingCenter.test and the organization tests mock the feed rows with sourceTable 'reading_center', so they cannot catch this.",
+        "fix": "Keep the item's original source classification (sourceTable/refId, used for display and permissions) separate from the canonical receipt identity (classroom_items:item.id). Store the canonical identity only in workIdentity and use it for access/receipt lookup. Add a buildAssignedRows test with a real reading_center/library mirror plus access rows."
+      },
+      {
+        "id": "F3-bootcamp-gate-requires-loaded-item",
+        "severity": "medium",
+        "path": "src/components/hub/BootcampGate.tsx",
+        "evidence": "Line 108 now requires `assigned && !!loaded`. `loaded` comes from useClassroomItems(), which now also depends on the get_student_work_access RPC. While that query is loading, the assigned query has resolved, so isLoading is false; the gate skips the loading branch (line 112) and renders 'Not assigned yet'. If the access RPC errors, items.data is undefined, and an assigned student is locked out permanently. A URL carrying a workId that does not match the newest matched row (for example, an older alert pointing at the presented duplicate) also yields loaded=undefined and denial.",
+        "fix": "Use `loaded` only for acknowledgement. Keep authorization on the existing `assigned` check, or at minimum render the loading state while items.isLoading and fall back to `assigned` when the identity lookup fails."
+      },
+      {
+        "id": "F4-release-queue-starvation",
+        "severity": "medium",
+        "path": "supabase/migrations/20261028140000_student_work_delivery.sql",
+        "evidence": "release_assignment_notifications (line 341-342) selects the oldest undelivered, uncancelled events with `limit least(greatest(p_limit,1),500)`; cron uses 100. Events that are not yet available (future unlock, or hidden/archived but not deleted) hit `continue` at line 351 and stay pending forever. Once 100 or more such older events exist (for example, curriculum day bundles scheduled over several weeks for 37 students, or archived-but-undeleted work), every cron run scans only those and never reaches newer due events. Auto-policy practice-test events and managed recovery depend entirely on cron.",
+        "fix": "Store a due/unlock time on events and keep it updated when sources are rescheduled. Select `where due_at <= now()`, or order by readiness, and cancel or park events whose source is no longer active instead of rescanning them. Add a test with more than 100 future events plus one due event."
+      },
+      {
+        "id": "F5-single-item-alerts-become-group-pages",
+        "severity": "medium",
+        "path": "supabase/migrations/20261028140000_student_work_delivery.sql",
+        "evidence": "Every client writer uses newAssignmentDelivery(), which always sets notificationGroupId (assignmentDelivery.ts:22). MCP writers also always set delivery_group. In release, any event with group_id produces a notification with assignment_event_id NULL and assignment_group_id set (line 352-375). get_assignment_notification_links therefore returns no source identity, so assignmentNotificationNavigation (assignmentNotificationRoute.ts:8) routes even a single TA, note or guided assignment to '/my-work/to-do?workGroup=…'. AssignmentUpdate then acknowledges the alert as soon as the collection loads, before the item is opened. That contradicts the spec's 'Single-item alert clears on that successful item load' and 'Assignment bell navigation defers mapped alert clearing to destination acknowledgment'.",
+        "fix": "When a finalized group delivers exactly one current member, attach assignment_event_id and the member's link so the bell navigates to the item and clears via acknowledge_student_work. Alternatively, only use group routing when the cohort has more than one member. Add tests for a one-item group and a three-item group."
+      },
+      {
+        "id": "F6-announcement-read-history-lost",
+        "severity": "medium",
+        "path": "supabase/migrations/20261028140000_student_work_delivery.sql",
+        "evidence": "The classroom_items receipt backfill (line 520-523) covers only type in ('note','session_recap','smartboard_recap'). TEACHING_NOTE_TYPES also includes 'announcement'. useClassroomItems.ts now strips metadata_json.read_at when no receipt exists (`const {read_at:_priorRead,...metadata}`; metadata replaced unless a receipt is found). Every announcement a student had already read (metadata read_at set) will show as Unread and inflate the sidebar and archive Unread counts after release. This contradicts 'Preserve existing note read timestamps … as defensible backfill evidence'.",
+        "fix": "Include 'announcement' in the backfill, or backfill every classroom_items row with a valid metadata read_at. Add a preservation-audit assertion that the count of read notes is unchanged before and after the migration."
+      },
+      {
+        "id": "F7-recap-message-alerts-never-cleared",
+        "severity": "medium",
+        "path": "src/lib/markNoteRead.ts",
+        "evidence": "clearNoteNotifications (removed) used to mark read the bell entries linking to a note. In AssignmentBuilder and StudentSchedulePanel, recaps and announcements now use notificationChannel 'message', which inserts a notifications row (type 'message', link to the item) with no assignment_event_id/group_id and no legacy link (classroomNotify.ts finalize). acknowledge_student_work clears only event-, legacy- or group-linked notifications, so reading the recap from My Work leaves that bell entry unread indefinitely. The plan requires recaps to 'still support owned document receipts and exact linked-notification clearing'.",
+        "fix": "Give message-channel recap notifications an exact durable link: write a legacy link row or set an identity column at insert, scoped to classroom_items:id and its issuance. Have acknowledge_student_work clear them, and add a test."
+      },
+      {
+        "id": "F8-duplicate-workgroup-param",
+        "severity": "low",
+        "path": "src/lib/assignWork.ts",
+        "evidence": "For multi-item bundles, runAssign appends '?workGroup=<id>' to summary.route before finalize, and publishSessionBundle does the same. release_assignment_notifications then appends '&workGroup=<id>' to g.link again (line 357), giving '/my-work/to-do?workGroup=X&workGroup=X'. It is harmless today but brittle.",
+        "fix": "Have finalize receive the base link only, or make the SQL skip appending when the parameter is already present."
+      },
+      {
+        "id": "F9-realtime-channel-proliferation",
+        "severity": "low",
+        "path": "src/hooks/useStudentWorkState.ts",
+        "evidence": "Every caller of useStudentWorkAccessReceipts opens its own channel with 7 postgres_changes subscriptions (line 21-24). That hook is invoked via useClassroomItems, useAssignedTodoFeed (twice through nesting), each destination's acknowledgement hook, and now the always-mounted ClassroomLayout sidebar. A typical Classroom page therefore opens several duplicate channels per student, and each change fires invalidations for 8 query keys multiple times.",
+        "fix": "Hoist the subscription into one provider-level effect per actor, or ref-count it by userId."
+      }
+    ],
+    "coverage": [
+      "Read in full: supabase/migrations/20261028140000_student_work_delivery.sql and 20261028142000_reading_center_delivery_policy.sql",
+      "Read in part: 20261028141000_student_work_mcp_writers.sql (homework writer in full; policy/finalize usage grepped for the passage-map and note writers)",
+      "Read: src/hooks/useStudentWorkState.ts, src/lib/studentWorkState.ts, src/lib/studentWorkIdentity.ts, src/lib/assignmentDelivery.ts, src/lib/assignmentNotificationRoute.ts, src/components/my-work/AssignmentUpdate.tsx",
+      "Read the provided diff for every changed src file, plus the full current buildAssignedRows in useAssignedTodoFeed.ts, the useClassroomItems query, and the BootcampGate render path",
+      "Traced related writers outside the manifest: useStudentAssignments.ts (TA viewed/completed), guidedDrills.ts (read/started/completed), activitiesClient.ts, completeAssignedWork.ts, useWeeklyPlanPublisher.ts, and Reading Center consumers (useClassroomHome, ClassroomLayout, TeacherReadingCenter)"
+    ],
+    "limitations": [
+      "No tests, typecheck, build or SQL were executed; findings are from static reading only.",
+      "scripts/test-student-work-delivery.mjs and the scripts/sql audit/assertion files were not read in detail, so I could not confirm what the disposable-PG suite asserts.",
+      "docs/plans/my-work-assignment-writer-inventory-20261028.md and src/lib/assignmentWriterInventory.test.ts were not read.",
+      "Homework and practice-test status vocabularies were not fully enumerated; F1 may affect them too.",
+      "Edge functions (including the practice-test edge writer and any edge that inserts classroom_items) and supabase/functions/mcp/index.ts are outside scope. Any of them inserting with the default legacy_client policy after activation was not verified.",
+      "Motion/CSS/notes-archive changes (useClassroomMotion, useNoteReaderTransition, TeachingNotesArchive, stylesheets) were only skimmed in the diff and not deeply reviewed.",
+      "Approval scope is limited to the fingerprinted snapshot. It does not cover live database state, production pg_cron registration or rendered behaviour on real devices."
+    ]
+  },
+  "usage": {
+    "input_tokens": 30,
+    "cache_creation_input_tokens": 248548,
+    "cache_read_input_tokens": 3213692,
+    "output_tokens": 19102,
+    "output_tokens_details": {
+      "thinking_tokens": 11229
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 248548,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 6340,
+        "cache_read_input_tokens": 251102,
+        "cache_creation_input_tokens": 1927,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1927
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "permission_denials": [],
+  "total_cost_usd": 3.0132823999999996,
+  "error": "Code changed during inspection; inspect the final code again.",
+  "elapsed_seconds": 381.53
+}

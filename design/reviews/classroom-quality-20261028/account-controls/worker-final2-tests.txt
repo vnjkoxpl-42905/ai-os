@@ -1,0 +1,36 @@
+
+ RUN  v3.2.7 C:/Users/Joshu/dev/ai-os-projects/lsatu-my-work-20261026
+
+ ✓ src/components/classroom/home/teacher/TeachingDesk.test.tsx (23 tests) 25381ms
+   ✓ Teaching desk interactions > reuses an individual link without presenting a credit grant or mutating the account  5112ms
+   ✓ Teaching desk interactions > defaults a missed-credit correction to one and rejects fractional custom amounts  1642ms
+   ✓ Teaching desk interactions > resets custom initial-link settings on a new opening without creating anything  3409ms
+   ✓ Teaching desk interactions > keeps exact pending recovery available when the roster cannot supply an eligible account  1083ms
+   ✓ Teaching desk interactions > never discards unreadable protection using a free account ID when the roster is unavailable  1524ms
+   ✓ Teaching desk interactions > recovers unreadable protection only after loading and confirming an eligible named balance  747ms
+   ✓ Teaching desk interactions > loads an existing link after a creation race and gives mode-specific guidance without granting credits  2607ms
+   ✓ Teaching desk interactions > drops the former actor’s pending intent when the actor changes  533ms
+   ✓ Teaching desk interactions > caps Home at two sessions using the true total and preserves unsaved input across disclosure  3540ms
+   ✓ Teaching desk interactions > loads filtered history pages and reopens through the revisioned manual writer  2066ms
+   ✓ Teaching desk interactions > never changes access on opening, choosing or cancelling, then confirms the named target  1137ms
+ ✓ src/components/classroom/home/teacher/TeacherHomeView.test.tsx (25 tests) 35992ms
+   ✓ TeacherHomeView > keeps direct access editing open after a blank selection and returns focus to its own row  10495ms
+   ✓ TeacherHomeView > makes account operations discoverable and opens access selection without an account write  688ms
+   ✓ TeacherHomeView > uses an accessible More menu that closes on Escape and returns focus  2944ms
+   ✓ TeacherHomeView > hands More selection to the booking sheet and returns to an interactive page  6824ms
+   ✓ TeacherHomeView > keeps Assign work in the header without a student assignment promotion  1207ms
+   ✓ TeacherHomeView > shows the canonical unread total while capping previews at two and opens the exact conversation  2783ms
+   ✓ TeacherHomeView > keeps the recent-visit area small and never labels a heartbeat Online now  3344ms
+   ✓ Teacher Home provider setup rendering > keeps the desk rendered when email has the live array-free setup envelope  400ms
+   ✓ teacher seven-day calendar > groups upcoming starts in the connected zone and preserves partial snapshot qualifications  476ms
+   ✓ teacher seven-day calendar > moves today at calendar-zone midnight while retaining the snapshot date  1798ms
+   ✓ teacher calendar status > reports one calendar error and one retry for both calendar presentations  829ms
+   ✓ teacher saved calendar coverage > removes past timed starts and falls back to today outside an aged snapshot  1255ms
+   ✓ teacher saved calendar coverage > uses unknown coverage when snapshot time is undefined and safely falls back from an invalid zone  1231ms
+   ✓ teacher saved calendar coverage > uses unknown coverage when snapshot time is bad-date and safely falls back from an invalid zone  1014ms
+
+ Test Files  2 passed (2)
+      Tests  48 passed (48)
+   Start at  17:46:35
+   Duration  89.10s (transform 9.13s, setup 15.13s, collect 22.20s, tests 61.37s, environment 58.46s, prepare 6.46s)
+

@@ -14,6 +14,7 @@ subject: Charles Moore Transcripts
 
 | Date | Full local export | Local session package | Status |
 |---|---|---|---|
+| 2026-11-13 | [[transcript-downloads/2026-11-13-charles-moore-notes-by-gemini|2026-11-13-charles-moore-notes-by-gemini.md]] ([[transcript-downloads/2026-11-13-charles-moore-notes-by-gemini-provenance|provenance]]) | None on disk | Raw export only; filed 2026-11-13, not distilled |
 | 2026-09-25 | [[transcript-downloads/2026-09-25-charles-moore-notes-by-gemini|2026-09-25-charles-moore-notes-by-gemini.md]] | 2026-09-25-quantity-logic: [[sessions/2026-09-25-quantity-logic/transcript|transcript]], [[sessions/2026-09-25-quantity-logic/summary|summary]], [[sessions/2026-09-25-quantity-logic/topic-map|topic map]]; [[recaps/2026-09-25-recap|draft recap]] | Paired; recap draft |
 | 2026-09-14 | [[transcript-downloads/2026-09-14-charles-moore-notes-by-gemini|2026-09-14-charles-moore-notes-by-gemini.md]] | 2026-09-14-conditional-logic: [[sessions/2026-09-14-conditional-logic/transcript|transcript]], [[sessions/2026-09-14-conditional-logic/summary|summary]], [[sessions/2026-09-14-conditional-logic/topic-map|topic map]] | Paired |
 | 2026-09-09 | [[transcript-downloads/2026-09-09-charles-moore-notes-by-gemini|2026-09-09-charles-moore-notes-by-gemini.md]] | None on disk | Raw export only |

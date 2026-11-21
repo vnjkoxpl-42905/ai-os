@@ -1,0 +1,65 @@
+
+> vite_react_shadcn_ts@0.0.0 test
+> vitest run src/bootcamps/conditionals/components/OpeningCourse.test.tsx src/bootcamps/conditionals/routes.test.tsx
+
+
+ RUN  v3.2.4 C:/Users/Joshu/dev/ai-os-projects/lsatu-conditional-bootcamp
+
+Browserslist: browsers data (caniuse-lite) is 6 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+stderr | src/bootcamps/conditionals/components/OpeningCourse.test.tsx > offers nine dedicated notes and four interleaved drill entries
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+stderr | src/bootcamps/conditionals/routes.test.tsx > lands on one current lesson without a curriculum map or teaching rail
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+stderr | src/bootcamps/conditionals/components/OpeningCourse.test.tsx > renders the dedicated 'whole-meaning' destination without an old reader index
+Warning: Encountered two children with the same key, `.4`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+    at Content (C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp\src\bootcamps\conditionals\components\OpeningCourseContent.tsx:413:20)
+    at div
+    at OpeningCourseContent (C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp\src\bootcamps\conditionals\components\OpeningCourseContent.tsx:678:112)
+    at div
+    at div
+    at div
+    at OpeningCourseScreen (C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp\src\bootcamps\conditionals\components\OpeningCourse.tsx:325:32)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+
+ ✓ src/bootcamps/conditionals/components/OpeningCourse.test.tsx (18 tests) 1502ms
+stderr | src/bootcamps/conditionals/routes.test.tsx > preserves assignment context without recording legacy completion on new course navigation
+Warning: Encountered two children with the same key, `.4`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+    at Content (C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp\src\bootcamps\conditionals\components\OpeningCourseContent.tsx:413:20)
+    at div
+    at OpeningCourseContent (C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp\src\bootcamps\conditionals\components\OpeningCourseContent.tsx:678:112)
+    at div
+    at div
+    at div
+    at OpeningCourseScreen (C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp\src\bootcamps\conditionals\components\OpeningCourse.tsx:325:32)
+    at OpeningCourseRoute (C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp\src\bootcamps\conditionals\routes.tsx:672:37)
+    at RenderedRoute (C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp\node_modules\react-router\dist\umd\react-router.development.js:535:7)
+    at Outlet (C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp\node_modules\react-router\dist\umd\react-router.development.js:1182:28)
+    at main
+    at div
+    at Shell (C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp\src\bootcamps\conditionals\routes.tsx:748:48)
+    at RenderedRoute (C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp\node_modules\react-router\dist\umd\react-router.development.js:535:7)
+    at Routes (C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp\node_modules\react-router\dist\umd\react-router.development.js:1269:7)
+    at ConditionalBootcampRoutes (C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp\src\bootcamps\conditionals\routes.tsx:223:38)
+    at RenderedRoute (C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp\node_modules\react-router\dist\umd\react-router.development.js:535:7)
+    at Routes (C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp\node_modules\react-router\dist\umd\react-router.development.js:1269:7)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+
+ ✓ src/bootcamps/conditionals/routes.test.tsx (54 tests) 3576ms
+   ✓ completes the available subset of a shared area practice run and preserves its other work  410ms
+   ✓ completes the available subset of a shared phase practice run and preserves its other work  342ms
+   ✓ completes the available subset of a shared area flashcards run and preserves its other work  430ms
+   ✓ stamps the opening edition only when Mark lesson as read is clicked and keeps it after reloading practice  491ms
+
+ Test Files  2 passed (2)
+      Tests  72 passed (72)
+   Start at  02:36:15
+   Duration  9.69s (transform 6.74s, setup 403ms, collect 8.44s, tests 5.08s, environment 1.98s, prepare 326ms)
+

@@ -1,0 +1,109 @@
+{
+  "status": "completed",
+  "mode": "review",
+  "provider": "claude",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "claude",
+    "builder": "codex",
+    "inspector": "claude"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\ai-os\\design\\prototypes\\lsatu-dashboard\\new-versions\\09-focus-studio",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os\\design\\prototypes\\lsatu-dashboard\\new-versions\\09-focus-studio\\REVIEW-BRIEF.md",
+  "plan_sha256": "a6c10ed09abee8e4b803f222909a1114de7b6bc226a2b65b4713a95fbc58e0ad",
+  "requested_model": null,
+  "requested_effort": null,
+  "base": null,
+  "snapshot": null,
+  "previous": null,
+  "started_at": 1792912534.4531615,
+  "artifacts": "C:\\Users\\Joshu\\.codex\\visualizations\\2026\\10\\25\\01a17081-6735-7fc2-b0e1-922ab635486c\\claude-09-review\\claudex-s4brgcdj",
+  "cli_version": "2.1.309 (Claude Code)",
+  "executable": [
+    "C:\\Users\\Joshu\\.local\\bin\\claude.exe"
+  ],
+  "exit_code": 0,
+  "session_id": "3c093ee7-d2ce-4d00-8f4c-81991a674d76",
+  "response": {
+    "verdict": "REVISE",
+    "summary": "Round-1 fixes F1 to F8 are present in the final source and visible in the refreshed images. The 320 and 390 phone calendars wrap 4+3 with every day visible. Synthetic-item disclaimers appear on lookup rows, Review rows and the question page. Review totals (3/5, 2 sets) and the Progress date range are derived from `attempts`. Partial search normalizes through a `pt155s1q1lr`-style key. The negation reveal is a labelled sample answer and does not grade. The five questions map one-to-one to the five attempt records, and strip buttons and rows pass the same `a.id`. The two missed items (lr156, rc156) have distinct, response-specific hints. I found no educational-logic defect in the five samples. The permit necessary-condition item and the some/none negation are sound. The date arithmetic is right: Oct 24, 2026 is a Saturday and Oct 26 is a Monday.\n\nThree defects remain, none structural. The material one is that the exact-reference console rejects the reference format the app itself displays. Two smaller routing defects are listed below.\n\nVisual comparison with 08: 09 is more legible. Metadata is 11px on desktop and 12px on phone, with LR/RC chips, status, assigned dates and countable ticks in aligned rows. Home stays compact and is not a console. It is somewhat taller than 08 at 1440 (about 1180px against about 1085px) and 768 Home is long, but the architecture and the paper/ink/Newsreader/Manrope family are intact. The phone 4+3 week grid leaves an empty fourth slot in row two, which is acceptable. Review, Practice and Work at 390 read comfortably. The 1440 Practice page has a large empty area under the reference column, which is minor.",
+    "findings": [
+      {
+        "id": "R2-1",
+        "severity": "medium",
+        "path": "app.js:96 (parseReference) and app.js:99 (typed-reference-form)",
+        "evidence": "The regex allows a separator OR a keyword between parts: `(?:[·,/]|S(?:ection)?)`. The app's own display format `reference(q)` is 'PT 155 · Section 1 · Question 1'. Typing or pasting that exact string fails. After '155', the '·' is consumed as the separator, then `\\s*0*(\\d+)` meets 'S' and cannot match, so no alternative remains. The user gets 'is not one of the five sample references' for a reference that is on screen. 'PT 155, Section 1, Question 1' fails the same way. The search box still matches that string via substring, so the two inputs behave inconsistently. The features report's normalization checks do not cover this mixed form.",
+        "fix": "Allow an optional separator followed by an optional keyword: `(?:\\s*[·,/]\\s*|\\s+|\\s*)(?:S(?:ection)?\\s*)?0*(\\d+)` for each part. Equivalently, strip `preptest|section|question` and the separators `·,/` to tokens before matching. Add a check that `reference(q)` round-trips through parseReference for all five questions."
+      },
+      {
+        "id": "R2-2",
+        "severity": "low",
+        "path": "app.js:31 (navHTML links) and app.js:110 (hashchange)",
+        "evidence": "While a question is open (`state.question` set), the sidebar or drawer 'Practice' link is `href=\"#practice\"`. The hash is already 'practice', so no hashchange fires and the click does nothing. The user stays on the question page and cannot return to lookup from the Practice nav item. Only the in-page 'Back' button and 'Find a question' (`data-action=\"finder\"`) work. The `aria-current` Practice link therefore looks like a no-op.",
+        "fix": "Give the Practice nav link `data-action=\"question-back\"` or the finder action. Alternatively, handle a click on a nav link whose hash equals the current route by clearing `state.question` and calling `render()`."
+      },
+      {
+        "id": "R2-3",
+        "severity": "low",
+        "path": "app.js:33 and app.js:60 (routes lookup)",
+        "evidence": "`routes` is a plain object, so `routes[r]` resolves inherited properties for hashes such as #__proto__, #constructor, #toString and #hasOwnProperty. `#__proto__` gives a truthy non-function, so `routes[r]()` throws a TypeError and leaves `main` empty. `#constructor` renders '[object Object]'. Any unknown hash in the Object.prototype namespace breaks the page instead of redirecting home.",
+        "fix": "Use `Object.hasOwn(routes,r)` in the validity check, or build `routes` with `Object.create(null)` or a Map."
+      }
+    ],
+    "coverage": [
+      "Read in full: REVIEW-BRIEF.md, BRIEF.md, reviews/DISPOSITIONS.md, reviews/round-1.json, index.html, app.js and style.css.",
+      "Read host reports features-09-report.json (15 checks) and interaction-report.json (13 checks). I did not open motion-focus-report.json, capture-report.json or offline-report.json, and I did not re-read baseline.json or round-2-source-hashes.json this round. I treated all reports as host assertions, not my own verification.",
+      "Images actually inspected for 09: home-1440.png, home-768.png, home-390.png, home-320.png, practice-1440.png, practice-390.png, review-1440.png, review-390.png, work-390.png, teacher-students-1440.png. Baseline: families/05-new-directions/08-combined-home/artifacts/home-1440.png.",
+      "Traced by source reading: result-to-question mapping for all five attempts (strip buttons, rows, revisit, openQuestion) and both missed items; derived totals in Review and Progress; parseReference with leading zeros, keywords and separators, plus the filteredQuestions normalized key; esc() on user-text sinks (typed reference, work query, student query, note, draft, assignment note); work search/subject/status combination logic; resume identity (resumeId is constant and dialogs never alter it); save() rollback for note, draft, bookmark, read and recent; localStorage parse versus access errors; dialog trigger and focus return (modal, nested student/assign, Ctrl+K, drawer, go-work); calendar click and Arrow/Home/End handling; hashchange routing and role redirects; CSS reduced-motion and the content-only route-transition class; the phone 4+3 grid CSS; the F1 to F8 fixes.",
+      "Verified date arithmetic: Oct 24, 2026 is a Saturday and Oct 26 is a Monday."
+    ],
+    "limitations": [
+      "Read-only review. I could not run a browser, Playwright or the proof scripts. All runtime behavior, including R2-1 to R2-3, is inferred from source and the static images. The regex trace in R2-1 is by hand.",
+      "I did not independently verify the host reports' pass results, nor reproduce the keyboard, motion or storage-failure behavior.",
+      "I did not view the remaining images (progress, library, messages, reading, work-1440, teacher-home, 1100 and 1920 captures, dialogs, reduced-motion). I could not measure contrast ratios or the 44px target sizes.",
+      "Visual judgment is from static host captures only, not real-device rendering or font loading.",
+      "This is a bounded artifact review, not a full ai-os repository diff or production acceptance. I did not diff 08 source against 09 line by line, only compared the Home images and the brief."
+    ]
+  },
+  "usage": {
+    "input_tokens": 10,
+    "cache_creation_input_tokens": 70745,
+    "cache_read_input_tokens": 115128,
+    "output_tokens": 9719,
+    "output_tokens_details": {
+      "thinking_tokens": 5108
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 70745,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 3111,
+        "cache_read_input_tokens": 56553,
+        "cache_creation_input_tokens": 18696,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 18696
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "observed_models": [
+    "claude-sonnet-5-5"
+  ],
+  "permission_denials": [],
+  "total_cost_usd": 0.3917028,
+  "elapsed_seconds": 78.47
+}

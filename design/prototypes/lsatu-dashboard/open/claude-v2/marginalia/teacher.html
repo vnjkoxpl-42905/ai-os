@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marginalia · Teacher home · LSAT U</title>
+
+
+<link href="../../../vendor/b2d718e3b86fd64f3d.css" rel="stylesheet">
+<link rel="stylesheet" href="marginalia.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to your home page</a>
+<div class="page" id="page">
+  <header class="head">
+    <a class="head__mark" href="#">LSAT U</a>
+    <nav aria-label="Main">
+      <a href="#" aria-current="page">Home</a>
+      <a href="#">Teacher workspace</a>
+      <a href="#">Students</a>
+      <a href="#">Whiteboard</a>
+      <a href="#">Library</a>
+      <a href="#">Reading center</a>
+    </nav>
+    <div class="head__end"><button class="inbox-link" type="button" data-act="inbox">Inbox <b id="inbox-count">3 unread</b></button><span>Joshua</span></div>
+  </header>
+
+  <main id="main"><div id="letter"></div></main>
+
+  <footer class="row end"><div class="ml"></div><div class="tx">LSAT U, Marginalia direction. Prototype with sample data; actions are simulated.</div><div></div></footer>
+  <svg class="leader" id="leader" aria-hidden="true"><path id="leader-path" d=""/></svg>
+</div>
+
+<script src="../../../vendor/cb9c6262bdd703dd5f.js"></script>
+<script src="../shared/sample.js"></script>
+<script src="marginalia.js"></script>
+<script>
+(function () {
+  const { teacher: T, mountSampleBar, toast, Word, word, esc, reduced } = window.LSATU;
+  const state = mountSampleBar({ other: 'student.html', otherLabel: 'Student home' });
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+
+  const people = state === 'full' ? T.people.map((p) => JSON.parse(JSON.stringify(p))) : [];
+  const roster = state === 'full' || state === 'empty' ? T.roster : [];
+  const kinds = [['Drill', 'a drill'], ['Homework set', 'a homework set'], ['Activity', 'an activity'], ['Timed section', 'a timed section']];
+  let kind = 'Drill', who = '', query = '';
+
+  const tok = (n, text, extra = '') => `<a class="tok${extra}" href="#note-${n}" data-n="${n}">${esc(text)}<sup>${n}</sup></a>`;
+  const note = (n, body, extra = '') => `<div class="note${extra}" data-n="${n}" id="note-${n}"><span class="note__n">${n}</span>${body}</div>`;
+  const row = (label, tx, sn = '', cls = '') => `<section class="row para ${cls}"><div class="ml">${label}</div><div class="tx">${tx}</div><aside class="sn">${sn}</aside></section>`;
+  const P = (id) => people.find((p) => p.id === id);
+
+  function eve(start, mins, now) {
+    // 4 pm to 10 pm
+    const pos = (h) => ((h - 16) / 6) * 100;
+    const hrs = [16, 18, 20, 22].map((h) => `<span class="eve__h" style="left:${pos(h)}%">${h - 12} pm</span>`).join('');
+    const b = `<span class="eve__b" style="left:${pos(start)}%;width:${(mins / 60 / 6) * 100}%"></span>`;
+    const n = now ? `<span class="eve__now" style="left:${pos(17 + 12 / 60)}%"></span>` : '';
+    return `<div class="eve" role="img" aria-label="Evening timeline">${hrs}${b}${n}</div><div style="height:16px"></div>`;
+  }
+
+  function personNote(n, p) {
+    const m = p.message;
+    const extra = [p.active + '.'];
+    if (p.session) extra.push(`Session ${p.session.when.charAt(0).toLowerCase() + p.session.when.slice(1)}.`);
+    return note(n, `<span class="note__t">${esc(p.name)}, ${esc(m.time)}${m.unread ? '' : '<span style="font-weight:500;color:var(--faint)"> read</span>'}</span>
+      ${m.attachment ? `<span class="note__m">Attached: ${esc(m.attachment)}</span>` : ''}
+      <span class="note__m">${esc(extra.join(' '))}</span>
+      <span class="note__acts">${m.unread ? `<button class="lnk" type="button" data-act="convo" data-id="${p.id}">Open conversation</button>` : `<button class="lnk" type="button" data-act="convo" data-id="${p.id}">Reply</button>`}<button class="lnk" type="button" data-act="page" data-name="${esc(p.name)}">${esc(p.first)}’s page</button></span>`, m.unread ? '' : ' is-read');
+  }
+
+  function whoNote() {
+    const r = roster.find((x) => x.name === who);
+    if (!r) return note(6, `<span class="note__t">Who it’s for</span><span class="note__m">Pick a student and their context shows here before you send anything.</span>`);
+    const p = people.find((x) => x.name === r.name);
+    const bits = [r.active + '.'];
+    if (p && p.message && p.message.unread) bits.push('One unread letter from them.');
+    if (p && p.session) bits.push(`Session ${p.session.when.charAt(0).toLowerCase() + p.session.when.slice(1)}.`);
+    return note(6, `<span class="note__t">${esc(r.name)}</span><span class="note__m">${esc(bits.join(' '))}</span><span class="note__acts"><button class="lnk" type="button" data-act="page" data-name="${esc(r.name)}">${esc(r.first)}’s page</button></span>`);
+  }
+
+  function indexHTML() {
+    if (state === 'loading') return '<p class="caveat">Loading students.</p>';
+    if (state === 'error') return '<p class="caveat">Students didn’t load. Try again in a moment.</p>';
+    const q = query.trim().toLowerCase();
+    const sorted = roster.slice().sort((a, b) => a.last.localeCompare(b.last));
+    const groups = {};
+    sorted.forEach((r) => { (groups[r.last[0]] = groups[r.last[0]] || []).push(r); });
+    let any = false;
+    const html = Object.keys(groups).map((L) => {
+      const items = groups[L].map((r) => {
+        const label = `${r.last}, ${r.first}`;
+        const hit = !q || label.toLowerCase().includes(q) || r.name.toLowerCase().includes(q);
+        if (hit) any = true;
+        let shown = esc(label);
+        if (q && hit) { const i = label.toLowerCase().indexOf(q); if (i >= 0) shown = esc(label.slice(0, i)) + '<mark>' + esc(label.slice(i, i + q.length)) + '</mark>' + esc(label.slice(i + q.length)); }
+        return `<li class="${hit ? '' : 'gone'}"><button type="button" data-act="page" data-name="${esc(r.name)}">${shown}<small>${esc(r.active.replace('Last active', 'last active').replace('Active', 'active'))}</small></button></li>`;
+      }).join('');
+      const vis = groups[L].some((r) => !q || `${r.last}, ${r.first}`.toLowerCase().includes(q) || r.name.toLowerCase().includes(q));
+      return `<div class="${vis ? '' : 'gone'}"><h3>${L}</h3><ul>${items}</ul></div>`;
+    }).join('');
+    return `<div class="idx" id="idx">${html}</div>${q && !any ? `<p class="caveat">No student matches “${esc(query)}”.</p>` : ''}`;
+  }
+
+  function render() {
+    const parts = [];
+    parts.push(`<section class="row opening"><div class="ml"><b>Thursday</b>October 22</div><div class="tx"><h1>Good evening, Joshua.</h1></div><aside class="sn"></aside></section>`);
+    const unread = people.filter((p) => p.message && p.message.unread);
+
+    if (state === 'loading') {
+      parts.push(row('<b>Waiting on you</b>', `<p class="lead">Checking who wrote to you. <span class="skel" style="width:12em"></span> <span class="skel" style="width:8em"></span></p><p>The unread count appears once conversations load.</p>`));
+    } else if (state === 'error') {
+      parts.push(row('<b>Waiting on you</b>', `<p class="lead">Conversations didn’t load, so the unread count is unknown. Nothing has been marked read.</p><div class="cta-row"><button class="cta" type="button" data-act="retry">Try again</button><button class="lnk" type="button" data-act="inbox">Open the inbox</button></div>`));
+    } else if (!people.length) {
+      parts.push(row('<b>Waiting on you</b>', `<p class="lead">Nobody is waiting on a reply, and nothing is booked on the platform today.</p>`));
+    } else {
+      const c = P('s-celia'), iv = P('s-ivory'), ly = P('s-lydia');
+      const lead = unread.length ? `${Word(unread.length)} ${unread.length === 1 ? 'person is' : 'people are'} waiting on a reply.` : 'Everyone has had a reply.';
+      parts.push(row(`<b>Waiting on you</b>${unread.length ? word(unread.length) + ' unread' : 'all read'}`,
+        `<p class="lead"><span class="runin">${lead.split(' ').slice(0, 2).join(' ')}</span> ${lead.split(' ').slice(2).join(' ')} ${tok(1, 'Celia', c.message.unread ? '' : ' is-read')} asked to move Thursday to 7:30, because her lab runs late. ${tok(2, 'Ivory', iv.message.unread ? '' : ' is-read')} sent her PT105 S2 answer sheet and flagged 14 and 22. ${tok(3, 'Lydia', ly.message.unread ? '' : ' is-read')} wants to go over question 16 at your next session.</p>`,
+        personNote(1, c) + personNote(2, iv) + personNote(3, ly)));
+
+      const d = P('s-dakota');
+      parts.push(row('<b>Teaching</b>platform calendar',
+        `<p><span class="runin">You teach</span> ${tok(4, 'Dakota at six tonight')}, for an hour, starting in forty-eight minutes. Tomorrow it’s ${tok(5, 'Celia at 7:15')}, for ninety minutes.</p>`,
+        note(4, `<span class="note__t">Dakota Reyes, today</span>${eve(18, 60, true)}<span class="note__m">6:00 to 7:00 pm. ${esc(d.active)}.</span><span class="note__acts"><button class="lnk" type="button" data-act="session" data-name="Dakota Reyes">Open session</button><button class="lnk" type="button" data-act="page" data-name="Dakota Reyes">Dakota’s page</button></span>`) +
+        note(5, `<span class="note__t">Celia Moreno, Friday</span>${eve(19.25, 90, false)}<span class="note__m">7:15 to 8:45 pm. She asked about moving a Thursday session; see note 1.</span><span class="note__acts"><button class="lnk" type="button" data-act="session" data-name="Celia Moreno">Open session</button></span>`)));
+    }
+
+    // assign: a sentence with blanks
+    const kindOpts = kinds.map(([k, l]) => `<option value="${k}"${k === kind ? ' selected' : ''}>${l}</option>`).join('');
+    const whoOpts = `<option value="">choose a student</option>` + roster.map((r) => `<option${r.name === who ? ' selected' : ''}>${esc(r.name)}</option>`).join('');
+    parts.push(row('<b>Assign</b>finish in Assignments',
+      `<p><span class="runin">Assign</span> <label class="sr" for="kind">Kind of work</label><select class="blank" id="kind">${kindOpts}</select> to <label class="sr" for="who">Student</label><select class="blank" id="who" data-n="6"${roster.length ? '' : ' disabled'}>${roster.length ? whoOpts : (state === 'loading' ? '<option>loading students</option>' : '<option>students unavailable</option>')}</select>.</p>
+       <div class="cta-row"><button class="cta" type="button" data-act="assign">Continue in Assignments</button><span>You’ll pick the exact set there.</span></div>`,
+      whoNote()));
+
+    parts.push(row(`<b>Index</b>${roster.length ? word(roster.length) + ' students' : ''}`,
+      `<div class="idx-search"><p style="margin:0">Find a student:</p><label class="sr" for="find">Find a student</label><input class="blank" id="find" type="search" placeholder="a name" value="${esc(query)}" autocomplete="off"></div><div id="idx-slot">${indexHTML()}</div>`));
+
+    const toc = T.week.map((dd) => {
+      const items = state === 'full' ? dd.items : [];
+      const v = items.length ? items.map((x) => `${esc(x.t)}<small>${esc(x.s)}</small>`).join('') : state === 'loading' ? 'loading' : state === 'error' ? 'unknown' : 'nothing on the platform';
+      return `<li class="${dd.today ? 'is-today' : ''}${items.length ? '' : ' is-empty'}"><span class="d"><b>${dd.dow} ${dd.d}</b></span><span class="lead-dots"></span><span class="v">${v}</span></li>`;
+    }).join('');
+    parts.push(row('<b>The week</b>October 22 to 28', `<ol class="toc">${toc}</ol><p class="caveat">Platform sessions only. Bookings made elsewhere don’t appear, so “nothing on the platform” isn’t proof of a free evening.</p>`));
+
+    $('#letter').innerHTML = parts.join('');
+    $('#inbox-count').textContent = state === 'loading' ? '—' : state === 'error' ? 'unknown' : unread.length ? `${unread.length} unread` : 'nothing new';
+    Marg.popins();
+    Marg.wire();
+    $$('.tok').forEach((t) => t.classList.add('is-inked'));
+  }
+
+  render();
+  $$('.tok').forEach((t) => t.classList.remove('is-inked'));
+  Marg.inkIn();
+
+  document.addEventListener('change', (e) => {
+    if (e.target.id === 'kind') kind = e.target.value;
+    if (e.target.id === 'who') {
+      who = e.target.value;
+      const sn = e.target.closest('.row').querySelector('.sn');
+      sn.innerHTML = whoNote();
+      Marg.wire(); Marg.hot('6', true);
+    }
+  });
+  document.addEventListener('input', (e) => {
+    if (e.target.id !== 'find') return;
+    query = e.target.value;
+    $('#idx-slot').innerHTML = indexHTML();
+    Marg.layoutNotes();
+  });
+  document.addEventListener('click', (e) => {
+    const t = e.target.closest('.tok');
+    if (t) { e.preventDefault(); const nt = $(`#note-${t.dataset.n}`); if (nt) Marg.openNote(nt); if (nt && window.innerWidth <= 920) nt.scrollIntoView({ behavior: reduced() ? 'auto' : 'smooth', block: 'center' }); Marg.hot(t.dataset.n, true); return; }
+    const b = e.target.closest('[data-act]');
+    if (!b) return;
+    const act = b.dataset.act;
+    if (act === 'convo') {
+      const p = P(b.dataset.id); if (!p) return;
+      const was = p.message.unread;
+      p.message.unread = false;
+      render();
+      return toast(was ? `Opened ${p.first}’s conversation. It’s marked read; the history is kept.` : `Opening your conversation with ${p.first}.`);
+    }
+    if (act === 'page') return toast(`Opening ${b.dataset.name}’s page.`);
+    if (act === 'session') return toast(`Opening ${b.dataset.name}’s session.`);
+    if (act === 'assign') {
+      const w = $('#who').value;
+      if (!w) { $('#who').focus(); return toast('Choose a student first.'); }
+      return toast(`Opening Assignments: ${kinds.find((k) => k[0] === kind)[1]} for ${w}.`);
+    }
+    if (act === 'inbox') return toast('Opening the inbox.');
+    if (act === 'retry') { const u = new URL(location.href); u.searchParams.set('state', 'full'); location.href = u; }
+  });
+})();
+</script>
+</body>
+</html>

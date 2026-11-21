@@ -1,0 +1,9 @@
+# Host dispositions, plan round 3
+
+H1 accepted: cryptographic per-preview submit UUID persisted actor-scoped through reload/retry, unknown-outcome operation stays pending, unique owner/pass/key append-only ledger with payload hash and receipt, atomic pass lock/increment/receipt, mismatched replay rejection. Separate new intentional key even for identical amount; original receipt plus current balance. No grant_booking_access revoke/replace as add. Explicit same-key/distinct-key/concurrent/reload/actor tests.
+
+H2 accepted after reading accessTierClient and admin endpoint: old setStudentTier/setStudentAccess return void and direct-write fallback; Home may NOT reuse those writer implementations. Preset Home variant uses backend set_tier and verified full row; no direct profiles fallback, no speculative second write. Customize uses named new authenticated set_custom_access, allowed map +Tier2 in atomic update with derived rules and verified result. Cancel/no-op/stale/mismatch/old backend tests specified. Shared semantics and existing outside-Home paths preserved. All current passages claiming old writer return contract replaced.
+
+H3 accepted: agenda early branch before recordSyncAttempt/lease and independent catch. Explicit settings no-write comparison/spies success/failure. Visible-only 120s client refresh/focus dedup/15s retry throttle; selected-field owner+calendar server roster/alias cache max60s with invalidation, fresh owner authorization and current candidate-eligibility batch checks. No per-refresh unbounded SELECT* scan inherited from worker. Provider errors remain agenda-area status only.
+
+No new app implementation or new visual render exists in this review pass. All final delivery gates remain explicit. This is round4 of5, source and baseline-image review only. Please judge if any unresolved material plan defect remains; do not infer exhaustive coverage, code approval or visual perfection from approval.

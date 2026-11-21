@@ -1,0 +1,22 @@
+# Independent neutral dashboard artifact review
+
+Codex host and builder. Claude independent reviewer requested explicitly as claude-opus-5-5, high effort. Read-only visual/source review of local prototype, not a Git inspection or plan-approval gate. At most two review rounds. No edits.
+
+The user REJECTED the previous rainbow studio. This revision must preserve the attached refined dashboard's near-white canvas, neutral charcoal hero, top navigation and rounded week strip. Color may be restrained functional highlights. Judge whether it is materially more crafted and useful while faithful to that neutral family. Do not recommend a rainbow palette or full-screen art displacing useful study actions. Original dimensional objects and restrained GSAP may help only when purposeful.
+
+Read actual PNG pixels with Read, all at C:/Users/Joshu/Downloads/LSAT-U-Dashboard-New-Directions/06-refined-studio/artifacts/:
+- pass-2-1440.png
+- pass-2-768.png
+- pass-2-390.png
+- tools-2-390.png
+
+Read current source in C:/Users/Joshu/Downloads/LSAT-U-Dashboard-New-Directions/06-refined-studio/: index.html, style.css, app.js, craft.js.
+
+Read relevant design lenses explicitly:
+C:/Users/Joshu/.codex/plugins/cache/claude-cowork/design/1.2.0/skills/design-critique/SKILL.md
+C:/Users/Joshu/dev/ai-os/.agents/skills/impeccable/reference/product.md
+C:/Users/Joshu/dev/ai-os/.agents/skills/impeccable/reference/color-and-contrast.md
+C:/Users/Joshu/dev/ai-os/.agents/skills/impeccable/reference/typeset.md
+C:/Users/Joshu/dev/ai-os/.agents/skills/impeccable/reference/animate.md
+
+Look for high-value changes in hierarchy, composition, typography, component quality, utility, mobile handling, keyboard access, reduced motion, persistence and correctness. Report only concrete findings with path, evidence, fix and severity, no quota. Parent has already identified tiny mobile labels and floating right score placement, and builder is fixing these during pass3. If current source differs from saved screenshot, explicitly distinguish that. This review covers actual read files only, no claim of live browser interaction. Captures are host-generated Microsoft Edge renders. Claude has only Read/Glob/Grep. Do not claim observed animation from stills. Return runner structured verdict/summary/findings/coverage/limitations, naming each image actually read.

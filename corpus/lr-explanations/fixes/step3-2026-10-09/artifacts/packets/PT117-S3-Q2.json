@@ -1,0 +1,84 @@
+{
+ "qid": "PT117-S3-Q2",
+ "type": "Paradox",
+ "difficulty": "2",
+ "key_db": "C",
+ "stimulus_db": "Leatherbacks, the largest of the sea turtles, when subjected to the conditions of captivity, are susceptible to a wide variety of fatal diseases with which they would never come in contact if they lived in the wild. It is surprising, therefore, that the likelihood that a leatherback will reach its theoretical maximum life expectancy is about the same whether that animal is living in captivity or in the wild.",
+ "stem_db": "Which one of the following, if true, most helps to resolve the apparent discrepancy?",
+ "choices_db": {
+  "A": "Fewer diseases attack leatherbacks than attack other large aquatic reptiles.",
+  "B": "The average life expectancy of sea turtles in general is longer than that of almost all other marine animals.",
+  "C": "Most leatherbacks that perish in the wild are killed by predators.",
+  "D": "Few zoologists have sufficient knowledge to establish an artificial environment that is conducive to the well-being of captive leatherbacks.",
+  "E": "The size of a leatherback is an untrustworthy indicator of its age."
+ },
+ "bank": {
+  "stimulus": "Leatherbacks, the largest of the sea turtles, when subjected to the conditions of captivity, are susceptible to a wide variety of fatal diseases with which they would never come in contact if they lived in the wild. It is surprising, therefore, that the likelihood that a leatherback will reach its theoretical maximum life expectancy is about the same whether that animal is living in captivity or in the wild.",
+  "stem": "Which one of the following, if true, most helps to resolve the apparent discrepancy?",
+  "choices": {
+   "A": "Fewer diseases attack leatherbacks than attack other large aquatic reptiles.",
+   "B": "The average life expectancy of sea turtles in general is longer than that of almost all other marine animals.",
+   "C": "Most leatherbacks that perish in the wild are killed by predators.",
+   "D": "Few zoologists have sufficient knowledge to establish an artificial environment that is conducive to the well-being of captive leatherbacks.",
+   "E": "The size of a leatherback is an untrustworthy indicator of its age."
+  },
+  "key": "C"
+ },
+ "explanation_id": "4e0d31b1-37db-42db-a39a-40e976a4732d",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "aad4cf5c-88ae-495f-b4e4-b730e4a4bf98",
+   "position": 0,
+   "label": "Given that",
+   "body": "Captive leatherbacks are exposed to fatal diseases they'd never encounter in the wild."
+  },
+  {
+   "row_id": "4463bdfe-f1ec-47b2-a655-3b90a9a40255",
+   "position": 1,
+   "label": "How can it be that",
+   "body": "The likelihood of reaching maximum life expectancy is about the same in captivity and in the wild?"
+  },
+  {
+   "row_id": "d768c294-1f6a-4632-bd81-f82cb8c3e736",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "We're told there's something worse / life-shortening about living in captivity.\nSo if max life expectancy is the same for captive vs. wild, then we either need to hear: - something good / life-elongating about captivity - something bad / life-shortening about the wild - these fatal diseases that become a risk on captivity are not actually shortening the lives of any leatherbacks"
+  },
+  {
+   "row_id": "79d7e006-8e55-47ca-b7f3-2ca85bb04742",
+   "position": 3,
+   "label": "Goal",
+   "body": "I'd be looking for a distinction between captivity and the wild, something GOOD about captivity or BAD about the wild, when it comes to life span."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "95b813da-ad0e-4942-9f81-60b5d11defc3",
+   "letter": "A",
+   "body": "Comparing leatherbacks with other reptiles does not separate captivity from the wild."
+  },
+  {
+   "row_id": "1bf3ba6b-8337-4212-bff8-746ce5757312",
+   "letter": "B",
+   "body": "Sea turtles living longer than other marine animals says nothing about captivity versus the wild."
+  },
+  {
+   "row_id": "86782073-ac68-4ac1-9494-90dac1b164f1",
+   "letter": "C",
+   "body": "Most wild leatherbacks die from predators, which captive ones never face. That is something bad about the wild to offset the diseases of captivity, so the two odds come out about equal."
+  },
+  {
+   "row_id": "6629b443-0328-4197-ab72-cbc19c170594",
+   "letter": "D",
+   "body": "If few people can make captivity healthy, captive turtles should do worse, not equally well."
+  },
+  {
+   "row_id": "a6695012-35bf-4641-b9ab-e8501b6b6f52",
+   "letter": "E",
+   "body": "Whether size shows age does not affect the chance of reaching maximum life expectancy."
+  }
+ ],
+ "known_problem": "Good breakdown and Goal, but all five choice notes are missing.",
+ "tags": "no-notes; damage; very-short"
+}

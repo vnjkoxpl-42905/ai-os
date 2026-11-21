@@ -1,0 +1,213 @@
+{"provider": "claude", "model": "CLI default (unresolved)", "mode": "inspect", "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\design\\reviews\\classroom-quality-20261028\\claude-inspect2\\claudex-de8p27v_"}
+{
+  "status": "completed",
+  "mode": "inspect",
+  "provider": "claude",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "claude",
+    "builder": "codex",
+    "inspector": "claude"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-my-work-20261026",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os\\design\\reviews\\classroom-quality-20261028\\PLAN.md",
+  "plan_sha256": "e470285d30f8b95d0de317e33812d3aa187aef6deef58ba8a8095b0527434196",
+  "requested_model": null,
+  "requested_effort": null,
+  "base": "18fc8af7e1ff7d83defb62b9e0d8dd720f90b3a3",
+  "snapshot": {
+    "base": "18fc8af7e1ff7d83defb62b9e0d8dd720f90b3a3",
+    "files": [
+      {
+        "path": "scripts/verification/start-teacher-home-preview.mjs",
+        "kind": "file",
+        "sha256": "10e1b173bd492c5a73346173bab4701826025325fb93f3fc83e09704e923e2f1"
+      },
+      {
+        "path": "scripts/verification/teacher-home-preview.html",
+        "kind": "file",
+        "sha256": "764de64adc816feb6c96a3b6a0f92b9b23d19e5d32195330eaef826ef7388ec2"
+      },
+      {
+        "path": "scripts/verification/teacher-home-preview.tsx",
+        "kind": "file",
+        "sha256": "003a0a96e324deec6d9fd1177977bd29f77964a297904ad8887e50f0114dfd35"
+      },
+      {
+        "path": "src/components/classroom/home/home.css",
+        "kind": "file",
+        "sha256": "9f629a1a4bedd4449e672c21bd49cc9bb352af366a2e1b287c071650f6336da3"
+      },
+      {
+        "path": "src/components/classroom/home/teacher/TeacherHomeView.test.tsx",
+        "kind": "file",
+        "sha256": "09aed11a2a29df9d4d56d0ab1d19fe527cb34a16c8580e2e70129ac652e20182"
+      },
+      {
+        "path": "src/components/classroom/home/teacher/TeacherHomeView.tsx",
+        "kind": "file",
+        "sha256": "6517295b0ec1c3c6c50e43a850955d0d073baaccef9ca299c7ede79709836c4b"
+      },
+      {
+        "path": "src/components/classroom/home/teacher/TeacherTasks.tsx",
+        "kind": "file",
+        "sha256": "e4ea7111db385f7092cb5b1734dfa193c21074161caa012e9de5c6698ec7e5b7"
+      },
+      {
+        "path": "src/components/classroom/home/teacher/teacherWeek.test.ts",
+        "kind": "file",
+        "sha256": "5715c04e1bd9a5e7f468e0658d9d95834b43a3494c4db8d7b090288fcbbbc832"
+      },
+      {
+        "path": "src/components/classroom/home/teacher/teacherWeek.ts",
+        "kind": "file",
+        "sha256": "fccbfee0d3e3160d21d39779e80bbdcb344119529d01066efb6f7e4ffec57c83"
+      }
+    ],
+    "diff_sha256": "a9c98dbb3799ec884850f6e3b46f9c72bcc0b49b679fb6cbe8f845c4225060ca",
+    "scope": [
+      "scripts/verification/start-teacher-home-preview.mjs",
+      "scripts/verification/teacher-home-preview.html",
+      "scripts/verification/teacher-home-preview.tsx",
+      "src/components/classroom/home/home.css",
+      "src/components/classroom/home/teacher/TeacherHomeView.test.tsx",
+      "src/components/classroom/home/teacher/TeacherHomeView.tsx",
+      "src/components/classroom/home/teacher/TeacherTasks.tsx",
+      "src/components/classroom/home/teacher/TeachingDesk.test.tsx",
+      "src/components/classroom/home/teacher/teacherWeek.test.ts",
+      "src/components/classroom/home/teacher/teacherWeek.ts"
+    ],
+    "sha256": "d6077982a5b2a5142fd91e34dbff57617d415b2c96619c7aec502c8596103383"
+  },
+  "previous": null,
+  "started_at": 1793212440.4818506,
+  "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\design\\reviews\\classroom-quality-20261028\\claude-inspect2\\claudex-de8p27v_",
+  "scope": [
+    "scripts/verification/start-teacher-home-preview.mjs",
+    "scripts/verification/teacher-home-preview.html",
+    "scripts/verification/teacher-home-preview.tsx",
+    "src/components/classroom/home/home.css",
+    "src/components/classroom/home/teacher/TeacherHomeView.test.tsx",
+    "src/components/classroom/home/teacher/TeacherHomeView.tsx",
+    "src/components/classroom/home/teacher/TeacherTasks.tsx",
+    "src/components/classroom/home/teacher/TeachingDesk.test.tsx",
+    "src/components/classroom/home/teacher/teacherWeek.test.ts",
+    "src/components/classroom/home/teacher/teacherWeek.ts"
+  ],
+  "cli_version": "2.1.309 (Claude Code)",
+  "executable": [
+    "C:\\Users\\Joshu\\.local\\bin\\claude.EXE"
+  ],
+  "exit_code": 0,
+  "session_id": "1a9b7cf8-4441-4141-bf3c-2de09e67e0c3",
+  "response": {
+    "verdict": "REVISE",
+    "summary": "I read the full source diff and the related callers. I did not run tests or a browser, and I did not view the screenshots. Most of the work holds up: calendar-zone day keys, single-select aria-pressed buttons, the Radix menu with focus return, and the retained routes (Open email, All students and History still exist elsewhere on the page). Three defects remain. (1) The charcoal focal style applies to any first-child session task, so it can land on handled history rather than a real actionable task. (2) The seven-day grid never refreshes its events or re-checks completeness against the wall clock, so after a long idle it can show past or out-of-window events as upcoming. (3) The week-day buttons have no live announcement when the day changes. I'd fix (1) and (2) before approval. The rest are low severity.",
+    "findings": [
+      {
+        "id": "R1",
+        "severity": "medium",
+        "path": "src/components/classroom/home/home.css (.classroom-home-post-session .classroom-home-session-task:first-child); src/components/classroom/home/teacher/PostSessionWork.tsx:373-430",
+        "evidence": "The charcoal 'focal' rule matches any first-child SessionTask inside .classroom-home-post-session. PostSessionWork also renders the handled-work <ul> (lines 416-429) inside that section. With no pending tasks, expanding 'Handled work' turns the first handled (completed) item charcoal. That contradicts the plan, which limits charcoal to the real actionable first task. It also happens when the pending list is empty and only the stale or 'No tasks' copy is showing. A pending list with two tasks is fine, but the history list gets its own first-child.",
+        "fix": "Scope the selector to the pending list, e.g. add a class or aria-label hook such as .classroom-home-task-list[aria-label='Sessions needing follow-up'] > .classroom-home-session-task:first-child. Add a test or fixture check that handled history is not styled as focal."
+      },
+      {
+        "id": "R2",
+        "severity": "medium",
+        "path": "src/components/classroom/home/teacher/TeacherHomeView.tsx (TeacherWeek)",
+        "evidence": "The week anchors on the live `now` (refreshed every 60s), but events come from a fixed agenda snapshot whose window starts at fetched_at. After a tab sits open for hours or days, day 1 is today's real date. The grid still counts events that already started, and events that started before now are labelled 'upcoming event shown'. Events beyond the snapshot's 7-day end can silently be missing without any marker. The caption shows 'Updated …' only when fetched_at parses, and the 'delayed' qualifier depends on agenda.stale, which this component does not derive from the clock. A day can therefore read 'None shown' when no data was ever fetched for it.",
+        "fix": "Derive an out-of-window/staleness flag in TeacherWeek: when the current day key is later than the fetched_at day key, or when now minus fetched_at exceeds the snapshot window or freshness threshold, add the 'delayed' caption and use 'None loaded' wording. Mark days outside [fetched_at day, fetched_at day +6] as unknown, not none. Alternatively, filter events whose ends_at is before now. Add a test that advances the clock several days."
+      },
+      {
+        "id": "R3",
+        "severity": "low",
+        "path": "src/components/classroom/home/teacher/TeacherHomeView.tsx (week detail div#detailId)",
+        "evidence": "Day buttons use aria-controls on a plain div. There is no aria-live/status region, so a screen-reader user who selects a day gets no announcement that the detail changed. aria-controls support is also inconsistent across screen readers.",
+        "fix": "Make the detail container role='status' (aria-live='polite') or announce the h3 and count on selection. Alternatively, move focus to the detail heading (tabIndex=-1) after selection."
+      },
+      {
+        "id": "R4",
+        "severity": "low",
+        "path": "src/components/classroom/home/home.css (.home-desk-week-days button span/small; container ≤680px small:11px)",
+        "evidence": "Status text is set to 12px, and 11px in the narrow container rule. Weekday labels are 12px uppercase. This goes against the plan's 'no smaller text to force density' and its readable-meta requirement, and it conflicts with the rest of the file's 13-14px minimum. The 665px min-width grid inside the scroller also means the ≤680px compact-column layout is only reachable inside a scroll region.",
+        "fix": "Use at least 13px for the status text at all widths, and 12px is acceptable only for the weekday. Verify at 320/390 with the measured contrast of #d0d6ce on #282e2a, and of --home-muted on --home-surface, before claiming AA."
+      },
+      {
+        "id": "R5",
+        "severity": "low",
+        "path": "src/components/classroom/home/teacher/TeacherHomeView.tsx (More menu); src/components/classroom/home/home.css (.home-desk-menu)",
+        "evidence": "The menu is portaled to body, outside .classroom-root and .home-desk, so it uses hard-coded colours rather than --home-* tokens. Only 'Create session link' remains. The 'All students' item was removed; that route survives in the lower students section (line ~545) and in 'Manage access', so no route is lost. The onCloseAutoFocus closure reads `booking`, which depends on the render ordering after onSelect. The new test covers it in jsdom only, with fireEvent keyboard events, not real pointer or focus behaviour.",
+        "fix": "Keep the hard-coded colours but note them as a deliberate portal limitation. Confirm the booking-sheet focus handoff in a real browser, and consider a ref flag set in onSelect instead of reading the stale closure value."
+      },
+      {
+        "id": "R6",
+        "severity": "low",
+        "path": "src/components/classroom/home/teacher/TeacherHomeView.test.tsx; src/components/classroom/home/teacher/teacherWeek.test.ts",
+        "evidence": "The tests exercise the happy paths and the zone boundary, but not the timer-driven midnight roll with a stale snapshot (covered by R2), the invalid-time-zone fallback in the rendered component (only the helper), or the selection falling back to today when the selected date leaves the window. The plan lists that fallback as required, and no test exercises it. The DST test only checks consecutive days at UTC noon, not that calendarWeek chooses the correct local date near midnight in those weeks.",
+        "fix": "Add a rendered test that selects a day, advances the clock past that day, and asserts the today fallback. Add a boundary test for calendarWeek with now just before and after local midnight in a DST-change week."
+      }
+    ],
+    "coverage": [
+      "Read teacherWeek.ts and teacherWeek.test.ts in full",
+      "Read the full tracked diff for TeacherHomeView.tsx, TeacherTasks.tsx, home.css and TeacherHomeView.test.tsx",
+      "Read TeacherHomeView.tsx lines 236-465 (agenda, decisions, payments, correspondence)",
+      "Read PostSessionWork.tsx lines 300-449 to trace the focal selector",
+      "Read the shared dropdown-menu wrapper (src/components/ui/dropdown-menu.tsx)",
+      "Checked that the removed header links (Open email, All students, Payments and history) are still reachable elsewhere on the page",
+      "Grepped existing tests for copy changed by the DeskStatus grammar edits; those two matches look consistent",
+      "Read start-teacher-home-preview.mjs; grepped the preview tsx only for scenario, time zone and dark handling"
+    ],
+    "limitations": [
+      "I did not view the screenshots, so I make no claim about the visual result or about after-desktop or 390px layout",
+      "I did not run tests, typecheck, build or any browser, so all runtime behaviour, including menu focus return, is unverified",
+      "I did not read in full the preview html/tsx fixture or the unchanged TeachingDesk.test.tsx; I inspected only the preview server script and grepped the preview tsx",
+      "I did not inspect PostSessionWork.test.tsx or the other callers of the shared home.css beyond the grep, so the student Home and other routes are unreviewed",
+      "I did not read supabase/functions/mcp/index.ts, which is outside the inspection scope",
+      "I measured no computed contrast values, and I did not assess phone widths or reduced motion at runtime",
+      "Source-render consistency does not establish the deployed SHA"
+    ]
+  },
+  "usage": {
+    "input_tokens": 14,
+    "cache_creation_input_tokens": 37918,
+    "cache_read_input_tokens": 219174,
+    "output_tokens": 6987,
+    "output_tokens_details": {
+      "thinking_tokens": 2231
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 37918,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2891,
+        "cache_read_input_tokens": 41748,
+        "cache_creation_input_tokens": 651,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 651
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "observed_models": [
+    "claude-sonnet-5-5"
+  ],
+  "permission_denials": [],
+  "total_cost_usd": 0.2434874,
+  "elapsed_seconds": 113.5
+}
+
+EXIT_CODE=0

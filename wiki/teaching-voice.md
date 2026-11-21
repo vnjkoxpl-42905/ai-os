@@ -3,10 +3,10 @@ title: Teaching Voice
 type: concept
 tags: [lsat-u, voice, pedagogy, content]
 created: 2026-06-10
-updated: 2026-07-18
+updated: 2026-10-16
 status: active
 subject: Teaching Voice
-aliases: []
+aliases: [apology emails, student correspondence voice, booking error reply]
 ---
 
 # Teaching Voice
@@ -14,6 +14,8 @@ aliases: []
 How LSAT U sounds, across every surface. This is the canonical voice doc: route all student-facing and brand copy through it. Built from a grill with Joshua (2026-06-13), then tested and enriched against the full corpus of his real correspondence (944 messages he authored, mid-2025 to mid-2026, from the Gmail takeout; 2026-07-18). Claims below marked with a quote are evidenced by that corpus.
 
 It replaces the old two-register / 15-named-tools "preserve verbatim" profile (deleted 2026-06-10) and folds in the brand/marketing register the earlier draft was missing.
+
+**LSAT teaching standard, selected 2026-10-02:** Joshua chose the supplied Conditional Reasoning transcription as the reference for how LSAT material should sound and unfold. Read [LSAT teaching voice standard](../references/lsat-teaching-voice-standard.md) before drafting lessons, notes, explanations, drills, flashcards, quizzes, or instructional feedback. It contains the detailed source analysis, original calibration examples, progression, and review rubric. [Source identity and limits](sources/conditional-reasoning-voice.md) are preserved separately. This choice develops the teaching-content register below; correspondence and marketing retain their own registers.
 
 ## Core voice (every register)
 
@@ -23,10 +25,16 @@ The constant under all three registers below. This is Joshua on the page.
 - **Specific, never generic.** Real scores, the actual skill, the student's own history. Praise is a specific observation, not "great job."
 - **Honest about the work, gentle about the person.** Be blunt that the LSAT is hard ("expect this to be exhausting and very challenging"). Never be blunt about a student's shortcomings. Honesty points at the material; warmth points at the person. When someone slips, nudge gently, never accuse.
 - **Light, grounded metaphor, understated in email.** In his real correspondence the recurring image is quiet: "partner with you on your LSAT journey," "getting set up," "foundational." The vivid images (runway, climb, march toward November, an easy door to walk through) belong to authored teaching and brand copy, not to email. Keep metaphor light and grounded; never float off into abstraction.
-- **Balanced rhythm.** Short declaratives plus one slightly longer warm beat. Air between ideas. Each idea gets its own line. Real messages are short and single-purpose (median ~280 characters).
-- **Plain professional diction.** No corporate jargon, no startup hype ("unlock," "crush," "level up," "game-changer" — "crush" appears once in 944 messages). Contractions are the norm, not the exception. Exclamation points are genuine, not performed: a warm message often carries one, occasionally more, especially in openers ("Sorry for such a long delay!"). He is not exclamation-averse.
+- **Balanced rhythm.** Air between ideas. Real correspondence is short and single-purpose (median ~280 characters). In teaching, vary sentence and paragraph length with the reasoning: give an explanation room, then let a short sentence settle the consequence. Do not impose email brevity on a lesson or cut its intermediate reasoning.
+- **Plain professional diction.** No corporate jargon, no startup hype ("unlock," "crush," "level up," "game-changer"; "crush" appears once in 944 messages). Contractions are the norm, not the exception. Exclamation points are genuine, not performed: a warm message often carries one, occasionally more, especially in openers ("Sorry for such a long delay!"). He is not exclamation-averse.
 - **Forward-looking.** End on the next step or what's ahead.
 - **No em dashes, ever.** Use periods, colons before lists, the middot (·) as a separator, and numbered steps for procedures.
+
+## Student interface copy must explain the task plainly
+
+Student notes use ordinary names: **Session recap**, **Before you start**, and **Reference**. Never use **manual** in student-facing prose, headings, browser titles, controls or hidden answers (Joshua, 2026-10-25). **Recognition drill** is also an internal label and must not appear on the student surface (Joshua, 2026-10-25). Name the actual task or omit the label. An internal template name can remain in private files. Explain the reasoning through definitions, small examples and their limits. Check generated pages as well as authored copy against [COPY-CORRECTIONS](COPY-CORRECTIONS.md).
+
+Joshua's 2026-10-16 Spot introduction correction rejects stock slogan pairs, Worked example and What to write as student labels. Use ordinary complete instructions and Example. Do not replace one abstract verb with another and call the passage humanized; read the entire instruction aloud beside the example and remove repetition. Signal is not a prohibited word, but Find the words that signal it was formulaic in this context. Keep the complete task and logical limits accurate. Pair writing review with the rendered hierarchy: instructions and examples lead, and supporting video does not bury them. [The dated correction and visual evidence](COPY-CORRECTIONS.md#2026-10-16-spot-introduction-copy-and-visual-hierarchy-supersede-earlier-wording) preserve scope and provenance.
 
 ## Openings, closings, and signature phrases
 
@@ -36,7 +44,7 @@ The mechanical fingerprint of his email, from the real corpus. Match these when 
 - **Sign-off.** "Best," and "Best regards," are the workhorses (~360x / ~237x). "Thanks," when it's a favor or logistics (~146x). "Warmly," / "Warm regards," (~54x) for a genuinely warm note. "Talk soon," (~9x) for someone he'll see again soon.
 - **Signature.** Almost always signed **"Joshua"** (844 of 944 messages). The name is near-universal; include it.
 - **Signature phrases (his verbal fingerprint, use naturally, don't overuse):** "let me know" (by far the most common, ~390x), "looking forward," "I hope" / "hope all is well" / "hope you," "no worries at all," "happy to" / "more than happy to," "just wanted to make sure," "make sure," "no rush," "of course."
-- **Punctuation he actually uses:** semicolons (correctly, ~41x); ellipses essentially never. (For em-dashes, the hard rule in Core voice governs — never.)
+- **Punctuation he actually uses:** semicolons (correctly, ~41x); ellipses essentially never. (For em-dashes, the hard rule in Core voice governs: never.)
 
 ## The apology / accountability move
 
@@ -102,7 +110,7 @@ Verbatim-grounded reference lines for the situations that recur most. Adapt, nev
 
 Which voice governs which surface.
 
-### 1. Coaching (earnest) -- inbox, recaps, in-drill feedback, email
+### 1. Coaching (earnest) -- inbox, personal encouragement, email
 
 Fully earnest. Warm, sincere, calm, patient. No jokes. The closest thing to being in the room with Joshua. Normalizes struggle, then moves to the work.
 
@@ -117,12 +125,13 @@ Reference line (target tone):
   > That's the cleanest you've split premise from conclusion yet. Let's push it into the harder sets.
 - **Hard truth about the test:** state it plainly. "Do not expect for it to come easy. Expect to find this exhausting."
 
-### 2. Teaching content (earnest substance, wit at the edges) -- bootcamp lessons, drill explanations
+### 2. Teaching content (conversational reasoning) -- lessons, recaps, notes, drills, explanations
 
-The substance stays earnest and clear (you are explaining a hard skill). The wit lives only at the edges: headers, openers, transitions. No jokes mid-explanation, nothing that costs comprehension.
+Use [LSAT teaching voice standard](../references/lsat-teaching-voice-standard.md), Joshua's selected calibration from 2026-10-02. Keep the reader beside the teacher. Explain the ordinary meaning, ground it in an original example, make the small inferences audible, ask a useful question, and show both the consequence and its limit. Introduce terminology and notation when their meaning is established. Give each concept enough development to be learned from the page.
 
-> Header: "The flaw hides in plain sight."
-> Body: earnest, clear, step by step.
+Contractions and varied sentence lengths should sound natural when read aloud. Repetition should change the reader's view of the same relationship. Questions should give the reader actual thinking work. Light humor may appear within an explanation when it helps understanding; this supersedes the older wit-only-at-the-edges restriction. Do not force punchlines, slang, hyperbole, catchphrases, or paragraph quotas.
+
+The source governs delivery, not Joshua's procedure, indicator taxonomy, biography, or the scope of a lesson. Preserve his approved methods and logical precision. Personal encouragement still follows the earnest coaching register. Project-owned `lsat-u-voice` routes here and to the detailed standard; an older vendor writer-blend skill must not override this selection.
 
 ### 3. Brand (sharp wit) -- landing, auth, marketing
 

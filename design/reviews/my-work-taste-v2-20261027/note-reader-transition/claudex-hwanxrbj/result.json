@@ -1,0 +1,340 @@
+{
+  "status": "completed",
+  "mode": "inspect",
+  "provider": "claude",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "claude",
+    "builder": "codex",
+    "inspector": "claude"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-my-work-20261026",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-my-work-20261026\\docs\\plans\\my-work-note-reader-transition.md",
+  "plan_sha256": "ae16e90945eebe09814bef0b1431d83b182a6b808a7af0679adc732b3a13672a",
+  "requested_model": "claude-opus-5-5",
+  "requested_effort": "medium",
+  "base": "e4035d9c8ec97a3aaec01b0b3464533872328bc8",
+  "snapshot": {
+    "base": "e4035d9c8ec97a3aaec01b0b3464533872328bc8",
+    "files": [
+      {
+        "path": "docs/verification/platform-motion-20261022.md",
+        "kind": "file",
+        "sha256": "b60fb33490440e94744017c7e8689384e129ba3f51906fb656a538fc7d5c900c"
+      },
+      {
+        "path": "scripts/verification/my-work-preview.tsx",
+        "kind": "file",
+        "sha256": "c0b7c1131659058508745f8067fda0279040275a9d6080dce91a3bd7efae8a54"
+      },
+      {
+        "path": "scripts/verification/start-my-work-preview.mjs",
+        "kind": "file",
+        "sha256": "b27a2dd68d6de6089b4de1e8ee9e69f027371f688186b95f4354d1bfac466736"
+      },
+      {
+        "path": "src/components/classroom/ClassroomNotesJourney.test.tsx",
+        "kind": "file",
+        "sha256": "6bb8e4eeb50b20311c861bf5c097a4ed7e12d6c2d787094654bccd59e3473751"
+      },
+      {
+        "path": "src/components/classroom/ClassroomRouteViews.notes.test.tsx",
+        "kind": "file",
+        "sha256": "4d5856b66ff38190885187f895ce5d2d30ef5ae15a82958162cae1f6a6519859"
+      },
+      {
+        "path": "src/components/classroom/ClassroomRouteViews.tsx",
+        "kind": "file",
+        "sha256": "7bef75c2d9411f6d7cc5c077cc0acfa2c3d0d5dfcf84ad8b439d51c728e3ffc0"
+      },
+      {
+        "path": "src/components/classroom/shell/ClassroomLayout.tsx",
+        "kind": "file",
+        "sha256": "b99a37b790c16740d9db9df757f2d5668cbd38babd73e336de158bb803956215"
+      },
+      {
+        "path": "src/components/my-work/TeachingNotesArchive.test.tsx",
+        "kind": "file",
+        "sha256": "89a5af49edd53d806236139d1f05da9475368333add222de12a660771ff05238"
+      },
+      {
+        "path": "src/components/my-work/TeachingNotesArchive.tsx",
+        "kind": "file",
+        "sha256": "789b540508871cae76bbc79c7cf314962b3e5dfce9470b7b0a189f3ae6d0f44c"
+      },
+      {
+        "path": "src/components/my-work/WorkFilterSelect.tsx",
+        "kind": "file",
+        "sha256": "13eee43accb2c23ad53a442c55182e2d17c4cabebe0a75b50e9c86c4d2a173ee"
+      },
+      {
+        "path": "src/components/my-work/assignedWorkOrganization.ts",
+        "kind": "file",
+        "sha256": "0454ff47d5cd15157b2b717d0433970ae3cb7409d4392a82900ab5b722934fed"
+      },
+      {
+        "path": "src/components/my-work/teachingNoteDates.test.ts",
+        "kind": "file",
+        "sha256": "3c5d8d86bcc9cd5f9c861f5aa9790bc78eb3ea3119f5e0d48a4c07e2a54fc881"
+      },
+      {
+        "path": "src/components/my-work/teachingNoteDates.ts",
+        "kind": "file",
+        "sha256": "e1befb8937e2980a136abb668a4640df5b94a3634de07a9a0a257816166a2b11"
+      },
+      {
+        "path": "src/hooks/useClassroomMotion.test.tsx",
+        "kind": "file",
+        "sha256": "10056d51404fd80c5caa9df2a79657fa4f25fcdb99cdc3aeab13108594ba521e"
+      },
+      {
+        "path": "src/hooks/useClassroomMotion.ts",
+        "kind": "file",
+        "sha256": "f1d6a1a737973cb4cb2ab6c5e200e9973b1250e5b074b07991d6e1b585114c2a"
+      },
+      {
+        "path": "src/hooks/useNoteReaderTransition.test.tsx",
+        "kind": "file",
+        "sha256": "45568cb2422e5eab564c54fafb3830ec222c8d70f82349fb4f505f3491e93216"
+      },
+      {
+        "path": "src/hooks/useNoteReaderTransition.ts",
+        "kind": "file",
+        "sha256": "a2a32c87dcc5b985d957552c4ec4c3ff2a2092f260437392d14df104000745d0"
+      },
+      {
+        "path": "src/hooks/useNotesArchiveScroll.test.ts",
+        "kind": "file",
+        "sha256": "3916c8525fffeb504427614c9282127c9c3081cbf5183fd4de6fa91b9c6fdb9d"
+      },
+      {
+        "path": "src/hooks/useNotesArchiveScroll.ts",
+        "kind": "file",
+        "sha256": "9249bd891d54f1c17dec3c81ccfa02a750bed0e872a6dd13345a8e4c5e436cff"
+      },
+      {
+        "path": "src/hooks/useNotesSelectMotion.ts",
+        "kind": "file",
+        "sha256": "8ffbbde6358a34638ff4df937496e537ba66037c302b486ed1c0462711fec0aa"
+      },
+      {
+        "path": "src/lib/myWorkNotesNavigation.test.ts",
+        "kind": "file",
+        "sha256": "bfbd144ae18733b7c7f61d13d81072c2b1bbcef8f70528223a77bd4df0641da8"
+      },
+      {
+        "path": "src/lib/myWorkNotesNavigation.ts",
+        "kind": "file",
+        "sha256": "1dde456ba677abc61121333a3945a4696337d50c6c8c91533380e7fe8984a7b4"
+      },
+      {
+        "path": "src/pages/MyWorkNotesPage.tsx",
+        "kind": "file",
+        "sha256": "52bd7e593540d0539e74c5e9ecdf24ec52abeb0e960dc69a65101a85aaecdec9"
+      },
+      {
+        "path": "src/pages/MyWorkPage.organization.test.tsx",
+        "kind": "file",
+        "sha256": "6587a8380bea2b080e4973cd6830889c1cdb823cf724bdc217689b7b234483d4"
+      },
+      {
+        "path": "src/pages/MyWorkPage.readingCenter.test.tsx",
+        "kind": "file",
+        "sha256": "838707bcba41e811b6adc38333b480eca060868781c8188a8ba634ea18e39082"
+      },
+      {
+        "path": "src/pages/MyWorkPage.tsx",
+        "kind": "file",
+        "sha256": "844491f2b2e7d2a36c9d91bb503b03b3ce0e1d2cf440bd1d22259db7ca98edb3"
+      },
+      {
+        "path": "src/pages/StudentDestination.test.tsx",
+        "kind": "file",
+        "sha256": "e2a663fcbc111c5f97548609f388508d4785e86785a526490ac0b722c300febf"
+      },
+      {
+        "path": "src/pages/StudentDestination.tsx",
+        "kind": "file",
+        "sha256": "4c9fc2666e54a0fc5122f3fd6e2399d6926294be31f84a04d61ca1fefccc8bf7"
+      },
+      {
+        "path": "src/pages/myWorkNotes.css",
+        "kind": "file",
+        "sha256": "3e8816afc285ee16f10997bdddc3d0bfc0dc9d79da12f2554df7416ccab32234"
+      },
+      {
+        "path": "src/pages/myWorkNotesRefinement.css",
+        "kind": "file",
+        "sha256": "97ab44a311fb41718ac53b658090f1b2719c6d0023245c6bce92532149263b0c"
+      },
+      {
+        "path": "src/pages/myWorkOrganization.css",
+        "kind": "file",
+        "sha256": "a9cb62f871bdd8e8405dfe72a0df504ae42dd535e867203a5f31e0f6abe00d02"
+      },
+      {
+        "path": "src/styles/note-reader-transition.css",
+        "kind": "file",
+        "sha256": "d67a365ee620c10aa7fe52c8a7c923a2994c1e4efc3cda81046b3c3ba0fef9ae"
+      }
+    ],
+    "diff_sha256": "98188c957b0ebb625757d147376d0c1f7e72bdbf3a0df5a954f6962a61139f68",
+    "scope": [
+      "docs/verification/platform-motion-20261022.md",
+      "scripts/verification/my-work-preview.tsx",
+      "scripts/verification/start-my-work-preview.mjs",
+      "src/components/classroom/ClassroomNotesJourney.test.tsx",
+      "src/components/classroom/ClassroomRouteViews.notes.test.tsx",
+      "src/components/classroom/ClassroomRouteViews.tsx",
+      "src/components/classroom/shell/ClassroomLayout.test.tsx",
+      "src/components/classroom/shell/ClassroomLayout.tsx",
+      "src/components/my-work",
+      "src/hooks/useClassroomMotion.test.tsx",
+      "src/hooks/useClassroomMotion.ts",
+      "src/hooks/useNoteReaderTransition.test.tsx",
+      "src/hooks/useNoteReaderTransition.ts",
+      "src/hooks/useNotesArchiveScroll.test.ts",
+      "src/hooks/useNotesArchiveScroll.ts",
+      "src/hooks/useNotesSelectMotion.ts",
+      "src/lib/myWorkNotesNavigation.test.ts",
+      "src/lib/myWorkNotesNavigation.ts",
+      "src/pages/MyWorkNotesPage.tsx",
+      "src/pages/MyWorkPage.organization.test.tsx",
+      "src/pages/MyWorkPage.readingCenter.test.tsx",
+      "src/pages/MyWorkPage.refetch.test.tsx",
+      "src/pages/MyWorkPage.tsx",
+      "src/pages/StudentDestination.test.tsx",
+      "src/pages/StudentDestination.tsx",
+      "src/pages/myWorkNotes.css",
+      "src/pages/myWorkNotesRefinement.css",
+      "src/pages/myWorkOrganization.css",
+      "src/styles/note-reader-transition.css"
+    ],
+    "sha256": "9bf715c9679a923b2ae2c60c7d244702763290038c94ae4238457300544e2b07"
+  },
+  "previous": null,
+  "started_at": 1793170304.5887413,
+  "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\design\\reviews\\my-work-taste-v2-20261027\\note-reader-transition\\claudex-hwanxrbj",
+  "scope": [
+    "docs/verification/platform-motion-20261022.md",
+    "scripts/verification/my-work-preview.tsx",
+    "scripts/verification/start-my-work-preview.mjs",
+    "src/components/classroom/ClassroomNotesJourney.test.tsx",
+    "src/components/classroom/ClassroomRouteViews.notes.test.tsx",
+    "src/components/classroom/ClassroomRouteViews.tsx",
+    "src/components/classroom/shell/ClassroomLayout.test.tsx",
+    "src/components/classroom/shell/ClassroomLayout.tsx",
+    "src/components/my-work",
+    "src/hooks/useClassroomMotion.test.tsx",
+    "src/hooks/useClassroomMotion.ts",
+    "src/hooks/useNoteReaderTransition.test.tsx",
+    "src/hooks/useNoteReaderTransition.ts",
+    "src/hooks/useNotesArchiveScroll.test.ts",
+    "src/hooks/useNotesArchiveScroll.ts",
+    "src/hooks/useNotesSelectMotion.ts",
+    "src/lib/myWorkNotesNavigation.test.ts",
+    "src/lib/myWorkNotesNavigation.ts",
+    "src/pages/MyWorkNotesPage.tsx",
+    "src/pages/MyWorkPage.organization.test.tsx",
+    "src/pages/MyWorkPage.readingCenter.test.tsx",
+    "src/pages/MyWorkPage.refetch.test.tsx",
+    "src/pages/MyWorkPage.tsx",
+    "src/pages/StudentDestination.test.tsx",
+    "src/pages/StudentDestination.tsx",
+    "src/pages/myWorkNotes.css",
+    "src/pages/myWorkNotesRefinement.css",
+    "src/pages/myWorkOrganization.css",
+    "src/styles/note-reader-transition.css"
+  ],
+  "cli_version": "2.1.309 (Claude Code)",
+  "executable": [
+    "C:\\Users\\Joshu\\.local\\bin\\claude.EXE"
+  ],
+  "exit_code": 0,
+  "session_id": "029c9117-b8d7-42d4-a4f7-54d9fa4bd20d",
+  "response": {
+    "verdict": "REVISE",
+    "summary": "I read the source of the new reader-transition owner (`useNoteReaderTransition` and its CSS), the reader markers in ClassroomRouteViews, the shell wiring and origin carry-through in ClassroomLayout, the `notesArchiveOrigin` helper, archive restoration in TeachingNotesArchive, `useNotesArchiveScroll` and the shared list-motion changes in `useClassroomMotion`. I found no high or medium defects. The main paths look correct from the source: archive-to-reader stage inversion, rapid-cancel rebasing, rail arriving late under the same key, ending in an untransformed state, no replay of already visible content on refetch, reduced motion and archive-mode transform suppression. The NRT-6 fix holds: with no validated origin the reader sends `state: null`, and the archive's `returningId == null` guard then skips restoration. Three low findings remain. One is in the pure page-scroll key correction, which had not been inspected before. The other two are scope leaks: the stage/rail entrance applies to non-note items, and unused reader markers were added to views that have no reader owner.",
+    "findings": [
+      {
+        "id": "FIN-1",
+        "severity": "low",
+        "path": "src/hooks/useClassroomMotion.ts",
+        "evidence": "In `useList`, `rowTravel` treats ArrowUp/Down/Left/Right, Home, End, PageUp and PageDown as list travel whenever the target is inside `[data-motion-list] [data-motion-item]`, and it then sets the sticky `keyboardInteraction = true`. The archive cards (`TeachingNotesArchive.tsx`) and assigned-work row links have no roving or arrow-key handler, so these keys on a focused card just scroll the page. Failure scenario: a pointer user returns from a reader. The archive restore focuses the original card (`target.focus` in the layout effect). The user presses PageDown or ArrowDown to scroll. That makes `keyboardInteraction` sticky, so the user's later pointer 'Load more notes' (`paginate`) can no longer reset `listInteraction`, and the new rows never reveal. This contradicts the stated rule that pure page-scroll keys do not suppress scroll reveals. The test row `['ArrowDown','a']` / `['PageDown','a']` in `useClassroomMotion.test.tsx` locks in this behavior.",
+        "fix": "Count arrow/Home/End/Page keys as row travel only when the list really handles them (for example an explicit `data-motion-list-keyboard` opt-in or a roving-tabindex container). Otherwise treat them like the pointer-focused-button case, or require `event.target.matches(':focus-visible')` before making the interaction sticky. Update the test matrix to match."
+      },
+      {
+        "id": "FIN-2",
+        "severity": "low",
+        "path": "src/components/classroom/shell/ClassroomLayout.tsx",
+        "evidence": "`data-note-transition-mode` is set to 'reader' for every `/classroom/item/` path. In `useNoteReaderTransition.ts`, `readerId()` gives an `expectedId` for any item route, so `play()` runs the stage x-inversion and rail paper/row stagger (`newShell`, `enteringRail`) even when there is no `[data-note-reader]`. Example: a homework or TA item opened from a route with no rail (or a different stage edge) gets a 320px stage tween and a rail stagger. At the same time, ClassroomMotionContent still runs its generic blur entrance on that item's content. The plan says non-note items keep their existing behavior and that the reader must have no competing tween owner. The test 'does not scroll a non-note item with no owned reader marker' checks scrolling only, not stage or rail travel.",
+        "fix": "Own the shell tween only for note readers. Either defer stage/rail work until a matching `[data-note-reader]` exists or loading is resolved, or set mode/`expectedId` only when the item is a note (for example a `data-note-transition-owned` attribute on the reader wrapper that `play()` requires before animating the stage). Add a test showing that a non-note item route gets no stage/rail tween."
+      },
+      {
+        "id": "FIN-3",
+        "severity": "low",
+        "path": "src/components/classroom/ClassroomRouteViews.tsx",
+        "evidence": "`data-note-reader-block` was added to `ClassroomRecapsView` (h1), `ClassroomUploadsView` (h1), `ClassroomAssignmentView` (actions) and `ClassroomTAAssignmentView` (article, actions). None of these views renders a `[data-note-reader]` wrapper, so the reader owner never targets them; `play()` only queries blocks inside `reader`. The markers are dead and suggest these views are reader-owned when they are not, which risks future mis-scoping (for example the reduced-motion selector in `note-reader-transition.css` matches them).",
+        "fix": "Remove `data-note-reader-block` from non-note views, or deliberately bring those views under the reader owner and test it."
+      }
+    ],
+    "coverage": [
+      "Read in full: src/hooks/useNoteReaderTransition.ts, src/styles/note-reader-transition.css, src/hooks/useNotesArchiveScroll.ts",
+      "Read ClassroomItemView in src/components/classroom/ClassroomRouteViews.tsx (lines 195-370 plus the diff), including the interactive branch, which is limited to note types",
+      "Reviewed every diff hunk in the provided TRACKED DIFF: ClassroomLayout wiring and openRow origin carry, TeachingNotesArchive restoration/POP/origin logic, the notesArchiveOrigin helper and tests, useClassroomMotion list ownership, intents and the page-scroll key logic, MyWorkPage filters/focus, StudentDestination list-only policy, CSS edits, the preview fixture and its launcher script",
+      "Grepped classroom.css transitions to check how the stage/column padding and max-width transitions interact with data-note-transition-active and archive-mode suppression",
+      "Grepped ClassroomLayout notes rail routes to confirm returnTo/origin propagation for rail selections",
+      "Listed the test names in src/hooks/useNoteReaderTransition.test.tsx (did not read the bodies)",
+      "Traced the NRT-6 regression: a reader with no origin sends state null, and the archive returns without restoring or consuming the anchor"
+    ],
+    "limitations": [
+      "I could not run tests, typecheck, builds or a browser. Every behavioral conclusion comes from reading source, and no claim here says tests passed.",
+      "I did not read in full: useNoteReaderTransition.test.tsx bodies, ClassroomNotesJourney.test.tsx, ClassroomLayout.test.tsx, useNotesArchiveScroll.test.ts, MyWorkPage.refetch.test.tsx, WorkFilterSelect.tsx, useNotesSelectMotion.ts, teachingNoteDates.ts/test, myWorkNotesRefinement.css. These are in scope and in the manifest but their contents were not shown in the diff, so their correctness is not confirmed.",
+      "I did not read docs/plans/my-work-scroll-filters-gemini-review.md. Earlier-remediation fidelity was checked only through the code in the diff.",
+      "I did not inspect the host evidence outside the repo (local-desktop-final-trace.json, PNGs). GSAP runtime behavior, such as re-enabling a completed timeline when blocks are appended for delayed content, is inferred from GSAP semantics, not observed.",
+      "The fixture uses the real secondary rail and stage geometry but not the full authenticated ClassroomLayout (permissions, profile readiness, mobile flyout), so integrated production behavior is unverified.",
+      "Out-of-scope areas are unreviewed: supabase/functions/mcp/index.ts (excluded as unrelated), the rest of classroom.css beyond its transition rules, and all other repository files. This is not whole-repository approval."
+    ]
+  },
+  "usage": {
+    "input_tokens": 12,
+    "cache_creation_input_tokens": 109388,
+    "cache_read_input_tokens": 524521,
+    "output_tokens": 12013,
+    "output_tokens_details": {
+      "thinking_tokens": 8009
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 109388,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 3334,
+        "cache_read_input_tokens": 111629,
+        "cache_creation_input_tokens": 2240,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 2240
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "permission_denials": [],
+  "total_cost_usd": 1.2203161999999999,
+  "elapsed_seconds": 136.3
+}

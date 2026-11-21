@@ -1,0 +1,7 @@
+# AQ-033: bounded operating inventory implemented, 2026-10-26
+
+Read the complete archived ARMS transcript and current connections registry. Built system/scripts/brain-inventory.py and references/ai-workspace/operating-inventory.md, retaining existing registries as owners. Ran the helper successfully and read back generated JSON. Six CLI executable paths resolved; five memory homes checked; six runtime activation homes counted; two named Codex metadata configurations and one Windows task were observed. Monitor is PAUSED; Claudex updater ACTIVE; Matt Pocock task Ready. No schedule, permission, connection, automation prompt or secret was changed.
+
+Local audit outcome: complete within the explicit bounded inventory scope. Broad AQ-033 remains partial if it requires every schedule, granted permission, actual use and provider authentication. Current provider access, recent usage, last-run success, unused connections and missing repeated-work integrations remain UNKNOWN. No retirement recommendation is supported yet. Next useful checks are monitor pause rationale and updater receipts, not another integration install.
+
+Verification: helper real execution succeeded, generated JSON parsed and links from operating-inventory.md checked. Script dry-run must leave generated file unchanged; JSON checks assert only name/status/rrule automation metadata is emitted. The report does not claim a full workspace or live-provider audit.

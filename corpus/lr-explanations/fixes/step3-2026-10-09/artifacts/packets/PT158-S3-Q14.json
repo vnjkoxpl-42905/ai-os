@@ -1,0 +1,84 @@
+{
+ "qid": "PT158-S3-Q14",
+ "type": "Parallel Flaw",
+ "difficulty": "4",
+ "key_db": "C",
+ "stimulus_db": "Some freelance journalists sell their work to magazines that have lax editorial standards. No self-respecting writer sells his or her work to magazines that have lax editorial standards. Therefore, some self-respecting writers are not freelance journalists.",
+ "stem_db": "Which one of the following displays a flawed pattern of reasoning most similar to the one in the argument above?",
+ "choices_db": {
+  "A": "Some high school teachers teach biology. No kindergarten teachers teach biology. Therefore, biology is not taught by all teachers.",
+  "B": "Most school board members were once teachers. No one who was once a teacher prefers administrative work to teaching. Hence, few school board members prefer administrative work to teaching.",
+  "C": "Some students prefer history to mathematics. No member of the Calculus Club prefers history to mathematics. Thus, some members of the Calculus Club are not students.",
+  "D": "Some principals are harsh disciplinarians. No adviser to a debate team is a harsh disciplinarian. Hence, some principals are not advisers to a debate team.",
+  "E": "Some teachers who let their students leave early are popular. No coaches allow their students to leave before three o'clock. Therefore, some popular teachers are not coaches."
+ },
+ "bank": {
+  "stimulus": "Some freelance journalists sell their work to magazines\n that have lax editorial standards. No self-respecting\n writer sells his or her work to magazines that have lax\n editorial standards. Therefore, some self-respecting\n writers are not freelance journalists.",
+  "stem": "Which one of the following displays a flawed pattern of\n reasoning most similar to the one in the argument\n above?",
+  "choices": {
+   "A": "Some high school teachers teach biology. No kindergarten teachers teach biology. Therefore, biology is not taught by all teachers.",
+   "B": "Most school board members were once teachers. No one who was once a teacher prefers administrative work to teaching. Hence, few school board members prefer administrative work to teaching.",
+   "C": "Some students prefer history to mathematics. No member of the Calculus Club prefers history to mathematics. Thus, some members of the Calculus Club are not students.",
+   "D": "Some principals are harsh disciplinarians. No adviser to a debate team is a harsh disciplinarian. Hence, some principals are not advisers to a debate team.",
+   "E": "Some teachers who let their students leave early are popular. No coaches allow their students to leave before three o’clock. Therefore, some popular teachers are not coaches."
+  },
+  "key": "C"
+ },
+ "explanation_id": "08ee55e6-74bb-430f-9fcd-2e6f64c8fe2d",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "bf5801ad-1493-4d51-a152-52c6f90a553b",
+   "position": 0,
+   "label": "Conclusion (Therefore)",
+   "body": "Some self-respecting writers are not freelance journalists."
+  },
+  {
+   "row_id": "63bac500-1c49-40a8-839a-2ecafa395bef",
+   "position": 1,
+   "label": "Evidence",
+   "body": "No self-respecting writer sells their work to magazines with lax editorial standards. Some freelance journalists sell their work to magazines that have lax editorial standards."
+  },
+  {
+   "row_id": "8504a9b1-f245-4975-8778-7556d38957de",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "When it comes to diagnosing why this conclusion is a flawed inference, the easiest place to start could be simply noticing that the conclusion is about people who aren't freelance journalists. Meanwhile, none of the evidence discusses people who aren't freelance journalists. How could we derive a claim about a group of people we never got any facts about? So the flaw must center around the first sentence, which talks about people who are freelance journalists. The author must be confusing himself there and thinking we can also learn something about people who aren't. However, we don't necessarily need to understand the flaw here. When we're doing Parallel or Parallel Flaw, and the stimulus has Conditionals, Quantifiers, or Repeating Ideas, we'd often be better off just writing an Algebraic Recipe based off those keywords. We have some repeating ideas here: A = freelance journalists; B = sells work to mags with lax standards; C = self-respecting"
+  },
+  {
+   "row_id": "2fd14b45-5190-46f6-9dd3-a188aa5c3469",
+   "position": 3,
+   "label": "Goal",
+   "body": "Let's look for something with this formula.\n```\nPremise 1: Some A's are B.\nPremise 2: No C's are B.\nConclusion: Some C's are not A.\n```\nIn particular, we should see two premises (Some / No) and a Some conclusion."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "c2c428cf-f4a2-4b9a-912b-d34ef026d7d8",
+   "letter": "A",
+   "body": "This argument states: Some high school teachers teach biology. No kindergarten teachers teach biology. Therefore, some high school teachers are not kindergarten teachers. Map the structure: Some A are B. No C are B. Therefore, some A are not C. This is actually the VALID conclusion — the one the original argument should have drawn but did not. The original's flaw was reversing the direction from \"some A are not C\" to \"some C are not A.\" This answer draws the correct conclusion rather than the reversed one, so it does not replicate the flaw. It reaches the right answer using the right logic, which makes it a poor parallel for an argument that reaches the wrong answer using flawed logic."
+  },
+  {
+   "row_id": "1599910d-1470-46d9-aa95-bffeeeef2d0c",
+   "letter": "B",
+   "body": "This argument states: Most school board members were once teachers. No one who was once a teacher prefers administrative duties to teaching. Therefore, most school board members do not prefer administrative duties to teaching. The structure is: Most A are B. No B are C. Therefore, most A are not C. While this has a superficial similarity, it uses \"most\" rather than \"some\" as the quantifier in both the first premise and the conclusion. The original argument used \"some\" in the first premise and drew a conclusion about a reversed subject-predicate pair. This argument keeps the direction consistent (A to C in both the premise chain and the conclusion) and merely passes the \"most\" quantifier through. The flaw pattern — reversing which group the conclusion is about — is absent here."
+  },
+  {
+   "row_id": "52724ca9-4324-4289-b2f8-4d407316e52f",
+   "letter": "C",
+   "body": "This argument states: Some students prefer history to mathematics. No member of the Calculus Club prefers history to mathematics. Therefore, some member of the Calculus Club are not students. Map the structure: Some A (students) are B (prefer history to math). No C (Calculus Club members) are B. Therefore, some C are not A. This perfectly replicates the original's flaw. The premises validly prove that some students are not Calculus Club members — the ones who prefer history cannot be in the Calculus Club. But the conclusion reverses direction and claims that some Calculus Club members are not students. Just as in the original, the argument proves something about one group (students/freelancers) and then draws a conclusion about the other group (Calculus Club members/self-respecting writers). The directional reversal — the defining flaw — is exactly matched."
+  },
+  {
+   "row_id": "7d8209de-37a6-4b17-9447-5e9d25e6fd01",
+   "letter": "D",
+   "body": "This argument states: Some principals are harsh disciplinarians. No adviser to a debate team is a harsh disciplinarian. Therefore, some principals are not advisers to debate teams. Map the structure: Some A (principals) are B (harsh disciplinarians). No C (debate team advisers) are B. Therefore, some A are not C. This is the VALID conclusion — the one the original should have drawn. The principals who are harsh disciplinarians cannot be debate team advisers, so some principals are indeed not debate team advisers. The original's flaw was reversing to \"some C are not A,\" but this answer correctly concludes \"some A are not C.\" Since the reasoning here is actually valid, it cannot parallel a flawed argument."
+  },
+  {
+   "row_id": "7b3046cc-ddf8-42cb-9176-00d87eba3b99",
+   "letter": "E",
+   "body": "This argument states: Some teachers who let students leave early are popular. No coaches allow their students to leave early. Therefore, some popular teachers are not coaches. While this might initially look like the reversed conclusion, the structure is more complex because the first premise combines two properties (\"let students leave early\" AND \"are popular\"). From \"some teachers who let students leave early are popular\" and \"no coaches let students leave early,\" we validly know the teachers in the first premise are not coaches, and since those teachers are popular, some popular teachers are not coaches. The reasoning actually follows validly, making this a poor match for the original's flaw."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (8.4 em-dashes per 1k words; wrong-answer notes average 119.0 words).",
+ "tags": "emdash-heavy; pt157-158-register; possible-misquote; damage"
+}

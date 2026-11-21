@@ -1,0 +1,278 @@
+{
+  "prepared": "2026-10-24",
+  "mode": "read-only decision plan",
+  "conditions": [
+    "fresh core and personal complete snapshots and full cloud dependencychains independently verified",
+    "explicit approval to discard failed historical versions"
+  ],
+  "fresh_scopes": {
+    "personal": {
+      "generation": "20261024-213612",
+      "payload_path": "C:\\Users\\Joshu\\LaptopBackups\\2026-10-07\\20261024-213612\\payload.zip",
+      "archive_bytes": 57104624,
+      "payload_present": false,
+      "receipt_exists": true,
+      "parts_declared": 1,
+      "parts_manifest_path": "C:\\Users\\Joshu\\LaptopBackups\\2026-10-07\\20261024-213612\\parts-manifest.json"
+    },
+    "core": {
+      "generation": "20261024-211629",
+      "payload_path": "C:\\Users\\Joshu\\LaptopBackups\\2026-10-07\\20261024-211629\\payload.zip",
+      "archive_bytes": 6688633988,
+      "payload_present": true,
+      "receipt_exists": false,
+      "parts_declared": null,
+      "parts_manifest_path": null
+    }
+  },
+  "conditional_discard_failed_core_payloads": [
+    {
+      "generation": "20261014-200506",
+      "delete_file_if_approved": "C:\\Users\\Joshu\\LaptopBackups\\2026-10-07\\20261014-200506\\payload.zip",
+      "bytes": 25439762758,
+      "capture_errors": [
+        {
+          "path": "\\\\?\\C:\\Users\\Joshu\\.codex\\app-server-control\\app-server-control.sock",
+          "error": "[Errno 22] Invalid argument: '\\\\\\\\?\\\\C:\\\\Users\\\\Joshu\\\\.codex\\\\app-server-control\\\\app-server-control.sock'"
+        },
+        {
+          "path": "\\\\?\\C:\\Users\\Joshu\\.codex\\app-server-daemon\\daemon-updater.sock",
+          "error": "[Errno 22] Invalid argument: '\\\\\\\\?\\\\C:\\\\Users\\\\Joshu\\\\.codex\\\\app-server-daemon\\\\daemon-updater.sock'"
+        }
+      ],
+      "metadata_and_snapshots_retained": true,
+      "warning": "Deletes historical archive revisions; not authorized yet"
+    },
+    {
+      "generation": "20261015-223301",
+      "delete_file_if_approved": "C:\\Users\\Joshu\\LaptopBackups\\2026-10-07\\20261015-223301\\payload.zip",
+      "bytes": 33409888480,
+      "capture_errors": [
+        {
+          "path": "\\\\?\\C:\\Users\\Joshu\\dev\\ai-os\\.git\\objects\\pack\\pack-b2401beea41d59e2c5450f96e3a681bc8ba32b8d.pack",
+          "error": "changed during capture; retry next run"
+        },
+        {
+          "path": "\\\\?\\C:\\Users\\Joshu\\dev\\ai-os-projects\\karpathy-method-tools\\.git\\objects\\pack\\pack-bbc9cdb1eda7cd0a1bfef0afb5c191a14cd6f157.pack",
+          "error": "changed during capture; retry next run"
+        },
+        {
+          "path": "\\\\?\\C:\\Users\\Joshu\\.codex\\app-server-control\\app-server-control.sock",
+          "error": "[Errno 22] Invalid argument: '\\\\\\\\?\\\\C:\\\\Users\\\\Joshu\\\\.codex\\\\app-server-control\\\\app-server-control.sock'"
+        },
+        {
+          "path": "\\\\?\\C:\\Users\\Joshu\\.codex\\app-server-daemon\\daemon-updater.sock",
+          "error": "[Errno 22] Invalid argument: '\\\\\\\\?\\\\C:\\\\Users\\\\Joshu\\\\.codex\\\\app-server-daemon\\\\daemon-updater.sock'"
+        }
+      ],
+      "metadata_and_snapshots_retained": true,
+      "warning": "Deletes historical archive revisions; not authorized yet"
+    },
+    {
+      "generation": "20261016-164840",
+      "delete_file_if_approved": "C:\\Users\\Joshu\\LaptopBackups\\2026-10-07\\20261016-164840\\payload.zip",
+      "bytes": 35205891631,
+      "capture_errors": [
+        {
+          "path": "\\\\?\\C:\\Users\\Joshu\\.codex\\app-server-control\\app-server-control.sock",
+          "error": "[Errno 22] Invalid argument: '\\\\\\\\?\\\\C:\\\\Users\\\\Joshu\\\\.codex\\\\app-server-control\\\\app-server-control.sock'"
+        },
+        {
+          "path": "\\\\?\\C:\\Users\\Joshu\\.codex\\app-server-daemon\\daemon-updater.sock",
+          "error": "[Errno 22] Invalid argument: '\\\\\\\\?\\\\C:\\\\Users\\\\Joshu\\\\.codex\\\\app-server-daemon\\\\daemon-updater.sock'"
+        },
+        {
+          "path": "\\\\?\\C:\\Users\\Joshu\\.codex\\sessions\\2026\\10\\16\\rollout-2026-10-16T06-28-28-01a14441-8ac2-70c3-9a6a-7f1f0af7b851.jsonl",
+          "error": "changed during capture; retry next run"
+        }
+      ],
+      "metadata_and_snapshots_retained": true,
+      "warning": "Deletes historical archive revisions; not authorized yet"
+    },
+    {
+      "generation": "20261016-190001",
+      "delete_file_if_approved": "C:\\Users\\Joshu\\LaptopBackups\\2026-10-07\\20261016-190001\\payload.zip",
+      "bytes": 35794367308,
+      "capture_errors": [
+        {
+          "path": "\\\\?\\C:\\Users\\Joshu\\dev\\ai-os\\.git\\objects\\pack\\pack-b2401beea41d59e2c5450f96e3a681bc8ba32b8d.pack",
+          "error": "changed during capture; retry next run"
+        },
+        {
+          "path": "\\\\?\\C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu\\.git\\objects\\pack\\pack-17f5696dacee7543903ed16b02eebdae8edd2294.pack",
+          "error": "changed during capture; retry next run"
+        },
+        {
+          "path": "\\\\?\\C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu\\.git\\objects\\pack\\pack-c47272f91ccba362813464aeb4b56576fb65a28e.pack",
+          "error": "changed during capture; retry next run"
+        },
+        {
+          "path": "\\\\?\\C:\\Users\\Joshu\\.codex\\app-server-control\\app-server-control.sock",
+          "error": "[Errno 22] Invalid argument: '\\\\\\\\?\\\\C:\\\\Users\\\\Joshu\\\\.codex\\\\app-server-control\\\\app-server-control.sock'"
+        },
+        {
+          "path": "\\\\?\\C:\\Users\\Joshu\\.codex\\app-server-daemon\\daemon-updater.sock",
+          "error": "[Errno 22] Invalid argument: '\\\\\\\\?\\\\C:\\\\Users\\\\Joshu\\\\.codex\\\\app-server-daemon\\\\daemon-updater.sock'"
+        }
+      ],
+      "metadata_and_snapshots_retained": true,
+      "warning": "Deletes historical archive revisions; not authorized yet"
+    },
+    {
+      "generation": "20261017-190011",
+      "delete_file_if_approved": "C:\\Users\\Joshu\\LaptopBackups\\2026-10-07\\20261017-190011\\payload.zip",
+      "bytes": 36874573344,
+      "capture_errors": [
+        {
+          "path": "\\\\?\\C:\\Users\\Joshu\\.codex\\app-server-control\\app-server-control.sock",
+          "error": "[Errno 22] Invalid argument: '\\\\\\\\?\\\\C:\\\\Users\\\\Joshu\\\\.codex\\\\app-server-control\\\\app-server-control.sock'"
+        },
+        {
+          "path": "\\\\?\\C:\\Users\\Joshu\\.codex\\app-server-daemon\\daemon-updater.sock",
+          "error": "[Errno 22] Invalid argument: '\\\\\\\\?\\\\C:\\\\Users\\\\Joshu\\\\.codex\\\\app-server-daemon\\\\daemon-updater.sock'"
+        }
+      ],
+      "metadata_and_snapshots_retained": true,
+      "warning": "Deletes historical archive revisions; not authorized yet"
+    },
+    {
+      "generation": "20261018-190002",
+      "delete_file_if_approved": "C:\\Users\\Joshu\\LaptopBackups\\2026-10-07\\20261018-190002\\payload.zip",
+      "bytes": 37560220737,
+      "capture_errors": [
+        {
+          "path": "\\\\?\\C:\\Users\\Joshu\\.codex\\thread_history_1.sqlite",
+          "error": "SQLite snapshot exceeded 300 seconds; retry later"
+        },
+        {
+          "path": "\\\\?\\C:\\Users\\Joshu\\.codex\\app-server-control\\app-server-control.sock",
+          "error": "[Errno 22] Invalid argument: '\\\\\\\\?\\\\C:\\\\Users\\\\Joshu\\\\.codex\\\\app-server-control\\\\app-server-control.sock'"
+        },
+        {
+          "path": "\\\\?\\C:\\Users\\Joshu\\.codex\\app-server-daemon\\daemon-updater.sock",
+          "error": "[Errno 22] Invalid argument: '\\\\\\\\?\\\\C:\\\\Users\\\\Joshu\\\\.codex\\\\app-server-daemon\\\\daemon-updater.sock'"
+        }
+      ],
+      "metadata_and_snapshots_retained": true,
+      "warning": "Deletes historical archive revisions; not authorized yet"
+    },
+    {
+      "generation": "20261019-201032",
+      "delete_file_if_approved": "C:\\Users\\Joshu\\LaptopBackups\\2026-10-07\\20261019-201032\\payload.zip",
+      "bytes": 45246969812,
+      "capture_errors": [
+        {
+          "path": "\\\\?\\C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu\\.git\\objects\\pack\\pack-c47272f91ccba362813464aeb4b56576fb65a28e.pack",
+          "error": "changed during capture; retry next run"
+        },
+        {
+          "path": "\\\\?\\C:\\Users\\Joshu\\.codex\\app-server-control\\app-server-control.sock",
+          "error": "[Errno 22] Invalid argument: '\\\\\\\\?\\\\C:\\\\Users\\\\Joshu\\\\.codex\\\\app-server-control\\\\app-server-control.sock'"
+        },
+        {
+          "path": "\\\\?\\C:\\Users\\Joshu\\.codex\\app-server-daemon\\daemon-updater.sock",
+          "error": "[Errno 22] Invalid argument: '\\\\\\\\?\\\\C:\\\\Users\\\\Joshu\\\\.codex\\\\app-server-daemon\\\\daemon-updater.sock'"
+        }
+      ],
+      "metadata_and_snapshots_retained": true,
+      "warning": "Deletes historical archive revisions; not authorized yet"
+    },
+    {
+      "generation": "20261020-190002",
+      "delete_file_if_approved": "C:\\Users\\Joshu\\LaptopBackups\\2026-10-07\\20261020-190002\\payload.zip",
+      "bytes": 47071602479,
+      "capture_errors": [
+        {
+          "path": "\\\\?\\C:\\Users\\Joshu\\.codex\\app-server-control\\app-server-control.sock",
+          "error": "[Errno 22] Invalid argument: '\\\\\\\\?\\\\C:\\\\Users\\\\Joshu\\\\.codex\\\\app-server-control\\\\app-server-control.sock'"
+        },
+        {
+          "path": "\\\\?\\C:\\Users\\Joshu\\.codex\\app-server-daemon\\daemon-updater.sock",
+          "error": "[Errno 22] Invalid argument: '\\\\\\\\?\\\\C:\\\\Users\\\\Joshu\\\\.codex\\\\app-server-daemon\\\\daemon-updater.sock'"
+        }
+      ],
+      "metadata_and_snapshots_retained": true,
+      "warning": "Deletes historical archive revisions; not authorized yet"
+    },
+    {
+      "generation": "20261021-190002",
+      "delete_file_if_approved": "C:\\Users\\Joshu\\LaptopBackups\\2026-10-07\\20261021-190002\\payload.zip",
+      "bytes": 48240161191,
+      "capture_errors": [
+        {
+          "path": "\\\\?\\C:\\Users\\Joshu\\.codex\\app-server-control\\app-server-control.sock",
+          "error": "[Errno 22] Invalid argument: '\\\\\\\\?\\\\C:\\\\Users\\\\Joshu\\\\.codex\\\\app-server-control\\\\app-server-control.sock'"
+        },
+        {
+          "path": "\\\\?\\C:\\Users\\Joshu\\.codex\\app-server-daemon\\daemon-updater.sock",
+          "error": "[Errno 22] Invalid argument: '\\\\\\\\?\\\\C:\\\\Users\\\\Joshu\\\\.codex\\\\app-server-daemon\\\\daemon-updater.sock'"
+        }
+      ],
+      "metadata_and_snapshots_retained": true,
+      "warning": "Deletes historical archive revisions; not authorized yet"
+    },
+    {
+      "generation": "20261023-032455",
+      "delete_file_if_approved": "C:\\Users\\Joshu\\LaptopBackups\\2026-10-07\\20261023-032455\\payload.zip",
+      "bytes": 16518782357,
+      "capture_errors": [
+        {
+          "path": "\\\\?\\C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu\\.git\\objects\\pack\\pack-17f5696dacee7543903ed16b02eebdae8edd2294.pack",
+          "error": "changed during capture; retry next run"
+        }
+      ],
+      "metadata_and_snapshots_retained": true,
+      "warning": "Deletes historical archive revisions; not authorized yet"
+    }
+  ],
+  "total_bytes": 361362220097,
+  "exclusions": [
+    "complete generations",
+    "already receipted generations",
+    "unindexed or opaque original captures",
+    "all metadata",
+    "all SQLite snapshots"
+  ],
+  "protected_fresh_dependency_closure": [
+    "20261007-113653",
+    "20261007-121909",
+    "20261007-122827",
+    "20261007-122847",
+    "20261007-130257",
+    "20261007-130504",
+    "20261007-153457",
+    "20261007-153621",
+    "20261007-190001",
+    "20261007-190800",
+    "20261008-035307",
+    "20261008-040120",
+    "20261008-190002",
+    "20261008-190523",
+    "20261009-091256",
+    "20261009-092109",
+    "20261009-202545",
+    "20261010-190654",
+    "20261011-051914",
+    "20261011-191008",
+    "20261012-191231",
+    "20261013-040920",
+    "20261013-055313",
+    "20261013-214340",
+    "20261014-204308",
+    "20261015-200209",
+    "20261015-233335",
+    "20261016-174622",
+    "20261016-194844",
+    "20261017-201849",
+    "20261018-220221",
+    "20261019-212335",
+    "20261020-201648",
+    "20261021-203152",
+    "20261023-035115",
+    "20261023-174504",
+    "20261023-203256",
+    "20261024-211629",
+    "20261024-213612"
+  ],
+  "blocked_required_failed_history": []
+}

@@ -1,0 +1,73 @@
+
+> check
+> npx --yes hyperframes@0.8.149 check
+
+◆  Checking whole-group-negation
+[hyperframes] browserGpuMode probe → hardware (WebGL renderer vendor="Google Inc. (AMD)" renderer="ANGLE (AMD, AMD Radeon (TM) Graphics (0x000015E7) Direct3D11 vs_5_0 ps_5_0, D3D11)")
+
+Lint
+  ⚠ studio_missing_editable_id: <div class="bg" data-start="0" data-track-index="0"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.
+    C:\Users\Joshu\dev\ai-os-projects\conditional-and-or-video-20261019\whole-group-negation\index.html [data-composition-id] t=0s
+    Fix: Add a stable, human-readable id such as id="hero-title" or id="scene-1-card" to every timeline-visible element you want agents or Studio to edit.
+  ⚠ studio_missing_editable_id: <div class="chrome" data-start="0" data-track-index="1"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.
+    C:\Users\Joshu\dev\ai-os-projects\conditional-and-or-video-20261019\whole-group-negation\index.html [data-composition-id] t=0s
+    Fix: Add a stable, human-readable id such as id="hero-title" or id="scene-1-card" to every timeline-visible element you want agents or Studio to edit.
+  ⚠ nested_structure_needs_subcomposition: <div> is a timeline element that contains nested <div id="orbA">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.
+    C:\Users\Joshu\dev\ai-os-projects\conditional-and-or-video-20261019\whole-group-negation\index.html [data-composition-id] t=0s
+    Fix: Move <div> and its contents into a sub-composition file and mount it with data-composition-src.
+  ⚠ nested_structure_needs_subcomposition: <div> is a timeline element that contains nested <div id="kicker">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.
+    C:\Users\Joshu\dev\ai-os-projects\conditional-and-or-video-20261019\whole-group-negation\index.html [data-composition-id] t=0s
+    Fix: Move <div> and its contents into a sub-composition file and mount it with data-composition-src.
+  ⚠ nested_structure_needs_subcomposition: <div id="s-fails"> is a timeline element that contains nested <div id="i-fails">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.
+    C:\Users\Joshu\dev\ai-os-projects\conditional-and-or-video-20261019\whole-group-negation\index.html #s-fails t=0s
+    Fix: Move <div id="s-fails"> and its contents into a sub-composition file and mount it with data-composition-src.
+  ⚠ nested_structure_needs_subcomposition: <div id="s-or"> is a timeline element that contains nested <div id="i-or">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.
+    C:\Users\Joshu\dev\ai-os-projects\conditional-and-or-video-20261019\whole-group-negation\index.html #s-or t=0s
+    Fix: Move <div id="s-or"> and its contents into a sub-composition file and mount it with data-composition-src.
+  ⚠ nested_structure_needs_subcomposition: <div id="s-flip"> is a timeline element that contains nested <div id="i-flip">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.
+    C:\Users\Joshu\dev\ai-os-projects\conditional-and-or-video-20261019\whole-group-negation\index.html #s-flip t=0s
+    Fix: Move <div id="s-flip"> and its contents into a sub-composition file and mount it with data-composition-src.
+  ⚠ nested_structure_needs_subcomposition: <div id="s-double"> is a timeline element that contains nested <div id="i-double">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.
+    C:\Users\Joshu\dev\ai-os-projects\conditional-and-or-video-20261019\whole-group-negation\index.html #s-double t=0s
+    Fix: Move <div id="s-double"> and its contents into a sub-composition file and mount it with data-composition-src.
+  ⚠ nested_structure_needs_subcomposition: <div id="s-close"> is a timeline element that contains nested <div id="i-close">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.
+    C:\Users\Joshu\dev\ai-os-projects\conditional-and-or-video-20261019\whole-group-negation\index.html #s-close t=0s
+    Fix: Move <div id="s-close"> and its contents into a sub-composition file and mount it with data-composition-src.
+  0 error(s), 9 warning(s), 0 info(s)
+
+Runtime
+  ◇ 0 errors, 0 warnings
+
+Layout
+  ⚠ t=48.712, 48.836s content_overlap #i-double > div:nth-of-type(2) > div:nth-of-type(1) inside #i-double > div:nth-of-type(6) "Lifeguard on duty" — Two text blocks overlap and may render unreadable.
+        Fix: Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.
+  ℹ t=3.518, 10.554, 17.59, 24.626, 31.663, 38.699, 45.735, 52.771, 59.807s panel_out_of_canvas #orbA inside #root overflowed left 138.8px, top 159.32px — Painted panel extends outside the composition canvas.
+        Fix: Move the panel inward, or mark intentional off-canvas animation with data-layout-allow-overflow.
+  ℹ t=3.518, 10.554, 17.59, 24.626, 31.663, 38.699, 45.735, 52.771, 59.807s panel_out_of_canvas #orbT inside #root overflowed right 178.65px, bottom 219.17px — Painted panel extends outside the composition canvas.
+        Fix: Move the panel inward, or mark intentional off-canvas animation with data-layout-allow-overflow.
+  ℹ t=5.121s content_overlap #i-fails > div:nth-of-type(9) inside #i-fails > div:nth-of-type(10) "A PARADE FLOAT" — Two text blocks overlap and may render unreadable.
+        Fix: Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.
+  ℹ t=21.233s content_overlap #i-or > div:nth-of-type(10) inside #i-or > div:nth-of-type(11) "EVERY MEMBER IS MISSING" — Two text blocks overlap and may render unreadable.
+        Fix: Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.
+  ℹ t=29.227s content_overlap #i-flip > div:nth-of-type(1) > div:nth-of-type(1) inside #i-flip > div:nth-of-type(6) "Brakes pass" — Two text blocks overlap and may render unreadable.
+        Fix: Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.
+  ℹ t=32.724s content_overlap #i-flip > div:nth-of-type(11) inside #i-flip > div:nth-of-type(12) "STEP 2 · NOT ON EVERY MEMBER" — Two text blocks overlap and may render unreadable.
+        Fix: Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.
+  ℹ t=33.224s content_overlap #i-flip > div:nth-of-type(3) inside #i-flip > div:nth-of-type(9) "AND" — Two text blocks overlap and may render unreadable.
+        Fix: Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.
+  ℹ t=52.708s content_overlap #i-double > div:nth-of-type(4) inside #i-double > div:nth-of-type(9) "OR" — Two text blocks overlap and may render unreadable.
+        Fix: Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.
+  ℹ t=52.771s text_occluded #i-double > div:nth-of-type(4) inside #i-double > div:nth-of-type(9) "OR" — Text is hidden beneath an opaque element.
+        Fix: Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.
+  0 error(s), 1 warning(s), 9 info(s)
+
+Motion
+  ◇ 0 errors, 0 warnings
+
+Contrast
+  ◇ 27/27 text checks pass WCAG AA
+
+Snapshots
+  ◇ disabled
+
+◇  Check passed

@@ -21,10 +21,10 @@ in a real browser, not a plain HTTP fetch.
 | [[students/david-salgado/7sage\|david-salgado]] | `usr_02yzfmW4LeOYZ1FdDHEC6W` | davidsalgado0722@gmail.com |
 | [[students/favour/7sage\|favour]] | `usr_032v95nGJp05FDF9fuoLL9` | favourx23@gmail.com |
 | [[students/fernande-charleus/7sage\|fernande-charleus]] | `usr_032EUOf61sdLQDd1ldqK4j` | fernandecharleus@gmail.com |
-| [[students/lexi/7sage\|lexi]] (FORMER) | `usr_033UyJoXoMzuGp0LxEvWMh` | lexiadler@gmail.com |
+| [lexi](../students/non-students/lexi/7sage.md) (FORMER) | `usr_033UyJoXoMzuGp0LxEvWMh` | lexiadler@gmail.com |
 | [[students/ore/7sage\|ore]] | `usr_030fUgpZxTpFiclgl63K81` | oreoluwavjames@gmail.com |
 | [[students/sofia/7sage\|sofia]] | `usr_031dHpQ3aQrsJM3i9Ys5wB` | sofiaminassian@gmail.com |
-| [[students/thaniuska-vivas/7sage\|thaniuska-vivas]] (FORMER) | `usr_02zzpwAcYYdQjj6UiMSAog` | thanivivas@gmail.com |
+| [thaniuska-vivas](../students/non-students/thaniuska-vivas/7sage.md) (FORMER) | `usr_02zzpwAcYYdQjj6UiMSAog` | thanivivas@gmail.com |
 | [[students/vinay-kalva/7sage\|vinay-kalva]] | `usr_033Qu2yTr4I5vkERVDyPFg` | workemail.vinay@gmail.com |
 
 Review URL for any of them: `https://7sage.com/u/<user id>/review`

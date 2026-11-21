@@ -1,0 +1,1 @@
+F5 accepted: use gap-1 max-sm:gap-3 on inner Restore/toggle wrapper. Plan corrects the inaccurate grid-gap claim and adds pointer-boundary checks at 320px. No other changes.

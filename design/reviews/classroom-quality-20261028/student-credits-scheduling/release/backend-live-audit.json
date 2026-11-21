@@ -1,0 +1,25 @@
+{
+  "at": "2026-10-29T00:11:35.524Z",
+  "rosterBefore": 40,
+  "rosterAfter": 40,
+  "rosterIdentitiesUnchanged": true,
+  "passCount": 34,
+  "balancesAndStatusUnchanged": true,
+  "redemptionCount": 103,
+  "bookingHistoryUnchanged": true,
+  "historyIdentityBound": true,
+  "historyContainsExpected": true,
+  "historyExactOperationOnly": true,
+  "wrongStudentDenied": true,
+  "wrongStudentStatus": 500,
+  "unauthenticated": [
+    {
+      "function": "admin-manage-users",
+      "status": 401
+    },
+    {
+      "function": "booking-pass-admin",
+      "status": 401
+    }
+  ]
+}

@@ -1,0 +1,230 @@
+{
+  "status": "failed",
+  "mode": "inspect",
+  "provider": "claude",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "claude",
+    "builder": "codex",
+    "inspector": "claude"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-conditional-bootcamp",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os\\brainstorms\\2026-09-30-conditional-curriculum\\2026-10-03-astra-opening-spec.md",
+  "plan_sha256": "1d01c8316b859dcc8b215a5ea7328b32223db22ca5640bbf9dbdecefaab0aa22",
+  "requested_model": null,
+  "requested_effort": null,
+  "base": "67230dfae74a1466515d570fcb7b8a96ab5cb9c5",
+  "snapshot": {
+    "base": "67230dfae74a1466515d570fcb7b8a96ab5cb9c5",
+    "files": [
+      {
+        "path": "public/data/_bank.generated.json",
+        "kind": "file",
+        "sha256": "69f34f6dc7c1c2772d0fc212851873ca92a6c0a40e15af83e97b56575e004f75"
+      },
+      {
+        "path": "public/data/finder-address-index.json",
+        "kind": "file",
+        "sha256": "3f8216dacc9a968b6e4e19da90472b8591b32204f912dcf97ed87459b5406007"
+      },
+      {
+        "path": "src/App.tsx",
+        "kind": "file",
+        "sha256": "eef49221a7a4b4f3496c4979abb11355dfd437fd57df109c261c202de3965260"
+      },
+      {
+        "path": "src/bootcamps/conditionals/assignments.test.ts",
+        "kind": "file",
+        "sha256": "ec97ae7e4b36cb39855d048d83a2431d93a7f4e7b2eb2f91a9a5001e5bc1ec2f"
+      },
+      {
+        "path": "src/bootcamps/conditionals/assignments.ts",
+        "kind": "file",
+        "sha256": "5e1963c6cf4c1a9438164cf3c27215133ed17f0db460570be0882704c88489dd"
+      },
+      {
+        "path": "src/bootcamps/conditionals/components/ConditionalLessonNote.test.tsx",
+        "kind": "file",
+        "sha256": "2e72358fd103e53508cbfd4f02f52c0f032217aee1b3d7456588aa4386a83871"
+      },
+      {
+        "path": "src/bootcamps/conditionals/components/ConditionalLessonNote.tsx",
+        "kind": "file",
+        "sha256": "55c7be469bfef6d60c1e0c90b15d83464967a3604e16d50da058bf2d50a170b2"
+      },
+      {
+        "path": "src/bootcamps/conditionals/components/ConditionalOpeningLesson.review.test.tsx",
+        "kind": "file",
+        "sha256": "9cdd9a6e3b2dbce228644b696e8887d19e845f83d2ea463673f7db497bd52b9e"
+      },
+      {
+        "path": "src/bootcamps/conditionals/components/ConditionalOpeningLesson.tsx",
+        "kind": "file",
+        "sha256": "09d56267162d6773b08c1d2e9f8e4b3d6fc344380cb42fdc4832a02d216f7ddb"
+      },
+      {
+        "path": "src/bootcamps/conditionals/components/ConditionalOpeningMedia.tsx",
+        "kind": "file",
+        "sha256": "459521bcc900015b437f76195da81de5bb6ab74d72a09acef242990916531c38"
+      },
+      {
+        "path": "src/bootcamps/conditionals/components/ConditionalReferenceSequence.test.tsx",
+        "kind": "file",
+        "sha256": "441a266b7ccfc9cdee42e45056c161aa784dc18efc7c56702df40f52aa704a37"
+      },
+      {
+        "path": "src/bootcamps/conditionals/components/ConditionalReferenceSequence.tsx",
+        "kind": "file",
+        "sha256": "2137794d99cf1e2887c83e0534da3b9580696c50d2ee92b9be3f9bffaef1cde5"
+      },
+      {
+        "path": "src/bootcamps/conditionals/components/CounterexampleLab.tsx",
+        "kind": "file",
+        "sha256": "7f4dfdc69777b75466b4e95839a0c3eaa2a4b55dc16dfd8539af5f886171161c"
+      },
+      {
+        "path": "src/bootcamps/conditionals/components/LessonPages.test.tsx",
+        "kind": "file",
+        "sha256": "273009fb631a7022c4f33316832272b97e6ee01743de1f8f0497a28937b5b83a"
+      },
+      {
+        "path": "src/bootcamps/conditionals/components/LessonPages.tsx",
+        "kind": "file",
+        "sha256": "a8330328ec87e40bc2f28a25d8a750254cdfa84af3339f73490a1920a937b500"
+      },
+      {
+        "path": "src/bootcamps/conditionals/components/StudyDeck.tsx",
+        "kind": "file",
+        "sha256": "b22fc8f835172832c4099fbe9584b7da341af33a31b29aed1295da739c2fee9b"
+      },
+      {
+        "path": "src/bootcamps/conditionals/components/lesson-pages.css",
+        "kind": "file",
+        "sha256": "b53de48648e6d4ff06c4740056e3a2f3631fc74b29e9ce506ac34891e820d0e8"
+      },
+      {
+        "path": "src/bootcamps/conditionals/components/opening-polish.css",
+        "kind": "file",
+        "sha256": "781d6c9cd98c88f013029a129b7147bf3780c2998736d2f12f7bcc5592c9f82e"
+      },
+      {
+        "path": "src/bootcamps/conditionals/components/opening.css",
+        "kind": "file",
+        "sha256": "d1c3f838f9337a2682510ecf98f3c32db59be02b123c49fd3d6138d5d4b3d68b"
+      },
+      {
+        "path": "src/bootcamps/conditionals/components/reference-sequence.css",
+        "kind": "file",
+        "sha256": "ed0bc7929c0d48a483ffe9f93684bd59b298221eb6fbc9221636a4f5be92e778"
+      },
+      {
+        "path": "src/bootcamps/conditionals/content/foundations.source.ts",
+        "kind": "file",
+        "sha256": "8157785294b3c902382db1cf0d66d2f1a3df74a32e7e0f612eddffafce56eaa0"
+      },
+      {
+        "path": "src/bootcamps/conditionals/content/indicatorFlashcards.ts",
+        "kind": "file",
+        "sha256": "7771abc878559b26216b2ee7c30ce0c66ade402954504df45fd7e4ba61a0c6c6"
+      },
+      {
+        "path": "src/bootcamps/conditionals/content/legacyQuestions.ts",
+        "kind": "file",
+        "sha256": "ad91b8a4a6fd59acd5c5d9b72ab3c9bc00e54d64475a2bcb18891b3ad54b04b9"
+      },
+      {
+        "path": "src/bootcamps/conditionals/content/opening-coverage.test.ts",
+        "kind": "file",
+        "sha256": "626db89fc67bb6d76eb36548cbc4f618f7522afad8d9ae6d1fd7aee05bfbf540"
+      },
+      {
+        "path": "src/bootcamps/conditionals/data/curriculum.generated.json",
+        "kind": "file",
+        "sha256": "4b2afd7a7a9b4ebe17359131c2eb4873770e1f4e8c6ffce463bc7730d863868b"
+      },
+      {
+        "path": "src/bootcamps/conditionals/openingRevision.ts",
+        "kind": "file",
+        "sha256": "4a005ecdca298f1fe1a42319d63eaee51cc9a8679324e8916f981d194de52e92"
+      },
+      {
+        "path": "src/bootcamps/conditionals/progress.test.ts",
+        "kind": "file",
+        "sha256": "e820957bb9e7d423ff7355b81709cb7ad6cf997e3401e8b09cbb2f1660297144"
+      },
+      {
+        "path": "src/bootcamps/conditionals/progress.ts",
+        "kind": "file",
+        "sha256": "e438914de88dd3166e0758809b5112856ffe32d67813263ef54285a199c0ad7b"
+      },
+      {
+        "path": "src/bootcamps/conditionals/routes.test.tsx",
+        "kind": "file",
+        "sha256": "bedffcfedabf8a47ceeb92c0d3a164eea0703f977ce7c58c8019e9f7c0739f7f"
+      },
+      {
+        "path": "src/bootcamps/conditionals/routes.tsx",
+        "kind": "file",
+        "sha256": "434a55cfe8dfc785cfd4cea5b7dd459467102c05aa7380f17976eeb70a45ee2e"
+      },
+      {
+        "path": "src/bootcamps/conditionals/useConditionalAssignments.ts",
+        "kind": "file",
+        "sha256": "a8988f5701f5f524e3c6373798c3a0bc0c6511ecec5a95183c652f61e308bd74"
+      },
+      {
+        "path": "src/bootcamps/conditionals/useConditionalProgress.test.tsx",
+        "kind": "file",
+        "sha256": "e88c4b5021940330559d103990e3336e8f4ce2c2b2d72d135e89a03900331346"
+      },
+      {
+        "path": "src/components/teacher/ConditionalAssignmentFields.test.tsx",
+        "kind": "file",
+        "sha256": "10c903b7a3533499971e332f577dbd62e0c015bb7300ad51303ad9dcae4a9928"
+      },
+      {
+        "path": "src/components/teacher/ConditionalAssignmentFields.tsx",
+        "kind": "file",
+        "sha256": "9975d3cd7bbf3def762ac0acceee66e58579f9923f804829a2ba9a440d6c8e18"
+      },
+      {
+        "path": "src/components/ui/dynamic-island-toc.inline.test.tsx",
+        "kind": "file",
+        "sha256": "fe711dbe2cd606b3efe19d41bdddd0c5243b4ac0bb0068b08c826a7b2ff4f111"
+      },
+      {
+        "path": "src/components/ui/dynamic-island-toc.tsx",
+        "kind": "file",
+        "sha256": "c3192146db83a500db480512ffa294cc80fe2aed8f637c81225fe3b4cb0fbf3f"
+      },
+      {
+        "path": "src/dev/ConditionalOpeningPreview.tsx",
+        "kind": "file",
+        "sha256": "bdc5b3507ee3e1d99635b2d926312a139578481966ddabc21451a7781779dc4c"
+      },
+      {
+        "path": "src/lib/conditionalBootcampAssignment.test.ts",
+        "kind": "file",
+        "sha256": "d5e5b20e1c2765a1a32c41edb4458fd971789bcb3bd4d8674c87a1bc4c322ee6"
+      },
+      {
+        "path": "src/lib/conditionalBootcampAssignment.ts",
+        "kind": "file",
+        "sha256": "9b9d909aa12cdbeded57577f499ba0bada38ab82b29c96b27c99c55d4e7d8dc8"
+      },
+      {
+        "path": "supabase/functions/mcp/index.ts",
+        "kind": "file",
+        "sha256": "f731b29c4fcd1517dc99276a998944494a86720e0cd103061e1799d149c7d32c"
+      }
+    ],
+    "diff_sha256": "df936344824a66fcf0827188cdaf2a05f207264d659c6962a0884e352eef013a",
+    "sha256": "58352449abea9956099e01cfe2ac2ef7f5875619830d87b9ff52780b8123b567"
+  },
+  "previous": null,
+  "started_at": 1791028357.721302,
+  "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\brainstorms\\2026-09-30-conditional-curriculum\\claude-astra-opening-inspection\\claudex-fa7barsq",
+  "error": "Cannot safely launch C:\\Users\\Joshu\\AppData\\Roaming\\npm\\claude.CMD. Put the native CLI executable on PATH.",
+  "elapsed_seconds": 0.26
+}

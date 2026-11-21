@@ -1,0 +1,434 @@
+
+[1m[46m RUN [49m[22m [36mv3.2.7 [39m[90mC:/Users/Joshu/dev/ai-os-projects/lsatu-my-work-20261026[39m
+
+[90mstderr[2m | src/pages/AcademyMainhub.section.test.tsx[2m > [22m[2mAcademyMainhub — the LR/RC section switch[2m > [22m[2mreturns a question preview to its Practice route instead of the scored drill destination
+[22m[39m[useClassId] no students row for user; falling back to user.id { userId: [32m'student-1'[39m, email: [32m'student@example.com'[39m }
+Warning: An update to PracticeInsightStage inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at PracticeInsightStage (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\mainhub\PracticeInsightStage.tsx:33:37)
+    at section
+    at section
+    at div
+    at div
+    at AcademyMainhub (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\pages\AcademyMainhub.tsx:338:31)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+    at QueryClientProvider (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@tanstack/react-query/build/modern/QueryClientProvider.js:41:32)
+
+[90mstderr[2m | src/pages/AcademyMainhub.section.test.tsx[2m > [22m[2mAcademyMainhub — the LR/RC section switch[2m > [22m[2mretains the sidebar origin after removing the finder launch parameters
+[22m[39m[useClassId] no students row for user; falling back to user.id { userId: [32m'student-1'[39m, email: [32m'student@example.com'[39m }
+Warning: An update to PracticeInsightStage inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at PracticeInsightStage (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\mainhub\PracticeInsightStage.tsx:33:37)
+    at section
+    at section
+    at div
+    at div
+    at AcademyMainhub (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\pages\AcademyMainhub.tsx:338:31)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+    at QueryClientProvider (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@tanstack/react-query/build/modern/QueryClientProvider.js:41:32)
+
+[90mstderr[2m | src/pages/AcademyMainhub.section.test.tsx[2m > [22m[2mAcademyMainhub — the LR/RC section switch[2m > [22m[2mopens on LR when nothing says otherwise
+[22m[39m[useClassId] no students row for user; falling back to user.id { userId: [32m'student-1'[39m, email: [32m'student@example.com'[39m }
+Warning: An update to PracticeInsightStage inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at PracticeInsightStage (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\mainhub\PracticeInsightStage.tsx:33:37)
+    at section
+    at section
+    at div
+    at div
+    at AcademyMainhub (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\pages\AcademyMainhub.tsx:338:31)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+    at QueryClientProvider (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@tanstack/react-query/build/modern/QueryClientProvider.js:41:32)
+
+[90mstderr[2m | src/pages/AcademyMainhub.section.test.tsx[2m > [22m[2mAcademyMainhub — the LR/RC section switch[2m > [22m[2mdoes not carry the RC builder mode into LR
+[22m[39m[useClassId] no students row for user; falling back to user.id { userId: [32m'student-1'[39m, email: [32m'student@example.com'[39m }
+Warning: An update to PracticeInsightStage inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at PracticeInsightStage (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\mainhub\PracticeInsightStage.tsx:33:37)
+    at section
+    at section
+    at div
+    at div
+    at AcademyMainhub (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\pages\AcademyMainhub.tsx:338:31)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+    at QueryClientProvider (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@tanstack/react-query/build/modern/QueryClientProvider.js:41:32)
+
+[90mstderr[2m | src/pages/AcademyMainhub.section.test.tsx[2m > [22m[2mAcademyMainhub — the LR/RC section switch[2m > [22m[2mreturns through RC landing to the original LR page after closing setup
+[22m[39m[useClassId] no students row for user; falling back to user.id { userId: [32m'student-1'[39m, email: [32m'student@example.com'[39m }
+Warning: An update to PracticeInsightStage inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at PracticeInsightStage (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\mainhub\PracticeInsightStage.tsx:33:37)
+    at section
+    at section
+    at div
+    at div
+    at AcademyMainhub (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\pages\AcademyMainhub.tsx:338:31)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+    at QueryClientProvider (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@tanstack/react-query/build/modern/QueryClientProvider.js:41:32)
+
+[90mstderr[2m | src/pages/AcademyMainhub.section.test.tsx[2m > [22m[2mAcademyMainhub — the LR/RC section switch[2m > [22m[2mtreats an unrecognised section as LR rather than as an error
+[22m[39m[useClassId] no students row for user; falling back to user.id { userId: [32m'student-1'[39m, email: [32m'student@example.com'[39m }
+Warning: An update to PracticeInsightStage inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at PracticeInsightStage (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\mainhub\PracticeInsightStage.tsx:33:37)
+    at section
+    at section
+    at div
+    at div
+    at AcademyMainhub (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\pages\AcademyMainhub.tsx:338:31)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+    at QueryClientProvider (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@tanstack/react-query/build/modern/QueryClientProvider.js:41:32)
+
+[90mstderr[2m | src/pages/AcademyMainhub.section.test.tsx[2m > [22m[2mAcademyMainhub — the LR/RC section switch[2m > [22m[2mwrites the section to the URL when the switch is thrown
+[22m[39m[useClassId] no students row for user; falling back to user.id { userId: [32m'student-1'[39m, email: [32m'student@example.com'[39m }
+Warning: An update to PracticeInsightStage inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at PracticeInsightStage (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\mainhub\PracticeInsightStage.tsx:33:37)
+    at section
+    at section
+    at div
+    at div
+    at AcademyMainhub (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\pages\AcademyMainhub.tsx:338:31)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+    at QueryClientProvider (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@tanstack/react-query/build/modern/QueryClientProvider.js:41:32)
+
+[90mstderr[2m | src/pages/AcademyMainhub.section.test.tsx[2m > [22m[2mAcademyMainhub — the LR/RC section switch[2m > [22m[2mlets an explicit ?section=lr outrank the remembered RC
+[22m[39m[useClassId] no students row for user; falling back to user.id { userId: [32m'student-1'[39m, email: [32m'student@example.com'[39m }
+Warning: An update to PracticeInsightStage inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at PracticeInsightStage (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\mainhub\PracticeInsightStage.tsx:33:37)
+    at section
+    at section
+    at div
+    at div
+    at AcademyMainhub (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\pages\AcademyMainhub.tsx:338:31)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+    at QueryClientProvider (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@tanstack/react-query/build/modern/QueryClientProvider.js:41:32)
+
+[90mstderr[2m | src/pages/AcademyMainhub.section.test.tsx[2m > [22m[2mAcademyMainhub — the LR/RC section switch[2m > [22m[2mBack after a toggle returns to the section you came from
+[22m[39m[useClassId] no students row for user; falling back to user.id { userId: [32m'student-1'[39m, email: [32m'student@example.com'[39m }
+Warning: An update to PracticeInsightStage inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at PracticeInsightStage (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\mainhub\PracticeInsightStage.tsx:33:37)
+    at section
+    at section
+    at div
+    at div
+    at AcademyMainhub (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\pages\AcademyMainhub.tsx:338:31)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+    at QueryClientProvider (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@tanstack/react-query/build/modern/QueryClientProvider.js:41:32)
+
+[90mstderr[2m | src/pages/AcademyMainhub.section.test.tsx[2m > [22m[2mAcademyMainhub — the LR/RC section switch[2m > [22m[2mmoves between the two options on the arrow keys
+[22m[39m[useClassId] no students row for user; falling back to user.id { userId: [32m'student-1'[39m, email: [32m'student@example.com'[39m }
+Warning: An update to PracticeInsightStage inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at PracticeInsightStage (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\mainhub\PracticeInsightStage.tsx:33:37)
+    at section
+    at section
+    at div
+    at div
+    at AcademyMainhub (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\pages\AcademyMainhub.tsx:338:31)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+    at QueryClientProvider (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@tanstack/react-query/build/modern/QueryClientProvider.js:41:32)
+
+[90mstderr[2m | src/pages/AcademyMainhub.section.test.tsx[2m > [22m[2mAcademyMainhub — the LR/RC section switch[2m > [22m[2mdiscards an RC drill in progress only after a confirmation, and keeps LR cards without the button
+[22m[39mWarning: An update to AcademyMainhub inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at AcademyMainhub (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\pages\AcademyMainhub.tsx:338:31)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+    at QueryClientProvider (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@tanstack/react-query/build/modern/QueryClientProvider.js:41:32)
+Warning: An update to AcademyMainhub inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at AcademyMainhub (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\pages\AcademyMainhub.tsx:338:31)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+    at QueryClientProvider (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@tanstack/react-query/build/modern/QueryClientProvider.js:41:32)
+Warning: An update to AcademyMainhub inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at AcademyMainhub (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\pages\AcademyMainhub.tsx:338:31)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+    at QueryClientProvider (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@tanstack/react-query/build/modern/QueryClientProvider.js:41:32)
+
+[90mstderr[2m | src/pages/AcademyMainhub.section.test.tsx[2m > [22m[2mAcademyMainhub — Escape leaves a stage[2m > [22m[2mcloses an open stage and returns the hub
+[22m[39m[useClassId] no students row for user; falling back to user.id { userId: [32m'student-1'[39m, email: [32m'student@example.com'[39m }
+Warning: An update to PracticeInsightStage inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at PracticeInsightStage (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\mainhub\PracticeInsightStage.tsx:33:37)
+    at section
+    at section
+    at div
+    at div
+    at AcademyMainhub (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\pages\AcademyMainhub.tsx:338:31)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+    at QueryClientProvider (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@tanstack/react-query/build/modern/QueryClientProvider.js:41:32)
+
+[90mstderr[2m | src/pages/AcademyMainhub.section.test.tsx[2m > [22m[2mQuestion finder URL ownership[2m > [22m[2mopens exactly one finder across stage=analytics
+[22m[39m[useClassId] no students row for user; falling back to user.id { userId: [32m'student-1'[39m, email: [32m'student@example.com'[39m }
+Warning: An update to AnalyticsStage inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at AnalyticsStage (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\mainhub\AnalyticsStage.tsx:41:31)
+    at section
+    at div
+    at div
+    at AcademyMainhub (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\pages\AcademyMainhub.tsx:338:31)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+    at QueryClientProvider (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@tanstack/react-query/build/modern/QueryClientProvider.js:41:32)
+
+[90mstderr[2m | src/pages/AcademyMainhub.section.test.tsx[2m > [22m[2mQuestion finder URL ownership[2m > [22m[2mseeds explicit lr against remembered rc
+[22m[39m[useClassId] no students row for user; falling back to user.id { userId: [32m'student-1'[39m, email: [32m'student@example.com'[39m }
+Warning: An update to PracticeInsightStage inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at PracticeInsightStage (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\mainhub\PracticeInsightStage.tsx:33:37)
+    at section
+    at section
+    at div
+    at div
+    at AcademyMainhub (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\pages\AcademyMainhub.tsx:338:31)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+    at QueryClientProvider (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@tanstack/react-query/build/modern/QueryClientProvider.js:41:32)
+
+[90mstderr[2m | src/pages/AcademyMainhub.section.test.tsx[2m > [22m[2mQuestion finder URL ownership[2m > [22m[2mseeds explicit invalid against remembered rc
+[22m[39m[useClassId] no students row for user; falling back to user.id { userId: [32m'student-1'[39m, email: [32m'student@example.com'[39m }
+Warning: An update to PracticeInsightStage inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at PracticeInsightStage (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\mainhub\PracticeInsightStage.tsx:33:37)
+    at section
+    at section
+    at div
+    at div
+    at AcademyMainhub (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\pages\AcademyMainhub.tsx:338:31)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+    at QueryClientProvider (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@tanstack/react-query/build/modern/QueryClientProvider.js:41:32)
+
+[90mstderr[2m | src/pages/AcademyMainhub.section.test.tsx[2m > [22m[2mQuestion finder URL ownership[2m > [22m[2mcancels to the retained origin with replace and strips recursive launch parameters
+[22m[39m[useClassId] no students row for user; falling back to user.id { userId: [32m'student-1'[39m, email: [32m'student@example.com'[39m }
+Warning: An update to PracticeInsightStage inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at PracticeInsightStage (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\mainhub\PracticeInsightStage.tsx:33:37)
+    at section
+    at section
+    at div
+    at div
+    at AcademyMainhub (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\pages\AcademyMainhub.tsx:338:31)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+    at QueryClientProvider (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@tanstack/react-query/build/modern/QueryClientProvider.js:41:32)
+
+[90mstderr[2m | src/pages/AcademyMainhub.section.test.tsx[2m > [22m[2mQuestion finder URL ownership[2m > [22m[2mreplaces the temporary Practice stop when opening RC preview
+[22m[39m[useClassId] no students row for user; falling back to user.id { userId: [32m'student-1'[39m, email: [32m'student@example.com'[39m }
+Warning: An update to PracticeInsightStage inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at PracticeInsightStage (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\mainhub\PracticeInsightStage.tsx:33:37)
+    at section
+    at section
+    at div
+    at div
+    at AcademyMainhub (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\pages\AcademyMainhub.tsx:338:31)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+    at QueryClientProvider (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@tanstack/react-query/build/modern/QueryClientProvider.js:41:32)
+
+[90mstderr[2m | src/pages/AcademyMainhub.section.test.tsx[2m > [22m[2mQuestion finder URL ownership[2m > [22m[2mreturns a URL-launched LR preview to its origin by replacing the temporary entry
+[22m[39m[useClassId] no students row for user; falling back to user.id { userId: [32m'student-1'[39m, email: [32m'student@example.com'[39m }
+Warning: An update to PracticeInsightStage inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at PracticeInsightStage (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\mainhub\PracticeInsightStage.tsx:33:37)
+    at section
+    at section
+    at div
+    at div
+    at AcademyMainhub (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\pages\AcademyMainhub.tsx:338:31)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+    at QueryClientProvider (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@tanstack/react-query/build/modern/QueryClientProvider.js:41:32)
+
+ [32m✓[39m src/pages/AcademyMainhub.section.test.tsx [2m([22m[2m60 tests[22m[2m)[22m[33m 9064[2mms[22m[39m
+   [33m[2m✓[22m[39m AcademyMainhub — the LR/RC section switch[2m > [22mreturns a question preview to its Practice route instead of the scored drill destination [33m 667[2mms[22m[39m
+   [33m[2m✓[22m[39m AcademyMainhub — the LR/RC section switch[2m > [22mreturns through RC landing to the original LR page after closing setup [33m 323[2mms[22m[39m
+   [33m[2m✓[22m[39m AcademyMainhub — the LR/RC section switch[2m > [22mdiscards an RC drill in progress only after a confirmation, and keeps LR cards without the button [33m 300[2mms[22m[39m
+   [33m[2m✓[22m[39m AcademyMainhub — the LR/RC section switch[2m > [22misolates RC history by status and keeps that view when switching to LR [33m 359[2mms[22m[39m
+   [33m[2m✓[22m[39m Question finder URL ownership[2m > [22mcancels to the retained origin with replace and strips recursive launch parameters [33m 330[2mms[22m[39m
+   [33m[2m✓[22m[39m Question finder URL ownership[2m > [22mreturns a URL-launched LR preview to its origin by replacing the temporary entry [33m 369[2mms[22m[39m
+   [33m[2m✓[22m[39m Question finder URL ownership[2m > [22mforgets a revoked URL origin before a newly granted direct launch [33m 342[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m1 passed[39m[22m[90m (1)[39m
+[2m      Tests [22m [1m[32m60 passed[39m[22m[90m (60)[39m
+[2m   Start at [22m 11:38:54
+[2m   Duration [22m 30.63s[2m (transform 3.40s, setup 1.39s, collect 11.31s, tests 9.06s, environment 4.80s, prepare 897ms)[22m
+

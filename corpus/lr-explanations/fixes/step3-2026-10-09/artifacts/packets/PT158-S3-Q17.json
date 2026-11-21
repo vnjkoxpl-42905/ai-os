@@ -1,0 +1,78 @@
+{
+ "qid": "PT158-S3-Q17",
+ "type": "Principle-Conform EXCEPT",
+ "difficulty": "5",
+ "key_db": "D",
+ "stimulus_db": "Situation: A physical therapist wants her patients to derive more enjoyment from the challenge of developing physical skills. She also wants them to spend more time practicing those skills.\n\nAnalysis: Success in meeting the first objective will bring about success in meeting the second.",
+ "stem_db": "The analysis provided for the situation above could be appropriate for each of the following situations except:",
+ "choices_db": {
+  "A": "A math teacher wants her students to understand the mathematical principles taught in her course and wants them to apply these principles routinely in everyday life.",
+  "B": "A software manufacturer wants its customers to be more satisfied with its product, and it wants them to place fewer calls to the service representative about how to use the product.",
+  "C": "A librarian wants fewer of the books borrowed from the library to be lost or stolen, and he wants more of the library's books to be returned on time.",
+  "D": "A hardware retail company wants to construct a new, larger warehouse and wants its employees to help plan how the old warehouse will be expanded to meet any need for more space.",
+  "E": "A concert series director wants to present a more varied repertoire and wants to attract new patrons."
+ },
+ "bank": {
+  "stimulus": "Situation: A physical therapist wants her patients to\n derive more enjoyment from the challenge of\n developing physical skills. She also wants them\n to spend more time practicing those skills. Analysis: Success in meeting the first objective will bring\n about success in meeting the second.",
+  "stem": "The analysis provided for the situation above could be\n appropriate for each of the following situations except:",
+  "choices": {
+   "A": "A math teacher wants her students to understand the mathematical principles taught in her course and wants them to apply these principles routinely in everyday life.",
+   "B": "A software manufacturer wants its customers to be more satisfied with its product, and it wants them to place fewer calls to the service representative about how to use the product.",
+   "C": "A librarian wants fewer of the books borrowed from the library to be lost or stolen, and he wants more of the library’s books to be returned on time.",
+   "D": "A hardware retail company wants to construct a new, larger warehouse and wants its employees to help plan how the old warehouse will be expanded to meet any need for more space.",
+   "E": "A concert series director wants to present a more varied repertoire and wants to attract new patrons."
+  },
+  "key": "D"
+ },
+ "explanation_id": "24de3482-12b3-4e23-8667-4c33dca83d01",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "5efca95f-cd59-4efe-af88-66ef06e54bf7",
+   "position": 0,
+   "label": "Situation",
+   "body": "You want your PT patient to better enjoy the challenge of developing physical skills. You also want them to spend more time practicing those physical skills."
+  },
+  {
+   "row_id": "8f8ecb99-14ac-4aa4-90e1-ba3743218e45",
+   "position": 1,
+   "label": "Analysis",
+   "body": "If you succeed in getting them to enjoy the challenge more, it will cause them to spend more time practicing."
+  },
+  {
+   "row_id": "bc7f510e-7135-4c3f-871a-7be2160b8a91",
+   "position": 2,
+   "label": "Evaluate / Goal",
+   "body": "It looks like we should be wanting situations where you want two things, and those two things would allow us to say ... \"You know what ... If you get that first thing you want, it will cause that second thing to happen\"."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "e25443f2-441f-4c69-80ad-a65ef4872600",
+   "letter": "A",
+   "body": "The teacher wants students to (1) understand the mathematical principles taught in the course and (2) apply these principles routinely in everyday life. The analysis pattern applies: if students truly understand the principles (objective 1), they are better able, and more likely, to use them outside class (objective 2). You cannot routinely apply what you do not understand. This mirrors the original, where achieving the first goal (enjoying the challenge) brings about the second (more time practicing). This fits the pattern."
+  },
+  {
+   "row_id": "bc3c31a7-2d2e-4e8f-a53b-154f72002871",
+   "letter": "B",
+   "body": "The software manufacturer wants customers to (1) be more satisfied with its product and (2) place fewer calls to the service representative about how to use the product. The analysis pattern applies: if customers are more satisfied with the product (objective 1), that plausibly includes finding it easier to use, so they call less often for help using it (objective 2). This mirrors the original's pattern, where an improvement in how people experience something (satisfaction/enjoyment) brings about the desired behavior (fewer help calls/more practice time)."
+  },
+  {
+   "row_id": "92be04b0-a400-450b-90a4-779c40630517",
+   "letter": "C",
+   "body": "The librarian wants (1) fewer borrowed books to be lost or stolen and (2) more of the library's books to be returned on time. The analysis pattern applies: if fewer borrowed books go missing (objective 1), more of them come back at all, and a book that comes back is a book that can come back on time (objective 2). Both objectives also reflect the same underlying behavior: responsible handling of borrowed materials. Success with the first can plausibly bring about success with the second."
+  },
+  {
+   "row_id": "f63b631f-cc3c-4523-aa28-336b516f0d0b",
+   "letter": "D",
+   "body": "The hardware company wants (1) to construct a new, larger warehouse and (2) its employees to help plan how the old warehouse will be expanded to meet any need for more space. These two objectives pull against each other. If the company succeeds in building a new, larger warehouse, the need for more space is met, so there is no reason to expand the old one. Success with the first objective makes the second unnecessary; it does not bring it about. Unlike every other answer, where achieving the first objective creates the conditions for the second, this one breaks the pattern where \"success in meeting the first objective will bring about success in meeting the second.\""
+  },
+  {
+   "row_id": "e7a81700-f303-47a9-ba20-f4ed5371b17c",
+   "letter": "E",
+   "body": "The concert series director wants (1) to present a more varied repertoire and (2) to attract new audience members. The analysis pattern applies: if the concert series offers more varied programming (objective 1), it will naturally attract new audience members who are drawn to the expanded offerings (objective 2). Variety broadens appeal — programming that previously only attracted fans of one genre now attracts fans of multiple genres. The causal link is direct: diversified content attracts a diversified audience. This mirrors the original pattern where an improvement in the offering (variety/enjoyment) leads to a desired participation outcome (new audience/more practice time)."
+  }
+ ],
+ "known_problem": "A, B, C and D notes describe choices that do not exist (\"enjoy learning math\", \"recommend the product\", \"return books in good condition\", \"start working on Saturdays\"). D's real problem (build new vs expand old) is never named.",
+ "tags": "emdash-heavy; pt157-158-register"
+}

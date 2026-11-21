@@ -1,0 +1,109 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="lsatu-interactive-lesson" content="ore-2026-10-23-recall-primer"><title>Find the connection. Keep the details. · Session recap</title><style>  :root{
+    --cream:#FBF8F1; --ink:#1C1917; --ink-soft:#44403C; --ink-mute:#78716C;
+    --gold:#E8D08B; --gold-deep:#B8983F; --gold-wash:rgba(232,208,139,.16);
+    --card:#FFFFFF; --line:#E7E0D2;
+    --green:#3F6212; --green-wash:rgba(63,98,18,.09);
+    --red:#9F1239; --red-wash:rgba(159,18,57,.07);
+    --serif:"Fraunces","Garamond","Georgia",serif;
+    --sans:"Outfit","Avenir Next","Helvetica Neue",sans-serif;
+    --mono:"JetBrains Mono","SF Mono",Menlo,monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--ink);font-family:var(--sans);line-height:1.65;font-size:17px}
+  .wrap{max-width:800px;margin:0 auto;padding:0 24px}
+
+  header.hero{padding:68px 0 44px;border-bottom:1px solid var(--line)}
+  .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:18px}
+  h1{font-family:var(--serif);font-weight:600;font-size:clamp(36px,6vw,54px);line-height:1.06;letter-spacing:-.01em}
+  .hero p.lede{margin-top:20px;font-size:19px;color:var(--ink-soft);max-width:58ch}
+
+  section{padding:50px 0;border-bottom:1px solid var(--line)}
+  h2{font-family:var(--serif);font-weight:600;font-size:30px;line-height:1.15;margin-bottom:4px}
+  .sec-kicker{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:10px}
+  p{margin:14px 0;color:var(--ink-soft)}
+  p strong{color:var(--ink)}
+
+  .callout{background:var(--gold-wash);border-left:3px solid var(--gold-deep);border-radius:0 12px 12px 0;padding:16px 20px;margin:24px 0;font-size:16.5px;color:var(--ink-soft)}
+  .callout .tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-deep);display:block;margin-bottom:6px}
+  .callout strong{color:var(--ink)}
+
+  /* the three kinds */
+  .kinds{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:28px 0 8px}
+  .kind{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;box-shadow:0 1px 3px rgba(28,25,23,.06);transition:transform .18s,box-shadow .18s}
+  /* The colour carries the taxonomy, so it has to stay. A short rule inside
+     the padding does that without a 3px border running into a 14px corner. */
+  .kind .bar{display:block;width:32px;height:4px;border-radius:2px;background:var(--c);margin-bottom:14px}
+  .kind:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(28,25,23,.09)}
+  .kind.assume{--c:var(--gold-deep)}
+  .kind.object{--c:var(--red)}
+  .kind.describe{--c:var(--green)}
+  .kind .name{font-family:var(--serif);font-size:22px;color:var(--c);font-weight:600}
+  .kind .what{font-size:15px;margin:8px 0 0;color:var(--ink-soft)}
+  .kind .words{border-top:1px dashed var(--line);margin-top:14px;padding-top:12px}
+  .kind .words b{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--c);display:block;margin-bottom:7px}
+  .kind .words span{display:block;font-size:14px;color:var(--ink-mute);padding:2px 0}
+  .kind .test{margin-top:14px;background:var(--cream);border-radius:9px;padding:11px 13px;font-size:14.5px;color:var(--ink)}
+  .kind .test b{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-mute);display:block;margin-bottom:4px}
+
+  .opposite{display:flex;align-items:stretch;gap:0;margin:26px 0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--card)}
+  .opposite div{flex:1;padding:18px 20px;font-size:15.5px;color:var(--ink-soft)}
+  .opposite div:first-child{background:var(--gold-wash)}
+  .opposite div:last-child{background:var(--red-wash)}
+  .opposite b{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;margin-bottom:6px}
+  .opposite div:first-child b{color:var(--gold-deep)}
+  .opposite div:last-child b{color:var(--red)}
+
+  ol.steps{margin:20px 0;padding-left:0;list-style:none;counter-reset:step}
+  ol.steps li{counter-increment:step;position:relative;padding:14px 0 14px 54px;border-bottom:1px dashed var(--line);font-size:16px;color:var(--ink-soft)}
+  ol.steps li:last-child{border-bottom:none}
+  ol.steps li::before{content:counter(step);position:absolute;left:0;top:12px;width:34px;height:34px;border-radius:50%;background:var(--ink);color:var(--cream);font-family:var(--serif);display:flex;align-items:center;justify-content:center;font-size:16px}
+  ol.steps li b{color:var(--ink)}
+
+  .flags{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 4px}
+  .flag{font-family:var(--mono);font-size:12.5px;letter-spacing:.04em;background:var(--red-wash);color:var(--red);border:1px solid rgba(159,18,57,.2);border-radius:999px;padding:6px 14px}
+
+  .drill{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;margin:26px 0;box-shadow:0 2px 8px rgba(28,25,23,.06)}
+  .drill h3{font-family:var(--serif);font-size:19px;margin-bottom:4px}
+  .drill p.hint{font-size:14px;color:var(--ink-mute);margin:0 0 14px}
+  .chips{display:flex;gap:8px;flex-wrap:wrap}
+  .chip{font-family:var(--mono);font-size:13px;background:var(--cream);border:1px solid var(--line);border-radius:999px;padding:8px 15px;cursor:pointer;transition:all .16s;color:var(--ink-soft)}
+  .chip:hover{border-color:var(--ink-mute)}
+  .chip.on[data-k="assume"]{background:var(--gold-wash);border-color:var(--gold-deep);color:var(--gold-deep)}
+  .chip.on[data-k="object"]{background:var(--red-wash);border-color:var(--red);color:var(--red)}
+  .chip.on[data-k="describe"]{background:var(--green-wash);border-color:var(--green);color:var(--green)}
+  .chip .ans{display:none;font-weight:600}
+  .chip.on .ans{display:inline;margin-left:8px}
+
+  .quote{font-family:var(--serif);font-size:20px;line-height:1.45;color:var(--ink);border-left:3px solid var(--gold);padding:4px 0 4px 22px;margin:24px 0;font-style:italic}
+  .footer-note{padding:34px 0 56px}
+  .mark{font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-mute);opacity:.7}
+  .chip.on[data-k="neutral"]{background:var(--gold-wash);border-color:var(--ink-mute);color:var(--ink)}
+  .kind.link{--c:var(--gold-deep)}
+  .kind.apply{--c:var(--green)}
+  .kind.warn{--c:var(--red)}
+  .rule{font-family:var(--serif);font-size:20px;color:var(--ink);margin:18px 0}
+  .rule .ar{color:var(--gold-deep);font-weight:700;margin:0 6px}
+  table.t{width:100%;border-collapse:collapse;margin:20px 0;font-size:15.5px;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  table.t th{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold-deep);text-align:left;padding:12px 16px;border-bottom:1px solid var(--line)}
+  table.t td{padding:11px 16px;border-bottom:1px dashed var(--line);color:var(--ink-soft);vertical-align:top}
+  table.t tr:last-child td{border-bottom:none}
+  table.t td:first-child{color:var(--ink);font-weight:600;white-space:nowrap}
+  pre{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;font-family:var(--serif);font-size:18px;overflow-x:auto}
+  @media (max-width:560px){.opposite{flex-direction:column}table.t td:first-child{white-space:normal}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style></head><body>
+<header class="hero"><div class="wrap"><div class="kicker">Before you start · Read, Recall, Colour</div><h1>Find the connection. Keep the details.</h1><p class="lede">Before Read, Recall, Colour · PT104 Section 1, use a small enough piece that you can explain exactly what it says. The purpose is to retain the argument, not repeat its wording.</p></div></header>
+<section><div class="wrap"><h2>Before The Core Connection</h2><p>This seven-question guided set focuses on links inside arguments. Find the conclusion and the main supporting premise before you test the answers. Read each question's stem: the set includes several tasks, so the same answer test does not apply to every question.</p>
+<p>On Strengthen, ask what adds support. On Weaken, ask what undermines the connection. On Flaw, ask what reasoning problem the argument actually contains. A necessary assumption must be required; a sufficient assumption must make the conclusion follow when added to the premises. Do not treat those two tasks as interchangeable.</p>
+<p>For every question, say one sentence: The evidence says this, but the author concludes that. Then explain what the selected answer does to that connection. The full method reference gives the task boundaries. Follow the guided set's own instructions and feedback as you proceed.</p></div></section><section><div class="wrap"><h2>The current drill routine</h2><ol>
+<li>Read about a sentence silently. Take less if the beginning slips away.</li>
+<li>Look away and tell it back out loud in your own words.</li>
+<li>React out loud to that particular content. Ask a question, give an example, or say what seems doubtful. Keep the given claim separate from your reaction.</li>
+<li>Continue through the stimulus. During these steps, the text remains on screen; looking away is your job.</li>
+<li>Once you have worked through the whole stimulus, press Space. The text disappears. Retell the whole argument from memory, preserving its details.</li>
+<li>Press Space again for the next stimulus. You cannot return to a previous one.</li>
+</ol></div></section><section><div class="wrap"><h2>What to keep</h2><p>Keep names, groups, quantities, comparisons, time limits and connecting words. Customers having different tastes is not the same as customers wanting every available flavour. A cause helping is not the same as that cause being necessary.</p>
+<p>Your own wording is required. Changing the order is fine when the meaning and relationships survive. A topic label such as marketing is not a recall of what the author claimed about marketing.</p></div></section><section><div class="wrap"><h2>One habit for this section</h2><p>Before the final recall, check that you can say the evidence and the conclusion separately. Do not turn an uncertain conclusion into something the evidence already proved.</p>
+<p>This is a whole-section spoken exercise. Follow the activity's recording and pause controls. Start carefully; completing the reasoning matters more than racing the clock.</p></div></section><div class="footer-note"><div class="wrap"><span class="mark">LSAT U</span></div></div></body></html>

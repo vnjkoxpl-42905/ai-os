@@ -1,0 +1,84 @@
+{
+ "qid": "PT120-S1-Q26",
+ "type": "Strengthen",
+ "difficulty": "5",
+ "key_db": "C",
+ "stimulus_db": "Researchers gave 100 first-graders after-school lessons in handwriting. They found that those whose composition skills had improved the most had learned to write letters the most automatically. This suggests that producing characters more automatically frees up mental resources for other activities.",
+ "stem_db": "Which one of the following, if true, most strengthens the argument?",
+ "choices_db": {
+  "A": "Among the first-graders who received the after-school lessons in handwriting, those who practiced the most learned to write letters the most automatically.",
+  "B": "The first-graders who wrote letters the most automatically before receiving the after-school lessons in handwriting showed the greatest improvement in their composition skills over the course of the lessons.",
+  "C": "Over the course of the lessons, the first-graders who showed greater improvement in their ability to write letters automatically also generally showed greater improvement in their composition skills.",
+  "D": "Before receiving the after-school lessons in handwriting, the 100 first-graders who received the lessons were representative of first-graders more generally, with respect to their skills in both handwriting and composition.",
+  "E": "Among the first-graders who received the lessons in handwriting, those who started out with strong composition skills showed substantial improvement in how automatically they could write letters."
+ },
+ "bank": {
+  "stimulus": "Researchers gave 100 first-graders after-school lessons in handwriting. They found that those whose composition skills had improved the most had learned to write letters the most automatically. This suggests that producing\ncharacters more automatically frees up mental resources for other activities.",
+  "stem": "Which one of the following, if true, most strengthens the argument?",
+  "choices": {
+   "A": "Among the first-graders who received the after-school lessons in handwriting, those who practiced the most learned to write letters the most automatically.",
+   "B": "The first-graders who wrote letters the most automatically before receiving the after-school lessons in handwriting showed the greatest improvement in their composition skills over the course of the lessons.",
+   "C": "Over the course of the lessons, the first-graders who showed greater improvement in their ability to write letters automatically also generally showed greater improvement in their composition skills.",
+   "D": "Before receiving the after-school lessons in handwriting, the 100 first-graders who received the lessons were representative of first-graders more generally, with respect to their skills in both handwriting and composition.",
+   "E": "Among the first-graders who received the lessons in handwriting, those who started out with strong composition skills showed substantial improvement in how automatically they could write letters."
+  },
+  "key": "C"
+ },
+ "explanation_id": "6a6a5f87-7508-4b44-b9d4-9cf861b94c26",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "2a6b9894-b689-476e-82e3-fe7df1130efd",
+   "position": 0,
+   "label": "Conclusion (this suggests that)",
+   "body": "Producing characters more automatically frees up mental resources for other activities."
+  },
+  {
+   "row_id": "47320945-1608-4997-8a8d-2553ef76b2c0",
+   "position": 1,
+   "label": "Evidence",
+   "body": "Among first-graders who got handwriting lessons, those whose composition skills improved most were those who had learned to write letters most automatically."
+  },
+  {
+   "row_id": "cf84d2b1-9d6f-44a8-b234-abc41fd3c429",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "The most common argument pattern on Str / Wkn is Explain Curious Fact, and when we see we're dealing with an Experiment / Study, we're almost always going to hear about some data from the study which creates the causal mystery that our author wants to solve.\nCURIOUS FACT How come the kids whose composition skills had improved the most were the same as the kids who had learned to write letters most automatically? (you'd never guess this, but the LSAT author is about to assume that this correlation proves causation)\nEXPLANATION We gave them handwriting lessons; they learned to write letters automatically. Once their handwriting became automatic muscle memory, that freed up mental resources for them to focus on what they were writing about / how they were communicating their ideas. So their composition skills improved. Notice how much I fleshed out the causal story being implied by the conclusion. Causal conclusions often suggest a longer story than they explicitly say, so we need to take a few secs to play out the author's causal chain in our brain."
+  },
+  {
+   "row_id": "7c43a239-ae68-4b6e-8e8c-c8baf632e8ec",
+   "position": 3,
+   "label": "Goal",
+   "body": "For Explain Curious Fact arguments, Strengthen questions usually **increase the plausibility** of the Author's Explanation, but sometimes they **rule out** an Alternate Explanation. So we want more evidence that becoming more automatic with your writing frees up cognitive bandwidth for you to focus on the quality of your composition.\nOr we want to rule out some alternate explanation for why the kids with the biggest uptick in automaticity also had the biggest uptick in composition skills (f.e. the kids with the most automatic handwriting were **not** more likely to have English tutors they worked with outside of school)."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "868d95f4-cdb2-498f-a353-afb2032be832",
+   "letter": "A",
+   "body": "This links practice to automatic handwriting. Composition never comes into it, so it says nothing about freeing up mental resources."
+  },
+  {
+   "row_id": "8de26de0-5100-4c55-a58d-78fe0c824b6b",
+   "letter": "B",
+   "body": "This is about kids who were already automatic before the lessons. The argument is about becoming more automatic during them. Those kids might also just be stronger students overall, so this doesn't show automaticity freed anything up."
+  },
+  {
+   "row_id": "3624e49f-9063-49d2-8fcb-50ed4271de99",
+   "letter": "C",
+   "body": "Across the group, bigger gains in automatic handwriting came with bigger gains in composition. That's the pattern you'd expect if automatic writing frees attention for composing."
+  },
+  {
+   "row_id": "c418baf9-e59b-4f87-ba57-e884d04fed75",
+   "letter": "D",
+   "body": "A representative sample lets the result generalize. It doesn't support the causal claim about why automatic handwriting helps."
+  },
+  {
+   "row_id": "534f119d-af5b-4035-8d4c-025fc5b19211",
+   "letter": "E",
+   "body": "This suggests strong composition skills led to more automatic handwriting. That reverses the argument's direction of cause."
+  }
+ ],
+ "known_problem": "Breakdown only; all five choice notes missing.",
+ "tags": "no-notes"
+}

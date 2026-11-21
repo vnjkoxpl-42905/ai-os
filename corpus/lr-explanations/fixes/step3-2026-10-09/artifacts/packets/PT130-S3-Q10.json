@@ -1,0 +1,66 @@
+{
+ "qid": "PT130-S3-Q10",
+ "type": "Must Be True",
+ "difficulty": "2",
+ "key_db": "E",
+ "stimulus_db": "Only people who are willing to compromise should undergo mediation to resolve their conflicts. Actual litigation should be pursued only when one is sure that one's position is correct. People whose conflicts are based on ideology are unwilling to compromise.",
+ "stem_db": "If the statements above are true, then which one of the following must be true?",
+ "choices_db": {
+  "A": "People who do not undergo mediation to resolve their conflicts should be sure that their positions are correct.",
+  "B": "People whose conflicts are not based on ideology should attempt to resolve their conflicts by means of litigation.",
+  "C": "People whose conflicts are based on ideology are not always sure that their positions are correct.",
+  "D": "People who are sure of the correctness of their positions are not people who should undergo mediation to resolve their conflicts.",
+  "E": "People whose conflicts are based on ideology are not people who should undergo mediation to resolve their conflicts."
+ },
+ "bank": {
+  "stimulus": "Only people who are willing to compromise should undergo mediation to resolve their conflicts. Actual litigation should be pursued only when one is sure that one's position is correct. People whose conflicts are based on ideology are unwilling to compromise.",
+  "stem": "If the statements above are true, then which one of the following must be true?",
+  "choices": {
+   "A": "People who do not undergo mediation to resolve their conflicts should be sure that their positions are correct.",
+   "B": "People whose conflicts are not based on ideology should attempt to resolve their conflicts by means of litigation.",
+   "C": "People whose conflicts are based on ideology are not always sure that their positions are correct.",
+   "D": "People who are sure of the correctness of their positions are not people who should undergo mediation to resolve their conflicts.",
+   "E": "People whose conflicts are based on ideology are not people who should undergo mediation to resolve their conflicts."
+  },
+  "key": "E"
+ },
+ "explanation_id": "1df1c56c-2734-48a2-9856-6a70bf7258cb",
+ "style": "single",
+ "steps": [
+  {
+   "row_id": "3255122f-8444-46fe-ae1e-0511d98cc1fd",
+   "position": 0,
+   "label": "Explanation",
+   "body": "Only people who are **willing to compromise** should undergo **mediation** to resolve their conflicts.\n\nM → WC\n\nActual **litigation** should be pursued only when one is **sure** that one's position is **correct**.\n\nL → SC\n\nPeople whose **conflicts are based on ideology** are **unwilling to compromise**.\n\nI → ~WC"
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "f911fdd7-afab-4167-af27-26f26553d414",
+   "letter": "A",
+   "body": "Falsely assumes that people who do not undergo mediation should pursue litigation."
+  },
+  {
+   "row_id": "bff43783-8559-4be8-87d1-ed77f11a82ca",
+   "letter": "B",
+   "body": "No relationship can be established between people whose conflicts are not based on ideology and people who should pursue litigation."
+  },
+  {
+   "row_id": "e4f4654f-7376-4704-8718-90428d405d04",
+   "letter": "C",
+   "body": "There is a difference between “should be sure” and “are sure.”\nAlso, this assumes that those who should not undergo mediation are not always sure that their positions are correct."
+  },
+  {
+   "row_id": "080c7abc-5921-4fd1-b619-c4b96d25c39e",
+   "letter": "D",
+   "body": "Falsely assumes that people who are sure of the correctness of their position are not willing to compromise."
+  },
+  {
+   "row_id": "a280a233-6f6c-4923-b295-fee7b5205c3e",
+   "letter": "E",
+   "body": "This follows from the first and third statements."
+  }
+ ],
+ "known_problem": "No breakdown or diagram on a conditional Must Be True; E note is \"This follows from the first and third statements.\"",
+ "tags": "no-breakdown; verdict-only; thin-correct-note; thin-notes; very-short"
+}

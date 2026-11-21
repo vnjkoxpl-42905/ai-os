@@ -1,0 +1,84 @@
+{
+ "qid": "PT157-S3-Q12",
+ "type": "Flaw",
+ "difficulty": "5",
+ "key_db": "E",
+ "stimulus_db": "Columnist: Vagrancy laws are supposed to reduce criminal activity, but they don't. Making vagrancy illegal means transforming many innocuous everyday occurrences into crimes. Thus, vagrancy laws increase crime while purporting to reduce it.",
+ "stem_db": "The reasoning in the columnist's argument is most vulnerable to criticism on the grounds that the argument",
+ "choices_db": {
+  "A": "presumes, without providing any justification, that most innocuous everyday occurrences are harmful to society",
+  "B": "mistakenly infers, from the claim that vagrancy laws are associated with an increase in many innocuous everyday occurrences, that vagrancy laws cause that increase",
+  "C": "fails to specify what is meant by \"innocuous everyday occurrences\"",
+  "D": "fails to consider the possibility that crime will increase even in the absence of vagrancy laws",
+  "E": "does not adequately distinguish between an increase in criminal activity and the reclassification of certain occurrences as crimes"
+ },
+ "bank": {
+  "stimulus": "Columnist: Vagrancy laws are supposed to reduce\n criminal activity, but they don’t. Making\n vagrancy illegal means transforming many\n innocuous everyday occurrences into crimes. Thus, vagrancy laws increase crime while\n purporting to reduce it.",
+  "stem": "The reasoning in the columnist’s argument is most\n vulnerable to criticism on the grounds that the argument",
+  "choices": {
+   "A": "presumes, without providing any justification, that most innocuous everyday occurrences are harmful to society",
+   "B": "mistakenly infers, from the claim that vagrancy laws are associated with an increase in many innocuous everyday occurrences, that vagrancy laws cause that increase",
+   "C": "fails to specify what is meant by “innocuous everyday occurrences”",
+   "D": "fails to consider the possibility that crime will increase even in the absence of vagrancy laws",
+   "E": "does not adequately distinguish between an increase in criminal activity and the reclassification of certain occurrences as crimes."
+  },
+  "key": "E"
+ },
+ "explanation_id": "8e762c34-8d2d-4e41-a746-7c28058c3349",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "dc5bcc8b-733d-4adb-8a93-939e60fc0f7f",
+   "position": 0,
+   "label": "Evidence",
+   "body": "Making vagrancy illegal means transforming many innocuous everyday occurrences into crimes."
+  },
+  {
+   "row_id": "08961e09-acfa-4522-8b7b-38de48ead3ed",
+   "position": 1,
+   "label": "Conclusion",
+   "body": "Vagrancy laws increase crime while purporting to reduce it."
+  },
+  {
+   "row_id": "aac5aeae-90fe-4f43-975e-7342189649ab",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "The argument presents evidence about \"transforming many innocuous everyday occurrences into crimes\" and then makes a leap to a new concept in the conclusion—increasing crime. The argument doesn't clearly explain what \"increase crime\" is intended to mean. It's reasonable to think this means that entirely new crimes take place, ones that did not occur before the vagrancy laws were passed. For example, in a certain town there might be 10 cases a month where someone actually trespasses on another person's property, but once vagrancy laws are passed that number jumps to 30 actual instances of trespassing. However, the evidence suggests that something different could be happening. It suggests that actions which were not illegal become illegal once vagrancy laws are passed. This could mean, for example, that napping under a tree in a public park is legal until vagrancy laws make it illegal. The actual number of people who nap under trees might stay exactly the same, or even decrease, but because it is now a crime, there is a sudden increase in the number of people who are arrested or fined for it. The argument doesn't clearly explain the link between innocuous occurrences becoming crimes and an increase in crime. It's not clear what \"increase\" actually means in this conclusion."
+  },
+  {
+   "row_id": "e242526d-7b83-4e28-97dd-4583986280a8",
+   "position": 3,
+   "label": "Goal",
+   "body": "A correct answer might point out how the phrase \"increase crime\" is used in an unclear way. It might point out that the argument doesn't establish a clear link between innocuous occurrences becoming crimes and an actual increase in crime."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "32e01438-bb80-4728-81ee-0a40814e08e8",
+   "letter": "A",
+   "body": "The argument calls these everyday occurrences \"innocuous,\" suggesting they are not harmful. It does not presume they are harmful to society — it says the opposite."
+  },
+  {
+   "row_id": "0d6f50c3-bbf9-4503-879d-0310cf72cd97",
+   "letter": "B",
+   "body": "The argument does not claim there is an increase in innocuous everyday occurrences. It says those occurrences are reclassified as crimes. The occurrences themselves may not increase at all — they simply receive a new legal classification. This answer mischaracterizes the evidence."
+  },
+  {
+   "row_id": "9a7649fd-02d9-45ac-9956-c066c97c575e",
+   "letter": "C",
+   "body": "The argument does not need to specify what the innocuous occurrences are. The flaw would exist regardless of whether examples were provided. Even if the argument named specific behaviors, it would still conflate reclassification with an actual increase in criminal activity."
+  },
+  {
+   "row_id": "83218fb4-db52-490b-8e73-95df524be292",
+   "letter": "D",
+   "body": "Whether crime would increase without vagrancy laws is irrelevant to the argument's flaw. The argument focuses on what happens when vagrancy laws are enacted. External factors affecting crime rates independently of vagrancy laws do not address the internal logical problem of conflating reclassification with an actual increase in crime."
+  },
+  {
+   "row_id": "ce414672-98b3-4b32-8fdd-fb51629899a8",
+   "letter": "E",
+   "body": "This answer identifies the argument's core flaw. The argument uses \"increase crime\" in the conclusion without distinguishing between two very different meanings: (1) an actual increase in harmful criminal activity, and (2) the reclassification of previously legal behaviors as crimes. The evidence supports only meaning (2) — more things are now labeled as crimes — but the conclusion seems to claim meaning (1) — that there is more actual criminal activity. By failing to make this distinction, the argument equivocates on what \"increase crime\" means."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (11.8 em-dashes per 1k words; wrong-answer notes average 39.0 words).",
+ "tags": "emdash-heavy; pt157-158-register"
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="lsatu-interactive-lesson" content="charles-parallel-reasoning-v1"><title>Parallel Reasoning</title><style>  :root{
+    --cream:#FBF8F1; --ink:#1C1917; --ink-soft:#44403C; --ink-mute:#78716C;
+    --gold:#E8D08B; --gold-deep:#B8983F; --gold-wash:rgba(232,208,139,.16);
+    --card:#FFFFFF; --line:#E7E0D2;
+    --green:#3F6212; --green-wash:rgba(63,98,18,.09);
+    --red:#9F1239; --red-wash:rgba(159,18,57,.07);
+    --serif:"Fraunces","Garamond","Georgia",serif;
+    --sans:"Outfit","Avenir Next","Helvetica Neue",sans-serif;
+    --mono:"JetBrains Mono","SF Mono",Menlo,monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--ink);font-family:var(--sans);line-height:1.65;font-size:17px}
+  .wrap{max-width:800px;margin:0 auto;padding:0 24px}
+
+  header.hero{padding:68px 0 44px;border-bottom:1px solid var(--line)}
+  .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:18px}
+  h1{font-family:var(--serif);font-weight:600;font-size:clamp(36px,6vw,54px);line-height:1.06;letter-spacing:-.01em}
+  .hero p.lede{margin-top:20px;font-size:19px;color:var(--ink-soft);max-width:58ch}
+
+  section{padding:50px 0;border-bottom:1px solid var(--line)}
+  h2{font-family:var(--serif);font-weight:600;font-size:30px;line-height:1.15;margin-bottom:4px}
+  h3{font-family:var(--serif);font-weight:600;font-size:21px;line-height:1.2;margin:30px 0 4px;color:var(--ink)}
+  p{margin:14px 0;color:var(--ink-soft)}
+  p strong{color:var(--ink)}
+  ul{margin:14px 0 14px 22px;color:var(--ink-soft)}
+  ul li{margin:6px 0}
+
+  .callout{background:var(--gold-wash);border-left:3px solid var(--gold-deep);border-radius:0 12px 12px 0;padding:16px 20px;margin:24px 0;font-size:16.5px;color:var(--ink-soft)}
+  .callout strong{color:var(--ink)}
+  .callout p{margin:8px 0}
+
+  ol.steps{margin:20px 0;padding-left:0;list-style:none;counter-reset:step}
+  ol.steps li{counter-increment:step;position:relative;padding:14px 0 14px 54px;border-bottom:1px dashed var(--line);font-size:16px;color:var(--ink-soft)}
+  ol.steps li:last-child{border-bottom:none}
+  ol.steps li::before{content:counter(step);position:absolute;left:0;top:12px;width:34px;height:34px;border-radius:50%;background:var(--ink);color:var(--cream);font-family:var(--serif);display:flex;align-items:center;justify-content:center;font-size:16px}
+  ol.steps li b{color:var(--ink)}
+  ol.steps li span.say{display:block;margin-top:4px}
+
+  table.t{width:100%;border-collapse:collapse;margin:20px 0;font-size:15.5px;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  table.t th{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold-deep);text-align:left;padding:12px 16px;border-bottom:1px solid var(--line)}
+  table.t td{padding:11px 16px;border-bottom:1px dashed var(--line);color:var(--ink-soft);vertical-align:top}
+  table.t tr:last-child td{border-bottom:none}
+  table.t td:first-child{color:var(--ink);font-weight:600;white-space:nowrap}
+
+  .strength{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:22px 0}
+  .strength div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;text-align:center;font-family:var(--serif);font-size:22px;color:var(--ink);box-shadow:0 1px 3px rgba(28,25,23,.06)}
+  .strength div:nth-child(1){border-top:4px solid var(--gold)}
+  .strength div:nth-child(2){border-top:4px solid var(--gold-deep)}
+  .strength div:nth-child(3){border-top:4px solid var(--ink)}
+
+  .diagram{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 22px;margin:20px 0;font-family:var(--serif);font-size:22px;line-height:2;color:var(--ink)}
+  .diagram .ar{color:var(--gold-deep);font-weight:700;margin:0 8px}
+  .neg{position:relative;display:inline-block;padding:0 3px;line-height:1.15}
+  .neg::after{content:"";position:absolute;left:0;right:0;top:0;bottom:0;background:linear-gradient(to bottom left,transparent calc(50% - 1.25px),currentColor calc(50% - 1.25px),currentColor calc(50% + 1.25px),transparent calc(50% + 1.25px))}
+  .quote{font-family:var(--serif);font-size:19px;line-height:1.5;color:var(--ink);border-left:3px solid var(--gold);padding:4px 0 4px 22px;margin:24px 0;font-style:italic}
+  .quote p{color:var(--ink);margin:6px 0}
+
+  .wrong{border:1px solid rgba(159,18,57,.25);background:var(--red-wash);border-radius:12px;padding:12px 16px;margin:10px 0;color:var(--ink-soft)}
+  .wrong b{color:var(--red)}
+
+  .footer-note{padding:34px 0 56px}
+  .mark{font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-mute);opacity:.7}
+  @media (max-width:560px){table.t td:first-child{white-space:normal}.strength{grid-template-columns:1fr}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style></head><body>
+<header class="hero"><div class="wrap"><div class="kicker">Reference · Keep it open beside a drill set</div><h1>Parallel Reasoning</h1><p class="lede">The steps, how to diagram, and the claim vocabulary. Read this before the drills.</p></div></header>
+
+<section><div class="wrap"><h2>The steps</h2>
+<ol class="steps">
+<li><b>Read the stimulus. Pick your mode.</b>
+<table class="t"><thead><tr><th>Mode</th><th>When</th></tr></thead><tbody>
+<tr><td>Diagram it. Letters, arrows, chains.</td><td>You see conditionals, quantifiers, or copycats, meaning an idea mentioned twice.</td></tr>
+<tr><td>Say what it did. One plain sentence, going conversational.</td><td>You see none of those.</td></tr>
+</tbody></table>
+You decide the moment you finish reading. If the five answers come back nearly identical, go back and diagram after all.</li>
+<li><b>Find the conclusion. Tag it twice.</b> One <b>type</b> and one <b>strength</b>, both from the vocabulary below. Exactly, not roughly. <i>Whenever</i> means all, <i>can</i> means possible, and swapping either changes what you are matching on. This costs about three seconds and it is the cheapest elimination on the test.</li>
+<li><b>Decide whether the argument is valid or flawed.</b> A valid stimulus needs a valid answer. A flawed one needs a flawed answer. No negotiating.</li>
+<li><b>Name one striking feature.</b> A <i>not</i>, a conditional, an either-or, a quantifier, a pivot like <i>but</i>. One, not four. If the conclusion is a flat statement of fact with nothing distinctive to point at, skip this and go match premises instead.</li>
+<li><b>Scan only the five conclusions.</b> Cut on type, on strength, and on whether there is a <i>not</i>. A stimulus concluding <i>not A</i> cannot be matched by an answer concluding <i>A</i>, and you can cut on that without understanding either argument. No premise has been read yet.</li>
+<li><b>Read the premises of whatever survived.</b> Type against type, strength against strength. Order does not have to match, and the subject matter is never what you match on.</li>
+</ol>
+<div class="callout"><p><strong>The moment an answer breaks one requirement, stop reading it.</strong> Not at the end of the sentence, not after you have been fair to it. One fatal mismatch is the whole verdict.</p></div>
+</div></section>
+
+<section><div class="wrap"><h2>How to diagram</h2>
+<p>Six steps, the same six every time, in this order.</p>
+<ol class="steps">
+<li><b>Count the parts.</b> How many premises, and the one conclusion. Say it out loud: two premises, one conclusion.</li>
+<li><b>Name each part by type.</b> Not just how many but what kind. <i>Two conditional premises and one conditional conclusion.</i> When the argument runs on quantifiers, write the sequence instead: <i>none, some, some.</i> That sequence alone will often cut the answer set in half, because a matching answer has to carry the same one in the same order.</li>
+<li><b>Find the copycats.</b> Which ideas show up more than once? Mark every occurrence, and give each idea its own mark. Underline one, use a different colour for the next. The repeats are where the premises are meant to join.</li>
+<li><b>Give each idea a letter.</b> One letter per idea, and the same letter every time that idea appears.</li>
+<li><b>Write each claim as an arrow.</b> One line per claim, trigger on the left, outcome on the right.</li>
+<li><b>Read what runs between the lines.</b> This is the step people skip and it is the one that does the work. You have three lines. Now ask what they do to each other.</li>
+</ol>
+
+<h3>One argument, all six steps</h3>
+<div class="quote"><p>If the gate is locked, you go around the back. If the gate is not locked, you walk straight through. So if you did not walk straight through, you went around the back.</p></div>
+<table class="t"><thead><tr><th>Letter</th><th>Idea</th></tr></thead><tbody>
+<tr><td>A</td><td>the gate is locked</td></tr>
+<tr><td>B</td><td>you go around the back</td></tr>
+<tr><td>C</td><td>you walk straight through</td></tr>
+</tbody></table>
+<div class="diagram">
+<div>A <span class="ar">→</span> B</div>
+<div><span class="neg">A</span> <span class="ar">→</span> C</div>
+<div>So: <span class="neg">C</span> <span class="ar">→</span> B</div>
+</div>
+<p>A line through a letter means <i>not</i>. The two triggers are opposites, A and not A, so the premises carve the situation into two halves with nothing left over. And the conclusion never mentions a trigger. It pairs the two outcomes.</p>
+<p>That is your requirement, and you can now say it without the gate: <strong>two premises whose triggers are opposites, and a conclusion that pairs the two outcomes.</strong> Hold the five answers to that.</p>
+
+<h3>Then carry the marks into the answers</h3>
+<p>Whatever colour B got in the stimulus, give it to B in the answer. Each answer becomes something you can see rather than reason out: does this conclusion put those two colours against each other?</p>
+<p><strong>Most wrong answers pair a trigger with an outcome, and that is the trap.</strong> A trigger and an outcome often share words. <i>The gate is locked</i> and <i>you go around the back of the gate</i> both say gate, so an answer pairing them looks right. Overlapping words are not the same idea. The letters exist so that you stop reading the words.</p>
+
+<h3>Start picky, then loosen</h3>
+<p>Be as specific as you can on the first pass. The more specific your requirement, the more answers you can throw out, and a correct answer usually matches closely enough to survive it.</p>
+<p>But if you run the filter and nothing you like is left, the filter was too harsh. Back out and loosen it. Do not force a choice between two answers you do not want.</p>
+</div></section>
+
+<section><div class="wrap"><h2>The claim vocabulary</h2>
+<p>You cannot match two arguments if you have no words for what an argument is made of. When these questions feel like a sea of information, this is usually why. You are looking at a claim and the only thing you can say about it is what it is <i>about</i>, and what it is about is the one part that never matters.</p>
+<p>There are three things to say about any claim.</p>
+
+<h3>1 · Strength</h3>
+<div class="strength"><div>Possible</div><div>Probable</div><div>Certain</div></div>
+<p>How hard does this claim commit?</p>
+<p>Say a friend tells you the bakery on the corner is probably open. Now say a different friend tells you it is definitely open. Same bakery, same subject, two completely different claims. Drive over and find it closed, and only one of them was wrong.</p>
+<p>That does a lot of the eliminating for you. A claim that only got to <i>possible</i> cannot be matched by one that arrives at <i>certain</i>, no matter how nicely the subject matter lines up.</p>
+
+<h3>2 · Type</h3>
+<p>What kind of claim is it? More than one label can fit, and that is fine. You are not looking for the single correct answer, you are seeing how many ways you could describe the thing.</p>
+<table class="t"><thead><tr><th>Type</th><th>Sounds like</th></tr></thead><tbody>
+<tr><td>Conditional</td><td>If the gate is locked, you have to go around the back.</td></tr>
+<tr><td>Statement of fact</td><td>The gate was locked on Tuesday.</td></tr>
+<tr><td>Causal</td><td>The rain is what warped the gate.</td></tr>
+<tr><td>Normative</td><td>They ought to replace that gate.</td></tr>
+<tr><td>Prediction</td><td>That gate will not last another winter.</td></tr>
+<tr><td>Rebuttal</td><td>People say the gate is fine. It is not.</td></tr>
+<tr><td>Either-or</td><td>Either we fix the gate or we lose the dog.</td></tr>
+<tr><td>Attribution</td><td>The inspector says the gate is fine.</td></tr>
+<tr><td>Comparison</td><td>The back gate is sturdier than the front one.</td></tr>
+<tr><td>Temporal</td><td>Soon after they put the new gate in, the dog stopped escaping.</td></tr>
+<tr><td>Correlation</td><td>People who use the back gate are more likely to arrive late.</td></tr>
+<tr><td>Volume dial</td><td>The heavier the gate, the harder it is to force open.</td></tr>
+</tbody></table>
+<p>Three of these need a note.</p>
+<p><strong>Statement of fact is your fallback, and it is a real answer.</strong> When nothing else fits, fact is correct rather than lazy. It also does specific work: it is how you tell the difference between an argument saying <i>if this happens</i> and an argument saying <i>this actually happened</i>.</p>
+<p><strong>Volume dial needs a comparison on both sides.</strong> <i>The heavier the gate, the harder it is to force.</i> Both halves move. If only one side moves, you do not have a volume dial, you have something else. It is the strongest claim on the test. Picture a chessboard: a rook runs forever in a line, and that is roughly a conditional, but the queen runs forever in every direction, and that is volume dial. It has everything a conditional has plus the ability to move in increments both ways. And despite how it sounds, it is <strong>not causal</strong>. Nothing in it says one thing produces the other.</p>
+<p><strong>Temporal and correlation are both setups.</strong> <i>After the new stoplight went in, accidents dropped</i> says two things happened in an order. <i>Drivers on that street are more likely to speed</i> says two things go together. Neither one claims that either thing produced the other. The test leans on both constantly, because the conclusion the author wants to draw is almost always causation, and that step is exactly where the argument breaks.</p>
+<p>Do not label a claim with the name of a flaw. <i>Proven versus unproven</i> is a flaw, and a flaw is something that goes wrong between two claims. It can never be the type of one sentence.</p>
+
+<h3>3 · How the claims relate</h3>
+<p>This is the one people skip, and it decides more hard questions than either of the others.</p>
+<p>Once you have described the individual claims, look at what runs <i>between</i> them. Most of the time you are looking for a <strong>copycat term</strong>: an idea that shows up in two different places in the argument. That repetition is not decoration. It is the hinge, and it is usually where the premises are meant to connect.</p>
+<p>Three come up constantly:</p>
+<ul>
+<li><strong>A copycat term.</strong> The same idea in two claims.</li>
+<li><strong>A copycat and its opposite.</strong> Tall in one place, not tall in the other.</li>
+<li><strong>A general category and a specific example of it.</strong> Birds in one claim, this particular pigeon in the next.</li>
+</ul>
+<p>To use it, pick the repeated idea, then write down exactly <i>where</i> it sat each time. Say it appeared as the trigger of a conditional in one premise, and inside a <i>some</i> claim in the other. Now that is a requirement, and you can hold the five answers to it without understanding a word about the topic.</p>
+<p><strong>Be careful how picky you get.</strong> With a conditional, the trigger and the outcome sit in different positions, so position tells you something. With <i>some</i>, it does not. <i>Some doctors are cyclists</i> and <i>some cyclists are doctors</i> say the identical thing, so the order of the two terms tells you nothing. Do not cut an answer because its terms arrived in the other order.</p>
+<p>And while you are here: <strong>several is some.</strong> So is <i>a few</i>, and so is <i>at least one</i>. An answer that says <i>several</i> has satisfied a <i>some</i> requirement, and the test knows perfectly well that it will not look like it did.</p>
+</div></section>
+
+<section><div class="wrap"><h2>Parallel Flaw</h2>
+<p>You are matching the mistake, not the structure. Name the error in one sentence before you look down, because if you cannot say it you will not recognise it when it walks past.</p>
+<p>Two broken arguments are not the same broken argument:</p>
+<div class="wrong"><b>Reversed.</b> If A then B. B. Therefore A.</div>
+<div class="wrong"><b>Negated.</b> If A then B. Not A. Therefore not B.</div>
+<p>At the hardest level the flaw outranks the structure. The answer committing your error wins even when its structure is imperfect.</p>
+</div></section>
+
+<section><div class="wrap"><h2>Two things that will fool you</h2>
+<p><strong>Adding is as fatal as missing.</strong> A feature sitting in the answer that the stimulus never had kills it as fast as a missing one does.</p>
+<p><strong>The contrapositive disguise.</strong> The right answer often states your chain backwards, so it reads as a mismatch when it is an exact match. <i>Unless</i> is the usual tell, because unless translates to <i>if not</i>. When an answer looks off and you cannot name the rule it broke, flip it before you cut it.</p>
+</div></section>
+
+<div class="footer-note"><div class="wrap"><span class="mark">LSAT U</span></div></div></body></html>

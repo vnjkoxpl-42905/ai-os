@@ -1,0 +1,20 @@
+[safe-push] origin/main has diverged (Lovable likely committed). Merging.
+Merge made by the 'ort' strategy.
+ .../0041_teacher_home_profile_identity_repair.sql  |  47 ++
+ drizzle/migrations/0042_teacher_home_desk.sql      |  94 +++
+ .../0043_teacher_home_access_booking.sql           | 143 ++++
+ drizzle/migrations/meta/0041_snapshot.json         |  18 +
+ drizzle/migrations/meta/0042_snapshot.json         |  18 +
+ drizzle/migrations/meta/0043_snapshot.json         |  18 +
+ drizzle/migrations/meta/_journal.json              |  21 +
+ src/integrations/supabase/types.ts                 | 736 ++++++++++++++++++++-
+ 8 files changed, 1087 insertions(+), 8 deletions(-)
+ create mode 100644 drizzle/migrations/0041_teacher_home_profile_identity_repair.sql
+ create mode 100644 drizzle/migrations/0042_teacher_home_desk.sql
+ create mode 100644 drizzle/migrations/0043_teacher_home_access_booking.sql
+ create mode 100644 drizzle/migrations/meta/0041_snapshot.json
+ create mode 100644 drizzle/migrations/meta/0042_snapshot.json
+ create mode 100644 drizzle/migrations/meta/0043_snapshot.json
+[safe-push] Typechecking (npm run typecheck)...
+[safe-push] Typecheck passed.
+fatal: unable to access 'https://github.com/vnjkoxpl-42905/lsatu-684d89db.git/': Could not resolve host: github.com

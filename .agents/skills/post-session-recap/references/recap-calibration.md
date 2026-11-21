@@ -22,3 +22,25 @@ Claude's source-level approval of V8 or V9 is not Joshua's approval and does not
 ## Maintain this calibration
 
 For new feedback, capture the date, actual failure, reusable requirement and observable check. Consolidate repeated entries and update the owning quality-bar rule rather than growing duplicate prohibitions. Keep lesson-specific scope exclusions tied to the relevant lesson; do not ban vocabulary universally. Treat future notes as forward tests of these corrections, not exact copies of an old page.
+
+## 2026-10-25: Invented visual system rejected; reuse the Session Manual
+
+| Observed correction | Requirement for the next draft | Check before handoff |
+|---|---|---|
+| Drafts for Amanda (2026-10-21) and Yahunathan (2026-10-20) used a new design: navy panels, sans-serif cards, generic quiz. Joshua: "terrible", "the wrong look", "look at my other notes ... build an inventory and reuse it". | Build every note from Joshua's own posted notes. The model is Reading Flaw Answer Choices (Lexi, 2026-08-05, "Session Manual"): kicker with the date, serif title, reframing lede, sections with mono eyebrows, colour-coded kind cards, two-sided comparison panel, numbered steps, gold callouts, one italic credit line about the student, tap-to-check chip drill, a finalist checklist, then the week's work. Stylesheet: `brainstorms/2026-10-25-note-inventory/session-manual.css`; catalog: `brainstorms/2026-10-25-note-inventory/INVENTORY.md`. | Open the model and the draft side by side before handoff. Any component not traceable to the inventory needs a reason. |
+
+## 2026-10-25: Finish the workflow rather than repeat homework questions
+
+Joshua redirected the continuation to the full saved chat and the original aim: develop a proper post-session recap process. Repeated requests for him to name homework had displaced that work. The source chat already authorizes proposing a matching drill for approval.
+
+- Read the full decision history and reconcile superseded open flags. Do not restart the design interview.
+- Finish extraction, teaching, all three note purposes, current Markdown/HTML sync and verification while homework approval is pending. Present one concrete proposal with actual validation limits.
+- Concept-first teaching can use helpful session particulars; credit lines are not the only permitted location for them. Teach errors as general traps without direct blame.
+- Reuse the Session Manual and inventory without manufacturing a taxonomy or padding all three notes into the same lesson. Keep the accepted static primer/reference samples distinct from a universal rule against interaction.
+- Preserve offers as tentative, record teacher commitments privately, and distinguish preparation from assignment, posting and verified student visibility.
+
+Regression check: a continuation produces the current three-note set and one consolidated pending-decision report, rather than another copy of the same unanswered questionnaire. Rendering and interaction coverage is stated for every delivered page. Evidence: `handoffs/2026-10-25_post-session-note-session-manual.md` and Joshua's continuation correction in this chat.
+
+## 2026-11-15 · Famous Flaws preview
+
+Joshua flagged the illustrated examples as spatially awkward and asked for each image to fit the example it teaches. Keep abstract answer wording close to a concrete application. In comparisons such as Sampling versus Part vs. Whole, reuse the same objects. Spell out the author's causal claim, reverse direction, and a possible third cause. Reveal those paths in place when useful. Preserve the review draft and the build source so later feedback can be applied without reconstructing the note.

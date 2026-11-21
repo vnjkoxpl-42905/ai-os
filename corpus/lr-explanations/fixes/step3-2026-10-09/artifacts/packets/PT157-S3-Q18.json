@@ -1,0 +1,84 @@
+{
+ "qid": "PT157-S3-Q18",
+ "type": "Paradox EXCEPT",
+ "difficulty": "5",
+ "key_db": "B",
+ "stimulus_db": "Consumer demand for personal computers continues to increase each year, which might lead one to think that the profits earned selling personal computers at the retail level are very high relative to total retail sales of personal computers. Yet the retail profit margin on personal computer sales is extremely low compared to that of other popular high-technology items.",
+ "stem_db": "Each of the following, if true, helps to resolve the apparent discrepancy described above except:",
+ "choices_db": {
+  "A": "Rapid innovation in computer technology increases the likelihood of a store's stock becoming obsolete.",
+  "B": "Satisfaction with their first personal computer tends to make customers very loyal to that particular brand.",
+  "C": "A customer needs more help from store employees when buying a personal computer than when buying other high-technology items.",
+  "D": "Many retail stores have low prices on personal computers in order to bring in customers who might buy software and accessories.",
+  "E": "An increase in the number of discount retail outlets selling personal computers has intensified the competition for customers."
+ },
+ "bank": {
+  "stimulus": "Consumer demand for personal computers continues to\n increase each year, which might lead one to think that\n the profits earned selling personal computers at the retail\n level are very high relative to total retail sales of personal\n computers. Yet the retail profit margin on personal\n computer sales is extremely low compared to that of\n other popular high-technology items.",
+  "stem": "Each of the following, if true, helps to resolve the\n apparent discrepancy described above except:",
+  "choices": {
+   "A": "Rapid innovation in computer technology increases the likelihood of a store’s stock becoming obsolete.",
+   "B": "Satisfaction with their first personal computer tends to make customers very loyal to that particular brand.",
+   "C": "A customer needs more help from store employees when buying a personal computer than when buying other high-technology items.",
+   "D": "Many retail stores have low prices on personal computers in order to bring in customers who might buy software and accessories.",
+   "E": "An increase in the number of discount retail outlets selling personal computers has intensified the competition for customers."
+  },
+  "key": "B"
+ },
+ "explanation_id": "75866168-5040-4f7c-b434-91f79e6df8bd",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "0c6620d0-fa74-4d2c-8a24-4822c9c3486d",
+   "position": 0,
+   "label": "Given that ...",
+   "body": "Consumer demand for personal computers continues to increase each year."
+  },
+  {
+   "row_id": "d535bd5f-9632-4044-8129-10aef878951e",
+   "position": 1,
+   "label": "Why is it that ...",
+   "body": "The retail profit margin on personal computer sales is extremely low compared to that of other high-tech items."
+  },
+  {
+   "row_id": "64c64245-41ef-40e8-93d3-dc2e23e5b14f",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "Since more people want PC's every year, the producers of PC's could theoretically raise their prices and still have buyers, thus we might expect them to have high profit levels. But they don't. Maybe the price is already so high that even though people badly want a PC, if the price were raised any further, lot of people couldn't afford one. Maybe there is a ton of competition in the PC space (whereas there isn't for other high-tech items), since competition keeps prices lower."
+  },
+  {
+   "row_id": "2ecfc5bb-81ac-4888-9b83-615ca55fdd7d",
+   "position": 3,
+   "label": "Goal",
+   "body": "We need to find four reasons why PC's have a lower profit margin (or why other popular high-tech items have a higher profit margin)."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "59ef34b9-9fb1-479a-a40f-25c01c9e601b",
+   "letter": "A",
+   "body": "Rapid innovation causing stock obsolescence means retailers lose money on unsold inventory. Even with rising demand, if yesterday's model is worthless tomorrow, retailers cannot maintain high margins. This explains why PC margins are lower than for more stable tech products."
+  },
+  {
+   "row_id": "79623cef-512b-446b-96cd-11684bf1a3db",
+   "letter": "B",
+   "body": "Brand loyalty might actually deepen the paradox rather than resolve it. If customers are loyal to a brand, that brand has less competitive pressure and could theoretically raise prices without losing customers — which would increase margins, not explain why they are low. High demand plus brand loyalty should mean higher margins, not lower ones. This does not explain why PC margins are low."
+  },
+  {
+   "row_id": "a896e35d-6599-48a6-8f65-b37a66ffc9b0",
+   "letter": "C",
+   "body": "If PCs require more employee assistance than other tech items, retailers face higher labor costs per PC sale. Higher overhead means lower profit margins even with strong demand. Other tech items sold with less employee help have lower costs and thus higher margins."
+  },
+  {
+   "row_id": "b4dc49ba-f562-409f-a103-72ef40f95db8",
+   "letter": "D",
+   "body": "PCs as loss leaders — priced low to attract customers who then buy high-margin accessories and software. Retailers intentionally keep PC margins low as a traffic-generation strategy, similar to how movie theaters price tickets low and profit on concessions."
+  },
+  {
+   "row_id": "bde5d3d7-5cfb-4147-aa07-9ae07af49de2",
+   "letter": "E",
+   "body": "More discount outlets create intense price competition, preventing any single retailer from charging high margins. Even with rising demand, competition among many sellers keeps prices — and therefore margins — low. Other high-tech items may face less retail competition."
+  }
+ ],
+ "known_problem": "Correct; shorter than most.",
+ "tags": "emdash-heavy; pt157-158-register"
+}

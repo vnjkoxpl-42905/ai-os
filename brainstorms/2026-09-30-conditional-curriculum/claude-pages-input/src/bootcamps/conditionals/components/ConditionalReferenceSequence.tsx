@@ -1,0 +1,341 @@
+import { useEffect, useId, useRef, useState, type ReactNode } from 'react';
+import './reference-sequence.css';
+
+const orderRule = 'If an order is marked ready for pickup, it has been packed.';
+
+function ReferenceStep({ number, title, label, children, dark = false }: { number: number; title: string; label: string; children: ReactNode; dark?: boolean }) {
+  return <section id={`reference-step-${number}`} data-reference-step={number} data-toc data-toc-title={label} className={`cr-step co-section ${dark ? 'cr-dark' : ''}`}>
+    <header className="cr-step-heading"><span className="cr-number" aria-hidden="true">{String(number).padStart(2, '0')}</span><div><p className="co-kicker">{label}</p><h2>{title}</h2></div></header>
+    <div className="cr-step-body">{children}</div>
+  </section>;
+}
+
+function ReferenceQuestion({ prompt, options, correct, feedback, onAttempt }: { prompt: string; options: string[]; correct: number; feedback: string[]; onAttempt?: (choice: number | null) => void }) {
+  const [choice, setChoice] = useState<number | null>(null);
+  const id = useId();
+  const firstChoice = useRef<HTMLButtonElement>(null);
+  return <div className="cr-question co-check"><h3 id={id}>{prompt}</h3><div className="cr-answer-options" role="group" aria-labelledby={id}>
+    {options.map((option, index) => <button ref={index === 0 ? firstChoice : undefined} type="button" key={option} aria-pressed={choice === index} onClick={() => { setChoice(index); onAttempt?.(index); }}>{option}</button>)}
+  </div><div role="status" aria-live="polite">{choice !== null && <div className={`cr-feedback ${choice === correct ? 'cr-correct' : 'cr-revise'}`}><strong>{choice === correct ? 'Correct.' : 'Not quite.'}</strong><p>{feedback[choice]}</p></div>}</div>
+    {choice !== null && <button className="cr-reset" type="button" onClick={() => { firstChoice.current?.focus(); setChoice(null); onAttempt?.(null); }}>Try again</button>}
+  </div>;
+}
+
+function HypotheticalFigure() {
+  const ref = useRef<HTMLElement>(null);
+  const [inView, setInView] = useState(false);
+  useEffect(() => {
+    if (!ref.current || typeof IntersectionObserver === 'undefined') return;
+    const observer = new IntersectionObserver(([entry]) => setInView(entry.isIntersecting), { threshold: .35 });
+    observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
+  return <figure className="cr-hypothetical co-if-connection" ref={ref} data-in-view={inView}>
+    <div className="cr-if"><span>IF</span><strong>this condition is true</strong><small>A case to imagine</small></div>
+    <div className="cr-connection" aria-hidden="true"><i/><i/><i/></div>
+    <div className="cr-then"><span>THEN</span><strong>the other condition has to be true</strong><small>What the rule establishes</small></div>
+    <figcaption>The connection is certain under the rule. The imagined case isn't a reported fact.</figcaption>
+  </figure>;
+}
+
+type FamilyEntry = { word: string; sentence: string; explanation: string };
+const sufficientFamily: FamilyEntry[] = [
+  { word: 'if', sentence: 'If someone borrows a locker, they have a key.', explanation: 'Borrowing a locker is enough to establish that the person has a key.' },
+  { word: 'when / whenever', sentence: 'Whenever someone borrows a locker, they have a key.', explanation: 'Whenever covers every occasion of borrowing. A report that something happened once when someone borrowed a locker would not establish this general rule.' },
+  { word: 'any / anytime', sentence: 'Any person who borrows a locker has a key.', explanation: 'Pick any person meeting the borrowing condition. The rule gives that person a key. Anytime someone borrows a locker, they have a key expresses the same connection across occasions.' },
+  { word: 'all', sentence: 'All people who borrow a locker have a key.', explanation: 'All covers every person in the described group. Keep who borrow a locker with people; the rule is not about everyone.' },
+  { word: 'every / every time', sentence: 'Every person who borrows a locker has a key.', explanation: 'Every member of this group meets the other condition. Every time someone borrows a locker, they have a key preserves the relationship while speaking about occasions.' },
+  { word: 'in order to', sentence: 'In order to borrow a locker, a person needs a key.', explanation: 'Borrowing the locker is the goal. Having a key is its requirement. This does not say that having a key is enough to borrow a locker.' },
+  { word: 'people who', sentence: 'People who borrow a locker have a key.', explanation: 'People who borrow a locker names the complete group being described. For a person in that group, having a key follows.' },
+  { word: 'each', sentence: 'Each person who borrows a locker has a key.', explanation: 'Each applies the statement to every individual locker borrower. We have changed the wording, not what borrowing establishes.' },
+];
+const necessaryFamily: FamilyEntry[] = [
+  { word: 'then', sentence: 'If someone borrows a locker, then they have a key.', explanation: 'Then introduces what the borrowing condition establishes: the person has a key.' },
+  { word: 'must', sentence: 'A person borrowing a locker must have a key.', explanation: 'Here we are describing a requirement under the stated rule. If must appears in an instruction instead, preserve that meaning: a required action is not proof that someone completed it.' },
+  { word: 'necessary', sentence: 'Having a key is necessary for borrowing a locker.', explanation: 'Ask necessary for what? For borrowing a locker. Having a key is the requirement, not a promise that someone borrowed.' },
+  { word: 'required', sentence: 'Having a key is required for borrowing a locker.', explanation: 'Required names the same relationship. Every locker borrower meets the key requirement.' },
+  { word: 'only / only if', sentence: 'A person borrows a locker only if they have a key.', explanation: 'Only if makes having a key necessary. Only people with a key borrow a locker says the same thing. Neither gives a locker to every person with a key.' },
+  { word: 'depends', sentence: 'Borrowing a locker depends on having a key.', explanation: 'Having a key is what the borrowing depends on. The sentence does not make the key enough by itself.' },
+  { word: 'need / need to', sentence: 'A person needs a key to borrow a locker.', explanation: 'What does the person need? A key. A person needs to have a key to borrow a locker expresses the same requirement.' },
+  { word: 'have to', sentence: 'A person has to have a key to borrow a locker.', explanation: 'Having a key is required for borrowing. Read have to have a key as one complete requirement.' },
+  { word: 'essential', sentence: 'Having a key is essential for borrowing a locker.', explanation: 'Essential for borrowing names the requirement. The borrowing cannot meet this rule without the key.' },
+  { word: 'precondition', sentence: 'Having a key is a precondition for borrowing a locker.', explanation: 'A precondition is something the other condition requires. Do not infer that the requirement was sufficient, or invent a timeline from the label.' },
+];
+
+function WordFamily({ entries, role }: { entries: FamilyEntry[]; role: 'sufficient' | 'necessary' }) {
+  const [selected, setSelected] = useState<number | null>(null);
+  const regionId = useId();
+  const firstExpression = useRef<HTMLButtonElement>(null);
+  return <div className={`cr-family co-lab cr-family-${role}`}>
+    <p className="cr-instruction">Choose an expression. Read its sentence before comparing the explanation.</p>
+    <ol className="cr-family-list">{entries.map((entry, index) => <li key={entry.word}><button ref={index === 0 ? firstExpression : undefined} type="button" aria-pressed={selected === index} aria-controls={regionId} onClick={() => setSelected(index)}><span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>{entry.word}</button></li>)}</ol>
+    <div id={regionId} className="cr-family-reading" aria-live="polite">{selected === null ? <p>The words vary. We'll keep the same locker relationship while reading each one.</p> : <><p className="co-kicker">{entries[selected].word}</p><blockquote>{entries[selected].sentence}</blockquote><p>{entries[selected].explanation}</p><div className="cr-family-role"><span>{role === 'sufficient' ? 'Enough to establish the other condition' : 'Required for the other condition'}</span><strong>{role === 'sufficient' ? 'Borrows a locker' : 'Has a key'}</strong></div></>}</div>
+    {selected !== null && <button type="button" className="cr-reset" onClick={() => { firstExpression.current?.focus(); setSelected(null); }}>Clear the example</button>}
+  </div>;
+}
+
+const cases = [
+  { label: 'Sufficient present', fact: 'Order A is marked ready for pickup.', question: 'What do we know about packing?', options: ['It has been packed.', 'It has not been packed.', 'Packing is not settled.'], correct: 0, reasoning: ['The ready label meets the sufficient condition. Under the rule, this order has been packed.', 'A ready order that was not packed would violate the rule. The fact gives you packing.', 'The sentence covers every ready order, including A. Packing is settled here.'] },
+  { label: 'Necessary absent', fact: 'Order A has not been packed.', question: 'What do we know about the ready label?', options: ['It is marked ready.', 'It is not marked ready.', 'The ready label is not settled.'], correct: 1, reasoning: ['If A were marked ready, it would have to be packed. That conflicts with the fact you have.', 'A cannot be marked ready while unpacked. The missing requirement rules out the sufficient condition.', 'We can settle it. A ready label would require packing, and A does not meet that requirement.'] },
+  { label: 'Sufficient absent', fact: 'Order A is not marked ready for pickup.', question: 'What do we know about packing?', options: ['It has been packed.', 'It has not been packed.', 'Packing is not settled.'], correct: 2, reasoning: ['A could be packed, but the missing ready label does not establish it. An unpacked A would also fit this rule.', 'A could already be packed without a ready label. The rule has not said only ready orders are packed.', 'Both a packed order without the label and an unpacked order without the label fit the rule. Packing remains open.'] },
+  { label: 'Necessary present', fact: 'Order A has been packed.', question: 'What do we know about the ready label?', options: ['It is marked ready.', 'It is not marked ready.', 'The ready label is not settled.'], correct: 2, reasoning: ['A packed order could be marked ready, but packing alone does not establish that label. You reversed the rule.', 'A could be packed and marked ready. Nothing in the fact rules out that label.', 'A could be packed with or without a ready label. Having the requirement does not establish the sufficient condition.'] },
+];
+function FourCaseExplorer() {
+  const [selected, setSelected] = useState(0);
+  const [answers, setAnswers] = useState<Record<number, number>>({});
+  const current = cases[selected];
+  const answer = answers[selected];
+  return <div className="cr-cases co-lab"><p className="co-kicker">One rule. Four starting facts.</p><blockquote>{orderRule}</blockquote>
+    <div className="cr-case-tabs" role="group" aria-label="Choose a starting fact">{cases.map((item, index) => <button type="button" key={item.label} aria-pressed={selected === index} onClick={() => setSelected(index)}><span>{String(index + 1).padStart(2, '0')}</span>{item.label}</button>)}</div>
+    <div className="cr-case-fact"><span>Given</span><strong>{current.fact}</strong></div><h3>{current.question}</h3>
+    <div className="cr-answer-options" role="group" aria-label="Choose what follows">{current.options.map((option, index) => <button type="button" key={option} aria-pressed={answer === index} onClick={() => setAnswers({ ...answers, [selected]: index })}>{option}</button>)}</div>
+    <div role="status">{answer !== undefined && <div className={`cr-feedback ${answer === current.correct ? 'cr-correct' : 'cr-revise'}`}><strong>{answer === current.correct ? 'Correct.' : 'Not quite.'}</strong><p>{current.reasoning[answer]}</p></div>}</div>
+    {Object.keys(answers).length === 4 && <div className="cr-case-review"><h3>Keep these four distinctions</h3><dl>{cases.map(item => <div key={item.label}><dt>{item.label}</dt><dd>{item.options[item.correct]}</dd></div>)}</dl><p>The rule still holds in all four cases. Two facts give an inference; two leave the other condition open.</p></div>}
+    <button type="button" className="cr-reset" onClick={() => { setAnswers({}); setSelected(0); }}>Reset the four cases</button>
+  </div>;
+}
+
+function ContrapositiveDiscovery() {
+  const [attempted, setAttempted] = useState(false);
+  return <div className="cr-discovery"><p>Use this stated rule for a different case.</p><blockquote>If a report is in the published archive, it has an approval stamp.</blockquote>
+    <p>A report in that archive has to carry the stamp. Now you inspect Report K. It has no approval stamp.</p>
+    <ReferenceQuestion prompt="Could Report K be in the published archive while this rule holds?" options={['Yes, its location is unrestricted.', 'No, it cannot be in that archive.', 'Yes, the missing stamp puts it in the archive.']} correct={1} onAttempt={choice => setAttempted(choice !== null)} feedback={['Its location is restricted by the rule. If K were in the archive, it would have a stamp, which conflicts with the given fact.', 'An archived K would have to have a stamp. K has no stamp, so it cannot be in the published archive under this rule.', 'The missing stamp rules out archive membership. It does not establish it.']}/>
+    {attempted && <div className="cr-discovery-reasoning"><p>That way of using the rule is the <strong>contrapositive</strong>: when the necessary condition is absent, the sufficient condition cannot be present.</p>
+      <p>It is the same relationship. We didn't add a second rule; we worked out a consequence already contained in the first one.</p>
+      <blockquote>{orderRule}</blockquote>
+      <ReferenceQuestion prompt="An order has not been packed. What follows about its ready label?" options={['It is not marked ready for pickup.', 'It is marked ready for pickup.', 'Nothing follows about the ready label.']} correct={0} feedback={['A ready label would require packing. Since packing is absent, the order cannot have that label under the rule.', 'A ready but unpacked order would break the rule. The absent requirement excludes the ready label.', 'The missing requirement does give an inference. If this order were ready, it would have to be packed.']}/>
+      <p>Don't confuse that with starting from a requirement that is present. A packed order could still be waiting for its ready label. Let's compare all four starting facts.</p>
+    </div>}
+  </div>;
+}
+
+function RuleDiagram({ left, right, label }: { left: string; right: string; label?: string }) {
+  return <div className="cr-diagram" role="img" aria-label={label || `${left} implies ${right}`}><strong>{left}</strong><span aria-hidden="true">→</span><strong>{right}</strong></div>;
+}
+const writingSteps = [
+  { button: 'Find the indicator', explanation: 'I see if. It introduces the sufficient condition: an order is marked ready for pickup.' },
+  { button: 'Draw the must arrow', explanation: 'The arrow connects the sufficient condition to the necessary condition. It means that when the left holds, the right has to hold.' },
+  { button: 'Place the complete target', explanation: 'Marked ready for pickup is the complete sufficient condition. I shorten it to Ready and put it on the left. Ready does not mean packed; it means the order has that label.' },
+  { button: 'Fill the remaining condition', explanation: 'The other condition is that this same order has been packed. I shorten it to Packed and put it on the right.' },
+];
+function IncrementalWriter() {
+  const [step, setStep] = useState(0);
+  const resetControl = useRef<HTMLButtonElement>(null);
+  return <div className="cr-writer co-lab"><blockquote>{step > 0 ? <><mark>If</mark> an order is marked ready for pickup, it has been packed.</> : orderRule}</blockquote>
+    <div className="cr-writing-sheet" aria-label="Diagram construction"><span className="cr-paper-label">Our diagram</span>{step < 2 ? <p>The sentence is our starting point.</p> : <RuleDiagram left={step >= 3 ? 'Ready' : 'Not placed yet'} right={step >= 4 ? 'Packed' : 'Not placed yet'} />}</div>
+    <div role="status">{step > 0 && <div className="cr-feedback"><strong>Step {step} of 4</strong><p>{writingSteps[step - 1].explanation}</p>{step === 4 && <p>Read it back: if an order is marked ready for pickup, it has been packed. We shortened the words and kept the relationship.</p>}</div>}</div>
+    <div className="cr-control-row">{step < 4 && <button type="button" className="cr-primary" onClick={() => { if (step === 3) resetControl.current?.focus(); setStep(step + 1); }}>{writingSteps[step].button}</button>}<button ref={resetControl} type="button" className="cr-reset" onClick={() => setStep(0)}>Reset the construction</button></div>
+  </div>;
+}
+
+const signPatterns = [
+  { label: 'Neither side negative', sentence: orderRule, legend: 'R = marked ready for pickup. P = has been packed.', original: 'R → P', options: ['P → R', '~P → ~R', '~R → ~P'], correct: 1, reading: 'If an order has not been packed, it is not marked ready for pickup.', wrongFeedback: ['A packed order without a ready label would fit the original. Your arrow adds a promise of a ready label to every packed order. Reverse both sides and negate both, not just reverse.', '', 'An order without a ready label could already be packed. You negated the sides without reversing them. Start from not packed, the missing requirement.'] },
+  { label: 'Necessary side negative', sentence: 'If the machine is testing, its indicator is not lit.', legend: 'T = machine is testing. L = indicator is lit.', original: 'T → ~L', options: ['L → ~T', '~L → T', '~T → L'], correct: 0, reading: 'If its indicator is lit, the machine is not testing.', wrongFeedback: ['', 'An unlit indicator could occur while the machine is idle. You used the required not-lit condition to establish testing. Its absence is lit, and that rules out testing.', 'An idle machine could still have an unlit indicator. Not testing does not prove lit. Reverse the sides as well as negating them.'] },
+  { label: 'Sufficient side negative', sentence: 'If the café is not closed, its doors are unlocked.', legend: 'C = café is closed. U = doors are unlocked.', original: '~C → U', options: ['U → ~C', 'C → ~U', '~U → C'], correct: 2, reading: 'If the doors are not unlocked, the café is closed.', wrongFeedback: ['A closed café could have unlocked doors without violating the original. You reversed the arrow unchanged. The missing requirement is not unlocked.', 'Closing the café does not establish its locks. You negated without reversing. Start from doors that are not unlocked; then the not-closed condition cannot hold.', ''] },
+  { label: 'Both sides negative', sentence: 'If an item is not marked fragile, it is not on the glass shelf.', legend: 'F = item is marked fragile. G = item is on the glass shelf.', original: '~F → ~G', options: ['~G → ~F', 'G → F', 'F → G'], correct: 1, reading: 'If an item is on the glass shelf, it is marked fragile.', wrongFeedback: ['A fragile item on another shelf fits the original. Off the glass shelf does not mean not fragile. Reverse and negate both conditions, so both existing not-signs disappear.', '', 'A fragile item can be stored elsewhere. Your arrow gives every fragile item a place on this shelf. Negating both conditions without reversing them changes the rule.'] },
+];
+function SignPatterns() {
+  return <div className="cr-pattern-grid">{signPatterns.map((item, index) => <div className="cr-pattern" key={item.label}><p className="co-kicker">{index + 1}. {item.label}</p><p>{item.sentence}</p><p className="cr-legend">{item.legend}</p><div className="cr-formula">{item.original}</div><ReferenceQuestion prompt={`Which is the contrapositive of ${item.original}?`} options={item.options} correct={item.correct} feedback={item.options.map((_, option) => option === item.correct ? `${item.reading} This is the same rule: the missing necessary condition rules out the sufficient one.` : item.wrongFeedback[option])}/></div>)}</div>;
+}
+
+type TargetExample = { label: string; before: string; target: string; after: string; options: string[]; correct: number; feedback: string[] };
+const targetExamples: TargetExample[] = [
+  { label: 'Target after the indicator', before: 'Only ', target: 'reports with editor approval', after: ' are published.', options: ['reports', 'reports with editor approval', 'published'], correct: 1, feedback: ['Reports alone drops with editor approval. The statement restricts publication to that qualified group.', 'Only refers to reports with editor approval. Keep that qualification; it is the required idea.', 'Published is the other condition. Only limits which reports can meet it.'] },
+  { label: 'Target before the indicator', before: '', target: 'Editor approval', after: ' is necessary for publication.', options: ['publication', 'editor approval'], correct: 1, feedback: ['Publication is what has the requirement. Editor approval is what the sentence calls necessary.', 'The target comes before necessary. Editor approval is the requirement for publication.'] },
+  { label: 'The same word can move', before: 'Publication makes it necessary to have ', target: 'editor approval', after: '.', options: ['publication', 'editor approval'], correct: 1, feedback: ['Publication still needs something. Moving necessary earlier has not made publication the requirement.', 'Editor approval is still what publication requires. Here the target comes after necessary; in the previous sentence it came before.'] },
+];
+function TargetReader({ item }: { item: TargetExample }) {
+  const [choice, setChoice] = useState<number | null>(null);
+  const correct = choice === item.correct;
+  const id = useId();
+  const firstTarget = useRef<HTMLButtonElement>(null);
+  return <div className="cr-target co-lab"><p className="co-kicker">{item.label}</p><blockquote>{item.before}{correct ? <mark>{item.target}</mark> : item.target}{item.after}</blockquote><h3 id={id}>Which complete idea does the indicator refer to?</h3><div className="cr-answer-options" role="group" aria-labelledby={id}>{item.options.map((option, index) => <button ref={index === 0 ? firstTarget : undefined} key={option} type="button" aria-pressed={choice === index} onClick={() => setChoice(index)}>{option}</button>)}</div><div role="status">{choice !== null && <div className={`cr-feedback ${correct ? 'cr-correct' : 'cr-revise'}`}><strong>{correct ? 'Correct target.' : 'Not quite.'}</strong><p>{item.feedback[choice]}</p></div>}</div>{choice !== null && <button type="button" className="cr-reset" onClick={() => { firstTarget.current?.focus(); setChoice(null); }}>Clear the target</button>}</div>;
+}
+
+type PracticeItem = { sentence: string; left: string; right: string; leftCode: string; rightCode: string; originalPosition: number; contraPosition: number; why: string; readback: string; contraReadback: string };
+export const referencePracticeItems: PracticeItem[] = [
+  { sentence: 'If a parcel has a red tracking tag, its sender has paid for tracking.', left: 'Parcel has red tracking tag', right: 'Sender has paid for tracking', leftCode: 'RT', rightCode: 'PT', originalPosition: 1, contraPosition: 2, why: 'The if-clause is enough to establish payment. A sender who paid could have a parcel without this tag; payment alone does not settle the tag.', readback: 'If a parcel has a red tracking tag, its sender has paid for tracking.', contraReadback: 'If its sender has not paid for tracking, the parcel does not have a red tracking tag.' },
+  { sentence: 'Every applicant who submits by Friday receives a confirmation.', left: 'Applicant submits by Friday', right: 'Applicant receives confirmation', leftCode: 'SF', rightCode: 'RC', originalPosition: 2, contraPosition: 0, why: 'Keep who submits by Friday with applicant. The rule gives those applicants confirmations; it does not restrict all confirmations to them.', readback: 'If an applicant submits by Friday, the applicant receives a confirmation.', contraReadback: 'If an applicant does not receive a confirmation, the applicant did not submit by Friday.' },
+  { sentence: 'A document is stored in the archive only if it has a catalogue number.', left: 'Document stored in archive', right: 'Document has catalogue number', leftCode: 'A', rightCode: 'C', originalPosition: 0, contraPosition: 1, why: 'Only if identifies the catalogue number as required. A numbered document could remain outside the archive.', readback: 'If a document is stored in the archive, it has a catalogue number.', contraReadback: 'If a document has no catalogue number, it is not stored in the archive.' },
+  { sentence: 'A backup copy is required for a file to be deleted.', left: 'File is deleted', right: 'File has backup copy', leftCode: 'D', rightCode: 'B', originalPosition: 1, contraPosition: 0, why: 'The requirement appears first in the sentence. Deletion requires the backup; having a backup does not establish deletion.', readback: 'If a file is deleted, it has a backup copy.', contraReadback: 'If a file has no backup copy, it is not deleted under this rule.' },
+  { sentence: 'Only guests with prepaid tickets enter the balcony.', left: 'Guest enters balcony', right: 'Guest has prepaid ticket', leftCode: 'E', rightCode: 'P', originalPosition: 2, contraPosition: 1, why: 'Only restricts balcony entrants to guests with prepaid tickets. A ticketed guest can stay outside, so the ticket alone is not enough.', readback: 'If a guest enters the balcony, the guest has a prepaid ticket.', contraReadback: 'If a guest does not have a prepaid ticket, the guest does not enter the balcony.' },
+  { sentence: 'The only recipes printed on the weekly menu are vegan recipes.', left: 'Recipe printed on weekly menu', right: 'Recipe is vegan', leftCode: 'M', rightCode: 'V', originalPosition: 0, contraPosition: 2, why: 'The only recipes printed on the weekly menu names the group whose recipes must be vegan. Other vegan recipes can be absent from the menu.', readback: 'If a recipe is printed on the weekly menu, it is vegan.', contraReadback: 'If a recipe is not vegan, it is not printed on the weekly menu.' },
+];
+function practiceChoices(item: PracticeItem, contrapositive: boolean) {
+  const correct = contrapositive ? `~${item.rightCode} → ~${item.leftCode}` : `${item.leftCode} → ${item.rightCode}`;
+  const wrong = contrapositive ? [`${item.rightCode} → ${item.leftCode}`, `~${item.leftCode} → ~${item.rightCode}`] : [`${item.rightCode} → ${item.leftCode}`, `~${item.leftCode} → ~${item.rightCode}`];
+  const position = contrapositive ? item.contraPosition : item.originalPosition;
+  const options = [...wrong];
+  options.splice(position, 0, correct);
+  return options;
+}
+function IntegratedItem({ item, number }: { item: PracticeItem; number: number }) {
+  const [original, setOriginal] = useState<number | null>(null);
+  const [contra, setContra] = useState<number | null>(null);
+  const [checked, setChecked] = useState(false);
+  const correct = original === item.originalPosition && contra === item.contraPosition;
+  const labels = [{ code: item.leftCode, meaning: item.left }, { code: item.rightCode, meaning: item.right }];
+  if (number % 2 === 0) labels.reverse();
+  const change = (value: number, isContra: boolean) => { setChecked(false); if (isContra) setContra(value); else setOriginal(value); };
+  const reset = () => { setOriginal(null); setContra(null); setChecked(false); };
+  return <div className="cr-integrated-item co-check" data-reference-practice={number}><header><span className="cr-item-number">{String(number).padStart(2, '0')}</span><h3>{item.sentence}</h3></header><dl className="cr-practice-legend">{labels.map(label => <div key={label.code}><dt>{label.code}</dt><dd>{label.meaning}</dd></div>)}</dl>
+    <fieldset><legend>Original diagram for item {number}</legend><div className="cr-answer-options cr-symbol-options">{practiceChoices(item, false).map((option, index) => <button key={option} type="button" aria-pressed={original === index} onClick={() => change(index, false)}>{option}</button>)}</div></fieldset>
+    <fieldset><legend>Contrapositive for item {number}</legend><div className="cr-answer-options cr-symbol-options">{practiceChoices(item, true).map((option, index) => <button key={option} type="button" aria-pressed={contra === index} onClick={() => change(index, true)}>{option}</button>)}</div></fieldset>
+    <div className="cr-control-row"><button type="button" className="cr-primary" disabled={original === null || contra === null} aria-label={`Check both diagrams for item ${number}`} onClick={() => setChecked(true)}>Check both diagrams</button><button type="button" className="cr-reset" onClick={reset}>Try item {number} again</button></div>
+    <div role="status">{checked && <div className={`cr-feedback ${correct ? 'cr-correct' : 'cr-revise'}`}><strong>{correct ? 'Both diagrams are correct.' : 'Review the relationship.'}</strong><p>{original === item.originalPosition ? 'Your original preserves the direction.' : 'Your original changes the direction or negates conditions the sentence did not negate.'} {contra === item.contraPosition ? 'Your contrapositive reverses and negates both complete conditions.' : 'Your contrapositive must start from the missing requirement and rule out the sufficient condition.'}</p><p>{item.why}</p><p className="cr-answer-key">Original: {item.leftCode} → {item.rightCode}<br/>Contrapositive: ~{item.rightCode} → ~{item.leftCode}</p><p>Read the original: {item.readback}</p><p>Read its contrapositive: {item.contraReadback}</p></div>}</div>
+  </div>;
+}
+
+export function ConditionalReferenceSequence() {
+  return <div className="cr-sequence">
+    <ReferenceStep number={1} label="Start with meaning" title="What does a conditional tell you?">
+      <p>A <strong>condition</strong> is an idea that can be true or false. An order has been packed. A guest has a ticket. We can ask whether either condition holds in a particular case.</p>
+      <p>A <strong>conditional</strong> connects two conditions. It says that if the first is true, the other has to be true too.</p>
+      <p className="co-if-inline">We don't need to know whether the first condition really occurred to understand the connection. We're asking what would follow <strong>if</strong> it did.</p>
+      <HypotheticalFigure/>
+      <h3>Why learn this?</h3><p>On the LSAT, an argument may give you a rule and ask what follows from it. Or it may treat one fact as enough to prove another. Understanding that connection helps you decide what the argument establishes and where it goes further than its information allows.</p>
+      <p>Let's read one rule.</p><blockquote>{orderRule}</blockquote>
+      <p>For this rule, the ready label makes packing certain. A ready order that hasn't been packed would break the stated relationship. That's what we mean by a <strong>guarantee</strong> here.</p>
+      <p>Compare that with “Ready orders are usually packed.” Usually allows an exception. Our if/then rule doesn't. We are working with the rule as given; we aren't claiming that every shop in real life follows it.</p>
+      <ReferenceQuestion prompt="Does the rule itself tell us that an actual order is marked ready?" options={['Yes, at least one order is marked ready.', 'No, it tells us what would follow if an order were marked ready.']} correct={1} feedback={['You added a case fact. The rule connects the conditions but has not reported an order with that label.', 'The imagined ready order lets us understand the rule. We need a separate fact to establish that an actual order has the label.']}/>
+      <p>Now let's take the two conditions one at a time.</p>
+    </ReferenceStep>
+
+    <ReferenceStep number={2} label="Sufficient means enough" title="One condition gives you enough">
+      <blockquote>{orderRule}</blockquote><p>The <strong>if-part</strong> is the <strong>sufficient condition</strong>. Sufficient means enough. Knowing an order is marked ready is enough, under this rule, to know it has been packed.</p>
+      <div className="cr-role-exhibit"><span>Sufficient</span><strong>Marked ready for pickup</strong><p>Enough to establish packing</p></div>
+      <p>The ready label might be present. It might not be. The rule hasn't settled that question for every order.</p>
+      <ReferenceQuestion prompt="Order D isn't marked ready. Could it still have been packed?" options={['Yes. Packing is still possible.', 'No. Without the label, packing is impossible.']} correct={0} feedback={['D could be packed without the label. It could also be unpacked. Neither case creates a ready order that is unpacked, so the rule leaves packing open.', 'You made the ready label the only way to have packing. The sentence gives one condition that establishes packing; it has not excluded other packed orders.']}/>
+      <p>Now suppose a fact gives us the sufficient condition. That is when we can <strong>use</strong>, or activate, the rule in its stated direction.</p>
+      <ReferenceQuestion prompt="Order E is marked ready. Do we need another fact to establish packing?" options={['Yes, we need an additional packing fact.', 'No, the rule and the ready label establish it.']} correct={1} feedback={['The rule already covers every ready order, including E. The separate ready-label fact meets its sufficient condition.', 'E meets the sufficient condition. With the rule, that is enough to establish that E has been packed.']}/>
+      <p>We'll now keep this job in mind while changing the wording.</p>
+    </ReferenceStep>
+
+    <ReferenceStep number={3} label="The sufficient family" title="Different words can give you the same connection">
+      <p>An <strong>indicator</strong> is an expression that helps you recognize a conditional relationship. These expressions can introduce an idea that is enough to establish another.</p>
+      <p>For the next examples, use a different stated rule: anyone who borrows a locker has a key. We will express that same connection in several ways. We haven't said everyone with a key borrows a locker.</p>
+      <WordFamily entries={sufficientFamily} role="sufficient"/>
+      <p>When/whenever and any/anytime group related forms together. An ending changes the kind of case being discussed, but these examples keep the same connection. Read the whole sentence. A familiar word is a clue, not a substitute for its meaning.</p>
+      <ReferenceQuestion prompt="Every guest wearing a blue badge receives a lunch voucher. Which complete idea is enough?" options={['Guest', 'Guest wearing a blue badge', 'Receives a lunch voucher']} correct={1} feedback={['Guest alone drops the badge restriction and would make a claim about unbadged guests.', 'The rule gives a voucher to every guest wearing a blue badge. Keep that qualification with the person.', 'The voucher is what the rule establishes. It has not said every voucher recipient wears a blue badge.']}/>
+      <details className="cr-extension"><summary>Two more Group 1 expressions</summary><p><strong>Where</strong> can state a relationship across locations: “Where a collection point operates, parcels can be returned.” An operating collection point establishes the availability of returns there. Availability is not proof that someone made a return.</p><p><strong>The only</strong> needs its complete phrase: “The only notebooks on this shelf are hardback.” A notebook on the shelf is hardback. The sentence does not put every hardback notebook there.</p><p>These are part of your Group 1 work. Understand what the full expression covers before using its group as a placement shortcut.</p></details>
+      <p>We have seen what can be enough. Now let's name what that condition requires.</p>
+    </ReferenceStep>
+
+    <ReferenceStep number={4} label="Necessary means required" title="The other condition has to be there">
+      <blockquote>{orderRule}</blockquote><p>The <strong>then-part</strong> is the <strong>necessary condition</strong>. Necessary means required. A ready order has to have been packed.</p>
+      <div className="cr-role-exhibit cr-required"><span>Necessary</span><strong>Has been packed</strong><p>Required for an order marked ready</p></div>
+      <p>Ask “required for what?” Here, required for an order with the ready label. These names describe the roles the conditions have in this relationship.</p>
+      <p>We're looking at the same connection from its other side. The ready label gives us enough to establish packing. Packing is what every ready order requires.</p>
+      <ReferenceQuestion prompt="Under our rule, which condition must a ready order meet?" options={['It has been packed.', 'It has been collected by the customer.']} correct={0} feedback={['Packing is the stated requirement. A ready order that was not packed would violate the rule.', 'Collection is not part of this rule. The sentence establishes packing, not whether the customer collected the order.']}/>
+      <p>Necessary does not mean “the next event.” It means required by this relationship. A conditional need not tell you which event caused another, or when either happened.</p>
+      <p>As with sufficient language, the wording can vary while the relationship stays the same.</p>
+    </ReferenceStep>
+
+    <ReferenceStep number={5} label="The necessary family" title="Listen for what the sentence needs">
+      <p>Return to our locker rule. Borrowing a locker requires a key. The next expressions all identify that requirement in their complete sentences.</p>
+      <WordFamily entries={necessaryFamily} role="necessary"/>
+      <div className="cr-contrast"><div><h3>If</h3><p>“You borrow a locker <strong>if</strong> you have a key.”</p><p>Having a key is enough for borrowing under this sentence.</p></div><div><h3>Only if</h3><p>“You borrow a locker <strong>only if</strong> you have a key.”</p><p>Having a key is required. This sentence has not made it enough.</p></div></div>
+      <ReferenceQuestion prompt="A guest enters the lounge only if the guest has a current pass. What does entering establish?" options={['The guest has a current pass.', 'Every guest with a pass enters.']} correct={0} feedback={['Only if identifies the current pass as required for entry. An entering guest therefore meets that requirement.', 'You made the requirement enough. A guest could have a current pass and remain outside without violating the sentence.']}/>
+      <details className="cr-extension"><summary>More Group 2 forms, with the sentence intact</summary><p><strong>Only when</strong> and <strong>only where</strong> can restrict the occasions or places of an outcome: “The fountain runs only when its pump is on.” A running fountain requires an operating pump. The pump being on does not establish that the fountain runs.</p><p><strong>Requires</strong> directly names a requirement: “Entry requires a current pass.” Preserve current. <strong>Always</strong> needs the sentence's subject and scope: “The upstairs room is always quiet when the door is shut.” Here a shut door establishes quiet, not the other way around.</p><p><strong>Only</strong> and <strong>the only</strong> are different complete expressions. “Only packed orders are marked ready” and “The only orders marked ready are packed” both tell us that a ready order is packed.</p></details>
+      <p>We can now recognize both roles before writing any symbols. Next, let's see what happens when a requirement is missing.</p>
+    </ReferenceStep>
+
+    <ReferenceStep number={6} label="A missing requirement" title="What if the requirement is missing?" dark>
+      <ContrapositiveDiscovery/>
+    </ReferenceStep>
+
+    <ReferenceStep number={7} label="The four situations" title="Keep what follows separate from what stays open">
+      <p>Change the fact about one order while keeping the rule. Each fact gives a different starting point. Decide what it establishes before comparing the explanation.</p>
+      <FourCaseExplorer/>
+      <p>Starting from packing and concluding ready is the tempting <strong>reverse</strong>. Starting from not ready and concluding not packed is the tempting <strong>inverse</strong>. Neither follows from this rule alone.</p>
+      <p>The contrapositive starts from <strong>not packed</strong> and establishes <strong>not ready</strong>. Its reasoning depends on the missing requirement, not on reversing whichever words happen to appear.</p>
+      <p>We now understand the relationship in words. Symbols will let us record that understanding without carrying every word of the sentence.</p>
+    </ReferenceStep>
+
+    <ReferenceStep number={8} label="Build the first diagram" title="Give the relationship a shorter form">
+      <p>Put the sufficient condition on the <strong>left</strong>, the necessary condition on the <strong>right</strong>, and a <strong>must arrow</strong> between them.</p>
+      <RuleDiagram left="Sufficient: enough" right="Necessary: required"/>
+      <p>The arrow means the left condition requires the right. It does not mean the left caused the right, or that the right happens later.</p>
+      <h3>Which idea goes on which side?</h3>
+      <p>The indicator helps you find a condition's job. Once you've found that job, place the <strong>complete condition</strong> on its side of the arrow. We don't put the word if or only if in the diagram.</p>
+      <div className="cr-contrast"><div><h3>Left: sufficient</h3><p>This is the condition that's enough to establish the other one. Group 1 expressions such as <strong>if, when, all, every</strong> and <strong>any</strong> can identify this condition.</p><p>“All people who borrow a locker have a key.” All refers to <strong>people who borrow a locker</strong>. For someone in that group, having a key follows. Borrowing goes left.</p></div><div><h3>Right: necessary</h3><p>This is what the sufficient condition requires. Group 2 expressions such as <strong>only if, requires</strong> and <strong>must</strong> can identify the requirement.</p><p>“Borrowing a locker requires a key.” What is required? <strong>Having a key.</strong> That condition goes right.</p></div></div>
+      <RuleDiagram left="Borrows a locker" right="Has a key"/>
+      <p>Read it back: if someone borrows a locker, they have a key. The arrow records that connection. It hasn't told us that everyone with a key borrows a locker.</p>
+      <h3>The sentence can move. The roles stay the same.</h3>
+      <p>Compare these two versions of our order rule. The indicator is bold; the complete idea it refers to is in brackets.</p>
+      <div className="cr-language-pair"><p><strong>If</strong> [an order is marked ready for pickup], it has been packed.</p><p>An order has been packed <strong>if</strong> [it is marked ready for pickup].</p><span>If identifies the sufficient condition in both sentences.</span></div>
+      <p>In the second sentence, if appears in the middle. Its condition comes last, but being marked ready is still enough to establish packing. That condition still goes left. Don't let the first phrase in English choose the first side of your diagram.</p>
+      <RuleDiagram left="Marked ready for pickup" right="Has been packed"/>
+      <p>Now try the same move with a requirement.</p>
+      <div className="cr-language-pair"><p><strong>Only</strong> [people with a key] borrow a locker.</p><p>A person borrows a locker <strong>only if</strong> [they have a key].</p><span>Only and only if identify the necessary condition here.</span></div>
+      <p>Both sentences say locker borrowers have a key. In the first, only is at the beginning. In the second, only if is in the middle. Having a key is required in both, so it goes right. <strong>If</strong> and <strong>only if</strong> have different jobs; read only if as the whole expression.</p>
+      <ReferenceQuestion prompt="A person borrows a locker only if they have a key. Which condition goes on the right?" options={['Borrows a locker', 'Has a key']} correct={1} feedback={['Borrowing is what has the requirement. Ask what a locker borrower must have: a key. Borrowing goes left; having a key goes right.', 'Having a key is required for borrowing. Only if appears in the middle, but it still identifies the necessary condition.']}/>
+      <h3>The indicator can also follow its target</h3>
+      <div className="cr-language-pair"><p>[Having a key] is <strong>required</strong> for borrowing a locker.</p><p>Borrowing a locker <strong>requires</strong> [having a key].</p><span>Having a key is the requirement in both sentences.</span></div>
+      <p>The target is the complete idea the indicator refers to. It comes before required in the first sentence and after requires in the second. Having a key still goes right. We find it by asking what is required, not by taking whichever words come next.</p>
+      <p>You'll work through the less familiar expressions in their Group 1 and Group 2 lessons. For each one, keep the whole sentence: what is enough, and what does it require?</p>
+      <p>Let's build an original diagram slowly. First find the indicator, then draw the arrow, place the complete idea it refers to, and fill the other side.</p>
+      <IncrementalWriter/>
+      <p>Now move the if-clause: “An order has been packed if it is marked ready for pickup.” The ready condition comes last in English but still goes left in the diagram. Its job hasn't changed.</p>
+      <ReferenceQuestion prompt="Which diagram preserves the moved if-clause?" options={['Packed → Ready', 'Ready → Packed']} correct={1} feedback={['You let sentence order choose the arrow. The if-clause still makes being marked ready enough for packing.', 'The sufficient condition is still marked ready. Where it appears in the sentence does not change what it establishes.']}/>
+    </ReferenceStep>
+
+    <ReferenceStep number={9} label="Write and read the contrapositive" title="Write the meaning you already understand">
+      <p>Ready means the order is marked ready for pickup. Packed means it has been packed. Our original is Ready → Packed.</p>
+      <p>We already know that a missing packing requirement rules out the ready label. Write that as <strong>~Packed → ~Ready</strong>. The <strong>~</strong> sign means <strong>not</strong>.</p>
+      <p>To write a contrapositive from a diagram, reverse the two sides and negate <strong>both complete conditions</strong>. A condition already containing not loses that not when we negate it. Let's try all four patterns.</p>
+      <SignPatterns/>
+      <div className="cr-method"><p className="co-kicker">The complete five-step routine</p><ol><li><strong>Find the indicator.</strong> Read its job in the whole sentence.</li><li><strong>Identify both complete ideas.</strong> Keep restrictions such as current or submitted by Friday.</li><li><strong>Place the roles.</strong> Sufficient goes left; necessary goes right. Choose labels you can read back.</li><li><strong>Write the contrapositive.</strong> Reverse the sides and negate both complete conditions.</li><li><strong>Read both in English.</strong> Compare them with what the original sentence actually requires.</li></ol></div>
+      <p>The original and its contrapositive describe the same relationship. If writing both helps you see that relationship, write both. If you can read the contrapositive from the original when it is relevant, you needn't copy it merely to have a second line.</p>
+      <p>Read an arrow forward to use its stated direction. To read its contrapositive, start from the right condition's absence and work back to the left condition's absence. That is a different move from reading the arrow backward unchanged.</p>
+    </ReferenceStep>
+
+    <ReferenceStep number={10} label="Practical diagramming questions" title="Use writing to make your reasoning easier to check">
+      <div className="cr-faq">
+        <details><summary>When should I diagram?</summary><p>While learning, write enough to make your choices visible. A difficult sentence, several rules or a connection you keep rereading can be a reason to put the relationship on paper. With practice, you may hold a simple rule mentally. Use the writing to help the reasoning.</p></details>
+        <details><summary>How do I check whether my diagram is right?</summary><p>Read it back and compare the whole meaning. Did you keep each restriction? Does your arrow promise something the original leaves open? When a diagram is wrong, record the exact phrase and the mistake it produced. That gives you something specific to practice. Familiarity alone is not proof of correctness.</p></details>
+        <details><summary>What if writing takes time?</summary><p>Start by producing a correct, readable diagram. Speed is a later practice goal. Writing can reduce rereading, but it does not save time in every case. Compare how it helps on the sentences you are actually working through. Your teacher can add timing to medium or advanced practice after the reasoning is stable.</p></details>
+        <details><summary>Should I always write the contrapositive?</summary><p>You need to understand it every time. Write it when it helps you use the missing requirement, inspect your translation or connect rules. Otherwise, you may read that direction from the original. Extra notation should have a job.</p></details>
+        <aside className="cr-training-note"><h3>Why this practice asks for both</h3><p>In the integrated drill, write or choose the original and the contrapositive. We're checking that you can produce both. Once that skill is reliable, a performance task need not require both lines for every rule.</p></aside>
+        <details><summary>How should I abbreviate the conditions?</summary><p>Use short labels that bring back the complete idea. R might mean marked ready for pickup. Current pass may be clearer than a single letter if you're tracking several kinds of pass. Shortening should save writing without losing meaning. There is no fixed letter limit.</p></details>
+      </div>
+      <ReferenceQuestion prompt="Only envelopes with a paid stamp go into this tray. Someone wrote Paid stamp → In tray. What needs repairing?" options={['The labels need to be longer.', 'The arrow makes the requirement enough.', 'Nothing; the first phrase always goes left.']} correct={1} feedback={['Longer labels would not repair the direction. The tray requires a paid stamp, but a stamped envelope can remain outside it.', 'Only restricts tray envelopes to ones with paid stamps. In tray → Paid stamp preserves that requirement; the proposed reverse promises tray placement to every stamped envelope.', 'Sentence order does not determine diagram order. Only identifies the paid stamp as required for tray placement.']}/>
+      <p>That error came from the language. Let's inspect precisely which idea an indicator refers to.</p>
+    </ReferenceStep>
+
+    <ReferenceStep number={11} label="Find the target" title="Read the whole idea the indicator refers to">
+      <p>An indicator's <strong>target</strong> is the complete word or phrase it refers to. In “All guests wearing blue badges receive vouchers,” all refers to guests wearing blue badges, not guests alone.</p>
+      <p>The target often comes after its indicator. But often isn't always. Try these sentences in order.</p>
+      {targetExamples.map(item => <TargetReader item={item} key={item.label}/>)}
+      <div className="cr-language-pair"><p>“Editor approval is required for publication.”</p><p>“Publication requires editor approval.”</p><span>Same requirement, different placement</span></div>
+      <p>Neither the closest noun nor the next word is a reliable target rule. Read which complete idea the sentence calls required. Then give that idea its role in the diagram.</p>
+      <p>When the wording still feels uncertain, we can test a proposed translation against an imagined case.</p>
+    </ReferenceStep>
+
+    <ReferenceStep number={12} label="Check an interpretation" title="Try the sentence from the inside">
+      <p>A <strong>Personalized If/Then</strong> lets you test what a proposed sufficient condition would establish. First read the ordinary meaning. Propose the sufficient idea. Imagine a case meeting it. Ask what the sentence now requires.</p>
+      <blockquote>Only people wearing helmets ride the studio bikes.</blockquote><p>The sentence restricts riders to people wearing helmets. Keep that meaning while trying each proposed starting point.</p>
+      <div className="cr-personalized"><div><p className="co-kicker">First proposed starting point</p><ReferenceQuestion prompt="If I'm riding a studio bike, what does this sentence tell me?" options={['I am wearing a helmet.', 'The helmet question is open.']} correct={0} feedback={['The sentence puts every rider in the helmet-wearing group. Riding → Wearing helmet preserves that meaning.', 'Only restricts who rides. If you meet the riding condition, the sentence does settle helmet wearing.']}/></div><div><p className="co-kicker">Try the other starting point</p><ReferenceQuestion prompt="If I'm wearing a helmet, must I be riding a studio bike?" options={['Yes, the helmet proves riding.', 'No, I could wear one without riding.']} correct={1} feedback={['You gave every helmet wearer a ride. The sentence restricts riders; it does not make all helmet wearers riders.', 'A helmet wearer waiting beside a bike fits the sentence. Wearing helmet → Riding would add a promise the original did not make.']}/></div></div>
+      <p>The first reading matches the sentence. The second proposed arrow fails because it rules out a case the original permits. Use the imagined situation to inspect meaning, not to supply extra facts from what usually happens.</p>
+      <h3>Use the What Test beside it</h3><p>Ask a sensible question about the expression: only what? People wearing helmets. What is required? Wearing a helmet. What is enough? Riding a studio bike, under this rule, establishes that requirement.</p>
+      <p>The What Test finds the complete target. The Personalized If/Then checks what your proposed direction says about a case. Use them together when one part of the translation is unclear.</p>
+      <p>We've now read the relationship, understood its limits, written both directions and checked the language. Put those pieces together with fresh sentences.</p>
+    </ReferenceStep>
+
+    <ReferenceStep number={13} label="Use the whole process" title="Build an original and its contrapositive">
+      <p>For each sentence, identify the indicator and both complete conditions. Choose the original diagram, then its contrapositive. Read both back before checking.</p>
+      <p>You can look back. The job here is to produce and inspect the reasoning, not to prove you memorized every expression on the first reading. The labels below keep the complete ideas visible while you choose the directions.</p>
+      <div className="cr-integrated-grid">{referencePracticeItems.map((item, index) => <IntegratedItem item={item} number={index + 1} key={item.sentence}/>)}</div>
+      <p>If an answer needs revision, name the exact issue: lost qualification, wrong role, reversed arrow or incomplete negation. Then retry that item. Your targeted Group 1 and Group 2 work gives you more practice with individual expressions; this set checks whether the steps hold together.</p>
+    </ReferenceStep>
+    <section id="reference-boundary" className="cr-boundary co-section" data-reference-boundary data-toc data-toc-title="Permission and instructions">
+      <p className="co-kicker">Before the attached practice</p><h2>Keep what the sentence actually gives you</h2>
+      <p>The core process is now in place. One more distinction matters for the practice: a conditional can give permission or an instruction. Preserve that strength instead of turning it into a report of what someone did.</p>
+      <blockquote>Every guest with a ticket may use the cloakroom.</blockquote><p>May use gives permission here. A ticketed guest is allowed to use the cloakroom. The guest could keep their coat on and never go inside.</p>
+      <ReferenceQuestion prompt="Lena is a guest with a ticket. Do we know that she used the cloakroom?" options={['Yes, the ticket establishes that she used it.', 'No, we know she is allowed to use it.']} correct={1} feedback={['You turned permission into a completed action. Lena meets the condition for permission, but we have no fact reporting her use of the cloakroom.', 'The rule gives Lena permission because she is a guest with a ticket. Whether she used the cloakroom remains open.']}/>
+      <p>Now compare an instruction. “If your coat is wet, hang it on the rack” tells you what to do with a wet coat. It does not report that someone followed the instruction.</p>
+      <ReferenceQuestion prompt="The notice says: If a tray is empty, return it to the counter. This tray is empty. What does the instruction establish?" options={['The tray has been returned.', 'The instruction calls for returning the tray.', 'The tray cannot be returned.']} correct={1} feedback={['You turned an instruction into a completed action. The notice has not reported that anyone returned this tray.', 'The empty tray meets the condition in the instruction, so the notice calls for returning it. Whether someone returned it is a separate question.', 'The instruction asks for a return. It does not say a return is impossible.']}/>
+      <p>Allowed to use isn't used. Told to return isn't returned. Your conclusion should keep the meaning the sentence actually gave you.</p>
+    </section>
+  </div>;
+}

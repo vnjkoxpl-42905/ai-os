@@ -1,0 +1,84 @@
+{
+ "qid": "PT158-S4-Q4",
+ "type": "Flaw",
+ "difficulty": "3",
+ "key_db": "B",
+ "stimulus_db": "A club wanted to determine whether it could increase attendance by changing its weekly meetings from Tuesday to another day. At one Tuesday meeting, the club's president took a survey of all members present. Of those surveyed, 95 percent said that they had no difficulty attending on Tuesdays. On the basis of this survey result, the club's president concluded that the attendance problem was not due primarily to schedule conflicts.",
+ "stem_db": "A questionable technique used in the club president's reasoning is",
+ "choices_db": {
+  "A": "drawing a conclusion on the basis of circular reasoning",
+  "B": "making a generalization on the basis of a sample that is likely to be unrepresentative",
+  "C": "treating a generalization that applies to most cases as if it applied without exception",
+  "D": "drawing a conclusion on the basis of premises that contradict one another",
+  "E": "inferring, solely from the claim that a change is not sufficient to solve a problem, that it is not necessary either"
+ },
+ "bank": {
+  "stimulus": "A club wanted to determine whether it could increase\n attendance by changing its weekly meetings from\n Tuesday to another day. At one Tuesday meeting, the\n club’s president took a survey of all members present. Of\n those surveyed, 95 percent said that they had no difficulty\n attending on Tuesdays. On the basis of this survey\n result, the club’s president concluded that the attendance\n problem was not due primarily to schedule conflicts.",
+  "stem": "A questionable technique used in the club president’s\n reasoning is",
+  "choices": {
+   "A": "drawing a conclusion on the basis of circular reasoning",
+   "B": "making a generalization on the basis of a sample that is likely to be unrepresentative",
+   "C": "treating a generalization that applies to most cases as if it applied without exception",
+   "D": "drawing a conclusion on the basis of premises that contradict one another",
+   "E": "inferring, solely from the claim that a change is not sufficient to solve a problem, that it is not necessary either."
+  },
+  "key": "B"
+ },
+ "explanation_id": "de2da1e5-f29e-4a95-8776-5cd7d586787f",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "26bd5d40-e1ce-4c71-b2b8-35212d03998d",
+   "position": 0,
+   "label": "Evidence",
+   "body": "At one Tuesday meeting, the club's president took a survey of all members present.\nOf those surveyed, 95 percent said that they had no difficulty attending on Tuesdays."
+  },
+  {
+   "row_id": "c3358a45-6034-438e-8a09-7524d89c9490",
+   "position": 1,
+   "label": "Conclusion",
+   "body": "The club's president concluded that the attendance problem [at weekly meetings] was not due primarily to schedule conflicts."
+  },
+  {
+   "row_id": "838e1b73-7cfb-43f3-8a17-2fbf861c77b5",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "This sounds like a great approach. Let's go to a sushi restaurant and ask the customers if they like to eat fish. Or maybe we'll go to a dog park and ask the people there if dogs make good pets.\nIt's not surprising for people who are present at a Tuesday meeting to say that they have no problem attending on Tuesdays. But it's very possible that this selection of people are do not accurately represent the club members as a whole. And the president is making a conclusion about the club members as a whole.\nHow many club members did not answer the survey because they can't attend Tuesday meetings due to a schedule conflict? We don't know."
+  },
+  {
+   "row_id": "4a174753-dd5b-4207-a61e-681de2f49d5a",
+   "position": 3,
+   "label": "Goal",
+   "body": "We'll expect a correct answer to describe a Sampling flaw."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "268e95ee-e05e-4d2a-b849-2743ae683754",
+   "letter": "A",
+   "body": "Circular reasoning occurs when the conclusion is restated as a premise — when the argument assumes the very thing it is trying to prove. The president's conclusion is that no members have significant conflicts with Tuesday. The premise is survey data from Tuesday attendees showing 95% reported no difficulty. These are technically distinct claims: one is about what a survey showed, the other is a generalization about the full membership. The problem is not that the conclusion sneaks into the premises but that the evidence was gathered from a biased source. It may feel circular because the result was essentially predetermined by the sampling method, but the logical structure is biased sampling, not circular reasoning. Circular reasoning involves no real evidence at all; the president's argument has evidence — it is just fatally skewed evidence."
+  },
+  {
+   "row_id": "0e039f0a-d733-4a62-aae3-6886e4a2369b",
+   "letter": "B",
+   "body": "The president surveyed members at a Tuesday meeting about whether they have difficulty attending on Tuesdays. The people present at a Tuesday meeting are, by definition, people who can attend on Tuesdays. Members who have significant scheduling conflicts with Tuesday are systematically excluded from the survey because they would not be at the meeting. This makes the sample fundamentally unrepresentative of the full membership. The 95% \"no difficulty\" result was practically guaranteed by the sampling method itself — asking only the people who successfully showed up whether showing up is hard for them. It is the equivalent of surveying marathon finishers about whether the race was too difficult and concluding it was easy for everyone. The people for whom it was genuinely too difficult never crossed the finish line and were never asked. The evidence tells us about the subset who can attend, but the conclusion claims to cover the entire membership."
+  },
+  {
+   "row_id": "63e9d8a9-3290-40f6-9ca8-c819f97bd630",
+   "letter": "C",
+   "body": "This answer describes treating a generalization as if it has no exceptions — moving from \"most\" to \"all\" or ignoring outliers within a valid trend. While the president does make a sweeping claim about the entire membership, the fundamental problem occurs much earlier in the reasoning. The data itself is fatally biased because the wrong people were surveyed. Even if the president had softened the conclusion to \"most members do not have conflicts\" or \"the vast majority are fine with Tuesday,\" the argument would still be deeply flawed because the data does not represent the full membership. You cannot fix a biased sample by being more careful about how you state the conclusion. The problem is at the evidence-gathering stage, not the conclusion-drawing stage."
+  },
+  {
+   "row_id": "7fcfd3b5-c828-4f69-9b0e-fbc8f572559d",
+   "letter": "D",
+   "body": "Contradictory premises would mean the argument contains two claims that logically cannot both be true simultaneously. The president's premises — a survey was conducted at a Tuesday meeting and 95% of attendees reported no difficulty — are perfectly consistent with each other and with the conclusion. Nothing in the argument contradicts anything else within the argument. The problem is that internally consistent premises can still fail to support a conclusion when the evidence is gathered from a biased source. The premises get along fine; they just do not prove what the president thinks they prove. Internal consistency is a necessary but not sufficient condition for a good argument. The evidence needs to actually be representative of the relevant population, and here it spectacularly is not."
+  },
+  {
+   "row_id": "677719a9-bcb3-4dfb-930f-431cd67cedc7",
+   "letter": "E",
+   "body": "Confusing sufficient and necessary conditions involves misunderstanding conditional relationships — like concluding \"if the ground is wet, it rained\" from \"if it rains, the ground is wet.\" The president's argument contains no conditional reasoning of any kind. There is no \"if X, then Y\" structure being inverted or misapplied. The argument is entirely about evidence gathering and generalization: a survey was conducted, results were obtained, and a conclusion was drawn. The flaw lies in who was included in the survey (only Tuesday attendees), creating a systematically biased sample. This is a data collection error, not a formal logic error about the relationship between conditions. Diagnosing a necessary/sufficient confusion here applies the wrong diagnostic framework to the wrong category of problem."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (8.5 em-dashes per 1k words; wrong-answer notes average 125.2 words).",
+ "tags": "emdash-heavy; pt157-158-register; possible-misquote"
+}

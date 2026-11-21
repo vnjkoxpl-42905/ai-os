@@ -1,0 +1,398 @@
+YouTube transcript
+Video ID: bvGptCLDhyo
+Language: en
+Captions: auto-generated
+
+[0:00] So, this isn't the Claude that you know.
+[0:01] I just turned one of the biggest minds
+[0:03] in AI into a Claude agent. Andrej
+[0:05] Karpathy is one of Anthropic's lead
+[0:06] engineers, a co-founder of OpenAI, and
+[0:09] the person that everyone says explains
+[0:10] AI better than anyone alive. And today,
+[0:12] I'm going to show you the exact four
+[0:13] steps to turn his thoughts into your own
+[0:15] Claude agent. So, let's get into it.
+[0:17] Okay, so real quick, who is this guy? He
+[0:19] was a founding member of OpenAI back in
+[0:20] 2015. Then he ran AI at Tesla for about
+[0:22] five years, leading the computer vision
+[0:24] team behind autopilot. Then he left to
+[0:27] do education full-time and started
+[0:28] Eureka Labs. And as of May of this year,
+[0:31] he's at Anthropic on the pre-training
+[0:32] team, which is the team that trains
+[0:34] Claude models before they're released to
+[0:36] the public. And on the side, he has put
+[0:37] out so many different YouTube videos and
+[0:39] courses on building with AI. So, what
+[0:41] we're building today is not a voice
+[0:42] clone of Andrej Karpathy. It's not an
+[0:44] impression of him. It's an agent that
+[0:46] condenses the way the best AI teacher,
+[0:48] Andrej Karpathy, explains things, and it
+[0:50] teaches you the same way. So, it follows
+[0:52] seven rules that all come from his own
+[0:54] writing and his blogs and his lectures,
+[0:56] stuff like build the smallest version
+[0:58] first, predict what's going to happen
+[0:59] before you run it, show the broken
+[1:01] version, and never hand over code that
+[1:03] you haven't run yourself. So, this is
+[1:04] more than just a clone of a person. It's
+[1:06] more about cloning the way that his
+[1:07] brain thinks. So, now I bet you guys are
+[1:10] wondering, why would you actually build
+[1:11] this? Let's think about what happens
+[1:12] when you ask Claude to explain something
+[1:14] that you don't understand. It might
+[1:15] overexplain. It might make stuff up
+[1:17] along the way. And you actually just end
+[1:19] up feeling like you learned nothing and
+[1:20] feeling more overwhelmed. And if you're
+[1:22] building something for a client, that's
+[1:24] how you end up shipping code that you
+[1:25] can't fix or explain when it breaks. And
+[1:27] Andrej Karpathy has run into this exact
+[1:28] same thing. Back in August of last year,
+[1:30] he actually posted publicly that he
+[1:32] tried to get Claude code to teach him
+[1:34] alongside the code that it was writing,
+[1:35] and in his words, it didn't work at all
+[1:37] because it really just wants to write
+[1:39] code a lot more than it wants to explain
+[1:41] anything along the way. So, building
+[1:42] this agent here is going to fix AI's
+[1:44] worst habit, which is sounding right
+[1:46] instead of being right. And the bigger
+[1:47] reason is honestly this, the quality of
+[1:49] what you build with AI comes down to the
+[1:52] expertise that's in the system, and
+[1:53] you're not going to be an expert on
+[1:54] everything. You know, I'm not a machine
+[1:56] learning researcher. I'm not a machine
+[1:57] learning expert, but I can certainly go
+[1:59] have agents pull in everything that a
+[2:00] real expert has said, compile it into
+[2:02] something that Claude can actually use,
+[2:04] and then I can just talk to it until I
+[2:05] understand it. And then, once I
+[2:06] understand a little bit better, I have
+[2:08] all that knowledge already in my
+[2:09] project, and I can wire that knowledge
+[2:10] into my own skills and my own agents and
+[2:12] my own workflows, which is exactly what
+[2:14] we're doing today with Karpathy. And
+[2:15] what's really cool is, once you've done
+[2:16] this with Karpathy, you can do this with
+[2:18] pretty much anyone. You can do this with
+[2:19] your favorite, you know, sales teacher,
+[2:21] or an author you really like, or a coach
+[2:23] that you're already paying for. And it's
+[2:24] basically just the same four steps, in
+[2:26] the same way that [music] we build this
+[2:27] sort of like second brain. Now, real
+[2:28] quick, before we get into the build,
+[2:30] I've got this completely free AI OS kit
+[2:31] for you guys to help you build and scale
+[2:33] your operating systems. If you combine
+[2:35] this sort of setup with things like
+[2:36] Karpathy's brain, it's just going to be
+[2:38] a huge unlock, and that's how I'm able
+[2:39] to move so fast. So, link for that will
+[2:40] be down in the description, but let's
+[2:42] get into the build. Okay, so I'm going
+[2:43] to do this inside of Claude Code, and
+[2:45] there are going to be six prompts to run
+[2:47] here, and I'll show all of them on
+[2:48] screen, so you can just kind of take a
+[2:50] screenshot and paste them into your own
+[2:51] Claude Code. So, first, Claude needs
+[2:53] everything that's inside of Andre
+[2:55] Karpathy's head. Things like his blogs,
+[2:56] his lecture transcripts, his GitHub
+[2:58] repos, his posts on X, all of that is
+[3:00] going to be just basically free and
+[3:01] public. But, Claude Code might not be
+[3:03] able to just grab all of that for free,
+[3:05] because it might be behind some sort of
+[3:07] like paywall or software wall. So, what
+[3:09] I did for YouTube is I had it pull
+[3:10] captions with two free Python packages,
+[3:13] YouTube Transcript API and yt-dlp. And
+[3:16] then, for X, I'm using a API called
+[3:18] twitterapi.io, which is a paid API, but
+[3:20] I've pulled basically every post that
+[3:22] he's made since 2023, and it was about a
+[3:24] dollar. It's not a very expensive API at
+[3:25] all. So, here is the prompt for the
+[3:27] crawl. It basically says where to get
+[3:29] everything, which tool to use for each
+[3:30] source, and I told it to run one agent
+[3:32] per source, so they all go at once and
+[3:34] parallel, so it doesn't take forever. I
+[3:36] told it to write down what it got, so
+[3:38] that you can actually check it. And this
+[3:39] took me about 45 minutes to an hour for
+[3:41] all of these agents to run and grab
+[3:42] everything. And what we end up with is
+[3:44] one raw folder with one subfolder per
+[3:46] source, and over 700,000 words, straight
+[3:49] from Andre Karpathy himself. Now, you
+[3:51] could just stop here and point Claude at
+[3:52] that folder, but all of these, you know,
+[3:54] messy words, it doesn't really fit into
+[3:56] Claude's head in the right way where it
+[3:58] actually can filter through it in a good
+[4:00] fashion, right? Like it's going to be
+[4:01] too messy. It's like finding a needle in
+[4:02] a haystack. So, what we're going to do
+[4:04] is what Karpathy told everyone to do
+[4:05] back in April. He posted about how he
+[4:08] has an LLM compile his raw sources into
+[4:10] a wiki. The raw files don't get touched,
+[4:12] but the LLM basically reads through all
+[4:14] of them and then links them together
+[4:15] with pages, keeps an index, keeps a log,
+[4:18] and now you're able to actually query
+[4:20] against it in a way that makes more
+[4:20] sense because there's like
+[4:21] relationships. And you put that whole
+[4:23] idea in a gist, and that's what I'm
+[4:25] going to paste into the coding agent.
+[4:26] The link to the gist is in the
+[4:28] description of this video. So, what
+[4:29] we're doing is kind of funny. We're
+[4:30] storing Karpathy's brain inside of
+[4:32] Karpathy's own LLM wiki memory system.
+[4:34] And if you guys have been following me
+[4:35] for a while, you know that I've made
+[4:36] quite a few videos on this topic, and
+[4:38] I've got a bunch of different LLM wikis
+[4:39] set up in my own AI OS. All right, so
+[4:41] here's prompt two to set up the wiki.
+[4:43] You're going to paste in the gist, and
+[4:44] then you're going to tell Claude to use
+[4:45] it on the raw folder, which is just
+[4:47] everything that Claude previously just
+[4:48] extracted for you. And what comes out is
+[4:50] a wiki inside of Obsidian. Now, Obsidian
+[4:52] is just kind of the visual layer on top
+[4:54] of it, which is what I'm showing you
+[4:55] guys here. And you don't need Obsidian
+[4:56] to get this to work, but if you want to
+[4:58] look at it visually, Obsidian works. You
+[4:59] can see down here we have the sources,
+[5:01] we have one page per thing he wrote or
+[5:03] said, we have topics on what he knows,
+[5:05] we have principles, we have the rules,
+[5:06] we have methods, we have how he
+[5:07] explains, we have how he debugs, we have
+[5:09] basically, just like I said, the way his
+[5:11] brain works. And whenever you see one of
+[5:12] these purple links, that is the wiki
+[5:14] connecting one page to another or one
+[5:17] method to another. Every rule links back
+[5:19] to the source that it came from or
+[5:20] sources that it came from. Every source
+[5:22] links to the rules that it supports. So,
+[5:24] instead of just having a dump of notes
+[5:25] like we had earlier, we now have like
+[5:27] this interconnected web or sort of like
+[5:29] relationship map. And every time that
+[5:31] something new goes in, you ingest a new
+[5:33] blog or a new idea, the LLM will once
+[5:34] again ingest it and link it to a bunch
+[5:36] of other concepts. Now, this next step
+[5:38] is what makes it think like him instead
+[5:40] of just knowing what he said in the
+[5:41] past. So, here's the prompt for setting
+[5:42] up the rules. It basically pulls his
+[5:44] rules out of the the and every rule has
+[5:46] to connect with an exact quote from him
+[5:48] and where it came from. Because we don't
+[5:50] want Claude to just make things up. So,
+[5:51] what we got here were seven rules.
+[5:53] Number one is build it or you don't
+[5:55] understand it. Number two is first order
+[5:57] term first. Basically, find the one
+[6:00] piece that matters, show it working, and
+[6:01] then add just one thing at a time. And
+[6:03] pretty much his whole course is built in
+[6:04] that way. Number three is to predict,
+[6:06] then run, then compare. He'll say the
+[6:08] number he expects before he runs the
+[6:10] cell because, in his words, most of the
+[6:12] time it will train, but silently work a
+[6:14] bit worse. Number four is to show the
+[6:16] wrong version first. He leaves his own
+[6:18] bugs in the recording on purpose. Number
+[6:20] five is prove it, don't claim it. Number
+[6:22] six is say what you assumed. His number
+[6:23] one complaint about Claude code is that
+[6:25] the models make wrong assumptions on
+[6:27] your behalf and then just run along them
+[6:29] without checking. And number seven is
+[6:30] that simpler wins. And what's cool is
+[6:32] you can check any of these. You can
+[6:34] click the quote and it will open up the
+[6:35] page that it came from with the
+[6:36] timestamp or with the exact source. And
+[6:38] if there is no source, the agent has to
+[6:40] say explicitly that it's inferring based
+[6:42] on things that Karpathy has said. Now,
+[6:43] these rules need to live somewhere where
+[6:45] the agent can actually read them. So,
+[6:46] here is prompt four. And it has Claude
+[6:48] turn them into two files for us. That
+[6:50] first file is a sub-agent. And in case
+[6:52] you don't know what that is, it's a
+[6:53] separate Claude with its own
+[6:54] instructions and its own memory and
+[6:55] context window, so that if you want to
+[6:57] hand off a task to a sub-agent, it
+[6:58] doesn't drag your whole conversation
+[7:00] along with it. And you can see here
+[7:01] inside of this sub-agent file, we can
+[7:03] see the seven rules. We can also see how
+[7:05] it talks. And we can see the loop that
+[7:06] it runs on every single task. So, this
+[7:08] is basically like a little mini Karpathy
+[7:10] agent. Now, the second one is a skill.
+[7:12] So, you can see here that when I type
+[7:13] {slash} Karpathy-teach and then whatever
+[7:16] I'm stuck on, it goes into the agent
+[7:18] with the rules, and then it grades the
+[7:19] answer against a checklist, one line per
+[7:21] rule, and then it will actually show me
+[7:22] everything. So, those are the two things
+[7:24] we have, a Karpathy agent and a Karpathy
+[7:26] skill. Okay. Now, here's another thing
+[7:27] that's really important when we're
+[7:28] setting this up. We want the agent to
+[7:30] make sure that it's running its code
+[7:31] before it answers you. And that's why
+[7:32] building this inside of Claude code
+[7:33] works so well because it can already
+[7:35] write and run code. And it's a step that
+[7:37] we have to make sure that the agent
+[7:38] can't skip based on Karpathy's own
+[7:40] rules. So, here's prompt five. It's
+[7:41] basically adding a run gate. It adds a
+[7:43] hook, which is a little script that runs
+[7:45] right when the agent tries to finish its
+[7:46] turn. So, if it wrote code and it never
+[7:48] ran it, the hook will basically block
+[7:50] the answer and it will send it back with
+[7:51] one message saying, "Hey, you have to
+[7:53] run this before you say it works." So,
+[7:55] we're kind of just baking in like a
+[7:56] verification loop. And you know,
+[7:57] obviously you don't have to code or
+[7:58] write this hook yourself. You just ask
+[8:00] for it with this prompt. So, now it will
+[8:01] run, it will test, and it will fix, and
+[8:03] then only after all that will you
+[8:05] actually see the final thing. And then
+[8:06] the last step, of course, is just to
+[8:07] test it. So, a few different prompts
+[8:09] that we used it. I asked it here to
+[8:11] build something real and teach me how it
+[8:12] works, which was a byte pair tokenizer,
+[8:15] which is the thing that turns text into
+[8:16] numbers before a large language model
+[8:17] ever sees it. And watch what it does
+[8:19] here. The first thing, it writes down
+[8:21] what done means before it touches any
+[8:23] code. And then it builds the smallest
+[8:24] version that works on a tiny input and
+[8:26] before it runs it, it tells me what it
+[8:27] expects to see. Then it runs it and
+[8:29] shows me the real output. And then, it
+[8:30] shows me a version that breaks and why,
+[8:32] and then it fixes it. And then at the
+[8:33] bottom it lists basically everything it
+[8:34] ran, what came out, what it changed, and
+[8:37] which rule it was following for each of
+[8:38] those moves. So, instead of getting just
+[8:40] a block of code back and then the agent
+[8:42] saying, "Hey, this works." I basically
+[8:43] got walked through it one piece at a
+[8:44] time and now I can understand a lot
+[8:46] better what just happened. Now, another
+[8:47] thing you can test is its review. So,
+[8:49] before something goes to a client, I can
+[8:50] ask it one question, which is, "Would
+[8:52] the client accept this and what would he
+[8:53] want to delete?" Or, you know, questions
+[8:55] like that. And here's a script that
+[8:56] Claude wrote for me that I can use as an
+[8:57] example. This script pulls YouTube
+[8:59] comments and it ran fine when Claude
+[9:01] tested it. The agent reads it, predicts
+[9:03] it'll crash on an emoji under a normal
+[9:04] Windows terminal, it runs it that way,
+[9:06] and then it crashes before writing any
+[9:08] files. So, saying that it works was only
+[9:09] true in one specific setting or
+[9:11] terminal. So, here you can see that
+[9:13] Claude was able to go through and cut a
+[9:14] bunch of stuff that wasn't earning its
+[9:15] place. It was able to give me an
+[9:16] analysis on how we actually fix this and
+[9:18] clean it up and review it before we can
+[9:20] actually like ship it. And then it
+[9:21] proves the trimmed version catches the
+[9:22] same questions by running both of them
+[9:24] side by side and actually showing me.
+[9:26] And then the other thing I wanted to
+[9:27] bring up is that this thing will just
+[9:28] keep learning. Back in July, Karpathy
+[9:30] posted about how he rambles at the model
+[9:31] by voice for 10 minutes and then he lets
+[9:33] the model clean up all that text. So, I
+[9:35] can run {slash} Karpathy {dash} ingest
+[9:38] with any sort of link. It will then
+[9:39] check the raw folder, it'll write a
+[9:40] source page for the [music] post, and
+[9:42] then it will update every page that post
+[9:44] touches. It added a new behavior here to
+[9:46] rule six. So, now the agent knows to ask
+[9:48] me a couple of questions when my request
+[9:50] is thin instead of just guessing. And a
+[9:52] rule that was sitting on the bench with
+[9:53] one source behind it got its second
+[9:55] source and became a real rule. And then,
+[9:57] because it understands how this wiki
+[9:58] works, it'll update the index, it'll
+[10:00] update the hot page, it'll update the
+[10:01] log. So, the brain just got better from
+[10:02] me adding one link. And I never had to
+[10:04] touch the wiki by hand or manually set
+[10:06] up these relationships or links. And
+[10:08] that, of course, was his rule two. Okay,
+[10:10] so zooming out, we had four steps. We
+[10:12] gave Claude everything inside of
+[10:13] someone's head, Karpathy's head, and we
+[10:15] compiled it into a wiki. We turned that
+[10:16] into his rules with a quote for each
+[10:18] one. We make it run before it talks, and
+[10:20] we make it test on things that are real.
+[10:21] And the line that I'd want to leave you
+[10:22] guys with today is one of my favorite
+[10:24] quotes, and it's something that he
+[10:25] himself has said this year, which is
+[10:26] that you can outsource your thinking,
+[10:27] but you cannot outsource your
+[10:28] understanding. You are not going to be
+[10:29] the expert at everything, and that's
+[10:30] fine. But, you can certainly pull in the
+[10:32] expert and build on top of him or her.
+[10:35] Anyways, that is going to do it for this
+[10:36] one. So, if you guys enjoyed the video
+[10:37] or you learned something new, please
+[10:38] give it a like. It definitely helps me
+[10:39] out a ton. And as always, I appreciate
+[10:40] you guys making it to the end of the
+[10:41] video, and I'll see you on the next one.
+[10:43] Thanks, everyone.

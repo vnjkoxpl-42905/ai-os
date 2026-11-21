@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Teacher Home vocabulary</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&family=Outfit:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#252b26;--muted:#6f726b;--line:#e4e0d6;--paper:#f6f4ef;--sheet:#fcfbf8;--char:#16191a;--on:#efede6;--soft:#ebe7de;--ease:cubic-bezier(.23,1,.32,1)}
+*{box-sizing:border-box;margin:0}
+body{background:var(--paper);color:var(--ink);font-family:Outfit,system-ui,sans-serif;padding:40px 16px 80px}
+.wrap{max-width:1180px;margin:0 auto}
+header{margin-bottom:36px;max-width:760px}
+h1{font:300 40px/1.1 Fraunces,serif;letter-spacing:-.02em;margin-bottom:12px}
+header p{color:var(--muted);line-height:1.55}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:22px}
+.term{background:var(--sheet);border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:0 1px 2px rgb(37 43 38/.04),0 10px 24px rgb(37 43 38/.04);display:flex;flex-direction:column;gap:14px}
+.tag{font:400 11px 'JetBrains Mono',monospace;color:var(--muted);letter-spacing:.06em}
+.term h2{font:400 24px/1.1 Fraunces,serif;letter-spacing:-.015em}
+.def{font-size:14px;line-height:1.5;color:var(--muted)}
+.demo{border-radius:16px;background:var(--paper);border:1px solid var(--line);padding:18px;min-height:150px;display:flex;align-items:center;justify-content:center}
+.contrast{display:grid;grid-template-columns:1fr 1fr;gap:10px;width:100%}
+.contrast>div{border-radius:12px;padding:12px;font-size:12px}
+.bad{background:#fff;border:1px dashed #cfc8ba;color:var(--muted)}
+.bad p{border-bottom:1px solid var(--line);padding:5px 0}
+.good{background:var(--char);color:var(--on);display:grid;place-items:center;text-align:center}
+.big{font:300 44px/1 Fraunces,serif}
+/* eclipse */
+.ecl{width:100%;height:150px;background:radial-gradient(ellipse at 60% 40%,#2a2f30,#0d0f10 70%);border-radius:14px;position:relative;overflow:hidden}
+.ecl .sun{position:absolute;left:52%;top:28px;width:84px;height:84px;border-radius:99px;background:#050606;box-shadow:0 0 0 1.5px #e9e6de,0 0 30px 6px rgb(255 255 255/.25)}
+.ecl .orbit{position:absolute;left:12%;top:58px;width:80%;height:58px;border:1px solid rgb(255 255 255/.35);border-radius:50%;transform:rotate(-8deg)}
+.ecl .lbl{position:absolute;right:16px;top:86px;background:#e9e6de;color:#111;font-size:10px;border-radius:99px;padding:3px 8px}
+.ecl .cd{position:absolute;left:16px;bottom:12px;color:var(--on);font:300 30px Fraunces,serif}
+/* ring */
+.rings{display:flex;gap:22px}
+.ring{--p:66;width:92px;height:92px;border-radius:99px;background:conic-gradient(var(--ink) calc(var(--p)*1%),var(--soft) 0);display:grid;place-items:center;position:relative}
+.ring::after{content:"";position:absolute;inset:9px;border-radius:99px;background:var(--paper)}
+.ring span{position:relative;z-index:1;text-align:center;font-size:11px;color:var(--muted)}
+.ring b{display:block;font:400 22px Fraunces,serif;color:var(--ink)}
+/* ticks */
+.ticks{width:100%;display:grid;gap:12px}
+.trow{display:grid;grid-template-columns:70px 1fr 40px;align-items:center;gap:10px;font-size:12px}
+.bars{display:flex;gap:3px}.bars i{flex:1;height:18px;border-radius:2px;background:var(--ink)}.bars i.x{background:var(--soft)}
+/* ribbon */
+.ribbon{width:100%}
+.track{position:relative;height:56px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:repeating-linear-gradient(90deg,transparent 0 calc(12.5% - 1px),var(--line) calc(12.5% - 1px) 12.5%)}
+.ev{position:absolute;top:10px;height:34px;border-radius:9px;background:var(--sheet);border:1px solid var(--line);font-size:11px;padding:4px 8px;box-shadow:0 2px 6px rgb(0 0 0/.05)}
+.ev.d{background:var(--char);color:var(--on);border-color:var(--char)}
+.now{position:absolute;top:-6px;bottom:-6px;left:31%;width:2px;background:#b4232f}
+.hours{display:flex;justify-content:space-between;font:400 10px 'JetBrains Mono',monospace;color:var(--muted);margin-top:6px}
+/* stack */
+.stack{position:relative;width:240px;height:130px}
+.card{position:absolute;inset:0;border-radius:14px;background:var(--sheet);border:1px solid var(--line);padding:14px;box-shadow:0 6px 16px rgb(37 43 38/.08)}
+.card:nth-child(1){transform:translate(14px,14px) rotate(3deg);opacity:.6}
+.card:nth-child(2){transform:translate(7px,7px) rotate(1.5deg);opacity:.85}
+.card:nth-child(3){background:var(--char);color:var(--on);border-color:var(--char)}
+.card small{opacity:.7;font-size:11px}.card strong{display:block;font:400 20px Fraunces,serif;margin:6px 0}
+.chips{display:flex;gap:5px;margin-top:8px}.chips span{font-size:10px;border:1px solid rgb(255 255 255/.3);border-radius:99px;padding:2px 7px}.chips span.ok{background:var(--on);color:var(--char)}
+/* faces */
+.faces{display:flex;flex-direction:column;gap:12px;align-items:center}
+.cluster{display:flex}.cluster span{width:44px;height:44px;border-radius:99px;margin-left:-10px;border:3px solid var(--paper);display:grid;place-items:center;font:400 17px Fraunces,serif;background:var(--soft);position:relative}
+.cluster span.on::after{content:"";position:absolute;right:0;bottom:0;width:10px;height:10px;border-radius:99px;background:#2f7d4f;border:2px solid var(--paper)}
+.heat{display:grid;grid-template-columns:repeat(14,12px);gap:3px}.heat i{height:12px;border-radius:3px;background:var(--soft)}.heat i.a{background:#a9a59b}.heat i.b{background:#5d615b}.heat i.c{background:var(--ink)}
+/* bento */
+.bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:34px;gap:6px;width:100%}
+.bento div{border-radius:9px;background:var(--sheet);border:1px solid var(--line);font-size:10px;color:var(--muted);padding:5px 7px}
+.bento .h{grid-column:span 3;grid-row:span 2;background:var(--char);color:var(--on);border-color:var(--char)}
+.bento .t{grid-row:span 2}.bento .w{grid-column:span 2;grid-row:span 2}
+/* tactile */
+.press{display:flex;gap:18px}
+.flat{padding:16px 20px;border:1px solid var(--line);border-radius:12px;font-size:13px;background:transparent}
+.tact{padding:16px 20px;border-radius:14px;font-size:13px;background:linear-gradient(#fefdfb,#f3f0ea);border:1px solid #dcd6ca;box-shadow:inset 0 1px 0 #fff,0 1px 1px rgb(0 0 0/.06),0 6px 14px rgb(37 43 38/.08);cursor:pointer;transition:transform .15s var(--ease),box-shadow .15s}
+.tact:hover{transform:translateY(-2px);box-shadow:inset 0 1px 0 #fff,0 2px 2px rgb(0 0 0/.06),0 12px 22px rgb(37 43 38/.12)}
+.tact:active{transform:translateY(1px);box-shadow:inset 0 1px 2px rgb(0 0 0/.08)}
+/* dock */
+.dock{display:flex;gap:6px;background:#202425;padding:7px;border-radius:99px;box-shadow:0 10px 30px rgb(0 0 0/.25)}
+.dock span{color:var(--on);font-size:12px;padding:9px 14px;border-radius:99px;background:#2c3132}
+.dock span.p{background:var(--on);color:var(--char)}
+.tilegrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;width:100%}
+.tile{border-radius:14px;background:var(--sheet);border:1px solid var(--line);padding:12px;display:grid;gap:4px}
+.tile b{font:300 30px/1 Fraunces,serif}.tile span{font-size:11px;color:var(--muted)}
+.tile.k{background:var(--char);color:var(--on)}.tile.k span{color:#b9bab4}
+footer{margin-top:40px;color:var(--muted);font-size:13px}
+</style></head><body><div class="wrap">
+<header>
+<h1>Words for what you mean</h1>
+<p>Each card is one term with a small drawing of it, using your teacher-side data. Tell me which words match what you want, by letter, and which feel wrong. Nothing here is a final design.</p>
+</header>
+<div class="grid">
+
+<article class="term"><span class="tag">A · the core idea</span><h2>Widget, not a list</h2>
+<p class="def">A self-contained object that answers one question at a glance through a picture or one big value. A list makes you read rows; a widget you understand before you read.</p>
+<div class="demo"><div class="contrast"><div class="bad"><p>Celia Moreno · recap</p><p>Zoë Adams · recap</p><p>Dakota Reyes · recap</p></div><div class="good"><div><div class="big">3</div>recaps to finish</div></div></div></div></article>
+
+<article class="term"><span class="tag">B · the one big piece</span><h2>Hero instrument</h2>
+<p class="def">The single large, live visual at the top of the page that tells you where you are in the day. Your eclipse is one. There is only ever one per page.</p>
+<div class="demo"><div class="ecl"><div class="orbit"></div><div class="sun"></div><span class="lbl">3:00 Lydia</span><span class="cd">5 hr 0 min</span></div></div></article>
+
+<article class="term"><span class="tag">C · the layout</span><h2>Bento grid</h2>
+<p class="def">Widgets of different sizes fitted together in one grid, like compartments in a bento box. Size shows importance. Replaces one long scrolling list of sections.</p>
+<div class="demo"><div class="bento"><div class="h">Hero instrument</div><div class="t">Rings</div><div class="w">Session stack</div><div>Faces</div><div>Tasks</div><div class="w">Day ribbon</div><div class="w">Results</div></div></div></article>
+
+<article class="term"><span class="tag">D · at-a-glance numbers</span><h2>Glance tiles</h2>
+<p class="def">Small tiles with one large number and a label. Only for numbers that change what you do today. A zero hides instead of showing.</p>
+<div class="demo"><div class="tilegrid"><div class="tile k"><b>3</b><span>recaps to finish</span></div><div class="tile"><b>2</b><span>unread messages</span></div><div class="tile"><b>4</b><span>sessions this week</span></div></div></div></article>
+
+<article class="term"><span class="tag">E · progress</span><h2>Progress rings</h2>
+<p class="def">A circle that fills as work gets done. Good for "how much of my follow-up is finished" or a student's homework this week.</p>
+<div class="demo"><div class="rings"><div class="ring" style="--p:33"><span><b>1/3</b>follow-ups</span></div><div class="ring" style="--p:75"><span><b>6/8</b>homework</span></div></div></div></article>
+
+<article class="term"><span class="tag">F · the day</span><h2>Day ribbon</h2>
+<p class="def">A horizontal strip of today's hours with each session as a block and a red line for now. You see gaps and crowding without reading times.</p>
+<div class="demo"><div class="ribbon"><div class="track"><div class="now"></div><div class="ev" style="left:4%;width:16%">Celia</div><div class="ev d" style="left:50%;width:16%">Lydia</div><div class="ev" style="left:76%;width:20%">Consult · Priya</div></div><div class="hours"><span>9</span><span>11</span><span>1</span><span>3</span><span>5</span><span>7</span></div></div></div></article>
+
+<article class="term"><span class="tag">G · work you hold</span><h2>Card stack</h2>
+<p class="def">Pending items drawn as a physical stack. The top card is the one to do now, showing its steps as chips; the cards behind show how many are left.</p>
+<div class="demo"><div class="stack"><div class="card"></div><div class="card"></div><div class="card"><small>Follow-up · Nov 17</small><strong>Celia Moreno</strong><div class="chips"><span class="ok">Notes</span><span>Recap</span><span>Next work</span></div></div></div></div></article>
+
+<article class="term"><span class="tag">H · results</span><h2>Score bars (tick bars)</h2>
+<p class="def">One small bar per question, filled for correct. You see a section's shape, not just its score. You already use this on Home.</p>
+<div class="demo"><div class="ticks"><div class="trow"><span>Zoë · LR</span><div class="bars"><i></i><i></i><i></i><i class="x"></i><i></i><i></i><i></i><i></i><i class="x"></i><i></i><i></i><i></i><i class="x"></i><i></i></div><b>21/26</b></div><div class="trow"><span>Ivory · RC</span><div class="bars"><i></i><i class="x"></i><i></i><i></i><i class="x"></i><i></i><i class="x"></i><i></i><i></i><i></i><i class="x"></i><i></i><i></i><i></i></div><b>19/27</b></div></div></div></article>
+
+<article class="term"><span class="tag">I · people</span><h2>Face cluster + activity strip</h2>
+<p class="def">Students as overlapping initials, with a dot for "active recently", and a strip of squares showing how active each has been over two weeks.</p>
+<div class="demo"><div class="faces"><div class="cluster"><span class="on">L</span><span class="on">C</span><span>Z</span><span>D</span><span>I</span></div><div class="heat"><i class="c"></i><i class="b"></i><i></i><i class="a"></i><i class="c"></i><i class="c"></i><i></i><i class="b"></i><i class="a"></i><i></i><i class="c"></i><i class="b"></i><i class="c"></i><i class="c"></i></div></div></div></article>
+
+<article class="term"><span class="tag">J · feel</span><h2>Tactile</h2>
+<p class="def">Pieces look like physical objects: a lit top edge, a soft shadow under them, they lift on hover and press in on click. Left is flat, right is tactile. Hover it.</p>
+<div class="demo"><div class="press"><span class="flat">Open follow-up</span><span class="tact">Open follow-up</span></div></div></article>
+
+<article class="term"><span class="tag">K · the bar at the bottom</span><h2>Dock</h2>
+<p class="def">A floating bar pinned to the bottom of the screen with your most-used jumps. One primary action is lit; the rest are quiet.</p>
+<div class="demo"><div class="dock"><span class="p">Assign work</span><span>Find a question</span><span>Messages</span><span>Students</span></div></div></article>
+
+</div>
+<footer>Design vocabulary board · 2026-11-18 · sample data</footer>
+</div></body></html>

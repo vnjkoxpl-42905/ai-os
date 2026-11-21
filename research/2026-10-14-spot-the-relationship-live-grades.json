@@ -1,0 +1,85 @@
+{
+  "mode": "admin-preview",
+  "maximumProviderCalls": 6,
+  "gradingRequests": 6,
+  "results": [
+    {
+      "order": 1,
+      "attempt": 1,
+      "response": "conditional",
+      "expected": "partial",
+      "status": 200,
+      "body": {
+        "verdict": "partial",
+        "feedback": "You correctly identified the relationship type, but you still need to include the specific indicator word from the sentence. Please add the exact phrase that establishes the conditional relationship to complete your answer."
+      },
+      "passes": true,
+      "requestId": "32249540-2db3-46f0-b977-d5857b989679"
+    },
+    {
+      "order": 5,
+      "attempt": 1,
+      "response": "comparative, caused",
+      "expected": "partial",
+      "status": 200,
+      "body": {
+        "verdict": "partial",
+        "feedback": "You successfully identified the correct indicator word in the sentence. However, you misidentified the relationship type. Try reconsidering the nature of the link between the blocked flue and the smoke."
+      },
+      "passes": true,
+      "requestId": "0c8444ef-01bc-40e0-8be0-ef579af19e95"
+    },
+    {
+      "order": 25,
+      "attempt": 1,
+      "response": "comparative, stronger",
+      "expected": "partial",
+      "status": 200,
+      "body": {
+        "verdict": "partial",
+        "feedback": "You successfully identified the comparative relationship, which is great. However, because this is a separated comparative, you need to include the second part of the indicator to fully capture the relationship. Please update your indicator to include the word that completes the comparison."
+      },
+      "passes": true,
+      "requestId": "5c67b4a3-224c-455e-acc5-b971f3b6549d"
+    },
+    {
+      "order": 1,
+      "attempt": 1,
+      "response": "conditional, only if is not the indicator",
+      "expected": "not_correct",
+      "status": 200,
+      "body": {
+        "verdict": "incorrect",
+        "feedback": "You correctly identified the relationship type, but you dismissed the indicator that actually establishes it. Re-examine the phrase that sets the requirement for the vent to open."
+      },
+      "passes": true,
+      "requestId": "9b68b317-59fd-4b25-b5ef-0445f95960bc"
+    },
+    {
+      "order": 48,
+      "attempt": 1,
+      "response": "The conditional relationship is shown by only if. The comparative relationship is more regionally appropriate than the global one. The causal relationship is indicated by because and produces.",
+      "expected": "correct",
+      "status": 200,
+      "body": {
+        "verdict": "correct",
+        "feedback": "You have accurately identified all three relationships and paired them with the correct indicator words. Your analysis of the logical structure is spot on, and you handled the comparative indicator effectively by including both necessary parts."
+      },
+      "passes": true,
+      "requestId": "54237dd1-38a2-4897-a4ac-5a86dd6c0dad"
+    },
+    {
+      "order": 1,
+      "attempt": 2,
+      "response": "This is a conditional relationship, shown by only if: reaching 28 degrees is required for the vent to open.",
+      "expected": "correct",
+      "status": 200,
+      "body": {
+        "verdict": "correct",
+        "feedback": "You correctly identified the conditional relationship and the accurate indicator. Your explanation of the logical necessity is also spot on."
+      },
+      "passes": true,
+      "requestId": "f77fc09c-888e-444f-9506-2593d21f8635"
+    }
+  ]
+}

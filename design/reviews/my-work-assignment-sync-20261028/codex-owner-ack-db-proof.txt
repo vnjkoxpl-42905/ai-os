@@ -1,0 +1,10 @@
+2026-10-28T16:29:11.999Z
+{
+  "fresh_core": "893b0b801d98e49595f6157a3fe61b50c97332bae4c324792a46789ea04ceb4e",
+  "forward": "6928b0fdec40119c9c8760fc1b40aba5aa5ba9cf18e0d44b8245997f06dec756"
+}
+PASS PostgreSQL baseline old-index=false: owner/RLS, source/mirror, gates, generation, receipts, group/schedule/recovery, seven-day flows, lifetime delivery and silent replay
+PASS PostgreSQL baseline old-index=true: owner/RLS, source/mirror, gates, generation, receipts, group/schedule/recovery, seven-day flows, lifetime delivery and silent replay
+
+Six-migration disposable PostgreSQL proof exit0. New regression: administrator acknowledges an own assigned note; exact owned receipt saved; status remains assigned, completed_at stays null and existing metadata preserved. Administrator preview of another student's current available note remains denied. Source owner, active/publication, unlock and issuance guards unchanged. Prior ownership/lifetime/dedupe/queue/races/migration replay all retained. Independent read-only reviewer confirmed no material finding.
+Production forward fix is ONLY 20261028145000_student_work_owner_acknowledgment.sql; fresh core updated for new installs. No production mutation or commit performed by database reviewer. Actual live ownership acceptance remains parent release step.

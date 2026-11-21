@@ -1,0 +1,263 @@
+{
+  "status": "completed",
+  "mode": "inspect",
+  "provider": "claude",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "claude",
+    "builder": "codex",
+    "inspector": "claude"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-conditional-bootcamp",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os\\brainstorms\\2026-09-30-conditional-curriculum\\OPENING-VISUAL-BUILD-REVIEW.md",
+  "plan_sha256": "7d5e60a9831ee5b60ec87c87023253f2e040b7cd31a3adf0c4838546ca263546",
+  "requested_model": null,
+  "requested_effort": null,
+  "base": "67230dfae74a1466515d570fcb7b8a96ab5cb9c5",
+  "snapshot": {
+    "base": "67230dfae74a1466515d570fcb7b8a96ab5cb9c5",
+    "files": [
+      {
+        "path": "public/conditional-opening/sufficient-necessary.png",
+        "kind": "file",
+        "sha256": "696696c4f501f65e3d33315c9b236acf532ecf954142c532d54f9d2b880a7eba"
+      },
+      {
+        "path": "public/data/_bank.generated.json",
+        "kind": "file",
+        "sha256": "69f34f6dc7c1c2772d0fc212851873ca92a6c0a40e15af83e97b56575e004f75"
+      },
+      {
+        "path": "public/data/finder-address-index.json",
+        "kind": "file",
+        "sha256": "3f8216dacc9a968b6e4e19da90472b8591b32204f912dcf97ed87459b5406007"
+      },
+      {
+        "path": "src/App.tsx",
+        "kind": "file",
+        "sha256": "25c149ebb99ff5cd4335c6950cb3c42fcb89c69d7e8b4ac3e799acbcbfac13ae"
+      },
+      {
+        "path": "src/bootcamps/conditionals/assignments.test.ts",
+        "kind": "file",
+        "sha256": "77f1b64f7cae57f9252ab9cc4a751b076f49210fab623b1bf70271a31e0d76ec"
+      },
+      {
+        "path": "src/bootcamps/conditionals/assignments.ts",
+        "kind": "file",
+        "sha256": "fd588d1035192e40019845bb071c81c1a49f0a4d502ff7dca5bd51d6ee6a26d4"
+      },
+      {
+        "path": "src/bootcamps/conditionals/components/ConditionalLessonNote.test.tsx",
+        "kind": "file",
+        "sha256": "a5566dd89205934660bbba22c3c9678f2f3572ac753bbdfcca1e2b2c7d7988a8"
+      },
+      {
+        "path": "src/bootcamps/conditionals/components/ConditionalLessonNote.tsx",
+        "kind": "file",
+        "sha256": "650257b071cdeff6e1280c08270730b801c05eb580e45f9bf751d2900b1b5567"
+      },
+      {
+        "path": "src/bootcamps/conditionals/components/ConditionalOpeningLesson.tsx",
+        "kind": "file",
+        "sha256": "8d4391d4699183bd57783e328f7723e72ae81b415f0b766b4d785ae06c9f0a58"
+      },
+      {
+        "path": "src/bootcamps/conditionals/components/ConditionalOpeningMedia.tsx",
+        "kind": "file",
+        "sha256": "fc0fab325a060914474228e04658e229a2d8eee3f111c7cd983d3ae96b00b1ad"
+      },
+      {
+        "path": "src/bootcamps/conditionals/components/opening.css",
+        "kind": "file",
+        "sha256": "19ceb420446004072d675cb6bb5309dbaa7929593621e8509e4e8367f002a788"
+      },
+      {
+        "path": "src/bootcamps/conditionals/content/foundations.source.ts",
+        "kind": "file",
+        "sha256": "7d46f9c62855b2ff781e5ffa2128b83a07ea1c8a805ac856df52c92607a68ac7"
+      },
+      {
+        "path": "src/bootcamps/conditionals/data/curriculum.generated.json",
+        "kind": "file",
+        "sha256": "c7d7742645a3758602cedf191b81076aa9f919cee2c2ce4960e11a309ebaf8ff"
+      },
+      {
+        "path": "src/bootcamps/conditionals/routes.test.tsx",
+        "kind": "file",
+        "sha256": "2487375125791666e921d3e45d8ca2a9cb16aa3608c73785853694176560efed"
+      },
+      {
+        "path": "src/bootcamps/conditionals/routes.tsx",
+        "kind": "file",
+        "sha256": "a8de32d2b1b8962092a629d94f9943cdb12d88e97d2a0b8def3dc6279cbc6eb7"
+      },
+      {
+        "path": "src/dev/ConditionalOpeningPreview.tsx",
+        "kind": "file",
+        "sha256": "b8e60b8b5ec9cfc513edfaf4bcf208e3c172129bd865bc29d43916f4385b9c78"
+      },
+      {
+        "path": "supabase/functions/mcp/index.ts",
+        "kind": "file",
+        "sha256": "f731b29c4fcd1517dc99276a998944494a86720e0cd103061e1799d149c7d32c"
+      }
+    ],
+    "diff_sha256": "75fc4c94f093cb10a5919a2d865c0a29b4b8362001e8167abc7be1766f93326a",
+    "sha256": "931c1d5079647d342d3586cc47ec31e5c774802a31963a6f32f4ac5f24a32daf"
+  },
+  "previous": null,
+  "started_at": 1790953874.8580344,
+  "artifacts": "C:\\Users\\Joshu\\AppData\\Local\\Temp\\claudex-kookmw5z",
+  "cli_version": "2.1.280 (Claude Code)",
+  "executable": [
+    "C:\\Users\\Joshu\\AppData\\Roaming\\npm\\node_modules\\@anthropic-ai\\claude-code\\bin\\claude.exe"
+  ],
+  "exit_code": 0,
+  "session_id": "7a5b802c-bbd2-41f5-8ce6-19f7c92f9ded",
+  "response": {
+    "verdict": "REVISE",
+    "summary": "The order-rule examples, the seven indicators per group, the obligation-preserving \"must\" handling and the regenerated curriculum order all match the plan. Most of the 42 new and replacement drill items are logically correct. Five issues need fixing before approval. (1) The stage-assignment change uses the old unit order for every grant, including new ones. Because the teacher picker lists units in the new order, \"start at Group 1\" now leaves out rules-facts, truth-validity, negation and contraposition, even though contraposition is a prerequisite for Group 3. (2) The unit action bar shows a malformed label: literal quote marks around \"3. Skill drill\" plus \"Level N\", which the plan says to remove. (3) Interactive state carries over between the Group 1 and Group 2 lessons because the production lesson is not keyed by unit. The dev preview adds a key, which hides this bug from browser checks. (4) The set diagram first shows Order A outside the \"Marked ready\" region, which contradicts the fact Order A is marked ready. (5) The NotebookLM dog/mammal infographic, which the user rejected, is still in public/ and would be deployed. Lower-severity gaps: Group 2 advanced drills don't include \"must\", and Group 1 advanced drills use \"if\" and \"when\" only in non-conditional sentences. Some level labels remain, one explanation is badly worded, and there are minor accessibility and feedback issues.",
+    "findings": [
+      {
+        "id": "F1-stage-membership-drops-prereqs",
+        "severity": "high",
+        "path": "src/bootcamps/conditionals/assignments.ts",
+        "evidence": "conditionalAssignmentUnitIds (lines ~46-52) always slices a hardcoded original order ['orientation','rules-facts','sufficient-necessary','truth-validity','negation','contraposition','group-1','group-2',...]. The teacher picker (src/components/teacher/ConditionalAssignmentFields.tsx:15,32 'Starting skill') lists module.conditionalUnits, which are now in the new order. A teacher creating a NEW stage grant 'start at group-1' expects group-1, group-2, rules-facts, truth-validity, negation, contraposition, group-3…, but the grant resolves to group-1, group-2, group-3…, leaving out rules-facts/truth-validity/negation/contraposition. group-3 lists prerequisites ['group-2','contraposition'] (foundations.source.ts:305), so the student reaches Group 3 without the contraposition unit. Likewise 'start at sufficient-necessary' leaves out rules-facts. The new test in assignments.test.ts asserts this exclusion ('expect(group).not.toContain(\"contraposition\")'). Separately, routes.tsx removed `start` from assignmentSelection, so the displayed path now depends only on this list.",
+        "fix": "Freeze the legacy order only for grants created before the reorder. Do this either by versioning the stage target (e.g., add an orderVersion or createdAt check in parseTarget/resolveConditionalAssignments) or by storing explicit unitIds at grant time. Resolve new grants with getCurriculumUnits(conditionalUnits, unitId) in the current order. Alternatively, define stage membership as 'the start unit, all later units, and any unmet prerequisites of included units'. Add tests for a new 'group-1' stage grant that includes contraposition, and for legacy grants keeping their original membership."
+      },
+      {
+        "id": "F2-unit-actions-label",
+        "severity": "medium",
+        "path": "src/bootcamps/conditionals/routes.tsx",
+        "evidence": "Line 156: ['practice', `'3. Skill drill'${levelLabel(selection.difficulty)}`] renders literally as \"'3. Skill drill'Level 1\": stray quote marks, no separator, and a student-facing level label, which the plan says to remove ('Remove student-facing level labels around lessons'). routes.test.tsx only updated the guided-activity link name and never asserts this nav label.",
+        "fix": "Change it to ['practice', '3. Skill drill'] (no level label) and add a test asserting the action-nav link text."
+      },
+      {
+        "id": "F3-lesson-state-leaks-across-units",
+        "severity": "medium",
+        "path": "src/bootcamps/conditionals/components/ConditionalLessonNote.tsx",
+        "evidence": "Line 25 returns <ConditionalOpeningLesson …/> with no key, and routes.tsx:188 renders <ConditionalLessonNote unit={unit} …/> unkeyed. Navigating group-1 → group-2 (or back through 'Previous lesson') reuses the same instance, and GroupLessons renders Check/TranslationLab/DiagramBuilder/Flashcards in the same tree positions. Their state carries over. For example, the 'Keep the whole condition' Check keeps `choice` and immediately shows Yes/incorrect feedback for a question the learner never answered. DiagramBuilder keeps the stale `left` string, so its Arrow shows a group-1 idea paired with a group-2 idea (e.g., 'Submitted before noon → Admitted'). src/dev/ConditionalOpeningPreview.tsx:14 passes key={unit.id}, so browser verification through the preview cannot show this bug.",
+        "fix": "Render <ConditionalOpeningLesson key={unit.id} …/> in ConditionalLessonNote (or key the note in routes.tsx). Add a test that rerenders group-1 → group-2 and asserts no feedback is shown. Remove the key from the preview so it matches production."
+      },
+      {
+        "id": "F4-set-explorer-initial-position",
+        "severity": "medium",
+        "path": "src/bootcamps/conditionals/components/ConditionalOpeningLesson.tsx",
+        "evidence": "SetExplorer line 25: while !placed, x=460, y=125. That point lies inside the 'Packed orders' rect (28–612 × 25–300) and outside the 'Marked ready' rect (70–310 × 99–263). The default fact is 'Order A is marked ready', so the first view shows Order A packed but not marked ready, which contradicts the stated fact. The plan requires every visualization to teach the relation correctly and to separate a possibility from an established fact.",
+        "fix": "Place the unplaced token outside both regions (e.g., widen the viewBox and park it in a neutral 'unsorted' tray), or hide it until a fact is chosen. Make the aria-label consistent with that position."
+      },
+      {
+        "id": "F5-rejected-notebooklm-png-deployed",
+        "severity": "medium",
+        "path": "public/conditional-opening/sufficient-necessary.png",
+        "evidence": "The new untracked file is a Gemini/NotebookLM-watermarked infographic built on the dog/mammal example, which the 2026-10-02 corrections replaced. Nothing in src references it, but everything under public/ is copied into the build and is publicly reachable. The plan says NotebookLM output stays internal and only reviewed assets are shown.",
+        "fix": "Delete the file from public/ and keep it as an internal artifact outside the deployed tree. Optionally add a verify step that fails on unreferenced files in public/conditional-opening/."
+      },
+      {
+        "id": "F6-drill-indicator-coverage",
+        "severity": "low",
+        "path": "src/bootcamps/conditionals/content/foundations.source.ts",
+        "evidence": "The plan says each assigned difficulty covers every core expression. In the Group 2 advanced set, 'must' is missing: a2 uses 'obliges', and a1–a7 otherwise cover only, only if, only when, only where, always and required. In the Group 1 advanced set, 'if' (a2) and 'when' (a4) appear only as non-conditional uses, so no advanced item translates a real if/when rule. group-2-b3 ('Every registered buoy always broadcasts…') pairs a Group 1 'every' with 'always', which blurs what the 'always' item tests.",
+        "fix": "Replace group-2-a2 (or add an item) with a 'must' obligation item. Add advanced Group 1 items with conditional uses of if and when (e.g., clause-order or modifier traps). Rewrite group-2-b3 without 'every'."
+      },
+      {
+        "id": "F7-residual-level-labels",
+        "severity": "low",
+        "path": "src/bootcamps/conditionals/routes.tsx",
+        "evidence": "Student-facing level labels remain at line 246 (question runner header '· Level N'), line 261 ('Recall before reveal · Level N') and line 274 (review cards). The plan says to remove student-facing level labels around lessons while keeping the assigned difficulty logic.",
+        "fix": "Remove or replace these with neutral wording on student-visible surfaces, keeping the difficulty value internal."
+      },
+      {
+        "id": "F8-b6-explanation-wording",
+        "severity": "low",
+        "path": "src/bootcamps/conditionals/content/foundations.source.ts",
+        "evidence": "group-1-b6 reasoning: 'The rule does not include every chilled dessert on the menu.' This can be read as 'not every chilled dessert on the menu is covered', which contradicts the rule. The intended point is that the rule does not put every chilled dessert on the menu.",
+        "fix": "Reword to 'The rule does not put every chilled dessert on the lunch menu.'"
+      },
+      {
+        "id": "F9-recall-cards-not-fresh",
+        "severity": "low",
+        "path": "src/bootcamps/conditionals/components/ConditionalOpeningMedia.tsx",
+        "evidence": "The Recall cards are labelled 'A fresh example', but orientation card 3 repeats the orientation Check verbatim ('Every volunteer wears a badge. Ari wears a badge…'). Group 2 card 4 ('A complaint is filed only when a review occurs') reverses the lesson's natural sentence into an unnatural one, against the 'intuitive and natural' correction.",
+        "fix": "Replace the duplicate card with a new scenario, and rewrite the Group 2 card as a natural 'only when' sentence."
+      },
+      {
+        "id": "F10-check-feedback-generic",
+        "severity": "low",
+        "path": "src/bootcamps/conditionals/components/ConditionalOpeningLesson.tsx",
+        "evidence": "Check (line 18) shows a single explanation whatever the choice, and every wrong answer gets the same header, 'Look at what the rule actually requires.' (even for sufficiency questions). The plan asks for real answer-specific feedback.",
+        "fix": "Accept per-option feedback strings (feedback: string[]) and write the header to match the misconception."
+      },
+      {
+        "id": "F11-arrow-accessible-name",
+        "severity": "low",
+        "path": "src/bootcamps/conditionals/components/ConditionalOpeningLesson.tsx",
+        "evidence": "Arrow uses <b aria-label=\"implies\">→</b>. aria-label on an element with a generic role is not reliably announced, so screen readers may read 'right arrow' or nothing. The same applies to the gate track and the DirectionSwitch arrows.",
+        "fix": "Use <span aria-hidden=\"true\">→</span><span className=\"sr-only\">implies</span>, or render the whole diagram as text: 'Marked ready implies Packed'."
+      },
+      {
+        "id": "F12-reference-scope-unverified",
+        "severity": "low",
+        "path": "src/bootcamps/conditionals/content/foundations.source.ts",
+        "evidence": "The opening lesson no longer renders unit.teaching/method/workedExample for orientation, sufficient-necessary, group-1 and group-2, but those fields still feed other surfaces (guided method, readonly references). They contain older scenarios (impact-rated windows, parcel scanning) and expressions beyond the seven-indicator scope (whenever, provided that, essential, depends on, implies). The plan says 'Readonly references follow same scope'. Only the methods and guided prompts were updated for this scope.",
+        "fix": "Audit the reference rendering for these four units. Move the out-of-scope expression paragraphs to a later or 'related expressions' unit, or mark them as optional extensions, so references match the opening scope."
+      }
+    ],
+    "coverage": [
+      "Read in full: ConditionalOpeningLesson.tsx, ConditionalOpeningMedia.tsx, opening.css, ConditionalOpeningPreview.tsx, ConditionalLessonNote.tsx",
+      "Viewed public/conditional-opening/sufficient-necessary.png",
+      "Read diff sections: App.tsx, assignments.ts and assignments.test.ts, ConditionalLessonNote.test.tsx, foundations.source.ts (all new Group 1/2 drill items checked for logic and indicator coverage), routes.tsx and routes.test.tsx",
+      "Read foundations.source.ts for orientation, rules-facts, sufficient-necessary, truth-validity and negation, plus the group-2 teaching block and group-3 prerequisites",
+      "Traced callers and shared state: curriculumPath.getCurriculumUnits, the routes selection and start handling, the teacher ConditionalAssignmentFields unit picker, scripts/conditionals/import-content.ts, and the content index importing curriculum.generated.json",
+      "Spot-checked curriculum.generated.json for the new unit order and the presence of group-1-b7 and group-2-a7"
+    ],
+    "limitations": [
+      "Could not run typecheck, tests, the Vite build or the browser passes. No claim that tests pass or that the visual rendering is correct.",
+      "Did not read the full diffs of public/data/_bank.generated.json, finder-address-index.json or supabase/functions/mcp/index.ts (diff lines are multi-MB). Did not verify that the preserved-file hashes are unchanged.",
+      "Did not count all 294 generated questions or diff the entire curriculum.generated.json against the source.",
+      "Did not inspect the readonly reference route, LessonInteractions, applications.source.ts units or DynamicIslandTOC behavior with the new hero toggle.",
+      "Plan source documents outside the repo (draft lessons, teaching-voice wiki, COPY-CORRECTIONS, NotebookLM/Kling artifacts, Intro to LR) were not read, so voice fidelity and copy-correction compliance were judged only from the plan text."
+    ]
+  },
+  "usage": {
+    "input_tokens": 38,
+    "cache_creation_input_tokens": 88770,
+    "cache_read_input_tokens": 1059598,
+    "output_tokens": 19609,
+    "output_tokens_details": {
+      "thinking_tokens": 11087
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 88770,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 5988,
+        "cache_read_input_tokens": 92548,
+        "cache_creation_input_tokens": 513,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 513
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "permission_denials": [],
+  "total_cost_usd": 1.3144116000000001,
+  "elapsed_seconds": 213.12
+}

@@ -1,0 +1,212 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="lsatu-interactive-lesson" content="celia-cutler-reference-most-strongly-supported"><title>Most Strongly Supported · Reference</title><style>  :root{
+    --cream:#FBF8F1; --ink:#1C1917; --ink-soft:#44403C; --ink-mute:#6F6A63;
+    --gold:#E8D08B; --gold-deep:#B8983F; --gold-text:#85650F; --gold-wash:rgba(232,208,139,.16);
+    --card:#FFFFFF; --line:#E7E0D2;
+    --green:#3F6212; --green-wash:rgba(63,98,18,.09);
+    --red:#9F1239; --red-wash:rgba(159,18,57,.07);
+    --serif:"Fraunces","Garamond","Georgia",serif;
+    --sans:"Outfit","Avenir Next","Helvetica Neue",sans-serif;
+    --mono:"JetBrains Mono","SF Mono",Menlo,monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--ink);font-family:var(--sans);line-height:1.65;font-size:17px}
+  .wrap{max-width:800px;margin:0 auto;padding:0 24px}
+
+  header.hero{padding:68px 0 44px;border-bottom:1px solid var(--line)}
+  .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-text);margin-bottom:18px}
+  h1{font-family:var(--serif);font-weight:600;font-size:clamp(36px,6vw,54px);line-height:1.06;letter-spacing:-.01em}
+  .hero p.lede{margin-top:20px;font-size:19px;color:var(--ink-soft);max-width:58ch}
+
+  section{padding:50px 0;border-bottom:1px solid var(--line)}
+  h2{font-family:var(--serif);font-weight:600;font-size:30px;line-height:1.15;margin-bottom:4px}
+  .sec-kicker{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-text);margin-bottom:10px}
+  p{margin:14px 0;color:var(--ink-soft)}
+  p strong{color:var(--ink)}
+
+  .callout{background:var(--gold-wash);border-left:3px solid var(--gold-deep);border-radius:0 12px 12px 0;padding:16px 20px;margin:24px 0;font-size:16.5px;color:var(--ink-soft)}
+  .callout .tag{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-text);display:block;margin-bottom:6px}
+  .callout strong{color:var(--ink)}
+
+  /* the three kinds */
+  .kinds{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:28px 0 8px}
+  .kind{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;box-shadow:0 1px 3px rgba(28,25,23,.06);transition:transform .18s,box-shadow .18s}
+  /* The colour carries the taxonomy, so it has to stay. A short rule inside
+     the padding does that without a 3px border running into a 14px corner. */
+  .kind .bar{display:block;width:32px;height:4px;border-radius:2px;background:var(--c);margin-bottom:14px}
+  .kind:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(28,25,23,.09)}
+  .kind.assume{--c:var(--gold-deep)}
+  .kind.object{--c:var(--red)}
+  .kind.describe{--c:var(--green)}
+  .kind .name{font-family:var(--serif);font-size:22px;color:var(--c);font-weight:600}
+  .kind .what{font-size:15px;margin:8px 0 0;color:var(--ink-soft)}
+  .kind .words{border-top:1px dashed var(--line);margin-top:14px;padding-top:12px}
+  .kind .words b{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--c);display:block;margin-bottom:7px}
+  .kind .words span{display:block;font-size:14px;color:var(--ink-mute);padding:2px 0}
+  .kind .test{margin-top:14px;background:var(--cream);border-radius:9px;padding:11px 13px;font-size:14.5px;color:var(--ink)}
+  .kind .test b{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-mute);display:block;margin-bottom:4px}
+
+  .opposite{display:flex;align-items:stretch;gap:0;margin:26px 0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--card)}
+  .opposite div{flex:1;padding:18px 20px;font-size:15.5px;color:var(--ink-soft)}
+  .opposite div:first-child{background:var(--gold-wash)}
+  .opposite div:last-child{background:var(--red-wash)}
+  .opposite b{display:block;font-family:var(--mono);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;margin-bottom:6px}
+  .opposite div:first-child b{color:var(--gold-text)}
+  .opposite div:last-child b{color:var(--red)}
+
+  ol.steps{margin:20px 0;padding-left:0;list-style:none;counter-reset:step}
+  ol.steps li{counter-increment:step;position:relative;padding:14px 0 14px 54px;border-bottom:1px dashed var(--line);font-size:16px;color:var(--ink-soft)}
+  ol.steps li:last-child{border-bottom:none}
+  ol.steps li::before{content:counter(step);position:absolute;left:0;top:12px;width:34px;height:34px;border-radius:50%;background:var(--ink);color:var(--cream);font-family:var(--serif);display:flex;align-items:center;justify-content:center;font-size:16px}
+  ol.steps li b{color:var(--ink)}
+
+  .flags{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 4px}
+  .flag{font-family:var(--mono);font-size:12.5px;letter-spacing:.04em;background:var(--red-wash);color:var(--red);border:1px solid rgba(159,18,57,.2);border-radius:999px;padding:6px 14px}
+
+  .drill{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;margin:26px 0;box-shadow:0 2px 8px rgba(28,25,23,.06)}
+  .drill h3{font-family:var(--serif);font-size:19px;margin-bottom:4px}
+  .drill p.hint{font-size:14px;color:var(--ink-mute);margin:0 0 14px}
+  .chips{display:flex;gap:8px;flex-wrap:wrap}
+  .chip{font-family:var(--mono);font-size:13px;background:var(--cream);border:1px solid var(--line);border-radius:999px;padding:8px 15px;cursor:pointer;transition:all .16s;color:var(--ink-soft)}
+  .chip:hover{border-color:var(--ink-mute)}
+  .chip.on[data-k="assume"]{background:var(--gold-wash);border-color:var(--gold-deep);color:var(--gold-text)}
+  .chip.on[data-k="object"]{background:var(--red-wash);border-color:var(--red);color:var(--red)}
+  .chip.on[data-k="describe"]{background:var(--green-wash);border-color:var(--green);color:var(--green)}
+  .chip .ans{display:none;font-weight:600}
+  .chip.on .ans{display:inline;margin-left:8px}
+
+  .quote{font-family:var(--serif);font-size:20px;line-height:1.45;color:var(--ink);border-left:3px solid var(--gold);padding:4px 0 4px 22px;margin:24px 0;font-style:italic}
+  .footer-note{padding:34px 0 56px}
+  .mark{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-mute)}
+  .chip.on[data-k="neutral"]{background:var(--gold-wash);border-color:var(--ink-mute);color:var(--ink)}
+  .kind.link{--c:var(--gold-deep)}
+  .kind.link .name,.kind.assume .name,.kind.link .words b,.kind.assume .words b{color:var(--gold-text)}
+  .kind.apply{--c:var(--green)}
+  .kind.warn{--c:var(--red)}
+  .rule{font-family:var(--serif);font-size:20px;color:var(--ink);margin:18px 0}
+  .rule .ar{color:var(--gold-text);font-weight:700;margin:0 6px}
+  table.t{width:100%;border-collapse:collapse;margin:20px 0;font-size:15.5px;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  table.t th{font-family:var(--mono);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold-text);text-align:left;padding:12px 16px;border-bottom:1px solid var(--line)}
+  table.t td{padding:11px 16px;border-bottom:1px dashed var(--line);color:var(--ink-soft);vertical-align:top}
+  table.t tr:last-child td{border-bottom:none}
+  table.t td:first-child{color:var(--ink);font-weight:600;white-space:nowrap}
+  pre{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;font-family:var(--serif);font-size:18px;overflow-x:auto}
+  @media (max-width:560px){.opposite{flex-direction:column}table.t td:first-child{white-space:normal}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style></head><body>
+<header class="hero"><div class="wrap"><div class="kicker">Reference · Keep it open while you drill</div><h1>Most Strongly Supported</h1><p class="lede">Keep this open beside a Most Strongly Supported set.</p></div></header>
+<section><div class="wrap"><h2>What you&#x27;re looking for</h2><p>Information, then a question about what that information supports best. It is never an argument. Think of it as a Must Be True question with a lighter touch: the answer doesn't have to be guaranteed. It has to be the most supported one, and it works like the conclusion the information reaches.</p></div></section><section><div class="wrap"><h2>The steps</h2><p><strong>1 · Expect sentences, not an argument.</strong>
+You won't be asked to find a conclusion or judge reasoning. You'll be asked what the sentences support.</p>
+<p><strong>2 · Name each claim.</strong>
+Conditional, causal, correlation, quantity, or a should claim. Mark any pivot (<em>but</em>, <em>yet</em>, <em>however</em>). Mark any <em>and</em> or <em>or</em> claim too. They change what you need to focus on.</p>
+<p><strong>3 · See how the claims fit.</strong>
+A repeated idea means a link. Cause and effect claims may chain. If nothing chains, find what the sentences share, and expect the answer to stay inside it.</p>
+<p><strong>4 · Predict the range.</strong>
+Put yourself in the situation. What do you know? What don't you know? What range of answers is possible? Do this before you read the choices.</p>
+<p><strong>5 · Weigh each answer.</strong>
+Check its strength and its exact words against what the stimulus said.</p>
+<p><strong>6 · Take the answer with the fewest problems.</strong>
+It won't be perfect.</p></div></section><section><div class="wrap"><h2>What the claims are, and what the answer usually does</h2><table class="t">
+<thead>
+<tr>
+<th>The claims are</th>
+<th>The right answer usually</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rules that link</td>
+<td>Joins two ideas that sit far apart, or its contrapositive</td>
+</tr>
+<tr>
+<td>A rule plus a fact</td>
+<td>Applies the rule to the fact</td>
+</tr>
+<tr>
+<td>A causal chain</td>
+<td>Plays with the chain: the first idea makes the last more likely, or seeing the last is some evidence of the first</td>
+</tr>
+<tr>
+<td>Several causal claims that don't chain</td>
+<td>Stays inside what they share</td>
+</tr>
+<tr>
+<td>A pivot</td>
+<td>Settles the tension between the ideas on either side</td>
+</tr>
+</tbody>
+</table></div></section><section><div class="wrap"><h2>When the claims are rules</h2><p><strong>Two rules that link.</strong> Every sourdough loaf is baked in the stone oven. Every loaf baked in the stone oven sells out by noon. The stone oven is the idea in the middle, and it won't be in the answer. The answer joins the ends: every sourdough loaf sells out by noon, or a loaf that doesn't sell out by noon isn't sourdough.</p>
+<p><strong>The ends sit far apart.</strong> The test often puts one end early in the stimulus and the other near the end, buried in extra detail. Look for the idea that repeats. The ideas that appear once are usually your two ends.</p>
+<p><strong>Not every pair links.</strong> Every sourdough loaf is baked in the stone oven. Every rye loaf is baked in the stone oven. Both rules end in the same place, and that links nothing. Don't force a chain.</p>
+<p><strong>A rule plus a fact.</strong> Find the rule, write its contrapositive, then apply the fact. Take: everyone on the guest list gets a wristband.</p>
+<table class="t">
+<thead>
+<tr>
+<th>You learn</th>
+<th>You can say</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dana is on the guest list</td>
+<td>Dana has a wristband</td>
+</tr>
+<tr>
+<td>Dana has a wristband</td>
+<td>Nothing about the list</td>
+</tr>
+<tr>
+<td>Dana isn't on the list</td>
+<td>Nothing about the wristband</td>
+</tr>
+<tr>
+<td>Dana has no wristband</td>
+<td>Dana isn't on the list</td>
+</tr>
+</tbody>
+</table>
+<p>The second and third rows are the bait. The test hopes you'll see something that isn't there.</p></div></section><section><div class="wrap"><h2>Causal chains: a dial, not a switch</h2><p>A rule is a hard line. A causal chain is a dial, like a volume knob. Turn it up and the volume rises. Turn it down and it falls.</p>
+<table class="t">
+<thead>
+<tr>
+<th>If</th>
+<th>A conditional says</th>
+<th>A causal chain says</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The first idea is absent</td>
+<td>Nothing about the last</td>
+<td>The last is less likely</td>
+</tr>
+<tr>
+<td>The last idea is present</td>
+<td>Nothing about the first</td>
+<td>The first may be the reason</td>
+</tr>
+</tbody>
+</table>
+<p>If the effect keeps showing up when the cause is absent, doubt that it was the cause.</p></div></section><section><div class="wrap"><h2>Strength: the weightlifter</h2><p>The stimulus is the lifter. Each answer is a weight. The heavier the weight, the less likely the lift.</p>
+<table class="t">
+<thead>
+<tr>
+<th>Wording</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Soft</td>
+<td><em>can</em>, <em>may</em>, <em>some</em>, <em>helps</em>, <em>tends to</em>, <em>detracts</em></td>
+</tr>
+<tr>
+<td>Strong</td>
+<td><em>inevitably</em>, <em>always</em>, <em>never</em>, <em>all</em>, <em>must</em></td>
+</tr>
+</tbody>
+</table>
+<p>A strong word needs the stimulus to say something just as strong. <em>Inevitably</em> means every time, with no exceptions. A soft word still has to be about what the stimulus said. And a soft word asks for very little: <em>detracts</em> only needs a small dip.</p></div></section><section><div class="wrap"><h2>Things that will fool you</h2><p><strong>A different idea that sounds close.</strong> Pulling attention away is not the same as losing it. Helping is not guaranteeing. The stimulus is your whole data set, so check each key word against it.</p>
+<p><strong>An answer that skips a detail.</strong> That isn't fatal. Ask whether the stimulus pushes you toward this answer more than toward any other.</p>
+<p><strong>Waiting for a perfect answer.</strong> There isn't one. It's the most supported answer, not a proven one.</p></div></section><div class="footer-note"><div class="wrap"><span class="mark">LSAT U</span></div></div></body></html>

@@ -4,6 +4,10 @@ description: This skill should be used when the user asks to "create a slash com
 version: 0.2.0
 ---
 
+## Current AI OS execution contract
+
+Reference for legacy third-party Claude plugin commands only. New AI OS capabilities use the single skill activation model, not a parallel command directory.
+
 # Command Development for Claude Code
 
 > **Note:** The `.claude/commands/` directory is a legacy format. For new skills, use the `.claude/skills/<name>/SKILL.md` directory format. Both are loaded identically — the only difference is file layout. See the `skill-development` skill for the preferred format.

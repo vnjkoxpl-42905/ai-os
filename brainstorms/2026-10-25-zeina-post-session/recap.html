@@ -1,0 +1,217 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="lsatu-interactive-lesson" content="zeina-2026-10-22-rules-facts-and-strength"><title>Know what the sentence gives you · Session recap</title><style>  :root{
+    --cream:#FBF8F1; --ink:#1C1917; --ink-soft:#44403C; --ink-mute:#78716C;
+    --gold:#E8D08B; --gold-deep:#B8983F; --gold-wash:rgba(232,208,139,.16);
+    --card:#FFFFFF; --line:#E7E0D2;
+    --green:#3F6212; --green-wash:rgba(63,98,18,.09);
+    --red:#9F1239; --red-wash:rgba(159,18,57,.07);
+    --serif:"Fraunces","Garamond","Georgia",serif;
+    --sans:"Outfit","Avenir Next","Helvetica Neue",sans-serif;
+    --mono:"JetBrains Mono","SF Mono",Menlo,monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--ink);font-family:var(--sans);line-height:1.65;font-size:17px}
+  .wrap{max-width:800px;margin:0 auto;padding:0 24px}
+
+  header.hero{padding:68px 0 44px;border-bottom:1px solid var(--line)}
+  .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:18px}
+  h1{font-family:var(--serif);font-weight:600;font-size:clamp(36px,6vw,54px);line-height:1.06;letter-spacing:-.01em}
+  .hero p.lede{margin-top:20px;font-size:19px;color:var(--ink-soft);max-width:58ch}
+
+  section{padding:50px 0;border-bottom:1px solid var(--line)}
+  h2{font-family:var(--serif);font-weight:600;font-size:30px;line-height:1.15;margin-bottom:4px}
+  .sec-kicker{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:10px}
+  p{margin:14px 0;color:var(--ink-soft)}
+  p strong{color:var(--ink)}
+
+  .callout{background:var(--gold-wash);border-left:3px solid var(--gold-deep);border-radius:0 12px 12px 0;padding:16px 20px;margin:24px 0;font-size:16.5px;color:var(--ink-soft)}
+  .callout .tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-deep);display:block;margin-bottom:6px}
+  .callout strong{color:var(--ink)}
+
+  /* the three kinds */
+  .kinds{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:28px 0 8px}
+  .kind{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;box-shadow:0 1px 3px rgba(28,25,23,.06);transition:transform .18s,box-shadow .18s}
+  /* The colour carries the taxonomy, so it has to stay. A short rule inside
+     the padding does that without a 3px border running into a 14px corner. */
+  .kind .bar{display:block;width:32px;height:4px;border-radius:2px;background:var(--c);margin-bottom:14px}
+  .kind:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(28,25,23,.09)}
+  .kind.assume{--c:var(--gold-deep)}
+  .kind.object{--c:var(--red)}
+  .kind.describe{--c:var(--green)}
+  .kind .name{font-family:var(--serif);font-size:22px;color:var(--c);font-weight:600}
+  .kind .what{font-size:15px;margin:8px 0 0;color:var(--ink-soft)}
+  .kind .words{border-top:1px dashed var(--line);margin-top:14px;padding-top:12px}
+  .kind .words b{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--c);display:block;margin-bottom:7px}
+  .kind .words span{display:block;font-size:14px;color:var(--ink-mute);padding:2px 0}
+  .kind .test{margin-top:14px;background:var(--cream);border-radius:9px;padding:11px 13px;font-size:14.5px;color:var(--ink)}
+  .kind .test b{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-mute);display:block;margin-bottom:4px}
+
+  .opposite{display:flex;align-items:stretch;gap:0;margin:26px 0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--card)}
+  .opposite div{flex:1;padding:18px 20px;font-size:15.5px;color:var(--ink-soft)}
+  .opposite div:first-child{background:var(--gold-wash)}
+  .opposite div:last-child{background:var(--red-wash)}
+  .opposite b{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;margin-bottom:6px}
+  .opposite div:first-child b{color:var(--gold-deep)}
+  .opposite div:last-child b{color:var(--red)}
+
+  ol.steps{margin:20px 0;padding-left:0;list-style:none;counter-reset:step}
+  ol.steps li{counter-increment:step;position:relative;padding:14px 0 14px 54px;border-bottom:1px dashed var(--line);font-size:16px;color:var(--ink-soft)}
+  ol.steps li:last-child{border-bottom:none}
+  ol.steps li::before{content:counter(step);position:absolute;left:0;top:12px;width:34px;height:34px;border-radius:50%;background:var(--ink);color:var(--cream);font-family:var(--serif);display:flex;align-items:center;justify-content:center;font-size:16px}
+  ol.steps li b{color:var(--ink)}
+
+  .flags{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 4px}
+  .flag{font-family:var(--mono);font-size:12.5px;letter-spacing:.04em;background:var(--red-wash);color:var(--red);border:1px solid rgba(159,18,57,.2);border-radius:999px;padding:6px 14px}
+
+  .drill{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;margin:26px 0;box-shadow:0 2px 8px rgba(28,25,23,.06)}
+  .drill h3{font-family:var(--serif);font-size:19px;margin-bottom:4px}
+  .drill p.hint{font-size:14px;color:var(--ink-mute);margin:0 0 14px}
+  .chips{display:flex;gap:8px;flex-wrap:wrap}
+  .chip{font-family:var(--mono);font-size:13px;background:var(--cream);border:1px solid var(--line);border-radius:999px;padding:8px 15px;cursor:pointer;transition:all .16s;color:var(--ink-soft)}
+  .chip:hover{border-color:var(--ink-mute)}
+  .chip.on[data-k="assume"]{background:var(--gold-wash);border-color:var(--gold-deep);color:var(--gold-deep)}
+  .chip.on[data-k="object"]{background:var(--red-wash);border-color:var(--red);color:var(--red)}
+  .chip.on[data-k="describe"]{background:var(--green-wash);border-color:var(--green);color:var(--green)}
+  .chip .ans{display:none;font-weight:600}
+  .chip.on .ans{display:inline;margin-left:8px}
+
+  .quote{font-family:var(--serif);font-size:20px;line-height:1.45;color:var(--ink);border-left:3px solid var(--gold);padding:4px 0 4px 22px;margin:24px 0;font-style:italic}
+  .footer-note{padding:34px 0 56px}
+  .mark{font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-mute);opacity:.7}
+  .chip.on[data-k="neutral"]{background:var(--gold-wash);border-color:var(--ink-mute);color:var(--ink)}
+  .kind.link{--c:var(--gold-deep)}
+  .kind.apply{--c:var(--green)}
+  .kind.warn{--c:var(--red)}
+  .rule{font-family:var(--serif);font-size:20px;color:var(--ink);margin:18px 0}
+  .rule .ar{color:var(--gold-deep);font-weight:700;margin:0 6px}
+  table.t{width:100%;border-collapse:collapse;margin:20px 0;font-size:15.5px;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  table.t th{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold-deep);text-align:left;padding:12px 16px;border-bottom:1px solid var(--line)}
+  table.t td{padding:11px 16px;border-bottom:1px dashed var(--line);color:var(--ink-soft);vertical-align:top}
+  table.t tr:last-child td{border-bottom:none}
+  table.t td:first-child{color:var(--ink);font-weight:600;white-space:nowrap}
+  pre{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;font-family:var(--serif);font-size:18px;overflow-x:auto}
+  @media (max-width:560px){.opposite{flex-direction:column}table.t td:first-child{white-space:normal}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+summary{cursor:pointer;font-weight:600}summary:focus-visible{outline:3px solid var(--green);outline-offset:5px}table{width:100%}td,th{overflow-wrap:anywhere}details[open]{border-color:var(--green)}@media(max-width:560px){.wrap{padding-left:18px;padding-right:18px}.t{font-size:14px}.t td,.t th{padding:8px 5px}}</style></head><body><header class="hero"><div class="wrap"><div class="kicker">Session recap · October 22</div><h1>Know what the<br>sentence gives you</h1><p class="lede">A rule tells you what follows if a condition is met. A fact tells you what is true about a particular situation. Before drawing another arrow, decide which one you have. That small distinction determines what you can conclude.</p></div></header><section><div class="wrap"><div class="sec-kicker">Step zero</div><h2>Read on three levels</h2><p>First ask what the sentence does in the argument: does it support another claim, or is it the claim being supported? Then ask what kind of information it contains. Finally, keep its strength. A possible result and a guaranteed result are different conclusions.</p>
+<table class="t">
+<thead>
+<tr>
+<th>Kind</th>
+<th>What it says</th>
+<th>Simple example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fact</td>
+<td>What is true about a particular person, object or situation</td>
+<td>This parcel has a blue sticker.</td>
+</tr>
+<tr>
+<td>Conditional rule</td>
+<td>If one condition is met, another must be met</td>
+<td>Every blue-sticker parcel must be inspected.</td>
+</tr>
+<tr>
+<td>Causal claim</td>
+<td>One thing produces or changes another</td>
+<td>The heat warped the shelf.</td>
+</tr>
+<tr>
+<td>Correlation</td>
+<td>Two things occur together more often</td>
+<td>People who commute farther are more likely to arrive late.</td>
+</tr>
+<tr>
+<td>Normative claim</td>
+<td>What should happen, or what is better</td>
+<td>The office should open earlier.</td>
+</tr>
+<tr>
+<td>Quantity claim</td>
+<td>How many members of a group fit a description</td>
+<td>Most parcels arrived before noon.</td>
+</tr>
+</tbody>
+</table>
+<p>These labels can overlap. A quantity claim can be a premise. A causal claim can be a conclusion. Knowing the topic is not enough; you want to know what the author is doing with it.</p>
+<p>The word <em>for</em> does not by itself make a sentence conditional. In “The path is muddy, for it rained,” it introduces a reason. In “For entry, a ticket is required,” the requirement gives you the conditional relationship. Read the complete sentence rather than turning every familiar word into an arrow.</p></div></section><section><div class="wrap"><div class="sec-kicker">Session recap</div><h2>Enough is different from required</h2><p>Suppose the office has this rule: <strong>Every blue-sticker parcel must be inspected.</strong> A blue sticker is sufficient for inspection under this rule. Knowing the parcel has that sticker is enough to know it has been inspected. Inspection is necessary: the rule does not allow a blue-sticker parcel without it.</p>
+<p><strong>Blue sticker → must be inspected</strong></p>
+<p>An inspection stamp does not prove there was a blue sticker. The office could inspect other parcels too. Being required for one route does not make something a guarantee that the route was taken.</p>
+<p>The contrapositive says the same rule another way: <strong>If a parcel has not been inspected, it cannot have a blue sticker.</strong> If it did have one, inspection would have to come with it. Reverse the two complete conditions and negate both. You do not need a diagram that looks positive; you need one that says exactly what the original says.</p></div></section><section><div class="wrap"><div class="sec-kicker">Session recap</div><h2>Two jobs, with different inputs</h2><h3>1. Apply a rule to a fact</h3>
+<p>Rule: Blue sticker → must be inspected.</p>
+<p>Fact: This parcel has a blue sticker.</p>
+<p>Result: This parcel must be inspected. The fact supplies the left side of the arrow.</p>
+<p>Change the fact to “This parcel has not been inspected.” Now the contrapositive tells you it cannot have a blue sticker.</p>
+<p>Change it again to “This parcel has been inspected.” The rule does not settle whether it has a blue sticker. Nor does the absence of a sticker settle whether it has been inspected. In those two cases, keep the uncertainty.</p>
+<h3>2. Link rules to make another rule</h3>
+<p>Rule 1: Blue sticker → must be inspected.</p>
+<p>Rule 2: Inspected → must be logged.</p>
+<p>The complete shared idea is <em>inspected</em>. The result required by the first rule meets the condition that starts the second.</p>
+<p>New rule: <strong>Blue sticker → must be logged.</strong></p>
+<p>We still do not know that any parcel has a blue sticker. Rules can connect without telling us that their starting condition occurred. If a fact later supplies a blue-sticker parcel, we can apply the whole chain to it.</p>
+<p>You explained why a finding of guilt did not tell us what specific act had occurred. That was the distinction we needed: the required result can be present for another reason.</p></div></section><section><div class="wrap"><div class="sec-kicker">Session recap</div><h2>Count things without adding an upper limit</h2><p>With five cookies, <em>some are chocolate</em> means at least one. All five could be chocolate. <em>Most are chocolate</em> means more than half: three, four or five. <em>All</em> means all five.</p>
+<table class="t">
+<thead>
+<tr>
+<th>Word</th>
+<th>What it requires</th>
+<th>What it leaves open</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Some</td>
+<td>At least one</td>
+<td>Whether most or all fit</td>
+</tr>
+<tr>
+<td>Most</td>
+<td>More than half</td>
+<td>Whether all fit</td>
+</tr>
+<tr>
+<td>All</td>
+<td>Every member</td>
+<td>No exception within the group</td>
+</tr>
+</tbody>
+</table>
+<p>For a group known to contain members, all implies most and some; most implies some. You cannot go back upward. One chocolate cookie does not prove a majority. Use <em>more than half</em>, rather than memorizing 51 percent: 50.5 percent is most too.</p></div></section><section><div class="wrap"><div class="sec-kicker">Session recap</div><h2>Possibility is not a head count</h2><p>“Some parcels arrived” counts parcels. “The parcel could arrive” describes a possibility. Keep those questions separate.</p>
+<table class="t">
+<thead>
+<tr>
+<th>Wording</th>
+<th>What it says</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Could or might</td>
+<td>It is possible; it is not ruled out</td>
+</tr>
+<tr>
+<td>Must</td>
+<td>It is required by the information</td>
+</tr>
+<tr>
+<td>Cannot</td>
+<td>It is ruled out</td>
+</tr>
+<tr>
+<td>Not necessarily</td>
+<td>It is not guaranteed; it could fail to happen</td>
+</tr>
+</tbody>
+</table>
+<p>You do not need percentage ranges for these words. They are not numerical forecasts. Also, not knowing that something happens is not the same as proving that it cannot happen. A rule that leaves a case unsettled does not, by itself, prove a specific real-world possibility either.</p></div></section><section><div class="wrap"><div class="sec-kicker">Session recap</div><h2>Match the reasoning before the subject</h2><p>For parallel questions, find the conclusion and name its type and strength. Then name how the premises were used. “It took a required condition as enough” is more useful than “It was about participation.”</p>
+<p>If the original uses <strong>if A then B; B; therefore A</strong>, look for that same reversal. The fact must supply the required side, and the conclusion must infer the sufficient side. A valid application of a rule is not parallel to this mistake.</p>
+<p>Before the next sentence of an answer, predict what it would need to say. Then check the prediction. Weak wording alone does not make an answer match; <em>might</em> still needs the same reasoning behind it.</p></div></section><section><div class="wrap"><div class="sec-kicker">Session recap</div><h2>Say it first, then check</h2><p>Say your answer before opening each explanation.</p><details class="drill"><summary>Rule: Every blue-sticker parcel must be inspected. Fact: This parcel was not inspected. What follows?</summary><p>It cannot have a blue sticker. This is the contrapositive.</p></details><details class="drill"><summary>Five cookies: some are chocolate. Could all five be chocolate? Must all five be chocolate?</summary><p>All five could be chocolate, but all five are not required. One would satisfy “some.”</p></details><details class="drill"><summary>Blue sticker → inspected. Inspected → logged. Do these rules prove that a blue-sticker parcel exists?</summary><p>No. They give the new rule blue sticker → logged, without supplying a fact that starts it.</p></details></div></section><section><div class="wrap"><div class="sec-kicker">Session recap</div><h2>Your work before the next session</h2><ol>
+<li>Start with the available conditional practice. The Conditional Foundations bootcamp will follow when it is ready. As you practise, say which complete condition is enough and which is required before checking a diagram.</li>
+<li>Practise Conditional Rephrase: draw the complete rule on paper, then choose its matching diagram. Read the primer first.</li>
+<li>Apply the method to the easier guided question sets. Begin with Must Be True and Parallel Flaw, then Sufficient Assumption and Necessary Assumption. Read the question task each time: what follows, what completes the argument, and what is required are different jobs. The aim is accurate recognition and explanation before speed.</li>
+<li>Keep the Parallel Reasoning reference open beside that question type. For each question, identify the rule, any supplied fact, and exactly what follows or what went wrong.</li>
+<li>Bring one question where you can show the rule but cannot explain the next inference. Send a specific question sooner if you get stuck.</li>
+</ol>
+<p>We discussed a steadier study routine and a separate plan toward January. The immediate order is foundations, easier applications, then the differences between question types. Group-session details will follow once the time is confirmed.</p></div></section><div class="footer-note"><div class="wrap"><span class="mark">LSAT U</span></div></div></body></html>

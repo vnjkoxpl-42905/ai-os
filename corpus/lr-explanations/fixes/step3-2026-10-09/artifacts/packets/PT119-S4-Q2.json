@@ -1,0 +1,84 @@
+{
+ "qid": "PT119-S4-Q2",
+ "type": "Method of Reasoning",
+ "difficulty": "1",
+ "key_db": "B",
+ "stimulus_db": "Advertisement: The pride the people at Austin Stables take in their work accounts for their success in producing more winning racehorses than any other stable. Such a tradition of pride is not only found in the business of horse racing. For generations we at Barr Motor Company have demonstrated similar pride. You can rely on Barr Motor Company to produce more winning automobiles than our competitors.",
+ "stem_db": "The advertisement proceeds by",
+ "choices_db": {
+  "A": "demonstrating that Barr Motor Company has more repeat customers than its competitors",
+  "B": "using an analogy to reach the conclusion that Barr Motor Company is superior to its competitors",
+  "C": "proving that Barr Motor Company has a long- standing tradition of pride",
+  "D": "understating the role that pride plays in accounting for the success of Austin Stables",
+  "E": "asserting that Barr Motor Company has an older tradition of pride than does Austin Stables"
+ },
+ "bank": {
+  "stimulus": "Advertisement: The pride the people at Austin Stables take in their work accounts for their success in producing more winning racehorses than any other stable. Such a tradition of pride is not only found in the business of horse racing. For generations we at Barr Motor Company have demonstrated similar pride. You can rely on Barr Motor Company to produce more winning automobiles than our competitors.",
+  "stem": "The advertisement proceeds by",
+  "choices": {
+   "A": "demonstrating that Barr Motor Company has more repeat customers than its competitors",
+   "B": "using an analogy to reach the conclusion that Barr Motor Company is superior to its competitors",
+   "C": "proving that Barr Motor Company has a long-standing tradition of pride",
+   "D": "understating the role that pride plays in accounting for the success of Austin Stables",
+   "E": "asserting that Barr Motor Company has an older tradition of pride than does Austin Stables"
+  },
+  "key": "B"
+ },
+ "explanation_id": "0bb1aa2f-4156-4210-a078-b02f0ed1113a",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "9328f240-6c4b-492d-8ef1-e6f64d8ffd5d",
+   "position": 0,
+   "label": "Conclusion",
+   "body": "You can rely on Barr Motor Company to produce more winning automobiles than its competitors."
+  },
+  {
+   "row_id": "06cbf39b-fc71-4141-b70d-98016734d5a9",
+   "position": 1,
+   "label": "Evidence",
+   "body": "(1) The pride at Austin Stables accounts for their success in producing more winning racehorses than any other stable. (2) For generations, Barr Motor Company has demonstrated similar pride. (3) That tradition of pride is not limited to horse racing."
+  },
+  {
+   "row_id": "da224888-545e-40ea-91c7-476774fdb2d6",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "The ad's structure is an analogy: pride causes Austin Stables to outperform competitors in horse racing; Barr has the same tradition of pride; therefore Barr should outperform its competitors in cars. The ad reaches its conclusion by drawing a parallel between two different industries based on a shared trait."
+  },
+  {
+   "row_id": "0adcf04c-f4e8-4478-85f0-8c67cc508474",
+   "position": 3,
+   "label": "Goal",
+   "body": "Find an answer that describes the analogy-to-conclusion structure: an analogy is used to support a conclusion that Barr is superior to its competitors."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "8ed8eaeb-3096-4036-9bc2-7f47c8dce089",
+   "letter": "A",
+   "body": "Repeat customers are never mentioned. The ad talks only about pride and winning."
+  },
+  {
+   "row_id": "b236d999-2cb4-48ed-9547-8f27b285fb86",
+   "letter": "B",
+   "body": "The analogy is Austin Stables: pride made it beat its competitors in horse racing. Barr claims the same pride, and concludes it will beat its competitors in cars."
+  },
+  {
+   "row_id": "7a1208fc-a4a5-494b-ba47-d72b07c207be",
+   "letter": "C",
+   "body": "This is the most popular wrong answer. The ad does mention Barr's long tradition of pride, but it only states it. Nothing proves it. \"Asserting\" and \"proving\" are different moves."
+  },
+  {
+   "row_id": "ed458bee-4c9e-4d4b-901d-9b7d0d73d625",
+   "letter": "D",
+   "body": "The ad leans hard on pride as the reason for Austin's success. Playing it down would undercut the ad's own analogy."
+  },
+  {
+   "row_id": "1ddd3869-909c-4414-80fa-6801deaaa9c4",
+   "letter": "E",
+   "body": "The ad never compares how old the two traditions are."
+  }
+ ],
+ "known_problem": "Breakdown only; all five choice notes missing.",
+ "tags": "no-notes; very-short"
+}

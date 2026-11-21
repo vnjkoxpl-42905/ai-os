@@ -1,0 +1,84 @@
+{
+ "qid": "PT158-S4-Q3",
+ "type": "Role",
+ "difficulty": "4",
+ "key_db": "C",
+ "stimulus_db": "Physician: We are constantly bombarded by warnings, based on initial studies' tentative conclusions, about this or that food having adverse health effects. If the medical establishment wants people to pay attention to health warnings, it should announce only conclusive results, the kind that can come only from definitive studies. After all, people who are constantly subjected to fire drills eventually come to ignore the fire alarm.",
+ "stem_db": "The statement that people who are constantly subjected to fire drills eventually come to ignore the fire alarm plays which one of the following roles in the physician's argument?",
+ "choices_db": {
+  "A": "It is presented as an example of the sort of warning referred to in the argument's overall conclusion.",
+  "B": "It is a statement that plays no logical role in the argument but that instead serves to impugn the motives of the medical establishment.",
+  "C": "It is an analogy offered in support of the argument's overall conclusion.",
+  "D": "It is an analogy that forms part of a specific objection to the argument's overall conclusion.",
+  "E": "It is an analogy offered to clarify the distinction the physician makes between an initial study and a definitive study."
+ },
+ "bank": {
+  "stimulus": "Physician: We are constantly bombarded by warnings,\n based on initial studies’ tentative conclusions,\n about this or that food having adverse health\n effects. If the medical establishment wants people\n to pay attention to health warnings, it should\n announce only conclusive results, the kind that\n can come only from definitive studies. After all,\n people who are constantly subjected to fire drills\n eventually come to ignore the fire alarm.",
+  "stem": "The statement that people who are constantly subjected\n to fire drills eventually come to ignore the fire alarm\n plays which one of the following roles in the physician’s\n argument?",
+  "choices": {
+   "A": "It is presented as an example of the sort of warning referred to in the argument’s overall conclusion.",
+   "B": "It is a statement that plays no logical role in the argument but that instead serves to impugn the motives of the medical establishment.",
+   "C": "It is an analogy offered in support of the argument’s overall conclusion.",
+   "D": "It is an analogy that forms part of a specific objection to the argument’s overall conclusion.",
+   "E": "It is an analogy offered to clarify the distinction the physician makes between an initial study and a definitive study."
+  },
+  "key": "C"
+ },
+ "explanation_id": "a8407c96-3ae3-493a-a164-5d5119abee2c",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "ee9a7112-d306-48a4-81fd-864a2707ecd8",
+   "position": 0,
+   "label": "Conclusion (should)",
+   "body": "If the medical establishment wants people to pay attention to health warnings, it should announce only conclusive results from definitive studies."
+  },
+  {
+   "row_id": "1c4d564c-dda6-43b5-955d-d0b5925a95ef",
+   "position": 1,
+   "label": "Evidence (after all)",
+   "body": "We're constantly bombarded by warnings about certain foods having adverse effects, based on initial studies' tentative conclusions.\nPeople who are constantly subjected to fire drills eventually come to ignore the fire alarm."
+  },
+  {
+   "row_id": "00e40578-bc91-4a71-8b9f-67df69fbcf56",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "The main conclusion should be an Author's Opinion and it should be supported by at least one claim. We can find our conclusion here by noticing the Opinion Indicator should in the 2nd sentence, and by noticing the Support Indicator after all beginning the 3rd sentence.\n\"After all\" is the \"A\" in FABS: for, after all, because, since\nWhenever we see \"after all\", we know the previous claim was a conclusion."
+  },
+  {
+   "row_id": "88d2713b-fc3b-4661-bf77-db6938b0e762",
+   "position": 3,
+   "label": "Goal",
+   "body": "We're being asked about the last claim, which we know was Support (the \"after all\" guarantees that). And we know the conclusion was the 2nd sentence."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "8661f25d-6939-4072-9f3f-5c6a8c8de525",
+   "letter": "A",
+   "body": "This answer treats the fire alarm as a literal instance of the type of warning the physician is concerned about — as if the physician were compiling a list of warnings that cause desensitization. But the physician is not cataloging types of warnings. The fire alarm is brought in from a completely different domain (building safety, not health research) to serve as an analogy. Its function is to illustrate a principle — that repeated alerts lead to desensitization — not to exemplify the specific health warnings under discussion. An example would be: \"People hear about a different food causing cancer every week.\" An analogy is: \"It is like fire drills — repeat them enough and people stop reacting.\" The physician is doing the latter, using a familiar non-health scenario to illuminate the dynamics of the health-warning problem."
+  },
+  {
+   "row_id": "3fe81613-9747-414f-88e2-79590bfbef3c",
+   "letter": "B",
+   "body": "Claiming a statement \"plays no logical role\" means it is tangential, decorative, or irrelevant to the argument's structure. That description is plainly false here. The fire alarm analogy is one of the physician's primary tools for supporting the conclusion. It is introduced with \"After all,\" which is a premise indicator signaling that what follows provides a reason to believe what came before. Remove the analogy and the argument loses a key piece of its persuasive architecture. Additionally, this answer suggests the statement is meant to impugn the motives of researchers, but the physician is not questioning researchers' motives at all — the physician is arguing about the practical consequences of how research findings are communicated. The fire alarm analogy addresses desensitization effects, not researchers' intentions."
+  },
+  {
+   "row_id": "69ddbb44-f757-4cca-a093-b30747ae1d5c",
+   "letter": "C",
+   "body": "The fire alarm statement functions as an analogy that supports the physician's overall conclusion. The physician's main claim is that researchers should announce only conclusive results because excessive warnings cause desensitization. The fire alarm reference illustrates this desensitization principle through a parallel from everyday life: people subjected to repeated fire drills eventually ignore the alarm, just as people bombarded with constant health warnings eventually tune them out. The word \"After all\" explicitly marks this as a premise — evidence offered in support of what preceded it. The analogy does not form the conclusion itself; it supports the conclusion by providing a familiar, intuitive case that demonstrates the underlying mechanism (repeated alerts leading to diminished response). Its role is to make the abstract principle of desensitization concrete and persuasive."
+  },
+  {
+   "row_id": "58b22f57-d877-4108-be7e-8bd645d05f65",
+   "letter": "D",
+   "body": "This answer gets the relationship between the analogy and the conclusion exactly backwards. An analogy that \"forms part of an objection to the conclusion\" would be deployed by an opponent to undermine the physician's reasoning. But the fire alarm analogy comes from the physician and is offered in direct support of the physician's own conclusion. The relationship between the analogy and the conclusion is cooperative, not adversarial. The physician introduces the fire alarm to make the case for limiting announcements stronger, not to raise doubts about it. If the analogy were being used against the physician's position, it would need to highlight why desensitization does not occur or why frequent warnings are beneficial despite their frequency. Instead, it does precisely the opposite."
+  },
+  {
+   "row_id": "2c38e082-ad21-4901-bfb5-5482a206f718",
+   "letter": "E",
+   "body": "Clarifying a distinction means separating two concepts that might be confused — demonstrating how they differ from each other. The fire alarm analogy does the opposite: it highlights a similarity between two scenarios, not a difference. The physician's rhetorical strategy depends on the audience seeing fire alarm desensitization and health warning desensitization as parallel phenomena, not as distinct ones. Furthermore, this answer specifies a distinction between \"initial findings\" and \"definitive study results,\" but the fire alarm analogy does not map onto that distinction. The analogy illustrates the consequence of overexposure to warnings in general, not the difference between preliminary and conclusive research. The analogy's function is comparison, not differentiation."
+  }
+ ],
+ "known_problem": "Correct; padded; the Evidence step is cut off (\"tentative.\").",
+ "tags": "emdash-heavy; pt157-158-register; possible-misquote"
+}

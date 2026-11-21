@@ -4,6 +4,10 @@ description: "Use this skill any time a .pptx or .potx file is involved in any w
 license: Proprietary. LICENSE.txt has complete terms
 ---
 
+## Current AI OS execution contract
+
+Resolve installed host runtimes and support files before execution. Preserve content and render/visual QA; no claim of live slide acceptance follows from a file existing.
+
 # PPTX creation, editing, and analysis
 
 A `.pptx` is a ZIP archive of XML files. Choose your approach by task:

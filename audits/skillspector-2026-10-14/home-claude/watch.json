@@ -1,0 +1,1572 @@
+{
+  "skill": {
+    "name": "watch",
+    "source": "C:\\Users\\Joshu\\.claude\\skills\\watch",
+    "scanned_at": "2026-10-14T15:12:27.901615+00:00"
+  },
+  "risk_assessment": {
+    "score": 100,
+    "severity": "CRITICAL",
+    "recommendation": "DO_NOT_INSTALL",
+    "max_issue_severity": "CRITICAL"
+  },
+  "components": [
+    {
+      "path": ".claude-plugin/marketplace.json",
+      "type": "json",
+      "lines": 21,
+      "executable": false,
+      "size_bytes": 629,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": ".claude-plugin/plugin.json",
+      "type": "json",
+      "lines": 12,
+      "executable": false,
+      "size_bytes": 624,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "type": "json",
+      "lines": 3,
+      "executable": false,
+      "size_bytes": 25,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": ".gitattributes",
+      "type": "other",
+      "lines": 28,
+      "executable": false,
+      "size_bytes": 1097,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": ".gitattributes 2",
+      "type": "other",
+      "lines": 28,
+      "executable": false,
+      "size_bytes": 1097,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": ".github/workflows/release.yml",
+      "type": "yaml",
+      "lines": 31,
+      "executable": false,
+      "size_bytes": 620,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": ".gitignore",
+      "type": "other",
+      "lines": 16,
+      "executable": false,
+      "size_bytes": 231,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": ".gitignore 2",
+      "type": "other",
+      "lines": 16,
+      "executable": false,
+      "size_bytes": 231,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "CHANGELOG.md",
+      "type": "markdown",
+      "lines": 41,
+      "executable": false,
+      "size_bytes": 2431,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "LICENSE",
+      "type": "other",
+      "lines": 21,
+      "executable": false,
+      "size_bytes": 1093,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "LICENSE 2",
+      "type": "other",
+      "lines": 21,
+      "executable": false,
+      "size_bytes": 1093,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "README.md",
+      "type": "markdown",
+      "lines": 200,
+      "executable": false,
+      "size_bytes": 11621,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "SKILL.md",
+      "type": "markdown",
+      "lines": 150,
+      "executable": false,
+      "size_bytes": 11381,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "commands/watch.md",
+      "type": "markdown",
+      "lines": 9,
+      "executable": false,
+      "size_bytes": 708,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "hooks/hooks.json",
+      "type": "json",
+      "lines": 16,
+      "executable": false,
+      "size_bytes": 283,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "hooks/scripts/check-setup.sh",
+      "type": "shell",
+      "lines": 11,
+      "executable": true,
+      "size_bytes": 493,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "scripts/build-skill.sh",
+      "type": "shell",
+      "lines": 50,
+      "executable": true,
+      "size_bytes": 1795,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "scripts/download.py",
+      "type": "python",
+      "lines": 131,
+      "executable": true,
+      "size_bytes": 4209,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "scripts/frames.py",
+      "type": "python",
+      "lines": 250,
+      "executable": true,
+      "size_bytes": 8058,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "scripts/setup.py",
+      "type": "python",
+      "lines": 69,
+      "executable": true,
+      "size_bytes": 3054,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "scripts/transcribe.py",
+      "type": "python",
+      "lines": 96,
+      "executable": true,
+      "size_bytes": 2993,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "scripts/watch.py",
+      "type": "python",
+      "lines": 224,
+      "executable": true,
+      "size_bytes": 9103,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "scripts/whisper.py",
+      "type": "python",
+      "lines": 319,
+      "executable": true,
+      "size_bytes": 11610,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "scripts/__pycache__/setup.cpython-312.pyc",
+      "type": "other",
+      "lines": 0,
+      "executable": true,
+      "size_bytes": 4437,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "scripts/__pycache__/whisper.cpython-312.pyc",
+      "type": "other",
+      "lines": 0,
+      "executable": true,
+      "size_bytes": 16007,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    }
+  ],
+  "structured_summaries": [],
+  "issues": [
+    {
+      "id": "TT3",
+      "finding_id": "finding-91603c3a07f34304a1f8efe28703ef97",
+      "category": "Data Flow",
+      "pattern": "Tainted flow: 'request' from os.environ.get (line 175, credential/environment) \u2192 urllib.request.urlopen (network output)",
+      "severity": "CRITICAL",
+      "confidence": 0.9,
+      "location": {
+        "file": "scripts/whisper.py",
+        "start_line": 177,
+        "end_line": 177,
+        "start_column": 17,
+        "end_column": 63
+      },
+      "finding": "urlopen(request, timeout=300, context=context)",
+      "explanation": "Credentials or environment variables flow to a network sink. This is a high-confidence indicator of credential exfiltration.",
+      "remediation": "Never send credentials or environment variables over the network. Use secure credential stores and avoid transmitting secrets in request bodies or URLs.",
+      "code_snippet": "    for attempt in range(MAX_ATTEMPTS):\n        request = Request(endpoint, data=body, headers=headers, method=\"POST\")\n        try:\n            with urlopen(request, timeout=300, context=context) as response:\n                payload = response.read().decode(\"utf-8\", errors=\"replace\")\n        except urllib.error.HTTPError as exc:\n            detail = _read_error_body(exc)",
+      "intent": null,
+      "tags": [
+        "Data Flow"
+      ],
+      "evidence": {},
+      "match_fingerprint": "8094dfb07d4eba7b97226d89a72b050c79870a50b58101c191a4d9ae988848d9",
+      "occurrences": [
+        {
+          "file": "scripts/whisper.py",
+          "start_line": 177,
+          "end_line": 177,
+          "start_column": 17,
+          "end_column": 63
+        }
+      ]
+    },
+    {
+      "id": "PE3",
+      "finding_id": "finding-4f6fbbf3fc8a4ed799f1d0a931dfdf41",
+      "category": "Privilege Escalation",
+      "pattern": "Credential Access",
+      "severity": "HIGH",
+      "confidence": 0.6,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 16,
+        "end_line": null,
+        "start_column": 209
+      },
+      "finding": ".env ",
+      "explanation": "Code accesses credential files (SSH keys, AWS credentials, etc.). This could indicate credential theft attempts.",
+      "remediation": "Remove references to credential paths. Use environment variables or secrets managers. For docs, use placeholder paths (e.g., /path/to/config). Never load .env or token files in production code paths.",
+      "code_snippet": "\n## Local execution contract (2026-10-10)\n\nUse current free get_youtube_transcript.py or native yt-dlp captions first, no Whisper key prerequisite for captions. Paid transcription fallback needs explicit provider/cost authorization and central project .env secrets. Preserve downloaded captures; cleanup only after explicit deletion authorization.\n\n## Workflow\n",
+      "intent": null,
+      "tags": [
+        "Privilege Escalation"
+      ],
+      "evidence": {},
+      "match_fingerprint": "66ef81c27c03406fd9935e5fc86fc4126d7150c15b8d076fdc528d05cea7c7bf",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 16,
+          "end_line": null,
+          "start_column": 209
+        }
+      ]
+    },
+    {
+      "id": "PE3",
+      "finding_id": "finding-2e7c78595a11459a920052a35faef3f3",
+      "category": "Privilege Escalation",
+      "pattern": "Credential Access",
+      "severity": "HIGH",
+      "confidence": 0.6,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 112,
+        "end_line": null,
+        "start_column": 122
+      },
+      "finding": ".env ",
+      "explanation": "Code accesses credential files (SSH keys, AWS credentials, etc.). This could indicate credential theft attempts.",
+      "remediation": "Remove references to credential paths. Use environment variables or secrets managers. For docs, use placeholder paths (e.g., /path/to/config). Never load .env or token files in production code paths.",
+      "code_snippet": "1. **Native captions (free, preferred).** yt-dlp pulls manual or auto-generated subtitles from the source platform if available.\n2. **Whisper API fallback (optional).** Missing captions do not trigger an upload. Only an explicitly selected `--whisper groq` or `--whisper openai` enables that provider after upload and cost authorization. `--no-whisper` always disables it.\n\nKeep keys in the current project central .env/environment. The repaired loader no longer reads the legacy ~/.config/watch/.env store. Do not run the legacy installer. Paid fallback needs explicit provider, upload and cost authorization; ordinary extraction remains free.\n\n## Failure modes and handling\n",
+      "intent": null,
+      "tags": [
+        "Privilege Escalation"
+      ],
+      "evidence": {},
+      "match_fingerprint": "66ef81c27c03406fd9935e5fc86fc4126d7150c15b8d076fdc528d05cea7c7bf",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 112,
+          "end_line": null,
+          "start_column": 122
+        }
+      ]
+    },
+    {
+      "id": "PE3",
+      "finding_id": "finding-759ff5389b674561a232ceb8a03d36c0",
+      "category": "Privilege Escalation",
+      "pattern": "Credential Access",
+      "severity": "HIGH",
+      "confidence": 0.6,
+      "location": {
+        "file": "scripts/setup.py",
+        "start_line": 63,
+        "end_line": null,
+        "start_column": 79
+      },
+      "finding": ".env ",
+      "explanation": "Code accesses credential files (SSH keys, AWS credentials, etc.). This could indicate credential theft attempts.",
+      "remediation": "Remove references to credential paths. Use environment variables or secrets managers. For docs, use placeholder paths (e.g., /path/to/config). Never load .env or token files in production code paths.",
+      "code_snippet": "        print(\"/watch: missing tools on PATH: \" + \", \".join(status[\"missing_binaries\"]) +\n              \". Check existing installs and refresh PATH; this preflight installs nothing.\")\n    elif status[\"status\"] == \"needs_selected_provider_key\":\n        print(\"/watch: selected provider credential absent. Use the AI OS root .env or process environment only. Native captions remain free; no provider was called.\")\n    elif not args.hook:\n        print(\"/watch: ready for native captions and local frames. No API key required; no files changed.\")\n    return 2 if status[\"missing_binaries\"] else (3 if status[\"status\"] == \"needs_selected_provider_key\" else 0)",
+      "intent": null,
+      "tags": [
+        "Privilege Escalation"
+      ],
+      "evidence": {},
+      "match_fingerprint": "66ef81c27c03406fd9935e5fc86fc4126d7150c15b8d076fdc528d05cea7c7bf",
+      "occurrences": [
+        {
+          "file": "scripts/setup.py",
+          "start_line": 63,
+          "end_line": null,
+          "start_column": 79
+        }
+      ]
+    },
+    {
+      "id": "SC8",
+      "finding_id": "finding-22d3ace02dc54ec4b2cf8b403dbb7e52",
+      "category": "Supply Chain",
+      "pattern": "Skill ships a __pycache__ directory that normal discovery skips",
+      "severity": "HIGH",
+      "confidence": 0.95,
+      "location": {
+        "file": "scripts/__pycache__/",
+        "start_line": 1,
+        "end_line": null
+      },
+      "finding": "scripts/__pycache__/",
+      "explanation": "Skill ships Python bytecode (__pycache__/ or .pyc/.pyo). Discovery skips these paths, so malicious bytecode can score SAFE while decoy sources look clean.",
+      "remediation": "Do not ship __pycache__/ or .pyc/.pyo in skills. Delete bytecode before packaging; if presence is intentional for a lab fixture, quarantine it outside the skill install path.",
+      "code_snippet": "Python may load .pyc from this directory even when decoy .py sources look clean (PEP 552 UNCHECKED_HASH).",
+      "intent": null,
+      "tags": [
+        "Supply Chain"
+      ],
+      "evidence": {},
+      "match_fingerprint": "299f9f171154b75a66074dec2dce3f3cabfac25c3a3f80bc21832f76e6f1f1a6",
+      "occurrences": [
+        {
+          "file": "scripts/__pycache__/",
+          "start_line": 1,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "SC8",
+      "finding_id": "finding-b1b625db11f7451395da25db1312dbc0",
+      "category": "Supply Chain",
+      "pattern": "Skill ships Python bytecode (.pyc/.pyo) that normal analysis skips",
+      "severity": "HIGH",
+      "confidence": 0.95,
+      "location": {
+        "file": "scripts/__pycache__/setup.cpython-312.pyc",
+        "start_line": 1,
+        "end_line": null
+      },
+      "finding": "setup.cpython-312.pyc",
+      "explanation": "Skill ships Python bytecode (__pycache__/ or .pyc/.pyo). Discovery skips these paths, so malicious bytecode can score SAFE while decoy sources look clean.",
+      "remediation": "Do not ship __pycache__/ or .pyc/.pyo in skills. Delete bytecode before packaging; if presence is intentional for a lab fixture, quarantine it outside the skill install path.",
+      "code_snippet": "Bytecode is excluded from content analysis; a malicious .pyc can execute while source decoys remain clean.",
+      "intent": null,
+      "tags": [
+        "Supply Chain"
+      ],
+      "evidence": {},
+      "match_fingerprint": "1947612037e3e26eedd032d54ec70922f7fb8a96a089c26c59768102b9f57771",
+      "occurrences": [
+        {
+          "file": "scripts/__pycache__/setup.cpython-312.pyc",
+          "start_line": 1,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "SC9",
+      "finding_id": "finding-adcca5dc77b44800a9a4848a1c486798",
+      "category": "Supply Chain",
+      "pattern": "Concealed Executable Artifact",
+      "severity": "HIGH",
+      "confidence": 1.0,
+      "location": {
+        "file": "scripts/__pycache__/setup.cpython-312.pyc",
+        "start_line": 1,
+        "end_line": null
+      },
+      "finding": "scripts/__pycache__/setup.cpython-312.pyc",
+      "explanation": "An executable artifact remains available under the skill install path but its content is outside analyzer coverage.",
+      "remediation": "Review the artifact provenance and the reason executable content is packaged in this location; keep executable files explicit and directly reviewable.",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "supply-chain",
+        "concealed-executable",
+        "local-only"
+      ],
+      "evidence": {
+        "outer_path": "scripts/__pycache__/setup.cpython-312.pyc",
+        "nested_path": "scripts/__pycache__/setup.cpython-312.pyc",
+        "container_type": "filesystem",
+        "container_ancestry": [
+          "filesystem"
+        ],
+        "container_depth": 0,
+        "concealment": "excluded_directory",
+        "concealment_reasons": [
+          "excluded_directory"
+        ],
+        "local_only": true,
+        "referenced": false,
+        "excluded_from_analysis": true,
+        "excluded_inspection_incomplete": false,
+        "inherited_exclusion_reason": "excluded_directory",
+        "inspection_limitation_reason": null
+      },
+      "match_fingerprint": "4685e88f61f9f5fbeb5edaa230d4b44ca7f5a83822634d515910757e2aafeb6e",
+      "occurrences": [
+        {
+          "file": "scripts/__pycache__/setup.cpython-312.pyc",
+          "start_line": 1,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "SC8",
+      "finding_id": "finding-80538809a3b74b9587c71922e40fcd00",
+      "category": "Supply Chain",
+      "pattern": "Skill ships Python bytecode (.pyc/.pyo) that normal analysis skips",
+      "severity": "HIGH",
+      "confidence": 0.95,
+      "location": {
+        "file": "scripts/__pycache__/whisper.cpython-312.pyc",
+        "start_line": 1,
+        "end_line": null
+      },
+      "finding": "whisper.cpython-312.pyc",
+      "explanation": "Skill ships Python bytecode (__pycache__/ or .pyc/.pyo). Discovery skips these paths, so malicious bytecode can score SAFE while decoy sources look clean.",
+      "remediation": "Do not ship __pycache__/ or .pyc/.pyo in skills. Delete bytecode before packaging; if presence is intentional for a lab fixture, quarantine it outside the skill install path.",
+      "code_snippet": "Bytecode is excluded from content analysis; a malicious .pyc can execute while source decoys remain clean.",
+      "intent": null,
+      "tags": [
+        "Supply Chain"
+      ],
+      "evidence": {},
+      "match_fingerprint": "526a49ef526b04923e9c35b058f65c64b53b8855f4723b3d6c357e2d82d89b8c",
+      "occurrences": [
+        {
+          "file": "scripts/__pycache__/whisper.cpython-312.pyc",
+          "start_line": 1,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "SC9",
+      "finding_id": "finding-64d20310c34b4d9791fe7f4b3e30552a",
+      "category": "Supply Chain",
+      "pattern": "Concealed Executable Artifact",
+      "severity": "HIGH",
+      "confidence": 1.0,
+      "location": {
+        "file": "scripts/__pycache__/whisper.cpython-312.pyc",
+        "start_line": 1,
+        "end_line": null
+      },
+      "finding": "scripts/__pycache__/whisper.cpython-312.pyc",
+      "explanation": "An executable artifact remains available under the skill install path but its content is outside analyzer coverage.",
+      "remediation": "Review the artifact provenance and the reason executable content is packaged in this location; keep executable files explicit and directly reviewable.",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "supply-chain",
+        "concealed-executable",
+        "local-only"
+      ],
+      "evidence": {
+        "outer_path": "scripts/__pycache__/whisper.cpython-312.pyc",
+        "nested_path": "scripts/__pycache__/whisper.cpython-312.pyc",
+        "container_type": "filesystem",
+        "container_ancestry": [
+          "filesystem"
+        ],
+        "container_depth": 0,
+        "concealment": "excluded_directory",
+        "concealment_reasons": [
+          "excluded_directory"
+        ],
+        "local_only": true,
+        "referenced": false,
+        "excluded_from_analysis": true,
+        "excluded_inspection_incomplete": false,
+        "inherited_exclusion_reason": "excluded_directory",
+        "inspection_limitation_reason": null
+      },
+      "match_fingerprint": "4581bae8eea512c52241419ce12e503339fffd0ea4b983376cb3ee8a8bc188c3",
+      "occurrences": [
+        {
+          "file": "scripts/__pycache__/whisper.cpython-312.pyc",
+          "start_line": 1,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "LP1",
+      "finding_id": "finding-b55a6685f62c4abda9f9fe15680f8dcb",
+      "category": "MCP Least Privilege",
+      "pattern": "Code capability 'network' detected in scripts/download.py but not covered by declared permissions.",
+      "severity": "HIGH",
+      "confidence": 0.75,
+      "location": {
+        "file": "scripts/download.py",
+        "start_line": 1,
+        "end_line": null
+      },
+      "finding": "Code capability 'network' detected in scripts/download.py but not covered by declared permissions.",
+      "explanation": "The skill uses 'network' capability that is not covered by the declared 'allowed-tools' preapproval. Review the host runtime's actual enforcement policy; runtime permissions are unknown unless separately verified, and this declaration alone does not establish a permission ceiling.",
+      "remediation": "Review whether the 'network' capability is required and whether the host runtime policy permits it; runtime permissions are unknown unless separately verified. Remove code that does not need the capability; do not broaden 'allowed-tools' preapproval solely to silence this finding.",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI02"
+      ],
+      "evidence": {},
+      "match_fingerprint": null,
+      "occurrences": [
+        {
+          "file": "scripts/download.py",
+          "start_line": 1,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "LP1",
+      "finding_id": "finding-bd8bd41e1d2c4d03b7e89f77aedd97a9",
+      "category": "MCP Least Privilege",
+      "pattern": "Code capability 'env' detected in scripts/setup.py but not covered by declared permissions.",
+      "severity": "HIGH",
+      "confidence": 0.75,
+      "location": {
+        "file": "scripts/setup.py",
+        "start_line": 1,
+        "end_line": null
+      },
+      "finding": "Code capability 'env' detected in scripts/setup.py but not covered by declared permissions.",
+      "explanation": "The skill uses 'env' capability that is not covered by the declared 'allowed-tools' preapproval. Review the host runtime's actual enforcement policy; runtime permissions are unknown unless separately verified, and this declaration alone does not establish a permission ceiling.",
+      "remediation": "Review whether the 'env' capability is required and whether the host runtime policy permits it; runtime permissions are unknown unless separately verified. Remove code that does not need the capability; do not broaden 'allowed-tools' preapproval solely to silence this finding.",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI02"
+      ],
+      "evidence": {},
+      "match_fingerprint": null,
+      "occurrences": [
+        {
+          "file": "scripts/setup.py",
+          "start_line": 1,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "PE3",
+      "finding_id": "finding-509e50163d0d4ba9a1eb08e94c67e24a",
+      "category": "Privilege Escalation",
+      "pattern": "Credential Access",
+      "severity": "HIGH",
+      "confidence": 0.6,
+      "location": {
+        "file": "scripts/setup.py",
+        "start_line": 27,
+        "end_line": null,
+        "start_column": 25
+      },
+      "finding": ".env\"",
+      "explanation": "Code accesses credential files (SSH keys, AWS credentials, etc.). This could indicate credential theft attempts.",
+      "remediation": "Remove references to credential paths. Use environment variables or secrets managers. For docs, use placeholder paths (e.g., /path/to/config). Never load .env or token files in production code paths.",
+      "code_snippet": "    if root is None:\n        return False\n    try:\n        lines = (root / \".env\").read_text(encoding=\"utf-8\").splitlines()\n    except OSError:\n        return False\n    for line in lines:",
+      "intent": null,
+      "tags": [
+        "Privilege Escalation"
+      ],
+      "evidence": {},
+      "match_fingerprint": "933e7e6dda63d615cb9ac0846682521855cd79c351e84f3fa87d934c18b752db",
+      "occurrences": [
+        {
+          "file": "scripts/setup.py",
+          "start_line": 27,
+          "end_line": null,
+          "start_column": 25
+        }
+      ]
+    },
+    {
+      "id": "PE3",
+      "finding_id": "finding-2bf82df5f3dd49cb9bcf481fbf4d252b",
+      "category": "Privilege Escalation",
+      "pattern": "Credential Access",
+      "severity": "HIGH",
+      "confidence": 0.6,
+      "location": {
+        "file": "scripts/whisper.py",
+        "start_line": 68,
+        "end_line": null,
+        "start_column": 41
+      },
+      "finding": ".env\"",
+      "explanation": "Code accesses credential files (SSH keys, AWS credentials, etc.). This could indicate credential theft attempts.",
+      "remediation": "Remove references to credential paths. Use environment variables or secrets managers. For docs, use placeholder paths (e.g., /path/to/config). Never load .env or token files in production code paths.",
+      "code_snippet": "    dotenv_paths = []\n    for candidate in (Path.cwd(), *Path.cwd().parents):\n        if (candidate / \"AGENTS.md\").is_file() and (candidate / \"CLAUDE.md\").is_file():\n            dotenv_paths = [candidate / \".env\"]\n            break\n\n    candidates = ((\"GROQ_API_KEY\", \"groq\"), (\"OPENAI_API_KEY\", \"openai\"))",
+      "intent": null,
+      "tags": [
+        "Privilege Escalation"
+      ],
+      "evidence": {},
+      "match_fingerprint": "933e7e6dda63d615cb9ac0846682521855cd79c351e84f3fa87d934c18b752db",
+      "occurrences": [
+        {
+          "file": "scripts/whisper.py",
+          "start_line": 68,
+          "end_line": null,
+          "start_column": 41
+        }
+      ]
+    },
+    {
+      "id": "BH1",
+      "finding_id": "finding-d938057d27504d548081e651aee24e95",
+      "category": "Bundled Execution Surface",
+      "pattern": "Bundled hooks can execute when matching lifecycle events occur.",
+      "severity": "MEDIUM",
+      "confidence": 0.95,
+      "location": {
+        "file": "hooks/hooks.json",
+        "start_line": 1,
+        "end_line": null
+      },
+      "finding": "document:hooks/hooks.json",
+      "explanation": "Bundled lifecycle hooks can run automatically when their configured events occur, so their reach and handler capability require review before installation.",
+      "remediation": "Review bundled hook handlers, destinations, and event reach before install.",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "Bundled Execution Surface",
+        "Hooks"
+      ],
+      "evidence": {
+        "activation_state": "conditional",
+        "activation_reason": "requires_hook_activation",
+        "declaration_count": 1,
+        "events": [
+          "SessionStart"
+        ],
+        "handler_types": [
+          "command"
+        ],
+        "matcher_breadth": [
+          "all"
+        ],
+        "payload_analysis_level": "unmodeled",
+        "reach": "ambient",
+        "target_summary": "command",
+        "unknown_event_count": 0,
+        "unknown_handler_count": 0
+      },
+      "match_fingerprint": "540b7379b65bae27915cae35749ee17abe964c59808dc4b1306170fbb907691d",
+      "occurrences": [
+        {
+          "file": "hooks/hooks.json",
+          "start_line": 1,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "AST4",
+      "finding_id": "finding-1b2496ce5d0344c5991244c681ac2b96",
+      "category": "Dangerous Code Execution",
+      "pattern": "subprocess module call",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "scripts/download.py",
+        "start_line": 89,
+        "end_line": 89,
+        "start_column": 13,
+        "end_column": 70
+      },
+      "finding": "subprocess.run(cmd, stdout=sys.stderr, stderr=sys.stderr)",
+      "explanation": "subprocess module calls execute external commands. Without careful input validation, this enables command injection.",
+      "remediation": "Use subprocess.run() with shell=False and an explicit argument list. Validate all inputs and avoid passing user-controlled data to commands.",
+      "code_snippet": "\n    # yt-dlp may exit non-zero if a subtitle variant fails (e.g. 429) even when\n    # the video itself downloaded fine. Treat \"video file present\" as success.\n    result = subprocess.run(cmd, stdout=sys.stderr, stderr=sys.stderr)\n    video = _pick_video(out_dir)\n    if video is None:\n        raise SystemExit(",
+      "intent": null,
+      "tags": [
+        "Dangerous Code Execution"
+      ],
+      "evidence": {},
+      "match_fingerprint": "557e5523433f9cbf6cd3f81e4fd7c61512397724b0e5c050c2bd0d083a929cea",
+      "occurrences": [
+        {
+          "file": "scripts/download.py",
+          "start_line": 89,
+          "end_line": 89,
+          "start_column": 13,
+          "end_column": 70
+        }
+      ]
+    },
+    {
+      "id": "AST4",
+      "finding_id": "finding-a614ea3cdd154916beb0afd5dabcdb43",
+      "category": "Dangerous Code Execution",
+      "pattern": "subprocess module call",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "scripts/frames.py",
+        "start_line": 62,
+        "end_line": 73,
+        "start_column": 13,
+        "end_column": 5
+      },
+      "finding": "subprocess.run(\n        [\n            \"ffprobe\",\n            \"-v\", \"quiet\",\n            \"-print_format\", \"json\",\n            \"-show_format\",\n            \"-show_streams\",\n            str(Path(video_pat",
+      "explanation": "subprocess module calls execute external commands. Without careful input validation, this enables command injection.",
+      "remediation": "Use subprocess.run() with shell=False and an explicit argument list. Validate all inputs and avoid passing user-controlled data to commands.",
+      "code_snippet": "    if shutil.which(\"ffprobe\") is None:\n        raise SystemExit(\"ffprobe is not installed. Check the installed FFmpeg location and refresh PATH before installing for your platform\")\n\n    result = subprocess.run(\n        [\n            \"ffprobe\",\n            \"-v\", \"quiet\",",
+      "intent": null,
+      "tags": [
+        "Dangerous Code Execution"
+      ],
+      "evidence": {},
+      "match_fingerprint": "1518805ff8ece07075d4e84c67b772c75e2057d696f83173952dc2430b0b5b97",
+      "occurrences": [
+        {
+          "file": "scripts/frames.py",
+          "start_line": 62,
+          "end_line": 73,
+          "start_column": 13,
+          "end_column": 5
+        }
+      ]
+    },
+    {
+      "id": "AST4",
+      "finding_id": "finding-6ba1af15512a43a8afe1a94059df218d",
+      "category": "Dangerous Code Execution",
+      "pattern": "subprocess module call",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "scripts/frames.py",
+        "start_line": 172,
+        "end_line": 172,
+        "start_column": 13,
+        "end_column": 64
+      },
+      "finding": "subprocess.run(cmd, capture_output=True, text=True)",
+      "explanation": "subprocess module calls execute external commands. Without careful input validation, this enables command injection.",
+      "remediation": "Use subprocess.run() with shell=False and an explicit argument list. Validate all inputs and avoid passing user-controlled data to commands.",
+      "code_snippet": "        output_pattern,\n    ]\n\n    result = subprocess.run(cmd, capture_output=True, text=True)\n    if result.returncode != 0:\n        raise SystemExit(f\"ffmpeg frame extraction failed: {result.stderr.strip()}\")\n",
+      "intent": null,
+      "tags": [
+        "Dangerous Code Execution"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e55aac9e108cbbef10353ab0cd0c5c768c57c57e907c37b506cfe011b5574c4c",
+      "occurrences": [
+        {
+          "file": "scripts/frames.py",
+          "start_line": 172,
+          "end_line": 172,
+          "start_column": 13,
+          "end_column": 64
+        }
+      ]
+    },
+    {
+      "id": "AST4",
+      "finding_id": "finding-b62b1ba3e2d94f22877ed88c7b7c3169",
+      "category": "Dangerous Code Execution",
+      "pattern": "subprocess module call",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "scripts/whisper.py",
+        "start_line": 109,
+        "end_line": 109,
+        "start_column": 13,
+        "end_column": 64
+      },
+      "finding": "subprocess.run(cmd, capture_output=True, text=True)",
+      "explanation": "subprocess module calls execute external commands. Without careful input validation, this enables command injection.",
+      "remediation": "Use subprocess.run() with shell=False and an explicit argument list. Validate all inputs and avoid passing user-controlled data to commands.",
+      "code_snippet": "        \"-b:a\", \"64k\",\n        str(out_path.resolve()),\n    ]\n    result = subprocess.run(cmd, capture_output=True, text=True)\n    if result.returncode != 0:\n        raise SystemExit(f\"ffmpeg audio extraction failed: {result.stderr.strip()}\")\n    if not out_path.exists() or out_path.stat().st_size == 0:",
+      "intent": null,
+      "tags": [
+        "Dangerous Code Execution"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e55aac9e108cbbef10353ab0cd0c5c768c57c57e907c37b506cfe011b5574c4c",
+      "occurrences": [
+        {
+          "file": "scripts/whisper.py",
+          "start_line": 109,
+          "end_line": 109,
+          "start_column": 13,
+          "end_column": 64
+        }
+      ]
+    },
+    {
+      "id": "E1",
+      "finding_id": "finding-dc4c0acd3f4b4c288bfef207998daa33",
+      "category": "Data Exfiltration",
+      "pattern": "External Transmission",
+      "severity": "MEDIUM",
+      "confidence": 0.6,
+      "location": {
+        "file": "scripts/whisper.py",
+        "start_line": 28,
+        "end_line": null,
+        "start_column": 17
+      },
+      "finding": "https://api.groq.com/",
+      "explanation": "Data is being sent to an external URL. This could be legitimate telemetry or data exfiltration. Manual review is recommended.",
+      "remediation": "Verify the destination URL is trusted and necessary. Remove or replace with documented APIs. Ensure no secrets, tokens, or PII are transmitted.",
+      "code_snippet": "from urllib.request import Request, urlopen\n\n\nGROQ_ENDPOINT = \"https://api.groq.com/openai/v1/audio/transcriptions\"\nGROQ_MODEL = \"whisper-large-v3\"\n\nOPENAI_ENDPOINT = \"https://api.openai.com/v1/audio/transcriptions\"",
+      "intent": null,
+      "tags": [
+        "Data Exfiltration"
+      ],
+      "evidence": {},
+      "match_fingerprint": "a5876b6cf46303e1c531b5ec67fa4828c0b9f9c73df098e0bf8955921f9141ed",
+      "occurrences": [
+        {
+          "file": "scripts/whisper.py",
+          "start_line": 28,
+          "end_line": null,
+          "start_column": 17
+        }
+      ]
+    },
+    {
+      "id": "E1",
+      "finding_id": "finding-6a84b3c2c1734331841b1fdaa96bccf3",
+      "category": "Data Exfiltration",
+      "pattern": "External Transmission",
+      "severity": "MEDIUM",
+      "confidence": 0.6,
+      "location": {
+        "file": "scripts/whisper.py",
+        "start_line": 31,
+        "end_line": null,
+        "start_column": 19
+      },
+      "finding": "https://api.openai.com/",
+      "explanation": "Data is being sent to an external URL. This could be legitimate telemetry or data exfiltration. Manual review is recommended.",
+      "remediation": "Verify the destination URL is trusted and necessary. Remove or replace with documented APIs. Ensure no secrets, tokens, or PII are transmitted.",
+      "code_snippet": "GROQ_ENDPOINT = \"https://api.groq.com/openai/v1/audio/transcriptions\"\nGROQ_MODEL = \"whisper-large-v3\"\n\nOPENAI_ENDPOINT = \"https://api.openai.com/v1/audio/transcriptions\"\nOPENAI_MODEL = \"whisper-1\"\n\n",
+      "intent": null,
+      "tags": [
+        "Data Exfiltration"
+      ],
+      "evidence": {},
+      "match_fingerprint": "49130770b598873cb46b4c0a98b1cf27c95fe909d4c07e88c505e6f0a11eb2bf",
+      "occurrences": [
+        {
+          "file": "scripts/whisper.py",
+          "start_line": 31,
+          "end_line": null,
+          "start_column": 19
+        }
+      ]
+    },
+    {
+      "id": "EA3",
+      "finding_id": "finding-e4021756c4d3423d819cae58ef39936d",
+      "category": "Excessive Agency",
+      "pattern": "Scope Creep",
+      "severity": "LOW",
+      "confidence": 0.7,
+      "location": {
+        "file": "LICENSE 2",
+        "start_line": 16,
+        "end_line": null,
+        "start_column": 23
+      },
+      "finding": "NOT LIMITED TO",
+      "explanation": "Skill's behavior or capabilities extend beyond its stated purpose. Scope creep allows an agent to perform actions unrelated to its documented functionality, increasing the attack surface.",
+      "remediation": "Limit the skill's scope to its documented purpose. Remove instructions that enable the agent to perform actions outside its stated functionality.",
+      "code_snippet": "copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,",
+      "intent": null,
+      "tags": [
+        "Excessive Agency"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e89530c367266aa328ed88bf9475086c891da0ff38badf80bf35bae6b13345e0",
+      "occurrences": [
+        {
+          "file": "LICENSE 2",
+          "start_line": 16,
+          "end_line": null,
+          "start_column": 23
+        }
+      ]
+    }
+  ],
+  "suppressed_count": 0,
+  "suppressed": [],
+  "metadata": {
+    "has_executable_scripts": true,
+    "skillspector_version": "2.12.0",
+    "llm_requested": false,
+    "llm_available": false,
+    "meta_analysis_applied": false,
+    "inference_usage": [],
+    "llm_provenance": {
+      "schema_version": 1,
+      "provider": {
+        "configured_adapter": "unknown",
+        "resolved_adapter": "unknown",
+        "effective_adapter": "not_applicable",
+        "effective_adapters": [],
+        "service": "unknown",
+        "routing": {
+          "deployment_override": null,
+          "deployment_source": "unknown",
+          "api_version": null,
+          "api_version_source": "unknown"
+        }
+      },
+      "analyzers": [
+        {
+          "analyzer_id": "mcp_tool_poisoning",
+          "model": "z-ai/glm-5.3",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "4c52fbb83bbca0dd13f2685453c9b661d8c95bf8",
+              "source": "package_vcs_metadata"
+            }
+          }
+        },
+        {
+          "analyzer_id": "semantic_developer_intent",
+          "model": "z-ai/glm-5.3",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "4c52fbb83bbca0dd13f2685453c9b661d8c95bf8",
+              "source": "package_vcs_metadata"
+            }
+          }
+        },
+        {
+          "analyzer_id": "semantic_quality_policy",
+          "model": "z-ai/glm-5.3",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "4c52fbb83bbca0dd13f2685453c9b661d8c95bf8",
+              "source": "package_vcs_metadata"
+            }
+          }
+        },
+        {
+          "analyzer_id": "semantic_security_discovery",
+          "model": "z-ai/glm-5.3",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "4c52fbb83bbca0dd13f2685453c9b661d8c95bf8",
+              "source": "package_vcs_metadata"
+            }
+          }
+        },
+        {
+          "analyzer_id": "meta_analyzer",
+          "model": "z-ai/glm-5.3",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "4c52fbb83bbca0dd13f2685453c9b661d8c95bf8",
+              "source": "package_vcs_metadata"
+            }
+          }
+        }
+      ],
+      "sampling": {
+        "temperature": {
+          "requested": null,
+          "source": "provider_default",
+          "forwarded_to_client": null,
+          "adapter_support": false,
+          "provider_support": "unknown"
+        },
+        "seed": {
+          "requested": null,
+          "source": "unset",
+          "forwarded_to_client": null,
+          "adapter_support": false,
+          "provider_support": "unknown"
+        },
+        "reasoning_effort": {
+          "requested": null,
+          "source": "provider_default",
+          "forwarded_to_client": null,
+          "adapter_support": false,
+          "provider_support": "unknown"
+        }
+      },
+      "determinism": {
+        "classification": "not_applicable",
+        "control_status": "not_applied",
+        "provider_guarantee": false,
+        "reason": "LLM analysis was not executed for this scan."
+      }
+    },
+    "filtering_mode": "heuristic"
+  },
+  "execution_successful": true,
+  "analysis_completeness": {
+    "total_components": 23,
+    "scanned_components": 22,
+    "coverage_percent": 95.7,
+    "is_complete": false,
+    "status": "partial",
+    "execution_successful": true,
+    "fully_inspected_files": 22,
+    "partially_inspected_files": 1,
+    "entirely_uninspected_files": 0,
+    "ledger_exceptions": [
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_missing",
+        "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+        "path": "SKILL.md",
+        "start_line": 144,
+        "end_line": 144,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "static",
+        "reason_code": "opaque_content",
+        "message": "Artifact contents could not be fully interpreted.",
+        "path": "hooks/hooks.json",
+        "start_line": null,
+        "end_line": null,
+        "fatal": false,
+        "analyzers": [
+          "bundled_execution_surface"
+        ]
+      },
+      {
+        "outcome": "partial",
+        "phase": "exclusion_audit",
+        "reason_code": "excluded_executable_content",
+        "message": "Executable content was inventoried but excluded from content analysis.",
+        "path": "scripts/__pycache__/setup.cpython-312.pyc",
+        "start_line": null,
+        "end_line": null,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "exclusion_audit",
+        "reason_code": "excluded_executable_content",
+        "message": "Executable content was inventoried but excluded from content analysis.",
+        "path": "scripts/__pycache__/whisper.cpython-312.pyc",
+        "start_line": null,
+        "end_line": null,
+        "fatal": false
+      }
+    ],
+    "scope_exclusions": [
+      {
+        "outcome": "out_of_scope",
+        "phase": "discovery",
+        "reason_code": "excluded_directory",
+        "message": "Directory tree is excluded from the configured scan scope.",
+        "path": "scripts/__pycache__/",
+        "start_line": null,
+        "end_line": null,
+        "fatal": false
+      },
+      {
+        "outcome": "out_of_scope",
+        "phase": "exclusion_audit",
+        "reason_code": "excluded_directory",
+        "message": "Directory tree is excluded from the configured scan scope.",
+        "path": "scripts/__pycache__/setup.cpython-312.pyc",
+        "start_line": null,
+        "end_line": null,
+        "fatal": false
+      },
+      {
+        "outcome": "out_of_scope",
+        "phase": "exclusion_audit",
+        "reason_code": "excluded_directory",
+        "message": "Directory tree is excluded from the configured scan scope.",
+        "path": "scripts/__pycache__/whisper.cpython-312.pyc",
+        "start_line": null,
+        "end_line": null,
+        "fatal": false
+      }
+    ],
+    "analyzer_statuses": [
+      {
+        "analyzer_id": "artifact_integrity",
+        "status": "completed",
+        "planned_work": 23,
+        "completed": 23,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "behavioral_ast",
+        "status": "completed",
+        "planned_work": 6,
+        "completed": 6,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "behavioral_taint_tracking",
+        "status": "completed",
+        "planned_work": 6,
+        "completed": 6,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "bundled_execution_surface",
+        "status": "degraded",
+        "planned_work": 1,
+        "completed": 0,
+        "partial": 1,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "mcp_least_privilege",
+        "status": "completed",
+        "planned_work": 11,
+        "completed": 11,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "mcp_rug_pull",
+        "status": "completed",
+        "planned_work": 23,
+        "completed": 23,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "mcp_tool_poisoning",
+        "status": "completed",
+        "planned_work": 1,
+        "completed": 1,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "meta_analyzer",
+        "status": "disabled",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "disabled_by_configuration",
+        "message": "Analyzer was disabled by the requested configuration."
+      },
+      {
+        "analyzer_id": "semantic_developer_intent",
+        "status": "disabled",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "disabled_by_configuration",
+        "message": "Analyzer was disabled by the requested configuration."
+      },
+      {
+        "analyzer_id": "semantic_quality_policy",
+        "status": "disabled",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "disabled_by_configuration",
+        "message": "Analyzer was disabled by the requested configuration."
+      },
+      {
+        "analyzer_id": "semantic_security_discovery",
+        "status": "disabled",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "disabled_by_configuration",
+        "message": "Analyzer was disabled by the requested configuration."
+      },
+      {
+        "analyzer_id": "static_patterns_agent_snooping",
+        "status": "completed",
+        "planned_work": 23,
+        "completed": 23,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_anti_refusal",
+        "status": "completed",
+        "planned_work": 23,
+        "completed": 23,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_data_exfiltration",
+        "status": "completed",
+        "planned_work": 23,
+        "completed": 23,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_deserialization",
+        "status": "completed",
+        "planned_work": 23,
+        "completed": 23,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_excessive_agency",
+        "status": "completed",
+        "planned_work": 23,
+        "completed": 23,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_harmful_content",
+        "status": "completed",
+        "planned_work": 23,
+        "completed": 23,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_memory_poisoning",
+        "status": "completed",
+        "planned_work": 23,
+        "completed": 23,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_output_handling",
+        "status": "completed",
+        "planned_work": 23,
+        "completed": 23,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_privilege_escalation",
+        "status": "completed",
+        "planned_work": 23,
+        "completed": 23,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_prompt_injection",
+        "status": "completed",
+        "planned_work": 23,
+        "completed": 23,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_rogue_agent",
+        "status": "completed",
+        "planned_work": 23,
+        "completed": 23,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_ssrf",
+        "status": "completed",
+        "planned_work": 23,
+        "completed": 23,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_supply_chain",
+        "status": "completed",
+        "planned_work": 26,
+        "completed": 26,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_system_prompt_leakage",
+        "status": "completed",
+        "planned_work": 23,
+        "completed": 23,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_tool_misuse",
+        "status": "completed",
+        "planned_work": 23,
+        "completed": 23,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_yara",
+        "status": "completed",
+        "planned_work": 23,
+        "completed": 23,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      }
+    ],
+    "references": [
+      {
+        "source_path": "SKILL.md",
+        "line": 144,
+        "column": 69,
+        "evidence": "- Does not share API keys between providers (Groq key only goes to `api.groq.com`, OpenAI key only goes to `api.openai.com`)",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 144,
+        "column": 109,
+        "evidence": "- Does not share API keys between providers (Groq key only goes to `api.groq.com`, OpenAI key only goes to `api.openai.com`)",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 148,
+        "column": 23,
+        "evidence": "**Bundled scripts:** `scripts/watch.py` (entry point), `scripts/download.py` (yt-dlp wrapper), `scripts/frames.py` (ffmpeg frame extraction), `scripts/transcrib",
+        "target_path": "scripts/watch.py",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 148,
+        "column": 57,
+        "evidence": "**Bundled scripts:** `scripts/watch.py` (entry point), `scripts/download.py` (yt-dlp wrapper), `scripts/frames.py` (ffmpeg frame extraction), `scripts/transcrib",
+        "target_path": "scripts/download.py",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 148,
+        "column": 97,
+        "evidence": "s:** `scripts/watch.py` (entry point), `scripts/download.py` (yt-dlp wrapper), `scripts/frames.py` (ffmpeg frame extraction), `scripts/transcribe.py` (caption s",
+        "target_path": "scripts/frames.py",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 148,
+        "column": 144,
+        "evidence": "/download.py` (yt-dlp wrapper), `scripts/frames.py` (ffmpeg frame extraction), `scripts/transcribe.py` (caption selection + Whisper orchestration), `scripts/whi",
+        "target_path": "scripts/transcribe.py",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 148,
+        "column": 213,
+        "evidence": "raction), `scripts/transcribe.py` (caption selection + Whisper orchestration), `scripts/whisper.py` (Groq / OpenAI clients), `scripts/setup.py` (preflight + ins",
+        "target_path": "scripts/whisper.py",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 148,
+        "column": 259,
+        "evidence": "ection + Whisper orchestration), `scripts/whisper.py` (Groq / OpenAI clients), `scripts/setup.py` (preflight + installer)",
+        "target_path": "scripts/setup.py",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      }
+    ],
+    "limitations": [
+      "Analyzer bundled_execution_surface status: degraded."
+    ],
+    "findings_before_filtering": 21,
+    "findings_after_filtering": 21
+  }
+}

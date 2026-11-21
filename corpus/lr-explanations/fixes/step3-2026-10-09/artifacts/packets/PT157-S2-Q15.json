@@ -1,0 +1,78 @@
+{
+ "qid": "PT157-S2-Q15",
+ "type": "Most Strongly Supported",
+ "difficulty": "3",
+ "key_db": "D",
+ "stimulus_db": "The introduction of mass production techniques in modern industrial economies allowed the owners of industries to lower prices because they could employ fewer workers, many of whom required little training. The lower prices allowed workers to buy goods that they previously would not have been able to afford. But since jobs for workers with little training are more vulnerable to elimination than those for more highly trained workers, _______.",
+ "stem_db": "Which one of the following most logically completes the argument?",
+ "choices_db": {
+  "A": "highly trained workers have more purchasing power in modern industrial economies than workers who are less trained",
+  "B": "the introduction of mass production techniques has decreased benefits for workers as it has increased the profits for owners of industries",
+  "C": "even the highest paid employees in modern industrial economies are never able to achieve job security",
+  "D": "a source of increased purchasing power for workers in modern industrial economies also undermines their job security",
+  "E": "the percentage of workers who can afford to purchase goods produced by modern industrial techniques is shrinking"
+ },
+ "bank": {
+  "stimulus": "The introduction of mass production techniques in\n modern industrial economies allowed the owners of\n industries to lower prices because they could employ\n fewer workers, many of whom required little training.\n The lower prices allowed workers to buy goods that they\n previously would not have been able to afford. But since\n jobs for workers with little training are more vulnerable\n to elimination than those for more highly trained\n workers, _______.",
+  "stem": "Which one of the following most logically completes the\n argument?",
+  "choices": {
+   "A": "highly trained workers have more purchasing power in modern industrial economies than workers who are less trained",
+   "B": "the introduction of mass production techniques has decreased benefits for workers as it has increased the profits for owners of industries",
+   "C": "even the highest paid employees in modern industrial economies are never able to achieve job security",
+   "D": "a source of increased purchasing power for workers in modern industrial economies also undermines their job security",
+   "E": "the percentage of workers who can afford to purchase goods produced by modern industrial techniques is shrinking"
+  },
+  "key": "D"
+ },
+ "explanation_id": "eb60c00d-d2ab-4dc0-8d00-802b2a969fb5",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "29c8391a-2935-48c4-8f7e-32888037ab90",
+   "position": 0,
+   "label": "Given",
+   "body": "The introduction of mass production techniques in modern industrial economies allowed for lower prices because industries could employ fewer workers, many of whom required little training. The lower prices allowed workers to buy goods that they previously would not have been able to afford. But jobs for workers with little training are more vulnerable to elimination than those for more highly trained workers."
+  },
+  {
+   "row_id": "49a6cf2d-3ad4-48a5-805a-d29fd8627b5f",
+   "position": 1,
+   "label": "Evaluate",
+   "body": "The statements that we're given are the evidence in the argument. The correct answer will be a conclusion that is supported by this evidence. The premises describe a benefit for workers—the ability to buy goods that they previously couldn't afford. But the premises also describe a disadvantage. The workers with little training are at a higher risk for losing their jobs."
+  },
+  {
+   "row_id": "61d0699b-ae2f-4f00-8933-8c2be2ded79f",
+   "position": 2,
+   "label": "Goal",
+   "body": "The correct answer is likely to focus on the disadvantage, or at least state that workers with little training in a modern industrial economy experience a mixed situation with both advantages and disadvantages."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "6ced6357-3ec5-411d-b528-71cfd29da3ae",
+   "letter": "A",
+   "body": "The stimulus never compares the purchasing power of highly trained workers to that of less-trained workers. The evidence says lower prices allowed workers generally to buy previously unaffordable goods — it does not distinguish between how much different training levels benefit from these lower prices. This comparison requires information that is not provided in the premises."
+  },
+  {
+   "row_id": "9d8e7cd8-046a-44e4-9480-6bcc33cdce85",
+   "letter": "B",
+   "body": "The stimulus does not say mass production decreased benefits for workers — it says lower prices allowed workers to buy goods they previously could not afford, which is an increase in benefits. The third premise introduces a vulnerability (job insecurity for less-trained workers) but does not establish that overall benefits decreased. Additionally, the stimulus never mentions profits for owners of industries, so the claim about increased profits is unsupported. This answer overstates the negative while introducing an unsupported element about profits."
+  },
+  {
+   "row_id": "154ab80a-e668-47f5-91bf-97f8ec1f16c7",
+   "letter": "C",
+   "body": "The stimulus says highly trained workers have more secure jobs than less-trained ones. This answer says \"even the highest paid employees\" can never achieve job security. The third premise contradicts this by establishing that more highly trained workers face less vulnerability than less-trained workers — implying greater (though perhaps not absolute) job security. The word \"never\" makes this answer especially extreme and unsupportable. If anything, the premises suggest more highly trained workers can achieve meaningful job security."
+  },
+  {
+   "row_id": "9f890e38-0bef-4493-8ae7-62f06ab0c2f3",
+   "letter": "D",
+   "body": "This answer precisely captures the paradox described in the premises. The \"source of increased purchasing power\" is mass production's effect of lowering prices through fewer, less-trained workers. This same dynamic — reliance on less-trained workers — also \"undermines their job security\" because such jobs are more vulnerable to elimination. The answer correctly identifies that a single cause produces both a benefit (purchasing power) and a detriment (job insecurity). It stays within the scope of the evidence, avoids unsupported comparisons, and accurately reflects the tension the stimulus describes."
+  },
+  {
+   "row_id": "2946bed1-b948-4443-811c-2afcc367992f",
+   "letter": "E",
+   "body": "The stimulus describes workers' jobs being vulnerable to elimination but does not say workers have actually lost their jobs in significant numbers. \"Vulnerable to elimination\" is a risk, not an accomplished fact. We cannot conclude that the percentage of workers who can afford goods is shrinking, because we do not know how many workers have actually been laid off or whether new jobs have replaced old ones. The evidence describes a potential threat, not an ongoing trend of actual job losses that would reduce the purchasing workforce."
+  }
+ ],
+ "known_problem": "Accurate; padded em-dash notes.",
+ "tags": "emdash-heavy; pt157-158-register"
+}

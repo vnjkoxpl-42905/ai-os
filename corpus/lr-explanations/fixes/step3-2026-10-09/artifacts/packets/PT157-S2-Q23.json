@@ -1,0 +1,78 @@
+{
+ "qid": "PT157-S2-Q23",
+ "type": "Principle-Strengthen",
+ "difficulty": "1",
+ "key_db": "D",
+ "stimulus_db": "Filmmaker: I use hidden cameras when filming documentaries, because people behave differently when they are aware of being filmed. Although my subjects have been told that a camera is present, they remain unaware of its location and act naturally. Hence, my documentaries are more worthwhile than documentaries in which, for example, people speak directly to the camera.",
+ "stem_db": "Which one of the following principles, if valid, most helps to justify the filmmaker’s argument?",
+ "choices_db": {
+  "A": "A documentary with no purpose other than authentically depicting the behavior of its human subjects can be legitimate.",
+  "B": "A documentary can be authentic only if it does not include any subjects speaking directly to a camera.",
+  "C": "Makers of documentaries do not have a moral obligation to reveal to their subjects the location of the cameras filming them.",
+  "D": "The more authentically a documentary depicts its subjects, the more worthwhile it is.",
+  "E": "Subjects of documentaries should not try to discover the locations of the cameras filming them."
+ },
+ "bank": {
+  "stimulus": "Filmmaker: I use hidden cameras when filming\n documentaries, because people behave differently\n when they are aware of being filmed. Although\n my subjects have been told that a camera is\n present, they remain unaware of its location and\n act naturally. Hence, my documentaries are more\n worthwhile than documentaries in which, for\n example, people speak directly to the camera.",
+  "stem": "Which one of the following principles, if valid, most\n helps to justify the filmmaker’s argument?",
+  "choices": {
+   "A": "A documentary with no purpose other than authentically depicting the behavior of its human subjects can be legitimate.",
+   "B": "A documentary can be authentic only if it does not include any subjects speaking directly to a camera.",
+   "C": "Makers of documentaries do not have a moral obligation to reveal to their subjects the location of the cameras filming them.",
+   "D": "The more authentically a documentary depicts its subjects, the more worthwhile it is.",
+   "E": "Subjects of documentaries should not try to discover the locations of the cameras filming them."
+  },
+  "key": "D"
+ },
+ "explanation_id": "815c307e-b295-47f2-bfc4-9bf58bf45557",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "50bb4694-9990-4717-b2fb-37919dcfe921",
+   "position": 0,
+   "label": "Evidence",
+   "body": "The filmmaker's subjects remain unaware of the camera's location and therefore act naturally."
+  },
+  {
+   "row_id": "99b4a99e-a6c8-43bf-994a-56ce6f9c135d",
+   "position": 1,
+   "label": "Conclusion",
+   "body": "The filmmaker's documentaries are more worthwhile than other documentaries such as those where people speak directly to the camera."
+  },
+  {
+   "row_id": "fabd6527-dccd-4570-ad57-7fe529d15f59",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "The argument shifts from evidence about subjects acting naturally to a conclusion about how worthwhile a documentary is. But there could easily be other factors which influence how worthwhile a documentary is. Maybe the most worthwhile documentaries are about events that impact a large number of people. Maybe those are more worthwhile even if the people who appear in the documentary are speaking directly to the camera and not behaving in a way that's completely natural. We can strengthen this argument by stating that documentaries in which people act naturally are more worthwhile than other documentaries. (act naturally → more worthwhile)"
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "37e95148-17f7-42b8-8230-080a7e651eb5",
+   "letter": "A",
+   "body": "This answer says a documentary with no purpose other than authentically depicting human behavior can be \"legitimate.\" Two problems. First, the filmmaker's documentary is not described as having \"no purpose other than\" depicting behavior — it might serve additional purposes. Second, the conclusion is about documentaries being \"worthwhile,\" not \"legitimate.\" Legitimacy and worthiness are different evaluative standards; a documentary can be legitimate without being worthwhile, and vice versa. This answer uses the wrong evaluative term and describes a narrower category of documentary than the filmmaker's."
+  },
+  {
+   "row_id": "4f7bfa06-233b-4b5f-a568-d068bb367117",
+   "letter": "B",
+   "body": "This answer says a documentary can be authentic only if subjects do not speak directly to the camera. This addresses documentary authenticity, not documentary worthwhileness. Even if we established that the filmmaker's documentary is authentic and others are not, we still would not know that authenticity makes a documentary more worthwhile. The conclusion's key concept — being \"more worthwhile\" — is absent from this answer. Additionally, this answer addresses documentary-level authenticity, while the evidence discusses subject-level behavior (acting naturally). Being authentic as a documentary and having subjects who act naturally are related but distinct concepts."
+  },
+  {
+   "row_id": "320ed7de-13f4-45c6-8e4f-133b7e5d387d",
+   "letter": "C",
+   "body": "This answer addresses whether filmmakers have a moral obligation to reveal camera locations. The argument is not about the ethics of hidden cameras — it is about the relative worthwhileness of documentaries. Whether the filmmaker's practice is morally permissible is a separate question from whether it produces better documentaries. This answer defends the filmmaker's method against an ethical critique that the argument never raises. The argument's gap is between natural behavior and documentary worth, not between hidden cameras and moral permissibility."
+  },
+  {
+   "row_id": "40d26742-3304-428f-afba-5381cf25ed04",
+   "letter": "D",
+   "body": "This answer states that the more authentically a documentary depicts its subjects, the more worthwhile it is. The filmmaker's evidence establishes that subjects act naturally when filmed with hidden cameras, meaning the documentary depicts them authentically. This principle bridges directly from authentic depiction to worthwhileness: more authentic depiction equals more worthwhile documentary. Since the filmmaker's subjects act more naturally than subjects who speak directly to the camera, the filmmaker's documentaries depict subjects more authentically, and therefore — by this principle — are more worthwhile. This is the precise bridge between the evidence (natural behavior / authentic depiction) and the conclusion (more worthwhile)."
+  },
+  {
+   "row_id": "92c1269c-5d26-4a4b-b7ed-29431f8bffd6",
+   "letter": "E",
+   "body": "This answer says documentary subjects should not try to discover hidden camera locations. The argument does not discuss what subjects should or should not do regarding camera locations. The argument is about the relative worthwhileness of documentaries based on how naturally subjects behave. Whether subjects should or should not search for cameras is an entirely different issue from whether documentaries featuring natural behavior are more worthwhile. This answer addresses subject behavior regarding camera discovery, not the relationship between natural behavior and documentary quality."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (10.5 em-dashes per 1k words; wrong-answer notes average 85.5 words).",
+ "tags": "no-prediction; emdash-heavy; pt157-158-register; possible-misquote"
+}

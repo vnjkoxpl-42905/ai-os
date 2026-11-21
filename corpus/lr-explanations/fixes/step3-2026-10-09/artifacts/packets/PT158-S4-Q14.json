@@ -1,0 +1,84 @@
+{
+ "qid": "PT158-S4-Q14",
+ "type": "Strengthen",
+ "difficulty": "4",
+ "key_db": "D",
+ "stimulus_db": "Psychologist: Most people's blood pressure rises when they talk. But extroverted people experience milder surges when they speak than do introverted people, for whom speaking is more stressful. This suggests that the increases result from the psychological stress of communicating rather than from the physical exertion of speech production.",
+ "stem_db": "Which one of the following, if true, most strengthens the psychologist's argument?",
+ "choices_db": {
+  "A": "Medications designed to lower blood pressure do not keep the people who take them from experiencing blood-pressure fluctuations when speaking.",
+  "B": "In general, the lower one's typical blood pressure, the more one's blood pressure will increase under stress.",
+  "C": "Introverted people who do not have chronically high blood pressure often sense the rises in blood pressure that occur when they speak in conversation.",
+  "D": "Deaf people experience increased blood pressure when they sign, but no change when they move their hands for other reasons.",
+  "E": "Extroverted people are more likely to have chronically high blood pressure than are introverted people and are more likely to take medication to lower their blood pressure."
+ },
+ "bank": {
+  "stimulus": "Psychologist: Most people’s blood pressure rises when\n they talk. But extroverted people experience\n milder surges when they speak than do\n introverted people, for whom speaking is more\n stressful. This suggests that the increases result\n from the psychological stress of communicating\n rather than from the physical exertion of speech\n production.",
+  "stem": "Which one of the following, if true, most strengthens the\n psychologist’s argument?",
+  "choices": {
+   "A": "Medications designed to lower blood pressure do not keep the people who take them from experiencing blood-pressure fluctuations when speaking.",
+   "B": "In general, the lower one’s typical blood pressure, the more one’s blood pressure will increase under stress.",
+   "C": "Introverted people who do not have chronically high blood pressure often sense the rises in blood pressure that occur when they speak in conversation.",
+   "D": "Deaf people experience increased blood pressure when they sign, but no change when they move their hands for other reasons.",
+   "E": "Extroverted people are more likely to have chronically high blood pressure than are introverted people and are more likely to take medication to lower their blood pressure."
+  },
+  "key": "D"
+ },
+ "explanation_id": "c7729e54-f9fd-4619-87fc-698c6ed11e65",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "51f68f28-9d7a-4075-b0d2-b7a4cae172e3",
+   "position": 0,
+   "label": "Conclusion",
+   "body": "The psychological stress, not the physiological exertion, involved in talking causes one's blood pressure to rise."
+  },
+  {
+   "row_id": "bc818d76-7963-4894-bc18-16bcd90481b2",
+   "position": 1,
+   "label": "Evidence",
+   "body": "Most people's blood pressure rises somewhat when they talk, but introverted people's BP rises even more than extroverted people's, and introverted people are more psychologically stressed when they're talking."
+  },
+  {
+   "row_id": "e4f2e465-fe3c-43e5-88ed-ac3bb4c78929",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "The author is presenting a correlation,\n```\nmore psychologically  ||  higher blood\nstressed (introverts)     pressure rises\n```\nThen, like so many brave LSAT authors before her, she assumes that one of those things causes the other.\nShe thinks that the extra stress is causing the extra blood pressure spike.\nWe always confront these Curious Fact → Causal Explanation arguments with the same two concerns:\n1. Alternate Explanation for the curious fact\n2. plausibility of the Author's Explanation"
+  },
+  {
+   "row_id": "179a492d-c909-420b-b1ca-629f60a75a89",
+   "position": 3,
+   "label": "Goal",
+   "body": "Since this is Strengthen, we want to either\nrule out an alternate explanation for the correlation\n- f.e., it's not the case that having higher blood pressure is actually causing the extroverted people to feel more stress\nor\nincrease the plausibility of the Author's Explanation\n- f.e. when people go from speaking in a more stressful to a less stressful setting, their blood pressure usually falls"
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "69112128-691d-47b6-a008-628b3a139085",
+   "letter": "A",
+   "body": "Whether medications can control BP fluctuations during speech tells us about treatment, not causation. The argument needs to distinguish between two possible causes — physical exertion and psychological stress. Medication effectiveness is irrelevant to that distinction. Even if no medication could prevent the BP rise, that would not tell us whether the rise is caused by muscle movement or anxiety. And even if medications could prevent it, that still would not identify the cause. Cause and treatment are different questions."
+  },
+  {
+   "row_id": "4b9fdb27-d274-4df2-99c9-49b443c128de",
+   "letter": "B",
+   "body": "Information about the relationship between typical blood pressure levels and stress-induced increases does not distinguish between the two competing explanations (physical exertion vs. psychological stress). Whether people with lower baseline BP show bigger increases under stress is a general physiological fact that applies regardless of the cause of the stress. The argument needs evidence that specifically isolates communication as the variable — not general information about BP reactivity patterns. This answer addresses the magnitude of BP changes, not their cause."
+  },
+  {
+   "row_id": "2bbcd858-e618-42a4-b6bb-4ec8a4c1bb13",
+   "letter": "C",
+   "body": "Whether introverts can sense their own BP rising tells us about self-perception, not about what causes the rise. Awareness of a physiological response is unrelated to the mechanism producing it. An introvert could feel their BP rising and still have no idea whether the cause is physical exertion, psychological stress, or something else entirely. The argument needs evidence that separates the physical and psychological components of speaking — not evidence about whether people can detect their own physiological changes."
+  },
+  {
+   "row_id": "89f3a439-df4b-456a-bd8c-dc1d2f79ee48",
+   "letter": "D",
+   "body": "This evidence creates a beautifully controlled natural experiment. Deaf people who use sign language provide a unique test case: signing involves hand and arm movements (physical exertion), and so do many non-communicative hand activities. If BP rises during signing (communication) but not during other comparable hand movements (non-communicative physical exertion), then physical effort alone cannot explain the BP increase.\n\nThe physical variable — hand/arm movement — is held roughly constant. The communication variable changes: signing involves communicating with another person, while other hand movements do not. The different BP outcomes across these conditions directly isolate communication as the causal factor. This eliminates the alternative explanation (physical exertion) while supporting the argument's conclusion (psychological stress of communication). It is the gold standard of strengthening evidence: a natural experiment that controls for the confounding variable."
+  },
+  {
+   "row_id": "0ed5b5cd-0c23-4dde-aa4d-c486b504d77f",
+   "letter": "E",
+   "body": "The argument relies on the introvert/extrovert difference to support its stress-based explanation: introverts find communication more stressful and show bigger BP spikes. If extroverts — who supposedly experience less communication stress — are actually more prone to chronically high BP, this complicates the argument's reasoning. It suggests that personality-based BP patterns may not track neatly with communication stress levels, introducing a confounding variable that muddies the argument's clean story about stress and BP. Rather than strengthening the communication-stress explanation, this information weakens it by suggesting the relationship between personality traits and BP is more complex than the argument assumes."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (10.7 em-dashes per 1k words; wrong-answer notes average 84.8 words).",
+ "tags": "emdash-heavy; pt157-158-register"
+}

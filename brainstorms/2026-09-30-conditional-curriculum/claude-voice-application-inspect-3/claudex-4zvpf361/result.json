@@ -1,0 +1,298 @@
+{
+  "status": "completed",
+  "mode": "inspect",
+  "provider": "claude",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "claude",
+    "builder": "codex",
+    "inspector": "claude"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-conditional-bootcamp",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os\\brainstorms\\2026-09-30-conditional-curriculum\\OPENING-VISUAL-BUILD-REVIEW.md",
+  "plan_sha256": "351da219e59e3a71e8556e42fcc0676c01515563c36a277d00fcb50176e6d206",
+  "requested_model": null,
+  "requested_effort": null,
+  "base": "67230dfae74a1466515d570fcb7b8a96ab5cb9c5",
+  "snapshot": {
+    "base": "67230dfae74a1466515d570fcb7b8a96ab5cb9c5",
+    "files": [
+      {
+        "path": "public/data/_bank.generated.json",
+        "kind": "file",
+        "sha256": "69f34f6dc7c1c2772d0fc212851873ca92a6c0a40e15af83e97b56575e004f75"
+      },
+      {
+        "path": "public/data/finder-address-index.json",
+        "kind": "file",
+        "sha256": "3f8216dacc9a968b6e4e19da90472b8591b32204f912dcf97ed87459b5406007"
+      },
+      {
+        "path": "src/App.tsx",
+        "kind": "file",
+        "sha256": "eef49221a7a4b4f3496c4979abb11355dfd437fd57df109c261c202de3965260"
+      },
+      {
+        "path": "src/bootcamps/conditionals/assignments.test.ts",
+        "kind": "file",
+        "sha256": "ec97ae7e4b36cb39855d048d83a2431d93a7f4e7b2eb2f91a9a5001e5bc1ec2f"
+      },
+      {
+        "path": "src/bootcamps/conditionals/assignments.ts",
+        "kind": "file",
+        "sha256": "5e1963c6cf4c1a9438164cf3c27215133ed17f0db460570be0882704c88489dd"
+      },
+      {
+        "path": "src/bootcamps/conditionals/components/ConditionalLessonNote.test.tsx",
+        "kind": "file",
+        "sha256": "30e3dc3120a347b3b8fd11ed83ee4c0df99488d963b09f2a446d2e6e69ba11f3"
+      },
+      {
+        "path": "src/bootcamps/conditionals/components/ConditionalLessonNote.tsx",
+        "kind": "file",
+        "sha256": "55c7be469bfef6d60c1e0c90b15d83464967a3604e16d50da058bf2d50a170b2"
+      },
+      {
+        "path": "src/bootcamps/conditionals/components/ConditionalOpeningLesson.review.test.tsx",
+        "kind": "file",
+        "sha256": "b805a7f9327769bf5887e54ae45d39ce485536c614505f808fe75a5b39409348"
+      },
+      {
+        "path": "src/bootcamps/conditionals/components/ConditionalOpeningLesson.tsx",
+        "kind": "file",
+        "sha256": "ac0739354704f2d1e849bd01dc0a039d4a79479eb7799869a5091263d6eedee7"
+      },
+      {
+        "path": "src/bootcamps/conditionals/components/ConditionalOpeningMedia.tsx",
+        "kind": "file",
+        "sha256": "3dd6a796d42f48c0fe9c9b74c94ef01828b12a5d01c058a40f8bc71a96a8fcf8"
+      },
+      {
+        "path": "src/bootcamps/conditionals/components/opening.css",
+        "kind": "file",
+        "sha256": "4a2c76be3910d2e41c878dcf16f61ed6c2faca0bea52119dccf3c824ecb9a12d"
+      },
+      {
+        "path": "src/bootcamps/conditionals/content/foundations.source.ts",
+        "kind": "file",
+        "sha256": "6a0b6c4e33163bc5140b804a58aa2646d4cb196c0d840b0d0a4aeac5fddcff92"
+      },
+      {
+        "path": "src/bootcamps/conditionals/content/legacyQuestions.ts",
+        "kind": "file",
+        "sha256": "ad91b8a4a6fd59acd5c5d9b72ab3c9bc00e54d64475a2bcb18891b3ad54b04b9"
+      },
+      {
+        "path": "src/bootcamps/conditionals/content/opening-coverage.test.ts",
+        "kind": "file",
+        "sha256": "1e81a86f79d1cc85854f1f4591757776899ae7026e4ea16723f400015a4cda7d"
+      },
+      {
+        "path": "src/bootcamps/conditionals/data/curriculum.generated.json",
+        "kind": "file",
+        "sha256": "a8f56035cd4eca6cfb33c97a8148ed2693ea14e4870ad26c751edb125e8afabb"
+      },
+      {
+        "path": "src/bootcamps/conditionals/openingRevision.ts",
+        "kind": "file",
+        "sha256": "8fe3aad67af99f13ff543b6aeddeb2d8cc85c0253e894d09754384bb7ef4777f"
+      },
+      {
+        "path": "src/bootcamps/conditionals/progress.test.ts",
+        "kind": "file",
+        "sha256": "69392eb3af188362ce8ec5f13228656bf77adb20fd3d075e1748bd001e7fb2a4"
+      },
+      {
+        "path": "src/bootcamps/conditionals/progress.ts",
+        "kind": "file",
+        "sha256": "e438914de88dd3166e0758809b5112856ffe32d67813263ef54285a199c0ad7b"
+      },
+      {
+        "path": "src/bootcamps/conditionals/routes.test.tsx",
+        "kind": "file",
+        "sha256": "b2cbf373f96183b82bc137f668a7589619ba3bef8fbdc4c52d076e073089fc83"
+      },
+      {
+        "path": "src/bootcamps/conditionals/routes.tsx",
+        "kind": "file",
+        "sha256": "6477a58c2cfad95f5450a0c4bad585396100638ffe76647ca3eb9eefc52e2e51"
+      },
+      {
+        "path": "src/bootcamps/conditionals/useConditionalAssignments.ts",
+        "kind": "file",
+        "sha256": "a8988f5701f5f524e3c6373798c3a0bc0c6511ecec5a95183c652f61e308bd74"
+      },
+      {
+        "path": "src/bootcamps/conditionals/useConditionalProgress.test.tsx",
+        "kind": "file",
+        "sha256": "e88c4b5021940330559d103990e3336e8f4ce2c2b2d72d135e89a03900331346"
+      },
+      {
+        "path": "src/components/teacher/ConditionalAssignmentFields.test.tsx",
+        "kind": "file",
+        "sha256": "10c903b7a3533499971e332f577dbd62e0c015bb7300ad51303ad9dcae4a9928"
+      },
+      {
+        "path": "src/components/teacher/ConditionalAssignmentFields.tsx",
+        "kind": "file",
+        "sha256": "9975d3cd7bbf3def762ac0acceee66e58579f9923f804829a2ba9a440d6c8e18"
+      },
+      {
+        "path": "src/dev/ConditionalOpeningPreview.tsx",
+        "kind": "file",
+        "sha256": "bdc5b3507ee3e1d99635b2d926312a139578481966ddabc21451a7781779dc4c"
+      },
+      {
+        "path": "src/lib/conditionalBootcampAssignment.test.ts",
+        "kind": "file",
+        "sha256": "2d5c39af9807a0d203146a2892aaba3c554fdc3f5767b4808fa2769476cbbfcc"
+      },
+      {
+        "path": "src/lib/conditionalBootcampAssignment.ts",
+        "kind": "file",
+        "sha256": "6e5a9b531bd316a7fedd05fc434915992b629db600f8bd9cadd19e546c62385a"
+      },
+      {
+        "path": "supabase/functions/mcp/index.ts",
+        "kind": "file",
+        "sha256": "f731b29c4fcd1517dc99276a998944494a86720e0cd103061e1799d149c7d32c"
+      }
+    ],
+    "diff_sha256": "ffd1d455d6ff8b42bbad0de2255d82d6e8d41502233af3919d2581bf1be9176e",
+    "sha256": "1ee060a05db57fed9ba11c313776fcc8d496add36c50d84d0e0dd18ed3f23164"
+  },
+  "previous": null,
+  "started_at": 1790993862.6168692,
+  "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\brainstorms\\2026-09-30-conditional-curriculum\\claude-voice-application-inspect-3\\claudex-4zvpf361",
+  "cli_version": "2.1.280 (Claude Code)",
+  "executable": [
+    "C:\\Users\\Joshu\\AppData\\Roaming\\npm\\node_modules\\@anthropic-ai\\claude-code\\bin\\claude.exe"
+  ],
+  "exit_code": 0,
+  "session_id": "4b9ed930-fd43-4d96-8620-de678be4db47",
+  "response": {
+    "verdict": "REVISE",
+    "summary": "Inspector identity: Claude Opus 5.5 (claude-opus-5-5), a fresh session that did not run any tests. I read the complete 621-line voice standard before judging the copy.\n\nThe opening four units are much stronger than a typical generated lesson:\n- **Progression:** the ordinary meaning comes before the order anchor, the anchor before the arrow, and sufficient and necessary get separate teaching beats. Each group has seven expression subsections, and both named methods are taught before the guided activity.\n- **Corrections:** the FI1-7 fixes are present in source. The edition is opening-2026-10-02-v2 and is stamped only by the Mark-as-read action. The `#repair` anchor is real. Old generated orientation titles are normalized. The packed-but-not-ready wording is fixed.\n\nMaterial defects remain:\n- **Blocked practice:** a run shared across assignments can leave a student with no way forward, only a link back to the same page.\n- **Contradictory explanations:** several worked explanations open with \"Yes.\" or \"No.\" that contradicts the displayed answer.\n- **Phone diagrams:** the arrow turns vertical on phones, but the copy and buttons still say left and right.\n- **Lower-severity issues:** visual and copy problems, listed in the findings.\n\nVisual quality is good but does not yet reach the stated premium bar. Three of the four heroes share one composition with an orbit graphic, and on phones that graphic is cut off.",
+    "findings": [
+      {
+        "id": "CI3-1",
+        "severity": "medium",
+        "path": "src/bootcamps/conditionals/routes.tsx",
+        "evidence": "Run keys are shared across assignments: QuestionRunner runKey is `practice:${difficulty}:${unitId ?? area ?? phase}` and `flashcards:${unitId ?? area ?? 'conditional'}:${level}`, with no assignment ID. When the saved cursor points to an ID outside the current filtered questions, the new branch (`if (!question && !run.finished)`) only shows 'This saved question is not available in this assignment...' and a 'Return to your work' link. That link leads back to the same practice. routes.test 'keeps a current question outside the selected assignment without offering a destructive reset' locks in this behavior. `advance` makes it worse: nextUncheckedQuestionIndex scans run.questionIds rather than the current `questions`, so a run built under a broader assignment can move into an unavailable ID partway through and never reach 'Finish set'. Scenario: a translation-area run built from group-1 and group-2 items is opened under an assignment whose allowedUnits is ['group-2']. The student cannot practice the assigned work at all. Counters (`run.index + 1 / run.questionIds.length`) also count items the student cannot open.",
+        "fix": "Keep the old run intact, but make the cursor and `advance` skip IDs not in the current `questions`. Compute progress counts over the available intersection. When none of the current items remain, offer a non-destructive 'Start this assignment's set' that creates a new run under an assignment-scoped key, for example by appending the assignment ID. Leave the existing run and its attempts unchanged. Add a route test showing a student completing the assigned subset."
+      },
+      {
+        "id": "CI3-2",
+        "severity": "medium",
+        "path": "src/bootcamps/conditionals/content/foundations.source.ts",
+        "evidence": "Some reasoningSteps answer the hint question, not the item. They are joined into `explanation` and shown after 'Answer:' in QuestionRunner and in Diagnostics review, where no hint is shown.\n- orientation-m1 (line 60): the answer is 'No; it remains unsettled.' and the first step reads 'Yes. Most inspected lifts can operate quietly...'. 'Yes.' is also wrong option A, so a student who chose A sees their wrong answer apparently confirmed.\n- sufficient-necessary-m2 (line 139): the answer is 'Unknown.' and the first step reads 'Yes. Tagged specimens must be stored...'.\n- group-1-m5 (line 287): the answer is 'Its ending is not established.' and the first step reads 'Yes. When the rehearsal ends...'.\nThis breaks the guide's 'Make feedback identify the missed connection' and 'Put the actual reason immediately before the consequence'. orientation-m1 also assesses 'most', which the lesson never taught; it taught 'usually'.",
+        "fix": "Rewrite each first step as a direct statement that does not depend on the hint. For example: 'An inspected lift could be noisy without contradicting most, so quiet operation isn't guaranteed.' Consider 'usually' in place of 'most' in orientation-m1. Add a test that no reasoningSteps[0] begins with a bare Yes or No unless that matches the keyed option."
+      },
+      {
+        "id": "CI3-3",
+        "severity": "medium",
+        "path": "src/bootcamps/conditionals/components/opening.css",
+        "evidence": "`@media(max-width:680px){.co-arrow{flex-direction:column}.co-arrow>b{transform:rotate(90deg)}}` turns every diagram vertical on phones. The copy still says 'Place the target right' and 'Place the target left' (TranslationLab), 'Choose the one that belongs on the left. The remaining idea goes right.' (DiagramBuilder), 'Goes left' and 'Goes right' (role pair), and 'Read it from left to right'. mobile-group-2-method-final.png shows the 'Place the target right' button above a vertical Admitted ↓ Member diagram. The plan explicitly excludes unexplained left/right instructions and requires readable phone diagrams.",
+        "fix": "Keep the arrow horizontal on narrow screens, letting the labels wrap with a smaller font; 375px can hold two short labels. Alternatively, label the vertical slots 'If (left side)' and 'then (right side)'. Either way, the placement buttons should name the role ('Place as the required side') rather than a screen direction."
+      },
+      {
+        "id": "CI3-4",
+        "severity": "low",
+        "path": "src/bootcamps/conditionals/components/ConditionalOpeningLesson.tsx",
+        "evidence": "Viewed images:\n- mobile-sufficient-necessary.png, mobile-group-1.png and mobile-group-2.png all crop the hero orbit to 'Require'.\n- desktop-sufficient-necessary.png, desktop-group-1.png and desktop-group-2.png use the same composition: a large serif title on the left, an empty upper right, and the same tilted 'Enough → Required' ellipse cut off at the bottom.\n- desktop-orientation.png leaves the right ~45% of the hero empty.\nThe orbit is decorative (aria-hidden) and identical across units, so it does not teach anything specific to the lesson. Line 863 renders the same orbit for all three units.",
+        "fix": "Contain the orbit inside the hero at 390px. Give each hero a small teaching figure instead: a ready-inside-packed thumbnail for orientation, a split enough/required gate for sufficient-necessary, a bracketed target in a sentence for Group 1, and a requirement checkpoint for Group 2. This is polish, not a blocker."
+      },
+      {
+        "id": "CI3-5",
+        "severity": "low",
+        "path": "src/bootcamps/conditionals/content/foundations.source.ts",
+        "evidence": "Group 1 commonMistake.repair (line 271) reads: 'A report appears when a rover crosses the ridge starts with the report, but the crossing is what guarantees it.' The embedded sentence has no quotation marks, so the line is hard to parse; desktop-repair-final.png shows it in the 'Read the sentence again' card. The rover example appears only in the guided example, never in the lesson the student just read. The same text appears in the Reference dialog (routes.tsx:168).",
+        "fix": "Set the sentence apart with quotation marks or italics. Better, reuse the lesson's own if-clause anchor: 'In “A report is reviewed if it is submitted before noon,” review comes first, but submission before noon is what guarantees it.'"
+      },
+      {
+        "id": "CI3-6",
+        "severity": "low",
+        "path": "src/bootcamps/conditionals/components/ConditionalOpeningLesson.tsx",
+        "evidence": "Small slips in logical strength and wording:\n- Line 676, 'Why learn this?': 'Another statement might allow that. But the first rule alone may not.' The rule alone never licenses the reverse, so 'may not' weakens a certain limit. The guide says: 'Avoid changing a logical could into must' and 'be certain about the limits of what is known'.\n- Line 89: 'This sentence gives a ring whenever the kitchen timer reaches zero'. The countdown reaches zero, not the timer.\n- Lines 60 and 72 use stiff register ('Under this stated rule, that event is enough for evacuation'; 'an exceptionless result of being a finalist'), which the guide warns against when plain speech would teach better.",
+        "fix": "Change the line 676 wording to 'But this rule alone doesn't.' Correct the subject to 'its countdown reaches zero'. Recast the two stiff lines in plain speech, for example: 'The rule says every alarm brings an evacuation.'"
+      },
+      {
+        "id": "CI3-7",
+        "severity": "low",
+        "path": "src/bootcamps/conditionals/components/ConditionalOpeningLesson.tsx",
+        "evidence": "Repeated boilerplate:\n- Every ThinkPause (about 20 per group lesson) repeats the same 'Pause here' / 'Think it through before revealing. Say what you know and why.' text.\n- All 14 reversedPromise strings follow one template ('Your arrow says: ... That ... The sentence ...').\n- Each group lesson has two near-identical recall decks: Flashcards under 'Say the rule without the scaffold' and ConditionalOpeningMedia under 'Return to the relationship'.\nThe guide says to remove repeated catchphrases and not to render the same instructions twice in different panels. In desktop-group-2-method-final.png, the paragraphs inside the revealed reasoning have no space between them.",
+        "fix": "Drop the fixed sub-instruction, or vary it by the kind of question (prediction, boundary test). Merge the two recall decks or give each a distinct job. Add paragraph spacing to `.co-pause-answer p + p`. Vary the reversed-arrow feedback so that each one names the specific counterexample first."
+      },
+      {
+        "id": "CI3-8",
+        "severity": "low",
+        "path": "src/bootcamps/conditionals/content/foundations.source.ts",
+        "evidence": "Unit titles shown on the learning path, practice h1, QuestionRunner unitTitle and Diagnostics do not match the lesson heroes:\n- group-2 is titled 'Group 2: Keep the Requirement on the Right', a placement shortcut used as a heading. The guide recommends concept headings such as 'What does this sentence require?'\n- sufficient-necessary is titled 'Enough to Guarantee, Required to Follow'. 'Follow' invites the temporal reading the plan rules out.\n- group-1 is titled 'Identify What Guarantees What', while the hero says 'Group 1: what is enough?'.",
+        "fix": "Align the unit titles with the hero questions. Existing assignment IDs are unaffected, and the exact-match display normalizer already handles old generated titles. Extend formerUnitTitles for any generated titles that change."
+      },
+      {
+        "id": "CI3-9",
+        "severity": "low",
+        "path": "src/bootcamps/conditionals/components/ConditionalOpeningLesson.tsx",
+        "evidence": "Optional improvement. TranslationLab (line 390) and DiagramBuilder show target alignment only through answer buttons. The quoted sentence is never marked to show which span the indicator refers to, even in clause-order cases ('...if it is submitted before noon', 'A current pass is required for entry'). The plan names indicator-to-target alignment as a visualization that should teach.",
+        "fix": "After a correct choice, highlight or bracket the target span inside the blockquote, and draw a connector from the indicator to it. Give the reduced-motion version the same static marks."
+      }
+    ],
+    "coverage": [
+      "(a) Voice. I read the full lsat-teaching-voice-standard.md before judging. Strengths:\n- 'Define before demonstrating' and 'Technical names arrive at the useful moment' are well applied. Orientation defines 'condition' and 'conditional statement' before the order rule; the arrow arrives only after 'Now that we understand the sentence'; 'Personalized If/Then' and 'What Test' are named after the learner has used them.\n- 'Confidence lives in the reasoning' and 'We don't know' are applied: the Order B pause gives a bold 'We don't know.' and then explains the missing connection.\n- 'Short sentences settle; longer sentences explain' and 'Contractions are normal' are visible: 'Usually leaves room for exceptions... The second doesn't leave that possibility open.'\n- 'Make feedback identify the missed connection' is met in the lesson Checks, for example 'You reversed the requirement. Your choice would mean anyone receiving an invitation has to be a finalist...'.\nWeaknesses: repeated boilerplate and templates (CI3-7), a hedge on logical strength (CI3-6), and drill explanations that open with a contradictory Yes or No (CI3-2). Overall the voice is close to the standard; I would approve it after CI3-2, CI3-6 and CI3-7.",
+      "(b) Learning progression and depth: strong. Orientation goes meaning → why it matters on the LSAT → tendency vs guarantee → rule in English → fact application → arrow (not causation or time) → changed fact → set explorer → fresh check. Sufficient-necessary has separate beats: enough; enough is not the only way; required; a requirement is not a guarantee; Personalized If/Then; roles belong to the rule. Each group has an intro defining indicator and target, then seven expression sections, each with a pause and readback. Those sections cover clause order (if, when, any, requires, only when), limiting modifiers, nonconditional inquiry and occasion uses with option-specific Checks, only vs the only in both groups, and must as an obligation. They are followed by the What Test lab, a whole-condition check, the diagram builder, recall, a meaning check, and a transition to guided practice and the drill. Scope stops at Group 2, and opening-coverage tests guard against contraposition and unless. The new drills are logically correct apart from the CI3-2 explanation wording.",
+      "(c) Visual design. Images I actually opened: additional-review/desktop-orientation, mobile-orientation, desktop-sufficient-necessary, mobile-sufficient-necessary, desktop-group-1, mobile-group-1, desktop-group-2 and mobile-group-2; plus desktop-personalized-method, desktop-what-test-final, desktop-repair-final, desktop-group-2-method-final, desktop-order-alternative-final and mobile-group-2-method-final.\nWhat works: serif display type over a humanist sans body, readable line length, generous whitespace, calm green and cream colors, clear pause, try-it and lab cards, and an order explorer that shows containment and an allowed outside placement clearly with a caption about possibility. On phones the text is readable.\nWhat falls short: the same hero in three units, a cropped orbit on phones (CI3-4), the vertical phone arrow conflicting with left/right copy (CI3-3), and a body that is mostly stacked rounded cards. Group lessons have no group-specific drawing beyond the arrow (CI3-9). The design is good but not yet 'memorable and varied'.",
+      "(d) Interaction and platform integrity. Verified in source:\n- Edition key only via markConditionalLessonRead on click, and excluded from lesson counts.\n- Reviewed state recalculated for old readers.\n- Expanded-lesson links hidden for practice-only work and gated by assignment.\n- Reconciliation adds registered IDs only for represented unit and difficulty, removes retired IDs only when the replacement is allowed, keeps drafts and attempts, and preserves the cursor when the current item still exists.\n- Historical resolver used only in Diagnostics review.\n- Generated titles and descriptions normalized without rewriting stored rows.\n- Legacy stage membership preserved, with v2 stage grants versioned.\n- DEV preview route gated by import.meta.env.DEV.\n- Lesson state resets per unit via key.\n- Keyboard: all controls are native buttons with aria-pressed or aria-expanded; reduced-motion and pause CSS present; SVG aria-labels describe state.\nOutstanding: the shared-run dead end (CI3-1). This is source-level review, not certification of rendered accessibility or live persistence.",
+      "Intro to LR structure: I read IntroNotesShell.tsx (hero with eyebrow, title and subtitle, DynamicIslandTOC, next/previous action labels, completion on advance), IntroPathLearningLayout.tsx and the top of NewGuidedIntro.tsx. The conditional opening uses a comparable shell: hero, TOC, sections, footer with Previous, Mark read and Continue. I make no claim of rendered visual parity because no Intro screenshot was provided.",
+      "I read the tracked diff for App.tsx, the assignments and progress modules, routes.tsx, useConditionalAssignments, useConditionalProgress.test, ConditionalLessonNote and its test, ConditionalAssignmentFields, and conditionalBootcampAssignment and its test. I read the full source of the untracked files ConditionalOpeningLesson.tsx, ConditionalOpeningMedia.tsx, legacyQuestions.ts, openingRevision.ts and opening-coverage.test.ts. I read foundations.source.ts for all four opening units, covering teaching, method, guided example, common mistake and all 62 drills, and grepped opening.css for motion and media rules."
+    ],
+    "limitations": [
+      "I did not run tests, typecheck, build or a browser. All pass claims are the host's own.",
+      "I did not read IntroLessonPage.tsx, the full routes.test.tsx or progress.test.ts beyond the diff hunks I sampled, ConditionalOpeningLesson.review.test.tsx, ConditionalAssignmentFields.test.tsx, src/dev/ConditionalOpeningPreview.tsx, or the full minified opening.css.",
+      "I did not open VERIFICATION.md, final-host-snapshot.json, scoped-tracked.diff or scoped-untracked.txt. I did not independently confirm that the protected bank, finder and MCP files are excluded from authored scope or that their hashes are unchanged. I treated them as unrelated audit context and did not review their diffs.",
+      "I reviewed only the diff hunks of curriculum.generated.json. I did not verify that it matches foundations.source.ts beyond what opening-coverage.test asserts.",
+      "Screenshots are static. I could not judge motion, focus rings across all controls, screen-reader output, or cold-load behavior.",
+      "I did not trace consumers of conditional progress outside src/bootcamps/conditionals, such as teacher dashboards or the MCP server, to check how they count the new edition keys in lessons."
+    ]
+  },
+  "usage": {
+    "input_tokens": 68,
+    "cache_creation_input_tokens": 190132,
+    "cache_read_input_tokens": 4389111,
+    "output_tokens": 30863,
+    "output_tokens_details": {
+      "thinking_tokens": 17030
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 190132,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 8608,
+        "cache_read_input_tokens": 191671,
+        "cache_creation_input_tokens": 1824,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1824
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "permission_denials": [],
+  "total_cost_usd": 3.0164101999999997,
+  "elapsed_seconds": 317.83
+}

@@ -1,0 +1,550 @@
+# Specific Reference Question Strategy
+
+Source: https://new.theloophole.com/training-camp/browse/stage/learn/video/specific-reference-question-strategy?source=timeline&plan=rc-plan
+
+Duration: 7:04. Captured: 2026-10-14.
+
+Transcript origin: English auto-generated native captions. Complete caption extraction, not a human-verified verbatim transcript. Original wording retained.
+
+[00:00:00.225 - 00:00:01.965]
+All right, specific reference questions.
+
+[00:00:01.965 - 00:00:04.245]
+So these are the questions where they're asking you
+
+[00:00:04.475 - 00:00:07.805]
+what the author meant by a specific word, phrase,
+
+[00:00:08.325 - 00:00:09.845]
+sentence in the passage, um,
+
+[00:00:09.945 - 00:00:11.285]
+or what they were referring
+
+[00:00:11.285 - 00:00:13.765]
+to when they said this given thing.
+
+[00:00:13.985 - 00:00:16.205]
+And so, as you might imagine, going through
+
+[00:00:16.205 - 00:00:19.045]
+and making a strong mission in the question, stem is
+
+[00:00:19.645 - 00:00:21.885]
+absolutely key to answering these questions correctly.
+
+[00:00:22.105 - 00:00:24.365]
+And so if you're doing your test on the digital platform,
+
+[00:00:24.365 - 00:00:27.885]
+as I imagine the majority of you are, um, when, uh,
+
+[00:00:27.885 - 00:00:29.325]
+you get a specific reference question,
+
+[00:00:29.325 - 00:00:31.525]
+they will actually highlight the word
+
+[00:00:31.525 - 00:00:33.965]
+or phrase in the passage that you are supposed to identify
+
+[00:00:33.965 - 00:00:35.485]
+what the author is referring to what they meant.
+
+[00:00:35.665 - 00:00:37.365]
+If you have a paper test accommodation,
+
+[00:00:37.365 - 00:00:38.525]
+they're gonna give you a line number
+
+[00:00:38.545 - 00:00:41.165]
+and you'll go over, back into the passage to identify
+
+[00:00:41.395 - 00:00:42.885]
+what phrase they're talking about.
+
+[00:00:42.985 - 00:00:44.045]
+Uh, typically in context.
+
+[00:00:44.465 - 00:00:47.965]
+And so make sure when you read a specific reference question
+
+[00:00:47.965 - 00:00:51.925]
+stem, you actually do go make a mission contextually
+
+[00:00:51.985 - 00:00:53.685]
+before you go into the answer choices.
+
+[00:00:54.885 - 00:00:56.125]
+I know this might seem like, oh,
+
+[00:00:56.485 - 00:00:58.485]
+I just wanna get outta there as fast as possible,
+
+[00:00:58.665 - 00:01:00.365]
+but it's really, really important
+
+[00:01:00.365 - 00:01:01.565]
+to make a contextual mission,
+
+[00:01:01.565 - 00:01:02.885]
+and I'm gonna tell you exactly how
+
+[00:01:02.885 - 00:01:04.045]
+to do it for maximum success.
+
+[00:01:04.345 - 00:01:07.165]
+So let's say there are three words.
+
+[00:01:07.375 - 00:01:10.725]
+Let's say, I don't know, horse usage,
+
+[00:01:12.245 - 00:01:14.885]
+I don't like horses, but horse use.
+
+[00:01:14.885 - 00:01:16.965]
+What did they mean by horse usage in the passage?
+
+[00:01:17.505 - 00:01:19.605]
+Um, okay, so when I go back
+
+[00:01:19.605 - 00:01:21.965]
+and let's say I see it highlighted there, I'm going
+
+[00:01:21.965 - 00:01:24.965]
+to read both above and below the reference.
+
+[00:01:25.125 - 00:01:26.365]
+I usually read the sentence
+
+[00:01:26.365 - 00:01:28.605]
+before, read the sentence that contains the reference,
+
+[00:01:28.625 - 00:01:32.125]
+and also read the sentence after as a baseline minimum.
+
+[00:01:32.425 - 00:01:36.525]
+If I have reason to believe that part of horse usage,
+
+[00:01:36.615 - 00:01:39.765]
+let's say, is referencing something outside
+
+[00:01:39.905 - 00:01:42.365]
+of just those two buffer sentences above
+
+[00:01:42.365 - 00:01:46.405]
+and below the reference, I'll look over there as well just
+
+[00:01:46.405 - 00:01:48.125]
+to make sure I have the full, full,
+
+[00:01:48.355 - 00:01:50.085]
+full context on the reference.
+
+[00:01:50.355 - 00:01:52.085]
+Just yesterday, I, um,
+
+[00:01:52.225 - 00:01:54.165]
+was doing a specific reference question in
+
+[00:01:54.235 - 00:01:55.285]
+camo with someone in tutoring.
+
+[00:01:56.345 - 00:01:58.765]
+And I, I watched him do, I watched his damn dig,
+
+[00:01:58.765 - 00:02:01.525]
+his own grave in camo where he went back to the reference
+
+[00:02:01.545 - 00:02:03.245]
+and he was like, okay, yep.
+
+[00:02:03.305 - 00:02:04.845]
+So this is what they're referring to. This is what it means.
+
+[00:02:04.845 - 00:02:06.765]
+And he only read the sentence that contained the reference.
+
+[00:02:06.765 - 00:02:08.285]
+And I watched him go get the question wrong
+
+[00:02:08.285 - 00:02:10.045]
+again right then and there.
+
+[00:02:10.045 - 00:02:12.485]
+And I was like, alright, buddy, go read the next sentence.
+
+[00:02:12.825 - 00:02:16.085]
+Um, but I, I want to caution you
+
+[00:02:16.315 - 00:02:20.205]
+that they're not just asking you for the literal meaning
+
+[00:02:20.225 - 00:02:21.245]
+of horse usage.
+
+[00:02:21.755 - 00:02:23.885]
+This is a silly example I gave up, uh,
+
+[00:02:24.595 - 00:02:26.645]
+like the literal meaning of the reference
+
+[00:02:26.645 - 00:02:27.805]
+of like, what's a horse?
+
+[00:02:28.505 - 00:02:30.805]
+Use your vocab knowledge. Sure, yeah.
+
+[00:02:30.985 - 00:02:32.525]
+You gotta know what a horse is.
+
+[00:02:32.545 - 00:02:34.245]
+You gotta know what the actual words
+
+[00:02:34.265 - 00:02:36.045]
+and the reference mean, um,
+
+[00:02:36.465 - 00:02:37.805]
+to be able to answer the question.
+
+[00:02:38.265 - 00:02:41.765]
+But they're asking you for the contextual meaning of
+
+[00:02:41.765 - 00:02:44.885]
+that phrase, the potentially referential
+
+[00:02:44.885 - 00:02:45.925]
+meaning of that phrase.
+
+[00:02:46.585 - 00:02:50.045]
+Um, not just the literal dictionary definition
+
+[00:02:50.105 - 00:02:52.845]
+of horse usage or whatever the specific reference might be.
+
+[00:02:52.985 - 00:02:55.005]
+And so what do I mean by contextual usage
+
+[00:02:55.025 - 00:02:56.205]
+or referential usage?
+
+[00:02:56.725 - 00:02:58.365]
+I mean, the contextual usage of the phrase
+
+[00:02:58.705 - 00:03:03.045]
+Is how this word was working, like what it was referring
+
+[00:03:03.045 - 00:03:06.925]
+to, um, the contextual meaning in the passage.
+
+[00:03:07.425 - 00:03:11.765]
+And that contextual meaning may be influenced by sentences
+
+[00:03:11.765 - 00:03:14.565]
+and references around even in other paragraphs potentially.
+
+[00:03:14.565 - 00:03:16.565]
+And that's why it's so important to have a really,
+
+[00:03:16.565 - 00:03:19.325]
+really good translation so that you have all of
+
+[00:03:19.325 - 00:03:22.045]
+that context in your brain, even if you're not necessarily
+
+[00:03:22.645 - 00:03:24.445]
+re-looking at it in that mission stage.
+
+[00:03:24.825 - 00:03:26.645]
+You know, you know what the rest
+
+[00:03:26.745 - 00:03:28.645]
+of the passage was saying about horses,
+
+[00:03:29.015 - 00:03:31.085]
+about the way things are used
+
+[00:03:31.145 - 00:03:33.725]
+or whatever else may be linked to horse usage.
+
+[00:03:34.185 - 00:03:37.525]
+Um, now let's say, lemme change my reference to show you
+
+[00:03:37.525 - 00:03:39.685]
+what I mean by referential meaning, um, when,
+
+[00:03:39.715 - 00:03:42.325]
+when the author said their reasons,
+
+[00:03:42.995 - 00:03:44.125]
+what were they referring to?
+
+[00:03:44.465 - 00:03:46.245]
+So here is a little more obvious
+
+[00:03:46.245 - 00:03:47.565]
+that there could be a referential
+
+[00:03:47.565 - 00:03:48.885]
+translation of this phrase, right?
+
+[00:03:48.975 - 00:03:51.245]
+Their reasons. Who's they? Right?
+
+[00:03:51.245 - 00:03:52.725]
+Who are the there that they're talking
+
+[00:03:52.725 - 00:03:54.045]
+about and what reasons?
+
+[00:03:54.385 - 00:03:57.365]
+And so I need to know referentially from my good translation
+
+[00:03:57.365 - 00:04:00.045]
+of what is around this reference, probably sentences above.
+
+[00:04:00.465 - 00:04:04.445]
+Um, probably, um, if it's referring to who they are, um,
+
+[00:04:05.555 - 00:04:09.325]
+that I need to know those reasons coming into that phrase,
+
+[00:04:09.505 - 00:04:11.485]
+I'm not gonna be able to go into a specific reference set
+
+[00:04:11.485 - 00:04:13.805]
+of answer choices, just be like, okay,
+
+[00:04:14.395 - 00:04:15.885]
+someone's evidence, right?
+
+[00:04:15.885 - 00:04:17.925]
+That that would be like a synonym style
+
+[00:04:17.995 - 00:04:19.445]
+translation of their reasons.
+
+[00:04:19.705 - 00:04:21.405]
+And it'd be like, yeah, someone's evidence.
+
+[00:04:21.405 - 00:04:23.565]
+That's what they mean. Very unlikely.
+
+[00:04:23.565 - 00:04:25.645]
+Realistically, that's gonna be in the answer choices.
+
+[00:04:26.075 - 00:04:28.525]
+Realistically, they're going to make you actually say
+
+[00:04:28.875 - 00:04:31.325]
+what the reasons referenced were,
+
+[00:04:31.585 - 00:04:33.245]
+and that's gonna be the correct answer
+
+[00:04:33.245 - 00:04:35.845]
+to the specific reference in that example case.
+
+[00:04:36.105 - 00:04:38.205]
+And so you may be asking yourself, okay,
+
+[00:04:38.265 - 00:04:40.525]
+but how much of the passage am I really allowed
+
+[00:04:40.525 - 00:04:42.085]
+to use and not use?
+
+[00:04:42.555 - 00:04:45.725]
+Well, the whole passage is your canvas here.
+
+[00:04:46.025 - 00:04:47.885]
+Yes, you are specifically referencing
+
+[00:04:47.885 - 00:04:51.925]
+and saying what one given word or phrase meant to refer to
+
+[00:04:52.065 - 00:04:55.445]
+or meant, but you are responsible for the full context
+
+[00:04:55.625 - 00:04:56.725]
+of the entire passage.
+
+[00:04:57.025 - 00:05:00.125]
+And so I'll often see people get this question type wrong
+
+[00:05:00.125 - 00:05:01.565]
+simply because they're like, well,
+
+[00:05:01.565 - 00:05:04.085]
+I thought I was only allowed to use that sentence
+
+[00:05:04.085 - 00:05:05.205]
+or the paragraph in which
+
+[00:05:05.205 - 00:05:06.405]
+the reference occurred, or whatever.
+
+[00:05:06.465 - 00:05:08.765]
+I'm not allowed to use any information from outside.
+
+[00:05:09.105 - 00:05:10.885]
+And it's like, no, no, no, no.
+
+[00:05:11.065 - 00:05:13.045]
+Um, the full contextual meaning
+
+[00:05:13.045 - 00:05:15.965]
+of the phrase will not necessarily only be determined
+
+[00:05:15.985 - 00:05:18.845]
+by like stuff in the same paragraph, right?
+
+[00:05:18.865 - 00:05:21.565]
+That's not really how writing works, that you would be able
+
+[00:05:21.565 - 00:05:22.725]
+to determine the contextual meaning
+
+[00:05:22.725 - 00:05:24.445]
+of a reference based on everything
+
+[00:05:24.445 - 00:05:26.285]
+that's on offer, you know, in the passage.
+
+[00:05:26.625 - 00:05:28.245]
+And then of course, my knowledge of like
+
+[00:05:28.355 - 00:05:31.925]
+what words mean also influences my beliefs about
+
+[00:05:31.925 - 00:05:33.245]
+what the reference is referring to.
+
+[00:05:33.425 - 00:05:36.845]
+And so there's both general verbal processing knowledge
+
+[00:05:36.845 - 00:05:38.725]
+and then there's passage level contextual
+
+[00:05:38.725 - 00:05:39.725]
+and referential knowledge.
+
+[00:05:39.945 - 00:05:42.525]
+And that what is, what gives us that great mission now,
+
+[00:05:42.525 - 00:05:43.845]
+alright, I have my great mission.
+
+[00:05:44.005 - 00:05:46.725]
+I know what horse usage means, what they were referring to.
+
+[00:05:46.835 - 00:05:50.925]
+Okay, great. When you go into the answer choices, really try
+
+[00:05:50.925 - 00:05:53.245]
+to not be mission matchy here
+
+[00:05:53.275 - 00:05:56.805]
+because the chances that they say exactly what you came up
+
+[00:05:56.805 - 00:05:58.485]
+With in your mission are somewhat low.
+
+[00:05:58.835 - 00:06:00.485]
+Instead, go through the answer choices
+
+[00:06:00.485 - 00:06:02.805]
+and ask yourself, is this what the reference was doing?
+
+[00:06:02.905 - 00:06:03.965]
+Is this what it was? Sorry, is
+
+[00:06:03.965 - 00:06:05.005]
+this what it was referring to?
+
+[00:06:05.185 - 00:06:07.165]
+Is this what they're referring to? Is this what that meant?
+
+[00:06:07.305 - 00:06:09.685]
+You'll actually engage using the translation
+
+[00:06:09.685 - 00:06:11.125]
+of the real question stem to
+
+[00:06:11.725 - 00:06:14.285]
+actually vet each answer individually,
+
+[00:06:14.285 - 00:06:15.925]
+because that is what will give you the correct
+
+[00:06:15.925 - 00:06:17.205]
+answer reliably.
+
+[00:06:17.205 - 00:06:18.885]
+Because remember, even though, you know,
+
+[00:06:18.885 - 00:06:20.325]
+I don't like RC question typing,
+
+[00:06:20.425 - 00:06:23.445]
+and here I am RC question typing, I still want to, you know,
+
+[00:06:23.445 - 00:06:25.925]
+give you the caveats that the question types.
+
+[00:06:26.145 - 00:06:27.725]
+Um, there they only go so far.
+
+[00:06:27.785 - 00:06:29.365]
+You wanna really translate that stem
+
+[00:06:29.545 - 00:06:31.645]
+and use the information in this video, all of this advice,
+
+[00:06:31.705 - 00:06:32.925]
+you know, to your advantage.
+
+[00:06:33.145 - 00:06:35.285]
+But if there are specific, you know, twists
+
+[00:06:35.285 - 00:06:37.645]
+and turns of the question stem that tell you, you know,
+
+[00:06:37.765 - 00:06:39.965]
+a little bit more specifically what to do, for instance,
+
+[00:06:39.965 - 00:06:41.605]
+even in some of the examples I gave you here,
+
+[00:06:41.605 - 00:06:43.725]
+the risks resulting from right?
+
+[00:06:43.825 - 00:06:45.205]
+Having that at the end of the stem,
+
+[00:06:45.205 - 00:06:47.525]
+you're basically doing almost a fill in the blanky kind
+
+[00:06:47.525 - 00:06:49.245]
+of situation in the answer choices there.
+
+[00:06:49.465 - 00:06:52.205]
+And so you want to keep that all in mind
+
+[00:06:52.385 - 00:06:54.045]
+and actually do what the question says,
+
+[00:06:54.625 - 00:06:56.965]
+not just mission match of like, oh, here's what that phrase,
+
+[00:06:57.265 - 00:06:58.285]
+uh, was referring to.
+
+[00:06:58.865 - 00:07:00.405]
+All right. I hope that this was helpful.
+
+[00:07:00.485 - 00:07:02.645]
+I hope this answers some of your burning questions
+
+[00:07:03.105 - 00:07:04.165]
+and I will see you soon.

@@ -1,0 +1,84 @@
+{
+ "qid": "PT116-S3-Q6",
+ "type": "Agree/Disagree",
+ "difficulty": "3",
+ "key_db": "E",
+ "stimulus_db": "Antonia: The stock market is the best place to invest your money these days; although it is often volatile, it provides the opportunity to make a large profit quickly. Maria: I agree that the stock market provides the opportunity to make large profits quickly, but one is just as likely to take a huge loss. I think it is better to invest in savings bonds, which provide a constant, reliable income over many years.",
+ "stem_db": "Antonia's and Maria's statements provide the most support for holding that they disagree about whether",
+ "choices_db": {
+  "A": "the stock market is often volatile but provides the opportunity to make a large profit quickly",
+  "B": "savings bonds can provide a large return on one’s investment",
+  "C": "the stock market provides the opportunity for an investor to make a constant, reliable income over many years",
+  "D": "it is safer to invest in savings bonds than to invest in the stock market",
+  "E": "it is preferable to pick an investment offering a reliable income over a riskier opportunity to make a large profit quickly"
+ },
+ "bank": {
+  "stimulus": "Antonia: The stock market is the best place to invest your money these days; although it is often volatile, it provides the opportunity to make a large profit quickly.\nMaria: I agree that the stock market provides the opportunity to make large profits quickly, but one is just as likely to take a huge loss. I think it is better to invest in savings bonds, which provide a constant, reliable income over many years.",
+  "stem": "Antonia's and Maria's statements provide the most support for holding that they disagree about whether",
+  "choices": {
+   "A": "the stock market is often volatile but provides the opportunity to make a large profit quickly",
+   "B": "savings bonds can provide a large return on one's investment",
+   "C": "the stock market provides the opportunity for an investor to make a constant, reliable income over many years",
+   "D": "it is safer to invest in savings bonds than to invest in the stock market",
+   "E": "it is preferable to pick an investment offering a reliable income over a riskier opportunity to make a large profit quickly"
+  },
+  "key": "E"
+ },
+ "explanation_id": "a34f24a2-710f-4c34-89c5-6550494f64a2",
+ "style": "single",
+ "steps": [
+  {
+   "row_id": "4f3493e1-8e1a-4503-9bc9-80db64d811ee",
+   "position": 0,
+   "label": "Antonia's Position",
+   "body": "The stock market is the best place to invest. It is volatile, but it gives you a shot at a large, quick profit."
+  },
+  {
+   "row_id": "bf3c3445-ba3c-47d5-a01d-705d00c81696",
+   "position": 1,
+   "label": "Maria's Position",
+   "body": "Yes, you can make a large profit quickly, but you are just as likely to take a huge loss. Savings bonds are better, because they pay a constant, reliable income."
+  },
+  {
+   "row_id": "b0f0b0b3-c166-415c-ba04-2200560c7e93",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "Look at what Maria concedes. Maria agrees about the quick profits, and Antonia already admitted the volatility. So the facts are shared. What they disagree about is the tradeoff: Antonia picks the big upside despite the risk; Maria picks the steady income. Antonia never mentions \"reliable income\" by name, but calling the volatile market the *best* place to invest puts Antonia on the other side of that choice."
+  },
+  {
+   "row_id": "e5e532ca-648b-4849-a853-b5448ad52637",
+   "position": 3,
+   "label": "Goal",
+   "body": "Whether a reliable income is better than a risky chance at a fast, large profit."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "ca91a43a-73c7-4337-b1b4-5d65a85fb0cd",
+   "letter": "A",
+   "body": "Speaker 1 says this in her second and third claims. Speaker 2 affirms this in her first claim."
+  },
+  {
+   "row_id": "3c0aa30a-5d94-452e-9e32-64f25c50bf96",
+   "letter": "B",
+   "body": "Neither speaker claims that a bond can provide a large return. Speaker 2 says bonds provide income that is both constant and reliable, but the amount of return relative to the investment isn't implied."
+  },
+  {
+   "row_id": "be71bba8-ab46-4711-a95f-688d769e9d4a",
+   "letter": "C",
+   "body": "Neither speaker says the stock market provides a constant, reliable income. Maria credits that to savings bonds, and Antonia praises the market for the chance at a large, quick profit, not for steady income. With neither speaker taking this claim on, it cannot be their disagreement."
+  },
+  {
+   "row_id": "80308a7d-1bc1-41f2-a2e9-5ac296b36dbf",
+   "letter": "D",
+   "body": "Speaker two definitely agrees, but Speaker 1 doesn't necessarily disagree."
+  },
+  {
+   "row_id": "00fdd75c-6f92-4738-b116-ea54f1fe6684",
+   "letter": "E",
+   "body": "This one might seem at first to be a \"half scope\" answer (meaning 1 speaker doesn't address one of the major concepts), but it's the best that we've got. True, speaker 1 doesn't explicitly address the concept of \"reliable income,\" but when she says that the volatile stock market is the best way to invest despite its volatility because of its big potential payoff, that lends strong support to the idea that she'd disagree that it' preferable to pick a reliable investment over a riskier one with a bigger potential payoff."
+  }
+ ],
+ "known_problem": "No breakdown; C note says Maria \"definitely agrees\" that the stock market gives reliable income, which she never says; E note apologises (\"the best that we've got\").",
+ "tags": "no-breakdown; verdict-only; thin-notes; very-short"
+}

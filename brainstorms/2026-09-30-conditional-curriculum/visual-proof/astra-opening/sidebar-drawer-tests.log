@@ -1,0 +1,27 @@
+
+> vite_react_shadcn_ts@0.0.0 test
+> vitest run src/bootcamps/conditionals/components/LessonPages.test.tsx
+
+
+ RUN  v3.2.4 C:/Users/Joshu/dev/ai-os-projects/lsatu-conditional-bootcamp
+
+Browserslist: browsers data (caniuse-lite) is 6 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+stderr | src/bootcamps/conditionals/components/LessonPages.test.tsx > retains the actual lesson card and revealed side across page navigation without pre-exposing answers
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/bootcamps/conditionals/components/LessonPages.test.tsx (6 tests) 16908ms
+   ✓ exposes only the current page, focuses its heading, and retains a checked case when returning  721ms
+   ✓ retains the actual lesson card and revealed side across page navigation without pre-exposing answers  2336ms
+   ✓ requires an explicit end-page action to record reading, including after a contents jump  1794ms
+   ✓ starts a changed unit at its first page and resets card state when returning to the prior unit  2862ms
+   ✓ separates a present negative requirement from its absence in the fresh two-room exercise  8865ms
+   ✓ uses a compact drawer in a narrow reader and moves focus to the chosen page  327ms
+
+ Test Files  1 passed (1)
+      Tests  6 passed (6)
+   Start at  00:36:55
+   Duration  21.03s (transform 1.19s, setup 242ms, collect 2.29s, tests 16.91s, environment 1.08s, prepare 199ms)
+

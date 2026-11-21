@@ -1,0 +1,78 @@
+{
+ "qid": "PT158-S2-Q20",
+ "type": "Paradox EXCEPT",
+ "difficulty": "5",
+ "key_db": "D",
+ "stimulus_db": "A research psychologist used a personality test to classify high school students as \"repressors\"—people who repress upsetting thoughts and feelings from conscious awareness—or as \"sensitizers\"—those especially attuned to internal states who freely express distress. The researcher found that, compared to sensitizers, the repressors were less shy and anxious, could better tolerate frustration, and had superior social skills, higher grades, and a greater sense of self-esteem.",
+ "stem_db": "Each of the following, if true, contributes to an explanation of the repressors' characteristics mentioned above except:",
+ "choices_db": {
+  "A": "Repressors are better able than sensitizers to focus on their work and to avoid distractions.",
+  "B": "Repressors are less apt than sensitizers to alienate people by expressing their emotions.",
+  "C": "Parents and other caregivers tend to reward repressors more than they reward sensitizers for academic performance and social behavior deemed desirable.",
+  "D": "Some psychologists have hypothesized that the desire to maintain social and academic success and self-esteem strengthens repressors' tendency to repress upsetting thoughts and feelings.",
+  "E": "Sensitizers tend to focus more than repressors do on the difficulties of succeeding in their projects rather than on factors that are likely to contribute to success."
+ },
+ "bank": {
+  "stimulus": "A research psychologist used a personality test to classify\n high school students as “repressors”—people who\n repress upsetting thoughts and feelings from conscious\n awareness—or as “sensitizers”—those especially\n attuned to internal states who freely express distress.\n The researcher found that, compared to sensitizers,\n the repressors were less shy and anxious, could better\n tolerate frustration, and had superior social skills, higher\n grades, and a greater sense of self-esteem.",
+  "stem": "Each of the following, if true, contributes to an\n explanation of the repressors’ characteristics mentioned\n above except:",
+  "choices": {
+   "A": "Repressors are better able than sensitizers to focus on their work and to avoid distractions.",
+   "B": "Repressors are less apt than sensitizers to alienate people by expressing their emotions.",
+   "C": "Parents and other caregivers tend to reward repressors more than they reward sensitizers for academic performance and social behavior deemed desirable.",
+   "D": "Some psychologists have hypothesized that the desire to maintain social and academic success and self-esteem strengthens repressors’ tendency to repress upsetting thoughts and feelings.",
+   "E": "Sensitizers tend to focus more than repressors do on the difficulties of succeeding in their projects rather than on factors that are likely to contribute to success."
+  },
+  "key": "D"
+ },
+ "explanation_id": "4b1643b9-e958-4a88-b72c-4985ea4db466",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "912b88df-3746-4bc1-8f9d-741b214386ae",
+   "position": 0,
+   "label": "Given that ...",
+   "body": "Repressors repress upsetting thoughts and feelings, whereas sensitizers are especially attuned to internal states and freely express distress."
+  },
+  {
+   "row_id": "70d42c21-b8b6-4e2a-a1ab-22c707238523",
+   "position": 1,
+   "label": "Why is it that ...",
+   "body": "Repressors are less shy and anxious, better tolerate frustration, and have better social skills / grades / self-esteem?"
+  },
+  {
+   "row_id": "847bb3f5-435f-48a5-9ebd-c3907c2d2900",
+   "position": 2,
+   "label": "Evaluate / Goal",
+   "body": "It's always hard to predict answers on Paradox questions, but even more so when it's an EXCEPT variation. We want ways to explain how repressing your upsetting feelings is associated with more confidence, less anxiety, better tolerance for frustrations, better social skills, higher grades, more self-esteem. (So many possible targets!) Conversely, we'll also like answers showing why expressing distress leads to the opposite of any of these."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "538fa497-ea20-4002-965c-fab1c83cfbe7",
+   "letter": "A",
+   "body": "If repressors are better at focusing on their work and avoiding distractions, this directly explains two of their advantages: higher grades (better academic focus leads to better academic performance) and better frustration tolerance (the ability to tune out distractions is closely related to handling frustrating situations). By identifying a cognitive mechanism linked to the repression style — the ability to block out irrelevant or upsetting stimuli and concentrate — this answer provides a clear causal pathway from personality type to observed outcomes. Since it contributes to explaining the findings, it is not the correct answer to this EXCEPT question."
+  },
+  {
+   "row_id": "652f882b-50c0-499d-b058-48e084f89d3b",
+   "letter": "B",
+   "body": "If repressors are less likely to alienate people by expressing emotions, this directly explains their superior social skills and likely contributes to their higher self-esteem as well. Social skills depend heavily on managing emotional expression — people who do not burden others with constant distress tend to have smoother social interactions. Better social relationships, in turn, typically boost self-esteem. The mechanism links the repression style (suppressing emotional expression) to social outcomes (fewer alienated peers) and psychological outcomes (higher self-esteem from better relationships). Since this clearly explains multiple observed characteristics, it is not the correct answer."
+  },
+  {
+   "row_id": "97f9630a-42e9-40a1-b0ac-c74018e72d8d",
+   "letter": "C",
+   "body": "If parents and caregivers reward repressors more than sensitizers for showing self-control, this explains multiple findings through an external reinforcement mechanism. Greater rewards for self-control would directly boost self-esteem (positive reinforcement builds confidence), improve grades (rewarded behavior is repeated, and self-control supports academic discipline), and develop social skills (children who are rewarded for emotional regulation learn to navigate social situations more effectively). The mechanism works through environmental feedback: repressors' natural tendency to suppress emotional expression is externally reinforced, strengthening the very behaviors that produce the observed advantages. Since this explains several findings, it is not the correct answer."
+  },
+  {
+   "row_id": "c088e7e8-9291-4ff3-8bec-3414c8da0415",
+   "letter": "D",
+   "body": "This answer does not explain why repressors have superior characteristics — it reverses the causal direction. It says that the desire to maintain social and academic success motivates the repressive personality style. In other words, the success comes first and causes the repression, not the other way around. The study's findings show that repressors have better outcomes, and we need explanations for why repression leads to those outcomes. This answer says the outcomes lead to the repression. That is a hypothesis about why people become repressors, not an explanation of why repressors are more successful. It reverses the explanatory direction: instead of \"repression causes success,\" it proposes \"the desire for success causes repression.\" While this is an interesting psychological hypothesis, it does not contribute to explaining why repressors exhibit the listed characteristics. The causal arrow points the wrong way."
+  },
+  {
+   "row_id": "25aad0db-81e7-46f5-b037-becbdb16a1ef",
+   "letter": "E",
+   "body": "If sensitizers focus more on the difficulties of succeeding in their lives, this explains several of the findings through a contrast mechanism. By dwelling on obstacles and challenges, sensitizers would naturally experience more anxiety (explaining repressors' comparative advantage in anxiety), lower self-esteem (focusing on difficulties undermines confidence), and greater frustration (attending to obstacles creates more frustration). This answer explains the gap between repressors and sensitizers not by giving repressors an advantage but by giving sensitizers a disadvantage — which amounts to the same thing in a comparative study. Since the findings are about relative performance (repressors compared to sensitizers), explaining why sensitizers perform worse is just as valid as explaining why repressors perform better. This clearly contributes to explaining the findings."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (7.6 em-dashes per 1k words; wrong-answer notes average 104.2 words).",
+ "tags": "emdash-heavy; pt157-158-register; possible-misquote"
+}

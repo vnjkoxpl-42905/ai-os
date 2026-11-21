@@ -1,0 +1,86 @@
+{
+  "activation_pairs": [
+    {
+      "runtime": "gemini",
+      "name": "lsatu-cc-handoff",
+      "equal": true
+    },
+    {
+      "runtime": "gemini",
+      "name": "chat-export",
+      "equal": true
+    },
+    {
+      "runtime": "gemini",
+      "name": "code-review",
+      "equal": true
+    },
+    {
+      "runtime": "gemini",
+      "name": "requesting-code-review",
+      "equal": true
+    },
+    {
+      "runtime": "gemini",
+      "name": "guided-drill-assignment",
+      "equal": true
+    },
+    {
+      "runtime": "gemini",
+      "name": "consultation-inquiry-drafts",
+      "equal": true
+    },
+    {
+      "runtime": "gemini",
+      "name": "consultation-followup-drafts",
+      "equal": true
+    },
+    {
+      "runtime": "gemini",
+      "name": "qa",
+      "equal": true
+    },
+    {
+      "runtime": "gemini",
+      "name": "test-driven-development",
+      "equal": true
+    },
+    {
+      "runtime": "gemini",
+      "name": "resolving-merge-conflicts",
+      "equal": true
+    },
+    {
+      "runtime": "gemini",
+      "name": "setup-pre-commit",
+      "equal": true
+    },
+    {
+      "runtime": "gemini",
+      "name": "bootcamp-parity-audit",
+      "equal": true
+    },
+    {
+      "runtime": "gemini",
+      "name": "decision-mapping",
+      "equal": true
+    },
+    {
+      "runtime": "gemini",
+      "name": "research-deep",
+      "equal": true
+    }
+  ],
+  "hash_errors": [],
+  "wip_fixture": {
+    "committed_range_empty": true,
+    "staged_visible": true,
+    "unstaged_visible": true,
+    "untracked_visible": true
+  },
+  "ignore_fixture": {
+    "old_or_accepts_wrong_location": true,
+    "exact_location_rejects": true,
+    "after_scoped_rule_passes": true
+  }
+}

@@ -1,0 +1,495 @@
+
+> vite_react_shadcn_ts@0.0.0 prebuild
+> vite-node scripts/conditionals/import-content.ts --check && node scripts/build-question-bank.mjs && node scripts/verify-rc-answer-keys.mjs && node scripts/build-rc-search-index.mjs && node scripts/build-finder-address-index.mjs && node scripts/verify-rc-search-index.mjs
+
+Generated 30 lessons and 296 practice questions.
+build-question-bank: merged 156 section files (3959 questions) -> public/data/_bank.generated.json
+{"questions":2150,"documentedCorrections":57,"applied":[]}
+rc-search-index: wrote 2150 questions to C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\public\data\rc\rc-question-index.json
+finder-address-index.json: 59 PrepTests, 236 sections, 320 RC passages, 89.9 KB
+RC indexes verified: 2150 unique bank questions, 2150 search records, 2150 finder addresses; ID, owner, and official-address sets match exactly.
+
+> vite_react_shadcn_ts@0.0.0 build
+> node --max-old-space-size=4096 ./node_modules/vite/bin/vite.js build
+
+[36mvite v5.4.21 [32mbuilding for production...[36m[39m
+transforming...
+
+[1m[33mwarn[39m[22m - The class `duration-[120ms]` is ambiguous and matches multiple utilities.
+[1m[33mwarn[39m[22m - If this is content and not a class, replace it with `duration-&lsqb;120ms&rsqb;` to silence this warning.
+
+[1m[33mwarn[39m[22m - The class `duration-[350ms]` is ambiguous and matches multiple utilities.
+[1m[33mwarn[39m[22m - If this is content and not a class, replace it with `duration-&lsqb;350ms&rsqb;` to silence this warning.
+
+[1m[33mwarn[39m[22m - The class `duration-[600ms]` is ambiguous and matches multiple utilities.
+[1m[33mwarn[39m[22m - If this is content and not a class, replace it with `duration-&lsqb;600ms&rsqb;` to silence this warning.
+
+[1m[33mwarn[39m[22m - The class `ease-[cubic-bezier(0.22,1,0.36,1)]` is ambiguous and matches multiple utilities.
+[1m[33mwarn[39m[22m - If this is content and not a class, replace it with `ease-&lsqb;cubic-bezier(0.22,1,0.36,1)&rsqb;` to silence this warning.
+
+/noise.png referenced in /noise.png didn't resolve at build time, it will remain unchanged to be resolved at runtime
+[32m✓[39m 7985 modules transformed.
+rendering chunks...
+[1m[33m[plugin:vite:reporter][39m[22m [33m[plugin vite:reporter] 
+(!) C:/Users/Joshu/dev/ai-os-projects/lsatu-my-work-20261026/src/lib/guidedDrills.ts is dynamically imported by C:/Users/Joshu/dev/ai-os-projects/lsatu-my-work-20261026/src/components/AssignmentGate.tsx but also statically imported by C:/Users/Joshu/dev/ai-os-projects/lsatu-my-work-20261026/src/bootcamps/conditionals/components/GuidedConditionalActivity.tsx, C:/Users/Joshu/dev/ai-os-projects/lsatu-my-work-20261026/src/components/drill/InteractiveGuidedDrillFrame.tsx, C:/Users/Joshu/dev/ai-os-projects/lsatu-my-work-20261026/src/components/teacher/library/AssignWorkSheet.tsx, C:/Users/Joshu/dev/ai-os-projects/lsatu-my-work-20261026/src/hooks/useAssignedTodoFeed.ts, C:/Users/Joshu/dev/ai-os-projects/lsatu-my-work-20261026/src/lib/drillLaunchResolve.ts, C:/Users/Joshu/dev/ai-os-projects/lsatu-my-work-20261026/src/lib/studentScopedWork.ts, C:/Users/Joshu/dev/ai-os-projects/lsatu-my-work-20261026/src/pages/GuidedDrillStart.tsx, C:/Users/Joshu/dev/ai-os-projects/lsatu-my-work-20261026/src/pages/admin/GuidedDrills.tsx, C:/Users/Joshu/dev/ai-os-projects/lsatu-my-work-20261026/src/pages/teacher/desk/library/DeskLibraryGuidedDrillsSurface.tsx, dynamic import will not move module into another chunk.
+[39m
+[1m[33m[plugin:vite:reporter][39m[22m [33m[plugin vite:reporter] 
+(!) C:/Users/Joshu/dev/ai-os-projects/lsatu-my-work-20261026/src/components/review/introLrReviewSource.ts is dynamically imported by C:/Users/Joshu/dev/ai-os-projects/lsatu-my-work-20261026/src/components/AssignmentGate.tsx but also statically imported by C:/Users/Joshu/dev/ai-os-projects/lsatu-my-work-20261026/src/pages/IntroLrReviewDetail.tsx, C:/Users/Joshu/dev/ai-os-projects/lsatu-my-work-20261026/src/pages/ReviewQueuePage.tsx, dynamic import will not move module into another chunk.
+[39m
+[1m[33m[plugin:vite:reporter][39m[22m [33m[plugin vite:reporter] 
+(!) C:/Users/Joshu/dev/ai-os-projects/lsatu-my-work-20261026/src/components/review/hardSentencesReviewSource.ts is dynamically imported by C:/Users/Joshu/dev/ai-os-projects/lsatu-my-work-20261026/src/components/AssignmentGate.tsx but also statically imported by C:/Users/Joshu/dev/ai-os-projects/lsatu-my-work-20261026/src/lib/scopedReviewEpisodes.ts, C:/Users/Joshu/dev/ai-os-projects/lsatu-my-work-20261026/src/pages/HardSentencesReviewDetail.tsx, C:/Users/Joshu/dev/ai-os-projects/lsatu-my-work-20261026/src/pages/ReviewQueuePage.tsx, dynamic import will not move module into another chunk.
+[39m
+[1m[33m[plugin:vite:reporter][39m[22m [33m[plugin vite:reporter] 
+(!) C:/Users/Joshu/dev/ai-os-projects/lsatu-my-work-20261026/src/components/review/nativeLabReviewSource.ts is dynamically imported by C:/Users/Joshu/dev/ai-os-projects/lsatu-my-work-20261026/src/components/AssignmentGate.tsx but also statically imported by C:/Users/Joshu/dev/ai-os-projects/lsatu-my-work-20261026/src/lib/drillHistory.ts, C:/Users/Joshu/dev/ai-os-projects/lsatu-my-work-20261026/src/lib/scopedReviewEpisodes.ts, C:/Users/Joshu/dev/ai-os-projects/lsatu-my-work-20261026/src/pages/NativeLabReviewDetail.tsx, C:/Users/Joshu/dev/ai-os-projects/lsatu-my-work-20261026/src/pages/ReviewQueuePage.tsx, dynamic import will not move module into another chunk.
+[39m
+[1m[33m[plugin:vite:reporter][39m[22m [33m[plugin vite:reporter] 
+(!) C:/Users/Joshu/dev/ai-os-projects/lsatu-my-work-20261026/src/lib/sectionHistory.ts is dynamically imported by C:/Users/Joshu/dev/ai-os-projects/lsatu-my-work-20261026/src/components/AssignmentGate.tsx but also statically imported by C:/Users/Joshu/dev/ai-os-projects/lsatu-my-work-20261026/src/components/history/SectionHistoryList.tsx, C:/Users/Joshu/dev/ai-os-projects/lsatu-my-work-20261026/src/pages/DrillHistory.tsx, C:/Users/Joshu/dev/ai-os-projects/lsatu-my-work-20261026/src/pages/ReviewQueuePage.tsx, C:/Users/Joshu/dev/ai-os-projects/lsatu-my-work-20261026/src/pages/SectionReviewDetail.tsx, dynamic import will not move module into another chunk.
+[39m
+computing gzip size...
+[2mdist/[22m[32mindex.html                                                [39m[1m[2m    7.48 kB[22m[1m[22m[2m │ gzip:   3.05 kB[22m
+[2mdist/[22m[32massets/Assistant-SemiBold-SCI4bEL9.woff2                  [39m[1m[2m   20.21 kB[22m[1m[22m
+[2mdist/[22m[32massets/Assistant-Regular-DVxZuzxb.woff2                   [39m[1m[2m   20.23 kB[22m[1m[22m
+[2mdist/[22m[32massets/Assistant-Medium-DrcxCXg3.woff2                    [39m[1m[2m   20.32 kB[22m[1m[22m
+[2mdist/[22m[32massets/Assistant-Bold-gm-uSS1B.woff2                      [39m[1m[2m   20.38 kB[22m[1m[22m
+[2mdist/[22m[32massets/outfit-latin-Bc-8i84L.woff2                        [39m[1m[2m   32.29 kB[22m[1m[22m
+[2mdist/[22m[35massets/rcTimedReaderStorage-CD29O2kz.css                  [39m[1m[2m    0.11 kB[22m[1m[22m[2m │ gzip:   0.12 kB[22m
+[2mdist/[22m[35massets/CausationStation-D8H6dcIw.css                      [39m[1m[2m    1.01 kB[22m[1m[22m[2m │ gzip:   0.43 kB[22m
+[2mdist/[22m[35massets/PrincipleFlawApp-CTcnNjvU.css                      [39m[1m[2m    2.29 kB[22m[1m[22m[2m │ gzip:   0.65 kB[22m
+[2mdist/[22m[35massets/player-BWBlfB54.css                                [39m[1m[2m    2.45 kB[22m[1m[22m[2m │ gzip:   0.87 kB[22m
+[2mdist/[22m[35massets/SectionDirectionsCard-jINWRU4Y.css                 [39m[1m[2m    2.73 kB[22m[1m[22m[2m │ gzip:   0.87 kB[22m
+[2mdist/[22m[35massets/activity-centre-CKp8Zo-p.css                       [39m[1m[2m    3.04 kB[22m[1m[22m[2m │ gzip:   1.09 kB[22m
+[2mdist/[22m[35massets/ActivityCard-Cb6Mlxvv.css                          [39m[1m[2m    5.34 kB[22m[1m[22m[2m │ gzip:   1.66 kB[22m
+[2mdist/[22m[35massets/ConditionalPractice-DZi5RrEa.css                   [39m[1m[2m    6.60 kB[22m[1m[22m[2m │ gzip:   1.77 kB[22m
+[2mdist/[22m[35massets/ActivityLab-B2Cxl4X0.css                           [39m[1m[2m    6.75 kB[22m[1m[22m[2m │ gzip:   1.59 kB[22m
+[2mdist/[22m[35massets/testing-centre-B5sHI719.css                        [39m[1m[2m    9.43 kB[22m[1m[22m[2m │ gzip:   1.86 kB[22m
+[2mdist/[22m[35massets/negated-condition-61liIv5I.css                     [39m[1m[2m   15.11 kB[22m[1m[22m[2m │ gzip:   3.99 kB[22m
+[2mdist/[22m[35massets/index-CcoqdWF5.css                                 [39m[1m[2m   18.52 kB[22m[1m[22m[2m │ gzip:   3.60 kB[22m
+[2mdist/[22m[35massets/UnlessDrill-CG6BrY3o.css                           [39m[1m[2m   24.60 kB[22m[1m[22m[2m │ gzip:   4.97 kB[22m
+[2mdist/[22m[35massets/IntroToLrBootcamp-D6sspxv4.css                     [39m[1m[2m   31.14 kB[22m[1m[22m[2m │ gzip:   6.35 kB[22m
+[2mdist/[22m[35massets/RcBootcampPage-BhrD5jR2.css                        [39m[1m[2m   32.97 kB[22m[1m[22m[2m │ gzip:   6.62 kB[22m
+[2mdist/[22m[35massets/section-launch-B669Dw0i.css                        [39m[1m[2m   44.05 kB[22m[1m[22m[2m │ gzip:   9.00 kB[22m
+[2mdist/[22m[35massets/rc-CoC3C6w0.css                                    [39m[1m[2m   48.81 kB[22m[1m[22m[2m │ gzip:   8.35 kB[22m
+[2mdist/[22m[35massets/AcademyMainhub-BqO2lUxx.css                        [39m[1m[2m   52.56 kB[22m[1m[22m[2m │ gzip:   8.14 kB[22m
+[2mdist/[22m[35massets/index-BNZR9Tew.css                                 [39m[1m[2m   59.41 kB[22m[1m[22m[2m │ gzip:  11.93 kB[22m
+[2mdist/[22m[35massets/report-card-DEkbo3tf.css                           [39m[1m[2m  116.50 kB[22m[1m[22m[2m │ gzip:  23.01 kB[22m
+[2mdist/[22m[35massets/TeacherSmartboard-CbfdidzT.css                     [39m[1m[2m  145.49 kB[22m[1m[22m[2m │ gzip:  23.00 kB[22m
+[2mdist/[22m[35massets/ConditionalBootcamp-e_PoaKlL.css                   [39m[1m[2m  339.50 kB[22m[1m[22m[2m │ gzip:  65.89 kB[22m
+[2mdist/[22m[35massets/index-BkwKEJxX.css                                 [39m[1m[2m  706.35 kB[22m[1m[22m[2m │ gzip: 101.24 kB[22m
+[2mdist/[22m[36massets/channel-yQT3SGqR.js                                [39m[1m[2m    0.11 kB[22m[1m[22m[2m │ gzip:   0.12 kB[22m
+[2mdist/[22m[36massets/endOfDay-CV4Llmpb.js                               [39m[1m[2m    0.12 kB[22m[1m[22m[2m │ gzip:   0.13 kB[22m
+[2mdist/[22m[36massets/practiceTestRunner-Csni7ISq.js                     [39m[1m[2m    0.16 kB[22m[1m[22m[2m │ gzip:   0.15 kB[22m
+[2mdist/[22m[36massets/bootcampDays-BDG0ehT3.js                           [39m[1m[2m    0.17 kB[22m[1m[22m[2m │ gzip:   0.16 kB[22m
+[2mdist/[22m[36massets/differenceInCalendarMonths-C1zl9pxj.js             [39m[1m[2m    0.17 kB[22m[1m[22m[2m │ gzip:   0.16 kB[22m
+[2mdist/[22m[36massets/skeleton-DMyh5R6j.js                               [39m[1m[2m    0.17 kB[22m[1m[22m[2m │ gzip:   0.16 kB[22m
+[2mdist/[22m[36massets/OneOffBooking-CBQUX6z_.js                          [39m[1m[2m    0.17 kB[22m[1m[22m[2m │ gzip:   0.16 kB[22m
+[2mdist/[22m[36massets/chunk-2Q5K7J3B-BjsAPg22.js                         [39m[1m[2m    0.19 kB[22m[1m[22m[2m │ gzip:   0.16 kB[22m
+[2mdist/[22m[36massets/analytics-ivtukkOA.js                              [39m[1m[2m    0.20 kB[22m[1m[22m[2m │ gzip:   0.17 kB[22m
+[2mdist/[22m[36massets/DrillRunSpecContext-Co80f_SS.js                    [39m[1m[2m    0.21 kB[22m[1m[22m[2m │ gzip:   0.17 kB[22m
+[2mdist/[22m[36massets/chunk-XXDRQBXY-Dlaa-JEu.js                         [39m[1m[2m    0.22 kB[22m[1m[22m[2m │ gzip:   0.20 kB[22m
+[2mdist/[22m[36massets/grading-status-Co85LNzT.js                         [39m[1m[2m    0.24 kB[22m[1m[22m[2m │ gzip:   0.17 kB[22m
+[2mdist/[22m[36massets/minus-CNJtWy9c.js                                  [39m[1m[2m    0.29 kB[22m[1m[22m[2m │ gzip:   0.24 kB[22m
+[2mdist/[22m[36massets/chunk-JWPE2WC7-DSibYPK4.js                         [39m[1m[2m    0.29 kB[22m[1m[22m[2m │ gzip:   0.20 kB[22m
+[2mdist/[22m[36massets/square-BalCjYFh.js                                 [39m[1m[2m    0.32 kB[22m[1m[22m[2m │ gzip:   0.26 kB[22m
+[2mdist/[22m[36massets/use-mobile-PCBBTTyJ.js                             [39m[1m[2m    0.33 kB[22m[1m[22m[2m │ gzip:   0.24 kB[22m
+[2mdist/[22m[36massets/arrow-up-DpRm8Fdt.js                               [39m[1m[2m    0.33 kB[22m[1m[22m[2m │ gzip:   0.26 kB[22m
+[2mdist/[22m[36massets/rcRetrySelection-DxsWN1Qm.js                       [39m[1m[2m    0.33 kB[22m[1m[22m[2m │ gzip:   0.23 kB[22m
+[2mdist/[22m[36massets/LrChoiceNote-XE7eZash.js                           [39m[1m[2m    0.34 kB[22m[1m[22m[2m │ gzip:   0.26 kB[22m
+[2mdist/[22m[36massets/command-D1FMZnDH.js                                [39m[1m[2m    0.35 kB[22m[1m[22m[2m │ gzip:   0.27 kB[22m
+[2mdist/[22m[36massets/reply-BUhqrUon.js                                  [39m[1m[2m    0.36 kB[22m[1m[22m[2m │ gzip:   0.29 kB[22m
+[2mdist/[22m[36massets/chunk-5VM5RSS4-CVAdmX0S.js                         [39m[1m[2m    0.36 kB[22m[1m[22m[2m │ gzip:   0.27 kB[22m
+[2mdist/[22m[36massets/terminal-hwxubBTf.js                               [39m[1m[2m    0.36 kB[22m[1m[22m[2m │ gzip:   0.28 kB[22m
+[2mdist/[22m[36massets/circle-check-big-DBScA9w5.js                       [39m[1m[2m    0.36 kB[22m[1m[22m[2m │ gzip:   0.28 kB[22m
+[2mdist/[22m[36massets/circle-play-Db5tkpqG.js                            [39m[1m[2m    0.36 kB[22m[1m[22m[2m │ gzip:   0.28 kB[22m
+[2mdist/[22m[36massets/user-CfOWf0IA.js                                   [39m[1m[2m    0.37 kB[22m[1m[22m[2m │ gzip:   0.28 kB[22m
+[2mdist/[22m[36massets/rotate-cw-BSMSyaCx.js                              [39m[1m[2m    0.37 kB[22m[1m[22m[2m │ gzip:   0.29 kB[22m
+[2mdist/[22m[36massets/RcRedirect-C5uCSCb1.js                             [39m[1m[2m    0.37 kB[22m[1m[22m[2m │ gzip:   0.28 kB[22m
+[2mdist/[22m[36massets/rrcNavigation--4Uf2xw_.js                          [39m[1m[2m    0.37 kB[22m[1m[22m[2m │ gzip:   0.27 kB[22m
+[2mdist/[22m[36massets/info-BvBCh-9z.js                                   [39m[1m[2m    0.37 kB[22m[1m[22m[2m │ gzip:   0.28 kB[22m
+[2mdist/[22m[36massets/circle-x-Dyc0HTkw.js                               [39m[1m[2m    0.38 kB[22m[1m[22m[2m │ gzip:   0.28 kB[22m
+[2mdist/[22m[36massets/init-Dmth1JHB.js                                   [39m[1m[2m    0.38 kB[22m[1m[22m[2m │ gzip:   0.19 kB[22m
+[2mdist/[22m[36massets/undo-2-CDNXYTh2.js                                 [39m[1m[2m    0.38 kB[22m[1m[22m[2m │ gzip:   0.28 kB[22m
+[2mdist/[22m[36massets/pause-0BQ-alP_.js                                  [39m[1m[2m    0.38 kB[22m[1m[22m[2m │ gzip:   0.27 kB[22m
+[2mdist/[22m[36massets/file-DBERmCNF.js                                   [39m[1m[2m    0.39 kB[22m[1m[22m[2m │ gzip:   0.28 kB[22m
+[2mdist/[22m[36massets/flag-C4nS44Wx.js                                   [39m[1m[2m    0.39 kB[22m[1m[22m[2m │ gzip:   0.31 kB[22m
+[2mdist/[22m[36massets/sticky-note-DZfVA1Up.js                            [39m[1m[2m    0.39 kB[22m[1m[22m[2m │ gzip:   0.29 kB[22m
+[2mdist/[22m[36massets/target-9RCOWH04.js                                 [39m[1m[2m    0.40 kB[22m[1m[22m[2m │ gzip:   0.27 kB[22m
+[2mdist/[22m[36massets/UnlessDrillPage-bjOyEy63.js                        [39m[1m[2m    0.40 kB[22m[1m[22m[2m │ gzip:   0.27 kB[22m
+[2mdist/[22m[36massets/library-BBN7g6U4.js                                [39m[1m[2m    0.40 kB[22m[1m[22m[2m │ gzip:   0.29 kB[22m
+[2mdist/[22m[36massets/useAITADrafts-0lLLCnZz.js                          [39m[1m[2m    0.40 kB[22m[1m[22m[2m │ gzip:   0.31 kB[22m
+[2mdist/[22m[36massets/ellipsis-vertical-Duy8aB3W.js                      [39m[1m[2m    0.40 kB[22m[1m[22m[2m │ gzip:   0.28 kB[22m
+[2mdist/[22m[36massets/activity-Cb7O6tYf.js                               [39m[1m[2m    0.40 kB[22m[1m[22m[2m │ gzip:   0.30 kB[22m
+[2mdist/[22m[36massets/history-Tg7WU-st.js                                [39m[1m[2m    0.41 kB[22m[1m[22m[2m │ gzip:   0.30 kB[22m
+[2mdist/[22m[36massets/waitForSession-D6ebIDRT.js                         [39m[1m[2m    0.41 kB[22m[1m[22m[2m │ gzip:   0.30 kB[22m
+[2mdist/[22m[36massets/timer-n_q3NRQD.js                                  [39m[1m[2m    0.41 kB[22m[1m[22m[2m │ gzip:   0.29 kB[22m
+[2mdist/[22m[36massets/database-DHqjKek-.js                               [39m[1m[2m    0.41 kB[22m[1m[22m[2m │ gzip:   0.30 kB[22m
+[2mdist/[22m[36massets/book-marked-DyraTEnZ.js                            [39m[1m[2m    0.42 kB[22m[1m[22m[2m │ gzip:   0.31 kB[22m
+[2mdist/[22m[36massets/chart-column-CkIKfSjq.js                           [39m[1m[2m    0.42 kB[22m[1m[22m[2m │ gzip:   0.30 kB[22m
+[2mdist/[22m[36massets/user-check-BVCelNtO.js                             [39m[1m[2m    0.42 kB[22m[1m[22m[2m │ gzip:   0.32 kB[22m
+[2mdist/[22m[36massets/archive-DP0TN_Nw.js                                [39m[1m[2m    0.42 kB[22m[1m[22m[2m │ gzip:   0.31 kB[22m
+[2mdist/[22m[36massets/messages-square-DDRuQNOv.js                        [39m[1m[2m    0.43 kB[22m[1m[22m[2m │ gzip:   0.30 kB[22m
+[2mdist/[22m[36massets/subset-worker.chunk-Cf1l4lk0.js                    [39m[1m[2m    0.43 kB[22m[1m[22m[2m │ gzip:   0.32 kB[22m
+[2mdist/[22m[36massets/timedPracticeTestEntry-B13zsYYt.js                 [39m[1m[2m    0.43 kB[22m[1m[22m[2m │ gzip:   0.31 kB[22m
+[2mdist/[22m[36massets/upload-B1ylYphM.js                                 [39m[1m[2m    0.43 kB[22m[1m[22m[2m │ gzip:   0.32 kB[22m
+[2mdist/[22m[36massets/zap-6BNhrhxo.js                                    [39m[1m[2m    0.43 kB[22m[1m[22m[2m │ gzip:   0.31 kB[22m
+[2mdist/[22m[36massets/mic-DbJ9HjIi.js                                    [39m[1m[2m    0.44 kB[22m[1m[22m[2m │ gzip:   0.32 kB[22m
+[2mdist/[22m[36massets/shield-7pQ5ls93.js                                 [39m[1m[2m    0.44 kB[22m[1m[22m[2m │ gzip:   0.33 kB[22m
+[2mdist/[22m[36massets/git-branch-CGW7RNIJ.js                             [39m[1m[2m    0.45 kB[22m[1m[22m[2m │ gzip:   0.32 kB[22m
+[2mdist/[22m[36massets/stateDiagram-v2-MP3YSRHH-BsfgDLXY.js               [39m[1m[2m    0.45 kB[22m[1m[22m[2m │ gzip:   0.31 kB[22m
+[2mdist/[22m[36massets/file-open-7c801643-684qeFg4.js                     [39m[1m[2m    0.45 kB[22m[1m[22m[2m │ gzip:   0.32 kB[22m
+[2mdist/[22m[36massets/lightbulb-mfoX_bAn.js                              [39m[1m[2m    0.46 kB[22m[1m[22m[2m │ gzip:   0.33 kB[22m
+[2mdist/[22m[36massets/useAdminActivities-zhepnliU.js                     [39m[1m[2m    0.46 kB[22m[1m[22m[2m │ gzip:   0.33 kB[22m
+[2mdist/[22m[36massets/maximize-2-DphYUOaY.js                             [39m[1m[2m    0.47 kB[22m[1m[22m[2m │ gzip:   0.32 kB[22m
+[2mdist/[22m[36massets/minimize-2-CaTxsuYE.js                             [39m[1m[2m    0.47 kB[22m[1m[22m[2m │ gzip:   0.31 kB[22m
+[2mdist/[22m[36massets/file-down-ByiQ-AAk.js                              [39m[1m[2m    0.47 kB[22m[1m[22m[2m │ gzip:   0.32 kB[22m
+[2mdist/[22m[36massets/users-B8fwkgXg.js                                  [39m[1m[2m    0.47 kB[22m[1m[22m[2m │ gzip:   0.33 kB[22m
+[2mdist/[22m[36massets/TeacherPayments-BilIu_9I.js                        [39m[1m[2m    0.48 kB[22m[1m[22m[2m │ gzip:   0.31 kB[22m
+[2mdist/[22m[36massets/pdfExtract-EaSib9Nf.js                             [39m[1m[2m    0.49 kB[22m[1m[22m[2m │ gzip:   0.37 kB[22m
+[2mdist/[22m[36massets/DrillSplit-CfawO4n0.js                             [39m[1m[2m    0.49 kB[22m[1m[22m[2m │ gzip:   0.32 kB[22m
+[2mdist/[22m[36massets/printer-BDuINMFm.js                                [39m[1m[2m    0.49 kB[22m[1m[22m[2m │ gzip:   0.34 kB[22m
+[2mdist/[22m[36massets/classDiagram-ZZMXUADV-CHlsnYeh.js                  [39m[1m[2m    0.49 kB[22m[1m[22m[2m │ gzip:   0.33 kB[22m
+[2mdist/[22m[36massets/classDiagram-v2-VYDZK3BY-CHlsnYeh.js               [39m[1m[2m    0.49 kB[22m[1m[22m[2m │ gzip:   0.33 kB[22m
+[2mdist/[22m[36massets/tag-bBusqWgt.js                                    [39m[1m[2m    0.50 kB[22m[1m[22m[2m │ gzip:   0.35 kB[22m
+[2mdist/[22m[36massets/save-Dxbb_z4N.js                                   [39m[1m[2m    0.50 kB[22m[1m[22m[2m │ gzip:   0.33 kB[22m
+[2mdist/[22m[36massets/layout-grid-DvkBi7Pa.js                            [39m[1m[2m    0.52 kB[22m[1m[22m[2m │ gzip:   0.30 kB[22m
+[2mdist/[22m[36massets/layout-dashboard-OCY2OPsh.js                       [39m[1m[2m    0.52 kB[22m[1m[22m[2m │ gzip:   0.31 kB[22m
+[2mdist/[22m[36massets/chunk-POPQ4Y6H-a_QR-78P.js                         [39m[1m[2m    0.53 kB[22m[1m[22m[2m │ gzip:   0.37 kB[22m
+[2mdist/[22m[36massets/RcMarkdown-DLGvctLi.js                             [39m[1m[2m    0.53 kB[22m[1m[22m[2m │ gzip:   0.24 kB[22m
+[2mdist/[22m[36massets/layers-CSr0jhHY.js                                 [39m[1m[2m    0.53 kB[22m[1m[22m[2m │ gzip:   0.34 kB[22m
+[2mdist/[22m[36massets/file-open-002ab408-DIuFHtCF.js                     [39m[1m[2m    0.54 kB[22m[1m[22m[2m │ gzip:   0.33 kB[22m
+[2mdist/[22m[36massets/QueryErrorCard-Bww7Uq71.js                         [39m[1m[2m    0.56 kB[22m[1m[22m[2m │ gzip:   0.35 kB[22m
+[2mdist/[22m[36massets/drillSection-gTDTm6W4.js                           [39m[1m[2m    0.56 kB[22m[1m[22m[2m │ gzip:   0.35 kB[22m
+[2mdist/[22m[36massets/swimlanesDiagram-VR7AAH4N-Bm8VsNrC.js              [39m[1m[2m    0.57 kB[22m[1m[22m[2m │ gzip:   0.38 kB[22m
+[2mdist/[22m[36massets/film-B0E3wuKr.js                                   [39m[1m[2m    0.58 kB[22m[1m[22m[2m │ gzip:   0.35 kB[22m
+[2mdist/[22m[36massets/clipboard-list-h3tYbEdx.js                         [39m[1m[2m    0.58 kB[22m[1m[22m[2m │ gzip:   0.36 kB[22m
+[2mdist/[22m[36massets/directory-open-01563666-DWU9wJ6I.js                [39m[1m[2m    0.59 kB[22m[1m[22m[2m │ gzip:   0.36 kB[22m
+[2mdist/[22m[36massets/infoDiagram-27XIBGKW-Ah7cgMfc.js                   [39m[1m[2m    0.60 kB[22m[1m[22m[2m │ gzip:   0.41 kB[22m
+[2mdist/[22m[36massets/gauge-szfJrIFQ.js                                  [39m[1m[2m    0.63 kB[22m[1m[22m[2m │ gzip:   0.33 kB[22m
+[2mdist/[22m[36massets/star-BB7LtvHU.js                                   [39m[1m[2m    0.64 kB[22m[1m[22m[2m │ gzip:   0.40 kB[22m
+[2mdist/[22m[36massets/file-save-3189631c-x92wctJd.js                     [39m[1m[2m    0.71 kB[22m[1m[22m[2m │ gzip:   0.46 kB[22m
+[2mdist/[22m[36massets/badge-BzXbUyFK.js                                  [39m[1m[2m    0.71 kB[22m[1m[22m[2m │ gzip:   0.37 kB[22m
+[2mdist/[22m[36massets/useClassroomDestinationAcknowledgment-Dw6BvA3I.js  [39m[1m[2m    0.72 kB[22m[1m[22m[2m │ gzip:   0.39 kB[22m
+[2mdist/[22m[36massets/useStudentLevels-C0KCTU5l.js                       [39m[1m[2m    0.72 kB[22m[1m[22m[2m │ gzip:   0.41 kB[22m
+[2mdist/[22m[36massets/pencil-ruler-CCCiX0oB.js                           [39m[1m[2m    0.73 kB[22m[1m[22m[2m │ gzip:   0.44 kB[22m
+[2mdist/[22m[36massets/dumbbell-Bbjj2ziB.js                               [39m[1m[2m    0.73 kB[22m[1m[22m[2m │ gzip:   0.40 kB[22m
+[2mdist/[22m[36massets/sliders-horizontal-P6SjTRP_.js                     [39m[1m[2m    0.75 kB[22m[1m[22m[2m │ gzip:   0.37 kB[22m
+[2mdist/[22m[36massets/RcEngagingPassageBootcamp-DaqmwGWj.js              [39m[1m[2m    0.77 kB[22m[1m[22m[2m │ gzip:   0.48 kB[22m
+[2mdist/[22m[36massets/DossierMessages-BNrDFdLu.js                        [39m[1m[2m    0.79 kB[22m[1m[22m[2m │ gzip:   0.47 kB[22m
+[2mdist/[22m[36massets/TeacherDevIndex-BkBFfdzK.js                        [39m[1m[2m    0.84 kB[22m[1m[22m[2m │ gzip:   0.48 kB[22m
+[2mdist/[22m[36massets/progress-840R8X5n.js                               [39m[1m[2m    0.84 kB[22m[1m[22m[2m │ gzip:   0.48 kB[22m
+[2mdist/[22m[36massets/useConditionalAssignments-CqyPPpF-.js              [39m[1m[2m    0.86 kB[22m[1m[22m[2m │ gzip:   0.51 kB[22m
+[2mdist/[22m[36massets/file-save-745eba88-Bb9F9Kg7.js                     [39m[1m[2m    0.87 kB[22m[1m[22m[2m │ gzip:   0.50 kB[22m
+[2mdist/[22m[36massets/user-x-BRz1UU-i.js                                 [39m[1m[2m    0.96 kB[22m[1m[22m[2m │ gzip:   0.49 kB[22m
+[2mdist/[22m[36massets/useTeachingAssets-CQUCWkfu.js                      [39m[1m[2m    0.98 kB[22m[1m[22m[2m │ gzip:   0.51 kB[22m
+[2mdist/[22m[36massets/card-Bbl8x-zr.js                                   [39m[1m[2m    0.99 kB[22m[1m[22m[2m │ gzip:   0.38 kB[22m
+[2mdist/[22m[36massets/sizeCapture-INFHLROL-CEm1-Saw.js                   [39m[1m[2m    1.02 kB[22m[1m[22m[2m │ gzip:   0.56 kB[22m
+[2mdist/[22m[36massets/guidedDrillNavigation-CHQJ6PV6.js                  [39m[1m[2m    1.03 kB[22m[1m[22m[2m │ gzip:   0.54 kB[22m
+[2mdist/[22m[36massets/adminConversation-Cyz0CcH1.js                      [39m[1m[2m    1.07 kB[22m[1m[22m[2m │ gzip:   0.49 kB[22m
+[2mdist/[22m[36massets/card-D4Z3Nw1s.js                                   [39m[1m[2m    1.14 kB[22m[1m[22m[2m │ gzip:   0.44 kB[22m
+[2mdist/[22m[36massets/ProgressWindowControl-C_9TwJaB.js                  [39m[1m[2m    1.17 kB[22m[1m[22m[2m │ gzip:   0.66 kB[22m
+[2mdist/[22m[36massets/ordinal-DILIJJjt.js                                [39m[1m[2m    1.20 kB[22m[1m[22m[2m │ gzip:   0.58 kB[22m
+[2mdist/[22m[36massets/useBootcampProgress-C6eba3Ii.js                    [39m[1m[2m    1.39 kB[22m[1m[22m[2m │ gzip:   0.81 kB[22m
+[2mdist/[22m[36massets/ScoreRing-BRsGfF7Q.js                              [39m[1m[2m    1.42 kB[22m[1m[22m[2m │ gzip:   0.75 kB[22m
+[2mdist/[22m[36massets/SectionDirectionsCard-D755nAD8.js                  [39m[1m[2m    1.49 kB[22m[1m[22m[2m │ gzip:   0.55 kB[22m
+[2mdist/[22m[36massets/band-CquvqAHh.js                                   [39m[1m[2m    1.54 kB[22m[1m[22m[2m │ gzip:   0.67 kB[22m
+[2mdist/[22m[36massets/taPdf-C0exHAmj.js                                  [39m[1m[2m    1.55 kB[22m[1m[22m[2m │ gzip:   0.88 kB[22m
+[2mdist/[22m[36massets/directory-open-4ed118d0-BzWybGaI.js                [39m[1m[2m    1.55 kB[22m[1m[22m[2m │ gzip:   0.79 kB[22m
+[2mdist/[22m[36massets/dayQuestions-byM4cPj2.js                           [39m[1m[2m    1.59 kB[22m[1m[22m[2m │ gzip:   0.76 kB[22m
+[2mdist/[22m[36massets/DossierProgress-NxbeTSQQ.js                        [39m[1m[2m    1.60 kB[22m[1m[22m[2m │ gzip:   0.82 kB[22m
+[2mdist/[22m[36massets/useQuestionHighlights-CQ8gQtSs.js                  [39m[1m[2m    1.61 kB[22m[1m[22m[2m │ gzip:   0.78 kB[22m
+[2mdist/[22m[36massets/timedSectionAdoption-DVqOzJ5I.js                   [39m[1m[2m    1.61 kB[22m[1m[22m[2m │ gzip:   0.91 kB[22m
+[2mdist/[22m[36massets/ScrollMoreCue-CNpiyDQO.js                          [39m[1m[2m    1.63 kB[22m[1m[22m[2m │ gzip:   0.87 kB[22m
+[2mdist/[22m[36massets/railroadDiagram-O6MQD6OU-CU9_1erQ.js               [39m[1m[2m    1.63 kB[22m[1m[22m[2m │ gzip:   0.76 kB[22m
+[2mdist/[22m[36massets/useStudentActivities-DVtyBNlN.js                   [39m[1m[2m    1.64 kB[22m[1m[22m[2m │ gzip:   0.78 kB[22m
+[2mdist/[22m[36massets/TeacherAssistant-BmqfKe_w.js                       [39m[1m[2m    1.66 kB[22m[1m[22m[2m │ gzip:   0.91 kB[22m
+[2mdist/[22m[36massets/FallacyFlawBootcamp-Zz5w6beo.js                    [39m[1m[2m    1.68 kB[22m[1m[22m[2m │ gzip:   0.92 kB[22m
+[2mdist/[22m[36massets/useHubStudents-BJMQofEV.js                         [39m[1m[2m    1.78 kB[22m[1m[22m[2m │ gzip:   0.81 kB[22m
+[2mdist/[22m[36massets/PrincipleFlawBootcamp-B20dX0Ew.js                  [39m[1m[2m    1.79 kB[22m[1m[22m[2m │ gzip:   0.98 kB[22m
+[2mdist/[22m[36massets/lastActivity-B1RKAKPQ.js                           [39m[1m[2m    1.80 kB[22m[1m[22m[2m │ gzip:   0.80 kB[22m
+[2mdist/[22m[36massets/abnfDiagram-VCTEODGH-CfK2qLqj.js                   [39m[1m[2m    1.83 kB[22m[1m[22m[2m │ gzip:   0.90 kB[22m
+[2mdist/[22m[36massets/chunk-F27PBJKO-CRyNjoer.js                         [39m[1m[2m    1.85 kB[22m[1m[22m[2m │ gzip:   0.81 kB[22m
+[2mdist/[22m[36massets/RcExamPane-DQqlMJCw.js                             [39m[1m[2m    1.86 kB[22m[1m[22m[2m │ gzip:   0.97 kB[22m
+[2mdist/[22m[36massets/pegDiagram-XKGWAZYB-CXOgtVCS.js                    [39m[1m[2m    1.98 kB[22m[1m[22m[2m │ gzip:   0.93 kB[22m
+[2mdist/[22m[36massets/ebnfDiagram-PWID7BFC-QfeNpnCa.js                   [39m[1m[2m    2.03 kB[22m[1m[22m[2m │ gzip:   0.88 kB[22m
+[2mdist/[22m[36massets/progress-COfEXCGu.js                               [39m[1m[2m    2.15 kB[22m[1m[22m[2m │ gzip:   1.06 kB[22m
+[2mdist/[22m[36massets/ActivityCard-BtZG3zYS.js                           [39m[1m[2m    2.16 kB[22m[1m[22m[2m │ gzip:   0.96 kB[22m
+[2mdist/[22m[36massets/HubMessages-CrUxLKmu.js                            [39m[1m[2m    2.23 kB[22m[1m[22m[2m │ gzip:   1.06 kB[22m
+[2mdist/[22m[36massets/SectionDirections-DCtPqt_W.js                      [39m[1m[2m    2.25 kB[22m[1m[22m[2m │ gzip:   0.97 kB[22m
+[2mdist/[22m[36massets/Homework-B-MqCPRg.js                               [39m[1m[2m    2.36 kB[22m[1m[22m[2m │ gzip:   1.03 kB[22m
+[2mdist/[22m[36massets/OAuthConsent-BoYURSJg.js                           [39m[1m[2m    2.49 kB[22m[1m[22m[2m │ gzip:   1.09 kB[22m
+[2mdist/[22m[36massets/PublicBooking-DDJzNhiO.js                          [39m[1m[2m    2.61 kB[22m[1m[22m[2m │ gzip:   1.23 kB[22m
+[2mdist/[22m[36massets/assignmentGroups-CxZj6TRV.js                       [39m[1m[2m    2.65 kB[22m[1m[22m[2m │ gzip:   1.19 kB[22m
+[2mdist/[22m[36massets/Inspector-Rg552f1t.js                              [39m[1m[2m    2.72 kB[22m[1m[22m[2m │ gzip:   1.18 kB[22m
+[2mdist/[22m[36massets/scheduleTemplate-B5oIWAJc.js                       [39m[1m[2m    2.72 kB[22m[1m[22m[2m │ gzip:   1.12 kB[22m
+[2mdist/[22m[36massets/useLrExplanation-DUs8YLOk.js                       [39m[1m[2m    2.72 kB[22m[1m[22m[2m │ gzip:   1.18 kB[22m
+[2mdist/[22m[36massets/rcExposure-6D9Ddmwe.js                             [39m[1m[2m    2.83 kB[22m[1m[22m[2m │ gzip:   1.12 kB[22m
+[2mdist/[22m[36massets/MeshSurfaceSampler-CbQdw46a.js                     [39m[1m[2m    2.85 kB[22m[1m[22m[2m │ gzip:   0.93 kB[22m
+[2mdist/[22m[36massets/NativeLabReviewDetail-U3MtyeY3.js                  [39m[1m[2m    2.89 kB[22m[1m[22m[2m │ gzip:   1.32 kB[22m
+[2mdist/[22m[36massets/accessTierClient-DcdgJbPB.js                       [39m[1m[2m    2.94 kB[22m[1m[22m[2m │ gzip:   1.17 kB[22m
+[2mdist/[22m[36massets/rcSession-YwUd7W8-.js                              [39m[1m[2m    2.96 kB[22m[1m[22m[2m │ gzip:   1.07 kB[22m
+[2mdist/[22m[36massets/StudentIndicatorLedger-Cqg9GGNj.js                 [39m[1m[2m    3.01 kB[22m[1m[22m[2m │ gzip:   1.26 kB[22m
+[2mdist/[22m[36massets/rcSearch-kB9_edAB.js                               [39m[1m[2m    3.02 kB[22m[1m[22m[2m │ gzip:   1.31 kB[22m
+[2mdist/[22m[36massets/roundRect-0PYZxl1G.js                              [39m[1m[2m    3.05 kB[22m[1m[22m[2m │ gzip:   1.08 kB[22m
+[2mdist/[22m[36massets/classroomNotify-C2MIqpzK.js                        [39m[1m[2m    3.16 kB[22m[1m[22m[2m │ gzip:   1.23 kB[22m
+[2mdist/[22m[36massets/SignupQueue-B6Ew3Iu9.js                            [39m[1m[2m    3.30 kB[22m[1m[22m[2m │ gzip:   1.40 kB[22m
+[2mdist/[22m[36massets/InspectorReport-DeHjUtmV.js                        [39m[1m[2m    3.32 kB[22m[1m[22m[2m │ gzip:   1.37 kB[22m
+[2mdist/[22m[36massets/tabs-B65y0iSL.js                                   [39m[1m[2m    3.40 kB[22m[1m[22m[2m │ gzip:   1.44 kB[22m
+[2mdist/[22m[36massets/arc-9KbbLbYh.js                                    [39m[1m[2m    3.42 kB[22m[1m[22m[2m │ gzip:   1.46 kB[22m
+[2mdist/[22m[36massets/ActivityReviewDetail-G0R5Hjs-.js                   [39m[1m[2m    3.42 kB[22m[1m[22m[2m │ gzip:   1.46 kB[22m
+[2mdist/[22m[36massets/IntroLr-BFFdgn4d.js                                [39m[1m[2m    3.78 kB[22m[1m[22m[2m │ gzip:   1.47 kB[22m
+[2mdist/[22m[36massets/TeacherBootcampsHub-Cv-fOa_Y.js                    [39m[1m[2m    3.83 kB[22m[1m[22m[2m │ gzip:   1.28 kB[22m
+[2mdist/[22m[36massets/rcAdaptive-BQ5aqwhQ.js                             [39m[1m[2m    3.88 kB[22m[1m[22m[2m │ gzip:   1.57 kB[22m
+[2mdist/[22m[36massets/bootcampReferences-Cf2SBv4h.js                     [39m[1m[2m    3.90 kB[22m[1m[22m[2m │ gzip:   1.28 kB[22m
+[2mdist/[22m[36massets/SectionReviewDetail-F-t61Z1-.js                    [39m[1m[2m    3.93 kB[22m[1m[22m[2m │ gzip:   1.65 kB[22m
+[2mdist/[22m[36massets/teacherAssignResource-H4pRoyEJ.js                  [39m[1m[2m    4.06 kB[22m[1m[22m[2m │ gzip:   1.42 kB[22m
+[2mdist/[22m[36massets/HardSentencesReviewDetail-CmyG_lYs.js              [39m[1m[2m    4.12 kB[22m[1m[22m[2m │ gzip:   1.63 kB[22m
+[2mdist/[22m[36massets/diagram-Z3DM3KII-Bo14JZwr.js                       [39m[1m[2m    4.27 kB[22m[1m[22m[2m │ gzip:   1.87 kB[22m
+[2mdist/[22m[36massets/TeacherReadingCenter-nmc0OVxl.js                   [39m[1m[2m    4.28 kB[22m[1m[22m[2m │ gzip:   1.80 kB[22m
+[2mdist/[22m[36massets/switch-CctVafse.js                                 [39m[1m[2m    4.31 kB[22m[1m[22m[2m │ gzip:   1.83 kB[22m
+[2mdist/[22m[36massets/BootcampReferenceLab-BxsNUUR4.js                   [39m[1m[2m    4.47 kB[22m[1m[22m[2m │ gzip:   1.51 kB[22m
+[2mdist/[22m[36massets/checkbox-D0_Vktru.js                               [39m[1m[2m    4.55 kB[22m[1m[22m[2m │ gzip:   1.95 kB[22m
+[2mdist/[22m[36massets/ProgressTopics-B5XRgBSm.js                         [39m[1m[2m    4.64 kB[22m[1m[22m[2m │ gzip:   1.87 kB[22m
+[2mdist/[22m[36massets/Overview-D614tKRX.js                               [39m[1m[2m    4.64 kB[22m[1m[22m[2m │ gzip:   1.66 kB[22m
+[2mdist/[22m[36massets/practiceStore-B9tsGpn2.js                          [39m[1m[2m    4.67 kB[22m[1m[22m[2m │ gzip:   2.01 kB[22m
+[2mdist/[22m[36massets/defaultLocale-DX6XiGOO.js                          [39m[1m[2m    4.69 kB[22m[1m[22m[2m │ gzip:   2.18 kB[22m
+[2mdist/[22m[36massets/TeacherWorkspaceShell-Dl8AzQzP.js                  [39m[1m[2m    4.83 kB[22m[1m[22m[2m │ gzip:   1.85 kB[22m
+[2mdist/[22m[36massets/QuestionMultiPicker-DpbAAKop.js                    [39m[1m[2m    4.86 kB[22m[1m[22m[2m │ gzip:   1.73 kB[22m
+[2mdist/[22m[36massets/HubStudentList-CcfOb-ZX.js                         [39m[1m[2m    4.97 kB[22m[1m[22m[2m │ gzip:   2.01 kB[22m
+[2mdist/[22m[36massets/FirstAnswerProgressPanel-BJubHMuo.js               [39m[1m[2m    4.98 kB[22m[1m[22m[2m │ gzip:   1.90 kB[22m
+[2mdist/[22m[36massets/OperatorChatProvider-9Rfxdf8E.js                   [39m[1m[2m    5.02 kB[22m[1m[22m[2m │ gzip:   2.06 kB[22m
+[2mdist/[22m[36massets/Profile-CkA8SABt.js                                [39m[1m[2m    5.11 kB[22m[1m[22m[2m │ gzip:   1.92 kB[22m
+[2mdist/[22m[36massets/IntroLrReviewDetail-CUJmqyEf.js                    [39m[1m[2m    5.27 kB[22m[1m[22m[2m │ gzip:   2.02 kB[22m
+[2mdist/[22m[36massets/Schedule-CPEUjzkZ.js                               [39m[1m[2m    5.31 kB[22m[1m[22m[2m │ gzip:   1.87 kB[22m
+[2mdist/[22m[36massets/StudentNoteDialog-BfdUv_Hx.js                      [39m[1m[2m    5.38 kB[22m[1m[22m[2m │ gzip:   1.99 kB[22m
+[2mdist/[22m[36massets/TeacherHomeworkDetail-D0-jvmcG.js                  [39m[1m[2m    5.40 kB[22m[1m[22m[2m │ gzip:   2.07 kB[22m
+[2mdist/[22m[36massets/StudentNotes-TLp4LVXg.js                           [39m[1m[2m    5.50 kB[22m[1m[22m[2m │ gzip:   2.18 kB[22m
+[2mdist/[22m[36massets/rcProtectedRelease-Hi8t8827.js                     [39m[1m[2m    5.52 kB[22m[1m[22m[2m │ gzip:   2.06 kB[22m
+[2mdist/[22m[36massets/EmbeddedConditionalActivity-C4UYrtLJ.js            [39m[1m[2m    5.70 kB[22m[1m[22m[2m │ gzip:   2.20 kB[22m
+[2mdist/[22m[36massets/TeacherBootcampDetail-BvLy_JDy.js                  [39m[1m[2m    5.75 kB[22m[1m[22m[2m │ gzip:   1.56 kB[22m
+[2mdist/[22m[36massets/linear-C-JHJ_0a.js                                 [39m[1m[2m    5.80 kB[22m[1m[22m[2m │ gzip:   2.38 kB[22m
+[2mdist/[22m[36massets/DrillRuns-Bd0A4oDd.js                              [39m[1m[2m    5.82 kB[22m[1m[22m[2m │ gzip:   2.10 kB[22m
+[2mdist/[22m[36massets/SavedReviewEpisodePanel-kaVR7Kes.js                [39m[1m[2m    6.19 kB[22m[1m[22m[2m │ gzip:   2.08 kB[22m
+[2mdist/[22m[36massets/TutorCorpus-DWzhgTjY.js                            [39m[1m[2m    6.19 kB[22m[1m[22m[2m │ gzip:   2.26 kB[22m
+[2mdist/[22m[36massets/useModuleProgress-BRUbKFBj.js                      [39m[1m[2m    6.21 kB[22m[1m[22m[2m │ gzip:   1.88 kB[22m
+[2mdist/[22m[36massets/PracticeExamsPreview-FSYPSxiT.js                   [39m[1m[2m    6.23 kB[22m[1m[22m[2m │ gzip:   1.94 kB[22m
+[2mdist/[22m[36massets/diagram-UQ7AKVKN-DP1RVrhL.js                       [39m[1m[2m    6.24 kB[22m[1m[22m[2m │ gzip:   2.68 kB[22m
+[2mdist/[22m[36massets/questionFeatureFamilies-Tmv1XGaW.js                [39m[1m[2m    6.31 kB[22m[1m[22m[2m │ gzip:   2.48 kB[22m
+[2mdist/[22m[36massets/pieDiagram-E7YTZNPT-CsG5p1NL.js                    [39m[1m[2m    6.38 kB[22m[1m[22m[2m │ gzip:   2.66 kB[22m
+[2mdist/[22m[36massets/PracticeSetResults-DYJKi3Ac.js                     [39m[1m[2m    6.43 kB[22m[1m[22m[2m │ gzip:   1.82 kB[22m
+[2mdist/[22m[36massets/LsatKnowledgeImport-Cv07Va8k.js                    [39m[1m[2m    6.64 kB[22m[1m[22m[2m │ gzip:   2.16 kB[22m
+[2mdist/[22m[36massets/Trust-1geRdukA.js                                  [39m[1m[2m    6.71 kB[22m[1m[22m[2m │ gzip:   2.62 kB[22m
+[2mdist/[22m[36massets/ActivityCentre-CjDiRvKj.js                         [39m[1m[2m    6.77 kB[22m[1m[22m[2m │ gzip:   2.30 kB[22m
+[2mdist/[22m[36massets/TeacherTemplates-C9geDYgC.js                       [39m[1m[2m    6.78 kB[22m[1m[22m[2m │ gzip:   2.21 kB[22m
+[2mdist/[22m[36massets/useGmailTodoSource-DrJA9HaK.js                     [39m[1m[2m    6.86 kB[22m[1m[22m[2m │ gzip:   2.90 kB[22m
+[2mdist/[22m[36massets/BootcampReferences-DhfZJ3MZ.js                     [39m[1m[2m    6.93 kB[22m[1m[22m[2m │ gzip:   2.31 kB[22m
+[2mdist/[22m[36massets/LRQuestionModal-C_qgy5UX.js                        [39m[1m[2m    7.25 kB[22m[1m[22m[2m │ gzip:   2.88 kB[22m
+[2mdist/[22m[36massets/GuidedDrills-DiPcx9OJ.js                           [39m[1m[2m    7.38 kB[22m[1m[22m[2m │ gzip:   2.55 kB[22m
+[2mdist/[22m[36massets/HelpSheet-DQnEEWym.js                              [39m[1m[2m    7.43 kB[22m[1m[22m[2m │ gzip:   3.04 kB[22m
+[2mdist/[22m[36massets/RcQuestionPreview-CszHhh9v.js                      [39m[1m[2m    7.62 kB[22m[1m[22m[2m │ gzip:   2.96 kB[22m
+[2mdist/[22m[36massets/TeacherStudentBootcampDetail-KDS5Xl1Y.js           [39m[1m[2m    7.64 kB[22m[1m[22m[2m │ gzip:   2.19 kB[22m
+[2mdist/[22m[36massets/DriveFiles-D3nqgvCX.js                             [39m[1m[2m    7.67 kB[22m[1m[22m[2m │ gzip:   3.18 kB[22m
+[2mdist/[22m[36massets/BookingAccess-DTtx1woT.js                          [39m[1m[2m    7.81 kB[22m[1m[22m[2m │ gzip:   2.54 kB[22m
+[2mdist/[22m[36massets/ledger-D5twMm1r.js                                 [39m[1m[2m    7.83 kB[22m[1m[22m[2m │ gzip:   2.22 kB[22m
+[2mdist/[22m[36massets/dynamic-island-toc-B0OnoT2s.js                     [39m[1m[2m    7.85 kB[22m[1m[22m[2m │ gzip:   3.33 kB[22m
+[2mdist/[22m[36massets/HomeworkNew-0yvb6rL9.js                            [39m[1m[2m    7.91 kB[22m[1m[22m[2m │ gzip:   2.37 kB[22m
+[2mdist/[22m[36massets/HomeworkDetail-B4EKAuYH.js                         [39m[1m[2m    8.01 kB[22m[1m[22m[2m │ gzip:   3.08 kB[22m
+[2mdist/[22m[36massets/si-LK-N5RQ5JYF-B7cS78Kf.js                         [39m[1m[2m    8.02 kB[22m[1m[22m[2m │ gzip:   3.36 kB[22m
+[2mdist/[22m[36massets/DrillLaunchGate--0rtfgZy.js                        [39m[1m[2m    8.14 kB[22m[1m[22m[2m │ gzip:   3.32 kB[22m
+[2mdist/[22m[36massets/useBootcampMetrics-CzBVNty_.js                     [39m[1m[2m    8.16 kB[22m[1m[22m[2m │ gzip:   2.91 kB[22m
+[2mdist/[22m[36massets/zh-HK-E62DVLB3-jm4ItrbP.js                         [39m[1m[2m    8.20 kB[22m[1m[22m[2m │ gzip:   4.09 kB[22m
+[2mdist/[22m[36massets/diagram-S7CK7UJ4-BavoiYgR.js                       [39m[1m[2m    8.32 kB[22m[1m[22m[2m │ gzip:   3.73 kB[22m
+[2mdist/[22m[36massets/az-AZ-76LH7QW2-CMZYsMpB.js                         [39m[1m[2m    8.51 kB[22m[1m[22m[2m │ gzip:   3.59 kB[22m
+[2mdist/[22m[36massets/BootcampReferenceDetail-CvcHmd_0.js                [39m[1m[2m    8.51 kB[22m[1m[22m[2m │ gzip:   2.46 kB[22m
+[2mdist/[22m[36massets/OfficialDrillToolbar-Bsogd3sh.js                   [39m[1m[2m    8.65 kB[22m[1m[22m[2m │ gzip:   3.13 kB[22m
+[2mdist/[22m[36massets/downloads-DUgoRE10.js                              [39m[1m[2m    8.74 kB[22m[1m[22m[2m │ gzip:   3.45 kB[22m
+[2mdist/[22m[36massets/section-launch-BAGLmwu6.js                         [39m[1m[2m    8.78 kB[22m[1m[22m[2m │ gzip:   3.71 kB[22m
+[2mdist/[22m[36massets/kk-KZ-P5N5QNE5-3EQfyh8O.js                         [39m[1m[2m    9.02 kB[22m[1m[22m[2m │ gzip:   4.20 kB[22m
+[2mdist/[22m[36massets/RcSearch-BOnWgX-T.js                               [39m[1m[2m    9.05 kB[22m[1m[22m[2m │ gzip:   2.65 kB[22m
+[2mdist/[22m[36massets/DrillSetupPreview-DLulg2QD.js                      [39m[1m[2m    9.27 kB[22m[1m[22m[2m │ gzip:   3.35 kB[22m
+[2mdist/[22m[36massets/DossierReview-voDht4hU.js                          [39m[1m[2m    9.44 kB[22m[1m[22m[2m │ gzip:   3.43 kB[22m
+[2mdist/[22m[36massets/PaymentsPanel-CH9KXqMx.js                          [39m[1m[2m    9.46 kB[22m[1m[22m[2m │ gzip:   3.31 kB[22m
+[2mdist/[22m[36massets/practiceSectionAttempts-BL37owLs.js                [39m[1m[2m    9.92 kB[22m[1m[22m[2m │ gzip:   3.87 kB[22m
+[2mdist/[22m[36massets/kaa-6HZHGXH3-CvbbclXR.js                           [39m[1m[2m    9.97 kB[22m[1m[22m[2m │ gzip:   4.18 kB[22m
+[2mdist/[22m[36massets/DossierOverview-D8cKB9-j.js                        [39m[1m[2m   10.05 kB[22m[1m[22m[2m │ gzip:   3.23 kB[22m
+[2mdist/[22m[36massets/cynefinDiagram-5FMLGOSQ-D9XOLmao.js                [39m[1m[2m   10.10 kB[22m[1m[22m[2m │ gzip:   3.64 kB[22m
+[2mdist/[22m[36massets/assignWork-Ci9WbLKE.js                             [39m[1m[2m   10.13 kB[22m[1m[22m[2m │ gzip:   3.71 kB[22m
+[2mdist/[22m[36massets/FirstAnswerHistoryPanel-DhaF3Mak.js                [39m[1m[2m   10.24 kB[22m[1m[22m[2m │ gzip:   3.15 kB[22m
+[2mdist/[22m[36massets/stateDiagram-D77RDMKH-JdbRRqbb.js                  [39m[1m[2m   10.39 kB[22m[1m[22m[2m │ gzip:   3.63 kB[22m
+[2mdist/[22m[36massets/th-TH-HPSO5L25-gihvyxD3.js                         [39m[1m[2m   10.48 kB[22m[1m[22m[2m │ gzip:   5.20 kB[22m
+[2mdist/[22m[36massets/confetti.module-B5JVzsfH.js                        [39m[1m[2m   10.66 kB[22m[1m[22m[2m │ gzip:   4.28 kB[22m
+[2mdist/[22m[36massets/TeacherSessionIngest-CNCf3RbZ.js                   [39m[1m[2m   10.79 kB[22m[1m[22m[2m │ gzip:   3.62 kB[22m
+[2mdist/[22m[36massets/diagram-VSXAHHWV-DT3RTaUy.js                       [39m[1m[2m   10.85 kB[22m[1m[22m[2m │ gzip:   4.17 kB[22m
+[2mdist/[22m[36massets/Flashcards-Ds9tGVUH.js                             [39m[1m[2m   11.02 kB[22m[1m[22m[2m │ gzip:   3.70 kB[22m
+[2mdist/[22m[36massets/rcTimedReaderStorage-BH6lfEd6.js                   [39m[1m[2m   11.07 kB[22m[1m[22m[2m │ gzip:   4.26 kB[22m
+[2mdist/[22m[36massets/PracticeExamPages-COt_fR8a.js                      [39m[1m[2m   11.09 kB[22m[1m[22m[2m │ gzip:   3.34 kB[22m
+[2mdist/[22m[36massets/HubAssignments-Dzka5KNL.js                         [39m[1m[2m   11.13 kB[22m[1m[22m[2m │ gzip:   3.95 kB[22m
+[2mdist/[22m[36massets/dagre-GXQ25YYZ-oncc1wSx.js                         [39m[1m[2m   11.16 kB[22m[1m[22m[2m │ gzip:   4.19 kB[22m
+[2mdist/[22m[36massets/my-MM-5M5IBNSE-BeJskyv3.js                         [39m[1m[2m   11.16 kB[22m[1m[22m[2m │ gzip:   5.33 kB[22m
+[2mdist/[22m[36massets/LineChart-BnZWndym.js                              [39m[1m[2m   11.17 kB[22m[1m[22m[2m │ gzip:   4.31 kB[22m
+[2mdist/[22m[36massets/StudentOverview-DoTBXk7Z.js                        [39m[1m[2m   11.21 kB[22m[1m[22m[2m │ gzip:   3.14 kB[22m
+[2mdist/[22m[36massets/ConditionalGuidedLibrary-D4OQxsvd.js               [39m[1m[2m   12.23 kB[22m[1m[22m[2m │ gzip:   4.43 kB[22m
+[2mdist/[22m[36massets/zh-CN-LNUGB5OW-BJf94yoO.js                         [39m[1m[2m   12.27 kB[22m[1m[22m[2m │ gzip:   8.89 kB[22m
+[2mdist/[22m[36massets/lt-LT-XHIRWOB4-vvbbHKFS.js                         [39m[1m[2m   12.27 kB[22m[1m[22m[2m │ gzip:   5.36 kB[22m
+[2mdist/[22m[36massets/vi-VN-M7AON7JQ-jYM2gPH6.js                         [39m[1m[2m   12.31 kB[22m[1m[22m[2m │ gzip:   5.79 kB[22m
+[2mdist/[22m[36massets/zh-TW-RAJ6MFWO-B87Go_2A.js                         [39m[1m[2m   12.39 kB[22m[1m[22m[2m │ gzip:   8.87 kB[22m
+[2mdist/[22m[36massets/GuidedDrillStart-iTX8HWdK.js                       [39m[1m[2m   12.43 kB[22m[1m[22m[2m │ gzip:   4.66 kB[22m
+[2mdist/[22m[36massets/AssignWorkSheet-DosVf8EZ.js                        [39m[1m[2m   12.56 kB[22m[1m[22m[2m │ gzip:   4.77 kB[22m
+[2mdist/[22m[36massets/ja-JP-DBVTYXUO-BVACcTOe.js                         [39m[1m[2m   13.59 kB[22m[1m[22m[2m │ gzip:   8.83 kB[22m
+[2mdist/[22m[36massets/NegatedCondition-TEtXd1AC.js                       [39m[1m[2m   13.59 kB[22m[1m[22m[2m │ gzip:   4.31 kB[22m
+[2mdist/[22m[36massets/bn-BD-2XOGV67Q-BSx7hGsk.js                         [39m[1m[2m   13.63 kB[22m[1m[22m[2m │ gzip:   6.71 kB[22m
+[2mdist/[22m[36massets/da-DK-5WZEPLOC-B--yruYD.js                         [39m[1m[2m   14.30 kB[22m[1m[22m[2m │ gzip:   6.06 kB[22m
+[2mdist/[22m[36massets/DrillActorScope-CaZL4ZC9.js                        [39m[1m[2m   14.41 kB[22m[1m[22m[2m │ gzip:   5.06 kB[22m
+[2mdist/[22m[36massets/ko-KR-MTYHY66A-BppR5ja3.js                         [39m[1m[2m   14.64 kB[22m[1m[22m[2m │ gzip:   9.18 kB[22m
+[2mdist/[22m[36massets/he-IL-6SHJWFNN-D2UMTFHT.js                         [39m[1m[2m   14.86 kB[22m[1m[22m[2m │ gzip:   7.57 kB[22m
+[2mdist/[22m[36massets/bg-BG-XCXSNQG7-BYSVcaBX.js                         [39m[1m[2m   14.86 kB[22m[1m[22m[2m │ gzip:   7.39 kB[22m
+[2mdist/[22m[36massets/Practice-Bf9B0jKe.js                               [39m[1m[2m   15.10 kB[22m[1m[22m[2m │ gzip:   4.39 kB[22m
+[2mdist/[22m[36massets/time-G62C-iHd.js                                   [39m[1m[2m   15.14 kB[22m[1m[22m[2m │ gzip:   4.92 kB[22m
+[2mdist/[22m[36massets/StudentHub-C6vSwS5T.js                             [39m[1m[2m   15.15 kB[22m[1m[22m[2m │ gzip:   4.70 kB[22m
+[2mdist/[22m[36massets/OfficialQuestionPane-Q_NkEO6x.js                   [39m[1m[2m   15.36 kB[22m[1m[22m[2m │ gzip:   5.99 kB[22m
+[2mdist/[22m[36massets/TeachingLibrary-6IFJAhdN.js                        [39m[1m[2m   15.50 kB[22m[1m[22m[2m │ gzip:   5.14 kB[22m
+[2mdist/[22m[36massets/pa-IN-N4M65BXN-DoxBp5X1.js                         [39m[1m[2m   15.58 kB[22m[1m[22m[2m │ gzip:   7.99 kB[22m
+[2mdist/[22m[36massets/OfficialDrillFrame-zKeC7nPs.js                     [39m[1m[2m   15.60 kB[22m[1m[22m[2m │ gzip:   4.89 kB[22m
+[2mdist/[22m[36massets/DossierWork-B9quBK0J.js                            [39m[1m[2m   15.68 kB[22m[1m[22m[2m │ gzip:   5.76 kB[22m
+[2mdist/[22m[36massets/chunk-SVP7TREG-mxVlw6KV.js                         [39m[1m[2m   15.75 kB[22m[1m[22m[2m │ gzip:   4.42 kB[22m
+[2mdist/[22m[36massets/nn-NO-6E72VCQL-BC_eNQpL.js                         [39m[1m[2m   15.85 kB[22m[1m[22m[2m │ gzip:   6.71 kB[22m
+[2mdist/[22m[36massets/assignments-DrFiCLVP.js                            [39m[1m[2m   15.93 kB[22m[1m[22m[2m │ gzip:   5.08 kB[22m
+[2mdist/[22m[36massets/diagram-VX7I27RA-THG659vD.js                       [39m[1m[2m   16.09 kB[22m[1m[22m[2m │ gzip:   5.74 kB[22m
+[2mdist/[22m[36massets/PracticeTestRun-UX6OP70S.js                        [39m[1m[2m   16.13 kB[22m[1m[22m[2m │ gzip:   5.66 kB[22m
+[2mdist/[22m[36massets/DossierSchedule-B-oJSfVp.js                        [39m[1m[2m   16.16 kB[22m[1m[22m[2m │ gzip:   5.23 kB[22m
+[2mdist/[22m[36massets/ConditionalPractice-xptIaN17.js                    [39m[1m[2m   16.43 kB[22m[1m[22m[2m │ gzip:   5.43 kB[22m
+[2mdist/[22m[36massets/rcProgress-BSgXJrhS.js                             [39m[1m[2m   16.73 kB[22m[1m[22m[2m │ gzip:   4.71 kB[22m
+[2mdist/[22m[36massets/nl-NL-IS3SIHDZ-DN2NDL55.js                         [39m[1m[2m   16.74 kB[22m[1m[22m[2m │ gzip:   6.92 kB[22m
+[2mdist/[22m[36massets/ReviewLog-QNxkgZm2.js                              [39m[1m[2m   16.85 kB[22m[1m[22m[2m │ gzip:   4.45 kB[22m
+[2mdist/[22m[36massets/sectionAnalysis-CMUd_Pc0.js                        [39m[1m[2m   16.90 kB[22m[1m[22m[2m │ gzip:   6.43 kB[22m
+[2mdist/[22m[36massets/hu-HU-A5ZG7DT2-BDkqd5oh.js                         [39m[1m[2m   17.04 kB[22m[1m[22m[2m │ gzip:   7.59 kB[22m
+[2mdist/[22m[36massets/fa-IR-HGAKTJCU-Dd971_h9.js                         [39m[1m[2m   17.04 kB[22m[1m[22m[2m │ gzip:   8.47 kB[22m
+[2mdist/[22m[36massets/hi-IN-IWLTKZ5I-q8LZwcUL.js                         [39m[1m[2m   17.30 kB[22m[1m[22m[2m │ gzip:   9.17 kB[22m
+[2mdist/[22m[36massets/ishikawaDiagram-5VMMS53U-Ba-TsTlU.js               [39m[1m[2m   17.58 kB[22m[1m[22m[2m │ gzip:   6.68 kB[22m
+[2mdist/[22m[36massets/ta-IN-2NMHFXQM-DgZC_RML.js                         [39m[1m[2m   17.74 kB[22m[1m[22m[2m │ gzip:   8.58 kB[22m
+[2mdist/[22m[36massets/ar-SA-G6X2FPQ2-9vOy4C1Y.js                         [39m[1m[2m   17.82 kB[22m[1m[22m[2m │ gzip:   9.14 kB[22m
+[2mdist/[22m[36massets/kab-KAB-ZGHBKWFO-DPI49bB-.js                       [39m[1m[2m   17.92 kB[22m[1m[22m[2m │ gzip:   7.53 kB[22m
+[2mdist/[22m[36massets/fi-FI-Z5N7JZ37-CmcGlGP8.js                         [39m[1m[2m   17.93 kB[22m[1m[22m[2m │ gzip:   7.52 kB[22m
+[2mdist/[22m[36massets/km-KH-HSX4SM5Z-wnyxblhv.js                         [39m[1m[2m   18.09 kB[22m[1m[22m[2m │ gzip:   9.31 kB[22m
+[2mdist/[22m[36massets/lv-LV-5QDEKY6T-Db3FLI8-.js                         [39m[1m[2m   18.21 kB[22m[1m[22m[2m │ gzip:   7.78 kB[22m
+[2mdist/[22m[36massets/TeacherSmartboard-D9aJ4DWn.js                      [39m[1m[2m   18.33 kB[22m[1m[22m[2m │ gzip:   6.93 kB[22m
+[2mdist/[22m[36massets/StudentDossier-BSHzpXEi.js                         [39m[1m[2m   18.34 kB[22m[1m[22m[2m │ gzip:   6.12 kB[22m
+[2mdist/[22m[36massets/tr-TR-DEFEU3FU-NwVrN_3O.js                         [39m[1m[2m   18.43 kB[22m[1m[22m[2m │ gzip:   7.97 kB[22m
+[2mdist/[22m[36massets/cs-CZ-2BRQDIVT-CP7yvsWz.js                         [39m[1m[2m   18.48 kB[22m[1m[22m[2m │ gzip:   8.39 kB[22m
+[2mdist/[22m[36massets/gl-ES-HMX3MZ6V-7v5trwbv.js                         [39m[1m[2m   19.20 kB[22m[1m[22m[2m │ gzip:   7.75 kB[22m
+[2mdist/[22m[36massets/pt-PT-UZXXM6DQ-Duq87jvn.js                         [39m[1m[2m   19.38 kB[22m[1m[22m[2m │ gzip:   7.79 kB[22m
+[2mdist/[22m[36massets/oc-FR-POXYY2M6-Fy6QfUwu.js                         [39m[1m[2m   19.42 kB[22m[1m[22m[2m │ gzip:   7.82 kB[22m
+[2mdist/[22m[36massets/ku-TR-6OUDTVRD-BfsGykP0.js                         [39m[1m[2m   19.59 kB[22m[1m[22m[2m │ gzip:   9.28 kB[22m
+[2mdist/[22m[36massets/ca-ES-6MX7JW3Y-Dm2Ft9pd.js                         [39m[1m[2m   19.60 kB[22m[1m[22m[2m │ gzip:   7.90 kB[22m
+[2mdist/[22m[36massets/id-ID-SAP4L64H-AZzkUjk9.js                         [39m[1m[2m   19.71 kB[22m[1m[22m[2m │ gzip:   7.69 kB[22m
+[2mdist/[22m[36massets/el-GR-BZB4AONW-CiTuTA3N.js                         [39m[1m[2m   19.81 kB[22m[1m[22m[2m │ gzip:   9.62 kB[22m
+[2mdist/[22m[36massets/nb-NO-T6EIAALU-Ct0h5FxM.js                         [39m[1m[2m   19.93 kB[22m[1m[22m[2m │ gzip:   8.21 kB[22m
+[2mdist/[22m[36massets/string-DyYdvY5l.js                                 [39m[1m[2m   19.96 kB[22m[1m[22m[2m │ gzip:   6.70 kB[22m
+[2mdist/[22m[36massets/ru-RU-B4JR7IUQ-FSTqFFB6.js                         [39m[1m[2m   20.41 kB[22m[1m[22m[2m │ gzip:   9.91 kB[22m
+[2mdist/[22m[36massets/kanban-definition-UXKFOSKX-CxqaNAVK.js             [39m[1m[2m   20.72 kB[22m[1m[22m[2m │ gzip:   7.29 kB[22m
+[2mdist/[22m[36massets/pt-BR-5N22H2LF-CKRqSlOz.js                         [39m[1m[2m   20.73 kB[22m[1m[22m[2m │ gzip:   8.20 kB[22m
+[2mdist/[22m[36massets/uk-UA-QMV73CPH-Qlrt6Xce.js                         [39m[1m[2m   20.91 kB[22m[1m[22m[2m │ gzip:  10.14 kB[22m
+[2mdist/[22m[36massets/mr-IN-CRQNXWMA-BhpxDCKS.js                         [39m[1m[2m   20.92 kB[22m[1m[22m[2m │ gzip:  10.71 kB[22m
+[2mdist/[22m[36massets/sl-SI-NN7IZMDC-CdBy6uiC.js                         [39m[1m[2m   21.04 kB[22m[1m[22m[2m │ gzip:   8.56 kB[22m
+[2mdist/[22m[36massets/sk-SK-C5VTKIMK-Dqxjae-A.js                         [39m[1m[2m   21.06 kB[22m[1m[22m[2m │ gzip:   9.09 kB[22m
+[2mdist/[22m[36massets/sv-SE-XGPEYMSR-BEwtpxM5.js                         [39m[1m[2m   21.06 kB[22m[1m[22m[2m │ gzip:   8.55 kB[22m
+[2mdist/[22m[36massets/es-ES-U4NZUMDT-CU3P6kTU.js                         [39m[1m[2m   21.19 kB[22m[1m[22m[2m │ gzip:   8.47 kB[22m
+[2mdist/[22m[36massets/eu-ES-A7QVB2H4-BDAbeA26.js                         [39m[1m[2m   21.23 kB[22m[1m[22m[2m │ gzip:   8.22 kB[22m
+[2mdist/[22m[36massets/pl-PL-T2D74RX3-C5ziU3Ei.js                         [39m[1m[2m   21.69 kB[22m[1m[22m[2m │ gzip:   9.22 kB[22m
+[2mdist/[22m[36massets/Analytics-BOJloovW.js                              [39m[1m[2m   21.75 kB[22m[1m[22m[2m │ gzip:   6.66 kB[22m
+[2mdist/[22m[36massets/it-IT-JPQ66NNP-DbUo8kYN.js                         [39m[1m[2m   22.04 kB[22m[1m[22m[2m │ gzip:   8.58 kB[22m
+[2mdist/[22m[36massets/RcResults-61-zhSFb.js                              [39m[1m[2m   22.24 kB[22m[1m[22m[2m │ gzip:   6.96 kB[22m
+[2mdist/[22m[36massets/ro-RO-JPDTUUEW-DdQLCDn-.js                         [39m[1m[2m   22.43 kB[22m[1m[22m[2m │ gzip:   8.94 kB[22m
+[2mdist/[22m[36massets/fr-FR-RHASNOE6-DjQFojYw.js                         [39m[1m[2m   23.05 kB[22m[1m[22m[2m │ gzip:   8.88 kB[22m
+[2mdist/[22m[36massets/de-DE-XR44H4JA-Chmp95vX.js                         [39m[1m[2m   23.13 kB[22m[1m[22m[2m │ gzip:   8.98 kB[22m
+[2mdist/[22m[36massets/mindmap-definition-YA3MSWOX-Cm7YOxDe.js            [39m[1m[2m   23.38 kB[22m[1m[22m[2m │ gzip:   7.89 kB[22m
+[2mdist/[22m[36massets/sankeyDiagram-P5KCCOFB-Blg64NJg.js                 [39m[1m[2m   23.41 kB[22m[1m[22m[2m │ gzip:   8.58 kB[22m
+[2mdist/[22m[36massets/journeyDiagram-3NMN7TZE-BO14M_LQ.js                [39m[1m[2m   23.61 kB[22m[1m[22m[2m │ gzip:   8.36 kB[22m
+[2mdist/[22m[36massets/player-25omygyn.js                                 [39m[1m[2m   24.17 kB[22m[1m[22m[2m │ gzip:   9.08 kB[22m
+[2mdist/[22m[36massets/BarChart-3Nc0LpHy.js                               [39m[1m[2m   24.68 kB[22m[1m[22m[2m │ gzip:   6.39 kB[22m
+[2mdist/[22m[36massets/timedPracticeTestStore-DfjzhRiT.js                 [39m[1m[2m   24.69 kB[22m[1m[22m[2m │ gzip:   7.48 kB[22m
+[2mdist/[22m[36massets/DrillHistory-Djo_GsK6.js                           [39m[1m[2m   24.95 kB[22m[1m[22m[2m │ gzip:   6.98 kB[22m
+[2mdist/[22m[36massets/SingleSession-DEyc3lk0.js                          [39m[1m[2m   25.36 kB[22m[1m[22m[2m │ gzip:   7.93 kB[22m
+[2mdist/[22m[36massets/RadarChart-RX0xPefs.js                             [39m[1m[2m   26.02 kB[22m[1m[22m[2m │ gzip:   6.33 kB[22m
+[2mdist/[22m[36massets/wardleyDiagram-VM6X3IG4-CJ3aq6X-.js                [39m[1m[2m   26.12 kB[22m[1m[22m[2m │ gzip:   6.95 kB[22m
+[2mdist/[22m[36massets/DeskPeopleSurface-DhIfLQ2c.js                      [39m[1m[2m   26.57 kB[22m[1m[22m[2m │ gzip:   7.62 kB[22m
+[2mdist/[22m[36massets/UnlessDrill-nBSL2g2Q.js                            [39m[1m[2m   26.61 kB[22m[1m[22m[2m │ gzip:   8.53 kB[22m
+[2mdist/[22m[36massets/DossierNotes-CB8iLy61.js                           [39m[1m[2m   26.64 kB[22m[1m[22m[2m │ gzip:   8.47 kB[22m
+[2mdist/[22m[36massets/SectionReportCard-DhIHcrFI.js                      [39m[1m[2m   29.14 kB[22m[1m[22m[2m │ gzip:   9.16 kB[22m
+[2mdist/[22m[36massets/RcBootcampPage-CSAMbeMF.js                         [39m[1m[2m   29.34 kB[22m[1m[22m[2m │ gzip:   9.07 kB[22m
+[2mdist/[22m[36massets/gitGraphDiagram-WWUBYQGX-Dng9X422.js               [39m[1m[2m   29.96 kB[22m[1m[22m[2m │ gzip:   8.88 kB[22m
+[2mdist/[22m[36massets/TimedOfficialChildRunner-DXUNtlQN.js               [39m[1m[2m   30.16 kB[22m[1m[22m[2m │ gzip:   9.90 kB[22m
+[2mdist/[22m[36massets/erDiagram-RLTQ6QDP-i3lNMDfB.js                     [39m[1m[2m   30.95 kB[22m[1m[22m[2m │ gzip:  10.64 kB[22m
+[2mdist/[22m[36massets/requirementDiagram-BXWQKSXE-BcSn1X2I.js            [39m[1m[2m   31.22 kB[22m[1m[22m[2m │ gzip:   9.82 kB[22m
+[2mdist/[22m[36massets/timeline-definition-24CTP7MA-BbWy8jb8.js           [39m[1m[2m   31.38 kB[22m[1m[22m[2m │ gzip:  10.44 kB[22m
+[2mdist/[22m[36massets/pica-DJ9IYOcs.js                                   [39m[1m[2m   32.60 kB[22m[1m[22m[2m │ gzip:  12.97 kB[22m
+[2mdist/[22m[36massets/PrincipleFlawApp-MceFMXYr.js                       [39m[1m[2m   32.75 kB[22m[1m[22m[2m │ gzip:   9.57 kB[22m
+[2mdist/[22m[36massets/TeacherInboxRoom-D2UzFOZf.js                       [39m[1m[2m   34.48 kB[22m[1m[22m[2m │ gzip:  11.19 kB[22m
+[2mdist/[22m[36massets/quadrantDiagram-AXDQQJYC-Dpx2pQ6e.js               [39m[1m[2m   34.51 kB[22m[1m[22m[2m │ gzip:  10.13 kB[22m
+[2mdist/[22m[36massets/TeacherWeeklyPlans-CEjw5_lY.js                     [39m[1m[2m   34.59 kB[22m[1m[22m[2m │ gzip:  11.46 kB[22m
+[2mdist/[22m[36massets/layout-Dg2HFcUw.js                                 [39m[1m[2m   35.43 kB[22m[1m[22m[2m │ gzip:  12.74 kB[22m
+[2mdist/[22m[36massets/ConditionalIndicatorsRefresher-CSUIR2o5.js         [39m[1m[2m   36.40 kB[22m[1m[22m[2m │ gzip:  11.68 kB[22m
+[2mdist/[22m[36massets/chunk-IMKFNOWR-MWSbUYiP.js                         [39m[1m[2m   38.59 kB[22m[1m[22m[2m │ gzip:  12.66 kB[22m
+[2mdist/[22m[36massets/Learn-Bq9gBQyh.js                                  [39m[1m[2m   40.02 kB[22m[1m[22m[2m │ gzip:   7.72 kB[22m
+[2mdist/[22m[36massets/rcHistoricalGrading-C2EJnJti.js                    [39m[1m[2m   40.75 kB[22m[1m[22m[2m │ gzip:   6.73 kB[22m
+[2mdist/[22m[36massets/vennDiagram-4TSXK5OY-EqVbho95.js                   [39m[1m[2m   42.39 kB[22m[1m[22m[2m │ gzip:  15.80 kB[22m
+[2mdist/[22m[36massets/TestingCentre-D31vtnHW.js                          [39m[1m[2m   42.47 kB[22m[1m[22m[2m │ gzip:  13.94 kB[22m
+[2mdist/[22m[36massets/ConditionalAssignmentFields-G4t-Kqcx.js            [39m[1m[2m   43.10 kB[22m[1m[22m[2m │ gzip:  13.18 kB[22m
+[2mdist/[22m[36massets/blockDiagram-I7D4REHJ-BSL0Tbz8.js                  [39m[1m[2m   43.15 kB[22m[1m[22m[2m │ gzip:  13.91 kB[22m
+[2mdist/[22m[36massets/xychartDiagram-S5SC5T6Z-D7EqoY9E.js                [39m[1m[2m   43.30 kB[22m[1m[22m[2m │ gzip:  12.15 kB[22m
+[2mdist/[22m[36massets/GLTFLoader-i3eTcSr4.js                             [39m[1m[2m   45.61 kB[22m[1m[22m[2m │ gzip:  13.71 kB[22m
+[2mdist/[22m[36massets/image-blob-reduce.esm-B6b2_-a4.js                  [39m[1m[2m   45.93 kB[22m[1m[22m[2m │ gzip:  16.78 kB[22m
+[2mdist/[22m[36massets/TAChatView-CNIFVwCj.js                             [39m[1m[2m   46.16 kB[22m[1m[22m[2m │ gzip:  13.52 kB[22m
+[2mdist/[22m[36massets/data-4HLUU11d.js                                   [39m[1m[2m   47.12 kB[22m[1m[22m[2m │ gzip:  10.18 kB[22m
+[2mdist/[22m[36massets/TimedStandaloneSectionRunner-Fst8qYID.js           [39m[1m[2m   47.12 kB[22m[1m[22m[2m │ gzip:  13.89 kB[22m
+[2mdist/[22m[36massets/chunk-TICWLB2K-D0JTwOe4.js                         [39m[1m[2m   49.32 kB[22m[1m[22m[2m │ gzip:  15.79 kB[22m
+[2mdist/[22m[36massets/ActivityRunner-DR16NU2x.js                         [39m[1m[2m   49.55 kB[22m[1m[22m[2m │ gzip:  17.10 kB[22m
+[2mdist/[22m[36massets/ganttDiagram-EL5Y4UJY-DqciN6W9.js                  [39m[1m[2m   54.61 kB[22m[1m[22m[2m │ gzip:  18.92 kB[22m
+[2mdist/[22m[36massets/SectionLibraryPanel-D19DsbUN.js                    [39m[1m[2m   55.40 kB[22m[1m[22m[2m │ gzip:  17.41 kB[22m
+[2mdist/[22m[36massets/flowDiagram-HODETNUW-D92dgsYL.js                   [39m[1m[2m   62.63 kB[22m[1m[22m[2m │ gzip:  20.05 kB[22m
+[2mdist/[22m[36massets/CompletionSummary-wO_wgLZf.js                      [39m[1m[2m   64.93 kB[22m[1m[22m[2m │ gzip:  19.59 kB[22m
+[2mdist/[22m[36massets/c4Diagram-7LVT6UL2-CHOKnwbA.js                     [39m[1m[2m   65.57 kB[22m[1m[22m[2m │ gzip:  18.83 kB[22m
+[2mdist/[22m[36massets/guidedDrillLaunch-BLONVRbv.js                      [39m[1m[2m   70.40 kB[22m[1m[22m[2m │ gzip:  14.07 kB[22m
+[2mdist/[22m[36massets/RcPlayer-CiLHR0Rl.js                               [39m[1m[2m   72.86 kB[22m[1m[22m[2m │ gzip:  22.81 kB[22m
+[2mdist/[22m[36massets/content-Y2czhYqu.js                                [39m[1m[2m   79.83 kB[22m[1m[22m[2m │ gzip:  26.09 kB[22m
+[2mdist/[22m[36massets/cose-bilkent-JH36ORCC-BStEbGCo.js                  [39m[1m[2m   81.57 kB[22m[1m[22m[2m │ gzip:  22.45 kB[22m
+[2mdist/[22m[36massets/DeskTodaySurface-B_8pc2Zm.js                       [39m[1m[2m  105.68 kB[22m[1m[22m[2m │ gzip:  29.89 kB[22m
+[2mdist/[22m[36massets/FallacyApp-DyunmfFx.js                             [39m[1m[2m  107.34 kB[22m[1m[22m[2m │ gzip:  29.39 kB[22m
+[2mdist/[22m[36massets/ActivityLab-BE9vbXZn.js                            [39m[1m[2m  107.74 kB[22m[1m[22m[2m │ gzip:  24.12 kB[22m
+[2mdist/[22m[36massets/DeskLibrarySurface-CKQOGsKh.js                     [39m[1m[2m  108.49 kB[22m[1m[22m[2m │ gzip:  32.76 kB[22m
+[2mdist/[22m[36massets/report-card-BqhTHOB8.js                            [39m[1m[2m  109.82 kB[22m[1m[22m[2m │ gzip:  29.99 kB[22m
+[2mdist/[22m[36massets/swimlanes-42K2YHIH-DqyhoE1a.js                     [39m[1m[2m  117.15 kB[22m[1m[22m[2m │ gzip:  42.84 kB[22m
+[2mdist/[22m[36massets/sequenceDiagram-WJ2MYXX4-DpnLpgMQ.js               [39m[1m[2m  117.44 kB[22m[1m[22m[2m │ gzip:  31.26 kB[22m
+[2mdist/[22m[36massets/Auth-CyY9Sv8B.js                                   [39m[1m[2m  122.92 kB[22m[1m[22m[2m │ gzip:  35.55 kB[22m
+[2mdist/[22m[36massets/index.es-BmiQmIL1.js                               [39m[1m[2m  150.87 kB[22m[1m[22m[2m │ gzip:  51.62 kB[22m
+[2mdist/[22m[36massets/AcademyMainhub-IBp-v9sT.js                         [39m[1m[2m  151.67 kB[22m[1m[22m[2m │ gzip:  43.34 kB[22m
+[2mdist/[22m[36massets/architectureDiagram-5GKGNRK7-BBiJIefm.js           [39m[1m[2m  151.83 kB[22m[1m[22m[2m │ gzip:  43.19 kB[22m
+[2mdist/[22m[36massets/html2canvas.esm-CBrSDip1.js                        [39m[1m[2m  201.42 kB[22m[1m[22m[2m │ gzip:  48.03 kB[22m
+[2mdist/[22m[36massets/CausationStation-C7hQ-JRa.js                       [39m[1m[2m  214.45 kB[22m[1m[22m[2m │ gzip:  56.39 kB[22m
+[2mdist/[22m[36massets/Drill-DvAWZ3bb.js                                  [39m[1m[2m  250.17 kB[22m[1m[22m[2m │ gzip:  73.86 kB[22m
+[2mdist/[22m[36massets/katex-C5jXJg4s.js                                  [39m[1m[2m  258.49 kB[22m[1m[22m[2m │ gzip:  77.57 kB[22m
+[2mdist/[22m[36massets/guidedDrillsLocal-BnzVsQ0y.js                      [39m[1m[2m  297.66 kB[22m[1m[22m[2m │ gzip:  72.46 kB[22m
+[2mdist/[22m[36massets/generateCategoricalChart-DilnbYS6.js               [39m[1m[2m  304.27 kB[22m[1m[22m[2m │ gzip:  83.33 kB[22m
+[2mdist/[22m[36massets/index-_AzAzQvS.js                                  [39m[1m[2m  308.16 kB[22m[1m[22m[2m │ gzip:  91.72 kB[22m
+[2mdist/[22m[36massets/index-VdmADQjs.js                                  [39m[1m[2m  357.02 kB[22m[1m[22m[2m │ gzip:  90.33 kB[22m
+[2mdist/[22m[36massets/pdf-BnPRJEQ6.js                                    [39m[1m[2m  365.12 kB[22m[1m[22m[2m │ gzip: 107.61 kB[22m
+[2mdist/[22m[36massets/jspdf.es.min-BcdhT-Wy.js                           [39m[1m[2m  390.49 kB[22m[1m[22m[2m │ gzip: 128.81 kB[22m
+[2mdist/[22m[36massets/cytoscape.esm-DgFJg4rT.js                          [39m[1m[2m  443.93 kB[22m[1m[22m[2m │ gzip: 142.40 kB[22m
+[2mdist/[22m[36massets/openingCoursePath-KapFi8Jl.js                      [39m[1m[2m  497.73 kB[22m[1m[22m[2m │ gzip: 123.16 kB[22m
+[2mdist/[22m[36massets/cynefin-OW5HDTMX-DHxKUzP2.js                       [39m[1m[33m  690.59 kB[39m[22m[2m │ gzip: 155.09 kB[22m
+[2mdist/[22m[36massets/index-nD_xgPff.js                                  [39m[1m[33m  701.39 kB[39m[22m[2m │ gzip: 172.41 kB[22m
+[2mdist/[22m[36massets/IntroToLrBootcamp-B7ombmNM.js                      [39m[1m[33m  712.29 kB[39m[22m[2m │ gzip: 185.83 kB[22m
+[2mdist/[22m[36massets/three.module-DL1GCKva.js                           [39m[1m[33m  734.51 kB[39m[22m[2m │ gzip: 189.59 kB[22m
+[2mdist/[22m[36massets/ConditionalBootcamp-D1KBhaSI.js                    [39m[1m[33m1,117.12 kB[39m[22m[2m │ gzip: 245.86 kB[22m
+[2mdist/[22m[36massets/percentages-BXMCSKIN-5gZKG8mv.js                   [39m[1m[33m1,119.46 kB[39m[22m[2m │ gzip: 362.76 kB[22m
+[2mdist/[22m[36massets/subset-shared.chunk-6QhlUYLm.js                    [39m[1m[33m1,823.54 kB[39m[22m[2m │ gzip: 736.87 kB[22m
+[2mdist/[22m[36massets/index-JUJAcSaA.js                                  [39m[1m[33m3,294.60 kB[39m[22m[2m │ gzip: 878.48 kB[22m
+[33m
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.[39m
+[32m✓ built in 1m 36s[39m
+
+> vite_react_shadcn_ts@0.0.0 postbuild
+> node scripts/knowledge/verify-no-canonical-in-build.mjs
+
+OK verify-no-canonical-in-build: scanned 784 dist files; no canonical guide content present.

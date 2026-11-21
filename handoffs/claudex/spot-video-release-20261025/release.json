@@ -1,0 +1,81 @@
+{
+  "date": "2026-10-25",
+  "status": "published-live-bundle-verified",
+  "pr": "https://github.com/vnjkoxpl-42905/lsatu-684d89db/pull/239",
+  "commit": "e26001375e68ee67af757b20f2349aeca5e3cb91",
+  "merge": "73dd27e2c68ed9a9b46af274a1366c2817f7030c",
+  "reviewer": [
+    "claude-opus-5-5"
+  ],
+  "verdict": "APPROVED",
+  "snapshot": "46dbe74e90aa9722ef5f9a8f8855f0893453464366b01e25b95ae29efae3c65a",
+  "files": [
+    ".impeccable/surfaces/src-features-activity-centre.md",
+    "docs/design-evidence/spot-intro-2026-10-16/README.md",
+    "docs/design-evidence/spot-intro-2026-10-16/video-expanded-2026-10-18.png",
+    "src/features/activity-centre/components/RelationshipIntro.test.tsx",
+    "src/features/activity-centre/components/RelationshipIntro.tsx",
+    "src/features/activity-centre/relationship-intro.css"
+  ],
+  "proof": {
+    "videoTests": "16/16 passed",
+    "typecheck": "passed",
+    "buildPostbuild": "passed",
+    "browser": "390/658/768/1280, same video, play, pause/position, no autoplay, Escape/repeated Escape, backdrop, focus, reduced motion, forced404 visible in modal",
+    "broadSuite": "16 pre-existing baseline failures reproduced; 4 new selector failures fixed and targeted file rerun"
+  },
+  "excluded": [
+    "backend",
+    "grading",
+    "question bank",
+    "dependencies",
+    "student/assignment data",
+    "unrelated generated MCP changes"
+  ],
+  "limits": [
+    {
+      "id": "SV-1",
+      "severity": "low",
+      "path": "src/features/activity-centre/components/RelationshipIntro.tsx",
+      "evidence": "Lines 147-151: the backdrop-dismiss handler fires on any click whose target is the dialog and whose coordinates fall outside its rect. With a mouse, pressing on the expanded native seek bar or volume slider, dragging past the dialog edge and releasing over the backdrop produces a click on the common ancestor (the dialog) with outside coordinates. That calls closeVideo() and pauses the video while the user is scrubbing.",
+      "fix": "Record the pointerdown target, e.g. a ref set in onPointerDown to event.target === event.currentTarget plus an outside-rect check. In onClick, only call closeVideo() when both pointerdown and click happened on the backdrop."
+    },
+    {
+      "id": "SV-2",
+      "severity": "low",
+      "path": "src/features/activity-centre/components/RelationshipIntro.tsx",
+      "evidence": "expandVideo (lines 36-49) calls shell.close() and shell.showModal() with no feature check. HTMLDialogElement.showModal needs Safari 15.4 or later. On older engines inside a default Vite 'modules' build target (Safari 14 to 15.3), clicking the preview or Expand video throws a TypeError. The inline video has no controls (controls={expanded}), so the tutorial can't be played there. The written instructions still work, so the task is not blocked.",
+      "fix": "Guard with `typeof shell.showModal === 'function'`. If it's missing, either skip expansion and render the inline video with controls, or note in the release record that the supported browser floor is Safari 15.4 or later."
+    },
+    {
+      "id": "SV-3",
+      "severity": "low",
+      "path": "src/features/activity-centre/components/RelationshipIntro.test.tsx",
+      "evidence": "beforeEach assigns HTMLDialogElement.prototype.showModal and close directly (lines 5-7). vi.restoreAllMocks() only reverts vi.spyOn, so these overrides persist for the rest of the file and in any run with isolation turned off. In the default per-file isolation they are harmless, but they hide whether jsdom's own dialog implementation, if it has one, behaves differently.",
+      "fix": "Save the original descriptors and restore them in afterEach, or use vi.spyOn(HTMLDialogElement.prototype, 'showModal') with mockImplementation, defining the method first if jsdom lacks it."
+    }
+  ],
+  "deployment": "3479e647-1dd2-4a31-b8f7-fd1d47ced618",
+  "lovableSyncVerified": "73dd27e2c68ed9a9b46af274a1366c2817f7030c",
+  "paidLovablePrompts": 0,
+  "live": {
+    "index": "/assets/index-hpX_ZWRI.js",
+    "runner": "https://lsatprep.study/assets/ActivityRunner-DDZPpx7o.js",
+    "marker_assets": {
+      "https://lsatprep.study/assets/CompletionSummary-aYk-zUEl.js": [
+        "relationship-video-shell",
+        "Expand video",
+        "Close video",
+        "relationship-video-fallback-expanded"
+      ]
+    },
+    "markers": {
+      "relationship-video-shell": true,
+      "Expand video": true,
+      "Close video": true,
+      "relationship-video-fallback-expanded": true
+    }
+  },
+  "liveVerification": "Changed index bundle and four release markers in the shared CompletionSummary asset imported by ActivityRunner. Signed-in production UI was not exercised; current integrated Chromium preview was exercised before release.",
+  "originalMcpSha256": "327469ab36fb3532171f68a37da6a34f6e6351f3239df5c1d19c3ccff4c57c23"
+}

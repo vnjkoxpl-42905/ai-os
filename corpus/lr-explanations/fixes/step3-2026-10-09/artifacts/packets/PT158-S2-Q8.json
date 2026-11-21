@@ -1,0 +1,78 @@
+{
+ "qid": "PT158-S2-Q8",
+ "type": "Most Strongly Supported",
+ "difficulty": "3",
+ "key_db": "B",
+ "stimulus_db": "Sociologist: Some anthropologists claim that cultures can most effectively respond to the threat of cultural decay by replacing or abandoning many of their traditions so that other traditions may endure. But since each of its traditions is essential to a culture's identity, this strategy _______.",
+ "stem_db": "Which one of the following most logically completes the sociologist's argument?",
+ "choices_db": {
+  "A": "can save those cultures capable of reflecting on their customs and envisioning alternatives",
+  "B": "will ensure the elimination of a culture rather than prevent its decay",
+  "C": "can be implemented by all and only those cultures studied by anthropologists",
+  "D": "constitutes the most effective response to the threat of cultural decay",
+  "E": "can succeed if adopted by cultures whose traditions have been adopted only recently"
+ },
+ "bank": {
+  "stimulus": "Sociologist: Some anthropologists claim that cultures can\n most effectively respond to the threat of cultural\n decay by replacing or abandoning many of their\n traditions so that other traditions may endure.\n But since each of its traditions is essential to a\n culture’s identity, this strategy _______.",
+  "stem": "Which one of the following most logically completes the\n sociologist’s argument?",
+  "choices": {
+   "A": "can save those cultures capable of reflecting on their customs and envisioning alternatives",
+   "B": "will ensure the elimination of a culture rather than prevent its decay",
+   "C": "can be implemented by all and only those cultures studied by anthropologists",
+   "D": "constitutes the most effective response to the threat of cultural decay",
+   "E": "can succeed if adopted by cultures whose traditions have been adopted only recently"
+  },
+  "key": "B"
+ },
+ "explanation_id": "a136d6ee-bf19-4a66-9935-aea18fddca81",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "afa94265-1bfd-497a-850b-129902b32de1",
+   "position": 0,
+   "label": "Given",
+   "body": "(According to some anthropologists) cultures can most effectively respond to the threat of cultural decay by replacing or abandoning many of their traditions so that other traditions may endure. But each of its traditions is essential to a culture's identity."
+  },
+  {
+   "row_id": "a4769d3d-093b-4f38-9855-8e17455f4890",
+   "position": 1,
+   "label": "Evaluate",
+   "body": "If each of a culture's traditions is essential to a culture's identity, what will happen if a culture replaces or abandons many of their traditions? It seems like this will damage the culture's identity. \"Cultural decay\" seems like it would be a loss of cultural identity. So, the evidence that we're given seems to indicate that the anthropologists are wrong: replacing or abandoning many traditions so that others may endure is not an effective way to respond to a threat of cultural decay."
+  },
+  {
+   "row_id": "e86242f3-17e6-401e-8a9e-1e92b3ddd0ee",
+   "position": 2,
+   "label": "Goal",
+   "body": "A correct answer might indicate that this strategy of replacing or abandoning many traditions is not an effective response to the threat of cultural decay, or more generally the strategy is likely to harm a culture."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "8f511f5e-911f-4c6d-88c5-2e4418e581d2",
+   "letter": "A",
+   "body": "This answer says the strategy \"can save those cultures capable of reflecting on their customs.\" But the sociologist's entire point is that the strategy cannot save any culture, because abandoning essential traditions eliminates the culture rather than preserving it. Saying the strategy works for some cultures directly contradicts the sociologist's reasoning. The sociologist does not distinguish between reflective and non-reflective cultures — the premise that \"each\" tradition is essential applies universally. If every tradition is essential, then the strategy fails for all cultures, not just some."
+  },
+  {
+   "row_id": "bfd05df2-16ad-4a38-a16e-148fdbc232d7",
+   "letter": "B",
+   "body": "This answer perfectly completes the sociologist's reasoning. The anthropologists propose abandoning many traditions to save others and thereby prevent cultural decay. The sociologist counters: each tradition is essential to cultural identity. Therefore, abandoning many traditions does not preserve the culture — it eliminates it. The strategy achieves the opposite of its goal. Instead of preventing decay (gradual deterioration), it ensures elimination (total destruction). The culture does not slowly weaken; it ceases to exist, because the essential components of its identity have been removed. This answer captures the self-defeating nature of the proposed strategy: the cure is not merely ineffective — it is more destructive than the disease."
+  },
+  {
+   "row_id": "7d4f0d8f-fd00-4db7-89c4-17d161b3681b",
+   "letter": "C",
+   "body": "This answer introduces two ideas absent from the argument: (1) that only cultures studied by anthropologists can implement the strategy, and (2) that the strategy \"can be implemented\" at all in the positive sense. The sociologist never discusses which cultures anthropologists study, nor does the sociologist concede that the strategy is implementable in a meaningful way. The sociologist's point is that the strategy is self-defeating for any culture that tries it. Additionally, the phrase \"all and only\" introduces a bizarre scope limitation — tying the strategy to anthropological study — that has no connection to the argument about tradition and cultural identity."
+  },
+  {
+   "row_id": "ea2d9fc3-f9ba-4f04-be79-6947532dfa28",
+   "letter": "D",
+   "body": "This answer says the strategy \"constitutes the most effective response to cultural decay.\" This is the anthropologists' position, not the sociologist's conclusion. The sociologist is arguing against the strategy, not endorsing it. The entire structure of the argument is: anthropologists say X, but here is why X is self-defeating. The blank needs to express the sociologist's critique, not a superlative endorsement of the approach the sociologist is dismantling."
+  },
+  {
+   "row_id": "9df27a6f-3c51-4329-af28-bc801041a41d",
+   "letter": "E",
+   "body": "This answer introduces a qualification — that the strategy can work for cultures with recently adopted traditions. But the sociologist's premise states that \"each\" of a culture's traditions is essential, with no distinction between old and new traditions. Whether a tradition was adopted recently or centuries ago is irrelevant if each one is essential to identity. This answer tries to carve out an exception that the premise's universal language does not allow. Additionally, the sociologist's argument builds toward a negative conclusion about the strategy, not toward identifying special cases where it might succeed."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (9.8 em-dashes per 1k words; wrong-answer notes average 87.0 words).",
+ "tags": "emdash-heavy; pt157-158-register"
+}

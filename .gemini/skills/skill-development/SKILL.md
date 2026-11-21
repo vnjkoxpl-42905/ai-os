@@ -1,8 +1,13 @@
 ---
 name: skill-development
-description: This skill should be used when the user wants to "create a skill", "add a skill to plugin", "write a new skill", "improve skill description", "organize skill content", or needs guidance on skill structure, progressive disclosure, or skill development best practices for Claude Code plugins.
+description: "Explicit Claude plugin skill packaging and progressive-disclosure reference. General skill creation uses skill-creator."
 version: 0.1.0
+disable-model-invocation: true
 ---
+
+## Current AI OS execution contract
+
+Use for explicit Claude plugin skill packaging; delegate generic skill authoring to the primary skill creator. Preserve progressive disclosure and plugin-specific references.
 
 # Skill Development for Claude Code Plugins
 

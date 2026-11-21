@@ -1,0 +1,90 @@
+{
+ "qid": "PT157-S3-Q22",
+ "type": "Role",
+ "difficulty": "5",
+ "key_db": "C",
+ "stimulus_db": "Philosopher: Philosophers usually treat emotions as nonrational. But emotion is not nonrational: it only seems that way because language lacks the ability to convey adequate conceptions of emotion. The words we use to refer to emotions name only very general kinds of inner experience—excitement, calm, joy, and so on. Thus, for example, there is no language for describing just how one joy differs from another.",
+ "stem_db": "Which one of the following most accurately describes the role played in the philosopher's argument by the proposition that there is no language for describing just how one joy differs from another?",
+ "choices_db": {
+  "A": "It is an example of the phenomenon that the argument seeks to explain.",
+  "B": "It is the main conclusion of the argument.",
+  "C": "It is a specific instance illustrating a general claim, thereby indirectly supporting the conclusion.",
+  "D": "It is a concession to the view that the argument seeks to refute.",
+  "E": "It is the explanation proposed for the phenomenon the argument seeks to explain."
+ },
+ "bank": {
+  "stimulus": "Philosopher: Philosophers usually treat emotions as\n nonrational. But emotion is not nonrational: it\n only seems that way because language lacks\n the ability to convey adequate conceptions\n of emotion. The words we use to refer to\n emotions name only very general kinds of inner\n experience—excitement, calm, joy, and so on.\n Thus, for example, there is no language for\n describing just how one joy differs from another.",
+  "stem": "Which one of the following most accurately describes\n the role played in the philosopher’s argument by the\n proposition that there is no language for describing just\n how one joy differs from another?",
+  "choices": {
+   "A": "It is an example of the phenomenon that the argument seeks to explain.",
+   "B": "It is the main conclusion of the argument.",
+   "C": "It is a specific instance illustrating a general claim, thereby indirectly supporting the conclusion.",
+   "D": "It is a concession to the view that the argument seeks to refute.",
+   "E": "It is the explanation proposed for the phenomenon the argument seeks to explain."
+  },
+  "key": "C"
+ },
+ "explanation_id": "e61682ce-63a3-4822-add4-78eb31ef5ce5",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "fe8d0b5b-d557-472b-b0da-3bc004896003",
+   "position": 0,
+   "label": "Conclusion",
+   "body": "Emotion is not nonrational."
+  },
+  {
+   "row_id": "b00f913d-5cb5-4b09-9b98-b9a7d29ba588",
+   "position": 1,
+   "label": "Intermediate Conclusion",
+   "body": "Emotion only seems nonrational way because language lacks the ability to convey adequate conceptions of emotion."
+  },
+  {
+   "row_id": "4b34d9dd-e6f5-4bd6-93cb-1ce9ec475561",
+   "position": 2,
+   "label": "Evidence",
+   "body": "The words we use to refer to emotions name only very general kinds of inner experience, such as excitement / calm / joy, but there is no language for describing just how one joy differs from another."
+  },
+  {
+   "row_id": "3dca010a-1ca5-4cfa-a0e7-ff601025c577",
+   "position": 3,
+   "label": "Evaluate",
+   "body": "Whenever we do Main Conclusion / Role, we listen for Rebuttal/Pivot conclusions (most of them are that style) or First Sentence conclusions (the 2nd most common style). Since this paragraph begins with an Attribution, \"Philosophers usually think of emotions as X\", we'd be waiting for a Pivot + Pushback, and so when we see \"But emotion is not nonrational\", we most likely have our rebuttal conclusion. Everything after that is support for the main conclusion. They're asking us about the last sentence, which is hella confusing because it's prefaced by Thus (which usually indicates conclusion) and by \"for example\" (which always indicates support). How can the last claim be a conclusion and a premise?! We need to remember that premise/conclusion indicator words can also be used to indicate Cause/Effect. \"Since I have the flu, I have a fever.\" / \"I have the flu. Thus, I have a fever.\" That's why we see a Thus in front of this supporting idea. The previous sentence causes this last claim to be true. The fact that we have words for only general emotional states is why we don't have specific words for different types of joy."
+  },
+  {
+   "row_id": "a9eb97e3-cf7b-4a59-a97b-4b8d2fa34fff",
+   "position": 4,
+   "label": "Goal",
+   "body": "We know this final claim plays a supporting role, and we know that the main conclusion is \"Emotion is not nonrational\", that's good enough to head to the answers."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "8d033779-3696-428c-ae6c-7a7bde049f12",
+   "letter": "A",
+   "body": "When it comes to the main conclusion, the argument does not seek to explain a phenomenon. It seeks to oppose the idea that emotions are nonrational. Emotions are a phenomenon, but the author isn't trying to explain why emotions happen. She's just trying to classify them as rational or nonrational. (To explain a phenomenon means to provide a causal explanation for it) Within the subsidiary argument, the author is trying to provide a causal explanation for the phenomenon of why people think emotions are nonrational. But an example of that phenomenon would be a specific case where a person thought of an emotion as nonrational. The last sentence doesn't resemble that at all, so even if we were being charitable to this answer, it breaks down."
+  },
+  {
+   "row_id": "a0b5a2cd-f751-4f48-bd3b-b4bb155fc508",
+   "letter": "B",
+   "body": "The main conclusion is that emotion is not nonrational. The target statement — about one joy being indistinguishable from another in language — is evidence supporting the general claim about language's limitations, which in turn supports the conclusion. The word \"thus\" before this statement might suggest it is a conclusion, but \"for example\" immediately overrides that signal, identifying the statement as an illustration. The conclusion appears earlier in the argument, not at the end."
+  },
+  {
+   "row_id": "37d7c7c7-8c87-4a63-a9f0-2ea11de04a38",
+   "letter": "C",
+   "body": "The target statement illustrates a specific instance of the general claim that emotion-words name only very general kinds of experience. \"Joy\" is a general word, and there is no language to capture how one joy differs from another — that is a specific example of language's generality. This general claim about language, in turn, supports the conclusion that emotion is not nonrational but merely appears so because of linguistic limitations. The target statement thus indirectly supports the conclusion by illustrating the evidence that directly supports it."
+  },
+  {
+   "row_id": "8158db88-a746-453d-919e-560913eabc03",
+   "letter": "D",
+   "body": "A concession would acknowledge the opposing view's validity. The opposing view is that emotions are nonrational. The target statement — about language's inability to distinguish joys — does not concede that emotions are nonrational. Instead, it supports the argument's rebuttal of that view by showing that language is inadequate, which is why emotions merely appear nonrational. The target statement works against the opposing view, not in its favor."
+  },
+  {
+   "row_id": "ae774761-9405-4f8c-aae8-2ffb7d287b36",
+   "letter": "E",
+   "body": "The explanation proposed for why emotions seem nonrational is that \"language lacks the ability to convey adequate conceptions of emotion.\" That appears in the second sentence. The target statement — about one joy being indistinguishable from another — is an example illustrating that explanation, not the explanation itself. This answer confuses the general explanation with the specific illustration. The explanation is the broad claim about language; the target statement is one piece of supporting evidence for that claim."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (10.0 em-dashes per 1k words; wrong-answer notes average 85.0 words).",
+ "tags": "emdash-heavy; pt157-158-register; possible-misquote"
+}

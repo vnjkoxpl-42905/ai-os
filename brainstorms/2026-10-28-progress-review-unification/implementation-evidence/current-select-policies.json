@@ -1,0 +1,219 @@
+{
+  "checkedOn": "2026-10-28",
+  "projectId": "53b9a6f2-aba7-4ae4-8dd1-fa5b8aab4d76",
+  "mechanism": "Read-only live pg_policies and pg_class query; no impersonation or mutation",
+  "rows": [
+    {
+      "detail": {
+        "cmd": "SELECT",
+        "name": "admins_read_practice_test_runs",
+        "qual": "has_role(auth.uid(), 'admin'::app_role)",
+        "roles": [
+          "authenticated"
+        ],
+        "table": "practice_test_runs"
+      },
+      "kind": "policy"
+    },
+    {
+      "detail": {
+        "cmd": "SELECT",
+        "name": "pt_runs_owner_select",
+        "qual": "(user_id = auth.uid())",
+        "roles": [
+          "public"
+        ],
+        "table": "practice_test_runs"
+      },
+      "kind": "policy"
+    },
+    {
+      "detail": {
+        "cmd": "ALL",
+        "name": "timed_pt_executor",
+        "qual": "true",
+        "roles": [
+          "timed_pt_executor"
+        ],
+        "table": "practice_test_runs"
+      },
+      "kind": "policy"
+    },
+    {
+      "detail": {
+        "cmd": "SELECT",
+        "name": "admins_read_rc_attempts",
+        "qual": "has_role(auth.uid(), 'admin'::app_role)",
+        "roles": [
+          "authenticated"
+        ],
+        "table": "rc_attempts"
+      },
+      "kind": "policy"
+    },
+    {
+      "detail": {
+        "cmd": "ALL",
+        "name": "own attempts",
+        "qual": "(auth.uid() = user_id)",
+        "roles": [
+          "public"
+        ],
+        "table": "rc_attempts"
+      },
+      "kind": "policy"
+    },
+    {
+      "detail": {
+        "cmd": "ALL",
+        "name": "section_rc_attempt_executor_v1",
+        "qual": "true",
+        "roles": [
+          "timed_section_executor"
+        ],
+        "table": "rc_attempts"
+      },
+      "kind": "policy"
+    },
+    {
+      "detail": {
+        "cmd": "ALL",
+        "name": "timed_rc_attempt_executor",
+        "qual": "true",
+        "roles": [
+          "timed_pt_executor"
+        ],
+        "table": "rc_attempts"
+      },
+      "kind": "policy"
+    },
+    {
+      "detail": {
+        "cmd": "SELECT",
+        "name": "admins_read_rc_drill_sessions",
+        "qual": "has_role(auth.uid(), 'admin'::app_role)",
+        "roles": [
+          "authenticated"
+        ],
+        "table": "rc_drill_sessions"
+      },
+      "kind": "policy"
+    },
+    {
+      "detail": {
+        "cmd": "ALL",
+        "name": "own sessions",
+        "qual": "(auth.uid() = user_id)",
+        "roles": [
+          "public"
+        ],
+        "table": "rc_drill_sessions"
+      },
+      "kind": "policy"
+    },
+    {
+      "detail": {
+        "cmd": "ALL",
+        "name": "section_rc_session_executor_v1",
+        "qual": "true",
+        "roles": [
+          "timed_section_executor"
+        ],
+        "table": "rc_drill_sessions"
+      },
+      "kind": "policy"
+    },
+    {
+      "detail": {
+        "cmd": "ALL",
+        "name": "timed_rc_session_executor",
+        "qual": "true",
+        "roles": [
+          "timed_pt_executor"
+        ],
+        "table": "rc_drill_sessions"
+      },
+      "kind": "policy"
+    },
+    {
+      "detail": {
+        "cmd": "SELECT",
+        "name": "Students can view section history",
+        "qual": "(class_id = (auth.uid())::text)",
+        "roles": [
+          "authenticated"
+        ],
+        "table": "section_history"
+      },
+      "kind": "policy"
+    },
+    {
+      "detail": {
+        "cmd": "SELECT",
+        "name": "admins_read_section_history",
+        "qual": "has_role(auth.uid(), 'admin'::app_role)",
+        "roles": [
+          "authenticated"
+        ],
+        "table": "section_history"
+      },
+      "kind": "policy"
+    },
+    {
+      "detail": {
+        "cmd": "ALL",
+        "name": "section_history_executor_v1",
+        "qual": "true",
+        "roles": [
+          "timed_section_executor"
+        ],
+        "table": "section_history"
+      },
+      "kind": "policy"
+    },
+    {
+      "detail": {
+        "cmd": "ALL",
+        "name": "timed_history_executor",
+        "qual": "true",
+        "roles": [
+          "timed_pt_executor"
+        ],
+        "table": "section_history"
+      },
+      "kind": "policy"
+    },
+    {
+      "detail": {
+        "enabled": true,
+        "forced": false,
+        "table": "practice_test_runs"
+      },
+      "kind": "rls"
+    },
+    {
+      "detail": {
+        "enabled": true,
+        "forced": false,
+        "table": "rc_attempts"
+      },
+      "kind": "rls"
+    },
+    {
+      "detail": {
+        "enabled": true,
+        "forced": false,
+        "table": "rc_drill_sessions"
+      },
+      "kind": "rls"
+    },
+    {
+      "detail": {
+        "enabled": true,
+        "forced": false,
+        "table": "section_history"
+      },
+      "kind": "rls"
+    }
+  ]
+}

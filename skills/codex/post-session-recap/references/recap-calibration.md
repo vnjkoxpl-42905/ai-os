@@ -19,6 +19,13 @@ Read this before each recap draft or revision alongside the teaching voice and q
 
 Claude's source-level approval of V8 or V9 is not Joshua's approval and does not establish rendered visual quality. Later user feedback overrides the accepted portions of earlier drafts. Preserve version history and report which checks actually ran.
 
+## 2026-11-17: Ore's Famous Flaws guide as the model for catalogue notes
+
+| Observed result | Requirement for the next draft | Check before handoff |
+|---|---|---|
+| Joshua named the 2026-11-16 Famous Flaws guide as the quality to match. It repeats one panel layout for every flaw, uses everyday examples, names the counterexample, states where each flaw stops, and ties each to the question types. | When a session teaches a set of named things, build a catalogue note to [catalogue note pattern](catalogue-note-pattern.md). Do not write it as a prose list or a stack of different-looking cards. | Count the panel parts for every item. Read the opening and one panel without the transcript. |
+| The guide was good because the source map, scope and acceptance criteria came first. | Write the private source map before HTML, and state on the note what is out of scope. | The source map exists, cites timestamps, and lists corrected transcript errors. |
+
 ## Maintain this calibration
 
 For new feedback, capture the date, actual failure, reusable requirement and observable check. Consolidate repeated entries and update the owning quality-bar rule rather than growing duplicate prohibitions. Keep lesson-specific scope exclusions tied to the relevant lesson; do not ban vocabulary universally. Treat future notes as forward tests of these corrections, not exact copies of an old page.

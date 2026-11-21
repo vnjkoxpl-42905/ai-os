@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>LSAT U | Passage search and picker refinement</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..600&family=Outfit:wght@300..700&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;background:#E6E0D5;color:#1E2120;font-family:Outfit,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+a{color:#1E2120;text-underline-offset:3px}
+a:hover{color:#4F6B57}
+button,input,select{font-family:inherit}
+input::placeholder{color:#7A776F}
+.dk input::placeholder{color:#8E8A82}
+:focus-visible{outline:2px solid #9C8463;outline-offset:2px}
+@keyframes popIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+@keyframes sheetIn{from{transform:translateX(24px);opacity:0}to{transform:none;opacity:1}}
+@media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
+</style>
+</helmet>
+
+<div style="max-width:1520px;margin:0 auto;padding:20px 16px 64px;display:flex;flex-direction:column;gap:16px">
+
+  <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px">
+    <div style="display:flex;flex-direction:column;gap:2px;min-width:0">
+      <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#6E6C65;font-weight:600">Draft prototype · demo metadata only</div>
+      <div style="font-size:18px;font-weight:600;color:#1E2120">LSAT U | Passage search and picker refinement</div>
+    </div>
+    <div role="radiogroup" aria-label="Preview width" style="display:flex;flex-wrap:wrap;gap:4px;padding:4px;background:#F4EFE6;border-radius:12px;box-shadow:0 0 0 1px rgba(30,33,32,.10)">
+      <sc-for list="{{ frames }}" as="f" hint-placeholder-count="5">
+        <button role="radio" aria-checked="{{ f.on }}" onClick="{{ f.pick }}" style="height:36px;padding:0 12px;border:0;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;background:{{ f.bg }};color:{{ f.fg }}">{{ f.label }}</button>
+      </sc-for>
+    </div>
+  </div>
+
+  <div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px">
+    <span style="font-size:13px;color:#4A4B47;font-weight:500">Try a state:</span>
+    <sc-for list="{{ demos }}" as="d" hint-placeholder-count="5">
+      <button onClick="{{ d.run }}" style="height:34px;padding:0 12px;border:0;border-radius:999px;background:#F4EFE6;box-shadow:0 0 0 1px rgba(30,33,32,.12);font-size:13px;color:#1E2120;cursor:pointer">{{ d.label }}</button>
+    </sc-for>
+  </div>
+
+  <div ref="{{ availRef }}" style="position:relative;width:100%;height:{{ wrapH }}">
+  <div style="font-size:12px;color:#6E6C65;position:absolute;top:-2px;right:0;transform:translateY(-100%);display:{{ scaleNoteDisplay }}">{{ scaleNote }}</div>
+  <div ref="{{ frameRef }}" class="pp-frame" style="position:absolute;top:0;left:{{ frameLeft }};transform:scale({{ scale }});transform-origin:top left;width:{{ frameW }};height:{{ frameH }};background:#F4EFE6;border-radius:18px;overflow:hidden;box-shadow:0 0 0 1px rgba(30,33,32,.10),0 24px 48px -28px rgba(50,38,20,.35)">
+    <div ref="{{ scrollRef }}" style="height:100%;overflow-y:auto;overflow-x:hidden">
+      <div style="padding:{{ L.pad }};display:flex;flex-direction:column;gap:20px;max-width:1240px;margin:0 auto">
+
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <h1 style="margin:0;font-family:Fraunces,Georgia,serif;font-weight:400;font-size:{{ L.h1 }};letter-spacing:-.01em;color:#1E2120">Practice</h1>
+          <p style="margin:0;font-size:14px;color:#4A4B47">Build drills and practice under test conditions.</p>
+        </div>
+
+        <div style="display:flex;gap:20px;border-bottom:1px solid rgba(30,33,32,.12);font-size:14px">
+          <span style="padding:0 0 10px;box-shadow:inset 0 -2px 0 #1E2120;font-weight:600">Drills</span>
+          <span style="padding:0 0 10px;color:#4A4B47">Practice Exams</span>
+        </div>
+
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding-bottom:14px;border-bottom:1px solid rgba(30,33,32,.12);flex-wrap:wrap">
+          <div style="display:flex;gap:4px;flex-wrap:wrap;font-size:14px">
+            <span style="height:34px;display:flex;align-items:center;padding:0 12px;background:#1E2120;color:#F4EFE6;border-radius:8px;font-weight:600">Create</span>
+            <span style="height:34px;display:flex;align-items:center;padding:0 12px;color:#4A4B47">In progress</span>
+            <span style="height:34px;display:flex;align-items:center;padding:0 12px;color:#4A4B47">Completed</span>
+            <span style="height:34px;display:flex;align-items:center;padding:0 12px;color:#4A4B47">Saved sets</span>
+          </div>
+          <div style="display:flex;padding:3px;border-radius:999px;background:#FAF7F1;box-shadow:0 0 0 1px rgba(30,33,32,.12);font-size:12px;font-weight:700;letter-spacing:.08em">
+            <span style="padding:6px 12px;color:#6E6C65">LR</span>
+            <span style="padding:6px 12px;background:#1E2120;color:#F4EFE6;border-radius:999px">RC</span>
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:{{ L.cols }};gap:{{ L.gap }};align-items:start">
+
+          <section aria-labelledby="choose-h" style="display:flex;flex-direction:column;gap:20px;min-width:0">
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <h2 id="choose-h" style="margin:0;font-size:{{ L.h2 }};font-weight:600;letter-spacing:-.015em;line-height:1.15;color:#1E2120">Choose your next passage</h2>
+              <p style="margin:0;font-size:15px;color:#4A4B47">Whole passages, with every question.</p>
+            </div>
+            <div style="height:1px;background:rgba(30,33,32,.12)"></div>
+
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap">
+                <label for="lk-input" id="lk-label" style="font-size:15px;font-weight:600;color:#1E2120">Have a passage in mind?</label>
+                <span style="font-size:13px;color:#6E6C65">Optional</span>
+              </div>
+              <p id="lk-help" style="margin:0;font-size:13px;line-height:1.5;color:#4A4B47;text-wrap:pretty">{{ lkHelp }}</p>
+
+              <div ref="{{ lkWrapRef }}" style="position:relative">
+                <div onClick="{{ focusInput }}" style="display:flex;flex-wrap:wrap;align-items:center;gap:6px;min-height:52px;padding:7px 8px 7px 12px;background:#FCFAF6;border-radius:12px;cursor:text;box-shadow:{{ fieldRing }};transition:box-shadow 150ms cubic-bezier(.4,0,.2,1)">
+                  <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6E6C65" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-right:2px"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
+                  <sc-for list="{{ tokens }}" as="tk" hint-placeholder-count="0">
+                    <span style="display:inline-flex;align-items:center;height:{{ L.tokH }};padding-left:10px;border-radius:8px;background:#E4EBE2;color:#2F4636;font-size:14px;font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap">
+                      <span style="font-size:11px;letter-spacing:.08em;color:#4F6B57;margin-right:5px">{{ tk.k }}</span>{{ tk.v }}
+                      <button type="button" aria-label="{{ tk.aria }}" onClick="{{ tk.clear }}" style="width:{{ L.tokH }};height:{{ L.tokH }};margin-left:2px;border:0;background:transparent;border-radius:8px;display:grid;place-items:center;cursor:pointer;color:#4F6B57" style-hover="background:rgba(79,107,87,.14)"><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"></path></svg></button>
+                    </span>
+                  </sc-for>
+                  <input id="lk-input" ref="{{ inputRef }}" role="combobox" aria-expanded="{{ open }}" aria-controls="lk-list" aria-autocomplete="list" aria-activedescendant="{{ activeId }}" aria-describedby="lk-help" autocomplete="off" spellcheck="false" value="{{ q }}" placeholder="{{ placeholder }}" onChange="{{ onQ }}" onKeyDown="{{ onKey }}" onFocus="{{ onFocus }}" onBlur="{{ onBlur }}" style="flex:1 1 90px;min-width:90px;height:36px;border:0;outline:0;background:transparent;font-size:15px;color:#1E2120;padding:0 4px"/>
+                  <sc-if value="{{ showClearAll }}" hint-placeholder-val="{{ false }}">
+                    <button type="button" onClick="{{ clearAll }}" aria-label="Clear passage address and search" style="height:36px;padding:0 10px;border:0;border-radius:8px;background:transparent;color:#4A4B47;font-size:13px;font-weight:600;cursor:pointer" style-hover="background:#EFE8DC">Clear</button>
+                  </sc-if>
+                </div>
+
+                <sc-if value="{{ open }}" hint-placeholder-val="{{ false }}">
+                  <div ref="{{ popRef }}" style="position:absolute;z-index:20;top:calc(100% + 6px);left:0;width:{{ L.popW }};max-width:{{ L.popMax }};background:#FCFAF6;border-radius:14px;box-shadow:0 0 0 1px rgba(30,33,32,.10),0 2px 4px rgba(50,38,20,.06),0 18px 36px -16px rgba(50,38,20,.30);animation:popIn 150ms cubic-bezier(.4,0,.2,1);overflow:hidden">
+                    <div style="padding:12px 14px 10px;display:flex;flex-direction:column;gap:3px;border-bottom:1px solid rgba(30,33,32,.08)">
+                      <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+                        <sc-for list="{{ crumbs }}" as="c" hint-placeholder-count="0">
+                          <span style="display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:{{ c.fw }};color:{{ c.fg }};font-variant-numeric:tabular-nums">{{ c.label }}<span aria-hidden="true" style="color:#B5AFA4;display:{{ c.sep }}">/</span></span>
+                        </sc-for>
+                      </div>
+                      <div style="font-size:12px;color:#6E6C65">{{ pop.sub }}</div>
+                    </div>
+                    <sc-if value="{{ pop.hint }}" hint-placeholder-val="{{ false }}">
+                      <div role="status" style="margin:10px 12px 0;padding:8px 10px;border-radius:8px;background:#F1EADF;font-size:13px;color:#4A3F2E">{{ pop.hint }}</div>
+                    </sc-if>
+                    <div id="lk-list" ref="{{ listRef }}" role="listbox" aria-labelledby="lk-label" style="position:relative;max-height:{{ L.popH }};overflow-y:auto;overscroll-behavior:contain;padding:8px">
+                      <sc-if value="{{ pop.isGrid }}" hint-placeholder-val="{{ false }}">
+                        <div style="display:flex;flex-direction:column;gap:6px">
+                          <sc-for list="{{ pop.groups }}" as="g" hint-placeholder-count="6">
+                            <div role="group" aria-label="{{ g.aria }}" style="display:grid;grid-template-columns:{{ L.gridCols }};gap:4px;align-items:center">
+                              <div aria-hidden="true" style="grid-column:{{ L.labelSpan }};font-size:12px;font-weight:600;color:#6E6C65;font-variant-numeric:tabular-nums;padding:0 4px">{{ g.label }}</div>
+                              <sc-if value="{{ g.blank }}" hint-placeholder-val="{{ false }}"><div aria-hidden="true"></div></sc-if>
+                              <sc-for list="{{ g.tiles }}" as="t" hint-placeholder-count="10">
+                                <div id="{{ t.domId }}" role="option" aria-selected="{{ t.sel }}" onMouseDown="{{ t.down }}" onClick="{{ t.click }}" onMouseMove="{{ t.enter }}" style="height:44px;display:grid;place-items:center;border-radius:8px;font-size:14px;font-variant-numeric:tabular-nums;cursor:pointer;user-select:none;background:{{ t.bg }};color:{{ t.fg }};font-weight:{{ t.fw }};box-shadow:{{ t.ring }}">{{ t.pt }}</div>
+                              </sc-for>
+                            </div>
+                          </sc-for>
+                        </div>
+                      </sc-if>
+                      <sc-if value="{{ pop.isRows }}" hint-placeholder-val="{{ false }}">
+                        <div style="display:flex;flex-direction:column;gap:2px">
+                          <sc-for list="{{ pop.rows }}" as="r" hint-placeholder-count="4">
+                            <div id="{{ r.domId }}" role="option" aria-selected="{{ r.sel }}" aria-label="{{ r.aria }}" onMouseDown="{{ r.down }}" onClick="{{ r.click }}" onMouseMove="{{ r.enter }}" style="min-height:52px;display:grid;grid-template-columns:36px minmax(0,1fr) auto;align-items:center;gap:12px;padding:8px 10px;border-radius:10px;cursor:pointer;background:{{ r.bg }};box-shadow:{{ r.ring }}">
+                              <span aria-hidden="true" style="width:36px;height:36px;border-radius:8px;display:grid;place-items:center;font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;background:{{ r.leadBg }};color:{{ r.leadFg }}">{{ r.lead }}</span>
+                              <span style="display:flex;flex-direction:column;gap:2px;min-width:0">
+                                <span style="font-size:15px;font-weight:500;color:#1E2120;line-height:1.3;text-wrap:pretty">{{ r.title }}</span>
+                                <span style="display:flex;flex-wrap:wrap;column-gap:10px;row-gap:2px;font-size:13px;color:#5E5C56;font-variant-numeric:tabular-nums">
+                                  <span style="color:#1E2120;font-weight:500">{{ r.m1 }}</span><span>{{ r.m2 }}</span>
+                                </span>
+                              </span>
+                              <span style="font-size:12px;font-weight:600;color:#4F6B57;display:flex;align-items:center;gap:4px;white-space:nowrap">
+                                <sc-if value="{{ r.sel }}" hint-placeholder-val="{{ false }}"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>{{ r.selLabel }}</sc-if>
+                                <sc-if value="{{ r.showGo }}" hint-placeholder-val="{{ false }}"><span style="color:#6E6C65;font-weight:500">{{ r.goLabel }}</span></sc-if>
+                              </span>
+                            </div>
+                          </sc-for>
+                        </div>
+                      </sc-if>
+                      <sc-if value="{{ pop.empty }}" hint-placeholder-val="{{ false }}">
+                        <div role="status" style="padding:18px 10px 20px;display:flex;flex-direction:column;gap:6px;align-items:flex-start">
+                          <div style="font-size:15px;font-weight:600;color:#1E2120">{{ pop.empty }}</div>
+                          <div style="font-size:13px;color:#4A4B47;line-height:1.5">{{ pop.emptyTip }}</div>
+                          <button type="button" onMouseDown="{{ prevent }}" onClick="{{ clearQ }}" style="margin-top:6px;height:36px;padding:0 12px;border:0;border-radius:8px;background:#EFE8DC;color:#1E2120;font-size:13px;font-weight:600;cursor:pointer">Clear search</button>
+                        </div>
+                      </sc-if>
+                    </div>
+                    <div aria-hidden="true" style="display:{{ L.keysDisplay }};flex-wrap:wrap;white-space:nowrap;gap:4px 14px;padding:8px 14px;border-top:1px solid rgba(30,33,32,.08);font-size:12px;color:#6E6C65">
+                      <span><b style="font-weight:600;color:#4A4B47">↑↓</b> move</span><span><b style="font-weight:600;color:#4A4B47">Enter</b> choose</span><span><b style="font-weight:600;color:#4A4B47">Backspace</b> step back</span><span><b style="font-weight:600;color:#4A4B47">Esc</b> close</span>
+                    </div>
+                  </div>
+                </sc-if>
+              </div>
+
+              <sc-if value="{{ chosen }}" hint-placeholder-val="{{ false }}">
+                <div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:center;padding:12px 14px;background:#FAF7F1;border-radius:12px;box-shadow:0 0 0 1px rgba(30,33,32,.08),0 1px 2px rgba(50,38,20,.06)">
+                  <div style="display:flex;flex-direction:column;gap:2px;min-width:0">
+                    <div style="display:flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:#4F6B57"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>In your drill</div>
+                    <div style="font-size:15px;font-weight:600;color:#1E2120">{{ chosen.title }}</div>
+                    <div style="font-size:13px;color:#4A4B47;font-variant-numeric:tabular-nums">{{ chosen.meta }}</div>
+                  </div>
+                  <button type="button" onClick="{{ clearAll }}" style="height:40px;padding:0 12px;border:0;border-radius:8px;background:transparent;color:#1E2120;font-size:13px;font-weight:600;cursor:pointer;box-shadow:0 0 0 1px rgba(30,33,32,.14)" style-hover="background:#EFE8DC">Use tutor's choice</button>
+                </div>
+              </sc-if>
+              <sc-if value="{{ multiNote }}" hint-placeholder-val="{{ false }}">
+                <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;padding:10px 14px;background:#FAF7F1;border-radius:12px;box-shadow:0 0 0 1px rgba(30,33,32,.08);font-size:13px;color:#4A4B47">
+                  <span>{{ multiNote }}</span>
+                  <button type="button" onClick="{{ openDrawer }}" style="height:36px;padding:0 10px;border:0;border-radius:8px;background:transparent;color:#1E2120;font-weight:600;text-decoration:underline;text-underline-offset:3px;cursor:pointer">Edit picks</button>
+                </div>
+              </sc-if>
+            </div>
+          </section>
+
+          <aside aria-label="Drill conditions" class="dk" style="background:#161A1B;color:#EEE9E0;border-radius:20px;padding:{{ L.panelPad }};display:flex;flex-direction:column;gap:18px;box-shadow:0 1px 0 rgba(255,250,240,.04) inset,0 2px 4px rgba(20,16,10,.12),0 24px 40px -24px rgba(20,16,10,.45);min-width:0">
+            <sc-if value="{{ notReview }}" hint-placeholder-val="{{ true }}">
+              <div style="display:grid;grid-template-columns:{{ L.condCols }};gap:16px">
+                <div style="display:flex;flex-direction:column;gap:8px">
+                  <span id="pc-l" style="font-size:13px;font-weight:600;color:#EEE9E0">Passages</span>
+                  <sc-if value="{{ isTutor }}" hint-placeholder-val="{{ true }}">
+                    <div role="group" aria-labelledby="pc-l" style="height:44px;display:grid;grid-template-columns:40px 1fr 40px;align-items:center;border-radius:10px;box-shadow:0 0 0 1px rgba(238,233,224,.16)">
+                      <button type="button" aria-label="Fewer passages" onClick="{{ dec }}" style="height:44px;border:0;background:transparent;color:#B9B4AA;font-size:18px;cursor:pointer">−</button>
+                      <span aria-live="polite" style="text-align:center;font-size:17px;font-weight:600;font-variant-numeric:tabular-nums">{{ n }}</span>
+                      <button type="button" aria-label="More passages" onClick="{{ inc }}" style="height:44px;border:0;background:transparent;color:#B9B4AA;font-size:18px;cursor:pointer">+</button>
+                    </div>
+                  </sc-if>
+                  <sc-if value="{{ isPicked }}" hint-placeholder-val="{{ false }}">
+                    <div style="height:44px;display:flex;align-items:center;padding:0 12px;border-radius:10px;background:#1F2425;font-size:14px;color:#EEE9E0;font-variant-numeric:tabular-nums">{{ pickedCount }}</div>
+                  </sc-if>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:8px;min-width:0">
+                  <label for="tm" style="font-size:13px;font-weight:600">Timing</label>
+                  <select id="tm" style="height:44px;width:100%;padding:0 12px;border-radius:10px;border:0;background:#161A1B;color:#EEE9E0;font-size:14px;box-shadow:0 0 0 1px rgba(238,233,224,.16)">
+                    <option>Standard pace · 8:45 per passage</option>
+                    <option>Untimed</option>
+                  </select>
+                </div>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:8px">
+                <label for="sa" style="font-size:13px;font-weight:600">Show answers</label>
+                <select id="sa" style="height:44px;width:100%;padding:0 12px;border-radius:10px;border:0;background:#161A1B;color:#EEE9E0;font-size:14px;box-shadow:0 0 0 1px rgba(238,233,224,.16)">
+                  <option>After each passage</option>
+                  <option>At the end</option>
+                </select>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:10px;padding:14px;border-radius:12px;background:#1F2425">
+                <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap">
+                  <span style="font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#8E8A82;font-weight:600">Passages</span>
+                  <span style="font-size:13px;color:#B9B4AA">{{ sourceLabel }}</span>
+                </div>
+                <sc-for list="{{ appliedRows }}" as="a" hint-placeholder-count="0">
+                  <div style="display:grid;grid-template-columns:20px minmax(0,1fr);gap:8px;font-size:14px;align-items:baseline">
+                    <span style="color:#8E8A82;font-variant-numeric:tabular-nums">{{ a.i }}</span>
+                    <span style="min-width:0"><span style="color:#EEE9E0;font-weight:500">{{ a.title }}</span> <span style="color:#B9B4AA;font-variant-numeric:tabular-nums;white-space:nowrap">{{ a.addr }}</span></span>
+                  </div>
+                </sc-for>
+                <sc-if value="{{ isTutor }}" hint-placeholder-val="{{ true }}">
+                  <div style="font-size:14px;color:#B9B4AA;line-height:1.5">Review the chosen passages before starting.</div>
+                </sc-if>
+                <button ref="{{ custRef }}" data-cust="1" type="button" onClick="{{ openDrawer }}" aria-haspopup="dialog" style="align-self:flex-start;height:44px;padding:0 16px;border:0;border-radius:10px;background:transparent;color:#EEE9E0;font-size:14px;font-weight:600;cursor:pointer;box-shadow:0 0 0 1px rgba(238,233,224,.24)" style-hover="background:#262B2C">Customize drill</button>
+              </div>
+              <div style="height:1px;background:rgba(238,233,224,.10)"></div>
+              <div style="font-size:13px;color:#B9B4AA">Review first. Start when you're ready.</div>
+              <button type="button" onClick="{{ goReview }}" style="height:48px;border:0;border-radius:999px;background:#EDE7DC;color:#161A1B;font-size:15px;font-weight:600;cursor:pointer;box-shadow:0 1px 0 rgba(255,255,255,.4) inset" style-hover="background:#F6F1E8">Review passages</button>
+            </sc-if>
+            <sc-if value="{{ review }}" hint-placeholder-val="{{ false }}">
+              <div style="display:flex;flex-direction:column;gap:4px">
+                <span style="font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#8E8A82;font-weight:600">Review</span>
+                <span style="font-size:20px;font-weight:600">{{ reviewTitle }}</span>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:10px">
+                <sc-for list="{{ appliedRows }}" as="a" hint-placeholder-count="0">
+                  <div style="display:grid;grid-template-columns:24px minmax(0,1fr);gap:8px;padding:10px 0;border-bottom:1px solid rgba(238,233,224,.08)">
+                    <span style="color:#8E8A82;font-variant-numeric:tabular-nums">{{ a.i }}</span>
+                    <span style="display:flex;flex-direction:column;gap:2px;min-width:0"><span style="font-weight:500">{{ a.title }}</span><span style="font-size:13px;color:#B9B4AA;font-variant-numeric:tabular-nums">{{ a.addr }} · {{ a.sub }}</span></span>
+                  </div>
+                </sc-for>
+                <sc-if value="{{ isTutor }}" hint-placeholder-val="{{ true }}">
+                  <div style="font-size:14px;color:#B9B4AA;line-height:1.5">{{ tutorReview }}</div>
+                </sc-if>
+                <div style="font-size:13px;color:#B9B4AA">Standard pace · 8:45 per passage · Answers after each passage</div>
+              </div>
+              <sc-if value="{{ started }}" hint-placeholder-val="{{ false }}">
+                <div role="status" style="padding:10px 12px;border-radius:10px;background:rgba(169,195,174,.14);color:#CFE0D2;font-size:13px;line-height:1.5">Prototype only. Start is not wired here. No drill starts and no exposure is recorded.</div>
+              </sc-if>
+              <div style="display:flex;gap:8px;flex-wrap:wrap">
+                <button type="button" onClick="{{ backReview }}" style="height:48px;padding:0 18px;border:0;border-radius:999px;background:transparent;color:#EEE9E0;font-size:15px;font-weight:600;cursor:pointer;box-shadow:0 0 0 1px rgba(238,233,224,.24)">Back</button>
+                <button type="button" onClick="{{ start }}" style="flex:1;min-width:140px;height:48px;border:0;border-radius:999px;background:#EDE7DC;color:#161A1B;font-size:15px;font-weight:600;cursor:pointer">Start drill</button>
+              </div>
+            </sc-if>
+          </aside>
+        </div>
+        <div aria-live="polite" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">{{ live }}</div>
+      </div>
+    </div>
+
+    <sc-if value="{{ drawer }}" hint-placeholder-val="{{ false }}">
+      <div onMouseDown="{{ cancelDrawer }}" style="position:absolute;inset:0;background:rgba(14,16,16,.42);z-index:30"></div>
+      <div ref="{{ drawerRef }}" role="dialog" aria-modal="true" aria-labelledby="dr-h" class="dk" onKeyDown="{{ drawerKey }}" style="position:absolute;z-index:31;top:0;right:0;bottom:0;width:{{ L.drawerW }};background:#161A1B;color:#EEE9E0;display:flex;flex-direction:column;box-shadow:-1px 0 0 rgba(238,233,224,.06),-24px 0 48px -24px rgba(0,0,0,.5);animation:sheetIn 220ms cubic-bezier(.4,0,.2,1)">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;padding:18px 20px 14px">
+          <div style="display:flex;flex-direction:column;gap:4px;min-width:0">
+            <h2 id="dr-h" style="margin:0;font-size:20px;font-weight:600">Pick passages</h2>
+            <p style="margin:0;font-size:13px;color:#B9B4AA;line-height:1.45">Choose whole passages and set their order. Nothing changes until you apply.</p>
+          </div>
+          <button type="button" aria-label="Cancel and close" onClick="{{ cancelDrawer }}" style="flex:none;width:44px;height:44px;border:0;border-radius:999px;background:transparent;color:#EEE9E0;cursor:pointer;box-shadow:0 0 0 1px rgba(238,233,224,.18);display:grid;place-items:center"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"></path></svg></button>
+        </div>
+        <div style="padding:0 20px 14px">
+          <div role="radiogroup" aria-label="Passage source" style="display:grid;grid-template-columns:1fr 1fr;gap:4px;padding:4px;border-radius:12px;background:#0F1213;box-shadow:0 0 0 1px rgba(238,233,224,.08)">
+            <sc-for list="{{ modes }}" as="m" hint-placeholder-count="2">
+              <button type="button" role="radio" aria-checked="{{ m.on }}" onClick="{{ m.pick }}" style="height:44px;border:0;border-radius:9px;font-size:14px;font-weight:600;cursor:pointer;background:{{ m.bg }};color:{{ m.fg }};box-shadow:{{ m.sh }}">{{ m.label }}</button>
+            </sc-for>
+          </div>
+        </div>
+
+        <sc-if value="{{ dTutor }}" hint-placeholder-val="{{ false }}">
+          <div style="flex:1;padding:8px 20px;display:flex;flex-direction:column;gap:10px;border-top:1px solid rgba(238,233,224,.08)">
+            <p style="margin:12px 0 0;font-size:15px;line-height:1.6;color:#EEE9E0;max-width:52ch">Tutor's choice uses the passage count in the drill panel. Review the chosen passages before starting.</p>
+            <p style="margin:0;font-size:13px;color:#B9B4AA">{{ draftKeepNote }}</p>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ dPicked }}" hint-placeholder-val="{{ false }}">
+          <div style="padding:0 20px 12px;display:flex;flex-direction:column;gap:10px">
+            <div style="display:flex;align-items:center;gap:8px;height:48px;padding:0 6px 0 12px;border-radius:12px;background:#1F2425;box-shadow:{{ dRing }}">
+              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8E8A82" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
+              <input ref="{{ dSearchRef }}" aria-label="Search passages by title, subject or PrepTest address" placeholder="Title, subject or 140 3 1" value="{{ dq }}" onChange="{{ onDq }}" onKeyDown="{{ dqKey }}" onFocus="{{ dFocusOn }}" onBlur="{{ dFocusOff }}" style="flex:1;min-width:0;height:44px;border:0;outline:0;background:transparent;color:#EEE9E0;font-size:15px"/>
+              <sc-if value="{{ dq }}" hint-placeholder-val="{{ false }}">
+                <button type="button" aria-label="Clear search" onClick="{{ clearDq }}" style="width:36px;height:36px;border:0;border-radius:8px;background:transparent;color:#B9B4AA;cursor:pointer;display:grid;place-items:center"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"></path></svg></button>
+              </sc-if>
+            </div>
+            <sc-if value="{{ L.phone }}" hint-placeholder-val="{{ false }}">
+              <div style="display:flex;align-items:center;justify-content:space-between;gap:8px">
+                <span style="font-size:13px;color:#B9B4AA;font-variant-numeric:tabular-nums">{{ dStatusShort }}</span>
+                <button type="button" aria-expanded="{{ fOpen }}" aria-controls="dr-filters" onClick="{{ toggleF }}" style="height:44px;padding:0 14px;border:0;border-radius:999px;background:transparent;color:#EEE9E0;font-size:13px;font-weight:600;cursor:pointer;box-shadow:0 0 0 1px rgba(238,233,224,.2)">{{ fLabel }}</button>
+              </div>
+            </sc-if>
+            <sc-if value="{{ showFilters }}" hint-placeholder-val="{{ true }}">
+            <div id="dr-filters" style="display:flex;flex-direction:column;gap:10px">
+            <div style="display:flex;flex-wrap:wrap;gap:6px" role="group" aria-label="Filter by subject">
+              <sc-for list="{{ subjChips }}" as="s" hint-placeholder-count="4">
+                <button type="button" aria-pressed="{{ s.on }}" onClick="{{ s.toggle }}" style="height:36px;padding:0 12px;border:0;border-radius:999px;font-size:13px;font-weight:500;cursor:pointer;background:{{ s.bg }};color:{{ s.fg }};box-shadow:{{ s.sh }}">{{ s.label }}</button>
+              </sc-for>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap">
+              <span role="status" style="font-size:13px;color:#B9B4AA;font-variant-numeric:tabular-nums;display:{{ L.statusDisplay }}">{{ dStatus }}</span>
+              <div role="radiogroup" aria-label="Sort" style="display:flex;gap:2px;padding:3px;border-radius:10px;background:#0F1213">
+                <sc-for list="{{ sorts }}" as="o" hint-placeholder-count="3">
+                  <button type="button" role="radio" aria-checked="{{ o.on }}" onClick="{{ o.pick }}" style="height:32px;padding:0 10px;border:0;border-radius:7px;font-size:12px;font-weight:600;cursor:pointer;background:{{ o.bg }};color:{{ o.fg }}">{{ o.label }}</button>
+                </sc-for>
+              </div>
+            </div>
+            </div>
+            </sc-if>
+          </div>
+
+          <div style="flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;border-top:1px solid rgba(238,233,224,.08)">
+            <div style="padding:14px 20px 6px;display:flex;flex-direction:column;gap:8px">
+              <div style="display:flex;align-items:baseline;justify-content:space-between;gap:8px">
+                <h3 style="margin:0;font-size:13px;font-weight:600;color:#EEE9E0">In this drill <span style="color:#8E8A82;font-weight:500;font-variant-numeric:tabular-nums">{{ selCountLabel }}</span></h3>
+                <span style="font-size:12px;color:#8E8A82">Stays selected through any filter</span>
+              </div>
+              <sc-if value="{{ selEmpty }}" hint-placeholder-val="{{ true }}">
+                <div style="padding:12px;border-radius:10px;background:#1B1F20;font-size:13px;color:#B9B4AA">No passages yet. Add from the list below.</div>
+              </sc-if>
+              <ol style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:4px">
+                <sc-for list="{{ selRows }}" as="s" hint-placeholder-count="0">
+                  <li style="display:grid;grid-template-columns:{{ L.selCols }};gap:{{ L.selGap }};align-items:center;padding:{{ L.selPad }};border-radius:10px;background:#1F2425;box-shadow:0 0 0 1px rgba(169,195,174,.18)">
+                    <span style="width:24px;height:24px;border-radius:999px;display:grid;place-items:center;background:rgba(169,195,174,.16);color:#CFE0D2;font-size:12px;font-weight:700;font-variant-numeric:tabular-nums">{{ s.i }}</span>
+                    <span style="display:flex;flex-direction:column;min-width:0"><span style="font-size:14px;font-weight:500;line-height:1.3">{{ s.title }}</span><span style="font-size:12px;color:#B9B4AA;font-variant-numeric:tabular-nums">{{ s.addr }}</span></span>
+                    <span role="group" aria-label="{{ s.grpAria }}" style="display:flex;gap:{{ L.actGap }};grid-column:{{ L.actSpan }};padding-top:{{ L.actPadTop }};border-top:{{ L.actRule }}">
+                      <button type="button" aria-label="{{ s.upAria }}" disabled="{{ s.first }}" onClick="{{ s.up }}" style="flex:{{ L.btnFlex }};min-width:{{ L.ctl }};height:{{ L.ctl }};padding:{{ L.btnPad }};border:0;border-radius:8px;background:{{ L.btnBg }};color:#D6D1C7;font-size:13px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;opacity:{{ s.upOp }}"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"></path></svg><span style="display:{{ L.btnLabel }}">Earlier</span></button>
+                      <button type="button" aria-label="{{ s.downAria }}" disabled="{{ s.last }}" onClick="{{ s.down }}" style="flex:{{ L.btnFlex }};min-width:{{ L.ctl }};height:{{ L.ctl }};padding:{{ L.btnPad }};border:0;border-radius:8px;background:{{ L.btnBg }};color:#D6D1C7;font-size:13px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;opacity:{{ s.downOp }}"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg><span style="display:{{ L.btnLabel }}">Later</span></button>
+                      <button type="button" aria-label="{{ s.rmAria }}" onClick="{{ s.rm }}" style="flex:{{ L.btnFlex }};min-width:{{ L.ctl }};height:{{ L.ctl }};padding:{{ L.btnPad }};border:0;border-radius:8px;background:{{ L.btnBg }};color:#D6D1C7;font-size:13px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"></path></svg><span style="display:{{ L.btnLabel }}">Remove</span></button>
+                    </span>
+                  </li>
+                </sc-for>
+              </ol>
+            </div>
+
+            <div style="padding:10px 20px 16px;display:flex;flex-direction:column">
+              <h3 style="margin:6px 0 6px;font-size:13px;font-weight:600;color:#EEE9E0">{{ availLabel }}</h3>
+              <sc-if value="{{ dEmpty }}" hint-placeholder-val="{{ false }}">
+                <div role="status" style="padding:18px 14px;border-radius:12px;background:#1B1F20;display:flex;flex-direction:column;gap:6px;align-items:flex-start">
+                  <div style="font-size:15px;font-weight:600">{{ dEmpty }}</div>
+                  <div style="font-size:13px;color:#B9B4AA;line-height:1.5">Try a PrepTest number like 140, a shorter title word, or fewer subject filters. Your selected passages are unchanged.</div>
+                  <button type="button" onClick="{{ resetFilters }}" style="margin-top:6px;height:40px;padding:0 14px;border:0;border-radius:999px;background:transparent;color:#EEE9E0;font-size:13px;font-weight:600;cursor:pointer;box-shadow:0 0 0 1px rgba(238,233,224,.24)">Clear search and filters</button>
+                </div>
+              </sc-if>
+              <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column">
+                <sc-for list="{{ dRows }}" as="r" hint-placeholder-count="6">
+                  <li style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid rgba(238,233,224,.07)">
+                    <div style="display:flex;flex-direction:column;gap:3px;min-width:0">
+                      <span style="font-size:15px;font-weight:500;line-height:1.3;color:#EEE9E0">{{ r.title }}</span>
+                      <span style="display:flex;flex-wrap:wrap;column-gap:10px;row-gap:2px;font-size:13px;color:#B9B4AA;font-variant-numeric:tabular-nums"><span style="color:#E2DDD3;font-weight:500">{{ r.addr }}</span><span>{{ r.sub }}</span><span>{{ r.qs }}</span><span>{{ r.diff }}</span></span>
+                    </div>
+                    <button type="button" aria-pressed="{{ r.on }}" aria-label="{{ r.aria }}" onClick="{{ r.toggle }}" style="height:44px;min-width:92px;padding:0 14px;border:0;border-radius:999px;font-size:13px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;background:{{ r.bg }};color:{{ r.fg }};box-shadow:{{ r.sh }}">
+                      <sc-if value="{{ r.on }}" hint-placeholder-val="{{ false }}"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></sc-if>{{ r.btn }}
+                    </button>
+                  </li>
+                </sc-for>
+              </ul>
+              <sc-if value="{{ moreLabel }}" hint-placeholder-val="{{ false }}">
+                <button type="button" onClick="{{ showMore }}" style="margin-top:12px;height:44px;border:0;border-radius:10px;background:#1F2425;color:#EEE9E0;font-size:13px;font-weight:600;cursor:pointer">{{ moreLabel }}</button>
+              </sc-if>
+            </div>
+          </div>
+        </sc-if>
+
+        <div style="display:flex;align-items:center;gap:8px;padding:12px 20px;border-top:1px solid rgba(238,233,224,.08);background:#131718;flex-wrap:wrap">
+          <button type="button" onClick="{{ clearDraft }}" disabled="{{ clearDisabled }}" style="height:44px;padding:0 14px;border:0;border-radius:999px;background:transparent;color:#EEE9E0;font-size:14px;font-weight:600;cursor:pointer;box-shadow:0 0 0 1px rgba(238,233,224,.2);opacity:{{ clearOp }}">Clear</button>
+          <span style="flex:1"></span>
+          <button type="button" onClick="{{ cancelDrawer }}" style="height:44px;padding:0 16px;border:0;border-radius:999px;background:transparent;color:#EEE9E0;font-size:14px;font-weight:600;cursor:pointer;box-shadow:0 0 0 1px rgba(238,233,224,.2)">Cancel</button>
+          <button type="button" onClick="{{ applyDraft }}" disabled="{{ applyDisabled }}" style="height:44px;padding:0 18px;border:0;border-radius:999px;background:#EDE7DC;color:#161A1B;font-size:14px;font-weight:600;cursor:pointer;flex:{{ L.applyFlex }};opacity:{{ applyOp }}">{{ applyLabel }}</button>
+        </div>
+      </div>
+    </sc-if>
+  </div>
+  </div>
+
+  <article style="max-width:1080px;width:100%;margin:24px auto 0;display:flex;flex-direction:column;gap:28px;color:#1E2120">
+    <header style="display:flex;flex-direction:column;gap:8px">
+      <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#6E6C65;font-weight:600">Critique and rationale</div>
+      <h2 style="margin:0;font-family:Fraunces,Georgia,serif;font-weight:400;font-size:32px;letter-spacing:-.01em">One address field, three ways in</h2>
+      <p style="margin:0;font-size:15px;line-height:1.65;color:#4A4B47;max-width:68ch;text-wrap:pretty">The three dependent selects become one combobox that accepts a typed address (140 3 1, PT140 S3 P1, 140.3.1), a partial PrepTest, or a title. Picking instead of typing walks the same address one step at a time inside an anchored panel. Chosen parts become removable tokens, so the dependency rules stay visible. Customize keeps its drawer and shares the same parser and row anatomy.</p>
+    </header>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:28px 40px">
+      <section style="display:flex;flex-direction:column;gap:10px">
+        <h3 style="margin:0;font-size:15px;font-weight:600">What was wrong with the current draft</h3>
+        <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.55;color:#33352F">
+          <li>The PrepTest menu is a 59-row list with five rows visible and nothing to orient by. It opens upward over "Choose your next passage".</li>
+          <li>Three boxes about 130px wide put disabled placeholders ("Test first", "Section first") where the controls are. They truncate on phones ("Tes...").</li>
+          <li>The drawer already keeps selected order, has reorder controls, and applies changes only on Apply or Cancel. In the screenshot those features have little prominence. Nothing in the visible area shows what is selected or in what order, apart from "0 selected" in a status line the sort menu covers. The search field looks like any form field.</li>
+          <li>Exact lookup and browsing look like unrelated features, even though both put passages into the same drill.</li>
+        </ul>
+      </section>
+      <section style="display:flex;flex-direction:column;gap:10px">
+        <h3 style="margin:0;font-size:15px;font-weight:600">Why one field beats three selects</h3>
+        <p style="margin:0;font-size:14px;line-height:1.6;color:#33352F">A student who knows the address types six characters and presses Enter. Three selects need six clicks or tab-and-arrow sequences. A student who doesn't know it gets a PrepTest grid grouped by decade, then sections, then passages with titles, all in the same panel. <b style="font-weight:600">Tradeoff:</b> the dependency between fields is no longer shown by three fixed boxes side by side. Tokens, the breadcrumb, and stepping back with Backspace have to carry it. Typed shorthand also has to be learned. The helper line and placeholder teach it, and picking still works without it.</p>
+      </section>
+    </div>
+
+    <section style="display:flex;flex-direction:column;gap:10px">
+      <h3 style="margin:0;font-size:15px;font-weight:600">Decisions and the local source behind each</h3>
+      <div style="display:flex;flex-direction:column;font-size:14px;line-height:1.55;color:#33352F">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:4px 24px;padding:10px 0;border-top:1px solid rgba(30,33,32,.12)"><b style="font-weight:600">Typed exact addresses and shorthand, results scoped by PT</b><span>references.md, Linear Search: exact identifiers, shorthand, scoped filters. Linear's "recent items before a query" is deliberately left out, because showing recents would mean inventing student history.</span></div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:4px 24px;padding:10px 0;border-top:1px solid rgba(30,33,32,.12)"><b style="font-weight:600">Choosing adds to the drill. It never opens or starts anything.</b><span>principles.md, "How should question controls behave?": distinguish opening one question from selecting questions into a set.</span></div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:4px 24px;padding:10px 0;border-top:1px solid rgba(30,33,32,.12)"><b style="font-weight:600">Four layers: paper ground, lighter field and panel, charcoal conditions panel, darker drawer</b><span>principles.md, "Give each surface a physical job" and "Compose layers rather than piling on cards". The panel uses a fine contact edge plus a low ambient shadow, not a haze.</span></div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:4px 24px;padding:10px 0;border-top:1px solid rgba(30,33,32,.12)"><b style="font-weight:600">Selected is sage with a check and label. Keyboard highlight is a warm tint with a ring.</b><span>principles.md: reserve accents for meaningful states and pair colour with text or a symbol. The two states never use the same signal.</span></div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:4px 24px;padding:10px 0;border-top:1px solid rgba(30,33,32,.12)"><b style="font-weight:600">Richer rows: title, address, subject, question count</b><span>methods.md, 2026-10-24: "precise reference controls, useful result detail" inside the same visual family, not a palette change.</span></div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:4px 24px;padding:10px 0;border-top:1px solid rgba(30,33,32,.12)"><b style="font-weight:600">Motion only on open (150ms panel, 220ms drawer). Filtering never replays it.</b><span>principles.md, "Which transition should run?" Reduced motion turns both off.</span></div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:4px 24px;padding:10px 0;border-top:1px solid rgba(30,33,32,.12)"><b style="font-weight:600">Warm paper and charcoal kept. The LSATy navy and gold tokens are not used.</b><span>principles.md, "Which colours are authoritative?": current user direction outranks historical palettes. The brief's screenshots win over the design system here.</span></div>
+      </div>
+    </section>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:28px 40px">
+      <section style="display:flex;flex-direction:column;gap:10px">
+        <h3 style="margin:0;font-size:15px;font-weight:600">Contracts kept in this prototype</h3>
+        <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.55;color:#33352F">
+          <li>Changing the PT clears section and passage. Changing the section clears the passage. Each token's × and Backspace step back one level.</li>
+          <li>Only a full address can choose a passage. Choosing it updates the drill panel and nothing launches. Start stays behind Review.</li>
+          <li>The drawer works on a draft copy. Cancel, ×, the backdrop and Escape discard it. Apply commits it. Focus returns to Customize drill. Picks and their order survive search, filter and sort.</li>
+          <li>Tutor's choice is one tap in the drawer and one button ("Use tutor's choice") on the page.</li>
+          <li>Rows show metadata only. Demo titles are fictional, except the three lifted from the screenshot (Marine ecosystems, The history of public libraries, Judicial interpretation). Section numbers, counts and difficulty are generated.</li>
+        </ul>
+      </section>
+      <section style="display:flex;flex-direction:column;gap:10px">
+        <h3 style="margin:0;font-size:15px;font-weight:600">Self-critique and refinements</h3>
+        <p style="margin:0;font-size:14px;line-height:1.6;color:#33352F"><b style="font-weight:600">Pass 1, phone drawer:</b> search, four wrapping subject chips, the status line and sort stacked up, so the first result started around 60% of the way down an 844px screen. On phones, filters and sort now sit behind a "Filters" toggle that shows a count when any are active.</p>
+        <p style="margin:0;font-size:14px;line-height:1.6;color:#33352F"><b style="font-weight:600">Pass 2, phone selected rows:</b> long titles wrapped beside three icon-only 44px controls. Below 560px, each row now puts the title and address on their own line, then a separate action row with labelled Earlier, Later and Remove buttons. Each button is still 44px tall and they share the width. A disabled Earlier or Later shows where the passage sits. On wider screens the controls stay icon-only, with full accessible names.</p>
+      </section>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:28px 40px">
+      <section style="display:flex;flex-direction:column;gap:10px">
+        <h3 style="margin:0;font-size:15px;font-weight:600">Inspected vs. only intended</h3>
+        <p style="margin:0;font-size:14px;line-height:1.6;color:#33352F"><b style="font-weight:600">Rendered and looked at:</b> the true 1440px layout, shown scaled to fit the preview pane: two columns, the title search for "libraries", and the 140 3 1 match. That pass surfaced a clipped Timing select, now fixed. The 768px frame: single column, a full-width panel, the drawer with two passages added. 390 and 320: the field, tokens, the drawer in both modes, folded filters, and the relabelled selected rows. Also the PT grid, section step, wrong-section hint and no-results state.</p>
+        <p style="margin:0;font-size:14px;line-height:1.6;color:#33352F"><b style="font-weight:600">Checked with scripted events at 768:</b> opening Customize moves focus into the drawer (to "Tutor's choice"). Shift+Tab on the first control wraps to the last. After adding a passage (draft: 1 selected), Escape closed the drawer, returned focus to Customize drill, and left the panel on "Tutor's choice · 1", so the draft was discarded. These were synthetic key events, not a person at a keyboard.</p>
+        <p style="margin:0;font-size:14px;line-height:1.6;color:#33352F"><b style="font-weight:600">Unverified:</b> real keyboard and touch input, screen-reader output, the reduced-motion setting, motion timing during playback, browser zoom, and native select rendering across browsers. No automated review result is available yet. None of the reference links were opened, and Mobbin imagery was never seen.</p>
+      </section>
+      <section style="display:flex;flex-direction:column;gap:10px">
+        <h3 style="margin:0;font-size:15px;font-weight:600">Implementation risks</h3>
+        <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.55;color:#33352F">
+          <li>The parser assumes three-digit PTs and single-digit section and passage numbers. Inputs like "1403" are ambiguous and need a decision about real IDs.</li>
+          <li>The section step assumes one RC section per PT, as in the demo. Real data may differ, and the row label has to come from the backend.</li>
+          <li>The PT grid uses listbox semantics with two-dimensional arrow keys. Screen readers announce it as a list, so it needs testing with VoiceOver and NVDA.</li>
+          <li>The panel always opens below the field and scrolls the page into view. Short landscape phones may need a sheet instead.</li>
+          <li>The drawer renders results 24 at a time. A full index needs virtualization or server paging, and that must keep selected IDs that fall outside the loaded page.</li>
+          <li>Native selects stay in place for Timing and Show answers. Nothing here proves backend search, exposure recording or drill creation behave correctly.</li>
+        </ul>
+      </section>
+    </div>
+      <section style="display:flex;flex-direction:column;gap:10px;padding-top:20px;border-top:1px solid rgba(30,33,32,.12)">
+      <h3 style="margin:0;font-size:15px;font-weight:600">Implementation handoff</h3>
+      <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.55;color:#33352F">
+        <li><b style="font-weight:600">Address field:</b> an ARIA 1.2 combobox with aria-activedescendant. State is {pt, sec, psg, query}. Choosing a PT sets sec and psg to null. Choosing a section sets psg to null. The × on a token and Backspace on an empty field remove the last level. Only a full address writes a selection.</li>
+        <li><b style="font-weight:600">Parser:</b> accepts <span style="font-variant-numeric:tabular-nums">140 3 1</span>, PT140 S3 P1, 140.3.1 and 140/3/1. One or two digits match as a PT prefix. Anything else is a title or subject search. The drawer search uses the same parser to scope results.</li>
+        <li><b style="font-weight:600">One selection model:</b> appliedIds[] in order. The address field replaces it with one ID. The drawer edits a draft copy, and only Apply commits it. Cancel, ×, the backdrop and Escape discard the draft. Focus goes back to Customize drill.</li>
+        <li><b style="font-weight:600">Rows:</b> title, PT · S · P, subject, question count. Difficulty appears in the drawer only. No passage text, questions or answers.</li>
+        <li><b style="font-weight:600">States:</b> selected is sage plus a check and a label. Keyboard highlight is a warm tint plus a 1.5px ring. Phone rows, tiles and controls are at least 44px.</li>
+        <li><b style="font-weight:600">Side effects:</b> searching, opening the panel and choosing a passage write no exposure and start nothing. Start stays behind Review.</li>
+      </ul>
+    </section>
+  </article>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  static SUBJ = ['Humanities', 'Law', 'Natural Science', 'Social Science'];
+  static POOL = {
+    'Humanities': ['The history of public libraries','Printmaking in the guild era','A composer reconsidered','Oral epics and memory','The novel as ledger','Restoring a fresco cycle','Translation and loss','Folk song collectors','Early photography and truth','Architecture of the arcade','Silent film scoring','Letters of a botanist','Quilting as record','The essay form','Theater without a stage','Marginalia in old books'],
+    'Law': ['Judicial interpretation','Precedent and drift','Water rights in arid basins','Contracts of adhesion','Tribal sovereignty and courts','The jury as fact finder','Copyright and sampling','Strict liability debates','Customary international law','Eminent domain limits','Plea bargaining critiques','Privacy in public spaces','Standing doctrine','Comparative bankruptcy','Arbitration clauses','Statutory purpose'],
+    'Natural Science': ['Marine ecosystems','Glacial meltwater lakes','Bird song dialects','Soil fungi networks','Deep sea vents','Comet composition','Coral bleaching models','Insect navigation','Volcanic island chains','Plant chemical signaling','Tidal energy limits','Dinosaur thermoregulation','Microbial mats','Bat echolocation','Cave climate records','Seed dispersal by ants'],
+    'Social Science': ['Informal credit circles','Urban heat and wages','Language shift in border towns','Migration and remittances','Rituals of gift exchange','Price signals in markets','Measuring happiness','Cooperative housing','Labor unions and automation','Census categories','Trust in local news','Kinship and inheritance','The rise of suburbs','Behavioral nudges','Public goods games','Colonial trade routes']
+  };
+  static build() {
+    const S = Component.SUBJ, P = Component.POOL, out = [];
+    for (let pt = 101; pt <= 159; pt++) {
+      const t = pt - 101, sec = (pt >= 140 && pt <= 142) ? 3 : ((pt * 7) % 4) + 1;
+      for (let p = 1; p <= 4; p++) {
+        const sub = S[(t + p - 1) % 4];
+        out.push({ id: pt + '-' + sec + '-' + p, pt, sec, p, sub, title: P[sub][(t * 5 + p * 3) % 16], q: 5 + ((pt * 3 + p) % 4), diff: 1 + ((pt + p * 2) % 5) });
+      }
+    }
+    const fix = (id, o) => Object.assign(out.find(d => d.id === id), o);
+    fix('140-3-1', { title: 'Marine ecosystems', sub: 'Natural Science', q: 3, diff: 1 });
+    fix('141-3-2', { title: 'The history of public libraries', sub: 'Humanities', q: 4, diff: 2 });
+    fix('142-3-3', { title: 'Judicial interpretation', sub: 'Law', q: 5, diff: 3 });
+    return out;
+  }
+  static parse(t) {
+    const m = t.trim().match(/^(?:pt|preptest)?\s*(\d{1,3})(?:\s*[\s.\-\/:,]?\s*(?:s|sec|section)?\s*([1-9]))?(?:\s*[\s.\-\/:,]?\s*(?:p|psg|passage)?\s*([1-9]))?\s*$/i);
+    if (!m) return null;
+    if (m[1].length < 3) return m[2] ? null : { partial: true, digits: m[1] };
+    return { pt: +m[1], sec: m[2] ? +m[2] : null, psg: m[3] ? +m[3] : null };
+  }
+
+  data = Component.build();
+  byId = Object.fromEntries(this.data.map(d => [d.id, d]));
+  frameRef = React.createRef(); availRef = React.createRef(); scrollRef = React.createRef(); inputRef = React.createRef(); listRef = React.createRef();
+  popRef = React.createRef(); lkWrapRef = React.createRef(); drawerRef = React.createRef(); custRef = React.createRef(); dSearchRef = React.createRef();
+
+  state = { frame: 'fluid', fw: 1200, addr: { pt: null, sec: null, psg: null }, q: '', open: false, hi: 0, focus: false,
+    mode: 'tutor', applied: [], fromLookup: false, n: 1, drawer: false, draft: null, dq: '', subj: [], sort: 'pt', dShow: 24, dFocus: false,
+    review: false, started: false, live: '' };
+
+  componentDidMount() {
+    this.ro = new ResizeObserver(e => { const w = Math.round(e[0].contentRect.width); if (w !== this.state.fw) this.setState({ fw: w }); });
+    if (this.frameRef.current) this.ro.observe(this.frameRef.current);
+    this.ro2 = new ResizeObserver(e => { const w = Math.round(e[0].contentRect.width); if (w !== this.state.avail) this.setState({ avail: w }); });
+    if (this.availRef.current) this.ro2.observe(this.availRef.current);
+    this.onDoc = e => { const w = this.lkWrapRef.current; if (this.state.open && w && !w.contains(e.target)) this.setState({ open: false }); };
+    document.addEventListener('mousedown', this.onDoc);
+  }
+  componentWillUnmount() { this.ro && this.ro.disconnect(); this.ro2 && this.ro2.disconnect(); document.removeEventListener('mousedown', this.onDoc); }
+  componentDidUpdate(pp, ps) {
+    const s = this.state;
+    if (s.open && (ps.hi !== s.hi || !ps.open || ps.q !== s.q)) {
+      const list = this.listRef.current, el = document.getElementById('lk-opt-' + s.hi);
+      if (list && el) {
+        const top = el.offsetTop, bot = top + el.offsetHeight;
+        if (top < list.scrollTop + 4) list.scrollTop = top - 8;
+        else if (bot > list.scrollTop + list.clientHeight - 4) list.scrollTop = bot - list.clientHeight + 8;
+      }
+    }
+    if (s.open && !ps.open) {
+      const sc = this.scrollRef.current, pop = this.popRef.current;
+      if (sc && pop) { const d = pop.getBoundingClientRect().bottom - sc.getBoundingClientRect().bottom; if (d > 0) sc.scrollTop += d + 16; }
+    }
+    if (s.drawer && !ps.drawer) {
+      let tries = 0;
+      const go = () => {
+        const d = this.drawerRef.current || document.querySelector('[role=dialog]');
+        const el = (this.dSearchRef.current && document.contains(this.dSearchRef.current) && this.dSearchRef.current) || (d && (d.querySelector('[role=radio][aria-checked="true"]') || d.querySelector('button')));
+        if (el) el.focus(); else if (tries++ < 10) requestAnimationFrame(go);
+      };
+      requestAnimationFrame(go);
+    }
+    if (!s.drawer && ps.drawer) setTimeout(() => this.custRef.current && this.custRef.current.focus(), 0);
+  }
+
+  rcSec(pt) { return this.byId[Object.keys(this.byId).find(k => k.startsWith(pt + '-'))].sec; }
+  addrOf(d) { return 'PT ' + d.pt + ' · S' + d.sec + ' · P' + d.p; }
+  addrAria(d) { return 'PrepTest ' + d.pt + ', section ' + d.sec + ', passage ' + d.p; }
+
+  lookup() {
+    const { addr, q } = this.state, t = q.trim(), data = this.data, r = { kind: 'none', items: [], crumbs: [], sub: '', hint: '', empty: '', emptyTip: '' };
+    const psgs = (pt, sec) => data.filter(d => d.pt === pt && d.sec === sec);
+    const stageCrumbs = () => {
+      const c = [{ label: addr.pt ? 'PT ' + addr.pt : 'PrepTest', on: !addr.pt }];
+      if (addr.pt) c.push({ label: addr.sec ? 'Section ' + addr.sec : 'Section', on: !addr.sec });
+      if (addr.sec) c.push({ label: 'Passage', on: true });
+      return c;
+    };
+    const ptsGrid = list => { r.kind = 'grid'; r.items = list.map(pt => ({ k: 'pt', pt })); };
+    if (!t) {
+      r.crumbs = stageCrumbs();
+      if (!addr.pt) { ptsGrid(Array.from({ length: 59 }, (_, i) => 101 + i)); r.sub = 'Pick a PrepTest, or type a full address like 140 3 1.'; }
+      else if (!addr.sec) { const sec = this.rcSec(addr.pt); r.kind = 'rows'; r.items = [{ k: 'sec', pt: addr.pt, sec }]; r.sub = 'Only sections with passages are listed.'; }
+      else { r.kind = 'rows'; r.items = psgs(addr.pt, addr.sec).map(d => ({ k: 'psg', d })); r.sub = 'Choosing a passage adds it to your drill. Nothing starts.'; }
+      return r;
+    }
+    const local = t.match(/^([sp])?\s*([1-9])$/i);
+    if (addr.pt && local && !(local[1] && local[1].toLowerCase() === 'p' && !addr.sec)) {
+      r.crumbs = stageCrumbs(); const n = +local[2];
+      if (!addr.sec) {
+        const sec = this.rcSec(addr.pt); r.kind = 'rows'; r.items = [{ k: 'sec', pt: addr.pt, sec }];
+        r.sub = 'Only sections with passages are listed.';
+        if (n !== sec) r.hint = 'PT ' + addr.pt + ' has passages in section ' + sec + ' only.';
+      } else {
+        const rows = psgs(addr.pt, addr.sec).filter(d => d.p === n);
+        if (rows.length) { r.kind = 'rows'; r.items = rows.map(d => ({ k: 'psg', d })); r.sub = 'Press Enter to choose.'; }
+        else { r.empty = 'No passage ' + n + ' in PT ' + addr.pt + ', section ' + addr.sec + '.'; r.emptyTip = 'This section has passages 1 to 4.'; }
+      }
+      return r;
+    }
+    const a = Component.parse(t);
+    if (a && a.partial) {
+      const list = Array.from({ length: 59 }, (_, i) => 101 + i).filter(pt => String(pt).startsWith(a.digits));
+      r.crumbs = [{ label: 'PrepTests starting ' + a.digits, on: true }];
+      if (list.length) { ptsGrid(list); r.sub = 'Keep typing, or pick one.'; }
+      else { r.empty = 'No PrepTest starts with ' + a.digits + '.'; r.emptyTip = 'This index covers PrepTests 101 to 159.'; }
+      return r;
+    }
+    if (a) {
+      if (a.pt < 101 || a.pt > 159) { r.crumbs = [{ label: 'PT ' + a.pt, on: true }]; r.empty = 'PT ' + a.pt + ' is outside this index.'; r.emptyTip = 'This index covers PrepTests 101 to 159.'; return r; }
+      const sec = this.rcSec(a.pt);
+      if (a.sec && a.sec !== sec) r.hint = 'PT ' + a.pt + ' has passages in section ' + sec + ', not ' + a.sec + '. Showing section ' + sec + '.';
+      let rows = psgs(a.pt, sec); if (a.psg) rows = rows.filter(d => d.p === a.psg);
+      r.crumbs = [{ label: 'PT ' + a.pt, on: false }, { label: 'Section ' + sec, on: !a.psg }].concat(a.psg ? [{ label: 'Passage ' + a.psg, on: true }] : []);
+      if (rows.length) { r.kind = 'rows'; r.items = rows.map(d => ({ k: 'psg', d })); r.sub = a.psg ? 'Exact address. Press Enter to choose.' : 'Pick a passage.'; }
+      else { r.empty = 'No passage ' + a.psg + ' in PT ' + a.pt + '.'; r.emptyTip = 'Each section here has passages 1 to 4.'; }
+      return r;
+    }
+    const words = t.toLowerCase().split(/\s+/);
+    const rows = data.filter(d => { const h = (d.title + ' ' + d.sub).toLowerCase(); return words.every(w => h.includes(w)); });
+    r.crumbs = [{ label: 'Titles and subjects', on: true }];
+    if (rows.length) { r.kind = 'rows'; r.items = rows.slice(0, 30).map(d => ({ k: 'psg', d, search: true })); r.sub = rows.length + ' passage' + (rows.length === 1 ? '' : 's') + (rows.length > 30 ? '. Showing the first 30.' : '.'); }
+    else { r.empty = 'No passages match "' + t + '".'; r.emptyTip = 'Search titles or subjects, or type an address like 141 3 2. Demo titles are fictional.'; }
+    return r;
+  }
+
+  setSel(ids, fromLookup, msg) { this.setState({ mode: ids.length ? 'picked' : 'tutor', applied: ids, fromLookup, live: msg || '', review: false, started: false }); }
+  activate(it) {
+    if (!it) return;
+    if (it.k === 'pt') this.setState({ addr: { pt: it.pt, sec: null, psg: null }, q: '', hi: 0, live: 'PrepTest ' + it.pt + '. Choose a section.' }, () => this.dropLookupSel());
+    else if (it.k === 'sec') this.setState({ addr: { pt: it.pt, sec: it.sec, psg: null }, q: '', hi: 0, live: 'Section ' + it.sec + '. Choose a passage.' }, () => this.dropLookupSel());
+    else { const d = it.d; this.setState({ addr: { pt: d.pt, sec: d.sec, psg: d.p }, q: '', open: false, hi: 0 }); this.setSel([d.id], true, d.title + ', ' + this.addrAria(d) + ', is in your drill. Review before starting.'); }
+  }
+  dropLookupSel() { if (this.state.fromLookup) this.setSel([], false); }
+  resetTo(level) {
+    const a = this.state.addr;
+    const addr = level === 'pt' ? { pt: null, sec: null, psg: null } : level === 'sec' ? { pt: a.pt, sec: null, psg: null } : { pt: a.pt, sec: a.sec, psg: null };
+    this.setState({ addr, q: '', hi: 0, open: true, live: level === 'pt' ? 'Address cleared.' : level === 'sec' ? 'Section and passage cleared.' : 'Passage cleared.' }, () => { this.dropLookupSel(); this.inputRef.current && this.inputRef.current.focus(); });
+  }
+
+  onKey(e, lk) {
+    const s = this.state, n = lk.items.length, grid = lk.kind === 'grid', cols = this.state.fw < 560 ? 5 : 10;
+    const mv = d => { e.preventDefault(); if (!s.open) return this.setState({ open: true }); this.setState({ hi: Math.max(0, Math.min(n - 1, s.hi + d)) }); };
+    if (e.key === 'ArrowDown') mv(grid ? cols : 1);
+    else if (e.key === 'ArrowUp') mv(grid ? -cols : -1);
+    else if (grid && s.open && e.key === 'ArrowRight' && !s.q) mv(1);
+    else if (grid && s.open && e.key === 'ArrowLeft' && !s.q) mv(-1);
+    else if (e.key === 'Home' && s.open && !s.q) { e.preventDefault(); this.setState({ hi: 0 }); }
+    else if (e.key === 'End' && s.open && !s.q) { e.preventDefault(); this.setState({ hi: n - 1 }); }
+    else if (e.key === 'Enter') { e.preventDefault(); if (!s.open) this.setState({ open: true }); else this.activate(lk.items[s.hi]); }
+    else if (e.key === 'Escape') { if (s.open) { e.preventDefault(); this.setState({ open: false }); } else if (s.q) this.setState({ q: '' }); }
+    else if (e.key === 'Backspace' && !s.q) {
+      const a = s.addr; if (!a.pt) return; e.preventDefault();
+      this.resetTo(a.psg ? 'psg' : a.sec ? 'sec' : 'pt');
+    } else if (e.key === 'Tab') this.setState({ open: false });
+  }
+
+  openDrawer() { const s = this.state; this.setState({ drawer: true, draft: { mode: s.mode === 'picked' ? 'picked' : (s.applied.length ? 'picked' : 'tutor'), ids: s.applied.slice() }, dq: '', subj: [], dShow: 24, open: false }, () => this.focusDrawer()); }
+  focusSoon(find) { let n = 0; const go = () => { const el = find(); if (el) { el.focus(); if (document.activeElement !== el && n++ < 20) setTimeout(go, 30); } else if (n++ < 20) setTimeout(go, 30); }; setTimeout(go, 0); }
+  focusDrawer() { this.focusSoon(() => { const d = document.querySelector('[role=dialog]'); if (!d) return null; return d.querySelector('input') || [...d.querySelectorAll('[role=radio]')].find(b => b.getAttribute('aria-checked') === 'true') || d.querySelector('button'); }); }
+  returnFocus() { this.focusSoon(() => document.querySelector('[data-cust="1"]')); }
+  closeDrawer(msg) { this.setState({ drawer: false, draft: null, live: msg || '' }, () => this.returnFocus()); }
+  applyDraft() {
+    const d = this.state.draft;
+    if (d.mode === 'tutor') { this.setState({ addr: { pt: null, sec: null, psg: null } }); this.setSel([], false, "Tutor's choice applied."); }
+    else {
+      if (d.ids.length === 1) { const p = this.byId[d.ids[0]]; this.setState({ addr: { pt: p.pt, sec: p.sec, psg: p.p } }); this.setSel(d.ids, true, '1 passage applied.'); }
+      else { this.setState({ addr: { pt: null, sec: null, psg: null } }); this.setSel(d.ids, false, d.ids.length + ' passages applied.'); }
+    }
+    this.setState({ drawer: false, draft: null }, () => this.returnFocus());
+  }
+  setDraft(fn) { this.setState(s => ({ draft: fn(s.draft) })); }
+  drawerKey(e) {
+    if (e.key === 'Escape') { e.preventDefault(); this.closeDrawer('Changes discarded.'); return; }
+    if (e.key === 'Tab') {
+      const f = Array.from(this.drawerRef.current.querySelectorAll('button:not([disabled]),input,[tabindex="0"]'));
+      if (!f.length) return; const i = f.indexOf(document.activeElement);
+      if (e.shiftKey && i <= 0) { e.preventDefault(); f[f.length - 1].focus(); }
+      else if (!e.shiftKey && i === f.length - 1) { e.preventDefault(); f[0].focus(); }
+    }
+  }
+  drawerRows() {
+    const { dq, subj, sort } = this.state, t = dq.trim(); let rows = this.data, scope = '';
+    if (t) {
+      const a = Component.parse(t);
+      if (a && a.partial) { rows = rows.filter(d => String(d.pt).startsWith(a.digits)); scope = 'PrepTests starting ' + a.digits; }
+      else if (a) { rows = rows.filter(d => d.pt === a.pt && (!a.psg || d.p === a.psg)); scope = 'PT ' + a.pt + (a.psg ? ' · P' + a.psg : ''); }
+      else { const w = t.toLowerCase().split(/\s+/); rows = rows.filter(d => { const h = (d.title + ' ' + d.sub).toLowerCase(); return w.every(x => h.includes(x)); }); }
+    }
+    if (subj.length) rows = rows.filter(d => subj.includes(d.sub));
+    rows = rows.slice();
+    if (sort === 'title') rows.sort((a, b) => a.title.localeCompare(b.title) || a.pt - b.pt);
+    else if (sort === 'diff') rows.sort((a, b) => a.diff - b.diff || a.pt - b.pt || a.p - b.p);
+    return { rows, scope };
+  }
+
+  renderVals() {
+    const s = this.state, fw = s.fw, phone = fw < 560, two = fw >= 920;
+    const L = {
+      pad: phone ? '20px 16px 40px' : fw < 920 ? '28px 28px 48px' : '36px 48px 56px',
+      h1: phone ? '30px' : '36px', h2: phone ? '24px' : '30px',
+      cols: two ? 'minmax(0,1fr) minmax(0,480px)' : 'minmax(0,1fr)', gap: two ? '56px' : '28px',
+      panelPad: phone ? '18px' : '24px', condCols: phone ? 'minmax(0,1fr)' : '108px minmax(0,1fr)',
+      popW: phone ? '100%' : 'max(100%, 460px)', popMax: two ? 'none' : '100%', popH: phone ? '300px' : '340px',
+      gridCols: phone ? 'repeat(5, minmax(0,1fr))' : '44px repeat(10, minmax(0,1fr))', labelSpan: phone ? '1 / -1' : 'auto',
+      tokH: phone ? '40px' : '34px', keysDisplay: phone ? 'none' : 'flex', drawerW: phone ? '100%' : 'min(520px, 100%)', ctl: phone ? '44px' : '36px', phone, statusDisplay: phone ? 'none' : 'inline',
+      selCols: phone ? '28px minmax(0,1fr)' : '28px minmax(0,1fr) auto', selGap: phone ? '8px 10px' : '10px', selPad: phone ? '10px 8px 6px 10px' : '6px 6px 6px 10px',
+      actSpan: phone ? '1 / -1' : 'auto', actGap: phone ? '6px' : '2px', actPadTop: phone ? '6px' : '0', actRule: phone ? '1px solid rgba(238,233,224,.08)' : '0',
+      btnFlex: phone ? '1 1 0' : 'none', btnPad: phone ? '0 8px' : '0', btnBg: phone ? 'rgba(238,233,224,.05)' : 'transparent', btnLabel: phone ? 'inline' : 'none', applyFlex: fw < 400 ? '1 1 100%' : 'none'
+    };
+    const lk = this.lookup(), a = s.addr;
+    const hiOK = Math.min(s.hi, Math.max(0, lk.items.length - 1));
+    const tile = (it, i) => {
+      const sel = a.pt === it.pt, hi = i === hiOK;
+      return { pt: it.pt, domId: 'lk-opt-' + i, sel, bg: sel ? '#E4EBE2' : hi ? '#EDE3D3' : 'transparent', fg: sel ? '#2F4636' : '#1E2120', fw: sel ? 700 : 500,
+        ring: hi ? 'inset 0 0 0 1.5px #9C8463' : 'none', down: e => e.preventDefault(), click: () => this.activate(it), enter: () => hi || this.setState({ hi: i }) };
+    };
+    let groups = [];
+    if (lk.kind === 'grid') {
+      const by = {};
+      lk.items.forEach((it, i) => { const dec = Math.floor(it.pt / 10) * 10; (by[dec] = by[dec] || []).push(tile(it, i)); });
+      groups = Object.keys(by).map(k => ({ label: k + 's', aria: 'PrepTests ' + Math.max(101, +k) + ' to ' + (+k + 9), blank: +k === 100 && by[k][0].pt === 101, tiles: by[k] }));
+    }
+    const rows = lk.kind === 'rows' ? lk.items.map((it, i) => {
+      const hi = i === hiOK;
+      if (it.k === 'sec') {
+        const sel = a.sec === it.sec;
+        return { domId: 'lk-opt-' + i, sel, lead: 'S' + it.sec, title: 'Section ' + it.sec, m1: 'Reading Comprehension', m2: '4 passages', aria: 'Section ' + it.sec + ', Reading Comprehension, 4 passages',
+          selLabel: 'Current', showGo: !sel, goLabel: 'Passages', bg: hi ? '#EDE3D3' : 'transparent', ring: hi ? 'inset 0 0 0 1.5px #9C8463' : 'none', leadBg: sel ? '#E4EBE2' : '#EFE8DC', leadFg: sel ? '#2F4636' : '#4A4B47',
+          down: e => e.preventDefault(), click: () => this.activate(it), enter: () => hi || this.setState({ hi: i }) };
+      }
+      const d = it.d, sel = s.applied.includes(d.id);
+      return { domId: 'lk-opt-' + i, sel, lead: 'P' + d.p, title: d.title, m1: this.addrOf(d), m2: d.sub + ' · ' + d.q + ' questions',
+        aria: d.title + ', ' + this.addrAria(d) + ', ' + d.sub + ', ' + d.q + ' questions' + (sel ? ', in your drill' : ''),
+        selLabel: 'In drill', showGo: false, goLabel: '', bg: hi ? '#EDE3D3' : 'transparent', ring: hi ? 'inset 0 0 0 1.5px #9C8463' : 'none',
+        leadBg: sel ? '#E4EBE2' : '#EFE8DC', leadFg: sel ? '#2F4636' : '#4A4B47', down: e => e.preventDefault(), click: () => this.activate(it), enter: () => hi || this.setState({ hi: i }) };
+    }) : [];
+    const crumbs = lk.crumbs.map((c, i) => ({ label: c.label, fw: c.on ? 600 : 500, fg: c.on ? '#1E2120' : '#6E6C65', sep: i < lk.crumbs.length - 1 ? 'inline' : 'none' }));
+
+    const tokens = [];
+    if (a.pt) tokens.push({ k: 'PT', v: a.pt, aria: 'Clear PrepTest ' + a.pt + '. Also clears section and passage.', clear: e => { e.stopPropagation(); this.resetTo('pt'); } });
+    if (a.sec) tokens.push({ k: 'S', v: a.sec, aria: 'Clear section ' + a.sec + '. Also clears passage.', clear: e => { e.stopPropagation(); this.resetTo('sec'); } });
+    if (a.psg) tokens.push({ k: 'P', v: a.psg, aria: 'Clear passage ' + a.psg, clear: e => { e.stopPropagation(); this.resetTo('psg'); } });
+    const placeholder = a.psg ? '' : a.sec ? 'Passage' : a.pt ? 'Section' : (phone ? '140 3 1 or a title' : 'PrepTest, section, passage, or a title');
+    const chosenD = s.fromLookup && s.applied.length === 1 ? this.byId[s.applied[0]] : null;
+    const appliedRows = s.applied.map((id, i) => { const d = this.byId[id]; return { i: i + 1, title: d.title, addr: this.addrOf(d), sub: d.sub + ' · ' + d.q + ' questions' }; });
+
+    const dr = s.draft, picked = dr && dr.mode === 'picked';
+    let dv = {};
+    if (dr) {
+      const { rows: all, scope } = this.drawerRows(), shown = all.slice(0, s.dShow);
+      const move = (i, d) => this.setDraft(x => { const ids = x.ids.slice(); const j = i + d; [ids[i], ids[j]] = [ids[j], ids[i]]; return { ...x, ids }; });
+      dv = {
+        modes: [['tutor', "Tutor's choice"], ['picked', 'Pick passages']].map(([k, label]) => ({ label, on: dr.mode === k, bg: dr.mode === k ? '#262B2C' : 'transparent', fg: dr.mode === k ? '#EEE9E0' : '#B9B4AA', sh: dr.mode === k ? '0 0 0 1px rgba(238,233,224,.14),0 1px 2px rgba(0,0,0,.3)' : 'none', pick: () => this.setDraft(x => ({ ...x, mode: k })) })),
+        dTutor: dr.mode === 'tutor', dPicked: picked,
+        draftKeepNote: dr.ids.length ? 'Your ' + dr.ids.length + ' picked passage' + (dr.ids.length === 1 ? ' is' : 's are') + ' kept in this draft if you switch back before applying.' : 'No passages to set.',
+        dRing: s.dFocus ? '0 0 0 1.5px #CDB892' : '0 0 0 1px rgba(238,233,224,.10)',
+        subjChips: Component.SUBJ.map(x => { const on = s.subj.includes(x); return { label: x, on, bg: on ? 'rgba(169,195,174,.16)' : 'transparent', fg: on ? '#CFE0D2' : '#B9B4AA', sh: on ? '0 0 0 1px rgba(169,195,174,.5)' : '0 0 0 1px rgba(238,233,224,.16)', toggle: () => this.setState(st => ({ subj: on ? st.subj.filter(y => y !== x) : st.subj.concat(x), dShow: 24 })) }; }),
+        sorts: [['pt', 'PrepTest'], ['diff', 'Difficulty'], ['title', 'Title']].map(([k, label]) => ({ label, on: s.sort === k, bg: s.sort === k ? '#262B2C' : 'transparent', fg: s.sort === k ? '#EEE9E0' : '#8E8A82', pick: () => this.setState({ sort: k }) })),
+        dStatus: dr.ids.length + ' selected · ' + all.length + ' of ' + this.data.length + ' match' + (scope ? ' · scoped to ' + scope : ''),
+        dStatusShort: dr.ids.length + ' selected · ' + all.length + ' match',
+        fOpen: !!s.fOpen, showFilters: !phone || !!s.fOpen, toggleF: () => this.setState(x => ({ fOpen: !x.fOpen })),
+        fLabel: (s.fOpen ? 'Hide filters' : 'Filters') + ((s.subj.length || s.sort !== 'pt') ? ' · ' + (s.subj.length + (s.sort !== 'pt' ? 1 : 0)) : ''),
+        selCountLabel: dr.ids.length ? '· ' + dr.ids.length : '', selEmpty: !dr.ids.length,
+        selRows: dr.ids.map((id, i) => { const d = this.byId[id]; return { i: i + 1, title: d.title, addr: this.addrOf(d) + ' · ' + d.q + ' questions', first: i === 0, last: i === dr.ids.length - 1, upOp: i === 0 ? .3 : 1, downOp: i === dr.ids.length - 1 ? .3 : 1,
+          grpAria: 'Order controls for ' + d.title + ', position ' + (i + 1) + ' of ' + dr.ids.length, upAria: 'Move ' + d.title + ' earlier', downAria: 'Move ' + d.title + ' later', rmAria: 'Remove ' + d.title,
+          up: () => move(i, -1), down: () => move(i, 1), rm: () => { this.setDraft(x => ({ ...x, ids: x.ids.filter(y => y !== id) })); this.setState({ live: d.title + ' removed.' }); } }; }),
+        availLabel: s.dq || s.subj.length ? 'Results' : 'All passages',
+        dEmpty: all.length ? '' : (s.dq ? 'No passages match "' + s.dq.trim() + '"' : 'No passages match these filters') + (s.subj.length ? ' in ' + s.subj.join(', ') : '') + '.',
+        dRows: shown.map(d => { const on = dr.ids.includes(d.id); return { title: d.title, addr: this.addrOf(d), sub: d.sub, qs: d.q + ' questions', diff: 'Difficulty ' + d.diff + '/5', on, btn: on ? 'Added' : 'Add',
+          aria: (on ? 'Remove ' : 'Add ') + d.title + ', ' + this.addrAria(d), bg: on ? 'rgba(169,195,174,.16)' : 'transparent', fg: on ? '#CFE0D2' : '#EEE9E0', sh: on ? '0 0 0 1px rgba(169,195,174,.45)' : '0 0 0 1px rgba(238,233,224,.22)',
+          toggle: () => { this.setDraft(x => ({ ...x, ids: on ? x.ids.filter(y => y !== d.id) : x.ids.concat(d.id) })); this.setState({ live: d.title + (on ? ' removed.' : ' added, position ' + (dr.ids.length + 1) + '.') }); } }; }),
+        moreLabel: all.length > s.dShow ? 'Show ' + Math.min(24, all.length - s.dShow) + ' more of ' + (all.length - s.dShow) : '',
+        clearDisabled: !picked || !dr.ids.length, clearOp: !picked || !dr.ids.length ? .4 : 1,
+        applyDisabled: picked && !dr.ids.length, applyOp: picked && !dr.ids.length ? .45 : 1,
+        applyLabel: picked ? (dr.ids.length ? 'Apply ' + dr.ids.length + ' passage' + (dr.ids.length === 1 ? '' : 's') : 'Add a passage to apply') : "Apply tutor's choice"
+      };
+    }
+
+    const frameMap = { fluid: ['100%', '900px'], 1440: ['1440px', '900px'], 768: ['768px', '1000px'], 390: ['390px', '844px'], 320: ['320px', '700px'] };
+    const fr = frameMap[s.frame], av = s.avail || 1200, fwNum = s.frame === 'fluid' ? av : +s.frame, fh = parseInt(fr[1]);
+    const scale = Math.min(1, av / fwNum), scaled = scale < 0.999;
+    const demo = (label, fn) => ({ label, run: fn });
+    const typeQ = q => () => this.setState({ drawer: false, q, open: true, hi: 0, addr: { pt: null, sec: null, psg: null } }, () => this.inputRef.current && this.inputRef.current.focus());
+
+    return {
+      L, frameW: fwNum + 'px', frameH: fr[1], scale, wrapH: Math.round(fh * scale) + 'px', frameLeft: Math.max(0, Math.round((av - fwNum * scale) / 2)) + 'px',
+      scaleNote: 'True ' + fwNum + 'px layout, shown at ' + Math.round(scale * 100) + '%', scaleNoteDisplay: scaled ? 'block' : 'none', availRef: this.availRef, frameRef: this.frameRef, scrollRef: this.scrollRef, inputRef: this.inputRef, listRef: this.listRef, popRef: this.popRef, lkWrapRef: this.lkWrapRef, drawerRef: this.drawerRef, custRef: this.custRef, dSearchRef: this.dSearchRef,
+      frames: [['fluid', 'Fluid'], [1440, '1440'], [768, '768'], [390, '390'], [320, '320']].map(([k, label]) => ({ label, on: s.frame === k, bg: s.frame === k ? '#1E2120' : 'transparent', fg: s.frame === k ? '#F4EFE6' : '#4A4B47', pick: () => this.setState({ frame: k }) })),
+      demos: [
+        demo('Exact: 140 3 1', typeQ('140 3 1')), demo('Partial: 14', typeQ('14')), demo('Title: libraries', typeQ('libraries')),
+        demo('Wrong section: 141 2', typeQ('141 2')), demo('No results', typeQ('quantum')),
+        demo('Open Customize', () => this.openDrawer())
+      ],
+      lkHelp: 'Type an address like 140 3 1, or a title. Leave blank to keep tutor\u2019s choice.',
+      fieldRing: s.focus ? '0 0 0 1.5px #9C8463, 0 0 0 5px rgba(156,132,99,.16)' : '0 0 0 1px rgba(30,33,32,.16), 0 1px 2px rgba(50,38,20,.05)',
+      tokens, placeholder, q: s.q, open: s.open, activeId: s.open && lk.items.length ? 'lk-opt-' + hiOK : undefined,
+      showClearAll: !!(a.pt || s.q),
+      onQ: e => this.setState({ q: e.target.value, open: true, hi: 0 }),
+      onKey: e => this.onKey(e, lk), onFocus: () => this.setState({ focus: true, open: true }), onBlur: () => this.setState({ focus: false }),
+      focusInput: () => this.inputRef.current && this.inputRef.current.focus(),
+      clearAll: () => { this.setState({ addr: { pt: null, sec: null, psg: null }, q: '', hi: 0 }); if (s.fromLookup) this.setSel([], false, "Address cleared. Tutor's choice."); },
+      clearQ: () => this.setState({ q: '', hi: 0 }, () => this.inputRef.current && this.inputRef.current.focus()),
+      prevent: e => e.preventDefault(),
+      crumbs, pop: { sub: lk.sub, hint: lk.hint, empty: lk.empty, emptyTip: lk.emptyTip, isGrid: lk.kind === 'grid', isRows: lk.kind === 'rows', groups, rows },
+      chosen: chosenD ? { title: chosenD.title, meta: this.addrOf(chosenD) + ' · ' + chosenD.sub + ' · ' + chosenD.q + ' questions' } : null,
+      multiNote: !s.fromLookup && s.applied.length > 1 ? s.applied.length + ' passages picked in Customize. Choosing an address here replaces them.' : '',
+      isTutor: s.mode === 'tutor', isPicked: s.mode === 'picked', n: s.n,
+      pickedCount: s.applied.length + ' picked',
+      dec: () => this.setState(x => ({ n: Math.max(1, x.n - 1) })), inc: () => this.setState(x => ({ n: Math.min(4, x.n + 1) })),
+      sourceLabel: s.mode === 'tutor' ? "Tutor's choice · " + s.n : 'Your picks, in order',
+      appliedRows, openDrawer: () => this.openDrawer(),
+      notReview: !s.review, review: s.review, started: s.started,
+      reviewTitle: s.mode === 'tutor' ? s.n + ' passage' + (s.n === 1 ? '' : 's') + ', tutor\u2019s choice' : s.applied.length + ' passage' + (s.applied.length === 1 ? '' : 's') + ', your order',
+      tutorReview: 'Review the chosen passages before starting. Nothing starts until you press Start drill.',
+      goReview: () => this.setState({ review: true, started: false, open: false }), backReview: () => this.setState({ review: false, started: false }), start: () => this.setState({ started: true }),
+      live: s.live, drawer: s.drawer,
+      cancelDrawer: () => this.closeDrawer('Changes discarded.'), applyDraft: () => this.applyDraft(), drawerKey: e => this.drawerKey(e),
+      dq: s.dq, onDq: e => this.setState({ dq: e.target.value, dShow: 24 }),
+      dqKey: e => { if (e.key === 'Escape' && s.dq) { e.preventDefault(); e.stopPropagation(); this.setState({ dq: '' }); } },
+      clearDq: () => this.setState({ dq: '' }, () => this.dSearchRef.current && this.dSearchRef.current.focus()),
+      dFocusOn: () => this.setState({ dFocus: true }), dFocusOff: () => this.setState({ dFocus: false }),
+      resetFilters: () => this.setState({ dq: '', subj: [], dShow: 24 }),
+      showMore: () => this.setState(x => ({ dShow: x.dShow + 24 })),
+      clearDraft: () => { this.setDraft(x => ({ ...x, ids: [] })); this.setState({ live: 'Selection cleared in draft.' }); },
+      ...dv
+    };
+  }
+}
+</script>
+</body>
+</html>

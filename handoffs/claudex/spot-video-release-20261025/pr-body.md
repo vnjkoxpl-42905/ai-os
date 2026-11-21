@@ -1,0 +1,7 @@
+Clicking the small Spot the Relationship instruction video now expands the same player smoothly into a viewport-sized modal. Closing pauses it without losing its position; reopening does not autoplay. The player supports Close, Escape, repeated Escape, backdrop dismissal, focus return, and reduced motion.
+
+This PR contains only the video component, its CSS and tests, the activity design guidance, and dated screenshot/evidence. It preserves current main styling. No backend, grading, content-bank, assignment, dependency, or unrelated local changes are included.
+
+Validation: Claude Opus 5.5 independently reviewed the plan and final code. Production build/postbuild and typecheck passed. Real-browser checks passed at 390/658/768/1280px, including playback, pause/retained position, no autoplay, direct click, double Escape, backdrop and reduced motion. All 16 video tests pass. The broader Activity Centre/DrillRuns run has 16 pre-existing failures reproduced on untouched baseline 6a167c85; the new test-selector failures were corrected and their file rerun successfully.
+
+Limitations: inline group-role override on native dialog is a documented ARIA-in-HTML conformance deviation. Native dialog support requires Safari 15.4+ or a modern Chromium/Firefox browser; an edge-crossing scrub gesture may dismiss the modal. Test prototype mocks rely on default file isolation. These were low-severity findings in the approving review. No student data or live AI grading calls were used for validation.

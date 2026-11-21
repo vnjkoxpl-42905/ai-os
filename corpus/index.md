@@ -1,56 +1,87 @@
----
-type: teaching-notes
-subject: Corpus LSAT teaching knowledge
-updated: 2026-07-17
-aliases: []
----
-
-# Corpus — LSAT teaching knowledge
-
-The second knowledge system: Joshua's LSAT teaching knowledge, built incrementally on the Karpathy LLM-wiki pattern as materials are ingested (books + notes, LSAT Lab, 7Sage material, drills, explanations). Eventually integrates into LSAT U as platform feedstock.
-
-Fills through supervised ingests, one source at a time, logged in [[../wiki/log|the wiki log]]. Raw materials land in `raw/` first (immutable); the corpus holds the synthesized, interlinked teaching pages.
-
-## Conventions
-
-- Pages are LLM-written and LLM-maintained; Joshua curates sources and directs emphasis.
-- Wikilink corpus concepts into `students/<name>/` pages when a student is working that area, and into LSAT U material as it ships.
-- Question-type taxonomy, method pages, and drill-design principles get their own pages as they accumulate — no empty scaffolding in advance.
-
+---
+type: teaching-notes
+subject: Corpus LSAT teaching knowledge
+updated: 2026-10-09
+aliases: []
+---
+
+# Corpus — LSAT teaching knowledge
+
+The second knowledge system: Joshua's LSAT teaching knowledge, built incrementally on the Karpathy LLM-wiki pattern as materials are ingested (books + notes, LSAT Lab, 7Sage material, drills, explanations). Eventually integrates into LSAT U as platform feedstock.
+
+Fills through supervised ingests, one source at a time, logged in [[../wiki/log|the wiki log]]. Raw materials land in `raw/` first (immutable); the corpus holds the synthesized, interlinked teaching pages.
+
+## Conventions
+
+- Pages are LLM-written and LLM-maintained; Joshua curates sources and directs emphasis.
+- Wikilink corpus concepts into `students/<name>/` pages when a student is working that area, and into LSAT U material as it ships.
+- Question-type taxonomy, method pages, and drill-design principles get their own pages as they accumulate — no empty scaffolding in advance.
+
 ## Pages
 
-### `lectures/` · read-aloud scripts and teaching visuals
-
-- [[lectures/index]] · LSAT Lab source transcripts, teleprompter scripts, initial concept boards, and worked-question visuals. Packages preserve source timestamps and explicit completeness checks.
-
-### `Curriculum/` — the LR curriculum (ingested 2026-07-17)
-
-118 markdown pages recovered from `raw/sources/lsat-curriculum/_stragglers/local-ai-gather/…/Curriculum/` — the corpus folder tree had been scaffolded from this source in the 2026-07-16 rebuild, but the files themselves were never copied. Each topic carries `Notes/` (the teaching) and `Homework/` (the assigned drills).
-
-| Topic | Pages | Topic | Pages |
-|---|---|---|---|
-| Main Conclusion | 21 | Necessary Assumption | 7 |
-| Flaw and Famous Flaws | 11 | Conditional Logic | 7 |
-| Abstract | 6 | Causation | 6 |
-| Principle | 4 | Role | 4 |
-| Sufficient Assumption | 4 | Must be True | 3 |
-| Strengthen | 2 | Parallel | 2 |
-| Rebuttals | 2 | Comparison | 1 |
-| Method | 1 | Most Supported | 1 |
-| Parallel Flaw | 1 | | |
-
-- `Curriculum/_question-feature-index/` — 33 pages indexing question features across PTs 101–159 (famous-flaws, complex-conditionals, 2-speaker, science, except, …).
-- `Curriculum/_meta/lr-taxonomy.md` — the LR question-type taxonomy.
-- `Curriculum/LR/` — 2 homework pages exported live from Google Drive (pilot, 2026-07-17).
-
-**Known gaps:** topics scaffolded but still unfilled — Agree Disagree, Bootcamp, Match Family, Must Be False, Paradox, Quantifiers, Weaken, Reading Comprehension. Their source material is split between `raw/sources/lsat-curriculum/LSAT DUMP/` (many entries are stale `.gdoc` Drive pointers whose IDs no longer resolve) and Google Drive itself, where a past migration converted docs to PDFs/scans under new IDs. Recovering those needs a Drive-side pass, not a local copy.
-
-### `lr-explanations/` — models for writing LR explanations (2026-09-26)
-
-- [[lr-explanations/golden-set]] — the 51 LSAT Lab explanations new LSAT U explanations are modelled on, with the quality rubric.
-- [[lr-explanations/models/index]] — model library: 334 top-tier existing explanations, 10 to 20 per LR type, with what the best ones do for each type.
-- [[lr-explanations/drafts/pilot-2026-09-27]] — 20-question pilot of new explanations, waiting for Joshua.
-- [[lr-explanations/golden-set-observations]] — strong-vs-loose comparison, step structure per type, voice notes.
-- [[lr-explanations/golden-set-candidates]] — all 80 candidates and the type x feature coverage grid.
-- [[lr-explanations/fixes/index]] — the fix list: one line per issue, with detail files beside it (revamp list, Choice Note issues).
-
+- [[Curriculum/Flaw and Famous Flaws/Notes/famous-fallacies|Famous Fallacies]] · Ten classic flaws, complete handout transcription, and Part vs. Whole teaching notes.
+
+- [The must arrow shows a direction of guarantee](<Curriculum/Conditional Logic/Notes/_megadoc_reference_conditionals.md#the-must-arrow-shows-a-direction-of-guarantee>): sufficient-to-necessary readback, what a rule leaves open, and limits on the trigger-disappears metaphor, supported by the full LSAT Lab transcript ingested 2026-10-11.
+
+### Teaching methods recovered from the old local vault (2026-10-07)
+
+- [Loophole library](loophole-online/README.md): separate Reading Comprehension, Logical Reasoning and shared-method routes; complete old/new source catalog, 59 RC lectures, the full How to Camo transcript, 84 workouts, 58 routines, prep-map captures and the local LR MP3/transcript library. [Filing router](loophole-online/ROUTER.md).
+- [Loophole operational method library](loophole-online/method-library.md): detailed instructor protocols, source-specific targets and doctrine checks, connected to four annotated editions retaining captured lecture explanations and worked examples.
+- [Diagnose the cause of a miss](tutoring-diagnosis.md): the recovered 7Sage four-category coaching framework and whole-section timing review, retained as a private teacher reference.
+- [RC cumulative translation](<Curriculum/Reading Comprehension/Notes/cumulative-translation-review.md>): a concrete recall-check protocol for an observed reading-retention problem, filed in its topic home.
+- [Source and comparison](../wiki/sources/old-obsidian-vault-2026-10-07.md): preservation hashes, full local-file coverage, missing images and historical-policy conflicts.
+
+### `lectures/` · read-aloud scripts and teaching visuals
+
+- [[lectures/index]] · LSAT Lab source transcripts, teleprompter scripts, initial concept boards, and worked-question visuals. Packages preserve source timestamps and explicit completeness checks.
+
+### `Curriculum/` — the LR curriculum (ingested 2026-07-17)
+
+118 markdown pages recovered from `raw/sources/lsat-curriculum/_stragglers/local-ai-gather/…/Curriculum/` — the corpus folder tree had been scaffolded from this source in the 2026-07-16 rebuild, but the files themselves were never copied. Each topic carries `Notes/` (the teaching) and `Homework/` (the assigned drills).
+
+| Topic | Pages | Topic | Pages |
+|---|---|---|---|
+| Main Conclusion | 21 | Necessary Assumption | 7 |
+| Flaw and Famous Flaws | 11 | Conditional Logic | 7 |
+| Abstract | 6 | Causation | 6 |
+| Principle | 4 | Role | 4 |
+| Sufficient Assumption | 4 | Must be True | 3 |
+| Strengthen | 2 | Parallel | 2 |
+| Rebuttals | 2 | Comparison | 1 |
+| Method | 1 | Most Supported | 1 |
+| Parallel Flaw | 1 | | |
+
+- `Curriculum/_question-feature-index/` — 33 pages indexing question features across PTs 101–159 (famous-flaws, complex-conditionals, 2-speaker, science, except, …).
+- `Curriculum/_meta/lr-taxonomy.md` — the LR question-type taxonomy.
+- `Curriculum/LR/` — 2 homework pages exported live from Google Drive (pilot, 2026-07-17).
+
+**Known gaps:** topics scaffolded but still unfilled — Agree Disagree, Bootcamp, Match Family, Must Be False, Paradox, Quantifiers, Weaken, Reading Comprehension. Their source material is split between `raw/sources/lsat-curriculum/LSAT DUMP/` (many entries are stale `.gdoc` Drive pointers whose IDs no longer resolve) and Google Drive itself, where a past migration converted docs to PDFs/scans under new IDs. Recovering those needs a Drive-side pass, not a local copy.
+
+2026-10-07 recovery note: the [RC cumulative-translation protocol](<Curriculum/Reading Comprehension/Notes/cumulative-translation-review.md>) now provides one attributed method in the RC topic home. It does not establish recovery of the complete RC curriculum. Conditional and objection topic pages now link the relevant recovered evidence without replacing their current teaching standards.
+
+### Find existing coverage before recovering missing curriculum (2026-10-09)
+
+An empty curriculum home is not proof that this brain lacks the topic. The following map resolves audit F28's retrieval gap without duplicating teaching or claiming complete curriculum recovery. Read each model's weaknesses before applying it; model explanations are examples, not complete lesson sequences.
+
+| Thin curriculum home | Existing local coverage | Remaining gap |
+|---|---|---|
+| Agree Disagree | [MC, Role and Agree models](lr-explanations/models/MC-Role-Agree.md); [model index](lr-explanations/models/index.md) records 20 Agree/Disagree models | Recover the original lesson and homework sequence |
+| Must Be False | [MBT and MBF models](lr-explanations/models/MBT-MBF.md); index records 17 selected MBF models with quality caveats | Recover the original curriculum; do not treat all selected examples as equally strong |
+| Weaken | [Weaken and Evaluate models](lr-explanations/models/Weaken-Evaluate.md); [Loophole overview](loophole-online/index.md) preserves vendor doctrine caveats | Recover lesson/homework sequence and retain the vendor's limitations |
+| Paradox | [Paradox and Method models](lr-explanations/models/Paradox-Method.md) | Recover the original lesson/homework sequence |
+| Match Family | [Taxonomy](Curriculum/_meta/lr-taxonomy.md) defines the family; [model index](lr-explanations/models/index.md) routes MC, Role, Method, Parallel and Agree/Disagree examples | Family-wide teaching progression has not been verified |
+| Reading Comprehension | [Cumulative translation](<Curriculum/Reading Comprehension/Notes/cumulative-translation-review.md>) and [Loophole methods](loophole-online/method-library.md) | [RC lecture index](lectures/reading-comprehension/index.md) reports no filed lectures; full recovery remains open |
+| Quantifiers | The [taxonomy](Curriculum/_meta/lr-taxonomy.md) identifies it as a reasoning pattern | Dedicated method/source coverage remains unverified; requires a targeted source inventory |
+| Bootcamp | [Taxonomy](Curriculum/_meta/lr-taxonomy.md) records historical app bootcamp names | Verify current application curriculum in its own repository/live system before importing it |
+
+Do not manufacture lessons, copy model text into empty folders, or label a stale Drive pointer as a recovered physical source. Further recovery uses the existing supervised ingest workflow and source verification.
+
+### `lr-explanations/` — models for writing LR explanations (2026-09-26)
+
+- [[lr-explanations/golden-set]] — the 51 LSAT Lab explanations new LSAT U explanations are modelled on, with the quality rubric.
+- [[lr-explanations/models/index]] — model library: 334 top-tier existing explanations, 10 to 20 per LR type, with what the best ones do for each type.
+- [[lr-explanations/drafts/pilot-2026-09-27]] — 20-question pilot of new explanations, waiting for Joshua.
+- [[lr-explanations/golden-set-observations]] — strong-vs-loose comparison, step structure per type, voice notes.
+- [[lr-explanations/golden-set-candidates]] — all 80 candidates and the type x feature coverage grid.
+- [[lr-explanations/fixes/index]] — the fix list: one line per issue, with detail files beside it (revamp list, Choice Note issues).
+

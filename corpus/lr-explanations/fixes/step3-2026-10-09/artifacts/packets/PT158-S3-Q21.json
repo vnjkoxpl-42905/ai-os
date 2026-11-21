@@ -1,0 +1,84 @@
+{
+ "qid": "PT158-S3-Q21",
+ "type": "Necessary Assumption",
+ "difficulty": "5",
+ "key_db": "E",
+ "stimulus_db": "Professor: Many scientists hypothesize that there is an invisible \"light-absorbing medium\" in outer space. In support, they argue that the medium's existence would explain the low visibility of other star systems from Earth. But there is actually no reason to believe that the hypothesis is correct, since the low visibility in question is already completely explained by the general theory of relativity.",
+ "stem_db": "Which one of the following is an assumption required by the professor's argument?",
+ "choices_db": {
+  "A": "The low visibility of other star systems from Earth would not be adequately explained by the existence of an invisible light-absorbing medium in outer space, even if there were such a medium.",
+  "B": "The hypothesis of an invisible light-absorbing medium in outer space is correct only if it adequately explains the low visibility of other star systems from Earth.",
+  "C": "A hypothesis is likely to be correct if there is some phenomenon that it adequately accounts for and that is not adequately accounted for by an existing theory.",
+  "D": "Most scientists who posit the invisible light-absorbing medium accept the general theory of relativity.",
+  "E": "The general theory of relativity does not depend upon the hypothesis that there exists an invisible light-absorbing medium in outer space."
+ },
+ "bank": {
+  "stimulus": "Professor: Many scientists hypothesize that there is an\n invisible “light-absorbing medium” in outer\n space. In support, they argue that the medium’s\n existence would explain the low visibility of\n other star systems from Earth. But there is\n actually no reason to believe that the hypothesis\n is correct, since the low visibility in question\n is already completely explained by the general\n theory of relativity.",
+  "stem": "Which one of the following is an assumption required by\n the professor’s argument?",
+  "choices": {
+   "A": "The low visibility of other star systems from Earth would not be adequately explained by the existence of an invisible light-absorbing medium in outer space, even if there were such a medium.",
+   "B": "The hypothesis of an invisible light-absorbing medium in outer space is correct only if it adequately explains the low visibility of other star systems from Earth.",
+   "C": "A hypothesis is likely to be correct if there is some phenomenon that it adequately accounts for and that is not adequately accounted for by an existing theory.",
+   "D": "Most scientists who posit the invisible light-absorbing medium accept the general theory of relativity.",
+   "E": "The general theory of relativity does not depend upon the hypothesis that there exists an invisible light-absorbing medium in outer space."
+  },
+  "key": "E"
+ },
+ "explanation_id": "990f4ad6-c9c1-45d7-af92-93825c23f964",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "c93cd3b3-9ed0-4e7b-b363-08ecd0638710",
+   "position": 0,
+   "label": "Conclusion",
+   "body": "There is no reason to believe that the hypothesis is correct. Rephrase: There is no reason to believe that an invisible \"light-absorbing medium\" in outer space explains our low visibility of other star systems."
+  },
+  {
+   "row_id": "4ab8aabc-01f6-46f9-938e-75226b61265c",
+   "position": 1,
+   "label": "Evidence (since)",
+   "body": "The low visibility is already completely explained by the general theory of relativity."
+  },
+  {
+   "row_id": "27f74a90-b4a4-4956-8be0-9736b1a2056a",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "This argument seems to think that if Eddie has already offered a convincing explanation for X, then there's no reason to believe Laura's explanation for X. Couldn't more than one explanation be valid? It seems like the author is thinking,\n```\nif X is completely          no good reason to\nexplained by relativity  →  believe any other\n                            explanation for X\n```\nIf we wanted to try debating this argument to think of possible objections, we could think, Given that ... Relativity completely explains why we can't see lots of other star systems, How could we argue that ... There is still some reason to believe that an invisible light-absorbing medium in why we we can't see lots of other star systems? Maybe we could say that they actually agree on important parts of the explanation. Like if Eddie and Laura were both witnesses to the same event, we wouldn't think, \"If Eddie completely explained X, then there's no reason to believe Laura's explanation for X\". After all, maybe they both have the same explanation for X."
+  },
+  {
+   "row_id": "74beed47-7cac-4105-b985-6c63de8b7eb3",
+   "position": 3,
+   "label": "Goal",
+   "body": "Look for an answer reflecting the reasoning move of, \"If A completely explains X, then there's no good reason to believe that B explains X\". Or look for an answer ruling out the objection that maybe these scientists and relativity agree / overlap a lot in terms of how they're explaining the low visibility of other star systems."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "66a5302c-409d-450e-8c65-e3191c6852aa",
+   "letter": "A",
+   "body": "The professor does not need to assume that combining both the medium and relativity would fail to explain low visibility. The professor's argument is that relativity alone is sufficient — making the medium unnecessary. This does not require that the two explanations are incompatible or that they could not work together. Two explanations can coexist without conflicting; the professor's point is simply that only one is needed. This answer addresses compatibility between the two theories, but the argument only requires independence, not incompatibility. The assumption needed is narrower: relativity does not depend on the medium, not that the two cannot coexist."
+  },
+  {
+   "row_id": "3e1addcb-06a2-42d9-b5b1-69954dd40989",
+   "letter": "B",
+   "body": "This says the hypothesis is correct only if it is the sole explanation for low visibility. This is far too strong. The professor's argument does not require that the hypothesis is correct only if it is unique — it requires that the evidence cited (low visibility) does not uniquely support the hypothesis because an alternative explanation exists. The professor is making an argument about evidential support, not about the logical conditions for the hypothesis's truth. Even if the medium hypothesis could be correct while coexisting with other explanations, the professor's point would still stand: low visibility does not provide independent reason to believe in the medium. This answer mischaracterizes the logical relationship."
+  },
+  {
+   "row_id": "ee54acaa-1645-4de6-a567-00d17a063ed4",
+   "letter": "C",
+   "body": "This answer says: a hypothesis is likely to be correct if there is some phenomenon it adequately accounts for. But the professor argues the reverse: a hypothesis is NOT supported just because it can explain something, especially when another theory already explains it. This answer, if anything, supports the SCIENTISTS' position — it suggests that because the medium hypothesis can account for low visibility, it is likely correct. The professor would reject this principle, not assume it. The professor's whole point is that the ability to explain a phenomenon does not constitute reason to believe a hypothesis when an alternative explanation already exists. This answer goes against the professor's reasoning."
+  },
+  {
+   "row_id": "553a1b8f-2ae5-404a-a629-3047dfd4bcd1",
+   "letter": "D",
+   "body": "Whether most scientists who believe in the medium also accept the general theory of relativity is irrelevant to whether the professor's argument is sound. The professor's argument is about the logical relationship between the two theories, not about what individual scientists believe. Even if no scientists who posit the medium accept relativity, the professor's point stands: relativity explains low visibility, so that evidence does not uniquely support the medium. Conversely, even if all medium proponents accept relativity, the professor's argument still needs the independence of the explanations. This answer addresses sociological facts about scientists' beliefs rather than the logical structure of the argument."
+  },
+  {
+   "row_id": "87a139de-74be-4c0e-b4cf-b05a1c3e58a6",
+   "letter": "E",
+   "body": "The professor argues that relativity provides an alternative explanation for low visibility, making the medium hypothesis unnecessary. This argument works only if relativity's explanation is independent of the medium hypothesis. If the general theory of relativity's explanation of low visibility actually depends on the existence of a light-absorbing medium, then relativity is not an alternative to the medium hypothesis — it incorporates it. In that case, pointing to relativity as an alternative would actually be pointing to a theory that presupposes the very hypothesis it is supposed to replace, making the professor's argument circular. Apply the Negation Test: if the general theory of relativity DOES depend on the medium hypothesis, then the professor's \"alternative\" explanation is not an alternative at all — it requires the medium to exist, which supports the scientists rather than the professor. The argument collapses entirely."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (6.0 em-dashes per 1k words; wrong-answer notes average 105.8 words).",
+ "tags": "emdash-heavy; pt157-158-register"
+}

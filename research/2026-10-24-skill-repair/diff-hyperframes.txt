@@ -1,0 +1,232 @@
+### SKILL.md
+--- 
+
++++ 
+
+@@ -18,2 +18,12 @@
+
+ 
++## Contents
++
++- [1. Start from project state](#1-start-from-project-state)
++- [2. Route fresh creation](#2-route-fresh-creation)
++- [3. Route once, then leave](#3-route-once-then-leave)
++- [4. Install and enter the workflow](#4-install-and-enter-the-workflow)
++- [5. Load domain skills on demand](#5-load-domain-skills-on-demand)
++- [6. Studio, and the HyperFrames desktop app](#6-studio-and-the-hyperframes-desktop-app)
++- [Reference files](#reference-files)
++
+ ### Check remaining usage
+@@ -82,3 +92,3 @@
+
+ - A music file selects `/music-to-video` only when its beat grid drives the piece. Music used as a bed does not override the subject-matched route.
+-- "I want a storyboard" changes the review process, not the workflow. With no other routing signal, use `/general-video`. A confirmed sketched `storyboard.html` may itself be the requested deliverable; the review loop defines that stop point.
++- "I want a storyboard" changes the review process, not the workflow. With no other routing signal, use `/general-video`. A confirmed board (`boards/storyboard.html`, format in `/hyperframes-creative` `references/storyboard-recipe.md`) may itself be the requested deliverable; the review loop defines that stop point.
+ - Specialized narrative workflows support up to about 3 minutes and are strongest around 30–90s. Route a clearly longer piece to `/general-video`. Length never overrides an explicit port, deck, caption, overlay, or music-driven deliverable.
+@@ -155,2 +165,34 @@
+
+ 
++## Reference files
++
++Read the matching file directly when its topic applies; the indexes remain available for choosing among recipes.
++
++### References
++
++- [Brief contract](references/brief-contract.md) — Read when interpreting confirmed brief fields and render approval.
++- [Brief format — BRIEF.md](references/brief-format.md) — Read when writing or resuming BRIEF.md.
++- [Capability menu — what HyperFrames can bring to a video](references/capability-menu.md) — Read when offering optional capabilities for a brief.
++- [Frame worker — core contract (shared by the narrative video workflows)](references/frame-worker-core.md) — Read when dispatching a narrative frame worker.
++- [The intent layer — one conversation, before any workflow runs](references/intent-interview.md) — Read when confirming intent before routing a new request.
++- [Pitch round — the intent layer's divergent step](references/pitch-round.md) — Read when developing alternative concepts before choosing one.
++- [Running from an installed plugin](references/plugin-installation.md) — Read when running setup or freshness commands from a plugin.
++- [Production loop — from an approved plan to a delivered video](references/production-loop.md) — Read when moving from an approved plan to delivery.
++- [The review loop — plan, sketch, build](references/review-loop.md) — Read when reviewing a storyboard, sketches, or a build.
++- [Route briefs (moved)](references/route-briefs.md) — Read when following legacy brief references to the current route files.
++- [Route: embedded-captions](references/routes/embedded-captions.md) — Read when routing a embedded captions request.
++- [Route: faceless-explainer](references/routes/faceless-explainer.md) — Read when routing a faceless explainer request.
++- [Route: general-video](references/routes/general-video.md) — Read when routing a general video request.
++- [Route: motion-graphics](references/routes/motion-graphics.md) — Read when routing a motion graphics request.
++- [Route: music-to-video](references/routes/music-to-video.md) — Read when routing a music to video request.
++- [Route: pr-to-video](references/routes/pr-to-video.md) — Read when routing a pr to video request.
++- [Route: product-launch-video](references/routes/product-launch-video.md) — Read when routing a product launch video request.
++- [Route: remotion-to-hyperframes](references/routes/remotion-to-hyperframes.md) — Read when routing a remotion to hyperframes request.
++- [Route: slideshow](references/routes/slideshow.md) — Read when routing a slideshow request.
++- [Route: talking-head-recut](references/routes/talking-head-recut.md) — Read when routing a talking head recut request.
++- [SCRIPT.md — locked narration (optional)](references/script-format.md) — Read when writing or reading locked narration in SCRIPT.md.
++- [Skill installation and freshness](references/skill-lifecycle.md) — Read when installing or refreshing a workflow skill.
++- [Storyboard format — STORYBOARD.md + parsed manifest](references/storyboard-format.md) — Read when writing STORYBOARD.md or its parsed manifest.
++- [Subagent dispatch — harness adapter](references/subagent-dispatch.md) — Read when adapting worker dispatch to the available harness.
++- [Workflow catalog (moved)](references/workflow-catalog.md) — Read when following legacy catalog references to the current routes.
++
+ <!-- BEGIN GENERATED DESIGN HUB ROUTE -->
+### references\frame-worker-core.md
+--- 
+
++++ 
+
+@@ -9,4 +9,5 @@
+
+ - `PROJECT_DIR` — the project root; all paths are relative to it.
+-- `frame_id` — e.g. `03-feature`. Use it **verbatim** as the composition id, the `window.__timelines` key, and the file name (`compositions/frames/03-feature.html`) — that path **is** the frame's `src` in `STORYBOARD.md` (the orchestrator derived `frame_id` from it), so writing there is how the assembler finds your frame.
++- `frame_id` — e.g. `03-feature`. Use it **verbatim** as the composition id, the `window.__timelines` key, and the file name. Write to the exact `src` in your packet's storyboard block (e.g. `compositions/frames/<frame_id>.html` or `compositions/<frame_id>.html`); the orchestrator derived `frame_id` from that path, and the assembler reads it verbatim.
+ - Your **packet** (`.hyperframes/frame-packets/<frame_id>.md`) — everything selected upstream for this frame. You never open the shared `STORYBOARD.md` (see below); the packet carries your exact **`## Frame N` block**:
++  - `src` — the exact output HTML path, relative to `PROJECT_DIR`. Preserve it; do not add or remove a `frames/` directory.
+   - `scene` — a one-line contact-sheet caption. **Design intent, never visible DOM text.**
+@@ -26,3 +27,3 @@
+
+ 
+-**OUTPUT** — `compositions/frames/<frame_id>.html` for each assigned packet: exactly one bare `<template>…</template>` fragment. The first non-whitespace bytes are `<template`; the last are `</template>`. Never emit `<!doctype>`, `<html>`, `<head>`, `<body>`, or any markup outside that single template. Writing your assigned file(s) (past the self-check below) is your **terminal action** — you do not edit `STORYBOARD.md`, mint audio, assemble the index, run the CLI, or report back. The orchestrator picks up the file and marks the frame's `status`.
++**OUTPUT** — the HTML file at each assigned packet's `src`: exactly one bare `<template>…</template>` fragment. The first non-whitespace bytes are `<template`; the last are `</template>`. Never emit `<!doctype>`, `<html>`, `<head>`, `<body>`, or any markup outside that single template. The workflow delta specifies any required sidecars and the dispatch specifies which packets you own. Writing all assigned HTML files and required sidecars (past the self-check below) is your **terminal action** — you do not edit `STORYBOARD.md`, mint audio, assemble the index, run the CLI, or report back. The orchestrator picks up the file and marks the frame's `status`.
+ 
+@@ -30,3 +31,3 @@
+
+ 
+-In collaborative runs the orchestrator sketches every frame first as a cell of `storyboard.html` (`id="frame-NN"`), so your frame may have a **user-confirmed wireframe** there — your dispatch says whether it does (a target file found on a retry is your own prior output, not a sketch). Read that cell first and **keep its composition**: the placement, hierarchy, and copy were approved — don't move or drop them. Everything else is yours to finish: the finished content where the sketch used stand-in blocks (what that content is — real assets, invented visuals, a code block — is the delta's call, since the sketch already carries the full `frame.md` treatment), and the motion — map each Scene onto a timeline phase, reveal each piece on its `voiceover` cue with `fromTo` entrances, adding DOM only where a phase needs it. The frame's landed state must still read as the approved sketch, now moving.
++In collaborative runs the orchestrator first poses every frame in its composition and shows it as a still on the board (`boards/storyboard.html`, stills in `boards/stills/`, format in `hyperframes-creative/references/storyboard-recipe.md`), so your frame may have a **user-confirmed wireframe**: the posed composition at your target file — your dispatch says whether it does (a target file found on a retry is your own prior output, not a sketch). Read that file and its still first and **keep its composition**: the placement, hierarchy, and copy were approved — don't move or drop them. Everything else is yours to finish: the finished content where the sketch used stand-in blocks (what that content is — real assets, invented visuals, a code block — is the delta's call, since the sketch already carries the full `frame.md` treatment), and the motion — map each Scene onto a timeline phase, reveal each piece on its `voiceover` cue with `fromTo` entrances, adding DOM only where a phase needs it. The frame's landed state must still read as the approved sketch, now moving.
+ 
+@@ -58,5 +59,5 @@
+
+ 2. **Design** — turn the time-coded shot sequence into a timeline using `frame.md`'s components and type ramp: each Scene window becomes a phase revealed on its `voiceover` cue, each named motion built from the recipe in your packet, the blueprint's signature move kept recognizable. Find a visual idea that reinforces the beat, not a literal restyle of the words.
+-3. **Author** — write the full sub-composition to `compositions/frames/<frame_id>.html` (rewrite to iterate; last write wins). `<template>`-wrapped root carrying `data-composition-id="<frame_id>"` and styled via `#root` (not a class on that element — see the self-check below), exactly one `gsap.timeline({ paused: true })` registered at `window.__timelines["<frame_id>"]`, built synchronously.
++3. **Author** — write the full sub-composition to the exact `src` in your packet (rewrite to iterate; last write wins). `<template>`-wrapped root carrying `data-composition-id="<frame_id>"` and styled via `#root` (not a class on that element — see the self-check below), exactly one `gsap.timeline({ paused: true })` registered at `window.__timelines["<frame_id>"]`, built synchronously.
+    Prefix authored ids and globally reusable class names with `<frame_id>-` so sibling frames assembled from parallel workers cannot collide. Contract selectors such as `#root` and `.clip` are the only exceptions.
+-4. **Self-check, then finish** — re-read your file against the checklist below and fix in place; then continue to your next assigned packet, if any. You do **not** run the CLI.
++4. **Self-check, then finish** — re-read your file against the checklist below and fix in place; write any sidecar required by the workflow delta, then continue to your next assigned packet, if any. You do **not** run the CLI.
+ 
+@@ -64,5 +65,6 @@
+
+ 
+-You **can't** meaningfully run `hyperframes lint` / `check` here: they operate on the **assembled project** (the `index.html` graph / bundle), and your frame isn't wired in yet — so they report on _other_ files, not yours (a false green). The **orchestrator** runs them after assembly (the correct unit), and **re-dispatches you with the finding** if your frame fails (see **Retry** above). So get it right on write: re-read your file against this checklist before finishing — the codes in parens are `hyperframes lint`'s and what the orchestrator may cite back:
++You **can't** meaningfully run `hyperframes lint` / `check` here: they operate on the **assembled project** (the `index.html` graph / bundle), and your frame isn't wired in yet — so they report on _other_ files, not yours (a false green). The **orchestrator** runs them after assembly (the correct unit), and **re-dispatches you with the finding** if your frame fails (see **Retry** above). So get it right on write: re-read your file against this checklist before finishing — backticked diagnostic codes below are emitted by `hyperframes lint`; bold labels are manual workflow checks, not lint codes:
+ 
+-- `missing_template_wrapper` / `missing_composition_id` — the entire file is exactly one bare `<template>…</template>` fragment (no DOCTYPE / full document); root carries `data-composition-id="<frame_id>"`.
++- **Template wrapper (manual)** — the entire file is exactly one bare `<template>…</template>` fragment (no DOCTYPE / full document).
++- `root_missing_composition_id` — root carries `data-composition-id="<frame_id>"`; check that the value matches your assigned frame id.
+ - **Template transport** — every `<style>` and `<script>` block, including the GSAP load, lives inside `<template>`.
+@@ -70,4 +72,4 @@
+
+ - **Full-bleed background on a `class="clip"` layer, never `#root`** — author a frame's full-bleed ground (color field / gradient / grid) as a dedicated full-duration `class="clip"` background element on the lowest content track, **not** as a `background` on the `#root` / `data-composition-id` element. At assembly the frame root is clip-gated to its scene window, so a background painted on the root is not a dependable full-frame ground — dark content can end up over the host `body` (black) and render invisible. The video's base ground is painted separately by the assembler from `frame.md`'s `canvas` color onto the index `#root`; your full-bleed clip rides on top of it.
+-- `clip_missing_data_attrs` — every `class="clip"` element has `data-start` / `data-duration` / `data-track-index`.
+-- `timeline_not_paused` / `timeline_not_registered` — one paused timeline, registered at `window.__timelines["<frame_id>"]`.
++- **Clip attributes (manual)** — every `class="clip"` element has `data-start` / `data-duration` / `data-track-index`.
++- **Paused timeline + registration (manual for template frames)** — one paused timeline, registered at `window.__timelines["<frame_id>"]`. `gsap_timeline_not_registered` is a real lint code for standalone compositions, but the rule skips template/sub-compositions; it does not verify your frame registration.
+ - `css_transition_used` + repeat / yoyo / non-deterministic logic — none present (the renderer seeks frame-by-frame).
+@@ -75,3 +77,3 @@
+
+ - **Hero visibility** — the main subject is visible by `t <= 0.5s`; entrance tweens use `fromTo` instead of CSS-hidden starting states.
+-- `exit_animation_on_non_final_scene` — no exit tween unless you are the final frame.
++- **Non-final exit (manual)** — no exit tween unless you are the final frame.
+ - **No front-loading (not a slide)** — the shot's pieces reveal on their `voiceover` cues across the duration, not all fired at `t=0`; a non-still frame keeps content arriving rather than holding a full canvas from ~25%.
+### references\intent-interview.md
+--- 
+
++++ 
+
+@@ -28,3 +28,3 @@
+
+ 
+-**2 — Triage the input.** What is the video about — a website (sold or shown), a PR, a topic, a music track, existing footage? And is the request **formed** — the message, the material, and the occasion readable from what the user gave — or **unformed**, a subject with no take on it? Source material doesn't settle this by itself: a site, document, or PR carries its own thesis, but five tellings of that thesis are five different videos — a request whose only shape comes from its source ("make a video about this URL") is formed about the facts and unformed about the telling, and enters the round to pitch the telling. A formed request runs the layer exactly as it always has; nothing below is added for it. An unformed one goes through the pitch round after routing (step 4) and earns one question here, before anything is generated: what is the user already picturing? Their answer seeds the round (`pitch-round.md`). A user who says they don't know video at all gets that reference's decision map instead of a question sequence. For a genuinely exploratory request ("we need a video but I'm not sure what kind"), don't interrogate — establish the subject and what exists to show, one question at a time, then close by **recommending** a route plus how the run will review: a plan in chat first, with optional wireframe sketches on a `storyboard.html` sheet before the full build (`review-loop.md`). The user hears the process before any workflow starts.
++**2 — Triage the input.** What is the video about — a website (sold or shown), a PR, a topic, a music track, existing footage? And is the request **formed** — the message, the material, and the occasion readable from what the user gave — or **unformed**, a subject with no take on it? Source material doesn't settle this by itself: a site, document, or PR carries its own thesis, but five tellings of that thesis are five different videos — a request whose only shape comes from its source ("make a video about this URL") is formed about the facts and unformed about the telling, and enters the round to pitch the telling. A formed request runs the layer exactly as it always has; nothing below is added for it. An unformed one goes through the pitch round after routing (step 4) and earns one question here, before anything is generated: what is the user already picturing? Their answer seeds the round (`pitch-round.md`). A user who says they don't know video at all gets that reference's decision map instead of a question sequence. For a genuinely exploratory request ("we need a video but I'm not sure what kind"), don't interrogate — establish the subject and what exists to show, one question at a time, then close by **recommending** a route plus how the run will review: a plan in chat first, with optional stills on a board (`boards/storyboard.html`, format in `hyperframes-creative/references/storyboard-recipe.md`) before the full build (`review-loop.md`). The user hears the process before any workflow starts.
+ 
+@@ -38,3 +38,3 @@
+
+ 
+-- **(a) Storyboard?** Review the plan in chat, wireframe sketches on a `storyboard.html` sheet, and the finished piece pass by pass (`review-loop.md`) — recommended for anything beyond a couple of scenes — or skip the review and get one finished video from the confirmed brief.
++- **(a) Storyboard?** Review the plan in chat, stills on a board (`boards/storyboard.html`, format in `hyperframes-creative/references/storyboard-recipe.md`), and the finished piece pass by pass (`review-loop.md`) — recommended for anything beyond a couple of scenes — or skip the review and get one finished video from the confirmed brief.
+ - **(b) Automation or companion?** **Automation** — the matched workflow's pipeline executes the brief end to end. **Companion** — build it together in `/general-video` with every HyperFrames capability on the table; the route's answers still describe the video, general-video executes them.
+### references\production-loop.md
+--- 
+
++++ 
+
+@@ -6,13 +6,13 @@
+
+ 
+-| Stage               | Needs                                                                                                                                              | Produces                                                                                                                                                                                                       | Where the capability lives                                                                                                                    |
+-| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+-| **Blocks & assets** | the approved plan                                                                                                                                  | registry blocks installed **once, before any parallel work** (parallel workers race the registry); user assets staged; logos / images / grades resolved                                                        | `npx hyperframes add <block>` per block the plan names; staging, adoption, and `resolve` via the menu's media rows                            |
+-| **Audio**           | narration text (when narrated); the storyboard's `music:` mood                                                                                     | voice files + **word timings** + BGM + SFX → `audio_meta.json`; **when BGM plays under a voice, the bed is carved** (`hyperframes-audio/scripts/carve.mjs`) before Verify — a duck alone is not a finished mix | the one engine — `media-use/audio/scripts/audio.mjs`, run in the background; `wait-bgm.mjs` before render when BGM generates                  |
+-| **Frames**          | design spec + the plan (+ a confirmed sketch cell in `storyboard.html` when one exists — dress that layout, never redraw it: `review-loop.md` § 3) | each scene at `compositions/frames/NN-*.html`, marked `animated` in the storyboard as it lands                                                                                                                 | `frame.md` + `hyperframes-animation` blueprints / rules (+ the genre lens, menu § Genre lenses); parallel dispatch per `subagent-dispatch.md` |
+-| **Duration sync**   | word timings + frames                                                                                                                              | scene durations trued to real voice length — real duration wins, silent scenes keep estimates, synced values are never hand-edited                                                                             | a mechanical rule; the narrative workflows' audio scripts apply it, a freeform build applies it by hand                                       |
+-| **Assembly**        | frames                                                                                                                                             | the index composition — scenes as sub-compositions on tracks                                                                                                                                                   | `sub-compositions.md` + `tracks-and-clips.md`; borrowable `assemble-index.mjs` (menu)                                                         |
+-| **Transitions**     | the assembled index                                                                                                                                | scene handoffs injected                                                                                                                                                                                        | `hyperframes-animation/transitions/overview.md` → `catalog.md`; borrowable `transitions.mjs` (menu)                                           |
+-| **Captions**        | word timings + the index                                                                                                                           | the caption track                                                                                                                                                                                              | borrowable `captions.mjs` (menu); no script to time against → `media-use` `scripts/transcribe.mjs` first                                      |
+-| **Verify**          | the index (+ captions / transitions when present)                                                                                                  | `npx hyperframes lint` and `npx hyperframes check` **passing**; a contact-sheet glance (`snapshot --at <frame-midpoints>`)                                                                                     | `hyperframes-cli`                                                                                                                             |
+-| **Deliver**         | verify passing                                                                                                                                     | the final-look pause → on approval `render` → optionally `publish` (a stable hosted link, private by default) → the recipe offer                                                                               | final approval and recipe offer: `review-loop.md` § 4; render / publish: `hyperframes-cli`                                                    |
++| Stage               | Needs                                                                                                                                                                                                                             | Produces                                                                                                                                                                                                       | Where the capability lives                                                                                                                    |
++| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
++| **Blocks & assets** | the approved plan                                                                                                                                                                                                                 | registry blocks installed **once, before any parallel work** (parallel workers race the registry); user assets staged; logos / images / grades resolved                                                        | `npx hyperframes add <block>` per block the plan names; staging, adoption, and `resolve` via the menu's media rows                            |
++| **Audio**           | narration text (when narrated); the storyboard's `music:` mood                                                                                                                                                                    | voice files + **word timings** + BGM + SFX → `audio_meta.json`; **when BGM plays under a voice, the bed is carved** (`hyperframes-audio/scripts/carve.mjs`) before Verify — a duck alone is not a finished mix | the one engine — `media-use/audio/scripts/audio.mjs`, run in the background; `wait-bgm.mjs` before render when BGM generates                  |
++| **Frames**          | design spec + the plan (+ a confirmed still on the board (`boards/storyboard.html`, format in `hyperframes-creative/references/storyboard-recipe.md`) when one exists — dress that layout, never redraw it: `review-loop.md` § 3) | each scene at `compositions/frames/NN-*.html`, marked `animated` in the storyboard as it lands                                                                                                                 | `frame.md` + `hyperframes-animation` blueprints / rules (+ the genre lens, menu § Genre lenses); parallel dispatch per `subagent-dispatch.md` |
++| **Duration sync**   | word timings + frames                                                                                                                                                                                                             | scene durations trued to real voice length — real duration wins, silent scenes keep estimates, synced values are never hand-edited                                                                             | a mechanical rule; the narrative workflows' audio scripts apply it, a freeform build applies it by hand                                       |
++| **Assembly**        | frames                                                                                                                                                                                                                            | the index composition — scenes as sub-compositions on tracks                                                                                                                                                   | `sub-compositions.md` + `tracks-and-clips.md`; borrowable `assemble-index.mjs` (menu)                                                         |
++| **Transitions**     | the assembled index                                                                                                                                                                                                               | scene handoffs injected                                                                                                                                                                                        | `hyperframes-animation/transitions/overview.md` → `catalog.md`; borrowable `transitions.mjs` (menu)                                           |
++| **Captions**        | word timings + the index                                                                                                                                                                                                          | the caption track                                                                                                                                                                                              | borrowable `captions.mjs` (menu); no script to time against → `media-use` `scripts/transcribe.mjs` first                                      |
++| **Verify**          | the index (+ captions / transitions when present)                                                                                                                                                                                 | `npx hyperframes lint` and `npx hyperframes check` **passing**; a contact-sheet glance (`snapshot --at <frame-midpoints>`)                                                                                     | `hyperframes-cli`                                                                                                                             |
++| **Deliver**         | verify passing                                                                                                                                                                                                                    | the final-look pause → on approval `render` → optionally `publish` (a stable hosted link, private by default) → the recipe offer                                                                               | final approval and recipe offer: `review-loop.md` § 4; render / publish: `hyperframes-cli`                                                    |
+ 
+### references\review-loop.md
+--- 
+
++++ 
+
+@@ -2,3 +2,3 @@
+
+ 
+-How a `storyboard: yes` run earns fidelity one pass at a time: the plan is reviewed as text in chat, the layouts as a sketched `storyboard.html` the user opens in a browser, and the finished piece as the assembled video. Collaborative mode waits at each checkpoint. Autonomous mode posts the same checkpoint summaries and continues, keeping exactly one question before render.
++How a `storyboard: yes` run earns fidelity one pass at a time: the plan is reviewed as text in chat, the layouts as stills on the board (`boards/storyboard.html`), and the finished piece as the assembled video. Collaborative mode waits at each checkpoint. Autonomous mode posts the same checkpoint summaries and continues, keeping exactly one question before render.
+ 
+@@ -18,7 +18,7 @@
+
+ 
+-A sketch is a **static frame, not an unstyled one**: the frame's layout at its key moment, drawn with the full `frame.md` treatment (real fonts, real colors, the actual headline / stat / label text placed where it will live) exactly as `storyboard-recipe.md` § 3 describes a cell, using plain blocks only for panels, charts, diagrams, and media the workflow hasn't produced yet (the workflow says what its blocks stand in for). **No motion** — that arrives with the build pass; the layout, copy and brand treatment are already locked here.
++A sketch is a **static frame, not an unstyled one**: the frame's layout at its key moment, posed in the composition with the full `frame.md` treatment (real fonts, real colors, the actual headline / stat / label text placed where it will live) as `storyboard-recipe.md` § 1 describes, using plain blocks only for panels, charts, diagrams, and media the workflow hasn't produced yet (the workflow says what its blocks stand in for). **No motion** — that arrives with the build pass; the layout, copy and brand treatment are already locked here.
+ 
+-Draw the sketches as the cells of `storyboard.html` (`storyboard-recipe.md` § 3) and hand the user the file path to open in a browser. Mark each frame `built` in `STORYBOARD.md` as its sketch lands. Run no CLI here — no `snapshot`, no `lint` / `check`, no rendering. When every frame is `built`, pause and ask one thing: does the sheet look right, or which frames change? This is a **checkpoint gate**; feedback arrives in chat: revise **only the sketches named**, bump the sheet's version, re-present, and loop until the layout is confirmed. Only then does the workflow's visual design get written onto the confirmed layouts.
++Mount the posed frames in `index.html`, snapshot every still in one run into `boards/stills/` and write the board, `boards/storyboard.html` (`storyboard-recipe.md` § 1–2), then hand the user the board. Mark each frame `built` in `STORYBOARD.md` as its still lands. `snapshot` is the only CLI here — no `lint` / `check`, no rendering. When every frame is `built`, pause and ask one thing: does the board look right, or which frames change? This is a **checkpoint gate**; feedback arrives in chat: re-pose **only the frames named** and replace only their stills (`storyboard-recipe.md` § 1 step 4), rewrite the page, re-present, and loop until the layout is confirmed. Only then does the workflow's visual design get written onto the confirmed layouts.
+ 
+-A confirmed sheet is also a valid place to **stop**. When the user asked for a storyboard rather than a finished video — a plan to pitch, review, or hand off — `storyboard.html` is the deliverable: confirm it, hand over the path, and go no further unless asked to build.
++A confirmed board is also a valid place to **stop**. When the user asked for a storyboard rather than a finished video — a plan to pitch, review, or hand off — `boards/storyboard.html` is the deliverable: confirm it, hand over the path, and go no further unless asked to build.
+ 
+@@ -28,5 +28,5 @@
+
+ 
+-However the workflow builds — sub-agent workers per frame, or inline scene by scene — a confirmed sketch's **composition is settled**: placement, hierarchy, and copy were approved on the sheet, so building means dressing that layout (full design treatment, real assets, motion), never redrawing it. Workflows that dispatch workers put "this frame has a **confirmed sketch** at `storyboard.html#frame-NN`" in the worker's context and carry the keep-the-layout rule in their worker prompt; a landed frame must still read as the approved wireframe, fully dressed.
++However the workflow builds — sub-agent workers per frame, or inline scene by scene — a confirmed sketch's **composition is settled**: placement, hierarchy, and copy were approved on the board, so building means dressing that layout (full design treatment, real assets, motion), never redrawing it. Workflows that dispatch workers put "this frame has a **confirmed sketch** (its posed composition, still in `boards/stills/`)" in the worker's context and carry the keep-the-layout rule in their worker prompt; a landed frame must still read as the approved wireframe, fully dressed.
+ 
+-Mark each frame `animated` as it lands. The build gate carries the loop's condition: in collaborative mode, the sketch sheet was confirmed at § 2.
++Mark each frame `animated` as it lands. The build gate carries the loop's condition: in collaborative mode, the board was confirmed at § 2.
+ 
+### references\skill-lifecycle.md
+--- 
+
++++ 
+
+@@ -16,2 +16,4 @@
+
+ The `--skip-skills` CLI flag is temporarily ignored. CI and tests may opt out with `HYPERFRAMES_SKIP_SKILLS=1`.
++
++`HYPERFRAMES_SKIP_SKILLS=1` also makes `skills update` (bare or named) and bare `skills` exit 0 without installing or pruning, so an install pinned to one commit stays pinned.
+ 
+### references\storyboard-format.md
+--- 
+
++++ 
+
+@@ -97,3 +97,3 @@
+
+ - `built` is the middle rung: the frame's HTML exists and its **layout is confirmed** (a wireframe sketch or better) — motion not yet added. Nothing is drawn yet beyond the approved layout.
+-- The process that walks these statuses — plan, sketch, build, each pass reviewed in chat and in `storyboard.html` — is `review-loop.md`.
++- The process that walks these statuses — plan, sketch, build, each pass reviewed in chat and on the board (`boards/storyboard.html`, format in `hyperframes-creative/references/storyboard-recipe.md`) — is `review-loop.md`.
+ - Multi-line `voiceover` values collapse to one line on save.
+### references\subagent-dispatch.md
+--- 
+
++++ 
+
+@@ -12,3 +12,3 @@
+
+ 
+-A harness concurrency limit **reduces parallelism, not work**: every scene still gets built, one scene per dispatch, with the available slots chewing through the full list.
++A harness concurrency limit **reduces parallelism, not work**: every scene still gets built, with the available slots chewing through the full list. The workflow sets how many scenes each worker gets (`general-video` assigns 2–3).
+ 

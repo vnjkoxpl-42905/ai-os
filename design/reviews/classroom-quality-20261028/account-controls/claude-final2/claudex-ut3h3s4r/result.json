@@ -1,0 +1,167 @@
+{
+  "status": "completed",
+  "mode": "inspect",
+  "provider": "claude",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "claude",
+    "builder": "codex",
+    "inspector": "claude"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-my-work-20261026",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os\\design\\reviews\\classroom-quality-20261028\\account-controls\\PLAN.md",
+  "plan_sha256": "13a7921ba4f2097c75d544844e28124d4aef6f9aeb3104fc6ca75714a6b14ab6",
+  "requested_model": null,
+  "requested_effort": null,
+  "base": "18fc8af7e1ff7d83defb62b9e0d8dd720f90b3a3",
+  "snapshot": {
+    "base": "18fc8af7e1ff7d83defb62b9e0d8dd720f90b3a3",
+    "files": [
+      {
+        "path": "scripts/verification/start-teacher-home-preview.mjs",
+        "kind": "file",
+        "sha256": "10e1b173bd492c5a73346173bab4701826025325fb93f3fc83e09704e923e2f1"
+      },
+      {
+        "path": "scripts/verification/teacher-home-preview.tsx",
+        "kind": "file",
+        "sha256": "617e6059d7913052a1375cde23033d1ea66efdc244a791d1890f2ea839050532"
+      },
+      {
+        "path": "src/components/classroom/home/home.css",
+        "kind": "file",
+        "sha256": "ac2f15fc6b4e898d6a232086f8ce449beb11f5ac7d0bb0b7947a355c72b02a41"
+      },
+      {
+        "path": "src/components/classroom/home/teacher/TeacherAccessBooking.tsx",
+        "kind": "file",
+        "sha256": "d255c583f999b079c565342cdc550fdb6af640ee57af4e89fc0c725c2695fe15"
+      },
+      {
+        "path": "src/components/classroom/home/teacher/TeacherHomeView.test.tsx",
+        "kind": "file",
+        "sha256": "295978d27d950f76f8250d78cfb807522a7564ab0d7af9c6f460b7f64ba64dbe"
+      },
+      {
+        "path": "src/components/classroom/home/teacher/TeacherHomeView.tsx",
+        "kind": "file",
+        "sha256": "cfc084de2a4d8251a4112b61f4e0e0fa3c86196c30072f6c50a96d9b2f88842a"
+      },
+      {
+        "path": "src/components/classroom/home/teacher/TeachingDesk.test.tsx",
+        "kind": "file",
+        "sha256": "a31ca8397363c052369f722b50a0d1a0e50c5745bc8a6df192f6481c170e9939"
+      }
+    ],
+    "diff_sha256": "fcf32bde0e85c503dae81ae89b44bf491bb839278e4b789ad33154257ab1a366",
+    "scope": [
+      "scripts/verification/start-teacher-home-preview.mjs",
+      "scripts/verification/teacher-home-preview.tsx",
+      "src/components/classroom/home/home.css",
+      "src/components/classroom/home/teacher/TeacherAccessBooking.tsx",
+      "src/components/classroom/home/teacher/TeacherHomeView.test.tsx",
+      "src/components/classroom/home/teacher/TeacherHomeView.tsx",
+      "src/components/classroom/home/teacher/TeachingDesk.test.tsx"
+    ],
+    "sha256": "61ce363cf69558393c09ab200aeac266f17cd6e5b23ce111bd4c98bf3f6c02b1"
+  },
+  "previous": null,
+  "started_at": 1793222503.7509105,
+  "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\design\\reviews\\classroom-quality-20261028\\account-controls\\claude-final2\\claudex-ut3h3s4r",
+  "scope": [
+    "scripts/verification/start-teacher-home-preview.mjs",
+    "scripts/verification/teacher-home-preview.tsx",
+    "src/components/classroom/home/home.css",
+    "src/components/classroom/home/teacher/TeacherAccessBooking.tsx",
+    "src/components/classroom/home/teacher/TeacherHomeView.test.tsx",
+    "src/components/classroom/home/teacher/TeacherHomeView.tsx",
+    "src/components/classroom/home/teacher/TeachingDesk.test.tsx"
+  ],
+  "cli_version": "2.1.309 (Claude Code)",
+  "executable": [
+    "C:\\Users\\Joshu\\.local\\bin\\claude.EXE"
+  ],
+  "exit_code": 0,
+  "session_id": "4d1073a1-1ce8-4d28-a312-e11e8895b4ed",
+  "response": {
+    "verdict": "REVISE",
+    "summary": "The core account-control behavior mostly holds up on source reading. It resets cleanly on open or actor change, keeps credits and link modes separate, requires an explicit step for first-time creation, shows the exact target and balance preview, and restores a pending receipt. The preview launcher blocks the production Supabase client before load. Three issues remain: one recovery-safety gap, one scope regression, and one mode-specific message error. I did not run tests or a browser.",
+    "findings": [
+      {
+        "id": "F-1",
+        "severity": "medium",
+        "path": "src/components/classroom/home/teacher/TeacherAccessBooking.tsx:344-378",
+        "evidence": "The new 'Recovery account ID' free-text path calls discardUnreadableHomeTopUp(actorId, recoveryStudentId, true). That function (src/lib/teacherHomeActions.ts:127-141) quarantines and removes the unreadable pending record once loadHomeBooking succeeds. Any valid UUID succeeds, including a mistyped or wrong student's ID. The old flow required a named roster student. Here the unreadable-pending protection is cleared after reviewing a possibly different account. The result is also invisible: the balance block renders only when `loaded && target`, and `target` is undefined when studentId is empty. The notice 'Current balance loaded. Review it before a new intentional addition.' therefore appears with no balance shown.",
+        "fix": "After a recovery with a typed ID, show the loaded account's ID and balance explicitly (exact ID, credits_remaining, status). Require the user to re-enter or confirm the ID before discarding. Alternatively, restrict recovery to roster-selected accounts and show a retry-roster message when the roster is unavailable."
+      },
+      {
+        "id": "F-2",
+        "severity": "medium",
+        "path": "src/components/classroom/home/teacher/TeacherHomeView.tsx (header, decisions, nav)",
+        "evidence": "The diff removes functionality unrelated to the plan's account controls. These are the 'Open email ↗' header link, the 'Payments and history ↗' navigation to /teacher/today, and the 'All students' item from More. It also adds a new TeacherWeek calendar, hides the attention nav (hideAttention), and changes email-setup copy. The More menu now has only 'Create session link'. These changes widen the review surface and drop existing entry points to payments history and email without a stated requirement. The matching tests were relaxed too: the `/book/i` assertion was narrowed.",
+        "fix": "Restore the removed links, or document them as deliberate in the plan or dispositions and add tests for the replacement entry points. Keep the account-controls change separate from the calendar and attention-nav redesign."
+      },
+      {
+        "id": "F-3",
+        "severity": "low",
+        "path": "src/components/classroom/home/teacher/TeacherAccessBooking.tsx:597-600",
+        "evidence": "When createHomeBooking returns pass_exists, the notice says 'Review its balance, then confirm Add sessions.' In link mode the add controls are hidden, since they require `mode === 'credits' && pass`. The user is told to use a control that does not exist there, and link mode correctly cannot grant sessions.",
+        "fix": "Use a mode-specific message. In link mode, say the existing link was loaded and no sessions were added, and point to Add session credits if the user wants to add sessions."
+      }
+    ],
+    "coverage": [
+      "Read TeacherAccessBooking.tsx BookingSheet in full (lines 190-648) and the AccessSheet and AccountPicker diff.",
+      "Read the TeacherHomeView.tsx, home.css, TeacherHomeView.test.tsx and TeachingDesk.test.tsx diffs.",
+      "Read the full start-teacher-home-preview.mjs launcher.",
+      "Traced discardUnreadableHomeTopUp in src/lib/teacherHomeActions.ts.",
+      "Confirmed teacherWeek.ts exists."
+    ],
+    "limitations": [
+      "Did not run tests, typecheck, build or a browser, so focus, 390/320 layout and dark-mode rendering are unverified.",
+      "Did not read scripts/verification/teacher-home-preview.tsx or the other untracked or out-of-scope files, and did not read the full AccessSheet body, TeacherTasks, teacherWeek.ts or the loaders in teacherHomeActions.ts beyond one function.",
+      "Did not inspect the Node CLI assistant route, edge functions or the real API behavior.",
+      "Nothing here approves production behavior or all-student sessions."
+    ]
+  },
+  "usage": {
+    "input_tokens": 6,
+    "cache_creation_input_tokens": 50479,
+    "cache_read_input_tokens": 100140,
+    "output_tokens": 4498,
+    "output_tokens_details": {
+      "thinking_tokens": 2397
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 50479,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 1826,
+        "cache_read_input_tokens": 51783,
+        "cache_creation_input_tokens": 3177,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 3177
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "observed_models": [
+    "claude-sonnet-5-5"
+  ],
+  "permission_denials": [],
+  "total_cost_usd": 0.256922,
+  "elapsed_seconds": 46.95
+}

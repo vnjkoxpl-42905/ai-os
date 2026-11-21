@@ -1,0 +1,105 @@
+{
+  "status": "completed",
+  "mode": "review",
+  "provider": "claude",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "claude",
+    "builder": "codex",
+    "inspector": "claude"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-and-or-20261019",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os\\brainstorms\\2026-09-30-conditional-curriculum\\full-bootcamp.build-spec.md",
+  "plan_sha256": "f29bf3c8fa43963c4fe207f76c0f5b8562acef01231509bcef0187276bba55ec",
+  "requested_model": null,
+  "requested_effort": null,
+  "base": null,
+  "snapshot": null,
+  "previous": "C:/Users/Joshu/dev/ai-os/handoffs/conditional-full-20261025-review/claudex-52ow_n_1/result.json",
+  "started_at": 1792952894.9118574,
+  "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\handoffs\\conditional-full-20261025-review\\claudex-hn1n6fsi",
+  "cli_version": "2.1.309 (Claude Code)",
+  "executable": [
+    "C:\\Users\\Joshu\\.local\\bin\\claude.exe"
+  ],
+  "exit_code": 0,
+  "session_id": "131b90c8-b33e-43c2-8090-76f88a909aff",
+  "response": {
+    "verdict": "REVISE",
+    "summary": "Revision 3 resolves all four round-2 findings. EDITION-1: the plan names every target normalizer, the key function, the parser, assignWork, AssignmentBuilder duplicate detection and both teacher producers, with round-trip tests and a fail-closed rule for unknown editions. EDITION-2: one registryStepAllowed predicate checks edition first, an explicit ?assignment cannot fall back to another assignment, and compatible-row selection is deterministic. PROGRESS-1: the plan now admits there is one account-level record, uses flat prefixed keys that cleanCourse keeps, and defines a revision-gated 'Completed earlier' projection. SELFSTUDY-1: the self-study and opt-in upgrade are removed. Tracing the new progress contract through the actual drill components found two remaining gaps. First, Chapter 1/2 drills keep a second copy of their state on the device, and that copy has no edition in its key. When no prefixed account record exists, the drills fall back to it, so earlier work could leak into the new edition and skip the projection rules. Second, the pre-expansion baseline that old editions freeze to is ambiguous, because Chapter 2 exists only as an uncommitted draft. Both need explicit spec obligations. Neither changes the teaching direction.",
+    "findings": [
+      {
+        "id": "PROGRESS-2",
+        "severity": "medium",
+        "path": "src/bootcamps/conditionals/components/SourceWorksheetDrill.tsx",
+        "evidence": "The plan's edition adapter covers only the CourseProgressStore (account `course` keys). Chapter 1/2 drills also keep their own device copy, keyed by user and set but not by edition: `conditional-worksheet-v1:${storageScope}:${set.id}` (SourceWorksheetDrill.tsx:71) and `conditional-and-or-v1:${storageScope}:${set.id}` (AndOrPractice.tsx:179). StagedReasoningDrill.tsx:117 and IndicatorWordDeck.tsx:13 use the same pattern. readSaved runs `accountState ?? localStorage.getItem(key)` (SourceWorksheetDrill.tsx:50; AndOrPractice.tsx:59). routes.tsx:194 passes storageScope={userId}. Scenario: a student opens a preserved Chapter 1/2 drill in v3 with no prefixed record and no compatible projection. The adapter correctly returns no account state, but the drill then loads the old edition's device draft, and its effects write that draft to the prefixed key (AndOrPractice.tsx:199-201 records on every change once started; with run=1 `started` is true at mount). That skips the contentRevision check and the 'no credit when absent or incompatible' rule. In the other direction, v3 work overwrites the shared device key, which the old edition falls back to whenever its own account record is missing. Separately, a read-only projection passed through `saved.state` to a component that records on mount would write a prefixed snapshot without the explicit resume the plan requires.",
+        "fix": "Extend the progress contract to device storage. New-edition renders pass an edition-scoped storageScope (for example `${userId}:full-conditionals-v3`) to every drill that keeps device state: SourceWorksheetDrill, AndOrPractice, StagedReasoningDrill, IndicatorWordDeck, and the folded-set lookups at SourceWorksheetDrill.tsx:76-81. The v3 path must never read old-edition device keys. Expose projected 'Completed earlier' records as read-only, marked separately from mutable account state, so mount and change effects cannot record them until the user explicitly chooses to resume. Add tests for: an old device draft not loading in v3 when no prefixed record exists; v3 edits leaving old device bytes unchanged; and opening a projected step with run=1 creating no prefixed write until explicit resume."
+      },
+      {
+        "id": "BASELINE-1",
+        "severity": "medium",
+        "path": "src/bootcamps/conditionals/openingCoursePath.ts",
+        "evidence": "The plan freezes old editions to 'PRE-EXPANSION membership ... captured from the actual reconciled baseline', and the access table lists 'Preserved Chapter2 IDs' as preserved. In this worktree, Chapter 2 (openingCoursePath.ts:31-38, the AndOr* components) is uncommitted: git status shows openingCoursePath.ts modified and AndOrLessons.tsx, AndOrPractice.tsx and the other AndOr files untracked. routes.andOr.test.tsx:127-129 sets the course denominator to the full OPENING_COURSE_PATH including Chapter 2's 7 steps. If 'reconciled baseline' means current main plus this draft, every existing course and stage assignment grows from the 16 Chapter 1 steps to 23 when Chapter 2 ships. That repeats the old-denominator expansion the plan forbids, only one chapter earlier. The spec does not say whether Chapter 2 belongs to the frozen legacy edition or only to v3.",
+        "fix": "Name the exact baseline: the deployed main HEAD SHA and its OPENING_COURSE_PATH step list. If Chapter 2 is not on deployed main, freeze old editions without it and add Chapter 2 only in v3 (or in an explicitly approved intermediate edition). Rewrite the draft's 'counts every Chapter 2 step in the course completion denominator' test so it applies only to v3. Record this as a decision for Joshua if Chapter 2 was meant to reach existing assignments."
+      }
+    ],
+    "coverage": [
+      "Re-read the full revision 3 plan text and checked each round-1 and round-2 finding against it: ACCESS-1/2, SEMANTIC-1, DRILL-1, REFRESHER-1 and NAV-1 stayed resolved, and EDITION-1/2, PROGRESS-1 and SELFSTUDY-1 are resolved in the spec.",
+      "src/bootcamps/conditionals/courseProgress.tsx (whole file): CourseProgressStore, useCourseStep, useDeviceCourseProgress",
+      "src/bootcamps/conditionals/components/SourceWorksheetDrill.tsx lines 42-81: readSaved fallback, device storage key, folded-set lookup",
+      "src/bootcamps/conditionals/components/AndOrPractice.tsx lines 178-202: device key, account-state fallback, record and device writes in the effect at mount and on change",
+      "Grep of storageScope/localStorage across src/bootcamps/conditionals: StagedReasoningDrill, IndicatorWordDeck, OpeningCourse DrillEntry",
+      "Grep of every writer and reader of progress.course and recordCourseStep reopen semantics (progress.ts:59-74)",
+      "routes.tsx:185-194 progressStore and storageScope wiring (from earlier rounds)",
+      "Git status from session context, confirming Chapter 2 files are uncommitted or untracked"
+    ],
+    "limitations": [
+      "This is a specification review only. Nothing was implemented, and no tests, typecheck or build were run; none are claimed to pass.",
+      "I did not open StagedReasoningDrill.tsx or IndicatorWordDeck.tsx beyond the grep lines, so their exact fallback order is inferred from that pattern.",
+      "I could not inspect deployed or current remote main, so whether Chapter 2 is already in production is unverified. BASELINE-1 depends on that.",
+      "I did not inspect the backend metadata schema, so whether courseEdition fits in the existing JSON remains the plan's own deferred check.",
+      "The plan SHA256 was not recomputed. The review is based on the plan text supplied in the message."
+    ]
+  },
+  "usage": {
+    "input_tokens": 10,
+    "cache_creation_input_tokens": 29424,
+    "cache_read_input_tokens": 563585,
+    "output_tokens": 5984,
+    "output_tokens_details": {
+      "thinking_tokens": 2502
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 29424,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 3856,
+        "cache_read_input_tokens": 122752,
+        "cache_creation_input_tokens": 1266,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1266
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "permission_denials": [],
+  "total_cost_usd": 1.9098986,
+  "elapsed_seconds": 66.74
+}

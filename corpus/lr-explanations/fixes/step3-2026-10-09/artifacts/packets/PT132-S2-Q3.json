@@ -1,0 +1,78 @@
+{
+ "qid": "PT132-S2-Q3",
+ "type": "Strengthen",
+ "difficulty": "2",
+ "key_db": "B",
+ "stimulus_db": "Medications with an unpleasant taste are generally produced only in tablet, capsule, or soft-gel form. The active ingredient in medication M is a waxy substance that cannot tolerate the heat used to manufacture tablets because it has a low melting point. So, since the company developing M does not have soft-gel manufacturing technology and manufactures all its medications itself, M will most likely be produced in capsule form.",
+ "stem_db": "The conclusion is most strongly supported by the reasoning in the argument if which one of the following is assumed?",
+ "choices_db": {
+  "A": "Medication M can be produced in liquid form.",
+  "B": "Medication M has an unpleasant taste.",
+  "C": "No medication is produced in both capsule and soft-gel form.",
+  "D": "Most medications with a low melting point are produced in soft-gel form.",
+  "E": "Medications in capsule form taste less unpleasant than those in tablet or soft-gel form."
+ },
+ "bank": {
+  "stimulus": "Medications with an unpleasant taste are generally produced only in tablet, capsule, or soft-gel form. The active ingredient in medication M is a waxy substance that cannot tolerate the heat used to manufacture tablets because it has a low melting point. So, since the company developing M does not have soft-gel manufacturing technology and manufactures all its medications itself, M will most likely be produced in capsule form.",
+  "stem": "The conclusion is most strongly supported by the reasoning in the argument if which one of the following is assumed?",
+  "choices": {
+   "A": "Medication M can be produced in liquid form.",
+   "B": "Medication M has an unpleasant taste.",
+   "C": "No medication is produced in both capsule and soft-gel form.",
+   "D": "Most medications with a low melting point are produced in soft-gel form.",
+   "E": "Medications in capsule form taste less unpleasant than those in tablet or soft-gel form."
+  },
+  "key": "B"
+ },
+ "explanation_id": "ac574eb4-f700-4220-91ae-c2fd4783e199",
+ "style": "single",
+ "steps": [
+  {
+   "row_id": "41eff948-d99b-4ede-b6e1-9d513e0de2f8",
+   "position": 0,
+   "label": "Evidence",
+   "body": "Medications with an unpleasant taste are generally produced only in tablet, capsule, or soft-gel form.\nPT → (T or C or SG)\n\nThe active ingredient in medication M is a waxy substance that cannot tolerate the heat used to manufacture tablets because it has a low melting point.\n~T\n\nThe company developing M does not have soft-gel manufacturing technology and manufactures all its medications itself.\n~SG"
+  },
+  {
+   "row_id": "bfdc099c-b881-48a9-a793-c558726d8a4a",
+   "position": 1,
+   "label": "Conclusion",
+   "body": "M will most likely be produced in capsule form.\nC"
+  },
+  {
+   "row_id": "dfe89858-b232-4a53-b9da-12973ec59c10",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "The argument assumes that medication M has an unpleasant taste.\nPT"
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "63ff81ea-97b3-4c18-979e-d96f1723e02f",
+   "letter": "A",
+   "body": "Knowing M can be made as a liquid does not help the conclusion. If anything, it opens a fourth option besides tablet, capsule, and soft-gel. Only the premise about unpleasant-tasting medications limits M to those three forms, and that premise applies only if M tastes unpleasant."
+  },
+  {
+   "row_id": "47fe78f1-cd86-492d-b1cf-bb1b3decbfd2",
+   "letter": "B",
+   "body": "This provides the missing assumption.\nPT"
+  },
+  {
+   "row_id": "d1cd2901-904c-49c5-853a-013b60d5475a",
+   "letter": "C",
+   "body": "This suggests that if a medication is produced in capsule form, then it is not produced in soft-gel form.\nC → ~SG"
+  },
+  {
+   "row_id": "242195a2-95b6-484f-b56e-d57bc5cb503b",
+   "letter": "D",
+   "body": "Other medications are not relevant to this argument."
+  },
+  {
+   "row_id": "ef879f8c-59b5-47d1-a3e0-9cfd7646a061",
+   "letter": "E",
+   "body": "This reverses an inference from the evidence.\nC → ~PT"
+  }
+ ],
+ "known_problem": "Assumption question filed as Strengthen; A note is a non sequitur (liquid form answered with soft-gel); B note's diagram reads \"~PT\" for \"PT\".",
+ "tags": "verdict-only; thin-correct-note; thin-notes; no-prediction; damage; very-short"
+}

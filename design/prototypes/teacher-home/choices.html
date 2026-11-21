@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Teacher Home choices</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&family=Outfit:wght@400;500;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#252b26;--muted:#6f726b;--line:#e4e0d6;--paper:#f6f4ef;--sheet:#fcfbf8;--char:#16191a;--char2:#202526;--on:#efede6;--soft:#ebe7de;--red:#b4232f;--ease:cubic-bezier(.23,1,.32,1)}
+*{box-sizing:border-box;margin:0}
+body{background:var(--paper);color:var(--ink);font-family:Outfit,system-ui,sans-serif;padding:40px 16px 90px}
+.wrap{max-width:1180px;margin:0 auto}
+h1{font:300 40px/1.1 Fraunces,serif;letter-spacing:-.02em;margin-bottom:10px}
+.intro{color:var(--muted);max-width:720px;line-height:1.55;margin-bottom:40px}
+.q{margin-bottom:56px}
+.qh{display:flex;gap:14px;align-items:baseline;margin-bottom:6px}
+.qn{font:400 12px 'JetBrains Mono',monospace;color:var(--muted)}
+.q h2{font:400 26px/1.15 Fraunces,serif;letter-spacing:-.015em}
+.q>p{color:var(--muted);margin-bottom:18px;max-width:760px;line-height:1.5}
+.opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px}
+.opt{background:var(--sheet);border:1px solid var(--line);border-radius:22px;padding:18px;display:flex;flex-direction:column;gap:12px;box-shadow:inset 0 1px 0 #fff,0 1px 2px rgb(37 43 38/.05),0 10px 24px rgb(37 43 38/.05)}
+.opt h3{font-size:15px;font-weight:600}.opt h3 span{font:400 12px 'JetBrains Mono',monospace;color:var(--muted);margin-right:8px}
+.opt p{font-size:13px;color:var(--muted);line-height:1.45}
+.stage{border-radius:16px;background:var(--paper);border:1px solid var(--line);height:220px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;padding:14px}
+.dark{background:radial-gradient(ellipse at 55% 35%,#2b3031,#0c0e0f 72%);border-color:#0c0e0f;color:var(--on)}
+.mono{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.06em;opacity:.7}
+.serif{font-family:Fraunces,serif;font-weight:300}
+/* Q1 heroes */
+.sun{position:absolute;border-radius:99px;background:#050606;box-shadow:0 0 0 1.5px #e9e6de,0 0 28px 6px rgb(255 255 255/.22)}
+.orbit{position:absolute;border:1px solid rgb(255 255 255/.3);border-radius:50%}
+.pill{position:absolute;background:#e9e6de;color:#111;font-size:10px;border-radius:99px;padding:3px 8px;white-space:nowrap}
+.minis{position:absolute;inset:14px;display:grid;grid-template-columns:1.6fr 1fr;grid-template-rows:1fr 1fr;gap:8px}
+.minis>div{border-radius:12px;position:relative;overflow:hidden}
+.minis .m1{grid-row:span 2}
+.gauge{width:90px;height:46px;border-radius:90px 90px 0 0;border:8px solid #3a3f40;border-bottom:0;position:relative}
+.gauge::after{content:"";position:absolute;left:-8px;top:-8px;width:90px;height:46px;border-radius:90px 90px 0 0;border:8px solid var(--on);border-bottom:0;clip-path:polygon(0 0,62% 0,62% 100%,0 100%)}
+/* Q2 follow-up */
+.stack{position:relative;width:230px;height:140px}
+.card{position:absolute;inset:0;border-radius:14px;background:var(--sheet);border:1px solid var(--line);padding:14px;box-shadow:0 8px 18px rgb(37 43 38/.1)}
+.card:nth-child(1){transform:translate(16px,14px) rotate(3.5deg);opacity:.55}
+.card:nth-child(2){transform:translate(8px,7px) rotate(1.6deg);opacity:.8}
+.card:nth-child(3){background:var(--char);color:var(--on);border-color:var(--char)}
+.card small{opacity:.7;font-size:10px}.card strong{display:block;font:400 21px Fraunces,serif;margin:5px 0}
+.chips{display:flex;gap:5px;flex-wrap:wrap}.chips span{font-size:10px;border:1px solid rgb(255 255 255/.3);border-radius:99px;padding:2px 8px}.chips .ok{background:var(--on);color:var(--char)}
+.pipe{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;width:100%;height:100%}
+.col{border-radius:10px;background:var(--sheet);border:1px solid var(--line);padding:8px;display:flex;flex-direction:column;gap:6px}
+.col b{font-size:10px;color:var(--muted);font-weight:500}
+.tok{font-size:10px;border-radius:99px;padding:4px 8px;background:var(--soft)}
+.tok.d{background:var(--char);color:var(--on)}
+.dials{display:flex;gap:16px}
+.dial{width:86px;height:86px;border-radius:99px;position:relative;background:conic-gradient(var(--ink) 0 25%,var(--paper) 25% 26%,var(--ink) 26% 50%,var(--paper) 50% 51%,var(--soft) 51% 75%,var(--paper) 75% 76%,var(--soft) 76% 100%);display:grid;place-items:center}
+.dial::after{content:"";position:absolute;inset:10px;border-radius:99px;background:var(--sheet)}
+.dial span{position:relative;z-index:1;font-size:10px;text-align:center}.dial b{display:block;font:400 15px Fraunces,serif}
+/* Q3 students */
+.sys{position:absolute;inset:0}
+.planet{position:absolute;border-radius:99px;display:grid;place-items:center;font:400 12px Fraunces,serif;background:#e9e6de;color:#111}
+.scards{display:grid;grid-template-columns:1fr 1fr;gap:8px;width:100%}
+.sc{border-radius:12px;background:var(--sheet);border:1px solid var(--line);padding:10px;display:grid;gap:6px}
+.sc b{font-size:12px}.sc small{font-size:10px;color:var(--muted)}
+.bars{display:flex;gap:2px}.bars i{flex:1;height:14px;border-radius:2px;background:var(--ink)}.bars i.x{background:var(--soft)}
+.shelf{display:flex;gap:10px;align-items:flex-end}
+.spine{width:46px;border-radius:10px 10px 6px 6px;background:var(--sheet);border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:8px 0;box-shadow:0 6px 12px rgb(37 43 38/.08)}
+.spine b{writing-mode:vertical-rl;transform:rotate(180deg);font:400 13px Fraunces,serif}
+.spine i{width:8px;height:8px;border-radius:99px;background:var(--ink)}
+.spine.hi{background:var(--char);color:var(--on);border-color:var(--char)}.spine.hi i{background:var(--on)}
+/* Q4 dock */
+.dock{display:flex;gap:6px;background:var(--char2);padding:7px;border-radius:99px;box-shadow:0 12px 30px rgb(0 0 0/.25);align-items:center}
+.dock span{color:var(--on);font-size:12px;padding:9px 13px;border-radius:99px;background:#2c3132;white-space:nowrap}
+.dock span.p{background:var(--on);color:var(--char)}
+.dock .ic{width:40px;height:40px;padding:0;display:grid;place-items:center;font-size:15px}
+.dock .ic.big{width:54px;height:54px;font-size:20px;transform:translateY(-8px);background:#3a4041}
+.dock .field{background:#f3f1ea;color:#666;min-width:190px;font-size:12px}
+.badge{position:absolute;transform:translate(18px,-16px);background:var(--red);color:#fff;font-size:9px;border-radius:99px;padding:1px 5px}
+/* Q5 messages */
+.bub{display:grid;gap:8px;width:100%}
+.b{max-width:80%;padding:9px 12px;border-radius:14px 14px 14px 4px;background:var(--sheet);border:1px solid var(--line);font-size:12px;box-shadow:0 3px 8px rgb(37 43 38/.06)}
+.b small{display:block;font-size:10px;color:var(--muted)}
+.b:nth-child(2){margin-left:10%}.b:nth-child(3){margin-left:20%;opacity:.7}
+.faces{display:flex}.faces span{width:52px;height:52px;border-radius:99px;margin-left:-12px;border:3px solid var(--paper);display:grid;place-items:center;font:400 20px Fraunces,serif;background:var(--soft);position:relative}
+.faces span em{position:absolute;right:-2px;top:-2px;background:var(--red);color:#fff;font:600 9px Outfit;border-radius:99px;padding:1px 5px;font-style:normal}
+.ticker{width:100%;border-radius:12px;background:var(--char);color:var(--on);padding:14px;display:grid;gap:10px}
+.ticker div{display:flex;justify-content:space-between;font-size:12px;border-bottom:1px solid rgb(255 255 255/.1);padding-bottom:8px}
+/* Q6 tactile */
+.tset{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+.t1{padding:16px 18px;border-radius:14px;background:var(--sheet);border:1px solid var(--line);box-shadow:0 1px 2px rgb(37 43 38/.05),0 8px 18px rgb(37 43 38/.06);font-size:13px;transition:.15s var(--ease)}
+.t1:hover{transform:translateY(-2px)}
+.t2{padding:16px 18px;border-radius:16px;background:linear-gradient(#fffefc,#efebe3);border:1px solid #d7d0c3;box-shadow:inset 0 1px 0 #fff,inset 0 -2px 0 rgb(0 0 0/.04),0 2px 2px rgb(0 0 0/.06),0 14px 26px rgb(37 43 38/.14);font-size:13px;transition:.15s var(--ease)}
+.t2:hover{transform:translateY(-3px)}.t2:active{transform:translateY(1px);box-shadow:inset 0 2px 4px rgb(0 0 0/.1)}
+.t3{padding:16px 18px;border-radius:16px;background:linear-gradient(160deg,#2d3334,#121516);color:var(--on);border:1px solid #3b4243;box-shadow:inset 0 1px 0 rgb(255 255 255/.12),0 14px 28px rgb(0 0 0/.3);font-size:13px;transition:.15s var(--ease)}
+.t3:hover{transform:translateY(-3px)}
+footer{color:var(--muted);font-size:13px}
+</style></head><body><div class="wrap">
+<h1>Pick what feels right</h1>
+<p class="intro">Six features, three versions each, all drawn with teacher data. Answer like "1B, 2A, 3C". Mixing is fine ("2A but with 2C's columns"). Nothing here is final.</p>
+
+<section class="q"><div class="qh"><span class="qn">QUESTION 1</span><h2>How many hero instruments?</h2></div>
+<p>You love the eclipse. Should it stay the only big instrument, or share the top with smaller instruments?</p>
+<div class="opts">
+<div class="opt"><h3><span>1A</span>One hero</h3><div class="stage dark"><div class="orbit" style="left:10%;top:90px;width:80%;height:70px;transform:rotate(-8deg)"></div><div class="sun" style="left:44%;top:40px;width:90px;height:90px"></div><span class="pill" style="right:20px;top:120px">3:00 Lydia</span><span class="serif" style="position:absolute;left:16px;bottom:12px;font-size:30px">5 hr 0 min</span></div><p>The eclipse alone across the top, as now. Calm, one focal point.</p></div>
+<div class="opt"><h3><span>1B</span>Hero + two mini instruments</h3><div class="stage" style="padding:0"><div class="minis"><div class="m1 dark"><div class="orbit" style="left:6%;top:70px;width:88%;height:52px;transform:rotate(-8deg)"></div><div class="sun" style="left:38%;top:30px;width:66px;height:66px"></div><span class="serif" style="position:absolute;left:10px;bottom:8px;font-size:20px">5 hr 0 min</span></div><div class="dark" style="display:grid;place-items:center"><div style="text-align:center"><div class="gauge"></div><div class="mono" style="margin-top:6px">FOLLOW-UP 1/3</div></div></div><div class="dark" style="display:grid;place-items:center;padding:10px"><div style="width:100%"><div class="mono">THIS WEEK</div><div style="display:flex;gap:4px;margin-top:8px;align-items:flex-end;height:40px"><i style="flex:1;height:30%;background:#555"></i><i style="flex:1;height:70%;background:#e9e6de"></i><i style="flex:1;height:50%;background:#555"></i><i style="flex:1;height:90%;background:#555"></i><i style="flex:1;height:20%;background:#555"></i></div></div></div></div></div><p>The eclipse stays the biggest piece, with two smaller live instruments beside it: a follow-up gauge and a week-load meter.</p></div>
+<div class="opt"><h3><span>1C</span>One hero that does more</h3><div class="stage dark"><div class="orbit" style="left:8%;top:60px;width:84%;height:110px;transform:rotate(-6deg)"></div><div class="orbit" style="left:20%;top:80px;width:60%;height:70px;transform:rotate(-6deg);opacity:.5"></div><div class="sun" style="left:42%;top:72px;width:72px;height:72px"></div><span class="pill" style="left:18px;top:70px">✓ Celia 9:00</span><span class="pill" style="right:22px;top:140px">3:00 Lydia</span><span class="pill" style="left:46%;top:40px;background:#555;color:#eee">5:00 Consult</span><span class="mono" style="position:absolute;left:14px;bottom:10px">3 FOLLOW-UPS WAITING</span></div><p>Keep one eclipse, but the whole day orbits it: past sessions ticked, next ones placed by time, follow-ups counted inside it.</p></div>
+</div></section>
+
+<section class="q"><div class="qh"><span class="qn">QUESTION 2</span><h2>After-session work: how should it look?</h2></div>
+<p>The three sessions waiting for notes, recap and next work. Today it's a list.</p>
+<div class="opts">
+<div class="opt"><h3><span>2A</span>Card stack</h3><div class="stage"><div class="stack"><div class="card"></div><div class="card"></div><div class="card"><small>Nov 17 · 1 of 3</small><strong>Celia Moreno</strong><div class="chips"><span class="ok">Notes</span><span>Recap</span><span>Next work</span></div></div></div></div><p>One session in your hand at a time; finish it and the next card comes up.</p></div>
+<div class="opt"><h3><span>2B</span>Pipeline</h3><div class="stage"><div class="pipe"><div class="col"><b>Transcript</b><span class="tok">Dakota</span></div><div class="col"><b>Notes</b><span class="tok">Zoë</span></div><div class="col"><b>Recap</b><span class="tok d">Celia</span></div><div class="col"><b>Next work</b></div></div></div><p>Columns for each step; students move left to right as you finish. Shows where everything is stuck.</p></div>
+<div class="opt"><h3><span>2C</span>Step dials</h3><div class="stage"><div class="dials"><div class="dial"><span><b>Celia</b>2 of 4</span></div><div class="dial" style="background:conic-gradient(var(--ink) 0 25%,var(--paper) 25% 26%,var(--soft) 26% 100%)"><span><b>Zoë</b>1 of 4</span></div><div class="dial" style="background:var(--soft)"><span><b>Dakota</b>blocked</span></div></div></div><p>One dial per student, each slice a step. You see who is nearly done at a glance.</p></div>
+</div></section>
+
+<section class="q"><div class="qh"><span class="qn">QUESTION 3</span><h2>Students: how should they appear?</h2></div>
+<p>Today: names with "Active today" text, and a separate results list.</p>
+<div class="opts">
+<div class="opt"><h3><span>3A</span>Student orbit</h3><div class="stage dark"><div class="orbit" style="left:15%;top:40px;width:70%;height:140px"></div><div class="orbit" style="left:30%;top:70px;width:40%;height:80px;opacity:.5"></div><div class="sun" style="left:45%;top:93px;width:34px;height:34px"></div><span class="planet" style="left:28%;top:78px;width:30px;height:30px">L</span><span class="planet" style="left:64%;top:66px;width:26px;height:26px">C</span><span class="planet" style="left:76%;top:120px;width:22px;height:22px;opacity:.7">Z</span><span class="planet" style="left:18%;top:150px;width:18px;height:18px;opacity:.45">D</span><span class="mono" style="position:absolute;left:14px;bottom:10px">CLOSER = SOONER SESSION</span></div><p>A companion to the eclipse: students as planets, closer when their session is sooner, brighter when recently active.</p></div>
+<div class="opt"><h3><span>3B</span>Student cards with score bars</h3><div class="stage"><div class="scards"><div class="sc"><b>Zoë Adams</b><small>PT 156 · LR · 21/26</small><div class="bars"><i></i><i></i><i></i><i class="x"></i><i></i><i></i><i></i><i class="x"></i><i></i><i></i><i></i><i></i></div></div><div class="sc"><b>Ivory Chen</b><small>PT 148 · RC · 19/27</small><div class="bars"><i></i><i class="x"></i><i></i><i></i><i class="x"></i><i></i><i class="x"></i><i></i><i></i><i></i><i class="x"></i><i></i></div></div><div class="sc"><b>Lydia Park</b><small>Session today 3:00</small><div class="bars"><i></i><i></i><i class="x"></i><i></i><i></i><i></i><i></i><i></i><i class="x"></i><i></i><i></i><i></i></div></div><div class="sc"><b>Celia Moreno</b><small>Active today</small><div class="bars"><i></i><i></i><i></i><i></i><i class="x"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div></div></div><p>A small tactile card per student with their latest section as score bars. Results and activity merged.</p></div>
+<div class="opt"><h3><span>3C</span>Student shelf</h3><div class="stage"><div class="shelf"><div class="spine hi" style="height:170px"><i></i><b>Lydia · today</b></div><div class="spine" style="height:150px"><i></i><b>Celia · Thu</b></div><div class="spine" style="height:130px"><i></i><b>Zoë · Fri</b></div><div class="spine" style="height:110px"><b>Dakota</b></div><div class="spine" style="height:100px"><b>Ivory</b></div></div></div><p>Students as book spines on a shelf, taller when their session is sooner; the dot means active today.</p></div>
+</div></section>
+
+<section class="q"><div class="qh"><span class="qn">QUESTION 4</span><h2>The teacher dock</h2></div>
+<p>You want an easy way to get to a question. Three dock styles.</p>
+<div class="opts">
+<div class="opt"><h3><span>4A</span>Labelled pill</h3><div class="stage"><div class="dock"><span class="p">Assign work</span><span>Find a question</span><span>Messages</span><span>Students</span></div></div><p>Like the student dock: words on every button, one lit.</p></div>
+<div class="opt"><h3><span>4B</span>Icon dock that lifts</h3><div class="stage"><div class="dock"><span class="ic">✎</span><span class="ic big">⌕</span><span class="ic">✉<em class="badge">3</em></span><span class="ic">◎</span><span class="ic">＋</span></div></div><p>Compact icons that rise and grow under your pointer, with a label on hover and unread badges.</p></div>
+<div class="opt"><h3><span>4C</span>Dock with a search field</h3><div class="stage"><div class="dock"><span class="p">Assign</span><span class="field">⌕ PT 156 S2 Q14, or a student</span><span>✉ 3</span></div></div><p>The question finder lives in the dock as a field: type a question or a student's name and go.</p></div>
+</div></section>
+
+<section class="q"><div class="qh"><span class="qn">QUESTION 5</span><h2>Messages</h2></div>
+<p>Unread platform messages and email from students or enquiries.</p>
+<div class="opts">
+<div class="opt"><h3><span>5A</span>Floating bubbles</h3><div class="stage"><div class="bub"><div class="b"><small>Celia · 9:40</small>Can we move Friday to 5?</div><div class="b"><small>Ivory · yesterday</small>Here is my PT 156 sheet</div><div class="b"><small>Priya · enquiry</small>Tutoring for February</div></div></div><p>Messages look like messages, stacked as chat bubbles; open one in the dock chat.</p></div>
+<div class="opt"><h3><span>5B</span>Faces with badges</h3><div class="stage"><div class="faces"><span>C<em>1</em></span><span>I<em>1</em></span><span>P<em>new</em></span></div></div><p>Just who is waiting, as faces with counts. Tap a face to open the conversation.</p></div>
+<div class="opt"><h3><span>5C</span>Dark ticker</h3><div class="stage"><div class="ticker"><div><span>Celia</span><span style="opacity:.6">Move Friday to 5?</span></div><div><span>Ivory</span><span style="opacity:.6">PT 156 sheet</span></div><div><span>Priya · enquiry</span><span style="opacity:.6">February</span></div></div></div><p>A compact dark instrument panel listing who wrote and the gist, matching the eclipse.</p></div>
+</div></section>
+
+<section class="q"><div class="qh"><span class="qn">QUESTION 6</span><h2>How tactile?</h2></div>
+<p>Hover each one.</p>
+<div class="opts">
+<div class="opt"><h3><span>6A</span>Paper</h3><div class="stage"><div class="tset"><span class="t1">Open follow-up</span><span class="t1">Celia Moreno</span></div></div><p>Light sheets with a soft shadow. Subtle, closest to today.</p></div>
+<div class="opt"><h3><span>6B</span>Pressed object</h3><div class="stage"><div class="tset"><span class="t2">Open follow-up</span><span class="t2">Celia Moreno</span></div></div><p>Lit top edge, deeper shadow, presses in when clicked. Feels like a physical button or tile.</p></div>
+<div class="opt"><h3><span>6C</span>Dark glass</h3><div class="stage"><div class="tset"><span class="t3">Open follow-up</span><span class="t3">Celia Moreno</span></div></div><p>Dark pieces with a lit edge, the same material as the eclipse, set on the light page.</p></div>
+</div></section>
+<footer>Choice board · 2026-11-18 · sample data</footer>
+</div></body></html>

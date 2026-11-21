@@ -1,0 +1,25 @@
+{
+  "status": "failed",
+  "mode": "review",
+  "provider": "gemini",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "gemini",
+    "builder": "codex",
+    "inspector": "gemini"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-my-work-20261026",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-my-work-20261026\\docs\\plans\\my-work-scroll-filters-gemini-review.md",
+  "plan_sha256": "2dd382c13692272ae39eee1a8b207fcf9fc8437d58046320c44e4d7d29357404",
+  "requested_model": "gemini-4-argon",
+  "requested_effort": "high",
+  "base": null,
+  "snapshot": null,
+  "previous": null,
+  "started_at": 1793127378.522748,
+  "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\design\\reviews\\my-work-taste-v2-20261027\\gemini-argon-high\\geminex-kd_90xo3",
+  "cli_version": "antigravity-ls (http://127.0.0.1:64882)",
+  "error": "timed out",
+  "elapsed_seconds": 603.44
+}

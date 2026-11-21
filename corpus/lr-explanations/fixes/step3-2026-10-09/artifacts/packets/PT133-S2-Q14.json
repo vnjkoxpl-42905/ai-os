@@ -1,0 +1,66 @@
+{
+ "qid": "PT133-S2-Q14",
+ "type": "Must Be True",
+ "difficulty": "5",
+ "key_db": "C",
+ "stimulus_db": "Expert: What criteria distinguish addictive substances from nonaddictive ones? Some have suggested that any substance that at least some habitual users can cease to use is nonaddictive. However, if this is taken to be the sole criterion of nonaddictiveness, some substances that most medical experts classify as prime examples of addictive substances would be properly deemed nonaddictive. Any adequate set of criteria for determining a substance's addictiveness must embody the view, held by these medical experts, that a substance is addictive only if withdrawal from its habitual use causes most users extreme psychological and physiological difficulty.",
+ "stem_db": "Which one of the following can be properly inferred from the expert's statements?",
+ "choices_db": {
+  "A": "If a person experiences extreme psychological and physiological difficulty in ceasing to use a substance habitually, that substance is addictive.",
+  "B": "Fewer substances would be deemed addictive than are deemed so at present if an adequate definition of \"addictive\" were employed.",
+  "C": "A substance that some habitual users can cease to use with little or no psychological or physiological difficulty is addictive only if that is not true for most habitual users.",
+  "D": "A chemical substance habitually used by a person throughout life without significant psychological or physiological difficulty is nonaddictive.",
+  "E": "\"Addiction\" is a term that is impossible to define with precision."
+ },
+ "bank": {
+  "stimulus": "Expert: What criteria distinguish addictive substances from nonaddictive ones? Some have suggested that any substance that at least some habitual users can cease to use is nonaddictive. However, if this is taken to be the sole criterion of nonaddictiveness, some substances that most medical experts classify as prime examples of addictive substances would be properly deemed nonaddictive. Any adequate set of criteria for determining a substance's addictiveness must embody the view, held by these medical experts, that a substance is addictive only if withdrawal from its habitual use causes most users extreme psychological and physiological difficulty.",
+  "stem": "Which one of the following can be properly inferred from the expert's statements?",
+  "choices": {
+   "A": "If a person experiences extreme psychological and physiological difficulty in ceasing to use a substance habitually, that substance is addictive.",
+   "B": "Fewer substances would be deemed addictive than are deemed so at present if an adequate definition of \"addictive\" were employed.",
+   "C": "A substance that some habitual users can cease to use with little or no psychological or physiological difficulty is addictive only if that is not true for most habitual users.",
+   "D": "A chemical substance habitually used by a person throughout life without significant psychological or physiological difficulty is nonaddictive.",
+   "E": "\"Addiction\" is a term that is impossible to define with precision."
+  },
+  "key": "C"
+ },
+ "explanation_id": "92c75e79-e4b4-40b3-a28b-6e2b1286aeb1",
+ "style": "single",
+ "steps": [
+  {
+   "row_id": "af38ad5c-9a00-4b48-851c-5ffe93d4f3ed",
+   "position": 0,
+   "label": "Given",
+   "body": "Some have suggested that any substance that at least some habitual users can cease to use is nonaddictive. However, if this is taken to be the sole criterion of nonaddictiveness, some substances that most medical experts classify as prime examples of addictive substances would be properly deemed nonaddictive. A substance is addictive only if withdrawal from its habitual use causes most users extreme psychological and physiological difficulty."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "2d2fe406-e5ce-4583-840d-a52161e420b4",
+   "letter": "A",
+   "body": "This reverses the third statement. WCD → A"
+  },
+  {
+   "row_id": "90fbac33-61e9-4516-997e-67dbee871ef4",
+   "letter": "B",
+   "body": "The statements do not indicate how many substances are deemed to be addictive at present."
+  },
+  {
+   "row_id": "c4dc1647-96ad-4328-9d6a-b8b4a0bdbb98",
+   "letter": "C",
+   "body": "This rephrases the third statement. A → WCD"
+  },
+  {
+   "row_id": "97165d62-07e7-4c1c-8861-fd500ca40145",
+   "letter": "D",
+   "body": "The issue is not substance use, but rather the withdrawal from the use of that substance."
+  },
+  {
+   "row_id": "de07c050-44d2-4d44-bdb8-13e62d7a2a29",
+   "letter": "E",
+   "body": "That there is a disagreement about the definition of the term “addiction” does not mean that it is impossible to define with precision."
+  }
+ ],
+ "known_problem": "d5 conditional inference; C note is one line (\"rephrases the third statement\") and never shows why \"some can cease\" does not make it nonaddictive.",
+ "tags": "short-breakdown; verdict-only; thin-correct-note; thin-notes; no-prediction; damage; very-short"
+}

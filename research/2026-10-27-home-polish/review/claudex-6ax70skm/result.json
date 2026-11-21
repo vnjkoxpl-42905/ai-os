@@ -1,0 +1,124 @@
+{
+  "status": "completed",
+  "mode": "review",
+  "provider": "claude",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "claude",
+    "builder": "codex",
+    "inspector": "claude"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-home-polish-20261027",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os\\brainstorms\\2026-10-27-home-polish.plan.md",
+  "plan_sha256": "2d0771969f81c4c2057e99f1ba07a7fe3f3ebefdb3590535e803fe959b159a99",
+  "requested_model": null,
+  "requested_effort": null,
+  "base": null,
+  "snapshot": null,
+  "previous": null,
+  "started_at": 1793101388.863817,
+  "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\research\\2026-10-27-home-polish\\review\\claudex-6ax70skm",
+  "cli_version": "2.1.309 (Claude Code)",
+  "executable": [
+    "C:\\Users\\Joshu\\.local\\bin\\claude.EXE"
+  ],
+  "exit_code": 0,
+  "session_id": "d3480198-5573-49f5-9e73-900983dc079e",
+  "response": {
+    "verdict": "REVISE",
+    "summary": "The plan is mostly sound and its guardrails are good. A few gaps would let the build ship wrong behavior. The \"View all assigned work\" link is not gated by access. The teacher preview enrichment has no payload or ordering constraints. The plan treats Home's \"loaded\" state loosely. Its reconciliation baseline is not what the checkout actually contains. I only did a partial source review, and I could not inspect the old role-home worktree.",
+    "findings": [
+      {
+        "id": "F1",
+        "severity": "medium",
+        "path": "src/lib/destinationAccess.ts:39-43",
+        "evidence": "The plan says the \"View all assigned work\" route is the canonical one \"verified in source\". The source shows /my-work/to-do and /my-work/completed are tab entries gated by has_classroom_access and readingCenterEligible, and tabAccess() can return 'locked'. Defaults also differ: Tier 1 and admin land on /my-work/notes, while Tier 3 lands on /my-work/to-do. A hard-coded link can send a student whose assignments came from a different grant path to a locked tab.",
+        "fix": "Derive the destination from DESTINATIONS['my-work'].tabs plus tabAccess() for the current permissions. Render the link only when access is 'open'. Add a test covering an open case and a locked case, including readingCenterChecking."
+      },
+      {
+        "id": "F2",
+        "severity": "medium",
+        "path": "src/hooks/useInbox.ts:184-204",
+        "evidence": "The plan enriches the read-only unread scan with the newest incoming body, sender and time. That scan currently selects only id, conversation_id and created_at, and pages 500 at a time from the oldest read timestamp across all conversations. Adding body to every unread message since the oldest read timestamp can pull large payloads for an old or never-read thread. The scan is ordered ascending, so \"newest\" must be computed explicitly, and ties on created_at are broken by id. Math.min over an empty lastReadMap gives Infinity, and new Date(Infinity).toISOString() throws a RangeError. The plan does not say whether that case is reachable here.",
+        "fix": "Keep the scan lean (ids and timestamps). Fetch the preview body only for the newest unread incoming message per conversation, or use a bounded per-conversation query. Select the newest by (created_at, id). Add tests for ties, multiple unread messages per conversation, a viewer-authored last message, and the empty read map."
+      },
+      {
+        "id": "F3",
+        "severity": "medium",
+        "path": "src/hooks/useInbox.ts:244-248",
+        "evidence": "The plan exposes \"loaded\" from the current successful conversation-owner state. The hook sets setError(null), setConversationOwner(viewerId) and setConversations together only on a full success. After a failed refetch, the previous owner's data stays in state with error set, and the old unread/preview data can still render. The plan's \"stale\" state is not defined against this. A user switch could also briefly show a previous owner's data if loaded is not tied to the current user id.",
+        "fix": "Define loaded as conversationOwner === currentUser.id && !loading. Keep the error and stale state explicit, and label stale previews as stale. Add a regression test for a failed refetch after a success, and for a user switch."
+      },
+      {
+        "id": "F4",
+        "severity": "low",
+        "path": "src/components/classroom/home/ClassroomHomeView.tsx:135",
+        "evidence": "The checkout already contains src/components/classroom/home/ with an existing entrance and matchMedia animation (home.css:1768 mentions a shared entrance). The plan says to \"remove the automatic page entrance\" and port from the old worktree, but does not list which current-main Home files are replaced and which are kept. Overwriting from the old worktree could drop main-only fixes. The existing useClassroomMotion hooks and test-days-animated sessionStorage logic would be left orphaned or duplicated.",
+        "fix": "Add a per-file reconcile table (current main vs old worktree) before copying. Reuse the existing useClassroomMotion hooks rather than ad-hoc gsap. Remove or keep the sessionStorage key deliberately, and test the result."
+      },
+      {
+        "id": "F5",
+        "severity": "low",
+        "path": "plan: Acceptance and proof",
+        "evidence": "The plan lists tests to run but names no regression test for the student-side counts coupling or the featured-exclusion rule after refresh. These are stated requirements: no repeated exact key, and counts coupled to the rendered model.",
+        "fix": "Add a focused test that the featured item is excluded from the remaining list by its stable key, and that the counts equal the rendered rows after a refetch changes the featured item."
+      }
+    ],
+    "coverage": [
+      "Read the plan.",
+      "Listed the Home directory in the build checkout.",
+      "Read src/lib/myWorkNotesNavigation.ts.",
+      "Grepped for my-work and assigned-work routes, and read the destinationAccess.ts tab matches.",
+      "Read useInbox.ts lines 170-260, covering the unread scan and the owner and error state.",
+      "Grepped for gsap usage and Home motion code."
+    ],
+    "limitations": [
+      "Did not open the old role-home worktree, so the plan's claims about its dirty changes are unverified.",
+      "Did not read ClassroomHomeView, useClassroomHome or the permission hooks in full.",
+      "Did not check the useUserPermissions additive fields against upstream.",
+      "Did not read the design docs or the tasteskill scripts.",
+      "Ran no tests, builds or visual checks."
+    ]
+  },
+  "usage": {
+    "input_tokens": 12,
+    "cache_creation_input_tokens": 13008,
+    "cache_read_input_tokens": 66488,
+    "output_tokens": 4022,
+    "output_tokens_details": {
+      "thinking_tokens": 455
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 13008,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2081,
+        "cache_read_input_tokens": 15656,
+        "cache_creation_input_tokens": 1833,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1833
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "observed_models": [
+    "claude-sonnet-5-5"
+  ],
+  "permission_denials": [],
+  "total_cost_usd": 0.09892480000000001,
+  "elapsed_seconds": 52.21
+}

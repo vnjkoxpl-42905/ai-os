@@ -1,0 +1,78 @@
+{
+ "qid": "PT157-S3-Q9",
+ "type": "Flaw",
+ "difficulty": "2",
+ "key_db": "D",
+ "stimulus_db": "Most lawyers hold that violations of the rights of those who possess sites on the web are best prevented using copyright law. Yet many of the words used to describe such sites evoke ideas that are usually associated with real estate: for example, the word \"site\" itself and the term \"visiting\" as applied to sites. The common law of trespass usually applies to cases of encroachment on real estate. Thus, it is reasonable to extend that law to protect against encroachments on property in cyberspace.",
+ "stem_db": "The reasoning in the argument is most vulnerable to criticism on the grounds that the argument",
+ "choices_db": {
+  "A": "fails to provide adequate evidence that property in cyberspace is widely considered to be real estate",
+  "B": "has a premise that presupposes what the argument attempts to show in the conclusion",
+  "C": "itself provides significant evidence against the conclusion that it draws",
+  "D": "fails to provide evidence that the similarities that constitute the analogy are anything but merely verbal",
+  "E": "defends a view solely on the grounds that the view is held by many experts"
+ },
+ "bank": {
+  "stimulus": "Most lawyers hold that violations of the rights of those\n who possess sites on the web are best prevented using\n copyright law. Yet many of the words used to describe\n such sites evoke ideas that are usually associated with\n real estate: for example, the word “site” itself and the\n term “visiting” as applied to sites. The common law of\n trespass usually applies to cases of encroachment on real\n estate. Thus, it is reasonable to extend that law to protect\n against encroachments on property in cyberspace.",
+  "stem": "The reasoning in the argument is most vulnerable to\n criticism on the grounds that the argument",
+  "choices": {
+   "A": "fails to provide adequate evidence that property in cyberspace is widely considered to be real estate",
+   "B": "has a premise that presupposes what the argument attempts to show in the conclusion",
+   "C": "itself provides significant evidence against the conclusion that it draws",
+   "D": "fails to provide evidence that the similarities that constitute the analogy are anything but merely verbal",
+   "E": "defends a view solely on the grounds that the view is held by many experts"
+  },
+  "key": "D"
+ },
+ "explanation_id": "90d0a0ad-1274-49b4-885f-bdeb59333623",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "1730e021-b342-465e-9476-c1b1bd912fff",
+   "position": 0,
+   "label": "Evidence",
+   "body": "Many of the words used to describe web sites evoke ideas that are usually associated with real estate. The common law of trespass usually applies to cases of encroachment on real estate."
+  },
+  {
+   "row_id": "ac48e875-cca5-4578-ae7b-9b42343ca9d0",
+   "position": 1,
+   "label": "Conclusion",
+   "body": "It is reasonable to extend that law [trespass] to protect against encroachments on property in cyberspace."
+  },
+  {
+   "row_id": "dbf4f7ad-6583-4e0a-a7da-bcc3bbe42768",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "The evidence notes a similarity between web sites and real estate. Many of the same words, like \"site\" and \"visiting\" are used when discussing both web sites and real estate. But then the argument gets cheeky. It uses this one similarity, which is pretty superficial, as a basis for claiming that web sites and real estate are similar in another way: the same types of laws should apply to both. When two types of activities happen to use similar terminology, does that necessarily mean that the same types of laws should apply to both? If I drive a car and also use Google Drive on my computer, do I have to obey local traffic laws while sitting at my desk using my laptop? If so, I guess I should put on a seatbelt and get rid of this glass of wine..."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "41e3ba86-2046-4d3c-9b7a-714a6e694947",
+   "letter": "A",
+   "body": "The argument does not claim cyberspace property is \"widely considered to be real estate.\" It draws an analogy based on shared terminology. This answer addresses a stronger claim than the argument makes."
+  },
+  {
+   "row_id": "6f96cb51-1680-43fd-8f72-8af700bdecd4",
+   "letter": "B",
+   "body": "No premise presupposes the conclusion. The premises about shared terminology and trespass law's real estate application are factual claims independent of whether trespass law should apply to cyberspace. The flaw is a weak analogy, not circular logic."
+  },
+  {
+   "row_id": "fe327f4b-d92b-4be6-96ac-a884624d6bdb",
+   "letter": "C",
+   "body": "The evidence does not contradict the conclusion — it is just weak. Shared terminology provides some minimal support for the legal analogy, not evidence against it. The problem is insufficiency, not self-contradiction."
+  },
+  {
+   "row_id": "a7470bc8-e738-4186-b44e-458bb387b295",
+   "letter": "D",
+   "body": "This precisely identifies the flaw. The argument's analogy between web sites and real estate rests entirely on shared vocabulary. No evidence is provided that web sites and real estate share substantive characteristics relevant to legal treatment — such as exclusive possession, physical boundaries, or interference with use. The answer correctly states that the argument fails to show the similarities go beyond verbal coincidence."
+  },
+  {
+   "row_id": "d4be0d8a-be23-47f8-ae49-c2fba22756a1",
+   "letter": "E",
+   "body": "The argument challenges the lawyers' view (copyright law) in favor of trespass law. It does not defer to expert opinion — it contradicts it. This answer reverses the argument's relationship to authority."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (7.8 em-dashes per 1k words; wrong-answer notes average 33.0 words).",
+ "tags": "no-prediction; emdash-heavy; pt157-158-register"
+}

@@ -5,6 +5,14 @@ description: "Daily: detect past consultations with Gemini notes and draft (not 
 
 You are Joshua's email drafting partner for aspiringattorneys.com (LSAT tutoring). Each run, find consultations that just happened and draft a personalized follow-up email from the meeting transcript, for Joshua to review. NEVER send. Only create Gmail drafts.
 
+STEP 0: Preflight (every run, before anything else). Confirm each source this skill reads with one cheap read:
+```bash
+gws gmail users getProfile --params '{"userId":"me","fields":"emailAddress"}'
+gws calendar calendars get --params '{"calendarId":"primary","fields":"id"}'
+gws drive about get --params '{"fields":"user(emailAddress)"}'
+```
+If any exits non-zero or prints an `"error"` object, stop the run. Never report "no consultations ready" after a failed read. Print: "Follow-up sweep stopped: <Gmail|Calendar|Drive> preflight failed (<error code and message>). Fix: run `gws auth login` in your own terminal (it opens a browser), then `gws auth status` to confirm, and rerun. If a 401 persists, check that GOOGLE_WORKSPACE_CLI_CONFIG_DIR is unset or points at ~/.config/gws."
+
 STEP 1 — Read voice + template (required):
 - Read C:/Users/Joshu/dev/ai-os/wiki/CONSULTATION-FOLLOW-UP-TEMPLATE.md (the real template, rebuilt 2026-09-11 from sent mail; the old PDF and archive paths are retired)
 - Read C:/Users/Joshu/dev/ai-os/wiki/teaching-voice.md
@@ -16,8 +24,12 @@ STEP 3 — Read the transcript. For each event that has Gemini notes, use `gws d
 
 STEP 4 — Check it isn't already handled. Use `gws gmail users messages list --params '{"userId":"me","q":"<email>"}'` to find any existing thread with that attendee. If a next-steps / follow-up email has already been sent to them since the consultation date, SKIP (one follow-up per consultation). If they already booked and paid, draft the short onboarding note from the template instead of the sales-y next-steps email.
 
+Before STEP 5, inspect all existing drafts through `gws` (paginate). Match the stable consultation event ID + normalized recipient + workflow (`consultation-followup`); corroborate with thread ID and the ledger. Reuse a matching unsent draft ID rather than creating another. Update only that draft when revision is authorized; multiple matches require a conflict report, not deletion. Failed lookup blocks creation. Record event ID, thread ID, draft ID and workflow in `wiki/send-ledger.md`, and read the draft back after a write. A repeat sweep must retain one matching draft.
+
+STEP 4b: Link check (before drafting, fail closed). Run `python scripts/check_links.py --live` from this skill's folder (add `--tier higher` only when Joshua chose that tier). It reads the price/link pairs from wiki/CONSULTATION-FOLLOW-UP-TEMPLATE.md and fails on a placeholder, a malformed link, a missing or duplicated price, or a dead Cal.com link. On FAIL, stop: draft nothing and report the failing line. Show any WARN line in the report. After writing each draft body to a scratch file, run it again with `--draft <file>`; it must print "draft matched" (every price in the draft carries exactly its template link) before the Gmail draft is created. Stripe Payment Links answer 200 for any id, so the script cannot prove a Stripe link is live or charges the right amount; that needs the Stripe dashboard or API.
+
 STEP 5 — Draft using wiki/CONSULTATION-FOLLOW-UP-TEMPLATE.md. Default rate tier $45/$40/$35. Include the 7Sage line only if the notes say they use 7Sage. Greeting "Hi [First name],". Sign "Best,
 
 Joshua". Create it with `gws gmail users drafts create` (raw RFC822, base64url), replying in the existing thread (threadId + In-Reply-To) if one exists, otherwise a new draft with subject "Next steps + tutoring options". Do NOT send.
 
-STEP 6 — Report: for each consultation, the student's name/email, the detail you mirrored, which variant you used, and that a draft is waiting in Gmail for review. If no consultations were ready, say so in one line. Flag anything uncertain (e.g. couldn't tell if they already booked) so Joshua can check before sending.
+STEP 6 — Report: for each consultation, the student's name/email, the detail you mirrored, which variant you used, and that a draft is waiting in Gmail for review. If no consultations were ready, say so in one line. Flag anything uncertain (e.g. couldn't tell if they already booked) so Joshua can check before sending. Include the link-check result (PASS, plus any WARN). End every report, including a "none ready" report, with a count line from the actual reads, with absolute dates: for example "Checked: Calendar 3 of 3 Consultation events 2026-10-10 to 2026-10-14; Drive 2 of 2 Gemini notes; Gmail 3 of 3 attendee threads." A report without this line is not finished.

@@ -1,0 +1,84 @@
+{
+ "qid": "PT157-S3-Q10",
+ "type": "Strengthen EXCEPT",
+ "difficulty": "1",
+ "key_db": "D",
+ "stimulus_db": "Journalist: Contrary to popular opinion, it is more dangerous for an individual to drive during the day than during the night. A recent study found that in each of the last ten years, the number of traffic accidents that resulted in death was greater during the day than during the night.",
+ "stem_db": "Each of the following, if true, helps to strengthen the argument except:",
+ "choices_db": {
+  "A": "Only during the day are there more unsafe than safe vehicles on the road.",
+  "B": "There is decreased law enforcement presence during the day.",
+  "C": "Persons drive more cautiously during the night than during the day.",
+  "D": "The number of travelers per vehicle has increased over the past ten years.",
+  "E": "Persons drive faster during the day than during the night."
+ },
+ "bank": {
+  "stimulus": "Journalist: Contrary to popular opinion, it is more\n dangerous for an individual to drive during the\n day than during the night. A recent study found\n that in each of the last ten years, the number of\n traffic accidents that resulted in death was greater\n during the day than during the night.",
+  "stem": "Each of the following, if true, helps to strengthen the\n argument except:",
+  "choices": {
+   "A": "Only during the day are there more unsafe than safe vehicles on the road.",
+   "B": "There is decreased law enforcement presence during the day.",
+   "C": "Persons drive more cautiously during the night than during the day.",
+   "D": "The number of travelers per vehicle has increased over the past ten years.",
+   "E": "Persons drive faster during the day than during the night."
+  },
+  "key": "D"
+ },
+ "explanation_id": "14f5ef4b-7d0b-461a-b7fb-4506fb6195ad",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "5fc308d8-2a0d-47a2-ae89-564fae597fa5",
+   "position": 0,
+   "label": "Evidence",
+   "body": "A recent study found that in each of the last ten years, the number of traffic accidents that resulted in death was greater during the day than during the night."
+  },
+  {
+   "row_id": "0ca16b0c-4c0d-40ea-a7f6-eb13013a44ee",
+   "position": 1,
+   "label": "Conclusion",
+   "body": "It is more dangerous for an individual to drive during the day than during the night."
+  },
+  {
+   "row_id": "a6cc6932-a37b-44fd-8e4c-ab06d99aef6d",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "The evidence contains a comparison between the number of fatal traffic accidents that occur during the day and the number that occur at night. The evidence states that more fatal accidents occur during the day, but it's important to notice that this is only a correlation. Nothing in the evidence indicates what is causing more fatal accidents to occur during the day. The evidence claims that it is more dangerous for \"an individual\"—meaning anyone—to drive during the day. To reach that conclusion, we need make an assumption about whatever factors are causing more fatal accidents to occur during daytime. We need to assume that those factors will affect everyone who drives during the day. But we haven't been told what is actually causing more fatal accidents to occur during daytime, so we can't be sure that those factors will affect all individuals who drive during the day."
+  },
+  {
+   "row_id": "d5fd6170-1471-444c-b0a0-ed19be5c4538",
+   "position": 3,
+   "label": "Goal",
+   "body": "An answer choice that strengthens the argument might describe a situation which makes driving more dangerous for everyone, but only occurs during the day, not at night. Since this is an EXCEPT question, we will expect four of the answers to strengthen the argument. The one correct answer will not strengthen the argument. It will either weaken the argument or—more likely—not have any clear impact on the argument."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "a9ad1aad-ad09-4492-9333-23ced104dce8",
+   "letter": "A",
+   "body": "More unsafe vehicles on the road only during the day creates a daytime-specific hazard, making daytime driving more dangerous for every individual. This strengthens the argument."
+  },
+  {
+   "row_id": "1351a44c-5b03-490f-8c56-5315ac1401ea",
+   "letter": "B",
+   "body": "Fewer police during the day means more dangerous driving behavior during daylight hours. With less enforcement, risky driving goes unchecked, increasing per-driver danger. This strengthens the argument."
+  },
+  {
+   "row_id": "5b35563d-8f14-485f-b9d9-90cf2fec3c8d",
+   "letter": "C",
+   "body": "More cautious nighttime driving reduces per-driver risk at night relative to during the day. This differential in driving behavior strengthens the claim that daytime driving is more dangerous."
+  },
+  {
+   "row_id": "df83e2aa-29d5-49f2-b7b5-b2dd4836b084",
+   "letter": "D",
+   "body": "This does not strengthen the argument. More travelers per vehicle is a general trend with no stated difference between day and night. More passengers could increase fatalities per accident, but if this applies equally to both time periods, it does not make daytime driving comparatively more dangerous. Without a day-specific component, this answer has no differential impact on the argument's conclusion."
+  },
+  {
+   "row_id": "5a57d2c0-480d-498d-8004-5e02b9025d8c",
+   "letter": "E",
+   "body": "Faster daytime driving means more severe crashes during the day. Higher speeds increase stopping distances, impact forces, and reduce reaction time. This is a clear daytime-specific risk factor that strengthens the argument."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (9.0 em-dashes per 1k words; wrong-answer notes average 29.2 words).",
+ "tags": "emdash-heavy; pt157-158-register"
+}

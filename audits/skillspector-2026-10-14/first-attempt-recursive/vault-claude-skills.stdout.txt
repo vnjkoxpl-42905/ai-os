@@ -1,0 +1,143 @@
+Multi-skill directory detected: 114 skills found
+
+  [1/114] Scanning accommodations-email (accommodations-email/)
+         Score: 33/100 (MEDIUM)
+
+  [2/114] Scanning ai-prompt-research (ai-prompt-research/)
+         Score: 0/100 (LOW)
+
+  [3/114] Scanning ai-visibility-audit (ai-visibility-audit/)
+         Score: 0/100 (LOW)
+
+  [4/114] Scanning api-and-interface-design (api-and-interface-design/)
+         Score: 20/100 (LOW)
+
+  [5/114] Scanning bootcamp-builder (bootcamp-builder/)
+         Score: 7/100 (LOW)
+
+  [6/114] Scanning browser-testing-with-devtools 
+(browser-testing-with-devtools/)
+         Score: 65/100 (HIGH)
+
+  [7/114] Scanning chief-of-staff (chief-of-staff/)
+         Score: 0/100 (LOW)
+
+  [8/114] Scanning ci-cd-and-automation (ci-cd-and-automation/)
+         Score: 27/100 (MEDIUM)
+
+  [9/114] Scanning claudex-loop (claudex-loop/)
+         Score: 45/100 (MEDIUM)
+
+  [10/114] Scanning claudex-route (claudex-route/)
+         Score: 0/100 (LOW)
+
+  [11/114] Scanning code-review-and-quality (code-review-and-quality/)
+         Score: 0/100 (LOW)
+
+  [12/114] Scanning code-simplification (code-simplification/)
+         Score: 21/100 (MEDIUM)
+
+  [13/114] Scanning codex-build (codex-build/)
+         Score: 0/100 (LOW)
+
+  [14/114] Scanning codex-review (codex-review/)
+         Score: 0/100 (LOW)
+
+  [15/114] Scanning competitive-landscape (competitive-landscape/)
+         Score: 0/100 (LOW)
+
+  [16/114] Scanning competitor-analysis (competitor-analysis/)
+         Score: 0/100 (LOW)
+
+  [17/114] Scanning constraint-driven-development 
+(constraint-driven-development/)
+         Score: 37/100 (MEDIUM)
+
+  [18/114] Scanning context-engineering (context-engineering/)
+         Score: 33/100 (MEDIUM)
+
+  [19/114] Scanning debugging-and-error-recovery 
+(debugging-and-error-recovery/)
+         Score: 0/100 (LOW)
+
+  [20/114] Scanning deprecation-and-migration (deprecation-and-migration/)
+         Score: 7/100 (LOW)
+
+  [21/114] Scanning documentation-and-adrs (documentation-and-adrs/)
+         Score: 0/100 (LOW)
+
+  [22/114] Scanning domain-modeling (domain-modeling/)
+         Score: 0/100 (LOW)
+
+  [23/114] Scanning doubt-driven-development (doubt-driven-development/)
+         Score: 22/100 (MEDIUM)
+
+  [24/114] Scanning eas-app-stores (eas-app-stores/)
+         Score: 30/100 (MEDIUM)
+
+  [25/114] Scanning eas-hosting (eas-hosting/)
+         Score: 22/100 (MEDIUM)
+
+  [26/114] Scanning eas-observe (eas-observe/)
+         Score: 12/100 (LOW)
+
+  [27/114] Scanning eas-simulator (eas-simulator/)
+         Score: 100/100 (CRITICAL)
+
+  [28/114] Scanning eas-update (eas-update/)
+         Score: 12/100 (LOW)
+
+  [29/114] Scanning eas-update-insights (eas-update-insights/)
+         Score: 7/100 (LOW)
+
+  [30/114] Scanning eas-workflows (eas-workflows/)
+         Score: 43/100 (MEDIUM)
+
+  [31/114] Scanning embedded-captions (embedded-captions/)
+         Score: 100/100 (CRITICAL)
+
+  [32/114] Scanning expo-animation (expo-animation/)
+         Score: 12/100 (LOW)
+
+
+═══ Multi-Skill Summary ═══
+
+  Skill                          Score    Severity     Findings   Execution 
+  ────────────────────────────── ──────── ──────────── ────────── ──────────
+  accommodations-email           33       MEDIUM       2          successful
+  ai-prompt-research             0        LOW          0          successful
+  ai-visibility-audit            0        LOW          0          successful
+  api-and-interface-design       20       LOW          1          successful
+  bootcamp-builder               7        LOW          1          successful
+  browser-testing-with-devtools  65       HIGH         4          successful
+  chief-of-staff                 0        LOW          0          successful
+  ci-cd-and-automation           27       MEDIUM       5          successful
+  claudex-loop                   45       MEDIUM       8          successful
+  claudex-route                  0        LOW          0          successful
+  code-review-and-quality        0        LOW          0          successful
+  code-simplification            21       MEDIUM       2          successful
+  codex-build                    0        LOW          0          successful
+  codex-review                   0        LOW          0          successful
+  competitive-landscape          0        LOW          0          successful
+  competitor-analysis            0        LOW          0          successful
+  constraint-driven-development  37       MEDIUM       1          successful
+  context-engineering            33       MEDIUM       4          successful
+  debugging-and-error-recovery   0        LOW          0          successful
+  deprecation-and-migration      7        LOW          1          successful
+  documentation-and-adrs         0        LOW          0          successful
+  domain-modeling                0        LOW          0          successful
+  doubt-driven-development       22       MEDIUM       1          successful
+  eas-app-stores                 30       MEDIUM       6          successful
+  eas-hosting                    22       MEDIUM       7          successful
+  eas-observe                    12       LOW          3          successful
+  eas-simulator                  100      CRITICAL     15         successful
+  eas-update                     12       LOW          4          successful
+  eas-update-insights            7        LOW          1          successful
+  eas-workflows                  43       MEDIUM       5          successful
+  embedded-captions              100      CRITICAL     38         successful
+  expo-animation                 12       LOW          2          successful
+  <unscanned>                    —        —            82         partial   
+Recursive scan incomplete: one or more skills were omitted after an aggregate 
+safety limit or skipped as symlinks.
+Combined report saved to: 
+audits\skillspector-2026-10-14\vault-claude-skills.json

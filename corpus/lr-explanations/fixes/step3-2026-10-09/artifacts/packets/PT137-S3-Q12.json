@@ -1,0 +1,66 @@
+{
+ "qid": "PT137-S3-Q12",
+ "type": "Must Be True",
+ "difficulty": "3",
+ "key_db": "E",
+ "stimulus_db": "Many nurseries sell fruit trees that they label \"miniature.\" Not all nurseries, however, use this term in the same way. While some nurseries label any nectarine trees of the Stark Sweet Melody variety as \"miniature,\" for example, others do not. One thing that is clear is that if a variety of fruit tree is not suitable for growing in a tub or a pot, no tree of that variety can be correctly labeled \"miniature.\"",
+ "stem_db": "Which one of the following can be properly inferred from the information above?",
+ "choices_db": {
+  "A": "Most nurseries mislabel at least some of their fruit trees.",
+  "B": "Some of the nurseries have correctly labeled nectarine trees of the Stark Sweet Melody variety only if the variety is unsuitable for growing in a tub or a pot.",
+  "C": "Any nectarine tree of the Stark Sweet Melody variety that a nursery labels \"miniature\" is labeled incorrectly.",
+  "D": "Some nectarine trees that are not labeled \"miniature\" are labeled incorrectly.",
+  "E": "Unless the Stark Sweet Melody variety of nectarine tree is suitable for growing in a tub or a pot, some nurseries mislabel this variety of tree."
+ },
+ "bank": {
+  "stimulus": "Many nurseries sell fruit trees that they label \"miniature.\" Not all nurseries, however, use this term in the same way. While some nurseries label any nectarine trees of the Stark Sweet Melody variety as \"miniature,\" for example, others do not. One thing that is clear is that if a variety of fruit tree is not suitable for growing in a tub or a pot, no tree of that variety can be correctly labeled “miniature.\"",
+  "stem": "Which one of the following can be properly inferred from the information above?",
+  "choices": {
+   "A": "Most nurseries mislabel at least some of their fruit trees.",
+   "B": "Some of the nurseries have correctly labeled nectarine trees of the Stark Sweet Melody variety only if the variety is unsuitable for growing in a tub or a pot.",
+   "C": "Any nectarine tree of the Stark Sweet Melody variety that a nursery labels \"miniature\" is labeled incorrectly.",
+   "D": "Some nectarine trees that are not labeled \"miniature\" are labeled incorrectly.",
+   "E": "Unless the Stark Sweet Melody variety of nectarine tree is suitable for growing in a tub or a pot, some nurseries mislabel this variety of tree."
+  },
+  "key": "E"
+ },
+ "explanation_id": "ef68a7e2-3ce5-47c5-9918-a96762181a53",
+ "style": "single",
+ "steps": [
+  {
+   "row_id": "07a04192-5610-42df-931d-1efaaee6898d",
+   "position": 0,
+   "label": "Explanation",
+   "body": "Some nurseries **label** any nectarine trees of the **Stark Sweet Melody** variety as \"**miniature**.\"\nN ↢some↣ Min\n\nOthers do **not**.\nN ↢some↣ ~Min\n\nIf a variety of fruit tree is **not suitable for growing in a tub or a pot**, no tree of that variety can be **correctly labeled \"miniature.\"**\nMin + CL → SGP"
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "82131486-4dbf-4f30-8846-a80cdceb4c08",
+   "letter": "A",
+   "body": "The stimulus does not prove anything to be true of most nurseries."
+  },
+  {
+   "row_id": "226e6c8a-a816-42e6-8ff1-fb3b19f4bb40",
+   "letter": "B",
+   "body": "The statements support the claim that some nurseries correctly label their nectarine trees of the Stark Sweet Melody variety as miniature only if the variety is suitable for growing in a pot.\n\nMin + CL → SGP\n\nThis answer states that they are correctly labeled only if they are not suitable for growing in a pot.\n\nMin + CL → ~SGP"
+  },
+  {
+   "row_id": "dbbe72b4-eaf2-4170-80bb-7e74649c7d6b",
+   "letter": "C",
+   "body": "This assumes that nectarine trees of the Stark Sweet Melody variety are not suitable for growing in a pot."
+  },
+  {
+   "row_id": "1b2c4d25-47bc-4b42-ad93-fce69ac8e07b",
+   "letter": "D",
+   "body": "The statements do not support an inference about nectarine trees that are not labeled “miniature.”"
+  },
+  {
+   "row_id": "732360e8-3302-4483-a0b2-63ef7cb97c3c",
+   "letter": "E",
+   "body": "This follows from combining two statements.\n\nN ↢some↣ Min\nMin + CL → SGP\n∴ (N → CL) → SGP\n\nSome nurseries label this variety \"miniature.\" A \"miniature\" label is correct only if the variety is suitable for a tub or a pot. So if the variety isn't suitable, those nurseries are mislabeling it."
+  }
+ ],
+ "known_problem": "No breakdown on a d3 conditional inference; B note is a one-word-per-line column; correct note diagram is garbled.",
+ "tags": "no-breakdown; verdict-only; thin-correct-note; damage; very-short"
+}

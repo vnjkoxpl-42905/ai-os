@@ -1,0 +1,162 @@
+{
+  "status": "completed",
+  "mode": "review",
+  "provider": "claude",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "claude",
+    "builder": "codex",
+    "inspector": "claude"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-conditional-full-20261025",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os\\brainstorms\\2026-09-30-conditional-curriculum\\full-bootcamp.build-spec.md",
+  "plan_sha256": "37e8759bca8322767cde0378076bbb657ba6f5726f33c85b6d3dfa88c5eb7659",
+  "requested_model": null,
+  "requested_effort": null,
+  "base": null,
+  "snapshot": null,
+  "previous": null,
+  "started_at": 1792954178.3959608,
+  "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\handoffs\\conditional-full-20261025-build-review\\claudex-ni035s27",
+  "cli_version": "2.1.309 (Claude Code)",
+  "executable": [
+    "C:\\Users\\Joshu\\.local\\bin\\claude.exe"
+  ],
+  "exit_code": 0,
+  "session_id": "b6c661e7-9225-448c-b238-e9fd86f5f554",
+  "response": {
+    "verdict": "REVISE",
+    "summary": "I checked the plan against the code. Most of its factual claims hold. All 20 unit IDs it names exist in curriculum.generated.json. The current openingCoursePath.ts in the working tree has 16 Chapter 1 steps plus 7 local Chapter 2 steps. The single conditionals-v1 record works as described: cleanCourse keeps any key whose status is valid, so flat prefixed keys survive. The Unless Drill problems are real: it seeds from an unscoped local cache, it marks milestones as done optimistically and does not surface insert failures, and the deadline path (settle(true)) still grades whatever is filled in. The duplicate check in AssignmentBuilder uses conditional_target_key. However, I found several unresolved gaps in how the new edition (v3) is carried, how a student enters it and how access is decided. The worst is that a v3 course assignment has no way to be told apart from an old one when the student opens it from the Classroom. Others are how already-deployed old app versions read a v3 assignment, how the new field interacts with the existing curriculumVersion, legacy units the plan never maps, and whether a step's list of access units means any-of or all-of. These need decisions before handoff.",
+    "findings": [
+      {
+        "id": "R1-classroom-entry-ambiguity",
+        "severity": "high",
+        "path": "src/lib/conditionalBootcampAssignment.ts",
+        "evidence": "resolveConditionalAssignment returns route '/bootcamp/conditionals' for every course target (line 38-42). assignWork.ts:340-341 stores that same route as source_id/route. BootcampsSection.tsx:52,126 sends the student to resolveItemRoute(it), with no assignment ID. In routes.tsx:107-108, the landing page has no requestedUnit, so active = assignments[0]. Scenario: a student holds an old course row and a v3 course row. They click Open on the v3 card and, depending on row order, land in the old 16-step course. The plan's rule to 'select deterministically among compatible rows' does not help, because at the landing page both rows are compatible.",
+        "fix": "Have resolveConditionalAssignment give v3 targets a route that identifies them, such as an edition query parameter or the assignment ID once the row exists, so the Classroom link selects that row. Alternatively, make the student entry point append ?assignment=<row id> for conditional bootcamp items. Add a test that clicks the Classroom card for each row when both an old and a v3 course row exist."
+      },
+      {
+        "id": "R2-stale-bundle-silent-downgrade",
+        "severity": "medium",
+        "path": "src/bootcamps/conditionals/assignments.ts",
+        "evidence": "The deployed parseTarget (lines 16-25) only checks scope, mode, difficulty and curriculumVersion, then returns the object unchanged, so an unknown courseEdition field passes through. resolveConditionalAssignment then sets course targets to { ...DEFAULT_CONDITIONAL_TARGET } (conditionalBootcampAssignment.ts:41). A student running a cached older version of the app would therefore show a v3 assignment as the legacy 16-step course and write unprefixed records. The plan's 'unsupported edition values fail closed' only covers new code.",
+        "fix": "Encode the edition in a way old parsers reject, so it fails closed on deployed versions too. For example, curriculumVersion: 3 makes the current parseTarget return null and hides the row. Otherwise, require the student-side reader to ship and be confirmed live before the teacher-side producer can create v3 rows, and state this order in the release step."
+      },
+      {
+        "id": "R3-dual-version-fields-and-stage-scope",
+        "severity": "medium",
+        "path": "src/components/teacher/ConditionalAssignmentFields.tsx",
+        "evidence": "Every new stage grant already gets curriculumVersion: 2 (lines 26, 36), and conditionalTargetKey uses it to build 'stage:v2:<unit>' keys. The plan adds a separate courseEdition and asks to 'test every supported scope'. It never says what a v3 stage target contains (a starting unit plus which registry steps), whether {curriculumVersion:2, courseEdition:v3} is valid, or what key it produces. Its access table and routing rules only cover course, skill, area and general.",
+        "fix": "Either define v3 stage semantics (the start step in the registry and the edition-filtered steps after it) with an exact key format, or rule out v3 stage targets and reject mixed version fields. Using a single version field, as in R2, removes the ambiguity."
+      },
+      {
+        "id": "R4-unmapped-legacy-units",
+        "severity": "medium",
+        "path": "src/bootcamps/conditionals/data/curriculum.generated.json",
+        "evidence": "rules-facts (line 1269), truth-validity (1476), negation (1681) and contraposition (1884) are granted by every course target (assignments.ts:46) and by area targets. None of them appears in the plan's step-to-access table or Chapter 1 mapping, even though Chapter 1 audits the four fact/rule situations and the converse/inverse. CourseLanding (routes.tsx:223) lists every non-opening unit under Additional assigned material. The plan's registry check only resolves the IDs it names, so these units would silently show up next to the numbered chapters, or vanish, in v3.",
+        "fix": "Require the registry to classify all 30 units as absorbed into a named step, shown under Earlier assigned work, kept as supplementary, or excluded. The generation check should fail on any unit that is not classified."
+      },
+      {
+        "id": "R5-access-set-semantics",
+        "severity": "medium",
+        "path": "src/bootcamps/conditionals/openingCoursePath.ts",
+        "evidence": "Chapter 1 steps use any-of access: alsoAvailableIn combined with .some() in routes.tsx:107,188,219. The plan's registry has a single plural accessUnitIDs field, but it also requires 'one primary topic' per step (row 4.2) and that a cumulative task's 'required-access set must be wholly allowed', which is all-of. A single registryStepAllowed predicate cannot tell which rule applies to a step. Reading it the wrong way would either deny preserved Chapter 1 steps to group-1/group-2 skill grants, or let a cumulative task through on one grant.",
+        "fix": "Split the registry into explicit fields, for example primaryUnit, anyOfUnits for preserved alternative grants, and requiredAllUnits for cumulative tasks. Test the predicate on each."
+      },
+      {
+        "id": "R6-shared-state-across-difficulties",
+        "severity": "medium",
+        "path": "src/bootcamps/conditionals/progress.ts",
+        "evidence": "The plan stores v3 progress at 'full-conditionals-v3:<stepId>' and shares it across every v3 assignment for the account. It also says that 'explicit assignment difficulty still governs' and gives 7.1 per-topic learn/guided/practice gates. recordCourseStep (line 60-66) keeps a done status permanently. If a registry step's items or completion depend on difficulty, a snapshot or completion earned at beginner would carry over to an advanced v3 assignment of the same step.",
+        "fix": "Either require every numbered registry step to be difficulty-invariant (checked when the registry is generated), or add difficulty to the key for steps whose items vary by level, and test a beginner-then-advanced v3 sequence."
+      },
+      {
+        "id": "R7-practice-mode-v3-targets",
+        "severity": "low",
+        "path": "src/bootcamps/conditionals/assignments.ts",
+        "evidence": "conditionalAssignmentAllowsAction (line 80) allows lesson and guided actions only in learn mode. The plan maps every numbered lesson and drill to lesson or guided actions. A v3 general target, or a practice-mode skill or area target, would therefore show no numbered steps. The plan still promises those targets 'only their explicitly granted new-edition steps' and asks for round-trip tests 'for every supported scope'.",
+        "fix": "Say whether the edition applies to practice-only targets. Either reject courseEdition for general and practice-mode targets, or define which v3 recorded-practice destinations they get."
+      },
+      {
+        "id": "R8-lesson-mount-writes-vs-projection",
+        "severity": "low",
+        "path": "src/bootcamps/conditionals/components/OpeningCourse.tsx",
+        "evidence": "LessonCompletion (lines 134-147) calls save(stepId, {}) on arrival and marks the step done when the closing navigation scrolls into view. If this runs for a projected Chapter 1 lesson, it creates a prefixed 'started' record, which hides the projection for good. That is the inverse of the plan's rule that a projection must not override later prefixed state, and nothing defines it. The plan's read-only rule names drills, run=1 and writer components, but not the lesson-note completion effect.",
+        "fix": "State that projected lesson notes render their content without LessonCompletion (or any other writer) until the student explicitly chooses to revise. Add a test that opening and scrolling a projected note produces zero writes."
+      },
+      {
+        "id": "R9-admin-preview-edition",
+        "severity": "low",
+        "path": "src/bootcamps/conditionals/assignments.ts",
+        "evidence": "conditionalTeacherPreview (lines 83-87) resolves the default legacy course target. In routes.tsx:188, isAdmin bypasses all filtering and the admin's activity is written to their own account record. The plan says new chapters show for 'admin access' but never says which edition an admin preview renders, which keys it writes (prefixed or not), or how an admin switches between the old and v3 views.",
+        "fix": "Add an explicit edition selector for admin and teacher preview, defaulting to legacy. Admin activity in v3 should use the v3 progress keys and device storage scope, with a test that admin writes never touch unprefixed records while previewing v3."
+      }
+    ],
+    "coverage": [
+      "src/bootcamps/conditionals/openingCoursePath.ts (full)",
+      "src/lib/conditionalBootcampAssignment.ts (full)",
+      "src/bootcamps/conditionals/assignments.ts (full)",
+      "src/bootcamps/conditionals/progress.ts (full)",
+      "src/bootcamps/conditionals/courseProgress.tsx (full)",
+      "src/bootcamps/conditionals/useConditionalProgress.ts (full)",
+      "src/bootcamps/conditionals/routes.tsx lines 90-290 (assignment matching, ActionGate, OpeningCourseRoute, CourseLanding, LearningPath)",
+      "src/bootcamps/conditionals/components/OpeningCourse.tsx lines 120-207 (tracker, LessonCompletion, CourseScreen)",
+      "src/lib/assignWork.ts bootcamp branch (lines 290-348)",
+      "src/components/teacher/AssignmentBuilder.tsx duplicate detection (lines 130-171)",
+      "src/components/teacher/ConditionalAssignmentFields.tsx and DeskLibraryBootcampsSurface.tsx (curriculumVersion/target producers, via grep)",
+      "src/components/classroom/BootcampsSection.tsx (student entry route)",
+      "src/features/quick-drills/unless-drill/unlessProgress.ts (full) and UnlessDrill.tsx lines 20-180",
+      "Unit ID list in curriculum.generated.json (grep)",
+      "localStorage/storageScope usage across conditionals components (grep)",
+      "Searches for conditional_target_key, conditional_course_state and assignment= callers"
+    ],
+    "limitations": [
+      "I could not run tests, typecheck, build, git fetch or a browser, so the plan's claims about origin/main SHA 6a167c8 and Lovable sync are unverified; I only confirmed the local HEAD shown in the git status snapshot.",
+      "I did not read the vault inputs outside this worktree (teaching preferences, Loophole transcripts, quantity classroom notes, Asia cheat sheets, material-inventory). The plan's content and source-audit claims (for example Unless bootcamp Q8-Q10 and the Inclusion forms) were reviewed for logical soundness only, not against their sources.",
+      "I did not inspect the Conditional Indicators Refresher data (f11/d12 'until' entries), the activity-centre hub banks or foundations.source.ts item by item, so the plan's bank counts (22/16/12, 62, 8+22+10) are unverified.",
+      "I did not inspect the Supabase schema for bootcamp_kv or chapter_progress constraints beyond a grep. RLS and the backend's ability to carry the edition field were not checked.",
+      "I only grepped SourceWorksheetDrill, AndOrPractice, StagedReasoningDrill and IndicatorWordDeck for their storage-key patterns, not their full logic."
+    ]
+  },
+  "usage": {
+    "input_tokens": 46,
+    "cache_creation_input_tokens": 85079,
+    "cache_read_input_tokens": 1227013,
+    "output_tokens": 19365,
+    "output_tokens_details": {
+      "thinking_tokens": 10617
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 85079,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 5917,
+        "cache_read_input_tokens": 86805,
+        "cache_creation_input_tokens": 2778,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 2778
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "permission_denials": [],
+  "total_cost_usd": 1.3135186,
+  "elapsed_seconds": 223.24
+}

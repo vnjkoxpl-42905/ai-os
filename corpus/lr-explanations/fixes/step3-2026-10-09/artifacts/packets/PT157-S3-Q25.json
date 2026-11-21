@@ -1,0 +1,90 @@
+{
+ "qid": "PT157-S3-Q25",
+ "type": "Weaken",
+ "difficulty": "5",
+ "key_db": "A",
+ "stimulus_db": "To test the claim that vitamin C is effective in treating acne, scientists administered it to one group of subjects and a placebo to a control group. The group receiving vitamin C had less severe acne during the study than did the control group. It was subsequently discovered, however, that half of the subjects in each group knew which kind of pill they were given. Among those who could not tell, no difference in the severity of acne was found between the two groups. Therefore, we can tentatively conclude that vitamin C has no real benefit in reducing the severity of acne.",
+ "stem_db": "Which one of the following, if true, most seriously weakens the argument?",
+ "choices_db": {
+  "A": "The subjects who were given vitamin C had a history of suffering from more severe acne than did the subjects receiving a placebo.",
+  "B": "None of the subjects who were given vitamin C took additional doses of vitamin C on their own.",
+  "C": "During the study, the severity of the subjects' acne was lower than the national average.",
+  "D": "Some of the subjects who were given placebos consumed foods during the study that are naturally rich in vitamin C.",
+  "E": "Some of the subjects who knew their pills were placebos did not actually take the pills they were given."
+ },
+ "bank": {
+  "stimulus": "To test the claim that vitamin C is effective in treating\n acne, scientists administered it to one group of subjects\n and a placebo to a control group. The group receiving\n vitamin C had less severe acne during the study than\n did the control group. It was subsequently discovered,\n however, that half of the subjects in each group knew\n which kind of pill they were given. Among those who\n could not tell, no difference in the severity of acne\n was found between the two groups. Therefore, we can\n tentatively conclude that vitamin C has no real benefit in\n reducing the severity of acne.",
+  "stem": "Which one of the following, if true, most seriously\n weakens the argument?",
+  "choices": {
+   "A": "The subjects who were given vitamin C had a history of suffering from more severe acne than did the subjects receiving a placebo.",
+   "B": "None of the subjects who were given vitamin C took additional doses of vitamin C on their own.",
+   "C": "During the study, the severity of the subjects’ acne was lower than the national average.",
+   "D": "Some of the subjects who were given placebos consumed foods during the study that are naturally rich in vitamin C.",
+   "E": "Some of the subjects who knew their pills were placebos did not actually take the pills they were given."
+  },
+  "key": "A"
+ },
+ "explanation_id": "2ff83bdd-29a8-4a08-b301-adfd45fc3305",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "292210ee-d1bf-40ad-997e-4dc382422946",
+   "position": 0,
+   "label": "Opposing Evidence",
+   "body": "During a study, a group of subjects receiving vitamin C had less severe acne than did the control group, which received a placebo."
+  },
+  {
+   "row_id": "4e81365a-dec1-4b4a-8d89-8bb723eafd48",
+   "position": 1,
+   "label": "Evidence",
+   "body": "Half of the subjects in each group knew which kind of pill they were given. Among those who could not tell [which pill they were given], no difference in the severity of acne was found between the two groups."
+  },
+  {
+   "row_id": "b9aec86e-0805-4623-8fce-3681bdb8332f",
+   "position": 2,
+   "label": "Conclusion",
+   "body": "We can tentatively conclude that vitamin C has no real benefit in reducing the severity of acne."
+  },
+  {
+   "row_id": "5b90d24d-3bc5-4de9-9096-fbd5e6b4df0d",
+   "position": 3,
+   "label": "Evaluate",
+   "body": "Let's make sure that we're clear about what happened to the different groups that are compared in this study. We know that some subjects who received vitamin C had less severe acne than those who received a placebo. Among the subjects who didn't know which kind of pill they were given, there was no difference in the severity of acne. This means that the subjects who received vitamin C and also had less severe acne all knew that they were taking vitamin C, not a placebo. At first, the study seems to show a correlation between taking vitamin C and a reduction in acne. That's evidence—not proof, but evidence—that vitamin C reduces acne. But wait! There's a problem with the study. If people knew which pill they were taking, that could affect the results somehow. From this the argument concludes—at least tentatively—that vitamin C does not help reduce the severity of acne. This looks like an \"unproven vs. proven false\" flaw. Because this one particular study had a problem, it hasn't necessarily proven that vitamin C helps treat acne. But it's still possible that vitamin C does help treat acne, even if this one study hasn't proven that it does. We can't jump from the details of this one study to a general claim about the benefits of vitamin C."
+  },
+  {
+   "row_id": "3f4a73c5-614b-4bf2-ab31-81985b672320",
+   "position": 4,
+   "label": "Goal",
+   "body": "A correct answer might provide evidence that the vitamin C actually did help to reduce subjects' acne, in spite of the apparent problem with the way the study was conducted."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "333af76a-9d2e-463a-89b1-af6de01cb2d9",
+   "letter": "A",
+   "body": "If the vitamin C subjects started with more severe acne than the placebo subjects, then the study results look very different. The vitamin C group had less severe acne during the study despite starting with worse acne — suggesting vitamin C actually reduced their acne enough to surpass the control group. Even among those who did not know which pill they received, having \"no difference\" in severity is significant if the vitamin C subgroup began with worse acne. Equal outcomes from unequal starting points suggest the treatment was effective. This undermines the conclusion that vitamin C provides no real benefit."
+  },
+  {
+   "row_id": "8746afd0-c226-4735-9ab3-3898726ee7d9",
+   "letter": "B",
+   "body": "This answer rules out a potential confounding factor — vitamin C subjects secretly taking extra vitamin C. But ruling out this possibility does not change the study's findings or the argument's reasoning. The study already showed the vitamin C group had less severe acne overall but no difference among subjects who did not know their pill. Whether anyone took extra doses does not affect this comparison. Even if they did take extra, we would need to know whether those subjects were in the knowing or unknowing subgroup to evaluate the impact."
+  },
+  {
+   "row_id": "b14f1e1a-4a4f-4b57-a126-4cda19b76316",
+   "letter": "C",
+   "body": "Whether all subjects had milder acne than the national average is irrelevant to the argument. The argument compares groups within the study — vitamin C versus placebo, knowing versus unknowing. External comparisons to the national average do not affect whether vitamin C was responsible for the differences observed within the study. Both groups could have below-average acne and the argument's reasoning would be unchanged."
+  },
+  {
+   "row_id": "011c47e1-9daa-4d67-8a2d-7bff9623600d",
+   "letter": "D",
+   "body": "If placebo subjects consumed foods naturally rich in vitamin C, this muddies the distinction between the two groups. The control group was effectively getting some vitamin C through diet, which could have reduced their acne. If the placebo group's acne was already being reduced by dietary vitamin C, then the absence of a difference between groups does not prove vitamin C is ineffective — it suggests both groups were receiving some vitamin C. However, this actually supports the argument's conclusion more than it weakens it: if both groups got vitamin C and there was no difference, then additional vitamin C through pills provides no extra benefit."
+  },
+  {
+   "row_id": "64024504-9bfd-41b6-ba6e-b7c4ad66198d",
+   "letter": "E",
+   "body": "Some subjects who knew they had placebos did not take them. This does not meaningfully affect the argument. Those subjects are in the placebo group regardless — they were not receiving vitamin C whether or not they swallowed their placebo pills. A placebo contains no active ingredient, so not taking it produces the same pharmacological result as taking it. At most, this introduces a minor methodological concern, but it does not provide any evidence that vitamin C actually reduces acne severity."
+  }
+ ],
+ "known_problem": "D note argues it muddies the study, then says it supports the conclusion.",
+ "tags": "emdash-heavy; pt157-158-register"
+}

@@ -1,0 +1,15 @@
+
+ RUN  v3.2.7 C:/Users/Joshu/dev/ai-os-projects/lsatu-my-work-20261026
+
+ ✓ src/components/classroom/home/teacher/TeachingDesk.test.tsx (21 tests) 2642ms
+   ✓ Teaching desk interactions > caps Home at two sessions using the true total and preserves unsaved input across disclosure  424ms
+ ✓ src/components/classroom/home/teacher/TeacherHomeView.test.tsx (25 tests) 3492ms
+   ✓ TeacherHomeView > keeps direct access editing open after a blank selection and returns focus to its own row  798ms
+   ✓ TeacherHomeView > hands More selection to the booking sheet and returns to an interactive page  606ms
+   ✓ TeacherHomeView > keeps Assign work in the header without a student assignment promotion  434ms
+
+ Test Files  2 passed (2)
+      Tests  46 passed (46)
+   Start at  17:21:24
+   Duration  9.35s (transform 712ms, setup 592ms, collect 2.48s, tests 6.13s, environment 5.84s, prepare 1.12s)
+

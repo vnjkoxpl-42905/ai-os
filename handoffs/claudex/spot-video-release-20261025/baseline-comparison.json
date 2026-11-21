@@ -1,0 +1,88 @@
+{
+  "releasePassed": 3299,
+  "baselinePassed": 3294,
+  "baselineFailures": [
+    [
+      "ActivityIntro.exit.test.tsx",
+      "ActivityIntro worked example shows each Activity's own answer in the after orb, never a fixed string"
+    ],
+    [
+      "ActivityItemView.coach.test.tsx",
+      "ActivityItemView sends the Activity's own Coach brief dumb-it-down sends its own rubric, not the negation default"
+    ],
+    [
+      "ActivityItemView.coach.test.tsx",
+      "ActivityItemView sends the Activity's own Coach brief find-the-conclusion sends its own rubric, not the negation default"
+    ],
+    [
+      "ActivityItemView.coach.test.tsx",
+      "ActivityItemView sends the Activity's own Coach brief omits coach for a legacy Activity so the negation default still applies"
+    ],
+    [
+      "ActivityItemView.coach.test.tsx",
+      "ActivityItemView sends the Activity's own Coach brief rebuttal-rephrase sends its own rubric, not the negation default"
+    ],
+    [
+      "ActivityItemView.coach.test.tsx",
+      "ActivityItemView sends the Activity's own Coach brief spot-the-callback sends its own rubric, not the negation default"
+    ],
+    [
+      "ActivityItemView.coach.test.tsx",
+      "ActivityItemView sends the Activity's own Coach brief spot-the-relationship sends its own rubric, not the negation default"
+    ],
+    [
+      "ActivityItemView.coach.test.tsx",
+      "ActivityItemView sends the Activity's own Coach brief vocab-rehab sends its own rubric, not the negation default"
+    ],
+    [
+      "ActivityItemView.paper.test.tsx",
+      "the paper-first conditional response gives rule-specific retry feedback for a wrong route without calling the Coach"
+    ],
+    [
+      "ActivityItemView.paper.test.tsx",
+      "the paper-first conditional response requires paper work before revealing exactly five diagrams"
+    ],
+    [
+      "SwitchyardStage.flip.test.tsx",
+      "the flip, for an item that failed the gate still carries the authored contrapositive on its plate"
+    ],
+    [
+      "flip.test.ts",
+      "finding D \u2014 a sentence carrying two conditionals is not two clauses costs no other item its diagram"
+    ],
+    [
+      "flip.test.ts",
+      "the derivability gate admits a real share of the bank, and publishes it"
+    ],
+    [
+      "routing.fastpath.test.ts",
+      "matchesAnyCredited credits both authored directions on item 48"
+    ],
+    [
+      "routing.fastpath.test.ts",
+      "matchesAnyCredited matches the first credited answer on every item the yard can parse"
+    ],
+    [
+      "routing.test.ts",
+      "parseRouting parses the credited answer of every item the world can honestly route"
+    ]
+  ],
+  "newFailures": [
+    [
+      "RelationshipIntro.test.tsx",
+      "exposes controls and a named dialog only when expanded, preserving a paused player on reopen"
+    ],
+    [
+      "RelationshipIntro.test.tsx",
+      "restores inline immediately on repeated Escape (cancelable=false) during animated close"
+    ],
+    [
+      "RelationshipIntro.test.tsx",
+      "restores inline immediately on repeated Escape (cancelable=true) during animated close"
+    ],
+    [
+      "RelationshipIntro.test.tsx",
+      "uses a deliberate 450ms expansion and skips it for reduced motion"
+    ]
+  ]
+}

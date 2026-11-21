@@ -1,0 +1,1331 @@
+{
+  "backup": "C:\\Users\\Joshu\\dev\\ai-os\\research\\2026-10-24-design-skill-doctor\\instruction-backup-20261024-065825.zip",
+  "changes": [
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\impeccable\\SKILL.md",
+      "before": "4d5026321efe065109ad73e7fd5b162860f06cde92bfa24951b9e9b6829cc9dc",
+      "after": "b3f3fbb671fbd12da5660e83d1d60e44fb0cd03db8ff84b7539cbe102d6a90ab",
+      "replacements": [
+        {
+          "source": "node .agents/skills/impeccable/scripts/",
+          "count": 3
+        },
+        {
+          "source": "load-context.mjs`",
+          "count": 2
+        },
+        {
+          "source": "load-context.mjs\n",
+          "count": 1
+        },
+        {
+          "source": "pin.mjs <pin|unpin>",
+          "count": 1
+        },
+        {
+          "source": "Locate the installed skill and support directory before loading references.",
+          "count": 1
+        },
+        {
+          "source": "`$impeccable craft` has a user-confirmed shape brief for this task.",
+          "count": 1
+        },
+        {
+          "source": "Run `$impeccable shape` and wait for explicit brief confirmation.",
+          "count": 1
+        },
+        {
+          "source": "For `$impeccable craft`, `shape=pass` is only valid after a separate user response approving the shape design brief, or when the user provided an already-confirmed brief in the request. Do not mark `shape=pass` after writing PRODUCT.md, summarizing assumptions, or drafting an unconfirmed brief yourself.",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\impeccable\\reference\\craft.md",
+      "before": "965510682f778d51c3038eb885bb02ae07c43c12c0d92298e0861e562c56728c",
+      "after": "5c0394317d945a1a29f53023e55a2660d6e75203483583e196777ff3fccbd235",
+      "replacements": [
+        {
+          "source": "2. The shape design brief is explicitly confirmed by the user for this task, unless the user already provided a confirmed brief.",
+          "count": 1
+        },
+        {
+          "source": "PRODUCT.md and `teach` answers do **not** satisfy the shape gate. They are project context only. A compact self-authored brief does not satisfy the shape gate either. `shape=pass` requires a separate user response approving the shape brief or an already-confirmed brief supplied by the user.",
+          "count": 1
+        },
+        {
+          "source": "1. Confirmed design brief from `shape`.",
+          "count": 1
+        },
+        {
+          "source": "Wait for the design brief to be fully confirmed by the user before proceeding. The brief is your blueprint, and every implementation decision should trace back to it.",
+          "count": 1
+        },
+        {
+          "source": "and explicit brief confirmation.",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\impeccable\\reference\\shape.md",
+      "before": "808ef64bb9087eaf1d3740d15258af16c6b9b843e5a6f44c92516224ba1f5089",
+      "after": "8bc18cb305bff05cb6e0f13a65f5a09ec2688847a71f7e615c324490665e2de5",
+      "replacements": [
+        {
+          "source": "This is a required interaction, not optional guidance. Ask these questions in conversation, adapting based on answers. Don't dump them all at once; have a natural dialogue. STOP and use Codex's structured user-input/question tool when available; if unavailable, ask directly in chat to clarify what you cannot infer.",
+          "count": 1
+        },
+        {
+          "source": "Discovery must include at least one user-answer round unless PRODUCT.md, DESIGN.md, or an already-confirmed brief directly answers the needed design inputs. With a sparse prompt, do **not** synthesize a complete brief for confirmation on the first response.",
+          "count": 1
+        },
+        {
+          "source": "Always ask. Sketch quality and shipped quality are different outputs; don't guess between them.",
+          "count": 1
+        },
+        {
+          "source": "After the interview and any required probes, synthesize everything into a structured design brief. Present it to the user for explicit confirmation before considering this command complete. Stop after asking for confirmation; do not proceed to craft or implementation in the same response unless the user has already approved the brief.",
+          "count": 1
+        },
+        {
+          "source": "STOP and use Codex's structured user-input/question tool when available; if unavailable, ask directly in chat to clarify what you cannot infer. Ask for explicit confirmation of the brief before finishing. If the user disagrees with any part, revisit the relevant discovery questions. A shape run is incomplete until the brief is confirmed.",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\high-end-visual-design\\SKILL.md",
+      "before": "ac04e8916c5a763e0f614aeca81a838d58a6f5e114b21fec5c163d3fc54fe719",
+      "after": "74bc068a7402d7ffa95d26227c6b0f13386b8c8ea4ea50a93789b12242ec4aa8",
+      "replacements": [
+        {
+          "source": "Build the DOM strictly using the \"Double-Bezel\" (Doppelrand) technique for all major cards, inputs, and feature grids. Use exaggerated squircle radii (`rounded-[2rem]`).",
+          "count": 1
+        },
+        {
+          "source": "All major cards and containers use the Double-Bezel nested architecture (outer shell + inner core)",
+          "count": 1
+        },
+        {
+          "source": "Scroll entry animations are present \u2014 no element appears statically",
+          "count": 1
+        },
+        {
+          "source": "transition-all duration-700",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\design-taste-frontend\\SKILL.md",
+      "before": "4044b867cb5f7041bdee883c00e1d5b75d5e7c3628c284e84d46be07c2ec9f56",
+      "after": "def63b4ada6809334f3c62561aa2ab456578e3b1d4a4ae7247eb822a6a569a07",
+      "replacements": [
+        {
+          "source": "**TECHNICAL UI RULE:** Serif fonts are strictly BANNED for Dashboard/Software UIs. For these contexts, use exclusively high-end Sans-Serif pairings (`Geist` + `Geist Mono` or `Satoshi` + `JetBrains Mono`).",
+          "count": 1
+        },
+        {
+          "source": "Use EXCLUSIVELY Framer Motion's `useMotionValue` and `useTransform` outside the React render cycle to prevent performance collapse on mobile.",
+          "count": 1
+        },
+        {
+          "source": "When `MOTION_INTENSITY > 5`, embed continuous, infinite micro-animations (Pulse, Typewriter, Float, Shimmer, Carousel) in standard components (avatars, status dots, backgrounds). Apply premium Spring Physics (`type: \"spring\", stiffness: 100, damping: 20`) to all interactive elements\u2014no linear easing.",
+          "count": 1
+        },
+        {
+          "source": "Always utilize Framer Motion's `layout` and `layoutId` props for smooth re-ordering, resizing, and shared element transitions across state changes.",
+          "count": 1
+        },
+        {
+          "source": "`transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1)`",
+          "count": 1
+        },
+        {
+          "source": "**Serif Constraints:** Use Serif fonts ONLY for creative/editorial designs. **NEVER** use Serif on clean Dashboards.",
+          "count": 1
+        },
+        {
+          "source": "**CRITICAL:** Never mix GSAP/ThreeJS with Framer Motion in the same component tree. Default to Framer Motion for UI/Bento interactions. Use GSAP/ThreeJS EXCLUSIVELY for isolated full-page scrolltelling or canvas backgrounds, wrapped in strict useEffect cleanup blocks.",
+          "count": 1
+        },
+        {
+          "source": "Use the following Framer Motion principles:",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\react-bits\\SKILL.md",
+      "before": "be68f46388c0bfe7e735eadd6530f43f68365eef0bf1471dc0c6e1651b058719",
+      "after": "fb12400005aae3e1e4df33e46a64b7c0ac42740fe24fe03b635d3d7044d82992",
+      "replacements": [
+        {
+          "source": "## Fetch\n",
+          "count": 1
+        },
+        {
+          "source": "node scripts/rb-add.mjs",
+          "count": 2
+        },
+        {
+          "source": "node scripts/gen-catalog.mjs",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\impeccable\\SKILL.md",
+      "before": "4d5026321efe065109ad73e7fd5b162860f06cde92bfa24951b9e9b6829cc9dc",
+      "after": "b3f3fbb671fbd12da5660e83d1d60e44fb0cd03db8ff84b7539cbe102d6a90ab",
+      "replacements": [
+        {
+          "source": "node .agents/skills/impeccable/scripts/",
+          "count": 3
+        },
+        {
+          "source": "load-context.mjs`",
+          "count": 2
+        },
+        {
+          "source": "load-context.mjs\n",
+          "count": 1
+        },
+        {
+          "source": "pin.mjs <pin|unpin>",
+          "count": 1
+        },
+        {
+          "source": "Locate the installed skill and support directory before loading references.",
+          "count": 1
+        },
+        {
+          "source": "`$impeccable craft` has a user-confirmed shape brief for this task.",
+          "count": 1
+        },
+        {
+          "source": "Run `$impeccable shape` and wait for explicit brief confirmation.",
+          "count": 1
+        },
+        {
+          "source": "For `$impeccable craft`, `shape=pass` is only valid after a separate user response approving the shape design brief, or when the user provided an already-confirmed brief in the request. Do not mark `shape=pass` after writing PRODUCT.md, summarizing assumptions, or drafting an unconfirmed brief yourself.",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\impeccable\\reference\\craft.md",
+      "before": "965510682f778d51c3038eb885bb02ae07c43c12c0d92298e0861e562c56728c",
+      "after": "5c0394317d945a1a29f53023e55a2660d6e75203483583e196777ff3fccbd235",
+      "replacements": [
+        {
+          "source": "2. The shape design brief is explicitly confirmed by the user for this task, unless the user already provided a confirmed brief.",
+          "count": 1
+        },
+        {
+          "source": "PRODUCT.md and `teach` answers do **not** satisfy the shape gate. They are project context only. A compact self-authored brief does not satisfy the shape gate either. `shape=pass` requires a separate user response approving the shape brief or an already-confirmed brief supplied by the user.",
+          "count": 1
+        },
+        {
+          "source": "1. Confirmed design brief from `shape`.",
+          "count": 1
+        },
+        {
+          "source": "Wait for the design brief to be fully confirmed by the user before proceeding. The brief is your blueprint, and every implementation decision should trace back to it.",
+          "count": 1
+        },
+        {
+          "source": "and explicit brief confirmation.",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\impeccable\\reference\\shape.md",
+      "before": "808ef64bb9087eaf1d3740d15258af16c6b9b843e5a6f44c92516224ba1f5089",
+      "after": "8bc18cb305bff05cb6e0f13a65f5a09ec2688847a71f7e615c324490665e2de5",
+      "replacements": [
+        {
+          "source": "This is a required interaction, not optional guidance. Ask these questions in conversation, adapting based on answers. Don't dump them all at once; have a natural dialogue. STOP and use Codex's structured user-input/question tool when available; if unavailable, ask directly in chat to clarify what you cannot infer.",
+          "count": 1
+        },
+        {
+          "source": "Discovery must include at least one user-answer round unless PRODUCT.md, DESIGN.md, or an already-confirmed brief directly answers the needed design inputs. With a sparse prompt, do **not** synthesize a complete brief for confirmation on the first response.",
+          "count": 1
+        },
+        {
+          "source": "Always ask. Sketch quality and shipped quality are different outputs; don't guess between them.",
+          "count": 1
+        },
+        {
+          "source": "After the interview and any required probes, synthesize everything into a structured design brief. Present it to the user for explicit confirmation before considering this command complete. Stop after asking for confirmation; do not proceed to craft or implementation in the same response unless the user has already approved the brief.",
+          "count": 1
+        },
+        {
+          "source": "STOP and use Codex's structured user-input/question tool when available; if unavailable, ask directly in chat to clarify what you cannot infer. Ask for explicit confirmation of the brief before finishing. If the user disagrees with any part, revisit the relevant discovery questions. A shape run is incomplete until the brief is confirmed.",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\high-end-visual-design\\SKILL.md",
+      "before": "ac04e8916c5a763e0f614aeca81a838d58a6f5e114b21fec5c163d3fc54fe719",
+      "after": "74bc068a7402d7ffa95d26227c6b0f13386b8c8ea4ea50a93789b12242ec4aa8",
+      "replacements": [
+        {
+          "source": "Build the DOM strictly using the \"Double-Bezel\" (Doppelrand) technique for all major cards, inputs, and feature grids. Use exaggerated squircle radii (`rounded-[2rem]`).",
+          "count": 1
+        },
+        {
+          "source": "All major cards and containers use the Double-Bezel nested architecture (outer shell + inner core)",
+          "count": 1
+        },
+        {
+          "source": "Scroll entry animations are present \u2014 no element appears statically",
+          "count": 1
+        },
+        {
+          "source": "transition-all duration-700",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\design-taste-frontend\\SKILL.md",
+      "before": "4044b867cb5f7041bdee883c00e1d5b75d5e7c3628c284e84d46be07c2ec9f56",
+      "after": "def63b4ada6809334f3c62561aa2ab456578e3b1d4a4ae7247eb822a6a569a07",
+      "replacements": [
+        {
+          "source": "**TECHNICAL UI RULE:** Serif fonts are strictly BANNED for Dashboard/Software UIs. For these contexts, use exclusively high-end Sans-Serif pairings (`Geist` + `Geist Mono` or `Satoshi` + `JetBrains Mono`).",
+          "count": 1
+        },
+        {
+          "source": "Use EXCLUSIVELY Framer Motion's `useMotionValue` and `useTransform` outside the React render cycle to prevent performance collapse on mobile.",
+          "count": 1
+        },
+        {
+          "source": "When `MOTION_INTENSITY > 5`, embed continuous, infinite micro-animations (Pulse, Typewriter, Float, Shimmer, Carousel) in standard components (avatars, status dots, backgrounds). Apply premium Spring Physics (`type: \"spring\", stiffness: 100, damping: 20`) to all interactive elements\u2014no linear easing.",
+          "count": 1
+        },
+        {
+          "source": "Always utilize Framer Motion's `layout` and `layoutId` props for smooth re-ordering, resizing, and shared element transitions across state changes.",
+          "count": 1
+        },
+        {
+          "source": "`transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1)`",
+          "count": 1
+        },
+        {
+          "source": "**Serif Constraints:** Use Serif fonts ONLY for creative/editorial designs. **NEVER** use Serif on clean Dashboards.",
+          "count": 1
+        },
+        {
+          "source": "**CRITICAL:** Never mix GSAP/ThreeJS with Framer Motion in the same component tree. Default to Framer Motion for UI/Bento interactions. Use GSAP/ThreeJS EXCLUSIVELY for isolated full-page scrolltelling or canvas backgrounds, wrapped in strict useEffect cleanup blocks.",
+          "count": 1
+        },
+        {
+          "source": "Use the following Framer Motion principles:",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\react-bits\\SKILL.md",
+      "before": "be68f46388c0bfe7e735eadd6530f43f68365eef0bf1471dc0c6e1651b058719",
+      "after": "fb12400005aae3e1e4df33e46a64b7c0ac42740fe24fe03b635d3d7044d82992",
+      "replacements": [
+        {
+          "source": "## Fetch\n",
+          "count": 1
+        },
+        {
+          "source": "node scripts/rb-add.mjs",
+          "count": 2
+        },
+        {
+          "source": "node scripts/gen-catalog.mjs",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os\\.agents\\skills\\impeccable\\SKILL.md",
+      "before": "4d5026321efe065109ad73e7fd5b162860f06cde92bfa24951b9e9b6829cc9dc",
+      "after": "b3f3fbb671fbd12da5660e83d1d60e44fb0cd03db8ff84b7539cbe102d6a90ab",
+      "replacements": [
+        {
+          "source": "node .agents/skills/impeccable/scripts/",
+          "count": 3
+        },
+        {
+          "source": "load-context.mjs`",
+          "count": 2
+        },
+        {
+          "source": "load-context.mjs\n",
+          "count": 1
+        },
+        {
+          "source": "pin.mjs <pin|unpin>",
+          "count": 1
+        },
+        {
+          "source": "Locate the installed skill and support directory before loading references.",
+          "count": 1
+        },
+        {
+          "source": "`$impeccable craft` has a user-confirmed shape brief for this task.",
+          "count": 1
+        },
+        {
+          "source": "Run `$impeccable shape` and wait for explicit brief confirmation.",
+          "count": 1
+        },
+        {
+          "source": "For `$impeccable craft`, `shape=pass` is only valid after a separate user response approving the shape design brief, or when the user provided an already-confirmed brief in the request. Do not mark `shape=pass` after writing PRODUCT.md, summarizing assumptions, or drafting an unconfirmed brief yourself.",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os\\.agents\\skills\\impeccable\\reference\\craft.md",
+      "before": "965510682f778d51c3038eb885bb02ae07c43c12c0d92298e0861e562c56728c",
+      "after": "5c0394317d945a1a29f53023e55a2660d6e75203483583e196777ff3fccbd235",
+      "replacements": [
+        {
+          "source": "2. The shape design brief is explicitly confirmed by the user for this task, unless the user already provided a confirmed brief.",
+          "count": 1
+        },
+        {
+          "source": "PRODUCT.md and `teach` answers do **not** satisfy the shape gate. They are project context only. A compact self-authored brief does not satisfy the shape gate either. `shape=pass` requires a separate user response approving the shape brief or an already-confirmed brief supplied by the user.",
+          "count": 1
+        },
+        {
+          "source": "1. Confirmed design brief from `shape`.",
+          "count": 1
+        },
+        {
+          "source": "Wait for the design brief to be fully confirmed by the user before proceeding. The brief is your blueprint, and every implementation decision should trace back to it.",
+          "count": 1
+        },
+        {
+          "source": "and explicit brief confirmation.",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os\\.agents\\skills\\impeccable\\reference\\shape.md",
+      "before": "808ef64bb9087eaf1d3740d15258af16c6b9b843e5a6f44c92516224ba1f5089",
+      "after": "8bc18cb305bff05cb6e0f13a65f5a09ec2688847a71f7e615c324490665e2de5",
+      "replacements": [
+        {
+          "source": "This is a required interaction, not optional guidance. Ask these questions in conversation, adapting based on answers. Don't dump them all at once; have a natural dialogue. STOP and use Codex's structured user-input/question tool when available; if unavailable, ask directly in chat to clarify what you cannot infer.",
+          "count": 1
+        },
+        {
+          "source": "Discovery must include at least one user-answer round unless PRODUCT.md, DESIGN.md, or an already-confirmed brief directly answers the needed design inputs. With a sparse prompt, do **not** synthesize a complete brief for confirmation on the first response.",
+          "count": 1
+        },
+        {
+          "source": "Always ask. Sketch quality and shipped quality are different outputs; don't guess between them.",
+          "count": 1
+        },
+        {
+          "source": "After the interview and any required probes, synthesize everything into a structured design brief. Present it to the user for explicit confirmation before considering this command complete. Stop after asking for confirmation; do not proceed to craft or implementation in the same response unless the user has already approved the brief.",
+          "count": 1
+        },
+        {
+          "source": "STOP and use Codex's structured user-input/question tool when available; if unavailable, ask directly in chat to clarify what you cannot infer. Ask for explicit confirmation of the brief before finishing. If the user disagrees with any part, revisit the relevant discovery questions. A shape run is incomplete until the brief is confirmed.",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os\\.agents\\skills\\design-taste-frontend\\SKILL.md",
+      "before": "4044b867cb5f7041bdee883c00e1d5b75d5e7c3628c284e84d46be07c2ec9f56",
+      "after": "def63b4ada6809334f3c62561aa2ab456578e3b1d4a4ae7247eb822a6a569a07",
+      "replacements": [
+        {
+          "source": "**TECHNICAL UI RULE:** Serif fonts are strictly BANNED for Dashboard/Software UIs. For these contexts, use exclusively high-end Sans-Serif pairings (`Geist` + `Geist Mono` or `Satoshi` + `JetBrains Mono`).",
+          "count": 1
+        },
+        {
+          "source": "Use EXCLUSIVELY Framer Motion's `useMotionValue` and `useTransform` outside the React render cycle to prevent performance collapse on mobile.",
+          "count": 1
+        },
+        {
+          "source": "When `MOTION_INTENSITY > 5`, embed continuous, infinite micro-animations (Pulse, Typewriter, Float, Shimmer, Carousel) in standard components (avatars, status dots, backgrounds). Apply premium Spring Physics (`type: \"spring\", stiffness: 100, damping: 20`) to all interactive elements\u2014no linear easing.",
+          "count": 1
+        },
+        {
+          "source": "Always utilize Framer Motion's `layout` and `layoutId` props for smooth re-ordering, resizing, and shared element transitions across state changes.",
+          "count": 1
+        },
+        {
+          "source": "`transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1)`",
+          "count": 1
+        },
+        {
+          "source": "**Serif Constraints:** Use Serif fonts ONLY for creative/editorial designs. **NEVER** use Serif on clean Dashboards.",
+          "count": 1
+        },
+        {
+          "source": "**CRITICAL:** Never mix GSAP/ThreeJS with Framer Motion in the same component tree. Default to Framer Motion for UI/Bento interactions. Use GSAP/ThreeJS EXCLUSIVELY for isolated full-page scrolltelling or canvas backgrounds, wrapped in strict useEffect cleanup blocks.",
+          "count": 1
+        },
+        {
+          "source": "Use the following Framer Motion principles:",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os\\.agents\\skills\\react-bits\\SKILL.md",
+      "before": "be68f46388c0bfe7e735eadd6530f43f68365eef0bf1471dc0c6e1651b058719",
+      "after": "fb12400005aae3e1e4df33e46a64b7c0ac42740fe24fe03b635d3d7044d82992",
+      "replacements": [
+        {
+          "source": "## Fetch\n",
+          "count": 1
+        },
+        {
+          "source": "node scripts/rb-add.mjs",
+          "count": 2
+        },
+        {
+          "source": "node scripts/gen-catalog.mjs",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os\\.claude\\skills\\impeccable\\SKILL.md",
+      "before": "4d5026321efe065109ad73e7fd5b162860f06cde92bfa24951b9e9b6829cc9dc",
+      "after": "b3f3fbb671fbd12da5660e83d1d60e44fb0cd03db8ff84b7539cbe102d6a90ab",
+      "replacements": [
+        {
+          "source": "node .agents/skills/impeccable/scripts/",
+          "count": 3
+        },
+        {
+          "source": "load-context.mjs`",
+          "count": 2
+        },
+        {
+          "source": "load-context.mjs\n",
+          "count": 1
+        },
+        {
+          "source": "pin.mjs <pin|unpin>",
+          "count": 1
+        },
+        {
+          "source": "Locate the installed skill and support directory before loading references.",
+          "count": 1
+        },
+        {
+          "source": "`$impeccable craft` has a user-confirmed shape brief for this task.",
+          "count": 1
+        },
+        {
+          "source": "Run `$impeccable shape` and wait for explicit brief confirmation.",
+          "count": 1
+        },
+        {
+          "source": "For `$impeccable craft`, `shape=pass` is only valid after a separate user response approving the shape design brief, or when the user provided an already-confirmed brief in the request. Do not mark `shape=pass` after writing PRODUCT.md, summarizing assumptions, or drafting an unconfirmed brief yourself.",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os\\.claude\\skills\\impeccable\\reference\\craft.md",
+      "before": "965510682f778d51c3038eb885bb02ae07c43c12c0d92298e0861e562c56728c",
+      "after": "5c0394317d945a1a29f53023e55a2660d6e75203483583e196777ff3fccbd235",
+      "replacements": [
+        {
+          "source": "2. The shape design brief is explicitly confirmed by the user for this task, unless the user already provided a confirmed brief.",
+          "count": 1
+        },
+        {
+          "source": "PRODUCT.md and `teach` answers do **not** satisfy the shape gate. They are project context only. A compact self-authored brief does not satisfy the shape gate either. `shape=pass` requires a separate user response approving the shape brief or an already-confirmed brief supplied by the user.",
+          "count": 1
+        },
+        {
+          "source": "1. Confirmed design brief from `shape`.",
+          "count": 1
+        },
+        {
+          "source": "Wait for the design brief to be fully confirmed by the user before proceeding. The brief is your blueprint, and every implementation decision should trace back to it.",
+          "count": 1
+        },
+        {
+          "source": "and explicit brief confirmation.",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os\\.claude\\skills\\impeccable\\reference\\shape.md",
+      "before": "808ef64bb9087eaf1d3740d15258af16c6b9b843e5a6f44c92516224ba1f5089",
+      "after": "8bc18cb305bff05cb6e0f13a65f5a09ec2688847a71f7e615c324490665e2de5",
+      "replacements": [
+        {
+          "source": "This is a required interaction, not optional guidance. Ask these questions in conversation, adapting based on answers. Don't dump them all at once; have a natural dialogue. STOP and use Codex's structured user-input/question tool when available; if unavailable, ask directly in chat to clarify what you cannot infer.",
+          "count": 1
+        },
+        {
+          "source": "Discovery must include at least one user-answer round unless PRODUCT.md, DESIGN.md, or an already-confirmed brief directly answers the needed design inputs. With a sparse prompt, do **not** synthesize a complete brief for confirmation on the first response.",
+          "count": 1
+        },
+        {
+          "source": "Always ask. Sketch quality and shipped quality are different outputs; don't guess between them.",
+          "count": 1
+        },
+        {
+          "source": "After the interview and any required probes, synthesize everything into a structured design brief. Present it to the user for explicit confirmation before considering this command complete. Stop after asking for confirmation; do not proceed to craft or implementation in the same response unless the user has already approved the brief.",
+          "count": 1
+        },
+        {
+          "source": "STOP and use Codex's structured user-input/question tool when available; if unavailable, ask directly in chat to clarify what you cannot infer. Ask for explicit confirmation of the brief before finishing. If the user disagrees with any part, revisit the relevant discovery questions. A shape run is incomplete until the brief is confirmed.",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os\\.claude\\skills\\design-taste-frontend\\SKILL.md",
+      "before": "4044b867cb5f7041bdee883c00e1d5b75d5e7c3628c284e84d46be07c2ec9f56",
+      "after": "def63b4ada6809334f3c62561aa2ab456578e3b1d4a4ae7247eb822a6a569a07",
+      "replacements": [
+        {
+          "source": "**TECHNICAL UI RULE:** Serif fonts are strictly BANNED for Dashboard/Software UIs. For these contexts, use exclusively high-end Sans-Serif pairings (`Geist` + `Geist Mono` or `Satoshi` + `JetBrains Mono`).",
+          "count": 1
+        },
+        {
+          "source": "Use EXCLUSIVELY Framer Motion's `useMotionValue` and `useTransform` outside the React render cycle to prevent performance collapse on mobile.",
+          "count": 1
+        },
+        {
+          "source": "When `MOTION_INTENSITY > 5`, embed continuous, infinite micro-animations (Pulse, Typewriter, Float, Shimmer, Carousel) in standard components (avatars, status dots, backgrounds). Apply premium Spring Physics (`type: \"spring\", stiffness: 100, damping: 20`) to all interactive elements\u2014no linear easing.",
+          "count": 1
+        },
+        {
+          "source": "Always utilize Framer Motion's `layout` and `layoutId` props for smooth re-ordering, resizing, and shared element transitions across state changes.",
+          "count": 1
+        },
+        {
+          "source": "`transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1)`",
+          "count": 1
+        },
+        {
+          "source": "**Serif Constraints:** Use Serif fonts ONLY for creative/editorial designs. **NEVER** use Serif on clean Dashboards.",
+          "count": 1
+        },
+        {
+          "source": "**CRITICAL:** Never mix GSAP/ThreeJS with Framer Motion in the same component tree. Default to Framer Motion for UI/Bento interactions. Use GSAP/ThreeJS EXCLUSIVELY for isolated full-page scrolltelling or canvas backgrounds, wrapped in strict useEffect cleanup blocks.",
+          "count": 1
+        },
+        {
+          "source": "Use the following Framer Motion principles:",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os\\.claude\\skills\\react-bits\\SKILL.md",
+      "before": "be68f46388c0bfe7e735eadd6530f43f68365eef0bf1471dc0c6e1651b058719",
+      "after": "fb12400005aae3e1e4df33e46a64b7c0ac42740fe24fe03b635d3d7044d82992",
+      "replacements": [
+        {
+          "source": "## Fetch\n",
+          "count": 1
+        },
+        {
+          "source": "node scripts/rb-add.mjs",
+          "count": 2
+        },
+        {
+          "source": "node scripts/gen-catalog.mjs",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Joshu\\.agents\\skills\\impeccable\\SKILL.md",
+      "before": "4d5026321efe065109ad73e7fd5b162860f06cde92bfa24951b9e9b6829cc9dc",
+      "after": "b3f3fbb671fbd12da5660e83d1d60e44fb0cd03db8ff84b7539cbe102d6a90ab",
+      "replacements": [
+        {
+          "source": "node .agents/skills/impeccable/scripts/",
+          "count": 3
+        },
+        {
+          "source": "load-context.mjs`",
+          "count": 2
+        },
+        {
+          "source": "load-context.mjs\n",
+          "count": 1
+        },
+        {
+          "source": "pin.mjs <pin|unpin>",
+          "count": 1
+        },
+        {
+          "source": "Locate the installed skill and support directory before loading references.",
+          "count": 1
+        },
+        {
+          "source": "`$impeccable craft` has a user-confirmed shape brief for this task.",
+          "count": 1
+        },
+        {
+          "source": "Run `$impeccable shape` and wait for explicit brief confirmation.",
+          "count": 1
+        },
+        {
+          "source": "For `$impeccable craft`, `shape=pass` is only valid after a separate user response approving the shape design brief, or when the user provided an already-confirmed brief in the request. Do not mark `shape=pass` after writing PRODUCT.md, summarizing assumptions, or drafting an unconfirmed brief yourself.",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Joshu\\.agents\\skills\\impeccable\\reference\\craft.md",
+      "before": "965510682f778d51c3038eb885bb02ae07c43c12c0d92298e0861e562c56728c",
+      "after": "5c0394317d945a1a29f53023e55a2660d6e75203483583e196777ff3fccbd235",
+      "replacements": [
+        {
+          "source": "2. The shape design brief is explicitly confirmed by the user for this task, unless the user already provided a confirmed brief.",
+          "count": 1
+        },
+        {
+          "source": "PRODUCT.md and `teach` answers do **not** satisfy the shape gate. They are project context only. A compact self-authored brief does not satisfy the shape gate either. `shape=pass` requires a separate user response approving the shape brief or an already-confirmed brief supplied by the user.",
+          "count": 1
+        },
+        {
+          "source": "1. Confirmed design brief from `shape`.",
+          "count": 1
+        },
+        {
+          "source": "Wait for the design brief to be fully confirmed by the user before proceeding. The brief is your blueprint, and every implementation decision should trace back to it.",
+          "count": 1
+        },
+        {
+          "source": "and explicit brief confirmation.",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Joshu\\.agents\\skills\\impeccable\\reference\\shape.md",
+      "before": "808ef64bb9087eaf1d3740d15258af16c6b9b843e5a6f44c92516224ba1f5089",
+      "after": "8bc18cb305bff05cb6e0f13a65f5a09ec2688847a71f7e615c324490665e2de5",
+      "replacements": [
+        {
+          "source": "This is a required interaction, not optional guidance. Ask these questions in conversation, adapting based on answers. Don't dump them all at once; have a natural dialogue. STOP and use Codex's structured user-input/question tool when available; if unavailable, ask directly in chat to clarify what you cannot infer.",
+          "count": 1
+        },
+        {
+          "source": "Discovery must include at least one user-answer round unless PRODUCT.md, DESIGN.md, or an already-confirmed brief directly answers the needed design inputs. With a sparse prompt, do **not** synthesize a complete brief for confirmation on the first response.",
+          "count": 1
+        },
+        {
+          "source": "Always ask. Sketch quality and shipped quality are different outputs; don't guess between them.",
+          "count": 1
+        },
+        {
+          "source": "After the interview and any required probes, synthesize everything into a structured design brief. Present it to the user for explicit confirmation before considering this command complete. Stop after asking for confirmation; do not proceed to craft or implementation in the same response unless the user has already approved the brief.",
+          "count": 1
+        },
+        {
+          "source": "STOP and use Codex's structured user-input/question tool when available; if unavailable, ask directly in chat to clarify what you cannot infer. Ask for explicit confirmation of the brief before finishing. If the user disagrees with any part, revisit the relevant discovery questions. A shape run is incomplete until the brief is confirmed.",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Joshu\\.agents\\skills\\high-end-visual-design\\SKILL.md",
+      "before": "ac04e8916c5a763e0f614aeca81a838d58a6f5e114b21fec5c163d3fc54fe719",
+      "after": "74bc068a7402d7ffa95d26227c6b0f13386b8c8ea4ea50a93789b12242ec4aa8",
+      "replacements": [
+        {
+          "source": "Build the DOM strictly using the \"Double-Bezel\" (Doppelrand) technique for all major cards, inputs, and feature grids. Use exaggerated squircle radii (`rounded-[2rem]`).",
+          "count": 1
+        },
+        {
+          "source": "All major cards and containers use the Double-Bezel nested architecture (outer shell + inner core)",
+          "count": 1
+        },
+        {
+          "source": "Scroll entry animations are present \u2014 no element appears statically",
+          "count": 1
+        },
+        {
+          "source": "transition-all duration-700",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Joshu\\.agents\\skills\\design-taste-frontend\\SKILL.md",
+      "before": "4044b867cb5f7041bdee883c00e1d5b75d5e7c3628c284e84d46be07c2ec9f56",
+      "after": "def63b4ada6809334f3c62561aa2ab456578e3b1d4a4ae7247eb822a6a569a07",
+      "replacements": [
+        {
+          "source": "**TECHNICAL UI RULE:** Serif fonts are strictly BANNED for Dashboard/Software UIs. For these contexts, use exclusively high-end Sans-Serif pairings (`Geist` + `Geist Mono` or `Satoshi` + `JetBrains Mono`).",
+          "count": 1
+        },
+        {
+          "source": "Use EXCLUSIVELY Framer Motion's `useMotionValue` and `useTransform` outside the React render cycle to prevent performance collapse on mobile.",
+          "count": 1
+        },
+        {
+          "source": "When `MOTION_INTENSITY > 5`, embed continuous, infinite micro-animations (Pulse, Typewriter, Float, Shimmer, Carousel) in standard components (avatars, status dots, backgrounds). Apply premium Spring Physics (`type: \"spring\", stiffness: 100, damping: 20`) to all interactive elements\u2014no linear easing.",
+          "count": 1
+        },
+        {
+          "source": "Always utilize Framer Motion's `layout` and `layoutId` props for smooth re-ordering, resizing, and shared element transitions across state changes.",
+          "count": 1
+        },
+        {
+          "source": "`transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1)`",
+          "count": 1
+        },
+        {
+          "source": "**Serif Constraints:** Use Serif fonts ONLY for creative/editorial designs. **NEVER** use Serif on clean Dashboards.",
+          "count": 1
+        },
+        {
+          "source": "**CRITICAL:** Never mix GSAP/ThreeJS with Framer Motion in the same component tree. Default to Framer Motion for UI/Bento interactions. Use GSAP/ThreeJS EXCLUSIVELY for isolated full-page scrolltelling or canvas backgrounds, wrapped in strict useEffect cleanup blocks.",
+          "count": 1
+        },
+        {
+          "source": "Use the following Framer Motion principles:",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Joshu\\.codex\\skills\\impeccable\\SKILL.md",
+      "before": "4d5026321efe065109ad73e7fd5b162860f06cde92bfa24951b9e9b6829cc9dc",
+      "after": "b3f3fbb671fbd12da5660e83d1d60e44fb0cd03db8ff84b7539cbe102d6a90ab",
+      "replacements": [
+        {
+          "source": "node .agents/skills/impeccable/scripts/",
+          "count": 3
+        },
+        {
+          "source": "load-context.mjs`",
+          "count": 2
+        },
+        {
+          "source": "load-context.mjs\n",
+          "count": 1
+        },
+        {
+          "source": "pin.mjs <pin|unpin>",
+          "count": 1
+        },
+        {
+          "source": "Locate the installed skill and support directory before loading references.",
+          "count": 1
+        },
+        {
+          "source": "`$impeccable craft` has a user-confirmed shape brief for this task.",
+          "count": 1
+        },
+        {
+          "source": "Run `$impeccable shape` and wait for explicit brief confirmation.",
+          "count": 1
+        },
+        {
+          "source": "For `$impeccable craft`, `shape=pass` is only valid after a separate user response approving the shape design brief, or when the user provided an already-confirmed brief in the request. Do not mark `shape=pass` after writing PRODUCT.md, summarizing assumptions, or drafting an unconfirmed brief yourself.",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Joshu\\.codex\\skills\\impeccable\\reference\\craft.md",
+      "before": "965510682f778d51c3038eb885bb02ae07c43c12c0d92298e0861e562c56728c",
+      "after": "5c0394317d945a1a29f53023e55a2660d6e75203483583e196777ff3fccbd235",
+      "replacements": [
+        {
+          "source": "2. The shape design brief is explicitly confirmed by the user for this task, unless the user already provided a confirmed brief.",
+          "count": 1
+        },
+        {
+          "source": "PRODUCT.md and `teach` answers do **not** satisfy the shape gate. They are project context only. A compact self-authored brief does not satisfy the shape gate either. `shape=pass` requires a separate user response approving the shape brief or an already-confirmed brief supplied by the user.",
+          "count": 1
+        },
+        {
+          "source": "1. Confirmed design brief from `shape`.",
+          "count": 1
+        },
+        {
+          "source": "Wait for the design brief to be fully confirmed by the user before proceeding. The brief is your blueprint, and every implementation decision should trace back to it.",
+          "count": 1
+        },
+        {
+          "source": "and explicit brief confirmation.",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Joshu\\.codex\\skills\\impeccable\\reference\\shape.md",
+      "before": "808ef64bb9087eaf1d3740d15258af16c6b9b843e5a6f44c92516224ba1f5089",
+      "after": "8bc18cb305bff05cb6e0f13a65f5a09ec2688847a71f7e615c324490665e2de5",
+      "replacements": [
+        {
+          "source": "This is a required interaction, not optional guidance. Ask these questions in conversation, adapting based on answers. Don't dump them all at once; have a natural dialogue. STOP and use Codex's structured user-input/question tool when available; if unavailable, ask directly in chat to clarify what you cannot infer.",
+          "count": 1
+        },
+        {
+          "source": "Discovery must include at least one user-answer round unless PRODUCT.md, DESIGN.md, or an already-confirmed brief directly answers the needed design inputs. With a sparse prompt, do **not** synthesize a complete brief for confirmation on the first response.",
+          "count": 1
+        },
+        {
+          "source": "Always ask. Sketch quality and shipped quality are different outputs; don't guess between them.",
+          "count": 1
+        },
+        {
+          "source": "After the interview and any required probes, synthesize everything into a structured design brief. Present it to the user for explicit confirmation before considering this command complete. Stop after asking for confirmation; do not proceed to craft or implementation in the same response unless the user has already approved the brief.",
+          "count": 1
+        },
+        {
+          "source": "STOP and use Codex's structured user-input/question tool when available; if unavailable, ask directly in chat to clarify what you cannot infer. Ask for explicit confirmation of the brief before finishing. If the user disagrees with any part, revisit the relevant discovery questions. A shape run is incomplete until the brief is confirmed.",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Joshu\\.codex\\skills\\high-end-visual-design\\SKILL.md",
+      "before": "ac04e8916c5a763e0f614aeca81a838d58a6f5e114b21fec5c163d3fc54fe719",
+      "after": "74bc068a7402d7ffa95d26227c6b0f13386b8c8ea4ea50a93789b12242ec4aa8",
+      "replacements": [
+        {
+          "source": "Build the DOM strictly using the \"Double-Bezel\" (Doppelrand) technique for all major cards, inputs, and feature grids. Use exaggerated squircle radii (`rounded-[2rem]`).",
+          "count": 1
+        },
+        {
+          "source": "All major cards and containers use the Double-Bezel nested architecture (outer shell + inner core)",
+          "count": 1
+        },
+        {
+          "source": "Scroll entry animations are present \u2014 no element appears statically",
+          "count": 1
+        },
+        {
+          "source": "transition-all duration-700",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Joshu\\.codex\\skills\\design-taste-frontend\\SKILL.md",
+      "before": "4044b867cb5f7041bdee883c00e1d5b75d5e7c3628c284e84d46be07c2ec9f56",
+      "after": "def63b4ada6809334f3c62561aa2ab456578e3b1d4a4ae7247eb822a6a569a07",
+      "replacements": [
+        {
+          "source": "**TECHNICAL UI RULE:** Serif fonts are strictly BANNED for Dashboard/Software UIs. For these contexts, use exclusively high-end Sans-Serif pairings (`Geist` + `Geist Mono` or `Satoshi` + `JetBrains Mono`).",
+          "count": 1
+        },
+        {
+          "source": "Use EXCLUSIVELY Framer Motion's `useMotionValue` and `useTransform` outside the React render cycle to prevent performance collapse on mobile.",
+          "count": 1
+        },
+        {
+          "source": "When `MOTION_INTENSITY > 5`, embed continuous, infinite micro-animations (Pulse, Typewriter, Float, Shimmer, Carousel) in standard components (avatars, status dots, backgrounds). Apply premium Spring Physics (`type: \"spring\", stiffness: 100, damping: 20`) to all interactive elements\u2014no linear easing.",
+          "count": 1
+        },
+        {
+          "source": "Always utilize Framer Motion's `layout` and `layoutId` props for smooth re-ordering, resizing, and shared element transitions across state changes.",
+          "count": 1
+        },
+        {
+          "source": "`transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1)`",
+          "count": 1
+        },
+        {
+          "source": "**Serif Constraints:** Use Serif fonts ONLY for creative/editorial designs. **NEVER** use Serif on clean Dashboards.",
+          "count": 1
+        },
+        {
+          "source": "**CRITICAL:** Never mix GSAP/ThreeJS with Framer Motion in the same component tree. Default to Framer Motion for UI/Bento interactions. Use GSAP/ThreeJS EXCLUSIVELY for isolated full-page scrolltelling or canvas backgrounds, wrapped in strict useEffect cleanup blocks.",
+          "count": 1
+        },
+        {
+          "source": "Use the following Framer Motion principles:",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Joshu\\.claude\\skills\\impeccable\\SKILL.md",
+      "before": "4d5026321efe065109ad73e7fd5b162860f06cde92bfa24951b9e9b6829cc9dc",
+      "after": "b3f3fbb671fbd12da5660e83d1d60e44fb0cd03db8ff84b7539cbe102d6a90ab",
+      "replacements": [
+        {
+          "source": "node .agents/skills/impeccable/scripts/",
+          "count": 3
+        },
+        {
+          "source": "load-context.mjs`",
+          "count": 2
+        },
+        {
+          "source": "load-context.mjs\n",
+          "count": 1
+        },
+        {
+          "source": "pin.mjs <pin|unpin>",
+          "count": 1
+        },
+        {
+          "source": "Locate the installed skill and support directory before loading references.",
+          "count": 1
+        },
+        {
+          "source": "`$impeccable craft` has a user-confirmed shape brief for this task.",
+          "count": 1
+        },
+        {
+          "source": "Run `$impeccable shape` and wait for explicit brief confirmation.",
+          "count": 1
+        },
+        {
+          "source": "For `$impeccable craft`, `shape=pass` is only valid after a separate user response approving the shape design brief, or when the user provided an already-confirmed brief in the request. Do not mark `shape=pass` after writing PRODUCT.md, summarizing assumptions, or drafting an unconfirmed brief yourself.",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Joshu\\.claude\\skills\\impeccable\\reference\\craft.md",
+      "before": "965510682f778d51c3038eb885bb02ae07c43c12c0d92298e0861e562c56728c",
+      "after": "5c0394317d945a1a29f53023e55a2660d6e75203483583e196777ff3fccbd235",
+      "replacements": [
+        {
+          "source": "2. The shape design brief is explicitly confirmed by the user for this task, unless the user already provided a confirmed brief.",
+          "count": 1
+        },
+        {
+          "source": "PRODUCT.md and `teach` answers do **not** satisfy the shape gate. They are project context only. A compact self-authored brief does not satisfy the shape gate either. `shape=pass` requires a separate user response approving the shape brief or an already-confirmed brief supplied by the user.",
+          "count": 1
+        },
+        {
+          "source": "1. Confirmed design brief from `shape`.",
+          "count": 1
+        },
+        {
+          "source": "Wait for the design brief to be fully confirmed by the user before proceeding. The brief is your blueprint, and every implementation decision should trace back to it.",
+          "count": 1
+        },
+        {
+          "source": "and explicit brief confirmation.",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Joshu\\.claude\\skills\\impeccable\\reference\\shape.md",
+      "before": "808ef64bb9087eaf1d3740d15258af16c6b9b843e5a6f44c92516224ba1f5089",
+      "after": "8bc18cb305bff05cb6e0f13a65f5a09ec2688847a71f7e615c324490665e2de5",
+      "replacements": [
+        {
+          "source": "This is a required interaction, not optional guidance. Ask these questions in conversation, adapting based on answers. Don't dump them all at once; have a natural dialogue. STOP and use Codex's structured user-input/question tool when available; if unavailable, ask directly in chat to clarify what you cannot infer.",
+          "count": 1
+        },
+        {
+          "source": "Discovery must include at least one user-answer round unless PRODUCT.md, DESIGN.md, or an already-confirmed brief directly answers the needed design inputs. With a sparse prompt, do **not** synthesize a complete brief for confirmation on the first response.",
+          "count": 1
+        },
+        {
+          "source": "Always ask. Sketch quality and shipped quality are different outputs; don't guess between them.",
+          "count": 1
+        },
+        {
+          "source": "After the interview and any required probes, synthesize everything into a structured design brief. Present it to the user for explicit confirmation before considering this command complete. Stop after asking for confirmation; do not proceed to craft or implementation in the same response unless the user has already approved the brief.",
+          "count": 1
+        },
+        {
+          "source": "STOP and use Codex's structured user-input/question tool when available; if unavailable, ask directly in chat to clarify what you cannot infer. Ask for explicit confirmation of the brief before finishing. If the user disagrees with any part, revisit the relevant discovery questions. A shape run is incomplete until the brief is confirmed.",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Joshu\\.claude\\skills\\high-end-visual-design\\SKILL.md",
+      "before": "ac04e8916c5a763e0f614aeca81a838d58a6f5e114b21fec5c163d3fc54fe719",
+      "after": "74bc068a7402d7ffa95d26227c6b0f13386b8c8ea4ea50a93789b12242ec4aa8",
+      "replacements": [
+        {
+          "source": "Build the DOM strictly using the \"Double-Bezel\" (Doppelrand) technique for all major cards, inputs, and feature grids. Use exaggerated squircle radii (`rounded-[2rem]`).",
+          "count": 1
+        },
+        {
+          "source": "All major cards and containers use the Double-Bezel nested architecture (outer shell + inner core)",
+          "count": 1
+        },
+        {
+          "source": "Scroll entry animations are present \u2014 no element appears statically",
+          "count": 1
+        },
+        {
+          "source": "transition-all duration-700",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Joshu\\.claude\\skills\\design-taste-frontend\\SKILL.md",
+      "before": "4044b867cb5f7041bdee883c00e1d5b75d5e7c3628c284e84d46be07c2ec9f56",
+      "after": "def63b4ada6809334f3c62561aa2ab456578e3b1d4a4ae7247eb822a6a569a07",
+      "replacements": [
+        {
+          "source": "**TECHNICAL UI RULE:** Serif fonts are strictly BANNED for Dashboard/Software UIs. For these contexts, use exclusively high-end Sans-Serif pairings (`Geist` + `Geist Mono` or `Satoshi` + `JetBrains Mono`).",
+          "count": 1
+        },
+        {
+          "source": "Use EXCLUSIVELY Framer Motion's `useMotionValue` and `useTransform` outside the React render cycle to prevent performance collapse on mobile.",
+          "count": 1
+        },
+        {
+          "source": "When `MOTION_INTENSITY > 5`, embed continuous, infinite micro-animations (Pulse, Typewriter, Float, Shimmer, Carousel) in standard components (avatars, status dots, backgrounds). Apply premium Spring Physics (`type: \"spring\", stiffness: 100, damping: 20`) to all interactive elements\u2014no linear easing.",
+          "count": 1
+        },
+        {
+          "source": "Always utilize Framer Motion's `layout` and `layoutId` props for smooth re-ordering, resizing, and shared element transitions across state changes.",
+          "count": 1
+        },
+        {
+          "source": "`transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1)`",
+          "count": 1
+        },
+        {
+          "source": "**Serif Constraints:** Use Serif fonts ONLY for creative/editorial designs. **NEVER** use Serif on clean Dashboards.",
+          "count": 1
+        },
+        {
+          "source": "**CRITICAL:** Never mix GSAP/ThreeJS with Framer Motion in the same component tree. Default to Framer Motion for UI/Bento interactions. Use GSAP/ThreeJS EXCLUSIVELY for isolated full-page scrolltelling or canvas backgrounds, wrapped in strict useEffect cleanup blocks.",
+          "count": 1
+        },
+        {
+          "source": "Use the following Framer Motion principles:",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\impeccable\\SKILL.md",
+      "before": "b3f3fbb671fbd12da5660e83d1d60e44fb0cd03db8ff84b7539cbe102d6a90ab",
+      "after": "37b3c520e4a68dc2fa5238905e7309bcb7af6abe51ba54fb244762947abc4702",
+      "kind": "followup path and wording consistency"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\design-taste-frontend\\SKILL.md",
+      "before": "def63b4ada6809334f3c62561aa2ab456578e3b1d4a4ae7247eb822a6a569a07",
+      "after": "0b718274d9fd14f54a99ca8e58b98846467a118cf13d83b2acb81a396c91c62b",
+      "kind": "followup path and wording consistency"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\impeccable\\reference\\document.md",
+      "before": "09f703a20f22f394b763e2a865e153d0ce5c7d3d9a0fd67a29942a75385fb410",
+      "after": "0fa8a37fd3a6feb68427288daa8a937c4ad53dbcb6d90a70111871228b2babf0",
+      "kind": "followup path and wording consistency"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\impeccable\\reference\\live.md",
+      "before": "405e83b04aa43b274d8afa331303f6f722f593cd21b1a02c5aae2a5028433bce",
+      "after": "f6419e751b3e871e7b9d7a71b6e4b60bd389875fe1b46f479bb9afe9d2b36990",
+      "kind": "followup path and wording consistency"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\impeccable\\reference\\teach.md",
+      "before": "97dfca0073badcecfa8a29f03dfae909b4684896eddcde5121966fb7a5f34858",
+      "after": "fb7da5a89a1cb4715fb0568d179d83de0b1cdb251b9ad6a44ba49250c22108f9",
+      "kind": "followup path and wording consistency"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\impeccable\\SKILL.md",
+      "before": "b3f3fbb671fbd12da5660e83d1d60e44fb0cd03db8ff84b7539cbe102d6a90ab",
+      "after": "37b3c520e4a68dc2fa5238905e7309bcb7af6abe51ba54fb244762947abc4702",
+      "kind": "followup path and wording consistency"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\design-taste-frontend\\SKILL.md",
+      "before": "def63b4ada6809334f3c62561aa2ab456578e3b1d4a4ae7247eb822a6a569a07",
+      "after": "0b718274d9fd14f54a99ca8e58b98846467a118cf13d83b2acb81a396c91c62b",
+      "kind": "followup path and wording consistency"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\impeccable\\reference\\document.md",
+      "before": "09f703a20f22f394b763e2a865e153d0ce5c7d3d9a0fd67a29942a75385fb410",
+      "after": "0fa8a37fd3a6feb68427288daa8a937c4ad53dbcb6d90a70111871228b2babf0",
+      "kind": "followup path and wording consistency"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\impeccable\\reference\\live.md",
+      "before": "405e83b04aa43b274d8afa331303f6f722f593cd21b1a02c5aae2a5028433bce",
+      "after": "f6419e751b3e871e7b9d7a71b6e4b60bd389875fe1b46f479bb9afe9d2b36990",
+      "kind": "followup path and wording consistency"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\impeccable\\reference\\teach.md",
+      "before": "97dfca0073badcecfa8a29f03dfae909b4684896eddcde5121966fb7a5f34858",
+      "after": "fb7da5a89a1cb4715fb0568d179d83de0b1cdb251b9ad6a44ba49250c22108f9",
+      "kind": "followup path and wording consistency"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os\\.agents\\skills\\impeccable\\SKILL.md",
+      "before": "b3f3fbb671fbd12da5660e83d1d60e44fb0cd03db8ff84b7539cbe102d6a90ab",
+      "after": "37b3c520e4a68dc2fa5238905e7309bcb7af6abe51ba54fb244762947abc4702",
+      "kind": "followup path and wording consistency"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os\\.agents\\skills\\design-taste-frontend\\SKILL.md",
+      "before": "def63b4ada6809334f3c62561aa2ab456578e3b1d4a4ae7247eb822a6a569a07",
+      "after": "0b718274d9fd14f54a99ca8e58b98846467a118cf13d83b2acb81a396c91c62b",
+      "kind": "followup path and wording consistency"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os\\.agents\\skills\\impeccable\\reference\\document.md",
+      "before": "09f703a20f22f394b763e2a865e153d0ce5c7d3d9a0fd67a29942a75385fb410",
+      "after": "0fa8a37fd3a6feb68427288daa8a937c4ad53dbcb6d90a70111871228b2babf0",
+      "kind": "followup path and wording consistency"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os\\.agents\\skills\\impeccable\\reference\\live.md",
+      "before": "405e83b04aa43b274d8afa331303f6f722f593cd21b1a02c5aae2a5028433bce",
+      "after": "f6419e751b3e871e7b9d7a71b6e4b60bd389875fe1b46f479bb9afe9d2b36990",
+      "kind": "followup path and wording consistency"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os\\.agents\\skills\\impeccable\\reference\\teach.md",
+      "before": "97dfca0073badcecfa8a29f03dfae909b4684896eddcde5121966fb7a5f34858",
+      "after": "fb7da5a89a1cb4715fb0568d179d83de0b1cdb251b9ad6a44ba49250c22108f9",
+      "kind": "followup path and wording consistency"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os\\.claude\\skills\\impeccable\\SKILL.md",
+      "before": "b3f3fbb671fbd12da5660e83d1d60e44fb0cd03db8ff84b7539cbe102d6a90ab",
+      "after": "37b3c520e4a68dc2fa5238905e7309bcb7af6abe51ba54fb244762947abc4702",
+      "kind": "followup path and wording consistency"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os\\.claude\\skills\\design-taste-frontend\\SKILL.md",
+      "before": "def63b4ada6809334f3c62561aa2ab456578e3b1d4a4ae7247eb822a6a569a07",
+      "after": "0b718274d9fd14f54a99ca8e58b98846467a118cf13d83b2acb81a396c91c62b",
+      "kind": "followup path and wording consistency"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os\\.claude\\skills\\impeccable\\reference\\document.md",
+      "before": "09f703a20f22f394b763e2a865e153d0ce5c7d3d9a0fd67a29942a75385fb410",
+      "after": "0fa8a37fd3a6feb68427288daa8a937c4ad53dbcb6d90a70111871228b2babf0",
+      "kind": "followup path and wording consistency"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os\\.claude\\skills\\impeccable\\reference\\live.md",
+      "before": "405e83b04aa43b274d8afa331303f6f722f593cd21b1a02c5aae2a5028433bce",
+      "after": "f6419e751b3e871e7b9d7a71b6e4b60bd389875fe1b46f479bb9afe9d2b36990",
+      "kind": "followup path and wording consistency"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os\\.claude\\skills\\impeccable\\reference\\teach.md",
+      "before": "97dfca0073badcecfa8a29f03dfae909b4684896eddcde5121966fb7a5f34858",
+      "after": "fb7da5a89a1cb4715fb0568d179d83de0b1cdb251b9ad6a44ba49250c22108f9",
+      "kind": "followup path and wording consistency"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\.agents\\skills\\impeccable\\SKILL.md",
+      "before": "b3f3fbb671fbd12da5660e83d1d60e44fb0cd03db8ff84b7539cbe102d6a90ab",
+      "after": "37b3c520e4a68dc2fa5238905e7309bcb7af6abe51ba54fb244762947abc4702",
+      "kind": "followup path and wording consistency"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\.agents\\skills\\design-taste-frontend\\SKILL.md",
+      "before": "def63b4ada6809334f3c62561aa2ab456578e3b1d4a4ae7247eb822a6a569a07",
+      "after": "0b718274d9fd14f54a99ca8e58b98846467a118cf13d83b2acb81a396c91c62b",
+      "kind": "followup path and wording consistency"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\.agents\\skills\\impeccable\\reference\\document.md",
+      "before": "09f703a20f22f394b763e2a865e153d0ce5c7d3d9a0fd67a29942a75385fb410",
+      "after": "0fa8a37fd3a6feb68427288daa8a937c4ad53dbcb6d90a70111871228b2babf0",
+      "kind": "followup path and wording consistency"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\.agents\\skills\\impeccable\\reference\\live.md",
+      "before": "405e83b04aa43b274d8afa331303f6f722f593cd21b1a02c5aae2a5028433bce",
+      "after": "f6419e751b3e871e7b9d7a71b6e4b60bd389875fe1b46f479bb9afe9d2b36990",
+      "kind": "followup path and wording consistency"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\.agents\\skills\\impeccable\\reference\\teach.md",
+      "before": "97dfca0073badcecfa8a29f03dfae909b4684896eddcde5121966fb7a5f34858",
+      "after": "fb7da5a89a1cb4715fb0568d179d83de0b1cdb251b9ad6a44ba49250c22108f9",
+      "kind": "followup path and wording consistency"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\.codex\\skills\\impeccable\\SKILL.md",
+      "before": "b3f3fbb671fbd12da5660e83d1d60e44fb0cd03db8ff84b7539cbe102d6a90ab",
+      "after": "37b3c520e4a68dc2fa5238905e7309bcb7af6abe51ba54fb244762947abc4702",
+      "kind": "followup path and wording consistency"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\.codex\\skills\\design-taste-frontend\\SKILL.md",
+      "before": "def63b4ada6809334f3c62561aa2ab456578e3b1d4a4ae7247eb822a6a569a07",
+      "after": "0b718274d9fd14f54a99ca8e58b98846467a118cf13d83b2acb81a396c91c62b",
+      "kind": "followup path and wording consistency"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\.codex\\skills\\impeccable\\reference\\document.md",
+      "before": "09f703a20f22f394b763e2a865e153d0ce5c7d3d9a0fd67a29942a75385fb410",
+      "after": "0fa8a37fd3a6feb68427288daa8a937c4ad53dbcb6d90a70111871228b2babf0",
+      "kind": "followup path and wording consistency"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\.codex\\skills\\impeccable\\reference\\live.md",
+      "before": "405e83b04aa43b274d8afa331303f6f722f593cd21b1a02c5aae2a5028433bce",
+      "after": "f6419e751b3e871e7b9d7a71b6e4b60bd389875fe1b46f479bb9afe9d2b36990",
+      "kind": "followup path and wording consistency"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\.codex\\skills\\impeccable\\reference\\teach.md",
+      "before": "97dfca0073badcecfa8a29f03dfae909b4684896eddcde5121966fb7a5f34858",
+      "after": "fb7da5a89a1cb4715fb0568d179d83de0b1cdb251b9ad6a44ba49250c22108f9",
+      "kind": "followup path and wording consistency"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\.claude\\skills\\impeccable\\SKILL.md",
+      "before": "b3f3fbb671fbd12da5660e83d1d60e44fb0cd03db8ff84b7539cbe102d6a90ab",
+      "after": "37b3c520e4a68dc2fa5238905e7309bcb7af6abe51ba54fb244762947abc4702",
+      "kind": "followup path and wording consistency"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\.claude\\skills\\design-taste-frontend\\SKILL.md",
+      "before": "def63b4ada6809334f3c62561aa2ab456578e3b1d4a4ae7247eb822a6a569a07",
+      "after": "0b718274d9fd14f54a99ca8e58b98846467a118cf13d83b2acb81a396c91c62b",
+      "kind": "followup path and wording consistency"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\.claude\\skills\\impeccable\\reference\\document.md",
+      "before": "09f703a20f22f394b763e2a865e153d0ce5c7d3d9a0fd67a29942a75385fb410",
+      "after": "0fa8a37fd3a6feb68427288daa8a937c4ad53dbcb6d90a70111871228b2babf0",
+      "kind": "followup path and wording consistency"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\.claude\\skills\\impeccable\\reference\\live.md",
+      "before": "405e83b04aa43b274d8afa331303f6f722f593cd21b1a02c5aae2a5028433bce",
+      "after": "f6419e751b3e871e7b9d7a71b6e4b60bd389875fe1b46f479bb9afe9d2b36990",
+      "kind": "followup path and wording consistency"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\.claude\\skills\\impeccable\\reference\\teach.md",
+      "before": "97dfca0073badcecfa8a29f03dfae909b4684896eddcde5121966fb7a5f34858",
+      "after": "fb7da5a89a1cb4715fb0568d179d83de0b1cdb251b9ad6a44ba49250c22108f9",
+      "kind": "followup path and wording consistency"
+    }
+  ],
+  "followup_backup": "C:\\Users\\Joshu\\dev\\ai-os\\research\\2026-10-24-design-skill-doctor\\instruction-backup-followup.zip"
+}

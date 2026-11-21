@@ -1,0 +1,139 @@
+{
+  "status": "completed",
+  "mode": "review",
+  "provider": "claude",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "claude",
+    "builder": "codex",
+    "inspector": "claude"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-and-or-20261019",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os\\brainstorms\\2026-09-30-conditional-curriculum\\full-bootcamp.build-spec.md",
+  "plan_sha256": "b1a68dd2cc03fe7c2d320b0c812af7b6f480a67d9457995df93b93580acfdd2d",
+  "requested_model": null,
+  "requested_effort": null,
+  "base": null,
+  "snapshot": null,
+  "previous": null,
+  "started_at": 1792952245.2984715,
+  "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\handoffs\\conditional-full-20261025-review\\claudex-yx_1e9wn",
+  "cli_version": "2.1.309 (Claude Code)",
+  "executable": [
+    "C:\\Users\\Joshu\\.local\\bin\\claude.exe"
+  ],
+  "exit_code": 0,
+  "session_id": "131b90c8-b33e-43c2-8090-76f88a909aff",
+  "response": {
+    "verdict": "REVISE",
+    "summary": "The plan is thorough on teaching content, where material comes from, and what must be preserved. It is weak on how new chapters get access, which affects existing students. New chapter steps have to borrow existing legacy unit IDs (group-3, direct-linking, quantifier-*, mbt and others). In the current assignment code, course-scope assignments and legacy stage assignments cover every unit, including quantifier units. So adding chapters would quietly make existing assignments longer, including assignments already marked completed. It would also make the quantity material required, which the plan says must not block finishing the core course. Skill-scope assignments for the units being absorbed would also switch to a different screen without carrying over their earlier progress. The checkable logic model is also too limited for the acceptance claims the plan makes. These need concrete decisions before implementation. The source inputs I spot-checked exist, and the plan's bank counts match the code.",
+    "findings": [
+      {
+        "id": "ACCESS-1",
+        "severity": "high",
+        "path": "src/bootcamps/conditionals/assignments.ts",
+        "evidence": "Course scope resolves to getCurriculumUnits(conditionalUnits) (assignments.ts:46), and that list includes the quantifier-phase units (curriculumPath.ts:43). Legacy stage assignments return every unit after their starting unit (assignments.ts:50-53). Rows with status 'completed' still resolve (assignments.ts:62). OpeningCourseRoute (routes.tsx:188) shows any step whose unitId the assignment allows. routes.andOr.test.tsx:127-129 already locks in that the course denominator equals the full OPENING_COURSE_PATH. Mapping Chapters 3-7 to group-3/group-4/biconditionals/direct-linking/no-link/triggering/mbt/sufficient-assumption and so on will instantly add every new step to every existing course and stage assignment. A student who finished at 16/16 (or 23/23 with Chapter 2) would reopen to something like 16/60. If Chapter 6 uses quantifier-* unitIds, course scope will require the quantity material, which contradicts 'do not block core conditional completion on an unapproved quantity expansion'. 'general' learn scope (phase === 'conditional') would leave quantity out, so the same course gets different denominators under different assignment types.",
+        "fix": "Add to the spec an explicit step-to-access-unit table for every new step. Decide whether existing course, stage and completed assignments gain the new chapters or are frozen to their original step set, for example through a course edition or curriculumVersion on the target, applied the same way assignment membership already is. State whether quantity steps count toward core completion, and gate them so they do not count for course scope unless that is approved. Add access-matrix tests for course, v2-stage, legacy-stage, general, area and skill targets, including a completed row, for each new chapter."
+      },
+      {
+        "id": "ACCESS-2",
+        "severity": "medium",
+        "path": "src/bootcamps/conditionals/routes.tsx",
+        "evidence": "CourseLanding sends a skill or area assignment to the legacy LearningPath only when no course step matches its units (routes.tsx:219-222). Once a chapter step uses unitId 'group-3' or 'direct-linking', an existing skill assignment for that unit switches to the numbered course. There, the legacy read marks in progress.lessons do not count as step completion (routes.andOr.test.tsx:97-105 confirms that the legacy marks show 'Not started'). Students midway through those assignments lose their visible progress. Also, additionalUnits (routes.tsx:223) excludes only CONDITIONAL_OPENING_UNIT_IDS, while recordedPractice (routes.tsx:192) includes CHAPTER_TWO_LEGACY_UNIT_IDS. Absorbed legacy units therefore appear twice: as numbered steps and again under 'Additional assigned material'. A per-chapter constant like CHAPTER_TWO_LEGACY_UNIT_IDS will multiply across seven chapters.",
+        "fix": "Replace the per-chapter constant with one registry of absorbed legacy unit IDs, used in routes.tsx:192, routes.tsx:223 and the landing switch. Specify what a student with an existing skill or area assignment, or with legacy read marks or runs for an absorbed unit, sees at entry. For example, show an acknowledged prior-work state or a link to their legacy record, without claiming new step completion. Add regression tests for this transition and for the duplicate listing."
+      },
+      {
+        "id": "SEMANTIC-1",
+        "severity": "medium",
+        "path": "src/bootcamps/conditionals/content/andOrLogic.ts",
+        "evidence": "Side is a flat {op: 'and'|'or', members: Literal[]} (andOrLogic.ts:14), and Rule is a single sufficient→necessary pair. It cannot express exactly-one, but-not-both, a single iff item, nested compounds (Chapter 7.4), changes of subject or domain (Chapter 5.4), or some/most quantity models (Chapter 6). The plan's acceptance requires truth-table and inference checks to 'consume the actual semantic items' and to confirm iff, inclusion/exclusion, invalid chains and quantity counterexamples 'with logically appropriate models'. It never says the model must be extended or which model applies. Without that, authors will fall back on handwritten keys, which is the outcome the plan forbids.",
+        "fix": "State the semantic representation for each new item family. For example: iff and exactly-one as validated multi-rule sets or an explicit xor/iff connector; a recursive Side tree for nested compounds; typed atoms with a subject/domain field for no-link cases; and a small finite-domain model checker for some/most/all with counterexample generation. Require the item tests to derive keys and distractor wrongness from those models, as andOrItems.test.ts does now."
+      },
+      {
+        "id": "DRILL-1",
+        "severity": "low",
+        "path": "src/features/quick-drills/unless-drill/UnlessDrill.tsx",
+        "evidence": "This confirms the timeout defect the plan raises. When time runs out, settle(true) grades placedRef with gradeUnless (UnlessDrill.tsx:102-112), so boxes that are filled but never locked score as correct at the deadline. It also shows the storage gaps are wider than one fallback: there are two unscoped localStorage keys ('lsatu.unless-drill.milestones.v1' in unlessProgress.ts:15 and KEY in UnlessDrill.tsx:28). Initial milestones come from browser storage before the account loads, so a prior user's 5-second unlock can apply on a shared device. record() unlocks optimistically and only console.warns when the insert fails (unlessProgress.ts:47-57).",
+        "fix": "Before any course adapter, the spec should require: a decision on whether timed-out results are graded or counted only as no-answer; user-scoped local keys, or no local seeding when signed in; and a visible save-failure state instead of console.warn. Add tests for the deadline boundary and for one account switching to another on the same device."
+      },
+      {
+        "id": "REFRESHER-1",
+        "severity": "low",
+        "path": "src/features/conditional-refresher/content.ts",
+        "evidence": "The plan limits the until correction to f11 (content.ts:185-188, note 'until behaves exactly like unless'). The same sentence also appears in diagram entry d12 (content.ts:97), and the Group 3 word list puts 'until' beside unless/without (content.ts:35). Any reused sort or diagram feedback built from that grouping can repeat the blanket equivalence.",
+        "fix": "Have the spec require an audit of every 'until' occurrence in the refresher's sort, diagram and flashcard data and its feedback. Fixing f11 alone is not enough."
+      },
+      {
+        "id": "NAV-1",
+        "severity": "low",
+        "path": "src/bootcamps/conditionals/openingCoursePath.ts",
+        "evidence": "openingDrillNumber (openingCoursePath.ts:61-64) numbers drills across the whole OPENING_COURSE_PATH. Lessons use chapter-local numbers such as 2.1, but Chapter 2 drills already come out as drills 11-14, and a seven-chapter course would show numbers like 'Drill 40'. The plan says to render Chapter labels but never says how drills are numbered.",
+        "fix": "Specify chapter-scoped drill numbering, or no numbering, and update the openingDrillNumber tests to match."
+      }
+    ],
+    "coverage": [
+      "Read the full plan file at the given path.",
+      "src/bootcamps/conditionals/openingCoursePath.ts (whole file)",
+      "src/bootcamps/conditionals/routes.tsx lines 90-289 (route access, OpeningCourseRoute, CourseLanding, LearningPath, ActionGate)",
+      "src/bootcamps/conditionals/assignments.ts lines 1-87 (target parsing, unit membership by scope, conditionalAssignmentAllowsAction)",
+      "src/bootcamps/conditionals/curriculumPath.ts getCurriculumUnits/getCurriculumDifficulty",
+      "src/bootcamps/conditionals/routes.andOr.test.tsx lines 90-150 (Chapter 2 denominator and access matrix)",
+      "Grep of all callers of OPENING_COURSE_PATH, CONDITIONAL_OPENING_UNIT_IDS, CHAPTER_TWO_LEGACY_UNIT_IDS",
+      "curriculum.generated.json top-level unit IDs (confirmed 30 units, including quantifier-*)",
+      "src/bootcamps/conditionals/content/andOrLogic.ts exported model; andOrItems.ts exactly-one/not-both/neither references",
+      "src/features/quick-drills/unless-drill/UnlessDrill.tsx lines 60-189 and unlessProgress.ts (whole file)",
+      "src/features/conditional-refresher/content.ts 'until' occurrences",
+      "src/features/activity-centre/conditionals/content.ts (whole file) and questions.json IDs (confirmed 8 Linking, 22 Missing Link order, 10 MBT; all Linking items ask for the missing link)",
+      "Confirmed the plan's vault inputs exist: students/asia cheat sheet and breakdown, 09-quantity-statements-classroom.md, brainstorm directory"
+    ],
+    "limitations": [
+      "I could not run tests, typecheck or the build. No test results are claimed.",
+      "Glob timed out on broad patterns, so I did not open generalPhases.ts or conditional-rephrase.json. The 62-entry General count and the rubric contradiction the plan describes are unverified.",
+      "I did not read the Loophole transcripts, the corpus Notes/Homework, the LSAT Lab guide, teaching-preferences.md, or the October 18/19 checkpoint, spec and HOST-VERIFICATION documents. The plan's teaching-content claims and source-audit cautions were not independently checked.",
+      "I did not compare this worktree with current main. The plan says the checkout is behind cached main, so the line references may differ there.",
+      "I did not review the Chapter 2 draft components (AndOrLessons.tsx, AndOrPractice.tsx, the films) for teaching quality or runtime behavior. Only their access and denominator wiring was traced.",
+      "I did not inspect the Activity Centre practiceStore, DrillEntrance or ConditionalPractice access gating, so how the adapter would gate hub content inside course steps was not traced."
+    ]
+  },
+  "usage": {
+    "input_tokens": 36,
+    "cache_creation_input_tokens": 65827,
+    "cache_read_input_tokens": 766843,
+    "output_tokens": 14116,
+    "output_tokens_details": {
+      "thinking_tokens": 5173
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 65827,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 5658,
+        "cache_read_input_tokens": 61896,
+        "cache_creation_input_tokens": 7516,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 7516
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "permission_denials": [],
+  "total_cost_usd": 0.9624485999999999,
+  "elapsed_seconds": 205.6
+}

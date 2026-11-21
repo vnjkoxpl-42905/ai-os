@@ -1,0 +1,129 @@
+
+> vite_react_shadcn_ts@0.0.0 test
+> vitest run src/features/reading-center
+
+
+ RUN  v3.2.4 C:/Users/Joshu/dev/ai-os-projects/lsatu-rc-sonnet-build
+
+Browserslist: browsers data (caniuse-lite) is 6 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+stderr | src/features/reading-center/pages/ReadingCenterHome.test.tsx > Reading dashboard > starts with truthful empty states and links to separate activities
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/features/reading-center/pages/ReadingCenterHome.test.tsx (4 tests) 212ms
+ ✓ src/features/reading-center/rc-recall/useRecordingRecovery.test.tsx (9 tests) 494ms
+ ✓ src/features/reading-center/rc-recall/RcTrainingDemo.test.tsx (6 tests) 502ms
+stderr | src/features/reading-center/index.test.tsx > Reading Center route boundaries > opens Dashboard by default inside the activity rail for hub members
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/features/reading-center/rc-recall/ExamplePlayer.test.tsx (3 tests) 176ms
+ ✓ src/features/reading-center/index.test.tsx (12 tests) 400ms
+ ✓ src/features/reading-center/hooks/useReadingCenterData.test.tsx (7 tests) 518ms
+stderr | src/features/reading-center/pages/ReaderPage.test.tsx > Reader session acknowledgement and foreground timing > keeps a failed final-page session visible and retries the exact UUID without recounting
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/features/reading-center/components/EReader.test.tsx (1 test) 325ms
+   ✓ eReader resume after column measurement > restores the saved word's page before emitting any page-zero progress  319ms
+ ✓ src/features/reading-center/pages/ReaderPage.test.tsx (5 tests) 415ms
+stderr | src/features/reading-center/components/AppShell.navigation.test.tsx > opening a destination from the sidebar > keeps destination focus when the mobile drawer closes after navigation
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+stderr | src/features/reading-center/components/AppShell.test.tsx > Reading Center activity rail > shows RC Training as its own activity beside the existing LR stage
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+stderr | src/features/reading-center/components/RcTrainingProgress.test.tsx > RC Training in Reading Progress and the Dashboard > retains loaded attempts after a later page fails without repeatedly fetching it
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/features/reading-center/components/AppShell.test.tsx (5 tests) 917ms
+   ✓ Reading Center activity rail > shows RC Training as its own activity beside the existing LR stage  617ms
+ ✓ src/features/reading-center/components/RcTrainingProgress.test.tsx (9 tests) 1123ms
+   ✓ RC Training in Reading Progress and the Dashboard > retains loaded attempts after a later page fails without repeatedly fetching it  445ms
+ ✓ src/features/reading-center/lib/importText.test.ts (3 tests) 70ms
+ ✓ src/features/reading-center/components/AddText.test.tsx (2 tests) 221ms
+ ✓ src/features/reading-center/lib/tokenize.test.ts (8 tests) 12ms
+ ✓ src/features/reading-center/hooks/useRecallDashboard.test.tsx (5 tests) 276ms
+ ✓ src/features/reading-center/components/ReaderDialogs.test.tsx (3 tests) 212ms
+stderr | src/features/reading-center/pages/RrcPage.test.tsx > RRC home > mounts the existing library outside reader styles and exits to the hub
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+stderr | src/features/reading-center/components/LrRecallProgress.test.tsx > LR Recall Reading Progress > shows every own run, excludes other accounts and revoked assignments, and opens existing reports
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/features/reading-center/pages/RrcPage.test.tsx (4 tests) 215ms
+ ✓ src/features/reading-center/hooks/useSpreederEngine.test.tsx (2 tests) 110ms
+ ✓ src/features/reading-center/rc-recall/lib/backup.test.ts (20 tests) 431ms
+ ✓ src/features/reading-center/lib/session.test.ts (11 tests) 24ms
+stderr | src/features/reading-center/rc-recall/RcRecallPage.test.tsx > RC Training page: entry > states the purpose before the procedure and offers one primary Start a section action
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/features/reading-center/components/LrRecallProgress.test.tsx (4 tests) 780ms
+   ✓ LR Recall Reading Progress > shows every own run, excludes other accounts and revoked assignments, and opens existing reports  540ms
+ ✓ src/features/reading-center/rc-recall/lib/attempts.test.ts (43 tests) 51ms
+ ✓ src/features/reading-center/components/AppShell.navigation.test.tsx (21 tests) 5039ms
+   ✓ opening a destination from the sidebar > keeps destination focus when the mobile drawer closes after navigation  456ms
+   ✓ opening a destination from the sidebar > reaches every sidebar destination from every other with a focused heading and no animated scroll  2324ms
+ ✓ src/features/reading-center/rc-recall/lib/checkpoint.test.ts (17 tests) 18ms
+ ✓ src/features/reading-center/lib/analytics.test.ts (4 tests) 60ms
+ ✓ src/features/reading-center/lib/spreeder.test.ts (14 tests) 19ms
+ ✓ src/features/reading-center/lib/dashboard.test.ts (4 tests) 12ms
+ ✓ src/features/reading-center/rc-recall/lib/segment.test.ts (4 tests) 12ms
+ ✓ src/features/reading-center/rc-recall/lib/media.test.ts (5 tests) 10ms
+ ✓ src/features/reading-center/rc-recall/lib/history.test.ts (14 tests) 28ms
+ ✓ src/features/reading-center/rc-recall/lib/sections.test.ts (9 tests) 20ms
+ ✓ src/features/reading-center/rc-recall/useRecapRecorder.test.tsx (1 test) 83ms
+ ✓ src/features/reading-center/rc-recall/lib/copy.test.ts (5 tests) 12ms
+ ✓ src/features/reading-center/rc-recall/lib/sequence.test.ts (16 tests) 17ms
+ ✓ src/features/reading-center/lib/timing.test.ts (6 tests) 9ms
+ ✓ src/features/reading-center/lib/persistence.test.ts (4 tests) 13ms
+ ✓ src/features/reading-center/lib/sessionPersistence.test.ts (2 tests) 5ms
+ ✓ src/features/reading-center/lib/rrcNavigation.test.ts (6 tests) 7ms
+ ✓ src/features/reading-center/lib/goals.test.ts (2 tests) 5ms
+stderr | src/features/reading-center/pages/ProfilePage.test.tsx > Reading Progress activity selection > opens LR history by default and switches to the preserved Speed Reading charts
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/features/reading-center/rc-recall/RcRecallRunner.test.tsx (32 tests) 9606ms
+   ✓ RC Training runner: the whole-paragraph procedure > shows the text to read, hides it for recall, and shows it again to check  477ms
+   ✓ RC Training runner: the whole-paragraph procedure > recalls only the newest paragraph, then checks everything read so far  495ms
+   ✓ RC Training runner: the whole-paragraph procedure > completes a silent-only attempt and saves every recall as not_recorded  1870ms
+   ✓ optional whole-passage recall > offers silent (the default) or out loud, and can be skipped  363ms
+   ✓ optional whole-passage recall > a silent passage recall records nothing and saves a not_recorded row  426ms
+   ✓ optional whole-passage recall > an out loud passage recall needs an explicit Start recording, and says it records this recall only  467ms
+   ✓ optional whole-passage recall > reports a blocked microphone, records nothing, and offers the silent recall instead  374ms
+   ✓ optional whole-passage recall > can retry a failed recorder start using the same recall row  646ms
+   ✓ timing > resets the passage clock without resetting section time  415ms
+   ✓ saving the finish > locks Finish immediately so a double click saves once  430ms
+   ✓ saving the finish > End attempt pressed while Finish is saving does not start a second, conflicting save  394ms
+   ✓ recordings > marks an empty recording not saved when ending the attempt  347ms
+   ✓ recordings > says which copy exists when an upload fails, and only offers retry and download where audio is still held  416ms
+   ✓ recordings > a recording with an on-device copy says it will be retried, not that it is lost  423ms
+ ✓ src/features/reading-center/pages/ProfilePage.test.tsx (3 tests) 802ms
+   ✓ Reading Progress activity selection > opens LR history by default and switches to the preserved Speed Reading charts  627ms
+ ✓ src/features/reading-center/rc-recall/RcRecallPage.test.tsx (28 tests) 8442ms
+   ✓ RC Training page: entry > states the purpose before the procedure and offers one primary Start a section action  531ms
+   ✓ RC Training page: entry > offers one paragraph workout and an optional elapsed timer  300ms
+   ✓ RC Training page: entry > lists the section even though its passages have no drillable questions  601ms
+   ✓ RC Training page: entry > shows the Cappuccino correction before the examples, with an Examples entry point, and no Watch Instructions  504ms
+   ✓ RC Training page: entry > does not expose the mixed-method instruction video even with its legacy flag  364ms
+   ✓ persistence availability > keeps launch off with an actionable, non-technical message when the attempts backend is missing  359ms
+   ✓ persistence availability > does not substitute anything or fake a start; retry re-checks and then enables launch  369ms
+   ✓ starting a section > after a lost response, retries with the same attempt id and says the outcome is unknown, not 'nothing saved'  331ms
+   ✓ starting a section > keeps the same id for the same section across retries, and gives a different choice its own id  316ms
+   ✓ attempt history > pages deterministically beyond 50 without skipping or repeating an attempt  1524ms
+   ✓ attempt history > deduplicates attempts returned on overlapping history pages  341ms
+
+ Test Files  41 passed (41)
+      Tests  363 passed (363)
+   Start at  01:00:00
+   Duration  17.80s (transform 10.35s, setup 10.06s, collect 59.28s, tests 31.70s, environment 61.60s, prepare 12.38s)
+

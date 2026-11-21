@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,interactive-widget=resizes-content">
+<title>LSAT U Teacher rail prototype</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font:15px/1.45 system-ui;color:#272622;background:#f4f3f0}button,select,textarea{font:inherit;color:inherit}button,select{cursor:pointer;border:1px solid #d4d2cd;background:#fff;border-radius:8px;padding:8px 11px}button:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid #444;outline-offset:2px}button[aria-pressed=true],.primary{background:#2d2c29;color:#fff}h1,h2,p{margin:0}h1{font:36px Georgia,serif}h2{font-size:17px}small,.muted{color:#595650}.layout{height:100dvh;display:grid;grid-template-columns:150px minmax(0,1fr) clamp(340px,42vw,520px)}.layout.closed{grid-template-columns:150px minmax(0,1fr)}aside{padding:20px 14px;border-right:1px solid #dedbd5}aside b{font:25px Georgia,serif}aside p{margin:20px 0}main{overflow:auto;padding:24px clamp(16px,3vw,40px)}header,.row,.methods,.tabs{display:flex;align-items:center;gap:8px}.spread{justify-content:space-between}.ledger{background:#fff;border:1px solid #e3e0da;border-radius:14px;padding:17px;margin:18px 0}.ledger p{padding:10px 0;border-bottom:1px solid #eeece8}.rail{background:#fcfbfa;border-left:1px solid #d4d2cd;box-shadow:-5px 0 20px #2221;display:flex;min-height:0;min-width:0;flex-direction:column}.rail[hidden], [hidden]{display:none}.rail header,.methods,.tabs,.identity,.composer{padding:10px 14px;border-bottom:1px solid #e5e2db}.tabs{min-width:0}.tabs button:first-child{flex:1;text-align:left;min-width:0;overflow-wrap:anywhere}.tabs select{min-width:0;width:100%;max-width:110px}.body{overflow:auto;min-height:0;flex:1;padding:14px;overscroll-behavior:contain}.message{padding:9px 12px;margin:8px 16% 8px 0;background:#efede9;border-radius:10px;overflow-wrap:anywhere}.message.mine{margin:8px 0 8px 16%;background:#e2dfd8}.composer{border-top:1px solid #e5e2db;border-bottom:0;flex-shrink:0;padding-bottom:max(10px,env(safe-area-inset-bottom))}textarea{width:100%;resize:vertical;background:white;border:1px solid #ccc9c1;border-radius:9px;padding:8px;display:block;margin:5px 0}.list{display:grid;gap:6px;margin-top:8px}.list button{text-align:left}.identity{overflow-wrap:anywhere}.identity a{color:inherit}.steps{margin:16px 0}.steps li{margin:7px 0}.threadMarker{text-align:center;font-size:12px;color:#595650}.phone{display:none}
+@media(max-width:700px){.layout,.layout.closed{grid-template-columns:126px minmax(0,1fr)}.rail{position:fixed;inset:0;height:var(--visible-height,100dvh);z-index:2}.phone{display:inline-block}.layout:not(.closed) main,.layout:not(.closed) aside{visibility:hidden}}
+@media(max-width:540px){.layout,.layout.closed{grid-template-columns:minmax(0,1fr)}aside{display:none}.tabs,.methods{gap:5px;padding-inline:8px}.tabs button,.tabs select,.methods button{padding-inline:6px;font-size:13px}}
+@media(min-width:701px) and (max-width:1050px){.layout{grid-template-columns:116px minmax(0,1fr) clamp(340px,42vw,520px)}.layout.closed{grid-template-columns:116px minmax(0,1fr)}main{padding:18px 14px}}
+.tabs{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;min-height:52px;background:#f4f3ef;padding:7px 9px;gap:6px}.tabStrip{display:flex;align-items:center;gap:4px;min-width:0;overflow-x:auto;scrollbar-width:thin}.tabStrip button:first-child,.tabStrip button{flex:0 0 auto;max-width:145px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding:5px 9px;font-size:13px}.tabStrip button[aria-pressed=false]{background:transparent;border-color:transparent}.tabStrip button[aria-pressed=true]{max-width:170px}.tabTools{display:flex;align-items:center;gap:4px}.tabTools button,.tabs .tabTools select{width:32px;height:32px;padding:2px;text-align:center;font-size:16px}.tabs .tabTools select{width:36px}.rail>header{border-bottom:0;padding-block:6px}.rail>.methods{padding-block:6px}.rail>header strong{font-size:13px}.identity{background:#fff}.identity a{white-space:nowrap;font-size:12px}.identity strong{min-width:0}.composer textarea{resize:none}
+</style>
+<div class="layout closed" id="layout">
+<aside><b>LSAT U</b><p><strong>Home</strong></p><p>Students</p><p>Assignments</p><p>Sessions</p><p>Inbox</p></aside>
+<main id="teacherPage" tabindex="-1">
+<header class="spread"><span>Teacher Classroom</span><button id="open">Tools</button></header>
+<p class="muted">Prototype · Synthetic data</p><h1>Teacher Home</h1>
+<div class="ledger"><h2>Try the Teacher rail</h2><ol class="steps"><li>Open Tools, type a message, and switch to another student using the conversation tabs or Open chats. Return to check the draft.</li><li>Open Student work and start an assignment. Type a note, switch to another chat, then resume the assignment.</li><li>Refresh this tab and check the drafts. Resize below the docked layout and check Back and the composer.</li></ol><button id="reset">Reset demo / simulate sign-out</button></div>
+<div class="ledger"><h2>Today's sessions</h2><p>10:00 · Jordan</p><p>11:30 · Avery</p><p>13:30 · Priya</p></div>
+<div class="ledger"><h2>Recent results</h2><p>Logical Reasoning · Jordan · 18/25</p><p>Reading Comprehension · Priya · 20/27</p><p>Logical Reasoning · Avery · 21/25</p></div>
+</main>
+<section class="rail" id="rail" aria-label="Teacher tools" hidden>
+<header class="spread"><strong>Teacher tools</strong><button id="close"><span class="phone">Back</span><span id="desktopClose">Close</span></button></header>
+<div class="methods" id="views"></div><div id="panel"></div><div class="body" id="body"></div><div id="footer"></div>
+</section>
+</div>
+<script>
+const students=['Jordan Ellis','Avery Montgomery-Williams','Priya Ramanathan','Emerson Santiago-Choudhury','Noah Chen','Samira Abdullahi-Khan','Maya Robinson'];
+const key='teacher-rail-prototype-v1';
+const initial=()=>({open:false,view:'Messages',tabs:[0,1,2,3,4,5],active:0,drafts:{},sent:{},positions:{},work:null});
+function read(){try{return JSON.parse(sessionStorage.getItem(key))||initial()}catch{return initial()}}
+let s=read(), mode='', notice='';
+const el=id=>document.getElementById(id);
+const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const save=()=>{try{sessionStorage.setItem(key,JSON.stringify(s))}catch{}};
+function showStudent(id){if(!s.tabs.includes(id))s.tabs.push(id);s.active=id;s.view='Messages';mode='';notice='';render();el('activeTab')?.focus()}
+function render(){
+ save();
+ el('layout').classList.toggle('closed',!s.open);el('rail').hidden=!s.open;
+ el('views').innerHTML=['Messages','Student access','Student work'].map(view=>'<button data-view="'+view+'" aria-pressed="'+(view===s.view)+'">'+view+'</button>').join('');
+ const id=s.active, name=students[id], isChat=s.view==='Messages'&&!mode&&name;
+ el('panel').innerHTML=s.view==='Messages'?'<div class="tabs"><div class="tabStrip" aria-label="Conversation tabs">'+s.tabs.map(i=>'<button data-chat="'+i+'" '+(i===id?'id="activeTab" ':'')+'aria-pressed="'+(i===id&&!mode)+'" title="'+esc(students[i])+'">'+esc(students[i])+(s.drafts[i]?' · Draft':'')+'</button>').join('')+'</div><div class="tabTools">'+(name?'<button id="closeTab" aria-label="Close chat for '+esc(name)+'" title="Close active chat">×</button>':'')+(s.tabs.length?'<select id="overflow" aria-label="Open chats" title="Open chats"><option value="">⋯</option>'+s.tabs.map(i=>'<option value="'+i+'">'+esc(students[i])+(s.drafts[i]?' · Draft':'')+'</option>').join('')+'</select>':'')+'<button id="newChat" aria-label="New chat" title="New chat">+</button><button id="inbox" aria-label="Inbox" title="Inbox">↺</button></div></div>':'';
+ const activeTab=el('activeTab');
+ if(activeTab){const strip=activeTab.parentElement;const start=activeTab.offsetLeft-strip.offsetLeft;if(start+activeTab.offsetWidth>strip.clientWidth)strip.scrollLeft=Math.max(0,start-30)}
+ if(isChat){
+  el('panel').insertAdjacentHTML('beforeend','<div class="identity row spread"><strong>'+esc(name)+'</strong><a href="#student" id="record">Open student record</a></div>');
+  const messages=id===6?[]:Array.from({length:18},(_,i)=>['I reviewed the notes from our session.','Let’s start with the conclusion and work back to the support.','I’ll bring the questions I flagged to our next session.'][i%3]);
+  el('body').innerHTML=messages.map((m,i)=>(i===15&&id===1?'<p class="threadMarker">New messages</p>':'')+'<p class="message '+(i%2?'mine':'')+'">'+esc(m)+'</p>').join('')+(s.sent[id]||[]).map(m=>'<p class="message mine">'+esc(m)+'</p>').join('')+(!messages.length&&!s.sent[id]?'<p>Start a conversation with '+esc(name)+'.</p>':'');
+  el('footer').innerHTML='<form class="composer" id="compose"><label for="draft">Message '+esc(name)+'</label><textarea id="draft" rows="2">'+esc(s.drafts[id])+'</textarea><button class="primary">Send</button></form>';
+  el('body').scrollTop=s.positions[id]??el('body').scrollHeight;
+ }else{
+  el('footer').innerHTML='';
+  if(s.view==='Messages')el('body').innerHTML='<h2>'+(mode==='new'?'Choose a student':'Inbox')+'</h2><div class="list">'+students.slice(0,mode==='new'?7:6).map((n,i)=>'<button data-student="'+i+'">'+esc(n)+(i===1?' · Unread':'')+'</button>').join('')+'</div>';
+  if(s.view==='Student access')el('body').innerHTML='<h2>Needs access</h2><p class="message">Maya Robinson · New signup</p>';
+  if(s.view==='Student work')el('body').innerHTML=s.work?'<h2>Assignment for '+esc(students[s.work.id])+'</h2><label for="workDraft">Assignment instructions</label><textarea id="workDraft" rows="4">'+esc(s.work.text)+'</textarea><div class="row"><button id="assign" class="primary">Assign to '+esc(students[s.work.id].split(' ')[0])+'</button><button id="discard">Discard draft</button></div>':'<h2>Recent assignments · '+esc(name||students[0])+'</h2><p class="message">Review assumption questions · Assigned</p><button id="start">New assignment</button>';
+  if(notice)el('body').insertAdjacentHTML('beforeend','<p role="status">'+esc(notice)+'</p>');
+  el('body').scrollTop=0;
+ }
+}
+el('open').onclick=()=>{s.open=true;render();el('close').focus()};
+el('close').onclick=()=>{s.open=false;render();el('open').focus()};
+el('reset').onclick=()=>{s=initial();mode='';notice='';render()};
+el('overflow')?.addEventListener('change',()=>{});
+el('rail').addEventListener('change',e=>{if(e.target.id==='overflow'&&e.target.value!=='')showStudent(Number(e.target.value))});
+el('body').addEventListener('scroll',()=>{if(s.open&&s.view==='Messages'&&!mode&&students[s.active]){s.positions[s.active]=el('body').scrollTop;save()}});
+el('rail').addEventListener('input',e=>{
+ if(e.target.id==='draft'){s.drafts[s.active]=e.target.value;el('activeTab').textContent=students[s.active]+(e.target.value?' · Draft':'');el('overflow').options[s.tabs.indexOf(s.active)+1].textContent=el('activeTab').textContent}
+ if(e.target.id==='workDraft')s.work.text=e.target.value;
+ save();
+});
+el('rail').addEventListener('click',e=>{
+ const b=e.target.closest('button,a');if(!b)return;
+ if(b.dataset.view){s.view=b.dataset.view;mode='';notice='';render();el('views').querySelector('[aria-pressed=true]').focus()}
+ if(b.dataset.chat!==undefined)showStudent(Number(b.dataset.chat));
+ if(b.dataset.student!==undefined)showStudent(Number(b.dataset.student));
+ if(b.id==='newChat'||b.id==='inbox'){mode=b.id==='newChat'?'new':'inbox';render();el('body').querySelector('button').focus()}
+ if(b.id==='closeTab'&&(!s.drafts[s.active]?.trim()||confirm('Discard this message draft and close the chat?'))){delete s.drafts[s.active];const idx=s.tabs.indexOf(s.active);s.tabs.splice(idx,1);s.active=s.tabs[Math.min(idx,s.tabs.length-1)]??null;render();(el('closeTab')||el('newChat')).focus()}
+ if(b.id==='start'){s.work={id:s.active??0,text:''};render();el('workDraft').focus()}
+ if(b.id==='discard'&&confirm('Discard this assignment draft?')){s.work=null;render();el('start').focus()}
+ if(b.id==='assign'&&s.work.text.trim()){notice='Simulated assignment saved for '+students[s.work.id]+'.';s.work=null;render()}
+ if(b.id==='record'){e.preventDefault();s.open=false;render();el('teacherPage').focus()}
+});
+el('rail').addEventListener('submit',e=>{if(e.target.id!=='compose')return;e.preventDefault();const id=s.active,text=s.drafts[id]?.trim();if(!text)return;(s.sent[id]??=[]).push(text);delete s.drafts[id];delete s.positions[id];render();el('draft').focus()});
+const breakpoint=matchMedia('(max-width: 700px)');
+function syncViewport(){el('desktopClose').hidden=breakpoint.matches;el('rail').style.setProperty('--visible-height',(window.visualViewport?.height||innerHeight)+'px')}
+breakpoint.addEventListener('change',syncViewport);window.visualViewport?.addEventListener('resize',syncViewport);
+syncViewport();render();
+</script>
+</html>
+

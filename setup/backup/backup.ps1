@@ -47,6 +47,8 @@ $Projects = Join-Path (Split-Path $Vault -Parent) 'ai-os-projects'
 if (-not (Test-Path $Projects)) { $Projects = Join-Path $Vault 'projects' }
 Mirror $Projects (Join-Path $Cur 'ai-os\projects') @('node_modules','.venv','venv','.vite','.turbo','.next','dist','__pycache__','.cache')
 # (Two empty raw/ folders whose names end in a space are excluded above: Google Drive cannot create them.)
+# 5b. Saved UI component library (21st.dev etc.). Lives outside the vault, not in git.
+Mirror (Join-Path (Split-Path $Vault -Parent) 'component-library') (Join-Path $Cur 'component-library') @('node_modules')
 # 6. Other dotfiles that matter on a new machine.
 $dot = Join-Path $Cur 'dotfiles'; New-Item -ItemType Directory -Force -Path $dot | Out-Null
 foreach ($f in '.gitconfig','.npmrc','.bashrc','.bash_profile') {

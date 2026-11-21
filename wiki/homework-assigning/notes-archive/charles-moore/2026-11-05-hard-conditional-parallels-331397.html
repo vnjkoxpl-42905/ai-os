@@ -1,0 +1,138 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="lsatu-interactive-lesson" content="charles-parallel-day4-hard-v1"><title>Hard Conditional Parallels</title><style>  :root{
+    --cream:#FBF8F1; --ink:#1C1917; --ink-soft:#44403C; --ink-mute:#78716C;
+    --gold:#E8D08B; --gold-deep:#B8983F; --gold-wash:rgba(232,208,139,.16);
+    --card:#FFFFFF; --line:#E7E0D2;
+    --green:#3F6212; --green-wash:rgba(63,98,18,.09);
+    --red:#9F1239; --red-wash:rgba(159,18,57,.07);
+    --serif:"Fraunces","Garamond","Georgia",serif;
+    --sans:"Outfit","Avenir Next","Helvetica Neue",sans-serif;
+    --mono:"JetBrains Mono","SF Mono",Menlo,monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--ink);font-family:var(--sans);line-height:1.65;font-size:17px}
+  .wrap{max-width:800px;margin:0 auto;padding:0 24px}
+
+  header.hero{padding:68px 0 44px;border-bottom:1px solid var(--line)}
+  .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:18px}
+  h1{font-family:var(--serif);font-weight:600;font-size:clamp(36px,6vw,54px);line-height:1.06;letter-spacing:-.01em}
+  .hero p.lede{margin-top:20px;font-size:19px;color:var(--ink-soft);max-width:58ch}
+
+  section{padding:50px 0;border-bottom:1px solid var(--line)}
+  h2{font-family:var(--serif);font-weight:600;font-size:30px;line-height:1.15;margin-bottom:4px}
+  h3{font-family:var(--serif);font-weight:600;font-size:21px;line-height:1.2;margin:30px 0 4px;color:var(--ink)}
+  p{margin:14px 0;color:var(--ink-soft)}
+  p strong{color:var(--ink)}
+  ul{margin:14px 0 14px 22px;color:var(--ink-soft)}
+  ul li{margin:6px 0}
+
+  .callout{background:var(--gold-wash);border-left:3px solid var(--gold-deep);border-radius:0 12px 12px 0;padding:16px 20px;margin:24px 0;font-size:16.5px;color:var(--ink-soft)}
+  .callout strong{color:var(--ink)}
+  .callout p{margin:8px 0}
+
+  ol.steps{margin:20px 0;padding-left:0;list-style:none;counter-reset:step}
+  ol.steps li{counter-increment:step;position:relative;padding:14px 0 14px 54px;border-bottom:1px dashed var(--line);font-size:16px;color:var(--ink-soft)}
+  ol.steps li:last-child{border-bottom:none}
+  ol.steps li::before{content:counter(step);position:absolute;left:0;top:12px;width:34px;height:34px;border-radius:50%;background:var(--ink);color:var(--cream);font-family:var(--serif);display:flex;align-items:center;justify-content:center;font-size:16px}
+  ol.steps li b{color:var(--ink)}
+  ol.steps li span.say{display:block;margin-top:4px}
+
+  table.t{width:100%;border-collapse:collapse;margin:20px 0;font-size:15.5px;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  table.t th{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold-deep);text-align:left;padding:12px 16px;border-bottom:1px solid var(--line)}
+  table.t td{padding:11px 16px;border-bottom:1px dashed var(--line);color:var(--ink-soft);vertical-align:top}
+  table.t tr:last-child td{border-bottom:none}
+  table.t td:first-child{color:var(--ink);font-weight:600;white-space:nowrap}
+
+  .strength{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:22px 0}
+  .strength div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;text-align:center;font-family:var(--serif);font-size:22px;color:var(--ink);box-shadow:0 1px 3px rgba(28,25,23,.06)}
+  .strength div:nth-child(1){border-top:4px solid var(--gold)}
+  .strength div:nth-child(2){border-top:4px solid var(--gold-deep)}
+  .strength div:nth-child(3){border-top:4px solid var(--ink)}
+
+  .diagram{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 22px;margin:20px 0;font-family:var(--serif);font-size:22px;line-height:2;color:var(--ink)}
+  .diagram .ar{color:var(--gold-deep);font-weight:700;margin:0 8px}
+  .neg{position:relative;display:inline-block;padding:0 3px;line-height:1.15}
+  .neg::after{content:"";position:absolute;left:0;right:0;top:0;bottom:0;background:linear-gradient(to bottom left,transparent calc(50% - 1.25px),currentColor calc(50% - 1.25px),currentColor calc(50% + 1.25px),transparent calc(50% + 1.25px))}
+  .quote{font-family:var(--serif);font-size:19px;line-height:1.5;color:var(--ink);border-left:3px solid var(--gold);padding:4px 0 4px 22px;margin:24px 0;font-style:italic}
+  .quote p{color:var(--ink);margin:6px 0}
+
+  .wrong{border:1px solid rgba(159,18,57,.25);background:var(--red-wash);border-radius:12px;padding:12px 16px;margin:10px 0;color:var(--ink-soft)}
+  .wrong b{color:var(--red)}
+
+  .footer-note{padding:34px 0 56px}
+  .mark{font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-mute);opacity:.7}
+  @media (max-width:560px){table.t td:first-child{white-space:normal}.strength{grid-template-columns:1fr}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+  .ok{border:1px solid rgba(63,98,18,.28);background:var(--green-wash);border-radius:12px;padding:12px 16px;margin:10px 0;color:var(--ink-soft)}
+  .ok b{color:var(--green)}
+  details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:10px 0}
+  details summary{cursor:pointer;color:var(--ink)}
+  details p{margin:10px 0 2px}
+</style></head><body>
+<header class="hero"><div class="wrap"><div class="kicker">Thursday · Goes with Conditional Logic (Medium) Set 5</div><h1>Hard Conditional Parallels</h1><p class="lede">Ten questions, all at the harder end of medium. The ideas are the ones you already have. What changes is that the wording hides them and the time runs short.</p></div></header>
+
+<section><div class="wrap"><h2>What makes these harder</h2>
+<ul>
+<li><strong>Disguised wording.</strong> <i>Only if</i>, <i>unless</i> and <i>none</i> in place of a plain if-then.</li>
+<li><strong>Longer chains.</strong> Three claims instead of two.</li>
+<li><strong>OR in the trigger.</strong> Either of two things leads to the same outcome.</li>
+<li><strong>Answers that look alike.</strong> Five conclusions with one or two small differences between them.</li>
+</ul>
+<p>Nothing here is new. What you add is a routine that holds up across ten questions.</p>
+</div></section>
+
+<section><div class="wrap"><h2>A routine for ten questions</h2>
+<ol class="steps">
+<li><b>Diagram the stimulus fully.</b> One arrow per claim, using short words, with the link between them marked.</li>
+<li><b>Write the conclusion as an arrow and tag it.</b> Valid or flawed. If flawed, name the mistake in one sentence.</li>
+<li><b>Read only the conclusions of the answers.</b> Cut on direction, on <i>not</i>, and on strength.</li>
+<li><b>Diagram the premises of whatever is left.</b> Not before.</li>
+</ol>
+<p>Diagramming all five answers in full is the habit that runs the clock out on the sixth question. Spend your effort on the stimulus, and let the conclusions do the cutting.</p>
+</div></section>
+
+<section><div class="wrap"><h2>Is it valid?</h2>
+<p>Follow the arrows. If you can get from the trigger of the conclusion to its outcome by walking forward along the claims, or along their contrapositives, it is valid. If you cannot, it is flawed, and it will be one of three shapes.</p>
+<table class="t"><thead><tr><th>Shape</th><th>Sounds like</th></tr></thead><tbody>
+<tr><td>Reversal</td><td>If the pool is open, lifeguards are on duty. Lifeguards are on duty. So the pool is open.</td></tr>
+<tr><td>Denying the trigger</td><td>If the pool is open, lifeguards are on duty. The pool is closed. So no lifeguards are on duty.</td></tr>
+<tr><td>Broken link</td><td>If the pool is open, lifeguards are on duty. If the pool is open, the café is busy. So if lifeguards are on duty, the café is busy.</td></tr>
+</tbody></table>
+<h3>Longer chains</h3>
+<div class="diagram">
+<div>gate sticks <span class="ar">→</span> Lena is late <span class="ar">→</span> meeting starts without her <span class="ar">→</span> she misses the vote</div>
+</div>
+<p>Any stretch of the chain follows from its start: gate sticks leads to she misses the vote, and Lena is late leads to she misses the vote. The contrapositive runs the other way and negates everything: if she does not miss the vote, the meeting did not start without her, Lena was not late, and the gate did not stick.</p>
+</div></section>
+
+<section><div class="wrap"><h2>OR in the trigger</h2>
+<div class="diagram">
+<div>sale is on OR coupon is valid <span class="ar">→</span> shop is crowded</div>
+</div>
+<p>In the trigger, OR means either one is enough, and both also count. When you flip it, each half gets negated and OR turns into AND:</p>
+<div class="diagram">
+<div><span class="neg">shop is crowded</span> <span class="ar">→</span> <span class="neg">sale is on</span> AND <span class="neg">coupon is valid</span></div>
+</div>
+<p>So a quiet shop tells you both things at once: no sale and no valid coupon. That is why an answer can conclude something about just the coupon and still be valid.</p>
+</div></section>
+
+<section><div class="wrap"><h2>When two answers survive</h2>
+<p>Go back to the stimulus and compare three things in this order: strength words (<i>all</i> against <i>most</i>, <i>whenever</i> against <i>can</i>), whether a <i>not</i> sits in the same place, and whether the answer adds a feature the stimulus never had. The details in your Parallel Reasoning note still apply. If you cut everything, the filter was too tight, so loosen it.</p>
+</div></section>
+
+<section><div class="wrap"><h2>Try it before the drill</h2>
+<p>Decide valid or flawed, then open the answer.</p>
+<h3>1</h3>
+<p>If the gate sticks, Lena is late. If Lena is late, the meeting starts without her. If the meeting starts without her, she misses the vote. So if the gate sticks, she misses the vote.</p>
+<details><summary><b>Open the answer</b></summary><p><strong>Valid.</strong> Each outcome is the next trigger, and the conclusion runs from the first trigger to the last outcome.</p></details>
+<h3>2</h3>
+<p>If the sale is on or the coupon is valid, the shop is crowded. The shop is not crowded. So the coupon is not valid.</p>
+<details><summary><b>Open the answer</b></summary><p><strong>Valid.</strong> A quiet shop means no sale and no valid coupon. The conclusion takes one half of that.</p></details>
+<h3>3</h3>
+<p>If the sale is on or the coupon is valid, the shop is crowded. The shop is crowded. So the sale is on.</p>
+<details><summary><b>Open the answer</b></summary><p><strong>Flawed, a reversal.</strong> The shop could be crowded because of the coupon alone.</p></details>
+</div></section>
+
+<div class="footer-note"><div class="wrap"><span class="mark">LSAT U</span></div></div>
+</body></html>

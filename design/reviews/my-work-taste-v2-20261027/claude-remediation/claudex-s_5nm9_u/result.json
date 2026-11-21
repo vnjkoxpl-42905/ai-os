@@ -1,0 +1,290 @@
+{
+  "status": "completed",
+  "mode": "inspect",
+  "provider": "claude",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "claude",
+    "builder": "codex",
+    "inspector": "claude"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-my-work-20261026",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-my-work-20261026\\docs\\plans\\my-work-scroll-filters-gemini-review.md",
+  "plan_sha256": "a835d7b16a0fa6dde6e6aab94a53a458bcbd8fa01b71fe29d9b85750aa29bf3c",
+  "requested_model": "claude-opus-5-5",
+  "requested_effort": "medium",
+  "base": "e4035d9c8ec97a3aaec01b0b3464533872328bc8",
+  "snapshot": {
+    "base": "e4035d9c8ec97a3aaec01b0b3464533872328bc8",
+    "files": [
+      {
+        "path": "docs/verification/platform-motion-20261022.md",
+        "kind": "file",
+        "sha256": "06edf672ef79ccf5db7d12adabd15eb14502b584b24c3ef9db8e5abfb64e4412"
+      },
+      {
+        "path": "scripts/verification/my-work-preview.tsx",
+        "kind": "file",
+        "sha256": "f62e6757ddb02347a48727138edc6541bc96e1d2c7a0dd2fb2bf8dc1ef9461a9"
+      },
+      {
+        "path": "scripts/verification/start-my-work-preview.mjs",
+        "kind": "file",
+        "sha256": "c86132a8a69513fe6d8b47b26c0af9f4541fc8ab2929997a7e98024b66110132"
+      },
+      {
+        "path": "src/components/classroom/ClassroomRouteViews.tsx",
+        "kind": "file",
+        "sha256": "290b30c7248cdc75e2a5ca811228a1fbdee66b3683c549e55d4ed5e3bf7b8d30"
+      },
+      {
+        "path": "src/components/my-work/TeachingNotesArchive.test.tsx",
+        "kind": "file",
+        "sha256": "de9d4666e24c91d8f85d56ee56cb1b0cac28fe9b28f6fe4946324938d57a3b36"
+      },
+      {
+        "path": "src/components/my-work/TeachingNotesArchive.tsx",
+        "kind": "file",
+        "sha256": "cf0030f08ecd804e0a9f51e31b5d771cfbe15f3e8456a5f95c45b3139303b399"
+      },
+      {
+        "path": "src/components/my-work/WorkFilterSelect.tsx",
+        "kind": "file",
+        "sha256": "18526e161143be4629f5b5de02bbb91e961e99048fa34430fc19a8972a0b88b1"
+      },
+      {
+        "path": "src/components/my-work/assignedWorkOrganization.ts",
+        "kind": "file",
+        "sha256": "0454ff47d5cd15157b2b717d0433970ae3cb7409d4392a82900ab5b722934fed"
+      },
+      {
+        "path": "src/components/my-work/teachingNoteDates.test.ts",
+        "kind": "file",
+        "sha256": "6a75174b4bb3be831ac046660875a4cdbb45157b6004d9e6d1699d3ad5dadabd"
+      },
+      {
+        "path": "src/components/my-work/teachingNoteDates.ts",
+        "kind": "file",
+        "sha256": "7e065252a3d943835ce3cc8e8594c12e29a84ea5301e47202eefc2d9a580d9c1"
+      },
+      {
+        "path": "src/hooks/useClassroomMotion.test.tsx",
+        "kind": "file",
+        "sha256": "450879934abe21816c1af803d0e5d599fa77f377ca2cb4c1f7c00e7affe18265"
+      },
+      {
+        "path": "src/hooks/useClassroomMotion.ts",
+        "kind": "file",
+        "sha256": "b4502fb3e382d27e42ce61fbdb267d5e6da89852fbd25d92566a73aa4cd9e388"
+      },
+      {
+        "path": "src/hooks/useNotesArchiveScroll.test.ts",
+        "kind": "file",
+        "sha256": "3916c8525fffeb504427614c9282127c9c3081cbf5183fd4de6fa91b9c6fdb9d"
+      },
+      {
+        "path": "src/hooks/useNotesArchiveScroll.ts",
+        "kind": "file",
+        "sha256": "9249bd891d54f1c17dec3c81ccfa02a750bed0e872a6dd13345a8e4c5e436cff"
+      },
+      {
+        "path": "src/hooks/useNotesSelectMotion.ts",
+        "kind": "file",
+        "sha256": "8ffbbde6358a34638ff4df937496e537ba66037c302b486ed1c0462711fec0aa"
+      },
+      {
+        "path": "src/pages/MyWorkNotesPage.tsx",
+        "kind": "file",
+        "sha256": "52bd7e593540d0539e74c5e9ecdf24ec52abeb0e960dc69a65101a85aaecdec9"
+      },
+      {
+        "path": "src/pages/MyWorkPage.organization.test.tsx",
+        "kind": "file",
+        "sha256": "8f2f80a0e10345ff70151d42d668fae9be8383dccff0caac312e2178a9f653bd"
+      },
+      {
+        "path": "src/pages/MyWorkPage.readingCenter.test.tsx",
+        "kind": "file",
+        "sha256": "838707bcba41e811b6adc38333b480eca060868781c8188a8ba634ea18e39082"
+      },
+      {
+        "path": "src/pages/MyWorkPage.tsx",
+        "kind": "file",
+        "sha256": "2706b350ea3dba84de209f8b6f0b37ea6b1a408e3b1466c8f70a06ce3d22f884"
+      },
+      {
+        "path": "src/pages/StudentDestination.test.tsx",
+        "kind": "file",
+        "sha256": "e2a663fcbc111c5f97548609f388508d4785e86785a526490ac0b722c300febf"
+      },
+      {
+        "path": "src/pages/StudentDestination.tsx",
+        "kind": "file",
+        "sha256": "4c9fc2666e54a0fc5122f3fd6e2399d6926294be31f84a04d61ca1fefccc8bf7"
+      },
+      {
+        "path": "src/pages/myWorkNotesRefinement.css",
+        "kind": "file",
+        "sha256": "97ab44a311fb41718ac53b658090f1b2719c6d0023245c6bce92532149263b0c"
+      },
+      {
+        "path": "src/pages/myWorkOrganization.css",
+        "kind": "file",
+        "sha256": "bac50ff36ca390d8db7e4f02e4678ccd48ea45475cc0a95a1b22498b6aefdb12"
+      }
+    ],
+    "diff_sha256": "042a9ed9a422256ad6440e663d049ec3887467fe9b25227bef36f01724f993dc",
+    "scope": [
+      "docs/verification/platform-motion-20261022.md",
+      "scripts/verification/my-work-preview.tsx",
+      "scripts/verification/start-my-work-preview.mjs",
+      "src/components/classroom/ClassroomRouteViews.tsx",
+      "src/components/my-work",
+      "src/hooks/useClassroomMotion.test.tsx",
+      "src/hooks/useClassroomMotion.ts",
+      "src/hooks/useNotesArchiveScroll.test.ts",
+      "src/hooks/useNotesArchiveScroll.ts",
+      "src/hooks/useNotesSelectMotion.ts",
+      "src/pages/MyWorkNotesPage.tsx",
+      "src/pages/MyWorkPage.organization.test.tsx",
+      "src/pages/MyWorkPage.readingCenter.test.tsx",
+      "src/pages/MyWorkPage.refetch.test.tsx",
+      "src/pages/MyWorkPage.tsx",
+      "src/pages/StudentDestination.test.tsx",
+      "src/pages/StudentDestination.tsx",
+      "src/pages/myWorkNotes.css",
+      "src/pages/myWorkNotesRefinement.css",
+      "src/pages/myWorkOrganization.css"
+    ],
+    "sha256": "7be050f531c17db80057eb81418e27fa2c922469d99e88e879829f24b759f382"
+  },
+  "previous": null,
+  "started_at": 1793132013.1689079,
+  "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\design\\reviews\\my-work-taste-v2-20261027\\claude-remediation\\claudex-s_5nm9_u",
+  "scope": [
+    "docs/verification/platform-motion-20261022.md",
+    "scripts/verification/my-work-preview.tsx",
+    "scripts/verification/start-my-work-preview.mjs",
+    "src/components/classroom/ClassroomRouteViews.tsx",
+    "src/components/my-work",
+    "src/hooks/useClassroomMotion.test.tsx",
+    "src/hooks/useClassroomMotion.ts",
+    "src/hooks/useNotesArchiveScroll.test.ts",
+    "src/hooks/useNotesArchiveScroll.ts",
+    "src/hooks/useNotesSelectMotion.ts",
+    "src/pages/MyWorkNotesPage.tsx",
+    "src/pages/MyWorkPage.organization.test.tsx",
+    "src/pages/MyWorkPage.readingCenter.test.tsx",
+    "src/pages/MyWorkPage.refetch.test.tsx",
+    "src/pages/MyWorkPage.tsx",
+    "src/pages/StudentDestination.test.tsx",
+    "src/pages/StudentDestination.tsx",
+    "src/pages/myWorkNotes.css",
+    "src/pages/myWorkNotesRefinement.css",
+    "src/pages/myWorkOrganization.css"
+  ],
+  "cli_version": "2.1.309 (Claude Code)",
+  "executable": [
+    "C:\\Users\\Joshu\\.local\\bin\\claude.EXE"
+  ],
+  "exit_code": 0,
+  "session_id": "8ba50c03-e966-4643-a4bc-148eaceac471",
+  "response": {
+    "verdict": "REVISE",
+    "summary": "Most of the remediation matches the plan. The shared hook registers an owner per root in a WeakMap (reduced-motion roots included), and notifyClassroomListIntent stops at the first ancestor owner. The heading's local owner is a sibling of the content, not an ancestor, so a notes or assigned-work intent reaches the ClassroomMotionContent owner. All list rows join one paused, DOM-ordered rAF batch with step=min(.05,.15/(n-1)). Filter, restore and keyboard interactions settle current and queued rows. Pointer paginate re-enables reveals unless a keyboard interaction already made settlement sticky. The motion key uses only the pathname, so filter URL changes cannot re-key the hook and replay rows. The list-only policy plus the eligible() change stops generic fallback from animating My Work content states. Subject and kind validity no longer depends on loaded rows, and options and counts come from rows after access filtering. Month keys and labels use one local-calendar helper. One concrete keyboard focus defect remains in the new assigned-work selects: the notes archive has a fix for it, My Work does not. There are also smaller issues: an unplanned shared-hook behaviour change, a possible one-frame hide on browser Back, and missing integration coverage.",
+    "findings": [
+      {
+        "id": "MW-FOCUS-1",
+        "severity": "medium",
+        "path": "src/pages/MyWorkPage.tsx (my-work-list-controls: `(kinds.length > 1 || Boolean(kind)) && <WorkFilterSelect …>` and the matching subject condition); src/components/my-work/WorkFilterSelect.tsx",
+        "evidence": "Scenario: every to-do row is a Guided drill and the URL has ?kind=Activity, which is valid but has no rows (the case the plan explicitly preserves). A keyboard user opens 'Assignment type' and chooses 'All work types'. updateFilter clears kind, so `kinds.length` is 1 and `kind` is empty, and the whole WorkFilterSelect unmounts. Radix tries to return focus to a trigger that no longer exists, so focus falls to <body>. The same happens with a valid absent ?subject=. TeachingNotesArchive handles this exact case with recoverTypeFocus/searchRef, and its test 'returns keyboard focus to search when choosing All types removes the selector' covers it. MyWorkPage has no equivalent, and no My Work test checks focus after clearing an absent filter. Impact: keyboard and screen-reader users lose their place and must Tab again from the top of the document.",
+        "fix": "Use the same pattern as the notes archive. In MyWorkList, keep a ref to the search input. Before onChange('') from a WorkFilterSelect, record whether focus is inside that select's trigger or content (pass a callback or have WorkFilterSelect report it). In an effect that runs when the select stops rendering, focus the search input. Add organization tests for kind and subject: valid absent value → keyboard 'All …' → selector removed → search box has focus."
+      },
+      {
+        "id": "MOTION-SHARED-1",
+        "severity": "low",
+        "path": "src/hooks/useClassroomMotion.ts:138 (`records.filter(record => record.element.querySelector('[data-motion-item]')).forEach(settle)`)",
+        "evidence": "This new line runs on every discover() for every caller of the shared hook: ClassroomMotionContent on all classroom routes, TeacherWorkspaceShell, the Reading Center AppShell, StudentDossier and TeacherSmartboard. It is not limited to data-motion-list or the My Work policy. Example: on a non-My-Work destination, `.student-destination-content[data-motion-enter]` (still generic, as the plan requires) starts its 300ms blur entrance. A lazy outlet then mounts data-motion-item children about 100ms in. The wrapper snaps to progress(1), and its new children are then set to opacity 0/blur and re-enter. Content can show at partial opacity, disappear and fade back in, which is the 'readiness blinking' class an earlier round asked to remove. The plan says to preserve default non-list behaviour and does not authorize this change. Only one test covers it, and that test uses a list child.",
+        "fix": "Limit the settle to the case the plan needs: settle only when the newly discovered descendants are data-motion-list rows, or when the record is inside a list-only policy. Otherwise keep the previous behaviour, where a running wrapper finishes and its children are excluded or capped. If the broader change is intended, add a test for a non-My-Work destination wrapper that receives non-list items mid-tween and record the decision in the plan."
+      },
+      {
+        "id": "MOTION-RESTORE-1",
+        "severity": "low",
+        "path": "src/components/my-work/TeachingNotesArchive.tsx:58-72 (restore in useEffect) with src/hooks/useClassroomMotion.ts:174-185",
+        "evidence": "When the route changes back to /my-work/notes, the shell's layout effect runs discover(true) first. fromTo with immediateRender sets every in-view list row to opacity 0 and y 8, paused, and queues the rows for the next rAF. The restore intent only arrives later, in the archive's passive useEffect. After a discrete click on 'Back to notes', React flushes passive effects synchronously, so nothing paints hidden. After browser Back (POP, which the code handles explicitly through navigationType), passive effects are not guaranteed to run before paint. The rows around the anchor can therefore paint invisible for a frame before restore settles them. The plan asks for restore to settle rows 'before archive anchor focus/scroll restoration'. That ordering holds, but rows can still flash hidden on POP. Separately, if the notes query refetches on return, the MutationObserver microtask can create hidden tweens before the passive restore runs.",
+        "fix": "Send the restore intent from a useLayoutEffect, or from a layout-phase check that only reads the stored anchor, so settlement happens in the same commit as discovery. Alternatively, have the hook check a synchronous 'pending restore' marker on the owner root before creating list tweens. Add a test that renders the real hook plus the archive with a stored anchor and asserts that no row has opacity 0 after the first commit."
+      },
+      {
+        "id": "COVERAGE-1",
+        "severity": "low",
+        "path": "src/components/my-work/TeachingNotesArchive.test.tsx; src/pages/MyWorkPage.organization.test.tsx",
+        "evidence": "Both suites mock '@/hooks/useClassroomMotion', so notifyClassroomListIntent is a spy. They prove the call order (intent before the URL changes) but not that archiveRef or sectionRef resolves to the real ClassroomMotionContent owner rather than the StudentDestination heading owner. They also do not test the plan's required end-to-end sequence 'pointer Unread/type -> Load more reveals newly surfaced rows' with the real hook. The hook suite covers that sequence only with hand-built DOM, and its StudentDestination composition test renders a placeholder <p>, not TeachingNotesArchive or MyWorkList.",
+        "fix": "Add one composition test that mounts ClassroomMotionContent > StudentDestination(my-work) > TeachingNotesArchive with the real hook and the GSAP mock. Pointer-click Unread and assert that existing row tweens reach progress(1) and that new identities create no tweens. Then pointer-click Load more and assert that the new rows create paused list tweens, which restart in DOM order. Do the same for MyWorkList with a WorkFilterSelect pointer choice."
+      },
+      {
+        "id": "DATE-A11Y-1",
+        "severity": "low",
+        "path": "src/components/my-work/TeachingNotesArchive.tsx card() aria-label",
+        "evidence": "The visible text now reads 'Shared Oct 3, 2026', and the <time> has title 'Date shared'. But the Link's aria-label replaces its contents for assistive technology and still says only `${dateLabel(note.created_at)}`. Screen-reader users hear a bare date on a session recap, which can read as the lesson date. The plan's date semantics say 'Date shown means date shared, not lesson date.'",
+        "fix": "Change the aria-label date part to `Shared ${dateLabel(note.created_at)}` and update the aria-label assertions in the archive tests."
+      }
+    ],
+    "coverage": [
+      "Read the full plan text and the full tracked diff in the manifest.",
+      "Read in full: src/hooks/useClassroomMotion.ts, src/components/my-work/WorkFilterSelect.tsx, src/hooks/useNotesArchiveScroll.ts, src/hooks/useNotesSelectMotion.ts, src/components/my-work/teachingNoteDates.ts, src/components/classroom/shell/ClassroomMotionContent.tsx.",
+      "Read TeachingNotesArchive.tsx lines 34-73 (state, restore effect) plus the rest through the diff; StudentDestination.tsx lines 20-110; the selector list of myWorkNotesRefinement.css.",
+      "Traced all useClassroomMotion callers by grep (ClassroomMotionContent, StudentDestination heading, TeacherWorkspaceShell, Reading Center AppShell, StudentDossier, TeacherSmartboard) to check owner resolution and the shared-behaviour impact of discover() changes.",
+      "Checked that classroomMotionKey returns only the pathname for My Work, so filter search params do not re-key or replay the hook.",
+      "Grepped for <form> ancestors to rule out a Radix hidden native select dispatching a bubbling 'change' that would make pointer selection count as sticky keyboard settlement.",
+      "Reviewed the test diffs for the hook, archive, organization, Reading Center and StudentDestination suites to judge acceptance coverage."
+    ],
+    "limitations": [
+      "I ran no tests, typecheck, build or browser checks. Host-reported pass counts and the scroll trace are not independently verified.",
+      "I did not open the external design report or screenshots (C:/Users/Joshu/dev/ai-os/design/reviews/...), so no visual inspection was done.",
+      "Not read: src/components/ui/select.tsx, teachingNotesArchiveData.ts, useAssignedTodoFeed.ts, assignedWorkOrganization.ts beyond the diff, myWorkNotes.css, the full myWorkOrganization.css, MyWorkNotesPage.tsx beyond the diff, ClassroomRouteViews.tsx beyond the diff, MyWorkPage.refetch.test.tsx, useNotesArchiveScroll.test.ts, teachingNoteDates.test.ts, and the preview harness beyond the diff.",
+      "GSAP ScrollTrigger `once` and kill semantics for paused list tweens restarted from onEnter on a very fast scroll were reasoned about, not executed.",
+      "The broader dirty checkout outside the explicit scope, including supabase/functions/mcp/index.ts, the teacher and Reading Center shells' own runtime behaviour, and production RLS and read-state, was not reviewed and is not approved."
+    ]
+  },
+  "usage": {
+    "input_tokens": 16,
+    "cache_creation_input_tokens": 85431,
+    "cache_read_input_tokens": 537066,
+    "output_tokens": 16444,
+    "output_tokens_details": {
+      "thinking_tokens": 11055
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 85431,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 4778,
+        "cache_read_input_tokens": 89451,
+        "cache_creation_input_tokens": 461,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 461
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "permission_denials": [],
+  "total_cost_usd": 1.1198052,
+  "elapsed_seconds": 188.47
+}

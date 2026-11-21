@@ -1,0 +1,173 @@
+{"provider": "claude", "model": "CLI default (unresolved)", "mode": "inspect", "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\design\\reviews\\classroom-quality-20261028\\account-controls\\claude-inspection\\claudex-l2375_08"}
+{
+  "status": "completed",
+  "mode": "inspect",
+  "provider": "claude",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "claude",
+    "builder": "codex",
+    "inspector": "claude"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-my-work-20261026",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os\\design\\reviews\\classroom-quality-20261028\\account-controls\\PLAN.md",
+  "plan_sha256": "13a7921ba4f2097c75d544844e28124d4aef6f9aeb3104fc6ca75714a6b14ab6",
+  "requested_model": null,
+  "requested_effort": null,
+  "base": "18fc8af7e1ff7d83defb62b9e0d8dd720f90b3a3",
+  "snapshot": {
+    "base": "18fc8af7e1ff7d83defb62b9e0d8dd720f90b3a3",
+    "files": [
+      {
+        "path": "scripts/verification/teacher-home-preview.tsx",
+        "kind": "file",
+        "sha256": "327fff3f6955eeb3f8c4537cdbd9516456b054e2d4178e73ec5f10771f6f97a4"
+      },
+      {
+        "path": "src/components/classroom/home/home.css",
+        "kind": "file",
+        "sha256": "11a01bfd4e0660c06507890ef0ca365ae3769671bef80ade572c50ce40633756"
+      },
+      {
+        "path": "src/components/classroom/home/teacher/TeacherAccessBooking.tsx",
+        "kind": "file",
+        "sha256": "a79a4154f69e98cdb561939695afb494bb2f001c9d0dc9feecabf462ff82c4c2"
+      },
+      {
+        "path": "src/components/classroom/home/teacher/TeacherHomeView.test.tsx",
+        "kind": "file",
+        "sha256": "90d1b7786c512eed93905fe5ea448f88dddb040bf9d8d070153fce06042b7080"
+      },
+      {
+        "path": "src/components/classroom/home/teacher/TeacherHomeView.tsx",
+        "kind": "file",
+        "sha256": "dff7980aabaf201a13ccb74524a70ade0c8068863a30320a6fd5d6e1d22720ab"
+      },
+      {
+        "path": "src/components/classroom/home/teacher/TeachingDesk.test.tsx",
+        "kind": "file",
+        "sha256": "cb1430a4711045d09dfd1494a5100b44655231bc90f5a99abd658d9387a8424a"
+      }
+    ],
+    "diff_sha256": "d529c9f3758422f2766e812fccb72d021483f0035aeb605e1bf9c39cdb7965b7",
+    "scope": [
+      "scripts/verification/teacher-home-preview.tsx",
+      "src/components/classroom/home/home.css",
+      "src/components/classroom/home/teacher/TeacherAccessBooking.tsx",
+      "src/components/classroom/home/teacher/TeacherHomeView.test.tsx",
+      "src/components/classroom/home/teacher/TeacherHomeView.tsx",
+      "src/components/classroom/home/teacher/TeachingDesk.test.tsx"
+    ],
+    "sha256": "d9793247c12867a3ab749985c02ad380fe6284365a38b3de2bd8999f12cf5c48"
+  },
+  "previous": null,
+  "started_at": 1793221048.6769397,
+  "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\design\\reviews\\classroom-quality-20261028\\account-controls\\claude-inspection\\claudex-l2375_08",
+  "scope": [
+    "scripts/verification/teacher-home-preview.tsx",
+    "src/components/classroom/home/home.css",
+    "src/components/classroom/home/teacher/TeacherAccessBooking.tsx",
+    "src/components/classroom/home/teacher/TeacherHomeView.test.tsx",
+    "src/components/classroom/home/teacher/TeacherHomeView.tsx",
+    "src/components/classroom/home/teacher/TeachingDesk.test.tsx"
+  ],
+  "cli_version": "2.1.309 (Claude Code)",
+  "executable": [
+    "C:\\Users\\Joshu\\.local\\bin\\claude.EXE"
+  ],
+  "exit_code": 0,
+  "session_id": "7609bb0c-395b-4ca4-b5c6-5d2e72fd2f1c",
+  "response": {
+    "verdict": "REVISE",
+    "summary": "The writer contract in teacherHomeActions.ts is respected. Link mode never tops up. Creation needs an explicit click and a 1–50 amount. The pending receipt/recovery path is unchanged. Opening, selecting and cancelling write nothing. One medium defect remains: BookingSheet keeps the previous student and amount when it is reopened in the same mode, so credits can be added to the wrong student or in the wrong amount. There are also three low issues (dark-mode styling, stale access baseline, test gaps). I did not run any tests, build or browser flow.",
+    "findings": [
+      {
+        "id": "F1",
+        "severity": "medium",
+        "path": "src/components/classroom/home/teacher/TeacherAccessBooking.tsx",
+        "evidence": "BookingSheet stays mounted. It is only remounted when `key={bookingMode}` changes, in TeacherHomeView.tsx. The `open` effect (about lines 242-271) resets error, notice, pass, loaded and create. It does not reset `studentId`, `amount`, `customAmount`, `sessionMinutes` or `expiresAt`. Scenario: add 10 sessions to Student A and close. Click 'Add session credits' again. The sheet reopens with A preselected, A's pass reloaded, 'Sessions to add' still at 10 and the confirm button enabled. This contradicts the plan's default of 1 and its requirement for an exact, deliberate target. A double-click or a distracted second correction could add 10 more sessions to A.",
+        "fix": "On each open (or on close), reset `studentId` to \"\", `amount` to 1, `customAmount` to false, and clear sessionMinutes and expiresAt. Keep restoring `studentId` and `amount` from `pending` when one exists. Alternatively key the sheet on an open counter. Add a test that closes and reopens the sheet and asserts no student is selected and the amount is 1."
+      },
+      {
+        "id": "F2",
+        "severity": "low",
+        "path": "src/components/classroom/home/home.css",
+        "evidence": "The new `.home-desk-account-actions` buttons are hard-coded to a light fill (`#fffefa`, borders `#aeb1a8`). The text colour is not set, and the `p`/`.home-desk-account-email` grays are fixed (`#62655f`). The picker border is fixed at `#d7d6ce`. No `html.dark` rules were added for these. Elsewhere the file adds dark overrides for `.home-desk-sheet` fields. In dark mode the button label probably inherits light ink on a near-white fill, and the gray text sits on a dark sheet with poor contrast. I did not render it, so this is unverified.",
+        "fix": "Set an explicit `color:#262a28` on the account-action buttons. Use `var(--home-*)` tokens or add `html.dark` overrides for the account-actions group, `.home-desk-account-picker` and `.home-desk-account-email`. Check them in both themes."
+      },
+      {
+        "id": "F3",
+        "severity": "low",
+        "path": "src/components/classroom/home/teacher/TeacherAccessBooking.tsx",
+        "evidence": "AccessSheet snapshots `person` from the `access` state, and the draft is rebuilt only when `class_id` changes. After a verified save and `refreshAccess`, `person` still carries the pre-save flags and tier. If the teacher then changes the tier, `saved` resets and a second save sends the old `expected_tier` and `expected_flags` (saveHomeAccess builds `expected` from `person`). The compare-and-swap check rejects it, and the UI shows 'Access was not confirmed'. Also, `onClose` focuses `accountTrigger.current`. A direct `setAccess(person)` path never updates that ref, so focus returns to whichever account button was used last.",
+        "fix": "After a successful save, replace the selected person with the refreshed roster row (or the returned row), or close the sheet. Re-derive `person` from `students` by `class_id` while the sheet is open. Set `accountTrigger` on the direct selection paths, or fall back to a sensible element."
+      },
+      {
+        "id": "F4",
+        "severity": "low",
+        "path": "src/components/classroom/home/teacher/TeachingDesk.test.tsx",
+        "evidence": "Several checks the plan lists have no assertion in the new tests. (a) No test clicks 'Confirm add sessions' with the default amount of 1 and asserts `prepareHomeTopUp(actor, student, pass, 1)`. The only click test uses a custom 2. (b) The new-link test never confirms and asserts `createHomeBooking(student, 1, ...)`. (c) The pending-retry and actor-change tests that exist do not cover `mode=\"link\"`. In link mode the credit form and 'Retry pending addition' still render when `pending` is set, which is an intentional recovery path that is untested. (d) Revoked, expired and reactivated copy has no test for the new mode gating. (e) No test covers that the Home entrypoints pass the correct `mode`.",
+        "fix": "Add tests for each of (a)–(e). Optionally state in the UI copy that recovering a pending add is available from either mode."
+      }
+    ],
+    "coverage": [
+      "Read TeacherAccessBooking.tsx in full.",
+      "Read teacherHomeActions.ts lines 20-150: saveHomeAccess CAS, createHomeBooking, the pending/prepare/add/resolve/discard flow, and reactivate.",
+      "Read the full preview fixture, teacher-home-preview.tsx. It uses in-memory actions, validates the actor and amount, and keeps an audit log with no operation methods exposed.",
+      "Reviewed the full diff of TeacherHomeView.tsx entrypoints, the CSS, and the TeacherHomeView.test.tsx and TeachingDesk.test.tsx additions.",
+      "Grepped existing pending/actor tests in TeachingDesk.test.tsx."
+    ],
+    "limitations": [
+      "I did not run tests, typecheck, build or any browser flow.",
+      "I did not read the booking-pass-admin and admin-manage-users edge functions or the SQL. I relied on the client-side contract in teacherHomeActions.ts.",
+      "I did not check dark-mode rendering; the F2 contrast concern is inferred from the CSS.",
+      "I did not read the preview start script (start-teacher-home-preview.mjs) or confirm that the production Supabase client is blocked in the preview.",
+      "I did not read the Sheet and DropdownMenu primitives, the teachingDeskModel types or the roster model, so I did not verify that `desk.access.state` values map to the picker's 'ready' check.",
+      "I did not trace the prior calendar and polish changes, per the host note.",
+      "Nothing here covers files outside the listed scope."
+    ]
+  },
+  "usage": {
+    "input_tokens": 8,
+    "cache_creation_input_tokens": 57610,
+    "cache_read_input_tokens": 137837,
+    "output_tokens": 8002,
+    "output_tokens_details": {
+      "thinking_tokens": 4787
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 57610,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 4239,
+        "cache_read_input_tokens": 50956,
+        "cache_creation_input_tokens": 11135,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 11135
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "observed_models": [
+    "claude-sonnet-5-5"
+  ],
+  "permission_denials": [],
+  "total_cost_usd": 0.3242597,
+  "elapsed_seconds": 115.69
+}
+
+EXIT_CODE=0

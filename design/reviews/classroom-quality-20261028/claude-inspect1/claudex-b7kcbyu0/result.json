@@ -1,0 +1,220 @@
+{
+  "status": "failed",
+  "mode": "inspect",
+  "provider": "claude",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "claude",
+    "builder": "codex",
+    "inspector": "claude"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-my-work-20261026",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os\\design\\reviews\\classroom-quality-20261028\\PLAN.md",
+  "plan_sha256": "e470285d30f8b95d0de317e33812d3aa187aef6deef58ba8a8095b0527434196",
+  "requested_model": null,
+  "requested_effort": null,
+  "base": "18fc8af7e1ff7d83defb62b9e0d8dd720f90b3a3",
+  "snapshot": {
+    "base": "18fc8af7e1ff7d83defb62b9e0d8dd720f90b3a3",
+    "files": [
+      {
+        "path": "scripts/verification/start-teacher-home-preview.mjs",
+        "kind": "file",
+        "sha256": "10e1b173bd492c5a73346173bab4701826025325fb93f3fc83e09704e923e2f1"
+      },
+      {
+        "path": "scripts/verification/teacher-home-preview.html",
+        "kind": "file",
+        "sha256": "764de64adc816feb6c96a3b6a0f92b9b23d19e5d32195330eaef826ef7388ec2"
+      },
+      {
+        "path": "scripts/verification/teacher-home-preview.tsx",
+        "kind": "file",
+        "sha256": "2788e6a46ae421ef93cb44939ebb6836df468ee2fbc707e134bb03847a8e0eaf"
+      },
+      {
+        "path": "src/components/classroom/home/home.css",
+        "kind": "file",
+        "sha256": "2a4fa962c463933b5c4a39a5903d161aa0a2a990a182e947c2ca648d3ab363a5"
+      },
+      {
+        "path": "src/components/classroom/home/teacher/TeacherHomeView.test.tsx",
+        "kind": "file",
+        "sha256": "e0b54cf314a3477712cbffe568b75542f6442a1e40f4b7769b573c4779a19ccf"
+      },
+      {
+        "path": "src/components/classroom/home/teacher/TeacherHomeView.tsx",
+        "kind": "file",
+        "sha256": "0fd0bc30f021e54882c0dc0c312e403ab25543b61c5fdbfedbce0752232a6ee7"
+      },
+      {
+        "path": "src/components/classroom/home/teacher/TeacherTasks.tsx",
+        "kind": "file",
+        "sha256": "e4ea7111db385f7092cb5b1734dfa193c21074161caa012e9de5c6698ec7e5b7"
+      },
+      {
+        "path": "src/components/classroom/home/teacher/teacherWeek.test.ts",
+        "kind": "file",
+        "sha256": "5715c04e1bd9a5e7f468e0658d9d95834b43a3494c4db8d7b090288fcbbbc832"
+      },
+      {
+        "path": "src/components/classroom/home/teacher/teacherWeek.ts",
+        "kind": "file",
+        "sha256": "fccbfee0d3e3160d21d39779e80bbdcb344119529d01066efb6f7e4ffec57c83"
+      }
+    ],
+    "diff_sha256": "00cbf63846871d978dbaff337f2fe9de394e4173cdd03478aacc10277f5b98a6",
+    "scope": [
+      "scripts/verification/start-teacher-home-preview.mjs",
+      "scripts/verification/teacher-home-preview.html",
+      "scripts/verification/teacher-home-preview.tsx",
+      "src/components/classroom/home/home.css",
+      "src/components/classroom/home/teacher/TeacherHomeView.test.tsx",
+      "src/components/classroom/home/teacher/TeacherHomeView.tsx",
+      "src/components/classroom/home/teacher/TeacherTasks.tsx",
+      "src/components/classroom/home/teacher/TeachingDesk.test.tsx",
+      "src/components/classroom/home/teacher/teacherWeek.test.ts",
+      "src/components/classroom/home/teacher/teacherWeek.ts"
+    ],
+    "sha256": "ba41dd45114134a98c830d9a51dfbd138abf8ceb4992838afd474a9e9588fb71"
+  },
+  "previous": null,
+  "started_at": 1793212120.0594785,
+  "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\design\\reviews\\classroom-quality-20261028\\claude-inspect1\\claudex-b7kcbyu0",
+  "scope": [
+    "scripts/verification/start-teacher-home-preview.mjs",
+    "scripts/verification/teacher-home-preview.html",
+    "scripts/verification/teacher-home-preview.tsx",
+    "src/components/classroom/home/home.css",
+    "src/components/classroom/home/teacher/TeacherHomeView.test.tsx",
+    "src/components/classroom/home/teacher/TeacherHomeView.tsx",
+    "src/components/classroom/home/teacher/TeacherTasks.tsx",
+    "src/components/classroom/home/teacher/TeachingDesk.test.tsx",
+    "src/components/classroom/home/teacher/teacherWeek.test.ts",
+    "src/components/classroom/home/teacher/teacherWeek.ts"
+  ],
+  "cli_version": "2.1.309 (Claude Code)",
+  "executable": [
+    "C:\\Users\\Joshu\\.local\\bin\\claude.EXE"
+  ],
+  "exit_code": 0,
+  "session_id": "9b6c1bf9-adb5-42a9-9858-0fc7ab148d63",
+  "response": {
+    "verdict": "REVISE",
+    "summary": "Code review of the scoped diff only. I did not run tests, a browser or a build, and I viewed no screenshots, so there are no scorecard or visual findings. The calendar-zone logic in teacherWeek.ts is sound: zone validation, date-only keys, day-key derivation, and the DST tests I traced by hand. The More menu now uses the shared Radix dropdown, and its Escape and focus-return test looks plausible. Two CSS cascade defects affect the new seven-day strip, and a few smaller consistency and coverage gaps remain.\n\nRecommendations in priority order:\n1. Fix the selected-day hover colour clash (F1). Benefit: stops unreadable white-on-pale text. Risk: low. Check: hover and focus the selected and today buttons, and measure contrast.\n2. Restore a visible focus ring on the pressed day button (F2). Benefit: keyboard users can see focus on the selected day. Risk: low. Check: tab to the selected day and confirm the ring differs from the unfocused state, in light and dark.\n3. Use the calendar zone in the Next up list (F3). Benefit: one time for the same event. Risk: low. Check: run a test with a device zone different from the calendar zone.\n4. Render the agenda status once (F4). Benefit: no duplicate alerts or retry buttons. Risk: low.\n5. Add a test for the menu to booking-sheet flow (F5). Benefit: guards the focus and pointer-events handover. Risk: none, it is test-only.\n6. Fix the mixed 11px/12px text and the ambiguous today-versus-selected styling (F6, F7).\n7. Make the verification preview match the production stage selector (F8).",
+    "findings": [
+      {
+        "id": "F1",
+        "severity": "medium",
+        "path": "src/components/classroom/home/home.css (lines ~1476 and ~1540)",
+        "evidence": "The generic hover rule `.classroom-root .home-desk button:not(:disabled):not(.home-desk-primary):hover` has specificity 0,5,1 and sets a pale `--home-hover` background. The selected-day hover rule `.classroom-root .home-desk-week-days button[aria-pressed=true]:hover` is only 0,4,1, so the generic rule wins. Hovering the selected day gives a #e9ede8 background with #fffefa text and #d0d6ce small text, which is near-invisible. The `.is-today:not([aria-pressed=true]):hover` override fixes only the unselected today button. Neither the selected day nor a selected today button is covered.",
+        "fix": "Raise specificity for the pressed hover, for example `.classroom-root .home-desk .home-desk-week-days button[aria-pressed=true]:not(:disabled):hover`. Alternatively exclude `[aria-pressed=true]` from the generic hover selector. Add a computed-colour or visual check for hover on selected, today and unselected days."
+      },
+      {
+        "id": "F2",
+        "severity": "medium",
+        "path": "src/components/classroom/home/home.css (selector `.home-desk-week-days button[aria-pressed=true]{outline:2px solid var(--home-ink);outline-offset:2px}`)",
+        "evidence": "The pressed-state outline has specificity 0,4,1, which beats the `.home-desk :is(button,...):focus-visible` ring at 0,2,1. A focused selected day therefore keeps the selection outline with the same colour and offset as when unfocused. Keyboard users cannot tell when focus lands on the selected day, and activating a day with Enter or Space moves focus onto it with no visible change. The plan requires focus visibility to be preserved.",
+        "fix": "Show selection with a non-outline cue such as an inset box-shadow or border. Keep `outline` for focus-visible only. Or add a `[aria-pressed=true]:focus-visible` rule with a distinct offset or colour, and check contrast against both surfaces."
+      },
+      {
+        "id": "F3",
+        "severity": "low",
+        "path": "src/components/classroom/home/teacher/TeacherHomeView.tsx (`when()` and Next up list, lines 29-46 and ~259-275)",
+        "evidence": "The new week strip groups events and formats times in the calendar zone, as the plan resolved. The existing Next up list still uses `when()`, which formats in the device zone. When the device zone differs from agenda `time_zone`, the same event shows two different times, and possibly different dates, in the same view. That undercuts the zone semantics added by this change.",
+        "fix": "Use the validated calendar zone in `when()` for Next up, or at least for timed events. Add a test with a device zone different from the calendar zone."
+      },
+      {
+        "id": "F4",
+        "severity": "low",
+        "path": "src/components/classroom/home/teacher/TeacherHomeView.tsx (TeacherWeek detail and Next up)",
+        "evidence": "`<DeskStatus region={agenda} noun=\"primary calendar\"/>` is rendered in both TeacherWeek and the Next up region. On error or setup the page shows two `role=alert` messages and two Retry or Check connection buttons for the same region. This is redundant screen-reader output and clutter, against the plan's aim of reducing redundant panels.",
+        "fix": "Render the status once, for example only in Next up. TeacherWeek could show a brief non-alert 'Calendar unavailable' line, or reuse the same status without a duplicate retry control."
+      },
+      {
+        "id": "F5",
+        "severity": "low",
+        "path": "src/components/classroom/home/teacher/TeacherHomeView.test.tsx and TeacherHomeView.tsx (lines ~185-195)",
+        "evidence": "The new More-menu test covers only open, Escape and focus return. 'Create session link' now opens a Sheet (Radix Dialog) from `DropdownMenuItem onSelect`. Opening a dialog from a modal dropdown is a known source of stuck `pointer-events:none` on body and a focus-return race with the trigger. No test covers selecting the item and then interacting with or closing the sheet. The menu was reduced to a single item, and the 'All students' entry was dropped. Replacement links still exist at lines 392 and 543, so that part is acceptable.",
+        "fix": "Add a test that selects 'Create session link', asserts the booking sheet appears, closes it, and asserts the page is interactive and focus returns sensibly. Confirm in a browser."
+      },
+      {
+        "id": "F6",
+        "severity": "low",
+        "path": "src/components/classroom/home/home.css (container rule `@container classroom-home (max-width:680px)` weekday span and day buttons)",
+        "evidence": "Weekday labels are set to 11px at narrow widths. The later same-specificity `small{font-size:12px}` rule overrides the narrow `small{11px}`, but `span` stays 11px. The plan says no smaller text just to force density. Also, the removed `font-size:14px!important` on `.home-desk :is(button,a,summary)` leaves anchors with no 14px floor, because the replacement `.home-desk :is(button,summary)` omits `a`. Anchors inherit their size and can drop below 14px.",
+        "fix": "Raise the weekday label to at least 12px. Restore `a` in the 14px rule or set it explicitly for header and region links. Verify computed sizes at 320 and 390 widths."
+      },
+      {
+        "id": "F7",
+        "severity": "low",
+        "path": "src/components/classroom/home/home.css (`.home-desk-week-days button.is-today` and `[aria-pressed=true]`)",
+        "evidence": "Today and the selected day are both charcoal #282e2a. When another day is selected, two dark tiles appear, distinguished only by a 2px same-ink outline. State is then conveyed by subtle cues, and this interacts with F2. On the plan's own 'charcoal only for the most useful task' principle, the always-dark today tile competes with the after-session task for emphasis.",
+        "fix": "Make 'today' a light marker (top rule, dot or label) and reserve the charcoal fill for the selected day. Confirm the result visually."
+      },
+      {
+        "id": "F8",
+        "severity": "low",
+        "path": "scripts/verification/teacher-home-preview.tsx and home.css (`.classroom-root.classroom-root-home:has(.home-desk) .classroom-stage`)",
+        "evidence": "The preview fixture uses `classroom-root classroom-root-destination` and a custom stage. The teacher-only off-white ground rule needs `.classroom-root-home` and `.classroom-stage`, so preview screenshots will not exercise the new background or stage padding. Fixture dates use local `setHours` and `setDate` while the agenda claims `America/Toronto`, so fixture days can land in the wrong calendar-zone day when the device zone differs. The harness otherwise correctly blocks the Supabase client and is local-only.",
+        "fix": "Add `classroom-root-home` and `classroom-stage` wrappers to the fixture, or label its screenshots as non-representative of the ground. Generate fixture timestamps in the declared zone, or omit `time_zone` so the device zone is used."
+      }
+    ],
+    "coverage": [
+      "Read teacherWeek.ts, teacherWeek.test.ts and the TeacherHomeView.tsx diff plus the sections around the agenda, decisions, correspondence and students regions.",
+      "Traced CSS cascade specificity for the week-day buttons (hover, pressed, today and focus-visible) in the home.css diff, from the diff text.",
+      "Searched the src tree for removed links (Open email, Payments and history, All students). Equivalent entry points remain in the correspondence, payment-activity and students regions.",
+      "Checked the dropdown-menu primitive usage, the scoped charcoal first-task selector against PostSessionWork's li structure, and the DeskStatus noun grammar change.",
+      "Read the verification preview scripts. Did not open teacher-home-preview.html or the TeacherTasks.tsx body; relied on the diff for TeacherTasks changes (aria-busy, ready-empty class, DeskStatus subject)."
+    ],
+    "limitations": [
+      "No tests, typecheck, build or browser run. All findings come from static reading, so cascade conclusions (F1, F2) are derived from computed specificity and need runtime confirmation.",
+      "No screenshots viewed. The scorecard, 51/95 assessed points, contrast measurements, phone widths and reduced-motion behaviour were not independently assessed.",
+      "TeachingDesk.test.tsx is in scope but unchanged. I did not read it or check whether existing assertions conflict with the removed 'Open email', 'Payments and history' and 'Student access' strings.",
+      "Only the files in the scope list were examined. PostSessionWork.tsx, the shared dropdown-menu.tsx, student Home styles, other routes and the backend agenda window semantics (fetched_at, next_cursor, 20-event cap) were not reviewed beyond targeted greps.",
+      "Source-render consistency with deployed production and the exact deployed SHA are not established. Nothing here approves the whole repository."
+    ]
+  },
+  "usage": {
+    "input_tokens": 12,
+    "cache_creation_input_tokens": 43653,
+    "cache_read_input_tokens": 180198,
+    "output_tokens": 10914,
+    "output_tokens_details": {
+      "thinking_tokens": 5503
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 43653,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 3933,
+        "cache_read_input_tokens": 43021,
+        "cache_creation_input_tokens": 5113,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 5113
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "observed_models": [
+    "claude-sonnet-5-5"
+  ],
+  "permission_denials": [],
+  "total_cost_usd": 0.30179579999999995,
+  "error": "Code changed during inspection; inspect the final code again.",
+  "elapsed_seconds": 115.23
+}

@@ -1,0 +1,1036 @@
+
+> vite_react_shadcn_ts@0.0.0 test
+> vitest run src/bootcamps/conditionals --maxWorkers=1 --no-file-parallelism --testTimeout=90000
+
+
+ RUN  v3.2.4 C:/Users/Joshu/dev/ai-os-projects/lsatu-and-or-20261019
+
+Browserslist: browsers data (caniuse-lite) is 6 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+ ✓ src/bootcamps/conditionals/components/OpeningMixedDrill.test.tsx (12 tests) 94434ms
+   ✓ shows one task, a single 24-question counter, progress and predictable heading focus  428ms
+   ✓ reuses the real reviewed diagram engine without its own count, storage or untaught transformations  944ms
+   ✓ keeps independent writing before supplied labels and retains it across questions  3649ms
+   ✓ freezes first checks and treats a repaired fresh answer differently from an independent confirmation  28286ms
+   ✓ groups a wrong role choice with a new direction question instead of a qualification question  14749ms
+   ✓ explains repeated diagram conditions and follows them with a fresh diagram check  15613ms
+   ✓ checks an obligation mistake with a new obligation case rather than a different equivalence skill  15124ms
+   ✓ continues directly to the next stage without repeating instructions  368ms
+   ✓ offers review directly when no first-attempt errors need a fresh case  14465ms
+   ✓ builds diagrams from full condition labels and gives only a hint for a reversed arrow  689ms
+stderr | src/bootcamps/conditionals/components/ConditionalLessonNote.test.tsx > keeps the full orientation formative until the student marks the lesson read
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/bootcamps/conditionals/components/ConditionalLessonNote.test.tsx (12 tests) 33399ms
+   ✓ keeps the full orientation formative until the student marks the lesson read  5181ms
+   ✓ mounts the thirteen reference steps before the attached guided activity  1067ms
+   ✓ checks each Group 2 group before revealing direction and keeps obligations  431ms
+   ✓ resets lesson interactions when the production wrapper changes units  732ms
+   ✓ does not reveal the four-case conclusions before a formative attempt and clears them on reset  789ms
+   ✓ keeps recall prompts readable and exposes answers through an expanded control  658ms
+   ✓ gives each formative choice its own reasoning without marking the lesson read  24183ms
+   ✓ names the attached guided activity and permits a truthful preview-only label  319ms
+stderr | src/bootcamps/conditionals/components/LessonPages.test.tsx > requires an explicit end-page action to record reading, including after a contents jump
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/bootcamps/conditionals/components/LessonPages.test.tsx (5 tests) 25937ms
+   ✓ exposes only the current page, focuses its heading, and retains a checked case when returning  454ms
+   ✓ requires an explicit end-page action to record reading, including after a contents jump  659ms
+   ✓ starts a changed unit at its first page and has no flashcards page  358ms
+   ✓ separates a present negative requirement from its absence in the fresh two-room exercise  24162ms
+   ✓ uses a compact drawer in a narrow reader and moves focus to the chosen page  301ms
+ ❯ src/bootcamps/conditionals/components/OpeningFoundations.test.tsx (2 tests | 1 failed) 567ms
+   × shows one foundation question at a time and retains checked feedback when returning 521ms
+     → Unable to find an element with the text: /You treated the rule as a weather report/. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m"opening-course-content"[39m
+    [36m>[39m
+      [36m<section[39m
+        [33maria-label[39m=[32m"Spot the condition questions"[39m
+        [33mclass[39m=[32m"d1-experience"[39m
+      [36m>[39m
+        [36m<header[39m
+          [33mclass[39m=[32m"cd-progress"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"cd-progress-labels"[39m
+          [36m>[39m
+            [36m<span>[39m
+              [0mQuestion 2 of 24[0m
+            [36m</span>[39m
+            [36m<strong>[39m
+              [0m8[0m
+              [0m% [0m
+              [36m<small>[39m
+                [0mcomplete[0m
+              [36m</small>[39m
+            [36m</strong>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33maria-label[39m=[32m"Questions answered"[39m
+            [33maria-valuemax[39m=[32m"24"[39m
+            [33maria-valuemin[39m=[32m"0"[39m
+            [33maria-valuenow[39m=[32m"2"[39m
+            [33maria-valuetext[39m=[32m"8% complete. 2 of 24 questions completed."[39m
+            [33mclass[39m=[32m"cd-progress-track"[39m
+            [33mrole[39m=[32m"progressbar"[39m
+          [36m>[39m
+            [36m<span[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mdata-complete[39m=[32m"true"[39m
+              [33mdata-current[39m=[32m"false"[39m
+            [36m/>[39m
+            [36m<span[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mdata-complete[39m=[32m"true"[39m
+              [33mdata-current[39m=[32m"true"[39m
+            [36m/>[39m
+            [36m<span[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mdata-complete[39m=[32m"false"[39m
+              [33mdata-current[39m=[32m"false"[39m
+            [36m/>[39m
+            [36m<span[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mdata-complete[39m=[32m"false"[39m
+              [33mdata-current[39m=[32m"false"[39m
+            [36m/>[39m
+            [36m<span[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mdata-complete[39m=[32m"false"[39m
+              [33mdata-current[39m=[32m"false"[39m
+            [36m/>[39m
+            [36m<span[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mdata-complete[39m=[32m"false"[39m
+              [33mdata-current[39m=[32m"false"[39m
+            [36m/>[39m
+            [36m<span[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mdata-complete[39m=[32m"false"[39m
+              [33mdata-current[39m=[32m"false"[39m
+            [36m/>[39m
+            [36m<span[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mdata-complete[39m=[32m"false"[39m
+              [33mdata-current[39m=[32m"false"[39m
+            [36m/>[39m
+            [36m<span[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mdata-complete[39m=[32m"false"[39m
+              [33mdata-current[39m=[32m"false"[39m
+            [36m/>[39m
+            [36m<span[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mdata-complete[39m=[32m"false"[39m
+              [33mdata-current[39m=[32m"false"[39m
+            [36m/>[39m
+            [36m<span[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mdata-complete[39m=[32m"false"[39m
+              [33mdata-current[39m=[32m"false"[39m
+            [36m/>[39m
+            [36m<span[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mdata-complete[39m=[32m"false"[39m
+              [33mdata-current[39m=[32m"false"[39m
+            [36m/>[39m
+            [36m<span[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mdata-complete[39m=[32m"false"[39m
+              [33mdata-current[39m=[32m"false"[39m
+            [36m/>[39m
+            [36m<span[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mdata-complete[39m=[32m"false"[39m
+              [33mdata-current[39m=[32m"false"[39m
+            [36m/>[39m
+            [36m<span[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mdata-complete[39m=[32m"false"[39m
+              [33mdata-current[39m=[32m"false"[39m
+            [36m/>[39m
+            [36m<span[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mdata-complete[39m=[32m"false"[39m
+              [33mdata-current[39m=[32m"false"[39m
+            [36m/>[39m
+            [36m<span[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mdata-complete[39m=[32m"false"[39m
+              [33mdata-current[39m=[32m"false"[39m
+            [36m/>[39m
+            [36m<span[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mdata-complete[39m=[32m"false"[39m
+              [33mdata-current[39m=[32m"false"[39m
+            [36m/>[39m
+            [36m<span[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mdata-complete[39m=[32m"false"[39m
+              [33mdata-current[39m=[32m"false"[39m
+            [36m/>[39m
+            [36m<span[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mdata-complete[39m=[32m"false"[39m
+              [33mdata-current[39m=[32m"false"[39m
+            [36m/>[39m
+            [36m<span[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mdata-complete[39m=[32m"false"[39m
+              [33mdata-current[39m=[32m"false"[39m
+            [36m/>[39m
+            [36m<span[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mdata-complete[39m=[32m"false"[39m
+              [33mdata-current[39m=[32m"false"[39m
+            [36m/>[39m
+            [36m<span[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mdata-complete[39m=[32m"false"[39m
+              [33mdata-current[39m=[32m"false"[39m
+            [36m/>[39m
+            [36m<span[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mdata-complete[39m=[32m"false"[39m
+              [33mdata-current[39m=[32m"false"[39m
+            [36m/>[39m
+          [36m</div>[39m
+        [36m</header>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"d1-question-scene"[39m
+          [33mdata-practice-task[39m=[32m"2"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"d1-rule-panel"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"d1-rule-top"[39m
+            [36m>[39m
+              [36m<span[39m
+                [33mclass[39m=[32m"d1-eyebrow"[39m
+              [36m>[39m
+                [0mGiven rule[0m
+              [36m</span>[39m
+              [36m<span[39m
+                [33maria-hidden[39m=[32m"true"[39m
+                [33mclass[39m=[32m"d1-rule-number"[39m
+              [36m>[39m
+                [0m02[0m
+              [36m</span>[39m
+            [36m</div>[39m
+            [36m<blockquote>[39m
+              [0mIf it rains on Saturday, the market moves into the town hall.[0m
+            [36m</blockquote>[39m
+            [36m<div[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mclass[39m=[32m"d1-rule-foot"[39m
+            [36m>[39m
+              [36m<span />[39m
+              [36m<span />[39m
+              [36m<span />[39m
+            [36m</div>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"d1-question-body"[39m
+          [36m>[39m
+            [36m<h2[39m
+              [33mid[39m=[32m":r0:-question"[39m
+              [33mtabindex[39m=[32m"-1"[39m
+            [36m>[39m
+              [0mIt's Friday. You've read this rule and nothing else. Where will the market be on Saturday?[0m
+            [36m</h2>[39m
+            [36m<div[39m
+              [33maria-labelledby[39m=[32m":r0:-question"[39m
+              [33mclass[39m=[32m"d1-options"[39m
+              [33mrole[39m=[32m"group"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33maria-pressed[39m=[32m"true"[39m
+                [33mclass[39m=[32m"d1-option"[39m
+                [33mdata-correct[39m=[32m"false"[39m
+                [33mdata-incorrect[39m=[32m"true"[39m
+                [33mdata-selected[39m=[32m"true"[39m
+                [33mdisabled[39m=[32m""[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [36m<span[39m
+                  [33maria-hidden[39m=[32m"true"[39m
+                  [33mclass[39m=[32m"d1-option-letter"[39m
+                [36m>[39m
+                  [0mA[0m
+                [36m</span>[39m
+                [36m<span>[39m
+                  [0mIn the town hall.[0m
+                [36m</span>[39m
+              [36m</button>[39m
+              [36m<button[39m
+                [33maria-pressed[39m=[32m"false"[39m
+                [33mclass[39m=[32m"d1-option"[39m
+                [33mdata-correct[39m=[32m"false"[39m
+                [33mdata-incorrect[39m=[32m"false"[39m
+                [33mdata-selected[39m=[32m"false"[39m
+                [33mdisabled[39m=[32m""[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [36m<span[39m
+                  [33maria-hidden[39m=[32m"true"[39m
+                  [33mclass[39m=[32m"d1-option-letter"[39m
+                [36m>[39m
+                  [0mB[0m
+                [36m</span>[39m
+                [36m<span>[39m
+                  [0mOutdoors, as usual.[0m
+                [36m</span>[39m
+              [36m</button>[39m
+              [36m<button[39m
+                [33maria-pressed[39m=[32m"false"[39m
+                [33mclass[39m=[32m"d1-option"[39m
+                [33mdata-correct[39m=[32m"false"[39m
+                [33mdata-incorrect[39m=[32m"false"[39m
+                [33mdata-selected[39m=[32m"false"[39m
+                [33mdisabled[39m=[32m""[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [36m<span[39m
+                  [33maria-hidden[39m=[32m"true"[39m
+                  [33mclass[39m=[32m"d1-option-letter"[39m
+                [36m>[39m
+                  [0mC[0m
+                [36m</span>[39m
+                [36m<span>[39m
+                  [0mThe rule alone doesn't settle it.[0m
+                [36m</span>[39m
+              [36m</button>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"d1-feedback-region"[39m
+            [36m>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"d1-feedback d1-feedback-halo"[39m
+                [33mdata-correct[39m=[32m"false"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"d1-feedback-surface"[39m
+                [36m>[39m
+                  [36m<h3[39m
+                    [33maria-describedby[39m=[32m":r0:-explanation"[39m
+                    [33mclass[39m=[32m"d1-feedback-title"[39m
+                    [33mtabindex[39m=[32m"-1"[39m
+                  [36m>[39m
+                    [36m<span[39m
+                      [33maria-hidden[39m=[32m"true"[39m
+                      [33mclass[39m=[32m"d1-feedback-icon"[39m
+                    [36m>[39m
+                      [36m<svg[39m
+                        [33mclass[39m=[32m"lucide lucide-rotate-ccw"[39m
+                        [33mfill[39m=[32m"none"[39m
+                        [33mheight[39m=[32m"23"[39m
+                        [33mstroke[39m=[32m"currentColor"[39m
+                        [33mstroke-linecap[39m=[32m"round"[39m
+                        [33mstroke-linejoin[39m=[32m"round"[39m
+                        [33mstroke-width[39m=[32m"1.7"[39m
+                        [33mviewBox[39m=[32m"0 0 24 24"[39m
+                        [33mwidth[39m=[32m"23"[39m
+                        [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+                      [36m>[39m
+                        [36m<path[39m
+                          [33md[39m=[32m"M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"[39m
+                        [36m/>[39m
+                        [36m<path[39m
+                          [33md[39m=[32m"M3 3v5h5"[39m
+                        [36m/>[39m
+                      [36m</svg>[39m
+                    [36m</span>[39m
+                    [0mNot quite.[0m
+                  [36m</h3>[39m
+                  [36m<p[39m
+                    [33mid[39m=[32m":r0:-explanation"[39m
+                  [36m>[39m
+                    [0mCheck whether you have been told that it will rain on Saturday. A rule about rain is not a weather forecast.[0m
+                  [36m</p>[39m
+                [36m</div>[39m
+              [36m</div>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"d1-answer-actions"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"d1-retry"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [36m<svg[39m
+                  [33mclass[39m=[32m"lucide lucide-rotate-ccw"[39m
+                  [33mfill[39m=[32m"none"[39m
+                  [33mheight[39m=[32m"15"[39m
+                  [33mstroke[39m=[32m"currentColor"[39m
+                  [33mstroke-linecap[39m=[32m"round"[39m
+                  [33mstroke-linejoin[39m=[32m"round"[39m
+                  [33mstroke-width[39m=[32m"2"[39m
+                  [33mviewBox[39m=[32m"0 0 24 24"[39m
+                  [33mwidth[39m=[32m"15"[39m
+                  [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+                [36m>[39m
+                  [36m<path[39m
+                    [33md[39m=[32m"M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"[39m
+                  [36m/>[39m
+                  [36m<path[39m
+                    [33md[39m=[32m"M3 3v5h5"[39m
+                  [36m/>[39m
+                [36m</svg>[39m
+                [0mTry again[0m
+              [36m</button>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+        [36m<nav[39m
+          [33maria-label[39m=[32m"Question navigation"[39m
+          [33mclass[39m=[32m"d1-navigation"[39m
+        [36m>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"d1-previous"[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [36m<svg[39m
+              [33mclass[39m=[32m"lucide lucide-arrow-left"[39m
+              [33mfill[39m=[32m"none"[39m
+              [33mheight[39m=[32m"16"[39m
+              [33mstroke[39m=[32m"currentColor"[39m
+              [33mstroke-linecap[39m=[32m"round"[39m
+              [33mstroke-linejoin[39m=[32m"round"[39m
+              [33mstroke-width[39m=[32m"2"[39m
+              [33mviewBox[39m=[32m"0 0 24 24"[39m
+              [33mwidth[39m=[32m"16"[39m
+              [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+            [36m>[39m
+              [36m<path[39m
+                [33md[39m=[32m"m12 19-7-7 7-7"[39m
+              [36m/>[39m
+              [36m<path[39m
+                [33md[39m=[32m"M19 12H5"[39m
+              [36m/>[39m
+            [36m</svg>[39m
+            [0mPrevious question[0m
+          [36m</button>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m"d1-next"[39m
+            [33mdisabled[39m=[32m""[39m
+            [33mtype[39m=[32m"button"[39m
+          [36m>[39m
+            [0mNext question[0m
+            [36m<svg[39m
+              [33mclass[39m=[32m"lucide lucide-arrow-right"[39m
+              [33mfill[39m=[32m"none"[39m
+              [33mheight[39m=[32m"17"[39m
+              [33mstroke[39m=[32m"currentColor"[39m
+              [33mstroke-linecap[39m=[32m"round"[39m
+              [33mstroke-linejoin[39m=[32m"round"[39m
+              [33mstroke-width[39m=[32m"2"[39m
+              [33mviewBox[39m=[32m"0 0 24 24"[39m
+              [33mwidth[39m=[32m"17"[39m
+              [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+            [36m>[39m
+              [36m<path[39m
+                [33md[39m=[32m"M5 12h14"[39m
+              [36m/>[39m
+              [36m<path[39m
+                [33md[39m=[32m"m12 5 7 7-7 7"[39m
+              [36m/>[39m
+            [36m</svg>[39m
+          [36m</button>[39m
+        [36m</nav>[39m
+      [36m</section>[39m
+    [36m</div>[39m
+  [36m</div>[39m
+[36m</body>[39m
+   ✓ runs sufficient-side practice as the staged drill and keeps a fresh counterexample item 45ms
+stderr | src/bootcamps/conditionals/components/DrillOneExperience.test.tsx > titles the entry page Spot the condition
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/bootcamps/conditionals/components/DrillOneExperience.test.tsx (6 tests) 21112ms
+   ✓ checks deliberately, preserves the rule panel, and shows question progress above the task  454ms
+   ✓ retains the first answer through repair and restores focus to an enabled choice  5417ms
+   ✓ checks every option across all 24 questions in the rule, concept, indicator order  13833ms
+   ✓ keeps every saved answer with its question when the question order changed  1086ms
+stderr | src/bootcamps/conditionals/components/ConditionalOpeningLesson.review.test.tsx > lets learners test a requirement before translating its word family
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/bootcamps/conditionals/components/ConditionalOpeningLesson.review.test.tsx (27 tests) 20444ms
+   ✓ lets learners test a requirement before translating its word family  421ms
+   ✓ keeps group-1 group choices stable while learners change their answers  483ms
+   ✓ keeps group-2 group choices stable while learners change their answers  553ms
+   ✓ varies group-1 diagram choices and explains the promise each reversed arrow adds  424ms
+   ✓ varies group-2 diagram choices and explains the promise each reversed arrow adds  470ms
+   ✓ teaches inquiry and single-occasion wording before testing a recurring rule  1071ms
+   ✓ renders each named opening method before the learner continues to guided practice  1848ms
+   ✓ gives each independently assigned group its own What Test explanation before group selection  530ms
+   ✓ reuses the “Put yourself in it” in Only if with a genuine check of the reverse  314ms
+   ✓ reveals group-1 exact sentence groups only after a correct choice and clears them on a new example  1206ms
+   ✓ reveals group-2 exact sentence groups only after a correct choice and clears them on a new example  1840ms
+   ✓ marks group-1 transfer spans only after the learner checks a correct diagram  954ms
+   ✓ marks group-2 transfer spans only after the learner checks a correct diagram  907ms
+   ✓ keeps the entire connector in reserved space beneath a sentence whose later clause wraps  318ms
+   ✓ reports a correct negative answer without reversing its meaning in feedback  1602ms
+   ✓ teaches permission and instruction after the core sequence but before the kept attached practice  4124ms
+   ✓ keeps correct group status readable without colour and uses a fresh the-only check  547ms
+   ✓ keeps animation implementation controls out of the student lesson  1144ms
+stderr | src/bootcamps/conditionals/routes.test.tsx > opens the same numbered Chapter 1 course at 
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/bootcamps/conditionals/routes.test.tsx (77 tests) 14393ms
+   ✓ opens the same numbered Chapter 1 course at   1572ms
+   ✓ opens the same numbered Chapter 1 course at /lessons  1539ms
+   ✓ allows teacher preview through the same numbered course entry  698ms
+   ✓ keeps destinations in one course navigation and preserves assignment context  621ms
+   ✓ resumes a finished old run at the new work without losing its drafts, attempts, or timing  624ms
+   ✓ completes the available subset of a shared area practice run and keeps its other work  859ms
+   ✓ completes the available subset of a shared phase practice run and keeps its other work  841ms
+   ✓ completes the available subset of a shared area flashcards run and keeps its other work  921ms
+   ✓ stamps the opening edition only when Mark lesson as read is clicked and keeps it after reloading practice  1347ms
+   ✓ filters the new course index by existing teacher authorization  409ms
+   ✓ keeps root-entry query context when opening the revised Lessons index  306ms
+stderr | src/bootcamps/conditionals/components/SourceWorksheetDrill.test.tsx > recovers malformed saved state and links the landing to its run route
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/bootcamps/conditionals/components/SourceWorksheetDrill.test.tsx (25 tests) 4893ms
+   ✓ checks indicators and reviews directly without a condition-highlighting step  400ms
+   ✓ keeps resumed source questions reachable with only previous and next navigation, without counting a visit as completion  1169ms
+   ✓ checks shortened phrases, diagram direction and both written readbacks without self-rating  1452ms
+stderr | src/bootcamps/conditionals/components/OpeningCourseContent.test.tsx > links sufficient to its dedicated indicator flashcards and preserves its lesson media
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/bootcamps/conditionals/components/OpeningCourseContent.test.tsx (26 tests) 6907ms
+   ✓ teaches necessity before the visual and distinguishes a requirement from a guarantee in fresh practice  538ms
+   ✓ keeps the sufficient definition and media before its indicator and complete-condition practice  318ms
+   ✓ runs the sufficient Pop Quiz one question at a time with short, specific feedback  401ms
+   ✓ requires a checked group and arrow before revealing the family in mixed practice  507ms
+   ✓ checks the corrected bus and phone translations through the learner controls  1153ms
+   ✓ opens with one raffle question, then tests fresh cases with reasoned feedback  1767ms
+   ✓ works through four fresh rules one at a time, one for each place a not can sit  346ms
+ ✓ src/bootcamps/conditionals/components/ConditionalReferenceSequence.test.tsx (15 tests) 5253ms
+   ✓ negates both complete conditions correctly in all four sign patterns, including existing negatives  459ms
+   ✓ requires both independent diagrams before giving nine fresh practice keys and resets each attempt  2574ms
+stderr | src/bootcamps/conditionals/components/OpeningCourse.test.tsx > offers five numbered lessons in Chapter 1 and eleven interleaved drill entries
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/bootcamps/conditionals/components/OpeningCourse.test.tsx (43 tests) 5763ms
+   ✓ offers five numbered lessons in Chapter 1 and eleven interleaved drill entries  690ms
+   ✓ retains a corrected answer when returning from another dedicated lesson  479ms
+   ✓ continues the first unfinished course step without skipping prerequisites for a later draft  540ms
+stderr | src/bootcamps/conditionals/components/AndOrPractice.test.tsx > runs each lesson’s Pop Quiz one question at a time with a specific hint
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/bootcamps/conditionals/components/AndOrPractice.test.tsx (8 tests) 1698ms
+   ✓ gives a hint for the chosen wrong answer before any reveal, and unlocks the answer only after a second miss  352ms
+   ✓ checks a built diagram by structure, hints at the mistake, and clears the build when the wording changes  427ms
+stderr | src/bootcamps/conditionals/routes.andOr.test.tsx > shows the whole Chapter 2 to a teacher preview and to a full course assignment, after all of Chapter 1
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/bootcamps/conditionals/routes.andOr.test.tsx (14 tests) 4235ms
+   ✓ shows the whole Chapter 2 to a teacher preview and to a full course assignment, after all of Chapter 1  1451ms
+   ✓ shows each Chapter 2 step to exactly the assignment targets whose real unit membership reaches its topic  585ms
+   ✓ lists the recorded legacy practice for And/Or alongside the numbered chapter without joining the opening edition  1147ms
+stderr | src/bootcamps/conditionals/components/StagedReasoningDrill.test.tsx > shows one stage at a time and requires a correct checked choice
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/bootcamps/conditionals/components/StagedReasoningDrill.test.tsx (8 tests) 1037ms
+   ✓ shows one stage at a time and requires a correct checked choice  335ms
+ ✓ src/bootcamps/conditionals/components/MustArrowPractice.test.tsx (4 tests) 1161ms
+   ✓ explains every distractor using the specific reasoning error  694ms
+ ✓ src/bootcamps/conditionals/useConditionalProgress.test.tsx (12 tests) 1349ms
+ ✓ src/bootcamps/conditionals/components/OpeningActivityPractice.test.tsx (5 tests) 1312ms
+   ✓ gates feedback, explains reversal and retry, and keeps original-only practice isolated from saved history  480ms
+   ✓ restarts only the seven reviewed statements and never exposes timers or assignment completion  680ms
+stderr | src/bootcamps/conditionals/components/AndOrTeachingRegressions.test.tsx > teaches that one known AND member leaves the group not established, not false
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/bootcamps/conditionals/components/AndOrTeachingRegressions.test.tsx (14 tests) 1490ms
+   ✓ build feedback survives edits without going stale > keeps a hint as earlier feedback after an edit, restores it on undo, and never shows it as correct  308ms
+   ✓ build feedback survives edits without going stale > reopens an accepted build when wording changes, keeps the text, and survives a reload  366ms
+   ✓ account-store path through the real course reducer > remembers a reveal through a wording edit and a later correct rebuild, and reloads it from the account  363ms
+ ✓ src/bootcamps/conditionals/components/MixedFamilyPractice.test.tsx (3 tests) 690ms
+   ✓ requires an independent diagram and readback before exposing complete labels, then retains and retries the attempt  350ms
+   ✓ asks an authored question about each rule and gives only the arrow hint when only the arrow needs revision  330ms
+ ✓ src/bootcamps/conditionals/components/IndicatorWordDeck.test.tsx (4 tests) 439ms
+stderr | src/bootcamps/conditionals/components/FlashcardTools.test.tsx > links the matching indicator deck from each definition lesson
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/bootcamps/conditionals/components/FlashcardTools.test.tsx (6 tests) 550ms
+ ✓ src/bootcamps/conditionals/components/NecessaryIndicatorExplorer.test.tsx (3 tests) 331ms
+ ✓ src/bootcamps/conditionals/components/SufficientConditionExperience.test.tsx (6 tests) 358ms
+ ✓ src/bootcamps/conditionals/components/NecessaryConditionExperience.test.tsx (2 tests) 151ms
+ ✓ src/bootcamps/conditionals/courseProgress.test.tsx (3 tests) 227ms
+ ✓ src/bootcamps/conditionals/components/PracticeTaskRunner.test.tsx (3 tests) 208ms
+ ✓ src/bootcamps/conditionals/components/DrillProgress.test.tsx (5 tests) 88ms
+ ✓ src/bootcamps/conditionals/content/andOrItems.test.ts (16 tests) 66ms
+ ✓ src/bootcamps/conditionals/progress.test.ts (25 tests) 22ms
+ ✓ src/bootcamps/conditionals/content/sourceWorksheetDrills.test.ts (12 tests) 22ms
+ ✓ src/bootcamps/conditionals/indicatorWordDeck.test.ts (9 tests) 21ms
+ ✓ src/bootcamps/conditionals/content/opening-coverage.test.ts (14 tests) 21ms
+ ✓ src/bootcamps/conditionals/assignments.test.ts (11 tests) 23ms
+ ✓ src/bootcamps/conditionals/content/conditionSpans.test.ts (3 tests) 14ms
+ ✓ src/bootcamps/conditionals/content/mixedDrillItems.test.ts (6 tests) 13ms
+ ✓ src/bootcamps/conditionals/content/drillDemos.test.ts (2 tests) 10ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/bootcamps/conditionals/components/OpeningFoundations.test.tsx > shows one foundation question at a time and retains checked feedback when returning
+TestingLibraryElementError: Unable to find an element with the text: /You treated the rule as a weather report/. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+<body>
+  <div>
+    <div
+      class="opening-course-content"
+    >
+      <section
+        aria-label="Spot the condition questions"
+        class="d1-experience"
+      >
+        <header
+          class="cd-progress"
+        >
+          <div
+            class="cd-progress-labels"
+          >
+            <span>
+              Question 2 of 24
+            </span>
+            <strong>
+              8
+              % 
+              <small>
+                complete
+              </small>
+            </strong>
+          </div>
+          <div
+            aria-label="Questions answered"
+            aria-valuemax="24"
+            aria-valuemin="0"
+            aria-valuenow="2"
+            aria-valuetext="8% complete. 2 of 24 questions completed."
+            class="cd-progress-track"
+            role="progressbar"
+          >
+            <span
+              aria-hidden="true"
+              data-complete="true"
+              data-current="false"
+            />
+            <span
+              aria-hidden="true"
+              data-complete="true"
+              data-current="true"
+            />
+            <span
+              aria-hidden="true"
+              data-complete="false"
+              data-current="false"
+            />
+            <span
+              aria-hidden="true"
+              data-complete="false"
+              data-current="false"
+            />
+            <span
+              aria-hidden="true"
+              data-complete="false"
+              data-current="false"
+            />
+            <span
+              aria-hidden="true"
+              data-complete="false"
+              data-current="false"
+            />
+            <span
+              aria-hidden="true"
+              data-complete="false"
+              data-current="false"
+            />
+            <span
+              aria-hidden="true"
+              data-complete="false"
+              data-current="false"
+            />
+            <span
+              aria-hidden="true"
+              data-complete="false"
+              data-current="false"
+            />
+            <span
+              aria-hidden="true"
+              data-complete="false"
+              data-current="false"
+            />
+            <span
+              aria-hidden="true"
+              data-complete="false"
+              data-current="false"
+            />
+            <span
+              aria-hidden="true"
+              data-complete="false"
+              data-current="false"
+            />
+            <span
+              aria-hidden="true"
+              data-complete="false"
+              data-current="false"
+            />
+            <span
+              aria-hidden="true"
+              data-complete="false"
+              data-current="false"
+            />
+            <span
+              aria-hidden="true"
+              data-complete="false"
+              data-current="false"
+            />
+            <span
+              aria-hidden="true"
+              data-complete="false"
+              data-current="false"
+            />
+            <span
+              aria-hidden="true"
+              data-complete="false"
+              data-current="false"
+            />
+            <span
+              aria-hidden="true"
+              data-complete="false"
+              data-current="false"
+            />
+            <span
+              aria-hidden="true"
+              data-complete="false"
+              data-current="false"
+            />
+            <span
+              aria-hidden="true"
+              data-complete="false"
+              data-current="false"
+            />
+            <span
+              aria-hidden="true"
+              data-complete="false"
+              data-current="false"
+            />
+            <span
+              aria-hidden="true"
+              data-complete="false"
+              data-current="false"
+            />
+            <span
+              aria-hidden="true"
+              data-complete="false"
+              data-current="false"
+            />
+            <span
+              aria-hidden="true"
+              data-complete="false"
+              data-current="false"
+            />
+          </div>
+        </header>
+        <div
+          class="d1-question-scene"
+          data-practice-task="2"
+        >
+          <div
+            class="d1-rule-panel"
+          >
+            <div
+              class="d1-rule-top"
+            >
+              <span
+                class="d1-eyebrow"
+              >
+                Given rule
+              </span>
+              <span
+                aria-hidden="true"
+                class="d1-rule-number"
+              >
+                02
+              </span>
+            </div>
+            <blockquote>
+              If it rains on Saturday, the market moves into the town hall.
+            </blockquote>
+            <div
+              aria-hidden="true"
+              class="d1-rule-foot"
+            >
+              <span />
+              <span />
+              <span />
+            </div>
+          </div>
+          <div
+            class="d1-question-body"
+          >
+            <h2
+              id=":r0:-question"
+              tabindex="-1"
+            >
+              It's Friday. You've read this rule and nothing else. Where will the market be on Saturday?
+            </h2>
+            <div
+              aria-labelledby=":r0:-question"
+              class="d1-options"
+              role="group"
+            >
+              <button
+                aria-pressed="true"
+                class="d1-option"
+                data-correct="false"
+                data-incorrect="true"
+                data-selected="true"
+                disabled=""
+                type="button"
+              >
+                <span
+                  aria-hidden="true"
+                  class="d1-option-letter"
+                >
+                  A
+                </span>
+                <span>
+                  In the town hall.
+                </span>
+              </button>
+              <button
+                aria-pressed="false"
+                class="d1-option"
+                data-correct="false"
+                data-incorrect="false"
+                data-selected="false"
+                disabled=""
+                type="button"
+              >
+                <span
+                  aria-hidden="true"
+                  class="d1-option-letter"
+                >
+                  B
+                </span>
+                <span>
+                  Outdoors, as usual.
+                </span>
+              </button>
+              <button
+                aria-pressed="false"
+                class="d1-option"
+                data-correct="false"
+                data-incorrect="false"
+                data-selected="false"
+                disabled=""
+                type="button"
+              >
+                <span
+                  aria-hidden="true"
+                  class="d1-option-letter"
+                >
+                  C
+                </span>
+                <span>
+                  The rule alone doesn't settle it.
+                </span>
+              </button>
+            </div>
+            <div
+              class="d1-feedback-region"
+            >
+              <div
+                class="d1-feedback d1-feedback-halo"
+                data-correct="false"
+              >
+                <div
+                  class="d1-feedback-surface"
+                >
+                  <h3
+                    aria-describedby=":r0:-explanation"
+                    class="d1-feedback-title"
+                    tabindex="-1"
+                  >
+                    <span
+                      aria-hidden="true"
+                      class="d1-feedback-icon"
+                    >
+                      <svg
+                        class="lucide lucide-rotate-ccw"
+                        fill="none"
+                        height="23"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.7"
+                        viewBox="0 0 24 24"
+                        width="23"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"
+                        />
+                        <path
+                          d="M3 3v5h5"
+                        />
+                      </svg>
+                    </span>
+                    Not quite.
+                  </h3>
+                  <p
+                    id=":r0:-explanation"
+                  >
+                    Check whether you have been told that it will rain on Saturday. A rule about rain is not a weather forecast.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="d1-answer-actions"
+            >
+              <button
+                class="d1-retry"
+                type="button"
+              >
+                <svg
+                  class="lucide lucide-rotate-ccw"
+                  fill="none"
+                  height="15"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="15"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"
+                  />
+                  <path
+                    d="M3 3v5h5"
+                  />
+                </svg>
+                Try again
+              </button>
+            </div>
+          </div>
+        </div>
+        <nav
+          aria-label="Question navigation"
+          class="d1-navigation"
+        >
+          <button
+            class="d1-previous"
+            type="button"
+          >
+            <svg
+              class="lucide lucide-arrow-left"
+              fill="none"
+              height="16"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m12 19-7-7 7-7"
+              />
+              <path
+                d="M19 12H5"
+              />
+            </svg>
+            Previous question
+          </button>
+          <button
+            class="d1-next"
+            disabled=""
+            type="button"
+          >
+            Next question
+            <svg
+              class="lucide lucide-arrow-right"
+              fill="none"
+              height="17"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="17"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5 12h14"
+              />
+              <path
+                d="m12 5 7 7-7 7"
+              />
+            </svg>
+          </button>
+        </nav>
+      </section>
+    </div>
+  </div>
+</body>
+ ❯ Object.getElementError ../../../AppData/Local/Temp/lsatu-and-or-dom-20261019/node_modules/@testing-library/dom/dist/config.js:37:19
+ ❯ ../../../AppData/Local/Temp/lsatu-and-or-dom-20261019/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ ❯ ../../../AppData/Local/Temp/lsatu-and-or-dom-20261019/node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ ❯ getByText ../../../AppData/Local/Temp/lsatu-and-or-dom-20261019/node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ ❯ src/bootcamps/conditionals/components/OpeningFoundations.test.tsx:23:17
+     21|   expect(screen.queryByText(/You treated the rule as a weather report/…
+     22|   fireEvent.click(screen.getByRole('button', { name: 'Check answer' })…
+     23|   expect(screen.getByText(/You treated the rule as a weather report/))…
+       |                 ^
+     24|   expect(screen.getByRole('button', { name: 'Next question' })).toBeDi…
+     25|   fireEvent.click(screen.getByRole('button', { name: 'Try again' }));
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+⎯⎯⎯⎯⎯⎯ Unhandled Errors ⎯⎯⎯⎯⎯⎯
+
+Vitest caught 1 unhandled error during the test run.
+This might cause false positive tests. Resolve unhandled errors to make sure your tests are not affected.
+
+⎯⎯⎯⎯⎯⎯ Unhandled Error ⎯⎯⎯⎯⎯⎯⎯
+Error: [vitest-worker]: Timeout calling "onTaskUpdate"
+ ❯ Object.onTimeoutError node_modules/vitest/dist/chunks/rpc.-pEldfrD.js:53:10
+ ❯ Timeout._onTimeout node_modules/vitest/dist/chunks/index.B521nVV-.js:59:62
+ ❯ listOnTimeout node:internal/timers:685:17
+ ❯ processTimers node:internal/timers:618:7
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+
+
+ Test Files  1 failed | 35 passed (36)
+      Tests  1 failed | 447 passed (448)
+     Errors  1 error
+   Start at  03:45:36
+   Duration  305.02s (transform 3.53s, setup 3.52s, collect 17.51s, tests 248.64s, environment 23.09s, prepare 3.96s)
+

@@ -1,0 +1,19 @@
+Perform an independent VISUAL UI DESIGN critique, primarily of the STUDENT dashboard concepts. This is a fresh review; do not consult prior critique reports, prior chat transcripts or other reviewers' scores. Do not edit the designs. Judge the visual design, not backend integration, simulated data truth or whether the prototype actions persist.
+
+Inspect all three current student directions visually, desktop AND mobile, including full-page composition and entrance/interaction motion where evidence allows:
+http://127.0.0.1:5191/lamplight/student.html
+http://127.0.0.1:5191/carrel/student.html
+http://127.0.0.1:5191/marginalia/student.html
+
+Files are C:/Users/Joshu/Downloads/LSAT-U-Dashboard-Three-Directions-v2. Read images with your Read tool, not filenames or source alone. Current full desktop/mobile renders are screenshots/lamplight-student-1440.png and -390.png, similarly carrel and marginalia. Motion contact sheets in _verify/video/lamplight-student-sheet.png, carrel-student-sheet.png, marginalia-student-sheet.png, and phone sheets. Natural-frame sequences/stamps are beside them. Inspect readable details as well as whole pages. You may use the preapproved capture command below to get fresh local browser captures via headless Playwright/Edge. No prototype edits.
+
+Compare against OUR ORIGINAL CORRECTED STUDENT HANDOFF visually: C:/Users/Joshu/Downloads/LSAT-U-Dashboard-Handoff-2026-10-22/student-dashboard.png and student-dashboard-390.png, and student-dashboard.html if needed. This is the supplied baseline, not proof of current authenticated production. Teacher views are secondary context only; focus score on student pages.
+
+Fresh browser capture command: node C:/Users/Joshu/dev/ai-os/research/2026-10-23-dashboard-final-audit/capture.cjs
+That existing script renders all six pages at desktop/mobile into its owning audit folder. It does not edit prototype sources. Its PNGs can be read for top viewport composition. Do not read AUDIT.md or any earlier written critique in that folder. Restrict review to rendered assets and necessary source/evidence.
+
+Create a clear weighted rubric out of100 for hierarchy/first-screen focus, typography/readability, spacing/composition, distinctiveness/coherence, motion/interaction design, mobile visual adaptation. State weights. Score EACH direction and baseline where evidence supports it, distinguish visual judgments from objective observations. Do not manufacture precise motion scores if only sparse frames support them: qualify confidence.
+
+For each direction be SPECIFIC: strongest elements, weakest elements, comparison with original, and exact ideas worth taking forward. If a design has no worthwhile takeaway, say so; do not invent praise or force a hybrid. Separate criticism of the artwork from criticism of backend completeness. Discuss what to borrow, what to reject, and why. The user wants highly refined, original, striking visual design, not merely a conventional efficient dashboard. Do not penalize exploration just for departing from the original palette. Consider depth, proportions, contrast, surfaces, calendar treatment, main task, messages, navigation and visual hierarchy. Give a clear ranking and recommendation, not generic balanced praise.
+
+Return a self-contained report in your final response with the rubric table, per-direction analysis, baseline comparison, selected takeaways and coverage/limits. Explicitly list images actually inspected. No implementation or tool reconfiguration. Use the requested model Opus5.5 at Medium effort; report a genuine availability blocker rather than silently substituting.

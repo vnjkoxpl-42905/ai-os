@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-28",
+  "fixture": "synthetic real-components preview, no production writes",
+  "checks": [
+    "Desktop work list inspected, compact unread badge CSS corrected",
+    "Phone CSS viewport390x844, no horizontal overflow, stacked work filters",
+    "Phone work-type Guided drill selection yields2of4 rows, returnTo preserves filter",
+    "Notes archive opens actual reader and secondary rail, normal/reduced-motion paths inspected",
+    "Tablet search above paired filters; docked/wide inline controls inspected",
+    "Explicit mixed note/work update view phone inspected, arrow alignment refined"
+  ],
+  "limits": [
+    "Browser zoom67percent requires compensated viewport; screenshots include dark unused capture area",
+    "Fixture read-state hooks stubbed; persistence certified separately by PostgreSQL tests, not this visual fixture",
+    "Actual production student signed-in acceptance pending release"
+  ],
+  "screenshots": [
+    "assigned-desktop.png",
+    "assigned-phone.png",
+    "assigned-tablet.png",
+    "assigned-docked.png",
+    "update-phone.png"
+  ],
+  "viewportChecks": [
+    {
+      "cssWidth": 390,
+      "cssHeight": 844,
+      "horizontalOverflow": false
+    },
+    {
+      "cssWidth": 768,
+      "cssHeight": 1000,
+      "horizontalOverflow": false
+    },
+    {
+      "cssWidth": 1054,
+      "cssHeight": 1000,
+      "horizontalOverflow": false
+    },
+    {
+      "cssWidth": 1441,
+      "cssHeight": 1000,
+      "horizontalOverflow": false
+    }
+  ]
+}

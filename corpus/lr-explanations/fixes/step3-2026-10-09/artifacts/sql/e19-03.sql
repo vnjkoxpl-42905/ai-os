@@ -1,0 +1,4 @@
+insert into lr_explanation_steps (explanation_id,position,label,body) select v.e,v.p,v.l,v.b from (values
+('ac574eb4-f700-4220-91ae-c2fd4783e199'::uuid,3,'Goal','The stem says "if which one of the following is assumed", so we want the piece that makes the conclusion follow. The missing piece is the rule''s trigger: M has an unpleasant taste. Once that''s in place, the three-option rule applies, two options are gone, and capsule is the one left.'),
+('0352230f-ff1f-4b13-8932-7d1ac7ede622'::uuid,3,'Goal','Look for an answer that connects impressing jurors to morality: litigants believed that sounding morally like the jurors was how to win them over. Then the speeches had to mirror the jurors'' moral views, and those were the common views.')
+) v(e,p,l,b) where not exists (select 1 from lr_explanation_steps x where x.explanation_id=v.e and x.position=v.p) returning id;

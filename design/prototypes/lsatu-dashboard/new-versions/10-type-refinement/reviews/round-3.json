@@ -1,0 +1,95 @@
+{
+  "status": "completed",
+  "mode": "review",
+  "provider": "claude",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "claude",
+    "builder": "codex",
+    "inspector": "claude"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\ai-os\\design\\prototypes\\lsatu-dashboard\\new-versions\\10-type-refinement",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os\\design\\prototypes\\lsatu-dashboard\\new-versions\\10-type-refinement\\REVIEW-BRIEF.md",
+  "plan_sha256": "79dfc7d44752ca86fa4dff111bfde49dafbcf692e4bdbdcfcc6ee3c3697f04c0",
+  "requested_model": null,
+  "requested_effort": null,
+  "base": null,
+  "snapshot": null,
+  "previous": null,
+  "started_at": 1792919254.4142773,
+  "artifacts": "C:\\Users\\Joshu\\.codex\\visualizations\\2026\\10\\25\\01a17081-6735-7fc2-b0e1-922ab635486c\\claude-10-review\\claudex-ubfnbg3_",
+  "cli_version": "2.1.309 (Claude Code)",
+  "executable": [
+    "C:\\Users\\Joshu\\.local\\bin\\claude.exe"
+  ],
+  "exit_code": 0,
+  "session_id": "9ef1233f-1b26-419c-a828-d74beeb2af3f",
+  "response": {
+    "verdict": "APPROVED",
+    "summary": "Both round-2 findings are fixed in the current source and in the captures. The teacher link now reads \"Teacher home\" (app.js:34). In teacher-768-text2.png it wraps to \"Teacher / home\" inside the active pill without clipping. Assignment rows use flex-wrap with .assignment-body{flex:1 1 10rem} at every width, and the h3 uses overflow-wrap:normal (style.css:5). In text-200-home-1048.png, \"Conditional Indicators Refresher\" breaks only between words and Open moves to its own line. Because --sidebar-width is clamp(205px,14rem,260px) (style.css:3), the main offsets at style.css:5/11 stay matched. In both enlarged captures the Messages \"1\" badge and the nav labels stay inside the sidebar. At the user's 1048x858 viewport (home-1048-viewport.png), the type is clearly better than in 09: ordinary-case labels, a single \"Ctrl K\" badge, Newsreader only on the greeting heading, readable muted secondary text, quick actions with whole labels, and the coach and session panels intact. home-768.png stacks cleanly and nothing clips. The keyboard shortcut handler still matches only the platform's modifier and is ignored while a dialog is open (app.js:109). The inherited behaviour I traced in source is unchanged: exact reference parsing, fixed Review totals, work filters, draft/note save-failure retention, dialog focus return and route guards. I found no material regression. One low-severity cosmetic issue remains: avatars have a fixed pixel size, so their initials overflow the circle at 200% text.",
+    "findings": [
+      {
+        "id": "T10-R3-01",
+        "severity": "low",
+        "path": "style.css:5 (.avatar width/height:32px; .message .avatar width/height:29px with font-size:.8125rem)",
+        "evidence": "The avatar circle is sized in px but its initials are sized in rem. At 200% text the coach avatar is .8125rem×2 = 26px Manrope semibold \"JF\", which is about as wide as or wider than its 29px circle. In text-200-home-1048.png the coach-panel \"JF\" shows no visible circle around it and sits above the line of \"Joshua\". The sidebar-foot \"JF\" in teacher-768-text2.png likewise fills its 32px circle edge to edge. Round 1 fixed chips and dots by moving them to rem/em, but the avatars were not changed. The host's chipOverflow check apparently doesn't include .avatar. This is cosmetic, and no information is lost.",
+        "fix": "Size avatars in em relative to their own font, e.g. .avatar{width:2.3em;height:2.3em} and .message .avatar{width:2.2em;height:2.2em}, or use min-width/min-height in rem. Add .avatar to the chip-bounds check."
+      }
+    ],
+    "coverage": [
+      "Source read in full: index.html, app.js (117 lines), style.css (17 lines). I compared the source against reviews/round-3-source-hashes.json (index 6706D017…, app 3061FF96…, style EC3F267D…) but did not compute any hashes myself.",
+      "Review history read: reviews/round-2.json and reviews/ROUND-2-DISPOSITIONS.md. Checked in source: the T10-R2-01 fix (app.js:34 label 'Teacher home'; --sidebar-width clamp token with matching main margin-left at style.css:3/5/11) and the T10-R2-02 fix (.assignment flex-wrap and .assignment h3 overflow-wrap:normal at all widths).",
+      "Images read: artifacts/home-1048-viewport.png, artifacts/home-768.png, artifacts/teacher-768-text2.png, artifacts/text-200-home-1048.png.",
+      "Report read: artifacts/review-regressions-report.json, which lists 30 view/width/zoom results, all with empty navOverflow, splitWords, clipped, chipOverflow and wrappedActions; the teacher-table keyboard scroll keeps the last View button inside the wrapper; Windows and Mac modifier cases are rejected with unsaved dialog text preserved.",
+      "Traced in source: keydown shortcut (platform modifier, student role, !modal.open), finder()/drawer close, openDialog/closeDialog focus return, note/draft save-failure retention, the teacherTable region and Students search re-render, route guards in render(), parseReference and the typed/field reference forms, fixed attempts/totals, and work filters/search."
+    ],
+    "limitations": [
+      "This was a read-only review. I did not run a browser or any tests, and I did not compute hashes. All pass counts are host-reported, including interaction, features, typography, motion/focus, offline and capture counts.",
+      "Reports not read this round: typography-report.json, interaction-report.json, features-10-report.json, motion-focus-report.json, offline-report.json, capture-report.json, sidebar-200-report.json, proof-summary.json.",
+      "Images skipped this round: before-home-1048/390, home-390, home-1440, the practice/review/work-390 captures, the other text-200 routes, text-200-home-390, sidebar-200-1048, the teacher/students/dialog text1 and text2 captures other than teacher-768-text2, teacher-table-scroll and prepare-dialog-save captures, and the motion/mobile-finder captures. My before/after judgement relies on earlier rounds plus home-1048-viewport.png.",
+      "text-200-home-1048.png is a full-page capture, so the fixed sidebar appears cut off after 'Find a…'. That is its own scroll region, not page clipping. I could not confirm scrollbar visibility or reachability of the bottom role selector at 200% text from this image alone.",
+      "Contrast was judged by eye and from the source hex values. Nothing was measured. I did not inspect the full repository diff, the enclosing vault has unrelated changes, and the user's own visual acceptance is still outstanding."
+    ]
+  },
+  "usage": {
+    "input_tokens": 12,
+    "cache_creation_input_tokens": 64142,
+    "cache_read_input_tokens": 144187,
+    "output_tokens": 4682,
+    "output_tokens_details": {
+      "thinking_tokens": 1272
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 64142,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2640,
+        "cache_read_input_tokens": 54133,
+        "cache_creation_input_tokens": 14513,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 14513
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "permission_denials": [],
+  "total_cost_usd": 0.6356614,
+  "elapsed_seconds": 50.98
+}

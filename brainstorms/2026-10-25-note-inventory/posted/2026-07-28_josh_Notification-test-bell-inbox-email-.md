@@ -1,0 +1,1 @@
+This is a live end-to-end test of the new notification path. If it works, you should see a bell alert, an inbox message, and an email.

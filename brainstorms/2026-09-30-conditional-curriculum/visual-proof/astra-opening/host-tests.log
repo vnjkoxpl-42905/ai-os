@@ -1,0 +1,78 @@
+
+> vite_react_shadcn_ts@0.0.0 test
+> vitest run src/bootcamps/conditionals src/lib/conditionalBootcampAssignment.test.ts src/components/teacher/ConditionalAssignmentFields.test.tsx
+
+
+ RUN  v3.2.4 C:/Users/Joshu/dev/ai-os-projects/lsatu-conditional-bootcamp
+
+ ✓ src/bootcamps/conditionals/assignments.test.ts (11 tests) 25ms
+ ✓ src/lib/conditionalBootcampAssignment.test.ts (11 tests) 33ms
+ ✓ src/bootcamps/conditionals/content/opening-coverage.test.ts (14 tests) 22ms
+ ✓ src/bootcamps/conditionals/progress.test.ts (25 tests) 26ms
+Browserslist: browsers data (caniuse-lite) is 6 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+ ✓ src/components/teacher/ConditionalAssignmentFields.test.tsx (1 test) 261ms
+stderr | src/bootcamps/conditionals/components/ConditionalOpeningLesson.review.test.tsx > lets learners test a requirement before translating its word family
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+stderr | src/bootcamps/conditionals/routes.test.tsx > lands on one current lesson without a curriculum map or teaching rail
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/bootcamps/conditionals/useConditionalProgress.test.tsx (12 tests) 1401ms
+stderr | src/bootcamps/conditionals/components/LessonPages.test.tsx > retains the actual lesson card and revealed side across page navigation without pre-exposing answers
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+stderr | src/bootcamps/conditionals/components/ConditionalLessonNote.test.tsx > keeps the full orientation formative until the student marks the lesson read
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/bootcamps/conditionals/components/ConditionalReferenceSequence.test.tsx (15 tests) 3061ms
+   ✓ teaches all thirteen reference steps in order with notation after the conceptual contrapositive and cases  386ms
+   ✓ distinguishes the two valid inferences from both unknown cases without exposing conclusions before an attempt  360ms
+   ✓ negates both complete conditions correctly in all four sign patterns, including existing negatives  383ms
+   ✓ requires both independent diagrams before giving six fresh practice keys and resets each attempt  736ms
+ ✓ src/bootcamps/conditionals/routes.test.tsx (50 tests) 3536ms
+   ✓ resumes a finished old run at the new work without losing its drafts, attempts, or timing  366ms
+   ✓ completes the available subset of a shared area practice run and preserves its other work  494ms
+   ✓ completes the available subset of a shared phase practice run and preserves its other work  405ms
+   ✓ completes the available subset of a shared area flashcards run and preserves its other work  474ms
+   ✓ stamps the opening edition only when Mark lesson as read is clicked and keeps it after reloading practice  391ms
+ ✓ src/bootcamps/conditionals/components/LessonPages.test.tsx (5 tests) 8601ms
+   ✓ exposes only the current page, focuses its heading, and retains a checked case when returning  750ms
+   ✓ retains the actual lesson card and revealed side across page navigation without pre-exposing answers  1299ms
+   ✓ requires an explicit end-page action to record reading, including after a contents jump  686ms
+   ✓ starts a changed unit at its first page and resets card state when returning to the prior unit  1129ms
+   ✓ separates a present negative requirement from its absence in the fresh two-room exercise  4737ms
+ ✓ src/bootcamps/conditionals/components/ConditionalOpeningLesson.review.test.tsx (26 tests) 10315ms
+   ✓ lets learners test a requirement before translating its word family  747ms
+   ✓ keeps group-1 target choices stable while learners change their answers  707ms
+   ✓ keeps group-2 target choices stable while learners change their answers  621ms
+   ✓ varies group-1 diagram choices and explains the promise each reversed arrow adds  350ms
+   ✓ varies group-2 diagram choices and explains the promise each reversed arrow adds  387ms
+   ✓ teaches inquiry and single-occasion wording before testing a recurring rule  712ms
+   ✓ renders each named opening method before the learner continues to guided practice  721ms
+   ✓ reveals group-1 exact sentence targets only after a correct choice and clears them on a new example  760ms
+   ✓ reveals group-2 exact sentence targets only after a correct choice and clears them on a new example  871ms
+   ✓ marks group-1 transfer spans only after the learner checks a correct diagram  531ms
+   ✓ marks group-2 transfer spans only after the learner checks a correct diagram  521ms
+   ✓ reports a correct negative answer without reversing its meaning in feedback  581ms
+   ✓ teaches permission and instruction after the core sequence but before the preserved attached practice  1009ms
+   ✓ keeps animation implementation controls out of the student lesson  312ms
+ ✓ src/bootcamps/conditionals/components/ConditionalLessonNote.test.tsx (12 tests) 10532ms
+   ✓ keeps the full orientation formative until the student marks the lesson read  2226ms
+   ✓ mounts the thirteen reference steps before the attached guided activity  505ms
+   ✓ checks each Group 2 target before revealing direction and preserves obligations  510ms
+   ✓ resets lesson interactions when the production wrapper changes units  366ms
+   ✓ does not reveal the four-case conclusions before a formative attempt and clears them on reset  345ms
+   ✓ keeps recall prompts readable and exposes answers through an expanded control  455ms
+   ✓ gives each formative choice its own reasoning without marking the lesson read  5839ms
+
+ Test Files  11 passed (11)
+      Tests  182 passed (182)
+   Start at  07:51:06
+   Duration  13.50s (transform 2.52s, setup 1.77s, collect 9.58s, tests 37.81s, environment 11.42s, prepare 2.21s)
+

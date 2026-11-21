@@ -1,0 +1,45 @@
+Implement the attached frozen work order within this checkout. Do not commit, push or publish. Resolve source paths relative to this checkout; never edit an original checkout named in the plan. Do not silently redesign an impossible requirement: report it and the proposed deviation. Run the agreed proof command: npm run test -- src/features/reading-center
+Report files changed, proof output, denied/blocked actions, and deviations. Your report is advisory; another provider will independently review the final changes.
+
+PLAN PATH: C:\Users\Joshu\dev\ai-os\brainstorms\2026-10-16-rc-training-build-spec.md
+PLAN SHA256: fca69e3ea5cd2d31db2f1b3d19795fa41e0482eb157cdd0adfc5228e8d1b1e15
+<plan>
+# RC Training implementation work order
+
+Status: standalone implementation authorized by Joshua on 2026-10-16 following the audit. Host-authored specification, no independent plan approval claimed. Builder Claude Sonnet 5.5 (`claude-sonnet-5-5`), effort medium. Maximum fix rounds: 3. Codex independently verifies and inspects. No push, release, remote database writes, paid media creation or source-media edits.
+
+Build only in the isolated checkout supplied by the runner. Never edit the original checkout. The host prepares a hash-verified snapshot of current RC work, excluding the unrelated MCP edit. Keep diagnostics outside the checkout. Read repository CLAUDE.md and applicable instructions, but do not commit or publish despite default repository shipping guidance.
+
+## Outcomes and invariant teaching procedure
+
+One RC Training activity and one current workout. Read/translate a whole paragraph, hide all text and silently recall that newest paragraph, reveal and briefly confirm all text read so far, then continue. Preserve details, qualifications, relationships and brief reactions while reading. No sentence-by-sentence hidden recall, mandatory cumulative hidden retelling, grading or forced cutoff. Optional whole-passage recall at passage end can be silent or spoken; only spoken recap records audio. Comparative A/B confirmation choice remains supported and accurately labelled. Untimed with optional elapsed display; passage time resets, section time continues. Legacy attempts retain their actual procedure; do not relabel all historical records indiscriminately.
+
+## Required changes
+
+R1. Persistence availability and truthfulness: detect unavailable attempts backend before enabling real launch; show actionable, nontechnical unavailable state and retry. Do not silently substitute another table, fake successful saves or deploy schema. Keep a deployment checklist for existing migration/policies/storage. Reconcile ambiguous create outcomes by retaining the same ID and reading back before retry. Return pending/unknown status instead of claiming nothing saved when uncertain.
+
+R2. Durable progress and finalization: checkpoint account/attempt, content identity, paragraph/stage, completed recaps, selected options and active elapsed totals. Provide resume from history and preserve pending finalization with original duration through exit/reload. Pause elapsed accumulation when deliberately leaving the practice route or on pagehide; do not infer inactivity from silent thinking. Restore elapsed totals without adding time away. Navigation must not silently abandon work. Reject mismatched/stale/cross-account checkpoints safely. Use existing persistence when available and a clearly identified same-device fallback where server checkpoint schema is not deployed. Never claim cross-device resume for local state.
+
+R3. Save/recording integrity: immediately lock Finish/End against duplicate and overlapping submission. Make operations idempotent and reconcile successful server state after uncertain responses. Check backup initialization, surface quota/IndexedDB failure and chunk-write errors, verify contiguous audio chunks before assembly. Do not promise on-device recovery when storage failed. Preserve recoverable data; expose retry and local download where actually available. Propagate failed status updates. Recovery must report pending/failed outcomes, retry manually and after reconnect, handle crash remnants and absence of Web Locks without duplicate uploads. Never expose another account's recording or checkpoint. Do not delete existing records or backups as a cleanup shortcut.
+
+R4. History: explicit in-progress/completed/ended/pending/recovery-needed states; deterministic pagination beyond 50; recap details and private playback/download only for verified saved audio; retry/resume actions appropriate to state. Include RC in Reading Progress and Dashboard without inventing scores or mixing LR grading. One source of RC history data. Preserve old workout provenance and version new display names where necessary.
+
+R5. Navigation: keep stable sidebar geometry and main destinations available on Tags; replace ambiguous Back with labelled contextual return. On intentional sidebar destination change, show destination heading below sticky chrome and move keyboard focus appropriately without stealing focus after unrelated data updates. Back/Forward restores previous view and scroll. Instructions URL, disclosure/view state and focus must agree on click, reload and direct entry. Preserve LR/RC access gates; do not grant access by combining shells indiscriminately. Prefer shared shell/presentation behavior with separate correctly scoped access checks. Loading stays understandable without blank/unnecessary full-workspace replacement. Respect reduced motion; do not animate long scrolling between unrelated pages. Retain all existing sidebar destinations.
+
+R6. Teaching and UI: purpose before procedure, one primary Start a section action, obvious Instructions/Examples/Your attempts entry points. Demo begins with paragraph 1, then paragraph 2. Clearly label instructor modelling; do not give a model answer while pretending to test retrieval. Demonstrate an omitted qualification and its correction. Paragraph 2 recall concerns paragraph 2 alone, followed by confirmation of both paragraphs. End accurately with optional whole-passage recap/continue. During practice show passage/paragraph position and current stage with one dominant next action. Hiding starts silent recall immediately, avoiding a redundant Start recap click. Keep explicit Start/Stop for recording. Use consistent recall terminology. Match LR's level of hierarchy/spacing and simple navigation without introducing a new visual system. No em dashes in new student copy.
+
+R7. Video preparation only: retain the old mixed Decaf/Cappuccino film disabled. Write a source-mapped original two-paragraph script/storyboard for a short conceptual video plus a separate verified-app walkthrough shot list. Include purpose, detailed recall, a genuine omission/correction, cumulative confirmation, optional final recall, timing and saved-work retrieval. Supply accessible player fallback behavior if relevant existing player is used. Do not render/upload/create paid media or present a placeholder as a finished video. The actual walkthrough must wait for verified working controls and backend acceptance.
+
+## Proof and acceptance
+
+Run separately: `npm run test -- src/features/reading-center`; `npm run typecheck`; `npm run build`. Host repeats independently. Add meaningful regressions for R1–R5: lost response after commit, duplicate finish/end, interrupted finalization, checkpoint round-trip/account isolation/time away, backup unavailable and missing chunks, reconnect recovery, history pagination and route/view/focus behavior. Use realistic adapters with explicit mocked boundaries; do not call mock persistence a real backend pass. Do not modify app behavior merely to pass tests.
+
+Host browser checks at 320/768/1024/1440 and a docked content width: all sidebar destinations, both LR/RC directions from scrolled views, keyboard focus, direct instructions URL/reload/Back, empty/error/history states, instructional demo progression, silent/optional spoken flows where possible. Real connected section completion/readback is blocked until authorized deployment resolves the known PGRST205. Record that limitation rather than concealing it. No production mutation to make acceptance green.
+
+Review every changed/staged/untracked file relative to the isolated baseline. Keep tests diagnostic, preserve unrelated behavior, and document limitations. If scope cannot be completed, explicitly list unfinished requirement IDs. No claims of fully working persistence without actual readback.
+
+## Evidence
+
+The preceding audit is `C:/Users/Joshu/dev/ai-os/brainstorms/2026-10-16-rc-training-audit-and-plan.md`; it contains A01–A18 findings and source pointers. It is reference evidence, not authority to edit the original path. Original Cappuccino notes are `C:/Users/Joshu/dev/ai-os/Loophole Lecture/Day Six/How and Why to Do Cappuccino RC Translation/ellens-notes.txt`; corpus workout is `C:/Users/Joshu/dev/ai-os/corpus/loophole-online/workouts/cappuccino-rc-translation-drill/README.md`. Source media remain immutable.
+
+</plan>

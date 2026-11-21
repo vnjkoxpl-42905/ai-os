@@ -1,0 +1,35 @@
+
+[1m[46m RUN [49m[22m [36mv3.2.7 [39m[90mC:/Users/Joshu/dev/ai-os-projects/lsatu-my-work-20261026[39m
+
+ [32m✓[39m src/components/classroom/home/teacher/teacherWeek.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 119[2mms[22m[39m
+ [32m✓[39m src/lib/teacherHomeActions.test.ts [2m([22m[2m26 tests[22m[2m)[22m[33m 512[2mms[22m[39m
+ [32m✓[39m src/components/classroom/home/teacher/PostSessionWork.test.tsx [2m([22m[2m8 tests[22m[2m)[22m[33m 3682[2mms[22m[39m
+   [33m[2m✓[22m[39m After-session work[2m > [22mmarks a conflicting automatic transcript for review [33m 2846[2mms[22m[39m
+   [33m[2m✓[22m[39m After-session work[2m > [22msends a revisioned change without pretending the checkbox saved [33m 323[2mms[22m[39m
+ [32m✓[39m src/components/classroom/home/teacher/TeachingDesk.test.tsx [2m([22m[2m14 tests[22m[2m)[22m[33m 7817[2mms[22m[39m
+   [33m[2m✓[22m[39m Teaching desk interactions[2m > [22mreuses an individual link without presenting a credit grant or mutating the account [33m 371[2mms[22m[39m
+   [33m[2m✓[22m[39m Teaching desk interactions[2m > [22mdefaults a missed-credit correction to one and rejects fractional custom amounts [33m 1919[2mms[22m[39m
+   [33m[2m✓[22m[39m Teaching desk interactions[2m > [22mrequires a separate explicit initial-link flow when an account has no pass [33m 1095[2mms[22m[39m
+   [33m[2m✓[22m[39m Teaching desk interactions[2m > [22mcaps Home at two sessions using the true total and preserves unsaved input across disclosure [33m 533[2mms[22m[39m
+   [33m[2m✓[22m[39m Teaching desk interactions[2m > [22mloads filtered history pages and reopens through the revisioned manual writer [33m 1198[2mms[22m[39m
+   [33m[2m✓[22m[39m Teaching desk interactions[2m > [22mnever changes access on opening, choosing or cancelling, then confirms the named target [33m 784[2mms[22m[39m
+   [33m[2m✓[22m[39m Teaching desk interactions[2m > [22mrecovers the same pending top-up and keeps target and quantity locked [33m 954[2mms[22m[39m
+ [32m✓[39m src/components/classroom/home/teacher/TeacherHomeView.test.tsx [2m([22m[2m24 tests[22m[2m)[22m[33m 16798[2mms[22m[39m
+   [33m[2m✓[22m[39m TeacherHomeView[2m > [22mmakes account operations discoverable and opens access selection without an account write [33m 3460[2mms[22m[39m
+   [33m[2m✓[22m[39m TeacherHomeView[2m > [22muses an accessible More menu that closes on Escape and returns focus [33m 560[2mms[22m[39m
+   [33m[2m✓[22m[39m TeacherHomeView[2m > [22mhands More selection to the booking sheet and returns to an interactive page [33m 2573[2mms[22m[39m
+   [33m[2m✓[22m[39m TeacherHomeView[2m > [22mkeeps Assign work in the header without a student assignment promotion [33m 1385[2mms[22m[39m
+   [33m[2m✓[22m[39m TeacherHomeView[2m > [22msearches beyond recent students, supports accent-insensitive Enter and Escape [33m 732[2mms[22m[39m
+   [33m[2m✓[22m[39m TeacherHomeView[2m > [22mkeeps the recent-visit area small and never labels a heartbeat Online now [33m 2513[2mms[22m[39m
+   [33m[2m✓[22m[39m Teacher Home provider setup rendering[2m > [22mkeeps the desk rendered when email has the live array-free setup envelope [33m 377[2mms[22m[39m
+   [33m[2m✓[22m[39m teacher seven-day calendar[2m > [22mmoves today at calendar-zone midnight while retaining the snapshot date [33m 3015[2mms[22m[39m
+   [33m[2m✓[22m[39m teacher saved calendar coverage[2m > [22mremoves past timed starts and falls back to today outside an aged snapshot [33m 517[2mms[22m[39m
+   [33m[2m✓[22m[39m compacts the all-confirmed-empty summary but keeps unknown and stale email visible [33m 454[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m5 passed[39m[22m[90m (5)[39m
+[2m      Tests [22m [1m[32m80 passed[39m[22m[90m (80)[39m
+[2m   Start at [22m 16:51:14
+[2m   Duration [22m 53.87s[2m (transform 2.93s, setup 3.86s, collect 18.62s, tests 28.93s, environment 54.69s, prepare 2.31s)[22m
+
+
+EXIT_CODE=0

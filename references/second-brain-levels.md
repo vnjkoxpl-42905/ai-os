@@ -1,13 +1,31 @@
 ---
 type: reference
 subject: The 5 levels of a Claude second brain where ai-os stands
-updated: 2026-07-18
+updated: 2026-10-14
 aliases: []
 ---
 
 # The 5 levels of a Claude second brain — where ai-os stands
 
 Comparative analysis of ai-os against Nate/Herk's "Every Level of a Claude Second Brain Explained" and the Karpathy LLM-wiki video (both in the NotebookLM `SETUp` notebook). Written 2026-07-18.
+
+## Current clip pathway, verified 2026-10-10
+
+Save a clip to `raw/inbox/`, then ask **"Ingest this into my second brain"**.
+`second-brain-ingest` preserves evidence, compiles the useful content into its existing domain
+pages, updates navigation, and checks one natural retrieval question. Later ask
+**"What do we know about this, and how can I use it?"**; `second-brain-query`
+retrieves compiled knowledge with source links and qualifications. AI clips route
+through [the AI workspace hub](ai-workspace/index.md); LSAT knowledge uses the
+[corpus](../corpus/index.md). Saving alone does not automatically run ingestion.
+
+Student/session records use `transcript-intake`; student-facing lessons use
+`post-session-recap`. Claude and Codex project copies share these boundaries.
+A native Claude read-only check successfully activated ingest and retrieved one
+saved video example. Browser template settings and live acquisition were not
+checked. [Verification and remaining limits](../research/second-brain-pathway-2026-10-10/20261011T011434Z/outcome.md).
+
+On 2026-10-14 the ingest, query and lint rules gained checked quotes, evidence hashes, contradiction gates, retrieval-miss logging and wider lint coverage, drawn from GD4AI's plugin, Nate Herk, Chase AI, Dan Martell and Austin Marchese and graded against Karpathy's idea file. What was built, what waits on Joshua and what was declined is in [the second-brain adoption ledger](ai-workspace/second-brain-adoptions.md).
 
 ## The model
 
@@ -27,20 +45,42 @@ Two doctrines that outrank the levels:
 
 The source's own author parks his primary EA brain ("Herk 2") at **Level 2**. He does not run Level 4 or 5 day-to-day. That is the benchmark.
 
-## Where ai-os stands
+## Architecture evidence and the historical level comparison
+
+The original level comparison was written 2026-07-18. The table below was qualified on 2026-10-08 using the current root routing map and documented sync setup. A documented capability or prior successful upload does not establish continuous availability, device installation, or cloud authentication.
 
 | Level | Status | Evidence |
 |---|---|---|
 | 1 | Complete, exceeds reference | CLAUDE.md router with explicit routing-map table; `context/{about-me,work,priorities}`, `decisions/log.md`, `projects/`. |
-| 2 | Complete — our operating level | `wiki/index.md` + `wiki/log.md` (dated prefix) + `[[wikilinks]]` + `entities/` + `wiki/hot.md` (the "hot cache") + native automemory + `references/` + `corpus/` as a second wiki. |
-| 3 | Not built — correctly | No vector index/embeddings/qmd. Unnecessary below ~100 articles / 500k words. No retrieval pain. |
-| 4 | Capability on-demand, not a live layer | `graphify` skill produces HTML+JSON knowledge graphs when asked. Source author doesn't run L4 daily either. |
-| 5 | Not running — correctly | Crons exist but no always-on sync. Source author doesn't run L5. |
+| 2 | Current documented operating pattern | `wiki/index.md`, `wiki/log.md`, `wiki/hot.md`, native automemory, `references/`, and domain homes in `corpus/` and `students/`. These routes do not certify that every page is complete or current. |
+| 3 | Not part of the documented retrieval order | Root instructions use indexes, domain pages and live-system escalation. Add semantic retrieval only for an observed retrieval failure; file counts alone do not justify it. **2026-10-14:** Joshua installed the Smart Connections 4.7.2 and Smart Context 3.3.2 Obsidian plugins (local embeddings in the git-ignored `.smart-env/`) and removed "there is no semantic search and none is needed" from `CLAUDE.md` and `AGENTS.md`. Whether agents use it is open: AQ-010 in the [AI action queue](ai-workspace/action-queue.md); see also [Tina Huang's Obsidian levels](../wiki/sources/obsidian-in-24-minutes-tina-huang.md). |
+| 4 | On-demand graph research | Graphify is cataloged and generated graph imports exist. Their existence does not prove freshness, a continuously maintained graph, or improved retrieval. Graph work was deferred in the old-vault intake. |
+| 5 | Scheduled snapshot sync is documented; an autonomous OS is not established | [Sync setup](../setup/github-sync/README.md) describes two-minute GitHub/Drive checks while signed in. The intake's local verification receipt records a matching GitHub/Drive snapshot at `2026-10-08T04:20:38.800373+00:00`, commit `9378793aafed94b946845b205a35cdf39fc46a9e`. This is a past verification, not a claim that later edits are uploaded or that a sleeping/offline laptop keeps syncing. |
 
-**Headline:** ai-os's Context/Connections separation is *more* formalized than the source's — Nate keeps the split in his head; ai-os has it written as `connections.md` (7 data domains, backend wins on conflict) + the "don't read the wiki unless the task needs it" rule + the Four Cs in `references/3ms-framework.md`. The video references the Four Cs as Nate's own framework; ai-os has already absorbed it.
+**Headline:** ai-os's Context/Connections separation is *more* formalized than the source's — Nate keeps the split in his head; ai-os has it written as `connections.md` (7 data domains, backend wins on conflict) + the "don't read the wiki unless the task needs it" rule + the Four Cs in `references/3ms-framework.md`. The video references the Four Cs as Nate's own framework; ai-os has already absorbed it. His fuller walkthrough of Herk 2 is compared practice by practice in the [Ultimate Second Brain summary](../wiki/sources/claude-ultimate-second-brain-nate-herk.md) (2026-10-12).
 
 ## Recommendation
 
-Do not build Level 3, 4, or 5 now — no pain justifies it, and the doctrine warns against climbing levels for their own sake. Watch for future Level-3 value in one high-volume folder (`corpus/` ~118 pages, or student transcripts) *only if* retrieval starts "whiffing on notes you know exist." Higher-leverage work is hygiene (empty `wiki/concepts/` + `wiki/knowledge/`; the confusing second `INDEX.generated.md`) and ingest discipline, not a new level.
+### Keep one connected brain with separate domain homes
+
+Recommendation recorded 2026-10-07 after the old-vault intake review. Keep `ai-os` as one working Obsidian vault, with the [wiki](../wiki/index.md), [teaching corpus](../corpus/index.md) and [student records](../students/README.md) as distinct knowledge domains. This preserves the existing architecture; it does not authorize a folder move, vault split or Sync change.
+
+The useful unit is a connected reasoning chain. A student's session evidence supports a dated teaching judgment in their record. That judgment links to a reusable concept or method in the corpus. Its student-facing explanation uses [Joshua's selected teaching voice](lsat-teaching-voice-standard.md). Product or pedagogy choices link to the [decision log](../decisions/log.md), while sources remain evidence with provenance. [Business context](../context/work.md) and [Joshua's identity](../context/about-me.md) explain the purpose and preferences behind the work. Keeping those links in one vault makes the whole chain available without copying each shared lesson into every student folder.
+
+Separate vaults would require additional cross-vault retrieval and synchronization conventions. They would be justified by a real access, collaboration or workflow boundary, not merely by teaching and student notes being different subjects. No such new boundary was established in this task.
+
+This can preserve Joshua's expressed judgments, demonstrated wording, source evidence and decision reasons. It is not a complete replica of his mind or permission to turn a vendor method into his personal preference. Keep observed, inferred, recommended and decided distinct. The [old-vault source summary](../wiki/sources/old-obsidian-vault-2026-10-07.md) illustrates those boundaries.
+
+### Diagnose a context failure before adding another retrieval layer
+
+The recovered “Steal My Exact AI OS Setup” clip offers four useful failure labels: a wrong fact entering context, too much irrelevant context, missing or misrouted context, and contradictory source generations. These categories overlap; use them to locate evidence, not as a new score or replacement for the current audit rubric. [Recovered-source review](../research/obsidian-vault-comparison/2026-10-07/research-review.md); [provenance](../wiki/sources/old-obsidian-vault-2026-10-07.md).
+
+For a failed lookup, record the requested fact, the route actually taken, the correct source, and the narrow routing change that would have prevented it. This makes “look before asking” actionable without assuming semantic search or a new plugin is the answer. The clip's architecture overlaps the existing router and live-system authority; no old runtime rule was activated.
+
+Investigate a new retrieval layer when actual queries miss relevant evidence despite correct routes. Measure the failure in the affected domain, such as teaching sources or student transcripts, before choosing a tool. Continue maintaining indexes, provenance and explicit authority boundaries; the older page-count and empty-folder observations are not current inventory evidence.
 
 Related: [[3ms-framework]], the LLM-wiki schema in CLAUDE.md.
+
+## Retrieval role settled for current operation (2026-10-26)
+
+Under Joshua's delegated implementation judgment, Smart Connections remains an optional Obsidian aid and is not a required agent retrieval dependency. This supersedes the Level3 row's earlier open-choice wording. The compiled index/alias route remains first, with [bounded candidate sections](ai-workspace/compiled-retrieval.md) as an optional local helper. Ten regressions and an eight-case local benchmark pass; this does not establish semantic-plugin quality, actual model-token savings or a live operational fact. Escalate to the owning backend when freshness matters. The plugin manifest still reports4.7.2; its embedding coverage and active runtime were not revalidated.

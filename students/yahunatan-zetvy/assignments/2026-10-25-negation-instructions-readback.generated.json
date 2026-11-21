@@ -1,0 +1,27 @@
+{
+  "verified_at": "2026-10-26T03:38:45.921Z",
+  "id": "927f4325-d7d9-43fb-a90d-3638ff46c036",
+  "title": "Negation Station",
+  "student_id": "d9afa662-d72f-44c1-8948-475309268f63",
+  "item_count": 30,
+  "instructions": {
+    "task": "Negate each statement. The negation will (1) contradict the original, and (2) be the weakest statement that will do so.",
+    "rules": [
+      "Statement negation is an advanced Logical Reasoning technique with many different uses. I'll give you a statement and you try to negate it.",
+      "The rules are simple: I'll give you a statement. Imagine it's an answer on a Necessary Assumption question and you want to use the Negation Test. Tell me how you would negate it. Remember, a negation isn't a polar opposite: it's the weakest pushback that would contradict the original.",
+      "Keep in mind that a negation is not a polar opposite; it's the weakest statement that will contradict the original."
+    ],
+    "tagline": "Practice the Negation Test using the weakest statement that contradicts the original.",
+    "answer_label": "Your negation",
+    "worked_example": {
+      "statement": "All babies are cute.",
+      "explanation": "The word \"all\" expresses 100% conformity. The weakest claim that contradicts 100% conformity is a single non-conforming case. All three credited answers express that it's possible for there to be a baby that isn't cute.",
+      "credited_answers": [
+        "Some babies are not cute.",
+        "Not all babies are cute.",
+        "There is at least one baby that isn't cute."
+      ]
+    },
+    "answer_placeholder": "Write the weakest statement that contradicts the original…"
+  }
+}

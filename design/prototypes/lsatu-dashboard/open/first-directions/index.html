@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LSAT U · Three Directions</title>
+
+
+<link href="../../vendor/39e99a842d3803a9eb.css" rel="stylesheet">
+<style>
+:root{--bg:#ECEBE6;--ink:#141414;--ink-2:#5A5955;--line:rgba(20,20,20,.18)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Geist",ui-sans-serif,system-ui,sans-serif;font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid #2335E8;outline-offset:3px}
+.wrap{max-width:1360px;margin:0 auto;padding:0 clamp(16px,3vw,40px) 100px}
+header{padding:48px 0 36px;border-bottom:1px solid var(--ink);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,420px);gap:32px;align-items:end}
+header h1{margin:0;font-weight:300;font-size:clamp(40px,6vw,84px);line-height:.95;letter-spacing:-.045em}
+header p{margin:0;color:var(--ink-2)}
+.mono{font-family:"Geist Mono",ui-monospace,monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+nav.jump{display:flex;gap:8px;flex-wrap:wrap;padding:16px 0;border-bottom:1px solid var(--line)}
+nav.jump a{text-decoration:none;padding:8px 14px;border:1px solid var(--line);border-radius:20px;min-height:40px;display:inline-flex;align-items:center}
+nav.jump a:hover{border-color:var(--ink)}
+.dir{padding:56px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr;gap:36px}
+.dir > div:first-child{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:12px 48px;align-items:start}
+.dir > div:first-child > dl{grid-column:2;grid-row:1/span 5;margin-top:8px;grid-template-columns:150px minmax(0,1fr);gap:14px 20px}
+.dir dt{padding-top:4px}
+.dir dd{margin:0}
+.dir h2{margin:6px 0 14px;line-height:.9}
+.b h2{font-family:"Bodoni Moda",serif;font-weight:900;font-size:clamp(52px,6vw,88px);letter-spacing:-.04em}
+.b h2 em{font-weight:500}
+.m h2{font-family:"Geist",sans-serif;font-weight:300;font-size:clamp(52px,6vw,88px);letter-spacing:-.06em}
+.t h2{font-family:"Archivo",sans-serif;font-weight:900;font-size:clamp(52px,6vw,88px);letter-spacing:-.04em;font-variation-settings:"wdth" 70}
+.thesis{font-size:20px;line-height:1.35;letter-spacing:-.01em;margin:0 0 16px}
+.dir dl{margin:18px 0 0;display:grid;gap:12px}
+.dir dt{font-family:"Geist Mono",monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2)}
+.dir dd{margin:2px 0 0;color:var(--ink)}
+.open{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px}
+.open a{text-decoration:none;min-height:44px;padding:0 18px;display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:var(--bg);border-radius:22px;font-weight:500}
+.open a.alt{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+.open a:hover{opacity:.85}
+.shots{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) 170px 170px;gap:16px;align-items:start}
+.shot{margin:0}
+.shot a{display:block;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px var(--line),0 24px 50px -30px rgba(0,0,0,.45);transition:transform .5s cubic-bezier(.2,.8,.1,1)}
+.shot a:hover{transform:translateY(-4px)}
+.shot img{display:block;width:100%;height:auto}
+.shot figcaption{margin-top:8px;font-size:13px;color:var(--ink-2);display:flex;justify-content:space-between;gap:8px}
+.phones{display:contents}
+.notes{padding:56px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:32px}
+.notes h3{margin:0 0 10px;font-weight:500;font-size:20px;letter-spacing:-.02em}
+.notes ul{margin:0;padding-left:18px;color:var(--ink-2)}
+.notes li{margin:6px 0}
+@media (max-width:1000px){header,.dir > div:first-child{grid-template-columns:1fr}.dir > div:first-child > dl{grid-column:auto;grid-row:auto}.shots{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.dir > div:first-child > dl{grid-template-columns:1fr;gap:4px}.dir dd{margin-bottom:12px}}
+@media (max-width:520px){.shots > .shot{grid-column:1/-1}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div><div class="mono">LSAT U · Home redesign · October 22, 2026</div><h1>Three directions,<br>six screens.</h1></div>
+    <p>Each direction is a complete idea: its own type, color, layout, components and motion, built twice: once for the student (what to do next) and once for Joshua (who's waiting, what's next, who to assign). Every page is a working prototype with sample data and a state switcher in the corner for full, empty, loading and error.</p>
+  </header>
+  <nav class="jump" aria-label="Directions"><a href="#broadsheet">A · The Brief</a><a href="#meridian">B · Meridian</a><a href="#therefore">C · Therefore</a><a href="#notes">Notes &amp; verification</a></nav>
+
+  <section class="dir b" id="broadsheet" aria-labelledby="b-h">
+    <div>
+      <div class="mono">Direction A · Editorial</div>
+      <h2 id="b-h">The <em>Brief</em></h2>
+      <p class="thesis">Home as the day's front page. Law school runs on reading, so the dashboard reads like a broadsheet: a lead story, a docket, letters, an almanac.</p>
+      <dl>
+        <dt>Composition</dt><dd>Masthead, ruled columns, a lead story for the one thing that matters, secondary items as a numbered docket.</dd>
+        <dt>Signature details</dt><dd>Progress set as twelve type slugs being inked. A red proofreader's strike and DONE stamp when work is completed. Dotted leaders in the student index. A running head with the next action that drops in once the masthead scrolls away.</dd>
+        <dt>Motion</dt><dd>Printing press: rules draw across, headlines rise out of their line boxes, slugs fill one by one.</dd>
+        <dt>Type &amp; color</dt><dd>Bodoni Moda, Newsreader, IBM Plex Mono. Newsprint, ink, one proof red.</dd>
+      </dl>
+      <div class="open"><a href="broadsheet/student.html">Open student →</a><a class="alt" href="broadsheet/teacher.html">Open teacher →</a></div>
+    </div>
+    <div class="shots">
+      <figure class="shot"><a href="screenshots/broadsheet-student-1440-full.jpg"><img src="screenshots/broadsheet-student-1440-top.jpg" alt="The Brief, student home at desktop width" loading="lazy"></a><figcaption><span>Student · 1440</span><span>Full page ↗</span></figcaption></figure>
+      <figure class="shot"><a href="screenshots/broadsheet-teacher-1440-full.jpg"><img src="screenshots/broadsheet-teacher-1440-top.jpg" alt="The Brief, teacher home at desktop width" loading="lazy"></a><figcaption><span>Teacher · 1440</span><span>Full page ↗</span></figcaption></figure>
+      <div class="phones">
+        <figure class="shot"><a href="screenshots/broadsheet-student-390-full.jpg"><img src="screenshots/broadsheet-student-390-top.jpg" alt="The Brief, student home at phone width" loading="lazy"></a><figcaption><span>390</span></figcaption></figure>
+        <figure class="shot"><a href="screenshots/broadsheet-teacher-390-full.jpg"><img src="screenshots/broadsheet-teacher-390-top.jpg" alt="The Brief, teacher home at phone width" loading="lazy"></a><figcaption><span>390</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="dir m" id="meridian" aria-labelledby="m-h">
+    <div>
+      <div class="mono">Direction B · Instrument</div>
+      <h2 id="m-h">Meridian</h2>
+      <p class="thesis">Everything is placed where it lives in time. One axis, with now as a live line, replaces separate lists, cards and calendar strips.</p>
+      <dl>
+        <dt>Composition</dt><dd>A focus instrument on top (a twelve-segment bezel for prompts, a live countdown for the teacher's next session), the Meridian across the page, an inspector and queue below.</dd>
+        <dt>Signature details</dt><dd>Three scales (Today, Week, To test day) re-plot every item with one tween. For Joshua, each unread message draws a line from when it arrived to now, so the wait is visible; opening it retracts the line. The roster is plotted by last activity. On phones the axis turns vertical and time flows down the screen.</dd>
+        <dt>Motion</dt><dd>Sweep and settle: the axis draws out from now in both directions, markers lock on, the greeting decodes like an instrument acquiring signal.</dd>
+        <dt>Type &amp; color</dt><dd>Geist and Geist Mono. Near-black, amber for due, cyan for sessions, violet for messages.</dd>
+      </dl>
+      <div class="open"><a href="meridian/student.html">Open student →</a><a class="alt" href="meridian/teacher.html">Open teacher →</a></div>
+    </div>
+    <div class="shots">
+      <figure class="shot"><a href="screenshots/meridian-student-1440-full.jpg"><img src="screenshots/meridian-student-1440-top.jpg" alt="Meridian, student home at desktop width" loading="lazy"></a><figcaption><span>Student · 1440</span><span>Full page ↗</span></figcaption></figure>
+      <figure class="shot"><a href="screenshots/meridian-teacher-1440-full.jpg"><img src="screenshots/meridian-teacher-1440-top.jpg" alt="Meridian, teacher home at desktop width" loading="lazy"></a><figcaption><span>Teacher · 1440</span><span>Full page ↗</span></figcaption></figure>
+      <div class="phones">
+        <figure class="shot"><a href="screenshots/meridian-student-390-full.jpg"><img src="screenshots/meridian-student-390-top.jpg" alt="Meridian, student home at phone width" loading="lazy"></a><figcaption><span>390</span></figcaption></figure>
+        <figure class="shot"><a href="screenshots/meridian-teacher-390-full.jpg"><img src="screenshots/meridian-teacher-390-top.jpg" alt="Meridian, teacher home at phone width" loading="lazy"></a><figcaption><span>390</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="dir t" id="therefore" aria-labelledby="t-h">
+    <div>
+      <div class="mono">Direction C · Argument</div>
+      <h2 id="t-h">Therefore</h2>
+      <p class="thesis">The recommendation is presented as an LSAT argument: premises built from real data, the assumption stated, and a conclusion you can act on.</p>
+      <dl>
+        <dt>Composition</dt><dd>A Swiss grid. Premises left, the conclusion as an ultramarine field right. Then the rest of the work as a chain, givens, the teacher's message as a stimulus, and the week as a table.</dd>
+        <dt>Signature details</dt><dd>Hover a premise and its evidence lights up in the conclusion. Joshua assigns work by filling in a conditional (IF student AND work THEN open), shown as a formula. Opening a message rewrites the conclusion live ("Clear two replies…").</dd>
+        <dt>Motion</dt><dd>Compression: Archivo's width axis is the motion. Headlines stretch as they scroll in, conclusions settle from wide to condensed, completed work squeezes and drops out while the chain slides into the gap.</dd>
+        <dt>Type &amp; color</dt><dd>Archivo variable (width 62 to 125) and JetBrains Mono. Paper, ink, ultramarine, a lime highlighter.</dd>
+      </dl>
+      <div class="open"><a href="therefore/student.html">Open student →</a><a class="alt" href="therefore/teacher.html">Open teacher →</a></div>
+    </div>
+    <div class="shots">
+      <figure class="shot"><a href="screenshots/therefore-student-1440-full.jpg"><img src="screenshots/therefore-student-1440-top.jpg" alt="Therefore, student home at desktop width" loading="lazy"></a><figcaption><span>Student · 1440</span><span>Full page ↗</span></figcaption></figure>
+      <figure class="shot"><a href="screenshots/therefore-teacher-1440-full.jpg"><img src="screenshots/therefore-teacher-1440-top.jpg" alt="Therefore, teacher home at desktop width" loading="lazy"></a><figcaption><span>Teacher · 1440</span><span>Full page ↗</span></figcaption></figure>
+      <div class="phones">
+        <figure class="shot"><a href="screenshots/therefore-student-390-full.jpg"><img src="screenshots/therefore-student-390-top.jpg" alt="Therefore, student home at phone width" loading="lazy"></a><figcaption><span>390</span></figcaption></figure>
+        <figure class="shot"><a href="screenshots/therefore-teacher-390-full.jpg"><img src="screenshots/therefore-teacher-390-top.jpg" alt="Therefore, teacher home at phone width" loading="lazy"></a><figcaption><span>390</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="notes" id="notes" aria-label="Notes and verification">
+    <div><h3>Product truths kept in all six</h3><ul>
+      <li>Student and teacher homes stay separate. Joshua never sees student homework.</li>
+      <li>Mark done removes work by assignment key. Opening or marking a message read clears unread and keeps history. "Clear from Home" hides without marking read.</li>
+      <li>Unknown counts show as unknown, never zero. Platform sessions are labeled as not proof of free time.</li>
+      <li>Full, empty, loading and error states for every section, with retry.</li>
+    </ul></div>
+    <div><h3>Verified in a headless browser</h3><ul>
+      <li>All six at 1440 and 390 wide, no horizontal overflow, no console errors.</li>
+      <li>Mark done, mark read, clear, open thread, student search, scale switching, all four states, with and without reduced motion.</li>
+      <li>Keyboard: real buttons, links and inputs throughout; arrow keys step through Meridian markers.</li>
+    </ul></div>
+    <div><h3>Not verified / limits</h3><ul>
+      <li>Prototypes, not production React. Actions are simulated and logged in the corner dock; nothing persists.</li>
+      <li>Fonts load from Google Fonts, so offline viewing falls back to system faces. GSAP 3.12.5 is inlined.</li>
+      <li>Not tested with a screen reader or on real phones. Sample clock is fixed at 4:48 pm, Oct 22.</li>
+    </ul></div>
+  </section>
+</div>
+</body>
+</html>

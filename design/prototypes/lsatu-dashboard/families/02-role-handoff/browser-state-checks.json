@@ -1,0 +1,147 @@
+[
+  {
+    "alerts": [],
+    "busy": 0,
+    "headings": [
+      "Good afternoon, Ada.",
+      "Assigned to you",
+      "Next seven days"
+    ],
+    "role": "student",
+    "state": "empty"
+  },
+  {
+    "alerts": [],
+    "busy": 1,
+    "headings": [
+      "Good afternoon, Ada.",
+      "From Joshua",
+      "Next seven days"
+    ],
+    "role": "student",
+    "state": "loading"
+  },
+  {
+    "alerts": [
+      "Could not load all assigned work. Try again."
+    ],
+    "busy": 0,
+    "headings": [
+      "Good afternoon, Ada.",
+      "Assigned to you",
+      "From Joshua",
+      "Next seven days"
+    ],
+    "role": "student",
+    "state": "error"
+  },
+  {
+    "alerts": [],
+    "busy": 1,
+    "headings": [],
+    "role": "student",
+    "state": "role-pending"
+  },
+  {
+    "alerts": [
+      "Home did not loadYour account details did not come through, so this page cannot tell which Home to show yet.Try again"
+    ],
+    "busy": 0,
+    "headings": [
+      "Home did not load"
+    ],
+    "role": "student",
+    "state": "role-error"
+  },
+  {
+    "alerts": [
+      "Your account details did not refresh. Home is showing what loaded last.Try again"
+    ],
+    "busy": 0,
+    "headings": [
+      "Good afternoon, Ada.",
+      "Negation Station",
+      "Up next",
+      "From Joshua",
+      "Next seven days"
+    ],
+    "role": "student",
+    "state": "role-stale"
+  },
+  {
+    "alerts": [],
+    "busy": 0,
+    "headings": [
+      "Good afternoon, Joshua.",
+      "Assign work",
+      "Unread conversations",
+      "Students",
+      "Upcoming sessions"
+    ],
+    "role": "teacher",
+    "state": "empty"
+  },
+  {
+    "alerts": [],
+    "busy": 3,
+    "headings": [
+      "Good afternoon, Joshua.",
+      "Assign work",
+      "Unread conversations",
+      "Students",
+      "Upcoming sessions"
+    ],
+    "role": "teacher",
+    "state": "loading"
+  },
+  {
+    "alerts": [
+      "Could not load your inbox, so the unread count is unknown.Try again",
+      "Could not load the roster.Try again",
+      "Could not load scheduled sessions.Try again"
+    ],
+    "busy": 0,
+    "headings": [
+      "Good afternoon, Joshua.",
+      "Assign work",
+      "Unread conversations",
+      "Students",
+      "Upcoming sessions"
+    ],
+    "role": "teacher",
+    "state": "error"
+  },
+  {
+    "alerts": [],
+    "busy": 1,
+    "headings": [],
+    "role": "teacher",
+    "state": "role-pending"
+  },
+  {
+    "alerts": [
+      "Home did not loadYour account details did not come through, so this page cannot tell which Home to show yet.Try again"
+    ],
+    "busy": 0,
+    "headings": [
+      "Home did not load"
+    ],
+    "role": "teacher",
+    "state": "role-error"
+  },
+  {
+    "alerts": [
+      "Your account details did not refresh. Home is showing what loaded last.Try again"
+    ],
+    "busy": 0,
+    "headings": [
+      "Good afternoon, Joshua.",
+      "Assign work",
+      "Unread conversations",
+      "Students",
+      "Upcoming sessions"
+    ],
+    "role": "teacher",
+    "state": "role-stale"
+  }
+]

@@ -1,0 +1,165 @@
+{"provider": "claude", "model": "CLI default (unresolved)", "mode": "inspect", "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\design\\reviews\\classroom-quality-20261028\\account-controls\\claude-final3\\claudex-ih3yxd2q"}
+{
+  "status": "completed",
+  "mode": "inspect",
+  "provider": "claude",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "claude",
+    "builder": "codex",
+    "inspector": "claude"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-my-work-20261026",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os\\design\\reviews\\classroom-quality-20261028\\account-controls\\PLAN.md",
+  "plan_sha256": "13a7921ba4f2097c75d544844e28124d4aef6f9aeb3104fc6ca75714a6b14ab6",
+  "requested_model": null,
+  "requested_effort": null,
+  "base": "18fc8af7e1ff7d83defb62b9e0d8dd720f90b3a3",
+  "snapshot": {
+    "base": "18fc8af7e1ff7d83defb62b9e0d8dd720f90b3a3",
+    "files": [
+      {
+        "path": "scripts/verification/start-teacher-home-preview.mjs",
+        "kind": "file",
+        "sha256": "10e1b173bd492c5a73346173bab4701826025325fb93f3fc83e09704e923e2f1"
+      },
+      {
+        "path": "scripts/verification/teacher-home-preview.tsx",
+        "kind": "file",
+        "sha256": "617e6059d7913052a1375cde23033d1ea66efdc244a791d1890f2ea839050532"
+      },
+      {
+        "path": "src/components/classroom/home/home.css",
+        "kind": "file",
+        "sha256": "ac2f15fc6b4e898d6a232086f8ce449beb11f5ac7d0bb0b7947a355c72b02a41"
+      },
+      {
+        "path": "src/components/classroom/home/teacher/TeacherAccessBooking.tsx",
+        "kind": "file",
+        "sha256": "f74448a7149ea89f4643fe9e003f0077cec8811fa8773086a68ff71116592094"
+      },
+      {
+        "path": "src/components/classroom/home/teacher/TeacherHomeView.test.tsx",
+        "kind": "file",
+        "sha256": "295978d27d950f76f8250d78cfb807522a7564ab0d7af9c6f460b7f64ba64dbe"
+      },
+      {
+        "path": "src/components/classroom/home/teacher/TeacherHomeView.tsx",
+        "kind": "file",
+        "sha256": "cfc084de2a4d8251a4112b61f4e0e0fa3c86196c30072f6c50a96d9b2f88842a"
+      },
+      {
+        "path": "src/components/classroom/home/teacher/TeachingDesk.test.tsx",
+        "kind": "file",
+        "sha256": "0b779b41c44c1c2a2b8a48fff7d1075c807e58cb3724b549211c625014d5694b"
+      }
+    ],
+    "diff_sha256": "de44f92c80e0fce0ae221a560762b17b15a1e0f2d9f4c2e6d5b90ebae58f2db9",
+    "scope": [
+      "scripts/verification/start-teacher-home-preview.mjs",
+      "scripts/verification/teacher-home-preview.tsx",
+      "src/components/classroom/home/home.css",
+      "src/components/classroom/home/teacher/TeacherAccessBooking.tsx",
+      "src/components/classroom/home/teacher/TeacherHomeView.test.tsx",
+      "src/components/classroom/home/teacher/TeacherHomeView.tsx",
+      "src/components/classroom/home/teacher/TeachingDesk.test.tsx"
+    ],
+    "sha256": "2d2648e4345d09e93bc5c7377c821ba5bae2c892743b45d3a32992b3eaf85de0"
+  },
+  "previous": null,
+  "started_at": 1793223934.2927864,
+  "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\design\\reviews\\classroom-quality-20261028\\account-controls\\claude-final3\\claudex-ih3yxd2q",
+  "scope": [
+    "scripts/verification/start-teacher-home-preview.mjs",
+    "scripts/verification/teacher-home-preview.tsx",
+    "src/components/classroom/home/home.css",
+    "src/components/classroom/home/teacher/TeacherAccessBooking.tsx",
+    "src/components/classroom/home/teacher/TeacherHomeView.test.tsx",
+    "src/components/classroom/home/teacher/TeacherHomeView.tsx",
+    "src/components/classroom/home/teacher/TeachingDesk.test.tsx"
+  ],
+  "cli_version": "2.1.309 (Claude Code)",
+  "executable": [
+    "C:\\Users\\Joshu\\.local\\bin\\claude.EXE"
+  ],
+  "exit_code": 0,
+  "session_id": "1561a3d6-219b-4ef7-bf4d-5d5bed64c1b9",
+  "response": {
+    "verdict": "APPROVED",
+    "summary": "I found no material defects in the Student accounts controls. The credits and link modes are separated correctly. Opening, selecting and cancelling make no writes. The default of 1 and the integer 1..50 checks hold. Pending-receipt recovery stays available even when the roster is unavailable, and it grants nothing new. Unreadable-pending recovery now needs a named eligible account, a loaded balance and a checked box. I did not run any tests; this is a source read only. I found two low-severity polish items, listed below.",
+    "findings": [
+      {
+        "id": "L1",
+        "severity": "low",
+        "path": "src/components/classroom/home/teacher/TeacherAccessBooking.tsx:30",
+        "evidence": "AccountPicker renders a \"Retry accounts\" button for any non-ready, non-loading state, such as error or setup. BookingSheet and AccessSheet pass `desk.access.retry`, which can be undefined, as `onRetry`. When it is undefined, the button does nothing. The recovery text then tells the teacher to \"Retry loading accounts\", so they get a dead control.",
+        "fix": "Render the Retry button only when `onRetry` is defined. Otherwise show a plain \"Accounts are unavailable; reload Home\" message. Show a distinct message for the `setup` state."
+      },
+      {
+        "id": "L2",
+        "severity": "low",
+        "path": "src/components/classroom/home/teacher/TeacherAccessBooking.tsx:313",
+        "evidence": "The `act()` catch block shows one message for every failure: \"The operation was not confirmed. Retry the same request… do not create a second addition.\" This includes pre-flight validation errors from createHomeBooking, such as a past expiry date (`new Date(date+'T23:59:59')` <= now) or an invalid session length. For a link-creation validation error nothing was sent, so the message is misleading and gives no way to correct the input.",
+        "fix": "Show the thrown message when it is a known validation error, such as the 'Choose a valid session length and future expiry' text. Otherwise keep the ambiguous-outcome message."
+      }
+    ],
+    "coverage": [
+      "TeacherAccessBooking.tsx lines 180-650: BookingSheet in full, plus the AccessSheet save and close path. Lines 1-180 are known only from the diff.",
+      "Related code: saveHomeAccess, createHomeBooking, getPendingHomeTopUp, prepareHomeTopUp and discardUnreadableHomeTopUp in src/lib/teacherHomeActions.ts. I checked the baseline-after-save design against saveHomeAccess returning the verified row.",
+      "scripts/verification/start-teacher-home-preview.mjs in full. The Vite pre-load plugin replaces src/integrations/supabase/client.ts with a throwing stub, and teacherHomeActions.ts contains no fetch, XHR or WebSocket calls.",
+      "scripts/verification/teacher-home-preview.tsx in full. The actions are in-memory only and the page carries a synthetic banner.",
+      "The diff of TeacherHomeView.tsx, home.css and both test files: account action group, trigger-focus refs, dropdown handoff, dark styles.",
+      "Reasoning about effect ordering: the reset and pending-restore effects, the actor-change reset, and the credits-versus-link branch gating."
+    ],
+    "limitations": [
+      "No tests, typecheck, build or browser rendering were run. Focus behaviour, 390/320 phone fit and the Radix DropdownMenu close-autofocus handoff are judged from source and test text only.",
+      "Out of scope and unreviewed: the earlier teacher Home polish already in base 18fc8af7 (calendar strip, hideAttention, header link removals, TeacherWeek), per the host's disposition. The supabase edge functions, the CLI, and TeacherTasks.tsx and its diff are also unreviewed.",
+      "I did not read the UI primitives (Sheet, DropdownMenu) or the full unchanged part of TeacherHomeView.tsx, so I did not verify focus trapping or the pointer-events cleanup.",
+      "Server-side enforcement of idempotency and receipts in booking-pass-admin was not inspected. I relied on client contract checks.",
+      "Nothing here establishes production deployment or behaviour for all students."
+    ]
+  },
+  "usage": {
+    "input_tokens": 8,
+    "cache_creation_input_tokens": 63421,
+    "cache_read_input_tokens": 158095,
+    "output_tokens": 7172,
+    "output_tokens_details": {
+      "thinking_tokens": 4755
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 63421,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2226,
+        "cache_read_input_tokens": 57884,
+        "cache_creation_input_tokens": 10018,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 10018
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "observed_models": [
+    "claude-sonnet-5-5"
+  ],
+  "permission_denials": [],
+  "total_cost_usd": 0.34122949999999996,
+  "elapsed_seconds": 124.7
+}
+
+EXIT_CODE=0

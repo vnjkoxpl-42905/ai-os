@@ -1,0 +1,614 @@
+# Design skill registry
+
+<!-- BEGIN GENERATED DESIGN CATALOG -->
+Rendered 2026-10-29 from the scoped 2026-10-24 audits. Counts are paths/records, including runtime copies, not unique capabilities. Rendering does not rescan or authenticate tools.
+
+See [skill routing audit](skill-routing-audit.md). Vendor/plugin caches remain read-only; shared global instructions provide their hub route.
+
+## Primary design skills (438 paths)
+
+- [algorithmic-art / home-agents](<../../../.agents/skills/algorithmic-art/SKILL.md>): Metadata and workflow reviewed: visual creation, themes, brand styling or website design
+- [bootcamp-parity-audit / home-agents](<../../../.agents/skills/bootcamp-parity-audit/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: visual
+- [brand-guidelines / home-agents](<../../../.agents/skills/brand-guidelines/SKILL.md>): Metadata and workflow reviewed: visual creation, themes, brand styling or website design
+- [canvas-design / home-agents](<../../../.agents/skills/canvas-design/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: canvas
+- [design-taste-frontend / home-agents](<../../../.agents/skills/design-taste-frontend/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [emil-design-eng / home-agents](<../../../.agents/skills/emil-design-eng/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [extract-design / home-agents](<../../../.agents/skills/extract-design/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [firecrawl-interact / home-agents](<../../../.agents/skills/firecrawl-interact/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: scroll
+- [firecrawl-website-design-clone / home-agents](<../../../.agents/skills/firecrawl-website-design-clone/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [firecrawl-workflows / home-agents](<../../../.agents/skills/firecrawl-workflows/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [frontend-design / home-agents](<../../../.agents/skills/frontend-design/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: frontend
+- [general-video / home-agents](<../../../.agents/skills/general-video/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: HyperFrames
+- [high-end-visual-design / home-agents](<../../../.agents/skills/high-end-visual-design/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: visual
+- [hyperframes-animation / home-agents](<../../../.agents/skills/hyperframes-animation/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [hyperframes-audio / home-agents](<../../../.agents/skills/hyperframes-audio/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [hyperframes-cli / home-agents](<../../../.agents/skills/hyperframes-cli/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [hyperframes-core / home-agents](<../../../.agents/skills/hyperframes-core/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [hyperframes-creative / home-agents](<../../../.agents/skills/hyperframes-creative/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [hyperframes-keyframes / home-agents](<../../../.agents/skills/hyperframes-keyframes/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [hyperframes-registry / home-agents](<../../../.agents/skills/hyperframes-registry/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [hyperframes-studio / home-agents](<../../../.agents/skills/hyperframes-studio/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [hyperframes / home-agents](<../../../.agents/skills/hyperframes/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [image-to-code / home-agents](<../../../.agents/skills/image-to-code/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: image-to-code
+- [impeccable / home-agents](<../../../.agents/skills/impeccable/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: impeccable
+- [json-canvas / home-agents](<../../../.agents/skills/json-canvas/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: canvas
+- [media-use / home-agents](<../../../.agents/skills/media-use/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: HyperFrames
+- [minimalist-ui / home-agents](<../../../.agents/skills/minimalist-ui/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [prototype / home-agents](<../../../.agents/skills/prototype/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [redesign-existing-projects / home-agents](<../../../.agents/skills/redesign-existing-projects/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [reference-to-design / home-agents](<../../../.agents/skills/reference-to-design/SKILL.md>): Reference-led frontend design exploration and refinement; explicitly activated by Joshua.
+- [shadcn / home-agents](<../../../.agents/skills/shadcn/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: shadcn
+- [site-teardown / home-agents](<../../../.agents/skills/site-teardown/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: animation
+- [slack-gif-creator / home-agents](<../../../.agents/skills/slack-gif-creator/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: animation
+- [frontend-design / home-agents](<../../../.agents/skills/synced/66ab068d-6d11-4b9b-bace-f3622629a61f_3264ecb8-7644-4b8c-9aed-94ea1fae19cc/frontend-design/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: frontend
+- [site-teardown / home-agents](<../../../.agents/skills/synced/66ab068d-6d11-4b9b-bace-f3622629a61f_3264ecb8-7644-4b8c-9aed-94ea1fae19cc/site-teardown/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: animation
+- [web-artifacts-builder / home-agents](<../../../.agents/skills/synced/66ab068d-6d11-4b9b-bace-f3622629a61f_3264ecb8-7644-4b8c-9aed-94ea1fae19cc/web-artifacts-builder/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: frontend
+- [webapp-testing / home-agents](<../../../.agents/skills/synced/66ab068d-6d11-4b9b-bace-f3622629a61f_3264ecb8-7644-4b8c-9aed-94ea1fae19cc/webapp-testing/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: frontend
+- [theme-factory / home-agents](<../../../.agents/skills/theme-factory/SKILL.md>): Metadata and workflow reviewed: visual creation, themes, brand styling or website design
+- [web-artifacts-builder / home-agents](<../../../.agents/skills/web-artifacts-builder/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: frontend
+- [webapp-testing / home-agents](<../../../.agents/skills/webapp-testing/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: frontend
+- [21st-ui / plugin-claude](<../../../.claude/plugins/cache/21st-dev/21st/1.0.1/skills/21st-ui/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [remotion-captions / plugin-claude](<../../../.claude/plugins/cache/remotion/remotion/4.0.523/skills/remotion-captions/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: remotion
+- [remotion-interactivity / plugin-claude](<../../../.claude/plugins/cache/remotion/remotion/4.0.523/skills/remotion-interactivity/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: remotion
+- [remotion-maps / plugin-claude](<../../../.claude/plugins/cache/remotion/remotion/4.0.523/skills/remotion-maps/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: remotion
+- [remotion-markup / plugin-claude](<../../../.claude/plugins/cache/remotion/remotion/4.0.523/skills/remotion-markup/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: remotion
+- [remotion-multimedia / plugin-claude](<../../../.claude/plugins/cache/remotion/remotion/4.0.523/skills/remotion-multimedia/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: remotion
+- [remotion-saas / plugin-claude](<../../../.claude/plugins/cache/remotion/remotion/4.0.523/skills/remotion-saas/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: remotion
+- [algorithmic-art / home-claude](<../../../.claude/skills/algorithmic-art/SKILL.md>): Metadata and workflow reviewed: visual creation, themes, brand styling or website design
+- [bootcamp-parity-audit / home-claude](<../../../.claude/skills/bootcamp-parity-audit/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: visual
+- [brand-guidelines / home-claude](<../../../.claude/skills/brand-guidelines/SKILL.md>): Metadata and workflow reviewed: visual creation, themes, brand styling or website design
+- [canvas-design / home-claude](<../../../.claude/skills/canvas-design/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: canvas
+- [design-taste-frontend / home-claude](<../../../.claude/skills/design-taste-frontend/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [emil-design-eng / home-claude](<../../../.claude/skills/emil-design-eng/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [extract-design / home-claude](<../../../.claude/skills/extract-design/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [firecrawl-interact / home-claude](<../../../.claude/skills/firecrawl-interact/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: scroll
+- [firecrawl-website-design-clone / home-claude](<../../../.claude/skills/firecrawl-website-design-clone/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [firecrawl-workflows / home-claude](<../../../.claude/skills/firecrawl-workflows/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [frontend-design / home-claude](<../../../.claude/skills/frontend-design/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: frontend
+- [general-video / home-claude](<../../../.claude/skills/general-video/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: HyperFrames
+- [high-end-visual-design / home-claude](<../../../.claude/skills/high-end-visual-design/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: visual
+- [hyperframes-animation / home-claude](<../../../.claude/skills/hyperframes-animation/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [hyperframes-audio / home-claude](<../../../.claude/skills/hyperframes-audio/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [hyperframes-cli / home-claude](<../../../.claude/skills/hyperframes-cli/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [hyperframes-core / home-claude](<../../../.claude/skills/hyperframes-core/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [hyperframes-creative / home-claude](<../../../.claude/skills/hyperframes-creative/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [hyperframes-keyframes / home-claude](<../../../.claude/skills/hyperframes-keyframes/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [hyperframes-registry / home-claude](<../../../.claude/skills/hyperframes-registry/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [hyperframes-studio / home-claude](<../../../.claude/skills/hyperframes-studio/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [hyperframes / home-claude](<../../../.claude/skills/hyperframes/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [image-to-code / home-claude](<../../../.claude/skills/image-to-code/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: image-to-code
+- [impeccable / home-claude](<../../../.claude/skills/impeccable/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: impeccable
+- [json-canvas / home-claude](<../../../.claude/skills/json-canvas/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: canvas
+- [media-use / home-claude](<../../../.claude/skills/media-use/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: HyperFrames
+- [minimalist-ui / home-claude](<../../../.claude/skills/minimalist-ui/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [prototype / home-claude](<../../../.claude/skills/prototype/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [redesign-existing-projects / home-claude](<../../../.claude/skills/redesign-existing-projects/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [reference-to-design / home-claude](<../../../.claude/skills/reference-to-design/SKILL.md>): Reference-led frontend design exploration and refinement; explicitly activated by Joshua.
+- [shadcn / home-claude](<../../../.claude/skills/shadcn/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: shadcn
+- [site-teardown / home-claude](<../../../.claude/skills/site-teardown/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: animation
+- [slack-gif-creator / home-claude](<../../../.claude/skills/slack-gif-creator/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: animation
+- [frontend-design / home-claude](<../../../.claude/skills/synced/66ab068d-6d11-4b9b-bace-f3622629a61f_3264ecb8-7644-4b8c-9aed-94ea1fae19cc/frontend-design/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: frontend
+- [site-teardown / home-claude](<../../../.claude/skills/synced/66ab068d-6d11-4b9b-bace-f3622629a61f_3264ecb8-7644-4b8c-9aed-94ea1fae19cc/site-teardown/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: animation
+- [web-artifacts-builder / home-claude](<../../../.claude/skills/synced/66ab068d-6d11-4b9b-bace-f3622629a61f_3264ecb8-7644-4b8c-9aed-94ea1fae19cc/web-artifacts-builder/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: frontend
+- [webapp-testing / home-claude](<../../../.claude/skills/synced/66ab068d-6d11-4b9b-bace-f3622629a61f_3264ecb8-7644-4b8c-9aed-94ea1fae19cc/webapp-testing/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: frontend
+- [theme-factory / home-claude](<../../../.claude/skills/theme-factory/SKILL.md>): Metadata and workflow reviewed: visual creation, themes, brand styling or website design
+- [web-artifacts-builder / home-claude](<../../../.claude/skills/web-artifacts-builder/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: frontend
+- [webapp-testing / home-claude](<../../../.claude/skills/webapp-testing/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: frontend
+- [21st-ui / plugin-codex](<../../../.codex/plugins/cache/21st-dev/21st/1.0.1/skills/21st-ui/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [frontend-design / plugin-codex](<../../../.codex/plugins/cache/claude-cowork/anthropic-skills/1.0.0/skills/frontend-design/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: frontend
+- [site-teardown / plugin-codex](<../../../.codex/plugins/cache/claude-cowork/anthropic-skills/1.0.0/skills/site-teardown/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: animation
+- [web-artifacts-builder / plugin-codex](<../../../.codex/plugins/cache/claude-cowork/anthropic-skills/1.0.0/skills/web-artifacts-builder/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: frontend
+- [webapp-testing / plugin-codex](<../../../.codex/plugins/cache/claude-cowork/anthropic-skills/1.0.0/skills/webapp-testing/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: frontend
+- [accessibility-review / plugin-codex](<../../../.codex/plugins/cache/claude-cowork/design/1.2.0/skills/accessibility-review/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [design-critique / plugin-codex](<../../../.codex/plugins/cache/claude-cowork/design/1.2.0/skills/design-critique/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [design-handoff / plugin-codex](<../../../.codex/plugins/cache/claude-cowork/design/1.2.0/skills/design-handoff/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [design-system / plugin-codex](<../../../.codex/plugins/cache/claude-cowork/design/1.2.0/skills/design-system/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [user-research / plugin-codex](<../../../.codex/plugins/cache/claude-cowork/design/1.2.0/skills/user-research/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [visualize / plugin-codex](<../../../.codex/plugins/cache/openai-bundled/visualize/1.0.57/skills/visualize/SKILL.md>): In-conversation interactive visualizations; 1.0.57 entrypoint matches the audited 1.0.55 hash (2026-10-29)
+- [artifact-template-simple-dark-mode / plugin-codex](<../../../.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-simple-dark-mode/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: typography
+- [artifact-template-simple-light-mode / plugin-codex](<../../../.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-simple-light-mode/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: typography
+- [audit / plugin-codex](<../../../.codex/plugins/cache/openai-curated-remote/product-design/0.1.56/skills/audit/SKILL.md>): Product Design visual and UX audit, distinct from AI OS audit
+- [design-qa / plugin-codex](<../../../.codex/plugins/cache/openai-curated-remote/product-design/0.1.56/skills/design-qa/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [get-context / plugin-codex](<../../../.codex/plugins/cache/openai-curated-remote/product-design/0.1.56/skills/get-context/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [ideate / plugin-codex](<../../../.codex/plugins/cache/openai-curated-remote/product-design/0.1.56/skills/ideate/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [image-to-code / plugin-codex](<../../../.codex/plugins/cache/openai-curated-remote/product-design/0.1.56/skills/image-to-code/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: image-to-code
+- [index / plugin-codex](<../../../.codex/plugins/cache/openai-curated-remote/product-design/0.1.56/skills/index/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: Design
+- [url-to-code / plugin-codex](<../../../.codex/plugins/cache/openai-curated-remote/product-design/0.1.56/skills/url-to-code/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: frontend
+- [user-context / plugin-codex](<../../../.codex/plugins/cache/openai-curated-remote/product-design/0.1.56/skills/user-context/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: Design
+- [sites-remix / plugin-codex](<../../../.codex/plugins/cache/openai-curated-remote/sites/1.1.2/skills/sites-remix/SKILL.md>): Metadata and workflow reviewed: visual creation, themes, brand styling or website design
+- [sites / plugin-codex](<../../../.codex/plugins/cache/openai-curated-remote/sites/1.1.2/skills/sites/SKILL.md>): Metadata and workflow reviewed: visual creation, themes, brand styling or website design
+- [create-pet / plugin-codex](<../../../.codex/plugins/cache/openai-curated-remote/work-pets/0.1.6/skills/create-pet/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: animation
+- [frontend-app-builder / plugin-codex](<../../../.codex/plugins/cache/openai-curated/build-web-apps/1dc19589/skills/frontend-app-builder/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: frontend
+- [frontend-testing-debugging / plugin-codex](<../../../.codex/plugins/cache/openai-curated/build-web-apps/1dc19589/skills/frontend-testing-debugging/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: frontend
+- [shadcn-best-practices / plugin-codex](<../../../.codex/plugins/cache/openai-curated/build-web-apps/1dc19589/skills/shadcn-best-practices/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: shadcn
+- [gsap / plugin-codex](<../../../.codex/plugins/cache/openai-curated/hyperframes/1dc19589/skills/gsap/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: gsap
+- [hyperframes-cli / plugin-codex](<../../../.codex/plugins/cache/openai-curated/hyperframes/1dc19589/skills/hyperframes-cli/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [hyperframes-registry / plugin-codex](<../../../.codex/plugins/cache/openai-curated/hyperframes/1dc19589/skills/hyperframes-registry/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [hyperframes / plugin-codex](<../../../.codex/plugins/cache/openai-curated/hyperframes/1dc19589/skills/hyperframes/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [website-to-hyperframes / plugin-codex](<../../../.codex/plugins/cache/openai-curated/hyperframes/1dc19589/skills/website-to-hyperframes/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [build-chatgpt-app / plugin-codex](<../../../.codex/plugins/cache/openai-curated/openai-developers/1dc19589/skills/build-chatgpt-app/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [documents / plugin-codex](<../../../.codex/plugins/cache/openai-primary-runtime/documents/26.1026.10807/skills/documents/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: visual
+- [pdf / plugin-codex](<../../../.codex/plugins/cache/openai-primary-runtime/pdf/26.1026.10807/skills/pdf/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: visual
+- [imagegen / home-codex](<../../../.codex/skills/.system/imagegen/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: imagegen
+- [design-taste-frontend / home-codex](<../../../.codex/skills/design-taste-frontend/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [emil-design-eng / home-codex](<../../../.codex/skills/emil-design-eng/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [extract-design / home-codex](<../../../.codex/skills/extract-design/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [firecrawl-interact / home-codex](<../../../.codex/skills/firecrawl-interact/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: scroll
+- [firecrawl-website-design-clone / home-codex](<../../../.codex/skills/firecrawl-website-design-clone/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [firecrawl-workflows / home-codex](<../../../.codex/skills/firecrawl-workflows/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [frontend-design / home-codex](<../../../.codex/skills/frontend-design/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: frontend
+- [hatch-pet / home-codex](<../../../.codex/skills/hatch-pet/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: visual
+- [higgsfield-generate / home-codex](<../../../.codex/skills/higgsfield-generate/SKILL.md>): Metadata and workflow reviewed: visual creation, themes, brand styling or website design
+- [higgsfield-marketplace-cards / home-codex](<../../../.codex/skills/higgsfield-marketplace-cards/SKILL.md>): Metadata and workflow reviewed: visual creation, themes, brand styling or website design
+- [higgsfield-product-photoshoot / home-codex](<../../../.codex/skills/higgsfield-product-photoshoot/SKILL.md>): Metadata and workflow reviewed: visual creation, themes, brand styling or website design
+- [higgsfield-soul-id / home-codex](<../../../.codex/skills/higgsfield-soul-id/SKILL.md>): Metadata and workflow reviewed: visual creation, themes, brand styling or website design
+- [higgsfield-websites / home-codex](<../../../.codex/skills/higgsfield-websites/SKILL.md>): Metadata and workflow reviewed: visual creation, themes, brand styling or website design
+- [high-end-visual-design / home-codex](<../../../.codex/skills/high-end-visual-design/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: visual
+- [image-to-code / home-codex](<../../../.codex/skills/image-to-code/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: image-to-code
+- [impeccable / home-codex](<../../../.codex/skills/impeccable/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: impeccable
+- [json-canvas / home-codex](<../../../.codex/skills/json-canvas/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: canvas
+- [minimalist-ui / home-codex](<../../../.codex/skills/minimalist-ui/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [redesign-existing-projects / home-codex](<../../../.codex/skills/redesign-existing-projects/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [reference-to-design / home-codex](<../../../.codex/skills/reference-to-design/SKILL.md>): Reference-led frontend design exploration and refinement; explicitly activated by Joshua.
+- [shadcn / home-codex](<../../../.codex/skills/shadcn/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: shadcn
+- [site-teardown / home-codex](<../../../.codex/skills/site-teardown/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: animation
+- [webapp-testing / home-codex](<../../../.codex/skills/webapp-testing/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: frontend
+- [browser-testing-with-devtools / project-codex](<../.agents/skills/browser-testing-with-devtools/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: visual
+- [design-resource-library / project-codex](<../.agents/skills/design-resource-library/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [design-taste-frontend / project-codex](<../.agents/skills/design-taste-frontend/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [embedded-captions / project-codex](<../.agents/skills/embedded-captions/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: visual
+- [emil-upstream-animate-expo / project-codex](<../.agents/skills/emil-upstream-animate-expo/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-animate / project-codex](<../.agents/skills/emil-upstream-animate/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-animation-performance / project-codex](<../.agents/skills/emil-upstream-animation-performance/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-animation-vocabulary / project-codex](<../.agents/skills/emil-upstream-animation-vocabulary/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-apple-design / project-codex](<../.agents/skills/emil-upstream-apple-design/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-ask-sonner / project-codex](<../.agents/skills/emil-upstream-ask-sonner/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-break-ui / project-codex](<../.agents/skills/emil-upstream-break-ui/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-emil-design-eng / project-codex](<../.agents/skills/emil-upstream-emil-design-eng/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-find-animation-opportunities / project-codex](<../.agents/skills/emil-upstream-find-animation-opportunities/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-improve-animations / project-codex](<../.agents/skills/emil-upstream-improve-animations/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-mobile-native / project-codex](<../.agents/skills/emil-upstream-mobile-native/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-pick-ui-library / project-codex](<../.agents/skills/emil-upstream-pick-ui-library/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-prototype / project-codex](<../.agents/skills/emil-upstream-prototype/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-remove-animations / project-codex](<../.agents/skills/emil-upstream-remove-animations/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-review-animations / project-codex](<../.agents/skills/emil-upstream-review-animations/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-write-swift / project-codex](<../.agents/skills/emil-upstream-write-swift/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [expo-animation / project-codex](<../.agents/skills/expo-animation/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: animation
+- [expo-design-system / project-codex](<../.agents/skills/expo-design-system/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [expo-native-ui / project-codex](<../.agents/skills/expo-native-ui/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: visual
+- [extract-design / project-codex](<../.agents/skills/extract-design/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [faceless-explainer / project-codex](<../.agents/skills/faceless-explainer/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: typography
+- [figma / project-codex](<../.agents/skills/figma/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: figma
+- [frontend-ui-engineering / project-codex](<../.agents/skills/frontend-ui-engineering/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: frontend
+- [general-video / project-codex](<../.agents/skills/general-video/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: HyperFrames
+- [gsap-core / project-codex](<../.agents/skills/gsap-core/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: gsap
+- [gsap-frameworks / project-codex](<../.agents/skills/gsap-frameworks/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: gsap
+- [gsap-performance / project-codex](<../.agents/skills/gsap-performance/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: gsap
+- [gsap-plugins / project-codex](<../.agents/skills/gsap-plugins/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: gsap
+- [gsap-react / project-codex](<../.agents/skills/gsap-react/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: gsap
+- [gsap-scrolltrigger / project-codex](<../.agents/skills/gsap-scrolltrigger/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: gsap
+- [gsap-timeline / project-codex](<../.agents/skills/gsap-timeline/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: gsap
+- [gsap-utils / project-codex](<../.agents/skills/gsap-utils/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: gsap
+- [html-handoff / project-codex](<../.agents/skills/html-handoff/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: interface
+- [hyperframes-animation / project-codex](<../.agents/skills/hyperframes-animation/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [hyperframes-audio / project-codex](<../.agents/skills/hyperframes-audio/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [hyperframes-cli / project-codex](<../.agents/skills/hyperframes-cli/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [hyperframes-core / project-codex](<../.agents/skills/hyperframes-core/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [hyperframes-creative / project-codex](<../.agents/skills/hyperframes-creative/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [hyperframes-keyframes / project-codex](<../.agents/skills/hyperframes-keyframes/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [hyperframes-registry / project-codex](<../.agents/skills/hyperframes-registry/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [hyperframes-studio / project-codex](<../.agents/skills/hyperframes-studio/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [hyperframes / project-codex](<../.agents/skills/hyperframes/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [impeccable / project-codex](<../.agents/skills/impeccable/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: impeccable
+- [kling-cli / project-codex](<../.agents/skills/kling-cli/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: image generation
+- [media-use / project-codex](<../.agents/skills/media-use/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: HyperFrames
+- [modern-web-guidance / project-codex](<../.agents/skills/modern-web-guidance/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: Scroll
+- [motion-graphics / project-codex](<../.agents/skills/motion-graphics/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: motion
+- [music-to-video / project-codex](<../.agents/skills/music-to-video/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [performance-optimization / project-codex](<../.agents/skills/performance-optimization/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: frontend
+- [pr-to-video / project-codex](<../.agents/skills/pr-to-video/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [product-launch-video / project-codex](<../.agents/skills/product-launch-video/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [react-bits / project-codex](<../.agents/skills/react-bits/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: react-bits
+- [reference-to-design / project-codex](<../.agents/skills/reference-to-design/SKILL.md>): Reference-led frontend design exploration and refinement; explicitly activated by Joshua.
+- [remotion-to-hyperframes / project-codex](<../.agents/skills/remotion-to-hyperframes/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: remotion
+- [scroll-craft / project-codex](<../.agents/skills/scroll-craft/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: scroll
+- [slideshow / project-codex](<../.agents/skills/slideshow/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: HyperFrames
+- [talking-head-recut / project-codex](<../.agents/skills/talking-head-recut/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: canvas
+- [browser-testing-with-devtools / project-claude](<../.claude/skills/browser-testing-with-devtools/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: visual
+- [design-resource-library / project-claude](<../.claude/skills/design-resource-library/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [design-taste-frontend / project-claude](<../.claude/skills/design-taste-frontend/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [embedded-captions / project-claude](<../.claude/skills/embedded-captions/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: visual
+- [emil-upstream-animate-expo / project-claude](<../.claude/skills/emil-upstream-animate-expo/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-animate / project-claude](<../.claude/skills/emil-upstream-animate/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-animation-performance / project-claude](<../.claude/skills/emil-upstream-animation-performance/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-animation-vocabulary / project-claude](<../.claude/skills/emil-upstream-animation-vocabulary/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-apple-design / project-claude](<../.claude/skills/emil-upstream-apple-design/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-ask-sonner / project-claude](<../.claude/skills/emil-upstream-ask-sonner/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-break-ui / project-claude](<../.claude/skills/emil-upstream-break-ui/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-emil-design-eng / project-claude](<../.claude/skills/emil-upstream-emil-design-eng/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-find-animation-opportunities / project-claude](<../.claude/skills/emil-upstream-find-animation-opportunities/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-improve-animations / project-claude](<../.claude/skills/emil-upstream-improve-animations/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-mobile-native / project-claude](<../.claude/skills/emil-upstream-mobile-native/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-pick-ui-library / project-claude](<../.claude/skills/emil-upstream-pick-ui-library/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-prototype / project-claude](<../.claude/skills/emil-upstream-prototype/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-remove-animations / project-claude](<../.claude/skills/emil-upstream-remove-animations/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-review-animations / project-claude](<../.claude/skills/emil-upstream-review-animations/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-write-swift / project-claude](<../.claude/skills/emil-upstream-write-swift/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [expo-animation / project-claude](<../.claude/skills/expo-animation/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: animation
+- [expo-design-system / project-claude](<../.claude/skills/expo-design-system/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [expo-native-ui / project-claude](<../.claude/skills/expo-native-ui/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: visual
+- [extract-design / project-claude](<../.claude/skills/extract-design/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [faceless-explainer / project-claude](<../.claude/skills/faceless-explainer/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: typography
+- [figma / project-claude](<../.claude/skills/figma/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: figma
+- [frontend-ui-engineering / project-claude](<../.claude/skills/frontend-ui-engineering/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: frontend
+- [general-video / project-claude](<../.claude/skills/general-video/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: HyperFrames
+- [gsap-core / project-claude](<../.claude/skills/gsap-core/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: gsap
+- [gsap-frameworks / project-claude](<../.claude/skills/gsap-frameworks/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: gsap
+- [gsap-performance / project-claude](<../.claude/skills/gsap-performance/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: gsap
+- [gsap-plugins / project-claude](<../.claude/skills/gsap-plugins/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: gsap
+- [gsap-react / project-claude](<../.claude/skills/gsap-react/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: gsap
+- [gsap-scrolltrigger / project-claude](<../.claude/skills/gsap-scrolltrigger/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: gsap
+- [gsap-timeline / project-claude](<../.claude/skills/gsap-timeline/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: gsap
+- [gsap-utils / project-claude](<../.claude/skills/gsap-utils/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: gsap
+- [html-handoff / project-claude](<../.claude/skills/html-handoff/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: interface
+- [hyperframes-animation / project-claude](<../.claude/skills/hyperframes-animation/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [hyperframes-audio / project-claude](<../.claude/skills/hyperframes-audio/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [hyperframes-cli / project-claude](<../.claude/skills/hyperframes-cli/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [hyperframes-core / project-claude](<../.claude/skills/hyperframes-core/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [hyperframes-creative / project-claude](<../.claude/skills/hyperframes-creative/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [hyperframes-keyframes / project-claude](<../.claude/skills/hyperframes-keyframes/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [hyperframes-registry / project-claude](<../.claude/skills/hyperframes-registry/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [hyperframes-studio / project-claude](<../.claude/skills/hyperframes-studio/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [hyperframes / project-claude](<../.claude/skills/hyperframes/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [impeccable / project-claude](<../.claude/skills/impeccable/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: impeccable
+- [kling-cli / project-claude](<../.claude/skills/kling-cli/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: image generation
+- [media-use / project-claude](<../.claude/skills/media-use/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: HyperFrames
+- [modern-web-guidance / project-claude](<../.claude/skills/modern-web-guidance/SKILL.md>): Existing complete skill tree mirrored for Claude/Codex parity; Descriptive metadata identifies visual/UI/motion purpose: Scroll
+- [motion-graphics / project-claude](<../.claude/skills/motion-graphics/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: motion
+- [music-to-video / project-claude](<../.claude/skills/music-to-video/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [performance-optimization / project-claude](<../.claude/skills/performance-optimization/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: frontend
+- [pr-to-video / project-claude](<../.claude/skills/pr-to-video/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [product-launch-video / project-claude](<../.claude/skills/product-launch-video/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [react-bits / project-claude](<../.claude/skills/react-bits/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: react-bits
+- [reference-to-design / project-claude](<../.claude/skills/reference-to-design/SKILL.md>): Reference-led frontend design exploration and refinement; explicitly activated by Joshua.
+- [remotion-to-hyperframes / project-claude](<../.claude/skills/remotion-to-hyperframes/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: remotion
+- [scroll-craft / project-claude](<../.claude/skills/scroll-craft/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: scroll
+- [slideshow / project-claude](<../.claude/skills/slideshow/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: HyperFrames
+- [talking-head-recut / project-claude](<../.claude/skills/talking-head-recut/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: canvas
+- [emil-design-eng / catalog-claude](<../skills/claude/_project-forks/lsatu/emil-design-eng/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [extract-design / catalog-claude](<../skills/claude/_project-forks/lsatu/extract-design/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [algorithmic-art / catalog-claude](<../skills/claude/algorithmic-art/SKILL.md>): Metadata and workflow reviewed: visual creation, themes, brand styling or website design
+- [bootcamp-parity-audit / catalog-claude](<../skills/claude/bootcamp-parity-audit/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: visual
+- [brand-guidelines / catalog-claude](<../skills/claude/brand-guidelines/SKILL.md>): Metadata and workflow reviewed: visual creation, themes, brand styling or website design
+- [browser-testing-with-devtools / catalog-claude](<../skills/claude/browser-testing-with-devtools/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: visual
+- [canvas-design / catalog-claude](<../skills/claude/canvas-design/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: canvas
+- [design-resource-library / catalog-claude](<../skills/claude/design-resource-library/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [design-taste-frontend / catalog-claude](<../skills/claude/design-taste-frontend/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [embedded-captions / catalog-claude](<../skills/claude/embedded-captions/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: visual
+- [emil-design-eng / catalog-claude](<../skills/claude/emil-design-eng/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [emil-upstream-animate-expo / catalog-claude](<../skills/claude/emil-upstream-animate-expo/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-animate / catalog-claude](<../skills/claude/emil-upstream-animate/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-animation-performance / catalog-claude](<../skills/claude/emil-upstream-animation-performance/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-animation-vocabulary / catalog-claude](<../skills/claude/emil-upstream-animation-vocabulary/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-apple-design / catalog-claude](<../skills/claude/emil-upstream-apple-design/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-ask-sonner / catalog-claude](<../skills/claude/emil-upstream-ask-sonner/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-break-ui / catalog-claude](<../skills/claude/emil-upstream-break-ui/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-emil-design-eng / catalog-claude](<../skills/claude/emil-upstream-emil-design-eng/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-find-animation-opportunities / catalog-claude](<../skills/claude/emil-upstream-find-animation-opportunities/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-improve-animations / catalog-claude](<../skills/claude/emil-upstream-improve-animations/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-mobile-native / catalog-claude](<../skills/claude/emil-upstream-mobile-native/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-pick-ui-library / catalog-claude](<../skills/claude/emil-upstream-pick-ui-library/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-prototype / catalog-claude](<../skills/claude/emil-upstream-prototype/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-remove-animations / catalog-claude](<../skills/claude/emil-upstream-remove-animations/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-review-animations / catalog-claude](<../skills/claude/emil-upstream-review-animations/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-write-swift / catalog-claude](<../skills/claude/emil-upstream-write-swift/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [expo-animation / catalog-claude](<../skills/claude/expo-animation/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: animation
+- [expo-design-system / catalog-claude](<../skills/claude/expo-design-system/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [expo-native-ui / catalog-claude](<../skills/claude/expo-native-ui/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: visual
+- [extract-design / catalog-claude](<../skills/claude/extract-design/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [faceless-explainer / catalog-claude](<../skills/claude/faceless-explainer/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: typography
+- [figma / catalog-claude](<../skills/claude/figma/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: figma
+- [frontend-design / catalog-claude](<../skills/claude/frontend-design/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: frontend
+- [frontend-ui-engineering / catalog-claude](<../skills/claude/frontend-ui-engineering/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: frontend
+- [general-video / catalog-claude](<../skills/claude/general-video/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: HyperFrames
+- [gsap-core / catalog-claude](<../skills/claude/gsap-core/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: gsap
+- [gsap-frameworks / catalog-claude](<../skills/claude/gsap-frameworks/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: gsap
+- [gsap-performance / catalog-claude](<../skills/claude/gsap-performance/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: gsap
+- [gsap-plugins / catalog-claude](<../skills/claude/gsap-plugins/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: gsap
+- [gsap-react / catalog-claude](<../skills/claude/gsap-react/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: gsap
+- [gsap-scrolltrigger / catalog-claude](<../skills/claude/gsap-scrolltrigger/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: gsap
+- [gsap-timeline / catalog-claude](<../skills/claude/gsap-timeline/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: gsap
+- [gsap-utils / catalog-claude](<../skills/claude/gsap-utils/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: gsap
+- [high-end-visual-design / catalog-claude](<../skills/claude/high-end-visual-design/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: visual
+- [html-handoff / catalog-claude](<../skills/claude/html-handoff/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: interface
+- [hyperframes-animation / catalog-claude](<../skills/claude/hyperframes-animation/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [hyperframes-audio / catalog-claude](<../skills/claude/hyperframes-audio/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [hyperframes-cli / catalog-claude](<../skills/claude/hyperframes-cli/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [hyperframes-core / catalog-claude](<../skills/claude/hyperframes-core/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [hyperframes-creative / catalog-claude](<../skills/claude/hyperframes-creative/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [hyperframes-keyframes / catalog-claude](<../skills/claude/hyperframes-keyframes/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [hyperframes-registry / catalog-claude](<../skills/claude/hyperframes-registry/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [hyperframes-studio / catalog-claude](<../skills/claude/hyperframes-studio/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [hyperframes / catalog-claude](<../skills/claude/hyperframes/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [image-to-code / catalog-claude](<../skills/claude/image-to-code/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: image-to-code
+- [impeccable / catalog-claude](<../skills/claude/impeccable/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: impeccable
+- [json-canvas / catalog-claude](<../skills/claude/json-canvas/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: canvas
+- [kling-cli / catalog-claude](<../skills/claude/kling-cli/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: image generation
+- [media-use / catalog-claude](<../skills/claude/media-use/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: HyperFrames
+- [minimalist-ui / catalog-claude](<../skills/claude/minimalist-ui/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [modern-web-guidance / catalog-claude](<../skills/claude/modern-web-guidance/SKILL.md>): Existing complete skill tree mirrored for Claude/Codex parity; Descriptive metadata identifies visual/UI/motion purpose: Scroll
+- [motion-graphics / catalog-claude](<../skills/claude/motion-graphics/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: motion
+- [music-to-video / catalog-claude](<../skills/claude/music-to-video/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [performance-optimization / catalog-claude](<../skills/claude/performance-optimization/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: frontend
+- [playground / catalog-claude](<../skills/claude/playground/SKILL.md>): Metadata and workflow reviewed: visual creation, themes, brand styling or website design
+- [pr-to-video / catalog-claude](<../skills/claude/pr-to-video/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [product-launch-video / catalog-claude](<../skills/claude/product-launch-video/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [prototype / catalog-claude](<../skills/claude/prototype/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [react-bits / catalog-claude](<../skills/claude/react-bits/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: react-bits
+- [redesign-existing-projects / catalog-claude](<../skills/claude/redesign-existing-projects/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [reference-to-design / catalog-claude](<../skills/claude/reference-to-design/SKILL.md>): Reference-led frontend design exploration and refinement; explicitly activated by Joshua.
+- [remotion-to-hyperframes / catalog-claude](<../skills/claude/remotion-to-hyperframes/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: remotion
+- [scroll-craft / catalog-claude](<../skills/claude/scroll-craft/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: scroll
+- [shadcn / catalog-claude](<../skills/claude/shadcn/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: shadcn
+- [site-teardown / catalog-claude](<../skills/claude/site-teardown/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: animation
+- [slack-gif-creator / catalog-claude](<../skills/claude/slack-gif-creator/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: animation
+- [slideshow / catalog-claude](<../skills/claude/slideshow/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: HyperFrames
+- [talking-head-recut / catalog-claude](<../skills/claude/talking-head-recut/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: canvas
+- [theme-factory / catalog-claude](<../skills/claude/theme-factory/SKILL.md>): Metadata and workflow reviewed: visual creation, themes, brand styling or website design
+- [watch / catalog-claude](<../skills/claude/watch/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: visual
+- [web-artifacts-builder / catalog-claude](<../skills/claude/web-artifacts-builder/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: frontend
+- [webapp-testing / catalog-claude](<../skills/claude/webapp-testing/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: frontend
+- [extract-design / catalog-codex](<../skills/codex/_project-forks/lsatu/extract-design/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [webapp-testing / catalog-codex](<../skills/codex/_project-forks/lsatu/webapp-testing/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: frontend
+- [algorithmic-art / catalog-codex](<../skills/codex/algorithmic-art/SKILL.md>): Metadata and workflow reviewed: visual creation, themes, brand styling or website design
+- [brand-guidelines / catalog-codex](<../skills/codex/brand-guidelines/SKILL.md>): Metadata and workflow reviewed: visual creation, themes, brand styling or website design
+- [browser-testing-with-devtools / catalog-codex](<../skills/codex/browser-testing-with-devtools/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: visual
+- [canvas-design / catalog-codex](<../skills/codex/canvas-design/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: canvas
+- [design-resource-library / catalog-codex](<../skills/codex/design-resource-library/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [design-taste-frontend / catalog-codex](<../skills/codex/design-taste-frontend/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [embedded-captions / catalog-codex](<../skills/codex/embedded-captions/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: visual
+- [emil-design-eng / catalog-codex](<../skills/codex/emil-design-eng/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [emil-upstream-animate-expo / catalog-codex](<../skills/codex/emil-upstream-animate-expo/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-animate / catalog-codex](<../skills/codex/emil-upstream-animate/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-animation-performance / catalog-codex](<../skills/codex/emil-upstream-animation-performance/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-animation-vocabulary / catalog-codex](<../skills/codex/emil-upstream-animation-vocabulary/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-apple-design / catalog-codex](<../skills/codex/emil-upstream-apple-design/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-ask-sonner / catalog-codex](<../skills/codex/emil-upstream-ask-sonner/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-break-ui / catalog-codex](<../skills/codex/emil-upstream-break-ui/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-emil-design-eng / catalog-codex](<../skills/codex/emil-upstream-emil-design-eng/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-find-animation-opportunities / catalog-codex](<../skills/codex/emil-upstream-find-animation-opportunities/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-improve-animations / catalog-codex](<../skills/codex/emil-upstream-improve-animations/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-mobile-native / catalog-codex](<../skills/codex/emil-upstream-mobile-native/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-pick-ui-library / catalog-codex](<../skills/codex/emil-upstream-pick-ui-library/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-prototype / catalog-codex](<../skills/codex/emil-upstream-prototype/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-remove-animations / catalog-codex](<../skills/codex/emil-upstream-remove-animations/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-review-animations / catalog-codex](<../skills/codex/emil-upstream-review-animations/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [emil-upstream-write-swift / catalog-codex](<../skills/codex/emil-upstream-write-swift/SKILL.md>): Emil Kowalski upstream design, UI, motion or prototyping skill; scoped refresh 2026-10-29
+- [expo-animation / catalog-codex](<../skills/codex/expo-animation/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: animation
+- [expo-design-system / catalog-codex](<../skills/codex/expo-design-system/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [expo-native-ui / catalog-codex](<../skills/codex/expo-native-ui/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: visual
+- [extract-design / catalog-codex](<../skills/codex/extract-design/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [faceless-explainer / catalog-codex](<../skills/codex/faceless-explainer/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: typography
+- [figma / catalog-codex](<../skills/codex/figma/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: figma
+- [frontend-design / catalog-codex](<../skills/codex/frontend-design/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: frontend
+- [frontend-ui-engineering / catalog-codex](<../skills/codex/frontend-ui-engineering/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: frontend
+- [general-video / catalog-codex](<../skills/codex/general-video/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: HyperFrames
+- [gsap-core / catalog-codex](<../skills/codex/gsap-core/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: gsap
+- [gsap-frameworks / catalog-codex](<../skills/codex/gsap-frameworks/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: gsap
+- [gsap-performance / catalog-codex](<../skills/codex/gsap-performance/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: gsap
+- [gsap-plugins / catalog-codex](<../skills/codex/gsap-plugins/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: gsap
+- [gsap-react / catalog-codex](<../skills/codex/gsap-react/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: gsap
+- [gsap-scrolltrigger / catalog-codex](<../skills/codex/gsap-scrolltrigger/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: gsap
+- [gsap-timeline / catalog-codex](<../skills/codex/gsap-timeline/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: gsap
+- [gsap-utils / catalog-codex](<../skills/codex/gsap-utils/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: gsap
+- [higgsfield-generate / catalog-codex](<../skills/codex/higgsfield-generate/SKILL.md>): Metadata and workflow reviewed: visual creation, themes, brand styling or website design
+- [higgsfield-marketplace-cards / catalog-codex](<../skills/codex/higgsfield-marketplace-cards/SKILL.md>): Metadata and workflow reviewed: visual creation, themes, brand styling or website design
+- [higgsfield-product-photoshoot / catalog-codex](<../skills/codex/higgsfield-product-photoshoot/SKILL.md>): Metadata and workflow reviewed: visual creation, themes, brand styling or website design
+- [higgsfield-soul-id / catalog-codex](<../skills/codex/higgsfield-soul-id/SKILL.md>): Metadata and workflow reviewed: visual creation, themes, brand styling or website design
+- [higgsfield-websites / catalog-codex](<../skills/codex/higgsfield-websites/SKILL.md>): Metadata and workflow reviewed: visual creation, themes, brand styling or website design
+- [high-end-visual-design / catalog-codex](<../skills/codex/high-end-visual-design/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: visual
+- [html-handoff / catalog-codex](<../skills/codex/html-handoff/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: interface
+- [hyperframes-animation / catalog-codex](<../skills/codex/hyperframes-animation/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [hyperframes-audio / catalog-codex](<../skills/codex/hyperframes-audio/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [hyperframes-cli / catalog-codex](<../skills/codex/hyperframes-cli/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [hyperframes-core / catalog-codex](<../skills/codex/hyperframes-core/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [hyperframes-creative / catalog-codex](<../skills/codex/hyperframes-creative/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [hyperframes-keyframes / catalog-codex](<../skills/codex/hyperframes-keyframes/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [hyperframes-registry / catalog-codex](<../skills/codex/hyperframes-registry/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [hyperframes-studio / catalog-codex](<../skills/codex/hyperframes-studio/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [hyperframes / catalog-codex](<../skills/codex/hyperframes/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [image-to-code / catalog-codex](<../skills/codex/image-to-code/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: image-to-code
+- [imagegen / catalog-codex](<../skills/codex/imagegen/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: imagegen
+- [impeccable / catalog-codex](<../skills/codex/impeccable/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: impeccable
+- [json-canvas / catalog-codex](<../skills/codex/json-canvas/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: canvas
+- [kling-cli / catalog-codex](<../skills/codex/kling-cli/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: image generation
+- [media-use / catalog-codex](<../skills/codex/media-use/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: HyperFrames
+- [minimalist-ui / catalog-codex](<../skills/codex/minimalist-ui/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [modern-web-guidance / catalog-codex](<../skills/codex/modern-web-guidance/SKILL.md>): Existing complete skill tree mirrored for Claude/Codex parity; Descriptive metadata identifies visual/UI/motion purpose: Scroll
+- [motion-graphics / catalog-codex](<../skills/codex/motion-graphics/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: motion
+- [music-to-video / catalog-codex](<../skills/codex/music-to-video/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [performance-optimization / catalog-codex](<../skills/codex/performance-optimization/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: frontend
+- [pr-to-video / catalog-codex](<../skills/codex/pr-to-video/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [product-launch-video / catalog-codex](<../skills/codex/product-launch-video/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: hyperframes
+- [prototype / catalog-codex](<../skills/codex/prototype/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [react-bits / catalog-codex](<../skills/codex/react-bits/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: react-bits
+- [redesign-existing-projects / catalog-codex](<../skills/codex/redesign-existing-projects/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: design
+- [reference-to-design / catalog-codex](<../skills/codex/reference-to-design/SKILL.md>): Reference-led frontend design exploration and refinement; explicitly activated by Joshua.
+- [remotion-to-hyperframes / catalog-codex](<../skills/codex/remotion-to-hyperframes/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: remotion
+- [scroll-craft / catalog-codex](<../skills/codex/scroll-craft/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: scroll
+- [shadcn / catalog-codex](<../skills/codex/shadcn/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: shadcn
+- [site-teardown / catalog-codex](<../skills/codex/site-teardown/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: animation
+- [slack-gif-creator / catalog-codex](<../skills/codex/slack-gif-creator/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: animation
+- [slideshow / catalog-codex](<../skills/codex/slideshow/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: HyperFrames
+- [talking-head-recut / catalog-codex](<../skills/codex/talking-head-recut/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: canvas
+- [theme-factory / catalog-codex](<../skills/codex/theme-factory/SKILL.md>): Metadata and workflow reviewed: visual creation, themes, brand styling or website design
+- [watch / catalog-codex](<../skills/codex/watch/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: visual
+- [web-artifacts-builder / catalog-codex](<../skills/codex/web-artifacts-builder/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: frontend
+- [webapp-testing / catalog-codex](<../skills/codex/webapp-testing/SKILL.md>): Descriptive metadata identifies visual/UI/motion purpose: frontend
+
+## Supporting design skills (162 paths)
+
+- [browser-harness / home-agents](<../../../.agents/skills/browser-harness/SKILL.md>): Descriptive metadata identifies direct design-tool support: browser
+- [docx / home-agents](<../../../.agents/skills/docx/SKILL.md>): Metadata reviewed: direct research, component implementation, visual authoring or preview support
+- [firecrawl-agent / home-agents](<../../../.agents/skills/firecrawl-agent/SKILL.md>): Descriptive metadata identifies direct design-tool support: firecrawl
+- [firecrawl-crawl / home-agents](<../../../.agents/skills/firecrawl-crawl/SKILL.md>): Descriptive metadata identifies direct design-tool support: firecrawl
+- [firecrawl-deep-research / home-agents](<../../../.agents/skills/firecrawl-deep-research/SKILL.md>): Descriptive metadata identifies direct design-tool support: firecrawl
+- [firecrawl-demo-walkthrough / home-agents](<../../../.agents/skills/firecrawl-demo-walkthrough/SKILL.md>): Descriptive metadata identifies direct design-tool support: firecrawl
+- [firecrawl-developer-index / home-agents](<../../../.agents/skills/firecrawl-developer-index/SKILL.md>): Descriptive metadata identifies direct design-tool support: firecrawl
+- [firecrawl-download / home-agents](<../../../.agents/skills/firecrawl-download/SKILL.md>): Descriptive metadata identifies direct design-tool support: firecrawl
+- [firecrawl-map / home-agents](<../../../.agents/skills/firecrawl-map/SKILL.md>): Descriptive metadata identifies direct design-tool support: firecrawl
+- [firecrawl-parse / home-agents](<../../../.agents/skills/firecrawl-parse/SKILL.md>): Descriptive metadata identifies direct design-tool support: firecrawl
+- [firecrawl-qa / home-agents](<../../../.agents/skills/firecrawl-qa/SKILL.md>): Descriptive metadata identifies direct design-tool support: firecrawl
+- [firecrawl-research-index / home-agents](<../../../.agents/skills/firecrawl-research-index/SKILL.md>): Descriptive metadata identifies direct design-tool support: firecrawl
+- [firecrawl-scrape / home-agents](<../../../.agents/skills/firecrawl-scrape/SKILL.md>): Descriptive metadata identifies direct design-tool support: firecrawl
+- [firecrawl-search / home-agents](<../../../.agents/skills/firecrawl-search/SKILL.md>): Descriptive metadata identifies direct design-tool support: firecrawl
+- [firecrawl / home-agents](<../../../.agents/skills/firecrawl/SKILL.md>): Descriptive metadata identifies direct design-tool support: firecrawl
+- [gws-slides / home-agents](<../../../.agents/skills/gws-slides/SKILL.md>): Metadata reviewed: direct research, component implementation, visual authoring or preview support
+- [lovable-prompt / home-agents](<../../../.agents/skills/lovable-prompt/SKILL.md>): Descriptive metadata identifies direct design-tool support: UI
+- [orca-cli / home-agents](<../../../.agents/skills/orca-cli/SKILL.md>): Descriptive metadata identifies direct design-tool support: browser
+- [pptx / home-agents](<../../../.agents/skills/pptx/SKILL.md>): Metadata reviewed: direct research, component implementation, visual authoring or preview support
+- [browser / home-agents](<../../../.agents/skills/synced/66ab068d-6d11-4b9b-bace-f3622629a61f_3264ecb8-7644-4b8c-9aed-94ea1fae19cc/browser/SKILL.md>): Descriptive metadata identifies direct design-tool support: browser
+- [docx / home-agents](<../../../.agents/skills/synced/66ab068d-6d11-4b9b-bace-f3622629a61f_3264ecb8-7644-4b8c-9aed-94ea1fae19cc/docx/SKILL.md>): Metadata reviewed: direct research, component implementation, visual authoring or preview support
+- [pptx / home-agents](<../../../.agents/skills/synced/66ab068d-6d11-4b9b-bace-f3622629a61f_3264ecb8-7644-4b8c-9aed-94ea1fae19cc/pptx/SKILL.md>): Metadata reviewed: direct research, component implementation, visual authoring or preview support
+- [tavily-best-practices / home-agents](<../../../.agents/skills/tavily-best-practices/SKILL.md>): Descriptive metadata identifies direct design-tool support: tavily
+- [tavily-cli / home-agents](<../../../.agents/skills/tavily-cli/SKILL.md>): Descriptive metadata identifies direct design-tool support: tavily
+- [tavily-crawl / home-agents](<../../../.agents/skills/tavily-crawl/SKILL.md>): Descriptive metadata identifies direct design-tool support: tavily
+- [tavily-dynamic-search / home-agents](<../../../.agents/skills/tavily-dynamic-search/SKILL.md>): Descriptive metadata identifies direct design-tool support: tavily
+- [tavily-extract / home-agents](<../../../.agents/skills/tavily-extract/SKILL.md>): Descriptive metadata identifies direct design-tool support: tavily
+- [tavily-map / home-agents](<../../../.agents/skills/tavily-map/SKILL.md>): Descriptive metadata identifies direct design-tool support: tavily
+- [tavily-research / home-agents](<../../../.agents/skills/tavily-research/SKILL.md>): Descriptive metadata identifies direct design-tool support: tavily
+- [tavily-search / home-agents](<../../../.agents/skills/tavily-search/SKILL.md>): Descriptive metadata identifies direct design-tool support: tavily
+- [a11y-debugging / plugin-claude](<../../../.claude/plugins/cache/claude-plugins-official/chrome-devtools-mcp/1.11.0/skills/a11y-debugging/SKILL.md>): Descriptive metadata identifies direct design-tool support: DevTools
+- [chrome-devtools-cli / plugin-claude](<../../../.claude/plugins/cache/claude-plugins-official/chrome-devtools-mcp/1.11.0/skills/chrome-devtools-cli/SKILL.md>): Descriptive metadata identifies direct design-tool support: devtools
+- [chrome-devtools / plugin-claude](<../../../.claude/plugins/cache/claude-plugins-official/chrome-devtools-mcp/1.11.0/skills/chrome-devtools/SKILL.md>): Descriptive metadata identifies direct design-tool support: devtools
+- [cookie-debugging / plugin-claude](<../../../.claude/plugins/cache/claude-plugins-official/chrome-devtools-mcp/1.11.0/skills/cookie-debugging/SKILL.md>): Descriptive metadata identifies direct design-tool support: DevTools
+- [debug-optimize-lcp / plugin-claude](<../../../.claude/plugins/cache/claude-plugins-official/chrome-devtools-mcp/1.11.0/skills/debug-optimize-lcp/SKILL.md>): Descriptive metadata identifies direct design-tool support: DevTools
+- [a11y-debugging / plugin-claude](<../../../.claude/plugins/cache/claude-plugins-official/chrome-devtools-mcp/1.9.0/skills/a11y-debugging/SKILL.md>): Descriptive metadata identifies direct design-tool support: DevTools
+- [chrome-devtools-cli / plugin-claude](<../../../.claude/plugins/cache/claude-plugins-official/chrome-devtools-mcp/1.9.0/skills/chrome-devtools-cli/SKILL.md>): Descriptive metadata identifies direct design-tool support: devtools
+- [chrome-devtools / plugin-claude](<../../../.claude/plugins/cache/claude-plugins-official/chrome-devtools-mcp/1.9.0/skills/chrome-devtools/SKILL.md>): Descriptive metadata identifies direct design-tool support: devtools
+- [cookie-debugging / plugin-claude](<../../../.claude/plugins/cache/claude-plugins-official/chrome-devtools-mcp/1.9.0/skills/cookie-debugging/SKILL.md>): Descriptive metadata identifies direct design-tool support: DevTools
+- [debug-optimize-lcp / plugin-claude](<../../../.claude/plugins/cache/claude-plugins-official/chrome-devtools-mcp/1.9.0/skills/debug-optimize-lcp/SKILL.md>): Descriptive metadata identifies direct design-tool support: DevTools
+- [remotion-best-practices / plugin-claude](<../../../.claude/plugins/cache/remotion/remotion/4.0.523/skills/remotion-best-practices/SKILL.md>): Metadata reviewed: direct research, component implementation, visual authoring or preview support
+- [remotion-create / plugin-claude](<../../../.claude/plugins/cache/remotion/remotion/4.0.523/skills/remotion-create/SKILL.md>): Metadata reviewed: direct research, component implementation, visual authoring or preview support
+- [remotion-docs / plugin-claude](<../../../.claude/plugins/cache/remotion/remotion/4.0.523/skills/remotion-docs/SKILL.md>): Metadata reviewed: direct research, component implementation, visual authoring or preview support
+- [remotion-render / plugin-claude](<../../../.claude/plugins/cache/remotion/remotion/4.0.523/skills/remotion-render/SKILL.md>): Metadata reviewed: direct research, component implementation, visual authoring or preview support
+- [remotion-studio / plugin-claude](<../../../.claude/plugins/cache/remotion/remotion/4.0.523/skills/remotion-studio/SKILL.md>): Metadata reviewed: direct research, component implementation, visual authoring or preview support
+- [remotion-upgrade / plugin-claude](<../../../.claude/plugins/cache/remotion/remotion/4.0.523/skills/remotion-upgrade/SKILL.md>): Metadata reviewed: direct research, component implementation, visual authoring or preview support
+- [browser-harness / home-claude](<../../../.claude/skills/browser-harness/SKILL.md>): Descriptive metadata identifies direct design-tool support: browser
+- [docx / home-claude](<../../../.claude/skills/docx/SKILL.md>): Metadata reviewed: direct research, component implementation, visual authoring or preview support
+- [firecrawl-agent / home-claude](<../../../.claude/skills/firecrawl-agent/SKILL.md>): Descriptive metadata identifies direct design-tool support: firecrawl
+- [firecrawl-crawl / home-claude](<../../../.claude/skills/firecrawl-crawl/SKILL.md>): Descriptive metadata identifies direct design-tool support: firecrawl
+- [firecrawl-deep-research / home-claude](<../../../.claude/skills/firecrawl-deep-research/SKILL.md>): Descriptive metadata identifies direct design-tool support: firecrawl
+- [firecrawl-demo-walkthrough / home-claude](<../../../.claude/skills/firecrawl-demo-walkthrough/SKILL.md>): Descriptive metadata identifies direct design-tool support: firecrawl
+- [firecrawl-developer-index / home-claude](<../../../.claude/skills/firecrawl-developer-index/SKILL.md>): Descriptive metadata identifies direct design-tool support: firecrawl
+- [firecrawl-download / home-claude](<../../../.claude/skills/firecrawl-download/SKILL.md>): Descriptive metadata identifies direct design-tool support: firecrawl
+- [firecrawl-map / home-claude](<../../../.claude/skills/firecrawl-map/SKILL.md>): Descriptive metadata identifies direct design-tool support: firecrawl
+- [firecrawl-parse / home-claude](<../../../.claude/skills/firecrawl-parse/SKILL.md>): Descriptive metadata identifies direct design-tool support: firecrawl
+- [firecrawl-qa / home-claude](<../../../.claude/skills/firecrawl-qa/SKILL.md>): Descriptive metadata identifies direct design-tool support: firecrawl
+- [firecrawl-research-index / home-claude](<../../../.claude/skills/firecrawl-research-index/SKILL.md>): Descriptive metadata identifies direct design-tool support: firecrawl
+- [firecrawl-scrape / home-claude](<../../../.claude/skills/firecrawl-scrape/SKILL.md>): Descriptive metadata identifies direct design-tool support: firecrawl
+- [firecrawl-search / home-claude](<../../../.claude/skills/firecrawl-search/SKILL.md>): Descriptive metadata identifies direct design-tool support: firecrawl
+- [firecrawl / home-claude](<../../../.claude/skills/firecrawl/SKILL.md>): Descriptive metadata identifies direct design-tool support: firecrawl
+- [gws-slides / home-claude](<../../../.claude/skills/gws-slides/SKILL.md>): Metadata reviewed: direct research, component implementation, visual authoring or preview support
+- [lovable-prompt / home-claude](<../../../.claude/skills/lovable-prompt/SKILL.md>): Descriptive metadata identifies direct design-tool support: UI
+- [orca-cli / home-claude](<../../../.claude/skills/orca-cli/SKILL.md>): Descriptive metadata identifies direct design-tool support: browser
+- [pptx / home-claude](<../../../.claude/skills/pptx/SKILL.md>): Metadata reviewed: direct research, component implementation, visual authoring or preview support
+- [browser / home-claude](<../../../.claude/skills/synced/66ab068d-6d11-4b9b-bace-f3622629a61f_3264ecb8-7644-4b8c-9aed-94ea1fae19cc/browser/SKILL.md>): Descriptive metadata identifies direct design-tool support: browser
+- [built-in-browser / home-claude](<../../../.claude/skills/synced/66ab068d-6d11-4b9b-bace-f3622629a61f_3264ecb8-7644-4b8c-9aed-94ea1fae19cc/built-in-browser/SKILL.md>): Descriptive metadata identifies direct design-tool support: browser
+- [chrome-browser / home-claude](<../../../.claude/skills/synced/66ab068d-6d11-4b9b-bace-f3622629a61f_3264ecb8-7644-4b8c-9aed-94ea1fae19cc/chrome-browser/SKILL.md>): Descriptive metadata identifies direct design-tool support: browser
+- [computer-use / home-claude](<../../../.claude/skills/synced/66ab068d-6d11-4b9b-bace-f3622629a61f_3264ecb8-7644-4b8c-9aed-94ea1fae19cc/computer-use/SKILL.md>): Descriptive metadata identifies direct design-tool support: browser
+- [docx / home-claude](<../../../.claude/skills/synced/66ab068d-6d11-4b9b-bace-f3622629a61f_3264ecb8-7644-4b8c-9aed-94ea1fae19cc/docx/SKILL.md>): Metadata reviewed: direct research, component implementation, visual authoring or preview support
+- [pptx / home-claude](<../../../.claude/skills/synced/66ab068d-6d11-4b9b-bace-f3622629a61f_3264ecb8-7644-4b8c-9aed-94ea1fae19cc/pptx/SKILL.md>): Metadata reviewed: direct research, component implementation, visual authoring or preview support
+- [tavily-best-practices / home-claude](<../../../.claude/skills/tavily-best-practices/SKILL.md>): Descriptive metadata identifies direct design-tool support: tavily
+- [tavily-cli / home-claude](<../../../.claude/skills/tavily-cli/SKILL.md>): Descriptive metadata identifies direct design-tool support: tavily
+- [tavily-crawl / home-claude](<../../../.claude/skills/tavily-crawl/SKILL.md>): Descriptive metadata identifies direct design-tool support: tavily
+- [tavily-dynamic-search / home-claude](<../../../.claude/skills/tavily-dynamic-search/SKILL.md>): Descriptive metadata identifies direct design-tool support: tavily
+- [tavily-extract / home-claude](<../../../.claude/skills/tavily-extract/SKILL.md>): Descriptive metadata identifies direct design-tool support: tavily
+- [tavily-map / home-claude](<../../../.claude/skills/tavily-map/SKILL.md>): Descriptive metadata identifies direct design-tool support: tavily
+- [tavily-research / home-claude](<../../../.claude/skills/tavily-research/SKILL.md>): Descriptive metadata identifies direct design-tool support: tavily
+- [tavily-search / home-claude](<../../../.claude/skills/tavily-search/SKILL.md>): Descriptive metadata identifies direct design-tool support: tavily
+- [browser / plugin-codex](<../../../.codex/plugins/cache/claude-cowork/anthropic-skills/1.0.0/skills/browser/SKILL.md>): Descriptive metadata identifies direct design-tool support: browser
+- [docx / plugin-codex](<../../../.codex/plugins/cache/claude-cowork/anthropic-skills/1.0.0/skills/docx/SKILL.md>): Metadata reviewed: direct research, component implementation, visual authoring or preview support
+- [pptx / plugin-codex](<../../../.codex/plugins/cache/claude-cowork/anthropic-skills/1.0.0/skills/pptx/SKILL.md>): Metadata reviewed: direct research, component implementation, visual authoring or preview support
+- [research-synthesis / plugin-codex](<../../../.codex/plugins/cache/claude-cowork/design/1.2.0/skills/research-synthesis/SKILL.md>): Metadata reviewed: direct research, component implementation, visual authoring or preview support
+- [ux-copy / plugin-codex](<../../../.codex/plugins/cache/claude-cowork/design/1.2.0/skills/ux-copy/SKILL.md>): Descriptive metadata identifies direct design-tool support: ux
+- [appkit-interop / plugin-codex](<../../../.codex/plugins/cache/openai-curated-remote/build-macos-apps/0.1.4/skills/appkit-interop/SKILL.md>): Metadata reviewed: direct research, component implementation, visual authoring or preview support
+- [liquid-glass / plugin-codex](<../../../.codex/plugins/cache/openai-curated-remote/build-macos-apps/0.1.4/skills/liquid-glass/SKILL.md>): Descriptive metadata identifies direct design-tool support: UI
+- [swiftui-patterns / plugin-codex](<../../../.codex/plugins/cache/openai-curated-remote/build-macos-apps/0.1.4/skills/swiftui-patterns/SKILL.md>): Metadata reviewed: direct research, component implementation, visual authoring or preview support
+- [view-refactor / plugin-codex](<../../../.codex/plugins/cache/openai-curated-remote/build-macos-apps/0.1.4/skills/view-refactor/SKILL.md>): Metadata reviewed: direct research, component implementation, visual authoring or preview support
+- [google-slides / plugin-codex](<../../../.codex/plugins/cache/openai-curated-remote/google-drive/0.1.22/skills/google-slides/SKILL.md>): Metadata reviewed: direct research, component implementation, visual authoring or preview support
+- [research / plugin-codex](<../../../.codex/plugins/cache/openai-curated-remote/product-design/0.1.56/skills/research/SKILL.md>): Descriptive metadata identifies direct design-tool support: UX
+- [stripe-apps / plugin-codex](<../../../.codex/plugins/cache/openai-curated-remote/stripe/8.0.1/skills/stripe-apps/SKILL.md>): Stripe Dashboard UI extension guidance; 8.0.1 entrypoint inspected 2026-10-29; metadata below is from the historical 8.0.0 audit
+- [react-best-practices / plugin-codex](<../../../.codex/plugins/cache/openai-curated/build-web-apps/1dc19589/skills/react-best-practices/SKILL.md>): Metadata reviewed: direct research, component implementation, visual authoring or preview support
+- [stripe-apps / plugin-codex](<../../../.codex/plugins/cache/openai-curated/stripe/1dc19589/skills/stripe-apps/SKILL.md>): Descriptive metadata identifies direct design-tool support: UI
+- [presentations / plugin-codex](<../../../.codex/plugins/cache/openai-primary-runtime/presentations/26.1026.10807/skills/presentations/SKILL.md>): Metadata reviewed: direct research, component implementation, visual authoring or preview support
+- [template-creator / plugin-codex](<../../../.codex/plugins/cache/openai-primary-runtime/template-creator/26.1026.10807/skills/template-creator/SKILL.md>): Metadata reviewed: direct research, component implementation, visual authoring or preview support
+- [firecrawl-agent / home-codex](<../../../.codex/skills/firecrawl-agent/SKILL.md>): Descriptive metadata identifies direct design-tool support: firecrawl
+- [firecrawl-crawl / home-codex](<../../../.codex/skills/firecrawl-crawl/SKILL.md>): Descriptive metadata identifies direct design-tool support: firecrawl
+- [firecrawl-deep-research / home-codex](<../../../.codex/skills/firecrawl-deep-research/SKILL.md>): Descriptive metadata identifies direct design-tool support: firecrawl
+- [firecrawl-demo-walkthrough / home-codex](<../../../.codex/skills/firecrawl-demo-walkthrough/SKILL.md>): Descriptive metadata identifies direct design-tool support: firecrawl
+- [firecrawl-developer-index / home-codex](<../../../.codex/skills/firecrawl-developer-index/SKILL.md>): Descriptive metadata identifies direct design-tool support: firecrawl
+- [firecrawl-download / home-codex](<../../../.codex/skills/firecrawl-download/SKILL.md>): Descriptive metadata identifies direct design-tool support: firecrawl
+- [firecrawl-map / home-codex](<../../../.codex/skills/firecrawl-map/SKILL.md>): Descriptive metadata identifies direct design-tool support: firecrawl
+- [firecrawl-parse / home-codex](<../../../.codex/skills/firecrawl-parse/SKILL.md>): Descriptive metadata identifies direct design-tool support: firecrawl
+- [firecrawl-qa / home-codex](<../../../.codex/skills/firecrawl-qa/SKILL.md>): Descriptive metadata identifies direct design-tool support: firecrawl
+- [firecrawl-research-index / home-codex](<../../../.codex/skills/firecrawl-research-index/SKILL.md>): Descriptive metadata identifies direct design-tool support: firecrawl
+- [firecrawl-scrape / home-codex](<../../../.codex/skills/firecrawl-scrape/SKILL.md>): Descriptive metadata identifies direct design-tool support: firecrawl
+- [firecrawl-search / home-codex](<../../../.codex/skills/firecrawl-search/SKILL.md>): Descriptive metadata identifies direct design-tool support: firecrawl
+- [firecrawl / home-codex](<../../../.codex/skills/firecrawl/SKILL.md>): Descriptive metadata identifies direct design-tool support: firecrawl
+- [gws-slides / home-codex](<../../../.codex/skills/gws-slides/SKILL.md>): Metadata reviewed: direct research, component implementation, visual authoring or preview support
+- [lovable-prompt / home-codex](<../../../.codex/skills/lovable-prompt/SKILL.md>): Descriptive metadata identifies direct design-tool support: UI
+- [playwright / home-codex](<../../../.codex/skills/playwright/SKILL.md>): Descriptive metadata identifies direct design-tool support: playwright
+- [chrome-extensions / project-codex](<../.agents/skills/chrome-extensions/SKILL.md>): Descriptive metadata identifies direct design-tool support: browser
+- [constraint-driven-development / project-codex](<../.agents/skills/constraint-driven-development/SKILL.md>): Descriptive metadata identifies direct design-tool support: accessibility
+- [eas-simulator / project-codex](<../.agents/skills/eas-simulator/SKILL.md>): Descriptive metadata identifies direct design-tool support: screenshot
+- [expo-dom / project-codex](<../.agents/skills/expo-dom/SKILL.md>): Metadata reviewed: direct research, component implementation, visual authoring or preview support
+- [expo-overview / project-codex](<../.agents/skills/expo-overview/SKILL.md>): Descriptive metadata identifies direct design-tool support: screenshot
+- [expo-router / project-codex](<../.agents/skills/expo-router/SKILL.md>): Metadata reviewed: direct research, component implementation, visual authoring or preview support
+- [expo-ui / project-codex](<../.agents/skills/expo-ui/SKILL.md>): Descriptive metadata identifies direct design-tool support: ui
+- [expo-web-to-native / project-codex](<../.agents/skills/expo-web-to-native/SKILL.md>): Metadata reviewed: direct research, component implementation, visual authoring or preview support
+- [playwright-cli / project-codex](<../.agents/skills/playwright-cli/SKILL.md>): Descriptive metadata identifies direct design-tool support: playwright
+- [chrome-extensions / project-claude](<../.claude/skills/chrome-extensions/SKILL.md>): Existing complete skill tree mirrored for Claude/Codex parity; Descriptive metadata identifies direct design-tool support: browser
+- [constraint-driven-development / project-claude](<../.claude/skills/constraint-driven-development/SKILL.md>): Descriptive metadata identifies direct design-tool support: accessibility
+- [eas-simulator / project-claude](<../.claude/skills/eas-simulator/SKILL.md>): Descriptive metadata identifies direct design-tool support: screenshot
+- [expo-dom / project-claude](<../.claude/skills/expo-dom/SKILL.md>): Metadata reviewed: direct research, component implementation, visual authoring or preview support
+- [expo-overview / project-claude](<../.claude/skills/expo-overview/SKILL.md>): Descriptive metadata identifies direct design-tool support: screenshot
+- [expo-router / project-claude](<../.claude/skills/expo-router/SKILL.md>): Metadata reviewed: direct research, component implementation, visual authoring or preview support
+- [expo-ui / project-claude](<../.claude/skills/expo-ui/SKILL.md>): Descriptive metadata identifies direct design-tool support: ui
+- [expo-web-to-native / project-claude](<../.claude/skills/expo-web-to-native/SKILL.md>): Metadata reviewed: direct research, component implementation, visual authoring or preview support
+- [playwright-cli / project-claude](<../.claude/skills/playwright-cli/SKILL.md>): Descriptive metadata identifies direct design-tool support: playwright
+- [captions / catalog-claude](<../skills/claude/_inactive/captions/SKILL.md>): Descriptive metadata identifies direct design-tool support: accessibility
+- [subtitles / catalog-claude](<../skills/claude/_inactive/subtitles/SKILL.md>): Descriptive metadata identifies direct design-tool support: accessibility
+- [a11y-debugging / catalog-claude](<../skills/claude/a11y-debugging/SKILL.md>): Descriptive metadata identifies direct design-tool support: DevTools
+- [build-mcp-app / catalog-claude](<../skills/claude/build-mcp-app/SKILL.md>): Descriptive metadata identifies direct design-tool support: UI
+- [chrome-devtools / catalog-claude](<../skills/claude/chrome-devtools/SKILL.md>): Descriptive metadata identifies direct design-tool support: devtools
+- [chrome-extensions / catalog-claude](<../skills/claude/chrome-extensions/SKILL.md>): Existing complete skill tree mirrored for Claude/Codex parity; Descriptive metadata identifies direct design-tool support: browser
+- [constraint-driven-development / catalog-claude](<../skills/claude/constraint-driven-development/SKILL.md>): Descriptive metadata identifies direct design-tool support: accessibility
+- [debug-optimize-lcp / catalog-claude](<../skills/claude/debug-optimize-lcp/SKILL.md>): Descriptive metadata identifies direct design-tool support: DevTools
+- [docx / catalog-claude](<../skills/claude/docx/SKILL.md>): Metadata reviewed: direct research, component implementation, visual authoring or preview support
+- [eas-simulator / catalog-claude](<../skills/claude/eas-simulator/SKILL.md>): Descriptive metadata identifies direct design-tool support: screenshot
+- [expo-dom / catalog-claude](<../skills/claude/expo-dom/SKILL.md>): Metadata reviewed: direct research, component implementation, visual authoring or preview support
+- [expo-overview / catalog-claude](<../skills/claude/expo-overview/SKILL.md>): Descriptive metadata identifies direct design-tool support: screenshot
+- [expo-router / catalog-claude](<../skills/claude/expo-router/SKILL.md>): Metadata reviewed: direct research, component implementation, visual authoring or preview support
+- [expo-ui / catalog-claude](<../skills/claude/expo-ui/SKILL.md>): Descriptive metadata identifies direct design-tool support: ui
+- [expo-web-to-native / catalog-claude](<../skills/claude/expo-web-to-native/SKILL.md>): Metadata reviewed: direct research, component implementation, visual authoring or preview support
+- [gws-slides / catalog-claude](<../skills/claude/gws-slides/SKILL.md>): Metadata reviewed: direct research, component implementation, visual authoring or preview support
+- [lovable-prompt / catalog-claude](<../skills/claude/lovable-prompt/SKILL.md>): Descriptive metadata identifies direct design-tool support: UI
+- [playwright-cli / catalog-claude](<../skills/claude/playwright-cli/SKILL.md>): Descriptive metadata identifies direct design-tool support: playwright
+- [pptx / catalog-claude](<../skills/claude/pptx/SKILL.md>): Metadata reviewed: direct research, component implementation, visual authoring or preview support
+- [chrome-extensions / catalog-codex](<../skills/codex/chrome-extensions/SKILL.md>): Existing complete skill tree mirrored for Claude/Codex parity; Descriptive metadata identifies direct design-tool support: browser
+- [constraint-driven-development / catalog-codex](<../skills/codex/constraint-driven-development/SKILL.md>): Descriptive metadata identifies direct design-tool support: accessibility
+- [docx / catalog-codex](<../skills/codex/docx/SKILL.md>): Metadata reviewed: direct research, component implementation, visual authoring or preview support
+- [eas-simulator / catalog-codex](<../skills/codex/eas-simulator/SKILL.md>): Descriptive metadata identifies direct design-tool support: screenshot
+- [expo-dom / catalog-codex](<../skills/codex/expo-dom/SKILL.md>): Metadata reviewed: direct research, component implementation, visual authoring or preview support
+- [expo-overview / catalog-codex](<../skills/codex/expo-overview/SKILL.md>): Descriptive metadata identifies direct design-tool support: screenshot
+- [expo-router / catalog-codex](<../skills/codex/expo-router/SKILL.md>): Metadata reviewed: direct research, component implementation, visual authoring or preview support
+- [expo-ui / catalog-codex](<../skills/codex/expo-ui/SKILL.md>): Descriptive metadata identifies direct design-tool support: ui
+- [expo-web-to-native / catalog-codex](<../skills/codex/expo-web-to-native/SKILL.md>): Metadata reviewed: direct research, component implementation, visual authoring or preview support
+- [gws-slides / catalog-codex](<../skills/codex/gws-slides/SKILL.md>): Metadata reviewed: direct research, component implementation, visual authoring or preview support
+- [lovable-prompt / catalog-codex](<../skills/codex/lovable-prompt/SKILL.md>): Descriptive metadata identifies direct design-tool support: UI
+- [playwright-cli / catalog-codex](<../skills/codex/playwright-cli/SKILL.md>): Descriptive metadata identifies direct design-tool support: playwright
+- [playwright / catalog-codex](<../skills/codex/playwright/SKILL.md>): Descriptive metadata identifies direct design-tool support: playwright
+- [pptx / catalog-codex](<../skills/codex/pptx/SKILL.md>): Metadata reviewed: direct research, component implementation, visual authoring or preview support
+
+<!-- END GENERATED DESIGN CATALOG -->

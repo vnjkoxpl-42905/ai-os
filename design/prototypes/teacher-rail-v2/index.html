@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, interactive-widget=resizes-content">
+<title>Teacher Rail v2</title>
+<style>
+:root{
+  --canvas:#f7f7f5; --card:#ffffff; --ink:#1d1d1b; --ink2:#4a4945; --mute:#7a7873;
+  --line:#e6e5e1; --line2:#d9d8d3; --tint:#efeeea; --dot:#8a6f3e; --danger:#9b2c2c;
+  --navW:232px; --navIcons:64px; --railW:384px; --ease:cubic-bezier(.4,0,.2,1);
+  --serif: "Iowan Old Style","Georgia",serif;
+}
+@media (min-width:1280px){ :root{ --railW:420px; } }
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:var(--canvas);color:var(--ink);font:14px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;padding:0}
+button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:2px solid var(--ink);outline-offset:2px;border-radius:6px}
+a{color:inherit}
+.app{position:fixed;inset:0;display:flex}
+
+/* left nav */
+.nav{width:var(--navW);flex:none;display:flex;flex-direction:column;padding:12px 8px;transition:width .15s var(--ease);overflow:hidden}
+.app.nav-icons .nav{width:var(--navIcons)}
+.brand{display:flex;align-items:center;justify-content:space-between;height:34px;padding:0 8px;margin-bottom:14px}
+.brand b{font-family:var(--serif);font-size:19px;white-space:nowrap}
+.app.nav-icons .brand b{display:none}
+.navitem{display:flex;align-items:center;gap:12px;height:36px;padding:0 10px;border-radius:8px;color:var(--ink2);white-space:nowrap;text-decoration:none}
+.navitem:hover{background:var(--tint)}
+.navitem.on{background:var(--card);color:var(--ink);box-shadow:0 0 0 1px var(--line)}
+.navitem svg{flex:none}
+.app.nav-icons .navitem span{display:none}
+.navsep{font-size:11px;color:var(--mute);padding:14px 10px 6px;letter-spacing:.04em;text-transform:uppercase}
+.app.nav-icons .navsep{visibility:hidden}
+.ic{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+
+/* page column */
+.stage{flex:1;min-width:0;display:flex;flex-direction:column;padding-right:var(--railOpen,0px);transition:padding-right .2s var(--ease)}
+.app.rail-open .stage{--railOpen:var(--railW)}
+.head{height:46px;flex:none;display:flex;align-items:center;gap:10px;padding:0 12px 0 6px}
+.head h1{font-size:14px;font-weight:600;margin:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.iconbtn{width:32px;height:32px;display:grid;place-items:center;border-radius:8px;color:var(--ink2);position:relative}
+.iconbtn:hover{background:var(--tint)}
+.iconbtn[aria-pressed=true]{background:var(--card);box-shadow:0 0 0 1px var(--line);color:var(--ink)}
+.badge{position:absolute;top:5px;right:5px;width:7px;height:7px;border-radius:50%;background:var(--ink)}
+.card{flex:1;min-height:0;background:var(--card);border:1px solid var(--line);border-radius:12px;margin:0 10px 10px 0;overflow:auto}
+.menuBtn{display:none}
+
+/* teacher page */
+.page{padding:28px clamp(16px,4vw,40px) 40px;max-width:1080px}
+.page h2{font-family:var(--serif);font-weight:500;font-size:28px;margin:0 0 4px}
+.sub{color:var(--mute);margin:0 0 22px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.panel{border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.panel h3{font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--mute);margin:0 0 10px}
+.num{font-family:var(--serif);font-size:30px}
+.row{display:flex;align-items:center;gap:10px;padding:9px 0;border-top:1px solid var(--line)}
+.row:first-of-type{border-top:0}
+.row .grow{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pill{font-size:11px;padding:2px 8px;border-radius:999px;border:1px solid var(--line2);color:var(--ink2);white-space:nowrap}
+.pill.dark{background:var(--ink);color:#fff;border-color:var(--ink)}
+.link{font-size:13px;text-decoration:underline;text-underline-offset:3px;color:var(--ink2);white-space:nowrap}
+.cal{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;font-size:12px}
+.cal div{border:1px solid var(--line);border-radius:6px;padding:6px;min-height:58px;min-width:0;overflow:hidden}
+.panel{min-width:0}
+.cal i{display:block;font-style:normal;background:var(--tint);border-radius:4px;padding:2px 4px;margin-top:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* rail */
+.rail{position:fixed;top:0;right:0;bottom:0;width:var(--railW);display:flex;flex-direction:column;transform:translateX(100%);transition:transform .2s var(--ease);background:var(--canvas)}
+.app.rail-open .rail{transform:none}
+.rhead{height:46px;flex:none;display:flex;align-items:center;gap:4px;padding:0 8px 0 4px}
+.views{display:flex;gap:2px;flex:none}
+.vbtn{width:30px;height:30px;display:grid;place-items:center;border-radius:8px;color:var(--mute)}
+.vbtn:hover{background:var(--tint);color:var(--ink)}
+.vbtn[aria-selected=true]{background:var(--card);color:var(--ink);box-shadow:0 0 0 1px var(--line)}
+.vsep{width:1px;height:18px;background:var(--line2);margin:0 4px;flex:none}
+.tabs{flex:1;min-width:0;display:flex;gap:2px;align-items:center;overflow:hidden}
+.tab{flex:none;display:flex;align-items:center;gap:5px;height:26px;padding:0 4px 0 9px;border-radius:8px;font-size:12px;color:var(--ink2);max-width:92px}
+.tab .nm{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tab:hover{background:var(--tint)}
+.tab.on{background:var(--ink);color:#fff}
+.tab .x{width:16px;height:16px;display:none;place-items:center;border-radius:4px;opacity:.8;flex:none}
+.tab:hover .x,.tab.on .x,.tab:focus-within .x{display:grid}
+.tab:not(.on){padding-right:9px}
+.tab:not(.on):hover{padding-right:4px}
+.tab .x:hover{background:rgba(127,127,127,.25)}
+.ind{display:flex;gap:3px;align-items:center;flex:none}
+.udot{width:6px;height:6px;border-radius:50%;background:var(--dot)}
+.tab.on .udot{background:#e8d9b8}
+.pen{width:11px;height:11px}
+.more{flex:none;height:26px;padding:0 8px;border-radius:8px;font-size:12px;color:var(--ink2);border:1px solid var(--line2)}
+.more:hover{background:var(--tint)}
+.rtitle{flex:1;font-size:13px;font-weight:600;padding-left:6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.back{display:none}
+.rbody{flex:1;min-height:0;display:flex;flex-direction:column;margin:0 10px 10px 0;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.ctx{flex:none;display:flex;align-items:baseline;gap:10px;padding:10px 14px;border-bottom:1px solid var(--line)}
+.ctx strong{flex:1;min-width:0;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.thread{flex:1;min-height:0;overflow:auto;padding:12px 14px;display:flex;flex-direction:column;gap:8px;position:relative}
+.msg{max-width:84%;padding:8px 11px;border-radius:12px;background:var(--tint);white-space:pre-wrap;word-wrap:break-word}
+.msg.me{align-self:flex-end;background:var(--ink);color:#fff}
+.msg.fail{background:#fff;color:var(--ink);border:1px dashed var(--danger)}
+.meta{font-size:11px;color:var(--mute);align-self:flex-start}
+.meta.me{align-self:flex-end}
+.divider{display:flex;align-items:center;gap:8px;font-size:11px;color:var(--dot);text-transform:uppercase;letter-spacing:.05em}
+.divider:before,.divider:after{content:"";flex:1;height:1px;background:currentColor;opacity:.4}
+.jump{position:absolute;left:50%;transform:translateX(-50%);bottom:76px;background:var(--ink);color:#fff;border-radius:999px;padding:5px 12px;font-size:12px;display:none;z-index:2}
+.composer{flex:none;border-top:1px solid var(--line);padding:10px;display:flex;gap:8px;align-items:flex-end;background:var(--card)}
+.composer textarea{flex:1;resize:none;border:1px solid var(--line2);border-radius:10px;padding:8px 10px;font:inherit;height:38px;min-height:38px;max-height:140px;background:#fff;color:var(--ink)}
+.send{height:38px;padding:0 14px;border-radius:10px;background:var(--ink);color:#fff;font-weight:600;font-size:13px}
+.send:disabled{opacity:.35;cursor:default}
+.empty{margin:auto;text-align:center;color:var(--mute);padding:24px}
+.empty b{display:block;color:var(--ink);font-weight:600;margin-bottom:4px}
+
+/* popovers */
+.pop{position:fixed;z-index:50;background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:0 12px 32px rgba(20,20,18,.12);padding:6px;width:300px;max-height:min(420px,70vh);overflow:auto;display:none}
+.pop.open{display:block}
+.pop h4{font-size:11px;font-weight:600;color:var(--mute);text-transform:uppercase;letter-spacing:.05em;margin:8px 10px 4px}
+.pop input{width:100%;border:1px solid var(--line2);border-radius:8px;padding:8px 10px;font:inherit;margin:4px 0 6px}
+.opt{display:flex;align-items:center;gap:10px;width:100%;text-align:left;padding:8px 10px;border-radius:8px}
+.opt:hover,.opt.hl{background:var(--tint)}
+.opt .grow{flex:1;min-width:0}
+.opt .grow span{display:block;font-size:12px;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.opt.read{color:var(--ink2)}
+.av{width:26px;height:26px;border-radius:50%;background:var(--tint);display:grid;place-items:center;font-size:11px;font-weight:600;flex:none}
+
+/* access + work */
+.sect{padding:12px 14px;overflow:auto;flex:1;min-height:0}
+.seg{display:flex;gap:2px;background:var(--tint);border-radius:9px;padding:2px;margin-bottom:10px}
+.seg button{flex:1;height:28px;border-radius:7px;font-size:12px;color:var(--ink2)}
+.seg button[aria-selected=true]{background:var(--card);color:var(--ink);box-shadow:0 0 0 1px var(--line)}
+.srow{display:flex;align-items:center;gap:10px;padding:10px 8px;border-radius:8px;border-top:1px solid var(--line)}
+.srow.flash{background:#f4efe4;transition:background 1.2s}
+.srow .grow{flex:1;min-width:0}
+.srow .grow span{display:block;font-size:12px;color:var(--mute)}
+.btn{height:30px;padding:0 12px;border-radius:8px;border:1px solid var(--line2);font-size:12px;font-weight:600;white-space:nowrap}
+.btn.dark{background:var(--ink);color:#fff;border-color:var(--ink)}
+.btn:hover{filter:brightness(.97)}
+.who{display:flex;align-items:center;gap:8px;padding:10px 14px;border-bottom:1px solid var(--line);font-size:13px}
+.who strong{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.resume{margin:10px 14px 0;padding:10px 12px;border:1px solid var(--ink);border-radius:10px;display:flex;align-items:center;gap:10px;font-size:13px}
+.resume .grow{flex:1;min-width:0}
+.search{width:100%;border:1px solid var(--line2);border-radius:8px;padding:8px 10px;font:inherit;margin-bottom:10px}
+.src{font-size:10px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--mute)}
+label.f{display:block;font-size:12px;color:var(--mute);margin:10px 0 4px}
+.field{width:100%;border:1px solid var(--line2);border-radius:8px;padding:8px 10px;font:inherit;background:#fff;color:var(--ink)}
+.toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:9px 14px;border-radius:10px;font-size:13px;z-index:80;display:none}
+.modal{position:fixed;inset:0;background:rgba(20,20,18,.28);display:none;place-items:center;z-index:90}
+.modal.open{display:grid}
+.modal .box{background:var(--card);border-radius:14px;padding:18px;width:min(360px,92vw);box-shadow:0 20px 50px rgba(0,0,0,.2)}
+.modal .box p{margin:0 0 14px;color:var(--ink2)}
+.modal .acts{display:flex;gap:8px;justify-content:flex-end}
+.proto{position:fixed;left:10px;bottom:10px;z-index:70;font-size:11px;color:var(--mute);background:var(--card);border:1px solid var(--line);border-radius:8px;padding:6px 8px;display:flex;gap:8px;align-items:center}
+.proto label{display:flex;gap:4px;align-items:center}
+
+/* tablet: nav becomes drawer */
+@media (max-width:1023px){
+  .nav{position:fixed;z-index:40;top:0;bottom:0;left:0;background:var(--canvas);transform:translateX(-100%);transition:transform .2s var(--ease);width:var(--navW)!important;box-shadow:0 0 0 1px var(--line)}
+  .app.nav-drawer .nav{transform:none}
+  .app.nav-icons .navitem span,.app.nav-icons .brand b{display:inline}
+  .app.nav-icons .navsep{visibility:visible}
+  .menuBtn{display:grid}
+  .card{margin-left:10px}
+}
+/* phone: rail full screen */
+@media (max-width:767px){
+  :root{--railW:100vw}
+  .app.rail-open .stage{--railOpen:0px}
+  .rail{z-index:60;height:var(--vvh,100dvh);bottom:auto}
+  .rbody{margin:0;border-radius:0;border-left:0;border-right:0;border-bottom:0}
+  .back{display:grid}
+  .card{margin:0;border-radius:0;border-left:0;border-right:0;border-bottom:0}
+  .proto{display:none}
+}
+@media (prefers-reduced-motion:reduce){ *{transition:none!important} }
+.boot *{transition:none!important}
+</style>
+</head>
+<body>
+<div class="app" id="app">
+  <nav class="nav" aria-label="Classroom">
+    <div class="brand"><b>LSAT U</b>
+      <button class="iconbtn" id="navToggle" aria-label="Collapse navigation" title="Collapse navigation"><svg class="ic" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M9 4v16"/></svg></button>
+    </div>
+    <a class="navitem on" href="#"><svg class="ic" viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg><span>Home</span></a>
+    <a class="navitem" href="#"><svg class="ic" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14.8c1.8.7 3 2.4 3.5 5.2"/></svg><span>Students</span></a>
+    <a class="navitem" href="#"><svg class="ic" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg><span>Assignments</span></a>
+    <a class="navitem" href="#"><svg class="ic" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span>Schedule</span></a>
+    <a class="navitem" href="#"><svg class="ic" viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4z"/></svg><span>Inbox</span></a>
+    <div class="navsep">Library</div>
+    <a class="navitem" href="#"><svg class="ic" viewBox="0 0 24 24"><path d="M4 4h6a2 2 0 0 1 2 2v14a2 2 0 0 0-2-2H4zM20 4h-6a2 2 0 0 0-2 2v14a2 2 0 0 1 2-2h6z"/></svg><span>Lessons</span></a>
+    <a class="navitem" href="#"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r=".5"/></svg><span>Drills</span></a>
+    <a class="navitem" href="#"><svg class="ic" viewBox="0 0 24 24"><path d="M5 3h10l4 4v14H5z"/><path d="M14 3v5h5"/></svg><span>Sessions and transcripts</span></a>
+  </nav>
+
+  <div class="stage">
+    <header class="head">
+      <button class="iconbtn menuBtn" id="menuBtn" aria-label="Open navigation"><svg class="ic" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      <h1>Teacher Home</h1>
+      <button class="iconbtn" id="bellBtn" aria-label="Alerts" aria-haspopup="true"><svg class="ic" viewBox="0 0 24 24"><path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15z"/><path d="M10 20a2 2 0 0 0 4 0"/></svg><span class="badge" id="bellBadge"></span></button>
+      <button class="iconbtn" id="railBtn" aria-label="Teacher rail" aria-pressed="false" title="Teacher rail (Ctrl + .)"><svg class="ic" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M15 4v16"/></svg></button>
+    </header>
+    <main class="card" id="pageCard">
+      <div class="page">
+        <h2>Good afternoon, Joshua</h2>
+        <p class="sub">Thursday, 2026-11-20 · 6 sessions today · 3 students waiting on you</p>
+        <div class="grid" style="margin-bottom:12px">
+          <div class="panel"><h3>Sessions this week</h3><div class="num">27 <small style="font-size:14px;color:var(--mute)">of 34</small></div></div>
+          <div class="panel"><h3>Homework due today</h3><div class="num">11</div></div>
+          <div class="panel"><h3>Unread messages</h3><div class="num" id="unreadNum">4</div></div>
+          <div class="panel"><h3>Needs access</h3><div class="num">2</div></div>
+        </div>
+        <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr));margin-bottom:12px">
+          <div class="panel"><h3>Today</h3><div id="todayRows"></div></div>
+          <div class="panel"><h3>Recent results</h3><div id="resultRows"></div></div>
+        </div>
+        <div class="panel"><h3>This week</h3>
+          <div class="cal">
+            <div>Mon<i>Ishaan 9:00</i><i>Celia 11:30</i><i>Dakota 4:00</i></div>
+            <div>Tue<i>Maximiliana 10:00</i><i>Avneet 1:00</i></div>
+            <div>Wed<i>Lydia 9:30</i><i>Sandra 3:00</i><i>Consult 6:00</i></div>
+            <div>Thu<i>Bartholomew 8:00</i><i>Celia 12:00</i><i>Venusa 5:15</i></div>
+            <div>Fri<i>Dakota 9:00</i><i>Avneet 2:30</i></div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <aside class="rail" id="rail" aria-label="Teacher rail">
+    <div class="rhead" id="rhead">
+      <button class="iconbtn back" id="backBtn" aria-label="Back to page"><svg class="ic" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <button class="vbtn vmenu" id="vmenu" aria-haspopup="true" aria-label="Switch view" title="Switch view" style="width:auto;padding:0 6px;gap:2px;display:flex;align-items:center"></button>
+      <div class="views" id="views" role="tablist" aria-label="Rail views">
+        <button class="vbtn" role="tab" data-view="messages" aria-label="Messages" title="Messages"><svg class="ic" viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4z"/></svg></button>
+        <button class="vbtn" role="tab" data-view="access" aria-label="Student access" title="Student access"><svg class="ic" viewBox="0 0 24 24"><circle cx="10" cy="8" r="3.5"/><path d="M3.5 20c.8-3.6 3.4-5.5 6.5-5.5 1.5 0 2.8.4 3.9 1.2"/><path d="M15.5 18.5l2 2 4-4.5"/></svg></button>
+        <button class="vbtn" role="tab" data-view="work" aria-label="Student work" title="Student work"><svg class="ic" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></button>
+      </div>
+      <span class="vsep"></span>
+      <div id="rheadMain" style="flex:1;min-width:0;display:flex;align-items:center;gap:4px"></div>
+    </div>
+    <div class="rbody" id="rbody"></div>
+  </aside>
+</div>
+
+<div class="pop" id="pop"></div>
+<div class="modal" id="modal"><div class="box"><p id="modalText"></p><div class="acts" id="modalActs"></div></div></div>
+<div class="toast" id="toast"></div>
+<div class="proto" title="Prototype controls, not part of the design">
+  Prototype:
+  <label><input type="checkbox" id="failSend"> fail next send</label>
+  <label><input type="checkbox" id="iconSwitch"> three view icons</label>
+  <button class="link" id="resetBtn">reset</button>
+</div>
+
+<script>
+const $=s=>document.querySelector(s);
+const S=[
+ {id:'mo',name:'Maximiliana Okonkwo-Fitzgerald',status:'active'},
+ {id:'bv',name:'Bartholomew Vanderhoeven-Castellanos',status:'active'},
+ {id:'cl',name:'Celia Lindqvist',status:'active'},
+ {id:'ds',name:'Dakota Saint-Laurent',status:'active'},
+ {id:'ak',name:'Avneet Kaur-Sandhu',status:'active'},
+ {id:'ly',name:'Lydia Yamamoto-Brennan',status:'active'},
+ {id:'ig',name:'Ishaan Gopalakrishnan',status:'active'},
+ {id:'sp',name:'Sandra Papadopoulou',status:'active'},
+ {id:'vn',name:'Venusa Ndlovu',status:'active'},
+ {id:'tr',name:'Theodora Rasmussen-Achebe',status:'needs'},
+ {id:'jw',name:'Jordan Whitfield',status:'needs'},
+ {id:'po',name:'Priya Oyelaran',status:'none'},
+];
+const byId=id=>S.find(s=>s.id===id);
+const first=id=>byId(id).name.split(' ')[0];
+const ini=id=>byId(id).name.split(/[ -]/).filter(Boolean).slice(0,2).map(w=>w[0]).join('');
+// synthetic threads
+const T={};
+const longLines=["Hi Joshua, I finished PT156 section 2.","I got 19 out of 25. Flaw questions keep getting me.","Can we go over 14 and 21 next session?","Also I'm not sure the RRC timing is right for me.","I tried reading slower and my accuracy went up but I ran out of time.","Should I keep doing the Negation Station drill this week?","Sorry, one more: is the Saturday slot still open?"];
+T.mo=[];for(let i=0;i<34;i++){T.mo.push({me:i%3===1,t:i%3===1?["Good. Walk me through your answer on 14 first.","Slower reading is the right trade for now. Speed comes back.","Yes, keep Negation Station. Three sets before Tuesday.","Send me what you wrote for the conclusion."][i%4]:longLines[i%longLines.length],time:'Nov '+(10+Math.floor(i/4))})}
+T.mo.slice(-3).forEach(m=>m.me=false);
+T.bv=[{me:false,t:"Is the conditional bootcamp ready yet?",time:'Nov 19'},{me:true,t:"Not yet. I'll tell you the day it opens.",time:'Nov 19'},{me:false,t:"Thanks. I uploaded my notes from last session.",time:'Nov 20'}];
+T.cl=[{me:true,t:"Start with PT105.S2 tonight.",time:'Nov 18'},{me:false,t:"Done! 22/25.",time:'Nov 19'}];
+T.ds=[{me:false,t:"Can I move Friday to 7:15?",time:'Nov 20'}];
+T.ak=[{me:true,t:"Your Smart Drill results look much steadier.",time:'Nov 17'}];
+T.ly=[{me:false,t:"Got it, thank you.",time:'Nov 15'}];
+T.ig=[{me:true,t:"See you Monday.",time:'Nov 14'}];
+T.sp=[{me:false,t:"How many sessions do I have left?",time:'Nov 20'}];
+const UNREAD0={mo:3,bv:1,ds:1,sp:1};
+const WORK={
+ mo:{assign:[["PT156 Section 2","Submitted","Nov 19"],["Negation Station ×3","In progress","Nov 18"],["Flaw primer","Done","Nov 12"],["RRC: Passage 4","Overdue","Nov 10"]],notes:[["Assigned note","Flaw: name the gap before the answers","Nov 18"],["Session recap","Session 11: timing vs accuracy","Nov 17"],["Meet transcript","Session 11 transcript","Nov 17"],["Session recap","Session 10: sufficient assumption","Nov 10"]]},
+ cl:{assign:[["PT105 Section 2","Done","Nov 19"],["Main Point drill","Done","Nov 14"]],notes:[["Session recap","Session 6: main point","Nov 14"],["Meet transcript","Session 6 transcript","Nov 14"]]},
+};
+const defWork=()=>({assign:[["Diagnostic","Done","Nov 2"]],notes:[["Session recap","First session","Nov 2"]]});
+const ALERTS=[
+ {id:1,kind:'msg',sid:'mo',text:'Maximiliana sent 3 messages',time:'4 min'},
+ {id:2,kind:'signup',sid:'jw',text:'Jordan Whitfield signed up',time:'22 min'},
+ {id:3,kind:'msg',sid:'ds',text:'Dakota asked to move Friday',time:'1 h'},
+ {id:4,kind:'hw',sid:'cl',text:'Celia submitted PT105 Section 2',time:'3 h'},
+ {id:5,kind:'signup',sid:'tr',text:'Theodora Rasmussen-Achebe signed up',time:'5 h'},
+];
+
+const KEY='teacherRail.v2'+(new URLSearchParams(location.search).get('k')||'');
+const fresh=()=>({open:true,view:'messages',tabs:['mo','bv','cl','ds','ak','ly'],active:'mo',drafts:{bv:"Thanks for the notes. One thing to fix before Tuesday"},unread:{...UNREAD0},scroll:{},sent:{},failed:{},workSel:null,follow:true,assignment:null,bellRead:[],accessTab:'needs',flash:null});
+let st; try{st=JSON.parse(sessionStorage.getItem(KEY))||fresh()}catch(e){st=fresh()}
+const save=()=>{try{sessionStorage.setItem(KEY,JSON.stringify(st))}catch(e){}};
+let navPref; try{navPref=localStorage.getItem('teacherNav')||'expanded'}catch(e){navPref='expanded'}
+
+const app=$('#app');
+function threadOf(id){return (T[id]||[]).concat(st.sent[id]||[])}
+function activeStudent(){return st.view==='messages'?st.active:(st.active)}
+function workStudent(){return st.follow?st.active:st.workSel}
+
+function layout(){
+  const w=innerWidth;
+  app.classList.toggle('rail-open',st.open);
+  $('#railBtn').setAttribute('aria-pressed',st.open);
+  // nav: saved pref; icons while rail open on 1024-1199 without changing pref
+  const auto= st.open && w>=1024 && w<1200;
+  app.classList.toggle('nav-icons', navPref==='icons'||auto);
+  $('#navToggle').setAttribute('aria-label',navPref==='icons'?'Expand navigation':'Collapse navigation');
+  $('#bellBadge').style.display=ALERTS.some(a=>!st.bellRead.includes(a.id))?'block':'none';
+  $('#unreadNum').textContent=Object.values(st.unread).reduce((a,b)=>a+b,0);
+}
+
+function svgPen(){return '<svg class="pen" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"/></svg>'}
+function svgX(){return '<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M6 6l12 12M18 6L6 18"/></svg>'}
+function stateLabel(id){const p=[];if(st.unread[id])p.push(st.unread[id]+' unread');if(st.drafts[id])p.push('unsent message');return p.join(', ')}
+
+const VIEWS={messages:'Messages',access:'Student access',work:'Student work'};
+function renderHead(){
+  document.querySelectorAll('.views .vbtn').forEach(b=>b.setAttribute('aria-selected',b.dataset.view===st.view));
+  const icons=!!st.iconSwitch; $('#iconSwitch').checked=icons;
+  $('#views').style.display=icons?'flex':'none'; $('#vmenu').style.display=icons?'none':'flex';
+  const cur=document.querySelector('.views .vbtn[data-view="'+st.view+'"] svg');
+  $('#vmenu').innerHTML=cur.outerHTML+'<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 9l6 6 6-6"/></svg>';
+  $('#vmenu').setAttribute('aria-label','View: '+VIEWS[st.view]+'. Switch view');
+  const m=$('#rheadMain');
+  if(st.view==='messages'){
+    m.innerHTML='<div class="tabs" id="tabs" role="tablist" aria-label="Open chats"></div><button class="more" id="moreBtn" hidden></button><button class="iconbtn" id="plusBtn" aria-label="New chat" title="New chat"><svg class="ic" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button><button class="iconbtn" id="inboxBtn" aria-label="Inbox" title="Inbox"><svg class="ic" viewBox="0 0 24 24"><path d="M3 13h5l1.5 3h5L16 13h5"/><path d="M5 5h14l2 8v6H3v-6z"/></svg>'+(Object.values(st.unread).some(Boolean)?'<span class="badge"></span>':'')+'</button>';
+    layoutTabs();
+    $('#plusBtn').onclick=e=>openPicker(e.currentTarget);
+    $('#inboxBtn').onclick=e=>openInbox(e.currentTarget);
+  } else {
+    m.innerHTML='<div class="rtitle">'+(st.view==='access'?'Student access':'Student work')+'</div>';
+  }
+}
+function tabHTML(id){
+  const on=id===st.active;
+  const lab=byId(id).name+(stateLabel(id)?', '+stateLabel(id):'');
+  return '<div class="tab'+(on?' on':'')+'" data-id="'+id+'"><button class="nm" role="tab" aria-selected="'+on+'" aria-label="'+lab+'" title="'+byId(id).name+'">'+first(id)+'</button><span class="ind">'+(st.unread[id]?'<span class="udot" aria-hidden="true"></span>':'')+(st.drafts[id]?svgPen():'')+'</span><button class="x" aria-label="Close chat with '+byId(id).name+'">'+svgX()+'</button></div>';
+}
+function layoutTabs(){
+  const box=$('#tabs'),more=$('#moreBtn');
+  // order: keep st.tabs order; ensure active visible
+  let order=st.tabs.slice();
+  box.innerHTML=order.map(tabHTML).join('');
+  more.hidden=true;
+  let hidden=[];
+  const fits=()=>box.scrollWidth<=box.clientWidth+1;
+  if(!fits()){
+    more.hidden=false;
+    let vis=order.slice();
+    while(vis.length>1){
+      // drop the last non-active tab
+      let i=vis.length-1; if(vis[i]===st.active)i--;
+      hidden.unshift(vis.splice(i,1)[0]);
+      box.innerHTML=vis.map(tabHTML).join('');
+      more.textContent='+'+hidden.length;
+      if(fits())break;
+    }
+    const hiddenFlag=hidden.some(id=>st.unread[id]||st.drafts[id]);
+    more.innerHTML='+'+hidden.length+(hiddenFlag?' <span class="udot" style="display:inline-block;vertical-align:middle"></span>':'');
+    more.setAttribute('aria-label',hidden.length+' more open chats');
+    more.onclick=e=>openMore(e.currentTarget,hidden);
+  }
+  box.querySelectorAll('.tab').forEach(t=>{
+    const id=t.dataset.id;
+    t.querySelector('.nm').onclick=()=>focusChat(id);
+    t.querySelector('.x').onclick=()=>closeTab(id);
+  });
+}
+
+function renderBody(){
+  const b=$('#rbody');
+  if(st.view==='messages') return renderChat(b);
+  if(st.view==='access') return renderAccess(b);
+  return renderWork(b);
+}
+function renderChat(b){
+  const id=st.active;
+  if(!id){b.innerHTML='<div class="empty"><b>No open chats</b>Press + to message a student.</div>';return}
+  const msgs=threadOf(id);
+  const firstUnread=st.unread[id]?msgs.length-st.unread[id]:-1;
+  b.innerHTML='<div class="ctx"><strong>'+byId(id).name+'</strong><a class="link" href="#" onclick="toast(\'Opens '+first(id)+'\\\'s student record\');return false">Open student record</a></div>'+
+  '<div class="thread" id="thread" aria-live="polite">'+(msgs.length?'':'<div class="empty"><b>New conversation</b>Nothing is created until you send.</div>')+
+  msgs.map((m,i)=>(i===firstUnread?'<div class="divider">New messages</div>':'')+'<div class="msg'+(m.me?' me':'')+(m.fail?' fail':'')+'">'+esc(m.t)+'</div>'+(m.fail?'<div class="meta me" style="color:var(--danger)">Not sent. <button class="link" onclick="retry(\''+id+'\','+(i-(T[id]||[]).length)+')">Retry</button></div>':(i===msgs.length-1||msgs[i+1].me!==m.me?'<div class="meta'+(m.me?' me':'')+'">'+m.time+'</div>':''))).join('')+
+  '</div><button class="jump" id="jump">Jump to latest</button>'+
+  '<div class="composer"><textarea id="ta" rows="1" placeholder="Message '+first(id)+'" aria-label="Message to '+byId(id).name+'"></textarea><button class="send" id="sendBtn">Send</button></div>';
+  const th=$('#thread'),ta=$('#ta');
+  ta.value=st.drafts[id]||'';
+  grow(ta);$('#sendBtn').disabled=!ta.value.trim();
+  if(st.scroll[id]!=null) th.scrollTop=st.scroll[id];
+  else { const d=th.querySelector('.divider'); if(d) th.scrollTop=d.offsetTop-12; else th.scrollTop=th.scrollHeight; }
+  const nearBottom=()=>th.scrollHeight-th.scrollTop-th.clientHeight<40;
+  const upd=()=>{$('#jump').style.display=nearBottom()?'none':'block'};
+  th.onscroll=()=>{st.scroll[id]=th.scrollTop;save();upd()};upd();
+  $('#jump').onclick=()=>{th.scrollTop=th.scrollHeight};
+  if(st.unread[id]){setTimeout(()=>{st.unread[id]=0;save();layout();renderHead()},1200)}
+  ta.oninput=()=>{const had=!!st.drafts[id];if(ta.value)st.drafts[id]=ta.value;else delete st.drafts[id];save();grow(ta);$('#sendBtn').disabled=!ta.value.trim();if(had!==!!st.drafts[id])renderHeadKeepFocus()};
+  ta.onkeydown=e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();send(id)}};
+  $('#sendBtn').onclick=()=>send(id);
+}
+function renderHeadKeepFocus(){const a=document.activeElement,s=a&&a.selectionStart;renderHead();if(a&&a.id==='ta'){a.focus();a.selectionStart=a.selectionEnd=s}}
+function grow(t){t.style.height='';if(t.value&&t.scrollHeight>t.clientHeight)t.style.height=Math.min(140,t.scrollHeight+2)+'px'}
+function esc(s){return s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+function send(id){
+  const ta=$('#ta');const txt=ta.value.trim();if(!txt)return;
+  const fail=$('#failSend').checked; $('#failSend').checked=false;
+  (st.sent[id]=st.sent[id]||[]).push({me:true,t:txt,time:'now',fail});
+  delete st.drafts[id]; delete st.scroll[id]; save(); renderAll();
+  if(fail) toast('Message not sent. It is kept below with Retry.');
+  const th=$('#thread');th.scrollTop=th.scrollHeight;
+}
+window.retry=(id,i)=>{const m=st.sent[id][i];m.fail=false;save();renderAll();toast('Sent');}
+
+function renderAccess(b){
+  const needs=S.filter(s=>s.status==='needs'),all=S.filter(s=>s.status!=='needs');
+  const list=st.accessTab==='needs'?needs:all;
+  b.innerHTML='<div class="sect"><div class="seg" role="tablist"><button role="tab" data-t="needs" aria-selected="'+(st.accessTab==='needs')+'">Needs access · '+needs.length+'</button><button role="tab" data-t="all" aria-selected="'+(st.accessTab==='all')+'">All students</button></div>'+
+  '<input class="search" placeholder="Search students" aria-label="Search students" oninput="filterRows(this.value)">'+
+  list.map(s=>'<div class="srow'+(st.flash===s.id?' flash':'')+'" data-name="'+s.name.toLowerCase()+'" id="row-'+s.id+'"><span class="av">'+ini(s.id)+'</span><div class="grow"><b style="font-weight:600">'+s.name+'</b><span>'+(s.status==='needs'?'Signed up today · no access yet':s.status==='none'?'Account only':'Drills, Lessons, Homework')+'</span></div>'+(s.status==='needs'?'<button class="btn dark" onclick="grant(\''+s.id+'\')">Give access</button>':'<button class="btn" onclick="toast(\'Opens access settings\')">Manage</button>')+'</div>').join('')+'</div>';
+  b.querySelectorAll('.seg button').forEach(x=>x.onclick=()=>{st.accessTab=x.dataset.t;save();renderBody()});
+  if(st.flash){const r=$('#row-'+st.flash);if(r){r.scrollIntoView({block:'center'});setTimeout(()=>r.classList.remove('flash'),1500)}st.flash=null;save()}
+}
+window.filterRows=q=>document.querySelectorAll('.srow').forEach(r=>r.style.display=r.dataset.name.includes(q.toLowerCase())?'':'none');
+window.grant=id=>{byId(id).status='active';toast(byId(id).name+' now has access');renderBody()};
+
+function renderWork(b){
+  const sid=workStudent();
+  const a=st.assignment;
+  let h='<div class="who">'+(sid?'<span class="av">'+ini(sid)+'</span><strong>'+byId(sid).name+'</strong>':'<strong>No student selected</strong>')+
+   (st.follow?'<span class="pill">Following active</span>':'<button class="link" onclick="followActive()">Follow active student</button>')+
+   '<button class="link" onclick="pickWork(this)">Change</button></div>';
+  if(a && !st.building) h+='<div class="resume"><div class="grow"><b>Assignment in progress</b><br><span style="color:var(--mute)">'+(a.title||'Untitled')+' · for '+byId(a.sid).name+'</span></div><button class="btn dark" onclick="resumeA()">Resume</button></div>';
+  if(st.building){
+    h+='<div class="sect"><div class="src">Assignment in progress</div><div style="font-weight:600;margin:4px 0 2px">For '+byId(a.sid).name+'</div><div style="font-size:12px;color:var(--mute)">This stays with '+first(a.sid)+' while you switch chats.</div>'+
+    '<label class="f" for="aT">What to assign</label><select class="field" id="aT"><option value="">Choose…</option>'+['PT156 Section 3','Negation Station','Flaw primer','RRC: Passage 5','Smart Drill: Weaken'].map(o=>'<option'+(a.title===o?' selected':'')+'>'+o+'</option>').join('')+'</select>'+
+    '<label class="f" for="aD">Due</label><input class="field" id="aD" type="date" value="'+(a.due||'')+'">'+
+    '<label class="f" for="aN">Note to '+first(a.sid)+'</label><textarea class="field" id="aN" rows="4">'+esc(a.note||'')+'</textarea>'+
+    '<div style="display:flex;gap:8px;margin-top:14px"><button class="btn" onclick="discardA()">Discard</button><span style="flex:1"></span><button class="btn" onclick="st.building=false;save();renderBody()">Done for now</button><button class="btn dark" onclick="submitA()">Assign to '+first(a.sid)+'</button></div></div>';
+    b.innerHTML=h;
+    ['aT','aD','aN'].forEach(k=>$('#'+k).oninput=()=>{a.title=$('#aT').value;a.due=$('#aD').value;a.note=$('#aN').value;save()});
+    return;
+  }
+  const w=(sid&&WORK[sid])||defWork();
+  h+='<div class="sect"><div style="display:flex;gap:8px;align-items:center;margin-bottom:10px"><input class="search" style="margin:0" placeholder="Search assignments, notes, recaps, transcripts" aria-label="Search student work" oninput="filterRows(this.value)"><button class="btn dark" onclick="newA()" '+(sid?'':'disabled')+'>New</button></div>'+
+  '<div class="src" style="margin:6px 0 2px">Recent assignments</div>'+w.assign.map(x=>'<div class="srow" data-name="'+x[0].toLowerCase()+'"><div class="grow"><b style="font-weight:500">'+x[0]+'</b><span>'+x[2]+'</span></div><span class="pill'+(x[1]==='Overdue'?' dark':'')+'">'+x[1]+'</span></div>').join('')+
+  '<div class="src" style="margin:16px 0 2px">Notes, recaps and transcripts</div>'+w.notes.map(x=>'<div class="srow" data-name="'+(x[0]+' '+x[1]).toLowerCase()+'"><div class="grow"><span class="src" style="font-size:9px">'+x[0]+'</span><b style="font-weight:500;display:block">'+x[1]+'</b><span>'+x[2]+'</span></div><button class="link" onclick="toast(\'Opens the record\')">Open</button></div>').join('')+'</div>';
+  b.innerHTML=h;
+}
+window.followActive=()=>{st.follow=true;st.workSel=null;save();renderBody()};
+window.newA=()=>{const sid=workStudent();if(st.assignment){ask('You have an assignment in progress for '+byId(st.assignment.sid).name+'.',[['Discard and start new',()=>{st.assignment={sid};st.building=true;save();renderBody()}],['Resume current',()=>{st.building=true;save();renderBody()},1]])}else{st.assignment={sid};st.building=true;save();renderBody()}};
+window.resumeA=()=>{st.building=true;save();renderBody()};
+window.discardA=()=>ask('Discard the assignment for '+byId(st.assignment.sid).name+'? This cannot be undone.',[['Keep it',()=>{}],['Discard',()=>{st.assignment=null;st.building=false;save();renderBody()},1]]);
+window.submitA=()=>{const a=st.assignment;if(!a.title){toast('Choose what to assign first');return}if($('#failSend').checked){$('#failSend').checked=false;toast('Could not assign. Your edits are kept. Try again.');return}(WORK[a.sid]=WORK[a.sid]||defWork()).assign.unshift([a.title,'Assigned','Nov 20']);toast('Assigned to '+byId(a.sid).name);st.assignment=null;st.building=false;save();renderBody()};
+window.pickWork=el=>openPicker(el,id=>{st.follow=false;st.workSel=id;save();renderBody()});
+
+/* actions */
+function focusChat(id,{fromAlert}={}){
+  if(!st.tabs.includes(id))st.tabs.push(id);
+  st.active=id;st.view='messages';st.open=true;save();renderAll();
+}
+function closeTab(id){
+  const doClose=()=>{const i=st.tabs.indexOf(id);st.tabs.splice(i,1);delete st.drafts[id];delete st.scroll[id];if(st.active===id)st.active=st.tabs[Math.min(i,st.tabs.length-1)]||null;save();renderAll()};
+  if(st.drafts[id]) ask('Discard your unsent message to '+byId(id).name+'?',[['Keep open',()=>{}],['Discard and close',doClose,1]]); else doClose();
+}
+function place(pop,anchor){const r=anchor.getBoundingClientRect();pop.classList.add('open');const w=Math.min(300,innerWidth-16);pop.style.width=w+'px';pop.style.top=(r.bottom+6)+'px';pop.style.left=Math.max(8,Math.min(innerWidth-w-8,r.right-w))+'px';}
+function closePop(){$('#pop').classList.remove('open')}
+function openPicker(anchor,cb){
+  const p=$('#pop');
+  p.innerHTML='<h4>'+(cb?'Show work for':'Message a student')+'</h4><input id="pq" placeholder="Search by name" aria-label="Search students"><div id="pl"></div>';
+  const draw=q=>{$('#pl').innerHTML=S.filter(s=>s.name.toLowerCase().includes(q.toLowerCase())).map(s=>'<button class="opt" data-id="'+s.id+'"><span class="av">'+ini(s.id)+'</span><span class="grow">'+s.name+'<span>'+(st.tabs.includes(s.id)?'Open tab':T[s.id]?'Existing conversation':'No conversation yet')+'</span></span></button>').join('');
+    p.querySelectorAll('.opt').forEach(o=>o.onclick=()=>{closePop();cb?cb(o.dataset.id):focusChat(o.dataset.id)})};
+  draw('');place(p,anchor);$('#pq').oninput=e=>draw(e.target.value);$('#pq').focus();
+  $('#pq').onkeydown=e=>{if(e.key==='Enter'){const o=p.querySelector('.opt');o&&o.click()}};
+}
+function openInbox(anchor){
+  const p=$('#pop');const ids=Object.keys(T).sort((a,b)=>(st.unread[b]||0)-(st.unread[a]||0));
+  p.innerHTML='<h4>Inbox</h4>'+ids.map(id=>{const m=threadOf(id).slice(-1)[0];return '<button class="opt'+(st.unread[id]?'':' read')+'" data-id="'+id+'"><span class="av">'+ini(id)+'</span><span class="grow">'+(st.unread[id]?'<b>':'')+byId(id).name+(st.unread[id]?'</b>':'')+'<span>'+(m?esc(m.t):'')+'</span></span>'+(st.unread[id]?'<span class="udot"></span>':'')+'</button>'}).join('');
+  place(p,anchor);p.querySelectorAll('.opt').forEach(o=>o.onclick=()=>{closePop();focusChat(o.dataset.id)});
+}
+function openMore(anchor,hidden){
+  const p=$('#pop');p.innerHTML='<h4>More open chats</h4>'+hidden.map(id=>'<button class="opt" data-id="'+id+'"><span class="av">'+ini(id)+'</span><span class="grow">'+byId(id).name+'<span>'+(stateLabel(id)||'No changes')+'</span></span><span class="ind">'+(st.unread[id]?'<span class="udot"></span>':'')+(st.drafts[id]?svgPen():'')+'</span></button>').join('');
+  place(p,anchor);p.querySelectorAll('.opt').forEach(o=>o.onclick=()=>{closePop();const id=o.dataset.id;st.tabs.splice(st.tabs.indexOf(id),1);st.tabs.unshift(id);focusChat(id)});
+}
+function openBell(anchor){
+  const p=$('#pop');
+  p.innerHTML='<h4>Alerts</h4>'+ALERTS.map(a=>'<button class="opt'+(st.bellRead.includes(a.id)?' read':'')+'" data-id="'+a.id+'"><span class="av">'+ini(a.sid)+'</span><span class="grow">'+(st.bellRead.includes(a.id)?'':'<b>')+a.text+(st.bellRead.includes(a.id)?'':'</b>')+'<span>'+a.time+' ago</span></span></button>').join('');
+  place(p,anchor);
+  ALERTS.forEach(a=>{if(!st.bellRead.includes(a.id))st.bellRead.push(a.id)});save();layout();
+  p.querySelectorAll('.opt').forEach(o=>o.onclick=()=>{closePop();const a=ALERTS.find(x=>x.id==o.dataset.id);
+    if(a.kind==='msg')focusChat(a.sid);
+    else if(a.kind==='signup'){st.open=true;st.view='access';st.accessTab=byId(a.sid).status==='needs'?'needs':'all';st.flash=a.sid;save();renderAll()}
+    else toast('Opens '+first(a.sid)+'\'s submission page')});
+}
+function ask(text,acts){$('#modalText').textContent=text;$('#modalActs').innerHTML='';acts.forEach(([l,f,dark])=>{const b=document.createElement('button');b.className='btn'+(dark?' dark':'');b.textContent=l;b.onclick=()=>{$('#modal').classList.remove('open');f()};$('#modalActs').appendChild(b)});$('#modal').classList.add('open');$('#modalActs').lastChild.focus()}
+let tt;window.toast=t=>{const e=$('#toast');e.textContent=t;e.style.display='block';clearTimeout(tt);tt=setTimeout(()=>e.style.display='none',2600)};
+
+function renderAll(){layout();renderHead();renderBody()}
+
+// static page rows
+$('#todayRows').innerHTML=[['9:00','Ishaan Gopalakrishnan','Done'],['11:30','Maximiliana Okonkwo-Fitzgerald','Next'],['1:00','Avneet Kaur-Sandhu',''],['3:00','Sandra Papadopoulou',''],['5:15','Venusa Ndlovu',''],['7:15','Dakota Saint-Laurent','Requested']].map(r=>'<div class="row"><span style="width:44px;color:var(--mute)">'+r[0]+'</span><span class="grow">'+r[1]+'</span>'+(r[2]?'<span class="pill'+(r[2]==='Next'?' dark':'')+'">'+r[2]+'</span>':'')+'</div>').join('');
+$('#resultRows').innerHTML=[['Celia Lindqvist','PT105 S2','22/25'],['Maximiliana Okonkwo-Fitzgerald','PT156 S2','19/25'],['Bartholomew Vanderhoeven-Castellanos','Flaw set','11/15'],['Avneet Kaur-Sandhu','Smart Drill','14/20']].map(r=>'<div class="row"><span class="grow">'+r[0]+'</span><span style="color:var(--mute);white-space:nowrap">'+r[1]+'</span><b style="font-family:var(--serif);font-weight:500">'+r[2]+'</b></div>').join('');
+
+// wiring
+$('#railBtn').onclick=()=>{st.open=!st.open;save();renderAll()};
+$('#backBtn').onclick=()=>{st.open=false;save();renderAll()};
+$('#bellBtn').onclick=e=>{e.stopPropagation();openBell(e.currentTarget)};
+$('#navToggle').onclick=()=>{if(innerWidth<1024){app.classList.remove('nav-drawer');return}navPref=navPref==='icons'?'expanded':'icons';try{localStorage.setItem('teacherNav',navPref)}catch(e){}layout()};
+$('#menuBtn').onclick=()=>app.classList.add('nav-drawer');
+document.querySelectorAll('.views .vbtn').forEach(b=>b.onclick=()=>{st.view=b.dataset.view;st.building=st.view==='work'&&st.building;save();renderHead();renderBody()});
+$('#iconSwitch').onchange=e=>{st.iconSwitch=e.target.checked;save();renderHead()};
+$('#vmenu').onclick=e=>{e.stopPropagation();const p=$('#pop');p.innerHTML='<h4>Rail view</h4>'+Object.entries(VIEWS).map(([k,l])=>'<button class="opt'+(k===st.view?' hl':'')+'" data-v="'+k+'">'+document.querySelector('.views .vbtn[data-view="'+k+'"] svg').outerHTML+'<span class="grow">'+l+'</span>'+(k===st.view?'✓':'')+'</button>').join('');place(p,e.currentTarget);p.style.left=e.currentTarget.getBoundingClientRect().left+'px';p.querySelectorAll('.opt').forEach(o=>o.onclick=()=>{closePop();st.view=o.dataset.v;save();renderHead();renderBody()})};
+$('#resetBtn').onclick=()=>{st=fresh();save();renderAll()};
+document.addEventListener('click',e=>{const p=$('#pop');if(p.classList.contains('open')&&!p.contains(e.target)&&!e.target.closest('#plusBtn,#inboxBtn,#moreBtn,#bellBtn,#vmenu')&&!e.target.closest('.link'))closePop();if(app.classList.contains('nav-drawer')&&!e.target.closest('.nav,#menuBtn'))app.classList.remove('nav-drawer')});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closePop();$('#modal').classList.remove('open')}if((e.ctrlKey||e.metaKey)&&e.key==='.'){e.preventDefault();$('#railBtn').click()}});
+let rt;addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(()=>{layout();if(st.view==='messages')layoutTabs()},60)});
+// phone keyboard: size the rail to the visual viewport
+if(window.visualViewport){const vv=()=>document.documentElement.style.setProperty('--vvh',visualViewport.height+'px');visualViewport.addEventListener('resize',vv);vv()}
+app.classList.add('boot');renderAll();requestAnimationFrame(()=>requestAnimationFrame(()=>app.classList.remove('boot')));
+</script>
+</body>
+</html>

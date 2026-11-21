@@ -1,0 +1,31 @@
+
+[1m[46m RUN [49m[22m [36mv3.2.7 [39m[90mC:/Users/Joshu/dev/ai-os-projects/lsatu-my-work-20261026[39m
+
+ [32m✓[39m src/components/classroom/home/teacher/teacherWeek.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 43[2mms[22m[39m
+ [32m✓[39m src/components/classroom/home/homeStyles.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 35[2mms[22m[39m
+ [32m✓[39m src/components/classroom/home/teacher/PostSessionWork.test.tsx [2m([22m[2m8 tests[22m[2m)[22m[33m 1616[2mms[22m[39m
+   [33m[2m✓[22m[39m After-session work[2m > [22mdoes not claim a stale or never-checked calendar is up to date [33m 688[2mms[22m[39m
+   [33m[2m✓[22m[39m After-session work[2m > [22mmarks a conflicting automatic transcript for review [33m 402[2mms[22m[39m
+ [32m✓[39m src/components/classroom/home/teacher/TeachingDesk.test.tsx [2m([22m[2m10 tests[22m[2m)[22m[33m 4438[2mms[22m[39m
+   [33m[2m✓[22m[39m Teaching desk interactions[2m > [22mcaps Home at two sessions using the true total and preserves unsaved input across disclosure [33m 2756[2mms[22m[39m
+   [33m[2m✓[22m[39m Teaching desk interactions[2m > [22mtracks preparation and confirmed posting as separate persisted actions [33m 762[2mms[22m[39m
+   [33m[2m✓[22m[39m Teaching desk interactions[2m > [22mloads filtered history pages and reopens through the revisioned manual writer [33m 304[2mms[22m[39m
+ [32m✓[39m src/components/classroom/home/teacher/TeacherHomeView.test.tsx [2m([22m[2m22 tests[22m[2m)[22m[33m 11545[2mms[22m[39m
+   [33m[2m✓[22m[39m TeacherHomeView[2m > [22muses an accessible More menu that closes on Escape and returns focus [33m 3258[2mms[22m[39m
+   [33m[2m✓[22m[39m TeacherHomeView[2m > [22mhands More selection to the booking sheet and returns to an interactive page [33m 840[2mms[22m[39m
+   [33m[2m✓[22m[39m TeacherHomeView[2m > [22mkeeps Assign work in the header without a student assignment promotion [33m 350[2mms[22m[39m
+   [33m[2m✓[22m[39m TeacherHomeView[2m > [22mshows the canonical unread total while capping previews at two and opens the exact conversation [33m 668[2mms[22m[39m
+   [33m[2m✓[22m[39m TeacherHomeView[2m > [22mdoes not confuse missing provider setup with an empty healthy queue [33m 428[2mms[22m[39m
+   [33m[2m✓[22m[39m TeacherHomeView[2m > [22mseparates unknown inbox and activity from empty data [33m 776[2mms[22m[39m
+   [33m[2m✓[22m[39m TeacherHomeView[2m > [22mqualifies a stale empty inbox and retains cached unread rows [33m 754[2mms[22m[39m
+   [33m[2m✓[22m[39m TeacherHomeView[2m > [22msearches beyond recent students, supports accent-insensitive Enter and Escape [33m 507[2mms[22m[39m
+   [33m[2m✓[22m[39m TeacherHomeView[2m > [22mkeeps the recent-visit area small and never labels a heartbeat Online now [33m 318[2mms[22m[39m
+   [33m[2m✓[22m[39m Teacher Home provider setup rendering[2m > [22mkeeps the desk rendered when email has the live array-free setup envelope [33m 526[2mms[22m[39m
+   [33m[2m✓[22m[39m teacher seven-day calendar[2m > [22mgroups upcoming starts in the connected zone and preserves partial snapshot qualifications [33m 1891[2mms[22m[39m
+   [33m[2m✓[22m[39m teacher seven-day calendar[2m > [22mmoves today at calendar-zone midnight while retaining the snapshot date [33m 653[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m5 passed[39m[22m[90m (5)[39m
+[2m      Tests [22m [1m[32m50 passed[39m[22m[90m (50)[39m
+[2m   Start at [22m 14:39:02
+[2m   Duration [22m 30.30s[2m (transform 2.66s, setup 2.50s, collect 10.45s, tests 17.68s, environment 34.57s, prepare 1.80s)[22m
+

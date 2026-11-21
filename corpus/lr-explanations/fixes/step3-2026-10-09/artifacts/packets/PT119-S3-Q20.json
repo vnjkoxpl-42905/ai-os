@@ -1,0 +1,84 @@
+{
+ "qid": "PT119-S3-Q20",
+ "type": "Necessary Assumption",
+ "difficulty": "3",
+ "key_db": "C",
+ "stimulus_db": "Scientist: Genetic engineering has aided new developments in many different fields. But because these techniques require the manipulation of the genetic codes of organisms, they are said to be unethical. What the critics fail to realize is that this kind of manipulation has been going on for millennia; virtually every farm animal is the result of selective breeding for desired traits. Since selective breeding is genetic engineering of a crude sort, genetic engineering is not unethical.",
+ "stem_db": "Which one of the following is an assumption on which the scientist's argument depends?",
+ "choices_db": {
+  "A": "The manipulation of the genetic code of organisms is never unethical.",
+  "B": "Anything that is accomplished by nature is not unethical to accomplish with science.",
+  "C": "The manipulation of the genetic code through selective breeding for desired traits is not unethical.",
+  "D": "The manipulation of the genetic code through selective breeding for desired traits is important for human survival.",
+  "E": "Science can accomplish only what is already in some sense natural, and nothing natural is unethical."
+ },
+ "bank": {
+  "stimulus": "Scientist: Genetic engineering has aided new developments in many different fields. But because these techniques require the manipulation of the genetic codes of organisms, they are said to be unethical. What the critics fail to realize is that this kind of manipulation has been going on for millennia; virtually every farm animal is the result of selective breeding for desired traits. Since selective breeding is genetic engineering of a crude sort, genetic engineering is not unethical.",
+  "stem": "Which one of the following is an assumption on which the scientist's argument depends?",
+  "choices": {
+   "A": "The manipulation of the genetic code of organisms is never unethical.",
+   "B": "Anything that is accomplished by nature is not unethical to accomplish with science.",
+   "C": "The manipulation of the genetic code through selective breeding for desired traits is not unethical.",
+   "D": "The manipulation of the genetic code through selective breeding for desired traits is important for human survival.",
+   "E": "Science can accomplish only what is already in some sense natural, and nothing natural is unethical."
+  },
+  "key": "C"
+ },
+ "explanation_id": "3dbbe7ec-5548-455f-b9e4-fa006c62eaf5",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "5bff2286-8e79-451a-95ee-610f390c6ac0",
+   "position": 0,
+   "label": "Conclusion",
+   "body": "Genetic engineering is not unethical. rephrase: It's okay to do genetic engineering."
+  },
+  {
+   "row_id": "a8cb4263-3aff-491c-b9a5-6c2cedcbb08e",
+   "position": 1,
+   "label": "Evidence",
+   "body": "Selective breeding, as we've done with farm animals for millennia, is a crude form of genetic engineering."
+  },
+  {
+   "row_id": "f1ab5847-6ef7-4571-97c9-15d2dac5a986",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "The author is arguing both by appeal to analogy and to tradition.\nShe's saying, \"Since we've done genetic engineering for millennia, it's ok to keep doing it\". This assumes that anything we've done for millennia couldn't be unethical.\nThat doesn't seem like sound logic. Slavery existed for centuries, if not millennia, and it is clearly unethical.\nThe other structure at play here is the argument by analogy, where we say, \"Since these two things have X in common, they have Y in common.\" Let's look at the two things and what similarities they're meant to have in common:\nPicking which farm animals Manipulating the genetic you want to use for breeding codes of organisms intended similarity 1: they're both a form of genetic engineering intended similarity 2: they're both ok (not unethical) We might dispute either of the intended similarities. Is it really fair to say that both of these things are genetic engineering? Or is this equivocation? One of them literally means manipulating the genetic code of a living organism. The other one is talking about organizing which two things will have sex. Is it really fair to say they're both ok? Who ever said that crude farm-based genetic engineering we've been doing for millennia is actually ethical?"
+  },
+  {
+   "row_id": "e81c2c4a-d249-4334-b88c-446aad548525",
+   "position": 3,
+   "label": "Goal",
+   "body": "The answer might deal with the \"if we've been doing it a while, then it's ethical\" missing link. It might deal with the author's assumption that farm-breeding and genetic-code-manipulation are really relevantly similar forms of genetic engineering. It might deal with a missing piece of the author's analogy: that farm-based selective breeding itself is ok / ethical."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "bbc83bd7-a43f-448d-8303-87715ee990a2",
+   "letter": "A",
+   "body": "\"Never unethical\" covers every possible case. The scientist only needs selective breeding, and genetic engineering like it, to be acceptable."
+  },
+  {
+   "row_id": "24dabea0-eb2c-4347-b6c6-43e836b49b17",
+   "letter": "B",
+   "body": "This is the most popular wrong answer, and it is easy to see why: it sounds like a defense of genetic engineering. But the scientist's argument is about a long human *practice* (selective breeding), not about what nature does. Negate B and the argument still stands."
+  },
+  {
+   "row_id": "9d05888d-1674-455d-9d01-37cd5e465428",
+   "letter": "C",
+   "body": "Negate it: \"selective breeding for desired traits *is* unethical.\" Then pointing out that we have done it for millennia only shows we have been doing something wrong for a long time. It no longer clears genetic engineering, and the conclusion falls."
+  },
+  {
+   "row_id": "710820c3-cac8-4ec5-95cc-9d798666d4e0",
+   "letter": "D",
+   "body": "Whether selective breeding is important for survival says nothing about whether it is ethical."
+  },
+  {
+   "row_id": "7ca72712-983a-4b7c-9943-b462ce4f7f8c",
+   "letter": "E",
+   "body": "A sweeping claim about science and nature that the argument never uses."
+  }
+ ],
+ "known_problem": "Breakdown only; all five choice notes missing.",
+ "tags": "no-notes"
+}

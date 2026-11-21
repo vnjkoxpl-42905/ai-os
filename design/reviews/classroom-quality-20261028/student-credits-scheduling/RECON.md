@@ -1,0 +1,8 @@
+# Source recon
+Student authenticatedbooking binds JWT; teacher mustuse selectedvalidatedprivatepassslug publicadapter. Sharedpublicbooking bookingCore+redeem_booking_pass_v2 ownsavailability/creditdebit/collision/calendar/notifications. Successfulresponse ok:true,redemptionid/start/statusbooked,was_existing; pendingcalendar/Meetnull stillcommitted. Freshbusyguard precedesRPCdedupe, so networkunknown retryneedsbaselineIDreadback andsamekey. No realAPIchecksperformed.
+
+Roster source: useTeachingDesk.ts162-170 singleadmin-manage-usersGETfiltersadmins/archived. Defaultbackendprofile/rolequeriesunpaginated, authsingleperPage1000. Mustpaginateallthree and failreaderrorratherthanpartialeligibility. Preservelegitimateorphanprofileemailunknown aftercompleteauthscan (resolveStudentAuthId usesmarker).
+
+Consumers defaultGET: useTeachingDesk.ts163, useTeacherHome.ts71, useHubStudents.ts95, accessTierClient.ts34, AdminDashboard.ts58, DeskPeopleSurface.ts90; scriptsassign.ts138,student-work.ts59throwerrors,rrc-ungraded.ts90legacyignoreserrors. Homequeryerror/retrystatesexist; People/Adminfailuretoasts. AnalyticscallersAdminDashboard.ts59/DeskPeopleSurface.ts91sendx-modeheaderwhilebackendchecksmodequery; leaveknownheaderquirkunchangedinthisboundedfix, queryanalyticsbranchstillpaginationcorrected. PreserveGETarray/analyticsobjectandPOSTcontracts.
+
+Readonlysourceaudit by scheduling_recon, no runtime/deployproof. desk.agenda.retry readonly15seccooldownrefetch; no backendworkermutations onagendaread.

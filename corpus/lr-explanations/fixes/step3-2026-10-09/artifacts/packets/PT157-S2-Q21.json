@@ -1,0 +1,78 @@
+{
+ "qid": "PT157-S2-Q21",
+ "type": "Principle-Strengthen",
+ "difficulty": "5",
+ "key_db": "E",
+ "stimulus_db": "Essayist: Commitment to relationships or careers is commonly held to be virtuous. But all commitments should be seen as morally neutral. After all, what one is committed to might be either good or bad; for example, commitment to a relationship that benefits none of the people involved deserves no praise. Often, commitment is nothing more than involvement that has outlasted its original justification.",
+ "stem_db": "Which one of the following principles, if valid, most helps to justify the essayist’s reasoning?",
+ "choices_db": {
+  "A": "Any commitment that is morally neutral either has outlasted its original justification or deserves no praise, or both.",
+  "B": "Commitment to a relationship or career is virtuous when, but only when, the relationship or career is good.",
+  "C": "If a commitment deserves no praise, then that commitment is morally neutral.",
+  "D": "If a commitment has outlasted its original justification, then it cannot be virtuous.",
+  "E": "All commitments are morally neutral if there are any commitments that are undeserving of praise."
+ },
+ "bank": {
+  "stimulus": "Essayist: Commitment to relationships or careers\n is commonly held to be virtuous. But all\n commitments should be seen as morally neutral.\n After all, what one is committed to might be\n either good or bad; for example, commitment to\n a relationship that benefits none of the people\n involved deserves no praise. Often, commitment\n is nothing more than involvement that has\n outlasted its original justification.",
+  "stem": "Which one of the following principles, if valid, most\n helps to justify the essayist’s reasoning?",
+  "choices": {
+   "A": "Any commitment that is morally neutral either has outlasted its original justification or deserves no praise, or both.",
+   "B": "Commitment to a relationship or career is virtuous when, but only when, the relationship or career is good.",
+   "C": "If a commitment deserves no praise, then that commitment is morally neutral.",
+   "D": "If a commitment has outlasted its original justification, then it cannot be virtuous.",
+   "E": "All commitments are morally neutral if there are any commitments that are undeserving of praise."
+  },
+  "key": "E"
+ },
+ "explanation_id": "c98f53e7-554d-45c9-860b-0fc7af5b9a5c",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "a5d39aac-7285-40dd-bc16-072af403712a",
+   "position": 0,
+   "label": "Evidence",
+   "body": "Something that one is committed to might be either good or bad. Commitment to a relationship that benefits none of the people involved deserves no praise. Often, commitment is nothing more than involvement that has outlasted its original justification."
+  },
+  {
+   "row_id": "deae955b-27cf-4c5e-b899-4293dfc3cf1c",
+   "position": 1,
+   "label": "Conclusion",
+   "body": "All commitments should be seen as morally neutral."
+  },
+  {
+   "row_id": "b6b3118e-0616-4eed-a0a5-7de9ef8c1552",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "We can reach this conclusion if we assume that anything which has the capacity to be either good or bad should be seen as morally neutral: (could potentially be connected to good or bad → morally neutral) We can strengthen the argument by making a similar assumption about something that deserves no praise or has outlasted its original justification, since those are also descriptors that the argued applied to \"commitments\". (some of them deserve no praise → morally neutral) or (often outlasted original justification → morally neutral)"
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "6fbddb3b-e65d-40d8-a416-a6e8eb321020",
+   "letter": "A",
+   "body": "This answer says anything morally neutral either has outlasted its justification or deserves no praise. Diagrammed: morally neutral -> outlasted or no praise. The argument needs the opposite direction: outlasted or no praise -> morally neutral. This answer starts with moral neutrality and derives characteristics from it, but the argument needs to start with characteristics (some commitments deserve no praise) and derive moral neutrality. The conditional runs backward relative to the argument's needs."
+  },
+  {
+   "row_id": "b3338f5b-6aef-4dd7-b42b-1898eea4b6e0",
+   "letter": "B",
+   "body": "This answer says commitment is virtuous when, and only when, the relationship or career is good. This limits when commitment is virtuous but does not support the conclusion that commitment is morally neutral. If the relationship is bad, this answer tells us commitment is not virtuous — but \"not virtuous\" could mean bad, harmful, or neutral. The answer does not specifically support moral neutrality. It also does not address the general category of commitment; it only addresses commitment to relationships and careers. The conclusion requires all commitments to be morally neutral, and this answer points in an indeterminate direction when the commitment is to something bad."
+  },
+  {
+   "row_id": "44642ae7-b481-40bf-9f15-a0041cc2595f",
+   "letter": "C",
+   "body": "This answer says if a commitment deserves no praise, it is morally neutral. Diagrammed: deserves no praise -> morally neutral. This does connect one piece of evidence (some commitments deserve no praise) to the conclusion (morally neutral). However, the evidence only identifies one type of praiseworthy-less commitment: commitment to a relationship benefiting no one. This principle would only establish that this specific type of commitment is morally neutral, not that all commitments are. The conclusion is universal — all commitments are morally neutral — and this answer only supports the neutrality of a subset. The correct answer must bridge the gap for all commitments, not just the unpraiseworthy ones."
+  },
+  {
+   "row_id": "00da900d-089e-4c6c-ae5b-c2de4ee1e380",
+   "letter": "D",
+   "body": "This answer says if a commitment has outlasted its original justification, it cannot be virtuous. The evidence states that commitment \"often\" is involvement that has outlasted its justification, but not always. So this principle only covers commitments that have outlasted their justification, not all commitments. And \"cannot be virtuous\" does not equal \"morally neutral\" — a commitment that is not virtuous could still be morally negative rather than neutral. Like answer C, this gets the direction right but lacks the scope and precision needed to support the universal conclusion."
+  },
+  {
+   "row_id": "6710ed31-89b2-490c-9d0b-62bed4c2c8df",
+   "letter": "E",
+   "body": "This answer states that all commitments are morally neutral if there are any commitments that are undeserving of praise. Diagrammed: any commitment deserves no praise -> all commitments are morally neutral. The evidence establishes that at least one type of commitment deserves no praise (commitment to a relationship benefiting no one). Applying this principle: since at least one commitment is undeserving of praise, all commitments are morally neutral. This is the only answer that bridges the gap between evidence about some commitments and a conclusion about all commitments. The principle's structure is designed to generalize from the existence of any unpraiseworthy commitment to universal moral neutrality — exactly what the essayist's reasoning requires."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (8.2 em-dashes per 1k words; wrong-answer notes average 92.8 words).",
+ "tags": "no-prediction; emdash-heavy; pt157-158-register; possible-misquote"
+}

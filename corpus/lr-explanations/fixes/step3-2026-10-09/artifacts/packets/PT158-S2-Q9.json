@@ -1,0 +1,84 @@
+{
+ "qid": "PT158-S2-Q9",
+ "type": "Role",
+ "difficulty": "5",
+ "key_db": "C",
+ "stimulus_db": "Scholar: The purpose of a law is to deter certain actions by threatening to punish those performing the actions. This threat works only if potential violators believe that they are likely to be punished. But the likelihood that someone will be apprehended and punished for committing a prohibited act decreases as the number of types of prohibited actions increases. Therefore, a successful legal system prohibits only those few behaviors that citizens find absolutely intolerable.",
+ "stem_db": "Which one of the following most accurately describes the role played in the scholar's argument by the statement that the purpose of a law is to deter certain actions by threatening to punish those performing the actions?",
+ "choices_db": {
+  "A": "It is offered in support of the implicit conclusion that a legal system needs a significant number of police officers.",
+  "B": "It is the conclusion of the argument.",
+  "C": "It is a premise of the argument.",
+  "D": "It is an intermediate conclusion.",
+  "E": "It is the view that the argument as a whole is designed to discredit."
+ },
+ "bank": {
+  "stimulus": "Scholar: The purpose of a law is to deter certain actions\n by threatening to punish those performing the\n actions. This threat works only if potential\n violators believe that they are likely to be\n punished. But the likelihood that someone will\n be apprehended and punished for committing a\n prohibited act decreases as the number of types\n of prohibited actions increases. Therefore, a\n successful legal system prohibits only those few\n behaviors that citizens find absolutely intolerable.",
+  "stem": "Which one of the following most accurately describes\n the role played in the scholar’s argument by the\n statement that the purpose of a law is to deter certain\n actions by threatening to punish those performing the\n actions?",
+  "choices": {
+   "A": "It is offered in support of the implicit conclusion that a legal system needs a significant number of police officers.",
+   "B": "It is the conclusion of the argument.",
+   "C": "It is a premise of the argument.",
+   "D": "It is an intermediate conclusion.",
+   "E": "It is the view that the argument as a whole is designed to discredit."
+  },
+  "key": "C"
+ },
+ "explanation_id": "bd1ccae5-f5cf-4d45-90a5-24e7a6dd693e",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "76ef4fb8-1fec-4f04-8aee-3f4e268e01bf",
+   "position": 0,
+   "label": "Conclusion (Therefore)",
+   "body": "A successful legal system prohibits only those few behaviors that citizens find absolute intolerable."
+  },
+  {
+   "row_id": "9ab25c03-6765-498a-8da2-acca24eae4f9",
+   "position": 1,
+   "label": "Evidence",
+   "body": "The purpose of laws in a legal system is to deter bad actions by threatening punishment if you perform them, but this only works if people think they're likely to get punished for committing those actions, and the more behaviors that are criminalized, the less likely someone will be caught and punished."
+  },
+  {
+   "row_id": "b4bbfe52-39ce-4c25-af44-b5f393dff913",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "When we read Role and Main Conclusion we anticipate the conclusion being \"hidden\" by appearing as the First Sentence or as some Rebuttal / Pivot moment. But this first sentence is not supported, so it can't be a conclusion. And the pivot sentence prefaced by \"But\" is also not supported, so it can't be a conclusion. Meanwhile, we have a very conspicuous conclusion indicator on the last sentence (we know any time we see so, thus, hence, therefore that it will be a conclusion, even if it's not the main one). But in this case, it's the main conclusion, because the other three ideas combine to get us there. Why do successful legal systems want to limit the number of criminalized actions to the most intolerable ones? Because laws only work as a threat if people think they're likely to be caught and punished, and the more actions we criminalize the less likely people are to be caught / punished."
+  },
+  {
+   "row_id": "6919ad1a-3684-47e2-8849-c8c87ebe5896",
+   "position": 3,
+   "label": "Goal",
+   "body": "We're being asked about the Role of the first claim. We'd say it's part of the Support for the conclusion in the final sentence."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "e0842bba-1d53-46f3-9204-57f323947806",
+   "letter": "A",
+   "body": "This answer says the statement supports an implicit conclusion about a \"significant police force.\" The argument never mentions police, enforcement resources, or staffing. The argument's actual conclusion is that a successful legal system prohibits only a few intolerable behaviors. While one might extrapolate that effective enforcement requires resources, that inference is not made in this argument. The statement about deterrence supports the explicit conclusion about limiting prohibitions, not an unstated conclusion about police staffing."
+  },
+  {
+   "row_id": "80fde9a1-da9f-4b95-874b-de8908d7d75d",
+   "letter": "B",
+   "body": "The conclusion of the argument is that a successful legal system prohibits only a few behaviors that citizens find absolutely intolerable. The statement in question — that law's purpose is deterrence through punishment — is not this conclusion. It is the starting premise from which the argument builds. The conclusion is introduced by \"therefore\" at the end of the argument. The deterrence statement appears at the very beginning and provides the foundational definition of law's purpose. The argument uses this definition, combines it with additional premises about belief and probability, and arrives at the conclusion about limiting prohibitions. The statement is a building block, not the destination."
+  },
+  {
+   "row_id": "0a2393ea-33c1-485b-8567-efda25259459",
+   "letter": "C",
+   "body": "The statement that \"the purpose of a law is to deter certain actions by threatening to punish those performing the actions\" is a premise of the argument. It is the first claim in a chain of reasoning that leads to the conclusion. The argument does not derive this statement from other claims — it is asserted as a foundational principle. From this premise, the argument builds: deterrence requires belief in likely punishment, that belief erodes as prohibitions multiply, therefore successful systems must limit their prohibitions. The deterrence statement is not the conclusion (which appears after \"therefore\"), not an intermediate conclusion (it is not derived from other premises), and not a view being challenged (the scholar endorses it as the foundation of the argument)."
+  },
+  {
+   "row_id": "177722f5-bd22-435e-8307-d52f47016af0",
+   "letter": "D",
+   "body": "An intermediate conclusion is a claim that is both derived from premises AND used to support a further conclusion — it serves as both a conclusion of earlier reasoning and a premise for later reasoning. The deterrence statement is not derived from any other claims in the argument. It is simply asserted as a starting point. No prior reasoning leads to it; it is the first claim made. Because it has no premises supporting it within the argument, it cannot be an intermediate conclusion. It is a straightforward premise — a building block offered without prior justification."
+  },
+  {
+   "row_id": "7a92755a-a4a4-4103-becd-31d45bd5bc0c",
+   "letter": "E",
+   "body": "This answer says the statement is a view the argument is designed to discredit. But the scholar endorses this statement — it is the foundation of the argument, not the target of it. The scholar uses the deterrence definition of law to build toward the conclusion about limiting prohibitions. If the scholar were trying to discredit the deterrence view, the argument would need to present evidence or reasoning against it. Instead, the argument accepts the deterrence view and draws implications from it. The argument works with the statement, not against it."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (8.2 em-dashes per 1k words; wrong-answer notes average 91.0 words).",
+ "tags": "emdash-heavy; pt157-158-register"
+}

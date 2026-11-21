@@ -1,0 +1,181 @@
+{
+  "say_first": {
+    "necessary-vs-sufficient": {
+      "stimulus": "Every employee who completes the safety course receives a badge. Dana did not complete the course, so Dana will not receive a badge.",
+      "answer": "Necessary vs. Sufficient",
+      "reason": "Completing the course is enough to get a badge. The argument treats it as required. Dana could have earned a badge another way."
+    },
+    "causal": {
+      "stimulus": "Neighborhoods with more street lamps report fewer break-ins. So installing street lamps reduces break-ins.",
+      "answer": "Causal",
+      "reason": "The evidence says two things go together. The conclusion picks one cause. Wealthier neighborhoods could have both more lamps and fewer break-ins."
+    },
+    "part-vs-whole": {
+      "stimulus": "The faculty committee reached a wise decision, so every member of the committee must be wise.",
+      "answer": "Part vs. Whole",
+      "reason": "A trait of the whole group is pushed onto each member. A committee can decide wisely because of how it worked together, or because of a few members, while others are not wise."
+    },
+    "unproven-vs-proven-false": {
+      "stimulus": "No study has shown that this herbal tea improves sleep, so it does not improve sleep.",
+      "answer": "Unproven vs. Proven False",
+      "reason": "No one has shown it works. That is not the same as someone showing it does not. All we know is that it has not been shown."
+    },
+    "ad-hominem": {
+      "stimulus": "The mayor's report says the new tram line is cost-effective. But the mayor's brother builds trams, so the report can be ignored.",
+      "answer": "Ad Hominem",
+      "reason": "The author rejects the report by pointing at who is connected to it. The report's numbers are the thing to check."
+    },
+    "sampling": {
+      "stimulus": "I polled ten people leaving a vegan restaurant and nine said they would give up meat. So most residents of this city would give up meat.",
+      "answer": "Sampling",
+      "reason": "The ten people were selected for exactly the trait being measured. They are a small, biased sample of a whole city."
+    },
+    "circular-reasoning": {
+      "stimulus": "The new rule is fair because it treats everyone justly.",
+      "answer": "Circular Reasoning",
+      "reason": "Treating everyone justly is just fair said another way. The reason repeats the conclusion."
+    },
+    "internal-contradiction": {
+      "stimulus": "The report says that every employee finished the training this year. It also says that three employees never finished the training this year.",
+      "answer": "Internal Contradiction",
+      "reason": "If every employee finished, none can have missed it. The two claims are about the same employees, the same training and the same year, so they cannot both be true."
+    },
+    "equivocation": {
+      "stimulus": "Laws are made by legislators. Gravity is a law of nature. So gravity was made by legislators.",
+      "answer": "Equivocation",
+      "reason": "The word law means a rule passed by a legislature in the first sentence and a regularity of nature in the second."
+    },
+    "inappropriate-appeal": {
+      "stimulus": "A famous actor says this brand of ladder is the sturdiest, so it is the sturdiest.",
+      "answer": "Inappropriate Appeal",
+      "reason": "The only reason given is who said it. A famous actor is not an expert on ladder strength."
+    },
+    "sleight-of-hand": {
+      "stimulus": "The new curriculum raises test scores. So it will make students love learning.",
+      "answer": "Sleight of Hand",
+      "reason": "Love learning is a new term in the conclusion. Higher test scores are not basically the same thing."
+    },
+    "sleazy-sales-pitch": {
+      "stimulus": "Choose the Harbor Hotel: it has a pool and a rooftop bar, while the Maple Inn has no gym and a slow elevator.",
+      "answer": "Sleazy Sales Pitch",
+      "reason": "You hear the Harbor's strengths and the Maple's weaknesses. Nothing about the Harbor's drawbacks or the Maple's strengths."
+    },
+    "universal-desires": {
+      "stimulus": "This investment will double your money in ten years, so everyone should invest in it.",
+      "answer": "Universal Desires Assumption",
+      "reason": "The argument assumes everyone wants this kind of return. Some people do not want the risk, or the investment, at all."
+    },
+    "value-assumptions": {
+      "stimulus": "The company lets employees work from home, so it is a more admirable employer.",
+      "answer": "Value Assumptions",
+      "reason": "Admirable is a loaded word the evidence never defined. Letting people work from home is one fact, not a verdict."
+    },
+    "secret-downsides": {
+      "stimulus": "We should replace the paper forms with an app, because the app is faster.",
+      "answer": "Secret Downsides",
+      "reason": "Only the benefit is named. Training time, people without the app, or the cost of building it could outweigh the speed."
+    }
+  },
+  "matrix_drills": [
+    {
+      "row": 1,
+      "stimulus": "Anyone who holds a pilot's license is allowed to fly a plane. Marta is allowed to fly a plane, so Marta holds a pilot's license.",
+      "options": [
+        "Necessary vs. Sufficient",
+        "Causal"
+      ],
+      "right": "Necessary vs. Sufficient",
+      "reason": "The relationship is an if-then rule, not one thing making another happen. The author reads the rule backwards."
+    },
+    {
+      "row": 2,
+      "stimulus": "A poll of the four thousand subscribers of a luxury travel magazine found that 90% plan to renew their passports, so most adults plan to renew theirs.",
+      "options": [
+        "Sampling",
+        "Hasty Generalization"
+      ],
+      "right": "Sampling",
+      "reason": "The sample is large, so size is not the problem. The problem is how it was selected: subscribers of a travel magazine are far more likely to travel."
+    },
+    {
+      "row": 3,
+      "stimulus": "The study shows the drug is effective at lowering blood pressure. So the drug is safe.",
+      "options": [
+        "Equivocation",
+        "Sleight of Hand"
+      ],
+      "right": "Sleight of Hand",
+      "reason": "Two different words, effective and safe, are treated as equivalent. No single word shifts its meaning."
+    },
+    {
+      "row": 4,
+      "stimulus": "The restaurant uses locally sourced produce, so it is a morally better restaurant.",
+      "options": [
+        "Sleight of Hand",
+        "Value Assumptions"
+      ],
+      "right": "Value Assumptions",
+      "reason": "The new term in the conclusion is an evaluative word: morally better. Name the loaded word and it is Value Assumptions."
+    },
+    {
+      "row": 5,
+      "stimulus": "The critic says the bridge is unsafe. But nobody has found a crack in it, so the critic is wrong.",
+      "options": [
+        "Ad Hominem",
+        "Unproven vs. Proven False"
+      ],
+      "right": "Unproven vs. Proven False",
+      "reason": "What is attacked is the lack of evidence, not the critic as a person. No cracks found is not proof the bridge is safe."
+    },
+    {
+      "row": 6,
+      "stimulus": "The firm's total revenue grew this year, so each of its offices must have grown.",
+      "options": [
+        "Sampling",
+        "Part vs. Whole"
+      ],
+      "right": "Part vs. Whole",
+      "reason": "The move is from the whole to each part, not from a sample to a population."
+    },
+    {
+      "row": 7,
+      "stimulus": "Switch to Brand A: it is cheaper and lasts longer, unlike Brand B, which is expensive and breaks easily.",
+      "options": [
+        "Sleazy Sales Pitch",
+        "Secret Downsides"
+      ],
+      "right": "Sleazy Sales Pitch",
+      "reason": "Two options are compared, and only one side's strengths and the other side's weaknesses are given."
+    },
+    {
+      "row": 8,
+      "stimulus": "The city built more bike lanes this year. So the city has become more environmentally conscious.",
+      "options": [
+        "Causal",
+        "Sleight of Hand"
+      ],
+      "right": "Sleight of Hand",
+      "reason": "The conclusion brings in a new term, environmentally conscious. It does not claim that one thing caused another."
+    },
+    {
+      "row": 9,
+      "stimulus": "Anything light is easy to carry. This shirt is light blue, so this shirt is easy to carry.",
+      "options": [
+        "Equivocation",
+        "Necessary vs. Sufficient"
+      ],
+      "right": "Equivocation",
+      "reason": "The rule is applied in the right direction: light, so easy to carry. But light means low weight in the rule and pale in the fact. One word, two senses."
+    },
+    {
+      "row": 10,
+      "stimulus": "The new phone plan saves money, so everyone should switch to it.",
+      "options": [
+        "Universal Desires Assumption",
+        "Value Assumptions"
+      ],
+      "right": "Universal Desires Assumption",
+      "reason": "The unjustified claim is about what people want: it assumes everyone wants to save money in this way."
+    }
+  ]
+}

@@ -1,0 +1,2866 @@
+{
+  "skill": {
+    "name": "motion-graphics",
+    "source": "C:\\Users\\Joshu\\dev\\ai-os\\.claude\\skills\\motion-graphics",
+    "scanned_at": "2026-10-14T14:52:17.322621+00:00"
+  },
+  "risk_assessment": {
+    "score": 96,
+    "severity": "CRITICAL",
+    "recommendation": "DO_NOT_INSTALL",
+    "max_issue_severity": "HIGH"
+  },
+  "components": [
+    {
+      "path": "SKILL.md",
+      "type": "markdown",
+      "lines": 174,
+      "executable": false,
+      "size_bytes": 16013,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "agents/builder.md",
+      "type": "markdown",
+      "lines": 45,
+      "executable": false,
+      "size_bytes": 4071,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "agents/director.md",
+      "type": "markdown",
+      "lines": 54,
+      "executable": false,
+      "size_bytes": 6078,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "agents/finalize.md",
+      "type": "markdown",
+      "lines": 17,
+      "executable": false,
+      "size_bytes": 1071,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "catalog-map.md",
+      "type": "markdown",
+      "lines": 52,
+      "executable": false,
+      "size_bytes": 10641,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "categories/asset-fusion/module.md",
+      "type": "markdown",
+      "lines": 37,
+      "executable": false,
+      "size_bytes": 3968,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "categories/charts/module.md",
+      "type": "markdown",
+      "lines": 24,
+      "executable": false,
+      "size_bytes": 1982,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "categories/kinetic-type/module.md",
+      "type": "markdown",
+      "lines": 19,
+      "executable": false,
+      "size_bytes": 1607,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "categories/logo-reveal/module.md",
+      "type": "markdown",
+      "lines": 17,
+      "executable": false,
+      "size_bytes": 1131,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "categories/lower-thirds/module.md",
+      "type": "markdown",
+      "lines": 20,
+      "executable": false,
+      "size_bytes": 1493,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "categories/maps/bake-basemap.mjs",
+      "type": "other",
+      "lines": 273,
+      "executable": true,
+      "size_bytes": 14726,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "categories/maps/module.md",
+      "type": "markdown",
+      "lines": 61,
+      "executable": false,
+      "size_bytes": 9587,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "categories/news/module.md",
+      "type": "markdown",
+      "lines": 56,
+      "executable": false,
+      "size_bytes": 5425,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "categories/stat/module.md",
+      "type": "markdown",
+      "lines": 23,
+      "executable": false,
+      "size_bytes": 1330,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "categories/tweet/module.md",
+      "type": "markdown",
+      "lines": 16,
+      "executable": false,
+      "size_bytes": 1015,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "categories/webpage/module.md",
+      "type": "markdown",
+      "lines": 30,
+      "executable": false,
+      "size_bytes": 2538,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "grounding/PROTOCOL.md",
+      "type": "markdown",
+      "lines": 64,
+      "executable": false,
+      "size_bytes": 3108,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "grounding/locate.mjs",
+      "type": "other",
+      "lines": 228,
+      "executable": true,
+      "size_bytes": 8236,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "phases/source/guide.md",
+      "type": "markdown",
+      "lines": 21,
+      "executable": false,
+      "size_bytes": 1962,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "references/builder-contract.md",
+      "type": "markdown",
+      "lines": 38,
+      "executable": false,
+      "size_bytes": 2818,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "references/motion-vocabulary.md",
+      "type": "markdown",
+      "lines": 47,
+      "executable": false,
+      "size_bytes": 3978,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "references/shot-plan-ir.md",
+      "type": "markdown",
+      "lines": 54,
+      "executable": false,
+      "size_bytes": 2616,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "samples/asset-fusion/_ref-circle-highlight.html",
+      "type": "other",
+      "lines": 306,
+      "executable": false,
+      "size_bytes": 10674,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    }
+  ],
+  "structured_summaries": [],
+  "issues": [
+    {
+      "id": "AE1",
+      "finding_id": "finding-b2daeada1a7544f085fff9b37bf2a696",
+      "category": "analysis-evasion",
+      "pattern": "Incomplete referenced artifact analysis",
+      "severity": "HIGH",
+      "confidence": 1.0,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 54,
+        "end_line": null
+      },
+      "finding": "categories/maps/bake-basemap.mjs (partial)",
+      "explanation": "Referenced artifact was not completely inspected",
+      "remediation": "Review the reported expression and analyzer's parsing limitation; correct the scanner if it misinterprets valid source, then rerun the scan. Keep required references; incomplete analysis is not proof of malicious evasion.",
+      "code_snippet": "(vector lane, or baked basemap lane) | `us-map` / `world-map` family + `bake-basemap.mjs` |",
+      "intent": null,
+      "tags": [
+        "coverage",
+        "reference",
+        "target-disposition:partial"
+      ],
+      "evidence": {
+        "target_path": "categories/maps/bake-basemap.mjs",
+        "target_disposition": "partial",
+        "reasons": [
+          {
+            "reason_code": "static_parse_limit",
+            "message": "A security-relevant expression exceeded a bounded static parser's span limit.",
+            "phase": "static",
+            "analyzers": [
+              "static_patterns_tool_misuse"
+            ]
+          }
+        ]
+      },
+      "match_fingerprint": "988ec96acefee1972c4996988a8356fadd8395bfa5b862b005b53c3cb45a3e27",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 54,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "finding_id": "finding-6b9db6f9e64e468cac7bdcbe1a4cad53",
+      "category": "Prompt Injection",
+      "pattern": "Hidden Instructions",
+      "severity": "HIGH",
+      "confidence": 0.7,
+      "location": {
+        "file": "samples/asset-fusion/_ref-circle-highlight.html",
+        "start_line": 6,
+        "end_line": 161,
+        "start_column": 4,
+        "end_column": 61
+      },
+      "finding": "<!-- ============================================================\n         DROP-IN circle-highlight (editorial amber annotation style). To reuse:\n           1) set CFG below (asset path, EVEN stage di",
+      "explanation": "Hidden instructions were detected in comments or invisible text. These could contain malicious directives. Manual review is recommended.",
+      "remediation": "Audit all comments and invisible characters. Remove any instructions that direct the agent to perform unauthorized actions. Use plain, reviewable content.",
+      "code_snippet": "  <head>\n    <meta charset=\"utf-8\" />\n    <title>asset-fusion \u00b7 circle-highlight TEMPLATE (drop-in)</title>\n    <!-- ============================================================\n         DROP-IN circle-highlight (editorial amber annotation style). To reuse:\n           1) set CFG below (asset path, EVEN stage dims, BOX from the locate protocol, LABEL)\n           2) render with even width/height (ODD width => ffmpeg encode fails!)",
+      "intent": null,
+      "tags": [
+        "Prompt Injection"
+      ],
+      "evidence": {},
+      "match_fingerprint": "72007f16fe15d88f7ea72131f5a141107d9392be14ebb5afa836f6ca5c528673",
+      "occurrences": [
+        {
+          "file": "samples/asset-fusion/_ref-circle-highlight.html",
+          "start_line": 6,
+          "end_line": 161,
+          "start_column": 4,
+          "end_column": 61
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "finding_id": "finding-a09cc73e12e14fe5982e306c52e340a7",
+      "category": "Prompt Injection",
+      "pattern": "Hidden Instructions",
+      "severity": "HIGH",
+      "confidence": 0.7,
+      "location": {
+        "file": "samples/asset-fusion/_ref-circle-highlight.html",
+        "start_line": 6,
+        "end_line": 161,
+        "start_column": 4,
+        "end_column": 61
+      },
+      "finding": "<!-- ============================================================\n         DROP-IN circle-highlight (editorial amber annotation style). To reuse:\n           1) set CFG below (asset path, EVEN stage di",
+      "explanation": "Hidden instructions were detected in comments or invisible text. These could contain malicious directives. Manual review is recommended.",
+      "remediation": "Audit all comments and invisible characters. Remove any instructions that direct the agent to perform unauthorized actions. Use plain, reviewable content.",
+      "code_snippet": "  <head>\n    <meta charset=\"utf-8\" />\n    <title>asset-fusion \u00b7 circle-highlight TEMPLATE (drop-in)</title>\n    <!-- ============================================================\n         DROP-IN circle-highlight (editorial amber annotation style). To reuse:\n           1) set CFG below (asset path, EVEN stage dims, BOX from the locate protocol, LABEL)\n           2) render with even width/height (ODD width => ffmpeg encode fails!)",
+      "intent": null,
+      "tags": [
+        "Prompt Injection",
+        "normalized-view"
+      ],
+      "evidence": {},
+      "match_fingerprint": "33efde1589507a3bd85f1deee8aa6f56d11d05e3996410c24651d6dbd1a0b0e9",
+      "occurrences": [
+        {
+          "file": "samples/asset-fusion/_ref-circle-highlight.html",
+          "start_line": 6,
+          "end_line": 161,
+          "start_column": 4,
+          "end_column": 61
+        }
+      ]
+    },
+    {
+      "id": "LP3",
+      "finding_id": "finding-2cfe99f186964aacb2131dd4bdb48763",
+      "category": "MCP Least Privilege",
+      "pattern": "Skill declares no tool scope ('permissions' or 'allowed-tools') but code capabilities were detected: env, network.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 1,
+        "end_line": null
+      },
+      "finding": "Skill declares no tool scope ('permissions' or 'allowed-tools') but code capabilities were detected: env, network.",
+      "explanation": "Without declared permissions the skill's intent is opaque and cannot be validated.",
+      "remediation": "Clarify the skill's intended tool scope and review how the host runtime enforces it; runtime permissions are unknown unless separately verified. For Claude Code / Agent Skills SKILL.md, 'allowed-tools' records preapproved tools, not a permission ceiling; add a tool only when it is independently approved as necessary, not to silence this finding. For MCP server manifests, use a 'permissions' list naming the required capabilities.",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI02"
+      ],
+      "evidence": {},
+      "match_fingerprint": null,
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 1,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-0ae1668e3ff544b4a0065d973f50dc5c",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx hyperframes'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 16,
+        "end_line": null
+      },
+      "finding": "npx hyperframes",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "9c0890cb5a51bdd7b5d559cbc121a60b04c456f948c1ea5579990d5b27969eed",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 16,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-61386d2c19e040188ad5eecf8d0fcd9e",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx hyperframes'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 69,
+        "end_line": null
+      },
+      "finding": "npx hyperframes",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "9c0890cb5a51bdd7b5d559cbc121a60b04c456f948c1ea5579990d5b27969eed",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 69,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-9a0e3b426c204442b4561205a0997cdc",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx hyperframes'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 89,
+        "end_line": null
+      },
+      "finding": "npx hyperframes",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "9c0890cb5a51bdd7b5d559cbc121a60b04c456f948c1ea5579990d5b27969eed",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 89,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-7ea89ed054bf4e298aeee3dfb8e80d76",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx hyperframes'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 121,
+        "end_line": null
+      },
+      "finding": "npx hyperframes",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "9c0890cb5a51bdd7b5d559cbc121a60b04c456f948c1ea5579990d5b27969eed",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 121,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-38e47ad69a6240b78e843de1a1d2e8e5",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx hyperframes'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 126,
+        "end_line": null
+      },
+      "finding": "npx hyperframes",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "9c0890cb5a51bdd7b5d559cbc121a60b04c456f948c1ea5579990d5b27969eed",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 126,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-5ec222215ac344ecb895bbbad191a38c",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx hyperframes'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 127,
+        "end_line": null
+      },
+      "finding": "npx hyperframes",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "9c0890cb5a51bdd7b5d559cbc121a60b04c456f948c1ea5579990d5b27969eed",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 127,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-9c457e848353421891f3a6035d935cbb",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx hyperframes'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 137,
+        "end_line": null
+      },
+      "finding": "npx hyperframes",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "9c0890cb5a51bdd7b5d559cbc121a60b04c456f948c1ea5579990d5b27969eed",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 137,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-2987c9ce061d4e4bb11b533234cfc577",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx hyperframes'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 143,
+        "end_line": null
+      },
+      "finding": "npx hyperframes",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "9c0890cb5a51bdd7b5d559cbc121a60b04c456f948c1ea5579990d5b27969eed",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 143,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-8b5723db3420435b9717b1ff859ce97c",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx hyperframes'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "agents/builder.md",
+        "start_line": 9,
+        "end_line": null
+      },
+      "finding": "npx hyperframes",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "9c0890cb5a51bdd7b5d559cbc121a60b04c456f948c1ea5579990d5b27969eed",
+      "occurrences": [
+        {
+          "file": "agents/builder.md",
+          "start_line": 9,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-abe56b3d90584222a8f6cb6d2b52cb4d",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx hyperframes'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "agents/builder.md",
+        "start_line": 10,
+        "end_line": null
+      },
+      "finding": "npx hyperframes",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "9c0890cb5a51bdd7b5d559cbc121a60b04c456f948c1ea5579990d5b27969eed",
+      "occurrences": [
+        {
+          "file": "agents/builder.md",
+          "start_line": 10,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-d04b010c17b843d0a497cec614b86f70",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx hyperframes'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "agents/director.md",
+        "start_line": 43,
+        "end_line": null
+      },
+      "finding": "npx hyperframes",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "9c0890cb5a51bdd7b5d559cbc121a60b04c456f948c1ea5579990d5b27969eed",
+      "occurrences": [
+        {
+          "file": "agents/director.md",
+          "start_line": 43,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-e6c72e05babc4027b619315468199446",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx hyperframes'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "agents/finalize.md",
+        "start_line": 11,
+        "end_line": null
+      },
+      "finding": "npx hyperframes",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "9c0890cb5a51bdd7b5d559cbc121a60b04c456f948c1ea5579990d5b27969eed",
+      "occurrences": [
+        {
+          "file": "agents/finalize.md",
+          "start_line": 11,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-c7275afda0fb405480fa47f4b5c6a02c",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx hyperframes'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "agents/finalize.md",
+        "start_line": 13,
+        "end_line": null
+      },
+      "finding": "npx hyperframes",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "9c0890cb5a51bdd7b5d559cbc121a60b04c456f948c1ea5579990d5b27969eed",
+      "occurrences": [
+        {
+          "file": "agents/finalize.md",
+          "start_line": 13,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-e6c1981fef8847df808ccadf25787c27",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx hyperframes'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "catalog-map.md",
+        "start_line": 7,
+        "end_line": null
+      },
+      "finding": "npx hyperframes",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "9c0890cb5a51bdd7b5d559cbc121a60b04c456f948c1ea5579990d5b27969eed",
+      "occurrences": [
+        {
+          "file": "catalog-map.md",
+          "start_line": 7,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-da24141fe01d4c2bbf9ab5ab5d25b2ce",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx hyperframes'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "catalog-map.md",
+        "start_line": 13,
+        "end_line": null
+      },
+      "finding": "npx hyperframes",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "9c0890cb5a51bdd7b5d559cbc121a60b04c456f948c1ea5579990d5b27969eed",
+      "occurrences": [
+        {
+          "file": "catalog-map.md",
+          "start_line": 13,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-93fe0a687d55456e905496ee5f2c7367",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx hyperframes'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "catalog-map.md",
+        "start_line": 16,
+        "end_line": null
+      },
+      "finding": "npx hyperframes",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "9c0890cb5a51bdd7b5d559cbc121a60b04c456f948c1ea5579990d5b27969eed",
+      "occurrences": [
+        {
+          "file": "catalog-map.md",
+          "start_line": 16,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-49217539e5a64a1b907ebe4667e8e474",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx hyperframes'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "catalog-map.md",
+        "start_line": 41,
+        "end_line": null
+      },
+      "finding": "npx hyperframes",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "9c0890cb5a51bdd7b5d559cbc121a60b04c456f948c1ea5579990d5b27969eed",
+      "occurrences": [
+        {
+          "file": "catalog-map.md",
+          "start_line": 41,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-55a7bf63f7704eecaab4b8c7ea2f66a7",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx hyperframes'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "categories/charts/module.md",
+        "start_line": 15,
+        "end_line": null
+      },
+      "finding": "npx hyperframes",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "9c0890cb5a51bdd7b5d559cbc121a60b04c456f948c1ea5579990d5b27969eed",
+      "occurrences": [
+        {
+          "file": "categories/charts/module.md",
+          "start_line": 15,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-b09445aa4f8a4843a26808caeba32d39",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx hyperframes'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "categories/charts/module.md",
+        "start_line": 20,
+        "end_line": null
+      },
+      "finding": "npx hyperframes",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "9c0890cb5a51bdd7b5d559cbc121a60b04c456f948c1ea5579990d5b27969eed",
+      "occurrences": [
+        {
+          "file": "categories/charts/module.md",
+          "start_line": 20,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-1d21ed3e58d74617aaafef6bcf96f4fb",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx hyperframes'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "categories/kinetic-type/module.md",
+        "start_line": 17,
+        "end_line": null
+      },
+      "finding": "npx hyperframes",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "9c0890cb5a51bdd7b5d559cbc121a60b04c456f948c1ea5579990d5b27969eed",
+      "occurrences": [
+        {
+          "file": "categories/kinetic-type/module.md",
+          "start_line": 17,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-cfb9390f98f64292937c34a64d89cbf2",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx hyperframes'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "categories/lower-thirds/module.md",
+        "start_line": 5,
+        "end_line": null
+      },
+      "finding": "npx hyperframes",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "9c0890cb5a51bdd7b5d559cbc121a60b04c456f948c1ea5579990d5b27969eed",
+      "occurrences": [
+        {
+          "file": "categories/lower-thirds/module.md",
+          "start_line": 5,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-88c1b046f6d747d483bb91b7ec4362b0",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx hyperframes'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "categories/maps/module.md",
+        "start_line": 34,
+        "end_line": null
+      },
+      "finding": "npx hyperframes",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "9c0890cb5a51bdd7b5d559cbc121a60b04c456f948c1ea5579990d5b27969eed",
+      "occurrences": [
+        {
+          "file": "categories/maps/module.md",
+          "start_line": 34,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-04e660a462cf46b08bd91e14539dc707",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx hyperframes'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "categories/tweet/module.md",
+        "start_line": 16,
+        "end_line": null
+      },
+      "finding": "npx hyperframes",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "9c0890cb5a51bdd7b5d559cbc121a60b04c456f948c1ea5579990d5b27969eed",
+      "occurrences": [
+        {
+          "file": "categories/tweet/module.md",
+          "start_line": 16,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-4de41c163f674956bf88a3b62567c9fc",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx hyperframes'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/motion-vocabulary.md",
+        "start_line": 5,
+        "end_line": null
+      },
+      "finding": "npx hyperframes",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "9c0890cb5a51bdd7b5d559cbc121a60b04c456f948c1ea5579990d5b27969eed",
+      "occurrences": [
+        {
+          "file": "references/motion-vocabulary.md",
+          "start_line": 5,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "P9",
+      "finding_id": "finding-ea0403bf3288445e8c7afc17408d5a2a",
+      "category": "Prompt Injection",
+      "pattern": "Whitespace Padding",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "agents/director.md",
+        "start_line": 13,
+        "end_line": null
+      },
+      "finding": "U+0020 x169",
+      "explanation": "Large whitespace padding was detected (a block of blank lines or a long run of spaces). This can push injected instructions below or to the right of the visible area so a human reviewer never sees them while the agent still reads them. Manual review of the hidden content is recommended.",
+      "remediation": "Remove the large whitespace padding (blank-line blocks or long space runs) and review any content hidden below or to the right of it. Keep skill files compact and reviewable so no instructions can be concealed off-screen.",
+      "code_snippet": "\n1. **Classify** \u2014 form categories by intent below; search-driven categories are picked post-search:\n\n   | Category       | Pick when...                                                                                                                                                                         |\n   | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n   | `kinetic-type` | a punchy line / quote / title; text is the hero                                                                                                                                    |\n   | `stat`         | a single hero number / count-up                                                                                                                                                    |",
+      "intent": null,
+      "tags": [
+        "Prompt Injection",
+        "normalized-view"
+      ],
+      "evidence": {},
+      "match_fingerprint": "850445adf37ef04bf5447b9d511a100677457050d5313c7f5ca8c4be7b544bf4",
+      "occurrences": [
+        {
+          "file": "agents/director.md",
+          "start_line": 13,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "MP2",
+      "finding_id": "finding-a843fe7fae1c4a28bd7c3f0ecf8c5da0",
+      "category": "Memory Poisoning",
+      "pattern": "Context Window Stuffing",
+      "severity": "MEDIUM",
+      "confidence": 0.8,
+      "location": {
+        "file": "catalog-map.md",
+        "start_line": 26,
+        "end_line": null,
+        "start_column": 46
+      },
+      "finding": "                                                                                                                                                                                                        ",
+      "explanation": "Skill attempts to fill the context window with filler content, displacing legitimate instructions and safety constraints. This can degrade agent performance or bypass safety boundaries.",
+      "remediation": "Implement context-window management that detects and rejects padding or stuffing attempts. Prioritize system instructions over user-injected content.",
+      "code_snippet": "\n## Category \u2192 block(s)\n\n| Category               | Borrow from catalog                                                                                                                                                                                                                                                                                                                                                                         | Customize                                                                                        | Gaps \u2192 hand-author                                                                                             |\n| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------",
+      "intent": null,
+      "tags": [
+        "Memory Poisoning"
+      ],
+      "evidence": {},
+      "match_fingerprint": "5d64e38332663d53e94c5a06975d671b7ab689f1aa6a06ea60e074ded5c409f1",
+      "occurrences": [
+        {
+          "file": "catalog-map.md",
+          "start_line": 26,
+          "end_line": null,
+          "start_column": 46
+        }
+      ]
+    },
+    {
+      "id": "MP2",
+      "finding_id": "finding-38f88a5419024c15b54aa4c105ee37f2",
+      "category": "Memory Poisoning",
+      "pattern": "Context Window Stuffing",
+      "severity": "MEDIUM",
+      "confidence": 0.8,
+      "location": {
+        "file": "catalog-map.md",
+        "start_line": 29,
+        "end_line": null,
+        "start_column": 102
+      },
+      "finding": "                                                                                                                                                                                                        ",
+      "explanation": "Skill attempts to fill the context window with filler content, displacing legitimate instructions and safety constraints. This can degrade agent performance or bypass safety boundaries.",
+      "remediation": "Implement context-window management that detects and rejects padding or stuffing attempts. Prioritize system instructions over user-injected content.",
+      "code_snippet": "\u2026)                                                                                                                                                                                      | words; `emphasis_words` \u2192 `word--emphasis`; palette; font; timing                                | a motif none of the 17 cover                                                                                   |\n| **charts**             | `data-chart` (bar+line, staggered, value labels), `bar-chart-race` (a race)                                                                                                                                                                                                                                                                                                                 | edit the data array + headline/subtitle; `--bg`/`--text`                                         | pie/donut, ring/%                                                                             ",
+      "intent": null,
+      "tags": [
+        "Memory Poisoning"
+      ],
+      "evidence": {},
+      "match_fingerprint": "5d64e38332663d53e94c5a06975d671b7ab689f1aa6a06ea60e074ded5c409f1",
+      "occurrences": [
+        {
+          "file": "catalog-map.md",
+          "start_line": 29,
+          "end_line": null,
+          "start_column": 102
+        }
+      ]
+    },
+    {
+      "id": "MP2",
+      "finding_id": "finding-f78ae9e27aca4f619e4c9942ea83beff",
+      "category": "Memory Poisoning",
+      "pattern": "Context Window Stuffing",
+      "severity": "MEDIUM",
+      "confidence": 0.8,
+      "location": {
+        "file": "catalog-map.md",
+        "start_line": 32,
+        "end_line": null,
+        "start_column": 63
+      },
+      "finding": "                                                                                                                                                                                                        ",
+      "explanation": "Skill attempts to fill the context window with filler content, displacing legitimate instructions and safety constraints. This can degrade agent performance or bypass safety boundaries.",
+      "remediation": "Implement context-window management that detects and rejects padding or stuffing attempts. Prioritize system instructions over user-injected content.",
+      "code_snippet": "stry \u2014 build per `categories/maps/module.md`). **basemap lane** (real satellite/dark / zoom-to-place): bake via `categories/maps/bake-basemap.mjs` \u2192 `<video>` + geo-aligned SVG overlay (border draw-on + colour-block fills) | regions/data, palette, callouts/connectors, basemap style                                        | (basemap lane now covers real imagery + zoom-to-address \u2014 was the gap)                                         |\n| diagram                | `flowchart` (SVG connectors + nodes)                                                                                                                                                                                                                                                                                                                                                        | nodes, edges, labels                                                                             | \u2014                                                      ",
+      "intent": null,
+      "tags": [
+        "Memory Poisoning"
+      ],
+      "evidence": {},
+      "match_fingerprint": "5d64e38332663d53e94c5a06975d671b7ab689f1aa6a06ea60e074ded5c409f1",
+      "occurrences": [
+        {
+          "file": "catalog-map.md",
+          "start_line": 32,
+          "end_line": null,
+          "start_column": 63
+        }
+      ]
+    },
+    {
+      "id": "MP2",
+      "finding_id": "finding-3db8b0a01db0418a9670ae0784081fe5",
+      "category": "Memory Poisoning",
+      "pattern": "Context Window Stuffing",
+      "severity": "MEDIUM",
+      "confidence": 0.8,
+      "location": {
+        "file": "catalog-map.md",
+        "start_line": 33,
+        "end_line": null,
+        "start_column": 84
+      },
+      "finding": "                                                                                                                                                                                                        ",
+      "explanation": "Skill attempts to fill the context window with filler content, displacing legitimate instructions and safety constraints. This can degrade agent performance or bypass safety boundaries.",
+      "remediation": "Implement context-window management that detects and rejects padding or stuffing attempts. Prioritize system instructions over user-injected content.",
+      "code_snippet": "                                                                                                                                                                                                          | nodes, edges, labels                                                                             | \u2014                                                                                                              |\n| **brand reveal**       | `logo-outro` (piece assembly + glow + tagline + URL pill)                                                                                                                                                                                                                                                                                                                                   | logo asset, tagline, URL, palette                                                                | \u2014                                                                           ",
+      "intent": null,
+      "tags": [
+        "Memory Poisoning"
+      ],
+      "evidence": {},
+      "match_fingerprint": "5d64e38332663d53e94c5a06975d671b7ab689f1aa6a06ea60e074ded5c409f1",
+      "occurrences": [
+        {
+          "file": "catalog-map.md",
+          "start_line": 33,
+          "end_line": null,
+          "start_column": 84
+        }
+      ]
+    },
+    {
+      "id": "MP2",
+      "finding_id": "finding-06ecdc466c0d45f1b27fc2014be038a5",
+      "category": "Memory Poisoning",
+      "pattern": "Context Window Stuffing",
+      "severity": "MEDIUM",
+      "confidence": 0.8,
+      "location": {
+        "file": "catalog-map.md",
+        "start_line": 34,
+        "end_line": null,
+        "start_column": 92
+      },
+      "finding": "                                                                                                                                                                                                        ",
+      "explanation": "Skill attempts to fill the context window with filler content, displacing legitimate instructions and safety constraints. This can degrade agent performance or bypass safety boundaries.",
+      "remediation": "Implement context-window management that detects and rejects padding or stuffing attempts. Prioritize system instructions over user-injected content.",
+      "code_snippet": "                                                                                                                                                                                                  | logo asset, tagline, URL, palette                                                                | \u2014                                                                                                              |\n| transitions            | 15+ shader transitions (domain-warp, whip-pan, sdf-iris, glitch\u2026)                                                                                                                                                                                                                                                                                                                           | direction, timing                                                                                | \u2014                                                                                   ",
+      "intent": null,
+      "tags": [
+        "Memory Poisoning"
+      ],
+      "evidence": {},
+      "match_fingerprint": "5d64e38332663d53e94c5a06975d671b7ab689f1aa6a06ea60e074ded5c409f1",
+      "occurrences": [
+        {
+          "file": "catalog-map.md",
+          "start_line": 34,
+          "end_line": null,
+          "start_column": 92
+        }
+      ]
+    },
+    {
+      "id": "MP2",
+      "finding_id": "finding-4c3f5e2e605c4673a98386eab03958a9",
+      "category": "Memory Poisoning",
+      "pattern": "Context Window Stuffing",
+      "severity": "MEDIUM",
+      "confidence": 0.8,
+      "location": {
+        "file": "catalog-map.md",
+        "start_line": 35,
+        "end_line": null,
+        "start_column": 80
+      },
+      "finding": "                                                                                                                                                                                                        ",
+      "explanation": "Skill attempts to fill the context window with filler content, displacing legitimate instructions and safety constraints. This can degrade agent performance or bypass safety boundaries.",
+      "remediation": "Implement context-window management that detects and rejects padding or stuffing attempts. Prioritize system instructions over user-injected content.",
+      "code_snippet": "                                                                                                                                                                                                              | direction, timing                                                                                | \u2014                                                                                                              |\n| social overlay         | ig / tiktok / yt / x / reddit / spotify / macos cards                                                                                                                                                                                                                                                                                                                                       | handle, metrics, avatar                                                                          | \u2014                                                                       ",
+      "intent": null,
+      "tags": [
+        "Memory Poisoning"
+      ],
+      "evidence": {},
+      "match_fingerprint": "5d64e38332663d53e94c5a06975d671b7ab689f1aa6a06ea60e074ded5c409f1",
+      "occurrences": [
+        {
+          "file": "catalog-map.md",
+          "start_line": 35,
+          "end_line": null,
+          "start_column": 80
+        }
+      ]
+    },
+    {
+      "id": "MP2",
+      "finding_id": "finding-4ff09f360ca8425689959db1e9b53bac",
+      "category": "Memory Poisoning",
+      "pattern": "Context Window Stuffing",
+      "severity": "MEDIUM",
+      "confidence": 0.8,
+      "location": {
+        "file": "catalog-map.md",
+        "start_line": 36,
+        "end_line": null,
+        "start_column": 84
+      },
+      "finding": "                                                                                                                                                                                                        ",
+      "explanation": "Skill attempts to fill the context window with filler content, displacing legitimate instructions and safety constraints. This can degrade agent performance or bypass safety boundaries.",
+      "remediation": "Implement context-window management that detects and rejects padding or stuffing attempts. Prioritize system instructions over user-injected content.",
+      "code_snippet": "                                                                                                                                                                                                          | handle, metrics, avatar                                                                          | \u2014                                                                                                              |\n| polish                 | grain-overlay, vignette, shimmer-sweep, texture-mask-text                                                                                                                                                                                                                                                                                                                                   | intensity                                                                                        | \u2014                                                                           ",
+      "intent": null,
+      "tags": [
+        "Memory Poisoning"
+      ],
+      "evidence": {},
+      "match_fingerprint": "5d64e38332663d53e94c5a06975d671b7ab689f1aa6a06ea60e074ded5c409f1",
+      "occurrences": [
+        {
+          "file": "catalog-map.md",
+          "start_line": 36,
+          "end_line": null,
+          "start_column": 84
+        }
+      ]
+    },
+    {
+      "id": "P9",
+      "finding_id": "finding-771a1faf987249e88307c106386698b3",
+      "category": "Prompt Injection",
+      "pattern": "Whitespace Padding",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "catalog-map.md",
+        "start_line": 28,
+        "end_line": null
+      },
+      "finding": "U+0020 x182",
+      "explanation": "Large whitespace padding was detected (a block of blank lines or a long run of spaces). This can push injected instructions below or to the right of the visible area so a human reviewer never sees them while the agent still reads them. Manual review of the hidden content is recommended.",
+      "remediation": "Remove the large whitespace padding (blank-line blocks or long space runs) and review any content hidden below or to the right of it. Keep skill files compact and reviewable so no instructions can be concealed off-screen.",
+      "code_snippet": "---------------------------------------------------------- | ------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------- |\n| **kinetic-typo**       | one of **17 `caption-*`** (kinetic-slam, editorial-emphasis, clip-wipe, gradient-fill, neon-glow, glitch-rgb, matrix-decode, particle-burst, weight-shift, pill-karaoke, highlight, blend-difference...)                                                                                                                                                                                      | words; `emphasis_words` \u2192 `word--emphasis`; palette; font; timing                                | a motif none of the 17 cover                                                                                   |\n| **charts**             | `data-chart` (bar+line, staggered, value labels), `bar-chart-race` (a race)  ",
+      "intent": null,
+      "tags": [
+        "Prompt Injection",
+        "normalized-view"
+      ],
+      "evidence": {},
+      "match_fingerprint": "2fce3bbb2274b7ddd3db1d1e383c5b92e3492e0656b3f20986f3ab2c7778bf1f",
+      "occurrences": [
+        {
+          "file": "catalog-map.md",
+          "start_line": 28,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "P9",
+      "finding_id": "finding-fdf204c9ee4e4317821401e9fc23be2f",
+      "category": "Prompt Injection",
+      "pattern": "Whitespace Padding",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "catalog-map.md",
+        "start_line": 28,
+        "end_line": null
+      },
+      "finding": "U+0020 x83",
+      "explanation": "Large whitespace padding was detected (a block of blank lines or a long run of spaces). This can push injected instructions below or to the right of the visible area so a human reviewer never sees them while the agent still reads them. Manual review of the hidden content is recommended.",
+      "remediation": "Remove the large whitespace padding (blank-line blocks or long space runs) and review any content hidden below or to the right of it. Keep skill files compact and reviewable so no instructions can be concealed off-screen.",
+      "code_snippet": " `caption-*`** (kinetic-slam, editorial-emphasis, clip-wipe, gradient-fill, neon-glow, glitch-rgb, matrix-decode, particle-burst, weight-shift, pill-karaoke, highlight, blend-difference...)                                                                                                                                                                                      | words; `emphasis_words` \u2192 `word--emphasis`; palette; font; timing                                | a motif none of the 17 cover                                                                                   |\n| **charts**             | `data-chart` (bar+line, staggered, value labels), `bar-chart-race` (a race)                                                                                                                                                                                                                                                                                                                 | edit t",
+      "intent": null,
+      "tags": [
+        "Prompt Injection",
+        "normalized-view"
+      ],
+      "evidence": {},
+      "match_fingerprint": "d96191c882bbef56bdec8a780a83ec38d26e0883e5ef2b13675bd905d73e797d",
+      "occurrences": [
+        {
+          "file": "catalog-map.md",
+          "start_line": 28,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "P9",
+      "finding_id": "finding-74107410710d4884b901e09ad976fee4",
+      "category": "Prompt Injection",
+      "pattern": "Whitespace Padding",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "catalog-map.md",
+        "start_line": 34,
+        "end_line": null
+      },
+      "finding": "U+0020 x110",
+      "explanation": "Large whitespace padding was detected (a block of blank lines or a long run of spaces). This can push injected instructions below or to the right of the visible area so a human reviewer never sees them while the agent still reads them. Manual review of the hidden content is recommended.",
+      "remediation": "Remove the large whitespace padding (blank-line blocks or long space runs) and review any content hidden below or to the right of it. Keep skill files compact and reviewable so no instructions can be concealed off-screen.",
+      "code_snippet": "ns            | 15+ shader transitions (domain-warp, whip-pan, sdf-iris, glitch...)                                                                                                                                                                                                                                                                                                                           | direction, timing                                                                                | \u2014                                                                                                              |\n| social overlay         | ig / tiktok / yt / x / reddit / spotify / macos cards                                                                                                                                                                                                                                                                                                                    ",
+      "intent": null,
+      "tags": [
+        "Prompt Injection",
+        "normalized-view"
+      ],
+      "evidence": {},
+      "match_fingerprint": "5300d60d48a3665c82e3edc8c509d854fa57fc346d468ac8951700a538883135",
+      "occurrences": [
+        {
+          "file": "catalog-map.md",
+          "start_line": 34,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "P9",
+      "finding_id": "finding-2777a45f69f240a3b0d3a2135318f1ac",
+      "category": "Prompt Injection",
+      "pattern": "Whitespace Padding",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "catalog-map.md",
+        "start_line": 34,
+        "end_line": null
+      },
+      "finding": "U+0020 x315",
+      "explanation": "Large whitespace padding was detected (a block of blank lines or a long run of spaces). This can push injected instructions below or to the right of the visible area so a human reviewer never sees them while the agent still reads them. Manual review of the hidden content is recommended.",
+      "remediation": "Remove the large whitespace padding (blank-line blocks or long space runs) and review any content hidden below or to the right of it. Keep skill files compact and reviewable so no instructions can be concealed off-screen.",
+      "code_snippet": "                                                                                                                                                                                                | logo asset, tagline, URL, palette                                                                | \u2014                                                                                                              |\n| transitions            | 15+ shader transitions (domain-warp, whip-pan, sdf-iris, glitch...)                                                                                                                                                                                                                                                                                                                           | direction, timing                                                                                | \u2014                                                                                   ",
+      "intent": null,
+      "tags": [
+        "Prompt Injection",
+        "normalized-view"
+      ],
+      "evidence": {},
+      "match_fingerprint": "3a1407e6f940232a46654ae9b902a7932fbdc99090d9affe054e62bf2b5beadf",
+      "occurrences": [
+        {
+          "file": "catalog-map.md",
+          "start_line": 34,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "P9",
+      "finding_id": "finding-dc48557ffb824abf9d6d1fa2e2938c7e",
+      "category": "Prompt Injection",
+      "pattern": "Whitespace Padding",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "catalog-map.md",
+        "start_line": 34,
+        "end_line": null
+      },
+      "finding": "U+0020 x80",
+      "explanation": "Large whitespace padding was detected (a block of blank lines or a long run of spaces). This can push injected instructions below or to the right of the visible area so a human reviewer never sees them while the agent still reads them. Manual review of the hidden content is recommended.",
+      "remediation": "Remove the large whitespace padding (blank-line blocks or long space runs) and review any content hidden below or to the right of it. Keep skill files compact and reviewable so no instructions can be concealed off-screen.",
+      "code_snippet": "                                                                      |\n| transitions            | 15+ shader transitions (domain-warp, whip-pan, sdf-iris, glitch...)                                                                                                                                                                                                                                                                                                                           | direction, timing                                                                                | \u2014                                                                                                              |\n| social overlay         | ig / tiktok / yt / x / reddit / spotify / macos cards                                                                                                                                                                                                                                 ",
+      "intent": null,
+      "tags": [
+        "Prompt Injection",
+        "normalized-view"
+      ],
+      "evidence": {},
+      "match_fingerprint": "3f3e1ea3b9bb019abcac6734c9b22d5bee43d8557659b3a3de1778e0068d058d",
+      "occurrences": [
+        {
+          "file": "catalog-map.md",
+          "start_line": 34,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-8335412fe6cc4856983df0089a223c64",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx puppeteer'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "categories/maps/bake-basemap.mjs",
+        "start_line": 56,
+        "end_line": null
+      },
+      "finding": "npx puppeteer",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "f6bb0418a4d5b129a189db2b44bb280e9ba7dbf2ae147c79bac04ca0d2a6af75",
+      "occurrences": [
+        {
+          "file": "categories/maps/bake-basemap.mjs",
+          "start_line": 56,
+          "end_line": null
+        }
+      ]
+    }
+  ],
+  "suppressed_count": 0,
+  "suppressed": [],
+  "metadata": {
+    "has_executable_scripts": true,
+    "skillspector_version": "2.12.0",
+    "llm_requested": false,
+    "llm_available": false,
+    "meta_analysis_applied": false,
+    "inference_usage": [],
+    "llm_provenance": {
+      "schema_version": 1,
+      "provider": {
+        "configured_adapter": "unknown",
+        "resolved_adapter": "unknown",
+        "effective_adapter": "not_applicable",
+        "effective_adapters": [],
+        "service": "unknown",
+        "routing": {
+          "deployment_override": null,
+          "deployment_source": "unknown",
+          "api_version": null,
+          "api_version_source": "unknown"
+        }
+      },
+      "analyzers": [
+        {
+          "analyzer_id": "mcp_tool_poisoning",
+          "model": "z-ai/glm-5.3",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "4c52fbb83bbca0dd13f2685453c9b661d8c95bf8",
+              "source": "package_vcs_metadata"
+            }
+          }
+        },
+        {
+          "analyzer_id": "semantic_developer_intent",
+          "model": "z-ai/glm-5.3",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "4c52fbb83bbca0dd13f2685453c9b661d8c95bf8",
+              "source": "package_vcs_metadata"
+            }
+          }
+        },
+        {
+          "analyzer_id": "semantic_quality_policy",
+          "model": "z-ai/glm-5.3",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "4c52fbb83bbca0dd13f2685453c9b661d8c95bf8",
+              "source": "package_vcs_metadata"
+            }
+          }
+        },
+        {
+          "analyzer_id": "semantic_security_discovery",
+          "model": "z-ai/glm-5.3",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "4c52fbb83bbca0dd13f2685453c9b661d8c95bf8",
+              "source": "package_vcs_metadata"
+            }
+          }
+        },
+        {
+          "analyzer_id": "meta_analyzer",
+          "model": "z-ai/glm-5.3",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "4c52fbb83bbca0dd13f2685453c9b661d8c95bf8",
+              "source": "package_vcs_metadata"
+            }
+          }
+        }
+      ],
+      "sampling": {
+        "temperature": {
+          "requested": null,
+          "source": "provider_default",
+          "forwarded_to_client": null,
+          "adapter_support": false,
+          "provider_support": "unknown"
+        },
+        "seed": {
+          "requested": null,
+          "source": "unset",
+          "forwarded_to_client": null,
+          "adapter_support": false,
+          "provider_support": "unknown"
+        },
+        "reasoning_effort": {
+          "requested": null,
+          "source": "provider_default",
+          "forwarded_to_client": null,
+          "adapter_support": false,
+          "provider_support": "unknown"
+        }
+      },
+      "determinism": {
+        "classification": "not_applicable",
+        "control_status": "not_applied",
+        "provider_guarantee": false,
+        "reason": "LLM analysis was not executed for this scan."
+      }
+    },
+    "filtering_mode": "heuristic"
+  },
+  "execution_successful": true,
+  "analysis_completeness": {
+    "total_components": 23,
+    "scanned_components": 20,
+    "coverage_percent": 87.0,
+    "is_complete": false,
+    "status": "partial",
+    "execution_successful": true,
+    "fully_inspected_files": 20,
+    "partially_inspected_files": 3,
+    "entirely_uninspected_files": 0,
+    "ledger_exceptions": [
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_missing",
+        "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+        "path": "SKILL.md",
+        "start_line": 18,
+        "end_line": 18,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_missing",
+        "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+        "path": "SKILL.md",
+        "start_line": 24,
+        "end_line": 24,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_missing",
+        "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+        "path": "SKILL.md",
+        "start_line": 30,
+        "end_line": 30,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_missing",
+        "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+        "path": "SKILL.md",
+        "start_line": 31,
+        "end_line": 31,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_missing",
+        "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+        "path": "SKILL.md",
+        "start_line": 32,
+        "end_line": 32,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_missing",
+        "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+        "path": "SKILL.md",
+        "start_line": 33,
+        "end_line": 33,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_missing",
+        "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+        "path": "SKILL.md",
+        "start_line": 34,
+        "end_line": 34,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_missing",
+        "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+        "path": "SKILL.md",
+        "start_line": 35,
+        "end_line": 35,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_missing",
+        "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+        "path": "SKILL.md",
+        "start_line": 37,
+        "end_line": 37,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_missing",
+        "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+        "path": "SKILL.md",
+        "start_line": 84,
+        "end_line": 84,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_missing",
+        "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+        "path": "SKILL.md",
+        "start_line": 103,
+        "end_line": 103,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_missing",
+        "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+        "path": "SKILL.md",
+        "start_line": 105,
+        "end_line": 105,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_missing",
+        "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+        "path": "SKILL.md",
+        "start_line": 111,
+        "end_line": 111,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_missing",
+        "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+        "path": "SKILL.md",
+        "start_line": 115,
+        "end_line": 115,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_missing",
+        "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+        "path": "SKILL.md",
+        "start_line": 121,
+        "end_line": 121,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_unresolved",
+        "message": "A local path-like reference matched more than one bundled artifact and could not be resolved to a single target.",
+        "path": "SKILL.md",
+        "start_line": 121,
+        "end_line": 121,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_missing",
+        "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+        "path": "SKILL.md",
+        "start_line": 143,
+        "end_line": 143,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_missing",
+        "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+        "path": "SKILL.md",
+        "start_line": 147,
+        "end_line": 147,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_missing",
+        "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+        "path": "SKILL.md",
+        "start_line": 153,
+        "end_line": 153,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_missing",
+        "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+        "path": "SKILL.md",
+        "start_line": 154,
+        "end_line": 154,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_missing",
+        "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+        "path": "SKILL.md",
+        "start_line": 155,
+        "end_line": 155,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_missing",
+        "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+        "path": "SKILL.md",
+        "start_line": 156,
+        "end_line": 156,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_missing",
+        "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+        "path": "SKILL.md",
+        "start_line": 170,
+        "end_line": 170,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_missing",
+        "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+        "path": "SKILL.md",
+        "start_line": 171,
+        "end_line": 171,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_missing",
+        "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+        "path": "SKILL.md",
+        "start_line": 172,
+        "end_line": 172,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_missing",
+        "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+        "path": "SKILL.md",
+        "start_line": 174,
+        "end_line": 174,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "static",
+        "reason_code": "static_parse_limit",
+        "message": "A security-relevant expression exceeded a bounded static parser's span limit.",
+        "path": "categories/maps/bake-basemap.mjs",
+        "start_line": null,
+        "end_line": null,
+        "fatal": false,
+        "analyzers": [
+          "static_patterns_tool_misuse"
+        ]
+      },
+      {
+        "outcome": "partial",
+        "phase": "static",
+        "reason_code": "static_parse_limit",
+        "message": "A security-relevant expression exceeded a bounded static parser's span limit.",
+        "path": "grounding/locate.mjs",
+        "start_line": null,
+        "end_line": null,
+        "fatal": false,
+        "analyzers": [
+          "static_patterns_tool_misuse"
+        ]
+      },
+      {
+        "outcome": "partial",
+        "phase": "static",
+        "reason_code": "runtime_limit",
+        "message": "Inspection reached its configured runtime limit.",
+        "path": "phases",
+        "start_line": null,
+        "end_line": null,
+        "fatal": false,
+        "analyzers": [
+          "static_patterns_supply_chain_bytecode_runtime_limit"
+        ]
+      },
+      {
+        "outcome": "partial",
+        "phase": "static",
+        "reason_code": "static_parse_limit",
+        "message": "A security-relevant expression exceeded a bounded static parser's span limit.",
+        "path": "samples/asset-fusion/_ref-circle-highlight.html",
+        "start_line": null,
+        "end_line": null,
+        "fatal": false,
+        "analyzers": [
+          "static_patterns_tool_misuse"
+        ]
+      }
+    ],
+    "scope_exclusions": [],
+    "analyzer_statuses": [
+      {
+        "analyzer_id": "artifact_integrity",
+        "status": "completed",
+        "planned_work": 23,
+        "completed": 23,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "behavioral_ast",
+        "status": "not_applicable",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "no_applicable_files",
+        "message": "No files matched this analyzer's applicability contract."
+      },
+      {
+        "analyzer_id": "behavioral_taint_tracking",
+        "status": "not_applicable",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "no_applicable_files",
+        "message": "No files matched this analyzer's applicability contract."
+      },
+      {
+        "analyzer_id": "bundled_execution_surface",
+        "status": "not_applicable",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "no_applicable_files",
+        "message": "No files matched this analyzer's applicability contract."
+      },
+      {
+        "analyzer_id": "mcp_least_privilege",
+        "status": "completed",
+        "planned_work": 3,
+        "completed": 3,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "mcp_rug_pull",
+        "status": "completed",
+        "planned_work": 23,
+        "completed": 23,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "mcp_tool_poisoning",
+        "status": "completed",
+        "planned_work": 1,
+        "completed": 1,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "meta_analyzer",
+        "status": "disabled",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "disabled_by_configuration",
+        "message": "Analyzer was disabled by the requested configuration."
+      },
+      {
+        "analyzer_id": "reference_coverage",
+        "status": "completed",
+        "planned_work": 1,
+        "completed": 1,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "semantic_developer_intent",
+        "status": "disabled",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "disabled_by_configuration",
+        "message": "Analyzer was disabled by the requested configuration."
+      },
+      {
+        "analyzer_id": "semantic_quality_policy",
+        "status": "disabled",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "disabled_by_configuration",
+        "message": "Analyzer was disabled by the requested configuration."
+      },
+      {
+        "analyzer_id": "semantic_security_discovery",
+        "status": "disabled",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "disabled_by_configuration",
+        "message": "Analyzer was disabled by the requested configuration."
+      },
+      {
+        "analyzer_id": "static_patterns_agent_snooping",
+        "status": "completed",
+        "planned_work": 23,
+        "completed": 23,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_anti_refusal",
+        "status": "completed",
+        "planned_work": 23,
+        "completed": 23,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_data_exfiltration",
+        "status": "completed",
+        "planned_work": 23,
+        "completed": 23,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_deserialization",
+        "status": "completed",
+        "planned_work": 23,
+        "completed": 23,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_excessive_agency",
+        "status": "completed",
+        "planned_work": 23,
+        "completed": 23,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_harmful_content",
+        "status": "completed",
+        "planned_work": 23,
+        "completed": 23,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_memory_poisoning",
+        "status": "completed",
+        "planned_work": 23,
+        "completed": 23,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_output_handling",
+        "status": "completed",
+        "planned_work": 23,
+        "completed": 23,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_privilege_escalation",
+        "status": "completed",
+        "planned_work": 23,
+        "completed": 23,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_prompt_injection",
+        "status": "completed",
+        "planned_work": 23,
+        "completed": 23,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_rogue_agent",
+        "status": "completed",
+        "planned_work": 23,
+        "completed": 23,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_ssrf",
+        "status": "completed",
+        "planned_work": 23,
+        "completed": 23,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_supply_chain",
+        "status": "degraded",
+        "planned_work": 24,
+        "completed": 23,
+        "partial": 1,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_system_prompt_leakage",
+        "status": "completed",
+        "planned_work": 23,
+        "completed": 23,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_tool_misuse",
+        "status": "degraded",
+        "planned_work": 23,
+        "completed": 20,
+        "partial": 3,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_yara",
+        "status": "completed",
+        "planned_work": 23,
+        "completed": 23,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      }
+    ],
+    "references": [
+      {
+        "source_path": "SKILL.md",
+        "line": 14,
+        "column": 90,
+        "evidence": "installs:** Before setup or freshness commands, follow [plugin execution rules](../hyperframes/references/plugin-installation.md) when this skill is inside a Hy",
+        "target_path": null,
+        "status": "rejected",
+        "disposition": "out_of_scope",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 18,
+        "column": 314,
+        "evidence": "ut. Don't drive Figma via raw MCP tools directly: that skips SVG sanitization, `.media/manifest.jsonl` provenance, and brand-token `var()` binding, so a later b",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 24,
+        "column": 79,
+        "evidence": "This workflow is **autonomous by design** \u2014 at most one clarifying question (`agents/director.md`), then build through verification without intermediate review.",
+        "target_path": "agents/director.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 24,
+        "column": 198,
+        "evidence": "h verification without intermediate review. The intent layer (`/hyperframes` \u2192 `references/intent-interview.md`) routes here directly without run-shape question",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 24,
+        "column": 512,
+        "evidence": "dio preview and ask the canonical \u201crender now, or what changes?\u201d question from `../hyperframes/references/brief-contract.md`. When a `BRIEF.md` exists, read it ",
+        "target_path": null,
+        "status": "rejected",
+        "disposition": "out_of_scope",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 24,
+        "column": 566,
+        "evidence": " changes?\u201d question from `../hyperframes/references/brief-contract.md`. When a `BRIEF.md` exists, read it before the director's question.",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 30,
+        "column": 87,
+        "evidence": "| init | Bash | `hyperframes.json` | Step 0 |",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 31,
+        "column": 87,
+        "evidence": " | subagent \u2014 **decide search?** + classify + asset strategy | `shot-plan.json` (draft: category, `asset_needs` queries, brief) | `agents/director.md` (Part 1) ",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 31,
+        "column": 154,
+        "evidence": "t-plan.json` (draft: category, `asset_needs` queries, brief) | `agents/director.md` (Part 1) |",
+        "target_path": "agents/director.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 32,
+        "column": 99,
+        "evidence": "| source \u25c7 | Bash \u2014 media-use resolve (**skip if `asset_needs` is empty**) | `assets/` + `assets/index.md` | `phases/source/guide.md` |",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 32,
+        "column": 154,
+        "evidence": "| source \u25c7 | Bash \u2014 media-use resolve (**skip if `asset_needs` is empty**) | `assets/` + `assets/index.md` | `phases/source/guide.md` |",
+        "target_path": "phases/source/guide.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 33,
+        "column": 87,
+        "evidence": "| design | subagent \u2014 shot design around resolved assets | `shot-plan.json` (final: block(s) + layout + motion + positions) | `agents/director.md` (Part 2) |",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 33,
+        "column": 154,
+        "evidence": "| design | subagent \u2014 shot design around resolved assets | `shot-plan.json` (final: block(s) + layout + motion + positions) | `agents/director.md` (Part 2) |",
+        "target_path": "agents/director.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 34,
+        "column": 87,
+        "evidence": "| build | subagent \u2014 reuse-first composition | `compositions/index.html` | `agents/builder.md` |",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 34,
+        "column": 154,
+        "evidence": "| build | subagent \u2014 reuse-first composition | `compositions/index.html` | `agents/builder.md` |",
+        "target_path": "agents/builder.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 35,
+        "column": 87,
+        "evidence": "| verify | Bash \u2014 `lint`, `check`, proof snapshots; repair on failure | `snapshots/contact-sheet.jpg` | Step 5 |",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 37,
+        "column": 87,
+        "evidence": "| render | Bash \u2014 `hyperframes render` (MP4, or `--format webm/mov` for overlay) | `renders/video.mp4` or transparent overlay | Step 6 |",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 43,
+        "column": 330,
+        "evidence": "module.md` (its planning + build rules); the shared motion vocabulary lives in `references/motion-vocabulary.md` (\u2192 `hyperframes-animation` rules/blueprints + r",
+        "target_path": "references/motion-vocabulary.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 54,
+        "column": 166,
+        "evidence": "(vector lane, or baked basemap lane) | `us-map` / `world-map` family + `bake-basemap.mjs` |",
+        "target_path": "categories/maps/bake-basemap.mjs",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 84,
+        "column": 13,
+        "evidence": "Only when `$PROJECT_DIR/hyperframes.json` is absent:",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "plain_path"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 98,
+        "column": 39,
+        "evidence": "Dispatch one subagent. prompt = full `agents/director.md` + `## Dispatch context` (`SKILL_DIR` / `PROJECT_DIR` / the user's request / `Schema: <SKILL_DIR>/refer",
+        "target_path": "agents/director.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 103,
+        "column": 19,
+        "evidence": "2. Write a draft `shot-plan.json` (envelope + chosen form category _or_ search intent + `asset_needs` + a one-paragraph shot brief). Schema: `references/shot-pl",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 103,
+        "column": 143,
+        "evidence": "gory _or_ search intent + `asset_needs` + a one-paragraph shot brief). Schema: `references/shot-plan-ir.md`.",
+        "target_path": "references/shot-plan-ir.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 105,
+        "column": 21,
+        "evidence": "Validation: `[ -s \"$PROJECT_DIR/shot-plan.json\" ] && echo ok || echo missing`.",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "plain_path"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 109,
+        "column": 134,
+        "evidence": " assets (search / generate / fetch \u2192 frozen project-local paths + ledger). See `phases/source/guide.md` (wraps `media-use resolve`; the search-driven categories",
+        "target_path": "phases/source/guide.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 111,
+        "column": 109,
+        "evidence": "Degrade gracefully: if a search/provider is unavailable, the category falls back to asset-free (note it in `context.log`).",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 115,
+        "column": 32,
+        "evidence": "Dispatch a subagent (prompt = `agents/director.md` Part 2 + dispatch context including the resolved `assets/index.md` if Step 2 ran + `catalog-map.md`). It desi",
+        "target_path": "agents/director.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 115,
+        "column": 102,
+        "evidence": "prompt = `agents/director.md` Part 2 + dispatch context including the resolved `assets/index.md` if Step 2 ran + `catalog-map.md`). It designs the shot **around",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 115,
+        "column": 136,
+        "evidence": " 2 + dispatch context including the resolved `assets/index.md` if Step 2 ran + `catalog-map.md`). It designs the shot **around the available assets**: pick the ",
+        "target_path": "catalog-map.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 115,
+        "column": 394,
+        "evidence": "d (for `asset-fusion`) the `element_positions` + eyedropper palette. Finalizes `shot-plan.json` (`content.block` + `content.customize` + per-category content).",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 115,
+        "column": 412,
+        "evidence": "on`) the `element_positions` + eyedropper palette. Finalizes `shot-plan.json` (`content.block` + `content.customize` + per-category content).",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 115,
+        "column": 430,
+        "evidence": "positions` + eyedropper palette. Finalizes `shot-plan.json` (`content.block` + `content.customize` + per-category content).",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 119,
+        "column": 40,
+        "evidence": "Include the shared [motion principles](../hyperframes-creative/references/motion-principles.md) in the Builder's dispatch context. For `charts` and `stat`, also",
+        "target_path": null,
+        "status": "rejected",
+        "disposition": "out_of_scope",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 119,
+        "column": 187,
+        "evidence": "lder's dispatch context. For `charts` and `stat`, also include [data in motion](../hyperframes-creative/references/data-in-motion.md). The Builder reads these g",
+        "target_path": null,
+        "status": "rejected",
+        "disposition": "out_of_scope",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 121,
+        "column": 37,
+        "evidence": "Dispatch a subagent. prompt = full `agents/builder.md` + dispatch context (`shot-plan.json`, `catalog-map.md`, the category's `module.md`, `references/motion-vo",
+        "target_path": "agents/builder.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 121,
+        "column": 77,
+        "evidence": "Dispatch a subagent. prompt = full `agents/builder.md` + dispatch context (`shot-plan.json`, `catalog-map.md`, the category's `module.md`, `references/motion-vo",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 121,
+        "column": 95,
+        "evidence": "agent. prompt = full `agents/builder.md` + dispatch context (`shot-plan.json`, `catalog-map.md`, the category's `module.md`, `references/motion-vocabulary.md`, ",
+        "target_path": "catalog-map.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 121,
+        "column": 128,
+        "evidence": "der.md` + dispatch context (`shot-plan.json`, `catalog-map.md`, the category's `module.md`, `references/motion-vocabulary.md`, `references/builder-contract.md`)",
+        "target_path": null,
+        "status": "ambiguous",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 121,
+        "column": 141,
+        "evidence": "patch context (`shot-plan.json`, `catalog-map.md`, the category's `module.md`, `references/motion-vocabulary.md`, `references/builder-contract.md`). **Reuse-fir",
+        "target_path": "references/motion-vocabulary.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 121,
+        "column": 176,
+        "evidence": "atalog-map.md`, the category's `module.md`, `references/motion-vocabulary.md`, `references/builder-contract.md`). **Reuse-first**: `npx hyperframes add <block>`",
+        "target_path": "references/builder-contract.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 121,
+        "column": 340,
+        "evidence": "ustomize in place; hand-author only gaps + the asset-fusion affordance. Output `compositions/index.html` honoring the HF contract (paused GSAP timeline on `wind",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 130,
+        "column": 220,
+        "evidence": "inuing. On `lint`, `check`, or snapshot failure, dispatch the repair subagent (`agents/finalize.md`) for one in-place fix pass, then rerun the failed gate. Neve",
+        "target_path": "agents/finalize.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 143,
+        "column": 83,
+        "evidence": "(cd \"$PROJECT_DIR\" && npx hyperframes render . --skill=motion-graphics -q high -o ./renders/video.mp4)",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "plain_path"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 147,
+        "column": 246,
+        "evidence": "nd the inspected contact or snapshot sheet. Flags live in `/hyperframes-cli` \u2192 `references/preview-render.md`.",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 153,
+        "column": 7,
+        "evidence": "| no `shot-plan.json` | Step 1 (plan) |",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 154,
+        "column": 4,
+        "evidence": "| `shot-plan.json` has `asset_needs`, no `assets/` | Step 2 (source) |",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 155,
+        "column": 4,
+        "evidence": "| `shot-plan.json` final, no `compositions/index.html` | Step 3/4 (design+build) |",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 155,
+        "column": 31,
+        "evidence": "| `shot-plan.json` final, no `compositions/index.html` | Step 3/4 (design+build) |",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 156,
+        "column": 4,
+        "evidence": "| `compositions/index.html` exists, proof snapshots absent | Step 5 (verify) |",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 164,
+        "column": 94,
+        "evidence": "module contract:** one `categories/<id>/module.md` (planning + build), sharing `references/motion-vocabulary.md` (+ optional eval). Adding a category = drop the",
+        "target_path": "references/motion-vocabulary.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 164,
+        "column": 217,
+        "evidence": "l eval). Adding a category = drop the folder + register its classifier line in `agents/director.md` + its row in `catalog-map.md`; the phase pipeline is untouch",
+        "target_path": "agents/director.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 164,
+        "column": 251,
+        "evidence": "the folder + register its classifier line in `agents/director.md` + its row in `catalog-map.md`; the phase pipeline is untouched.",
+        "target_path": "catalog-map.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 170,
+        "column": 14,
+        "evidence": "assets/ assets/index.md # media-use output (if sourced)",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "plain_path"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 171,
+        "column": 5,
+        "evidence": "compositions/index.html # Builder output",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "plain_path"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 172,
+        "column": 5,
+        "evidence": "renders/video.mp4",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "plain_path"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 174,
+        "column": 215,
+        "evidence": "n-graphics triggers out of `/general-video`; add reverse Do-NOT-use edges. See `motion-graphics-genre.md` \u00a75-7.",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      }
+    ],
+    "limitations": [
+      "Analyzer static_patterns_supply_chain status: degraded.",
+      "Analyzer static_patterns_tool_misuse status: degraded."
+    ],
+    "findings_before_filtering": 44,
+    "findings_after_filtering": 44
+  }
+}

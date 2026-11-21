@@ -1,0 +1,78 @@
+{
+ "qid": "PT158-S4-Q12",
+ "type": "Paradox",
+ "difficulty": "5",
+ "key_db": "C",
+ "stimulus_db": "The only effective check on grass and brush fires is rain. If the level of rainfall is below normal for an extended period of time, then there are many more such fires. Yet grass and brush fires cause less financial damage overall during long periods of severe drought than during periods of relatively normal rainfall.",
+ "stem_db": "Which one of the following, if true, would most help to resolve the apparent paradox described above?",
+ "choices_db": {
+  "A": "Fire departments tend to receive less funding during periods of severe drought than during periods of normal rainfall.",
+  "B": "Areas subject to grass and brush fires tend to be less densely populated than areas where there are few such fires.",
+  "C": "Unusually large, hard-to-control grass and brush fires typically occur only when there is a large amount of vegetation for them to consume.",
+  "D": "Grass and brush fires that are not caused by human negligence or arson tend to be started by lightning.",
+  "E": "When vegetation is destroyed in a grass or brush fire, it tends to be replaced naturally by vegetation that is equally if not more flammable."
+ },
+ "bank": {
+  "stimulus": "The only effective check on grass and brush fires is rain.\n If the level of rainfall is below normal for an extended\n period of time, then there are many more such fires. Yet\n grass and brush fires cause less financial damage overall\n during long periods of severe drought than during periods\n of relatively normal rainfall.",
+  "stem": "Which one of the following, if true, would most help to\n resolve the apparent paradox described above?",
+  "choices": {
+   "A": "Fire departments tend to receive less funding during periods of severe drought than during periods of normal rainfall.",
+   "B": "Areas subject to grass and brush fires tend to be less densely populated than areas where there are few such fires.",
+   "C": "Unusually large, hard-to-control grass and brush fires typically occur only when there is a large amount of vegetation for them to consume.",
+   "D": "Grass and brush fires that are not caused by human negligence or arson tend to be started by lightning.",
+   "E": "When vegetation is destroyed in a grass or brush fire, it tends to be replaced naturally by vegetation that is equally if not more flammable."
+  },
+  "key": "C"
+ },
+ "explanation_id": "e55dd078-8d25-4a9a-97a8-de7f7a077d8c",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "f23671f1-a452-49dc-b932-5172e154f330",
+   "position": 0,
+   "label": "Given That",
+   "body": "The only way to curb grass and brush fires is rain.\nIf rain is below normal for an extended period of time, then there are many more such fires."
+  },
+  {
+   "row_id": "f5a0db02-6899-4182-a8a7-91ed8bef345f",
+   "position": 1,
+   "label": "How Can it be That",
+   "body": "Grass and brush fires cause less financial damage overall during severe drought than during normal rainfall?"
+  },
+  {
+   "row_id": "c8a11028-e252-4971-a598-7046817c23c7",
+   "position": 2,
+   "label": "Evaluate / Goal",
+   "body": "To sharpen the paradox a little bit, it seems like we're trying to reconcile this comparison:\n```\nSevere Drought        vs.   Normal Rain\nmany more fires             fewer fires\nless $ damage               more $ damage\nfrom fires                  from fires\n```\nSo we need a way to explain why fewer fires during rainy times could be causing more financial damage than more fires during drier times."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "639264bc-735b-463a-881c-f12c4be3e025",
+   "letter": "A",
+   "body": "If fire departments receive less funding during drought, their capacity to fight fires is reduced. With more fires occurring AND less firefighting capability, total damage should be even higher during drought — making the paradox harder to explain, not easier. A resolve-the-paradox answer must make both facts simultaneously sensible. This answer adds another factor that should increase drought-year damage, pushing in the wrong direction."
+  },
+  {
+   "row_id": "c16b668d-57be-45c5-8d84-533ce521336a",
+   "letter": "B",
+   "body": "Whether fire-prone areas are less densely populated is a fixed characteristic of the landscape — it does not change between drought and non-drought years. The paradox is specifically about why damage differs depending on rainfall conditions. A static fact that applies equally in drought and normal years cannot explain a difference that exists only between those conditions. Even if fewer people live in fire-prone areas, this would reduce damage in both drought and non-drought years equally, leaving the relative difference unexplained."
+  },
+  {
+   "row_id": "d30c5889-77cc-4ea4-85bf-71c8445103de",
+   "letter": "C",
+   "body": "This answer resolves the paradox by identifying a single factor — vegetation — that explains both observations. Large, hard-to-control fires require extensive vegetation as fuel. During drought, vegetation is sparse and dry. The dryness makes fires ignite easily (explaining the higher frequency), but the sparseness means each fire has little fuel to consume and stays small (explaining the lower total damage).\n\nIn contrast, during years with normal rainfall, vegetation is abundant. Fires start less frequently (conditions are wetter), but when they do start, they have enormous amounts of fuel available. These less frequent fires can grow into massive, devastating blazes that cause far more total damage than many small drought fires combined. The same condition — drought — that makes fires more likely also makes each fire less destructive. Both facts are simultaneously explained."
+  },
+  {
+   "row_id": "d7d80a20-4912-4bbf-8427-9801ad40dde9",
+   "letter": "D",
+   "body": "The cause of ignition — whether lightning, negligence, or anything else — does not explain why more fires produce less total damage. The paradox is about the relationship between fire frequency and total destructiveness, not about what starts the fires. Even if all drought fires were started by lightning and all non-drought fires by negligence, we would still need to explain why more fires lead to less damage. The ignition source has no bearing on how much damage each fire causes once it starts."
+  },
+  {
+   "row_id": "c55a4068-20ef-428c-a31f-0a7159c0eebf",
+   "letter": "E",
+   "body": "If destroyed vegetation is replaced by equally flammable material, then the total fuel supply does not decrease during drought — it just changes form. Without a reduction in fuel, there is no mechanism to explain why drought fires are individually less destructive. If anything, this answer deepens the paradox by suggesting fuel levels remain constant despite the drought, leaving the lower total damage unexplained. The correct resolution (C) works precisely because drought reduces available vegetation. This answer contradicts that mechanism by suggesting the fuel supply is replenished with equally burnable material."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (16.1 em-dashes per 1k words; wrong-answer notes average 80.8 words).",
+ "tags": "emdash-heavy; pt157-158-register"
+}

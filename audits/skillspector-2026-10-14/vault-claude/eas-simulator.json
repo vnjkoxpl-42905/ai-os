@@ -1,0 +1,4424 @@
+{
+  "skill": {
+    "name": "eas-simulator",
+    "source": "C:\\Users\\Joshu\\dev\\ai-os\\.claude\\skills\\eas-simulator",
+    "scanned_at": "2026-10-14T14:48:14.110545+00:00"
+  },
+  "risk_assessment": {
+    "score": 100,
+    "severity": "CRITICAL",
+    "recommendation": "DO_NOT_INSTALL",
+    "max_issue_severity": "HIGH"
+  },
+  "components": [
+    {
+      "path": "SKILL.md",
+      "type": "markdown",
+      "lines": 237,
+      "executable": false,
+      "size_bytes": 26695,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "agents/openai.yaml",
+      "type": "yaml",
+      "lines": 4,
+      "executable": false,
+      "size_bytes": 426,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "references/controllers.md",
+      "type": "markdown",
+      "lines": 139,
+      "executable": false,
+      "size_bytes": 14022,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "references/logs-and-crashes.md",
+      "type": "markdown",
+      "lines": 101,
+      "executable": false,
+      "size_bytes": 7823,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "references/run-your-app.md",
+      "type": "markdown",
+      "lines": 254,
+      "executable": false,
+      "size_bytes": 21549,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "references/troubleshooting.md",
+      "type": "markdown",
+      "lines": 56,
+      "executable": false,
+      "size_bytes": 14872,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    }
+  ],
+  "structured_summaries": [],
+  "issues": [
+    {
+      "id": "PE3",
+      "finding_id": "finding-36ab477f449744cd878900d34af16c3f",
+      "category": "Privilege Escalation",
+      "pattern": "Credential Access",
+      "severity": "HIGH",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 34,
+        "end_line": null,
+        "start_column": 179
+      },
+      "finding": "Access Tokens",
+      "explanation": "Code accesses credential files (SSH keys, AWS credentials, etc.). This could indicate credential theft attempts.",
+      "remediation": "Remove references to credential paths. Use environment variables or secrets managers. For docs, use placeholder paths (e.g., /path/to/config). Never load .env or token files in production code paths.",
+      "code_snippet": "## Prerequisites\n\n- **Run every `eas` command via `npx --yes eas-cli@latest \u2026`** \u2014 guarantees a CLI new enough to have `simulator:*` (a global `eas` is often too old), and `--yes` skips npx's prompt. (Bare `eas` is fine if `eas --version` is current.)\n- **Authenticated.** Interactive machine \u2192 `npx --yes eas-cli@latest login`. **Cloud sandbox / CI / headless agent has no browser login \u2014 set `EXPO_TOKEN`** (expo.dev \u2192 Account \u2192 Access Tokens) in the env instead. Verify either way with `npx --yes eas-cli@latest whoami`.\n- Run from an Expo **project directory.** A fresh app needs one-time setup: `npx --yes eas-cli@latest init` to create/link the project (when there's no `projectId`), and **set `ios.bundleIdentifier`** in app config if it's missing \u2014 a fresh `create-expo-app` often has none, and `prebuild`/`eas build` need it (they prompt or fail without it; e.g. `dev.<owner>.<slug>`). Read current config with `npx expo config --json` (it may live in `app.config.js`). The first Mode-C run ",
+      "intent": null,
+      "tags": [
+        "Privilege Escalation"
+      ],
+      "evidence": {},
+      "match_fingerprint": "8962f8722be07452b125a42074670b0fad71a4ae4b34ebaf919061a53ecf2b56",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 34,
+          "end_line": null,
+          "start_column": 179
+        }
+      ]
+    },
+    {
+      "id": "PE3",
+      "finding_id": "finding-036a51b541fd45b5921c7a16952e9e2d",
+      "category": "Privilege Escalation",
+      "pattern": "Credential Access",
+      "severity": "HIGH",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/troubleshooting.md",
+        "start_line": 11,
+        "end_line": null,
+        "start_column": 187
+      },
+      "finding": "Access Tokens",
+      "explanation": "Code accesses credential files (SSH keys, AWS credentials, etc.). This could indicate credential theft attempts.",
+      "remediation": "Remove references to credential paths. Use environment variables or secrets managers. For docs, use placeholder paths (e.g., /path/to/config). Never load .env or token files in production code paths.",
+      "code_snippet": "r upgrade `eas-cli`. |\n| `simulator:start` rejects `--name` (e.g. `Nonexistent flag: --name`) | `eas-cli` too old \u2014 `--name` was added after `simulator:start` itself | Run via `npx --yes eas-cli@latest \u2026`, or upgrade `eas-cli`. If you can't upgrade, retry once **without** `--name`; the session starts unnamed. |\n| `An Expo user account is required` / `whoami` shows logged-out | No browser login on a cloud/CI/headless box, or `EXPO_TOKEN` unset/invalid | Set **`EXPO_TOKEN`** (expo.dev \u2192 Account \u2192 Access Tokens) in the env; verify `npx --yes eas-cli@latest whoami`. (Interactive machines can `eas login`.) |\n| `simulator:start`/`build`: no linked project / missing `projectId` | A fresh `create-expo-app` isn't linked to EAS | `npx --yes eas-cli@latest init` to create/link it (writes `extra.eas.projectId`). |\n| `prebuild`/`eas build` prompts for or fails on a missing **iOS bundle identifier** | A fresh app often has no `ios.bundleIdentifier` | Set it in app config (e.g. `dev.<owner>.<slug>`);",
+      "intent": null,
+      "tags": [
+        "Privilege Escalation"
+      ],
+      "evidence": {},
+      "match_fingerprint": "8962f8722be07452b125a42074670b0fad71a4ae4b34ebaf919061a53ecf2b56",
+      "occurrences": [
+        {
+          "file": "references/troubleshooting.md",
+          "start_line": 11,
+          "end_line": null,
+          "start_column": 187
+        }
+      ]
+    },
+    {
+      "id": "AE1",
+      "finding_id": "finding-3509380fc94c473fb0b4c22d528fa95b",
+      "category": "analysis-evasion",
+      "pattern": "Incomplete referenced artifact analysis",
+      "severity": "HIGH",
+      "confidence": 1.0,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 194,
+        "end_line": null
+      },
+      "finding": "references/logs-and-crashes.md (partial)",
+      "explanation": "Referenced artifact was not completely inspected",
+      "remediation": "Review the reported expression and analyzer's parsing limitation; correct the scanner if it misinterprets valid source, then rerun the scan. Keep required references; incomplete analysis is not proof of malicious evasion.",
+      "code_snippet": "g tail. Commands, fields, and fallbacks are in [references/logs-and-crashes.md](./references/logs-and-crashes.md).",
+      "intent": null,
+      "tags": [
+        "coverage",
+        "reference",
+        "target-disposition:partial"
+      ],
+      "evidence": {
+        "target_path": "references/logs-and-crashes.md",
+        "target_disposition": "partial",
+        "reasons": [
+          {
+            "reason_code": "static_parse_limit",
+            "message": "A security-relevant expression exceeded a bounded static parser's span limit.",
+            "phase": "static",
+            "analyzers": [
+              "static_patterns_tool_misuse"
+            ]
+          }
+        ]
+      },
+      "match_fingerprint": "03107334f31aee89ff56ea910f5369645671c3b2ada5286ca844b5dd8ecd88c8",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 194,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "AE1",
+      "finding_id": "finding-3a0e8d049fbe4dcf964f62fa4f380426",
+      "category": "analysis-evasion",
+      "pattern": "Incomplete referenced artifact analysis",
+      "severity": "HIGH",
+      "confidence": 1.0,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 226,
+        "end_line": null
+      },
+      "finding": "references/logs-and-crashes.md (partial)",
+      "explanation": "Referenced artifact was not completely inspected",
+      "remediation": "Review the reported expression and analyzer's parsing limitation; correct the scanner if it misinterprets valid source, then rerun the scan. Keep required references; incomplete analysis is not proof of malicious evasion.",
+      "code_snippet": "- [references/logs-and-crashes.md](./references/logs-and-crashes.md) \u2014 device logs and crash reports from an iOS session (read when the app crashes or misbehave",
+      "intent": null,
+      "tags": [
+        "coverage",
+        "reference",
+        "target-disposition:partial"
+      ],
+      "evidence": {
+        "target_path": "references/logs-and-crashes.md",
+        "target_disposition": "partial",
+        "reasons": [
+          {
+            "reason_code": "static_parse_limit",
+            "message": "A security-relevant expression exceeded a bounded static parser's span limit.",
+            "phase": "static",
+            "analyzers": [
+              "static_patterns_tool_misuse"
+            ]
+          }
+        ]
+      },
+      "match_fingerprint": "03107334f31aee89ff56ea910f5369645671c3b2ada5286ca844b5dd8ecd88c8",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 226,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "AS2",
+      "finding_id": "finding-0580e66e1f0e486f98107a963253acd9",
+      "category": "Agent Snooping",
+      "pattern": "MCP Config Access",
+      "severity": "HIGH",
+      "confidence": 0.95,
+      "location": {
+        "file": "references/controllers.md",
+        "start_line": 135,
+        "end_line": null,
+        "start_column": 56
+      },
+      "finding": ".claude/mcp.json",
+      "explanation": "Skill accesses MCP server configuration files (mcp.json). MCP configs contain server URLs, authentication tokens, and tool definitions \u2014 reading them allows the skill to discover and potentially abuse other tool integrations.",
+      "remediation": "Remove all code or instructions that read MCP configuration files (mcp.json). MCP server details should be managed by the agent runtime, not read by individual skills.",
+      "code_snippet": "}\n```\n\nMCP config file location: `.cursor/mcp.json` (Cursor), `.claude/mcp.json` (Claude Code), `mcp.json` in the Codex project root. It carries a session token \u2014 **add it to `.gitignore`**.\n\n**Known issues:**\n- `argent init --help` launches an interactive wizard regardless of the flag \u2014 use `--yes` to skip it, or read the package source for non-interactive flags.",
+      "intent": null,
+      "tags": [
+        "Agent Snooping"
+      ],
+      "evidence": {},
+      "match_fingerprint": "13b92143329ed14dcc6306c67e05dc4ba1fa8cce8e7395bc763dcc5351d71f6f",
+      "occurrences": [
+        {
+          "file": "references/controllers.md",
+          "start_line": 135,
+          "end_line": null,
+          "start_column": 56
+        }
+      ]
+    },
+    {
+      "id": "AS2",
+      "finding_id": "finding-f37c72f3307c401486364aa11846cf82",
+      "category": "Agent Snooping",
+      "pattern": "MCP Config Access",
+      "severity": "HIGH",
+      "confidence": 0.9,
+      "location": {
+        "file": "references/controllers.md",
+        "start_line": 135,
+        "end_line": null,
+        "start_column": 35
+      },
+      "finding": "mcp.json` (Cursor), `.claude/mcp.json` (Claude Code), `mcp.json` in the Codex project root. It carries a session token",
+      "explanation": "Skill accesses MCP server configuration files (mcp.json). MCP configs contain server URLs, authentication tokens, and tool definitions \u2014 reading them allows the skill to discover and potentially abuse other tool integrations.",
+      "remediation": "Remove all code or instructions that read MCP configuration files (mcp.json). MCP server details should be managed by the agent runtime, not read by individual skills.",
+      "code_snippet": "}\n```\n\nMCP config file location: `.cursor/mcp.json` (Cursor), `.claude/mcp.json` (Claude Code), `mcp.json` in the Codex project root. It carries a session token \u2014 **add it to `.gitignore`**.\n\n**Known issues:**\n- `argent init --help` launches an interactive wizard regardless of the flag \u2014 use `--yes` to skip it, or read the package source for non-interactive flags.",
+      "intent": null,
+      "tags": [
+        "Agent Snooping"
+      ],
+      "evidence": {},
+      "match_fingerprint": "3d8683e7278aac803967b215a3cf4eb57004cdbad5935d6cd439c7bfa74f9269",
+      "occurrences": [
+        {
+          "file": "references/controllers.md",
+          "start_line": 135,
+          "end_line": null,
+          "start_column": 35
+        }
+      ]
+    },
+    {
+      "id": "TM1",
+      "finding_id": "finding-98b61b55053c4500861a4c34b4532703",
+      "category": "Tool Misuse",
+      "pattern": "Tool Parameter Abuse",
+      "severity": "HIGH",
+      "confidence": 0.6,
+      "location": {
+        "file": "references/logs-and-crashes.md",
+        "start_line": 32,
+        "end_line": null,
+        "start_column": 60
+      },
+      "finding": "curl -sS --fail-with-body --max-time 20 -K",
+      "explanation": "Tool parameters are crafted to achieve unintended or unsafe behavior. Parameter abuse can bypass intended safety checks (e.g. shell=True, --force, dangerous glob patterns).",
+      "remediation": "Validate all tool parameters against an allowlist. Reject dangerous parameter values (shell=True, --force, -rf /) and use safe defaults.",
+      "code_snippet": "# printf is a shell builtin, so the URL goes to curl on stdin and stays out of `ps`.\nsim_api() {\n  : \"${API_BASE:?no preview API}\"\n  printf 'url = \"%s\"\\n' \"$API_BASE$1?$API_QUERY${2:+&$2}\" | curl -sS --fail-with-body --max-time 20 -K -\n}\n```\n",
+      "intent": null,
+      "tags": [
+        "Tool Misuse"
+      ],
+      "evidence": {},
+      "match_fingerprint": "3fa992ff8ead5c8b607b1b338008208bbd08406ef0133d806bf979a78fcc78c7",
+      "occurrences": [
+        {
+          "file": "references/logs-and-crashes.md",
+          "start_line": 32,
+          "end_line": null,
+          "start_column": 60
+        }
+      ]
+    },
+    {
+      "id": "TM1",
+      "finding_id": "finding-b77d0c9b54464738b00f24c864825cac",
+      "category": "Tool Misuse",
+      "pattern": "Tool Parameter Abuse",
+      "severity": "HIGH",
+      "confidence": 0.6,
+      "location": {
+        "file": "references/logs-and-crashes.md",
+        "start_line": 44,
+        "end_line": null,
+        "start_column": 2
+      },
+      "finding": "curl -sSN --fail-with-body --max-time 300 -H 'Accept: text/event-stream' -K",
+      "explanation": "Tool parameters are crafted to achieve unintended or unsafe behavior. Parameter abuse can bypass intended safety checks (e.g. shell=True, --force, dangerous glob patterns).",
+      "remediation": "Validate all tool parameters against an allowlist. Reject dangerous parameter values (shell=True, --force, -rf /) and use safe defaults.",
+      "code_snippet": "\n```bash\nprintf 'url = \"%s\"\\n' \"$API_BASE/crashes?$API_QUERY&tail=1\" |\n  curl -sSN --fail-with-body --max-time 300 -H 'Accept: text/event-stream' -K - > \"$EVENTS.log\" 2> \"$EVENTS.err\" &\necho $! > \"$EVENTS.pid\"\nfor i in $(seq 1 20); do\n  grep -q '^data:' \"$EVENTS.log\" && break",
+      "intent": null,
+      "tags": [
+        "Tool Misuse"
+      ],
+      "evidence": {},
+      "match_fingerprint": "b83ba7b61b9d3ff28ee3389e4eceb735d72e136103a2d5f474f45d7b7b474faa",
+      "occurrences": [
+        {
+          "file": "references/logs-and-crashes.md",
+          "start_line": 44,
+          "end_line": null,
+          "start_column": 2
+        }
+      ]
+    },
+    {
+      "id": "TM2",
+      "finding_id": "finding-759d994d07bb4b0ca76cf8426f6f0c23",
+      "category": "Tool Misuse",
+      "pattern": "Chaining Abuse",
+      "severity": "HIGH",
+      "confidence": 0.75,
+      "location": {
+        "file": "references/logs-and-crashes.md",
+        "start_line": 57,
+        "end_line": null,
+        "start_column": 39
+      },
+      "finding": "; rm -",
+      "explanation": "Tool calls are chained to bypass individual safety checks or escalate capabilities beyond what any single tool call would allow.",
+      "remediation": "Limit tool chaining depth and validate the output of each tool before passing it to the next. Require explicit user approval for multi-step chains.",
+      "code_snippet": "\ngrep -E '\"type\":\"(crash|recurred)\"' \"$EVENTS.log\"  # a crash event arrives a few seconds after the process dies\nsim_api /crashes                                    # {meta, crashes}: one record per distinct crash\nkill \"$(cat \"$EVENTS.pid\")\" 2>/dev/null; rm -f \"$EVENTS.log\" \"$EVENTS.err\" \"$EVENTS.pid\"\n```\n\nReproduce only after `log held`. Otherwise the command prints the error: `401` means the session ended or its token changed, and `404` means the server predates these routes. `--max-time 300` ends the hold after 5 minutes even if nothing kills it; start it again for a longer run. Without the stream, call `sim_api /logs \"snapshot=1&follow=1&limit=1\"` more often than every 8 seconds: the log stops 8 seconds after its last reader.",
+      "intent": null,
+      "tags": [
+        "Tool Misuse"
+      ],
+      "evidence": {},
+      "match_fingerprint": "653c73eb47bd50a95878b88c727b3b22838d19b40be7e0c38ee04dc79d87f76f",
+      "occurrences": [
+        {
+          "file": "references/logs-and-crashes.md",
+          "start_line": 57,
+          "end_line": null,
+          "start_column": 39
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-01efaceec3a6491f82fc512543698682",
+      "category": "MCP Rug Pull",
+      "pattern": "Manifest references MCP server without version pin: 'npx expo'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 1,
+        "end_line": null
+      },
+      "finding": "npx expo",
+      "explanation": "MCP server references in the skill manifest without version pinning are a rug-pull risk.",
+      "remediation": "Always pin MCP server versions in manifest references.",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e38517e0fbc08df74e70542e838fb144ee7c3b4722682d30fde47eb05961c500",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 1,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-ad4d72f13b734ada90d076e75fba6445",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx expo'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 6,
+        "end_line": null
+      },
+      "finding": "npx expo",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e38517e0fbc08df74e70542e838fb144ee7c3b4722682d30fde47eb05961c500",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 6,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-04457a56586f452a899da893ec724ce8",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx expo'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 35,
+        "end_line": null
+      },
+      "finding": "npx expo",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e38517e0fbc08df74e70542e838fb144ee7c3b4722682d30fde47eb05961c500",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 35,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-633c6516063c4fb4870f02de2d43efa5",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx expo'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/run-your-app.md",
+        "start_line": 76,
+        "end_line": null
+      },
+      "finding": "npx expo",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e38517e0fbc08df74e70542e838fb144ee7c3b4722682d30fde47eb05961c500",
+      "occurrences": [
+        {
+          "file": "references/run-your-app.md",
+          "start_line": 76,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-c408fe58a90d43dba22a42cff29ce174",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx expo'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/run-your-app.md",
+        "start_line": 149,
+        "end_line": null
+      },
+      "finding": "npx expo",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e38517e0fbc08df74e70542e838fb144ee7c3b4722682d30fde47eb05961c500",
+      "occurrences": [
+        {
+          "file": "references/run-your-app.md",
+          "start_line": 149,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-8ab73a64b3e54a3697a82aa4c8eb7277",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx expo'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/run-your-app.md",
+        "start_line": 158,
+        "end_line": null
+      },
+      "finding": "npx expo",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e38517e0fbc08df74e70542e838fb144ee7c3b4722682d30fde47eb05961c500",
+      "occurrences": [
+        {
+          "file": "references/run-your-app.md",
+          "start_line": 158,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-7dac906c639643bc82b61d6f6421b595",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx expo'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/troubleshooting.md",
+        "start_line": 13,
+        "end_line": null
+      },
+      "finding": "npx expo",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e38517e0fbc08df74e70542e838fb144ee7c3b4722682d30fde47eb05961c500",
+      "occurrences": [
+        {
+          "file": "references/troubleshooting.md",
+          "start_line": 13,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-16b51a2b0800490dab1fd6eb56e06393",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 15,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 15,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-1776eead867043a7a9df916b9b48c1b9",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 33,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 33,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-1daf339c8a554396bd0da367be94ee26",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 34,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 34,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-ee4a5c7abae94472b561d4f5a2e69da9",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 35,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 35,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-fe045d4c5d3d4946ac1ba70a3b28bf97",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 51,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 51,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-56dd0073bc4040878595390ba521e3c2",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 64,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 64,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-e2782727421f471bb3d3b1e9af58b0ad",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 73,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 73,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-8e338cdaf7f946a39486af60c531e8e3",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 79,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 79,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-be2ab2288e634e6ebb727d475517c490",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 80,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 80,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-740a9d3a880e4a6688d64eb6ae14a4b8",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 81,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 81,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-666ed0b008c64b82a5672c9db5827e2d",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 82,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 82,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-50ef40d9cd054cce93a2206501f3a347",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 85,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 85,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-cb50e96786b6441480488930ffa45076",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 118,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 118,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-abdc9259f17748cfa37c4ad72e782636",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 127,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 127,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-cfe5b21c0ffb45f5b90b233367fa24d1",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 136,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 136,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-4b6ecf5468614e4ebf21c02645859422",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 137,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 137,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-80c3977813fe44cab2a6f3d2e8f5b235",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 138,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 138,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-0149135dfc86490d9e872641f0fd3800",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 139,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 139,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-3e891d944de3482089c47a073ca1dd02",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 140,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 140,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-ca1071faa8694f4fa3f466e547985671",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 141,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 141,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-53a52b0f7f244f47ab6edf7c3b8dfcdb",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 142,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 142,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-83577154ae2f45548b57ec08ae75ee38",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 171,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 171,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-e284b65d20ec4fd9bf68aeef301a0d45",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 217,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 217,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-ca22e60ae6c543a1a7b38ecd5881306a",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 229,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 229,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-74afd6609f8a4332a88c6ca78a193257",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/controllers.md",
+        "start_line": 17,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "references/controllers.md",
+          "start_line": 17,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-670a4018eb4741618a6e0d40c0b09d23",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/controllers.md",
+        "start_line": 19,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "references/controllers.md",
+          "start_line": 19,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-16cc7f2d22084ba79946447f87f9ac7e",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/controllers.md",
+        "start_line": 24,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "references/controllers.md",
+          "start_line": 24,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-8924589fc8c8477b9709787417f812fd",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/controllers.md",
+        "start_line": 26,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "references/controllers.md",
+          "start_line": 26,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-0b88b17461d0455e826e7d1a3c6a0150",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/controllers.md",
+        "start_line": 31,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "references/controllers.md",
+          "start_line": 31,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-d36dbca7de0045eb80557f2aabd85195",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/controllers.md",
+        "start_line": 32,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "references/controllers.md",
+          "start_line": 32,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-b3d583a64931404787f5b5e97174da0e",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/controllers.md",
+        "start_line": 51,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "references/controllers.md",
+          "start_line": 51,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-0ec23fb395b4473bb385d98a8c3fdec9",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/controllers.md",
+        "start_line": 62,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "references/controllers.md",
+          "start_line": 62,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-c6ebc4022819479f80e4647fe7c5bcf5",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/controllers.md",
+        "start_line": 64,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "references/controllers.md",
+          "start_line": 64,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-47304b32d3ef4f04a3e9542652db4748",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/controllers.md",
+        "start_line": 82,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "references/controllers.md",
+          "start_line": 82,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-7796fd7bac5d4be88aba2a9cdff5237c",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/controllers.md",
+        "start_line": 85,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "references/controllers.md",
+          "start_line": 85,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-784c10771c6e4cf09f274131c8bc5f67",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/controllers.md",
+        "start_line": 86,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "references/controllers.md",
+          "start_line": 86,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-01fe4ed3e2584c08ac6335587bdf0f2c",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/controllers.md",
+        "start_line": 88,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "references/controllers.md",
+          "start_line": 88,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-f1e7c82cb5d84a5c824ea692d64b097d",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/logs-and-crashes.md",
+        "start_line": 12,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "references/logs-and-crashes.md",
+          "start_line": 12,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-2863e83f8dbe44f989914c9559f14307",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/run-your-app.md",
+        "start_line": 5,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "references/run-your-app.md",
+          "start_line": 5,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-f3174ce1a3864603b8c680dbc48aa8a8",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/run-your-app.md",
+        "start_line": 7,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "references/run-your-app.md",
+          "start_line": 7,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-1a6034b745e342888a88ddf6dd9ace3c",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/run-your-app.md",
+        "start_line": 22,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "references/run-your-app.md",
+          "start_line": 22,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-3f65c87b9a354d65bbc411f3482f3909",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/run-your-app.md",
+        "start_line": 31,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "references/run-your-app.md",
+          "start_line": 31,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-7645ea52f2b943b5a2db510b6f20d02b",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/run-your-app.md",
+        "start_line": 45,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "references/run-your-app.md",
+          "start_line": 45,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-939ae6d7d31647429dfe518749f21655",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/run-your-app.md",
+        "start_line": 53,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "references/run-your-app.md",
+          "start_line": 53,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-f330531d656a4faeaab986d997b27376",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/run-your-app.md",
+        "start_line": 61,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "references/run-your-app.md",
+          "start_line": 61,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-ce7ac799a66a45568d2d191e651b99ed",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/run-your-app.md",
+        "start_line": 86,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "references/run-your-app.md",
+          "start_line": 86,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-d159cf76711d4768855b24f5ba1218f5",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/run-your-app.md",
+        "start_line": 87,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "references/run-your-app.md",
+          "start_line": 87,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-369c3065277244f5971c64634ee72903",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/run-your-app.md",
+        "start_line": 88,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "references/run-your-app.md",
+          "start_line": 88,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-83f9c807cd32467abaebcd8feb7b400f",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/run-your-app.md",
+        "start_line": 91,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "references/run-your-app.md",
+          "start_line": 91,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-a1927796327f40ab9e7cd42170ad9d37",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/run-your-app.md",
+        "start_line": 105,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "references/run-your-app.md",
+          "start_line": 105,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-45ffa13683ba48d6abd23cb44824c34c",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/run-your-app.md",
+        "start_line": 121,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "references/run-your-app.md",
+          "start_line": 121,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-f4df8835db714e238713c9848a4ab6e3",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/run-your-app.md",
+        "start_line": 126,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "references/run-your-app.md",
+          "start_line": 126,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-ecf6700bcd3c4e2998844d1d13c17327",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/run-your-app.md",
+        "start_line": 127,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "references/run-your-app.md",
+          "start_line": 127,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-29004dbc6c4d41b5bcfa276736831fb2",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/run-your-app.md",
+        "start_line": 128,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "references/run-your-app.md",
+          "start_line": 128,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-d3c2c2741f8648aca3d341050347d150",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/run-your-app.md",
+        "start_line": 131,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "references/run-your-app.md",
+          "start_line": 131,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-aa73ed12ac154373a45fdc0cef65b2ea",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/run-your-app.md",
+        "start_line": 134,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "references/run-your-app.md",
+          "start_line": 134,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-53a142eaab4b42149705bdf830f0d768",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/run-your-app.md",
+        "start_line": 150,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "references/run-your-app.md",
+          "start_line": 150,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-3aea4cab78044b528364afab2d5a9850",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/run-your-app.md",
+        "start_line": 166,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "references/run-your-app.md",
+          "start_line": 166,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-9f14e9a763f7476ca4f36fff02c926da",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/run-your-app.md",
+        "start_line": 179,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "references/run-your-app.md",
+          "start_line": 179,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-84c5ffffa1a74cfaa7fea50b7cf015b7",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/run-your-app.md",
+        "start_line": 180,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "references/run-your-app.md",
+          "start_line": 180,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-925e2890a3b44c7a8206fa8963eaf6a7",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/run-your-app.md",
+        "start_line": 187,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "references/run-your-app.md",
+          "start_line": 187,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-1d35e9d9bd0f40ffb5470409926bd5d5",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/run-your-app.md",
+        "start_line": 196,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "references/run-your-app.md",
+          "start_line": 196,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-e6bb0446485e4c95998aac3f4a2cd623",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/run-your-app.md",
+        "start_line": 201,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "references/run-your-app.md",
+          "start_line": 201,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-0b617d97ccd94ef4a724326d69557b13",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/run-your-app.md",
+        "start_line": 207,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "references/run-your-app.md",
+          "start_line": 207,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-3365605dcf0341128330c39e106d9d48",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/troubleshooting.md",
+        "start_line": 9,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "references/troubleshooting.md",
+          "start_line": 9,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-e0608410966e49f5bbe9ce52ee2c5e77",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/troubleshooting.md",
+        "start_line": 10,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "references/troubleshooting.md",
+          "start_line": 10,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-ef70e9c666f14d0f9d79750c49028e9b",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/troubleshooting.md",
+        "start_line": 11,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "references/troubleshooting.md",
+          "start_line": 11,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-e80f8b4eea3d4a7cb281120ada2e6270",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/troubleshooting.md",
+        "start_line": 12,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "references/troubleshooting.md",
+          "start_line": 12,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-b38e6cf8f4bc4ad38ba8f57f45f466db",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/troubleshooting.md",
+        "start_line": 17,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "references/troubleshooting.md",
+          "start_line": 17,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-c9edce1958304b70ba880e078dd2f16d",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/troubleshooting.md",
+        "start_line": 42,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "references/troubleshooting.md",
+          "start_line": 42,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-1c6ae43f4be8487b9f419a295a9b40b9",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes eas-cli'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/troubleshooting.md",
+        "start_line": 44,
+        "end_line": null
+      },
+      "finding": "npx --yes eas-cli",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "e397b0699e4b1e6eea0f6461247d8a222f9157f2921dabf80ce7798b027bfbdc",
+      "occurrences": [
+        {
+          "file": "references/troubleshooting.md",
+          "start_line": 44,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "EA2",
+      "finding_id": "finding-3b2b66e2d8c54ec4a23cf24516d6c4b7",
+      "category": "Excessive Agency",
+      "pattern": "Autonomous Decision Making",
+      "severity": "MEDIUM",
+      "confidence": 0.75,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 28,
+        "end_line": null,
+        "start_column": 15
+      },
+      "finding": "without asking",
+      "explanation": "Skill enables autonomous high-impact decisions without human-in-the-loop verification. Critical operations (destructive commands, financial transactions, data deletion) should require explicit user confirmation.",
+      "remediation": "Add human-in-the-loop confirmation for destructive, irreversible, or high-impact operations. Never auto-execute commands that modify files, send data, or alter system state.",
+      "code_snippet": "- Honor an explicit local choice; hand off to `expo run:ios` / Xcode / Android Studio as appropriate. Clarify only when the requested environment remains ambiguous and affects the task.\n\nWhen the user asks for EAS Simulator or a cloud simulator, start the session and do the\nrequested work without asking again. Stop the session when the work is done. Only check in\nif the user set a limit you would go past, or if the work grows beyond what they asked for.\n\n## Prerequisites",
+      "intent": null,
+      "tags": [
+        "Excessive Agency"
+      ],
+      "evidence": {},
+      "match_fingerprint": "8dc77d3dce9ba1f2672e813265a1b1a0c8594866ef38a4e978bf4f4451795465",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 28,
+          "end_line": null,
+          "start_column": 15
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-8e6d1e1f1a5c45b88f48e49ffbf5ae03",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx agent-device'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 36,
+        "end_line": null
+      },
+      "finding": "npx agent-device",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "24e4fbe46af28c2bff83392e20ee7bf2e56e4dc45763e1f65c349056d1810036",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 36,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-f0cc8f094f644474975adfd67a107080",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx agent-device'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 79,
+        "end_line": null
+      },
+      "finding": "npx agent-device",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "24e4fbe46af28c2bff83392e20ee7bf2e56e4dc45763e1f65c349056d1810036",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 79,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-0e220c1c85054d198b05a4570460d43d",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx agent-device'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 80,
+        "end_line": null
+      },
+      "finding": "npx agent-device",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "24e4fbe46af28c2bff83392e20ee7bf2e56e4dc45763e1f65c349056d1810036",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 80,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-c7a36924dd454e24907a942a57f8fd9a",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx agent-device'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 81,
+        "end_line": null
+      },
+      "finding": "npx agent-device",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "24e4fbe46af28c2bff83392e20ee7bf2e56e4dc45763e1f65c349056d1810036",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 81,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-0523176f5a69473a902cee35443989d6",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx agent-device'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 82,
+        "end_line": null
+      },
+      "finding": "npx agent-device",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "24e4fbe46af28c2bff83392e20ee7bf2e56e4dc45763e1f65c349056d1810036",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 82,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-846f16efdd464fe6bf2b491b9ce3f45c",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx agent-device'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 171,
+        "end_line": null
+      },
+      "finding": "npx agent-device",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "24e4fbe46af28c2bff83392e20ee7bf2e56e4dc45763e1f65c349056d1810036",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 171,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-1374aaa0740a41999e02a858c14a16a2",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx agent-device'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 207,
+        "end_line": null
+      },
+      "finding": "npx agent-device",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "24e4fbe46af28c2bff83392e20ee7bf2e56e4dc45763e1f65c349056d1810036",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 207,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-1b0bdc3640b34eb49d2d03edc94ebc4c",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx agent-device'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 229,
+        "end_line": null
+      },
+      "finding": "npx agent-device",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "24e4fbe46af28c2bff83392e20ee7bf2e56e4dc45763e1f65c349056d1810036",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 229,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-eb6eefea6e7f44438a8d6458fa71f123",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx agent-device'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/controllers.md",
+        "start_line": 5,
+        "end_line": null
+      },
+      "finding": "npx agent-device",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "24e4fbe46af28c2bff83392e20ee7bf2e56e4dc45763e1f65c349056d1810036",
+      "occurrences": [
+        {
+          "file": "references/controllers.md",
+          "start_line": 5,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-3d7a6dec71e340dc9268205ff4fc4ae8",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx agent-device'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/controllers.md",
+        "start_line": 24,
+        "end_line": null
+      },
+      "finding": "npx agent-device",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "24e4fbe46af28c2bff83392e20ee7bf2e56e4dc45763e1f65c349056d1810036",
+      "occurrences": [
+        {
+          "file": "references/controllers.md",
+          "start_line": 24,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-91541e1062db4740b550383a5768d833",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx agent-device'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/controllers.md",
+        "start_line": 31,
+        "end_line": null
+      },
+      "finding": "npx agent-device",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "24e4fbe46af28c2bff83392e20ee7bf2e56e4dc45763e1f65c349056d1810036",
+      "occurrences": [
+        {
+          "file": "references/controllers.md",
+          "start_line": 31,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-6deade2da83c49948b17155bc7cc2366",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx agent-device'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/controllers.md",
+        "start_line": 32,
+        "end_line": null
+      },
+      "finding": "npx agent-device",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "24e4fbe46af28c2bff83392e20ee7bf2e56e4dc45763e1f65c349056d1810036",
+      "occurrences": [
+        {
+          "file": "references/controllers.md",
+          "start_line": 32,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-638becff2c6e4af5bb5b24a1c0846da4",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx agent-device'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/run-your-app.md",
+        "start_line": 53,
+        "end_line": null
+      },
+      "finding": "npx agent-device",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "24e4fbe46af28c2bff83392e20ee7bf2e56e4dc45763e1f65c349056d1810036",
+      "occurrences": [
+        {
+          "file": "references/run-your-app.md",
+          "start_line": 53,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-d1cfeab4de2e4b4098f9c14f10aa9c14",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx agent-device'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/run-your-app.md",
+        "start_line": 61,
+        "end_line": null
+      },
+      "finding": "npx agent-device",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "24e4fbe46af28c2bff83392e20ee7bf2e56e4dc45763e1f65c349056d1810036",
+      "occurrences": [
+        {
+          "file": "references/run-your-app.md",
+          "start_line": 61,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-c1e7d6d7e82443a49219ef9c148e3200",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx agent-device'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/run-your-app.md",
+        "start_line": 86,
+        "end_line": null
+      },
+      "finding": "npx agent-device",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "24e4fbe46af28c2bff83392e20ee7bf2e56e4dc45763e1f65c349056d1810036",
+      "occurrences": [
+        {
+          "file": "references/run-your-app.md",
+          "start_line": 86,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-2d3b796cec2e4de09fc4a3b6a42b7a7c",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx agent-device'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/run-your-app.md",
+        "start_line": 87,
+        "end_line": null
+      },
+      "finding": "npx agent-device",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "24e4fbe46af28c2bff83392e20ee7bf2e56e4dc45763e1f65c349056d1810036",
+      "occurrences": [
+        {
+          "file": "references/run-your-app.md",
+          "start_line": 87,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-934b3ebf49d14901ad71ca56d5c085f7",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx agent-device'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/run-your-app.md",
+        "start_line": 88,
+        "end_line": null
+      },
+      "finding": "npx agent-device",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "24e4fbe46af28c2bff83392e20ee7bf2e56e4dc45763e1f65c349056d1810036",
+      "occurrences": [
+        {
+          "file": "references/run-your-app.md",
+          "start_line": 88,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-12bf6a03c9294271b706ca9811bc7a64",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx agent-device'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/run-your-app.md",
+        "start_line": 126,
+        "end_line": null
+      },
+      "finding": "npx agent-device",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "24e4fbe46af28c2bff83392e20ee7bf2e56e4dc45763e1f65c349056d1810036",
+      "occurrences": [
+        {
+          "file": "references/run-your-app.md",
+          "start_line": 126,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-d92dfd134da14ac79c27c25fe8f605a9",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx agent-device'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/run-your-app.md",
+        "start_line": 127,
+        "end_line": null
+      },
+      "finding": "npx agent-device",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "24e4fbe46af28c2bff83392e20ee7bf2e56e4dc45763e1f65c349056d1810036",
+      "occurrences": [
+        {
+          "file": "references/run-your-app.md",
+          "start_line": 127,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-9d413612d64544aea7f90c30af2d9a91",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx agent-device'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/run-your-app.md",
+        "start_line": 128,
+        "end_line": null
+      },
+      "finding": "npx agent-device",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "24e4fbe46af28c2bff83392e20ee7bf2e56e4dc45763e1f65c349056d1810036",
+      "occurrences": [
+        {
+          "file": "references/run-your-app.md",
+          "start_line": 128,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-a2d95795da1b4756902840680befd7bb",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx agent-device'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/run-your-app.md",
+        "start_line": 179,
+        "end_line": null
+      },
+      "finding": "npx agent-device",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "24e4fbe46af28c2bff83392e20ee7bf2e56e4dc45763e1f65c349056d1810036",
+      "occurrences": [
+        {
+          "file": "references/run-your-app.md",
+          "start_line": 179,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-65aae9e666244a7caacd63cd1229de64",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx agent-device'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/run-your-app.md",
+        "start_line": 180,
+        "end_line": null
+      },
+      "finding": "npx agent-device",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "24e4fbe46af28c2bff83392e20ee7bf2e56e4dc45763e1f65c349056d1810036",
+      "occurrences": [
+        {
+          "file": "references/run-your-app.md",
+          "start_line": 180,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-d65155cf67384a8894dfde788152953a",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx agent-device'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/run-your-app.md",
+        "start_line": 196,
+        "end_line": null
+      },
+      "finding": "npx agent-device",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "24e4fbe46af28c2bff83392e20ee7bf2e56e4dc45763e1f65c349056d1810036",
+      "occurrences": [
+        {
+          "file": "references/run-your-app.md",
+          "start_line": 196,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-22c16344bf714cd0b5610d6d17be25c1",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx agent-device'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/run-your-app.md",
+        "start_line": 201,
+        "end_line": null
+      },
+      "finding": "npx agent-device",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "24e4fbe46af28c2bff83392e20ee7bf2e56e4dc45763e1f65c349056d1810036",
+      "occurrences": [
+        {
+          "file": "references/run-your-app.md",
+          "start_line": 201,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-83a2cc3810344306852bddcf2386710f",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx agent-device'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/run-your-app.md",
+        "start_line": 207,
+        "end_line": null
+      },
+      "finding": "npx agent-device",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "24e4fbe46af28c2bff83392e20ee7bf2e56e4dc45763e1f65c349056d1810036",
+      "occurrences": [
+        {
+          "file": "references/run-your-app.md",
+          "start_line": 207,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-49b9407798cd46d786fd8abe3ae31666",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx agent-device'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/troubleshooting.md",
+        "start_line": 44,
+        "end_line": null
+      },
+      "finding": "npx agent-device",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "24e4fbe46af28c2bff83392e20ee7bf2e56e4dc45763e1f65c349056d1810036",
+      "occurrences": [
+        {
+          "file": "references/troubleshooting.md",
+          "start_line": 44,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-7be6f732e886435686fc40bb92cfc713",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx --yes submit-expo-feedback'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 234,
+        "end_line": null
+      },
+      "finding": "npx --yes submit-expo-feedback",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "257c594c81201fe41a735ca6fab91968ae051f5738e8ab5d0961e13105ad7350",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 234,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RA2",
+      "finding_id": "finding-aa33898a78fb499c98d73cfaa1ac465d",
+      "category": "Rogue Agent",
+      "pattern": "Session Persistence",
+      "severity": "MEDIUM",
+      "confidence": 0.6,
+      "location": {
+        "file": "references/controllers.md",
+        "start_line": 118,
+        "end_line": null,
+        "start_column": 63
+      },
+      "finding": "write to `~/.argent",
+      "explanation": "Skill establishes unauthorized persistence across sessions via cron jobs, startup scripts, or state files. Session persistence allows an attacker to maintain access beyond the current interaction.",
+      "remediation": "Remove any persistence mechanisms (cron jobs, startup scripts, state files). Skills should not maintain state across sessions without explicit user consent.",
+      "code_snippet": "\nReload the agent after linking so its `argent mcp` process picks up the remote session.\n\n**Sandboxed shells** (Claude Code, some CI environments) can't write to `~/.argent/` so `argent link` won't work there. Use env vars in the MCP config file instead \u2014 this is argent's highest-precedence resolution and overrides any link:\n\n```json\n{",
+      "intent": null,
+      "tags": [
+        "Rogue Agent"
+      ],
+      "evidence": {},
+      "match_fingerprint": "3c3dcb1d6d8fb48d4f7163862eb5465b00b81712873ad472d88f84441b18d0c8",
+      "occurrences": [
+        {
+          "file": "references/controllers.md",
+          "start_line": 118,
+          "end_line": null,
+          "start_column": 63
+        }
+      ]
+    },
+    {
+      "id": "EA2",
+      "finding_id": "finding-30a7b05bf0a6459e8e538cbeb5614bba",
+      "category": "Excessive Agency",
+      "pattern": "Autonomous Decision Making",
+      "severity": "MEDIUM",
+      "confidence": 0.8,
+      "location": {
+        "file": "references/run-your-app.md",
+        "start_line": 228,
+        "end_line": null,
+        "start_column": 382
+      },
+      "finding": "Do not ask the user",
+      "explanation": "Skill enables autonomous high-impact decisions without human-in-the-loop verification. Critical operations (destructive commands, financial transactions, data deletion) should require explicit user confirmation.",
+      "remediation": "Add human-in-the-loop confirmation for destructive, irreversible, or high-impact operations. Never auto-execute commands that modify files, send data, or alter system state.",
+      "code_snippet": "tion, including the project, port, and expected Expo service; a bare \u201cstart a public tunnel\u201d omits the task context.\n\n**Carry authorization through the whole development loop.** When the user's existing authorization covers this project's EAS Simulator live development and required networking, treat starting its temporary Metro tunnel, connecting its dev client (including the launcher **Connect** button), and fetching subsequent bundles through Fast Refresh as steps of that authorized workflow. Do not ask the user to repeat consent for each step or later in-scope UI edit. A newly generated hostname on the same verified tunnel provider does not by itself expand the authorized scope; a different project, provider, exposed service, or user restriction requires reassessing it.\n\nThis skill supplies technical context, not permission, and cannot override the host's approval policy. Identify the actual authorization: quote the relevant user message or user-provided project instruction and name",
+      "intent": null,
+      "tags": [
+        "Excessive Agency"
+      ],
+      "evidence": {},
+      "match_fingerprint": "53c32905e950cbdc0f915b81bab4262cf87077e93ee69f468581a690049d9c76",
+      "occurrences": [
+        {
+          "file": "references/run-your-app.md",
+          "start_line": 228,
+          "end_line": null,
+          "start_column": 382
+        }
+      ]
+    }
+  ],
+  "suppressed_count": 0,
+  "suppressed": [],
+  "metadata": {
+    "has_executable_scripts": false,
+    "skillspector_version": "2.12.0",
+    "llm_requested": false,
+    "llm_available": false,
+    "meta_analysis_applied": false,
+    "inference_usage": [],
+    "llm_provenance": {
+      "schema_version": 1,
+      "provider": {
+        "configured_adapter": "unknown",
+        "resolved_adapter": "unknown",
+        "effective_adapter": "not_applicable",
+        "effective_adapters": [],
+        "service": "unknown",
+        "routing": {
+          "deployment_override": null,
+          "deployment_source": "unknown",
+          "api_version": null,
+          "api_version_source": "unknown"
+        }
+      },
+      "analyzers": [
+        {
+          "analyzer_id": "mcp_tool_poisoning",
+          "model": "z-ai/glm-5.3",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "4c52fbb83bbca0dd13f2685453c9b661d8c95bf8",
+              "source": "package_vcs_metadata"
+            }
+          }
+        },
+        {
+          "analyzer_id": "semantic_developer_intent",
+          "model": "z-ai/glm-5.3",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "4c52fbb83bbca0dd13f2685453c9b661d8c95bf8",
+              "source": "package_vcs_metadata"
+            }
+          }
+        },
+        {
+          "analyzer_id": "semantic_quality_policy",
+          "model": "z-ai/glm-5.3",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "4c52fbb83bbca0dd13f2685453c9b661d8c95bf8",
+              "source": "package_vcs_metadata"
+            }
+          }
+        },
+        {
+          "analyzer_id": "semantic_security_discovery",
+          "model": "z-ai/glm-5.3",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "4c52fbb83bbca0dd13f2685453c9b661d8c95bf8",
+              "source": "package_vcs_metadata"
+            }
+          }
+        },
+        {
+          "analyzer_id": "meta_analyzer",
+          "model": "z-ai/glm-5.3",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "4c52fbb83bbca0dd13f2685453c9b661d8c95bf8",
+              "source": "package_vcs_metadata"
+            }
+          }
+        }
+      ],
+      "sampling": {
+        "temperature": {
+          "requested": null,
+          "source": "provider_default",
+          "forwarded_to_client": null,
+          "adapter_support": false,
+          "provider_support": "unknown"
+        },
+        "seed": {
+          "requested": null,
+          "source": "unset",
+          "forwarded_to_client": null,
+          "adapter_support": false,
+          "provider_support": "unknown"
+        },
+        "reasoning_effort": {
+          "requested": null,
+          "source": "provider_default",
+          "forwarded_to_client": null,
+          "adapter_support": false,
+          "provider_support": "unknown"
+        }
+      },
+      "determinism": {
+        "classification": "not_applicable",
+        "control_status": "not_applied",
+        "provider_guarantee": false,
+        "reason": "LLM analysis was not executed for this scan."
+      }
+    },
+    "filtering_mode": "heuristic"
+  },
+  "execution_successful": true,
+  "analysis_completeness": {
+    "total_components": 6,
+    "scanned_components": 5,
+    "coverage_percent": 83.3,
+    "is_complete": false,
+    "status": "partial",
+    "execution_successful": true,
+    "fully_inspected_files": 5,
+    "partially_inspected_files": 1,
+    "entirely_uninspected_files": 0,
+    "ledger_exceptions": [
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_missing",
+        "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+        "path": "SKILL.md",
+        "start_line": 35,
+        "end_line": 35,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_missing",
+        "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+        "path": "SKILL.md",
+        "start_line": 82,
+        "end_line": 82,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_missing",
+        "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+        "path": "SKILL.md",
+        "start_line": 89,
+        "end_line": 89,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_missing",
+        "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+        "path": "SKILL.md",
+        "start_line": 201,
+        "end_line": 201,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "static",
+        "reason_code": "static_parse_limit",
+        "message": "A security-relevant expression exceeded a bounded static parser's span limit.",
+        "path": "references/logs-and-crashes.md",
+        "start_line": null,
+        "end_line": null,
+        "fatal": false,
+        "analyzers": [
+          "static_patterns_tool_misuse"
+        ]
+      }
+    ],
+    "scope_exclusions": [],
+    "analyzer_statuses": [
+      {
+        "analyzer_id": "artifact_integrity",
+        "status": "completed",
+        "planned_work": 6,
+        "completed": 6,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "behavioral_ast",
+        "status": "not_applicable",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "no_applicable_files",
+        "message": "No files matched this analyzer's applicability contract."
+      },
+      {
+        "analyzer_id": "behavioral_taint_tracking",
+        "status": "not_applicable",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "no_applicable_files",
+        "message": "No files matched this analyzer's applicability contract."
+      },
+      {
+        "analyzer_id": "bundled_execution_surface",
+        "status": "not_applicable",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "no_applicable_files",
+        "message": "No files matched this analyzer's applicability contract."
+      },
+      {
+        "analyzer_id": "mcp_least_privilege",
+        "status": "not_applicable",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "no_applicable_files",
+        "message": "No files matched this analyzer's applicability contract."
+      },
+      {
+        "analyzer_id": "mcp_rug_pull",
+        "status": "completed",
+        "planned_work": 6,
+        "completed": 6,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "mcp_tool_poisoning",
+        "status": "completed",
+        "planned_work": 1,
+        "completed": 1,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "meta_analyzer",
+        "status": "disabled",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "disabled_by_configuration",
+        "message": "Analyzer was disabled by the requested configuration."
+      },
+      {
+        "analyzer_id": "reference_coverage",
+        "status": "completed",
+        "planned_work": 2,
+        "completed": 2,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "semantic_developer_intent",
+        "status": "disabled",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "disabled_by_configuration",
+        "message": "Analyzer was disabled by the requested configuration."
+      },
+      {
+        "analyzer_id": "semantic_quality_policy",
+        "status": "disabled",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "disabled_by_configuration",
+        "message": "Analyzer was disabled by the requested configuration."
+      },
+      {
+        "analyzer_id": "semantic_security_discovery",
+        "status": "disabled",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "disabled_by_configuration",
+        "message": "Analyzer was disabled by the requested configuration."
+      },
+      {
+        "analyzer_id": "static_patterns_agent_snooping",
+        "status": "completed",
+        "planned_work": 6,
+        "completed": 6,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_anti_refusal",
+        "status": "completed",
+        "planned_work": 6,
+        "completed": 6,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_data_exfiltration",
+        "status": "completed",
+        "planned_work": 6,
+        "completed": 6,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_deserialization",
+        "status": "completed",
+        "planned_work": 6,
+        "completed": 6,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_excessive_agency",
+        "status": "completed",
+        "planned_work": 6,
+        "completed": 6,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_harmful_content",
+        "status": "completed",
+        "planned_work": 6,
+        "completed": 6,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_memory_poisoning",
+        "status": "completed",
+        "planned_work": 6,
+        "completed": 6,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_output_handling",
+        "status": "completed",
+        "planned_work": 6,
+        "completed": 6,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_privilege_escalation",
+        "status": "completed",
+        "planned_work": 6,
+        "completed": 6,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_prompt_injection",
+        "status": "completed",
+        "planned_work": 6,
+        "completed": 6,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_rogue_agent",
+        "status": "completed",
+        "planned_work": 6,
+        "completed": 6,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_ssrf",
+        "status": "completed",
+        "planned_work": 6,
+        "completed": 6,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_supply_chain",
+        "status": "completed",
+        "planned_work": 6,
+        "completed": 6,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_system_prompt_leakage",
+        "status": "completed",
+        "planned_work": 6,
+        "completed": 6,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_tool_misuse",
+        "status": "degraded",
+        "planned_work": 6,
+        "completed": 5,
+        "partial": 1,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_yara",
+        "status": "completed",
+        "planned_work": 6,
+        "completed": 6,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      }
+    ],
+    "references": [
+      {
+        "source_path": "SKILL.md",
+        "line": 35,
+        "column": 439,
+        "evidence": "r>.<slug>`). Read current config with `npx expo config --json` (it may live in `app.config.js`). The first Mode-C run is slow (native build); later runs reuse i",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 36,
+        "column": 309,
+        "evidence": "`web-preview-only` has no automation interface. See [references/controllers.md](./references/controllers.md).",
+        "target_path": "references/controllers.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 36,
+        "column": 282,
+        "evidence": "ive automation interfaces; `web-preview-only` has no automation interface. See [references/controllers.md](./references/controllers.md).",
+        "target_path": "references/controllers.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "plain_path"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 82,
+        "column": 76,
+        "evidence": "npx --yes eas-cli@latest simulator:exec npx agent-device@latest screenshot ./shot.png",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "plain_path"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 89,
+        "column": 155,
+        "evidence": "s (in `--json`, `remoteConfig.webPreviewUrl`; for `web-preview-only` sessions, `remoteConfig.previewUrl`). All current session types include a browser preview, ",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 118,
+        "column": 273,
+        "evidence": "hout `--name` (the session starts unnamed). See [references/troubleshooting.md](./references/troubleshooting.md).",
+        "target_path": "references/troubleshooting.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 118,
+        "column": 242,
+        "evidence": "s a last resort, retry once without `--name` (the session starts unnamed). See [references/troubleshooting.md](./references/troubleshooting.md).",
+        "target_path": "references/troubleshooting.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "plain_path"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 132,
+        "column": 20,
+        "evidence": "[Session lifetime](#session-lifetime)\u2014even when constructing the command from `--help`.",
+        "target_path": null,
+        "status": "rejected",
+        "disposition": "out_of_scope",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 146,
+        "column": 238,
+        "evidence": "'s where live-session runs derail. Full sequences: [references/run-your-app.md](./references/run-your-app.md) \u2014 read before running a mode.",
+        "target_path": "references/run-your-app.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 146,
+        "column": 210,
+        "evidence": "irst** (the box below); that's where live-session runs derail. Full sequences: [references/run-your-app.md](./references/run-your-app.md) \u2014 read before running ",
+        "target_path": "references/run-your-app.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "plain_path"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 165,
+        "column": 97,
+        "evidence": "a Mode C tunnel or connecting the dev client, read [Tunnel scope and approvals](./references/run-your-app.md#tunnel-scope-and-approvals). Carry existing authori",
+        "target_path": "references/run-your-app.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 169,
+        "column": 89,
+        "evidence": "If a controller fails to download a recording, retrieve it from [EAS session artifacts](./references/controllers.md#recording-download-recovery).",
+        "target_path": "references/controllers.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 186,
+        "column": 613,
+        "evidence": "ff) \u2014 that plus other per-controller gotchas are in [references/controllers.md](./references/controllers.md).",
+        "target_path": "references/controllers.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 186,
+        "column": 586,
+        "evidence": "efault (turn `trimStatic` off) \u2014 that plus other per-controller gotchas are in [references/controllers.md](./references/controllers.md).",
+        "target_path": "references/controllers.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "plain_path"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 188,
+        "column": 96,
+        "evidence": "For the full verb set and the `argent` controller alternative, see [references/controllers.md](./references/controllers.md).",
+        "target_path": "references/controllers.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 188,
+        "column": 69,
+        "evidence": "For the full verb set and the `argent` controller alternative, see [references/controllers.md](./references/controllers.md).",
+        "target_path": "references/controllers.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "plain_path"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 194,
+        "column": 194,
+        "evidence": "g tail. Commands, fields, and fallbacks are in [references/logs-and-crashes.md](./references/logs-and-crashes.md).",
+        "target_path": "references/logs-and-crashes.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 194,
+        "column": 162,
+        "evidence": "sh gets a report but an empty log tail. Commands, fields, and fallbacks are in [references/logs-and-crashes.md](./references/logs-and-crashes.md).",
+        "target_path": "references/logs-and-crashes.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "plain_path"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 198,
+        "column": 230,
+        "evidence": "e, orphaned sessions, boot variability) live in [references/troubleshooting.md](./references/troubleshooting.md).",
+        "target_path": "references/troubleshooting.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 198,
+        "column": 199,
+        "evidence": ", `--json`, `pod install` locale, orphaned sessions, boot variability) live in [references/troubleshooting.md](./references/troubleshooting.md).",
+        "target_path": "references/troubleshooting.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "plain_path"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 201,
+        "column": 164,
+        "evidence": "essions the *wrong app* + drops a stray `.env.eas-simulator`; `pwd` / check `app.json`).",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 224,
+        "column": 32,
+        "evidence": "- [references/run-your-app.md](./references/run-your-app.md) \u2014 full command sequences for modes A, B, and C (read before running a mode).",
+        "target_path": "references/run-your-app.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 224,
+        "column": 4,
+        "evidence": "- [references/run-your-app.md](./references/run-your-app.md) \u2014 full command sequences for modes A, B, and C (read before running a mode).",
+        "target_path": "references/run-your-app.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "plain_path"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 225,
+        "column": 31,
+        "evidence": "- [references/controllers.md](./references/controllers.md) \u2014 agent-device verb reference and the `argent` alternative.",
+        "target_path": "references/controllers.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 225,
+        "column": 4,
+        "evidence": "- [references/controllers.md](./references/controllers.md) \u2014 agent-device verb reference and the `argent` alternative.",
+        "target_path": "references/controllers.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "plain_path"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 226,
+        "column": 36,
+        "evidence": "- [references/logs-and-crashes.md](./references/logs-and-crashes.md) \u2014 device logs and crash reports from an iOS session (read when the app crashes or misbehave",
+        "target_path": "references/logs-and-crashes.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 226,
+        "column": 4,
+        "evidence": "- [references/logs-and-crashes.md](./references/logs-and-crashes.md) \u2014 device logs and crash reports from an iOS session (read when the app crashes or misbehave",
+        "target_path": "references/logs-and-crashes.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "plain_path"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 227,
+        "column": 35,
+        "evidence": "- [references/troubleshooting.md](./references/troubleshooting.md) \u2014 concrete errors and fixes.",
+        "target_path": "references/troubleshooting.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 227,
+        "column": 4,
+        "evidence": "- [references/troubleshooting.md](./references/troubleshooting.md) \u2014 concrete errors and fixes.",
+        "target_path": "references/troubleshooting.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "plain_path"
+      }
+    ],
+    "limitations": [
+      "Analyzer static_patterns_tool_misuse status: degraded."
+    ],
+    "findings_before_filtering": 121,
+    "findings_after_filtering": 121
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "mcpServers": {
+    "21st": {
+      "type": "http",
+      "url": "https://21st.dev/api/mcp",
+      "headers": {
+        "x-api-key": "${API_KEY_21ST}"
+      }
+    },
+    "pinterest": {
+      "type": "stdio",
+      "command": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "C:/Users/Joshu/dev/ai-os-projects/pinterest-mcp-server/dist/index.js"
+      ]
+    },
+    "motionsites": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-remote",
+        "https://xgdzyqfalbibzelpdpvr.supabase.co/functions/v1/mcp"
+      ]
+    },
+    "godly": {
+      "type": "stdio",
+      "command": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "C:/Users/Joshu/dev/ai-os-projects/godly-mcp-server/dist/index.js"
+      ]
+    },
+    "shadcn": {
+      "type": "stdio",
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "shadcn@4.22.1",
+        "mcp",
+        "--cwd",
+        "C:/Users/Joshu/dev/ai-os-projects/lsatu-role-home-20261022"
+      ]
+    }
+  }
+}

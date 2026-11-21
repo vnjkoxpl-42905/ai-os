@@ -1,0 +1,84 @@
+{
+ "qid": "PT112-S4-Q24",
+ "type": "Weaken",
+ "difficulty": "2",
+ "key_db": "D",
+ "stimulus_db": "Telephone companies are promoting “voice mail” as an alternative to the answering machine. By recording messages from callers when a subscriber does not have access to his or her telephone, voice mail provides a service similar to that of an answering machine. The companies promoting this service argue that it will soon make answering machines obsolete, since it is much more convenient, more flexible, and less expensive than an answering machine.",
+ "stem_db": "Which one of the following, if true, most calls into question the argument made by the companies promoting voice mail?",
+ "choices_db": {
+  "A": "Unlike calls made to owners of answering machines, all telephone calls made to voice-mail subscribers are completed, even if the line called is in use at the time of the call.",
+  "B": "The surge in sales of answering machines occurred shortly after they were first introduced to the electronics market.",
+  "C": "Once a telephone customer decides to subscribe to voice mail, that customer can cancel the service at any time.",
+  "D": "Answering machines enable the customer to hear who is calling before the customer decides whether to answer the telephone, a service voice mail does not provide.",
+  "E": "The number of messages a telephone answering machine can record is limited by the length of the magnetic tape on which calls are recorded."
+ },
+ "bank": {
+  "stimulus": "Telephone companies are promoting \"voice mail\" as an alternative to the answering machine. By recording messages from callers when a subscriber does not have access to his or her telephone, voice mail provides a service similar to that of an answering machine. The companies promoting this service argue that it will soon make answering machines obsolete, since it is much more convenient, more flexible, and less expensive than an answering machine.",
+  "stem": "Which one of the following, if true, most calls into question the argument made by the companies promoting voice mail?",
+  "choices": {
+   "A": "Unlike calls made to owners of answering machines, all telephone calls made to voice-mail subscribers are completed, even if the line called is in use at the time of the call.",
+   "B": "The surge in sales of answering machines occurred shortly after they were first introduced to the electronics market.",
+   "C": "Once a telephone customer decides to subscribe to voice mail, that customer can cancel the service at any time.",
+   "D": "Answering machines enable the customer to hear who is calling before the customer decides whether to answer the telephone, a service voice mail does not provide.",
+   "E": "The number of messages a telephone answering machine can record is limited by the length of the magnetic tape on which calls are recorded."
+  },
+  "key": "D"
+ },
+ "explanation_id": "b0f4e85c-c551-492c-b0be-51f1ce1b72a2",
+ "style": "single",
+ "steps": [
+  {
+   "row_id": "7be45229-2031-4a40-8cef-c61d606ab67e",
+   "position": 0,
+   "label": "Conclusion",
+   "body": "Voice mail will soon make answering machines obsolete."
+  },
+  {
+   "row_id": "e18bead7-a296-463d-bb03-2018070ed653",
+   "position": 1,
+   "label": "Evidence",
+   "body": "Voice mail does the same job as an answering machine and is more convenient, more flexible, and cheaper."
+  },
+  {
+   "row_id": "56f41c0f-785b-49e6-9cc6-3a251b6c033c",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "The companies only list voice mail's advantages. If answering machines do something valuable that voice mail can't, some people will keep them, and they won't become obsolete."
+  },
+  {
+   "row_id": "773dcb3b-ca9e-4a32-a0e4-b56b8ebab524",
+   "position": 3,
+   "label": "Goal",
+   "body": "Find an advantage answering machines have over voice mail."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "08562757-4cb7-4d13-97a7-23140cb699f0",
+   "letter": "A",
+   "body": "A says every call to a voice-mail subscriber goes through, even when the line is busy, which answering machines cannot match. That is one more advantage for voice mail, so it strengthens the companies' argument instead of calling it into question."
+  },
+  {
+   "row_id": "5e4af2f2-ddf2-416e-a2fd-a7ef2559a5b5",
+   "letter": "B",
+   "body": "B tells us when answering machine sales surged: right after they first came out. Past sales say nothing about whether voice mail is better than answering machines now, so B has no effect on the prediction that answering machines will become obsolete."
+  },
+  {
+   "row_id": "f7c4ac76-34d7-4cda-a92a-03bc5972c4d4",
+   "letter": "C",
+   "body": "Being able to cancel voice mail at any time makes the service more flexible and less risky to try. If anything, that helps voice mail win customers, which fits the companies' argument rather than undercutting it."
+  },
+  {
+   "row_id": "3f57b890-d9c3-440f-8bac-4b262ff5ad2d",
+   "letter": "D",
+   "body": "Points out an advantage answering machines have over voicemail."
+  },
+  {
+   "row_id": "52945c32-b13c-4a3c-b03f-626c4ee4ec1a",
+   "letter": "E",
+   "body": "E points out a limit of answering machines: the tape caps how many messages they can record. A weakness of answering machines makes it more likely that voice mail replaces them, so E supports the argument, if anything."
+  }
+ ],
+ "known_problem": "No breakdown; every note is 5-10 words (\"Says something good about voicemail\") and E is never shown to strengthen rather than weaken.",
+ "tags": "no-breakdown; verdict-only; thin-correct-note; thin-notes; very-short"
+}

@@ -196,6 +196,8 @@ npm install @modelcontextprotocol/sdk @modelcontextprotocol/ext-apps zod express
 
 **Server (`src/server.ts`):**
 
+Supply your own `db.contacts.search` adapter before running this illustrative scaffold. Contact names and emails are untrusted display data; render them using text nodes.
+
 ```typescript
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/streamableHttp.js";
@@ -276,7 +278,12 @@ const { App } = globalThis.ExtApps;
     ul.innerHTML = "";
     for (const c of contacts) {
       const li = document.createElement("li");
-      li.innerHTML = `<div>${c.name}</div><div class="sub">${c.email}</div>`;
+      const name = document.createElement("div");
+      name.textContent = c.name ?? "";
+      const email = document.createElement("div");
+      email.className = "sub";
+      email.textContent = c.email ?? "";
+      li.append(name, email);
       li.addEventListener("click", () => {
         app.sendMessage({
           role: "user",

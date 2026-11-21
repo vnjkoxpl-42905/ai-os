@@ -12,15 +12,107 @@ Claude Desktop sandbox cannot redirect the write (see CLAUDE.md).
 Usage:
   python sync.py            write, after backing up what is there
   python sync.py --check    show what would change, write nothing
+  python sync.py --modes-only --left-alt --restart
+                           preserve live word lists, apply custom modes and Alt toggle
+  python sync.py --modes-only --left-alt --silence-removal off --restart
+                           disable silence removal, preserving other preferences
+  python sync.py --modes-only --word-lists-file PATH --restart
+                           apply exact lists from an empty profile or saved backup JSON
 
 The app reads these files at launch. After a sync, quit Superwhisper from the
 tray icon and reopen it. Never launch it from this shell.
 """
-import json, os, re, shutil, sys, uuid, datetime, glob
+import argparse, hashlib, json, os, re, shutil, sys, uuid, datetime, glob
+
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument("--check", action="store_true")
+parser.add_argument("--modes-only", action="store_true")
+parser.add_argument("--left-alt", action="store_true")
+parser.add_argument("--plain-recorder", action="store_true")
+parser.add_argument("--restart", action="store_true")
+parser.add_argument("--preserve-extra-modes", action="store_true",
+                    help="keep additional loaded mode keys with existing app JSON files; do not rewrite them")
+parser.add_argument("--active-mode", metavar="KEY",
+                    help="activate a canonical or explicitly preserved extra mode after restart; omitted preserves the current mode")
+parser.add_argument("--expected-active-mode", metavar="KEY",
+                    help="refuse writes if the current active mode differs before or after stopping")
+parser.add_argument("--silence-removal", choices=("off", "on"),
+                    help="set silence removal; omitted preserves the current preference")
+parser.add_argument("--word-lists-file", metavar="PATH",
+                    help="JSON containing exact vocabulary and replacements arrays; overrides --modes-only preservation")
+parser.add_argument("--expected-word-lists-sha256", metavar="SHA256",
+                    help="refuse writes unless current canonical vocabulary/replacements JSON matches this hash")
+ARGS = parser.parse_args()
+if ARGS.expected_word_lists_sha256 is not None:
+    if not re.fullmatch(r"[0-9a-fA-F]{64}", ARGS.expected_word_lists_sha256):
+        parser.error("--expected-word-lists-sha256 must contain exactly 64 hexadecimal characters")
+    ARGS.expected_word_lists_sha256 = ARGS.expected_word_lists_sha256.lower()
+
+
+class WordListConflict(Exception):
+    pass
+
+
+class ActiveModeConflict(Exception):
+    pass
+
+
+def check_active_mode(keys):
+    if ARGS.active_mode is not None and ARGS.active_mode not in keys:
+        raise ActiveModeConflict(f"active-mode conflict: {ARGS.active_mode!r} is not a canonical or preserved mode key")
+
+
+def check_expected_active_mode():
+    if ARGS.expected_active_mode is not None:
+        preferences = json.load(open(os.path.join(TARGET, "preferences.json"), encoding="utf-8"))
+        actual = preferences.get("activeMode")
+        if actual != ARGS.expected_active_mode:
+            raise ActiveModeConflict(f"active-mode conflict: current mode {actual!r} differs from expected {ARGS.expected_active_mode!r}")
+
+
+def word_lists_sha256(settings):
+    value = {key: settings.get(key, []) for key in ("vocabulary", "replacements")}
+    payload = json.dumps(value, sort_keys=True, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
+    return hashlib.sha256(payload).hexdigest()
+
+
+def check_word_lists_hash(settings):
+    if ARGS.expected_word_lists_sha256 is not None:
+        actual = word_lists_sha256(settings)
+        if actual != ARGS.expected_word_lists_sha256:
+            raise WordListConflict(f"word-list conflict: current SHA256 {actual} differs from the expected value")
+
+
+def load_word_lists(path):
+    try:
+        with open(path, encoding="utf-8-sig") as handle:
+            value = json.load(handle)
+    except (OSError, ValueError) as exc:
+        raise ValueError(f"cannot read word-lists file: {exc}") from exc
+    if not isinstance(value, dict):
+        raise ValueError("word-lists file must contain a JSON object")
+    vocabulary, replacements = value.get("vocabulary"), value.get("replacements")
+    if not isinstance(vocabulary, list) or any(not isinstance(term, str) for term in vocabulary):
+        raise ValueError("vocabulary must be an array of strings")
+    if not isinstance(replacements, list) or any(
+        not isinstance(row, dict) or any(not isinstance(row.get(key), str) for key in ("id", "original", "with"))
+        for row in replacements
+    ):
+        raise ValueError("replacements must be an array of objects with string id, original, and with fields")
+    return {"vocabulary": vocabulary, "replacements": replacements}
+
+
+WORD_LISTS = None
+if ARGS.word_lists_file is not None:
+    try:
+        WORD_LISTS = load_word_lists(ARGS.word_lists_file)
+    except ValueError as exc:
+        parser.error(str(exc))
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 TARGET = r"\\localhost\C$\Users\Joshu\AppData\Local\com.superwhisper.app"
-CHECK = "--check" in sys.argv
+CHECK = ARGS.check
+MODES_ONLY = ARGS.modes_only
 
 
 def frontmatter(text):
@@ -108,7 +200,7 @@ def read_modes(existing_dir):
         base.update({
             "key": key,
             "name": meta["name"],
-            "type": meta.get("type", "super"),
+            "type": meta.get("type", "custom"),
             "voiceModelID": meta.get("voice_model", "sv-1"),
             "languageModelID": meta.get("language_model", "") or "",
             "prompt": prompt,
@@ -125,17 +217,39 @@ def read_modes(existing_dir):
     return modes
 
 
+def mode_keys(settings, modes_dir, canonical_keys):
+    keys = list(canonical_keys)
+    if ARGS.preserve_extra_modes:
+        for key in settings.get("modeKeys", []):
+            if key not in keys and os.path.isfile(os.path.join(modes_dir, key + ".json")):
+                keys.append(key)
+    return keys
+
+
 def main():
     if not os.path.isdir(TARGET):
         raise SystemExit(f"target not found: {TARGET}")
     settings_path = os.path.join(TARGET, "settings", "settings.json")
     modes_dir = os.path.join(TARGET, "modes")
     settings = json.load(open(settings_path, encoding="utf-8"))
+    try:
+        check_word_lists_hash(settings)
+        check_expected_active_mode()
+    except (WordListConflict, ActiveModeConflict) as exc:
+        raise SystemExit(f"{exc}; no sync writes performed and app was not stopped") from exc
 
-    reps = read_replacements(settings.get("replacements", []))
-    vocab = read_vocabulary(reps)
+    if WORD_LISTS is not None:
+        reps, vocab = WORD_LISTS["replacements"], WORD_LISTS["vocabulary"]
+    else:
+        reps = settings.get("replacements", []) if MODES_ONLY else read_replacements(settings.get("replacements", []))
+        vocab = settings.get("vocabulary", []) if MODES_ONLY else read_vocabulary(reps)
     modes = read_modes(modes_dir)
-    keys = [m["key"] for m in modes]
+    canonical_keys = [m["key"] for m in modes]
+    keys = mode_keys(settings, modes_dir, canonical_keys)
+    try:
+        check_active_mode(keys)
+    except ActiveModeConflict as exc:
+        raise SystemExit(f"{exc}; no sync writes performed and app was not stopped") from exc
 
     new_settings = dict(settings)
     new_settings["vocabulary"] = vocab
@@ -147,6 +261,8 @@ def main():
     new_v, new_r = set(vocab), {(r["original"].lower(), r["with"]) for r in reps}
     print(f"vocabulary: {len(vocab)} (+{len(new_v - old_v)} / -{len(old_v - new_v)})")
     print(f"replacements: {len(reps)} (+{len(new_r - old_r)} / -{len(old_r - new_r)})")
+    if WORD_LISTS is not None:
+        print(f"word lists: exact override from {os.path.abspath(ARGS.word_lists_file)}")
     for m in modes:
         cur = os.path.join(modes_dir, m["key"] + ".json")
         state = "new" if not os.path.exists(cur) else ("changed" if json.load(open(cur, encoding="utf-8")) != m else "same")
@@ -154,6 +270,15 @@ def main():
     stale = [k for k in settings.get("modeKeys", []) if k not in keys]
     if stale:
         print("modeKeys dropped from the app list (files left in place):", stale)
+    extra_keys = [key for key in keys if key not in canonical_keys]
+    if extra_keys:
+        print("extra app modes preserved without rewriting their files:", extra_keys)
+    if ARGS.silence_removal is not None or ARGS.active_mode is not None:
+        preferences = json.load(open(os.path.join(TARGET, "preferences.json"), encoding="utf-8"))
+        if ARGS.silence_removal is not None:
+            print(f"silence removal: {preferences.get('enableSilenceRemoval', 'unset')} -> {ARGS.silence_removal == 'on'}")
+        if ARGS.active_mode is not None:
+            print(f"active mode: {preferences.get('activeMode', 'unset')} -> {ARGS.active_mode}")
 
     if CHECK:
         print("check only, nothing written")
@@ -161,33 +286,106 @@ def main():
 
     stamp = datetime.datetime.now().strftime("%Y-%m-%d-%H%M%S")
     bak = os.path.join(TARGET, "settings", "bak")
+    if "--restart" in sys.argv:
+        # Stop before writing: a running app can flush its old state over new files.
+        import subprocess
+        subprocess.run(["powershell", "-NoProfile", "-Command", "Get-Process Superwhisper -EA SilentlyContinue | Stop-Process -Force"], check=True, capture_output=True)
+        settings = json.load(open(settings_path, encoding="utf-8"))
+        try:
+            check_word_lists_hash(settings)
+            check_expected_active_mode()
+            keys = mode_keys(settings, modes_dir, canonical_keys)
+            check_active_mode(keys)
+        except (WordListConflict, ActiveModeConflict) as exc:
+            try:
+                processes = launch_app()
+            except (Exception, SystemExit) as recovery_error:
+                raise SystemExit(f"{exc}; no sync writes performed; automatic unchanged-app relaunch failed: {recovery_error}") from exc
+            raise SystemExit(f"{exc}; no sync writes performed; app relaunched unchanged ({processes} process(es)); requested settings were not applied or verified") from exc
+        new_settings = dict(settings)
+        new_settings.update(vocabulary=vocab, replacements=reps, modeKeys=keys)
     os.makedirs(bak, exist_ok=True)
     shutil.copy(settings_path, os.path.join(bak, f"settings.json.{stamp}"))
+    mode_bak = os.path.join(bak, f"modes.{stamp}")
+    shutil.copytree(modes_dir, mode_bak)
+    preferences_path = os.path.join(TARGET, "preferences.json")
+    shutil.copy(preferences_path, os.path.join(bak, f"preferences.json.{stamp}"))
+    if "--left-alt" in sys.argv or "--plain-recorder" in sys.argv or ARGS.silence_removal is not None or ARGS.active_mode is not None:
+        preferences = json.load(open(preferences_path, encoding="utf-8"))
+        if "--left-alt" in sys.argv:
+            preferences.update(toggleRecordingShortcut="AltLeft", p2t=False)
+        if "--plain-recorder" in sys.argv:
+            preferences.update(enableWindowEffects=False, alwaysShowMiniRecorder=False)
+        if ARGS.silence_removal is not None:
+            preferences["enableSilenceRemoval"] = ARGS.silence_removal == "on"
+        if ARGS.active_mode is not None:
+            preferences["activeMode"] = ARGS.active_mode
+        json.dump(preferences, open(preferences_path, "w", encoding="utf-8"), indent=2)
     json.dump(new_settings, open(settings_path, "w", encoding="utf-8"), indent=2)
     for m in modes:
         json.dump(m, open(os.path.join(modes_dir, m["key"] + ".json"), "w", encoding="utf-8"), indent=2)
     print(f"written. backup: settings/bak/settings.json.{stamp}")
     if "--restart" in sys.argv:
-        restart()
+        restart(expected_mode_keys=keys)
     else:
         print("now quit Superwhisper from the tray and reopen it (or rerun with --restart).")
 
 
-def restart():
-    """Quit the app, relaunch it OUTSIDE the Claude sandbox via Task Scheduler, reopen its
-    nothing on screen, then prove the load by reading modeKeys back (the app rewrites it and
-    drops any mode it rejected)."""
+def launch_app():
+    """Relaunch outside the agent process and return the confirmed process count."""
     import subprocess
     ps = r'''
-Get-Process Superwhisper -EA SilentlyContinue | Stop-Process -Force; Start-Sleep 3
 $a = New-ScheduledTaskAction -Execute 'C:\Users\Joshu\AppData\Local\superwhisper\Superwhisper.exe'
 Register-ScheduledTask -TaskName SWRun -Action $a -Force | Out-Null; Start-ScheduledTask -TaskName SWRun; Start-Sleep 10; Unregister-ScheduledTask -TaskName SWRun -Confirm:$false
 (Get-Process Superwhisper -EA SilentlyContinue | Measure-Object).Count
 '''
-    out = subprocess.run(["powershell", "-NoProfile", "-Command", ps], capture_output=True, text=True).stdout.strip()
+    result = subprocess.run(["powershell", "-NoProfile", "-Command", ps], capture_output=True, text=True, check=True)
+    out = result.stdout.strip()
+    if not out or not out.splitlines()[-1].isdigit() or int(out.splitlines()[-1]) < 1:
+        raise SystemExit("restart failed: no Superwhisper process confirmed")
+    return int(out.splitlines()[-1])
+
+
+def restart(expected_mode_keys=None):
+    """Relaunch in the background, then verify the requested configuration."""
+    processes = launch_app()
     d = json.load(open(os.path.join(TARGET, "settings", "settings.json"), encoding="utf-8"))
-    print(f"restarted in the background ({out.splitlines()[-1] if out else '?'} process(es)); ready for Ctrl+Space")
+    preferences = json.load(open(os.path.join(TARGET, "preferences.json"), encoding="utf-8"))
+    shortcut_key = "pushToTalkShortcut" if preferences.get("p2t", False) else "toggleRecordingShortcut"
+    shortcut = preferences.get(shortcut_key, "unset")
+    behavior = "hold to record" if preferences.get("p2t", False) else "press to start/stop"
+    print(f"restarted in the background ({processes} process(es)); recording: {shortcut} ({behavior})")
     print(f"loaded: {len(d['replacements'])} replacements, {len(d['vocabulary'])} vocabulary, {len(d['modeKeys'])} modes: {d['modeKeys']}")
+    expected = read_modes(os.path.join(TARGET, "modes"))
+    expected_keys = set(expected_mode_keys) if expected_mode_keys is not None else {m['key'] for m in expected}
+    if set(d['modeKeys']) != expected_keys:
+        raise SystemExit("verification failed: loaded mode keys differ from source")
+    for mode in expected:
+        loaded = json.load(open(os.path.join(TARGET, "modes", mode['key'] + '.json'), encoding="utf-8"))
+        for field in ('type', 'prompt', 'languageModelID', 'contextFromActiveApplication', 'contextFromClipboard', 'contextFromSelection'):
+            if loaded.get(field) != mode.get(field):
+                raise SystemExit(f"verification failed: {mode['key']} {field} differs")
+    if "--left-alt" in sys.argv and (shortcut != "AltLeft" or preferences.get("p2t", False)):
+        raise SystemExit("verification failed: Left Alt toggle did not persist")
+    if "--plain-recorder" in sys.argv:
+        if preferences.get("enableWindowEffects") or preferences.get("alwaysShowMiniRecorder"):
+            raise SystemExit("verification failed: recorder display settings did not persist")
+        print("verified: window effects and always-visible mini recorder disabled")
+    if ARGS.silence_removal is not None:
+        expected_silence_removal = ARGS.silence_removal == "on"
+        if preferences.get("enableSilenceRemoval") is not expected_silence_removal:
+            raise SystemExit("verification failed: silence removal preference did not persist")
+        print(f"verified: silence removal {'enabled' if expected_silence_removal else 'disabled'}")
+    if ARGS.active_mode is not None:
+        if preferences.get("activeMode") != ARGS.active_mode:
+            raise SystemExit("verification failed: active mode did not persist")
+        print(f"verified: active mode {ARGS.active_mode}")
+    if WORD_LISTS is not None:
+        for field in ("vocabulary", "replacements"):
+            if d.get(field) != WORD_LISTS[field]:
+                raise SystemExit(f"verification failed: loaded {field} differs from word-lists file")
+        print("verified: loaded vocabulary and replacements exactly match word-lists file")
+    print("verified: loaded mode files match source types, prompts, models, and context flags")
 
 
 if __name__ == "__main__":

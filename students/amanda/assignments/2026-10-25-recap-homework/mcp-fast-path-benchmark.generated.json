@@ -1,0 +1,54 @@
+{
+  "tested_at": "2026-10-25T21:34:39.368Z",
+  "mode": "verify_existing",
+  "new_assignments": 0,
+  "notifications_resent": 0,
+  "runs": [
+    {
+      "run": 1,
+      "mcp_wall_ms": 8812,
+      "metrics": {
+        "sign_ins": 1,
+        "student_lookups": 1,
+        "bank_reads": 1,
+        "planned": 7,
+        "assigned": 0,
+        "elapsed_ms": 4029
+      },
+      "runtime": {
+        "lock_ms": 8,
+        "fetch_ms": 1753,
+        "setup_ms": 774,
+        "execute_ms": 5963,
+        "total_ms": 8497,
+        "cache_hit": true,
+        "ops_commit": "6a167c8555b4a404334310aad48a5d748b1b0861",
+        "source_sha256": "1ff796d93db0856d2141432d10ec28bae301eba377699f8266e33c5115d51ecb"
+      },
+      "audit_file": "C:\\Users\\Joshu\\dev\\ai-os\\students\\amanda\\assignments\\amanda-fast-path-verify-2026-10-25\\2026-10-25T21-34-24-116Z-88fe05ea.generated.json"
+    },
+    {
+      "run": 2,
+      "mcp_wall_ms": 6574,
+      "metrics": {
+        "sign_ins": 1,
+        "student_lookups": 1,
+        "bank_reads": 1,
+        "planned": 7,
+        "assigned": 0,
+        "elapsed_ms": 2615
+      },
+      "runtime": {
+        "lock_ms": 9,
+        "fetch_ms": 111,
+        "setup_ms": 563,
+        "execute_ms": 5463,
+        "total_ms": 6145,
+        "cache_hit": true,
+        "ops_commit": "6a167c8555b4a404334310aad48a5d748b1b0861",
+        "source_sha256": "1ff796d93db0856d2141432d10ec28bae301eba377699f8266e33c5115d51ecb"
+      },
+      "audit_file": "C:\\Users\\Joshu\\dev\\ai-os\\students\\amanda\\assignments\\amanda-fast-path-verify-2026-10-25\\2026-10-25T21-34-32-938Z-a9548614.generated.json"
+    }
+  ]
+}

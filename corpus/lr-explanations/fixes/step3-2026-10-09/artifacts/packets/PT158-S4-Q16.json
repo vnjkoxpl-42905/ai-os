@@ -1,0 +1,84 @@
+{
+ "qid": "PT158-S4-Q16",
+ "type": "Weaken",
+ "difficulty": "5",
+ "key_db": "D",
+ "stimulus_db": "Journalist: When judges do not maintain strict control over their courtrooms, lawyers often try to influence jury verdicts by using inflammatory language and by badgering witnesses. These obstructive behaviors hinder the jury's effort to reach a correct verdict. Whenever lawyers engage in such behavior, therefore, it is reasonable to doubt whether the verdict is correct.",
+ "stem_db": "Which one of the following, if true, most weakens the journalist's argument?",
+ "choices_db": {
+  "A": "Court proceedings overseen by judges who are very strict in controlling lawyers' behavior are known to result sometimes in incorrect verdicts.",
+  "B": "Lawyers tend to be less concerned than are judges about whether the outcomes of jury trials are just or not.",
+  "C": "People who are influenced by inflammatory language are very unlikely to admit at some later time that they were influenced by such language.",
+  "D": "Obstructive courtroom behavior by a lawyer is seldom effective in cases where jurors are also presented with legitimate evidence.",
+  "E": "The selection of jurors is based in part on an assessment of the likelihood that they are free of bias."
+ },
+ "bank": {
+  "stimulus": "Journalist: When judges do not maintain strict control\n over their courtrooms, lawyers often try to\n influence jury verdicts by using inflammatory\n language and by badgering witnesses. These\n obstructive behaviors hinder the jury’s effort to\n reach a correct verdict. Whenever lawyers engage\n in such behavior, therefore, it is reasonable to\n doubt whether the verdict is correct.",
+  "stem": "Which one of the following, if true, most weakens the\n journalist’s argument?",
+  "choices": {
+   "A": "Court proceedings overseen by judges who are very strict in controlling lawyers’ behavior are known to result sometimes in incorrect verdicts.",
+   "B": "Lawyers tend to be less concerned than are judges about whether the outcomes of jury trials are just or not.",
+   "C": "People who are influenced by inflammatory language are very unlikely to admit at some later time that they were influenced by such language.",
+   "D": "Obstructive courtroom behavior by a lawyer is seldom effective in cases where jurors are also presented with legitimate evidence.",
+   "E": "The selection of jurors is based in part on an assessment of the likelihood that they are free of bias."
+  },
+  "key": "D"
+ },
+ "explanation_id": "09a77bf8-7701-4c66-95eb-47c451b1d341",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "010d861c-a2f0-4f1f-9df9-922b65e65811",
+   "position": 0,
+   "label": "Conclusion",
+   "body": "Whenever lawyers engage in obstructive behaviors (such as inflammatory language or badgering witnesses), it's reasonable to doubt whether the eventual verdict is correct."
+  },
+  {
+   "row_id": "9d486081-8b3e-49a7-84ad-2bc82a192b5d",
+   "position": 1,
+   "label": "Evidence",
+   "body": "These obstructive behaviors hinder the jury's effort to reach a correct verdict."
+  },
+  {
+   "row_id": "984f4d35-bbcf-4d00-8c76-9d5529625548",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "They seem to be testing the tension between these two concepts:\n\"Thing X hinders the effort to reach a correct verdict\"\nvs.\n\"Thing X causes us to doubt that a correct verdict was reached\".\nA strong headwind might hinder my effort to reach the top of Mt. Whitney, but a strong headwind doesn't make it reasonable to doubt my claim that I reached the top of Mt. Whitney.\nIn other words, yes, these obstructive behaviors make it harder to reach a verdict, but that's different from saying they make it somewhat likely that I'll reach the wrong verdict."
+  },
+  {
+   "row_id": "8906ed5a-58ef-4f49-8ea9-5c075f08af65",
+   "position": 3,
+   "label": "Goal",
+   "body": "Look for an answer saying, \"These behaviors might make it harder to reach a verdict, but they don't undermine our trust that if the jury managed to reach a verdict, it was a correct one.\""
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "330960d1-36bf-4034-86fa-e081dc3b96de",
+   "letter": "A",
+   "body": "This answer shifts focus from lawyer behavior to judge behavior. The argument claims that inflammatory LAWYER tactics give reason to doubt verdicts. Whether strict JUDGES sometimes preside over wrong verdicts is a different question entirely. Information about judges and their verdicts provides no evidence about the specific effect of lawyer misconduct on verdict accuracy. To weaken the argument, we need evidence specifically about the relationship between inflammatory lawyer tactics and verdict outcomes — not about what happens under a different courtroom variable."
+  },
+  {
+   "row_id": "f26f51f3-7cd3-4c6a-89c9-335061a18f1b",
+   "letter": "B",
+   "body": "Whether lawyers care more about winning than about justice addresses their motivations, not the effectiveness of their tactics. The argument's conclusion is about whether inflammatory behavior actually compromises verdicts. A lawyer could be entirely motivated by winning and still fail to distort the verdict with inflammatory tactics, or a justice-seeking lawyer could accidentally distort proceedings. Motivation and effectiveness are independent variables. The weakener must show that inflammatory language does not actually lead to incorrect verdicts — not that lawyers have bad intentions."
+  },
+  {
+   "row_id": "19a93fe6-3350-4f77-a976-f0d00fe3a012",
+   "letter": "C",
+   "body": "If people influenced by inflammatory language are unlikely to admit it, the distorting effect could be even more widespread and harder to detect than assumed. Jurors might be swayed by emotional manipulation without recognizing or acknowledging it, making compromised verdicts invisible. This makes the argument's concern MORE warranted, not less — the influence is insidious and undetectable. A weakener should give us reason to trust verdicts despite the presence of inflammatory tactics. This answer does the opposite by suggesting the problem is worse than it appears."
+  },
+  {
+   "row_id": "fd1c9e7d-99fc-4f83-827c-20a7fb83adf0",
+   "letter": "D",
+   "body": "This answer directly breaks the link between inflammatory behavior and incorrect verdicts. The argument assumes that when lawyers use inflammatory tactics, the verdict is likely compromised. But if obstructive behavior \"seldom\" succeeds when jurors are also presented with legitimate evidence, then the evidence — not the theatrics — determines the outcome in the vast majority of cases.\n\nIn real trials, legitimate evidence is almost always presented. If inflammatory behavior is ineffective against actual evidence, then its presence gives little reason to doubt the verdict. The tactics might be unprofessional and obnoxious, but they do not accomplish what the argument fears: distorting the jury's decision. This directly undermines the conclusion that we should doubt verdicts whenever inflammatory behavior occurs, because the behavior simply does not have the distorting effect the argument claims it does."
+  },
+  {
+   "row_id": "b8b4ba08-9ab2-461d-861d-80c2b05eb876",
+   "letter": "E",
+   "body": "Jury selection procedures occur before the trial. The argument is about what happens during the trial when lawyers engage in inflammatory behavior. These are different stages of the legal process. Even if jury selection perfectly screens out all pre-existing biases, the selected jurors could still be influenced by inflammatory tactics that occur during the proceedings themselves. Pre-trial screening cannot immunize jurors against in-trial manipulation. The argument's concern is about in-trial influence, and this answer addresses pre-trial preparation — a different phase entirely."
+  }
+ ],
+ "known_problem": "Correct; Mt. Whitney analogy is good.",
+ "tags": "emdash-heavy; pt157-158-register"
+}

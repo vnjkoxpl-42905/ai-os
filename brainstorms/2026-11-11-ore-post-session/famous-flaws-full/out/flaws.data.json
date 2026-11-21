@@ -1,0 +1,1004 @@
+{
+ "groups": {
+  "1": {
+   "n": 1,
+   "title": "Frequently the Real Flaw",
+   "count": 6,
+   "intro": [
+    "If you spot one of these reasoning errors in the stimulus, look for an answer that names it. These are the heavy hitters."
+   ]
+  },
+  "2": {
+   "n": 2,
+   "title": "Frequently the Distractor",
+   "count": 4,
+   "intro": [
+    "These flaws appear in *wrong* answer choices much more often than in correct ones. When you see one of these labels, default-skeptical: it's probably a wrong-flaw trap. Verify the flaw is actually present in the stimulus before selecting."
+   ]
+  },
+  "3": {
+   "n": 3,
+   "title": "Named by me, super common",
+   "count": 5,
+   "intro": [
+    "These don't have universally accepted textbook names. They might be the most common LSAT errors anyway. Sleight of Hand alone may be the #1 LR flaw, period. Treat Group 3 with the same priority as Group 1."
+   ]
+  }
+ },
+ "entries": [
+  {
+   "num": 1,
+   "name": "Necessary vs. Sufficient",
+   "group": 1,
+   "meta": "Group 1 · Frequency: very high",
+   "blocks": [
+    {
+     "key": "definition",
+     "label": "Definition",
+     "lines": [
+      "Illegally thinking through a conditional rule backwards or in the opposite direction. Mistaking what is *required* for what is *guaranteed*."
+     ]
+    },
+    {
+     "key": "tells",
+     "label": "Stimulus tells",
+     "lines": [
+      "An \"if X then Y\" rule appears in the premises. The conclusion either reverses it (\"Y therefore X\") or negates it (\"not X therefore not Y\") instead of contrapositing."
+     ]
+    },
+    {
+     "key": "disguises",
+     "label": "Answer-choice disguises",
+     "lines": [
+      "The LSAT phrases this six different ways. Memorize the verbs.",
+      "",
+      "- \"Confuses a necessary condition with a sufficient condition.\"",
+      "- \"Mistakes a condition required if a certain result is to obtain for a condition that by itself is sufficient to guarantee that result.\"",
+      "- \"From the assertion that something is necessary to a moral order, the argument concludes that the thing is sufficient for an element of the moral order to be realized.\"",
+      "- \"Confuses a condition that ensures the truth of another condition for one that is necessary for the truth of that condition.\"",
+      "- \"From the claim that X implies Y, the argument concludes that Y implies X.\"",
+      "- \"Treats a condition under which a phenomenon occurs as the only condition under which it occurs.\""
+     ]
+    },
+    {
+     "key": "example",
+     "label": "Canonical worked example",
+     "lines": [
+      "> *People who have seen The 13th have a great understanding of the US prison system. Since Megan hasn't seen it, she must have a poor understanding of the US prison system.*",
+      "",
+      "The author negates: seeing the film is sufficient for understanding, not necessary. Megan could understand the prison system from a textbook, a podcast, a relative who's been through it, anything."
+     ]
+    },
+    {
+     "key": "whatif",
+     "label": "The \"What if\" counter",
+     "lines": [
+      "What if Megan understands the system through some other means besides seeing the film?"
+     ]
+    },
+    {
+     "key": "disamb",
+     "label": "Disambiguate from",
+     "lines": [
+      "- **Causal.** If the relationship in the stimulus is cause-and-effect, not logical implication, the flaw is Causal. Ask: is this a logical condition or a real-world cause?",
+      "- **Sleight of Hand.** Sometimes a conditional argument also smuggles in a new term. Ask: are the conditional terms defined consistently?"
+     ]
+    }
+   ],
+   "id": "necessary-vs-sufficient"
+  },
+  {
+   "num": 2,
+   "name": "Causal",
+   "group": 1,
+   "meta": "Group 1 · Frequency: very high",
+   "blocks": [
+    {
+     "key": "definition",
+     "label": "Definition",
+     "lines": [
+      "Concluding one specific cause for a correlation when other interpretations exist. Whenever the LSAT concludes or assumes A causes B, 99.9% of the time it's wrong."
+     ]
+    },
+    {
+     "key": "tells",
+     "label": "Stimulus tells",
+     "lines": [
+      "A correlation, coincidence, or co-occurrence is described, then the conclusion picks ONE causal direction. Three things the author always ignores:",
+      "- Reverse causation (B caused A)",
+      "- Third-variable causation (C caused both A and B)",
+      "- Pure coincidence"
+     ]
+    },
+    {
+     "key": "disguises",
+     "label": "Answer-choice disguises",
+     "lines": [
+      "",
+      "- \"Fails to rule out the possibility that what appears to be the result of a given condition may in fact be the cause of that condition.\" (reverse causation)",
+      "- \"Mistakes a correlation between two phenomena for evidence that one causes the other.\"",
+      "- \"Fails to consider that the correlation may be explained by a third factor.\"",
+      "- \"Treats one possible explanation for a phenomenon as if it were the only explanation.\"",
+      "- \"Fails to rule out alternative causes for the observed effect.\"",
+      "- \"Concludes that A causes B merely because A and B occur together.\""
+     ]
+    },
+    {
+     "key": "example",
+     "label": "Canonical worked example",
+     "lines": [
+      "> *People who are enlisted in the military are more likely than civilians to have excellent physiques. Clearly, military recruiters select applicants based on their fitness.*",
+      "",
+      "Maybe military training causes the physique (B caused A). Maybe people who already exercise are the ones who enlist (selection effect). Maybe it's coincidence. The argument picked one explanation out of three."
+     ]
+    },
+    {
+     "key": "whatif",
+     "label": "The \"What if\" counter",
+     "lines": [
+      "What if the military training itself produces the physique? What if a third factor like youth or self-discipline explains both?"
+     ]
+    },
+    {
+     "key": "disamb",
+     "label": "Disambiguate from",
+     "lines": [
+      "- **Sampling.** Sampling is about whether the data supports the population claim. Causal is about whether the data supports the causal mechanism. Ask: is the problem the data itself, or the leap from the data?"
+     ]
+    }
+   ],
+   "id": "causal"
+  },
+  {
+   "num": 3,
+   "name": "Part vs. Whole",
+   "group": 1,
+   "meta": "Group 1 · Frequency: high",
+   "blocks": [
+    {
+     "key": "definition",
+     "label": "Definition",
+     "lines": [
+      "Assuming what is true of the parts is true of the whole, or vice versa."
+     ]
+    },
+    {
+     "key": "tells",
+     "label": "Stimulus tells",
+     "lines": [
+      "A property is established about either every member of a group, then concluded about the group as a whole, or about the group as a whole, then concluded about every member."
+     ]
+    },
+    {
+     "key": "disguises",
+     "label": "Answer-choice disguises",
+     "lines": [
+      "",
+      "- \"Assumes that what is true of the individual members of a group is necessarily true of the group as a whole.\"",
+      "- \"Infers from a property of a collective a property of its individual members.\"",
+      "- \"Treats a characteristic of the parts as if it must be a characteristic of the whole.\"",
+      "- \"It is assumed that what is true of persons individually is true of a country as a whole.\"",
+      "- \"Mistakes a property of a constituent for a property of the system that contains it.\""
+     ]
+    },
+    {
+     "key": "example",
+     "label": "Canonical worked examples",
+     "lines": [
+      "> *Just because each member of the team is efficient doesn't mean that the team will be efficient.*",
+      "",
+      "An efficient individual on a team that doesn't coordinate produces an inefficient team. Reverse direction:",
+      "",
+      "> *Rat poison is harmful if ingested, so each ingredient in rat poison must also be harmful if ingested.*",
+      "",
+      "Wrong direction. Some individual ingredients (water, sugar) are perfectly safe. Harm emerges from the combination."
+     ]
+    },
+    {
+     "key": "whatif",
+     "label": "The \"What if\" counter",
+     "lines": [
+      "What if the parts have a property that doesn't carry to the whole? What if the whole has a property that doesn't reduce to the parts?"
+     ]
+    },
+    {
+     "key": "disamb",
+     "label": "Disambiguate from",
+     "lines": [
+      "- **Sampling.** Sampling is sample-to-population. Part vs. Whole is part-to-whole hierarchy. Ask: is the move sample-to-population or part-to-whole?"
+     ]
+    }
+   ],
+   "id": "part-vs-whole"
+  },
+  {
+   "num": 4,
+   "name": "Unproven vs. Proven False",
+   "group": 1,
+   "meta": "Group 1 · Frequency: high",
+   "blocks": [
+    {
+     "key": "definition",
+     "label": "Definition",
+     "lines": [
+      "Concluding that because something hasn't been proven true, it must be false. Or because someone provided a weak argument FOR a claim, the claim itself must be wrong."
+     ]
+    },
+    {
+     "key": "tells",
+     "label": "Stimulus tells",
+     "lines": [
+      "The author points out a lack of evidence and concludes the opposite. Or attacks an argument's quality and concludes the argument's claim is false."
+     ]
+    },
+    {
+     "key": "disguises",
+     "label": "Answer-choice disguises",
+     "lines": [
+      "",
+      "- \"Treats the failure to establish that a certain claim is false as equivalent to a demonstration that that claim is true.\"",
+      "- \"Treats the failure to prove a claim as evidence of the falsity of that claim.\"",
+      "- \"Concludes that a claim is false merely because an inadequate argument has been offered in support of it.\"",
+      "- \"Takes an absence of evidence to be evidence of absence.\"",
+      "- \"Rejects a claim because no proof has been provided that it is true.\""
+     ]
+    },
+    {
+     "key": "example",
+     "label": "Canonical worked example",
+     "lines": [
+      "> *Many people think that COVID can be transmitted via sharing a stick of lip balm. But this is not true because no study has thus far demonstrated transmission occurring in this way.*",
+      "",
+      "No study yet means we don't know, not that it can't happen. Also:",
+      "",
+      "> *Billy says his uncle was related to a famous singer, but he can't prove it on Ancestry.com. Thus, Billy's uncle was not related to the singer.*"
+     ]
+    },
+    {
+     "key": "whatif",
+     "label": "The \"What if\" counter",
+     "lines": [
+      "What if the absence of evidence is just absence of evidence, not evidence of absence?"
+     ]
+    },
+    {
+     "key": "disamb",
+     "label": "Disambiguate from",
+     "lines": [
+      "- **Ad Hominem.** If the attack is on the source rather than the evidence, it's Ad Hominem. Ask: is the author attacking the claim, the evidence, or the speaker?"
+     ]
+    }
+   ],
+   "id": "unproven-vs-proven-false"
+  },
+  {
+   "num": 5,
+   "name": "Ad Hominem",
+   "group": 1,
+   "meta": "Group 1 · Frequency: medium-high",
+   "blocks": [
+    {
+     "key": "definition",
+     "label": "Definition",
+     "lines": [
+      "Dismissing an argument or point of view based on an attack on the source rather than the claim itself. The LSAT version is often subtler than the textbook version. Not always a personal insult. Often pointing out the source's bias or self-interest."
+     ]
+    },
+    {
+     "key": "tells",
+     "label": "Stimulus tells",
+     "lines": [
+      "The author rejects a claim by pointing out something about the speaker (their bias, their motive, their past behavior, their identity) rather than addressing the claim's content."
+     ]
+    },
+    {
+     "key": "disguises",
+     "label": "Answer-choice disguises",
+     "lines": [
+      "",
+      "- \"Casts doubt on the reliability of a study by questioning the motives of those reporting it.\"",
+      "- \"Attempts to undermine the legislators' credibility instead of addressing their argument.\"",
+      "- \"Dismisses a claim by pointing to the personal characteristics of the person making the claim.\"",
+      "- \"Rejects a position because of a perceived conflict of interest of the source.\"",
+      "- \"Treats a person's bias as if it were evidence against their argument.\""
+     ]
+    },
+    {
+     "key": "example",
+     "label": "Canonical worked example",
+     "lines": [
+      "> *My friend Sameer says social workers would respond to domestic abuse calls better than armed police. But we can ignore him, since he is a social worker and would benefit from the change.*",
+      "",
+      "Sameer's job doesn't make his argument wrong. Address what he said, not who he is."
+     ]
+    },
+    {
+     "key": "whatif",
+     "label": "The \"What if\" counter",
+     "lines": [
+      "What if the source is biased AND right? Bias affects credibility. It doesn't reverse truth."
+     ]
+    },
+    {
+     "key": "disamb",
+     "label": "Disambiguate from",
+     "lines": [
+      "- **Unproven vs. Proven False.** Ad Hominem attacks the source. Unproven vs. Proven False attacks the evidence or the lack of it. Ask: is the target the speaker or the evidence?"
+     ]
+    }
+   ],
+   "id": "ad-hominem"
+  },
+  {
+   "num": 6,
+   "name": "Sampling",
+   "group": 1,
+   "meta": "Group 1 · Frequency: high",
+   "blocks": [
+    {
+     "key": "definition",
+     "label": "Definition",
+     "lines": [
+      "Generalizing from a sample that is too small, biased, or unrepresentative."
+     ]
+    },
+    {
+     "key": "tells",
+     "label": "Stimulus tells",
+     "lines": [
+      "A study, survey, or set of examples is reported, then a sweeping conclusion is drawn about a much larger population."
+     ]
+    },
+    {
+     "key": "disguises",
+     "label": "Answer-choice disguises",
+     "lines": [
+      "",
+      "- \"Generalizes from a sample that is unlikely to be representative of public sentiment.\"",
+      "- \"Too hastily reaches a general conclusion on the basis of a few examples.\"",
+      "- \"Relies on the opinions of a group of people who are likely to be inclined to agree with the author.\"",
+      "- \"Generalizes from atypical occurrences.\"",
+      "- \"Infers limits on ability from a few isolated lapses in performance.\"",
+      "- \"Presumes, without providing justification, that the people surveyed based their responses on a random sampling.\""
+     ]
+    },
+    {
+     "key": "example",
+     "label": "Canonical worked example",
+     "lines": [
+      "> *Today's youth prefer comic books to literature. After all, in a survey conducted at Comic-Con, over 85% of young people preferred comics over novels.*",
+      "",
+      "A sample of comic-convention attendees does not generalize to \"today's youth.\" The sample selected for exactly the trait being measured."
+     ]
+    },
+    {
+     "key": "whatif",
+     "label": "The \"What if\" counter",
+     "lines": [
+      "What if the sample isn't representative of the population the conclusion describes?"
+     ]
+    },
+    {
+     "key": "disamb",
+     "label": "Disambiguate from",
+     "lines": [
+      "- **Hasty Generalization.** Hasty Generalization is a subtype of Sampling: too few cases. Sampling more broadly includes biased or unrepresentative samples even when there are many of them. Ask: is the problem the size, the selection method, or both?",
+      "- **Causal.** Sampling is whether the data supports a population claim. Causal is whether the data supports a causation claim. Ask: is the conclusion a population claim or a causation claim?"
+     ]
+    }
+   ],
+   "id": "sampling"
+  },
+  {
+   "num": 7,
+   "name": "Circular Reasoning",
+   "group": 2,
+   "meta": "Group 2 · Right-answer frequency: low",
+   "blocks": [
+    {
+     "key": "definition",
+     "label": "Definition",
+     "lines": [
+      "The premise is a restatement or assumption of the conclusion. The argument provides no real support; it just says the conclusion twice."
+     ]
+    },
+    {
+     "key": "tells",
+     "label": "Stimulus tells",
+     "lines": [
+      "The premise and conclusion say the same thing in different words. Pure circular reasoning is rare on the LSAT. When you see \"circular\" in an answer choice, it's usually wrong."
+     ]
+    },
+    {
+     "key": "disguises",
+     "label": "Answer-choice disguises",
+     "lines": [
+      "",
+      "- \"Assumes what it is trying to prove.\"",
+      "- \"Presupposes what it seeks to establish.\"",
+      "- \"The argument's conclusion is presupposed in the definition it gives of [its key term].\"",
+      "- \"The claim that X is mistaken is both a premise and a conclusion in the argument.\""
+     ]
+    },
+    {
+     "key": "example",
+     "label": "Canonical worked example",
+     "lines": [
+      "> *The LSAT is clearly the hardest graduate school test because all the other tests people take to go to grad school pale in comparison to the difficulty of the LSAT.*"
+     ]
+    },
+    {
+     "key": "whatif",
+     "label": "The \"What if\" counter",
+     "lines": [
+      "Is the author actually providing evidence, or just repeating their claim using different words?"
+     ],
+     "supplement": "R6"
+    },
+    {
+     "key": "right",
+     "label": "When it IS the right answer",
+     "lines": [
+      "Rare. The argument has to literally restate the conclusion as a premise. Be especially suspicious when the argument has a long string of premises. Real circular reasoning is short and self-referential, not elaborate."
+     ]
+    }
+   ],
+   "id": "circular-reasoning"
+  },
+  {
+   "num": 8,
+   "name": "Internal Contradiction",
+   "group": 2,
+   "meta": "Group 2 · Right-answer frequency: low",
+   "blocks": [
+    {
+     "key": "definition",
+     "label": "Definition",
+     "lines": [
+      "Something the author says undermines or contradicts something else they say."
+     ]
+    },
+    {
+     "key": "tells",
+     "label": "Stimulus tells",
+     "lines": [
+      "Two statements the author makes can't both be true. Rare in real Flaw stimuli."
+     ]
+    },
+    {
+     "key": "disguises",
+     "label": "Answer-choice disguises",
+     "lines": [
+      "",
+      "- \"Contradicts itself.\"",
+      "- \"Includes premises that are inconsistent with one another.\"",
+      "- \"Asserts a claim that, if true, would undermine the argument's own conclusion.\""
+     ]
+    },
+    {
+     "key": "example",
+     "label": "Canonical worked example",
+     "lines": [
+      "> *The LSAT is an incredibly challenging test for anyone who takes it. However, if you commit to Eddie Spaghetti's Steady LSAT Readiness protocol, you will soon feel like the LSAT is no harder than a kindergarten spelling quiz.*"
+     ]
+    },
+    {
+     "key": "whatif",
+     "label": "The \"What if\" counter",
+     "lines": [
+      "Wait, didn't the author just say the exact opposite of that a second ago?"
+     ],
+     "supplement": "R6"
+    },
+    {
+     "key": "right",
+     "label": "When it IS the right answer",
+     "lines": [
+      "Almost never. Be very suspicious."
+     ]
+    }
+   ],
+   "id": "internal-contradiction"
+  },
+  {
+   "num": 9,
+   "name": "Equivocation",
+   "group": 2,
+   "meta": "Group 2 · Right-answer frequency: low-medium",
+   "blocks": [
+    {
+     "key": "definition",
+     "label": "Definition",
+     "lines": [
+      "Using the *same* word or phrase to mean two different things in the same argument. The shift in meaning is often subtle."
+     ]
+    },
+    {
+     "key": "tells",
+     "label": "Stimulus tells",
+     "lines": [
+      "A single key term appears in both a premise and the conclusion, but the meaning has shifted between uses. The textbook example is \"fine for parking\" (penalty) vs. \"fine\" (acceptable)."
+     ]
+    },
+    {
+     "key": "disguises",
+     "label": "Answer-choice disguises",
+     "lines": [
+      "",
+      "- \"Equivocates with respect to a central concept.\"",
+      "- \"The term 'X' is used ambiguously in the argument.\"",
+      "- \"Treats two fundamentally different conceptions of [a concept] as essentially the same.\"",
+      "- \"Relies on multiple meanings of a single term.\""
+     ]
+    },
+    {
+     "key": "example",
+     "label": "Canonical worked example",
+     "lines": [
+      "> *Some question whether Egypt condones Romania's recent military buildup. But clearly, Egypt sanctions this activity, since after the military's actions, Egypt issued sanctions against Romania.*",
+      "",
+      "\"Sanctions\" means *approves* AND *penalizes*. The author exploits the double meaning."
+     ]
+    },
+    {
+     "key": "whatif",
+     "label": "The \"What if\" counter",
+     "lines": [
+      "Is the author using this word to mean the exact same thing in the premise as in the conclusion?"
+     ],
+     "supplement": "R6"
+    },
+    {
+     "key": "right",
+     "label": "When it IS the right answer",
+     "lines": [
+      "Rare but possible. The single key term has to actually shift meaning, not just be used in different contexts. Different from Sleight of Hand: Equivocation reuses the SAME word; Sleight of Hand swaps in a DIFFERENT word the author treats as equivalent."
+     ]
+    }
+   ],
+   "id": "equivocation"
+  },
+  {
+   "num": 10,
+   "name": "Inappropriate Appeal",
+   "group": 2,
+   "meta": "Group 2 · Right-answer frequency: low",
+   "blocks": [
+    {
+     "key": "definition",
+     "label": "Definition",
+     "lines": [
+      "Relying on sympathy, popular opinion, or an irrelevant authority figure rather than evidence."
+     ]
+    },
+    {
+     "key": "tells",
+     "label": "Stimulus tells",
+     "lines": [
+      "The premise is \"an authority said so\" (where the authority isn't actually qualified on the subject), or \"everyone agrees\" (popularity), or \"have pity on the speaker\" (sympathy)."
+     ]
+    },
+    {
+     "key": "disguises",
+     "label": "Answer-choice disguises",
+     "lines": [
+      "",
+      "- \"Too readily accepts a claim by appeal to inappropriate authority.\"",
+      "- \"Relies on the judgment of experts in a matter to which their expertise is irrelevant.\"",
+      "- \"A claim is inferred to be false merely because a majority of people believe it to be false.\"",
+      "- \"Appeals to the popularity of a position as if popularity established its truth.\""
+     ]
+    },
+    {
+     "key": "example",
+     "label": "Canonical worked example",
+     "lines": [
+      "> *The government's leading expert in infectious diseases says that coronavirus can't be transmitted by sharing hats. But my friend Brandy says it can. The expert must be wrong!*",
+      "",
+      "Brandy is not an authority on infectious disease."
+     ]
+    },
+    {
+     "key": "whatif",
+     "label": "The \"What if\" counter",
+     "lines": [
+      "What if the expert is wrong, or the majority of people believe something false?"
+     ],
+     "supplement": "R6"
+    },
+    {
+     "key": "right",
+     "label": "When it IS the right answer",
+     "lines": [
+      "Sometimes. Look for premises that are essentially \"X is true because someone famous said so\" or \"X is true because everyone thinks so.\""
+     ]
+    }
+   ],
+   "id": "inappropriate-appeal"
+  },
+  {
+   "num": 11,
+   "name": "Sleight of Hand (a.k.a. Dangling Variable)",
+   "group": 3,
+   "meta": "Group 3 · Frequency: extremely high · possibly the #1 LR flaw",
+   "blocks": [
+    {
+     "key": "definition",
+     "label": "Definition",
+     "lines": [
+      "New words appear in the conclusion that weren't in the premises. The author pretends these new words are \"basically\" the same as different words from the premises.",
+      "",
+      "Nothing is basically the same on the LSAT."
+     ]
+    },
+    {
+     "key": "tells",
+     "label": "Stimulus tells",
+     "lines": [
+      "A key term in the conclusion does not appear (or does not appear in this form) in any premise. The author silently equates two non-equivalent concepts."
+     ]
+    },
+    {
+     "key": "disguises",
+     "label": "Answer-choice disguises",
+     "lines": [
+      "",
+      "- \"Treats two fundamentally different concepts as essentially the same.\"",
+      "- \"Conflates [term in premises] with [term in conclusion].\"",
+      "- \"Assumes that [term in premises] is necessarily equivalent to [term in conclusion].\"",
+      "- \"Fails to establish that [premise term] is the same as [conclusion term].\"",
+      "- \"Takes for granted that [premise concept] is sufficient to establish [conclusion concept].\""
+     ]
+    },
+    {
+     "key": "example",
+     "label": "Canonical worked example",
+     "lines": [
+      "The Ethicist meat argument. Premises talk about feeding more people with grain than meat. Conclusion brings in \"morally unacceptable\" out of nowhere. The premises never set up morality. The author pretends \"doesn't feed the most people\" equals \"morally unacceptable.\" Put a ≠ between them."
+     ]
+    },
+    {
+     "key": "pairs",
+     "label": "Real LSAT phrase pairs the test exploits",
+     "lines": [
+      "- \"accurate\" vs. \"consistent\"",
+      "- \"interest of shareholders\" vs. \"profits high\"",
+      "- \"better developed neural connections\" vs. \"greater influence on the brain\"",
+      "- \"detract from social development\" vs. \"reduction in time interacting with other people\"",
+      "- \"diets higher in cholesterol\" vs. \"Western diets\""
+     ]
+    },
+    {
+     "key": "whatif",
+     "label": "The \"What if\" counter",
+     "lines": [
+      "What if those two things aren't necessarily the same?"
+     ]
+    },
+    {
+     "key": "disamb",
+     "label": "Disambiguate from",
+     "lines": [
+      "- **Equivocation (Group 2).** Equivocation reuses the SAME word. Sleight of Hand swaps in a DIFFERENT word. Ask: same word with shifting meaning, or two different words being treated as equivalent?",
+      "- **Necessary vs. Sufficient (Group 1).** Sleight of Hand can hide inside a conditional. Ask: are the conditional terms defined consistently?"
+     ]
+    }
+   ],
+   "id": "sleight-of-hand"
+  },
+  {
+   "num": 12,
+   "name": "Sleazy Sales Pitch",
+   "group": 3,
+   "meta": "Group 3 · Frequency: very high",
+   "blocks": [
+    {
+     "key": "definition",
+     "label": "Definition",
+     "lines": [
+      "The author compares two things and says one is superior without telling you the full story. They highlight the preferred choice's benefits and hide the drawbacks."
+     ]
+    },
+    {
+     "key": "tells",
+     "label": "Stimulus tells",
+     "lines": [
+      "One option is praised for its strengths; the other is criticized for its weaknesses. You hear nothing about the praised option's weaknesses or the criticized option's strengths. One-sided."
+     ]
+    },
+    {
+     "key": "disguises",
+     "label": "Answer-choice disguises",
+     "lines": [
+      "",
+      "- \"Fails to consider potential drawbacks of the preferred option.\"",
+      "- \"Bases its recommendation on a one-sided comparison.\"",
+      "- \"Ignores the possibility that the alternative has compensating strengths.\"",
+      "- \"Treats an incomplete comparison as if it were a complete one.\""
+     ]
+    },
+    {
+     "key": "example",
+     "label": "Canonical worked example",
+     "lines": [
+      "Dolores vs. Victor. We hear Dolores' strengths and Victor's weaknesses. We hear nothing about Dolores' weaknesses or Victor's strengths."
+     ]
+    },
+    {
+     "key": "whatif",
+     "label": "The \"What if\" counter",
+     "lines": [
+      "What if the preferred option has a major downside we're not being told about?"
+     ]
+    },
+    {
+     "key": "disamb",
+     "label": "Disambiguate from",
+     "lines": [
+      "- **Sampling.** Sleazy Sales Pitch is about an incomplete comparison. Sampling is about a population claim being unsupported. Ask: comparison or generalization?"
+     ]
+    }
+   ],
+   "id": "sleazy-sales-pitch"
+  },
+  {
+   "num": 13,
+   "name": "Universal Desires Assumption",
+   "group": 3,
+   "meta": "Group 3 · Frequency: high",
+   "blocks": [
+    {
+     "key": "definition",
+     "label": "Definition",
+     "lines": [
+      "The author assumes everyone would want certain goals. Usually the goals you constantly see commercials about: lose weight, make more money, be healthier, lower cholesterol, be more successful."
+     ]
+    },
+    {
+     "key": "tells",
+     "label": "Stimulus tells",
+     "lines": [
+      "The argument concludes that someone \"should\" do something because it would achieve some commonly-desired outcome. The argument never establishes that this person actually desires that outcome."
+     ]
+    },
+    {
+     "key": "disguises",
+     "label": "Answer-choice disguises",
+     "lines": [
+      "",
+      "- \"Presumes, without providing justification, that everyone shares the same goals.\"",
+      "- \"Takes for granted that the people in question want [outcome].\"",
+      "- \"Assumes that what is in someone's interest is necessarily what they desire.\"",
+      "- \"Fails to consider that some people might not pursue [outcome].\""
+     ]
+    },
+    {
+     "key": "example",
+     "label": "Canonical worked example",
+     "lines": [
+      "> *Everyone should switch to the new low-fat diet because it will help them lose weight.*",
+      "",
+      "Some people need to gain weight. Some people don't care about their weight. The conclusion pretends weight loss is a universal goal, and it isn't."
+     ]
+    },
+    {
+     "key": "whatif",
+     "label": "The \"What if\" counter",
+     "lines": [
+      "What if they don't want to lose weight, make more money, or be healthier?"
+     ]
+    }
+   ],
+   "id": "universal-desires"
+  },
+  {
+   "num": 14,
+   "name": "Value Assumptions",
+   "group": 3,
+   "meta": "Group 3 · Frequency: very high",
+   "blocks": [
+    {
+     "key": "definition",
+     "label": "Definition",
+     "lines": [
+      "The author makes a judgment in the conclusion using a loaded word (moral, appropriate, good, right, should) without clarifying what that word means in the premises. The judgment is treated as obvious. It isn't."
+     ]
+    },
+    {
+     "key": "tells",
+     "label": "Stimulus tells",
+     "lines": [
+      "The conclusion contains an evaluative word, *moral/immoral, appropriate/inappropriate, should/shouldn't, prudent/imprudent, good/bad, right/wrong*, that the premises never defined. The author assumes a convenient definition."
+     ]
+    },
+    {
+     "key": "disguises",
+     "label": "Answer-choice disguises",
+     "lines": [
+      "",
+      "- \"Bases its conclusion on subjective judgments rather than on an objective criterion.\"",
+      "- \"Takes for granted that [the premises'] description of [X] establishes that [X] is [evaluative term].\"",
+      "- \"Presupposes a particular standard of [moral/appropriate/etc.] without justifying it.\"",
+      "- \"Treats a description as if it were a normative judgment.\""
+     ]
+    },
+    {
+     "key": "example",
+     "label": "Canonical worked example",
+     "lines": [
+      "The robot engineer. Premises describe least-skilled labor. Conclusion calls it \"demeaning.\" The label is the author's judgment, not a fact."
+     ]
+    },
+    {
+     "key": "whatif",
+     "label": "The \"What if\" counter",
+     "lines": [
+      "What if the description doesn't actually qualify as the evaluative judgment?"
+     ]
+    },
+    {
+     "key": "disamb",
+     "label": "Disambiguate from",
+     "lines": [
+      "- **Sleight of Hand.** Value Assumption is a specific case of Sleight of Hand where the dangling variable is an evaluative term. If you can identify the loaded word, label it Value Assumption. Otherwise default to Sleight of Hand."
+     ]
+    }
+   ],
+   "id": "value-assumptions"
+  },
+  {
+   "num": 15,
+   "name": "Secret Downsides",
+   "group": 3,
+   "meta": "Group 3 · Frequency: medium-high",
+   "blocks": [
+    {
+     "key": "definition",
+     "label": "Definition",
+     "lines": [
+      "Potential drawbacks or negative consequences that the argument ignores or doesn't address. A close cousin of Sleazy Sales Pitch but applies even when no comparison is involved."
+     ]
+    },
+    {
+     "key": "tells",
+     "label": "Stimulus tells",
+     "lines": [
+      "The argument recommends an action based on its benefits without addressing its costs or unintended consequences."
+     ]
+    },
+    {
+     "key": "disguises",
+     "label": "Answer-choice disguises",
+     "lines": [
+      "",
+      "- \"Fails to consider the potential negative consequences of the recommended action.\"",
+      "- \"Overlooks costs that would offset the proposed benefits.\"",
+      "- \"Ignores the possibility that the action would produce unintended drawbacks.\""
+     ]
+    },
+    {
+     "key": "example",
+     "label": "Canonical worked example",
+     "lines": [
+      "> *We should switch to solar energy to save money on electricity.*",
+      "",
+      "Possible secret downside: the high initial installation costs erase the long-term savings."
+     ]
+    },
+    {
+     "key": "whatif",
+     "label": "The \"What if\" counter",
+     "lines": [
+      "What if there's a major downside the argument never mentions?"
+     ]
+    }
+   ],
+   "id": "secret-downsides"
+  }
+ ],
+ "mechanics": [
+  {
+   "n": 1,
+   "title": "Abstract verb substitution",
+   "lines": [
+    "The LSAT replaces the flaw's name with an abstract action verb. The pattern: *[verb] [flaw concept abstracted into a noun phrase].*",
+    "- \"Conflates\" / \"Treats as equivalent\" / \"Fails to distinguish between\" → Sleight of Hand or Equivocation",
+    "- \"Generalizes\" / \"Extrapolates\" / \"Infers from a small set\" → Sampling",
+    "- \"Confuses\" / \"Mistakes\" / \"Treats... as if\" → Necessary vs. Sufficient or Causal",
+    "- \"Presupposes\" / \"Assumes\" / \"Takes for granted\" → any Assumption-language flaw",
+    "- \"Fails to rule out\" / \"Fails to consider\" / \"Ignores\" → Objection-language for any flaw"
+   ]
+  },
+  {
+   "n": 2,
+   "title": "Inverted formal description",
+   "lines": [
+    "The LSAT describes the flaw by stating what the argument *should* have done, framed in formal language. Your job is to recognize that the argument failed to do exactly the thing being described.",
+    "- \"Treats a condition that ensures the truth of another condition for one that is necessary for the truth of that condition.\" → Necessary vs. Sufficient",
+    "- \"Treats the failure to establish that a certain claim is false as equivalent to a demonstration that that claim is true.\" → Unproven vs. Proven False",
+    "- \"Fails to rule out the possibility that what appears to be the result of a given condition may in fact be the cause of that condition.\" → Causal (reverse causation)"
+   ]
+  },
+  {
+   "n": 3,
+   "title": "Specific-noun camouflage",
+   "lines": [
+    "The LSAT references the SPECIFIC nouns of the stimulus rather than the abstract category. You have to mentally translate from \"the policies\" or \"the report\" or \"the species\" back to \"the term Y\" or \"the population claim.\"",
+    "- \"It is assumed that what is true of persons individually is true of a country as a whole.\" → Part vs. Whole",
+    "- \"Generalizes from a sample that is unlikely to be representative of public sentiment.\" → Sampling",
+    "- \"Casts doubt on the reliability of a study by questioning the motives of those reporting it.\" → Ad Hominem"
+   ]
+  },
+  {
+   "n": 4,
+   "title": "Half-truth misdirection",
+   "lines": [
+    "The LSAT describes a flaw the argument *almost* commits, but doesn't quite. Your job is to verify the flaw is actually present (a wrong flaw, or one the stimulus contradicts).",
+    "- \"Confuses correlation with causation\" when the stimulus didn't actually invoke causation. Default-skeptical: scan the stimulus for a causal claim before selecting.",
+    "- \"Argues from a biased sample\" when no sampling actually occurred. Same scan.",
+    "- \"Attacks the source rather than the argument\" when the source's bias is actually relevant evidence. Same scan."
+   ]
+  },
+  {
+   "n": 5,
+   "title": "Compound disguise",
+   "lines": [
+    "Two flaws stitched into one answer. You have to verify BOTH halves are present.",
+    "- \"Both relies on a sample that is too small AND fails to consider third-variable explanations\" → Sampling + Causal. If only one half is present, the answer is wrong.",
+    "- \"Treats a sufficient condition as if it were necessary AND assumes that what holds in one case holds in all cases\" → Necessary vs. Sufficient + Hasty Generalization. Both must be present."
+   ]
+  }
+ ],
+ "matrix": [
+  [
+   "**Necessary vs. Sufficient ↔ Causal**",
+   "Both involve a relationship that gets reasoned about wrong.",
+   "Logical condition (if-then) → Necessary vs. Sufficient. Cause-and-effect → Causal. **Ask: is the relationship a logical condition or a real-world cause?**"
+  ],
+  [
+   "**Sampling ↔ Hasty Generalization**",
+   "Both generalize from limited evidence.",
+   "SIZE problem → Hasty Generalization. SELECTION-method problem → biased Sampling. (Hasty Generalization is a subtype of Sampling.) **Ask: is the problem the size, the selection method, or both?**"
+  ],
+  [
+   "**Sleight of Hand ↔ Equivocation**",
+   "Both falsely equate concepts via language.",
+   "SAME word with shifting meaning → Equivocation. TWO DIFFERENT words treated as equivalent → Sleight of Hand. **Ask: same word being used twice, or two different words being treated as equivalent?**"
+  ],
+  [
+   "**Sleight of Hand ↔ Value Assumption**",
+   "Both involve a conclusion concept the premises didn't establish.",
+   "EVALUATIVE term in the conclusion → Value Assumption. Otherwise → Sleight of Hand. **Ask: is the new conclusion-term a moral / appropriate / should word?**"
+  ],
+  [
+   "**Ad Hominem ↔ Unproven vs. Proven False**",
+   "Both involve dismissing a claim.",
+   "Attack on the SOURCE → Ad Hominem. Attack on the EVIDENCE or lack thereof → Unproven vs. Proven False. **Ask: what's being attacked, the speaker or the evidence?**"
+  ],
+  [
+   "**Part vs. Whole ↔ Sampling**",
+   "Both move scope.",
+   "SAMPLE → POPULATION = Sampling. PART → WHOLE / WHOLE → PART = Part vs. Whole. **Ask: sample-to-population or part-to-whole?**"
+  ],
+  [
+   "**Sleazy Sales Pitch ↔ Secret Downsides**",
+   "Both hide negatives.",
+   "COMPARISON between two options → Sleazy Sales Pitch. Promotes ONE option → Secret Downsides. **Ask: is this a comparison or a single-option pitch?**"
+  ],
+  [
+   "**Causal ↔ Sleight of Hand**",
+   "Both involve the conclusion overreaching the premises.",
+   "Conclusion claims CAUSATION → Causal. Conclusion introduces a NEW concept → Sleight of Hand. **Ask: is the new claim about cause-and-effect, or about a new term entirely?**"
+  ],
+  [
+   "**Equivocation ↔ Necessary vs. Sufficient**",
+   "Both can hide inside a conditional argument.",
+   "SAME conditional term used inconsistently → Equivocation hiding inside a conditional. Conditional logic moves done backwards → Necessary vs. Sufficient. **Ask: are the terms in the conditional defined consistently?**"
+  ],
+  [
+   "**Universal Desires ↔ Value Assumption**",
+   "Both involve unjustified normative claims.",
+   "About what people WANT → Universal Desires. About whether something IS good/moral/appropriate → Value Assumption. **Ask: is the unjustified claim about desires or about values?**"
+  ]
+ ]
+}

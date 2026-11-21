@@ -1,0 +1,372 @@
+
+[1m[46m RUN [49m[22m [36mv3.2.7 [39m[90mC:/Users/Joshu/dev/ai-os-projects/lsatu-my-work-20261026[39m
+
+[90mstderr[2m | src/components/hub/BootcampGate.receipts.test.tsx[2m > [22m[2mbootcamp receipts do not change assignment authorization[2m > [22m[2macknowledges an administrators actually owned assignment without requiring a student permission query
+[22m[39m⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ [32m✓[39m src/components/hub/BootcampGate.receipts.test.tsx [2m([22m[2m7 tests[22m[2m)[22m[32m 120[2mms[22m[39m
+[90mstderr[2m | src/components/classroom/shell/ClassroomLayout.test.tsx[2m > [22m[2mshares the shell context with the real orientation hook across layout remounts
+[22m[39m⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+[90mstderr[2m | src/components/classroom/shell/ClassroomLayout.test.tsx[2m > [22m[2mclassroom rail access[2m > [22m[2mplaces an assigned Reading Center directly after My Work with no broad Classroom flag
+[22m[39mWarning: An update to ClassroomLayout inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at ClassroomLayout (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\classroom\shell\ClassroomLayout.tsx:1477:44)
+    at RenderedRoute (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:535:7)
+    at Routes (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1269:7)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: An update to ClassroomLayout inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at ClassroomLayout (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\classroom\shell\ClassroomLayout.tsx:1477:44)
+    at RenderedRoute (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:535:7)
+    at Routes (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1269:7)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: An update to ClassroomLayout inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at ClassroomLayout (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\classroom\shell\ClassroomLayout.tsx:1477:44)
+    at RenderedRoute (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:535:7)
+    at Routes (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1269:7)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+
+[90mstderr[2m | src/components/classroom/shell/ClassroomLayout.test.tsx[2m > [22m[2mclassroom rail access[2m > [22m[2mkeeps student access assignment-based and gives teachers a direct Reading Center launcher
+[22m[39mWarning: An update to ClassroomLayout inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at ClassroomLayout (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\classroom\shell\ClassroomLayout.tsx:1477:44)
+    at RenderedRoute (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:535:7)
+    at Routes (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1269:7)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: An update to ClassroomLayout inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at ClassroomLayout (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\classroom\shell\ClassroomLayout.tsx:1477:44)
+    at RenderedRoute (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:535:7)
+    at Routes (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1269:7)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: An update to ClassroomLayout inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at ClassroomLayout (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\classroom\shell\ClassroomLayout.tsx:1477:44)
+    at RenderedRoute (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:535:7)
+    at Routes (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1269:7)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+
+[90mstderr[2m | src/components/classroom/shell/ClassroomLayout.test.tsx[2m > [22m[2mclassroom rail access[2m > [22m[2mkeeps a fully locked destination reachable so its page can explain the lock
+[22m[39mWarning: An update to ClassroomLayout inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at ClassroomLayout (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\classroom\shell\ClassroomLayout.tsx:1477:44)
+    at RenderedRoute (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:535:7)
+    at Routes (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1269:7)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: An update to ClassroomLayout inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at ClassroomLayout (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\classroom\shell\ClassroomLayout.tsx:1477:44)
+    at RenderedRoute (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:535:7)
+    at Routes (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1269:7)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: An update to ClassroomLayout inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at ClassroomLayout (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\classroom\shell\ClassroomLayout.tsx:1477:44)
+    at RenderedRoute (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:535:7)
+    at Routes (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1269:7)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+
+[90mstderr[2m | src/components/classroom/shell/ClassroomLayout.test.tsx[2m > [22m[2mclassroom rail access[2m > [22m[2mopens a partly locked destination on a tab the account can use
+[22m[39mWarning: An update to ClassroomLayout inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at ClassroomLayout (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\classroom\shell\ClassroomLayout.tsx:1477:44)
+    at RenderedRoute (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:535:7)
+    at Routes (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1269:7)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: An update to ClassroomLayout inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at ClassroomLayout (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\classroom\shell\ClassroomLayout.tsx:1477:44)
+    at RenderedRoute (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:535:7)
+    at Routes (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1269:7)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: An update to ClassroomLayout inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at ClassroomLayout (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\classroom\shell\ClassroomLayout.tsx:1477:44)
+    at RenderedRoute (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:535:7)
+    at Routes (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1269:7)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+
+[90mstderr[2m | src/components/classroom/shell/ClassroomLayout.test.tsx[2m > [22m[2mclassroom rail access[2m > [22m[2mkeeps Schedule in the student rail
+[22m[39mWarning: An update to ClassroomLayout inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at ClassroomLayout (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\classroom\shell\ClassroomLayout.tsx:1477:44)
+    at RenderedRoute (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:535:7)
+    at Routes (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1269:7)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: An update to ClassroomLayout inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at ClassroomLayout (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\classroom\shell\ClassroomLayout.tsx:1477:44)
+    at RenderedRoute (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:535:7)
+    at Routes (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1269:7)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: An update to ClassroomLayout inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at ClassroomLayout (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\classroom\shell\ClassroomLayout.tsx:1477:44)
+    at RenderedRoute (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:535:7)
+    at Routes (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1269:7)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+
+[90mstderr[2m | src/components/classroom/shell/ClassroomLayout.test.tsx[2m > [22m[2mclassroom rail access[2m > [22m[2mkeeps Messages available and removes question lookup from the entitled rail
+[22m[39mWarning: An update to ClassroomLayout inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at ClassroomLayout (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\classroom\shell\ClassroomLayout.tsx:1477:44)
+    at RenderedRoute (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:535:7)
+    at Routes (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1269:7)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: An update to ClassroomLayout inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at ClassroomLayout (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\classroom\shell\ClassroomLayout.tsx:1477:44)
+    at RenderedRoute (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:535:7)
+    at Routes (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1269:7)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+Warning: An update to ClassroomLayout inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at ClassroomLayout (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\classroom\shell\ClassroomLayout.tsx:1477:44)
+    at RenderedRoute (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:535:7)
+    at Routes (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1269:7)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+
+ [32m✓[39m src/components/classroom/shell/ClassroomLayout.test.tsx [2m([22m[2m19 tests[22m[2m)[22m[33m 1492[2mms[22m[39m
+   [33m[2m✓[22m[39m mobile menu[2m > [22mdismisses on Escape and returns focus to the menu button [33m 337[2mms[22m[39m
+   [33m[2m✓[22m[39m mobile menu[2m > [22mcloses after a rail navigation [33m 312[2mms[22m[39m
+[90mstderr[2m | src/components/classroom/ClassroomRouteViews.notes.test.tsx[2m > [22m[2mnote detail return links[2m > [22m[2mregisters an interactive note as a ready locally owned reader without changing its iframe contract
+[22m[39m⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+[90mstderr[2m | src/components/classroom/ClassroomRouteViews.notes.test.tsx[2m > [22m[2mnote detail return links[2m > [22m[2mregisters an interactive note as a ready locally owned reader without changing its iframe contract
+[22m[39mWarning: An update to ClassroomItemView inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at ClassroomItemView (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\classroom\ClassroomRouteViews.tsx:252:46)
+    at RenderedRoute (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:535:7)
+    at Routes (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1269:7)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+    at QueryClientProvider (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@tanstack/react-query/build/modern/QueryClientProvider.js:41:32)
+
+[90mstderr[2m | src/components/classroom/ClassroomRouteViews.notes.test.tsx[2m > [22m[2mnote detail return links[2m > [22m[2mwaits for interactive content load before acknowledging it
+[22m[39mWarning: An update to ClassroomItemView inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at ClassroomItemView (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\classroom\ClassroomRouteViews.tsx:252:46)
+    at RenderedRoute (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:535:7)
+    at Routes (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1269:7)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+    at QueryClientProvider (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@tanstack/react-query/build/modern/QueryClientProvider.js:41:32)
+
+ [32m✓[39m src/components/classroom/ClassroomRouteViews.notes.test.tsx [2m([22m[2m13 tests[22m[2m)[22m[33m 444[2mms[22m[39m
+ [32m✓[39m src/components/classroom/home/teacher/TeacherHomeView.test.tsx [2m([22m[2m14 tests[22m[2m)[22m[33m 904[2mms[22m[39m
+   [33m[2m✓[22m[39m TeacherHomeView[2m > [22mkeeps Assign work in the header without a student assignment promotion [33m 426[2mms[22m[39m
+[90mstderr[2m | src/components/classroom/home/ClassroomHome.role.test.tsx[2m > [22m[2mClassroomHome role dispatch[2m > [22m[2mmounts neither Home while the role is still loading
+[22m[39m⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ [32m✓[39m src/components/classroom/home/ClassroomHome.role.test.tsx [2m([22m[2m8 tests[22m[2m)[22m[33m 689[2mms[22m[39m
+[90mstderr[2m | src/components/classroom/home/teacher/useTeachingDesk.test.tsx[2m > [22m[2mTeacher desk data boundaries[2m > [22m[2mreuses the manual draft operation on an unknown create outcome
+[22m[39mWarning: An update to TestComponent inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at TestComponent (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\@testing-library\react\dist\pure.js:337:5)
+    at QueryClientProvider (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@tanstack/react-query/build/modern/QueryClientProvider.js:41:32)
+    at wrapper (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\classroom\home\teacher\useTeachingDesk.test.tsx:49:21)
+
+ [32m✓[39m src/components/classroom/home/teacher/useTeachingDesk.test.tsx [2m([22m[2m9 tests[22m[2m)[22m[33m 759[2mms[22m[39m
+[90mstderr[2m | src/hooks/useStudentWorkState.test.tsx[2m > [22m[2msuccessful foreground work acknowledgement[2m > [22m[2mshares one actor subscription across consumers and removes it after the last consumer leaves
+[22m[39m⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ [32m✓[39m src/hooks/useStudentWorkState.test.tsx [2m([22m[2m7 tests[22m[2m)[22m[32m 195[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m7 passed[39m[22m[90m (7)[39m
+[2m      Tests [22m [1m[32m77 passed[39m[22m[90m (77)[39m
+[2m   Start at [22m 12:53:56
+[2m   Duration [22m 22.71s[2m (transform 1.52s, setup 972ms, collect 6.76s, tests 4.60s, environment 5.22s, prepare 854ms)[22m
+

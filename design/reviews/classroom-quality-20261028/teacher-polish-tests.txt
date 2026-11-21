@@ -1,0 +1,26 @@
+
+[1m[46m RUN [49m[22m [36mv3.2.7 [39m[90mC:/Users/Joshu/dev/ai-os-projects/lsatu-my-work-20261026[39m
+
+ [32m✓[39m src/components/classroom/home/homeStyles.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 40[2mms[22m[39m
+ [32m✓[39m src/components/classroom/home/teacher/PostSessionWork.test.tsx [2m([22m[2m8 tests[22m[2m)[22m[33m 6625[2mms[22m[39m
+   [33m[2m✓[22m[39m After-session work[2m > [22mmarks a conflicting automatic transcript for review [33m 3115[2mms[22m[39m
+   [33m[2m✓[22m[39m After-session work[2m > [22msends a revisioned change without pretending the checkbox saved [33m 1269[2mms[22m[39m
+   [33m[2m✓[22m[39m After-session work[2m > [22mkeeps handled work out of the active list and supports reopen [33m 1627[2mms[22m[39m
+ [32m✓[39m src/components/classroom/home/teacher/TeachingDesk.test.tsx [2m([22m[2m10 tests[22m[2m)[22m[33m 8331[2mms[22m[39m
+   [33m[2m✓[22m[39m Teaching desk interactions[2m > [22mcaps Home at two sessions using the true total and preserves unsaved input across disclosure [33m 2151[2mms[22m[39m
+   [33m[2m✓[22m[39m Teaching desk interactions[2m > [22mtracks preparation and confirmed posting as separate persisted actions [33m 1873[2mms[22m[39m
+   [33m[2m✓[22m[39m Teaching desk interactions[2m > [22mloads filtered history pages and reopens through the revisioned manual writer [33m 462[2mms[22m[39m
+   [33m[2m✓[22m[39m Teaching desk interactions[2m > [22mrecovers the same pending top-up and keeps target and quantity locked [33m 1223[2mms[22m[39m
+   [33m[2m✓[22m[39m Teaching desk interactions[2m > [22mkeeps a consultation source change visible until manually handled [33m 361[2mms[22m[39m
+   [33m[2m✓[22m[39m Teaching desk interactions[2m > [22mkeeps a changed draft while the original unknown task request is confirmed [33m 1386[2mms[22m[39m
+   [33m[2m✓[22m[39m Teaching desk interactions[2m > [22mreactivates an expired link only after explicit confirmation and never adds sessions automatically [33m 351[2mms[22m[39m
+ [32m✓[39m src/components/classroom/home/teacher/TeacherHomeView.test.tsx [2m([22m[2m14 tests[22m[2m)[22m[33m 8502[2mms[22m[39m
+   [33m[2m✓[22m[39m TeacherHomeView[2m > [22mkeeps Assign work in the header without a student assignment promotion [33m 4024[2mms[22m[39m
+   [33m[2m✓[22m[39m TeacherHomeView[2m > [22mshows the canonical unread total while capping previews at two and opens the exact conversation [33m 356[2mms[22m[39m
+   [33m[2m✓[22m[39m TeacherHomeView[2m > [22mkeeps the recent-visit area small and never labels a heartbeat Online now [33m 3267[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m4 passed[39m[22m[90m (4)[39m
+[2m      Tests [22m [1m[32m34 passed[39m[22m[90m (34)[39m
+[2m   Start at [22m 14:17:46
+[2m   Duration [22m 47.02s[2m (transform 5.54s, setup 7.54s, collect 25.55s, tests 23.50s, environment 69.78s, prepare 3.79s)[22m
+

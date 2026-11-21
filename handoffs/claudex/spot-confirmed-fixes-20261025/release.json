@@ -1,0 +1,121 @@
+{
+  "date": "2026-10-25",
+  "status": "published-live-content-and-assets-verified",
+  "repo": "vnjkoxpl-42905/lsatu-684d89db",
+  "branch": "codex/spot-confirmed-fixes-20261025",
+  "base": "73dd27e2c68ed9a9b46af274a1366c2817f7030c",
+  "commit": "8346dfc3ae443169f7c3f24f50f1f30d7e73d459",
+  "merge": "eaf82e506bbeb3b5e86f1310f98bad3e818b926a",
+  "pr": "https://github.com/vnjkoxpl-42905/lsatu-684d89db/pull/240",
+  "files": [
+    ".impeccable/surfaces/src-features-activity-centre.md",
+    "src/features/activity-centre/components/CoachFeedback.relationship.test.tsx",
+    "src/features/activity-centre/components/CoachFeedback.tsx",
+    "src/features/activity-centre/components/RelationshipIntro.test.tsx",
+    "src/features/activity-centre/components/RelationshipIntro.tsx",
+    "src/features/activity-centre/content/spot-the-relationship.answerKey.test.ts",
+    "src/features/activity-centre/content/spot-the-relationship.json",
+    "src/features/activity-centre/worlds/observatory/observatory.test.ts",
+    "src/features/activity-centre/worlds/observatory/observatory.ts"
+  ],
+  "review": {
+    "requestedModel": "claude-opus-5-5",
+    "verdict": "APPROVED",
+    "residualFindings": [
+      {
+        "id": "R2-F1",
+        "severity": "low",
+        "path": "src/features/activity-centre/worlds/observatory/observatory.ts",
+        "evidence": "answerPairs line 284: the lookahead `(?=\\s*[:,]|\\s+\\S)` still splits before an unquoted type word that is followed by more text. For Q5, 'Causal, caused the smoke to back into the reading room' becomes an empty 'Causal' pair plus a pair whose 'caused' is stripped as a label, leaving remainder 'the smoke to back…'. The answer gets no local credit, which is acceptable, but readAnswer (registry.tsx:243) also reports causal as missed. So a valid unquoted wider clause shows as not yet identified, against acceptance 2. The quoted form and 'Causal: caused the smoke…' work. The base code behaved the same way, so this is not a regression, and no test covers it.",
+        "fix": "After splitting, merge a pair that is only a label into the next part when that part starts with a type word that also appears in the statement as a keyed indicator. Alternatively, skip the boundary when the type word that follows is a keyed indicator of the item. Add a readAnswer test for the unquoted clause form."
+      },
+      {
+        "id": "R2-F2",
+        "severity": "low",
+        "path": "C:/Users/Joshu/dev/ai-os/handoffs/claudex/spot-confirmed-fixes-20261025/content-release.py",
+        "evidence": "Lines 32-37 and 54: when canonical-observed.json exists, preflight re-checks only canonical content and updated_at, then overwrites assignments-before.json with the current assignment metadata. It never compares that metadata against assignments-observed.json. If an assignment's snapshot or state changed between observation and the last preflight, verify (lines 69-78) compares against the new baseline. It would report 'preserved' relative to the last preflight, not the original observation. The helper writes no assignments, so the risk is only the accuracy of the receipt.",
+        "fix": "In preflight, when assignments-observed.json exists, require that the current metadata matches it, or report differences, before rewriting assignments-before.json. Or have verify compare against assignments-observed.json as well."
+      }
+    ],
+    "rounds": 2,
+    "observedModels": [
+      "claude-opus-5-5"
+    ],
+    "snapshot": "cd7edf102b99506c1b8fd6b9cf33074523b6298aaf4ff2b89e5d2a98b84ad622",
+    "result": "C:\\Users\\Joshu\\dev\\ai-os\\handoffs\\claudex\\spot-confirmed-fixes-20261025\\claudex-jt41fw2u\\result.json"
+  },
+  "validation": {
+    "build": "passed",
+    "typecheck": "passed",
+    "focusedTests": 231,
+    "mockPublisherTests": 3,
+    "browserWidths": [
+      390,
+      658,
+      768,
+      1280
+    ],
+    "liveGraderCalls": 0,
+    "signedInProductionInteraction": false
+  },
+  "deployment": {
+    "lovableSyncedExactMerge": true,
+    "project": "53b9a6f2-aba7-4ae4-8dd1-fa5b8aab4d76",
+    "paidLovablePrompts": 0,
+    "id": "41a39060-5e44-4641-9a4c-19c2daa414b2",
+    "status": "live-assets-verified",
+    "liveProof": {
+      "entry": "/assets/index-RIels5zf.js",
+      "assets": {
+        "https://lsatprep.study/assets/index-RIels5zf.js": [
+          "bolts at the base of the bridge"
+        ],
+        "https://lsatprep.study/assets/ActivityRunner-CpwPxlAN.js": [],
+        "https://lsatprep.study/assets/CompletionSummary-B99-mK3y.js": [
+          "One quotation for each relationship type is enough.",
+          "rather than the whole sentence"
+        ]
+      },
+      "markers": {
+        "One quotation for each relationship type is enough.": true,
+        "rather than the whole sentence": true,
+        "bolts at the base of the bridge": true
+      }
+    }
+  },
+  "canonical": {
+    "assignmentWrites": 0,
+    "fields": [
+      "items",
+      "instructions",
+      "subtitle"
+    ],
+    "activity": "12251bd3-d260-4108-bc35-bcf478e483e6",
+    "status": "readback-verified",
+    "assignedCopyRetainsSavedContent": true,
+    "preserveSnapshots": 4,
+    "verification": {
+      "canonicalMatches": true,
+      "items": 48,
+      "assignmentsPreserved": 4,
+      "missingAssignments": [],
+      "newAssignments": [],
+      "snapshotChanges": [],
+      "assignmentStateChanges": [],
+      "assignmentWrites": 0,
+      "contentHash": "4383aae9c8f75424645c8978bfb4142de8149ab34cd9913c863106c6ed580eb3"
+    }
+  },
+  "designPrinciples": {
+    "shared": "C:/Users/Joshu/dev/ai-os/design/principles.md:29",
+    "app": ".impeccable/surfaces/src-features-activity-centre.md"
+  },
+  "processNotes": [
+    "Only the nine approved files entered the merge.",
+    "Main-only .claude/safe-push.sh cannot publish a PR branch; used explicit branch push after typecheck and reviewed-hash validation, then GitHub PR merge.",
+    "Generated MCP dirt restored; original worktrees left untouched.",
+    "No third inspection or post-approval source edits.",
+    "No assignment snapshots, attempts, scores, notifications, dependency files, Edge Functions or migrations were changed."
+  ],
+  "completedAt": "2026-10-25T22:46:40.1684866-04:00"
+}

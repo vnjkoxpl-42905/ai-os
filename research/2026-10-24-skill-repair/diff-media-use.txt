@@ -1,0 +1,1477 @@
+### SKILL.md
+--- 
+
++++ 
+
+@@ -2,3 +2,3 @@
+
+ name: media-use
+-description: Agent Media OS for a HyperFrames project. Resolve BGM, SFX, image, icon, brand logo, voice, color grade, or LUT into a frozen local file or paste-ready block + ledger record (one verb, `resolve`); generate via TTS / music / image models when the catalog misses; produce voiceover, transcription, captions, and background removal through one shared audio engine; operate on media (cut / reframe / transform); and reuse assets across projects. Also use for vague feedback that real footage looks dark, flat, boring, should feel retro/camcorder/print/ASCII, needs privacy, or needs a media reveal. When the host app provides its own music or sound-effect tools, use those for music and sound effects; `resolve --type bgm|sfx` needs the heygen CLI. When `HEYGEN_API_BASE` is set, HeyGen calls go through that host with no CLI sign-in.
++description: Agent Media OS for a HyperFrames project. Resolve BGM, SFX, image, icon, brand logo, voice, color grade, or LUT into a frozen local file or paste-ready block + ledger record (one verb, `resolve`); generate via TTS / music / image models when the catalog misses; produce voiceover, transcription, captions, and background removal through one shared audio engine; operate on media (cut / reframe / transform); and reuse assets across projects. Also use for vague feedback that real footage looks dark, flat, boring, should feel retro/camcorder/print/ASCII, needs privacy, or needs a media reveal. When the host app provides its own music or sound-effect tools, use those for music and sound effects; `resolve --type bgm` needs the heygen CLI, while `--type sfx` needs no account (Openverse, then a bundled library). When `HEYGEN_API_BASE` is set, HeyGen calls go through that host with no CLI sign-in.
+ ---
+@@ -15,3 +15,3 @@
+
+ 
+-Music and sound effects inside a host app: when the app you run in gives you its own music or sound-effect tools, use those. Without `HEYGEN_API_BASE`, `resolve --type bgm` and `--type sfx` search the HeyGen catalog through the `heygen` CLI; without it they fail and say so (`sfx` still answers from its bundled library).
++Music and sound effects inside a host app: when the app you run in gives you its own music or sound-effect tools, use those. Without `HEYGEN_API_BASE`, `resolve --type bgm` searches the HeyGen catalog through the `heygen` CLI and fails without it, saying so. `resolve --type sfx` searches Openverse (CC0 and CC BY only, no account) and falls back to its bundled library offline; credit CC BY sounds as `audio/references/sfx.md` says.
+ 
+@@ -30,3 +30,3 @@
+
+ | `bgm`   | background music (HeyGen catalog via the `heygen` CLI, 10k+ tracks)              |
+-| `sfx`   | sound effects (bundled 19-file library + catalog via the `heygen` CLI)           |
++| `sfx`   | sound effects (Openverse CC0 / CC BY, bundled 21-file library offline)           |
+ | `image` | photos, backgrounds (HeyGen asset search, 75k+ vectors)                          |
+### references\audio.md
+--- 
+
++++ 
+
+@@ -14,3 +14,3 @@
+
+ - **Output** `audio_meta.json` (id-keyed): `voices[].{path,duration_s,words[]}` (word timestamps for captions), `sfx[]`, `bgm`, `total_duration_s`.
+-- **HeyGen free-usage path**: HeyGen CLI auth unlocks TTS plus music/SFX retrieval. Local/provider-specific generators are explicit alternatives where installed; run `npx hyperframes media-use resolve --doctor` before assuming retrieval or TTS will work.
++- **HeyGen free-usage path**: HeyGen CLI auth unlocks TTS plus music retrieval; SFX come from Openverse with no account (`audio/references/sfx.md`). Local/provider-specific generators are explicit alternatives where installed; run `npx hyperframes media-use resolve --doctor` before assuming retrieval or TTS will work.
+ - If BGM took the generate path (`bgm_pending: true`), run `audio/scripts/wait-bgm.mjs` before final render.
+### references\grading.md
+--- 
+
++++ 
+
+@@ -19,3 +19,3 @@
+
+ 
+-**Never `cat`/read a `.cube` file into context.** A 3D LUT is ~size^3 lines of raw numbers (33^3 ≈ 36k lines at the default size). It bloats context and carries zero human/agent-legible signal. To understand or choose a LUT, use `hyperframes grade-compare` to see it rendered, or `cube-validate.mjs` for a one-line `{ok,size}` check. Read `.media/index.md` or `luts/index.json` for the description. Never read the LUT body itself.
++**Never `cat`/read a `.cube` file into context.** A 3D LUT is ~size^3 lines of raw numbers (33^3 ≈ 36k lines at the default size). It bloats context and carries zero human/agent-legible signal. To understand or choose a LUT, use `hyperframes grade-compare` to see it rendered. `npx hyperframes media-use resolve --type lut --intent "<look description>" --project .` validates generated or downloaded LUTs before freezing them; the validator is bundled in the CLI, not shipped as a standalone skill script. Read `<project>/.media/index.md` or `luts/index.json` for the description. Never read the LUT body itself.
+ 
+@@ -160,3 +160,2 @@
+
+ npx hyperframes media-use resolve --type lut --intent "teal orange blockbuster" --project . --json
+-node skills/media-use/scripts/lib/cube-validate.mjs .media/luts/lut_001.cube
+ ```
+### references\meta.md
+--- 
+
++++ 
+
+@@ -6,18 +6,18 @@
+
+ 
+-HyperFrames owns media _playback_; media-use owns everything else. Each row is enforced by `scripts/lib/coverage.test.mjs` so the claim can't rot.
++HyperFrames owns media _playback_; media-use owns everything else. Each row is enforced by `packages/cli/src/media-use/lib/coverage.test.mjs` so the claim can't rot.
+ 
+-| HyperFrames gap                            | media-use owns it via                                                                                                                                                                                                                                                               |
+-| ------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+-| Audio-only, no image/icon                  | `resolve --type image\|icon` (heygen asset search)                                                                                                                                                                                                                                  |
+-| No third-party brand logos                 | `resolve --type logo` (theSVG → GitHub org avatar → domain favicon)                                                                                                                                                                                                                 |
+-| No voice / audio generation                | `resolve --type voice` (HeyGen TTS free-usage path; optional local Kokoro) + the audio engine (`audio/scripts/audio.mjs`)                                                                                                                                                           |
+-| Scattered/duplicated audio engine          | one consolidated engine under `audio/` (hyperframes-media retired)                                                                                                                                                                                                                  |
+-| No agent media-ops (cut/reframe/transform) | `references/operations.md` + `resolve --from` to register outputs                                                                                                                                                                                                                   |
+-| No transcript-driven cutting               | `scripts/transcript-cut.mjs` compiles word-timestamp edits into cut lists                                                                                                                                                                                                           |
+-| No auto-duck / publish loudness            | `scripts/audio-duck.mjs` + `references/operations.md` loudnorm/sidechain recipes                                                                                                                                                                                                    |
+-| No cross-project memory                    | global content-addressed cache + auto-promote (`~/.media`)                                                                                                                                                                                                                          |
+-| Grade recipes and LUT freezing             | `resolve --type grade` emits a paste-ready recipe and `resolve --type lut` freezes validated `.cube` files; direct element analysis/authoring lives in `hyperframes media-treatment`                                                                                                |
+-| No image generation                        | RAM-graded local mflux (FLUX) via `scripts/lib/mflux-provider.mjs`, codex `image_gen` upsell (`scripts/lib/codex-provider.mjs`)                                                                                                                                                     |
+-| No video generation                        | `resolve --type video` — HeyGen avatar video first (free-usage path, sign-in nudge on auth failure), local LTX fallback (`videogen` in `scripts/lib/local-models.mjs`); image-to-video, photo-avatar, dub/translate remain manual `heygen` CLI recipes (`references/operations.md`) |
+-| Weak local-model defaults                  | HeyGen free-usage path via the `heygen` CLI; local open-source tools only as opt-in alternatives (`scripts/lib/local-run.mjs`)                                                                                                                                                      |
++| HyperFrames gap                            | media-use owns it via                                                                                                                                                                                                                                    |
++| ------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
++| Audio-only, no image/icon                  | `resolve --type image\|icon` (heygen asset search)                                                                                                                                                                                                       |
++| No third-party brand logos                 | `resolve --type logo` (theSVG → GitHub org avatar → domain favicon)                                                                                                                                                                                      |
++| No voice / audio generation                | `resolve --type voice` (HeyGen TTS free-usage path; optional local Kokoro) + the audio engine (`audio/scripts/audio.mjs`)                                                                                                                                |
++| Scattered/duplicated audio engine          | one consolidated engine under `audio/` (hyperframes-media retired)                                                                                                                                                                                       |
++| No agent media-ops (cut/reframe/transform) | `references/operations.md` + `resolve --from` to register outputs                                                                                                                                                                                        |
++| No transcript-driven cutting               | `scripts/transcript-cut.mjs` compiles word-timestamp edits into cut lists                                                                                                                                                                                |
++| No auto-duck / publish loudness            | `scripts/audio-duck.mjs` + `references/operations.md` loudnorm/sidechain recipes                                                                                                                                                                         |
++| No cross-project memory                    | global content-addressed cache + auto-promote (`~/.media`)                                                                                                                                                                                               |
++| Grade recipes and LUT freezing             | `resolve --type grade` emits a paste-ready recipe and `resolve --type lut` freezes validated `.cube` files; direct element analysis/authoring lives in `hyperframes media-treatment`                                                                     |
++| No image generation                        | `resolve --type image` — RAM-graded local mflux (FLUX), codex `image_gen` upsell                                                                                                                                                                         |
++| No video generation                        | `resolve --type video` — HeyGen avatar video first (free-usage path, sign-in nudge on auth failure), local LTX fallback (`videogen` ladder); image-to-video, photo-avatar, dub/translate remain manual `heygen` CLI recipes (`references/operations.md`) |
++| Weak local-model defaults                  | HeyGen free-usage path via the `heygen` CLI; local open-source tools only as opt-in alternatives                                                                                                                                                         |
+ 
+@@ -49,3 +49,3 @@
+
+ search) carries the allowlisted `X-HeyGen-Client-Source: media-use` header, sourced
+-from one shared constant (`HEYGEN_CLIENT_SOURCE_ARGV` in `scripts/lib/heygen-cli.mjs`)
++from one shared constant (`HEYGEN_CLIENT_SOURCE_ARGV` in `packages/cli/src/media-use/lib/heygen-cli.mjs`)
+ so a future call site can't silently ship untagged. Read-only discovery calls
+### references\operations.md
+--- 
+
++++ 
+
+@@ -212,5 +212,5 @@
+
+ 1. **Local (default, free, private): mflux** (FLUX-on-MLX). `resolve` spec-checks
+-   AVAILABLE RAM and runs the best FLUX-class model that fits, via
+-   `scripts/lib/local-models.mjs` (`imagegen` ladder) + `mflux-provider.mjs`.
+-   The RAM ladder (agent sees it via `describeModelLadder("imagegen", specs)`):
++   AVAILABLE RAM and runs the best FLUX-class model that fits, using the
++   CLI-bundled `imagegen` ladder (its modules are not shipped in the standalone
++   skill). The RAM ladder:
+ 
+@@ -247,3 +247,3 @@
+
+ - **HeyGen avatar video (default, free for new API users):**
+-  `heygenVideoGenerate` (`scripts/lib/heygen-video-provider.mjs`) shells the
++  The CLI-bundled provider shells the
+   `heygen` CLI — never the raw API — auto-picking a public avatar and a
+@@ -255,3 +255,3 @@
+
+ - **Local fallback: LTX 2.3 on MLX** via `dgrauet/ltx-2-mlx`, the `videogen`
+-  ladder in `local-models.mjs` (`ltx-video-provider.mjs`). Generative clips
++  ladder bundled in the HyperFrames CLI. Generative clips
+   (t2v), spec-gated to RAM. Verified on 24GB: 512x320 x 33f with audio.
+@@ -261,3 +261,3 @@
+
+ header (persistent flag, works on every subcommand) via the shared
+-`HEYGEN_CLIENT_SOURCE_ARGV` constant (`scripts/lib/heygen-cli.mjs`), so usage
++CLI-internal `HEYGEN_CLIENT_SOURCE_ARGV` constant, so usage
+ tags correctly in billing/resource meta and shows up in the API dashboards.
+### references\resolve.md
+--- 
+
++++ 
+
+@@ -13,3 +13,3 @@
+
+ | `bgm`   | Background music                 | HeyGen audio catalog (10k+ tracks)                           |
+-| `sfx`   | Sound effects                    | Bundled 19-file library + HeyGen catalog                     |
++| `sfx`   | Sound effects                    | Openverse (CC0 / CC BY), then the bundled 21-file library    |
+ | `image` | Photos, backgrounds              | HeyGen asset search (75k+ vectors)                           |
+### references\setup-providers.md
+--- 
+
++++ 
+
+@@ -11,3 +11,3 @@
+
+ 
+-This unlocks the FREE path for bgm/sfx/image/icon catalog search, TTS (voice), and avatar videos. Sign in with `--oauth` — the free allowance rides on the OAuth session (an API key bills API credits instead). **media-use requires heygen >= v0.3.0 uniformly** (the OAuth free-usage path needs it), so `--doctor` nudges older CLIs to update even for API-key-only use. Before resolving anything, verify setup with:
++This unlocks the FREE path for bgm/image/icon catalog search, TTS (voice), and avatar videos. Sign in with `--oauth` — the free allowance rides on the OAuth session (an API key bills API credits instead). **media-use requires heygen >= v0.3.0 uniformly** (the OAuth free-usage path needs it), so `--doctor` nudges older CLIs to update even for API-key-only use. Before resolving anything, verify setup with:
+ 
+@@ -38,4 +38,4 @@
+
+ transcription, and LTX for local video generation. `resolve` spec-checks
+-AVAILABLE RAM for those local ladders (`describeModelLadder`); the agent can
+-see the ladder and override.
++AVAILABLE RAM for those local ladders inside the CLI (the image tiers are listed
++in `references/operations.md`).
+ 
+@@ -43,3 +43,4 @@
+
+ | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+-| bgm/sfx   | heygen catalog free-usage path; a host app's own music and sound tools come first                                                                                             |
++| bgm       | heygen catalog free-usage path; a host app's own music tools come first                                                                                                       |
++| sfx       | Openverse (CC0 / CC BY, no account), bundled library offline; a host app's own sound tools come first                                                                         |
+ | image     | heygen search free-usage path; optional local mflux; codex `image_gen` upsell                                                                                                 |
+@@ -69,3 +70,3 @@
+
+ `resolve` auto-cascades; each provider shells one CLI. HeyGen is the
+-free-usage path for bgm/sfx/image/icon catalog search, TTS (voice), and avatar
++free-usage path for bgm/image/icon catalog search, TTS (voice), and avatar
+ video, so those capabilities need `heygen` installed and authenticated. Local
+@@ -75,15 +76,14 @@
+
+ 
+-| Tool               | Serves                                                                          | Install                                                                                                                                                                                     |
+-| ------------------ | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+-| `ffmpeg`/`ffprobe` | adopt probing, smart-grade signalstats, cut, duck bake, loudnorm                | system package (`brew install ffmpeg`)                                                                                                                                                      |
+-| `heygen`           | catalog (bgm/sfx/image/icon) + TTS (voice) + avatar video — the free-usage path | install through [verified HeyGen release instructions](https://developers.heygen.com/cli), then `heygen auth login --oauth` (needs >= v0.3.0)                                               |
+-| `mflux-generate`   | local image gen (FLUX), best-for-RAM                                            | `uv venv ~/.venvs/mflux && VIRTUAL_ENV=~/.venvs/mflux uv pip install mflux==0.9.6`                                                                                                          |
+-| `codex`            | image gen upsell (ChatGPT sub)                                                  | Codex CLI, logged in via ChatGPT (owns its own auth)                                                                                                                                        |
+-| `parakeet-mlx`     | local transcription (default ASR, best) on Apple Silicon                        | `uv venv ~/.venvs/parakeet && VIRTUAL_ENV=~/.venvs/parakeet uv pip install parakeet-mlx`                                                                                                    |
+-| `ltx-2-mlx`        | local video gen                                                                 | `git clone https://github.com/dgrauet/ltx-2-mlx && cd ltx-2-mlx && uv sync --all-extras`                                                                                                    |
+-| `npx hyperframes`  | Kokoro TTS (voice), Parakeet or whisper.cpp (transcribe), remove-background     | via the hyperframes CLI; Parakeet on macOS, Windows and glibc 2.32+ Linux: `npx hyperframes models install parakeet`; whisper.cpp is built on first use (Homebrew on macOS, else git+cmake) |
++| Tool               | Serves                                                                      | Install                                                                                                                                                                                     |
++| ------------------ | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
++| `ffmpeg`/`ffprobe` | adopt probing, smart-grade signalstats, cut, duck bake, loudnorm            | system package (`brew install ffmpeg`)                                                                                                                                                      |
++| `heygen`           | catalog (bgm/image/icon) + TTS (voice) + avatar video — the free-usage path | install through [verified HeyGen release instructions](https://developers.heygen.com/cli), then `heygen auth login --oauth` (needs >= v0.3.0)                                               |
++| `mflux-generate`   | local image gen (FLUX), best-for-RAM                                        | `uv venv ~/.venvs/mflux && VIRTUAL_ENV=~/.venvs/mflux uv pip install mflux==0.9.6`                                                                                                          |
++| `codex`            | image gen upsell (ChatGPT sub)                                              | Codex CLI, logged in via ChatGPT (owns its own auth)                                                                                                                                        |
++| `parakeet-mlx`     | local transcription (default ASR, best) on Apple Silicon                    | `uv venv ~/.venvs/parakeet && VIRTUAL_ENV=~/.venvs/parakeet uv pip install parakeet-mlx`                                                                                                    |
++| `ltx-2-mlx`        | local video gen                                                             | `git clone https://github.com/dgrauet/ltx-2-mlx && cd ltx-2-mlx && uv sync --all-extras`                                                                                                    |
++| `npx hyperframes`  | Kokoro TTS (voice), Parakeet or whisper.cpp (transcribe), remove-background | via the hyperframes CLI; Parakeet on macOS, Windows and glibc 2.32+ Linux: `npx hyperframes models install parakeet`; whisper.cpp is built on first use (Homebrew on macOS, else git+cmake) |
+ 
+ The RAM-graded local-model shortlist + exact per-tier install/invoke lives in
+-`scripts/lib/local-models.mjs` (the agent can read `describeModelLadder(cap, specs)`
+-to see which model fits this machine). Without a tool on PATH, its provider
++the CLI's bundled media-use engine, not in the standalone skill. Without a tool on PATH, its provider
+ prints a one-line diagnostic to stderr and resolve falls through where another
+### scripts\transcript-cut.mjs
+--- 
+
++++ 
+
+@@ -100,3 +100,6 @@
+
+       // below. PCM has no priming, so audio is encoded exactly once, at concat.
+-      const ext = args.copy ? extname(outPath) || ".mp4" : isAudioOnly(outPath) ? ".wav" : ".mkv";
++      // The video container is .mov, not .mkv: ffmpeg writes Matroska
++      // timestamps in whole milliseconds, which moves frames off the source's
++      // frame grid, and the concat copy below carries that into the output.
++      const ext = args.copy ? extname(outPath) || ".mp4" : isAudioOnly(outPath) ? ".wav" : ".mov";
+       const out = join(tmpDir, `segment-${String(index).padStart(4, "0")}${ext}`);
+@@ -185,3 +188,3 @@
+
+     "-ss",
+-    fmt(segment.start),
++    seekTime(segment.start),
+     "-i",
+@@ -189,3 +192,3 @@
+
+     "-to",
+-    fmt(segment.end - segment.start),
++    seekTime(segment.end - segment.start),
+   ];
+@@ -193,3 +196,3 @@
+
+     argv.push("-c", "copy", "-avoid_negative_ts", "make_zero");
+-  } else if (extname(outPath).toLowerCase() === ".mkv") {
++  } else if (extname(outPath).toLowerCase() === ".mov") {
+     // Concat splices raw segment edges together; without a short ramp the
+@@ -199,2 +202,9 @@
+
+     argv.push("-c:v", "libx264", "-preset", "veryfast", "-crf", "18", "-c:a", "pcm_s16le");
++    // A keyframe every second. The renderer seeks into this footage, and x264
++    // on its own leaves up to 250 frames between keyframes.
++    argv.push("-force_key_frames", "expr:gte(t,n_forced)");
++    // Constant frame rate from the first frame. Left to itself, ffmpeg 7 starts
++    // a range that begins between two source frames one frame late, and .mov
++    // rounds that lead-in to the millisecond.
++    argv.push("-fps_mode", "cfr");
+   } else {
+@@ -267,2 +277,11 @@
+
+ 
++// -ss/-to name frames, and ffmpeg's accurate seek drops everything before the
++// time it is given: at 30 fps, frame 386 sits at 12.866666 s, and a 3-decimal
++// -ss of 12.867 starts that segment on frame 387 instead, leaving the cut a
++// frame short from the join on. So the values ffmpeg gets keep frame precision,
++// while fmt() above stays at 3 decimals for the times that are only printed.
++function seekTime(n) {
++  return Number(n).toFixed(6);
++}
++
+ function round3(n) {
+### scripts\transcript-cut.test.mjs
+--- 
+
++++ 
+
+@@ -48,2 +48,151 @@
+
+ }
++
++// Three kept ranges, none starting or ending on a frame boundary of any rate below.
++const UNALIGNED_KEEP = "0.137-1.913,2.845-4.111,4.9-5.47";
++const UNALIGNED_KEPT_SECONDS = 1.776 + 1.266 + 0.57;
++
++function cutVideo(t, rate, keep = UNALIGNED_KEEP) {
++  const { dir, cleanup } = fixture();
++  t.after(cleanup);
++
++  const source = join(dir, "source.mp4");
++  execFileSync("ffmpeg", [
++    "-y",
++    "-hide_banner",
++    "-loglevel",
++    "error",
++    "-f",
++    "lavfi",
++    "-i",
++    `testsrc2=size=160x90:rate=${rate}:duration=6`,
++    "-f",
++    "lavfi",
++    "-i",
++    `sine=frequency=440:duration=6:sample_rate=${SAMPLE_RATE}`,
++    "-c:v",
++    "libx264",
++    "-preset",
++    "ultrafast",
++    "-pix_fmt",
++    "yuv420p",
++    "-c:a",
++    "aac",
++    source,
++  ]);
++
++  const transcriptPath = join(dir, "transcript.json");
++  writeFileSync(transcriptPath, JSON.stringify({ words: [{ text: "tone", start: 0, end: 6 }] }));
++
++  const output = join(dir, "out.mp4");
++  const result = run([
++    "--input",
++    source,
++    "--transcript",
++    transcriptPath,
++    "--keep",
++    keep,
++    "--out",
++    output,
++    "--json",
++  ]);
++  assert.equal(result.status, 0, result.stderr || result.stdout);
++  return output;
++}
++
++function readVideoTimestamps(filePath) {
++  const probe = JSON.parse(
++    execFileSync(
++      "ffprobe",
++      [
++        "-v",
++        "error",
++        "-select_streams",
++        "v:0",
++        "-show_entries",
++        "stream=time_base:packet=pts",
++        "-of",
++        "json",
++        "--",
++        filePath,
++      ],
++      { encoding: "utf8" },
++    ),
++  );
++  const [tickNum, tickDen] = probe.streams[0].time_base.split("/").map(Number);
++  // Packets come in decode order; B-frames put that out of presentation order.
++  const pts = probe.packets.map((packet) => Number(packet.pts)).sort((a, b) => a - b);
++  return { tickNum, tickDen, pts };
++}
++
++for (const rate of ["30", "30000/1001", "60"]) {
++  test(
++    `puts every frame of a ${rate} fps video cut on the frame grid, with no gaps`,
++    { skip: !HAS_FFMPEG },
++    (t) => {
++      const [rateNum, rateDen = 1] = rate.split("/").map(Number);
++      const { tickNum, tickDen, pts } = readVideoTimestamps(cutVideo(t, rate));
++      assert.ok(pts.length > rateNum / rateDen, "expected several seconds of video");
++
++      // Frame i belongs at exactly i / rate seconds. Compared as integers, so a
++      // timestamp rounded to the millisecond (0.067 for 2/30) cannot pass.
++      const offGrid = pts.filter(
++        (value, index) => value * tickNum * rateNum !== index * rateDen * tickDen,
++      );
++      assert.equal(
++        offGrid.length,
++        0,
++        `${offGrid.length} of ${pts.length} frames are off the ${rate} fps grid (timestamps in units of ${tickNum}/${tickDen} s)`,
++      );
++    },
++  );
++}
++
++test(
++  "keeps the keyframes of a video cut no more than a second apart",
++  { skip: !HAS_FFMPEG },
++  (t) => {
++    // One kept range of almost four seconds, so only the encoder decides where keyframes go.
++    const output = cutVideo(t, "30", "0.137-4.111,4.9-5.47");
++    const probe = JSON.parse(
++      execFileSync(
++        "ffprobe",
++        [
++          "-v",
++          "error",
++          "-select_streams",
++          "v:0",
++          "-show_entries",
++          "packet=pts_time,flags",
++          "-of",
++          "json",
++          "--",
++          output,
++        ],
++        { encoding: "utf8" },
++      ),
++    );
++    const keyframes = probe.packets
++      .filter((packet) => packet.flags.startsWith("K"))
++      .map((packet) => Number(packet.pts_time))
++      .sort((a, b) => a - b);
++    const gaps = keyframes.slice(1).map((time, index) => time - keyframes[index]);
++    const widest = Math.max(...gaps);
++    // A frame of slack: the forced keyframe is the first frame at or after each second.
++    assert.ok(widest < 1.05, `keyframes are up to ${widest.toFixed(3)}s apart`);
++  },
++);
++
++test(
++  "does not pad the audio of a video cut with encoder priming at each splice",
++  { skip: !HAS_FFMPEG },
++  (t) => {
++    const seconds = readPcm(cutVideo(t, "30")).length / SAMPLE_RATE;
++    // The single AAC encode may round the end up by a frame or two (23 ms each).
++    // Encoding every segment separately instead adds about 25 ms per splice on top.
++    assert.ok(
++      Math.abs(seconds - UNALIGNED_KEPT_SECONDS) < 0.05,
++      `audio runs ${seconds.toFixed(3)}s for ${UNALIGNED_KEPT_SECONDS.toFixed(3)}s kept`,
++    );
++  },
++);
+ 
+@@ -117 +266,76 @@
+
+ );
++
++// Frame 32 at 30 fps sits at 1.0666666 s. A -ss rounded to 1.067 lands just past
++// it, so ffmpeg's accurate seek starts that segment on frame 33 and the cut comes
++// out a frame short from the join on.
++const THIRTY_FPS_FRAME_32 = 32 / 30;
++
++test("a kept range starting on a 30 fps frame keeps that frame", { skip: !HAS_FFMPEG }, (t) => {
++  const { dir, cleanup } = fixture();
++  t.after(cleanup);
++
++  const source = join(dir, "src.mp4");
++  execFileSync("ffmpeg", [
++    "-y",
++    "-hide_banner",
++    "-loglevel",
++    "error",
++    "-f",
++    "lavfi",
++    "-i",
++    "testsrc2=size=320x180:rate=30",
++    "-f",
++    "lavfi",
++    "-i",
++    `sine=frequency=440:sample_rate=${SAMPLE_RATE}`,
++    "-t",
++    "4",
++    "-c:v",
++    "libx264",
++    "-pix_fmt",
++    "yuv420p",
++    "-c:a",
++    "aac",
++    source,
++  ]);
++
++  const transcriptPath = join(dir, "transcript.json");
++  writeFileSync(transcriptPath, JSON.stringify([{ text: "a", start: 0.1, end: 3.9 }]));
++
++  const output = join(dir, "out.mp4");
++  const result = run([
++    "--input",
++    source,
++    "--transcript",
++    transcriptPath,
++    "--keep",
++    `0-1,${THIRTY_FPS_FRAME_32}-3`,
++    "--out",
++    output,
++    "--json",
++  ]);
++  assert.equal(result.status, 0, result.stderr || result.stdout);
++
++  // Frames 0-29 for 0-1s, then frames 32-89 for the second segment. Rounding
++  // -ss to the millisecond drops frame 32 and yields 87.
++  const frames = Number(
++    execFileSync(
++      "ffprobe",
++      [
++        "-v",
++        "error",
++        "-select_streams",
++        "v",
++        "-count_packets",
++        "-show_entries",
++        "stream=nb_read_packets",
++        "-of",
++        "csv=p=0",
++        "--",
++        output,
++      ],
++      { encoding: "utf8" },
++    ).trim(),
++  );
++  assert.equal(frames, 88, `expected 88 frames, got ${frames}`);
++});
+### scripts\lib\cutlist.mjs
+--- 
+
++++ 
+
+@@ -150,3 +150,3 @@
+
+   const sorted = ranges
+-    .map((range) => ({ start: round3(range.start), end: round3(range.end) }))
++    .map((range) => ({ start: round6(range.start), end: round6(range.end) }))
+     .sort((a, b) => a.start - b.start || a.end - b.end);
+@@ -175,6 +175,13 @@
+
+ 
++// Range bounds are rounded only to shed float noise, never to the millisecond:
++// these values become ffmpeg's -ss/-to, where a millisecond is wide enough to
++// step a boundary onto the next frame at 29.97/30/60 fps.
+ function finalizeKept(ranges) {
+   return mergeRanges(ranges)
+-    .map((range) => ({ start: round3(range.start), end: round3(range.end) }))
++    .map((range) => ({ start: round6(range.start), end: round6(range.end) }))
+     .filter((range) => round3(range.end - range.start) >= MIN_SEGMENT_SECONDS);
++}
++
++function round6(n) {
++  return Math.round(Number(n) * 1e6) / 1e6;
+ }
+### scripts\lib\manifest.mjs
+--- 
+
++++ 
+
+@@ -109,4 +109,3 @@
+
+   };
+-  mkdirSync(mediaDir(projectDir), { recursive: true });
+-  return withLock(mediaDir(projectDir), () => {
++  return withMediaLock(projectDir, () => {
+     const latest = latestRecordFor(projectDir, path);
+@@ -205,2 +204,8 @@
+
+ 
++/** Runs `fn` holding the project's `.media/.lock`, so concurrent resolves take turns on what it guards. */
++export function withMediaLock(projectDir, fn) {
++  mkdirSync(mediaDir(projectDir), { recursive: true });
++  return withLock(mediaDir(projectDir), fn);
++}
++
+ // Atomically allocate the next free id for `type` AND reserve it on disk, so a
+@@ -212,6 +217,4 @@
+
+ export function allocateId(projectDir, type, ext) {
+-  mkdirSync(mediaDir(projectDir), { recursive: true });
+-  const typeDir = typeDirPath(projectDir, type);
+-  mkdirSync(typeDir, { recursive: true });
+-  return withLock(mediaDir(projectDir), () => {
++  mkdirSync(typeDirPath(projectDir, type), { recursive: true });
++  return withMediaLock(projectDir, () => {
+     const id = nextFreeId(projectDir, type);
+### scripts\lib\recipe-store.mjs
+--- 
+
++++ 
+
+@@ -15,2 +15,5 @@
+
+ import { mergedPreferences } from "./prefs-store.mjs";
++
++// A filter keeps Node 22 off its native copy, which writes nothing under a non-ASCII path on Windows.
++const NON_ASCII_SAFE_DIR_COPY = { recursive: true, force: true, filter: () => true };
+ 
+@@ -281,3 +284,3 @@
+
+     mkdirSync(userDir, { recursive: true });
+-    cpSync(dir, userDir, { recursive: true, force: true });
++    cpSync(dir, userDir, NON_ASCII_SAFE_DIR_COPY);
+   } catch {
+@@ -341,3 +344,3 @@
+
+     mkdirSync(dir, { recursive: true });
+-    cpSync(userDir, dir, { recursive: true, force: true });
++    cpSync(userDir, dir, NON_ASCII_SAFE_DIR_COPY);
+     const imported = readRecipeJson(dir);
+### scripts\lib\telemetry.mjs
+--- 
+
++++ 
+
+@@ -37,5 +37,8 @@
+
+ 
+-/** True when telemetry must NOT be sent (opt-out envs, CI, dev). */
++/** True when telemetry must NOT be sent (opt-out envs, CI, dev, shared config). */
+ export function optedOut() {
+   return (
++    // `hyperframes telemetry disable` writes telemetryEnabled: false to the
++    // shared config; one opt-out must cover the CLI and the media-use scripts.
++    readSharedConfig().telemetryEnabled === false ||
+     process.env.HYPERFRAMES_NO_TELEMETRY === "1" ||
+### audio\references\requirements.md
+--- 
+
++++ 
+
+@@ -6,9 +6,9 @@
+
+ 
+-| Provider                             | Resolution order (first non-empty wins)                                                                                                                                    | Local deps when used                             |
+-| ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
+-| **HeyGen** (TTS + BGM/SFX retrieval) | `$HEYGEN_API_KEY` → `$HYPERFRAMES_API_KEY` → `~/.heygen/credentials` (shared with heygen-cli; `$HEYGEN_CONFIG_DIR` overrides the dir; written by `hyperframes auth login`) | none (REST)                                      |
+-| **ElevenLabs** (TTS fallback)        | `$ELEVENLABS_API_KEY`                                                                                                                                                      | `pip install elevenlabs`                         |
+-| **Lyria** (BGM fallback)             | `$GEMINI_API_KEY` → `$GOOGLE_API_KEY`                                                                                                                                      | `pip install google-genai`                       |
+-| **Kokoro** (TTS, no key)             | always — final voice fallback                                                                                                                                              | `pip install kokoro-onnx soundfile`              |
+-| **MusicGen** (BGM, no key)           | always — final music fallback                                                                                                                                              | `pip install transformers torch soundfile numpy` |
++| Provider                         | Resolution order (first non-empty wins)                                                                                                                                    | Local deps when used                             |
++| -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
++| **HeyGen** (TTS + BGM retrieval) | `$HEYGEN_API_KEY` → `$HYPERFRAMES_API_KEY` → `~/.heygen/credentials` (shared with heygen-cli; `$HEYGEN_CONFIG_DIR` overrides the dir; written by `hyperframes auth login`) | none (REST)                                      |
++| **ElevenLabs** (TTS fallback)    | `$ELEVENLABS_API_KEY`                                                                                                                                                      | `pip install elevenlabs`                         |
++| **Lyria** (BGM fallback)         | `$GEMINI_API_KEY` → `$GOOGLE_API_KEY`                                                                                                                                      | `pip install google-genai`                       |
++| **Kokoro** (TTS, no key)         | always — final voice fallback                                                                                                                                              | `pip install kokoro-onnx soundfile`              |
++| **MusicGen** (BGM, no key)       | always — final music fallback                                                                                                                                              | `pip install transformers torch soundfile numpy` |
+ 
+### audio\references\sfx.md
+--- 
+
++++ 
+
+@@ -2,8 +2,12 @@
+
+ 
+-Named sound effects, produced by the shared audio engine (`scripts/audio.mjs` → `scripts/lib/sfx.mjs`). **Provider-gated** by the engine's one switch — whether a HeyGen credential is present, decided once (not per cue):
++Named sound effects, produced by the shared audio engine (`scripts/audio.mjs` → `scripts/lib/sfx.mjs`). No account or key is needed:
+ 
+-- **HeyGen credential present → retrieve every cue** from HeyGen's audio library (`/v3/audio/sounds`, `type=sound_effects`, `min_score=0.4`). Search-and-download, **not** generation. The bundled library is NOT consulted.
+-- **No credential → the bundled 21-file library** (`assets/sfx/` + `manifest.json`): match each cue name, copy the matched file into the project. Offline, deterministic, free.
++- **Openverse first, per cue.** Each cue is searched on [Openverse](https://openverse.org)'s free audio API (most sound effects come from Freesound). Search-and-download, **not** generation.
++- **The bundled 21-file library is the fallback** (`assets/sfx/` + `manifest.json`): a cue Openverse has no usable match for, and every cue once Openverse is offline or rate limited, is matched against it and the file copied into the project.
+ 
+-There is no `npx hyperframes sfx` command. SFX is never generated — it is retrieved (online) or taken from the bundled library (offline).
++There is no `npx hyperframes sfx` command. SFX is never generated — it is retrieved from Openverse (online) or taken from the bundled library (offline). `npx hyperframes media-use resolve --type sfx` follows the same order (`--local-only` skips Openverse).
++
++## Licences
++
++Only **CC0** and **CC BY** sounds are used: never NonCommercial, ShareAlike or NoDerivatives. Each CC BY sound is credited in the project's `assets/sfx/CREDITS.md` (title, creator, licence, source link; for `resolve`, in a `CREDITS.md` beside the sound files it saves) and its `audio_meta.sfx[]` entry carries `license` and `credit`. Tell the person to include those credits wherever the video is published.
+ 
+@@ -11,3 +15,3 @@
+
+ 
+-Each line names the effects it wants: `lines[].sfx: ["whoosh", "ui click"]`. The engine flattens these into cues, resolves them per the switch, dedupes identical `(id, name)` pairs (the same effect named twice downloads/copies once), and writes `audio_meta.sfx[]`:
++Each line names the effects it wants: `lines[].sfx: ["whoosh", "ui click"]`. The engine flattens these into cues, resolves each, dedupes identical `(id, name)` pairs (the same effect named twice downloads/copies once), and writes `audio_meta.sfx[]`:
+ 
+@@ -18,6 +22,8 @@
+
+   "file": "assets/sfx/whoosh.mp3", // downloaded or copied, relative to project root
+-  "source": "heygen" | "local",    // which route resolved it
++  "source": "openverse" | "local", // which route resolved it
+   "offset_s": 0,                   // delay from the line's start
+   "duration_s": 0.57,
+-  "volume": 0.35                   // SFX sit UNDER voice + BGM
++  "volume": 0.35,                  // SFX sit UNDER voice + BGM
++  "license": "by",                 // Openverse only: "cc0" or "by"
++  "credit": "\"Swoosh\" by Ana is licensed under CC BY 4.0. …" // Openverse only
+ }
+@@ -27,7 +33,7 @@
+
+ 
+-## HeyGen retrieval (credentialed)
++## Openverse
+ 
+-`searchSounds(name, "sound_effects", { limit: 3, minScore: 0.4 })` → top hit → `assets/sfx/<slug>.mp3`. Results are ranked by `score` (each carries a presigned `audio_url`, `duration`, `description`). The floor is **0.4** because good SFX hits score ~0.5–0.67 — below the API's default `0.7`, which would silently drop most named cues (only whoosh/swoosh-family clears 0.7). `duration_s` comes from the result (else 1.0). Name effects concretely (`glass shatter`, not `dramatic sound`); a vague query returns a poor match.
++One search per distinct effect name (20 results, `license=cc0,by`; each result's licence is checked again). The pick keeps Openverse's relevance order, prefers clips that fit a cue (15 s at most; past ~4 s ranks lower) and CC0 over CC BY when they are close. The file lands at `assets/sfx/<slug>.<ext>` and `duration_s` comes from the result. Name effects concretely (`glass shatter`, not `dramatic sound`); a vague query returns a poor match. Anonymous use allows 20 searches a minute and 200 a day: past that, the rest of the run uses the bundled library.
+ 
+-## Bundled library (no credential)
++## Bundled library (fallback)
+ 
+@@ -39,4 +45,4 @@
+
+ - **No match → skip, don't fail.** A missing effect logs an anomaly and moves on; never a render blocker.
+-- **Retrieval (credentialed) or bundled library (offline) — never generation.** You search HeyGen by text, or match a name against the 21-file manifest.
+-- **One asset per distinct name.** Reuse across lines is deduped to a single download/copy, many cues.
+-- **The switch is global, not per cue.** With a credential, retrieval handles even the long tail (effects not in the 21); without one, only the 21 bundled names resolve.
++- **Retrieval (Openverse) or bundled library (offline) — never generation.**
++- **One asset per distinct name.** Reuse across lines is deduped to a single search and download, many cues.
++- **Credit CC BY sounds.** `CREDITS.md` lists them; keep it with the project.
+### audio\scripts\audio.mjs
+--- 
+
++++ 
+
+@@ -8,4 +8,4 @@
+
+ //
+-// The three capabilities degrade on ONE switch — whether HeyGen is configured
+-// (credential present, NOT the CLI). This mirrors the table in ../SKILL.md:
++// TTS and BGM degrade on ONE switch — whether HeyGen is configured (credential
++// present, NOT the CLI). SFX needs no credential. This mirrors ../SKILL.md:
+ //
+@@ -13,3 +13,3 @@
+
+ //   BGM : HeyGen retrieve  → (no credential) Lyria/MusicGen generate
+-//   SFX : HeyGen retrieve  → (no credential) bundled 19-file library
++//   SFX : Openverse (CC0 / CC BY) → (offline, rate limited, no match) bundled library
+ //
+@@ -33,3 +33,3 @@
+
+ //     voices: [ { id, path, duration_s, words: [{id,text,start,end}] } ],
+-//     sfx:    [ { id, name, file, source, offset_s, duration_s, volume } ],
++//     sfx:    [ { id, name, file, source, offset_s, duration_s, volume, license?, credit? } ],
+ //     total_duration_s }
+@@ -54,3 +54,3 @@
+
+ import { generateBgmDetached, inferBgmPrompt, retrieveBgm } from "./lib/bgm.mjs";
+-import { resolveSfx } from "./lib/sfx.mjs";
++import { BUNDLED_SFX_DIR, resolveSfx } from "./lib/sfx.mjs";
+ import { mapWithConcurrency } from "./lib/concurrency.mjs";
+@@ -85,3 +85,3 @@
+
+ const outPath = resolve(flag("out", join(hyperframesDir, "audio_meta.json")));
+-const sfxLibDir = resolve(flag("sfx-lib", join(HERE, "..", "assets", "sfx")));
++const sfxLibDir = resolve(flag("sfx-lib", BUNDLED_SFX_DIR));
+ const lyriaRecipe = resolve(flag("lyria-recipe", join(HERE, "lyria-recipe.py")));
+@@ -277,8 +277,8 @@
+
+   );
+-  const headers = heygenOK && cues.length ? heygenAuthHeaders() : null;
+-  const res = await resolveSfx({ cues, heygenOK, headers, hyperframesDir, sfxLibDir });
++  const res = await resolveSfx({ cues, hyperframesDir, sfxLibDir });
+   sfx = res.sfx;
+   anomalies.push(...res.anomalies);
++  const openverse = sfx.filter((s) => s.source === "openverse").length;
+   console.error(
+-    `· sfx: ${sfx.length} cue(s) resolved (${heygenOK ? "heygen retrieval" : "bundled library"})`,
++    `· sfx: ${sfx.length} cue(s) resolved (${openverse} Openverse, ${sfx.length - openverse} bundled library)`,
+   );
+### audio\scripts\audio.test.mjs
+--- 
+
++++ 
+
+@@ -12,3 +12,7 @@
+
+ // bundled SFX library from the moved location — the path most likely to break
+-// on a subtree move. Offline (heygenOK:false), no network.
++// on a subtree move. Openverse is unreachable unless a test serves it.
++const offline = async () => {
++  throw new TypeError("fetch failed");
++};
++globalThis.fetch = offline;
+ 
+@@ -23,3 +27,2 @@
+
+       cues: [{ id: "1", name: "whoosh" }],
+-      heygenOK: false,
+       hyperframesDir: dir,
+@@ -41,3 +44,2 @@
+
+       cues: [{ id: "1", name: "definitely-not-a-real-sfx" }],
+-      heygenOK: false,
+       hyperframesDir: dir,
+@@ -61,3 +63,2 @@
+
+         cues: [{ id: "1", name: "whoosh" }],
+-        heygenOK: false,
+         hyperframesDir: dir,
+@@ -91,7 +92,15 @@
+
+     writeFileSync(join(dir, "assets", "sfx", "glitch.mp3"), "the person's own glitch");
+-    const realFetch = globalThis.fetch;
+     globalThis.fetch = async (url) => {
+-      const query = new URL(url).searchParams.get("query");
++      const query = new URL(url).searchParams.get("q");
+       if (query)
+-        return Response.json({ data: [{ audio_url: `https://sound.test/${query}`, score: 0.6 }] });
++        return Response.json({
++          results: [
++            {
++              license: "cc0",
++              filetype: "mp3",
++              duration: 500,
++              url: `https://sound.test/${encodeURIComponent(query)}`,
++            },
++          ],
++        });
+       return new Response(`bytes of ${new URL(url).pathname}`);
+@@ -101,4 +110,2 @@
+
+         cues: names.map((name, index) => ({ id: String(index), name })),
+-        heygenOK: true,
+-        headers: {},
+         hyperframesDir: dir,
+@@ -121,3 +128,3 @@
+
+     } finally {
+-      globalThis.fetch = realFetch;
++      globalThis.fetch = offline;
+     }
+### audio\scripts\lib\media-record.mjs
+--- 
+
++++ 
+
+@@ -45,3 +45,8 @@
+
+ 
+-const SFX_SOURCES = { heygen: "search", local: "bundled" };
++// A cue's source as the manifest records it, and who provided it. A source missing here records as the person's
++// file, so every rerun would write a numbered copy beside it.
++const SFX_SOURCES = {
++  openverse: { source: "search", provider: "openverse.audio" },
++  local: { source: "bundled", provider: "bundled.sfx" },
++};
+ 
+@@ -75,4 +80,3 @@
+
+     for (const cue of new Map(sfx.map((entry) => [entry.file, entry])).values()) {
+-      const source = SFX_SOURCES[cue.source];
+-      const provider = source === "search" ? "heygen" : "bundled.sfx";
++      const { source, provider } = SFX_SOURCES[cue.source];
+       assets.push({
+### audio\scripts\lib\media-record.test.mjs
+--- 
+
++++ 
+
+@@ -2,3 +2,3 @@
+
+ import { test } from "node:test";
+-import { mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
++import { mkdirSync, mkdtempSync, readdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
+ import { join } from "node:path";
+@@ -99,3 +99,3 @@
+
+       { file: "assets/sfx/whoosh.mp3", name: "whoosh", source: "local" },
+-      { file: "assets/sfx/glass.mp3", name: "glass", source: "heygen" },
++      { file: "assets/sfx/glass.mp3", name: "glass", source: "openverse" },
+     ],
+@@ -108,5 +108,24 @@
+
+       ["assets/sfx/whoosh.mp3", "bundled", "bundled.sfx"],
+-      ["assets/sfx/glass.mp3", "search", "heygen"],
+-    ],
+-  );
++      ["assets/sfx/glass.mp3", "search", "openverse.audio"],
++    ],
++  );
++});
++
++test("a rerun of an Openverse sound effect writes over its own file, not a numbered copy", (t) => {
++  const dir = project(t);
++  mkdirSync(join(dir, "assets/sfx"), { recursive: true });
++  const anomalies = [];
++  for (let run = 0; run < 3; run++) {
++    const file = agentWritePath(dir, "assets/sfx/door-knock.mp3", { anomalies });
++    writeFileSync(join(dir, file), "knock");
++    const sfx = [{ file, name: "door knock", source: "openverse", duration_s: 1 }];
++    recordInManifest(
++      dir,
++      writtenAssets({ only: new Set(["sfx"]), lines: [], voices: [], sfx, ...noBgm }),
++    );
++  }
++
++  assert.deepEqual(readdirSync(join(dir, "assets/sfx")), ["door-knock.mp3"]);
++  assert.deepEqual(anomalies, []);
++  assert.equal(readManifest(dir).length, 1);
+ });
+### audio\scripts\lib\sfx.mjs
+--- 
+
++++ 
+
+@@ -1,11 +1,5 @@
+
+-// sfx.mjs — sound effects for the media audio engine. Provider-gated (NOT a
+-// per-cue merge): the decision is made once, by whether HeyGen is configured —
+-// mirroring how TTS and BGM degrade.
+-//
+-//   HeyGen credential present  →  retrieve EVERY cue from HeyGen's audio library
+-//        (/v3/audio/sounds, type=sound_effects, min_score=0.4). The bundled
+-//        library is NOT consulted.
+-//   HeyGen credential absent   →  resolve cues against the bundled 21-file
+-//        library (assets/sfx/manifest.json), copying matched files into the
+-//        project. Offline, deterministic, free.
++// sfx.mjs — sound effects for the media audio engine. Each cue is searched on
++// Openverse (CC0 / CC BY only, see openverse.mjs). A cue Openverse cannot answer,
++// and every cue after Openverse is unreachable or rate limited, resolves against
++// the bundled 21-file library (assets/sfx/manifest.json) instead.
+ //
+@@ -15,4 +9,6 @@
+
+ import { copyFileSync, existsSync, mkdirSync, readFileSync } from "node:fs";
+-import { join } from "node:path";
+-import { downloadTo, searchSounds } from "./heygen.mjs";
++import { dirname, join } from "node:path";
++import { fileURLToPath } from "node:url";
++import { downloadTo } from "./heygen.mjs";
++import { OpenverseUnavailableError, searchOpenverseSfx, writeSfxCredit } from "./openverse.mjs";
+ import { latestRecordFor } from "../../../scripts/lib/manifest.mjs";
+@@ -20,2 +16,9 @@
+
+ 
++export const BUNDLED_SFX_DIR = join(
++  dirname(fileURLToPath(import.meta.url)),
++  "..",
++  "..",
++  "assets",
++  "sfx",
++);
+ const SFX_VOLUME = 0.35;
+@@ -29,5 +32,28 @@
+
+ 
++// Lookups by manifest key, file basename, and slug of either, so a cue can name
++// "whoosh", "whoosh.mp3", or "ui click" (→ slug match). { error } when unusable.
++function loadBundledLibrary(sfxLibDir) {
++  const manifestPath = join(sfxLibDir, "manifest.json");
++  if (!existsSync(manifestPath)) return { error: `no bundled SFX library at ${sfxLibDir}` };
++  let manifest;
++  try {
++    manifest = JSON.parse(readFileSync(manifestPath, "utf8"));
++  } catch (e) {
++    return { error: `bundled SFX manifest parse failed (${e.message})` };
++  }
++  const byKey = new Map();
++  for (const [key, entry] of Object.entries(manifest)) {
++    if (!entry?.file || !isFinite(entry.duration)) continue;
++    const rec = { key, file: entry.file, duration: entry.duration };
++    byKey.set(key, rec);
++    byKey.set(entry.file, rec);
++    byKey.set(slug(key), rec);
++    byKey.set(slug(entry.file.replace(/\.\w+$/, "")), rec);
++  }
++  return { byKey };
++}
++
+ // cues: [{ id, name }] (id = the line/frame/scene the cue fires in). Returns
+-// { sfx: [{ id, name, file, source, offset_s, duration_s, volume }], anomalies }.
+-export async function resolveSfx({ cues, heygenOK, headers, hyperframesDir, sfxLibDir }) {
++// { sfx: [{ id, name, file, source, offset_s, duration_s, volume, license?, credit? }], anomalies }.
++export async function resolveSfx({ cues, hyperframesDir, sfxLibDir = BUNDLED_SFX_DIR }) {
+   const sfx = [];
+@@ -37,2 +63,7 @@
+
+   const fileFor = new Map();
++  const taken = () => new Set(fileFor.values());
++  // One Openverse sound per effect name this run, so a repeated cue costs no second request.
++  const openverseFor = new Map();
++  let openverseDown = false;
++  let library;
+ 
+@@ -48,68 +79,39 @@
+
+ 
+-  if (heygenOK) {
+-    for (const { id, name } of uniq) {
++  async function fromOpenverse({ id, name }) {
++    const key = `openverse:${slug(name)}`;
++    let entry = openverseFor.get(key);
++    if (!entry) {
++      const sound = await searchOpenverseSfx(name);
++      if (!sound) return null;
++      const file = agentWritePath(hyperframesDir, `assets/sfx/${slug(name)}${sound.ext}`, {
++        anomalies,
++        taken: taken(),
++      });
+       try {
+-        // SFX hits score low (~0.5–0.67), below the API's default 0.7 which
+-        // silently drops most named cues — floor to 0.4. (BGM/music score high
+-        // and keep the default.)
+-        const results = await searchSounds(name, "sound_effects", headers, {
+-          limit: 3,
+-          minScore: 0.4,
+-        });
+-        if (!results.length) {
+-          anomalies.push(`sfx "${name}" (id ${id}): no HeyGen match — skipped`);
+-          continue;
+-        }
+-        const top = results[0];
+-        const file =
+-          fileFor.get(slug(name)) ??
+-          agentWritePath(hyperframesDir, `assets/sfx/${slug(name)}.mp3`, {
+-            anomalies,
+-            taken: new Set(fileFor.values()),
+-          });
+-        await downloadTo(top.audio_url, join(hyperframesDir, file));
+-        fileFor.set(slug(name), file);
+-        sfx.push({
+-          id,
+-          name,
+-          file,
+-          source: "heygen",
+-          offset_s: 0,
+-          duration_s: typeof top.duration === "number" ? r3(top.duration) : 1.0,
+-          volume: SFX_VOLUME,
+-        });
++        await downloadTo(sound.url, join(hyperframesDir, file));
+       } catch (e) {
+-        anomalies.push(`sfx "${name}" (id ${id}): retrieval failed — ${e.message}`);
++        anomalies.push(`sfx "${name}" (id ${id}): Openverse download failed — ${e.message}`);
++        return null;
+       }
++      fileFor.set(key, file);
++      writeSfxCredit(join(destDir, "CREDITS.md"), file, sound);
++      entry = {
++        file,
++        source: "openverse",
++        duration_s: r3(sound.durationS),
++        license: sound.license,
++        credit: sound.credit,
++      };
++      openverseFor.set(key, entry);
+     }
+-    return { sfx, anomalies };
++    return { id, name, ...entry, offset_s: 0, volume: SFX_VOLUME };
+   }
+ 
+-  // ── offline: bundled library ──
+-  const manifestPath = join(sfxLibDir, "manifest.json");
+-  if (!existsSync(manifestPath)) {
+-    if (uniq.length)
+-      anomalies.push(`no HeyGen credential and no SFX library at ${sfxLibDir} — all cues dropped`);
+-    return { sfx, anomalies };
+-  }
+-  let manifest;
+-  try {
+-    manifest = JSON.parse(readFileSync(manifestPath, "utf8"));
+-  } catch (e) {
+-    anomalies.push(`SFX manifest parse failed (${e.message}) — all cues dropped`);
+-    return { sfx, anomalies };
+-  }
+-  // Build lookups: by manifest key, by file basename, and by slug of either, so
+-  // a cue can name "whoosh", "whoosh.mp3", or "ui click" (→ slug match).
+-  const byKey = new Map();
+-  for (const [key, entry] of Object.entries(manifest)) {
+-    if (!entry?.file || !isFinite(entry.duration)) continue;
+-    const rec = { key, file: entry.file, duration: entry.duration };
+-    byKey.set(key, rec);
+-    byKey.set(entry.file, rec);
+-    byKey.set(slug(key), rec);
+-    byKey.set(slug(entry.file.replace(/\.\w+$/, "")), rec);
+-  }
+-  mkdirSync(destDir, { recursive: true });
+-  for (const { id, name } of uniq) {
++  function fromBundled({ id, name }) {
++    library ??= loadBundledLibrary(sfxLibDir);
++    if (library.error) {
++      anomalies.push(`sfx "${name}" (id ${id}): ${library.error} — skipped`);
++      return null;
++    }
++    const { byKey } = library;
+     const hit = byKey.get(name) ?? byKey.get(slug(name));
+@@ -120,10 +122,11 @@
+
+       );
+-      continue;
++      return null;
+     }
++    mkdirSync(destDir, { recursive: true });
+     const src = join(sfxLibDir, hit.file);
+-    const library = existsSync(src) ? readFileSync(src) : null;
++    const bytes = existsSync(src) ? readFileSync(src) : null;
+     const isLibraryCopy = (rel) =>
+-      library &&
++      bytes &&
+       existsSync(join(hyperframesDir, rel)) &&
+-      readFileSync(join(hyperframesDir, rel)).equals(library);
++      readFileSync(join(hyperframesDir, rel)).equals(bytes);
+     const destRel =
+@@ -132,3 +135,3 @@
+
+         anomalies,
+-        taken: new Set(fileFor.values()),
++        taken: taken(),
+         // An unrecorded copy of the library file is one an engine run made before the manifest had it.
+@@ -137,8 +140,6 @@
+
+     const dest = join(hyperframesDir, destRel);
+-    // The bundled library may be incomplete: some installs of the skill ship
+-    // manifest.json without the actual mp3s. Pushing an sfx entry that points at
+-    // a file we never copied produces a dangling reference that silently drops
+-    // downstream ("not on disk"). Surface it as a loud anomaly and skip the cue
+-    // instead, so the audio_meta never references a missing file.
+-    if (library) {
++    // Some installs of the skill ship manifest.json without the mp3s. An entry
++    // pointing at a file we never copied would silently drop downstream, so
++    // skip the cue with a loud anomaly instead.
++    if (bytes) {
+       if (!isLibraryCopy(destRel)) copyFileSync(src, dest);
+@@ -148,8 +149,8 @@
+
+           `library (${sfxLibDir}) — skipped. Reinstall the media-use skill to ` +
+-          `restore assets/sfx/*.mp3, or configure a HeyGen credential for retrieval.`,
++          `restore assets/sfx/*.mp3.`,
+       );
+-      continue;
++      return null;
+     } // else the engine's earlier copy at dest stands in for the file this install lacks
+     fileFor.set(hit.file, destRel);
+-    sfx.push({
++    return {
+       id,
+@@ -161,3 +162,18 @@
+
+       volume: SFX_VOLUME,
+-    });
++    };
++  }
++
++  for (const cue of uniq) {
++    let entry = null;
++    if (!openverseDown) {
++      try {
++        entry = await fromOpenverse(cue);
++      } catch (e) {
++        if (!(e instanceof OpenverseUnavailableError)) throw e;
++        openverseDown = true;
++        anomalies.push(`${e.message}: the remaining SFX cues use the bundled library`);
++      }
++    }
++    entry ??= fromBundled(cue);
++    if (entry) sfx.push(entry);
+   }
+@@ -165 +181,16 @@
+
+ }
++
++/**
++ * One sound effect for `query`, saved under the project's assets/sfx/ (the entry point for hosts).
++ * { sound: { file, source, duration_s, license?, credit? } | null, anomalies }.
++ */
++export async function findSoundEffect(query, { hyperframesDir, sfxLibDir = BUNDLED_SFX_DIR }) {
++  const { sfx, anomalies } = await resolveSfx({
++    cues: [{ id: "1", name: query }],
++    hyperframesDir,
++    sfxLibDir,
++  });
++  if (!sfx.length) return { sound: null, anomalies };
++  const { file, source, duration_s, license, credit } = sfx[0];
++  return { sound: { file, source, duration_s, ...(license && { license, credit }) }, anomalies };
++}
+### audio\scripts\lib\sfx.test.mjs
+--- 
+
++++ 
+
+@@ -6,5 +6,14 @@
+
+ import { appendRecord } from "../../../scripts/lib/manifest.mjs";
+-import { resolveSfx } from "./sfx.mjs";
+-
+-// Offline (no HeyGen) SFX resolution: the bundled library may ship manifest.json
++import { BUNDLED_SFX_DIR, findSoundEffect, resolveSfx } from "./sfx.mjs";
++
++// No real network: each test serves Openverse's answers; by default it is unreachable.
++const offline = async () => {
++  throw new TypeError("fetch failed");
++};
++let serve = offline;
++const UNREACHABLE =
++  "Openverse unreachable (fetch failed): the remaining SFX cues use the bundled library";
++globalThis.fetch = (url, init) => serve(String(url), init);
++
++// Offline SFX resolution: the bundled library may ship manifest.json
+ // without the actual mp3s. The old code copied only when the source existed but
+@@ -39,3 +48,2 @@
+
+       cues: [{ id: "s1", name: "whoosh" }],
+-      heygenOK: false,
+       hyperframesDir: projDir,
+@@ -47,3 +55,3 @@
+
+     assert.ok(existsSync(join(projDir, "assets/sfx/whoosh.mp3")), "mp3 copied into project");
+-    assert.equal(anomalies.length, 0);
++    assert.deepEqual(anomalies, [UNREACHABLE]);
+   });
+@@ -60,3 +68,2 @@
+
+       cues: [{ id: "s1", name: "whoosh" }],
+-      heygenOK: false,
+       hyperframesDir: projDir,
+@@ -65,4 +72,4 @@
+
+     assert.equal(sfx.length, 0, "no dangling entry for a file that was never copied");
+-    assert.equal(anomalies.length, 1);
+-    assert.match(anomalies[0], /missing from the offline library/);
++    assert.equal(anomalies.length, 2);
++    assert.match(anomalies[1], /missing from the offline library/);
+     assert.ok(!existsSync(join(projDir, "assets/sfx/whoosh.mp3")), "nothing copied");
+@@ -80,6 +87,5 @@
+
+   appendRecord(projDir, { id: "sfx_001", type: "sfx", path: "assets/sfx/whoosh.mp3", source });
+-const offline = (libDir, projDir) =>
++const bundledOnly = (libDir, projDir) =>
+   resolveSfx({
+     cues: [{ id: "s1", name: "whoosh" }],
+-    heygenOK: false,
+     hyperframesDir: projDir,
+@@ -95,3 +101,3 @@
+
+ 
+-    const { sfx, anomalies } = await offline(libDir, projDir);
++    const { sfx, anomalies } = await bundledOnly(libDir, projDir);
+ 
+@@ -101,3 +107,3 @@
+
+     );
+-    assert.deepEqual(anomalies, []);
++    assert.deepEqual(anomalies, [UNREACHABLE]);
+   });
+@@ -112,3 +118,3 @@
+
+ 
+-    const { sfx } = await offline(libDir, projDir);
++    const { sfx } = await bundledOnly(libDir, projDir);
+ 
+@@ -121 +127,205 @@
+
+ });
++
++const libraryWith = (libDir, names) => {
++  const manifest = {};
++  for (const name of names) {
++    manifest[name] = { file: `${name}.mp3`, duration: 0.5 };
++    writeFileSync(join(libDir, `${name}.mp3`), `library ${name}`);
++  }
++  writeFileSync(join(libDir, "manifest.json"), JSON.stringify(manifest));
++};
++const sound = (overrides = {}) => ({
++  id: "ov-1",
++  title: "Swoosh",
++  creator: "Ana",
++  license: "by",
++  foreign_landing_url: "https://freesound.org/s/1",
++  url: "https://cdn.freesound.test/swoosh.mp3",
++  filetype: "mp3",
++  duration: 820,
++  attribution: '"Swoosh" by Ana is licensed under CC BY 4.0.',
++  ...overrides,
++});
++// Openverse stand-in: `answer(query)` gives a search response; any other URL is the sound file.
++function openverse(answer) {
++  const searches = [];
++  serve = async (url) => {
++    const query = new URL(url).searchParams.get("q");
++    if (!url.startsWith("https://api.openverse.org/")) return new Response(`bytes of ${url}`);
++    searches.push(query);
++    return answer(query);
++  };
++  return searches;
++}
++const run = (libDir, projDir, names) =>
++  resolveSfx({
++    cues: names.map((name, index) => ({ id: String(index + 1), name })),
++    hyperframesDir: projDir,
++    sfxLibDir: libDir,
++  });
++
++test("openverse: each cue gets the best licensed sound, with its licence and credit", async () => {
++  await withDirs(async ({ libDir, projDir }) => {
++    libraryWith(libDir, ["whoosh"]);
++    openverse(() => Response.json({ results: [sound()] }));
++    try {
++      const { sfx, anomalies } = await run(libDir, projDir, ["whoosh"]);
++      assert.deepEqual(sfx, [
++        {
++          id: "1",
++          name: "whoosh",
++          file: "assets/sfx/whoosh.mp3",
++          source: "openverse",
++          duration_s: 0.82,
++          license: "by",
++          credit: '"Swoosh" by Ana is licensed under CC BY 4.0.',
++          offset_s: 0,
++          volume: 0.35,
++        },
++      ]);
++      assert.deepEqual(anomalies, []);
++      assert.equal(
++        readFileSync(join(projDir, "assets/sfx/whoosh.mp3"), "utf8"),
++        "bytes of https://cdn.freesound.test/swoosh.mp3",
++      );
++      assert.match(
++        readFileSync(join(projDir, "assets/sfx/CREDITS.md"), "utf8"),
++        /- `assets\/sfx\/whoosh\.mp3`: "Swoosh" by Ana is licensed under CC BY 4\.0\. Source: https:\/\/freesound\.org\/s\/1/,
++      );
++    } finally {
++      serve = offline;
++    }
++  });
++});
++
++test("openverse: a rate limit sends this and every later cue to the bundled library, asking once", async () => {
++  await withDirs(async ({ libDir, projDir }) => {
++    libraryWith(libDir, ["whoosh", "pop"]);
++    const searches = openverse(() => new Response("slow down", { status: 429 }));
++    try {
++      const { sfx, anomalies } = await run(libDir, projDir, ["whoosh", "pop"]);
++      assert.deepEqual(searches, ["whoosh"]);
++      assert.deepEqual(
++        sfx.map(({ file, source }) => [file, source]),
++        [
++          ["assets/sfx/whoosh.mp3", "local"],
++          ["assets/sfx/pop.mp3", "local"],
++        ],
++      );
++      assert.equal(readFileSync(join(projDir, "assets/sfx/pop.mp3"), "utf8"), "library pop");
++      assert.deepEqual(anomalies, [
++        "Openverse rate limit reached (HTTP 429): the remaining SFX cues use the bundled library",
++      ]);
++    } finally {
++      serve = offline;
++    }
++  });
++});
++
++test("openverse: a cue with no licensed match falls back to the bundled library alone", async () => {
++  await withDirs(async ({ libDir, projDir }) => {
++    libraryWith(libDir, ["pop"]);
++    const searches = openverse((query) =>
++      Response.json({ results: query === "pop" ? [sound({ license: "by-nc" })] : [sound()] }),
++    );
++    try {
++      const { sfx } = await run(libDir, projDir, ["pop", "swoosh"]);
++      assert.deepEqual(searches, ["pop", "swoosh"]);
++      assert.deepEqual(
++        sfx.map(({ file, source }) => [file, source]),
++        [
++          ["assets/sfx/pop.mp3", "local"],
++          ["assets/sfx/swoosh.mp3", "openverse"],
++        ],
++      );
++    } finally {
++      serve = offline;
++    }
++  });
++});
++
++test("openverse: a failed download falls back to the bundled file with an anomaly", async () => {
++  await withDirs(async ({ libDir, projDir }) => {
++    libraryWith(libDir, ["whoosh"]);
++    serve = async (url) =>
++      url.startsWith("https://api.openverse.org/")
++        ? Response.json({ results: [sound()] })
++        : new Response("gone", { status: 404 });
++    try {
++      const { sfx, anomalies } = await run(libDir, projDir, ["whoosh"]);
++      assert.deepEqual(
++        sfx.map(({ file, source }) => [file, source]),
++        [["assets/sfx/whoosh.mp3", "local"]],
++      );
++      assert.match(anomalies[0], /Openverse download failed — download HTTP 404/);
++    } finally {
++      serve = offline;
++    }
++  });
++});
++
++test("openverse: one effect named in two lines is searched and downloaded once", async () => {
++  await withDirs(async ({ libDir, projDir }) => {
++    libraryWith(libDir, []);
++    const searches = openverse(() => Response.json({ results: [sound({ license: "cc0" })] }));
++    try {
++      const { sfx } = await run(libDir, projDir, ["whoosh", "whoosh"]);
++      assert.deepEqual(searches, ["whoosh"]);
++      assert.deepEqual(
++        sfx.map(({ id, file }) => [id, file]),
++        [
++          ["1", "assets/sfx/whoosh.mp3"],
++          ["2", "assets/sfx/whoosh.mp3"],
++        ],
++      );
++      assert.equal(
++        existsSync(join(projDir, "assets/sfx/CREDITS.md")),
++        false,
++        "CC0 needs no credit",
++      );
++    } finally {
++      serve = offline;
++    }
++  });
++});
++
++test("findSoundEffect: a host gets the saved file, licence, credit and duration for one query", async () => {
++  await withDirs(async ({ projDir }) => {
++    const searches = openverse(() => Response.json({ results: [sound()] }));
++    try {
++      assert.deepEqual(await findSoundEffect("whoosh", { hyperframesDir: projDir }), {
++        sound: {
++          file: "assets/sfx/whoosh.mp3",
++          source: "openverse",
++          duration_s: 0.82,
++          license: "by",
++          credit: '"Swoosh" by Ana is licensed under CC BY 4.0.',
++        },
++        anomalies: [],
++      });
++      assert.deepEqual(searches, ["whoosh"]);
++    } finally {
++      serve = offline;
++    }
++  });
++});
++
++test("findSoundEffect: offline, the skill's own bundled library answers", async () => {
++  await withDirs(async ({ projDir }) => {
++    const { sound, anomalies } = await findSoundEffect("whoosh", { hyperframesDir: projDir });
++    assert.deepEqual(sound, {
++      file: "assets/sfx/whoosh.mp3",
++      source: "local",
++      duration_s: sound.duration_s,
++    });
++    assert.deepEqual(
++      readFileSync(join(projDir, sound.file)),
++      readFileSync(join(BUNDLED_SFX_DIR, "whoosh.mp3")),
++    );
++    assert.deepEqual(anomalies, [UNREACHABLE]);
++    assert.equal(
++      (await findSoundEffect("no such sound at all", { hyperframesDir: projDir })).sound,
++      null,
++    );
++  });
++});
+### audio\scripts\lib\tts.mjs
+--- 
+
++++ 
+
+@@ -236,3 +236,3 @@
+
+ client = ElevenLabs(api_key=os.environ["ELEVENLABS_API_KEY"])
+-text = open(sys.argv[1]).read()
++text = open(sys.argv[1], encoding="utf-8").read()
+ audio = client.text_to_speech.convert(
+@@ -276,11 +276,7 @@
+
+     }
+-    const { cmd, args } = pythonInvocation([
+-      "-c",
+-      ELEVENLABS_PY,
+-      writeTmpText(text),
+-      voiceId,
+-      wavAbs,
+-    ]);
+-    const r = await spawnP(cmd, args, {});
+-    return synthResult(r, wavAbs, "elevenlabs (python)");
++    return withTmpText(text, async (textPath) => {
++      const { cmd, args } = pythonInvocation(["-c", ELEVENLABS_PY, textPath, voiceId, wavAbs]);
++      const r = await spawnP(cmd, args, {});
++      return synthResult(r, wavAbs, "elevenlabs (python)");
++    });
+   }
+@@ -288,7 +284,9 @@
+
+   const wavRel = relTo(hyperframesDir, wavAbs);
+-  const args = ["hyperframes", "tts", writeTmpText(text), "--voice", voiceId, "--output", wavRel];
+-  if (lang !== "en") args.push("--lang", lang);
+-  if (speed !== 1) args.push("--speed", String(speed));
+-  const r = await spawnP("npx", args, { cwd: hyperframesDir });
+-  return synthResult(r, wavAbs, "kokoro (npx hyperframes tts)");
++  return withTmpText(text, async (textPath) => {
++    const args = ["hyperframes", "tts", textPath, "--voice", voiceId, "--output", wavRel];
++    if (lang !== "en") args.push("--lang", lang);
++    if (speed !== 1) args.push("--speed", String(speed));
++    const r = await spawnP("npx", args, { cwd: hyperframesDir });
++    return synthResult(r, wavAbs, "kokoro (npx hyperframes tts)");
++  });
+ }
+@@ -380,7 +378,14 @@
+
+ // ── tiny local utils ──────────────────────────────────────────────────────────
+-function writeTmpText(text) {
++async function withTmpText(text, run) {
+   const td = mkdtempSync(join(tmpdir(), "hf-txt-"));
+-  const p = join(td, "line.txt");
+-  writeFileSync(p, text);
+-  return p;
++  try {
++    const p = join(td, "line.txt");
++    writeFileSync(p, text);
++    return await run(p);
++  } finally {
++    // Cleanup must preserve the synthesis result or the original write/spawn error.
++    try {
++      rmSync(td, { recursive: true, force: true });
++    } catch {}
++  }
+ }

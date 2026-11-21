@@ -1,0 +1,78 @@
+{
+ "qid": "PT157-S3-Q23",
+ "type": "Most Strongly Supported",
+ "difficulty": "5",
+ "key_db": "E",
+ "stimulus_db": "Superstring theory is a controversial new theory in physics that purports, unlike more established physical theories, to explain the nature and existence of gravity. A major problem with superstring theory is that to test it we would have to build a particle accelerator 100 trillion kilometers long. Another problem is that superstring theory has had no success in adequately explaining why the force of gravity is not stronger or weaker than it is.",
+ "stem_db": "Which one of the following is most strongly supported by the information above?",
+ "choices_db": {
+  "A": "Superstring theory would be more successful if superstring theorists attempted to explain why the force of gravity is not stronger or weaker than it is.",
+  "B": "Physical theories that are better established than superstring theory provide better explanations of physical phenomena than does superstring theory.",
+  "C": "Some physical theory more established than superstring theory has had at least some success in explaining why the force of gravity is not stronger or weaker than it is.",
+  "D": "A physical theory cannot be true if testing that theory would require us to build a particle accelerator 100 trillion kilometers long.",
+  "E": "A theory that purports to explain the nature of a force is deficient if it cannot account for the strength of that force."
+ },
+ "bank": {
+  "stimulus": "Superstring theory is a controversial new theory in\n physics that purports, unlike more established physical\n theories, to explain the nature and existence of gravity.\n A major problem with superstring theory is that to test it\n we would have to build a particle accelerator 100 trillion\n kilometers long. Another problem is that superstring\n theory has had no success in adequately explaining why\n the force of gravity is not stronger or weaker than it is.",
+  "stem": "Which one of the following is most strongly supported\n by the information above?",
+  "choices": {
+   "A": "Superstring theory would be more successful if superstring theorists attempted to explain why the force of gravity is not stronger or weaker than it is.",
+   "B": "Physical theories that are better established than superstring theory provide better explanations of physical phenomena than does superstring theory.",
+   "C": "Some physical theory more established than superstring theory has had at least some success in explaining why the force of gravity is not stronger or weaker than it is.",
+   "D": "A physical theory cannot be true if testing that theory would require us to build a particle accelerator 100 trillion kilometers long.",
+   "E": "A theory that purports to explain the nature of a force is deficient if it cannot account for the strength of that force."
+  },
+  "key": "E"
+ },
+ "explanation_id": "2553d222-788e-452d-aa5d-ab3859f3b75f",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "c3750964-5ebd-4a4f-8ffc-8d8e55369253",
+   "position": 0,
+   "label": "Given",
+   "body": "Superstring theory is a controversial new theory in physics. Superstring theory is unlike more established physical theories in that it purports to explain the nature and existence of gravity. A major problem with superstring theory is that to test it we would have to build a particle accelerator 100 trillion kilometers long. Another problem is that superstring theory has had no success in adequately explaining why the force of gravity is not stronger or weaker than it is."
+  },
+  {
+   "row_id": "d1e3b047-7252-426f-b3f0-72cfadb06b9f",
+   "position": 1,
+   "label": "Evaluate",
+   "body": "It's interesting that superstring theory is controversial and unlike more established theories. People who study it are probably fun to hang out with. But the statements seem to mainly focus on the goal of superstring theory—to explain the nature and existence of gravity—and on two problems with superstring theory. We would expect an answer to focus on those details."
+  },
+  {
+   "row_id": "ba9171cd-c81d-4217-9c6b-7ecfc7d213c2",
+   "position": 2,
+   "label": "Goal",
+   "body": "There aren't any clear conditional or quantified statements to link. We'll look for answers that seem closely related to the information we've been given, and watch out for incorrect answers that bring in irrelevant or unsupported details."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "175a8805-a733-4fa6-bed5-5f25661c481e",
+   "letter": "A",
+   "body": "The stimulus says superstring theory has had \"no success\" in explaining gravity's strength. This does not imply that theorists have not attempted to explain it — they may have tried and failed. \"No success\" describes an outcome, not a lack of effort. This answer assumes the problem is one of neglect rather than inability, which the stimulus does not support."
+  },
+  {
+   "row_id": "43a540f3-4cc3-44ed-8310-01c388dfdc62",
+   "letter": "B",
+   "body": "The stimulus says superstring theory purports to explain gravity, unlike more established theories. It mentions two problems with superstring theory. But it does not compare the quality of explanations between superstring theory and established theories for physical phenomena generally. We do not know whether established theories explain other phenomena better, worse, or the same as superstring theory does. The stimulus only contrasts them on the specific point of claiming to explain gravity."
+  },
+  {
+   "row_id": "540c51d2-ba18-45b2-a306-fc3e72ea3496",
+   "letter": "C",
+   "body": "The stimulus says superstring theory \"purports, unlike more established physical theories, to explain the nature and existence of gravity.\" The phrase \"unlike more established physical theories\" indicates that established theories do not claim to explain gravity. If they do not even purport to explain gravity, it is unlikely they have had success explaining gravity's strength. This answer is undermined rather than supported by the stimulus."
+  },
+  {
+   "row_id": "80587f22-545d-49c1-97d3-f1fc07fc947d",
+   "letter": "D",
+   "body": "The inability to test superstring theory is described as a \"problem,\" but the stimulus does not say that untestable theories cannot be true. A theory might be true even if we lack the means to verify it. The stimulus identifies practical obstacles to testing, not a logical impossibility of truth. This answer makes a much stronger claim than the stimulus supports — it equates untestability with impossibility of truth, which is a philosophical leap the stimulus does not take."
+  },
+  {
+   "row_id": "b2b13079-613b-4567-8c71-6675493b3b04",
+   "letter": "E",
+   "body": "The stimulus says superstring theory purports to explain the nature and existence of gravity. It also says a problem with the theory is that it cannot adequately explain why gravity has its particular strength. The fact that this failure is characterized as a \"problem\" supports the general principle that a theory claiming to explain the nature of a force is deficient if it cannot account for that force's strength. The specific case of superstring theory illustrates this principle: it claims to explain gravity but cannot explain gravity's strength, and this is identified as a deficiency."
+  }
+ ],
+ "known_problem": "Correct.",
+ "tags": "emdash-heavy; pt157-158-register; possible-misquote"
+}

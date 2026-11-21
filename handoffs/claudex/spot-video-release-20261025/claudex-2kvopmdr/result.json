@@ -1,0 +1,127 @@
+{
+  "status": "completed",
+  "mode": "review",
+  "provider": "claude",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "claude",
+    "builder": "codex",
+    "inspector": "claude"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-spot-video-release-20261025",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os\\brainstorms\\2026-10-25-spot-video-release.md",
+  "plan_sha256": "af70c4f09bdf283259d7d681381b3c84446753e8119d7f53ece22f8c9ceea7dc",
+  "requested_model": "claude-opus-5-5",
+  "requested_effort": null,
+  "base": null,
+  "snapshot": null,
+  "previous": null,
+  "started_at": 1792965943.5887601,
+  "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\handoffs\\claudex\\spot-video-release-20261025\\claudex-2kvopmdr",
+  "cli_version": "2.1.309 (Claude Code)",
+  "executable": [
+    "C:\\Users\\Joshu\\.local\\bin\\claude.EXE"
+  ],
+  "exit_code": 0,
+  "session_id": "abebf80d-e821-42bd-9472-1234866bcdd4",
+  "response": {
+    "verdict": "REVISE",
+    "summary": "Most of the plan is sound. It is narrowly scoped, keeps unrelated work out, publishes forward-only, refuses a model fallback, and admits the browser evidence gap. The staged implementation keeps a single mounted <video> and moves its <dialog> shell into the top layer. A 16:9 slot holds the inline space so the page does not shift, and focus returns to Expand video after the native dialog closes. Two medium issues need to be resolved before the plan is approved. First, in the small player, clicks on the native controls also reach the video's own click handler, so pressing Play, Captions or the timeline expands the player. The plan does not say whether that is intended. Second, the plan's test command misses the test files that actually render the Spot intro. One of the two files it names mocks the layout and confirms the relationship intro is absent, so it never exercises this change. There are also smaller issues: the inline player is announced as a dialog, the code does not handle a dialog closed by the browser itself, and the screenshot and README publication status need checking.",
+    "findings": [
+      {
+        "id": "SPOT-VID-01",
+        "severity": "medium",
+        "path": "src/features/activity-centre/components/RelationshipIntro.tsx",
+        "evidence": "Line 127 adds onClick={() => { if (!expanded) expandVideo(); }} to a <video controls> (line 121). In Chromium and Firefox, a click on the built-in control bar (Play, Captions, volume, timeline) reaches the <video> element as a click event. In the small player, pressing Play or Captions therefore also opens the modal. Dragging the timeline triggers a click on mouseup and opens the modal partway through. Firefox also starts or pauses playback when the video area is clicked, so 'click the video to expand' also changes playback. The plan requires both 'Clicking the video itself ... expands' and 'Native playback/caption controls continue working' but never says what the small player's controls should do. The 2026-10-18 browser evidence only mentions 'direct video clicks', not clicks on the controls.",
+        "fix": "Decide this in the plan and implement it. Option (a): the small player shows the poster with no controls, a click or Enter opens the modal, and the controls attribute is added only while expanded. Option (b): the small player keeps its controls, and expansion happens only from Expand video or a click overlay that does not cover the control bar. Then add a real-browser check that pressing Play or Captions in the small player behaves as the plan states."
+      },
+      {
+        "id": "SPOT-VID-02",
+        "severity": "medium",
+        "path": "C:/Users/Joshu/dev/ai-os/brainstorms/2026-10-25-spot-video-release.md",
+        "evidence": "The Verification section runs only RelationshipIntro.test.tsx and ActivityIntro.sectionCopy.test.tsx. sectionCopy.test.tsx mocks SectionLaunch and asserts queryByTestId('relationship-intro') is null (line 24), so it never renders the changed component. Other tests that do render the Spot activity are left out: ActivityRunner.resume.test.tsx, ActivityIntro.noexample.test.tsx, DrillRuns.test.tsx, the observatory tests, and others found by grepping for 'Spot the Relationship'. The change adds an always-present <dialog open> (role=dialog) to the page, which can break role queries or accessible-name assumptions in those tests. The relationship-intro-preview.tsx dev preview also imports this component.",
+        "fix": "Make the required test run at least `npx vitest run src/features/activity-centre src/pages/DrillRuns.test.tsx`, or run the full `npm test`. Record the results, and do not use the two-file run as evidence about the integrated runner."
+      },
+      {
+        "id": "SPOT-VID-03",
+        "severity": "low",
+        "path": "src/features/activity-centre/components/RelationshipIntro.tsx",
+        "evidence": "Line 112 renders <dialog open aria-label=\"Video instructions\"> all the time, inside an <aside> that already has the label 'Video instructions'. When the player is not expanded, screen readers announce an inline, non-modal 'dialog' in the page flow, with the same name repeated. The Expand video button also says aria-haspopup=\"dialog\", although a dialog is already present.",
+        "fix": "Give the shell a neutral role while it is inline, e.g. role={expanded ? undefined : 'group'} (or no label while inline), and add the dialog name only while it is modal. Add a test that checks the dialog role appears only when the player is expanded."
+      },
+      {
+        "id": "SPOT-VID-04",
+        "severity": "low",
+        "path": "src/features/activity-centre/components/RelationshipIntro.tsx",
+        "evidence": "The code handles only the cancel event (line 113) and has no onClose handler. In Chromium, if Escape is pressed again with no user activation in between, the cancel event cannot be cancelled. preventDefault is then ignored and the browser closes the dialog straight away, so the top-layer shell disappears. closeVideo still runs its 450ms reverse animation on a hidden element and then sets open again. The player vanishes for about half a second and then reappears inline. A second Escape during the closing animation has the same effect. If the dialog is closed by any route that skips cancel, React's expanded state stays true and the shell is not visible.",
+        "fix": "In onCancel, if !event.cancelable, close immediately without the animation. Add an onClose handler that, when closingRef is false and expanded is true, clears data-expanded, restores the open attribute, sets expanded to false and moves focus back to Expand video. Add the double-Escape case to the real-browser checks."
+      },
+      {
+        "id": "SPOT-VID-05",
+        "severity": "low",
+        "path": "docs/design-evidence/spot-intro-2026-10-16/README.md",
+        "evidence": "README line 46 refers to video-expanded-2026-10-18.png, and the file exists in the worktree. The git status snapshot lists only five modified files and does not show the PNG as untracked (??). It may be ignored or not yet added, and could be left out of the commit even though the plan requires copying it. The same line also says 'Local preview only; not deployed.', which this release will make untrue.",
+        "fix": "Before committing, confirm the PNG is not ignored (`git check-ignore -v`) and is staged. Confirm it appears in the PR file list. Update the README line (or add a dated note) once deployment is confirmed, so the evidence record is accurate."
+      }
+    ],
+    "coverage": [
+      "Read the plan file at the given path (hash not independently recomputed)",
+      "Read the staged RelationshipIntro.tsx in full: dialog lifecycle, animateBetween, expandVideo/closeVideo, the closing guard, the cleanup effect, focus return via requestAnimationFrame, backdrop hit test, error and loaded-data handling",
+      "Read relationship-intro.css in full: slot size reservation, expanded width and height fitting with min(960px, 100vw-32px, (100dvh-112px)*16/9), Close button placement, backdrop, reduced-motion rule, palette tokens unchanged",
+      "Read RelationshipIntro.test.tsx in full, including the prototype mocks for showModal and close and the requestAnimationFrame and animate stubs",
+      "Read ActivityIntro.sectionCopy.test.tsx and confirmed it does not render the relationship intro",
+      "Checked package.json for the typecheck, build and test scripts",
+      "Searched for other places that render RelationshipIntro or ActivityIntro, for test files that use Spot the Relationship, for tests that query role=dialog, for global dialog CSS rules, and for GSAP use in activity-centre (none found)",
+      "Checked the design-evidence README references and that the screenshot file exists"
+    ],
+    "limitations": [
+      "Could not run git, so the actual diff against baseline 6a167c85 was not inspected; the review used the staged working-tree files only",
+      "Could not run vitest, typecheck or build; no test results are claimed",
+      "No browser available; the native dialog, top-layer, close-watcher and control-click behaviour come from knowledge of the platform, not from observation",
+      "Did not check the original checkout's uncommitted patch to confirm the release worktree matches it exactly, and did not check whether supabase/functions/mcp/index.ts was left out",
+      "Did not read .impeccable/surfaces/src-features-activity-centre.md, ActivityRunner.tsx or the other test files that render the Spot intro beyond the role=dialog search",
+      "The Lovable deployment and bundle-marker steps are outside what can be inspected in the repository"
+    ]
+  },
+  "usage": {
+    "input_tokens": 14,
+    "cache_creation_input_tokens": 30032,
+    "cache_read_input_tokens": 135235,
+    "output_tokens": 11729,
+    "output_tokens_details": {
+      "thinking_tokens": 6833
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 30032,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 4407,
+        "cache_read_input_tokens": 31999,
+        "cache_creation_input_tokens": 1618,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1618
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "permission_denials": [],
+  "total_cost_usd": 0.501939,
+  "elapsed_seconds": 132.61
+}

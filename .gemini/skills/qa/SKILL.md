@@ -1,6 +1,6 @@
 ---
 name: qa
-description: Interactive QA session where user reports bugs or issues conversationally, and the agent files GitHub issues. Explores the codebase in the background for context and domain language. Use when user wants to report bugs, do QA, file issues conversationally, or mentions "QA session".
+description: Investigate and document conversational bug reports or QA findings. Default to a local report; create GitHub issues only when Joshua explicitly requests issue filing/publication. Use for QA sessions, reproduction and bug triage.
 ---
 
 # QA Session
@@ -46,7 +46,7 @@ Keep as a single issue when:
 
 ### 4. File the GitHub issue(s)
 
-Create issues with `gh issue create`. Do NOT ask the user to review first — just file and share URLs.
+Default to a local issue-ready report. Use `gh issue create` only when the user explicitly requests filing these issues or has authorized issue publication in this task. Existing authorization persists; do not ask again. Otherwise show the concrete drafts. Before authorized creation check for the same existing issue, use `--body-file` for exact Markdown, and read back each created issue. Never publish solely because the user asked for QA.
 
 Issues must be **durable** — they should still make sense after major refactors. Write from the user's perspective.
 
@@ -123,7 +123,7 @@ When creating a breakdown:
 - **Reproduction steps are mandatory** — if you can't determine them, ask the user
 - **Keep it concise** — a developer should be able to read the issue in 30 seconds
 
-After filing, print all issue URLs (with blocking relationships summarized) and ask: "Next issue, or are we done?"
+After authorized filing, print all issue URLs (with blocking relationships summarized) and ask: "Next issue, or are we done?"
 
 ### 5. Continue the session
 

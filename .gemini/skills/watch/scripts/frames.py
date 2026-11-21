@@ -57,7 +57,7 @@ def format_time(seconds: float) -> str:
 
 def get_metadata(video_path: str) -> dict:
     if shutil.which("ffprobe") is None:
-        raise SystemExit("ffprobe is not installed. Install with: brew install ffmpeg")
+        raise SystemExit("ffprobe is not installed. Check the installed FFmpeg location and refresh PATH before installing for your platform")
 
     result = subprocess.run(
         [
@@ -141,18 +141,18 @@ def extract(
     end_seconds: float | None = None,
 ) -> list[dict]:
     if shutil.which("ffmpeg") is None:
-        raise SystemExit("ffmpeg is not installed. Install with: brew install ffmpeg")
+        raise SystemExit("ffmpeg is not installed. Check the installed FFmpeg location and refresh PATH before installing for your platform")
 
     out_dir.mkdir(parents=True, exist_ok=True)
-    for existing in out_dir.glob("frame_*.jpg"):
-        existing.unlink()
+    if any(out_dir.iterdir()):
+        raise SystemExit("Frame output directory is not empty; existing files were preserved")
 
     output_pattern = str(out_dir / "frame_%04d.jpg")
     cmd: list[str] = [
         "ffmpeg",
         "-hide_banner",
         "-loglevel", "error",
-        "-y",
+        "-n",
     ]
 
     # -ss before -i = fast seek (keyframe-snap, good enough for preview frames).

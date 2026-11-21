@@ -1,0 +1,84 @@
+{
+ "qid": "PT158-S4-Q20",
+ "type": "Agree/Disagree",
+ "difficulty": "5",
+ "key_db": "A",
+ "stimulus_db": "Paula: Earthlike planets seem to be the rule rather than the exception, so there probably are intelligent beings on other planets. Furthermore, we can expect our radio telescopes to detect signs of such beings. Alien scientists would have basically the same understanding of mathematics and physics that humans have. Thus they would inevitably discover gravity, electromagnetism, and other fundamental physical phenomena and then develop technologies such as radio communication.\n\nAshley: That is like saying they would inevitably have the same legal or political systems that humans do. Our science, mathematics, and technology are unique outgrowths of our physiology, cognitive makeup, and environment. Using radio telescopes to search for intelligent life is a waste of time and money.",
+ "stem_db": "The dialogue provides the most evidence that Paula and Ashley disagree with each other about whether",
+ "choices_db": {
+  "A": "it is probable that there are intelligent alien beings who have developed radio communication",
+  "B": "it is probable that there are intelligent alien beings who have the same legal or political systems that humans do",
+  "C": "our technology is influenced by our cognitive makeup",
+  "D": "there is likely to be intelligent life on other planets",
+  "E": "scientists should spend more time and money on the search for intelligent extraterrestrial life"
+ },
+ "bank": {
+  "stimulus": "Paula: Earthlike planets seem to be the rule rather than\n the exception, so there probably are intelligent\n beings on other planets. Furthermore, we can\n expect our radio telescopes to detect signs of\n such beings. Alien scientists would have basically\n the same understanding of mathematics and\n physics that humans have. Thus they would\n inevitably discover gravity, electromagnetism,\n and other fundamental physical phenomena\n and then develop technologies such as radio\n communication. Ashley: That is like saying they would inevitably have\n the same legal or political systems that humans\n do. Our science, mathematics, and technology are\n unique outgrowths of our physiology, cognitive\n makeup, and environment. Using radio telescopes\n to search for intelligent life is a waste of time and\n money.",
+  "stem": "The dialogue provides the most evidence that Paula and\n Ashley disagree with each other about whether",
+  "choices": {
+   "A": "it is probable that there are intelligent alien beings who have developed radio communication",
+   "B": "it is probable that there are intelligent alien beings who have the same legal or political systems that humans do",
+   "C": "our technology is influenced by our cognitive makeup",
+   "D": "there is likely to be intelligent life on other planets",
+   "E": "scientists should spend more time and money on the search for intelligent extraterrestrial life"
+  },
+  "key": "A"
+ },
+ "explanation_id": "2181f7c0-f1f7-4616-b59d-fce27d363efb",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "5c47604b-1376-42a2-bead-531b75378421",
+   "position": 0,
+   "label": "Paula",
+   "body": "There are lots of Earthlike planets out there, so there's probably intelligent life out there, and we should be able to find such life with radio telescopes. Other intelligent life would have basically the same math / physics that humans have. They'd discover the same fundamental forces of the universe and then develop radio communication."
+  },
+  {
+   "row_id": "42c468b4-8624-41e1-b7a0-29dad85c0707",
+   "position": 1,
+   "label": "Ashley",
+   "body": "Saying they'd automatically have the same math / physics / radio technology is like saying (absurdly) that they'd have the same legal or political systems we do. All this stuff is a unique extension of the human form and the Earthly environment. Thus, using radio telescopes to find intelligent life would be pointless."
+  },
+  {
+   "row_id": "b13f2d7f-892c-438a-a4db-4433f79e009e",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "I often go claim-by-claim through the first person's statements to see if the 2nd person disagreed with any of the explicit claims.\nHere, it seems like Ashley took issue with a couple claims:\n- we can expect our radio telescopes to detect signs of such beings\n(A would say, \"that would be a waste of time and money\")\n- those smart aliens would have the same math, physics, and radio communication we have.\n(A would say, \"not necessarily — those are all just outgrowths of our unique physiology\")\nIf we went down to the layer of assumptions, it feels like Paula assumes that \"math / physics\" are objective properties of the universe that all intelligent life would come to similar conclusions about. Ashley makes those discoveries sound more subjective or contingent on us being us."
+  },
+  {
+   "row_id": "d03bb8ee-aa3f-48a6-bbe2-12ed75b7372a",
+   "position": 3,
+   "label": "Goal",
+   "body": "Look for an answer about whether or not radio telescopes would be likely to detect intelligent life, about whether smart aliens would inevitably find the same (objective) math and physics and technology that we have or whether those things are unique properties of humanity."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "910ca695-c885-4ed5-9bb8-2c4c9e249e5e",
+   "letter": "A",
+   "body": "This is the precise point where Paula and Ashley's positions directly conflict. Paula explicitly argues that intelligent aliens would probably develop radio communication — this is the foundation of her case for using radio telescopes. Ashley counters that our scientific and technological development, including radio, is a product of our unique cognitive makeup, implying that aliens would NOT necessarily develop radio. Paula would affirm this proposition; Ashley would deny it. Every other aspect of their arguments — the value of the search, the nature of intelligence, the role of biology — flows from this central factual dispute about whether alien species would arrive at radio technology."
+  },
+  {
+   "row_id": "3d1872e8-5096-4a7b-ae9d-e8b6ff0b126e",
+   "letter": "B",
+   "body": "Ashley mentions legal and political systems as an analogy to illustrate her broader point: just as it would be presumptuous to assume aliens have our legal systems, it is presumptuous to assume they have our science. This is a rhetorical device, not a substantive claim. Paula never addresses alien legal systems at all. For a genuine point of disagreement, both speakers must hold inferable positions on the topic that conflict with each other. Since Paula says nothing about alien legal systems and Ashley raises them only as an analogy, there is no actual dispute on this topic."
+  },
+  {
+   "row_id": "c08c751b-64fc-4535-acc4-b89cc0ce9b41",
+   "letter": "C",
+   "body": "Ashley's core thesis is that technology is shaped by a species' cognitive and physiological makeup — this is her explicit position. But Paula does not necessarily dispute this general principle. Paula could agree that cognition influences technology while still concluding that, despite cognitive differences, radio communication is a likely convergent development for any intelligent species. Their disagreement is about the specific outcome (whether aliens would develop radio), not about the general principle (whether cognition shapes technology). This answer identifies common ground rather than a point of conflict."
+  },
+  {
+   "row_id": "59486f59-4475-4f97-8488-483d043fdbb5",
+   "letter": "D",
+   "body": "Paula assumes intelligent life exists on other planets and argues for a particular search method. Ashley's critique is conditional: even if intelligent aliens exist, we cannot assume they developed radio. She targets the search methodology, not the premise of alien existence. Ashley never expresses skepticism about whether intelligent life exists elsewhere — she simply thinks we are looking for it the wrong way. Without Ashley clearly denying alien existence, this is not a point of disagreement between the two speakers."
+  },
+  {
+   "row_id": "418051c8-0731-4c10-af35-1233f66a84c7",
+   "letter": "E",
+   "body": "Neither speaker takes a clear position on whether overall spending on searching for alien life should increase. While Ashley calls radio telescopes a \"waste of time and money,\" this is a critique of the specific method, not a position on total research funding. She might support redirecting that money to different search technologies. Paula advocates for radio telescopes but never addresses total spending levels. For a point of disagreement, both speakers must hold inferable and conflicting positions. Their debate is about whether radio is the right approach, not about how much to budget for the search in general."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (8.1 em-dashes per 1k words; wrong-answer notes average 90.0 words).",
+ "tags": "emdash-heavy; pt157-158-register"
+}

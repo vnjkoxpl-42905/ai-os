@@ -1,0 +1,84 @@
+{
+ "qid": "PT158-S3-Q15",
+ "type": "Necessary Assumption",
+ "difficulty": "3",
+ "key_db": "B",
+ "stimulus_db": "Selling syndicated reruns of a popular network television program while the program is still running on the network can lead to decreased revenues for that network. The show's producers do earn a great deal of money from the sale of the syndication rights because the stations rerunning the program are assured of a successful show. However, a recent study shows that over 80 percent of the programs that are made available as reruns and as first-run episodes during the same season suffer an immediate ratings drop for their first-run episodes.",
+ "stem_db": "The argument depends on assuming which one of the following?",
+ "choices_db": {
+  "A": "Programs that are sold into syndication early tend to be long-running hits that are likely to decline soon.",
+  "B": "A drop in ratings has a negative effect on the network's revenues.",
+  "C": "The price of syndication rights includes some compensation for the network's probable losses.",
+  "D": "The audience of a popular program will usually prefer first-run episodes to reruns.",
+  "E": "Most programs are never sold into syndication."
+ },
+ "bank": {
+  "stimulus": "Selling syndicated reruns of a popular network television\n program while the program is still running on the\n network can lead to decreased revenues for that network. The show’s producers do earn a great deal of money from\n the sale of the syndication rights because the stations\n rerunning the program are assured of a successful show. However, a recent study shows that over 80 percent\n of the programs that are made available as reruns and\n as first-run episodes during the same season suffer an\n immediate ratings drop for their first-run episodes.",
+  "stem": "The argument depends on assuming which one of the\n following?",
+  "choices": {
+   "A": "Programs that are sold into syndication early tend to be long-running hits that are likely to decline soon.",
+   "B": "A drop in ratings has a negative effect on the network’s revenues.",
+   "C": "The price of syndication rights includes some compensation for the network’s probable losses.",
+   "D": "The audience of a popular program will usually prefer first-run episodes to reruns.",
+   "E": "Most programs are never sold into syndication."
+  },
+  "key": "B"
+ },
+ "explanation_id": "fd669e48-d9ce-46c4-a82d-0de499e57cd2",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "b7c729ed-894c-431c-878b-2f201a765526",
+   "position": 0,
+   "label": "Conclusion",
+   "body": "Selling syndicated reruns of a popular TV show while the show is still running can hurt revenues for the network that airs that TV show."
+  },
+  {
+   "row_id": "7703fab0-d5b4-4972-8742-7e0a0928ecc1",
+   "position": 1,
+   "label": "Evidence",
+   "body": "A recent study shows that over 80% of the shows that are made available as reruns and as first-run episodes during the same season suffer an immediate ratings drop for their first-run episodes."
+  },
+  {
+   "row_id": "5958ba1d-859e-46a3-a562-d3538f2c49e6",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "We do have a New Term in the conclusion, \"decreased revenues\". The evidence never talks about decreased revenues; it only talks about a ratings drop. So there is definitely a missing link assumption that \"a ratings drop for first-run episodes can lead to decreased revenues\". For anyone unfamiliar with these concepts and struggling to follow the argument, take a show like The Simpsons, which I believe still runs new first-run episodes on Fox on Sunday nights. Let's say that 15 years ago, you could only see Simpsons episodes on Fox, and each episode had a ratings share of like 5 million viewers. When Fox sells syndicated reruns of Simpsons to other channels (let's say Hulu or TBS or something like that starts to carry syndicated reruns), the producers of the Simpsons (the people who created the show and paid for it) make a ton of money from selling those intellectual property rights. But since people can get their Simpsons fix by watching reruns on TBS, they stop tuning in Sunday nights to Fox for first-run episodes. And the argument is saying that this change ends up hurting Fox's revenue. We seem to be assuming that the network does not get to partake of the huge payout the show's producers get from syndication."
+  },
+  {
+   "row_id": "baf7fb16-476a-4413-9d74-6fe390976fa7",
+   "position": 3,
+   "label": "Goal",
+   "body": "Look for an answer saying \"the great deal of money the producers get from selling syndication rights does not result in revenue for the network\", or look for the idea that \"when ratings drop, revenue decreases\"."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "60f192ba-c097-4e6a-a606-41c34c2e1079",
+   "letter": "A",
+   "body": "Whether programs sold into syndication early tend to be long-running hits that are likely to decline in popularity is beside the point. The argument's gap is between ratings drops and revenue losses for the network. This answer addresses why certain shows might experience ratings drops — because they are already past their peak — but the argument already has evidence of ratings drops (the 80 percent study). The argument does not need an explanation for why ratings drop. It needs a connection between ratings drops and revenue losses. This answer fills a hole that does not exist while leaving the actual gap wide open."
+  },
+  {
+   "row_id": "3a8b6088-8ad9-44f9-acda-00b689b5fb49",
+   "letter": "B",
+   "body": "The argument's evidence is that first-run episodes suffer a ratings drop when reruns are available simultaneously. The conclusion is that this leads to decreased revenues for the network. The hidden assumption bridging these two claims is that a drop in ratings negatively affects the network's revenues. Without this link, the ratings evidence is irrelevant to the revenue conclusion. Apply the Negation Test: if a drop in ratings has NO negative effect on the network's revenues, then proving ratings dropped tells us nothing about whether revenues decreased, and the entire argument collapses. This answer fills the exact gap between evidence (ratings drop) and conclusion (revenues decrease), making it the necessary assumption."
+  },
+  {
+   "row_id": "57c331d4-9250-48d5-ad38-ca10a158a894",
+   "letter": "C",
+   "body": "Whether the price of syndication rights includes compensation for the network's probable losses is irrelevant to whether the syndication causes those losses in the first place. The argument claims that selling reruns while the show is running leads to decreased network revenues. The question of whether anyone compensates the network for those losses is a separate issue — it does not affect whether the losses occur. Even if the syndication price includes compensation, the argument's conclusion could still be true (revenues decrease from the ratings drop, regardless of whether the syndication sale itself partially offsets those losses). The argument needs ratings-to-revenue, not information about deal structure."
+  },
+  {
+   "row_id": "7b55b004-4990-4f07-a846-5070fd9f6ab5",
+   "letter": "D",
+   "body": "The argument does not need to assume that audiences usually prefer first-run episodes to reruns. The study already provides the key evidence: when both are available, first-run ratings drop. Why the ratings drop — whether due to audience preference for reruns, scheduling convenience, or anything else — is not the gap in the argument. The gap is between the established ratings drop and the concluded revenue loss. Additionally, \"usually prefer\" is a strong claim about audience behavior that the argument never relies on. The argument's logical structure would function the same way regardless of audience preferences, as long as a ratings drop causes revenue loss."
+  },
+  {
+   "row_id": "a2ba65f8-0bb7-480f-9dd8-543190d653f7",
+   "letter": "E",
+   "body": "Whether most programs are ever sold into syndication has no bearing on whether the ones that ARE sold during their first-run season cause revenue losses for the network. The argument is specifically about programs that are sold into syndication while still running. How common that practice is — whether it happens to most or few programs — does not affect the causal chain the argument establishes. The gap between ratings drops and revenue losses exists regardless of how many programs enter syndication. This is background information about the industry that is completely disconnected from the argument's logical structure."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (8.4 em-dashes per 1k words; wrong-answer notes average 103.0 words).",
+ "tags": "emdash-heavy; pt157-158-register"
+}

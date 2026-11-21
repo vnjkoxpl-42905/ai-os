@@ -1,33 +1,14 @@
 ---
 name: assign-lsatu-work
-description: Operate LSAT U headlessly. Assign guided drills and daily schedules through a mapped catalog and verified batch MCP; assign activities or timed sections, read student progress, manage access and Classroom work, and handle platform messages.
+description: Assign approved LSAT U work headlessly through one mixed MCP batch with live preflight, idempotent reuse and readback. Covers guided drills, activities, standalone drills/bootcamps and HTML notes; legacy CLI handles other account operations.
 ---
 
 # Assign LSAT U work
 
-For guided-drill selection or schedules, follow [the guided-drill workflow](references/guided-drill-workflow.md). Use the mapped catalog, one live preview and one batch MCP assignment. This local branch contains its authorization and verification rules; do not load the global reference for a routine guided schedule.
+For assignments, use the project's authoritative [one-call batch workflow](../../../references/lsatu-work-batch.md). Search `search_assignable_work` only for missing identifiers, then call `assign_student_work` once with all approved items. Preflight, assignment, verification and generated evidence are included. Do not require a separate preview or another readback after a verified result.
 
-This is a pointer. The full skill lives in ONE place:
+Reuse the student, dates and approved content already established in the conversation. An assignment request authorizes the requested student's work and normal assignment notifications. It does not authorize unrelated messages, other students, or unapproved note content.
 
-    C:\Users\Joshu\.agents\skills\assign-lsatu-work\SKILL.md
-    (identical to C:\Users\Joshu\.claude\skills\assign-lsatu-work\SKILL.md, which Claude uses)
+The immediate fallback when new MCP tools are absent is `node system/scripts/lsatu-mcp-call.mjs assign_student_work --file <plan.json>`. It calls the same local MCP. Do not create a per-student shell transport, modify shared operational edits, or hand-write assignment rows.
 
-For other LSAT U operations, read that file in full and follow it exactly.
-Do not copy its contents here; this file must stay a pointer so the two runtimes never drift.
-
-The short version, in case the file cannot be read:
-
-- Every LSAT U operation runs headless through ONE command, from the vault root, with bash:
-  `bash system/scripts/lsatu <command> ...`
-  Examples: `bash system/scripts/lsatu status "Celia"`,
-  `bash system/scripts/lsatu assign --student "Celia" --section PT156.S2 --due 2026-09-30`.
-- No browser, no Chrome, no Lovable for routine content or assignments. Use
-  `lsat-u-platform-actions` for a complete interactive Classroom lesson: its
-  local MCP posts the HTML directly and verifies the saved copy headlessly.
-  This skill handles other assignments and student operations.
-- Reads never need permission. One named student assign / message: run it, then report.
-  Confirm first: 3+ students, revoke/archive/unarchive/unassign/all-off, unsend.
-- Never pass a multi-line argument. On Windows a newline drops `--dry-run` and sends for real
-  (this happened on 2026-09-23). The wrapper refuses it; do not work around it.
-
-Guided-drill catalog and MCP details live in the [guided workflow reference](references/guided-drill-workflow.md), including the authored-content exception and immediate fallback when new MCP tools have not appeared in a chat yet.
+Guided-only selection details remain in [the guided reference](references/guided-drill-workflow.md), subordinate to the batch workflow. Other account operations, progress and messages retain the full global skill at `C:/Users/Joshu/.agents/skills/assign-lsatu-work/SKILL.md`. On Windows use the supported Node entry point; never rely on the default WSL bash.

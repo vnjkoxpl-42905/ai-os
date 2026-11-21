@@ -1,5 +1,8 @@
 # Claude work order: navigation/access closure #168
 
+## Authorized host completion pass 2026-10-02
+Joshua explicitly instructed Codex to finish Claude's job and publish. This is a new bounded repair pass (maximum two correction rounds and fresh inspections), retaining the original baseline and preserving earlier work. Codex owns final repair of the duplicate shell gate, assignment-aware exam navigation, local bypass, and shortcut spacing. ProtectedRoute/LockedModule denial copy may be corrected at the authoritative gate, without changing entitlement policy. Verify real TestingCentreGate assignment exception, unassigned denial, truthful no-pause inference, and staff-only wording. Independently run all nine focused files, typecheck/build and browser matrix; obtain fresh Claude Opus 5.5 medium inspection before authorized safe-push and free publication. No schema/data mutation or credit-spending action is authorized by this amendment.
+
 SPEC_FILE: C:/Users/Joshu/dev/ai-os/brainstorms/2026-10-01-claude-navigation-168-work-order.md
 Repository: C:/Users/Joshu/dev/lsatu-navigation-access-168
 Branch: codex/navigation-access-168

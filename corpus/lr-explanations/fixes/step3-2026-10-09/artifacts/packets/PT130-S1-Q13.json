@@ -1,0 +1,78 @@
+{
+ "qid": "PT130-S1-Q13",
+ "type": "Main Conclusion",
+ "difficulty": "5",
+ "key_db": "B",
+ "stimulus_db": "It is a given that to be an intriguing person, one must be able to inspire the perpetual curiosity of others. Constantly broadening one's abilities and extending one's intellectual reach will enable one to inspire that curiosity. For such a perpetual expansion of one's mind makes it impossible to be fully comprehended, making one a constant mystery to others.",
+ "stem_db": "Which one of the following most accurately expresses the conclusion drawn in the argument above?",
+ "choices_db": {
+  "A": "To be an intriguing person, one must be able to inspire the perpetual curiosity of others.",
+  "B": "If one constantly broadens one's abilities and extends one's intellectual reach, one will be able to inspire the perpetual curiosity of others.",
+  "C": "If one's mind becomes impossible to fully comprehend, one will always be a mystery to others.",
+  "D": "To inspire the perpetual curiosity of others, one must constantly broaden one's abilities and extend one's intellectual reach.",
+  "E": "If one constantly broadens one's abilities and extends one's intellectual reach, one will always have curiosity."
+ },
+ "bank": {
+  "stimulus": "It is a given that to be an intriguing person, one must be able to inspire the perpetual curiosity of others. Constantly broadening one's abilities and extending one's intellectual reach will enable one to inspire that curiosity. For such a perpetual expansion of one's mind makes it impossible to be fully comprehended, making one a constant mystery to others.",
+  "stem": "Which one of the following most accurately expresses the conclusion drawn in the argument above?",
+  "choices": {
+   "A": "To be an intriguing person, one must be able to inspire the perpetual curiosity of others.",
+   "B": "If one constantly broadens one's abilities and extends one's intellectual reach, one will be able to inspire the perpetual curiosity of others.",
+   "C": "If one's mind becomes impossible to fully comprehend, one will always be a mystery to others.",
+   "D": "To inspire the perpetual curiosity of others, one must constantly broaden one's abilities and extend one's intellectual reach.",
+   "E": "If one constantly broadens one's abilities and extends one's intellectual reach, one will always have curiosity."
+  },
+  "key": "B"
+ },
+ "explanation_id": "c97829cb-ce32-4ed7-b348-87a1a99191f7",
+ "style": "single",
+ "steps": [
+  {
+   "row_id": "9079926a-ee5e-4a51-8546-5c6f2cb2cb00",
+   "position": 0,
+   "label": "Problem",
+   "body": "It is a given that to be an intriguing person, one must be able to inspire the perpetual curiosity of others.\nIP → IC"
+  },
+  {
+   "row_id": "53dc91b2-d899-497d-92c0-bbf5821c8dc3",
+   "position": 1,
+   "label": "Conclusion",
+   "body": "Constantly broadening one's abilities and extending one's intellectual reach [perpetually expanding one’s mind] will enable one to inspire that curiosity.\nPE → IC"
+  },
+  {
+   "row_id": "633d69ab-fbf0-4cef-acfa-3b1535d1fdcb",
+   "position": 2,
+   "label": "Premise",
+   "body": "For such a perpetual expansion of one's mind makes it impossible to be fully comprehended, making one a constant mystery to others.\nPE → ~FC → CM"
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "e856c25c-f61c-4369-bc96-934b14f2805d",
+   "letter": "A",
+   "body": "This is the problem for which the conclusion offers a solution.\n\nIP → IC"
+  },
+  {
+   "row_id": "cb29a944-8e8a-4483-b333-34ab24c9aaf3",
+   "letter": "B",
+   "body": "This best paraphrases the argument’s main point.\n\nPE → IC"
+  },
+  {
+   "row_id": "7960b72b-6e77-4692-9642-59619f7abc3d",
+   "letter": "C",
+   "body": "This paraphrases the premise that supports the argument’s main point.\n\n~FC → CM"
+  },
+  {
+   "row_id": "02391206-401d-4b1c-9c7b-de7462a9c9ee",
+   "letter": "D",
+   "body": "This reverses the relationship in the argument’s main point.\n\nIC → PE\n\nThe argument says expanding one's mind is enough to inspire curiosity, not that it is required."
+  },
+  {
+   "row_id": "209f3484-a1f9-466c-8c0f-c71270f67f39",
+   "letter": "E",
+   "body": "This shifts whose curiosity is at stake. The argument concludes that broadening one's abilities lets one inspire the perpetual curiosity of others. This answer says one \"will always have curiosity\" oneself, which the argument never claims."
+  }
+ ],
+ "known_problem": "d5 conditional Main Conclusion; notes are one-word-per-line columns; E note restates B's logic and never says E swaps \"inspire curiosity\" for \"have curiosity\".",
+ "tags": "verdict-only; thin-correct-note; thin-notes; no-prediction; very-short"
+}

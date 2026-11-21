@@ -1,0 +1,84 @@
+{
+ "qid": "PT158-S4-Q10",
+ "type": "Main Conclusion",
+ "difficulty": "3",
+ "key_db": "A",
+ "stimulus_db": "Railroads rely increasingly on automation. Since fewer railroad workers are needed, operating costs have been reduced. This means that we can expect the volume of freight shipped by rail to grow. The chief competitor of railway shipping is shipping by truck, and no reduction in operating costs is predicted for the trucking industry.",
+ "stem_db": "Which one of the following most accurately states the argument's overall conclusion?",
+ "choices_db": {
+  "A": "The volume of freight shipped by rail can be expected to increase.",
+  "B": "Increasing reliance on automation means that fewer railroad workers are needed.",
+  "C": "No reduction in operating costs is predicted for the trucking industry.",
+  "D": "Operating costs for railroads have been reduced as a result of increased reliance on automation.",
+  "E": "The chief competitor of railway shipping is shipping by truck."
+ },
+ "bank": {
+  "stimulus": "Railroads rely increasingly on automation. Since fewer\n railroad workers are needed, operating costs have been\n reduced. This means that we can expect the volume of\n freight shipped by rail to grow. The chief competitor of\n railway shipping is shipping by truck, and no reduction in\n operating costs is predicted for the trucking industry.",
+  "stem": "Which one of the following most accurately states the\n argument’s overall conclusion?",
+  "choices": {
+   "A": "The volume of freight shipped by rail can be expected to increase.",
+   "B": "Increasing reliance on automation means that fewer railroad workers are needed.",
+   "C": "No reduction in operating costs is predicted for the trucking industry.",
+   "D": "Operating costs for railroads have been reduced as a result of increased reliance on automation.",
+   "E": "The chief competitor of railway shipping is shipping by truck."
+  },
+  "key": "A"
+ },
+ "explanation_id": "709bab09-8832-4b67-860a-3048c84774fd",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "e235d799-78d6-4406-ae41-3d8fe6b45916",
+   "position": 0,
+   "label": "Conclusion (this means that)",
+   "body": "We can expect the volume of freight shipped by rail to grow."
+  },
+  {
+   "row_id": "483bda78-e7ed-4f1e-a8b7-047836ea4211",
+   "position": 1,
+   "label": "Evidence",
+   "body": "The chief competitor of railway shipping is shipping by truck. And while trucks don't have any predicted reduction in operating costs, operating costs for railroads have been reduced by automation."
+  },
+  {
+   "row_id": "5fd7255e-a2d2-42b3-9ba9-1cfa1f76ea10",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "When we do Main Conclusion (or Role), we expect that about 90% of the time the conclusion will be in the First Sentence or be a Rebuttal. But in either case, we expect the conclusion to arrive earlier than the evidence. An \"upside-down argument\" in which you hear the conclusion and then hear support.\nIn this one the conclusion is actually in the middle, sandwiched between premises. It's shown to us via a less common Conclusion indicator phrase, \"This means that\".\nIn general, Main Conclusion and Role won't use easy/obvious indicator words like \"Therefore, Thus, So\" for the main conclusion. They'll use Opinion Indicators (like \"probably / evidently / apparently\" or just the future-tense, which indicates opinion). Or they might use stuff like \"This reveals that, this shows that, this demonstrates that, this means that\"."
+  },
+  {
+   "row_id": "a44ddbaa-7d85-4d10-90b1-628b7856ef8c",
+   "position": 3,
+   "label": "Goal",
+   "body": "The hard part is done. We found the conclusion. Let's just find whatever answer matches the meaning of the 3rd sentence."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "cf2fe075-c1e3-42e6-8f4b-4e821fc3b083",
+   "letter": "A",
+   "body": "This is the main conclusion — the claim that every other statement in the argument is designed to support. The automation premise leads to fewer workers, which leads to lower costs, which — combined with trucking's inability to match those savings — supports this prediction about growing rail freight volume. This claim sits at the top of the reasoning chain: it receives support from everything else and provides support to nothing further.\n\nYou can confirm this by checking each other statement's role. \"Railroads rely on automation\" is a premise. \"Fewer workers are needed\" is supported by the automation premise and supports the cost claim — making it an intermediate conclusion. \"Operating costs have been reduced\" is another intermediate conclusion. \"Trucking has no comparable cost reduction\" is a premise. All of these funnel upward to support this single prediction. That is the hallmark of a main conclusion."
+  },
+  {
+   "row_id": "d0d30399-3d29-4f96-84e2-59ba63457555",
+   "letter": "B",
+   "body": "\"Fewer railroad workers are needed\" is an intermediate conclusion in the argument's chain. It is supported by the premise about automation (railroads relying on automated technology means fewer workers) and in turn supports the claim about reduced operating costs. Because it both receives and gives support, it cannot be the main conclusion. The main conclusion is the claim at the very top of the chain — the prediction about freight volume growth — which this statement helps prove but does not restate."
+  },
+  {
+   "row_id": "b514a500-23ee-4d83-84a5-b9d0fb8c3107",
+   "letter": "C",
+   "body": "\"No reduction in operating costs is predicted for trucking\" is a premise — a factual claim offered to support the conclusion. It provides the competitive context: rail has lower costs, and trucking cannot match them. Combined with the cost reduction from automation, this premise supports the main conclusion that rail freight volume will grow. But a premise supports other claims; it is not the claim being supported by everything else. The main conclusion is the freight growth prediction, which this premise helps prove."
+  },
+  {
+   "row_id": "ccdf2112-537e-4d49-9ced-78b722afd0cb",
+   "letter": "D",
+   "body": "\"Operating costs have been reduced as a result of automation\" is an intermediate conclusion. It is supported by the chain of premises about automation and fewer workers, and it in turn supports the main conclusion about growing freight volume. Because it both receives support and provides support, it occupies a middle position in the argument — not the top. The main conclusion is the prediction about freight growth, which is what the cost reduction claim helps prove."
+  },
+  {
+   "row_id": "3ec91f10-a31b-49e6-8a0c-3af94ac8047f",
+   "letter": "E",
+   "body": "\"The chief competitor of rail freight is shipping by truck\" is a background premise. It identifies the competitive landscape so that the argument can make its point about rail's cost advantage. This factual claim supports the reasoning chain — it is not what the reasoning chain is designed to prove. The argument uses this fact about the competitive landscape to build toward its main conclusion about growing rail freight volume. A premise is the foundation, not the destination."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (13.7 em-dashes per 1k words; wrong-answer notes average 78.8 words).",
+ "tags": "emdash-heavy; pt157-158-register; possible-misquote"
+}

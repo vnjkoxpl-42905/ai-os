@@ -1,0 +1,235 @@
+{
+  "status": "completed",
+  "mode": "inspect",
+  "provider": "claude",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "claude",
+    "builder": "codex",
+    "inspector": "claude"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-conditional-bootcamp",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os\\brainstorms\\2026-09-30-conditional-curriculum\\OPENING-VISUAL-BUILD-REVIEW.md",
+  "plan_sha256": "ed9f49837cd12808e3941f1058c6d8cdc205d3f183643afede6ead7d6a8cb39a",
+  "requested_model": null,
+  "requested_effort": null,
+  "base": "67230dfae74a1466515d570fcb7b8a96ab5cb9c5",
+  "snapshot": {
+    "base": "67230dfae74a1466515d570fcb7b8a96ab5cb9c5",
+    "files": [
+      {
+        "path": "public/data/_bank.generated.json",
+        "kind": "file",
+        "sha256": "69f34f6dc7c1c2772d0fc212851873ca92a6c0a40e15af83e97b56575e004f75"
+      },
+      {
+        "path": "public/data/finder-address-index.json",
+        "kind": "file",
+        "sha256": "3f8216dacc9a968b6e4e19da90472b8591b32204f912dcf97ed87459b5406007"
+      },
+      {
+        "path": "src/App.tsx",
+        "kind": "file",
+        "sha256": "eef49221a7a4b4f3496c4979abb11355dfd437fd57df109c261c202de3965260"
+      },
+      {
+        "path": "src/bootcamps/conditionals/assignments.test.ts",
+        "kind": "file",
+        "sha256": "ff46c13e7ba63adae9878c2cc5e3c5a964872302f2d2534b953e2fba1da10613"
+      },
+      {
+        "path": "src/bootcamps/conditionals/assignments.ts",
+        "kind": "file",
+        "sha256": "24f75c223b23e24d31e3f279cfa6939b4008c35b41f24a11844881664cbce234"
+      },
+      {
+        "path": "src/bootcamps/conditionals/components/ConditionalLessonNote.test.tsx",
+        "kind": "file",
+        "sha256": "38d6a3269f1e57e8084eae88abd7414f7f4910baba6e590468e190135aa4bb4f"
+      },
+      {
+        "path": "src/bootcamps/conditionals/components/ConditionalLessonNote.tsx",
+        "kind": "file",
+        "sha256": "7cd160624e24207057bf4955c25e5d5953e94b2043e375cdc08307ae040fffab"
+      },
+      {
+        "path": "src/bootcamps/conditionals/components/ConditionalOpeningLesson.tsx",
+        "kind": "file",
+        "sha256": "3964d898216dfc971f62800c07ceb19deb3aea1917a8294bdd611361a87c6b5f"
+      },
+      {
+        "path": "src/bootcamps/conditionals/components/ConditionalOpeningMedia.tsx",
+        "kind": "file",
+        "sha256": "7da4813b80a188656e9175a5fb74ae80673acbe7a4b4b1ce182fbb27d9db6df7"
+      },
+      {
+        "path": "src/bootcamps/conditionals/components/opening.css",
+        "kind": "file",
+        "sha256": "e56566490c5c88bfa23ec44571dfecb0b92bf2b57cd055d8714c774ab4fda42f"
+      },
+      {
+        "path": "src/bootcamps/conditionals/content/foundations.source.ts",
+        "kind": "file",
+        "sha256": "fd5cf99e913db16c5d50f886f5d18d49435a7585341c5899c0088f363e19ac06"
+      },
+      {
+        "path": "src/bootcamps/conditionals/content/opening-coverage.test.ts",
+        "kind": "file",
+        "sha256": "80e1708a47ffdbf8b8c909c5e665e3eeeb2b25a96d170f6b8e6d121b997e3e67"
+      },
+      {
+        "path": "src/bootcamps/conditionals/data/curriculum.generated.json",
+        "kind": "file",
+        "sha256": "b7ee7dd9d76d0a07c8c5b57eb3e6dcc64b862e66fa048af0d69fd95a504fa540"
+      },
+      {
+        "path": "src/bootcamps/conditionals/routes.test.tsx",
+        "kind": "file",
+        "sha256": "1bdea0a0a99aeefa6166028f75ca6fc6ca598a60e4408580b0df3f497289a4e0"
+      },
+      {
+        "path": "src/bootcamps/conditionals/routes.tsx",
+        "kind": "file",
+        "sha256": "3ee3a1e024fd5de8f86a33b5b7deb7fa9307fdeec536433d16a4e758c006b899"
+      },
+      {
+        "path": "src/components/teacher/ConditionalAssignmentFields.test.tsx",
+        "kind": "file",
+        "sha256": "10c903b7a3533499971e332f577dbd62e0c015bb7300ad51303ad9dcae4a9928"
+      },
+      {
+        "path": "src/components/teacher/ConditionalAssignmentFields.tsx",
+        "kind": "file",
+        "sha256": "9975d3cd7bbf3def762ac0acceee66e58579f9923f804829a2ba9a440d6c8e18"
+      },
+      {
+        "path": "src/dev/ConditionalOpeningPreview.tsx",
+        "kind": "file",
+        "sha256": "47fde405c5deedd8076e41479f90b96e973af4b74261d5de2458aff2400b0769"
+      },
+      {
+        "path": "src/lib/conditionalBootcampAssignment.test.ts",
+        "kind": "file",
+        "sha256": "3515676510514e8c81cb1536a94f23bdb406d83bc8e7688182df6e42ee73307e"
+      },
+      {
+        "path": "src/lib/conditionalBootcampAssignment.ts",
+        "kind": "file",
+        "sha256": "8e283f5805d70094397f4c98e4eecce86544c7e2279c712a344c790c5296ea7d"
+      },
+      {
+        "path": "supabase/functions/mcp/index.ts",
+        "kind": "file",
+        "sha256": "f731b29c4fcd1517dc99276a998944494a86720e0cd103061e1799d149c7d32c"
+      }
+    ],
+    "diff_sha256": "a4ca92f46f8294ebb450c40fe705adabca3bae9635e9662d850cd0fa9375addb",
+    "sha256": "dd8dcff8a13b2ad34af84cfab80d5eedb2b0e5774b8d60a18afa3858e2b7f23f"
+  },
+  "previous": null,
+  "started_at": 1790954613.2229197,
+  "artifacts": "C:\\Users\\Joshu\\AppData\\Local\\Temp\\claudex-57kc5i99",
+  "cli_version": "2.1.280 (Claude Code)",
+  "executable": [
+    "C:\\Users\\Joshu\\AppData\\Roaming\\npm\\node_modules\\@anthropic-ai\\claude-code\\bin\\claude.exe"
+  ],
+  "exit_code": 0,
+  "session_id": "a2e5c6a9-107e-463e-94e5-b4e8d3ace8a6",
+  "response": {
+    "verdict": "REVISE",
+    "summary": "The fixes for F1–F12 are mostly in place in the source, and I found no high-severity defects. Stage grants are now versioned, and legacy grants keep their original unit membership. The production key reset works, level labels are gone, the preview loads only in DEV, and the generated curriculum order matches the source. The new Group 1/2 drills cover every core indicator at every level, and 'must' is kept as an obligation. Two medium issues remain. First, both flashcard components put an aria-label on the card button. That label replaces the card text, so screen-reader users cannot hear the prompt or the answer. Second, the in-lesson independent practice and the cards labeled 'A fresh example' reuse sentences the lesson has already solved. The remaining issues are low severity: live regions that appear only after a click, a prerequisite left out of date, one recorded drill that reuses the lesson's main example, and two drill prompts with awkward wording.",
+    "findings": [
+      {
+        "id": "R2-A11Y-1",
+        "severity": "medium",
+        "path": "src/bootcamps/conditionals/components/ConditionalOpeningLesson.tsx",
+        "evidence": "Flashcards (line 70) renders <button aria-label={back ? 'Hide answer' : 'Reveal answer'}> with the sentence or the 'Left → Right' answer inside it. ConditionalOpeningMedia.tsx:39 does the same with aria-label 'Reveal recall explanation'. An aria-label replaces a button's text as its accessible name, and button content is presentational. A screen reader therefore announces only 'Reveal answer, button' and never reads the prompt or the answer. Screen-reader users cannot use either flashcard set.",
+        "fix": "Remove aria-label so the visible text becomes the name, or keep the face as a non-button region with aria-live and add a separate 'Reveal answer'/'Hide answer' button with aria-expanded/aria-controls. Add a test asserting getByRole('button', { name: /<card sentence>/ })."
+      },
+      {
+        "id": "R2-PED-1",
+        "severity": "medium",
+        "path": "src/bootcamps/conditionals/components/ConditionalOpeningLesson.tsx",
+        "evidence": "TranslationLab, DiagramBuilder and Flashcards all use the same seven examples[id] sentences. TranslationLab already shows each target, the 'why' text and the arrow, so the DiagramBuilder 'independent practice' asks for answers the student just saw. In ConditionalOpeningMedia.tsx, cards labeled 'A fresh example' reuse lesson sentences word for word: 'A student receives feedback if the student revises the essay' and 'Any applicant who submits late pays a fee' (both shown in Group 1), 'A finalist must attend the interview' (the Group 2 'must' example), and the archive pass (Sufficient/Necessary). The plan requires separate guided and independent practice inside each group, and the 'fresh example' kicker is inaccurate.",
+        "fix": "Give DiagramBuilder and the lesson flashcards their own transfer sentences per indicator, distinct from TranslationLab and from the recorded drills. Replace the reused media cards with new sentences, or change the kicker to 'Review'."
+      },
+      {
+        "id": "R2-A11Y-2",
+        "severity": "low",
+        "path": "src/bootcamps/conditionals/components/ConditionalOpeningLesson.tsx",
+        "evidence": "Check (line 18), TranslationLab (line 63) and DiagramBuilder (line 82) only create their role='status' feedback container after the first click. Live regions inserted already filled are often not announced by NVDA/JAWS, so the first answer-specific feedback can go unheard. Separately, aria-label on generic divs (co-word-tabs 'Indicator examples', and line 30 'Allowed placements, not established facts') is ignored because those elements have no role. The point that these placements are possibilities, not established facts, is not exposed to assistive tech.",
+        "fix": "Render an empty role='status' container permanently and fill it on selection. Add role='group' to the labelled choice containers."
+      },
+      {
+        "id": "R2-CONTENT-1",
+        "severity": "low",
+        "path": "src/bootcamps/conditionals/content/foundations.source.ts",
+        "evidence": "group-1-b5 ('All orders marked ready have been packed') is a recorded drill that reuses the lesson's main example nearly word for word. The accepted correction says recorded items must be fresh transfer examples. group-2-m7 asks 'Does that prove the person is a renter?' but the prompt never introduces 'the person' ('The key was returned by noon'). In group-1-a9 the correct option says 'does not settle which orders Q is set aside for', which assumes Q is set aside for some orders. The question is whether Q is set aside for nut-free orders at all.",
+        "fix": "Replace group-1-b5 with a new 'all' rule. Reword group-2-m7, e.g. 'Dana returned a key by noon. Does that prove Dana is a renter?' Change group-1-a9 option C to 'The rule does not establish whether Q is set aside for nut-free orders.' Regenerate the curriculum JSON."
+      },
+      {
+        "id": "R2-META-1",
+        "severity": "low",
+        "path": "src/bootcamps/conditionals/content/foundations.source.ts",
+        "evidence": "rules-facts now has prerequisite ['group-2'] and is ordered before truth-validity. truth-validity (line 123) still lists only ['sufficient-necessary'] and skips rules-facts. Nothing enforces prerequisites today (they are only checked in validate.ts), but the plan says to 'adjust prerequisites', and the metadata no longer matches the teaching order.",
+        "fix": "Set truth-validity prerequisites to ['rules-facts'], or ['rules-facts','sufficient-necessary'], and regenerate."
+      }
+    ],
+    "coverage": [
+      "Tracked diff sections for App.tsx, assignments.ts/test, ConditionalLessonNote.tsx/test, foundations.source.ts, routes.tsx/test, ConditionalAssignmentFields.tsx, conditionalBootcampAssignment.ts/test",
+      "Full read of untracked ConditionalOpeningLesson.tsx, ConditionalOpeningMedia.tsx, opening.css, ConditionalOpeningPreview.tsx, opening-coverage.test.ts, ConditionalAssignmentFields.test.tsx",
+      "foundations.source.ts orientation through contraposition units (teaching, drills, prerequisites), plus all new Group 1/Group 2 drill items checked for correctness, scope and obligation semantics",
+      "Traced assignment target writers and readers: assignWork.ts metadata persistence, AssignmentBuilder duplicate-key check, DeskLibraryBootcampsSurface, the e2e mock, and routes assignmentSelection/pathSelection with start-parameter handling",
+      "curriculumPath.getCurriculumUnits and difficulty map; GROUPS word lists in conditional-refresher/content.ts; ordering of unit IDs in curriculum.generated.json",
+      "Searched supabase/ for conditional stage-target writers (none found besides migrations seed text)"
+    ],
+    "limitations": [
+      "I could not run typecheck, tests, the Vite build, or check that the preview chunk is excluded from the production build. Nothing here is a claim that tests or builds pass.",
+      "There was no rendered or browser inspection, so layout at 390 px, motion behavior and screenshots are not verified.",
+      "The diff for curriculum.generated.json and public/data files is too large to read in full. I only checked the generated unit order and relied on the coverage test's source-equals-generated assertion, which I did not run.",
+      "I could not inspect the external vault REVIEW.md or the asset manifest cited for the NotebookLM-derived recall cards, so their review status and provenance are unverified.",
+      "The plan's source materials (draft lessons, teaching-voice wiki, transcripts) are outside this repository and were not read, so teaching-voice fidelity was judged only from the in-repo text.",
+      "supabase/functions/mcp/index.ts and the bank/finder files were treated as preexisting and out of scope, as the host stated, and were not reviewed."
+    ]
+  },
+  "usage": {
+    "input_tokens": 36,
+    "cache_creation_input_tokens": 104488,
+    "cache_read_input_tokens": 1196269,
+    "output_tokens": 19200,
+    "output_tokens_details": {
+      "thinking_tokens": 12929
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 104488,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 4524,
+        "cache_read_input_tokens": 106752,
+        "cache_creation_input_tokens": 2027,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 2027
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "permission_denials": [],
+  "total_cost_usd": 1.4593018,
+  "elapsed_seconds": 195.23
+}

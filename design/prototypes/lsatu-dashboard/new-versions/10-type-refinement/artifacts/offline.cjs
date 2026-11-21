@@ -1,0 +1,13 @@
+const {chromium}=require('C:/Users/Joshu/dev/ai-os-projects/lsatu-role-home-20261022/node_modules/playwright');
+const fs=require('fs'),path=require('path'),assert=require('assert/strict');
+const report={passed:false,startedAt:new Date().toISOString(),stage:'launch',pageErrors:[],failedRequests:[],consoleErrors:[]};
+(async()=>{const browser=await chromium.launch({channel:'msedge',headless:true});let page;try{
+ const context=await browser.newContext({offline:true,viewport:{width:1440,height:1000}});page=await context.newPage();page.on('pageerror',e=>report.pageErrors.push(String(e)));page.on('requestfailed',r=>report.failedRequests.push({url:r.url(),failure:r.failure()}));page.on('console',m=>{if(m.type()==='error')report.consoleErrors.push(m.text())});
+ const root='C:/Users/Joshu/dev/ai-os/design/prototypes/lsatu-dashboard/';report.stage='archive';await page.goto('file:///'+root+'index.html');report.archiveLinksTo10=await page.locator('a[href*="10-type-refinement/index.html"]').count();assert(report.archiveLinksTo10>0);
+ report.stage='preview-api';await page.goto('file:///'+root+'new-versions/10-type-refinement/index.html');await page.waitForFunction(()=>!!window.LSATPreview);assert.equal(await page.locator('h1').count(),1);
+ report.stage='finder-navigation';await page.locator('[data-action=finder]').first().click();await page.waitForFunction(()=>LSATPreview.inspect().route==='practice');
+ report.stage='reference-submit';await page.locator('#typed-reference').fill('PT0155 S01 Q001');await page.locator('#typed-reference-form').evaluate(f=>f.requestSubmit());
+ report.stage='exact-question';await page.waitForFunction(()=>LSATPreview.inspect().question==='lr155');report.exactReference='lr155';assert.deepEqual(report.pageErrors,[]);report.passed=true;report.stage='complete';
+ }catch(error){report.error=error.stack;if(page){report.url=page.url();report.state=await page.evaluate(()=>window.LSATPreview?.inspect()).catch(e=>({inspectionError:String(e)}));report.feedback=await page.locator('#typed-reference-feedback').textContent().catch(()=>null);report.query=await page.locator('#typed-reference').inputValue().catch(()=>null);await page.screenshot({path:path.join(__dirname,'offline-failure.png'),fullPage:true}).catch(()=>{})}throw error;
+ }finally{report.finishedAt=new Date().toISOString();fs.writeFileSync(path.join(__dirname,'offline-report.json'),JSON.stringify(report,null,2));if(!report.passed)fs.writeFileSync(path.join(__dirname,'offline-failure-report.json'),JSON.stringify(report,null,2));await browser.close()}
+})().then(()=>console.log(JSON.stringify(report,null,2))).catch(e=>{console.error(e);process.exitCode=1});

@@ -12,7 +12,7 @@ Controls the dedicated, persistent Chrome browser instance for Facebook Messenge
 - **Tooling Directory**: `C:\Users\Joshu\Tools\Facebook-Agent\`
 - **Target URL**: `https://www.facebook.com/messages`
 
-All sessions, login state, and cookies persist in `Facebook-Agent-Chrome`. Authentication is performed once by Joshua and remains permanently saved across reboots.
+All sessions, login state, and cookies persist in `Facebook-Agent-Chrome`. Authentication is performed once by Joshua and may persist across reboots; verify the rendered signed-in session before use.
 
 ## Commands
 

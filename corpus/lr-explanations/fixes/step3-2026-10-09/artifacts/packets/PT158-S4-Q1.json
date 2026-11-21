@@ -1,0 +1,84 @@
+{
+ "qid": "PT158-S4-Q1",
+ "type": "Weaken",
+ "difficulty": "3",
+ "key_db": "D",
+ "stimulus_db": "The government's tax collection agency has not followed through on its plan, announced a year ago, to crack down on violations of corporate income tax law. Audits are the primary tool for detecting such violations, and over the past year, not a single audit of corporate income tax returns has been completed.",
+ "stem_db": "Which one of the following, if true, most weakens the argument?",
+ "choices_db": {
+  "A": "The plan to crack down on violations of corporate income tax law is part of a broad campaign against corporate misconduct.",
+  "B": "The number of personal income tax returns audited over the past year is greater than in previous years.",
+  "C": "Most audits of corporate income tax returns do not reveal any significant violations.",
+  "D": "It generally takes longer than one year to complete an audit of a corporate income tax return.",
+  "E": "Over the last five years, fewer audits of corporate income tax returns have been completed than in the preceding five years."
+ },
+ "bank": {
+  "stimulus": "The government’s tax collection agency has not followed\n through on its plan, announced a year ago, to crack down\n on violations of corporate income tax law. Audits are\n the primary tool for detecting such violations, and over\n the past year, not a single audit of corporate income tax\n returns has been completed.",
+  "stem": "Which one of the following, if true, most weakens the\n argument?",
+  "choices": {
+   "A": "The plan to crack down on violations of corporate income tax law is part of a broad campaign against corporate misconduct.",
+   "B": "The number of personal income tax returns audited over the past year is greater than in previous years.",
+   "C": "Most audits of corporate income tax returns do not reveal any significant violations.",
+   "D": "It generally takes longer than one year to complete an audit of a corporate income tax return.",
+   "E": "Over the last five years, fewer audits of corporate income tax returns have been completed than in the preceding five years."
+  },
+  "key": "D"
+ },
+ "explanation_id": "69ecb8c3-adb8-414b-97b5-6bed87d09569",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "d988841a-67f8-4326-be37-7dbf943cfdf3",
+   "position": 0,
+   "label": "Conclusion",
+   "body": "The government's tax collection agency has not followed through on its plan to crack down on violations of corporate income tax law."
+  },
+  {
+   "row_id": "0eeac4a0-66a7-4e28-8e7f-4e46c98b3c65",
+   "position": 1,
+   "label": "Evidence",
+   "body": "Audits are the primary tool for detecting corporate income tax violations, and over the past year since they announced the plan, not a single audit of corporate income tax returns has been completed."
+  },
+  {
+   "row_id": "4d8ef774-19ff-4fe9-afb3-4c535d74dde0",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "Given that .... there hasn't been a single audit completed since the govt tax agency pledged to crack down on violations of corp tax law.\nHow could we still argue that ... the govt tax agency has followed through on its plan to crack down on violations of corp income tax law?\nMaybe they're trying to crack down through methods that don't involve audits? We know that audits are the primary tool for detecting such violations, but maybe the govt. is focusing on some of the less-used methods. Maybe they don't need to detect violations (they're already aware of them); they just need the will and manpower to go confront these corporations and charge them with violations."
+  },
+  {
+   "row_id": "a8fd67cf-7a75-47e3-a2c7-8020ae1e31b0",
+   "position": 3,
+   "label": "Goal",
+   "body": "Let's look for an answer that allows us to \"make an excuse\" for the fact that not a single audit has been completed, or allows us to argue that the government really is dedicated to cracking down on violations of corp income tax law."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "dc0721d8-671a-4b3a-8577-b11937f891e7",
+   "letter": "A",
+   "body": "Knowing that the corporate audits are part of a broader campaign against corporate misconduct does not explain why none of them have been completed. The argument's concern is specifically about the lack of completed audits, and expanding the scope of the initiative does not address the timeline issue. A broader campaign might involve more audits or different types of enforcement, but that has no bearing on whether any individual corporate audit has been finished. The question remains: if the crackdown is genuine, why has nothing been completed in a year? This answer leaves that question entirely unanswered."
+  },
+  {
+   "row_id": "096597ca-3a98-4cc7-bbf9-405a0cefc89d",
+   "letter": "B",
+   "body": "The argument is entirely about corporate tax audits. What the agency does with personal income tax returns is a separate enforcement activity that has no bearing on whether the corporate crackdown is genuine. Even if the agency has dramatically increased its personal income tax auditing, that says nothing about why corporate audits remain incomplete. These are different types of audits targeting different populations with different procedures and timelines. Introducing personal tax audit data shifts attention to an irrelevant metric rather than addressing the specific gap the argument identifies: zero completed corporate audits after a year of a supposedly genuine corporate crackdown."
+  },
+  {
+   "row_id": "6ac3ccd7-3216-4b3b-9fe5-1060bce18bae",
+   "letter": "C",
+   "body": "If most completed audits do not reveal significant violations, this actually makes the agency's failure to complete any audits look worse, not better. The argument concludes the crackdown is not genuine because nothing has been completed. To weaken that conclusion, we need a reason why the absence of completed audits is consistent with genuine effort. This answer does not provide one. Instead, it suggests that even when audits are completed, they tend to come up empty — which, if anything, bolsters the skeptic's case by adding a second layer of futility. Not only has nothing been finished, but even finished audits are typically unproductive. This pushes in the wrong direction entirely."
+  },
+  {
+   "row_id": "14a6b671-83cd-4162-8d4e-e95b54ffe81b",
+   "letter": "D",
+   "body": "The argument's logic depends on a hidden assumption: a genuine crackdown would produce completed audits within one year. This answer directly attacks that assumption by establishing that corporate audits inherently take longer than a year to complete. If the audit process itself requires more than twelve months, then the absence of completed audits is not evidence of inaction — it is simply evidence that the work is still in progress. The agency could have initiated dozens of thorough audits on the day of the announcement, and every single one of them would still be incomplete after twelve months. This provides an innocent, alternative explanation for the apparently damning evidence: the audits exist and are underway, but the process has not yet run its course. By showing that the timeline expectation is unreasonable, this answer severs the connection between \"no results yet\" and \"no genuine effort.\""
+  },
+  {
+   "row_id": "40fb9846-ab4d-4817-ac61-d25f4052f48a",
+   "letter": "E",
+   "body": "A five-year decline in completed audits reveals a longer-term pattern of weakening enforcement, which actually supports the skeptic's conclusion rather than undermining it. The argument claims the crackdown is not genuine, and a multi-year trend of declining audit activity makes that claim more plausible, not less. If the agency has been pulling back from enforcement for half a decade, the current zero-completion figure looks like the continuation of a broader retreat rather than an isolated anomaly. A weakening answer needs to make the crackdown look genuine despite the lack of results. This answer makes it look like part of a sustained pattern of doing less — the opposite of what is needed."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (3.8 em-dashes per 1k words; wrong-answer notes average 105.8 words).",
+ "tags": "pt157-158-register"
+}

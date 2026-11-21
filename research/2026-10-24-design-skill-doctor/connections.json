@@ -1,0 +1,131 @@
+{
+  "date": "2026-10-24",
+  "scope": "Read-only design connector health; no configuration changes, installs, generations or paid component code retrieval.",
+  "config": {
+    "claudeProject": [
+      "21st",
+      "pinterest",
+      "motionsites",
+      "godly",
+      "shadcn"
+    ],
+    "claudeGlobalRelated": [
+      "rea"
+    ],
+    "codexRelated": [
+      "pinterest",
+      "motionsites",
+      "godly",
+      "shadcn",
+      "mobbin",
+      "kling",
+      "rea"
+    ],
+    "codexNotRegistered": [
+      "21st"
+    ],
+    "hostSessionCallable": [
+      "godly",
+      "motionsites",
+      "pinterest",
+      "shadcn",
+      "kling",
+      "rea"
+    ],
+    "hostNotSessionCallable": [
+      "21st",
+      "mobbin"
+    ]
+  },
+  "checks": {
+    "firecrawl": {
+      "authenticated": true,
+      "version": "1.26.3",
+      "call": "search site:gsap.com docs, limit 1",
+      "success": true,
+      "results": 1,
+      "creditsUsed": 2
+    },
+    "tavily": {
+      "authenticated": true,
+      "version": "0.1.8",
+      "executable": "tvly",
+      "call": "search site:gsap.com docs, max-results 1",
+      "success": true,
+      "results": 1
+    },
+    "godly": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"query\": \"dashboard\",\n  \"collection\": \"all\",\n  \"count\": 0,\n  \"total_matches\": 0,\n  \"offset\": 0,\n  \"has_more\": false,\n  \"items\": [],\n  \"warnings\": [\n    \"Godly's /icons/ page exceeded the 2000000-character safety limit. Icons omitted from this search.\",\n    \"Godly returned HTTP 404 for /app-icons/. App Icons omitted from this search.\",\n    \"Godly's /apps/ page exceeded the 2000000-character safety limit. Apps omitted from this search.\",\n    \"Godly returned HTTP 404 for /trending/. Trending omitted from this search.\",\n    \"Godly's /screenshots/ page exceeded the 2000000-character safety limit. Screenshots omitted from this search.\"\n  ]\n}"
+        }
+      ],
+      "structuredContent": {
+        "query": "dashboard",
+        "collection": "all",
+        "count": 0,
+        "total_matches": 0,
+        "offset": 0,
+        "has_more": false,
+        "items": [],
+        "warnings": [
+          "Godly's /icons/ page exceeded the 2000000-character safety limit. Icons omitted from this search.",
+          "Godly returned HTTP 404 for /app-icons/. App Icons omitted from this search.",
+          "Godly's /apps/ page exceeded the 2000000-character safety limit. Apps omitted from this search.",
+          "Godly returned HTTP 404 for /trending/. Trending omitted from this search.",
+          "Godly's /screenshots/ page exceeded the 2000000-character safety limit. Screenshots omitted from this search."
+        ]
+      }
+    },
+    "motionsites": {
+      "success": true,
+      "results": 1,
+      "coverage": "Search metadata only; no prompt retrieved, premium plan not verified."
+    },
+    "pinterest": {
+      "sessionCallable": true,
+      "authenticated": false,
+      "error": "Pinterest is not authenticated; PINTEREST_ACCESS_TOKEN missing from server environment."
+    },
+    "shadcn": {
+      "content": [
+        {
+          "type": "text",
+          "text": "## Component Audit Checklist\n\nAfter adding or generating components, check the following common issues:\n\n- [ ] Ensure imports are correct i.e named vs default imports\n- [ ] If using next/image, ensure images.remotePatterns next.config.js is configured correctly.\n- [ ] Ensure all dependencies are installed.\n- [ ] Check for linting errors or warnings\n- [ ] Check for TypeScript errors\n- [ ] Use the Playwright MCP if available."
+        }
+      ]
+    },
+    "kling": {
+      "authenticated": true,
+      "success": true,
+      "version": "1.3.3",
+      "call": "who_am_i tools=text_to_image; no generation"
+    },
+    "browser": {
+      "playwrightModule": "C:/Users/Joshu/dev/ai-os-projects/lsatu-role-home-20261022/node_modules/playwright",
+      "channel": "msedge",
+      "headless": true,
+      "version": "156.0.4314.42",
+      "success": true,
+      "scope": "In-memory HTML rendered and h1 read. Not visual dashboard verification."
+    },
+    "twentyFirst": {
+      "directMcpAuthenticated": true,
+      "toolCount": 51,
+      "searchResults": 5,
+      "call": "search metadata for activity calendar tabs; no code retrieval",
+      "evidence": "connections-21st.json"
+    },
+    "mobbin": {
+      "codexConfigured": true,
+      "sessionCallable": false,
+      "authenticated": "not tested"
+    },
+    "rea": {
+      "configuredBoth": true,
+      "sessionCallable": true,
+      "health": "not tested; browser calls need a specific loopback CDP endpoint"
+    }
+  }
+}

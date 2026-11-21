@@ -1,0 +1,210 @@
+{
+  "plan_id": "charles-before-friday-2026-10-26",
+  "student_id": "c84f8758-1a58-4be1-a585-297a0609f785",
+  "dry_run": false,
+  "notifications": "none; prior notifications retain their original dates",
+  "completion_dependency": false,
+  "preflight": [
+    {
+      "card_id": "77444822-a7dd-47bd-86be-7ac8afb8d860",
+      "rows": [
+        {
+          "table": "guided_drill_assignments",
+          "before": {
+            "id": "14946626-0c4d-4690-90f9-4942b6f66960",
+            "guided_drill_id": "eef2cdf5-ebef-409a-93b4-05b9c167d035",
+            "student_id": "c84f8758-1a58-4be1-a585-297a0609f785",
+            "class_id": "c84f8758-1a58-4be1-a585-297a0609f785",
+            "assigned_by": "5ff160ef-016e-4ab5-aab1-55c7a2ad888f",
+            "assigned_at": "2026-10-25T22:21:43.318215+00:00",
+            "scheduled_for": "2026-10-26",
+            "unlock_at": "2026-10-26T04:00:00+00:00",
+            "status": "assigned",
+            "read_card_at": null,
+            "started_at": null,
+            "completed_at": null,
+            "attempt_session_id": null,
+            "created_at": "2026-10-25T22:21:43.318215+00:00",
+            "updated_at": "2026-10-25T22:21:43.318215+00:00",
+            "question_qids": [],
+            "level": "beginner",
+            "question_count": null
+          },
+          "target": {
+            "scheduled_for": "2026-10-26",
+            "unlock_at": "2026-10-26T04:00:00.000Z"
+          },
+          "identity": [
+            "id",
+            "student_id"
+          ]
+        },
+        {
+          "table": "classroom_items",
+          "before": {
+            "id": "77444822-a7dd-47bd-86be-7ac8afb8d860",
+            "student_id": "c84f8758-1a58-4be1-a585-297a0609f785",
+            "class_id": null,
+            "created_by": "5ff160ef-016e-4ab5-aab1-55c7a2ad888f",
+            "type": "drill",
+            "title": "Missing Links: First Taste",
+            "description": "New guided drill: Missing Links: First Taste",
+            "content_html": null,
+            "content_markdown": null,
+            "source_table": "guided_drill_assignments",
+            "source_id": "14946626-0c4d-4690-90f9-4942b6f66960",
+            "status": "assigned",
+            "unlock_at": "2026-10-26T04:00:00+00:00",
+            "due_at": "2026-11-02T04:59:59+00:00",
+            "completed_at": null,
+            "priority": 0,
+            "visible_to_student": true,
+            "metadata_json": {
+              "work_plan": "charles-session-work-2026-10-25",
+              "assigned_route": "/guided/14946626-0c4d-4690-90f9-4942b6f66960?returnTo=%2Fclassroom",
+              "guided_drill_id": "eef2cdf5-ebef-409a-93b4-05b9c167d035"
+            },
+            "created_at": "2026-10-25T22:21:43.440227+00:00",
+            "updated_at": "2026-10-25T22:21:43.440227+00:00"
+          },
+          "target": {
+            "unlock_at": "2026-10-26T04:00:00.000Z",
+            "due_at": "2026-10-27T03:59:59.000Z"
+          },
+          "identity": [
+            "id",
+            "student_id",
+            "type",
+            "source_id",
+            "source_table"
+          ]
+        }
+      ]
+    }
+  ],
+  "writes": [
+    {
+      "table": "classroom_items",
+      "before": {
+        "id": "77444822-a7dd-47bd-86be-7ac8afb8d860",
+        "student_id": "c84f8758-1a58-4be1-a585-297a0609f785",
+        "class_id": null,
+        "created_by": "5ff160ef-016e-4ab5-aab1-55c7a2ad888f",
+        "type": "drill",
+        "title": "Missing Links: First Taste",
+        "description": "New guided drill: Missing Links: First Taste",
+        "content_html": null,
+        "content_markdown": null,
+        "source_table": "guided_drill_assignments",
+        "source_id": "14946626-0c4d-4690-90f9-4942b6f66960",
+        "status": "assigned",
+        "unlock_at": "2026-10-26T04:00:00+00:00",
+        "due_at": "2026-11-02T04:59:59+00:00",
+        "completed_at": null,
+        "priority": 0,
+        "visible_to_student": true,
+        "metadata_json": {
+          "work_plan": "charles-session-work-2026-10-25",
+          "assigned_route": "/guided/14946626-0c4d-4690-90f9-4942b6f66960?returnTo=%2Fclassroom",
+          "guided_drill_id": "eef2cdf5-ebef-409a-93b4-05b9c167d035"
+        },
+        "created_at": "2026-10-25T22:21:43.440227+00:00",
+        "updated_at": "2026-10-25T22:21:43.440227+00:00"
+      },
+      "target": {
+        "unlock_at": "2026-10-26T04:00:00.000Z",
+        "due_at": "2026-10-27T03:59:59.000Z"
+      },
+      "identity": [
+        "id",
+        "student_id",
+        "type",
+        "source_id",
+        "source_table"
+      ],
+      "after": {
+        "id": "77444822-a7dd-47bd-86be-7ac8afb8d860",
+        "student_id": "c84f8758-1a58-4be1-a585-297a0609f785",
+        "class_id": null,
+        "created_by": "5ff160ef-016e-4ab5-aab1-55c7a2ad888f",
+        "type": "drill",
+        "title": "Missing Links: First Taste",
+        "description": "New guided drill: Missing Links: First Taste",
+        "content_html": null,
+        "content_markdown": null,
+        "source_table": "guided_drill_assignments",
+        "source_id": "14946626-0c4d-4690-90f9-4942b6f66960",
+        "status": "assigned",
+        "unlock_at": "2026-10-26T04:00:00+00:00",
+        "due_at": "2026-10-27T03:59:59+00:00",
+        "completed_at": null,
+        "priority": 0,
+        "visible_to_student": true,
+        "metadata_json": {
+          "work_plan": "charles-session-work-2026-10-25",
+          "assigned_route": "/guided/14946626-0c4d-4690-90f9-4942b6f66960?returnTo=%2Fclassroom",
+          "guided_drill_id": "eef2cdf5-ebef-409a-93b4-05b9c167d035"
+        },
+        "created_at": "2026-10-25T22:21:43.440227+00:00",
+        "updated_at": "2026-10-26T08:50:42.041472+00:00"
+      }
+    }
+  ],
+  "rollback": [],
+  "status": "verified",
+  "readback": [
+    {
+      "table": "guided_drill_assignments",
+      "row": {
+        "id": "14946626-0c4d-4690-90f9-4942b6f66960",
+        "guided_drill_id": "eef2cdf5-ebef-409a-93b4-05b9c167d035",
+        "student_id": "c84f8758-1a58-4be1-a585-297a0609f785",
+        "class_id": "c84f8758-1a58-4be1-a585-297a0609f785",
+        "assigned_by": "5ff160ef-016e-4ab5-aab1-55c7a2ad888f",
+        "assigned_at": "2026-10-25T22:21:43.318215+00:00",
+        "scheduled_for": "2026-10-26",
+        "unlock_at": "2026-10-26T04:00:00+00:00",
+        "status": "assigned",
+        "read_card_at": null,
+        "started_at": null,
+        "completed_at": null,
+        "attempt_session_id": null,
+        "created_at": "2026-10-25T22:21:43.318215+00:00",
+        "updated_at": "2026-10-25T22:21:43.318215+00:00",
+        "question_qids": [],
+        "level": "beginner",
+        "question_count": null
+      }
+    },
+    {
+      "table": "classroom_items",
+      "row": {
+        "id": "77444822-a7dd-47bd-86be-7ac8afb8d860",
+        "student_id": "c84f8758-1a58-4be1-a585-297a0609f785",
+        "class_id": null,
+        "created_by": "5ff160ef-016e-4ab5-aab1-55c7a2ad888f",
+        "type": "drill",
+        "title": "Missing Links: First Taste",
+        "description": "New guided drill: Missing Links: First Taste",
+        "content_html": null,
+        "content_markdown": null,
+        "source_table": "guided_drill_assignments",
+        "source_id": "14946626-0c4d-4690-90f9-4942b6f66960",
+        "status": "assigned",
+        "unlock_at": "2026-10-26T04:00:00+00:00",
+        "due_at": "2026-10-27T03:59:59+00:00",
+        "completed_at": null,
+        "priority": 0,
+        "visible_to_student": true,
+        "metadata_json": {
+          "work_plan": "charles-session-work-2026-10-25",
+          "assigned_route": "/guided/14946626-0c4d-4690-90f9-4942b6f66960?returnTo=%2Fclassroom",
+          "guided_drill_id": "eef2cdf5-ebef-409a-93b4-05b9c167d035"
+        },
+        "created_at": "2026-10-25T22:21:43.440227+00:00",
+        "updated_at": "2026-10-26T08:50:42.041472+00:00"
+      }
+    }
+  ],
+  "audit_file": "C:\\Users\\Joshu\\dev\\ai-os\\students\\charles-moore\\assignments\\charles-before-friday-2026-10-26\\2026-10-26T08-50-42-632Z-reschedule.generated.json"
+}

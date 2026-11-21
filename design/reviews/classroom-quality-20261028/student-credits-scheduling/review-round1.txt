@@ -1,0 +1,118 @@
+{"provider": "claude", "model": "CLI default (unresolved)", "mode": "review", "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\design\\reviews\\classroom-quality-20261028\\student-credits-scheduling\\review-round1\\claudex-4zn7d7t3"}
+{
+  "status": "completed",
+  "mode": "review",
+  "provider": "claude",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "claude",
+    "builder": "codex",
+    "inspector": "claude"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-my-work-20261026",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os\\design\\reviews\\classroom-quality-20261028\\student-credits-scheduling\\PLAN.md",
+  "plan_sha256": "e5239f277a1d965a8270c14a917f429127b6160dc67fc0b13f43474cd1d65dfb",
+  "requested_model": null,
+  "requested_effort": null,
+  "base": null,
+  "snapshot": null,
+  "previous": null,
+  "started_at": 1793226488.4163358,
+  "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\design\\reviews\\classroom-quality-20261028\\student-credits-scheduling\\review-round1\\claudex-4zn7d7t3",
+  "cli_version": "2.1.309 (Claude Code)",
+  "executable": [
+    "C:\\Users\\Joshu\\.local\\bin\\claude.EXE"
+  ],
+  "exit_code": 0,
+  "session_id": "c31eca1e-42d6-4dd3-b005-4a5fa8fa4e2f",
+  "response": {
+    "verdict": "REVISE",
+    "summary": "The plan is mostly sound and its boundaries are good. It reuses the existing writers and the public adapter, and it adds no backend route. I found four gaps that could cause wrong user-facing claims or unsafe behavior. The most important is the new one-click no-pass credit path. Nothing I read gives it an operation receipt, so an unknown outcome can leave the teacher with a wrong \"no sessions added\" message. I did not run any tests.",
+    "findings": [
+      {
+        "id": "F1",
+        "severity": "medium",
+        "path": "src/components/classroom/home/teacher/TeacherAccessBooking.tsx:613-624; src/lib/teacherHomeActions.ts:55-62",
+        "evidence": "The plan makes the no-pass credits mode a single Add N click that calls home_create once. home_create has no operation receipt or idempotency key; only the top-up path does. If the first call succeeds server-side but the response is lost (timeout or network drop), the teacher's retry returns created:false. createHomeBooking then throws pass_exists, and the current handler says 'No sessions were added'. That is false: the first attempt did add them. The plan also says a race 'does not claim added'. It does not say the UI must avoid claiming 'not added'. A teacher who sees 'No sessions were added' will click Add again and double-credit the account.",
+        "fix": "Say in the plan that the created:false copy is neutral: 'A booking pass already exists; review the balance below before adding more.' Drop the 'No sessions were added' wording. After a thrown or unknown create outcome, force a loadHomeBooking readback and then require explicit intent before showing the additive path. Add a test for lost response followed by retry that asserts the copy never claims zero credits were added. Alternatively, give home_create a client operation key. The plan says no new backend, so the neutral copy is the lighter option."
+      },
+      {
+        "id": "F2",
+        "severity": "medium",
+        "path": "src/pages/PublicBooking.tsx:14-28 (plan: publicBookingApi extraction and TeacherScheduleSheet)",
+        "evidence": "The private slug is a bearer capability, and the anon-key adapter has no student-identity binding. The plan validates the slug only as 'https://lsatprep.study/book/<slug>'. It does not require that the slug come from a pass whose student_id matches the selected student and whose status is active. loadHomeBooking's passFrom does check student_id. But the plan keys the card by 'actor+student+pass/slug', and an identity switch during async loads could reuse the previous slug if the generation guard is missed. In that case the teacher would book the old student's pass while the panel shows the new student's name. The confirmation dialog would display the new name, so the mislabel would be real.",
+        "fix": "Derive the slug only from the pass object returned for the current generation and current studentId. Remount the card with a key that includes the pass id. Add a test where student A's load resolves after the switch to B and the book call goes to B's slug or is blocked. Also assert that the book call uses the slug of the student shown in the confirmation."
+      },
+      {
+        "id": "F3",
+        "severity": "low",
+        "path": "src/components/classroom/home/teacher/TeacherAccessBooking.tsx:249-258,297-308",
+        "evidence": "Pending-recovery state auto-selects pending.studentId and locks the picker (disabled={busy || !!pending}). The plan's 'Lock studentpicker' and 'Success disables repeated addition until Add more' do not say how Schedule behaves with a pending or unreadable top-up. Scheduling would not be blocked, but the shared student dropdown is locked to the pending student. Scheduling for another student would be impossible, or it would show the wrong default with no explanation. The plan does not address this.",
+        "fix": "Make Schedule use its own selection state. Do not tie its picker to the credits pending-recovery lock. Add a test covering a pending top-up present while Schedule is opened for a different student."
+      },
+      {
+        "id": "F4",
+        "severity": "low",
+        "path": "src/components/classroom/home/teacher/TeacherAccessBooking.tsx:32-47 (eligibleAccounts/AccountPicker)",
+        "evidence": "The plan asks for 'all eligible student accounts' and an alphabetical dropdown. The roster comes from a loader that I did not trace. If it is paginated or capped, the dropdown silently omits students. The planned tests assert a 'complete' list, but a fixture list cannot detect a production cap. The picker also still shows the student only when s.class_id equals the current value or when the query matches, which is fine. Sorting with locale-sensitive compare on a missing display_name needs a stable tie-break by email or class_id.",
+        "fix": "Check the roster loader's limit and pagination. Either state the cap in the UI ('Showing N of M') or loop until complete. Define the sort key as (display_name || email).toLocaleLowerCase(), then email, then class_id. Test duplicate names."
+      }
+    ],
+    "coverage": [
+      "Read the full TeacherAccessBooking.tsx.",
+      "Read PublicBooking.tsx.",
+      "Read teacherHomeActions.ts lines 25-74 (passFrom, loadHomeBooking, createHomeBooking).",
+      "Grepped CalendlyBookingCard.tsx for BookingApi, theme and the slot loading flow.",
+      "Compared the plan's claims against these sources."
+    ],
+    "limitations": [
+      "Did not read BookingConfirmDialog, BookingView, the roster loader, the edge functions (public-booking, bookingCore, booking-pass-admin) or the SQL (redeem_booking_pass_v2, home_create).",
+      "So server-side idempotency and notification behavior are unverified.",
+      "Did not run tests or the build.",
+      "Reviewed the plan text only; no implementation exists yet to check."
+    ]
+  },
+  "usage": {
+    "input_tokens": 8,
+    "cache_creation_input_tokens": 21683,
+    "cache_read_input_tokens": 57655,
+    "output_tokens": 3719,
+    "output_tokens_details": {
+      "thinking_tokens": 807
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 21683,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2385,
+        "cache_read_input_tokens": 23039,
+        "cache_creation_input_tokens": 3125,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 3125
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "observed_models": [
+    "claude-sonnet-5-5"
+  ],
+  "permission_denials": [],
+  "total_cost_usd": 0.1297035,
+  "elapsed_seconds": 35.76
+}
+
+EXIT_CODE=0

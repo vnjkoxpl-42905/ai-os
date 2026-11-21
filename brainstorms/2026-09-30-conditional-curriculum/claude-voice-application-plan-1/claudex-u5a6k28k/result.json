@@ -1,0 +1,24 @@
+{
+  "status": "failed",
+  "mode": "review",
+  "provider": "claude",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "claude",
+    "builder": "codex",
+    "inspector": "claude"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-conditional-bootcamp",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os\\brainstorms\\2026-09-30-conditional-curriculum\\OPENING-VISUAL-BUILD-REVIEW.md",
+  "plan_sha256": "d920dcb9381be83ae5579a4af553d90a0c5ceec94586f02aca75be4bea9e05a3",
+  "requested_model": null,
+  "requested_effort": null,
+  "base": null,
+  "snapshot": null,
+  "previous": null,
+  "started_at": 1790971706.0215323,
+  "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\brainstorms\\2026-09-30-conditional-curriculum\\claude-voice-application-plan-1\\claudex-u5a6k28k",
+  "error": "Cannot safely launch C:\\Users\\Joshu\\AppData\\Roaming\\npm\\claude.CMD. Put the native CLI executable on PATH.",
+  "elapsed_seconds": 0.05
+}

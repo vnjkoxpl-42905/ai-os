@@ -1,0 +1,128 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="lsatu-interactive-lesson" content="charles-parallel-day1-flaw-v1"><title>Parallel Flaw: Name the Mistake First</title><style>  :root{
+    --cream:#FBF8F1; --ink:#1C1917; --ink-soft:#44403C; --ink-mute:#78716C;
+    --gold:#E8D08B; --gold-deep:#B8983F; --gold-wash:rgba(232,208,139,.16);
+    --card:#FFFFFF; --line:#E7E0D2;
+    --green:#3F6212; --green-wash:rgba(63,98,18,.09);
+    --red:#9F1239; --red-wash:rgba(159,18,57,.07);
+    --serif:"Fraunces","Garamond","Georgia",serif;
+    --sans:"Outfit","Avenir Next","Helvetica Neue",sans-serif;
+    --mono:"JetBrains Mono","SF Mono",Menlo,monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--ink);font-family:var(--sans);line-height:1.65;font-size:17px}
+  .wrap{max-width:800px;margin:0 auto;padding:0 24px}
+
+  header.hero{padding:68px 0 44px;border-bottom:1px solid var(--line)}
+  .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:18px}
+  h1{font-family:var(--serif);font-weight:600;font-size:clamp(36px,6vw,54px);line-height:1.06;letter-spacing:-.01em}
+  .hero p.lede{margin-top:20px;font-size:19px;color:var(--ink-soft);max-width:58ch}
+
+  section{padding:50px 0;border-bottom:1px solid var(--line)}
+  h2{font-family:var(--serif);font-weight:600;font-size:30px;line-height:1.15;margin-bottom:4px}
+  h3{font-family:var(--serif);font-weight:600;font-size:21px;line-height:1.2;margin:30px 0 4px;color:var(--ink)}
+  p{margin:14px 0;color:var(--ink-soft)}
+  p strong{color:var(--ink)}
+  ul{margin:14px 0 14px 22px;color:var(--ink-soft)}
+  ul li{margin:6px 0}
+
+  .callout{background:var(--gold-wash);border-left:3px solid var(--gold-deep);border-radius:0 12px 12px 0;padding:16px 20px;margin:24px 0;font-size:16.5px;color:var(--ink-soft)}
+  .callout strong{color:var(--ink)}
+  .callout p{margin:8px 0}
+
+  ol.steps{margin:20px 0;padding-left:0;list-style:none;counter-reset:step}
+  ol.steps li{counter-increment:step;position:relative;padding:14px 0 14px 54px;border-bottom:1px dashed var(--line);font-size:16px;color:var(--ink-soft)}
+  ol.steps li:last-child{border-bottom:none}
+  ol.steps li::before{content:counter(step);position:absolute;left:0;top:12px;width:34px;height:34px;border-radius:50%;background:var(--ink);color:var(--cream);font-family:var(--serif);display:flex;align-items:center;justify-content:center;font-size:16px}
+  ol.steps li b{color:var(--ink)}
+  ol.steps li span.say{display:block;margin-top:4px}
+
+  table.t{width:100%;border-collapse:collapse;margin:20px 0;font-size:15.5px;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  table.t th{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold-deep);text-align:left;padding:12px 16px;border-bottom:1px solid var(--line)}
+  table.t td{padding:11px 16px;border-bottom:1px dashed var(--line);color:var(--ink-soft);vertical-align:top}
+  table.t tr:last-child td{border-bottom:none}
+  table.t td:first-child{color:var(--ink);font-weight:600;white-space:nowrap}
+
+  .strength{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:22px 0}
+  .strength div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;text-align:center;font-family:var(--serif);font-size:22px;color:var(--ink);box-shadow:0 1px 3px rgba(28,25,23,.06)}
+  .strength div:nth-child(1){border-top:4px solid var(--gold)}
+  .strength div:nth-child(2){border-top:4px solid var(--gold-deep)}
+  .strength div:nth-child(3){border-top:4px solid var(--ink)}
+
+  .diagram{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 22px;margin:20px 0;font-family:var(--serif);font-size:22px;line-height:2;color:var(--ink)}
+  .diagram .ar{color:var(--gold-deep);font-weight:700;margin:0 8px}
+  .neg{position:relative;display:inline-block;padding:0 3px;line-height:1.15}
+  .neg::after{content:"";position:absolute;left:0;right:0;top:0;bottom:0;background:linear-gradient(to bottom left,transparent calc(50% - 1.25px),currentColor calc(50% - 1.25px),currentColor calc(50% + 1.25px),transparent calc(50% + 1.25px))}
+  .quote{font-family:var(--serif);font-size:19px;line-height:1.5;color:var(--ink);border-left:3px solid var(--gold);padding:4px 0 4px 22px;margin:24px 0;font-style:italic}
+  .quote p{color:var(--ink);margin:6px 0}
+
+  .wrong{border:1px solid rgba(159,18,57,.25);background:var(--red-wash);border-radius:12px;padding:12px 16px;margin:10px 0;color:var(--ink-soft)}
+  .wrong b{color:var(--red)}
+
+  .footer-note{padding:34px 0 56px}
+  .mark{font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-mute);opacity:.7}
+  @media (max-width:560px){table.t td:first-child{white-space:normal}.strength{grid-template-columns:1fr}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+  .ok{border:1px solid rgba(63,98,18,.28);background:var(--green-wash);border-radius:12px;padding:12px 16px;margin:10px 0;color:var(--ink-soft)}
+  .ok b{color:var(--green)}
+  details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:10px 0}
+  details summary{cursor:pointer;color:var(--ink)}
+  details p{margin:10px 0 2px}
+</style></head><body>
+<header class="hero"><div class="wrap"><div class="kicker">Monday · Goes with Parallel Flaw + Famous Flaws (Set 2)</div><h1>Parallel Flaw: Name the Mistake First</h1><p class="lede">In a parallel flaw question you are not matching the structure. You are matching the mistake. Say the mistake in one sentence before you look at a single answer.</p></div></header>
+
+<section><div class="wrap"><h2>The job</h2>
+<p>The stimulus is a broken argument. The right answer is a different argument, about a different subject, that breaks in the same place. Two arguments can both be broken and still not be the same broken argument, so "this one also looks bad" is never enough.</p>
+<h3>One example, start to finish</h3>
+<div class="quote"><p>Everyone who works the night shift at the bakery gets free coffee. Dana gets free coffee. So Dana works the night shift at the bakery.</p></div>
+<div class="diagram">
+<div>night shift <span class="ar">→</span> free coffee</div>
+<div>Dana: free coffee</div>
+<div>So: Dana <span class="ar">→</span> night shift</div>
+</div>
+<p><strong>The mistake, in one sentence:</strong> it treats the outcome as proof of the trigger. Other people could get free coffee too, so free coffee does not tell you who works nights.</p>
+<p>Now hold three answers to that sentence.</p>
+<div class="ok"><b>Same mistake.</b> All trains that stop at Elm station are late. This train is late. So it stops at Elm station. <i>The outcome is used as proof of the trigger. Keep it.</i></div>
+<div class="wrong"><b>No mistake at all.</b> All trains that stop at Elm station are late. This train stops at Elm station. So it is late. <i>This one is valid. A flawed stimulus can never be matched by a valid answer. Cut it.</i></div>
+<div class="wrong"><b>A different mistake.</b> If a train stops at Elm station, it is late. This train does not stop at Elm station. So it is not late. <i>This one denies the trigger and concludes the outcome is false. That is a real flaw, but it is not yours. Cut it.</i></div>
+<p>Notice what you did not need: anything about trains or bakeries.</p>
+</div></section>
+
+<section><div class="wrap"><h2>Five mistakes to name on sight</h2>
+<p>If you cannot name the flaw, you will not recognise it when it shows up in a new subject. These five cover most of what you will meet in this set.</p>
+<table class="t"><thead><tr><th>Mistake</th><th>What went wrong</th><th>Sounds like</th></tr></thead><tbody>
+<tr><td>Reversal</td><td>Outcome used as proof of the trigger.</td><td>Every winner trained daily. Sam trained daily. So Sam won.</td></tr>
+<tr><td>Denying the trigger</td><td>The trigger is missing, so the outcome is declared missing too.</td><td>If you study, you pass. Lee did not study. So Lee did not pass.</td></tr>
+<tr><td>Two somes that do not connect</td><td>Two "some" claims joined as if they pointed at the same people.</td><td>Some choir members play piano. Some piano players also play drums. So some choir members play drums.</td></tr>
+<tr><td>Correlation to cause</td><td>Two things go together, so one is said to produce the other.</td><td>Households with a treadmill report better sleep. So treadmills improve sleep.</td></tr>
+<tr><td>Part to whole</td><td>What is true of each piece is claimed for the group.</td><td>Each musician in the band is skilled, so the band will sound great.</td></tr>
+</tbody></table>
+<div class="callout"><p><strong>Check for validity first.</strong> If the stimulus has no flaw, then the right answer has none either. Test the stimulus first: can you reach the conclusion by following the arrows forward? If you can, you are in a valid-argument question and the flaw list does not apply.</p></div>
+</div></section>
+
+<section><div class="wrap"><h2>How to run it</h2>
+<ol class="steps">
+<li><b>Say the mistake in one sentence.</b> Use the words from the table. If it will not fit in a sentence, you have not found it yet.</li>
+<li><b>Cut every answer that has no flaw.</b> This is fast. If you can follow the arrows to the conclusion, the answer is valid and it is gone.</li>
+<li><b>Cut the answers with a different flaw.</b> Reversal does not match denying the trigger, even though both start with "if".</li>
+<li><b>If two answers survive, compare the details.</b> Strength words (<i>all</i> against <i>most</i>), a <i>not</i> that appears in one and not the other, and any extra feature the stimulus never had.</li>
+</ol>
+<p>On the hardest questions the flaw outranks the structure. If one answer commits your exact mistake with a slightly different shape, and another has the exact shape but a different mistake, take the first.</p>
+</div></section>
+
+<section><div class="wrap"><h2>Try it before the drill</h2>
+<p>Name the mistake, then open the answer. One of these has no mistake.</p>
+<h3>1</h3>
+<p>Every employee who passed the safety course may enter the lab. Priya may enter the lab. So Priya passed the safety course.</p>
+<details><summary><b>Open the answer</b></summary><p><strong>Reversal.</strong> Passing the course is enough to enter the lab, and Priya may enter the lab, but that does not show how she got in. Someone else could have been allowed in another way.</p></details>
+<h3>2</h3>
+<p>If the shop is open, the lights are on. The lights are off. So the shop is closed.</p>
+<details><summary><b>Open the answer</b></summary><p><strong>No mistake.</strong> This is the contrapositive. If open leads to lights on, then lights off leads to not open. Do not hunt for a flaw that is not there.</p></details>
+<h3>3</h3>
+<p>Each chapter of the book is short, so the book is short.</p>
+<details><summary><b>Open the answer</b></summary><p><strong>Part to whole.</strong> Many short chapters can make a long book.</p></details>
+</div></section>
+
+<div class="footer-note"><div class="wrap"><span class="mark">LSAT U</span></div></div>
+</body></html>

@@ -1,0 +1,21 @@
+{
+  "registry_entries": 577,
+  "project_skills": 37,
+  "claude_core_names": 12,
+  "claude_successful_skill_calls": 6,
+  "codex_successful_entrypoint_reads": {
+    "second-brain-query": "codex-triggers.jsonl",
+    "second-brain-lint": "codex-triggers.jsonl",
+    "research-deep": "codex-dependencies.jsonl",
+    "bootcamp-parity-audit": "codex-dependencies.jsonl",
+    "karpathy-teach": "codex-dependencies.jsonl",
+    "persona-agent-creator": "codex-persona-path.jsonl"
+  },
+  "silent_native_startup_hooks": 2,
+  "verified_changed_payload_files": 55,
+  "errors": [],
+  "limits": [
+    "Explicit loads and routing samples are not every production workflow.",
+    "Codex description budget remains bounded; no full automatic-selection certification."
+  ]
+}

@@ -1,0 +1,84 @@
+{
+ "qid": "PT158-S2-Q5",
+ "type": "Paradox",
+ "difficulty": "3",
+ "key_db": "E",
+ "stimulus_db": "On the plains where it lives, an individual zebra stands out because of its black-and-white stripes, which contrast with the green or brown of the surrounding vegetation. Yet zebras are a prey species, and the lions that hunt them can see stripes clearly. It seems surprising that zebras would survive with such vivid markings.",
+ "stem_db": "Which one of the following, if true, most adequately resolves the problem raised above?",
+ "choices_db": {
+  "A": "Because the vegetation on the open plains changes from green to brown as the season changes from wet to dry, true camouflage coloring for a prey species would have to change according to the seasons.",
+  "B": "Zebras are able to judge from the demeanor of lions they see in the vicinity whether or not those lions are preparing to hunt, and the zebras ignore the lions that are not.",
+  "C": "Lions that hunt zebras are themselves colored in a way that blends in with the brown color of dry vegetation, so that in the dry season, when prey is scarce, the lions can creep up on their prey to within a distance from which the lions have a favorable chance of succeeding in the hunt.",
+  "D": "When lions hunt, the whole pride shares in the food obtained when a prey animal is successfully brought down by one of the hunting lions.",
+  "E": "When zebras run in a group, as they generally do in response to danger, the stripe markings make it difficult for a predator pursuing a single individual to discern its outline."
+ },
+ "bank": {
+  "stimulus": "On the plains where it lives, an individual zebra stands\n out because of its black-and-white stripes, which contrast\n with the green or brown of the surrounding vegetation.\n Yet zebras are a prey species, and the lions that hunt them\n can see stripes clearly. It seems surprising that zebras\n would survive with such vivid markings.",
+  "stem": "Which one of the following, if true, most adequately\n resolves the problem raised above?",
+  "choices": {
+   "A": "Because the vegetation on the open plains changes from green to brown as the season changes from wet to dry, true camouflage coloring for a prey species would have to change according to the seasons.",
+   "B": "Zebras are able to judge from the demeanor of lions they see in the vicinity whether or not those lions are preparing to hunt, and the zebras ignore the lions that are not.",
+   "C": "Lions that hunt zebras are themselves colored in a way that blends in with the brown color of dry vegetation, so that in the dry season, when prey is scarce, the lions can creep up on their prey to within a distance from which the lions have a favorable chance of succeeding in the hunt.",
+   "D": "When lions hunt, the whole pride shares in the food obtained when a prey animal is successfully brought down by one of the hunting lions.",
+   "E": "When zebras run in a group, as they generally do in response to danger, the stripe markings make it difficult for a predator pursuing a single individual to discern its outline."
+  },
+  "key": "E"
+ },
+ "explanation_id": "6859fbf3-1588-447b-83d8-46678a9776ad",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "85dd1f1a-bb60-40de-8625-a48aa8fcb280",
+   "position": 0,
+   "label": "Given that...",
+   "body": "On the plains where it lives, an individual zebra stands out because of its black-and-white stripes, which contrast with the green or brown of the surrounding vegetation. Zebras are a prey species, and the lions that hunt them can see stripes clearly."
+  },
+  {
+   "row_id": "88deb30d-20a0-45fc-9e99-b522729cbf65",
+   "position": 1,
+   "label": "How can it be that...",
+   "body": "Zebras survive with such vivid markings."
+  },
+  {
+   "row_id": "110085b7-403b-4786-bc1e-5c7e106e110a",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "It seems that the zebra's stripes aren't helping them hide from lions. Instead, the stripes seem to be saying, \"hey Simba, check it out! There's a zebra right here! Lunch time!\" But wait? Can lions see colors? We're told that the black-and-white stripes stand out against the green or brown of vegetation. Would that matter if lions mostly see in black-and-white or shades of gray? What if a lion can \"see stripes clearly,\" but zebra stripes make the zebras look like part of the background. (Fun note: this might be how a tiger's flashy stripes work. They blend in amazingly well with tall brown grasses.) Maybe the stripes don't prevent a lion from seeing a zebra, but the stripe pattern confuses the lion, making it more difficult for a lion to catch a zebra even if it can see one. (Fun fact: sharks are apparently confused by black-and-white stripes, and less likely to bite something which has that pattern.)"
+  },
+  {
+   "row_id": "9756593d-f136-4fa9-8aec-908d9706c158",
+   "position": 3,
+   "label": "Goal",
+   "body": "A correct answer might indicate that a zebra's stripes do help them hide because of some fact about the vision of lions or other predators. A correct answer might also indicate that the stripes help zebras survive in some way other than by making them hard to see."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "8c79fefe-6411-48d4-86e0-698e02c11705",
+   "letter": "A",
+   "body": "This answer notes that vegetation changes from green to brown seasonally, meaning zebra stripes might contrast with green sometimes and brown other times. But this does not help resolve the paradox — it actually reinforces it. Whether the background is green or brown, the black-and-white stripes still contrast with it. The stimulus already established that the stripes contrast with \"the green or brown of the surrounding vegetation.\" Seasonal color changes do not create any period where stripes provide camouflage; they just change which background color the stripes stand out against. This answer makes the visibility problem year-round rather than solving it."
+  },
+  {
+   "row_id": "953c973f-0f8b-486d-a405-81877d62e2ae",
+   "letter": "B",
+   "body": "This answer says zebras can judge whether nearby lions are a threat based on the lions' demeanor. While this is interesting behavioral information, it does not resolve the core paradox. The puzzle is about the stripes: why would a prey animal survive while being highly visible? Being able to assess lion behavior might help zebras decide when to run, but it does not explain how they avoid being caught once a lion decides to hunt. The stripes remain a visibility problem regardless of whether zebras can read lion body language. The paradox is about the evolutionary persistence of conspicuous markings, not about zebras' threat-assessment abilities."
+  },
+  {
+   "row_id": "1c6dd25f-9550-4d8a-84a4-f9839dfa1ca7",
+   "letter": "C",
+   "body": "This answer discusses lions' camouflage — their coloring blends with the brown landscape. But the question is about zebra survival despite zebra conspicuousness, not about lion camouflage. If anything, lions being well-camouflaged makes the paradox worse: it means lions can approach zebras without being seen, making the zebras' own high visibility an even greater disadvantage. Better-hidden predators hunting conspicuous prey should lead to more successful hunts, not fewer. This answer deepens the puzzle rather than resolving it."
+  },
+  {
+   "row_id": "65b2a7ca-2c58-4157-9cb4-d54c71f2cf74",
+   "letter": "D",
+   "body": "This answer describes how lion prides share food from successful kills. But how lions distribute their food after a kill has no bearing on whether zebras survive as a species. Food-sharing behavior might affect individual lions' nutrition or pack dynamics, but it does not change the hunting success rate or explain why conspicuous zebras avoid being caught. The paradox is about zebra survival despite visual conspicuousness during the chase, not about what happens after a kill is made. The distribution of prey after the fact does not address the visibility problem."
+  },
+  {
+   "row_id": "e46b86bc-383f-4018-89f9-4eb554fc7f2f",
+   "letter": "E",
+   "body": "This answer resolves the paradox beautifully. The stimulus establishes that an individual zebra stands out against the background. But this answer reveals that zebras generally run in groups when threatened, and that the stripe markings of many zebras moving together make it difficult for lions to single out an individual target. This transforms the stripes from a liability into a survival mechanism: while one zebra's stripes are conspicuous against the landscape, a herd of zebras' interlocking stripes create visual confusion that protects the group. The conspicuousness of an individual is different from the visual effect of many individuals moving together. Lions may see the herd easily, but they cannot focus on one zebra to chase down — which is what matters for survival. The very feature that makes one zebra visible makes a group of zebras confusing to hunt."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (3.8 em-dashes per 1k words; wrong-answer notes average 94.8 words).",
+ "tags": "pt157-158-register"
+}

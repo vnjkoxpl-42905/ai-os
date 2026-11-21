@@ -1,0 +1,117 @@
+/* D, highlighter. Navy ground for the hero, white page, one marker colour.
+   The motif is the answer-sheet bubble: step numbers, practice choices and the
+   section markers are all circles that fill when you use them. */
+:root{
+  --cream:#FFFFFF; --page:#F5F7FC; --ink:#0B1431; --ink-soft:#2C3556; --ink-mute:#566083;
+  --navy:#0B1431; --navy-2:#17234F;
+  --marker:#D8F54A; --marker-soft:rgba(216,245,74,.38);
+  --cobalt:#2A45F0;
+  --gold:#D8F54A; --gold-deep:#2A45F0; --gold-text:#1F36C8; --gold-wash:rgba(42,69,240,.07);
+  --card:#FFFFFF; --line:#DCE1F0;
+  --green:#14683A; --green-wash:rgba(20,104,58,.10);
+  --red:#B4173D; --red-wash:rgba(180,23,61,.08);
+  --serif:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --mono:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --disp:"Arial Black","Segoe UI Black","Helvetica Neue",system-ui,sans-serif;
+}
+body{background:var(--page);color:var(--ink);font-size:17px;line-height:1.62}
+.wrap{max-width:780px;padding:0 24px}
+
+/* Hero: the whole top of the page is navy, with the title at poster size */
+header.hero{background:var(--navy);color:#fff;border-bottom:0;padding:clamp(44px,9vw,92px) 0 clamp(40px,8vw,76px)}
+.kicker{display:inline-block;font-family:var(--sans);font-weight:800;font-size:13px;letter-spacing:.04em;text-transform:none;
+  color:var(--navy);background:var(--marker);padding:6px 14px;border-radius:999px;margin-bottom:26px}
+h1{font-family:var(--disp);font-weight:900;font-size:clamp(32px,6.6vw,56px);line-height:1.02;letter-spacing:-.035em;color:#fff}
+.hero p.lede{color:#C9D1F2;font-size:clamp(17px,2.2vw,20px);max-width:56ch;margin-top:28px}
+
+/* Sections: a bubble marker leads each heading instead of a rule and a label */
+section{border-bottom:0;padding:clamp(40px,7vw,68px) 0 8px}
+section:last-of-type{padding-bottom:28px}
+.sec-kicker{font-family:var(--sans);font-weight:800;font-size:13px;letter-spacing:.02em;text-transform:none;color:var(--ink);
+  display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.sec-kicker::before{content:"";width:16px;height:16px;border-radius:50%;background:var(--marker);box-shadow:0 0 0 2px var(--navy) inset}
+h2{font-family:var(--disp);font-weight:900;font-size:clamp(27px,5vw,40px);line-height:1.04;letter-spacing:-.03em;margin-bottom:10px}
+p{color:var(--ink-soft)}
+p strong,.steps b{color:var(--ink)}
+em{font-style:normal;background:linear-gradient(transparent 58%,var(--marker) 58%,var(--marker) 92%,transparent 92%);color:var(--ink);padding:0 2px}
+
+/* Callouts: full navy blocks, no side stripe */
+.callout{background:var(--navy);color:#DDE3FA;border:0;border-radius:18px;padding:22px 24px;margin:30px 0;font-size:17px}
+.callout strong{color:#fff}
+.callout em{background:none;color:var(--marker);font-weight:700}
+.callout .tag{font-family:var(--sans);font-weight:800;font-size:12.5px;letter-spacing:.03em;text-transform:none;
+  color:var(--navy);background:var(--marker);padding:4px 11px;border-radius:999px;margin-bottom:12px;display:block;width:max-content;max-width:100%}
+
+/* Kinds: one navy card and one marker card, so the pair reads as a contrast */
+.kinds{gap:16px;margin:32px 0 18px}
+.kind{border:0;border-radius:20px;padding:26px 24px;box-shadow:none}
+.kind .bar{display:none}
+.kind .name{font-family:var(--disp);font-weight:900;font-size:26px;letter-spacing:-.02em}
+.kind.link{background:var(--navy);color:#DDE3FA;--c:#fff}
+.kind.link .name,.kind.link .words b{color:var(--marker)}
+.kind.link .what{color:#DDE3FA}
+.kind.link .words span{color:#B9C3EC}
+.kind.link .test{background:rgba(255,255,255,.08);color:#fff}
+.kind.link .test b{color:var(--marker)}
+.kind.warn{background:var(--marker);color:var(--navy);--c:var(--navy)}
+.kind.warn .name,.kind.warn .words b,.kind.warn .test b{color:var(--navy)}
+.kind.warn .what,.kind.warn .words span{color:#2B3510}
+.kind.warn .test{background:rgba(11,20,49,.09);color:var(--navy)}
+.kind .what{font-size:16.5px}
+.kind .words b,.kind .test b,.opposite b{font-family:var(--sans);font-weight:800;font-size:12.5px;letter-spacing:.03em;text-transform:none}
+.kind .words,.kind .test{border-top:0}
+.kind .test{border-radius:12px}
+
+.opposite{border:0;border-radius:18px;overflow:hidden;gap:0}
+.opposite div{padding:20px 22px;font-size:16px;color:var(--ink-soft)}
+.opposite div:first-child{background:#E5EAFB}
+.opposite div:last-child{background:#EEF0F7}
+.opposite div:first-child b{color:var(--gold-text)}
+.opposite div:last-child b{color:var(--ink)}
+
+/* Steps: answer-sheet bubbles */
+ol.steps li{border-bottom:0;padding:16px 0 16px 62px;font-size:17px}
+ol.steps li::before{top:12px;width:42px;height:42px;background:var(--navy);color:var(--marker);font-family:var(--disp);font-weight:900;font-size:19px;
+  box-shadow:0 0 0 3px var(--page),0 0 0 5px var(--navy)}
+
+/* Flags and quote */
+.flag{font-family:var(--sans);font-weight:800;font-size:14px;background:#fff;color:var(--red);border:2px solid var(--red);padding:5px 14px}
+.quote{font-family:var(--sans);font-style:normal;font-weight:600;font-size:clamp(19px,3vw,23px);line-height:1.4;color:var(--navy);
+  background:var(--marker);border:0;border-radius:18px;padding:24px 26px;margin:34px 0}
+.quote em{background:none;text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:4px}
+
+.rule{font-family:var(--sans);font-weight:800;font-size:19px;color:var(--ink)}
+.rule .ar{color:var(--cobalt)}
+
+/* Practice checks: each choice is a bubble that fills when you tap it */
+.drill{background:#fff;border:2px solid var(--navy);border-radius:20px;box-shadow:none;padding:24px}
+.drill h3{font-family:var(--disp);font-weight:900;font-size:21px;letter-spacing:-.02em}
+.drill p.hint{color:var(--ink-soft);font-size:15px}
+.chips{flex-direction:column;gap:10px}
+.chip{display:block;font-family:var(--sans);font-size:15.5px;font-weight:500;color:var(--ink);background:#fff;border:2px solid var(--line);border-radius:14px;
+  padding:12px 16px 12px 48px;position:relative;line-height:1.45;transition:border-color .15s,background .15s}
+.chip::before{content:"";position:absolute;left:14px;top:13px;width:20px;height:20px;border-radius:50%;border:2px solid var(--navy);background:#fff;transition:background .15s}
+.chip:hover{border-color:var(--navy)}
+.chip.on{border-color:var(--navy)}
+.chip.on::before{background:var(--navy);box-shadow:0 0 0 3px #fff inset}
+.chip .ans{display:none;margin:8px 0 0;font-weight:600;font-size:15px}
+.chip.on .ans{display:block;margin-left:0}
+.chip.on[data-k="describe"]{background:var(--green-wash);border-color:var(--green);color:var(--ink)}
+.chip.on[data-k="describe"] .ans{color:var(--green)}
+.chip.on[data-k="describe"]::before{background:var(--green);border-color:var(--green)}
+.chip.on[data-k="object"]{background:var(--red-wash);border-color:var(--red);color:var(--ink)}
+.chip.on[data-k="object"] .ans{color:var(--red)}
+.chip.on[data-k="object"]::before{background:var(--red);border-color:var(--red)}
+.chip.on[data-k="neutral"]{background:#EEF1FB;border-color:var(--navy);color:var(--ink)}
+.chip.on[data-k="neutral"] .ans{color:var(--gold-text)}
+.chip:focus-visible{outline:3px solid var(--cobalt);outline-offset:2px}
+
+/* Tables (reference page) */
+table.t{border-collapse:separate;border-spacing:0;border:2px solid var(--navy);border-radius:16px;overflow:hidden;background:#fff}
+table.t th{font-family:var(--sans);font-weight:800;font-size:12.5px;letter-spacing:.02em;text-transform:none;color:var(--marker);background:var(--navy);border-bottom:0}
+table.t td{border-bottom:1px solid var(--line)}
+table.t tr:last-child td{border-bottom:0}
+
+.footer-note{background:var(--navy);margin-top:56px;padding:30px 0 40px}
+.mark{font-family:var(--disp);font-weight:900;font-size:15px;letter-spacing:.08em;color:var(--marker)}

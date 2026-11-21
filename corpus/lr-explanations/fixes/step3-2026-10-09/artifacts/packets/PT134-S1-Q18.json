@@ -1,0 +1,66 @@
+{
+ "qid": "PT134-S1-Q18",
+ "type": "Must Be True",
+ "difficulty": "2",
+ "key_db": "B",
+ "stimulus_db": "Traffic engineers have increased the capacity of the Krakkenbak Bridge to handle rush-hour traffic flow. The resultant increase in rush-hour traffic flow would not have occurred had the city not invested in computer modeling technology last year at the request of the city’s mayor, and the city’s financial predicament would not have been resolved if the traffic flow across the bridge during rush hour had not been increased.",
+ "stem_db": "Which one of the following can be properly inferred from the information above?",
+ "choices_db": {
+  "A": "The city's financial predicament would not have been resolved had the city chosen a competing computer modeling software package.",
+  "B": "The city's financial predicament would not have been resolved had the city not invested in computer modeling technology.",
+  "C": "On an average day, more traffic crosses the Krakkenbak Bridge this year as compared to last year.",
+  "D": "Traffic flow across the Krakkenbak Bridge during rush hour would not have increased had the city's mayor not made investing in computer modeling technology the highest budgetary priority last year.",
+  "E": "The city's mayor was a proponent of investing in computer modeling technology because of the city's need to increase traffic flow across the Krakkenbak Bridge during rush hour."
+ },
+ "bank": {
+  "stimulus": "Traffic engineers have increased the capacity of the Krakkenbak Bridge to handle rush-hour traffic flow. The resultant increase in rush-hour traffic flow would not have occurred had the city not invested in computer modeling technology last year at the request of the city's mayor, and the city's financial predicament would not have been resolved if the traffic flow across the bridge during rush hour had not been increased.",
+  "stem": "Which one of the following can be properly inferred from the information above?",
+  "choices": {
+   "A": "The city's financial predicament would not have been resolved had the city chosen a competing computer modeling software package.",
+   "B": "The city's financial predicament would not have been resolved had the city not invested in computer modeling technology.",
+   "C": "On an average day, more traffic crosses the Krakkenbak Bridge this year as compared to last year.",
+   "D": "Traffic flow across the Krakkenbak Bridge during rush hour would not have increased had the city's mayor not made investing in computer modeling technology the highest budgetary priority last year.",
+   "E": "The city's mayor was a proponent of investing in computer modeling technology because of the city's need to increase traffic flow across the Krakkenbak Bridge during rush hour."
+  },
+  "key": "B"
+ },
+ "explanation_id": "cbdecbe8-ae3b-4bf8-8309-586d3c924c8c",
+ "style": "single",
+ "steps": [
+  {
+   "row_id": "62e9e508-cfd4-498b-a0cc-3bea52e84382",
+   "position": 0,
+   "label": "Explanation",
+   "body": "The resultant **increase** ~ICM → ↑~TF\n**in rush-hour traffic**\n**flow** would not have\noccurred had the city\nnot **invested in**\n**computer modeling**\n**technology** last year.\n\nThe city's **financial** ↑~TF → ~RFP\n**predicament would**\n**not have been**\n**resolved** if the **traffic**\n**flow** across the\nbridge during rush\nhour had **not been**\n**increased**."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "902c891c-a96b-4bce-93cd-f97e934d9689",
+   "letter": "A",
+   "body": "A competing computer modeling software package is not discussed."
+  },
+  {
+   "row_id": "5880ae4a-e75e-4d9e-87a7-1b8d3b654680",
+   "letter": "B",
+   "body": "This follows the 1st ~ICM → ~↑TF\nand 2nd statements. ~↑TF → ~RFP\n~ICM → ~RFP"
+  },
+  {
+   "row_id": "857f0842-9bec-472d-a187-7738d81adba7",
+   "letter": "C",
+   "body": "Could be false. We only know about the flow of traffic during rush hour. It’s possible that the flow of traffic during non-peak traffic has decreased enough that the daily average could have decreased as well. Furthermore, we don’t know how long the bridge has been completed. Comparing this year with last year would require knowing when the bridge was completed."
+  },
+  {
+   "row_id": "43195df6-1964-4a96-95fe-fca99bdca1d3",
+   "letter": "D",
+   "body": "We don’t know that the mayor made investing in computer modeling technology the highest budgetary priority last year."
+  },
+  {
+   "row_id": "07175d96-eacd-448c-ba5b-1efeca7a15fc",
+   "letter": "E",
+   "body": "While we know the mayor was a proponent of computer modeling technology, we do not know why."
+  }
+ ],
+ "known_problem": "No breakdown on a conditional chain; correct note is a bare diagram; C note wanders into when the bridge was built.",
+ "tags": "no-breakdown; verdict-only; thin-correct-note; damage; very-short"
+}

@@ -1,0 +1,16 @@
+
+ RUN  v3.2.7 C:/Users/Joshu/dev/ai-os-projects/lsatu-my-work-20261026
+
+ ✓ src/lib/edgeFunctionError.test.ts (8 tests) 13ms
+ ✓ src/lib/publicBookingApi.test.ts (15 tests) 17ms
+ ✓ src/components/booking/BookingConfirmDialog.test.tsx (3 tests) 706ms
+   ✓ BookingConfirmDialog > shows success when the booking commits even if the follow-up refresh fails  479ms
+ ✓ src/components/booking/CalendlyBookingCard.test.tsx (2 tests) 981ms
+   ✓ CalendlyBookingCard > keeps the next month open so a student can select its available dates  670ms
+   ✓ offers only server days in local date order and confirms the selected student's identity  309ms
+
+ Test Files  4 passed (4)
+      Tests  28 passed (28)
+   Start at  18:53:03
+   Duration  5.17s (transform 868ms, setup 1.02s, collect 3.40s, tests 1.72s, environment 6.29s, prepare 1.01s)
+

@@ -15,7 +15,7 @@ One folder per student, holding **everything** about them (D2, locked 2026-07-16
 
 ## Current students
 
-- [[adriana-varea/adriana-varea|Adriana Varea]] · [[amanda/amanda|Amanda]] · [[asia/asia|Asia]] · [[avneet-natt/avneet-natt|Avneet Natt]] · [[celia-cutler/celia-cutler|Celia Cutler]] · [[charles-moore/charles-moore|Charles Moore]] · [[dakota/dakota|Dakota]] · [[david-salgado/david-salgado|David Salgado]] · [[ethan/ethan|Ethan]] · [[favour/favour|Favour]] · [[fernande-charleus/fernande-charleus|Fernande Charleus]] · [[gianna/gianna|Gianna Jean]] · [[ivory-johnson/ivory-johnson|Ivory Johnson]] · [[nicole/nicole|Nicole]] · [[ore/ore|Ore]] · [[sandra/sandra|Sandra Kooh]] · [[sofia/sofia|Sofia]] · [[steven-morris/steven-morris|Steven Morris]] · [[venusa-laveaux/venusa-laveaux|Venusa Laveaux]] · [[vinay-kalva/vinay-kalva|Vinay Kalva]] · [[whit-wilson/whit-wilson|Whit Wilson]] · [[yahunatan-zetvy/yahunatan-zetvy|Yahunatan Zetvy]] · [[zeina-borji/zeina-borji|Zeina Borji]]
+- [[adriana-varea/adriana-varea|Adriana Varea]] · [[amanda/amanda|Amanda]] · [[asia/asia|Asia]] · [[avneet-natt/avneet-natt|Avneet Natt]] · [[celia-cutler/celia-cutler|Celia Cutler]] · [[charles-moore/charles-moore|Charles Moore]] · [[dakota/dakota|Dakota]] · [[david-salgado/david-salgado|David Salgado]] · [[ethan/ethan|Ethan]] · [[favour/favour|Favour]] · [[fernande-charleus/fernande-charleus|Fernande Charleus]] · [[gianna/gianna|Gianna Jean]] · [[ivory-johnson/ivory-johnson|Ivory Johnson]] · [[lanae/lanae|Lanae]] · [[nicole/nicole|Nicole]] · [[ore/ore|Ore]] · [[sandra/sandra|Sandra Kooh]] · [[sara-altuwaijri/sara-altuwaijri|Sara Altuwaijri]] · [[sofia/sofia|Sofia]] · [[steven-morris/steven-morris|Steven Morris]] · [[venusa-laveaux/venusa-laveaux|Venusa Laveaux]] · [[vinay-kalva/vinay-kalva|Vinay Kalva]] · [[whit-wilson/whit-wilson|Whit Wilson]] · [[yahunatan-zetvy/yahunatan-zetvy|Yahunatan Zetvy]] · [[zeina-borji/zeina-borji|Zeina Borji]]
 
 **Taught in the last month** (2026-08-08 to 2026-09-08, transcripts pulled 2026-09-08): Celia Cutler (6), Adriana Varea (5), Steven Morris (4), Sofia (2), Vinay Kalva (2), Yahunatan Zetvy (2), Asia (1), Charles Moore (1), Fernande Charleus (1), Whit Wilson (1).
 
@@ -28,7 +28,7 @@ Live in [[non-students/CLAUDE|non-students/]] as of 2026-09-10. Records preserve
 Every file in a student folder is one of two kinds, and the distinction decides what a rebuild may overwrite:
 
 - **Primary — the brain is the only home.** Transcripts, teaching notes, judgments, prep briefs, study plans, anything Joshua or an agent authored about the student. **Never regenerate, never overwrite; retain forever.**
-- **Mirror — a projection of a live backend.** Session/booking state (Cal.com + Google Calendar), homework/dossier/publish state (LSAT U Supabase), payment events (Stripe), correspondence indexes (Gmail). On any disagreement the backend wins, silently.
+- **Mirror — a projection of a live backend.** Session/booking state (Cal.com + Google Calendar), homework/dossier/publish state (LSAT U Supabase), payment events (Stripe), correspondence indexes (Gmail). On disagreement, the verified backend governs operational state. Preserve and report the discrepancy with its evidence rather than silently erasing a conflicting primary record.
 
 **Convention:** mirror files MUST be named `*.generated.md` (or carry `generated: true` frontmatter). A file without that marker is primary by definition and must be treated as precious. Pre-2026-07-16 files (`email-context.md`, `payment-links.md`, `transcripts.md`) predate the marker — treat as primary until individually re-derived and renamed. No Markdown file here is ever the source of operational truth — no package balances, no running totals (all services are paid upfront; Cal.com answers sessions-used).
 
@@ -47,10 +47,15 @@ This is the target layout, not a checklist to satisfy with empty files. Create a
 - `transcript-downloads/` — preserved local exports of Gemini notes (source evidence; do not hand-edit). A raw export here is not itself a completed session package.
 - `sessions/YYYY-MM-DD-session-name/` — new self-contained session packages.
 - `assignment-log.md` — running log of assigned work and notification evidence so repeats are avoided (primary).
+- `assigned-work/` — every assigned note as HTML plus a dated index of everything assigned, one subfolder per note with its session transcript links. Mirror of the LSAT U export; the backend wins. Built so far for [[sofia/assigned-work/README|Sofia]] and [[celia-cutler/assigned-work/README|Celia Cutler]].
 - `Practice_Test_Reports/` — the student's PT score reports as received (intake form, screenshots, exports). Raw evidence — read for diagnosis, never edit.
 - `Student_Specific_Homework/` — work assigned to this student specifically. Distinct from the shared banks in `corpus/Curriculum/*/Homework/`, which are the source material it draws from.
 
 ## Conventions
+
+### Connect a student observation to shared teaching knowledge
+
+Use [tutoring diagnosis](../corpus/tutoring-diagnosis.md) as a hypothesis framework when reviewing an actual session or score report. Keep what the person said or did, Joshua's judgment and the resulting follow-up in their own teaching notes and open loops. Link the appropriate shared [corpus method](../corpus/index.md), including the recovered [RC recall check](<../corpus/Curriculum/Reading Comprehension/Notes/cumulative-translation-review.md>) when evidence supports it. Apply [Joshua's teaching voice standard](../references/lsat-teaching-voice-standard.md) to student-facing adaptations. A general source never establishes a diagnosis, assignment or commitment by itself.
 
 - New student → new folder `students/<slug>/` with a `<slug>.md` profile page.
 - A consultation followed by a subsequent student session establishes onboarding. Check the Calendar sequence and identity before creating the folder; record any uncertainty about attendance or contact aliases. Consultation-only records stay in `_other-sessions/`.
@@ -61,7 +66,7 @@ This is the target layout, not a checklist to satisfy with empty files. Create a
 - Session summaries are append-only. Later corrections go in a dated correction section and never erase the original summary.
 - Generated operational state is clearly marked with `generated: true` and never overrides primary teaching records.
 - Wikilink student pages into corpus concepts and LSAT U material as they become relevant.
-- Tier A note: transcripts and correspondence are trackable (Tier-A amendment, 2026-07-16). True secrets (credentials, IDs, payment instruments) still never enter Git — `private/` only.
+- Tier A note: transcripts and correspondence are trackable (Tier-A amendment, 2026-07-16). True secrets never enter Git: credentials and bank/account information belong in the git-ignored root `.env`; government IDs stay outside this OS. There is no `private/` storage tier. See [current handling policy](../wiki/HANDLING.md).
 
 ## Internal routing contract after each session
 

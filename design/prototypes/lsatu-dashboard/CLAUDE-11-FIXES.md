@@ -1,0 +1,8 @@
+# Fix round 1 of 2, Claude 11
+
+Keep the design. Fix only the two verified enlarged-text defects, plus document the fix in your generation README. You own the same new-generation files; host has copied assets hash-identical and run checks. Do not edit assets or external files. Model remains Claude Opus5.5 medium. Do not spend time invoking denied shell commands; host will run proofs.
+
+1. Important: Home tools intrinsic overflow at200% root text. At390px the finder/quick actions extend to x436.6; at320px document width433. style.css116-122 and410. .head-tools uses an implicit auto grid track, .finder span nowrap and mobile quick-actions two fixed columns with nowrap controls. Use minmax(0,1fr) track containment and intrinsic whole-control wrapping/stacking, plus a wrapping finder label. Do not simply hide overflow, shrink text or clip labels.
+2. Important: statement-track fixed12columns (style.css151-152) creates23px cells with30px-wide labels10-12 at200%. Allow intrinsic minimum cell width and fewer columns or sensible wrapping at enlarged text while preserving ordered1-12, five done and next6. Check both light saved-progress and dark resume variants conceptually. Do not replace with unlabeled ticks.
+
+Native independent Codex reviewer inspected all4 authored files, compared10, viewed7renders and ran64 local student route/layout cases; no additional high-confidence defects. Host syntax pass,21 feature groups pass after markup-adapted selectors, main13 interaction checks nearly complete. Screenshots will be recaptured after animations finish; initial mid-fade captures are not runtime bugs. No production evidence. Keep the new design direction otherwise unchanged.

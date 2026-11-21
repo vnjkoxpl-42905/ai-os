@@ -4,6 +4,10 @@ description: Suite of tools for creating elaborate, multi-component claude.ai HT
 license: Complete terms in LICENSE.txt
 ---
 
+## Current AI OS execution contract
+
+Select a sibling application project before initializing dependencies. Build and run meaningful interaction checks before presenting completion; the old no-test/default-cwd examples are not the current contract.
+
 # Web Artifacts Builder
 
 To build powerful frontend claude.ai artifacts, follow these steps:
@@ -11,7 +15,7 @@ To build powerful frontend claude.ai artifacts, follow these steps:
 2. Develop your artifact by editing the generated code
 3. Bundle all code into a single HTML file using `scripts/bundle-artifact.sh`
 4. Display artifact to user
-5. (Optional) Test the artifact
+5. Test the relevant behavior before presenting it as working
 
 **Stack**: React 18 + TypeScript + Vite + Parcel (bundling) + Tailwind CSS + shadcn/ui
 
@@ -23,9 +27,9 @@ VERY IMPORTANT: To avoid what is often referred to as "AI slop", avoid using exc
 
 ### Step 1: Initialize Project
 
-Run the initialization script to create a new React project:
+Resolve this skill's absolute support-script paths and use an isolated sibling application directory under `../ai-os-projects/`. Do not initialize app dependencies in the Obsidian vault or assume scripts exist in cwd. The following Bash examples require an available Bash runtime; use the supported host shell otherwise. Run initialization from that verified sibling parent:
 ```bash
-bash scripts/init-artifact.sh <project-name>
+bash "<verified-skill-directory>/scripts/init-artifact.sh" <project-name>
 cd <project-name>
 ```
 
@@ -46,7 +50,7 @@ To build the artifact, edit the generated files. See **Common Development Tasks*
 
 To bundle the React app into a single HTML artifact:
 ```bash
-bash scripts/bundle-artifact.sh
+bash "<verified-skill-directory>/scripts/bundle-artifact.sh"
 ```
 
 This creates `bundle.html` - a self-contained artifact with all JavaScript, CSS, and dependencies inlined. This file can be directly shared in Claude conversations as an artifact.
@@ -63,11 +67,9 @@ This creates `bundle.html` - a self-contained artifact with all JavaScript, CSS,
 
 Finally, share the bundled HTML file in conversation with the user so they can view it as an artifact.
 
-### Step 5: Testing/Visualizing the Artifact (Optional)
+### Step 5: Verify before claiming completion
 
-Note: This is a completely optional step. Only perform if necessary or requested.
-
-To test/visualize the artifact, use available tools (including other Skills or built-in tools like Playwright or Puppeteer). In general, avoid testing the artifact upfront as it adds latency between the request and when the finished artifact can be seen. Test later, after presenting the artifact, if requested or if issues arise.
+Run the generated project's relevant build/checks. Inspect the bundled artifact and exercise its core interaction/state when interactive, including responsive/keyboard checks where material. A successful bundle alone is not proof the UI works. If browser testing is unavailable, state that limitation and present the output with the checks actually observed; do not defer essential checks solely to reduce latency.
 
 ## Reference
 

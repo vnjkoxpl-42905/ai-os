@@ -1,0 +1,78 @@
+{
+ "qid": "PT157-S3-Q21",
+ "type": "Must Be True",
+ "difficulty": "5",
+ "key_db": "E",
+ "stimulus_db": "Orator: Moral excellence can be achieved only by repeatedly overcoming inclinations to do the wrong thing. Overcoming these inclinations is often difficult to do, even for a morally virtuous person, but the only way to become a morally virtuous person is through the achievement of moral excellence.",
+ "stem_db": "Which one of the following is a conclusion that follows logically from the orator's statements?",
+ "choices_db": {
+  "A": "A morally virtuous person is incapable of doing the wrong thing.",
+  "B": "Most people who achieve moral excellence are morally virtuous.",
+  "C": "Someone who has no inclination to do anything that is wrong has achieved moral excellence.",
+  "D": "Someone who is not morally virtuous is incapable of achieving moral excellence.",
+  "E": "Every morally virtuous person has been inclined to do something that is wrong."
+ },
+ "bank": {
+  "stimulus": "Orator: Moral excellence can be achieved only by\n repeatedly overcoming inclinations to do the\n wrong thing. Overcoming these inclinations is\n often difficult to do, even for a morally virtuous\n person, but the only way to become a morally\n virtuous person is through the achievement of\n moral excellence.",
+  "stem": "Which one of the following is a conclusion that follows\n logically from the orator’s statements?",
+  "choices": {
+   "A": "A morally virtuous person is incapable of doing the wrong thing.",
+   "B": "Most people who achieve moral excellence are morally virtuous.",
+   "C": "Someone who has no inclination to do anything that is wrong has achieved moral excellence.",
+   "D": "Someone who is not morally virtuous is incapable of achieving moral excellence.",
+   "E": "Every morally virtuous person has been inclined to do something that is wrong."
+  },
+  "key": "E"
+ },
+ "explanation_id": "acf5a37a-c0a7-4910-8f91-92c7d1fddb64",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "0d45798d-2be6-440a-9948-b9e95fcd763f",
+   "position": 0,
+   "label": "Given",
+   "body": "Moral excellence can be achieved only by repeatedly overcoming inclinations to do the wrong thing. `moral excel → overcome` Overcoming these inclinations is often difficult to do, even for a morally virtuous person. The only way to become a morally virtuous person is through the achievement of moral excellence. `moral virtue → moral excel`"
+  },
+  {
+   "row_id": "0646e18d-1d86-4c60-ae80-2d65c5eeb4ef",
+   "position": 1,
+   "label": "Evaluate",
+   "body": "By connecting the final statement to the first statement, we can infer that if someone becomes a morally virtuous person, they have repeatedly overcome inclinations to do the wrong thing. `moral virtue → overcome`. We're also told that overcoming inclinations to do the wrong thing is often difficult to do. From this, we can infer that becoming a morally virtuous person is often difficult to do."
+  },
+  {
+   "row_id": "8c07262c-c721-42c3-81b4-9d63b4592b86",
+   "position": 2,
+   "label": "Goal",
+   "body": "Expect the correct answer to involve one of these two inferences that we made by connecting the statements."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "359f5471-9a11-49ad-b15b-d90fb2b92f99",
+   "letter": "A",
+   "body": "The stimulus says morally virtuous people have repeatedly overcome inclinations to do wrong — not that they are incapable of doing wrong. Overcoming an inclination means resisting a desire, which is entirely different from being unable to act on it. A person who repeatedly resists the urge to speed is not incapable of speeding. The word \"incapable\" introduces an absolute that the premises do not support."
+  },
+  {
+   "row_id": "42bb6b2d-beab-49fc-b9c4-76c1d00f8e19",
+   "letter": "B",
+   "body": "From the premises, we know that moral virtue requires moral excellence. This means all morally virtuous people have achieved moral excellence. We can infer that some people who achieve moral excellence are morally virtuous. But we cannot infer that most people who achieve moral excellence are morally virtuous. There could be many people who achieve moral excellence without becoming morally virtuous — perhaps moral excellence is necessary but not sufficient on its own. \"Most\" exceeds what the premises logically guarantee."
+  },
+  {
+   "row_id": "3fdb242d-e172-451f-af5e-fb59d81aec5d",
+   "letter": "C",
+   "body": "The first premise says moral excellence requires repeatedly overcoming inclinations to do wrong. The contrapositive is: if someone has not repeatedly overcome inclinations to do wrong, they have not achieved moral excellence. This answer says someone with no inclination to do wrong has achieved moral excellence — which is neither the original conditional nor its contrapositive. Someone with no inclinations to do wrong has no inclinations to overcome, which means they have not met the condition for moral excellence. If anything, this answer contradicts the premises."
+  },
+  {
+   "row_id": "9be247ed-fc55-4508-95d0-2bc60ce62bf3",
+   "letter": "D",
+   "body": "The third premise says moral virtue requires moral excellence (moral virtue leads to moral excellence). The contrapositive is: no moral excellence leads to no moral virtue. This answer negates both sides without reversing: not morally virtuous leads to incapable of moral excellence. That is an illegal negation — from \"virtue requires excellence,\" we cannot conclude \"lack of virtue prevents excellence.\" Someone who is not yet morally virtuous could still achieve moral excellence; they just have not yet become virtuous through it."
+  },
+  {
+   "row_id": "9f4ef585-edda-41b5-b5ea-61fc558935a1",
+   "letter": "E",
+   "body": "Chain the premises: moral virtue requires moral excellence, and moral excellence requires repeatedly overcoming inclinations to do wrong. Therefore, every morally virtuous person has repeatedly overcome inclinations to do wrong. To overcome an inclination, one must first have that inclination. Therefore, every morally virtuous person has been inclined to do something wrong. This follows necessarily from the premises — there is no way to be morally virtuous without having had wrong inclinations to overcome."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (9.7 em-dashes per 1k words; wrong-answer notes average 77.2 words).",
+ "tags": "emdash-heavy; pt157-158-register; possible-misquote"
+}

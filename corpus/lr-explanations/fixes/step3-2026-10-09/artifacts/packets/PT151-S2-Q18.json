@@ -1,0 +1,84 @@
+{
+ "qid": "PT151-S2-Q18",
+ "type": "Strengthen",
+ "difficulty": "5",
+ "key_db": "A",
+ "stimulus_db": "In grasslands near the Namib Desert there are \"fairy circles\"—large, circular patches that are entirely devoid of vegetation. Since sand termite colonies were found in every fairy circle they investigated, scientists hypothesize that it is the burrowing activities of these termites that cause the circles to form.",
+ "stem_db": "Which one of the following, if true, most supports the scientists' hypothesis?",
+ "choices_db": {
+  "A": "Dying grass plants within newly forming fairy circles are damaged only at the roots.",
+  "B": "The grasses that grow around fairy circles are able to survive even the harshest and most prolonged droughts in the region.",
+  "C": "The soil in fairy circles typically has higher water content than the soil in areas immediately outside the circles.",
+  "D": "Fairy circles tend to form in areas that already have numerous other fairy circles.",
+  "E": "Species of animals that feed on sand termites are often found living near fairy circles."
+ },
+ "bank": {
+  "stimulus": "In grasslands near the Namib Desert there are “fairy\ncircles”—large, circular patches that are entirely devoid\nof vegetation. Since sand termite colonies were found in\nevery fairy circle they investigated, scientists hypothesize\nthat it is the burrowing activities of these termites that\ncause the circles to form.",
+  "stem": "Which one of the following, if true, most supports the\nscientists’ hypothesis?",
+  "choices": {
+   "A": "Dying grass plants within newly forming fairy circles are damaged only at the roots.",
+   "B": "The grasses that grow around fairy circles are able to survive even the harshest and most prolonged droughts in the region.",
+   "C": "The soil in fairy circles typically has higher water content than the soil in areas immediately outside the circles.",
+   "D": "Fairy circles tend to form in areas that already have numerous other fairy circles.",
+   "E": "Species of animals that feed on sand termites are often found living near fairy circles."
+  },
+  "key": "A"
+ },
+ "explanation_id": "2c740851-68ba-436e-9c57-0270961cf176",
+ "style": "single",
+ "steps": [
+  {
+   "row_id": "cd7154ad-a0b5-4f67-9603-8a0fefeafae1",
+   "position": 0,
+   "label": "Conclusion",
+   "body": "Sand termite burrowing causes fairy circles to form."
+  },
+  {
+   "row_id": "0a2eb3e4-5b21-4a54-bfd2-088618899396",
+   "position": 1,
+   "label": "Evidence",
+   "body": "Sand termite colonies were found in every investigated fairy circle."
+  },
+  {
+   "row_id": "d5c60ec9-d4f0-449d-8a11-fcd64e106be4",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "The argument leans on a correlation. To strengthen, link the actual damage pattern to termite burrowing."
+  },
+  {
+   "row_id": "5668f31e-b8b2-47c6-aaa7-dbda3d15aafe",
+   "position": 3,
+   "label": "Goal",
+   "body": "Pick the answer that shows fairy-circle damage is consistent with termite burrowing activity."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "d540d41c-5d8b-42a1-9a4d-e3be97e07978",
+   "letter": "A",
+   "body": "Damage only at the roots fits termite burrowing — an underground cause matching the proposed mechanism."
+  },
+  {
+   "row_id": "4e806131-402b-4ff5-98b5-a4efa3fdc276",
+   "letter": "B",
+   "body": "Drought-resistant surrounding grasses cut against, not for, the termite hypothesis."
+  },
+  {
+   "row_id": "196b41ce-3a18-49e4-bca3-bf43f98b204c",
+   "letter": "C",
+   "body": "Higher water content does not specifically implicate termite burrowing as the cause."
+  },
+  {
+   "row_id": "6e724bd5-ff7e-4170-a32f-3cccdaaf74d6",
+   "letter": "D",
+   "body": "Clustering is consistent with many causes; it does not specifically support termites."
+  },
+  {
+   "row_id": "a7b0f695-c43c-420a-a187-694d6e1ed1dd",
+   "letter": "E",
+   "body": "Predators near circles only re-confirms termite presence; it does not show termite burrowing causes the circles."
+  }
+ ],
+ "known_problem": "d5 Strengthen in 115 words; B note says drought-resistant grass cuts against termites, when it rules out drought as a rival cause.",
+ "tags": "short-breakdown; verdict-only; thin-correct-note; thin-notes; very-short"
+}

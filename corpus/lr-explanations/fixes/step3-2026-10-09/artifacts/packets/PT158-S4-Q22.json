@@ -1,0 +1,84 @@
+{
+ "qid": "PT158-S4-Q22",
+ "type": "Weaken",
+ "difficulty": "5",
+ "key_db": "E",
+ "stimulus_db": "Historian: Because medieval epistemology (theory of knowledge) is a complex subject, intellectual historians have, until recently, failed to produce a definition that would help to determine what should and what should not be included in it. Clearly, the solution is to define medieval epistemology simply as \"the epistemological beliefs of the medieval epistemologists.\" That way, if we want to know whether medieval epistemology includes some epistemological claim, we just ask whether any medieval epistemologists believed it. If any did, it is part of medieval epistemology; if any medieval epistemologists believed the opposite, then that opposite claim is part of medieval epistemology.",
+ "stem_db": "Which one of the following, if true, would most weaken the historian's argument?",
+ "choices_db": {
+  "A": "Medieval epistemologists held some of the same epistemological beliefs as did ancient epistemologists.",
+  "B": "The epistemological beliefs of medieval epistemologists depended upon their beliefs about nonepistemological matters.",
+  "C": "The writings of most medieval epistemologists include passages that are clearly not about epistemology.",
+  "D": "Some medieval epistemologists had epistemological beliefs that contradicted the epistemological beliefs of other medieval epistemologists.",
+  "E": "There is much debate as to which medieval thinkers, if any, were epistemologists."
+ },
+ "bank": {
+  "stimulus": "Historian: Because medieval epistemology (theory of\n knowledge) is a complex subject, intellectual\n historians have, until recently, failed to produce\n a definition that would help to determine what\n should and what should not be included in\n it. Clearly, the solution is to define medieval\n epistemology simply as “the epistemological\n beliefs of the medieval epistemologists.” That\n way, if we want to know whether medieval\n epistemology includes some epistemological\n claim, we just ask whether any medieval\n epistemologists believed it. If any did, it is part\n of medieval epistemology; if any medieval\n epistemologists believed the opposite, then that\n opposite claim is part of medieval epistemology.",
+  "stem": "Which one of the following, if true, would most weaken\n the historian’s argument?",
+  "choices": {
+   "A": "Medieval epistemologists held some of the same epistemological beliefs as did ancient epistemologists.",
+   "B": "The epistemological beliefs of medieval epistemologists depended upon their beliefs about nonepistemological matters.",
+   "C": "The writings of most medieval epistemologists include passages that are clearly not about epistemology.",
+   "D": "Some medieval epistemologists had epistemological beliefs that contradicted the epistemological beliefs of other medieval epistemologists.",
+   "E": "There is much debate as to which medieval thinkers, if any, were epistemologists."
+  },
+  "key": "E"
+ },
+ "explanation_id": "bc99369b-8d3d-451e-9228-15efe84d9372",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "b297870f-c027-4cf8-9986-89f93ab41452",
+   "position": 0,
+   "label": "Conclusion",
+   "body": "Medieval epistemology should be defined as \"the epistemological beliefs of the medieval epistemologists.\""
+  },
+  {
+   "row_id": "99121926-d49a-415e-a029-61f6329177ef",
+   "position": 1,
+   "label": "Evidence",
+   "body": "If any medieval epistemologists believed claim X, then we'll say \"medieval epistemology believed X\".\nIf any medieval epistemologists believed claim X was false, then we'll say \"medieval epistemology did not believe X\"."
+  },
+  {
+   "row_id": "92039a68-223d-42f3-9bd9-b5a531bf5340",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "This definition only works if we can pick out the medieval epistemologists first. How would we know who they are? Presumably they're the thinkers who did medieval epistemology. But that's the very thing we're trying to define.\nNotice what is NOT a problem for the author: disagreement. He already says that if one epistemologist believed X and another believed the opposite, both claims count. So contradictions among epistemologists don't hurt his plan."
+  },
+  {
+   "row_id": "7d3ea25e-dd71-4ada-937c-ae04e2252a50",
+   "position": 3,
+   "label": "Goal",
+   "body": "Look for an answer that makes it hard to identify who the medieval epistemologists were. If we can't pick them out, the definition gives us nothing to work with.\nWatch out for answers about epistemologists contradicting each other. The author built that into his plan, so it doesn't weaken it."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "3f5c68c4-8737-490f-b41b-1ca69027a118",
+   "letter": "A",
+   "body": "Whether medieval epistemologists shared beliefs with ancient epistemologists concerns the originality of their ideas, not the applicability of the proposed definition. Even if every belief they held was borrowed from antiquity, the definition still functions — you would identify the medieval epistemologists, catalog their beliefs, and end up with a medieval epistemology that mirrors the ancient version. Overlapping content between eras does not make the definition impossible to apply. This answer addresses the content of medieval epistemology, not the workability of the definition itself."
+  },
+  {
+   "row_id": "01678eae-d0c8-4317-8851-790c8b1813a1",
+   "letter": "B",
+   "body": "This answer reveals that medieval epistemologists' beliefs were shaped by non-epistemological factors such as politics and religion. While historically illuminating, this does not challenge the proposed definition. The definition instructs us to identify medieval epistemologists and catalog their epistemological beliefs. The causes of those beliefs are irrelevant to this process. Even if every position they held was motivated by religious dogma rather than pure philosophical inquiry, those positions are still their epistemological beliefs. Knowing why they believed what they believed does not prevent us from identifying what they believed."
+  },
+  {
+   "row_id": "2ab8be91-6574-4c5d-b0dc-d80bbe02a89e",
+   "letter": "C",
+   "body": "This answer points out that medieval epistemologists wrote about topics beyond epistemology, meaning their works contain mixed content. The implication is that applying the definition would require separating epistemological from non-epistemological material. But this is a manageable editorial task, not a fatal flaw. Scholars regularly distinguish between a thinker's epistemological claims and their ethical, metaphysical, or theological writings. The definition does not require that medieval epistemologists wrote only about epistemology — just that their epistemological beliefs can be identified within their broader work. The truly devastating weakness would be one showing the definition is logically impossible to apply, not merely that it requires careful reading."
+  },
+  {
+   "row_id": "28029a1b-b551-46c4-93ea-97824d1d5775",
+   "letter": "D",
+   "body": "If medieval epistemologists held contradictory beliefs, the proposed definition would simply produce a body of thought containing internal disagreements. But this is entirely normal for any intellectual tradition. Modern epistemology, ethics, physics — every discipline contains competing viewpoints among its practitioners. The definition explicitly accounts for this: if one epistemologist believed X and another believed the opposite, both are included. Internal contradiction is a feature of the definition, not a bug. This answer describes a consequence the historian already anticipated and accepted, not a problem that undermines the definition's applicability."
+  },
+  {
+   "row_id": "6ed8926a-96f2-4261-831b-8f6ed4b064c7",
+   "letter": "E",
+   "body": "This answer exposes the definition's fatal circularity. The definition says: medieval epistemology consists of the beliefs held by medieval epistemologists. To apply it, you must first identify who the medieval epistemologists were. But this answer reveals that there is significant scholarly debate about which medieval thinkers qualify as epistemologists. Resolving that debate requires a clear understanding of what medieval epistemology encompasses — the very thing the definition is supposed to provide. The result is a vicious circle: you need the definition's output (what medieval epistemology is) to generate its input (who the medieval epistemologists were). Without independent criteria for identifying medieval epistemologists, the definition cannot get off the ground."
+  }
+ ],
+ "known_problem": "Breakdown Goal predicts the contradiction objection (choice D); the D note then calls contradictions \"a feature\". Key E is right; the breakdown points students at the wrong answer.",
+ "tags": "emdash-heavy; pt157-158-register"
+}

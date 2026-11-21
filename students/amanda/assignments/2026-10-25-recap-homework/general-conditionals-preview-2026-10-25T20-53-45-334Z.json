@@ -1,0 +1,17 @@
+{
+  "checked_at": "2026-10-25T20:53:45.332Z",
+  "commit": "6a167c8555b4a404334310aad48a5d748b1b0861",
+  "dry_run": true,
+  "args": [
+    "--student",
+    "amhuynh@asu.edu",
+    "--activity",
+    "General Conditionals",
+    "--due",
+    "2026-11-01",
+    "--dry-run"
+  ],
+  "source_sha256": "22b750577cf9bcddb635ef91a352c89303dde7a5100974ce9e4337f5fdc091e5",
+  "output": "\nassign: no Activity matches \"General Conditionals\".\n\nCommand failed: C:\\Program Files\\nodejs\\node.exe node_modules/vite-node/vite-node.mjs scripts/.ai-os-assign.generated.ts -- --student amhuynh@asu.edu --activity General Conditionals --due 2026-11-01 --dry-run\nassign: no Activity matches \"General Conditionals\".\n",
+  "success": false
+}

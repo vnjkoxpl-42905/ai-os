@@ -1,0 +1,1360 @@
+{
+  "date": "2026-10-24",
+  "scope": {
+    "projects_root": "C:\\Users\\Joshu\\dev\\ai-os-projects",
+    "downloads_root": "C:\\Users\\Joshu\\Downloads",
+    "excluded_traversal": [
+      "node_modules",
+      ".git internals",
+      ".env",
+      "private data",
+      "nested dependencies"
+    ],
+    "limitations": "All sibling top-level directories classified from names plus available root README/package/license metadata. Dependency trees, app source bodies, git state, remote freshness and authentication not audited. Downloads inventory limited to design/dashboard/motion matching folders."
+  },
+  "counts": {
+    "excluded": 6,
+    "general": 6,
+    "design-resource": 7,
+    "design-project": 47
+  },
+  "project_directory_count": 58,
+  "records": [
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\.conditional-reconcile-runtime",
+      "classification": "excluded",
+      "reason": "Operational scratch/runtime checkout; not a reusable design library. Top-level metadata inventoried only.",
+      "readme": null,
+      "license": "No top-level license found; do not assume redistribution rights.",
+      "license_paths": [],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\.conditional-reconcile-runtime\\package.json"
+      ],
+      "package_name": null,
+      "description": null,
+      "root_instructions": [],
+      "git_marker": true,
+      "readme_excerpt": ""
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\.lsatu-booking-messages-20261014",
+      "classification": "excluded",
+      "reason": "Operational scratch/runtime checkout; not a reusable design library. Top-level metadata inventoried only.",
+      "readme": "C:\\Users\\Joshu\\dev\\ai-os-projects\\.lsatu-booking-messages-20261014\\README.md",
+      "license": "No top-level license found; do not assume redistribution rights.",
+      "license_paths": [],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\.lsatu-booking-messages-20261014\\README.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\.lsatu-booking-messages-20261014\\package.json"
+      ],
+      "package_name": "vite_react_shadcn_ts",
+      "description": null,
+      "root_instructions": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\.lsatu-booking-messages-20261014\\AGENTS.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\.lsatu-booking-messages-20261014\\CLAUDE.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\.lsatu-booking-messages-20261014\\DESIGN.md"
+      ],
+      "git_marker": true,
+      "readme_excerpt": "# LSAT U\n\nPremium ed-tech web app: React 18 + Vite 5 + TypeScript + Tailwind + shadcn/ui, with a Supabase backend (Edge Functions), hosted on Lovable.\n\nFor full architecture, commands, and conventions, see [CLAUDE.md](./CLAUDE.md).\n\n## Fast locator\n\n- Code repo root (this project): `/Users/joshuaf/ai-os/projects/lsatu`\n- Vault root (the `~/ai-os` directory IS the Obsidian vault): `/Users/joshuaf/ai-os`\n- Live vault knowledge: `/Users/joshuaf/ai-os/wiki/`, `/Users/joshuaf/ai-os/students/`, `/Users/joshuaf/ai-os/corpus/`\n- Pre-2026-07-16 LSATU product knowledge (archived, read-only): `/Users/joshuaf/ai-os/archive/wiki-pre-rebuild-2026-07-16/domains/lsat-u/`\n\n(Older notes may point at `~/Docume"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\.lsatu-ops",
+      "classification": "excluded",
+      "reason": "Operational scratch/runtime checkout; not a reusable design library. Top-level metadata inventoried only.",
+      "readme": "C:\\Users\\Joshu\\dev\\ai-os-projects\\.lsatu-ops\\README.md",
+      "license": "No top-level license found; do not assume redistribution rights.",
+      "license_paths": [],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\.lsatu-ops\\README.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\.lsatu-ops\\package.json"
+      ],
+      "package_name": "vite_react_shadcn_ts",
+      "description": null,
+      "root_instructions": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\.lsatu-ops\\AGENTS.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\.lsatu-ops\\CLAUDE.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\.lsatu-ops\\DESIGN.md"
+      ],
+      "git_marker": true,
+      "readme_excerpt": "# LSAT U\n\nPremium ed-tech web app: React 18 + Vite 5 + TypeScript + Tailwind + shadcn/ui, with a Supabase backend (Edge Functions), hosted on Lovable.\n\nFor full architecture, commands, and conventions, see [CLAUDE.md](./CLAUDE.md).\n\n## Fast locator\n\n- Code repo root (this project): `/Users/joshuaf/ai-os/projects/lsatu`\n- Vault root (the `~/ai-os` directory IS the Obsidian vault): `/Users/joshuaf/ai-os`\n- Live vault knowledge: `/Users/joshuaf/ai-os/wiki/`, `/Users/joshuaf/ai-os/students/`, `/Users/joshuaf/ai-os/corpus/`\n- Pre-2026-07-16 LSATU product knowledge (archived, read-only): `/Users/joshuaf/ai-os/archive/wiki-pre-rebuild-2026-07-16/domains/lsat-u/`\n\n(Older notes may point at `~/Docume"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\.lsatu-ops-gianna",
+      "classification": "excluded",
+      "reason": "Operational scratch/runtime checkout; not a reusable design library. Top-level metadata inventoried only.",
+      "readme": "C:\\Users\\Joshu\\dev\\ai-os-projects\\.lsatu-ops-gianna\\README.md",
+      "license": "No top-level license found; do not assume redistribution rights.",
+      "license_paths": [],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\.lsatu-ops-gianna\\README.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\.lsatu-ops-gianna\\package.json"
+      ],
+      "package_name": "vite_react_shadcn_ts",
+      "description": null,
+      "root_instructions": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\.lsatu-ops-gianna\\AGENTS.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\.lsatu-ops-gianna\\CLAUDE.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\.lsatu-ops-gianna\\DESIGN.md"
+      ],
+      "git_marker": true,
+      "readme_excerpt": "# LSAT U\n\nPremium ed-tech web app: React 18 + Vite 5 + TypeScript + Tailwind + shadcn/ui, with a Supabase backend (Edge Functions), hosted on Lovable.\n\nFor full architecture, commands, and conventions, see [CLAUDE.md](./CLAUDE.md).\n\n## Fast locator\n\n- Code repo root (this project): `/Users/joshuaf/ai-os/projects/lsatu`\n- Vault root (the `~/ai-os` directory IS the Obsidian vault): `/Users/joshuaf/ai-os`\n- Live vault knowledge: `/Users/joshuaf/ai-os/wiki/`, `/Users/joshuaf/ai-os/students/`, `/Users/joshuaf/ai-os/corpus/`\n- Pre-2026-07-16 LSATU product knowledge (archived, read-only): `/Users/joshuaf/ai-os/archive/wiki-pre-rebuild-2026-07-16/domains/lsat-u/`\n\n(Older notes may point at `~/Docume"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\.lsatu-ops-sandra",
+      "classification": "excluded",
+      "reason": "Operational scratch/runtime checkout; not a reusable design library. Top-level metadata inventoried only.",
+      "readme": "C:\\Users\\Joshu\\dev\\ai-os-projects\\.lsatu-ops-sandra\\README.md",
+      "license": "No top-level license found; do not assume redistribution rights.",
+      "license_paths": [],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\.lsatu-ops-sandra\\README.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\.lsatu-ops-sandra\\package.json"
+      ],
+      "package_name": "vite_react_shadcn_ts",
+      "description": null,
+      "root_instructions": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\.lsatu-ops-sandra\\AGENTS.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\.lsatu-ops-sandra\\CLAUDE.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\.lsatu-ops-sandra\\DESIGN.md"
+      ],
+      "git_marker": true,
+      "readme_excerpt": "# LSAT U\n\nPremium ed-tech web app: React 18 + Vite 5 + TypeScript + Tailwind + shadcn/ui, with a Supabase backend (Edge Functions), hosted on Lovable.\n\nFor full architecture, commands, and conventions, see [CLAUDE.md](./CLAUDE.md).\n\n## Fast locator\n\n- Code repo root (this project): `/Users/joshuaf/ai-os/projects/lsatu`\n- Vault root (the `~/ai-os` directory IS the Obsidian vault): `/Users/joshuaf/ai-os`\n- Live vault knowledge: `/Users/joshuaf/ai-os/wiki/`, `/Users/joshuaf/ai-os/students/`, `/Users/joshuaf/ai-os/corpus/`\n- Pre-2026-07-16 LSATU product knowledge (archived, read-only): `/Users/joshuaf/ai-os/archive/wiki-pre-rebuild-2026-07-16/domains/lsat-u/`\n\n(Older notes may point at `~/Docume"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\.lsatu-publish-rule",
+      "classification": "excluded",
+      "reason": "Operational scratch/runtime checkout; not a reusable design library. Top-level metadata inventoried only.",
+      "readme": "C:\\Users\\Joshu\\dev\\ai-os-projects\\.lsatu-publish-rule\\README.md",
+      "license": "No top-level license found; do not assume redistribution rights.",
+      "license_paths": [],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\.lsatu-publish-rule\\README.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\.lsatu-publish-rule\\package.json"
+      ],
+      "package_name": "vite_react_shadcn_ts",
+      "description": null,
+      "root_instructions": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\.lsatu-publish-rule\\AGENTS.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\.lsatu-publish-rule\\CLAUDE.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\.lsatu-publish-rule\\DESIGN.md"
+      ],
+      "git_marker": true,
+      "readme_excerpt": "# LSAT U\n\nPremium ed-tech web app: React 18 + Vite 5 + TypeScript + Tailwind + shadcn/ui, with a Supabase backend (Edge Functions), hosted on Lovable.\n\nFor full architecture, commands, and conventions, see [CLAUDE.md](./CLAUDE.md).\n\n## Fast locator\n\n- Code repo root (this project): `/Users/joshuaf/ai-os/projects/lsatu`\n- Vault root (the `~/ai-os` directory IS the Obsidian vault): `/Users/joshuaf/ai-os`\n- Live vault knowledge: `/Users/joshuaf/ai-os/wiki/`, `/Users/joshuaf/ai-os/students/`, `/Users/joshuaf/ai-os/corpus/`\n- Pre-2026-07-16 LSATU product knowledge (archived, read-only): `/Users/joshuaf/ai-os/archive/wiki-pre-rebuild-2026-07-16/domains/lsat-u/`\n\n(Older notes may point at `~/Docume"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\antigravity-sdk-python",
+      "classification": "general",
+      "reason": "General tooling or source retrieval; relevant when needed but outside design library scope.",
+      "readme": "C:\\Users\\Joshu\\dev\\ai-os-projects\\antigravity-sdk-python\\README.md",
+      "license": "Local license present; inspect terms.",
+      "license_paths": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\antigravity-sdk-python\\LICENSE"
+      ],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\antigravity-sdk-python\\README.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\antigravity-sdk-python\\pyproject.toml",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\antigravity-sdk-python\\LICENSE"
+      ],
+      "package_name": null,
+      "description": null,
+      "root_instructions": [],
+      "git_marker": true,
+      "readme_excerpt": "# Google Antigravity SDK\n\nThe Google Antigravity SDK is a Python SDK for building AI agents powered by\nAntigravity and Gemini. It provides a secure, scalable, and stateful\ninfrastructure layer that abstracts the agentic loop, letting you focus on what\nyour agent *does* rather than how it runs.\n\n## Installation\n\n```sh\npip install google-antigravity\n```\n\n> [!IMPORTANT]\n> The Google Antigravity SDK relies on a compiled runtime binary that is\n> included in the platform-specific wheels published to\n> [PyPI](https://pypi.org/project/google-antigravity/). **Cloning this\n> repository alone is not sufficient to run the SDK.** Always install from\n> PyPI with `pip install google-antigravity` to obtain "
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\canvas-ui",
+      "classification": "design-resource",
+      "reason": "Reusable component, visual reference, font, or design-discovery source.",
+      "readme": "C:\\Users\\Joshu\\dev\\ai-os-projects\\canvas-ui\\README.md",
+      "license": "MIT + Commons Clause; read local restrictions before reuse.",
+      "license_paths": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\canvas-ui\\LICENSE.md"
+      ],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\canvas-ui\\README.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\canvas-ui\\package.json",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\canvas-ui\\LICENSE.md"
+      ],
+      "package_name": "canvasui",
+      "description": null,
+      "root_instructions": [],
+      "git_marker": true,
+      "readme_excerpt": "<div align=\"center\">\n\n<a href=\"https://canvasui.dev\">\n  <img src=\".github/readme.gif\" alt=\"Canvas UI\" width=\"100%\" />\n</a>\n\n<br />\n<br />\n\n<p>\n  <b>An open source library of creative, framework-agnostic components drawn on canvas.</b><br />\n  Fluid simulations, shader effects, and 3D scenes that run over your live, fully interactive interface. WebGL or WebGPU via vgpu, your choice.\n</p>\n\n<p>\n  <a href=\"https://canvasui.dev\"><b>canvasui.dev</b></a> ·\n  <a href=\"https://canvasui.dev/docs\">Docs</a> ·\n  <a href=\"https://canvasui.dev/components\">Components</a> ·\n  <a href=\"https://canvasui.dev/playground\">Playground</a> ·\n  <a href=\"https://canvasui.dev/docs/installation\">Installation</a> ·\n  <a "
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\claudex-loop",
+      "classification": "general",
+      "reason": "General tooling or source retrieval; relevant when needed but outside design library scope.",
+      "readme": "C:\\Users\\Joshu\\dev\\ai-os-projects\\claudex-loop\\README.md",
+      "license": "MIT.",
+      "license_paths": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\claudex-loop\\LICENSE"
+      ],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\claudex-loop\\README.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\claudex-loop\\LICENSE"
+      ],
+      "package_name": null,
+      "description": null,
+      "root_instructions": [],
+      "git_marker": true,
+      "readme_excerpt": "<div align=\"center\">\n<img src=\"assets/logo.svg\" alt=\"CLAUDEX LOOP\" width=\"719\">\n\n### Skills for working across Claude Code and Codex.\n\n[![Stars](https://img.shields.io/github/stars/chaseai-yt/claudex-loop?style=flat&color=e8590c)](https://github.com/chaseai-yt/claudex-loop/stargazers)\n[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)\n</div>\n\nThis repository contains separate skills for choosing a model, making a one-off handoff, and running a complete development workflow. They share a repository and plugin distribution; **Claudex Route is independent of the Claudex Loop workflow**.\n\n| Skill | Use it for | Dependencies |\n|---|---|---|\n| [`claudex-route`](skills/"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\conditional-and-or-video-20261019",
+      "classification": "design-project",
+      "reason": "Application or visual production project; use for project context and examples, not as a globally installed component library.",
+      "readme": "C:\\Users\\Joshu\\dev\\ai-os-projects\\conditional-and-or-video-20261019\\README.md",
+      "license": "No top-level license found; do not assume redistribution rights.",
+      "license_paths": [],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\conditional-and-or-video-20261019\\README.md"
+      ],
+      "package_name": null,
+      "description": null,
+      "root_instructions": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\conditional-and-or-video-20261019\\AGENTS.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\conditional-and-or-video-20261019\\CLAUDE.md"
+      ],
+      "git_marker": true,
+      "readme_excerpt": "# Chapter 2 (And/Or) lesson films\n\nThree 60 to 90 second narrated films for the lessons in `lsatu-and-or-20261019`:\n\n| Folder | Lesson | App file names |\n|---|---|---|\n| `both-or-either/` | 2.1 Both, or at least one | `both-or-either.mp4` `.vtt` `.jpg` |\n| `group-placement/` | 2.2 Where the group sits | `group-placement.mp4` `.vtt` `.jpg` |\n| `whole-group-negation/` | 2.3 Deny the whole group | `whole-group-negation.mp4` `.vtt` `.jpg` |\n\nProvenance and what was and was not reused: `PROVENANCE.md`. Teaching standards are not restated here; they live in the vault\n(`bootcamp-builder/references/teaching-preferences.md`, \"Gold standard: the Contrapositive lesson page\").\n\n## What is authored where"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\contrapositive-video",
+      "classification": "design-project",
+      "reason": "Application or visual production project; use for project context and examples, not as a globally installed component library.",
+      "readme": "C:\\Users\\Joshu\\dev\\ai-os-projects\\contrapositive-video\\README.md",
+      "license": "No top-level license found; do not assume redistribution rights.",
+      "license_paths": [],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\contrapositive-video\\README.md"
+      ],
+      "package_name": null,
+      "description": null,
+      "root_instructions": [],
+      "git_marker": true,
+      "readme_excerpt": "# Contrapositive lecture video\n\nBrief lecture video for the Conditional Bootcamp contrapositive lesson. Built with HyperFrames (HTML to MP4), narrated with local Kokoro.\n\nInterview and decisions: `C:\\Users\\Joshu\\dev\\ai-os\\brainstorms\\2026-10-12-contrapositive-video-from-latest-clip.md`\n\n## Setup (done 2026-10-12)\n\n- HyperFrames CLI 0.8.149 runs through `npx hyperframes@latest`. `doctor` passes for Node, FFmpeg, FFprobe and Chrome (headless shell cached in `~/.cache/puppeteer`).\n- Kokoro voice lives in `.venv` (kokoro-onnx, soundfile). HyperFrames must be pointed at it:\n\n```bash\nexport HYPERFRAMES_PYTHON=\"$PWD/.venv/Scripts/python.exe\"\nnpx hyperframes@latest tts \"text\" -o out.wav -v am_adam\n`"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\dashboard-design-assets",
+      "classification": "design-resource",
+      "reason": "Reusable component, visual reference, font, or design-discovery source.",
+      "readme": null,
+      "license": "No top-level license found; do not assume redistribution rights.",
+      "license_paths": [],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [],
+      "package_name": null,
+      "description": null,
+      "root_instructions": [],
+      "git_marker": true,
+      "readme_excerpt": ""
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\dashboard-design-lab",
+      "classification": "design-project",
+      "reason": "Application or visual production project; use for project context and examples, not as a globally installed component library.",
+      "readme": "C:\\Users\\Joshu\\dev\\ai-os-projects\\dashboard-design-lab\\README.md",
+      "license": "No top-level license found; do not assume redistribution rights.",
+      "license_paths": [],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\dashboard-design-lab\\README.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\dashboard-design-lab\\package.json"
+      ],
+      "package_name": "dashboard-design-lab",
+      "description": null,
+      "root_instructions": [],
+      "git_marker": true,
+      "readme_excerpt": "# Local design lab\n\nIndependent React + Vite + TypeScript workspace. This is a neutral component harness, not an approved homepage design. No unfinished dashboard files were copied in.\n\n```powershell\ncd C:/Users/Joshu/dev/ai-os-projects/dashboard-design-lab\nnpm run dev\n```\n\nOpen http://127.0.0.1:5187. Edit `src/main.tsx` and `src/styles.css`. Dependencies are already installed. `npm run build` typechecks and builds; `npm run preview` serves the build at http://127.0.0.1:5188.\n\nInstalled: React 18, Tailwind 3, GSAP, Motion (`motion/react`), Framer Motion compatibility, Lucide, Tabler. Animation is opt-in and respects reduced-motion preferences. Add specialized effect dependencies only when a "
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\godly-mcp-server",
+      "classification": "design-resource",
+      "reason": "Reusable component, visual reference, font, or design-discovery source.",
+      "readme": "C:\\Users\\Joshu\\dev\\ai-os-projects\\godly-mcp-server\\README.md",
+      "license": "No top-level license found; do not assume redistribution rights.",
+      "license_paths": [],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\godly-mcp-server\\README.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\godly-mcp-server\\package.json"
+      ],
+      "package_name": "godly-mcp-server",
+      "description": "Read-only MCP for searching public Godly design collections and site details.",
+      "root_instructions": [],
+      "git_marker": true,
+      "readme_excerpt": "# Godly MCP Server\n\nA local, read-only MCP server that searches Godly.Design's publicly listed collections and retrieves a site's public detail page. It uses the site's published collection pages and sitemap, not private endpoints or browser cookies. Requests are rate-limited and cached in memory for five minutes.\n\n## Tools\n\n- `godly_search`: search current public listings across websites, apps, templates, posts, tools, resources, logos, icons, OG images, and section collections. Filter by collection such as `hero`, `cta`, or `footer`.\n- `godly_get_site`: retrieve a public Godly website detail page, including its description, outbound website URL, and publicly listed screenshot/section image"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\karpathy-method-tools",
+      "classification": "general",
+      "reason": "General tooling or source retrieval; relevant when needed but outside design library scope.",
+      "readme": null,
+      "license": "No top-level license found; do not assume redistribution rights.",
+      "license_paths": [],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [],
+      "package_name": null,
+      "description": null,
+      "root_instructions": [],
+      "git_marker": true,
+      "readme_excerpt": ""
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lr-recall-instructions-video",
+      "classification": "design-project",
+      "reason": "Application or visual production project; use for project context and examples, not as a globally installed component library.",
+      "readme": null,
+      "license": "No top-level license found; do not assume redistribution rights.",
+      "license_paths": [],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lr-recall-instructions-video\\package.json"
+      ],
+      "package_name": "lr-recall-instructions-video",
+      "description": null,
+      "root_instructions": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lr-recall-instructions-video\\AGENTS.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lr-recall-instructions-video\\CLAUDE.md"
+      ],
+      "git_marker": true,
+      "readme_excerpt": ""
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu",
+      "classification": "design-project",
+      "reason": "Application or visual production project; use for project context and examples, not as a globally installed component library.",
+      "readme": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu\\README.md",
+      "license": "No top-level license found; do not assume redistribution rights.",
+      "license_paths": [],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu\\README.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu\\package.json"
+      ],
+      "package_name": "vite_react_shadcn_ts",
+      "description": null,
+      "root_instructions": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu\\AGENTS.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu\\CLAUDE.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu\\DESIGN.md"
+      ],
+      "git_marker": true,
+      "readme_excerpt": "# LSAT U\n\nPremium ed-tech web app: React 18 + Vite 5 + TypeScript + Tailwind + shadcn/ui, with a Supabase backend (Edge Functions), hosted on Lovable.\n\nFor full architecture, commands, and conventions, see [CLAUDE.md](./CLAUDE.md).\n\n## Fast locator\n\n- Code repo root (this project): `/Users/joshuaf/ai-os/projects/lsatu`\n- Vault root (the `~/ai-os` directory IS the Obsidian vault): `/Users/joshuaf/ai-os`\n- Live vault knowledge: `/Users/joshuaf/ai-os/wiki/`, `/Users/joshuaf/ai-os/students/`, `/Users/joshuaf/ai-os/corpus/`\n- Pre-2026-07-16 LSATU product knowledge (archived, read-only): `/Users/joshuaf/ai-os/archive/wiki-pre-rebuild-2026-07-16/domains/lsat-u/`\n\n(Older notes may point at `~/Docume"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-abstract",
+      "classification": "design-project",
+      "reason": "Application or visual production project; use for project context and examples, not as a globally installed component library.",
+      "readme": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-abstract\\README.md",
+      "license": "No top-level license found; do not assume redistribution rights.",
+      "license_paths": [],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-abstract\\README.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-abstract\\package.json"
+      ],
+      "package_name": "vite_react_shadcn_ts",
+      "description": null,
+      "root_instructions": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-abstract\\AGENTS.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-abstract\\CLAUDE.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-abstract\\DESIGN.md"
+      ],
+      "git_marker": true,
+      "readme_excerpt": "# LSAT U\n\nPremium ed-tech web app: React 18 + Vite 5 + TypeScript + Tailwind + shadcn/ui, with a Supabase backend (Edge Functions), hosted on Lovable.\n\nFor full architecture, commands, and conventions, see [CLAUDE.md](./CLAUDE.md).\n\n## Fast locator\n\n- Code repo root (this project): `/Users/joshuaf/ai-os/projects/lsatu`\n- Vault root (the `~/ai-os` directory IS the Obsidian vault): `/Users/joshuaf/ai-os`\n- Live vault knowledge: `/Users/joshuaf/ai-os/wiki/`, `/Users/joshuaf/ai-os/students/`, `/Users/joshuaf/ai-os/corpus/`\n- Pre-2026-07-16 LSATU product knowledge (archived, read-only): `/Users/joshuaf/ai-os/archive/wiki-pre-rebuild-2026-07-16/domains/lsat-u/`\n\n(Older notes may point at `~/Docume"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-and-or-20261019",
+      "classification": "design-project",
+      "reason": "Application or visual production project; use for project context and examples, not as a globally installed component library.",
+      "readme": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-and-or-20261019\\README.md",
+      "license": "No top-level license found; do not assume redistribution rights.",
+      "license_paths": [],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-and-or-20261019\\README.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-and-or-20261019\\package.json"
+      ],
+      "package_name": "vite_react_shadcn_ts",
+      "description": null,
+      "root_instructions": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-and-or-20261019\\AGENTS.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-and-or-20261019\\CLAUDE.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-and-or-20261019\\DESIGN.md"
+      ],
+      "git_marker": true,
+      "readme_excerpt": "# LSAT U\n\nPremium ed-tech web app: React 18 + Vite 5 + TypeScript + Tailwind + shadcn/ui, with a Supabase backend (Edge Functions), hosted on Lovable.\n\nFor full architecture, commands, and conventions, see [CLAUDE.md](./CLAUDE.md).\n\n## Fast locator\n\n- Code repo root (this project): `/Users/joshuaf/ai-os/projects/lsatu`\n- Vault root (the `~/ai-os` directory IS the Obsidian vault): `/Users/joshuaf/ai-os`\n- Live vault knowledge: `/Users/joshuaf/ai-os/wiki/`, `/Users/joshuaf/ai-os/students/`, `/Users/joshuaf/ai-os/corpus/`\n- Pre-2026-07-16 LSATU product knowledge (archived, read-only): `/Users/joshuaf/ai-os/archive/wiki-pre-rebuild-2026-07-16/domains/lsat-u/`\n\n(Older notes may point at `~/Docume"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-and-or-baseline-20261019",
+      "classification": "design-project",
+      "reason": "Application or visual production project; use for project context and examples, not as a globally installed component library.",
+      "readme": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-and-or-baseline-20261019\\README.md",
+      "license": "No top-level license found; do not assume redistribution rights.",
+      "license_paths": [],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-and-or-baseline-20261019\\README.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-and-or-baseline-20261019\\package.json"
+      ],
+      "package_name": "vite_react_shadcn_ts",
+      "description": null,
+      "root_instructions": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-and-or-baseline-20261019\\AGENTS.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-and-or-baseline-20261019\\CLAUDE.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-and-or-baseline-20261019\\DESIGN.md"
+      ],
+      "git_marker": true,
+      "readme_excerpt": "# LSAT U\n\nPremium ed-tech web app: React 18 + Vite 5 + TypeScript + Tailwind + shadcn/ui, with a Supabase backend (Edge Functions), hosted on Lovable.\n\nFor full architecture, commands, and conventions, see [CLAUDE.md](./CLAUDE.md).\n\n## Fast locator\n\n- Code repo root (this project): `/Users/joshuaf/ai-os/projects/lsatu`\n- Vault root (the `~/ai-os` directory IS the Obsidian vault): `/Users/joshuaf/ai-os`\n- Live vault knowledge: `/Users/joshuaf/ai-os/wiki/`, `/Users/joshuaf/ai-os/students/`, `/Users/joshuaf/ai-os/corpus/`\n- Pre-2026-07-16 LSATU product knowledge (archived, read-only): `/Users/joshuaf/ai-os/archive/wiki-pre-rebuild-2026-07-16/domains/lsat-u/`\n\n(Older notes may point at `~/Docume"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-conditional-bootcamp",
+      "classification": "design-project",
+      "reason": "Application or visual production project; use for project context and examples, not as a globally installed component library.",
+      "readme": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-conditional-bootcamp\\README.md",
+      "license": "No top-level license found; do not assume redistribution rights.",
+      "license_paths": [],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-conditional-bootcamp\\README.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-conditional-bootcamp\\package.json"
+      ],
+      "package_name": "vite_react_shadcn_ts",
+      "description": null,
+      "root_instructions": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-conditional-bootcamp\\AGENTS.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-conditional-bootcamp\\CLAUDE.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-conditional-bootcamp\\DESIGN.md"
+      ],
+      "git_marker": true,
+      "readme_excerpt": "# LSAT U\n\nPremium ed-tech web app: React 18 + Vite 5 + TypeScript + Tailwind + shadcn/ui, with a Supabase backend (Edge Functions), hosted on Lovable.\n\nFor full architecture, commands, and conventions, see [CLAUDE.md](./CLAUDE.md).\n\n## Fast locator\n\n- Code repo root (this project): `/Users/joshuaf/ai-os/projects/lsatu`\n- Vault root (the `~/ai-os` directory IS the Obsidian vault): `/Users/joshuaf/ai-os`\n- Live vault knowledge: `/Users/joshuaf/ai-os/wiki/`, `/Users/joshuaf/ai-os/students/`, `/Users/joshuaf/ai-os/corpus/`\n- Pre-2026-07-16 LSATU product knowledge (archived, read-only): `/Users/joshuaf/ai-os/archive/wiki-pre-rebuild-2026-07-16/domains/lsat-u/`\n\n(Older notes may point at `~/Docume"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-conditional-merge",
+      "classification": "design-project",
+      "reason": "Application or visual production project; use for project context and examples, not as a globally installed component library.",
+      "readme": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-conditional-merge\\README.md",
+      "license": "No top-level license found; do not assume redistribution rights.",
+      "license_paths": [],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-conditional-merge\\README.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-conditional-merge\\package.json"
+      ],
+      "package_name": "vite_react_shadcn_ts",
+      "description": null,
+      "root_instructions": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-conditional-merge\\AGENTS.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-conditional-merge\\CLAUDE.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-conditional-merge\\DESIGN.md"
+      ],
+      "git_marker": true,
+      "readme_excerpt": "# LSAT U\n\nPremium ed-tech web app: React 18 + Vite 5 + TypeScript + Tailwind + shadcn/ui, with a Supabase backend (Edge Functions), hosted on Lovable.\n\nFor full architecture, commands, and conventions, see [CLAUDE.md](./CLAUDE.md).\n\n## Fast locator\n\n- Code repo root (this project): `/Users/joshuaf/ai-os/projects/lsatu`\n- Vault root (the `~/ai-os` directory IS the Obsidian vault): `/Users/joshuaf/ai-os`\n- Live vault knowledge: `/Users/joshuaf/ai-os/wiki/`, `/Users/joshuaf/ai-os/students/`, `/Users/joshuaf/ai-os/corpus/`\n- Pre-2026-07-16 LSATU product knowledge (archived, read-only): `/Users/joshuaf/ai-os/archive/wiki-pre-rebuild-2026-07-16/domains/lsat-u/`\n\n(Older notes may point at `~/Docume"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-conditional-reconcile",
+      "classification": "design-project",
+      "reason": "Application or visual production project; use for project context and examples, not as a globally installed component library.",
+      "readme": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-conditional-reconcile\\README.md",
+      "license": "No top-level license found; do not assume redistribution rights.",
+      "license_paths": [],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-conditional-reconcile\\README.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-conditional-reconcile\\package.json"
+      ],
+      "package_name": "vite_react_shadcn_ts",
+      "description": null,
+      "root_instructions": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-conditional-reconcile\\AGENTS.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-conditional-reconcile\\CLAUDE.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-conditional-reconcile\\DESIGN.md"
+      ],
+      "git_marker": true,
+      "readme_excerpt": "# LSAT U\n\nPremium ed-tech web app: React 18 + Vite 5 + TypeScript + Tailwind + shadcn/ui, with a Supabase backend (Edge Functions), hosted on Lovable.\n\nFor full architecture, commands, and conventions, see [CLAUDE.md](./CLAUDE.md).\n\n## Fast locator\n\n- Code repo root (this project): `/Users/joshuaf/ai-os/projects/lsatu`\n- Vault root (the `~/ai-os` directory IS the Obsidian vault): `/Users/joshuaf/ai-os`\n- Live vault knowledge: `/Users/joshuaf/ai-os/wiki/`, `/Users/joshuaf/ai-os/students/`, `/Users/joshuaf/ai-os/corpus/`\n- Pre-2026-07-16 LSATU product knowledge (archived, read-only): `/Users/joshuaf/ai-os/archive/wiki-pre-rebuild-2026-07-16/domains/lsat-u/`\n\n(Older notes may point at `~/Docume"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-conditional-takeover",
+      "classification": "design-project",
+      "reason": "Application or visual production project; use for project context and examples, not as a globally installed component library.",
+      "readme": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-conditional-takeover\\README.md",
+      "license": "No top-level license found; do not assume redistribution rights.",
+      "license_paths": [],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-conditional-takeover\\README.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-conditional-takeover\\package.json"
+      ],
+      "package_name": "vite_react_shadcn_ts",
+      "description": null,
+      "root_instructions": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-conditional-takeover\\AGENTS.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-conditional-takeover\\CLAUDE.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-conditional-takeover\\DESIGN.md"
+      ],
+      "git_marker": true,
+      "readme_excerpt": "# LSAT U\n\nPremium ed-tech web app: React 18 + Vite 5 + TypeScript + Tailwind + shadcn/ui, with a Supabase backend (Edge Functions), hosted on Lovable.\n\nFor full architecture, commands, and conventions, see [CLAUDE.md](./CLAUDE.md).\n\n## Fast locator\n\n- Code repo root (this project): `/Users/joshuaf/ai-os/projects/lsatu`\n- Vault root (the `~/ai-os` directory IS the Obsidian vault): `/Users/joshuaf/ai-os`\n- Live vault knowledge: `/Users/joshuaf/ai-os/wiki/`, `/Users/joshuaf/ai-os/students/`, `/Users/joshuaf/ai-os/corpus/`\n- Pre-2026-07-16 LSATU product knowledge (archived, read-only): `/Users/joshuaf/ai-os/archive/wiki-pre-rebuild-2026-07-16/domains/lsat-u/`\n\n(Older notes may point at `~/Docume"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-drill-focus",
+      "classification": "design-project",
+      "reason": "Application or visual production project; use for project context and examples, not as a globally installed component library.",
+      "readme": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-drill-focus\\README.md",
+      "license": "No top-level license found; do not assume redistribution rights.",
+      "license_paths": [],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-drill-focus\\README.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-drill-focus\\package.json"
+      ],
+      "package_name": "vite_react_shadcn_ts",
+      "description": null,
+      "root_instructions": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-drill-focus\\AGENTS.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-drill-focus\\CLAUDE.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-drill-focus\\DESIGN.md"
+      ],
+      "git_marker": true,
+      "readme_excerpt": "# LSAT U\n\nPremium ed-tech web app: React 18 + Vite 5 + TypeScript + Tailwind + shadcn/ui, with a Supabase backend (Edge Functions), hosted on Lovable.\n\nFor full architecture, commands, and conventions, see [CLAUDE.md](./CLAUDE.md).\n\n## Fast locator\n\n- Code repo root (this project): `/Users/joshuaf/ai-os/projects/lsatu`\n- Vault root (the `~/ai-os` directory IS the Obsidian vault): `/Users/joshuaf/ai-os`\n- Live vault knowledge: `/Users/joshuaf/ai-os/wiki/`, `/Users/joshuaf/ai-os/students/`, `/Users/joshuaf/ai-os/corpus/`\n- Pre-2026-07-16 LSATU product knowledge (archived, read-only): `/Users/joshuaf/ai-os/archive/wiki-pre-rebuild-2026-07-16/domains/lsat-u/`\n\n(Older notes may point at `~/Docume"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-fix-overrides",
+      "classification": "design-project",
+      "reason": "Application or visual production project; use for project context and examples, not as a globally installed component library.",
+      "readme": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-fix-overrides\\README.md",
+      "license": "No top-level license found; do not assume redistribution rights.",
+      "license_paths": [],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-fix-overrides\\README.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-fix-overrides\\package.json"
+      ],
+      "package_name": "vite_react_shadcn_ts",
+      "description": null,
+      "root_instructions": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-fix-overrides\\AGENTS.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-fix-overrides\\CLAUDE.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-fix-overrides\\DESIGN.md"
+      ],
+      "git_marker": true,
+      "readme_excerpt": "# LSAT U\n\nPremium ed-tech web app: React 18 + Vite 5 + TypeScript + Tailwind + shadcn/ui, with a Supabase backend (Edge Functions), hosted on Lovable.\n\nFor full architecture, commands, and conventions, see [CLAUDE.md](./CLAUDE.md).\n\n## Fast locator\n\n- Code repo root (this project): `/Users/joshuaf/ai-os/projects/lsatu`\n- Vault root (the `~/ai-os` directory IS the Obsidian vault): `/Users/joshuaf/ai-os`\n- Live vault knowledge: `/Users/joshuaf/ai-os/wiki/`, `/Users/joshuaf/ai-os/students/`, `/Users/joshuaf/ai-os/corpus/`\n- Pre-2026-07-16 LSATU product knowledge (archived, read-only): `/Users/joshuaf/ai-os/archive/wiki-pre-rebuild-2026-07-16/domains/lsat-u/`\n\n(Older notes may point at `~/Docume"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-four-situations",
+      "classification": "design-project",
+      "reason": "Application or visual production project; use for project context and examples, not as a globally installed component library.",
+      "readme": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-four-situations\\README.md",
+      "license": "No top-level license found; do not assume redistribution rights.",
+      "license_paths": [],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-four-situations\\README.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-four-situations\\package.json"
+      ],
+      "package_name": "vite_react_shadcn_ts",
+      "description": null,
+      "root_instructions": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-four-situations\\AGENTS.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-four-situations\\CLAUDE.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-four-situations\\DESIGN.md"
+      ],
+      "git_marker": true,
+      "readme_excerpt": "# LSAT U\n\nPremium ed-tech web app: React 18 + Vite 5 + TypeScript + Tailwind + shadcn/ui, with a Supabase backend (Edge Functions), hosted on Lovable.\n\nFor full architecture, commands, and conventions, see [CLAUDE.md](./CLAUDE.md).\n\n## Fast locator\n\n- Code repo root (this project): `/Users/joshuaf/ai-os/projects/lsatu`\n- Vault root (the `~/ai-os` directory IS the Obsidian vault): `/Users/joshuaf/ai-os`\n- Live vault knowledge: `/Users/joshuaf/ai-os/wiki/`, `/Users/joshuaf/ai-os/students/`, `/Users/joshuaf/ai-os/corpus/`\n- Pre-2026-07-16 LSATU product knowledge (archived, read-only): `/Users/joshuaf/ai-os/archive/wiki-pre-rebuild-2026-07-16/domains/lsat-u/`\n\n(Older notes may point at `~/Docume"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-lr-baseline-20261016",
+      "classification": "design-project",
+      "reason": "Application or visual production project; use for project context and examples, not as a globally installed component library.",
+      "readme": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-lr-baseline-20261016\\README.md",
+      "license": "No top-level license found; do not assume redistribution rights.",
+      "license_paths": [],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-lr-baseline-20261016\\README.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-lr-baseline-20261016\\package.json"
+      ],
+      "package_name": "vite_react_shadcn_ts",
+      "description": null,
+      "root_instructions": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-lr-baseline-20261016\\AGENTS.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-lr-baseline-20261016\\CLAUDE.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-lr-baseline-20261016\\DESIGN.md"
+      ],
+      "git_marker": true,
+      "readme_excerpt": "# LSAT U\n\nPremium ed-tech web app: React 18 + Vite 5 + TypeScript + Tailwind + shadcn/ui, with a Supabase backend (Edge Functions), hosted on Lovable.\n\nFor full architecture, commands, and conventions, see [CLAUDE.md](./CLAUDE.md).\n\n## Fast locator\n\n- Code repo root (this project): `/Users/joshuaf/ai-os/projects/lsatu`\n- Vault root (the `~/ai-os` directory IS the Obsidian vault): `/Users/joshuaf/ai-os`\n- Live vault knowledge: `/Users/joshuaf/ai-os/wiki/`, `/Users/joshuaf/ai-os/students/`, `/Users/joshuaf/ai-os/corpus/`\n- Pre-2026-07-16 LSATU product knowledge (archived, read-only): `/Users/joshuaf/ai-os/archive/wiki-pre-rebuild-2026-07-16/domains/lsat-u/`\n\n(Older notes may point at `~/Docume"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-merge-tmp",
+      "classification": "design-project",
+      "reason": "Application or visual production project; use for project context and examples, not as a globally installed component library.",
+      "readme": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-merge-tmp\\README.md",
+      "license": "No top-level license found; do not assume redistribution rights.",
+      "license_paths": [],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-merge-tmp\\README.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-merge-tmp\\package.json"
+      ],
+      "package_name": "vite_react_shadcn_ts",
+      "description": null,
+      "root_instructions": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-merge-tmp\\AGENTS.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-merge-tmp\\CLAUDE.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-merge-tmp\\DESIGN.md"
+      ],
+      "git_marker": true,
+      "readme_excerpt": "# LSAT U\n\nPremium ed-tech web app: React 18 + Vite 5 + TypeScript + Tailwind + shadcn/ui, with a Supabase backend (Edge Functions), hosted on Lovable.\n\nFor full architecture, commands, and conventions, see [CLAUDE.md](./CLAUDE.md).\n\n## Fast locator\n\n- Code repo root (this project): `/Users/joshuaf/ai-os/projects/lsatu`\n- Vault root (the `~/ai-os` directory IS the Obsidian vault): `/Users/joshuaf/ai-os`\n- Live vault knowledge: `/Users/joshuaf/ai-os/wiki/`, `/Users/joshuaf/ai-os/students/`, `/Users/joshuaf/ai-os/corpus/`\n- Pre-2026-07-16 LSATU product knowledge (archived, read-only): `/Users/joshuaf/ai-os/archive/wiki-pre-rebuild-2026-07-16/domains/lsat-u/`\n\n(Older notes may point at `~/Docume"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-missed-session-credit",
+      "classification": "design-project",
+      "reason": "Application or visual production project; use for project context and examples, not as a globally installed component library.",
+      "readme": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-missed-session-credit\\README.md",
+      "license": "No top-level license found; do not assume redistribution rights.",
+      "license_paths": [],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-missed-session-credit\\README.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-missed-session-credit\\package.json"
+      ],
+      "package_name": "vite_react_shadcn_ts",
+      "description": null,
+      "root_instructions": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-missed-session-credit\\AGENTS.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-missed-session-credit\\CLAUDE.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-missed-session-credit\\DESIGN.md"
+      ],
+      "git_marker": true,
+      "readme_excerpt": "# LSAT U\n\nPremium ed-tech web app: React 18 + Vite 5 + TypeScript + Tailwind + shadcn/ui, with a Supabase backend (Edge Functions), hosted on Lovable.\n\nFor full architecture, commands, and conventions, see [CLAUDE.md](./CLAUDE.md).\n\n## Fast locator\n\n- Code repo root (this project): `/Users/joshuaf/ai-os/projects/lsatu`\n- Vault root (the `~/ai-os` directory IS the Obsidian vault): `/Users/joshuaf/ai-os`\n- Live vault knowledge: `/Users/joshuaf/ai-os/wiki/`, `/Users/joshuaf/ai-os/students/`, `/Users/joshuaf/ai-os/corpus/`\n- Pre-2026-07-16 LSATU product knowledge (archived, read-only): `/Users/joshuaf/ai-os/archive/wiki-pre-rebuild-2026-07-16/domains/lsat-u/`\n\n(Older notes may point at `~/Docume"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-nav-168",
+      "classification": "design-project",
+      "reason": "Application or visual production project; use for project context and examples, not as a globally installed component library.",
+      "readme": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-nav-168\\README.md",
+      "license": "No top-level license found; do not assume redistribution rights.",
+      "license_paths": [],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-nav-168\\README.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-nav-168\\package.json"
+      ],
+      "package_name": "vite_react_shadcn_ts",
+      "description": null,
+      "root_instructions": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-nav-168\\AGENTS.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-nav-168\\CLAUDE.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-nav-168\\DESIGN.md"
+      ],
+      "git_marker": true,
+      "readme_excerpt": "# LSAT U\n\nPremium ed-tech web app: React 18 + Vite 5 + TypeScript + Tailwind + shadcn/ui, with a Supabase backend (Edge Functions), hosted on Lovable.\n\nFor full architecture, commands, and conventions, see [CLAUDE.md](./CLAUDE.md).\n\n## Fast locator\n\n- Code repo root (this project): `/Users/joshuaf/ai-os/projects/lsatu`\n- Vault root (the `~/ai-os` directory IS the Obsidian vault): `/Users/joshuaf/ai-os`\n- Live vault knowledge: `/Users/joshuaf/ai-os/wiki/`, `/Users/joshuaf/ai-os/students/`, `/Users/joshuaf/ai-os/corpus/`\n- Pre-2026-07-16 LSATU product knowledge (archived, read-only): `/Users/joshuaf/ai-os/archive/wiki-pre-rebuild-2026-07-16/domains/lsat-u/`\n\n(Older notes may point at `~/Docume"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-builder-layout",
+      "classification": "design-project",
+      "reason": "Application or visual production project; use for project context and examples, not as a globally installed component library.",
+      "readme": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-builder-layout\\README.md",
+      "license": "No top-level license found; do not assume redistribution rights.",
+      "license_paths": [],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-builder-layout\\README.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-builder-layout\\package.json"
+      ],
+      "package_name": "vite_react_shadcn_ts",
+      "description": null,
+      "root_instructions": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-builder-layout\\AGENTS.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-builder-layout\\CLAUDE.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-builder-layout\\DESIGN.md"
+      ],
+      "git_marker": true,
+      "readme_excerpt": "# LSAT U\n\nPremium ed-tech web app: React 18 + Vite 5 + TypeScript + Tailwind + shadcn/ui, with a Supabase backend (Edge Functions), hosted on Lovable.\n\nFor full architecture, commands, and conventions, see [CLAUDE.md](./CLAUDE.md).\n\n## Fast locator\n\n- Code repo root (this project): `/Users/joshuaf/ai-os/projects/lsatu`\n- Vault root (the `~/ai-os` directory IS the Obsidian vault): `/Users/joshuaf/ai-os`\n- Live vault knowledge: `/Users/joshuaf/ai-os/wiki/`, `/Users/joshuaf/ai-os/students/`, `/Users/joshuaf/ai-os/corpus/`\n- Pre-2026-07-16 LSATU product knowledge (archived, read-only): `/Users/joshuaf/ai-os/archive/wiki-pre-rebuild-2026-07-16/domains/lsat-u/`\n\n(Older notes may point at `~/Docume"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-create",
+      "classification": "design-project",
+      "reason": "Application or visual production project; use for project context and examples, not as a globally installed component library.",
+      "readme": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-create\\README.md",
+      "license": "No top-level license found; do not assume redistribution rights.",
+      "license_paths": [],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-create\\README.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-create\\package.json"
+      ],
+      "package_name": "vite_react_shadcn_ts",
+      "description": null,
+      "root_instructions": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-create\\AGENTS.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-create\\CLAUDE.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-create\\DESIGN.md"
+      ],
+      "git_marker": true,
+      "readme_excerpt": "# LSAT U\n\nPremium ed-tech web app: React 18 + Vite 5 + TypeScript + Tailwind + shadcn/ui, with a Supabase backend (Edge Functions), hosted on Lovable.\n\nFor full architecture, commands, and conventions, see [CLAUDE.md](./CLAUDE.md).\n\n## Fast locator\n\n- Code repo root (this project): `/Users/joshuaf/ai-os/projects/lsatu`\n- Vault root (the `~/ai-os` directory IS the Obsidian vault): `/Users/joshuaf/ai-os`\n- Live vault knowledge: `/Users/joshuaf/ai-os/wiki/`, `/Users/joshuaf/ai-os/students/`, `/Users/joshuaf/ai-os/corpus/`\n- Pre-2026-07-16 LSATU product knowledge (archived, read-only): `/Users/joshuaf/ai-os/archive/wiki-pre-rebuild-2026-07-16/domains/lsat-u/`\n\n(Older notes may point at `~/Docume"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-final-release-20261021",
+      "classification": "design-project",
+      "reason": "Application or visual production project; use for project context and examples, not as a globally installed component library.",
+      "readme": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-final-release-20261021\\README.md",
+      "license": "No top-level license found; do not assume redistribution rights.",
+      "license_paths": [],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-final-release-20261021\\README.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-final-release-20261021\\package.json"
+      ],
+      "package_name": "vite_react_shadcn_ts",
+      "description": null,
+      "root_instructions": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-final-release-20261021\\AGENTS.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-final-release-20261021\\CLAUDE.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-final-release-20261021\\DESIGN.md"
+      ],
+      "git_marker": true,
+      "readme_excerpt": "# LSAT U\n\nPremium ed-tech web app: React 18 + Vite 5 + TypeScript + Tailwind + shadcn/ui, with a Supabase backend (Edge Functions), hosted on Lovable.\n\nFor full architecture, commands, and conventions, see [CLAUDE.md](./CLAUDE.md).\n\n## Fast locator\n\n- Code repo root (this project): `/Users/joshuaf/ai-os/projects/lsatu`\n- Vault root (the `~/ai-os` directory IS the Obsidian vault): `/Users/joshuaf/ai-os`\n- Live vault knowledge: `/Users/joshuaf/ai-os/wiki/`, `/Users/joshuaf/ai-os/students/`, `/Users/joshuaf/ai-os/corpus/`\n- Pre-2026-07-16 LSATU product knowledge (archived, read-only): `/Users/joshuaf/ai-os/archive/wiki-pre-rebuild-2026-07-16/domains/lsat-u/`\n\n(Older notes may point at `~/Docume"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-finished",
+      "classification": "design-project",
+      "reason": "Application or visual production project; use for project context and examples, not as a globally installed component library.",
+      "readme": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-finished\\README.md",
+      "license": "No top-level license found; do not assume redistribution rights.",
+      "license_paths": [],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-finished\\README.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-finished\\package.json"
+      ],
+      "package_name": "vite_react_shadcn_ts",
+      "description": null,
+      "root_instructions": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-finished\\AGENTS.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-finished\\CLAUDE.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-finished\\DESIGN.md"
+      ],
+      "git_marker": true,
+      "readme_excerpt": "# LSAT U\n\nPremium ed-tech web app: React 18 + Vite 5 + TypeScript + Tailwind + shadcn/ui, with a Supabase backend (Edge Functions), hosted on Lovable.\n\nFor full architecture, commands, and conventions, see [CLAUDE.md](./CLAUDE.md).\n\n## Fast locator\n\n- Code repo root (this project): `/Users/joshuaf/ai-os/projects/lsatu`\n- Vault root (the `~/ai-os` directory IS the Obsidian vault): `/Users/joshuaf/ai-os`\n- Live vault knowledge: `/Users/joshuaf/ai-os/wiki/`, `/Users/joshuaf/ai-os/students/`, `/Users/joshuaf/ai-os/corpus/`\n- Pre-2026-07-16 LSATU product knowledge (archived, read-only): `/Users/joshuaf/ai-os/archive/wiki-pre-rebuild-2026-07-16/domains/lsat-u/`\n\n(Older notes may point at `~/Docume"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-focus-release",
+      "classification": "design-project",
+      "reason": "Application or visual production project; use for project context and examples, not as a globally installed component library.",
+      "readme": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-focus-release\\README.md",
+      "license": "No top-level license found; do not assume redistribution rights.",
+      "license_paths": [],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-focus-release\\README.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-focus-release\\package.json"
+      ],
+      "package_name": "vite_react_shadcn_ts",
+      "description": null,
+      "root_instructions": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-focus-release\\AGENTS.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-focus-release\\CLAUDE.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-focus-release\\DESIGN.md"
+      ],
+      "git_marker": true,
+      "readme_excerpt": "# LSAT U\n\nPremium ed-tech web app: React 18 + Vite 5 + TypeScript + Tailwind + shadcn/ui, with a Supabase backend (Edge Functions), hosted on Lovable.\n\nFor full architecture, commands, and conventions, see [CLAUDE.md](./CLAUDE.md).\n\n## Fast locator\n\n- Code repo root (this project): `/Users/joshuaf/ai-os/projects/lsatu`\n- Vault root (the `~/ai-os` directory IS the Obsidian vault): `/Users/joshuaf/ai-os`\n- Live vault knowledge: `/Users/joshuaf/ai-os/wiki/`, `/Users/joshuaf/ai-os/students/`, `/Users/joshuaf/ai-os/corpus/`\n- Pre-2026-07-16 LSATU product knowledge (archived, read-only): `/Users/joshuaf/ai-os/archive/wiki-pre-rebuild-2026-07-16/domains/lsat-u/`\n\n(Older notes may point at `~/Docume"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-prelight-20261020",
+      "classification": "design-project",
+      "reason": "Application or visual production project; use for project context and examples, not as a globally installed component library.",
+      "readme": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-prelight-20261020\\README.md",
+      "license": "No top-level license found; do not assume redistribution rights.",
+      "license_paths": [],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-prelight-20261020\\README.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-prelight-20261020\\package.json"
+      ],
+      "package_name": "vite_react_shadcn_ts",
+      "description": null,
+      "root_instructions": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-prelight-20261020\\AGENTS.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-prelight-20261020\\CLAUDE.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-prelight-20261020\\DESIGN.md"
+      ],
+      "git_marker": true,
+      "readme_excerpt": "# LSAT U\n\nPremium ed-tech web app: React 18 + Vite 5 + TypeScript + Tailwind + shadcn/ui, with a Supabase backend (Edge Functions), hosted on Lovable.\n\nFor full architecture, commands, and conventions, see [CLAUDE.md](./CLAUDE.md).\n\n## Fast locator\n\n- Code repo root (this project): `/Users/joshuaf/ai-os/projects/lsatu`\n- Vault root (the `~/ai-os` directory IS the Obsidian vault): `/Users/joshuaf/ai-os`\n- Live vault knowledge: `/Users/joshuaf/ai-os/wiki/`, `/Users/joshuaf/ai-os/students/`, `/Users/joshuaf/ai-os/corpus/`\n- Pre-2026-07-16 LSATU product knowledge (archived, read-only): `/Users/joshuaf/ai-os/archive/wiki-pre-rebuild-2026-07-16/domains/lsat-u/`\n\n(Older notes may point at `~/Docume"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-september-20261020",
+      "classification": "design-project",
+      "reason": "Application or visual production project; use for project context and examples, not as a globally installed component library.",
+      "readme": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-september-20261020\\README.md",
+      "license": "No top-level license found; do not assume redistribution rights.",
+      "license_paths": [],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-september-20261020\\README.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-september-20261020\\package.json"
+      ],
+      "package_name": "vite_react_shadcn_ts",
+      "description": null,
+      "root_instructions": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-september-20261020\\AGENTS.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-september-20261020\\CLAUDE.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-september-20261020\\DESIGN.md"
+      ],
+      "git_marker": true,
+      "readme_excerpt": "# LSAT U\n\nPremium ed-tech web app: React 18 + Vite 5 + TypeScript + Tailwind + shadcn/ui, with a Supabase backend (Edge Functions), hosted on Lovable.\n\nFor full architecture, commands, and conventions, see [CLAUDE.md](./CLAUDE.md).\n\n## Fast locator\n\n- Code repo root (this project): `/Users/joshuaf/ai-os/projects/lsatu`\n- Vault root (the `~/ai-os` directory IS the Obsidian vault): `/Users/joshuaf/ai-os`\n- Live vault knowledge: `/Users/joshuaf/ai-os/wiki/`, `/Users/joshuaf/ai-os/students/`, `/Users/joshuaf/ai-os/corpus/`\n- Pre-2026-07-16 LSATU product knowledge (archived, read-only): `/Users/joshuaf/ai-os/archive/wiki-pre-rebuild-2026-07-16/domains/lsat-u/`\n\n(Older notes may point at `~/Docume"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-sonnet-build",
+      "classification": "design-project",
+      "reason": "Application or visual production project; use for project context and examples, not as a globally installed component library.",
+      "readme": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-sonnet-build\\README.md",
+      "license": "No top-level license found; do not assume redistribution rights.",
+      "license_paths": [],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-sonnet-build\\README.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-sonnet-build\\package.json"
+      ],
+      "package_name": "vite_react_shadcn_ts",
+      "description": null,
+      "root_instructions": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-sonnet-build\\AGENTS.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-sonnet-build\\CLAUDE.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-sonnet-build\\DESIGN.md"
+      ],
+      "git_marker": true,
+      "readme_excerpt": "# LSAT U\n\nPremium ed-tech web app: React 18 + Vite 5 + TypeScript + Tailwind + shadcn/ui, with a Supabase backend (Edge Functions), hosted on Lovable.\n\nFor full architecture, commands, and conventions, see [CLAUDE.md](./CLAUDE.md).\n\n## Fast locator\n\n- Code repo root (this project): `/Users/joshuaf/ai-os/projects/lsatu`\n- Vault root (the `~/ai-os` directory IS the Obsidian vault): `/Users/joshuaf/ai-os`\n- Live vault knowledge: `/Users/joshuaf/ai-os/wiki/`, `/Users/joshuaf/ai-os/students/`, `/Users/joshuaf/ai-os/corpus/`\n- Pre-2026-07-16 LSATU product knowledge (archived, read-only): `/Users/joshuaf/ai-os/archive/wiki-pre-rebuild-2026-07-16/domains/lsat-u/`\n\n(Older notes may point at `~/Docume"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-reading-center",
+      "classification": "design-project",
+      "reason": "Application or visual production project; use for project context and examples, not as a globally installed component library.",
+      "readme": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-reading-center\\README.md",
+      "license": "No top-level license found; do not assume redistribution rights.",
+      "license_paths": [],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-reading-center\\README.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-reading-center\\package.json"
+      ],
+      "package_name": "vite_react_shadcn_ts",
+      "description": null,
+      "root_instructions": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-reading-center\\AGENTS.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-reading-center\\CLAUDE.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-reading-center\\DESIGN.md"
+      ],
+      "git_marker": true,
+      "readme_excerpt": "# LSAT U\n\nPremium ed-tech web app: React 18 + Vite 5 + TypeScript + Tailwind + shadcn/ui, with a Supabase backend (Edge Functions), hosted on Lovable.\n\nFor full architecture, commands, and conventions, see [CLAUDE.md](./CLAUDE.md).\n\n## Fast locator\n\n- Code repo root (this project): `/Users/joshuaf/ai-os/projects/lsatu`\n- Vault root (the `~/ai-os` directory IS the Obsidian vault): `/Users/joshuaf/ai-os`\n- Live vault knowledge: `/Users/joshuaf/ai-os/wiki/`, `/Users/joshuaf/ai-os/students/`, `/Users/joshuaf/ai-os/corpus/`\n- Pre-2026-07-16 LSATU product knowledge (archived, read-only): `/Users/joshuaf/ai-os/archive/wiki-pre-rebuild-2026-07-16/domains/lsat-u/`\n\n(Older notes may point at `~/Docume"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-reading-center-rc-recall",
+      "classification": "design-project",
+      "reason": "Application or visual production project; use for project context and examples, not as a globally installed component library.",
+      "readme": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-reading-center-rc-recall\\README.md",
+      "license": "No top-level license found; do not assume redistribution rights.",
+      "license_paths": [],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-reading-center-rc-recall\\README.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-reading-center-rc-recall\\package.json"
+      ],
+      "package_name": "vite_react_shadcn_ts",
+      "description": null,
+      "root_instructions": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-reading-center-rc-recall\\AGENTS.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-reading-center-rc-recall\\CLAUDE.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-reading-center-rc-recall\\DESIGN.md"
+      ],
+      "git_marker": true,
+      "readme_excerpt": "# LSAT U\n\nPremium ed-tech web app: React 18 + Vite 5 + TypeScript + Tailwind + shadcn/ui, with a Supabase backend (Edge Functions), hosted on Lovable.\n\nFor full architecture, commands, and conventions, see [CLAUDE.md](./CLAUDE.md).\n\n## Fast locator\n\n- Code repo root (this project): `/Users/joshuaf/ai-os/projects/lsatu`\n- Vault root (the `~/ai-os` directory IS the Obsidian vault): `/Users/joshuaf/ai-os`\n- Live vault knowledge: `/Users/joshuaf/ai-os/wiki/`, `/Users/joshuaf/ai-os/students/`, `/Users/joshuaf/ai-os/corpus/`\n- Pre-2026-07-16 LSATU product knowledge (archived, read-only): `/Users/joshuaf/ai-os/archive/wiki-pre-rebuild-2026-07-16/domains/lsat-u/`\n\n(Older notes may point at `~/Docume"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-reading-center-sidebar",
+      "classification": "design-project",
+      "reason": "Application or visual production project; use for project context and examples, not as a globally installed component library.",
+      "readme": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-reading-center-sidebar\\README.md",
+      "license": "No top-level license found; do not assume redistribution rights.",
+      "license_paths": [],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-reading-center-sidebar\\README.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-reading-center-sidebar\\package.json"
+      ],
+      "package_name": "vite_react_shadcn_ts",
+      "description": null,
+      "root_instructions": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-reading-center-sidebar\\AGENTS.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-reading-center-sidebar\\CLAUDE.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-reading-center-sidebar\\DESIGN.md"
+      ],
+      "git_marker": true,
+      "readme_excerpt": "# LSAT U\n\nPremium ed-tech web app: React 18 + Vite 5 + TypeScript + Tailwind + shadcn/ui, with a Supabase backend (Edge Functions), hosted on Lovable.\n\nFor full architecture, commands, and conventions, see [CLAUDE.md](./CLAUDE.md).\n\n## Fast locator\n\n- Code repo root (this project): `/Users/joshuaf/ai-os/projects/lsatu`\n- Vault root (the `~/ai-os` directory IS the Obsidian vault): `/Users/joshuaf/ai-os`\n- Live vault knowledge: `/Users/joshuaf/ai-os/wiki/`, `/Users/joshuaf/ai-os/students/`, `/Users/joshuaf/ai-os/corpus/`\n- Pre-2026-07-16 LSATU product knowledge (archived, read-only): `/Users/joshuaf/ai-os/archive/wiki-pre-rebuild-2026-07-16/domains/lsat-u/`\n\n(Older notes may point at `~/Docume"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-reading-hub-20261015",
+      "classification": "design-project",
+      "reason": "Application or visual production project; use for project context and examples, not as a globally installed component library.",
+      "readme": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-reading-hub-20261015\\README.md",
+      "license": "No top-level license found; do not assume redistribution rights.",
+      "license_paths": [],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-reading-hub-20261015\\README.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-reading-hub-20261015\\package.json"
+      ],
+      "package_name": "vite_react_shadcn_ts",
+      "description": null,
+      "root_instructions": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-reading-hub-20261015\\AGENTS.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-reading-hub-20261015\\CLAUDE.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-reading-hub-20261015\\DESIGN.md"
+      ],
+      "git_marker": true,
+      "readme_excerpt": "# LSAT U\n\nPremium ed-tech web app: React 18 + Vite 5 + TypeScript + Tailwind + shadcn/ui, with a Supabase backend (Edge Functions), hosted on Lovable.\n\nFor full architecture, commands, and conventions, see [CLAUDE.md](./CLAUDE.md).\n\n## Fast locator\n\n- Code repo root (this project): `/Users/joshuaf/ai-os/projects/lsatu`\n- Vault root (the `~/ai-os` directory IS the Obsidian vault): `/Users/joshuaf/ai-os`\n- Live vault knowledge: `/Users/joshuaf/ai-os/wiki/`, `/Users/joshuaf/ai-os/students/`, `/Users/joshuaf/ai-os/corpus/`\n- Pre-2026-07-16 LSATU product knowledge (archived, read-only): `/Users/joshuaf/ai-os/archive/wiki-pre-rebuild-2026-07-16/domains/lsat-u/`\n\n(Older notes may point at `~/Docume"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-relationship-ui",
+      "classification": "design-project",
+      "reason": "Application or visual production project; use for project context and examples, not as a globally installed component library.",
+      "readme": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-relationship-ui\\README.md",
+      "license": "No top-level license found; do not assume redistribution rights.",
+      "license_paths": [],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-relationship-ui\\README.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-relationship-ui\\package.json"
+      ],
+      "package_name": "vite_react_shadcn_ts",
+      "description": null,
+      "root_instructions": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-relationship-ui\\AGENTS.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-relationship-ui\\CLAUDE.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-relationship-ui\\DESIGN.md"
+      ],
+      "git_marker": true,
+      "readme_excerpt": "# LSAT U\n\nPremium ed-tech web app: React 18 + Vite 5 + TypeScript + Tailwind + shadcn/ui, with a Supabase backend (Edge Functions), hosted on Lovable.\n\nFor full architecture, commands, and conventions, see [CLAUDE.md](./CLAUDE.md).\n\n## Fast locator\n\n- Code repo root (this project): `/Users/joshuaf/ai-os/projects/lsatu`\n- Vault root (the `~/ai-os` directory IS the Obsidian vault): `/Users/joshuaf/ai-os`\n- Live vault knowledge: `/Users/joshuaf/ai-os/wiki/`, `/Users/joshuaf/ai-os/students/`, `/Users/joshuaf/ai-os/corpus/`\n- Pre-2026-07-16 LSATU product knowledge (archived, read-only): `/Users/joshuaf/ai-os/archive/wiki-pre-rebuild-2026-07-16/domains/lsat-u/`\n\n(Older notes may point at `~/Docume"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-role-home-20261022",
+      "classification": "design-project",
+      "reason": "Application or visual production project; use for project context and examples, not as a globally installed component library.",
+      "readme": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-role-home-20261022\\README.md",
+      "license": "No top-level license found; do not assume redistribution rights.",
+      "license_paths": [],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-role-home-20261022\\README.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-role-home-20261022\\package.json"
+      ],
+      "package_name": "vite_react_shadcn_ts",
+      "description": null,
+      "root_instructions": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-role-home-20261022\\AGENTS.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-role-home-20261022\\CLAUDE.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-role-home-20261022\\DESIGN.md"
+      ],
+      "git_marker": true,
+      "readme_excerpt": "# LSAT U\n\nPremium ed-tech web app: React 18 + Vite 5 + TypeScript + Tailwind + shadcn/ui, with a Supabase backend (Edge Functions), hosted on Lovable.\n\nFor full architecture, commands, and conventions, see [CLAUDE.md](./CLAUDE.md).\n\n## Fast locator\n\n- Code repo root (this project): `/Users/joshuaf/ai-os/projects/lsatu`\n- Vault root (the `~/ai-os` directory IS the Obsidian vault): `/Users/joshuaf/ai-os`\n- Live vault knowledge: `/Users/joshuaf/ai-os/wiki/`, `/Users/joshuaf/ai-os/students/`, `/Users/joshuaf/ai-os/corpus/`\n- Pre-2026-07-16 LSATU product knowledge (archived, read-only): `/Users/joshuaf/ai-os/archive/wiki-pre-rebuild-2026-07-16/domains/lsat-u/`\n\n(Older notes may point at `~/Docume"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-str",
+      "classification": "design-project",
+      "reason": "Application or visual production project; use for project context and examples, not as a globally installed component library.",
+      "readme": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-str\\README.md",
+      "license": "No top-level license found; do not assume redistribution rights.",
+      "license_paths": [],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-str\\README.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-str\\package.json"
+      ],
+      "package_name": "vite_react_shadcn_ts",
+      "description": null,
+      "root_instructions": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-str\\AGENTS.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-str\\CLAUDE.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-str\\DESIGN.md"
+      ],
+      "git_marker": true,
+      "readme_excerpt": "# LSAT U\n\nPremium ed-tech web app: React 18 + Vite 5 + TypeScript + Tailwind + shadcn/ui, with a Supabase backend (Edge Functions), hosted on Lovable.\n\nFor full architecture, commands, and conventions, see [CLAUDE.md](./CLAUDE.md).\n\n## Fast locator\n\n- Code repo root (this project): `/Users/joshuaf/ai-os/projects/lsatu`\n- Vault root (the `~/ai-os` directory IS the Obsidian vault): `/Users/joshuaf/ai-os`\n- Live vault knowledge: `/Users/joshuaf/ai-os/wiki/`, `/Users/joshuaf/ai-os/students/`, `/Users/joshuaf/ai-os/corpus/`\n- Pre-2026-07-16 LSATU product knowledge (archived, read-only): `/Users/joshuaf/ai-os/archive/wiki-pre-rebuild-2026-07-16/domains/lsat-u/`\n\n(Older notes may point at `~/Docume"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-str-backend",
+      "classification": "design-project",
+      "reason": "Application or visual production project; use for project context and examples, not as a globally installed component library.",
+      "readme": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-str-backend\\README.md",
+      "license": "No top-level license found; do not assume redistribution rights.",
+      "license_paths": [],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-str-backend\\README.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-str-backend\\package.json"
+      ],
+      "package_name": "vite_react_shadcn_ts",
+      "description": null,
+      "root_instructions": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-str-backend\\AGENTS.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-str-backend\\CLAUDE.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-str-backend\\DESIGN.md"
+      ],
+      "git_marker": true,
+      "readme_excerpt": "# LSAT U\n\nPremium ed-tech web app: React 18 + Vite 5 + TypeScript + Tailwind + shadcn/ui, with a Supabase backend (Edge Functions), hosted on Lovable.\n\nFor full architecture, commands, and conventions, see [CLAUDE.md](./CLAUDE.md).\n\n## Fast locator\n\n- Code repo root (this project): `/Users/joshuaf/ai-os/projects/lsatu`\n- Vault root (the `~/ai-os` directory IS the Obsidian vault): `/Users/joshuaf/ai-os`\n- Live vault knowledge: `/Users/joshuaf/ai-os/wiki/`, `/Users/joshuaf/ai-os/students/`, `/Users/joshuaf/ai-os/corpus/`\n- Pre-2026-07-16 LSATU product knowledge (archived, read-only): `/Users/joshuaf/ai-os/archive/wiki-pre-rebuild-2026-07-16/domains/lsat-u/`\n\n(Older notes may point at `~/Docume"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-unless",
+      "classification": "design-project",
+      "reason": "Application or visual production project; use for project context and examples, not as a globally installed component library.",
+      "readme": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-unless\\README.md",
+      "license": "No top-level license found; do not assume redistribution rights.",
+      "license_paths": [],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-unless\\README.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-unless\\package.json"
+      ],
+      "package_name": "vite_react_shadcn_ts",
+      "description": null,
+      "root_instructions": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-unless\\AGENTS.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-unless\\CLAUDE.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-unless\\DESIGN.md"
+      ],
+      "git_marker": true,
+      "readme_excerpt": "# LSAT U\n\nPremium ed-tech web app: React 18 + Vite 5 + TypeScript + Tailwind + shadcn/ui, with a Supabase backend (Edge Functions), hosted on Lovable.\n\nFor full architecture, commands, and conventions, see [CLAUDE.md](./CLAUDE.md).\n\n## Fast locator\n\n- Code repo root (this project): `/Users/joshuaf/ai-os/projects/lsatu`\n- Vault root (the `~/ai-os` directory IS the Obsidian vault): `/Users/joshuaf/ai-os`\n- Live vault knowledge: `/Users/joshuaf/ai-os/wiki/`, `/Users/joshuaf/ai-os/students/`, `/Users/joshuaf/ai-os/corpus/`\n- Pre-2026-07-16 LSATU product knowledge (archived, read-only): `/Users/joshuaf/ai-os/archive/wiki-pre-rebuild-2026-07-16/domains/lsat-u/`\n\n(Older notes may point at `~/Docume"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-wt-frozen",
+      "classification": "design-project",
+      "reason": "Application or visual production project; use for project context and examples, not as a globally installed component library.",
+      "readme": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-wt-frozen\\README.md",
+      "license": "No top-level license found; do not assume redistribution rights.",
+      "license_paths": [],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-wt-frozen\\README.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-wt-frozen\\package.json"
+      ],
+      "package_name": "vite_react_shadcn_ts",
+      "description": null,
+      "root_instructions": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-wt-frozen\\AGENTS.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-wt-frozen\\CLAUDE.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-wt-frozen\\DESIGN.md"
+      ],
+      "git_marker": true,
+      "readme_excerpt": "# LSAT U\n\nPremium ed-tech web app: React 18 + Vite 5 + TypeScript + Tailwind + shadcn/ui, with a Supabase backend (Edge Functions), hosted on Lovable.\n\nFor full architecture, commands, and conventions, see [CLAUDE.md](./CLAUDE.md).\n\n## Fast locator\n\n- Code repo root (this project): `/Users/joshuaf/ai-os/projects/lsatu`\n- Vault root (the `~/ai-os` directory IS the Obsidian vault): `/Users/joshuaf/ai-os`\n- Live vault knowledge: `/Users/joshuaf/ai-os/wiki/`, `/Users/joshuaf/ai-os/students/`, `/Users/joshuaf/ai-os/corpus/`\n- Pre-2026-07-16 LSATU product knowledge (archived, read-only): `/Users/joshuaf/ai-os/archive/wiki-pre-rebuild-2026-07-16/domains/lsat-u/`\n\n(Older notes may point at `~/Docume"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\pinterest-mcp-server",
+      "classification": "design-resource",
+      "reason": "Reusable component, visual reference, font, or design-discovery source.",
+      "readme": "C:\\Users\\Joshu\\dev\\ai-os-projects\\pinterest-mcp-server\\README.md",
+      "license": "No top-level license found; do not assume redistribution rights.",
+      "license_paths": [],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\pinterest-mcp-server\\README.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\pinterest-mcp-server\\package.json"
+      ],
+      "package_name": "pinterest-mcp-server",
+      "description": "Read-only Pinterest search MCP server using Pinterest API v5.",
+      "root_instructions": [],
+      "git_marker": true,
+      "readme_excerpt": "# Pinterest MCP Server\n\nA local, read-only MCP server for Pinterest API v5. It provides public Pin discovery search when the developer app has Pinterest's beta endpoint enabled, plus search across Pins and Boards owned by the authenticated account.\n\n## Tools\n\n- `pinterest_search_public_pins`: public Pin search via `GET /search/partner/pins`. Pinterest marks this API endpoint as beta and does not enable it for every app.\n- `pinterest_search_my_pins`: search Pins owned by the connected account.\n- `pinterest_search_my_boards`: search boards owned by the connected account.\n- `pinterest_get_my_account`: verify the connected account.\n\nAll tools are read-only. This server cannot create Pins or chan"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\rc-training-demo",
+      "classification": "design-project",
+      "reason": "Application or visual production project; use for project context and examples, not as a globally installed component library.",
+      "readme": "C:\\Users\\Joshu\\dev\\ai-os-projects\\rc-training-demo\\README.md",
+      "license": "No top-level license found; do not assume redistribution rights.",
+      "license_paths": [],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\rc-training-demo\\README.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\rc-training-demo\\package.json"
+      ],
+      "package_name": "rc-training-demo",
+      "description": null,
+      "root_instructions": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\rc-training-demo\\AGENTS.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\rc-training-demo\\CLAUDE.md"
+      ],
+      "git_marker": true,
+      "readme_excerpt": "# Continuous-recording RC Training walkthrough\n\n## Guided entry revision\n\nThe current composition now demonstrates instructions and Enter RC Training, single-passage/full-section selection, mandatory microphone startup, the visible active timer, hidden paragraph recall, checking, saved completion and last passage time, then end feedback. No silent alternative or optional clock control is shown. Completion time is explicitly illustrative. All original LSAT source text is preserved.\n\nDelivery target: `renders/rc-training-demo-guided.mp4`, app cache key `guided-v3`. Browser gate passed with zero runtime, layout or motion errors, 89 of 89 contrast checks, and 10 structural composition warnings. "
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\react-bits",
+      "classification": "design-resource",
+      "reason": "Reusable component, visual reference, font, or design-discovery source.",
+      "readme": "C:\\Users\\Joshu\\dev\\ai-os-projects\\react-bits\\README.md",
+      "license": "MIT + Commons Clause; read local restrictions before reuse.",
+      "license_paths": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\react-bits\\LICENSE.md"
+      ],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\react-bits\\README.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\react-bits\\package.json",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\react-bits\\LICENSE.md"
+      ],
+      "package_name": "react-bits",
+      "description": null,
+      "root_instructions": [],
+      "git_marker": true,
+      "readme_excerpt": "<div align=\"center\">\n  <br />\n  <picture>\n    <source media=\"(prefers-color-scheme: dark)\" srcset=\"src/assets/logos/reactbits-gh-white.svg\">\n    <source media=\"(prefers-color-scheme: light)\" srcset=\"src/assets/logos/reactbits-gh-black.svg\">\n    <img src=\"src/assets/logos/reactbits-gh-black.svg\" alt=\"React Bits\" width=\"420\">\n  </picture>\n  <br />\n  <br />\n  <h3>Animated React components for websites people remember.</h3>\n  <p>215+ free animated components and backgrounds for React.<br />Tune them yourself, or hand them to your agent.</p>\n  <p>\n    <a href=\"https://github.com/davidhdev/react-bits/stargazers\"><img alt=\"GitHub stars\" src=\"https://img.shields.io/github/stars/davidhdev/react-bits?"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\reading-center",
+      "classification": "design-project",
+      "reason": "Application or visual production project; use for project context and examples, not as a globally installed component library.",
+      "readme": null,
+      "license": "No top-level license found; do not assume redistribution rights.",
+      "license_paths": [],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\reading-center\\package.json"
+      ],
+      "package_name": "reading-center",
+      "description": null,
+      "root_instructions": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\reading-center\\CLAUDE.md"
+      ],
+      "git_marker": true,
+      "readme_excerpt": ""
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\skill-dependency-tests",
+      "classification": "general",
+      "reason": "General tooling or source retrieval; relevant when needed but outside design library scope.",
+      "readme": "C:\\Users\\Joshu\\dev\\ai-os-projects\\skill-dependency-tests\\README.md",
+      "license": "No top-level license found; do not assume redistribution rights.",
+      "license_paths": [],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\skill-dependency-tests\\README.md"
+      ],
+      "package_name": null,
+      "description": null,
+      "root_instructions": [],
+      "git_marker": true,
+      "readme_excerpt": "# Skill dependency verification\n\nLocal repair/test tools for the 2026-10-11 research-deep and bootcamp-parity-audit dependency repairs. This is an auxiliary verification project outside the Obsidian vault. It does not change the LSAT U application, query paid services or publish anything.\n\nThe isolated `.venv` contains PyYAML 6.0.3. To recreate it, use `uv venv .venv` and `uv pip install --python .venv/Scripts/python.exe pyyaml==6.0.3`. Do not add dependencies to the vault.\n\n`test_dependencies.py` executes the restored installed validator against valid and meaningful failing inputs, reproduces the original no-input false success, and verifies actual benchmark source paths/style imports. `rep"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\taste-vault",
+      "classification": "design-resource",
+      "reason": "Reusable component, visual reference, font, or design-discovery source.",
+      "readme": "C:\\Users\\Joshu\\dev\\ai-os-projects\\taste-vault\\README.md",
+      "license": "MIT; third-party reference screenshot rights excluded.",
+      "license_paths": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\taste-vault\\LICENSE"
+      ],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\taste-vault\\README.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\taste-vault\\LICENSE"
+      ],
+      "package_name": null,
+      "description": null,
+      "root_instructions": [],
+      "git_marker": true,
+      "readme_excerpt": "# Taste Vault\n\n**Inspiration in, vocabulary out.** A local, zero-build design-taste gallery that turns screenshots of sites you love into objective design vocabulary, clustered collections, and paste-ready briefs for Codex, Claude Code and other coding assistants.\n\nBuilt as the companion tool for the video **[Turn Claude Into A Design GENIUS In 3 Simple Steps](https://youtu.be/7FU98O0JLHs)**. This repo ships with my real vault — 46 entries across 12 collections plus my House DNA — so you can see the whole system working before you replace my taste with yours.\n\n![Example hero asset generated from a vault image recipe](generated/stillness-voxel-hero-2k.png)\n\n---\n\n## From references to an origi"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\vue-bits",
+      "classification": "design-resource",
+      "reason": "Reusable component, visual reference, font, or design-discovery source.",
+      "readme": "C:\\Users\\Joshu\\dev\\ai-os-projects\\vue-bits\\README.md",
+      "license": "MIT + Commons Clause; read local restrictions before reuse.",
+      "license_paths": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\vue-bits\\LICENSE.md"
+      ],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\vue-bits\\README.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\vue-bits\\package.json",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\vue-bits\\LICENSE.md"
+      ],
+      "package_name": "vue-bits",
+      "description": null,
+      "root_instructions": [],
+      "git_marker": true,
+      "readme_excerpt": "<div align=\"center\">\n\t<br>\n\t<br>\n    <picture>\n      <source media=\"(prefers-color-scheme: light)\" srcset=\"src/assets/logos/vuebits-gh-black.svg\">\n      <source media=\"(prefers-color-scheme: dark)\" srcset=\"src/assets/logos/vuebits-gh-white.svg\">\n      <img src=\"src/assets/logos/vuebits-gh-black.svg\" alt=\"vue-bits logo\" width=\"1000\">\n    </picture>\n\t<br>\n\t<br>\n</div>\n\n<div align=\"center\">\n  The largest & most creative library of animated Vue components.\n</div>\n\n<br />\n\n<div align=\"center\">\n  <a href=\"https://github.com/davidhdev/vue-bits/stargazers\"><img alt=\"GitHub Repo stars\" src=\"https://img.shields.io/github/stars/davidhdev/vue-bits\"></a>\n  <a href=\"https://github.com/davidhdev/vue-bits/b"
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\x-archive-collector",
+      "classification": "general",
+      "reason": "General tooling or source retrieval; relevant when needed but outside design library scope.",
+      "readme": "C:\\Users\\Joshu\\dev\\ai-os-projects\\x-archive-collector\\README.md",
+      "license": "No top-level license found; do not assume redistribution rights.",
+      "license_paths": [],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\x-archive-collector\\README.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\x-archive-collector\\pyproject.toml"
+      ],
+      "package_name": null,
+      "description": null,
+      "root_instructions": [],
+      "git_marker": true,
+      "readme_excerpt": "# Collect visible Karpathy X posts with your signed-in Chrome\n\nFree local Python + Playwright. Connects to **your existing Chrome CDP session at localhost:9223**. It creates and navigates its own scratch tab, leaving existing tabs intact. It does not export cookies, use private X endpoints, launch another profile, or install stealth/proxy tooling.\n\nThe requested default range is **2023-10-08 through 2026-10-08 inclusive**. Search queries use an exclusive `until:2026-10-09`. Weekly windows covering 2024-08 through 2024-11 run first. When a window hits the scroll budget or stalls, it is divided into smaller windows down to a single day. All results include replies surfaced by `from:karpathy`; "
+    },
+    {
+      "path": "C:\\Users\\Joshu\\dev\\ai-os-projects\\youtube-transcripts",
+      "classification": "general",
+      "reason": "General tooling or source retrieval; relevant when needed but outside design library scope.",
+      "readme": "C:\\Users\\Joshu\\dev\\ai-os-projects\\youtube-transcripts\\README.md",
+      "license": "No top-level license found; do not assume redistribution rights.",
+      "license_paths": [],
+      "status": "Top-level metadata inspected; no runtime/authentication claim.",
+      "evidence": [
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\youtube-transcripts\\README.md",
+        "C:\\Users\\Joshu\\dev\\ai-os-projects\\youtube-transcripts\\pyproject.toml"
+      ],
+      "package_name": null,
+      "description": null,
+      "root_instructions": [],
+      "git_marker": true,
+      "readme_excerpt": "# Save available YouTube captions in one command\n\nThis free Python CLI saves timestamped Markdown, original caption cues in JSON, provenance, SHA-256 hashes and a coverage report. It does not summarize. It tries youtube-transcript-api once, then your shared yt-dlp install once. It never downloads video/audio or exports browser credentials.\n\nFrom this project directory:\n\n```powershell\nuv run youtube-transcript \"https://www.youtube.com/watch?v=7xTGNNLPyMI\" --out \"C:\\Users\\Joshu\\dev\\ai-os\\raw\\inbox\\youtube\\7xTGNNLPyMI\"\n```\n\nuv creates the isolated project environment and installs only the declared free dependency. Dependencies stay outside the Obsidian vault. The first run needs network access "
+    },
+    {
+      "path": "C:\\Users\\Joshu\\Downloads\\LSAT-U-Dashboard-2026-10-22",
+      "classification": "design-project",
+      "reason": "Local standalone design prototype, motion study, handoff or visual audit. Not production.",
+      "readme": null,
+      "license": "Not independently verified. Preserve bundled font/library notices.",
+      "status": "Top-level source/artifact presence inspected; preview server not tested.",
+      "evidence": [],
+      "root_instructions": [],
+      "git_marker": false
+    },
+    {
+      "path": "C:\\Users\\Joshu\\Downloads\\LSAT-U-Dashboard-Handoff-2026-10-22",
+      "classification": "design-project",
+      "reason": "Local standalone design prototype, motion study, handoff or visual audit. Not production.",
+      "readme": "C:\\Users\\Joshu\\Downloads\\LSAT-U-Dashboard-Handoff-2026-10-22\\README.md",
+      "license": "Not independently verified. Preserve bundled font/library notices.",
+      "status": "Top-level source/artifact presence inspected; preview server not tested.",
+      "evidence": [
+        "C:\\Users\\Joshu\\Downloads\\LSAT-U-Dashboard-Handoff-2026-10-22\\auto-checks.json",
+        "C:\\Users\\Joshu\\Downloads\\LSAT-U-Dashboard-Handoff-2026-10-22\\browser-layout-checks.json",
+        "C:\\Users\\Joshu\\Downloads\\LSAT-U-Dashboard-Handoff-2026-10-22\\browser-state-checks.json",
+        "C:\\Users\\Joshu\\Downloads\\LSAT-U-Dashboard-Handoff-2026-10-22\\capture.json",
+        "C:\\Users\\Joshu\\Downloads\\LSAT-U-Dashboard-Handoff-2026-10-22\\DESIGN-BRIEF.md",
+        "C:\\Users\\Joshu\\Downloads\\LSAT-U-Dashboard-Handoff-2026-10-22\\README.md",
+        "C:\\Users\\Joshu\\Downloads\\LSAT-U-Dashboard-Handoff-2026-10-22\\shell.json",
+        "C:\\Users\\Joshu\\Downloads\\LSAT-U-Dashboard-Handoff-2026-10-22\\START-HERE-PROMPT.md",
+        "C:\\Users\\Joshu\\Downloads\\LSAT-U-Dashboard-Handoff-2026-10-22\\student-dashboard.html",
+        "C:\\Users\\Joshu\\Downloads\\LSAT-U-Dashboard-Handoff-2026-10-22\\student-handoff.md",
+        "C:\\Users\\Joshu\\Downloads\\LSAT-U-Dashboard-Handoff-2026-10-22\\teacher-dashboard.html",
+        "C:\\Users\\Joshu\\Downloads\\LSAT-U-Dashboard-Handoff-2026-10-22\\teacher-handoff.md"
+      ],
+      "root_instructions": [],
+      "git_marker": false
+    },
+    {
+      "path": "C:\\Users\\Joshu\\Downloads\\LSAT-U-Dashboard-New-Directions",
+      "classification": "design-project",
+      "reason": "Local standalone design prototype, motion study, handoff or visual audit. Not production.",
+      "readme": null,
+      "license": "Not independently verified. Preserve bundled font/library notices.",
+      "status": "Top-level source/artifact presence inspected; preview server not tested.",
+      "evidence": [
+        "C:\\Users\\Joshu\\Downloads\\LSAT-U-Dashboard-New-Directions\\index.html",
+        "C:\\Users\\Joshu\\Downloads\\LSAT-U-Dashboard-New-Directions\\REVIEW.md"
+      ],
+      "root_instructions": [],
+      "git_marker": false
+    },
+    {
+      "path": "C:\\Users\\Joshu\\Downloads\\LSAT-U-Dashboard-Three-Directions",
+      "classification": "design-project",
+      "reason": "Local standalone design prototype, motion study, handoff or visual audit. Not production.",
+      "readme": null,
+      "license": "Not independently verified. Preserve bundled font/library notices.",
+      "status": "Top-level source/artifact presence inspected; preview server not tested.",
+      "evidence": [
+        "C:\\Users\\Joshu\\Downloads\\LSAT-U-Dashboard-Three-Directions\\index.html"
+      ],
+      "root_instructions": [],
+      "git_marker": false
+    },
+    {
+      "path": "C:\\Users\\Joshu\\Downloads\\LSAT-U-Dashboard-Three-Directions-v2",
+      "classification": "design-project",
+      "reason": "Local standalone design prototype, motion study, handoff or visual audit. Not production.",
+      "readme": null,
+      "license": "Not independently verified. Preserve bundled font/library notices.",
+      "status": "Top-level source/artifact presence inspected; preview server not tested.",
+      "evidence": [
+        "C:\\Users\\Joshu\\Downloads\\LSAT-U-Dashboard-Three-Directions-v2\\index.html"
+      ],
+      "root_instructions": [],
+      "git_marker": false
+    },
+    {
+      "path": "C:\\Users\\Joshu\\Downloads\\LSAT-U-LexPrep-Motion-2026-10-22",
+      "classification": "design-project",
+      "reason": "Local standalone design prototype, motion study, handoff or visual audit. Not production.",
+      "readme": null,
+      "license": "Not independently verified. Preserve bundled font/library notices.",
+      "status": "Top-level source/artifact presence inspected; preview server not tested.",
+      "evidence": [
+        "C:\\Users\\Joshu\\Downloads\\LSAT-U-LexPrep-Motion-2026-10-22\\comparison-spec.md",
+        "C:\\Users\\Joshu\\Downloads\\LSAT-U-LexPrep-Motion-2026-10-22\\final-responsive.json",
+        "C:\\Users\\Joshu\\Downloads\\LSAT-U-LexPrep-Motion-2026-10-22\\frames.json",
+        "C:\\Users\\Joshu\\Downloads\\LSAT-U-LexPrep-Motion-2026-10-22\\lexprep-dom-observation.json",
+        "C:\\Users\\Joshu\\Downloads\\LSAT-U-LexPrep-Motion-2026-10-22\\live-verification.json",
+        "C:\\Users\\Joshu\\Downloads\\LSAT-U-LexPrep-Motion-2026-10-22\\pr-body.md",
+        "C:\\Users\\Joshu\\Downloads\\LSAT-U-LexPrep-Motion-2026-10-22\\responsive.json",
+        "C:\\Users\\Joshu\\Downloads\\LSAT-U-LexPrep-Motion-2026-10-22\\review-log.md",
+        "C:\\Users\\Joshu\\Downloads\\LSAT-U-LexPrep-Motion-2026-10-22\\verified-final-frames.json"
+      ],
+      "root_instructions": [],
+      "git_marker": false
+    },
+    {
+      "path": "C:\\Users\\Joshu\\Downloads\\LSAT-U-Motion-Studies-2026-10-22",
+      "classification": "design-project",
+      "reason": "Local standalone design prototype, motion study, handoff or visual audit. Not production.",
+      "readme": null,
+      "license": "Not independently verified. Preserve bundled font/library notices.",
+      "status": "Top-level source/artifact presence inspected; preview server not tested.",
+      "evidence": [
+        "C:\\Users\\Joshu\\Downloads\\LSAT-U-Motion-Studies-2026-10-22\\01-scroll.html",
+        "C:\\Users\\Joshu\\Downloads\\LSAT-U-Motion-Studies-2026-10-22\\02-interface.html",
+        "C:\\Users\\Joshu\\Downloads\\LSAT-U-Motion-Studies-2026-10-22\\implementation-review.md",
+        "C:\\Users\\Joshu\\Downloads\\LSAT-U-Motion-Studies-2026-10-22\\review-log.md"
+      ],
+      "root_instructions": [],
+      "git_marker": false
+    },
+    {
+      "path": "C:\\Users\\Joshu\\Downloads\\RC-Direct-Design-Audit-2026-10-21",
+      "classification": "design-project",
+      "reason": "Local standalone design prototype, motion study, handoff or visual audit. Not production.",
+      "readme": null,
+      "license": "Not independently verified. Preserve bundled font/library notices.",
+      "status": "Top-level source/artifact presence inspected; preview server not tested.",
+      "evidence": [
+        "C:\\Users\\Joshu\\Downloads\\RC-Direct-Design-Audit-2026-10-21\\widths.json"
+      ],
+      "root_instructions": [],
+      "git_marker": false
+    }
+  ]
+}

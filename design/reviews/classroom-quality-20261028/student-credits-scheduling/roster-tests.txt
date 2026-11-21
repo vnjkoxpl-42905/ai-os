@@ -1,0 +1,51 @@
+
+[1m[46m RUN [49m[22m [36mv3.2.7 [39m[90mC:/Users/Joshu/dev/ai-os-projects/lsatu-my-work-20261026[39m
+
+ [31m❯[39m src/lib/adminRosterPagination.test.ts [2m([22m[2m6 tests[22m[2m | [22m[31m1 failed[39m[2m)[22m[32m 13[2mms[22m[39m
+   [32m✓[39m complete admin roster reads[2m > [22mreads beyond a short server-capped page without skipping identities[32m 2[2mms[22m[39m
+   [32m✓[39m complete admin roster reads[2m > [22mfails instead of returning an apparently complete partial roster[32m 2[2mms[22m[39m
+   [32m✓[39m complete admin roster reads[2m > [22mpaginates authentication users to the actual empty page[32m 1[2mms[22m[39m
+   [32m✓[39m complete admin roster reads[2m > [22mrejects auth page errors and repeated pages rather than truncating or looping[32m 1[2mms[22m[39m
+   [32m✓[39m complete admin roster reads[2m > [22mdoes not hide an admin when another role follows it[32m 0[2mms[22m[39m
+[31m   [31m×[31m complete admin roster reads[2m > [22mkeeps both authenticated GET response branches on complete loaders[39m[32m 6[2mms[22m[39m
+[31m     → The URL must be of scheme file[39m
+ [32m✓[39m src/lib/accessTierClient.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+[90mstderr[2m | src/components/classroom/home/teacher/useTeachingDesk.test.tsx[2m > [22m[2mTeacher desk data boundaries[2m > [22m[2mreuses the manual draft operation on an unknown create outcome
+[22m[39mWarning: An update to TestComponent inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+    at TestComponent (C:\Users\Joshu\dev\ai-os-projects\lsatu-spot-video-release-20261025\node_modules\@testing-library\react\dist\pure.js:337:5)
+    at QueryClientProvider (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/@tanstack/react-query/build/modern/QueryClientProvider.js:41:32)
+    at wrapper (C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\src\components\classroom\home\teacher\useTeachingDesk.test.tsx:49:21)
+
+ [32m✓[39m src/components/classroom/home/teacher/useTeachingDesk.test.tsx [2m([22m[2m9 tests[22m[2m)[22m[33m 824[2mms[22m[39m
+
+[31m⎯⎯⎯⎯⎯⎯⎯[39m[1m[41m Failed Tests 1 [49m[22m[31m⎯⎯⎯⎯⎯⎯⎯[39m
+
+[41m[1m FAIL [22m[49m src/lib/adminRosterPagination.test.ts[2m > [22mcomplete admin roster reads[2m > [22mkeeps both authenticated GET response branches on complete loaders
+[31m[1mTypeError[22m: The URL must be of scheme file[39m
+[36m [2m❯[22m src/lib/adminRosterPagination.test.ts:[2m31:18[22m[39m
+    [90m 29| [39m  })[33m;[39m
+    [90m 30| [39m  it('keeps both authenticated GET response branches on complete loade…
+    [90m 31| [39m    const source=readFileSync(new URL('../../supabase/functions/admin-…
+    [90m   | [39m                 [31m^[39m
+    [90m 32| [39m    const get=source.slice(source.indexOf('if (req.method === "GET")')…
+    [90m 33| [39m    [34mexpect[39m([35mget[39m[33m.[39m[34mmatch[39m([36m/await loadCompleteRoster/g[39m))[33m.[39m[34mtoHaveLength[39m([34m2[39m)[33m;[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯[22m[39m
+
+
+[2m Test Files [22m [1m[31m1 failed[39m[22m[2m | [22m[1m[32m2 passed[39m[22m[90m (3)[39m
+[2m      Tests [22m [1m[31m1 failed[39m[22m[2m | [22m[1m[32m20 passed[39m[22m[90m (21)[39m
+[2m   Start at [22m 18:37:58
+[2m   Duration [22m 3.39s[2m (transform 346ms, setup 625ms, collect 670ms, tests 846ms, environment 3.60s, prepare 721ms)[22m
+
+
+EXIT_CODE=1

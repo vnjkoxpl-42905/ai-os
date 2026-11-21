@@ -3,6 +3,10 @@ name: redesign-existing-projects
 description: Upgrades existing websites and apps to premium quality. Audits current design, identifies generic AI patterns, and applies high-end design standards without breaking functionality. Works with any CSS framework or vanilla CSS.
 ---
 
+## Current AI OS execution contract
+
+Preserve the current design system, product facts and real dates/data. Fix demonstrated usability/accessibility defects within the brief. Do not replace factual values with organic invented values or impose an unrelated palette/font/density.
+
 # Redesign Skill
 
 ## How This Works
@@ -17,7 +21,7 @@ When applied to an existing project, follow this sequence:
 
 ### Typography
 
-Check for these problems and fix them:
+Inspect these candidate changes against the approved brief and current design system. Apply only demonstrated defects or expressly requested aesthetic changes; an existing font/palette/component is not a bug because it appears here:
 
 - **Browser default fonts or Inter everywhere.** Replace with a font that has character. Good options: `Geist`, `Outfit`, `Cabinet Grotesk`, `Satoshi`. For editorial/creative projects, pair a serif header with a sans-serif body.
 - **Headlines lack presence.** Increase size for display text, tighten letter-spacing, reduce line-height. Headlines should feel heavy and intentional.
@@ -76,14 +80,14 @@ Check for these problems and fix them:
 
 ### Content
 
-- **Generic names like "John Doe" or "Jane Smith".** Use diverse, realistic-sounding names.
-- **Fake round numbers like `99.99%`, `50%`, `$100.00`.** Use organic, messy data: `47.2%`, `$99.00`, `+1 (312) 847-1928`.
-- **Placeholder company names like "Acme Corp", "Nexus", "SmartFlow".** Invent contextual, believable brand names.
+- **Names.** Preserve real identities. Synthetic mockup names must be clearly labeled; never replace operational people with invented names.
+- **Fake round numbers like `99.99%`, `50%`, `$100.00`.** Preserve actual values; use clearly labeled synthetic data only in a specifically requested mockup.
+- **Brand names.** Preserve the real brand. Use labeled fictional examples only in mockups requested as such.
 - **AI copywriting cliches.** Never use "Elevate", "Seamless", "Unleash", "Next-Gen", "Game-changer", "Delve", "Tapestry", or "In the world of...". Write plain, specific language.
 - **Exclamation marks in success messages.** Remove them. Be confident, not loud.
 - **"Oops!" error messages.** Be direct: "Connection failed. Please try again."
 - **Passive voice.** Use active voice: "We couldn't save your changes" instead of "Mistakes were made."
-- **All blog post dates identical.** Randomize dates to appear real.
+- **All blog post dates identical.** Verify and preserve actual publication dates. Clearly label synthetic dates only in an explicitly requested mockup.
 - **Same avatar image for multiple users.** Use unique assets for every distinct person.
 - **Lorem Ipsum.** Never use placeholder latin text. Write real draft copy.
 - **Title Case On Every Header.** Use sentence case instead.
@@ -131,7 +135,7 @@ Check for these problems and fix them:
 
 ## Upgrade Techniques
 
-When upgrading a project, pull from these high-impact techniques to replace generic patterns:
+These are optional aesthetic references, not mandatory upgrades. Use only when the brief requests the effect; preserve reduced-motion rendering, keyboard behavior, performance and native scrolling:
 
 ### Typography Upgrades
 - **Variable font animation.** Interpolate weight or width on scroll or hover for text that feels alive.
@@ -145,8 +149,8 @@ When upgrading a project, pull from these high-impact techniques to replace gene
 - **Split-screen scroll.** Two halves of the screen sliding in opposite directions.
 
 ### Motion Upgrades
-- **Smooth scroll with inertia.** Decouple scrolling from browser defaults for a heavier, cinematic feel.
-- **Staggered entry.** Elements cascade in with slight delays, combining Y-axis translation with opacity fade. Never mount everything at once.
+- **Scrolling.** Preserve native scrolling. Inertial effects require an explicit brief and verified keyboard/reduced-motion fallback.
+- **Staggered entry.** Elements cascade in with slight delays, combining Y-axis translation with opacity fade. Use staggered entry only when appropriate and preserve static rendering for reduced motion.
 - **Spring physics.** Replace linear easing with spring-based motion for a natural, weighty feel on all interactive elements.
 - **Scroll-driven reveals.** Content entering through expanding masks, wipes, or draw-on SVG paths tied to scroll progress.
 
@@ -160,7 +164,7 @@ When upgrading a project, pull from these high-impact techniques to replace gene
 
 Apply changes in this order for maximum visual impact with minimum risk:
 
-1. **Font swap** — biggest instant improvement, lowest risk
+1. **Demonstrated usability/accessibility defects**: preserve current font unless the brief explicitly requests a change
 2. **Color palette cleanup** — remove clashing or oversaturated colors
 3. **Hover and active states** — makes the interface feel alive
 4. **Layout and spacing** — proper grid, max-width, consistent padding

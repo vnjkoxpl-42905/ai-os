@@ -1,0 +1,24 @@
+
+[1m[46m RUN [49m[22m [36mv3.2.7 [39m[90mC:/Users/Joshu/dev/ai-os-projects/lsatu-my-work-20261026[39m
+
+ [32m✓[39m src/components/classroom/home/teacher/teacherWeek.test.ts [2m([22m[2m6 tests[22m[2m)[22m[33m 471[2mms[22m[39m
+   [33m[2m✓[22m[39m teacher calendar dates[2m > [22muses the calendar zone instead of the browser day [33m 367[2mms[22m[39m
+ [32m✓[39m src/components/classroom/home/homeStyles.test.ts [2m([22m[2m2 tests[22m[2m)[22m[33m 446[2mms[22m[39m
+   [33m[2m✓[22m[39m Home styles across input devices[2m > [22mkeeps hover queries outside base rules and populated [33m 411[2mms[22m[39m
+ [32m✓[39m src/components/classroom/home/teacher/TeachingDesk.test.tsx [2m([22m[2m10 tests[22m[2m)[22m[33m 6655[2mms[22m[39m
+   [33m[2m✓[22m[39m Teaching desk interactions[2m > [22mcaps Home at two sessions using the true total and preserves unsaved input across disclosure [33m 3014[2mms[22m[39m
+   [33m[2m✓[22m[39m Teaching desk interactions[2m > [22mkeeps a changed draft while the original unknown task request is confirmed [33m 1575[2mms[22m[39m
+   [33m[2m✓[22m[39m Teaching desk interactions[2m > [22mreactivates an expired link only after explicit confirmation and never adds sessions automatically [33m 1406[2mms[22m[39m
+ [32m✓[39m src/components/classroom/home/teacher/TeacherHomeView.test.tsx [2m([22m[2m19 tests[22m[2m)[22m[33m 10819[2mms[22m[39m
+   [33m[2m✓[22m[39m TeacherHomeView[2m > [22muses an accessible More menu that closes on Escape and returns focus [33m 3016[2mms[22m[39m
+   [33m[2m✓[22m[39m TeacherHomeView[2m > [22mhands More selection to the booking sheet and returns to an interactive page [33m 433[2mms[22m[39m
+   [33m[2m✓[22m[39m TeacherHomeView[2m > [22mkeeps Assign work in the header without a student assignment promotion [33m 3274[2mms[22m[39m
+   [33m[2m✓[22m[39m TeacherHomeView[2m > [22mkeeps the recent-visit area small and never labels a heartbeat Online now [33m 304[2mms[22m[39m
+   [33m[2m✓[22m[39m Teacher Home provider setup rendering[2m > [22mkeeps the desk rendered when email has the live array-free setup envelope [33m 1563[2mms[22m[39m
+   [33m[2m✓[22m[39m teacher seven-day calendar[2m > [22mgroups upcoming starts in the connected zone and preserves partial snapshot qualifications [33m 1258[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m4 passed[39m[22m[90m (4)[39m
+[2m      Tests [22m [1m[32m37 passed[39m[22m[90m (37)[39m
+[2m   Start at [22m 14:33:23
+[2m   Duration [22m 33.70s[2m (transform 1.44s, setup 1.21s, collect 10.83s, tests 18.39s, environment 28.78s, prepare 3.11s)[22m
+

@@ -1,0 +1,78 @@
+{
+ "qid": "PT117-S4-Q3",
+ "type": "Most Strongly Supported",
+ "difficulty": "3",
+ "key_db": "D",
+ "stimulus_db": "Beginning in the 1950s, popular music was revolutionized by the electrification of musical instruments, which has enabled musicians to play with increased volume. Because individual musicians can play with increased volume, the average number of musicians per band has decreased. Nevertheless, electrification has increased rather than decreased the overall number of musicians who play popular music professionally.",
+ "stem_db": "Which one of the following is most strongly supported by the statements above, if those statements are true?",
+ "choices_db": {
+  "A": "The number of amateur musicians who play popular music has decreased.",
+  "B": "Most professional musicians are able to play both electric and nonelectric instruments.",
+  "C": "The number of professional musicians in some bands has increased.",
+  "D": "The total number of professional bands has increased as a result of electrification.",
+  "E": "Many professional musicians play in more than one band."
+ },
+ "bank": {
+  "stimulus": "Beginning in the 1950s, popular music was revolutionized by the electrification of musical instruments, which has enabled musicians to play with increased volume. Because individual musicians can play with increased volume, the average number of musicians per band has decreased. Nevertheless, electrification has increased rather than decreased the overall number of musicians who play popular music professionally.",
+  "stem": "Which one of the following is most strongly supported by the statements above, if those statements are true?",
+  "choices": {
+   "A": "The number of amateur musicians who play popular music has decreased.",
+   "B": "Most professional musicians are able to play both electric and nonelectric instruments.",
+   "C": "The number of professional musicians in some bands has increased.",
+   "D": "The total number of professional bands has increased as a result of electrification.",
+   "E": "Many professional musicians play in more than one band."
+  },
+  "key": "D"
+ },
+ "explanation_id": "776ae5b7-d64d-4a29-b77c-acbc385dd38d",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "9bfcc23e-1bbd-44ba-962f-dadd6f3f30d1",
+   "position": 0,
+   "label": "Facts",
+   "body": "causal (by, which has enabled, because, increased)\nelectrical >> play w/ >> avg # of musicians instruments more volume per band decreased\npivot (nevertheless)\nelectrical >> greater # of professional instruments musicians"
+  },
+  {
+   "row_id": "981bba23-7b58-4924-a7f4-1cb69e2341a9",
+   "position": 1,
+   "label": "Evaluate",
+   "body": "The #1 thing we read for on Most Supported is Cause / Effect relationships, and we got four of them here.\nThere's a causal chain, and then a pivot that creates a **mathy tension** between two different things caused by electrification: 1. fewer musicians per band 2. more musicians overall When we see a Pivot creating a mathy tension, the correct answer usually addresses / resolves that tension.\nIf we have fewer musicians in each band nowadays, how can also have more musicians total?\nWe would need there to be more bands than before.\nMaybe there used to be 10 ppl / band, and there were 80 bands, giving us 800 musicians.\nIf we only have 5 ppl / band now and want to end up with 1000 musicians (some larger number), then we'd need 200 bands."
+  },
+  {
+   "row_id": "777c8a66-eae6-4c4c-8411-1e960acb9087",
+   "position": 2,
+   "label": "Goal",
+   "body": "The correct answer will probably reward us for understanding the causal chain between electrified instruments and fewer people per band, or it'll test this mathy inference that there are more bands."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "7354eaa5-1294-49df-ab0f-3458e9be7389",
+   "letter": "A",
+   "body": "The passage is about professional musicians. Amateurs never come up."
+  },
+  {
+   "row_id": "962b0b9d-9835-47ba-9e0a-02e0921495bc",
+   "letter": "B",
+   "body": "Nothing tells us which instruments musicians can play."
+  },
+  {
+   "row_id": "f87da5d7-ee95-47ab-a6b8-8040d21a3621",
+   "letter": "C",
+   "body": "This is the most popular wrong answer. The *average* band got smaller. Some bands could have grown, but nothing in the passage says so, and the average would also fall if every single band shrank. An answer that is merely possible isn't supported."
+  },
+  {
+   "row_id": "c6105cdb-0554-4fc3-9def-e6cf49374678",
+   "letter": "D",
+   "body": "Fewer musicians per band, more musicians overall. The only way both are true is more bands. Picture 100 musicians in bands of 5: 20 bands. Now 150 musicians in bands of 3: 50 bands. Electrification drives both trends, so crediting it with the extra bands is fair."
+  },
+  {
+   "row_id": "d91af5c4-50d1-42f6-a8d5-9de7ed44243e",
+   "letter": "E",
+   "body": "Nothing tells us whether musicians play in more than one band."
+  }
+ ],
+ "known_problem": "Strong breakdown (worked numbers) but all five choice notes missing.",
+ "tags": "no-notes; very-short"
+}

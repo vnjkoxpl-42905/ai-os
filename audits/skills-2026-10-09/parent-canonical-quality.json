@@ -1,0 +1,152 @@
+[
+  {
+    "name": "a11y-debugging",
+    "disposition": "keep-adapt",
+    "reason": "Distinct accessibility audit covering semantics, focus, keyboard, labels and measured contrast. Preserve manual interaction checks alongside Lighthouse; adapt named Chrome DevTools tools only when that host exposes them. Accessibility-tree snapshot alone is not full assistive-technology acceptance.",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\a11y-debugging\\SKILL.md",
+    "sha256": "f2ee15c98641fd101275fcfe25083de0fe38f0d2145c17d6fcbe11d454b1d286",
+    "coverage": "parent fresh full body reviewed in complete nontruncated reads on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static instruction review; live workflow untested"
+  },
+  {
+    "name": "academy-guide",
+    "disposition": "keep",
+    "reason": "Healthy Claude Academy identity, intent-based strong-match rule, exact catalog URLs and stale-catalog fallback. It does not recommend courses during unrelated execution. This canonical source differs from the corrupted global Codex substitutions.",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\academy-guide\\SKILL.md",
+    "sha256": "f27992510c051355dfe68c92394d509af730da5298094ec86834ee40bbd31376",
+    "coverage": "parent fresh full body reviewed in complete nontruncated reads on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static instruction review; live workflow untested"
+  },
+  {
+    "name": "accommodations-email",
+    "disposition": "keep",
+    "reason": "Purpose-specific pre-approved send template with fixed content, recipient resolution, dry run, one student per message and send logging. Root instructions explicitly recognize this template exception; do not mistake it for unauthorized generic auto-send. Script and live delivery were not executed in this audit.",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\accommodations-email\\SKILL.md",
+    "sha256": "a5b2ecdc33d670c644cd9b0edf577848dfee7e9f4a2927eb7d8d145fd3cde99b",
+    "coverage": "parent fresh full body reviewed in complete nontruncated reads on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static instruction review; live workflow untested"
+  },
+  {
+    "name": "audit",
+    "disposition": "keep",
+    "reason": "Evidence-based Four Cs v2 audit separates configured from observed capabilities, requires history, compatibility checks, scoped manuals, exact arithmetic and saved read-back. Read-only inspected systems are explicit. This differs from skill-lint and knowledge lint; specialized catalog review should not fabricate a Four Cs score.",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\audit\\SKILL.md",
+    "sha256": "07f338e1b413a3b1052a55715d378c358252d9783c65fb648575c781eb44a14e",
+    "coverage": "parent fresh full body reviewed in complete nontruncated reads on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static instruction review; live workflow untested"
+  },
+  {
+    "name": "chief-of-staff",
+    "disposition": "fix",
+    "reason": "Explicit-only long-goal coordinator has useful context-pointer delegation. Its every-message environment-improvement and no-deviation-before-feature directives can expand a narrow authorized task. Bound proactive improvements to the selected goal and make schedules suggestions until explicitly requested.",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\chief-of-staff\\SKILL.md",
+    "sha256": "6cc6e47ab5022f3e45e5be0fedbb0f6e645f4f0190d6b0c51c7cd60c2d7c1d98",
+    "coverage": "parent fresh full body reviewed in complete nontruncated reads on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static instruction review; live workflow untested"
+  },
+  {
+    "name": "chrome-devtools",
+    "disposition": "keep-adapt",
+    "reason": "Distinct Chrome DevTools MCP browser lifecycle, fresh element identifiers, output pagination and ordered navigation/wait/snapshot workflow. Check actual host tool availability instead of treating this reference as proof MCP is connected; preserve the supported browser workflow when the MCP is unavailable.",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\chrome-devtools\\SKILL.md",
+    "sha256": "3fb1cdc33e3f484cf1445b452cad0b70ca4e5a34bb50b0c5e174440727a343a6",
+    "coverage": "parent fresh full body reviewed in complete nontruncated reads on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static instruction review; live workflow untested"
+  },
+  {
+    "name": "claude-handoff",
+    "disposition": "keep-adapt",
+    "reason": "Explicit-only background Claude CLI continuation is distinct from chat-only session-handoff. Preserve pointer-based summary and sensitive-data redaction; verify actual installed CLI supports --bg and --name, translate Bash command substitution for the host shell, and label launch failures. CLI launch was not executed.",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\claude-handoff\\SKILL.md",
+    "sha256": "79357a18425d66d4c24048bedf83dceb79d3bba356f38014950f764a7fab4026",
+    "coverage": "parent fresh full body reviewed in complete nontruncated reads on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static instruction review; live workflow untested"
+  },
+  {
+    "name": "claudex-loop",
+    "disposition": "keep",
+    "reason": "Complete cross-provider plan/revise/build/inspect loop binds approval to plan path/hash, preserves provider/model choice, scopes authorization, bounds retries and rechecks later edits with fresh other-provider inspection. Shared runner/tool availability still needs actual execution for runtime acceptance.",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\claudex-loop\\SKILL.md",
+    "sha256": "1db26e6a89252638f72412fb2d84af04f2a42d59a9ac75ae3606bd16a578cbc0",
+    "coverage": "parent fresh full body reviewed in complete nontruncated reads on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static instruction review; live workflow untested"
+  },
+  {
+    "name": "claudex-route",
+    "disposition": "keep",
+    "reason": "One scoped routing recommendation or authorized handoff, distinct from a repeated loop. Preserves intent/model choices, rejects unsupported pricing claims, requires tool-layer read-only enforcement and inspects child exit/result. Includes staged/unstaged/untracked review scope and unresolved process handling.",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\claudex-route\\SKILL.md",
+    "sha256": "4c1d1b9abd9fdcfc7967e819f397f0147a25abd9b9b5fb00ae0c3303a4dfcd34",
+    "coverage": "parent fresh full body reviewed in complete nontruncated reads on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static instruction review; live workflow untested"
+  },
+  {
+    "name": "codebase-design",
+    "disposition": "keep-adapt",
+    "reason": "Useful deep-module, seam, adapter and testability vocabulary reference with distinct mechanism examples. Its blanket demand to avoid established component/service/API language should be scoped to this explanatory vocabulary and defer to an existing project glossary, rather than rename domain terms globally.",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\codebase-design\\SKILL.md",
+    "sha256": "2c20617f87ec8af6a434859f381b2f061a69b530444e74eb39e78bb016a6d1e2",
+    "coverage": "parent fresh full body reviewed in complete nontruncated reads on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static instruction review; live workflow untested"
+  },
+  {
+    "name": "codex-build",
+    "disposition": "keep",
+    "reason": "Deliberate compatibility entry point for explicit Codex implementation with shared Claudex runner, preserved spec filename, baseline, unrelated edits and fresh other-provider inspection. It is not an accidental duplicate of the loop, and a current host implementing then certifying its own work is explicitly prohibited.",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\codex-build\\SKILL.md",
+    "sha256": "3c53a833e033665d812060c6572fb7d6654d3f280b9422432a73de9cc2acebe1",
+    "coverage": "parent fresh full body reviewed in complete nontruncated reads on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static instruction review; live workflow untested"
+  },
+  {
+    "name": "codex-review",
+    "disposition": "keep",
+    "reason": "Explicit Codex plan-review wrapper delegates to shared mode=review and distinguishes same-provider ordinary review from cross-provider approval. Empty, blocked, failed and malformed results do not approve; plan review never substitutes for final code inspection.",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\codex-review\\SKILL.md",
+    "sha256": "ec9a5a5dfc78ec36c056f8ca007cd1be9aa03dbeda060b2c58032d50c49f97c7",
+    "coverage": "parent fresh full body reviewed in complete nontruncated reads on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static instruction review; live workflow untested"
+  },
+  {
+    "name": "defuddle",
+    "disposition": "keep-adapt",
+    "reason": "Focused clean web-page extraction and metadata CLI reference, distinct from crawling and durable ingest. Check installed executable and select a task-owned output location; do not infer permission for an unnecessary global install from a read request. No CLI extraction or installation was run.",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\defuddle\\SKILL.md",
+    "sha256": "10673a4dc70a0a057612d443243ab7a5aa4abdd4a0fadc3f6eec5fd71ad5a971",
+    "coverage": "parent fresh full body reviewed in complete nontruncated reads on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static instruction review; live workflow untested"
+  },
+  {
+    "name": "design-an-interface",
+    "disposition": "keep-adapt",
+    "reason": "Focused compare-multiple-module-interfaces design-only workflow with signatures, callers, hidden complexity and trade-offs; not a generic frontend design skill. Use host-supported delegation and available concurrency instead of literal Claude Task tool calls in another runtime; reuse resolved requirements rather than repeat an interview.",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\design-an-interface\\SKILL.md",
+    "sha256": "a2596e9fa2d50e23ba014f64a5b8f9df4eb56b846a52cad152899ef5eb97b085",
+    "coverage": "parent fresh full body reviewed in complete nontruncated reads on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static instruction review; live workflow untested"
+  },
+  {
+    "name": "domain-modeling",
+    "disposition": "keep",
+    "reason": "Active terminology/relationship refinement, concrete edge cases and code reconciliation, with lazy glossary creation and sparse reversible-cost-based ADRs. Explicitly separates changing the model from merely reading vocabulary. Keep its canonical GLOSSARY home coordinated with overlapping glossary-writing routes.",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\domain-modeling\\SKILL.md",
+    "sha256": "7b925d7b1e341a2eeae33ad68a8a8c0ab889a38ddd22a7598e4c240e5a7556a3",
+    "coverage": "parent fresh full body reviewed in complete nontruncated reads on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static instruction review; live workflow untested"
+  }
+]

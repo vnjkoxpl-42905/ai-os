@@ -1,0 +1,1942 @@
+{
+  "skill": {
+    "name": "scroll-craft",
+    "source": "C:\\Users\\Joshu\\dev\\ai-os\\.claude\\skills\\scroll-craft",
+    "scanned_at": "2026-10-14T14:54:36.185789+00:00"
+  },
+  "risk_assessment": {
+    "score": 100,
+    "severity": "CRITICAL",
+    "recommendation": "DO_NOT_INSTALL",
+    "max_issue_severity": "HIGH"
+  },
+  "components": [
+    {
+      "path": "SKILL.md",
+      "type": "markdown",
+      "lines": 457,
+      "executable": false,
+      "size_bytes": 24879,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "engine/scrollcraft.css",
+      "type": "other",
+      "lines": 432,
+      "executable": false,
+      "size_bytes": 19769,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "engine/scrollcraft.js",
+      "type": "javascript",
+      "lines": 1283,
+      "executable": true,
+      "size_bytes": 62176,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "references/approved-collection.md",
+      "type": "markdown",
+      "lines": 177,
+      "executable": false,
+      "size_bytes": 11650,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "references/assets.md",
+      "type": "markdown",
+      "lines": 286,
+      "executable": false,
+      "size_bytes": 13194,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "references/device-diag.html",
+      "type": "other",
+      "lines": 214,
+      "executable": false,
+      "size_bytes": 9149,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "references/devices.md",
+      "type": "markdown",
+      "lines": 552,
+      "executable": false,
+      "size_bytes": 26648,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "references/feel.md",
+      "type": "markdown",
+      "lines": 277,
+      "executable": false,
+      "size_bytes": 13181,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "references/hero-depth.md",
+      "type": "markdown",
+      "lines": 67,
+      "executable": false,
+      "size_bytes": 6260,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "references/taste.md",
+      "type": "markdown",
+      "lines": 304,
+      "executable": false,
+      "size_bytes": 14874,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "references/template.html",
+      "type": "other",
+      "lines": 138,
+      "executable": false,
+      "size_bytes": 6418,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "references/uniqueness.md",
+      "type": "markdown",
+      "lines": 480,
+      "executable": false,
+      "size_bytes": 23527,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "references/verify.md",
+      "type": "markdown",
+      "lines": 385,
+      "executable": false,
+      "size_bytes": 24189,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "references/worldflight.md",
+      "type": "markdown",
+      "lines": 349,
+      "executable": false,
+      "size_bytes": 16155,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "references/worlds.md",
+      "type": "markdown",
+      "lines": 178,
+      "executable": false,
+      "size_bytes": 8046,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "scripts/doctor.mjs",
+      "type": "other",
+      "lines": 179,
+      "executable": true,
+      "size_bytes": 7281,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "scripts/encode.sh",
+      "type": "shell",
+      "lines": 80,
+      "executable": true,
+      "size_bytes": 3222,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "scripts/kie.mjs",
+      "type": "other",
+      "lines": 202,
+      "executable": true,
+      "size_bytes": 7780,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "scripts/serve.mjs",
+      "type": "other",
+      "lines": 74,
+      "executable": true,
+      "size_bytes": 3206,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "scripts/shoot.mjs",
+      "type": "other",
+      "lines": 657,
+      "executable": true,
+      "size_bytes": 33472,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "scripts/workspace.mjs",
+      "type": "other",
+      "lines": 106,
+      "executable": true,
+      "size_bytes": 3707,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "scripts/worldflight-assert.mjs",
+      "type": "other",
+      "lines": 275,
+      "executable": true,
+      "size_bytes": 13115,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "templates/FINGERPRINTS.md",
+      "type": "markdown",
+      "lines": 65,
+      "executable": false,
+      "size_bytes": 2387,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    }
+  ],
+  "structured_summaries": [],
+  "issues": [
+    {
+      "id": "LP1",
+      "finding_id": "finding-7971cba05e9945199c6de2f6b88700cd",
+      "category": "MCP Least Privilege",
+      "pattern": "Code capability 'network' detected in engine/scrollcraft.js but not covered by declared permissions.",
+      "severity": "HIGH",
+      "confidence": 0.75,
+      "location": {
+        "file": "engine/scrollcraft.js",
+        "start_line": 1,
+        "end_line": null
+      },
+      "finding": "Code capability 'network' detected in engine/scrollcraft.js but not covered by declared permissions.",
+      "explanation": "The skill uses 'network' capability that is not covered by the declared 'allowed-tools' preapproval. Review the host runtime's actual enforcement policy; runtime permissions are unknown unless separately verified, and this declaration alone does not establish a permission ceiling.",
+      "remediation": "Review whether the 'network' capability is required and whether the host runtime policy permits it; runtime permissions are unknown unless separately verified. Remove code that does not need the capability; do not broaden 'allowed-tools' preapproval solely to silence this finding.",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI02"
+      ],
+      "evidence": {},
+      "match_fingerprint": null,
+      "occurrences": [
+        {
+          "file": "engine/scrollcraft.js",
+          "start_line": 1,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "AR2",
+      "finding_id": "finding-c37e4de41fc549e1bcab059e66fdfa68",
+      "category": "Anti-Refusal",
+      "pattern": "Anti-Refusal Statement",
+      "severity": "HIGH",
+      "confidence": 0.85,
+      "location": {
+        "file": "references/approved-collection.md",
+        "start_line": 88,
+        "end_line": 88,
+        "start_column": 0,
+        "end_column": 12
+      },
+      "finding": "Do not judge",
+      "explanation": "Skill instructs the agent to omit warnings, disclaimers, or ethical commentary. Stripping safety caveats hides risk from the user and is a common jailbreak preamble.",
+      "remediation": "Remove instructions that suppress warnings, disclaimers, or ethical commentary. Let the agent surface safety-relevant caveats to the user.",
+      "code_snippet": "Do not judge an alpha image solely by a previewer's exposed RGB backing color.",
+      "intent": null,
+      "tags": [
+        "Anti-Refusal",
+        "contextual-triage",
+        "likely-benign-context"
+      ],
+      "evidence": {},
+      "match_fingerprint": "cfb63a167f529fc9932a01a4f54df4414a5b0ca7eb6d5d3a782daae70d75d42a",
+      "occurrences": [
+        {
+          "file": "references/approved-collection.md",
+          "start_line": 88,
+          "end_line": 88,
+          "start_column": 0,
+          "end_column": 12
+        }
+      ]
+    },
+    {
+      "id": "AR1",
+      "finding_id": "finding-3babfa3b81bc484b9c14fc0d09fa5769",
+      "category": "Anti-Refusal",
+      "pattern": "Anti-Refusal Statement",
+      "severity": "HIGH",
+      "confidence": 0.85,
+      "location": {
+        "file": "references/assets.md",
+        "start_line": 111,
+        "end_line": 111,
+        "start_column": 36,
+        "end_column": 49
+      },
+      "finding": "do not refuse",
+      "explanation": "Skill instructs the agent to never refuse or to always comply. Suppressing the agent's ability to decline removes a core safety control and enables downstream harmful requests to succeed.",
+      "remediation": "Remove any instruction telling the agent to never refuse or always comply. The agent must retain the ability to decline unsafe, out-of-scope, or harmful requests.",
+      "code_snippet": "a build that comes in at its per-call cap has real headroom.** Keep planning at\n28 and 160, because a ceiling that never under-claims is the right one to hold a\nbuild to, and because the ratio is an observation about billing rather than a\npublished price that will hold. But do not refuse a justified reroll on a cap\ncomputed at the documented rates, and do not report a per-call sum as measured\nspend.\n",
+      "intent": null,
+      "tags": [
+        "Anti-Refusal"
+      ],
+      "evidence": {},
+      "match_fingerprint": "46c971bfc8bc4e60ff5d691e098efe460bdcd52975a9a876e0ea3e69d04dab66",
+      "occurrences": [
+        {
+          "file": "references/assets.md",
+          "start_line": 111,
+          "end_line": 111,
+          "start_column": 36,
+          "end_column": 49
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "finding_id": "finding-43e8fbb2b6ab42229a4c1eb6f28673ff",
+      "category": "Prompt Injection",
+      "pattern": "Hidden Instructions",
+      "severity": "HIGH",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/device-diag.html",
+        "start_line": 2,
+        "end_line": 24,
+        "start_column": 0,
+        "end_column": 3
+      },
+      "finding": "<!--\n  device-diag: real-device scrub diagnostic for scrollcraft builds.\n\n  Headless verification cannot reproduce a phone's video decoder, autoplay\n  policy, Low Power Mode, or touch scrolling. When ",
+      "explanation": "Hidden instructions were detected in comments or invisible text. These could contain malicious directives. Manual review is recommended.",
+      "remediation": "Audit all comments and invisible characters. Remove any instructions that direct the agent to perform unauthorized actions. Use plain, reviewable content.",
+      "code_snippet": "<!doctype html>\n<!--\n  device-diag: real-device scrub diagnostic for scrollcraft builds.\n\n  Headless verification cannot reproduce a phone's video decoder, autoplay",
+      "intent": null,
+      "tags": [
+        "Prompt Injection"
+      ],
+      "evidence": {},
+      "match_fingerprint": "79b59aaf59a73758f05a691d5e32d364b566535eea81ab36e2aa7798093498d4",
+      "occurrences": [
+        {
+          "file": "references/device-diag.html",
+          "start_line": 2,
+          "end_line": 24,
+          "start_column": 0,
+          "end_column": 3
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "finding_id": "finding-f3801dfbdad54f0fac0b05bb8ac7e697",
+      "category": "Prompt Injection",
+      "pattern": "Hidden Instructions",
+      "severity": "HIGH",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/template.html",
+        "start_line": 2,
+        "end_line": 46,
+        "start_column": 0,
+        "end_column": 71
+      },
+      "finding": "<!--\n  scrollcraft skeleton.\n\n  Start here, then delete what you do not need and write your own markup for\n  what you keep. This is a starting point, not a layout: a page that keeps this\n  structure v",
+      "explanation": "Hidden instructions were detected in comments or invisible text. These could contain malicious directives. Manual review is recommended.",
+      "remediation": "Audit all comments and invisible characters. Remove any instructions that direct the agent to perform unauthorized actions. Use plain, reviewable content.",
+      "code_snippet": "<!doctype html>\n<!--\n  scrollcraft skeleton.\n\n  Start here, then delete what you do not need and write your own markup for",
+      "intent": null,
+      "tags": [
+        "Prompt Injection"
+      ],
+      "evidence": {},
+      "match_fingerprint": "95dda15402ac7756da5c15824b8abd69be647e61507e44ebbdc4159919d3ed6a",
+      "occurrences": [
+        {
+          "file": "references/template.html",
+          "start_line": 2,
+          "end_line": 46,
+          "start_column": 0,
+          "end_column": 71
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "finding_id": "finding-2c9b6fbf22f54c618491a4ed60be06b1",
+      "category": "Prompt Injection",
+      "pattern": "Hidden Instructions",
+      "severity": "HIGH",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/template.html",
+        "start_line": 50,
+        "end_line": 57,
+        "start_column": 2,
+        "end_column": 74
+      },
+      "finding": "<!-- 1 \u00b7 RECOGNITION: scrub -->\n  <section data-sc-act=\"scrub\" data-sc-span=\"2.6\" data-sc-dwell=\"0.34\" data-sc-drift=\"#08090b\">\n    <div data-sc-stage>\n      <img class=\"sc-stage__poster\" src=\"assets/",
+      "explanation": "Hidden instructions were detected in comments or invisible text. These could contain malicious directives. Manual review is recommended.",
+      "remediation": "Audit all comments and invisible characters. Remove any instructions that direct the agent to perform unauthorized actions. Use plain, reviewable content.",
+      "code_snippet": "\n<main id=\"top\">\n\n  <!-- 1 \u00b7 RECOGNITION: scrub -->\n  <section data-sc-act=\"scrub\" data-sc-span=\"2.6\" data-sc-dwell=\"0.34\" data-sc-drift=\"#08090b\">\n    <div data-sc-stage>\n      <img class=\"sc-stage__poster\" src=\"assets/01-poster.webp\" alt=\"\">",
+      "intent": null,
+      "tags": [
+        "Prompt Injection"
+      ],
+      "evidence": {},
+      "match_fingerprint": "d8b110f976a2d01c071793b9009154d6aaa49b5e2a3d4070f997191f5b94c514",
+      "occurrences": [
+        {
+          "file": "references/template.html",
+          "start_line": 50,
+          "end_line": 57,
+          "start_column": 2,
+          "end_column": 74
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "finding_id": "finding-a44f8085316949c08adbe6e059d45bc1",
+      "category": "Prompt Injection",
+      "pattern": "Hidden Instructions",
+      "severity": "HIGH",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/template.html",
+        "start_line": 65,
+        "end_line": 101,
+        "start_column": 2,
+        "end_column": 73
+      },
+      "finding": "<!-- 2 \u00b7 TENSION: pin. Overlap the windows ~15% so there is never a gap. -->\n  <section data-sc-act=\"pin\" data-sc-span=\"3.4\" data-sc-drift=\"#101217\">\n    <div data-sc-stage class=\"argument\">\n      <p ",
+      "explanation": "Hidden instructions were detected in comments or invisible text. These could contain malicious directives. Manual review is recommended.",
+      "remediation": "Audit all comments and invisible characters. Remove any instructions that direct the agent to perform unauthorized actions. Use plain, reviewable content.",
+      "code_snippet": "    </div>\n  </section>\n\n  <!-- 2 \u00b7 TENSION: pin. Overlap the windows ~15% so there is never a gap. -->\n  <section data-sc-act=\"pin\" data-sc-span=\"3.4\" data-sc-drift=\"#101217\">\n    <div data-sc-stage class=\"argument\">\n      <p data-sc-cue=\"0 0.32 0\">The situation they recognise.</p>",
+      "intent": null,
+      "tags": [
+        "Prompt Injection"
+      ],
+      "evidence": {},
+      "match_fingerprint": "949b36875cfec1d66f40dd72b800f25f800e36469bb2184b2da3c082601b91ef",
+      "occurrences": [
+        {
+          "file": "references/template.html",
+          "start_line": 65,
+          "end_line": 101,
+          "start_column": 2,
+          "end_column": 73
+        }
+      ]
+    },
+    {
+      "id": "LP1",
+      "finding_id": "finding-7ebea37b7cfa43a6978387877bb6642e",
+      "category": "MCP Least Privilege",
+      "pattern": "Code capability 'env' detected in scripts/doctor.mjs but not covered by declared permissions.",
+      "severity": "HIGH",
+      "confidence": 0.75,
+      "location": {
+        "file": "scripts/doctor.mjs",
+        "start_line": 1,
+        "end_line": null
+      },
+      "finding": "Code capability 'env' detected in scripts/doctor.mjs but not covered by declared permissions.",
+      "explanation": "The skill uses 'env' capability that is not covered by the declared 'allowed-tools' preapproval. Review the host runtime's actual enforcement policy; runtime permissions are unknown unless separately verified, and this declaration alone does not establish a permission ceiling.",
+      "remediation": "Review whether the 'env' capability is required and whether the host runtime policy permits it; runtime permissions are unknown unless separately verified. Remove code that does not need the capability; do not broaden 'allowed-tools' preapproval solely to silence this finding.",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI02"
+      ],
+      "evidence": {},
+      "match_fingerprint": null,
+      "occurrences": [
+        {
+          "file": "scripts/doctor.mjs",
+          "start_line": 1,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "PE3",
+      "finding_id": "finding-b06a4a11c69944b0a6ad9bd488c54b57",
+      "category": "Privilege Escalation",
+      "pattern": "Credential Access",
+      "severity": "HIGH",
+      "confidence": 0.6,
+      "location": {
+        "file": "scripts/doctor.mjs",
+        "start_line": 131,
+        "end_line": null,
+        "start_column": 30
+      },
+      "finding": ".env\"",
+      "explanation": "Code accesses credential files (SSH keys, AWS credentials, etc.). This could indicate credential theft attempts.",
+      "remediation": "Remove references to credential paths. Use environment variables or secrets managers. For docs, use placeholder paths (e.g., /path/to/config). Never load .env or token files in production code paths.",
+      "code_snippet": "  if (process.env.KIE_AI_API_KEY) return \"env\";\n  let dir = process.cwd();\n  for (let i = 0; i < 8; i++) {\n    const p = path.join(dir, \".env\");\n    if (fs.existsSync(p) && /^\\s*KIE_AI_API_KEY\\s*=\\s*\\S+/m.test(fs.readFileSync(p, \"utf8\"))) return p;\n    const up = path.dirname(dir);\n    if (up === dir) break;",
+      "intent": null,
+      "tags": [
+        "Privilege Escalation"
+      ],
+      "evidence": {},
+      "match_fingerprint": "933e7e6dda63d615cb9ac0846682521855cd79c351e84f3fa87d934c18b752db",
+      "occurrences": [
+        {
+          "file": "scripts/doctor.mjs",
+          "start_line": 131,
+          "end_line": null,
+          "start_column": 30
+        }
+      ]
+    },
+    {
+      "id": "PE3",
+      "finding_id": "finding-9362891f4fbb4078a5b2aaeb21661c29",
+      "category": "Privilege Escalation",
+      "pattern": "Credential Access",
+      "severity": "HIGH",
+      "confidence": 0.6,
+      "location": {
+        "file": "scripts/kie.mjs",
+        "start_line": 39,
+        "end_line": null,
+        "start_column": 30
+      },
+      "finding": ".env\"",
+      "explanation": "Code accesses credential files (SSH keys, AWS credentials, etc.). This could indicate credential theft attempts.",
+      "remediation": "Remove references to credential paths. Use environment variables or secrets managers. For docs, use placeholder paths (e.g., /path/to/config). Never load .env or token files in production code paths.",
+      "code_snippet": "function findEnv(start) {\n  let dir = path.resolve(start);\n  for (let i = 0; i < 8; i++) {\n    const p = path.join(dir, \".env\");\n    if (fs.existsSync(p)) return p;\n    const up = path.dirname(dir);\n    if (up === dir) break;",
+      "intent": null,
+      "tags": [
+        "Privilege Escalation"
+      ],
+      "evidence": {},
+      "match_fingerprint": "933e7e6dda63d615cb9ac0846682521855cd79c351e84f3fa87d934c18b752db",
+      "occurrences": [
+        {
+          "file": "scripts/kie.mjs",
+          "start_line": 39,
+          "end_line": null,
+          "start_column": 30
+        }
+      ]
+    },
+    {
+      "id": "PE3",
+      "finding_id": "finding-4af8931197f9440f88994ee02e1c8d29",
+      "category": "Privilege Escalation",
+      "pattern": "Credential Access",
+      "severity": "HIGH",
+      "confidence": 0.6,
+      "location": {
+        "file": "scripts/doctor.mjs",
+        "start_line": 141,
+        "end_line": null,
+        "start_column": 126
+      },
+      "finding": ".env ",
+      "explanation": "Code accesses credential files (SSH keys, AWS credentials, etc.). This could indicate credential theft attempts.",
+      "remediation": "Remove references to credential paths. Use environment variables or secrets managers. For docs, use placeholder paths (e.g., /path/to/config). Never load .env or token files in production code paths.",
+      "code_snippet": "}\nconst keyWhere = findKey();\nadd(\"optional\", \"KIE_AI_API_KEY\", Boolean(keyWhere), keyWhere || \"not set\",\n  \"Only needed to GENERATE imagery. Building from your own photos and footage needs no key and no spend. Copy .env.example to .env to set one.\");\n\n// ----------------------------------------------------------- workspace ----\nlet ws = null;",
+      "intent": null,
+      "tags": [
+        "Privilege Escalation"
+      ],
+      "evidence": {},
+      "match_fingerprint": "66ef81c27c03406fd9935e5fc86fc4126d7150c15b8d076fdc528d05cea7c7bf",
+      "occurrences": [
+        {
+          "file": "scripts/doctor.mjs",
+          "start_line": 141,
+          "end_line": null,
+          "start_column": 126
+        }
+      ]
+    },
+    {
+      "id": "PE3",
+      "finding_id": "finding-3fbd0c62f3d5418a96060ee07943630b",
+      "category": "Privilege Escalation",
+      "pattern": "Credential Access",
+      "severity": "HIGH",
+      "confidence": 0.6,
+      "location": {
+        "file": "scripts/kie.mjs",
+        "start_line": 20,
+        "end_line": null,
+        "start_column": 51
+      },
+      "finding": ".env ",
+      "explanation": "Code accesses credential files (SSH keys, AWS credentials, etc.). This could indicate credential theft attempts.",
+      "remediation": "Remove references to credential paths. Use environment variables or secrets managers. For docs, use placeholder paths (e.g., /path/to/config). Never load .env or token files in production code paths.",
+      "code_snippet": " *\n *   probe  print account credit and exit.\n *\n * Env: KIE_AI_API_KEY, read from the project-root .env if not already set.\n */\n\nimport fs from \"node:fs\";",
+      "intent": null,
+      "tags": [
+        "Privilege Escalation"
+      ],
+      "evidence": {},
+      "match_fingerprint": "66ef81c27c03406fd9935e5fc86fc4126d7150c15b8d076fdc528d05cea7c7bf",
+      "occurrences": [
+        {
+          "file": "scripts/kie.mjs",
+          "start_line": 20,
+          "end_line": null,
+          "start_column": 51
+        }
+      ]
+    },
+    {
+      "id": "PE3",
+      "finding_id": "finding-23dbef9bf47040af93165df3c75ad59b",
+      "category": "Privilege Escalation",
+      "pattern": "Credential Access",
+      "severity": "HIGH",
+      "confidence": 0.6,
+      "location": {
+        "file": "scripts/kie.mjs",
+        "start_line": 50,
+        "end_line": null,
+        "start_column": 63
+      },
+      "finding": ".env ",
+      "explanation": "Code accesses credential files (SSH keys, AWS credentials, etc.). This could indicate credential theft attempts.",
+      "remediation": "Remove references to credential paths. Use environment variables or secrets managers. For docs, use placeholder paths (e.g., /path/to/config). Never load .env or token files in production code paths.",
+      "code_snippet": "function loadKey() {\n  if (process.env.KIE_AI_API_KEY) return process.env.KIE_AI_API_KEY;\n  const envPath = findEnv(process.cwd());\n  if (!envPath) throw new Error(\"KIE_AI_API_KEY not set and no .env found walking up from \" + process.cwd());\n  for (const line of fs.readFileSync(envPath, \"utf8\").split(/\\r?\\n/)) {\n    const m = line.match(/^\\s*KIE_AI_API_KEY\\s*=\\s*(.+?)\\s*$/);\n    if (m) return m[1].replace(/^[\"']|[\"']$/g, \"\");",
+      "intent": null,
+      "tags": [
+        "Privilege Escalation"
+      ],
+      "evidence": {},
+      "match_fingerprint": "66ef81c27c03406fd9935e5fc86fc4126d7150c15b8d076fdc528d05cea7c7bf",
+      "occurrences": [
+        {
+          "file": "scripts/kie.mjs",
+          "start_line": 50,
+          "end_line": null,
+          "start_column": 63
+        }
+      ]
+    },
+    {
+      "id": "EA2",
+      "finding_id": "finding-d2d5906f789642c087cfff0d4e2bead0",
+      "category": "Excessive Agency",
+      "pattern": "Autonomous Decision Making",
+      "severity": "MEDIUM",
+      "confidence": 0.75,
+      "location": {
+        "file": "references/worldflight.md",
+        "start_line": 283,
+        "end_line": null,
+        "start_column": 37
+      },
+      "finding": "without checking",
+      "explanation": "Skill enables autonomous high-impact decisions without human-in-the-loop verification. Critical operations (destructive commands, financial transactions, data deletion) should require explicit user confirmation.",
+      "remediation": "Add human-in-the-loop confirmation for destructive, irreversible, or high-impact operations. Never auto-execute commands that modify files, send data, or alter system state.",
+      "code_snippet": "line yields, is noticeably fast.\n\nThat line is a **dead-scroll guardrail, not a taste ceiling.** Exceeding it is\nfine and often correct; exceeding it without checking is not. The harness\ndefines dead scroll mechanically and will tell you. At 0.216vh/s a 0.12vh sample\ngap still advances the clip by half a second, nowhere near dead.\n",
+      "intent": null,
+      "tags": [
+        "Excessive Agency"
+      ],
+      "evidence": {},
+      "match_fingerprint": "9341b6f34d6af9081a0d6673f4217b7307d273da9f43357efd9029e15c5da76c",
+      "occurrences": [
+        {
+          "file": "references/worldflight.md",
+          "start_line": 283,
+          "end_line": null,
+          "start_column": 37
+        }
+      ]
+    },
+    {
+      "id": "E1",
+      "finding_id": "finding-5ed298e00ea4438785288ad8a197e1c1",
+      "category": "Data Exfiltration",
+      "pattern": "External Transmission",
+      "severity": "MEDIUM",
+      "confidence": 0.5,
+      "location": {
+        "file": "scripts/kie.mjs",
+        "start_line": 5,
+        "end_line": null,
+        "start_column": 10
+      },
+      "finding": "https://api.kie.ai/",
+      "explanation": "Data is being sent to an external URL. This could be legitimate telemetry or data exfiltration. Manual review is recommended.",
+      "remediation": "Verify the destination URL is trusted and necessary. Remove or replace with documented APIs. Ensure no secrets, tokens, or PII are transmitted.",
+      "code_snippet": "/**\n * scrollcraft asset generator: kie.ai unified jobs API.\n *\n *   POST https://api.kie.ai/api/v1/jobs/createTask   { model, input }\n *   GET  https://api.kie.ai/api/v1/jobs/recordInfo?taskId=...\n *\n * COMMANDS",
+      "intent": null,
+      "tags": [
+        "Data Exfiltration"
+      ],
+      "evidence": {},
+      "match_fingerprint": "67b30adcc635d04eba5535c1760ad1acc6bcb914a5c9aa8cc520d324926f45cb",
+      "occurrences": [
+        {
+          "file": "scripts/kie.mjs",
+          "start_line": 5,
+          "end_line": null,
+          "start_column": 10
+        }
+      ]
+    },
+    {
+      "id": "E1",
+      "finding_id": "finding-dc753fa48367465880855f48d2bc4b3f",
+      "category": "Data Exfiltration",
+      "pattern": "External Transmission",
+      "severity": "MEDIUM",
+      "confidence": 0.5,
+      "location": {
+        "file": "scripts/kie.mjs",
+        "start_line": 6,
+        "end_line": null,
+        "start_column": 10
+      },
+      "finding": "https://api.kie.ai/",
+      "explanation": "Data is being sent to an external URL. This could be legitimate telemetry or data exfiltration. Manual review is recommended.",
+      "remediation": "Verify the destination URL is trusted and necessary. Remove or replace with documented APIs. Ensure no secrets, tokens, or PII are transmitted.",
+      "code_snippet": " * scrollcraft asset generator: kie.ai unified jobs API.\n *\n *   POST https://api.kie.ai/api/v1/jobs/createTask   { model, input }\n *   GET  https://api.kie.ai/api/v1/jobs/recordInfo?taskId=...\n *\n * COMMANDS\n *   still  <prompt> <out.png> [--ar 16:9] [--ref a.png]",
+      "intent": null,
+      "tags": [
+        "Data Exfiltration"
+      ],
+      "evidence": {},
+      "match_fingerprint": "67b30adcc635d04eba5535c1760ad1acc6bcb914a5c9aa8cc520d324926f45cb",
+      "occurrences": [
+        {
+          "file": "scripts/kie.mjs",
+          "start_line": 6,
+          "end_line": null,
+          "start_column": 10
+        }
+      ]
+    }
+  ],
+  "suppressed_count": 0,
+  "suppressed": [],
+  "metadata": {
+    "has_executable_scripts": true,
+    "skillspector_version": "2.12.0",
+    "llm_requested": false,
+    "llm_available": false,
+    "meta_analysis_applied": false,
+    "inference_usage": [],
+    "llm_provenance": {
+      "schema_version": 1,
+      "provider": {
+        "configured_adapter": "unknown",
+        "resolved_adapter": "unknown",
+        "effective_adapter": "not_applicable",
+        "effective_adapters": [],
+        "service": "unknown",
+        "routing": {
+          "deployment_override": null,
+          "deployment_source": "unknown",
+          "api_version": null,
+          "api_version_source": "unknown"
+        }
+      },
+      "analyzers": [
+        {
+          "analyzer_id": "mcp_tool_poisoning",
+          "model": "z-ai/glm-5.3",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "4c52fbb83bbca0dd13f2685453c9b661d8c95bf8",
+              "source": "package_vcs_metadata"
+            }
+          }
+        },
+        {
+          "analyzer_id": "semantic_developer_intent",
+          "model": "z-ai/glm-5.3",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "4c52fbb83bbca0dd13f2685453c9b661d8c95bf8",
+              "source": "package_vcs_metadata"
+            }
+          }
+        },
+        {
+          "analyzer_id": "semantic_quality_policy",
+          "model": "z-ai/glm-5.3",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "4c52fbb83bbca0dd13f2685453c9b661d8c95bf8",
+              "source": "package_vcs_metadata"
+            }
+          }
+        },
+        {
+          "analyzer_id": "semantic_security_discovery",
+          "model": "z-ai/glm-5.3",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "4c52fbb83bbca0dd13f2685453c9b661d8c95bf8",
+              "source": "package_vcs_metadata"
+            }
+          }
+        },
+        {
+          "analyzer_id": "meta_analyzer",
+          "model": "z-ai/glm-5.3",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "4c52fbb83bbca0dd13f2685453c9b661d8c95bf8",
+              "source": "package_vcs_metadata"
+            }
+          }
+        }
+      ],
+      "sampling": {
+        "temperature": {
+          "requested": null,
+          "source": "provider_default",
+          "forwarded_to_client": null,
+          "adapter_support": false,
+          "provider_support": "unknown"
+        },
+        "seed": {
+          "requested": null,
+          "source": "unset",
+          "forwarded_to_client": null,
+          "adapter_support": false,
+          "provider_support": "unknown"
+        },
+        "reasoning_effort": {
+          "requested": null,
+          "source": "provider_default",
+          "forwarded_to_client": null,
+          "adapter_support": false,
+          "provider_support": "unknown"
+        }
+      },
+      "determinism": {
+        "classification": "not_applicable",
+        "control_status": "not_applied",
+        "provider_guarantee": false,
+        "reason": "LLM analysis was not executed for this scan."
+      }
+    },
+    "filtering_mode": "heuristic"
+  },
+  "execution_successful": true,
+  "analysis_completeness": {
+    "total_components": 23,
+    "scanned_components": 18,
+    "coverage_percent": 78.3,
+    "is_complete": false,
+    "status": "partial",
+    "execution_successful": true,
+    "fully_inspected_files": 18,
+    "partially_inspected_files": 5,
+    "entirely_uninspected_files": 0,
+    "ledger_exceptions": [
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_missing",
+        "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+        "path": "SKILL.md",
+        "start_line": 185,
+        "end_line": 185,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_missing",
+        "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+        "path": "SKILL.md",
+        "start_line": 193,
+        "end_line": 193,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_missing",
+        "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+        "path": "SKILL.md",
+        "start_line": 318,
+        "end_line": 318,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_missing",
+        "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+        "path": "SKILL.md",
+        "start_line": 319,
+        "end_line": 319,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_missing",
+        "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+        "path": "SKILL.md",
+        "start_line": 320,
+        "end_line": 320,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_missing",
+        "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+        "path": "SKILL.md",
+        "start_line": 321,
+        "end_line": 321,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_missing",
+        "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+        "path": "SKILL.md",
+        "start_line": 388,
+        "end_line": 388,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_missing",
+        "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+        "path": "SKILL.md",
+        "start_line": 430,
+        "end_line": 430,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_missing",
+        "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+        "path": "SKILL.md",
+        "start_line": 448,
+        "end_line": 448,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "static",
+        "reason_code": "obfuscated_instruction_text",
+        "message": "Obfuscated instruction text could not be fully evaluated by the deterministic layer.",
+        "path": "scripts/doctor.mjs",
+        "start_line": null,
+        "end_line": null,
+        "fatal": false,
+        "analyzers": [
+          "static_patterns_agent_snooping",
+          "static_patterns_anti_refusal",
+          "static_patterns_deserialization",
+          "static_patterns_excessive_agency",
+          "static_patterns_harmful_content",
+          "static_patterns_memory_poisoning",
+          "static_patterns_privilege_escalation",
+          "static_patterns_prompt_injection",
+          "static_patterns_rogue_agent",
+          "static_patterns_ssrf",
+          "static_patterns_supply_chain",
+          "static_patterns_system_prompt_leakage"
+        ]
+      },
+      {
+        "outcome": "partial",
+        "phase": "static",
+        "reason_code": "static_parse_limit",
+        "message": "A security-relevant expression exceeded a bounded static parser's span limit.",
+        "path": "scripts/doctor.mjs",
+        "start_line": null,
+        "end_line": null,
+        "fatal": false,
+        "analyzers": [
+          "static_patterns_tool_misuse"
+        ]
+      },
+      {
+        "outcome": "partial",
+        "phase": "static",
+        "reason_code": "static_parse_limit",
+        "message": "A security-relevant expression exceeded a bounded static parser's span limit.",
+        "path": "scripts/kie.mjs",
+        "start_line": null,
+        "end_line": null,
+        "fatal": false,
+        "analyzers": [
+          "static_patterns_tool_misuse"
+        ]
+      },
+      {
+        "outcome": "partial",
+        "phase": "static",
+        "reason_code": "static_parse_limit",
+        "message": "A security-relevant expression exceeded a bounded static parser's span limit.",
+        "path": "scripts/serve.mjs",
+        "start_line": null,
+        "end_line": null,
+        "fatal": false,
+        "analyzers": [
+          "static_patterns_tool_misuse"
+        ]
+      },
+      {
+        "outcome": "partial",
+        "phase": "static",
+        "reason_code": "static_parse_limit",
+        "message": "A security-relevant expression exceeded a bounded static parser's span limit.",
+        "path": "scripts/shoot.mjs",
+        "start_line": null,
+        "end_line": null,
+        "fatal": false,
+        "analyzers": [
+          "static_patterns_tool_misuse"
+        ]
+      },
+      {
+        "outcome": "partial",
+        "phase": "static",
+        "reason_code": "static_parse_limit",
+        "message": "A security-relevant expression exceeded a bounded static parser's span limit.",
+        "path": "scripts/worldflight-assert.mjs",
+        "start_line": null,
+        "end_line": null,
+        "fatal": false,
+        "analyzers": [
+          "static_patterns_tool_misuse"
+        ]
+      }
+    ],
+    "scope_exclusions": [],
+    "analyzer_statuses": [
+      {
+        "analyzer_id": "artifact_integrity",
+        "status": "completed",
+        "planned_work": 23,
+        "completed": 23,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "behavioral_ast",
+        "status": "not_applicable",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "no_applicable_files",
+        "message": "No files matched this analyzer's applicability contract."
+      },
+      {
+        "analyzer_id": "behavioral_taint_tracking",
+        "status": "not_applicable",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "no_applicable_files",
+        "message": "No files matched this analyzer's applicability contract."
+      },
+      {
+        "analyzer_id": "bundled_execution_surface",
+        "status": "not_applicable",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "no_applicable_files",
+        "message": "No files matched this analyzer's applicability contract."
+      },
+      {
+        "analyzer_id": "mcp_least_privilege",
+        "status": "completed",
+        "planned_work": 9,
+        "completed": 9,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "mcp_rug_pull",
+        "status": "completed",
+        "planned_work": 23,
+        "completed": 23,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "mcp_tool_poisoning",
+        "status": "completed",
+        "planned_work": 1,
+        "completed": 1,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "meta_analyzer",
+        "status": "disabled",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "disabled_by_configuration",
+        "message": "Analyzer was disabled by the requested configuration."
+      },
+      {
+        "analyzer_id": "semantic_developer_intent",
+        "status": "disabled",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "disabled_by_configuration",
+        "message": "Analyzer was disabled by the requested configuration."
+      },
+      {
+        "analyzer_id": "semantic_quality_policy",
+        "status": "disabled",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "disabled_by_configuration",
+        "message": "Analyzer was disabled by the requested configuration."
+      },
+      {
+        "analyzer_id": "semantic_security_discovery",
+        "status": "disabled",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "disabled_by_configuration",
+        "message": "Analyzer was disabled by the requested configuration."
+      },
+      {
+        "analyzer_id": "static_patterns_agent_snooping",
+        "status": "degraded",
+        "planned_work": 23,
+        "completed": 22,
+        "partial": 1,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_anti_refusal",
+        "status": "degraded",
+        "planned_work": 23,
+        "completed": 22,
+        "partial": 1,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_data_exfiltration",
+        "status": "completed",
+        "planned_work": 23,
+        "completed": 23,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_deserialization",
+        "status": "degraded",
+        "planned_work": 23,
+        "completed": 22,
+        "partial": 1,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_excessive_agency",
+        "status": "degraded",
+        "planned_work": 23,
+        "completed": 22,
+        "partial": 1,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_harmful_content",
+        "status": "degraded",
+        "planned_work": 23,
+        "completed": 22,
+        "partial": 1,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_memory_poisoning",
+        "status": "degraded",
+        "planned_work": 23,
+        "completed": 22,
+        "partial": 1,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_output_handling",
+        "status": "completed",
+        "planned_work": 23,
+        "completed": 23,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_privilege_escalation",
+        "status": "degraded",
+        "planned_work": 23,
+        "completed": 22,
+        "partial": 1,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_prompt_injection",
+        "status": "degraded",
+        "planned_work": 23,
+        "completed": 22,
+        "partial": 1,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_rogue_agent",
+        "status": "degraded",
+        "planned_work": 23,
+        "completed": 22,
+        "partial": 1,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_ssrf",
+        "status": "degraded",
+        "planned_work": 23,
+        "completed": 22,
+        "partial": 1,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_supply_chain",
+        "status": "degraded",
+        "planned_work": 23,
+        "completed": 22,
+        "partial": 1,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_system_prompt_leakage",
+        "status": "degraded",
+        "planned_work": 23,
+        "completed": 22,
+        "partial": 1,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_tool_misuse",
+        "status": "degraded",
+        "planned_work": 23,
+        "completed": 18,
+        "partial": 5,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_yara",
+        "status": "completed",
+        "planned_work": 23,
+        "completed": 23,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      }
+    ],
+    "references": [
+      {
+        "source_path": "SKILL.md",
+        "line": 42,
+        "column": 71,
+        "evidence": "never the same device twice in a row. Read [references/devices.md](references/devices.md).",
+        "target_path": "references/devices.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 42,
+        "column": 48,
+        "evidence": "never the same device twice in a row. Read [references/devices.md](references/devices.md).",
+        "target_path": "references/devices.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "plain_path"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 45,
+        "column": 27,
+        "evidence": "[references/worlds.md](references/worlds.md).",
+        "target_path": "references/worlds.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 45,
+        "column": 5,
+        "evidence": "[references/worlds.md](references/worlds.md).",
+        "target_path": "references/worlds.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "plain_path"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 54,
+        "column": 54,
+        "evidence": "did exactly that. Read [references/uniqueness.md](references/uniqueness.md).",
+        "target_path": "references/uniqueness.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 54,
+        "column": 28,
+        "evidence": "did exactly that. Read [references/uniqueness.md](references/uniqueness.md).",
+        "target_path": "references/uniqueness.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "plain_path"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 65,
+        "column": 33,
+        "evidence": "Read [references/hero-depth.md](references/hero-depth.md) before planning the hero",
+        "target_path": "references/hero-depth.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 65,
+        "column": 7,
+        "evidence": "Read [references/hero-depth.md](references/hero-depth.md) before planning the hero",
+        "target_path": "references/hero-depth.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "plain_path"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 75,
+        "column": 42,
+        "evidence": "Read [references/approved-collection.md](references/approved-collection.md)",
+        "target_path": "references/approved-collection.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 75,
+        "column": 7,
+        "evidence": "Read [references/approved-collection.md](references/approved-collection.md)",
+        "target_path": "references/approved-collection.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "plain_path"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 114,
+        "column": 70,
+        "evidence": "the peak. Both are required in BRIEF.md. See [references/feel.md](references/feel.md).",
+        "target_path": "references/feel.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 114,
+        "column": 50,
+        "evidence": "the peak. Both are required in BRIEF.md. See [references/feel.md](references/feel.md).",
+        "target_path": "references/feel.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "plain_path"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 119,
+        "column": 23,
+        "evidence": "[uniqueness.md \u00a75](references/uniqueness.md): brutalist, maximalist, playful,",
+        "target_path": "references/uniqueness.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 124,
+        "column": 32,
+        "evidence": "[references/worldflight.md](references/worldflight.md)), or like separate",
+        "target_path": "references/worldflight.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 124,
+        "column": 5,
+        "evidence": "[references/worldflight.md](references/worldflight.md)), or like separate",
+        "target_path": "references/worldflight.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "plain_path"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 148,
+        "column": 22,
+        "evidence": "[references/feel.md](references/feel.md) is the spec for all four.",
+        "target_path": "references/feel.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 148,
+        "column": 2,
+        "evidence": "[references/feel.md](references/feel.md) is the spec for all four.",
+        "target_path": "references/feel.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "plain_path"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 185,
+        "column": 17,
+        "evidence": "2. the nearest `.scrollcraft.json` walking up from the cwd, `{ \"workspace\": \"...\" }`",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 193,
+        "column": 52,
+        "evidence": "If you already keep builds somewhere else, drop a `.scrollcraft.json` at your",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 208,
+        "column": 7,
+        "evidence": "Copy `engine/scrollcraft.js` and `engine/scrollcraft.css` into the build folder.",
+        "target_path": "engine/scrollcraft.js",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 208,
+        "column": 35,
+        "evidence": "Copy `engine/scrollcraft.js` and `engine/scrollcraft.css` into the build folder.",
+        "target_path": "engine/scrollcraft.css",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 228,
+        "column": 66,
+        "evidence": "5. **Art direction**: offer the worlds in [references/worlds.md](references/worlds.md)",
+        "target_path": "references/worlds.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 228,
+        "column": 44,
+        "evidence": "5. **Art direction**: offer the worlds in [references/worlds.md](references/worlds.md)",
+        "target_path": "references/worlds.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "plain_path"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 251,
+        "column": 38,
+        "evidence": "detail in [references/uniqueness.md](references/uniqueness.md).",
+        "target_path": "references/uniqueness.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 251,
+        "column": 12,
+        "evidence": "detail in [references/uniqueness.md](references/uniqueness.md).",
+        "target_path": "references/uniqueness.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "plain_path"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 276,
+        "column": 47,
+        "evidence": "the page. Full method in [references/feel.md](references/feel.md).",
+        "target_path": "references/feel.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 276,
+        "column": 27,
+        "evidence": "the page. Full method in [references/feel.md](references/feel.md).",
+        "target_path": "references/feel.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "plain_path"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 313,
+        "column": 73,
+        "evidence": "Full pipeline, prompt scaffolds and model notes: [references/assets.md](references/assets.md).",
+        "target_path": "references/assets.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 313,
+        "column": 51,
+        "evidence": "Full pipeline, prompt scaffolds and model notes: [references/assets.md](references/assets.md).",
+        "target_path": "references/assets.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "plain_path"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 318,
+        "column": 66,
+        "evidence": "node <skill>/scripts/kie.mjs still \"<style preamble>\\n\\n<scene>\" out/01-hero.png --ar 16:9 [--ref brand-can.png]",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "plain_path"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 319,
+        "column": 52,
+        "evidence": "node <skill>/scripts/kie.mjs shot \"<camera move>\" out/01-hero.png out/01.mp4 --dur 5",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "plain_path"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 319,
+        "column": 68,
+        "evidence": "node <skill>/scripts/kie.mjs shot \"<camera move>\" out/01-hero.png out/01.mp4 --dur 5",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "plain_path"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 320,
+        "column": 33,
+        "evidence": "bash <skill>/scripts/encode.sh out/01.mp4 assets/01.mp4",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "plain_path"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 320,
+        "column": 44,
+        "evidence": "bash <skill>/scripts/encode.sh out/01.mp4 assets/01.mp4",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "plain_path"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 321,
+        "column": 33,
+        "evidence": "bash <skill>/scripts/encode.sh out/01.mp4 assets/01-m.mp4 mobile",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "plain_path"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 321,
+        "column": 44,
+        "evidence": "bash <skill>/scripts/encode.sh out/01.mp4 assets/01-m.mp4 mobile",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "plain_path"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 330,
+        "column": 44,
+        "evidence": "- **Encode for scrubbing, not playback.** `encode.sh` sets a dense GOP because",
+        "target_path": "scripts/encode.sh",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 337,
+        "column": 27,
+        "evidence": "[references/devices.md](references/devices.md).",
+        "target_path": "references/devices.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 337,
+        "column": 4,
+        "evidence": "[references/devices.md](references/devices.md).",
+        "target_path": "references/devices.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "plain_path"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 346,
+        "column": 13,
+        "evidence": "Start from `references/template.html`. The device patterns are in",
+        "target_path": "references/template.html",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 347,
+        "column": 25,
+        "evidence": "[references/devices.md](references/devices.md); the spacing, type, depth and",
+        "target_path": "references/devices.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 347,
+        "column": 2,
+        "evidence": "[references/devices.md](references/devices.md); the spacing, type, depth and",
+        "target_path": "references/devices.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "plain_path"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 348,
+        "column": 43,
+        "evidence": "colour rules are in [references/taste.md](references/taste.md). Read taste.md",
+        "target_path": "references/taste.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 348,
+        "column": 22,
+        "evidence": "colour rules are in [references/taste.md](references/taste.md). Read taste.md",
+        "target_path": "references/taste.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "plain_path"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 366,
+        "column": 29,
+        "evidence": "[approved-collection.md \u00a77](references/approved-collection.md#7-require-visual-and-functional-evidence-before-delivery).",
+        "target_path": "references/approved-collection.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 373,
+        "column": 61,
+        "evidence": "happened to look at. Full procedure: [references/verify.md](references/verify.md).",
+        "target_path": "references/verify.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 373,
+        "column": 39,
+        "evidence": "happened to look at. Full procedure: [references/verify.md](references/verify.md).",
+        "target_path": "references/verify.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "plain_path"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 388,
+        "column": 46,
+        "evidence": "Then do the part the harness cannot: **read `sheet.png`.** It proves a clip",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 392,
+        "column": 54,
+        "evidence": "**Then run the feel check** ([references/feel.md \u00a76](references/feel.md)). Scroll",
+        "target_path": "references/feel.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 392,
+        "column": 31,
+        "evidence": "**Then run the feel check** ([references/feel.md \u00a76](references/feel.md)). Scroll",
+        "target_path": "references/feel.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "plain_path"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 405,
+        "column": 22,
+        "evidence": "is reported, deploy `references/device-diag.html` beside the site on the",
+        "target_path": "references/device-diag.html",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 430,
+        "column": 147,
+        "evidence": "| Generating before the brief and creative authority are clear | Run Step 0. Record actual answers or explicitly delegated authored decisions in `BRIEF.md` |",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 435,
+        "column": 113,
+        "evidence": "| A build that clears fewer than 4 of 6 fingerprint dimensions against any existing row | Change the plan, not `FINGERPRINTS.md` |",
+        "target_path": "templates/FINGERPRINTS.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 443,
+        "column": 78,
+        "evidence": "| Autoplaying audio, or any audio at all on a scrub clip | Strip the track. `encode.sh` already does |",
+        "target_path": "scripts/encode.sh",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 448,
+        "column": 30,
+        "evidence": "The build folder, including `BRIEF.md`, then a short report: the grammar and why",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      }
+    ],
+    "limitations": [
+      "Analyzer static_patterns_agent_snooping status: degraded.",
+      "Analyzer static_patterns_anti_refusal status: degraded.",
+      "Analyzer static_patterns_deserialization status: degraded.",
+      "Analyzer static_patterns_excessive_agency status: degraded.",
+      "Analyzer static_patterns_harmful_content status: degraded.",
+      "Analyzer static_patterns_memory_poisoning status: degraded.",
+      "Analyzer static_patterns_privilege_escalation status: degraded.",
+      "Analyzer static_patterns_prompt_injection status: degraded.",
+      "Analyzer static_patterns_rogue_agent status: degraded.",
+      "Analyzer static_patterns_ssrf status: degraded.",
+      "Analyzer static_patterns_supply_chain status: degraded.",
+      "Analyzer static_patterns_system_prompt_leakage status: degraded.",
+      "Analyzer static_patterns_tool_misuse status: degraded."
+    ],
+    "findings_before_filtering": 16,
+    "findings_after_filtering": 16
+  }
+}

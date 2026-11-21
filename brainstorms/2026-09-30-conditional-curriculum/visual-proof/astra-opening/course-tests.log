@@ -1,0 +1,118 @@
+
+> vite_react_shadcn_ts@0.0.0 test
+> vitest run src/bootcamps/conditionals/components/OpeningCourse.test.tsx src/bootcamps/conditionals/routes.test.tsx src/bootcamps/conditionals/components/LessonPages.test.tsx src/bootcamps/conditionals/components/ConditionalLessonNote.test.tsx src/bootcamps/conditionals/components/ConditionalOpeningLesson.review.test.tsx src/bootcamps/conditionals/components/ConditionalReferenceSequence.test.tsx src/bootcamps/conditionals/content/opening-coverage.test.ts
+
+
+ RUN  v3.2.4 C:/Users/Joshu/dev/ai-os-projects/lsatu-conditional-bootcamp
+
+ ✓ src/bootcamps/conditionals/content/opening-coverage.test.ts (14 tests) 27ms
+Browserslist: browsers data (caniuse-lite) is 6 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+stderr | src/bootcamps/conditionals/components/OpeningCourse.test.tsx > offers nine dedicated notes and four interleaved drill entries
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+stderr | src/bootcamps/conditionals/routes.test.tsx > lands on one current lesson without a curriculum map or teaching rail
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+stderr | src/bootcamps/conditionals/components/ConditionalOpeningLesson.review.test.tsx > lets learners test a requirement before translating its word family
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+stderr | src/bootcamps/conditionals/components/OpeningCourse.test.tsx > renders the dedicated 'whole-meaning' destination without an old reader index
+Warning: Encountered two children with the same key, `.4`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+    at Content (C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp\src\bootcamps\conditionals\components\OpeningCourseContent.tsx:415:20)
+    at div
+    at OpeningCourseContent (C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp\src\bootcamps\conditionals\components\OpeningCourseContent.tsx:680:112)
+    at div
+    at div
+    at div
+    at OpeningCourseScreen (C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp\src\bootcamps\conditionals\components\OpeningCourse.tsx:325:32)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+
+ ✓ src/bootcamps/conditionals/components/OpeningCourse.test.tsx (18 tests) 2561ms
+   ✓ offers nine dedicated notes and four interleaved drill entries  613ms
+stderr | src/bootcamps/conditionals/components/LessonPages.test.tsx > retains the actual lesson card and revealed side across page navigation without pre-exposing answers
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+stderr | src/bootcamps/conditionals/components/ConditionalLessonNote.test.tsx > keeps the full orientation formative until the student marks the lesson read
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/bootcamps/conditionals/components/ConditionalReferenceSequence.test.tsx (15 tests) 3886ms
+   ✓ teaches all thirteen reference steps in order with notation after the conceptual contrapositive and cases  437ms
+   ✓ distinguishes the two valid inferences from both unknown cases without exposing conclusions before an attempt  390ms
+   ✓ negates both complete conditions correctly in all four sign patterns, including existing negatives  477ms
+   ✓ requires both independent diagrams before giving six fresh practice keys and resets each attempt  897ms
+stderr | src/bootcamps/conditionals/routes.test.tsx > preserves assignment context without recording legacy completion on new course navigation
+Warning: Encountered two children with the same key, `.4`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+    at Content (C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp\src\bootcamps\conditionals\components\OpeningCourseContent.tsx:415:20)
+    at div
+    at OpeningCourseContent (C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp\src\bootcamps\conditionals\components\OpeningCourseContent.tsx:680:112)
+    at div
+    at div
+    at div
+    at OpeningCourseScreen (C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp\src\bootcamps\conditionals\components\OpeningCourse.tsx:325:32)
+    at OpeningCourseRoute (C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp\src\bootcamps\conditionals\routes.tsx:672:37)
+    at RenderedRoute (C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp\node_modules\react-router\dist\umd\react-router.development.js:535:7)
+    at Outlet (C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp\node_modules\react-router\dist\umd\react-router.development.js:1182:28)
+    at main
+    at div
+    at Shell (C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp\src\bootcamps\conditionals\routes.tsx:748:48)
+    at RenderedRoute (C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp\node_modules\react-router\dist\umd\react-router.development.js:535:7)
+    at Routes (C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp\node_modules\react-router\dist\umd\react-router.development.js:1269:7)
+    at ConditionalBootcampRoutes (C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp\src\bootcamps\conditionals\routes.tsx:223:38)
+    at RenderedRoute (C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp\node_modules\react-router\dist\umd\react-router.development.js:535:7)
+    at Routes (C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp\node_modules\react-router\dist\umd\react-router.development.js:1269:7)
+    at Router (C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp\node_modules\react-router\dist\umd\react-router.development.js:1203:17)
+    at MemoryRouter (C:\Users\Joshu\dev\ai-os-projects\lsatu-conditional-bootcamp\node_modules\react-router\dist\umd\react-router.development.js:1097:7)
+
+ ✓ src/bootcamps/conditionals/routes.test.tsx (55 tests) 6383ms
+   ✓ resumes a finished old run at the new work without losing its drafts, attempts, or timing  496ms
+   ✓ completes the available subset of a shared area practice run and preserves its other work  726ms
+   ✓ completes the available subset of a shared phase practice run and preserves its other work  726ms
+   ✓ completes the available subset of a shared area flashcards run and preserves its other work  684ms
+   ✓ stamps the opening edition only when Mark lesson as read is clicked and keeps it after reloading practice  761ms
+ ✓ src/bootcamps/conditionals/components/LessonPages.test.tsx (6 tests) 12427ms
+   ✓ exposes only the current page, focuses its heading, and retains a checked case when returning  990ms
+   ✓ retains the actual lesson card and revealed side across page navigation without pre-exposing answers  1973ms
+   ✓ requires an explicit end-page action to record reading, including after a contents jump  1162ms
+   ✓ starts a changed unit at its first page and resets card state when returning to the prior unit  1838ms
+   ✓ separates a present negative requirement from its absence in the fresh two-room exercise  6121ms
+   ✓ uses a compact drawer in a narrow reader and moves focus to the chosen page  341ms
+ ✓ src/bootcamps/conditionals/components/ConditionalOpeningLesson.review.test.tsx (26 tests) 14908ms
+   ✓ lets learners test a requirement before translating its word family  1005ms
+   ✓ keeps group-1 target choices stable while learners change their answers  1001ms
+   ✓ keeps group-2 target choices stable while learners change their answers  1024ms
+   ✓ varies group-1 diagram choices and explains the promise each reversed arrow adds  620ms
+   ✓ varies group-2 diagram choices and explains the promise each reversed arrow adds  529ms
+   ✓ teaches inquiry and single-occasion wording before testing a recurring rule  1047ms
+   ✓ renders each named opening method before the learner continues to guided practice  1222ms
+   ✓ gives each independently assigned group its own What Test explanation before target selection  447ms
+   ✓ reveals group-1 exact sentence targets only after a correct choice and clears them on a new example  836ms
+   ✓ reveals group-2 exact sentence targets only after a correct choice and clears them on a new example  883ms
+   ✓ marks group-1 transfer spans only after the learner checks a correct diagram  586ms
+   ✓ marks group-2 transfer spans only after the learner checks a correct diagram  603ms
+   ✓ reports a correct negative answer without reversing its meaning in feedback  625ms
+   ✓ teaches permission and instruction after the core sequence but before the preserved attached practice  1879ms
+   ✓ keeps correct target status readable without colour and uses a fresh the-only check  530ms
+   ✓ keeps animation implementation controls out of the student lesson  604ms
+ ✓ src/bootcamps/conditionals/components/ConditionalLessonNote.test.tsx (12 tests) 15631ms
+   ✓ keeps the full orientation formative until the student marks the lesson read  3220ms
+   ✓ mounts the thirteen reference steps before the attached guided activity  773ms
+   ✓ checks each Group 2 target before revealing direction and preserves obligations  760ms
+   ✓ resets lesson interactions when the production wrapper changes units  696ms
+   ✓ does not reveal the four-case conclusions before a formative attempt and clears them on reset  648ms
+   ✓ keeps recall prompts readable and exposes answers through an expanded control  923ms
+   ✓ gives each formative choice its own reasoning without marking the lesson read  8215ms
+   ✓ names the attached guided activity and permits a truthful preview-only label  328ms
+
+ Test Files  7 passed (7)
+      Tests  146 passed (146)
+   Start at  02:40:08
+   Duration  20.41s (transform 2.97s, setup 2.24s, collect 10.78s, tests 55.82s, environment 10.57s, prepare 1.67s)
+

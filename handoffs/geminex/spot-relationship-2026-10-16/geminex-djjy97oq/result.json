@@ -1,0 +1,173 @@
+{
+  "status": "completed",
+  "mode": "review",
+  "provider": "gemini",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "gemini",
+    "builder": "codex",
+    "inspector": "gemini"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-relationship-ui",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os\\brainstorms\\2026-10-16-spot-the-relationship-gemini-question-review.md",
+  "plan_sha256": "e57c7d7010a0fe674f1a1f028d7076daf50e273f278ed9a75cda5f086db43e81",
+  "requested_model": "gemini-4-argon",
+  "requested_effort": "medium",
+  "base": null,
+  "snapshot": null,
+  "previous": null,
+  "started_at": 1792196359.6906948,
+  "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\handoffs\\geminex\\spot-relationship-2026-10-16\\geminex-djjy97oq",
+  "cli_version": "antigravity-ls (http://127.0.0.1:52560)",
+  "session_id": "3c1938f8-87d5-419e-871e-29305d1ac18d",
+  "response": {
+    "verdict": "REVISE",
+    "summary": "Completed an independent read-only audit of all 48 Spot the Relationship items, the authored instructions and grading rubric, the Signal Observatory fast-path/stage parser, and the Edge Function answer-key/leak guard. Most items (34 of 48) are semantically and pedagogically sound, but 14 items (Q11, Q25, Q28, Q30, Q31, Q33, Q34, Q35, Q39, Q40, Q41, Q42, Q43, Q46, Q47, Q48 — 16 flagged across content and parser boundaries) and 4 supporting code/rubric paths have concrete defects that require revision: (1) six items (Q28, Q30, Q33, Q35, Q41, Q42) credit non-causal intransitive or clause-internal verbs ('draws', 'cure', 'lags', 'silted', 'follows', 'inflate') as standalone causal indicators alongside 'since'/'because', allowing answers that omit the causal connective to pass both fast-path and AI grading while contradicting the item explanations; (2) Q47 contains a stale explanation and trap warning against comparing pressure with 'flux', a word absent from the prompt; (3) Q31 omits the comparative adjective 'larger' ('in the larger mould') and leaves context_benchmark null despite rubric[5] citing Q31 as a contextual comparison; (4) Q34 uses the verb 'yields' (explicitly taught in rubric[2] as a causal verb) in a non-causal quarry clause without accepting or disambiguating it, and Q46 omits the causal verb 'offsets' ('local subsidence offsets the uplift') as an accepted causal indicator; (5) separated/periphrastic comparatives (Q11, Q25, Q34, Q39, Q40, Q43, Q48) have inconsistent indicator formatting, over-strict required_parts in Q39 ('than to'), and fast-path/stage rejection in observatory.ts when students quote the full contiguous comparison span from the sentence; and (6) answerKey.ts omits 'more' from COMMON (causing Q48's required_parts to trigger false-positive hint leaks on any feedback containing the word 'more') and observatory.ts omits 'condition' from accepted type synonyms despite grading_rubric[4] promising it.",
+    "findings": [
+      {
+        "id": "STR-01",
+        "severity": "high",
+        "path": "src/features/activity-centre/content/spot-the-relationship.json",
+        "evidence": "In 6 compound items — Q28 ('since its flue draws efficiently' -> indicators: ['since', 'draws']), Q30 ('since the layers cure at different rates' -> indicators: ['since', 'cure']), Q33 ('because the thermocouple lags' -> indicators: ['because', 'lags']), Q35 ('Since the mill race silted' -> indicators: ['Since', 'silted']), Q41 ('because water follows the gradient' -> indicators: ['because', 'follows']), and Q42 ('since spurious matches inflate at short series lengths' -> indicators: ['since', 'inflate']) — the second listed causal indicator is not a causal verb establishing a cause-and-effect relationship (unlike transitive causal verbs in Q27 'accelerates', Q29 'expands', Q36 'drives', Q37 'starves', Q38 'dries', Q39 'elevates', Q44 'homogenizes', Q45/Q48 'produces'). Instead, 'draws', 'cure', 'lags', 'silted', and 'inflate' are intransitive process/state verbs inside the subordinate clause, and in all 6 items the authored explanation and answer_key.why only identify 'since' or 'because' as the causal indicator without even mentioning those verbs as indicators. Because instructions.coach.grading_rubric[7] ('One valid indicator per type is enough. Other listed indicators for the same type are alternatives') and observatory.ts indicatorQuoted() treat every entry in indicators[] as independently sufficient, a student who writes 'causal, \"draws\"' (Q28), 'causal, \"cure\"' (Q30), 'causal, \"lags\"' (Q33), 'causal, \"silted\"' (Q35), 'causal, \"follows\"' (Q41), or 'causal, \"inflate\"' (Q42) while completely missing 'since'/'because' is graded 100% correct, and ObservatoryStage highlights the non-causal verb as a causal signal.",
+        "fix": "In Q28, Q30, Q33, Q35, Q41, and Q42, remove 'draws', 'cure', 'lags', 'silted', 'follows', and 'inflate' from credited_answers and answer_key.relationships[].indicators so that the causal indicator is ['since'] (Q28, Q30, Q42), ['Since'] (Q35), or ['because'] (Q33, Q41), matching their authored explanations and why fields. If a student quotes a wider clause span that includes both the connective and the verb (e.g., 'since its flue draws'), keep that accepted under the wider-span rule only when the causal connective is present."
+      },
+      {
+        "id": "STR-02",
+        "severity": "medium",
+        "path": "src/features/activity-centre/content/spot-the-relationship.json",
+        "evidence": "In Q47 ('The membrane fouls only when the transmembrane pressure climbs above the critical pressure threshold, and the fouling itself drives the pressure higher still.'), the authored explanation ends with 'A pressure measurement must be compared with pressure, not with flux.' and answer_key.traps[0] is 'Comparing pressure with flux rather than pressure'. The word 'flux' does not appear anywhere in Q47's prompt; it is a leftover from an earlier draft before the prompt was changed to 'critical pressure threshold'.",
+        "fix": "In Q47, remove the stale sentence 'A pressure measurement must be compared with pressure, not with flux.' from explanation and replace answer_key.traps[0] ('Comparing pressure with flux rather than pressure') with a trap grounded in the actual prompt, such as 'Missing the comparison against a threshold in \"above\"' or 'Quoting \"climbs\" as causal when it is part of the conditional threshold clause'."
+      },
+      {
+        "id": "STR-03",
+        "severity": "medium",
+        "path": "src/features/activity-centre/content/spot-the-relationship.json",
+        "evidence": "In Q31 ('The heavier bell carries farther than the light one, which is why the foundry cast the alarm bell in the larger mould.'), the sentence contains three comparative forms: 'heavier' (contrasting with 'the light one'), 'farther than', and 'larger' ('in the larger mould', comparing the alarm-bell mould against the smaller mould for the light bell). However, answer_key.relationships[0].indicators only lists ['heavier', 'farther than'], so a student who quotes 'larger' (either alone or alongside 'heavier'/'farther than') is not credited by the key or fast-path. Additionally, Q31's answer_key.context_benchmark is null even though instructions.coach.rubric[5] explicitly cites Q31 ('Heavier contrasts with the light bell in item 31') as a benchmark-from-context item.",
+        "fix": "In Q31, either include 'larger' as an accepted comparative indicator in answer_key.relationships[0] (and mention it in explanation/connects/why) or, if only the bell comparisons are intended, clarify in the grading key/rubric that 'larger' is also an acceptable comparative indicator in Q31; and populate answer_key.context_benchmark on Q31 (e.g., \"'Heavier' contrasts with the light bell named later in the clause, and 'larger' contrasts with the smaller mould.\")."
+      },
+      {
+        "id": "STR-04",
+        "severity": "medium",
+        "path": "src/features/activity-centre/content/spot-the-relationship.json",
+        "evidence": "Two items contain genuine or rubric-listed causal verbs in the sentence that are omitted from answer_key.relationships[].indicators: (1) Q34 ('The eastern quarry yields harder stone than the western, so masons reserve it for thresholds, but only if the block is free of iron staining.') uses 'yields', while instructions.coach.rubric[2] explicitly instructs the Coach and student that 'Raises, drives, yields, starves, dries, lowers and homogenizes are causal words, and a student who quotes one has found the right thing.' Yet Q34 only credits 'so' for causal. (2) Q46 ('Isostatic rebound raises the shoreline, so a terrace formed after deglaciation sits higher than one formed before, unless local subsidence offsets the uplift.') contains the transitive causal verb 'offsets' (local subsidence counteracts/cancels the uplift), which fits the definition 'One thing produces, prevents, or changes another', but answer_key.relationships[0].indicators only lists ['raises', 'so'].",
+        "fix": "For Q34, either replace 'yields' with a non-causal verb in the prompt (e.g., 'has' or 'supplies') or clarify in instructions.coach.rubric[2] and Q34's answer_key/traps that 'yields' in Q34 merely means the quarry is the source of the stone rather than a causal mechanism (or accept 'yields' alongside 'so' if the prompt is kept unchanged). For Q46, accept 'offsets' as a valid causal indicator in answer_key (or in grading notes when paired with causal) so a student who quotes 'offsets' (especially alongside 'raises'/'so') is not penalized."
+      },
+      {
+        "id": "STR-05",
+        "severity": "medium",
+        "path": "src/features/activity-centre/content/spot-the-relationship.json",
+        "evidence": "Separated and periphrastic comparatives across Q11, Q25, Q34, Q39, Q40, Q43, and Q48 have three consistency and grading defects: (1) In Q39 ('...sits closer to the C3 range than to the C4 range...'), required_parts is [['closer to', 'than to']], which requires the repeated preposition 'to' after 'than', whereas Q25 ('...stronger on the eastern array than on the western.') has required_parts [['stronger', 'than']] without requiring 'than on'. A student who writes 'comparative, \"closer ... than\"' or 'comparative, \"closer to ... than\"' on Q39 fails indicatorQuoted() and is flagged by traps[0]. (2) In Q48 ('...a curve more regionally appropriate than the global one...'), 'more regionally appropriate than' is a contiguous periphrastic comparative adjective phrase (parallel to Q23 'more extensive than', Q28 'more evenly than', Q37 'more vigorous than'), yet Q48 only lists 'more … than' in indicators, causing observatory.ts confidentPair() and readAnswer() to reject a student who quotes the exact phrase 'more regionally appropriate than'. (3) In Q11 ('takes less time than'), 'less' and 'than' are separated by the noun 'time' (parallel to Q34 'harder stone than' and Q40 'thicker oxide layer than'), but Q11 lacks required_parts: [['less', 'than']], so a student who writes 'comparative, \"less ... than\"' fails indicatorQuoted(); meanwhile Q25, Q34, and Q40 write 'stronger than', 'harder than', and 'thicker than' without ellipsis in credited_answers[0] while Q39, Q43, and Q48 use '…'.",
+        "fix": "(1) In Q39, add ['closer', 'than'] (or ['closer to', 'than']) to required_parts so 'closer ... than' and 'closer to ... than' are accepted alongside 'closer to ... than to', and update traps[0] to 'Quoting only \"closer\" or \"closer to\" without \"than\"'. (2) In Q48, accept 'more regionally appropriate than' as well as 'more … than' in indicators/fast-path. (3) In Q11, add required_parts: [['less', 'than']] while retaining 'less time than', and standardize ellipsis formatting across separated comparatives (Q25, Q34, Q40 vs Q39, Q43, Q48)."
+      },
+      {
+        "id": "STR-06",
+        "severity": "high",
+        "path": "src/features/activity-centre/worlds/observatory/observatory.ts",
+        "evidence": "Two defects in observatory.ts affect both fast-path grading (matchesCredited) and the visual stage diagnosis (readAnswer -> matchedKinds -> ObservatoryStage 'Not yet identified'): (1) instructions.coach.grading_rubric[4] explicitly states 'Accept equivalent type names (cause, causation, comparison, condition)', and supabase/functions/activity-coach/answerKey.ts line 63 matches /\\bcondition(?:al|s)?\\b/i, but observatory.ts KIND_WORDS (line 219), answerPairs (line 315), and PAIR_LABEL (line 355) omit bare 'condition'/'conditions' (and answerPairs lookahead at line 315 also omits 'cause', 'condition', 'requirement', 'if-then', 'comparisons', 'compare'). A student who writes 'condition, \"only if\"' is not recognized by observatory.ts as naming conditional at all. (2) For separated comparatives (Q25, Q34, Q39, Q40, Q43, Q48), confidentPair() (lines 367-370) only strips r.indicators and r.requiredParts from the student's quoted text, leaving the intervening words from the sentence (e.g., 'on the eastern array' in Q25, 'stone' in Q34, 'the C3 range' in Q39, 'oxide layer' in Q40, 'at ambient temperature' in Q43, 'regionally appropriate' in Q48) in remainder. When a student quotes the exact contiguous span from the sentence on a multi-relationship item and receives a 'partial' verdict (e.g., because another type was missed), readAnswer() marks the comparative as undrawn/missed and ObservatoryStage displays 'Not yet identified: Comparison' for a relationship the student correctly identified.",
+        "fix": "(1) Add bare 'condition(s)' to KIND_WORDS and PAIR_LABEL.conditional in observatory.ts, and align the comma-split lookahead in answerPairs() with all accepted KIND_WORDS synonyms. (2) In confidentPair() (or indicatorQuoted/matchedKinds), allow contiguous substrings of item.prompt that begin with the first required part and end with the last required part of a split indicator so that quoting the full phrase from the sentence (e.g., 'more regionally appropriate than' or 'harder stone than') is recognized both by fast-path and by readAnswer()."
+      },
+      {
+        "id": "STR-07",
+        "severity": "medium",
+        "path": "supabase/functions/activity-coach/answerKey.ts",
+        "evidence": "In supabase/functions/activity-coach/answerKey.ts: (1) Line 71 defines COMMON = new Set(['so', 'if', 'when', 'since', 'as', 'than', 'because', 'unless', 'whenever']), omitting 'more'. In Q48, required_parts is [['more', 'than']], so hintLeaks() (lines 88-90) extracts phrases = ['more', 'than']. Because 'more' is not in COMMON, any first-attempt AI Coach feedback on Q48 that uses the ordinary English word 'more' anywhere in unquoted prose (e.g., 'Look for one more relationship in the sentence') satisfies has(f, 'more') when the student has not yet written 'more', causing grading.ts line 161 to discard the Coach's specific hint and replace it with SAFE_FIRST_HINT. (2) Line 63 defines TYPE_WORDS.conditional without 'requirement' (whereas observatory.ts accepts 'requirement' as a conditional label), so a first-attempt hint that tells a student 'Look for a requirement' is not caught by TYPE_WORDS.conditional, or conversely if a student wrote 'requirement, \"only if\"' and the Coach replies 'You found the conditional relationship...', hintLeaks() falsely flags 'conditional' as an unnamed type leak.",
+        "fix": "Add 'more' (and 'less', if Q11 adds required_parts [['less', 'than']]) to COMMON in supabase/functions/activity-coach/answerKey.ts so 'more'/'less' only trigger hintLeaks() when quoted or singledOut(), and include /\\brequirements?\\b/i in TYPE_WORDS.conditional to match observatory.ts."
+      },
+      {
+        "id": "STR-08",
+        "severity": "low",
+        "path": "src/features/activity-centre/relationshipPresentation.ts",
+        "evidence": "In src/features/activity-centre/relationshipPresentation.ts lines 15-19, relationshipExplanation(item) only substitutes the updated explanation from spot-the-relationship.json when item.prompt === first.prompt (i.e., only for Q01). For students resuming or reviewing existing assignment snapshots created before content fixes (such as Q29's explanation rewrite or Q47's removal of the stale 'flux' sentence), items 2 through 48 still render the stale snapshot explanation.",
+        "fix": "Look up the matching item in relationship.items by prompt (or order when prompt matches) across all 48 items in relationshipExplanation() (e.g., const match = relationship.items.find((candidate) => candidate.prompt === item.prompt); const text = match ? match.explanation : item.explanation;) so presentation-layer explanation repairs apply to all 48 items without mutating stored responses or grading keys."
+      },
+      {
+        "id": "STR-09",
+        "severity": "low",
+        "path": "src/features/activity-centre/content/spot-the-relationship.json",
+        "evidence": "In instructions.coach.rubric[3] and instructions.coach.grading_rubric[9], the condition-direction lists name 'if, provided and whenever' as sufficient-condition indicators and 'only if, only when, requires, depends on and contingent on' as necessary-condition indicators, but omit 'when' (used in Q36 as sufficient), 'only where' (used in Q38 and Q44 as necessary), and 'unless' (used in Q21, Q30, Q35, Q41, Q46 as conditional exception/requirement).",
+        "fix": "Include 'when' among sufficient-condition indicators, 'only where' among necessary-condition indicators, and 'unless' (introducing a required condition when paired with a negated main clause, or an exception condition when paired with an affirmative main clause) in instructions.coach.rubric and instructions.coach.grading_rubric."
+      }
+    ],
+    "coverage": [
+      "Q01: derived [conditional: \"only if\"]; key/explanation match -> PASS",
+      "Q02: derived [conditional: \"if\"]; key/explanation match -> PASS",
+      "Q03: derived [conditional: \"whenever\"]; key/explanation match -> PASS",
+      "Q04: derived [conditional: \"required\"]; key/explanation match -> PASS",
+      "Q05: derived [causal: \"caused\"]; key/explanation match -> PASS",
+      "Q06: derived [causal: \"destroyed\"]; key/explanation match -> PASS",
+      "Q07: derived [causal: \"corroded\"]; key/explanation match -> PASS",
+      "Q08: derived [causal: \"produced\"]; key/explanation match -> PASS",
+      "Q09: derived [comparative: \"louder than\"]; key/explanation match -> PASS",
+      "Q10: derived [comparative: \"lighter than\"]; key/explanation/context_benchmark match -> PASS",
+      "Q11: derived [comparative: \"less time than\" / \"less ... than\"]; missing required_parts [[\"less\", \"than\"]] for split comparative -> FLAG (STR-05)",
+      "Q12: derived [comparative: \"as strong as\"]; equality comparison key/explanation match -> PASS",
+      "Q13: derived [conditional: \"only when\"]; key/explanation match -> PASS",
+      "Q14: derived [causal: \"raises\"]; key/explanation match -> PASS",
+      "Q15: derived [conditional: \"requires\"]; key/explanation match -> PASS",
+      "Q16: derived [causal: \"stabilizes\"]; key/explanation match -> PASS",
+      "Q17: derived [conditional: \"contingent on\"]; key/explanation match -> PASS",
+      "Q18: derived [causal: \"secured\"]; key/explanation match -> PASS",
+      "Q19: derived [conditional: \"depends on\"]; key/explanation match -> PASS",
+      "Q20: derived [causal: \"sank\"]; key/explanation match -> PASS",
+      "Q21: derived [conditional: \"unless\"]; negative main clause + unless key/explanation match -> PASS",
+      "Q22: derived [causal: \"yields\"]; key/explanation match -> PASS",
+      "Q23: derived [comparative: \"more extensive than\"]; key/explanation match -> PASS",
+      "Q24: derived [comparative: \"better than\"]; key/explanation match -> PASS",
+      "Q25: derived [comparative: \"stronger ... than\"]; credited_answers omits ellipsis and observatory.ts rejects full contiguous span \"stronger on the eastern array than\" -> FLAG (STR-05, STR-06)",
+      "Q26: derived [causal: \"because\"]; key/explanation match -> PASS",
+      "Q27: derived [conditional: \"Only if\"; causal: \"because\", \"accelerates\"]; both causal indicators valid and explained -> PASS",
+      "Q28: derived [comparative: \"more evenly than\"; causal: \"since\"]; key credits non-causal intransitive verb \"draws\" as standalone causal indicator -> FLAG (STR-01)",
+      "Q29: derived [conditional: \"Only when\"; comparative: \"lower than\"; causal: \"because\", \"expands\"]; key/explanation/context_benchmark match -> PASS",
+      "Q30: derived [conditional: \"Unless\"; comparative: \"thinner than\"; causal: \"since\"]; key credits non-causal verb \"cure\" as standalone causal indicator -> FLAG (STR-01)",
+      "Q31: derived [comparative: \"heavier\", \"farther than\", \"larger\"; causal: \"which is why\"]; key omits comparative \"larger\" in \"the larger mould\" and leaves context_benchmark null -> FLAG (STR-03)",
+      "Q32: derived [conditional: \"only when\"; comparative: \"exceeds\"; causal: \"dampens\"]; key/explanation match -> PASS",
+      "Q33: derived [conditional: \"Provided\"; comparative: \"colder than\"; causal: \"because\"]; key credits non-causal intransitive verb \"lags\" as standalone causal indicator -> FLAG (STR-01)",
+      "Q34: derived [comparative: \"harder ... than\"; causal: \"so\" (with \"yields\" ambiguous against rubric[2]); conditional: \"only if\"]; \"yields\" conflicts with rubric[2] list of causal verbs and contiguous comparative span rejected by observatory.ts -> FLAG (STR-04, STR-05, STR-06)",
+      "Q35: derived [causal: \"Since\"; comparative: \"slower than\"; conditional: \"unless\"]; key credits intransitive verb \"silted\" as standalone causal indicator -> FLAG (STR-01)",
+      "Q36: derived [conditional: \"when\"; comparative: \"longer\", \"softer than\"; causal: \"because\", \"drives\"]; key/explanation/context_benchmark match -> PASS",
+      "Q37: derived [conditional: \"only if\"; comparative: \"more vigorous than\"; causal: \"since\", \"starves\"]; key/explanation match -> PASS",
+      "Q38: derived [conditional: \"Only where\"; comparative: \"denser than\"; causal: \"because\", \"dries\"]; key/explanation/context_benchmark match -> PASS",
+      "Q39: derived [conditional: \"Only when\"; comparative: \"closer to ... than (to)\"; causal: \"since\", \"elevates\"]; required_parts [[\"closer to\", \"than to\"]] rejects valid \"closer ... than\" / \"closer to ... than\" -> FLAG (STR-05, STR-06)",
+      "Q40: derived [causal: \"passivates\", \"so\"; comparative: \"thicker ... than\"; conditional: \"provided\"]; credited_answers omits ellipsis on \"thicker than\" and observatory.ts rejects contiguous span \"thicker oxide layer than\" -> FLAG (STR-05, STR-06)",
+      "Q41: derived [conditional: \"Unless\"; comparative: \"exceeds\"; causal: \"because\"]; key credits \"follows\" as standalone causal indicator without explanation support -> FLAG (STR-01)",
+      "Q42: derived [conditional: \"only if\"; comparative: \"higher than\"; causal: \"since\"]; key credits intransitive \"inflate\" as standalone causal indicator without explanation support -> FLAG (STR-01)",
+      "Q43: derived [causal: \"lowers\", \"which is why\"; comparative: \"faster ... than\"]; observatory.ts rejects contiguous comparative span \"faster at ambient temperature than\" -> FLAG (STR-06)",
+      "Q44: derived [conditional: \"Only where\"; comparative: \"lower than\"; causal: \"because\", \"homogenizes\"]; key/explanation/context_benchmark match -> PASS",
+      "Q45: derived [conditional: \"Provided\"; comparative: \"finer than\"; causal: \"since\", \"produces\"]; key/explanation/context_benchmark match -> PASS",
+      "Q46: derived [causal: \"raises\", \"so\", \"offsets\"; comparative: \"higher than\"; conditional: \"unless\"]; key omits transitive causal verb \"offsets\" in \"local subsidence offsets the uplift\" -> FLAG (STR-04)",
+      "Q47: derived [conditional: \"only when\"; comparative: \"above\", \"higher still\"; causal: \"drives\"]; explanation and traps[0] reference \"flux\", which is absent from the prompt -> FLAG (STR-02)",
+      "Q48: derived [conditional: \"Only if\"; comparative: \"more regionally appropriate than\" / \"more ... than\"; causal: \"because\", \"produces\"]; key omits contiguous phrase \"more regionally appropriate than\" and required_parts \"more\" triggers false-positive hintLeaks() -> FLAG (STR-05, STR-06, STR-07)",
+      "Source coverage — instructions & RelationshipIntro.tsx: inspected instructions.tagline, instructions.task, instructions.rules, instructions.worked_example, and RelationshipIntro.tsx.",
+      "Source coverage — authored rubric: inspected instructions.coach.drill, instructions.coach.rubric, instructions.coach.partial_rule, and instructions.coach.grading_rubric in spot-the-relationship.json (flagged missing 'when'/'only where'/'unless' in STR-09 and 'yields' interaction with Q34 in STR-04).",
+      "Source coverage — fast grading & Observatory stage: inspected src/features/activity-centre/worlds/observatory/observatory.ts, ObservatoryStage.tsx, registry.tsx, and spot-the-relationship.answerKey.test.ts (flagged missing 'condition' synonym and contiguous split-comparative span rejection in STR-06).",
+      "Source coverage — feedback boundaries & Coach grading: inspected ActivityItemView.tsx, CoachFeedback.tsx, relationshipPresentation.ts, activityCoachRequest.ts, supabase/functions/activity-coach/answerKey.ts, grading.ts, and index.ts (flagged 'more' in hintLeaks() and 'requirement' in TYPE_WORDS in STR-07, and item-1-only explanation fallback in STR-08)."
+    ],
+    "limitations": [
+      "Read-only static review only: no commands, unit tests, browser sessions, or live AI Coach calls were executed per review constraints.",
+      "Database RPC functions (begin_activity_ai_request_v1, dispatch_activity_ai_request_v1, finish_activity_ai_request_v1) and live student assignment snapshots in Supabase were not inspected directly beyond their TypeScript callers."
+    ]
+  },
+  "effective_model": "gemini-4-argon",
+  "effective_effort": "medium",
+  "model_enum": "MODEL_PLACEHOLDER_M418",
+  "observed_models": [
+    "gemini-4-argon-trial"
+  ],
+  "usage": {
+    "model": "MODEL_PLACEHOLDER_M418",
+    "inputTokens": "6764",
+    "outputTokens": "30948",
+    "thinkingOutputTokens": "24765",
+    "responseOutputTokens": "6183",
+    "cacheReadTokens": "97961",
+    "apiProvider": "API_PROVIDER_GOOGLE_GEMINI",
+    "messageId": "bot-430ca8f3-9368-4c7e-966e-0fa01b2e4b82",
+    "responseHeader": {
+      "sessionID": "-3750763034362895579"
+    },
+    "responseId": "SL_Satv-I5bbytMP7OjJmAM"
+  },
+  "exit_code": 0,
+  "elapsed_seconds": 393.4
+}

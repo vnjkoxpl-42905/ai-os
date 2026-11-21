@@ -1,0 +1,5 @@
+# First final-inspection dispositions
+
+F1 accepted: all four section headings restored to baseline1.375rem/500, session time3rem and session day var(--control). No working-text reduction; surface roles still supply hierarchy. F2 accepted: resume16px radius/inset highlight restored; only ambient shadow remains shorter. F3 accepted: saved prep side rule uses existing ink-2, not a faint mid-tone. F4 accepted: calendar inline padding now compensates for the ledger border and aligns with upper-rail or ledger headings at each layout range; exact offsets documented in revised plan. F5 accepted: non-selected strip-day hover gets a darker edge with matching Home specificity, not fill alone.
+
+This is fix round1 of2 and the next call is fresh final inspection2 of2. Updated plan explicitly records baseline type preservation and calendar heading offsets. Actual implementation comparison remains the preserved pre-change stylesheet. Host reruns affected layout/surface/calendar proofs before reinspection. No JS/HTML changes. Prior first-inspection verdict is REVISE and is not treated as approval.

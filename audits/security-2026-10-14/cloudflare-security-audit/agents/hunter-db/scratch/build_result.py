@@ -1,0 +1,198 @@
+import json
+M = "supabase/migrations/"
+F_LEG = M + "20251022025825_79b98981-456d-4917-87e6-e4ce4ed8e8cb.sql"
+F_FALLBACK = M + "20260329000000_fix_class_id_fallback.sql"
+F_RLS2 = M + "20260406153113_2a71da51-b5d2-4154-aa2b-8b5bae10d4ad.sql"
+F_MSG = M + "20260416234013_49bfd508-03f2-4942-a636-2763f1f3af5b.sql"
+F_GUARD = M + "20260511172245_00101794-a53b-4261-b60a-019a1afca5b2.sql"
+F_GUARD2 = M + "20260923010100_access_tiers_stage2_tier_column.sql"
+F_SIGNUP = M + "20260803160000_signup_approval_queue.sql"
+F_PT = M + "20260923010300_practice_test_assignments.sql"
+F_COLS = M + "20260612153001_90a75534-9c9e-4470-adfc-92b55043121f.sql"
+F_HOME = M + "20260826060000_home_message_clear_state.sql"
+F_BOOK = M + "20260911000000_booking_policy_mirrors_calcom.sql"
+F_AUTH = "src/contexts/AuthContext.tsx"
+F_ORIENT = "src/components/classroom/OrientationCard.tsx"
+F_PERM = "src/hooks/useUserPermissions.ts"
+
+FP_A = "lsatu:rls:students.class_id-self-writable-feeds-legacy-get_user_class_id-policies"
+FP_B = "lsatu:rls:profiles-insert-unguarded-access-flags-self-grant"
+FP_C = "lsatu:rls:conversation_participants-update-conversation_id-pivot"
+FP_D = "lsatu:rpc:set_booking_availability_overrides-default-execute-no-admin-check"
+
+U1 = "supabase%2Fmigrations%23PostgREST%20tables::supabase%2Fmigrations%23RLS%20policies::profile%2Fquick%2Fall-in-scope-subsystems::DATA-ISOLATION-AND-LIFECYCLE.md%23Missing%20tenant%20or%20owner%20enforcement"
+U2 = "supabase%2Fmigrations%23SECURITY%20DEFINER%20RPC::supabase%2Fmigrations%23role%20helper%20functions::profile%2Fquick%2Fall-in-scope-subsystems::ATTACK-CLASSES.md%23Access%20control"
+U3 = "supabase%2Fmigrations%23storage.objects::supabase%2Fmigrations%23storage%20policies::profile%2Fquick%2Fall-in-scope-subsystems::DATA-ISOLATION-AND-LIFECYCLE.md%23Blob%20and%20signed-reference%20overreach"
+U4 = "src%23client%20admin%20gating%20and%20HTML%20sinks::src%23client%20trust::profile%2Fquick%2Fall-in-scope-subsystems::CLIENT-SIDE.md%23DOM-based%20XSS"
+
+def chk(paths, inv, res):
+    return {"agent_id": "hunter-db", "reviewed_paths": paths, "invariant": inv, "method": "source", "result": res, "artifact": None}
+
+u1_checks = [
+    chk(["supabase/migrations"], "Every table holding user data has RLS enabled in the final migrated state.",
+        "Replayed all 344 migrations in filename order with a statement parser (CREATE/DROP POLICY, ENABLE RLS, CREATE TABLE/DROP TABLE). All 156 public tables end with RLS enabled (three reading_center tables enable it through dynamic SQL in 20261013220000). Tables with RLS and zero policies (activity_ai_*_v1, booking_link_hits, booking_worker_heartbeats, single_session_*) are deny-all to clients."),
+    chk(["supabase/migrations"], "No final policy grants anon or authenticated USING(true)/WITH CHECK(true) on user-owned data.",
+        "USING(true) survives only on content/reference tables (lr_*, rc_* question bank, concept_library, question_type_strategies, reasoning_type_guidance, tactical_patterns, question_tutor_cache, achievements legacy read). The 2025 USING(true) student policies were dropped by name in 20260406153113."),
+    chk([F_LEG, F_FALLBACK, F_RLS2, F_AUTH], "Owner identity used by RLS (class_id) cannot be chosen by the caller.",
+        "Violated (candidate " + FP_A + "): legacy policies named 'Users can ...' in 20251022025825 bind rows to get_user_class_id(auth.uid()), which reads students.class_id; 20260406153113 dropped only the 'Students can ...' names, so both sets OR together. students INSERT/UPDATE policies check only user_id and no column grant or trigger protects students.class_id."),
+    chk([F_RLS2, F_GUARD, F_GUARD2, F_SIGNUP, F_ORIENT, F_PT], "Admin-controlled profile fields (has_*_access, access_tier, archived_at, proficiency_level) cannot be set by the student.",
+        "Violated on INSERT (candidate " + FP_B + "): guard_profile_admin_fields is a BEFORE UPDATE trigger only, column-scoped grants were applied to UPDATE only, and the student INSERT policy checks only class_id = auth.uid()::text. Profiles are first created by a client upsert, so a new signup can create its own row with every access flag true, bypassing the approve_signup admin queue."),
+    chk([F_MSG, F_HOME], "A user can only become a conversation participant through admin or creator action.",
+        "Violated (candidate " + FP_C + "): 'Users can update own participant row' checks user_id only and leaves conversation_id writable; no column grant or trigger restricts it. Moving one's own row to another conversation id makes is_conversation_participant true for that conversation, opening messages, attachments rows, storage objects and inserts. conversations UPDATE also lacks WITH CHECK, letting a participant rewrite created_by."),
+    chk([F_COLS, "supabase/migrations"], "Student UPDATE policies cannot rewrite owner or role columns.",
+        "Held for profiles (column grants plus guard trigger block class_id and flags), classroom_items (guard trigger), user_roles (admin-only FOR ALL). Self-row UPDATEs on homework_assignments, activity_assignments, practice_test_runs, ta_assignments let a student alter status/score of their own rows (same-principal integrity; listed as hardening)."),
+    chk(["supabase/migrations"], "Views exposed through PostgREST run as invoker.",
+        "Held: students_safe is set security_invoker=on in 20260406175803 and drill_history is created with security_invoker=on."),
+]
+u2_checks = [
+    chk(["supabase/migrations"], "SECURITY DEFINER functions reachable by anon/authenticated check the caller before acting on other users' data.",
+        "Enumerated 90+ final SECURITY DEFINER non-trigger functions and matched GRANT/REVOKE statements, including multi-function REVOKE lists. Booking, Stripe, single-session, grading-claim and knowledge functions are revoked from public/anon/authenticated and granted to service_role. Authenticated-granted admin RPCs (approve_signup, dismiss_signup, admin_*_stripe_payment, assign/revoke_reading_center, mcp_* via mcp_require_admin, get_student_email, fts/match_lsatu_content) check user_roles/has_role. memory_* RPCs gate through can_access_memory_namespace."),
+    chk([F_BOOK], "Admin-only mutation RPCs are not executable by PUBLIC.",
+        "Violated (candidate " + FP_D + "): set_booking_availability_overrides(jsonb) is SECURITY DEFINER, has no role check, and no migration revokes its default PUBLIC EXECUTE. It deletes all future override rows and inserts caller-supplied ones; booking_ranges_for_date uses those rows to replace weekly hours."),
+    chk(["supabase/migrations"], "SECURITY DEFINER functions pin search_path.",
+        "Held: every enumerated SECURITY DEFINER function sets search_path (public or pg_catalog,public)."),
+    chk(["supabase/migrations"], "Definer RPCs granted to authenticated without caller checks do not disclose protected data.",
+        "Minor gaps only, recorded as hardening: get_or_create_personal_plan(uuid) creates a weekly_plans row for any supplied student id and keeps default PUBLIC EXECUTE; search_teaching_assets returns 2000-char excerpts of admin-only teaching_assets to any authenticated user (content also flows to students through ta-chat); search_guided_drill_sets and list_section_activities expose admin content metadata; get_user_class_id and can_sit_practice_test keep default PUBLIC EXECUTE but return low-sensitivity booleans/ids."),
+]
+u3_checks = [
+    chk(["supabase/migrations", "src/components/inbox/AttachmentCard.tsx"], "Every bucket is private and every storage.objects policy binds the object path to the caller or to admin.",
+        "Held at the storage layer: buckets message-attachments, teaching-assets, student-context, external-work-uploads, drill-recordings, model-runs are created public=false. Path policies bind folder[1] to auth.uid() (external-work-uploads, inbox-uploads, drill-recordings), to a conversation the caller participates in (message-attachments), to admin (teaching-assets, student-context), or to a graded section (model-runs). Clients create signed URLs with the user JWT, so a forged message_attachments.storage_path gains nothing. The message-attachments read policy inherits the participant-row pivot recorded under " + FP_C + " in the RLS unit; no separate storage root cause."),
+]
+u4_checks = [
+    chk(["src"], "HTML sinks never render data a lower-trust user controls without sanitizing.",
+        "Enumerated dangerouslySetInnerHTML, innerHTML, srcDoc and insertAdjacentHTML in src. Student-writable surfaces (messages, journal, reading-center) render as text or markdown without rehype-raw. Gmail bodies (external senders) go through DOMPurify (GmailMessageBody harden); TA drafts, ActionCard notes, taPdf and canvas exports sanitize with DOMPurify. Unsanitized sinks (bootcamp lesson constants, classroom content_html srcDoc in a sandbox without allow-same-origin, noteExcerpt/PostedRecapsList detached innerHTML) render admin-authored classroom content, and the classroom_items guard trigger blocks students from editing content_html/description."),
+    chk(["src/hooks/useUserPermissions.ts", "supabase/migrations"], "Client-only admin gates are backed by server enforcement.",
+        "Held for the sampled admin data: admin pages read tables whose RLS requires has_role(admin). Access flags are checked client-side but the flag values themselves are writable on INSERT (see " + FP_B + ")."),
+]
+
+def paths_union(checks):
+    s = []
+    for c in checks:
+        for p in c["reviewed_paths"]:
+            if p not in s: s.append(p)
+    return s
+
+units = [
+    {"coverage_id": U1, "disposition": "candidate", "reviewed_paths": paths_union(u1_checks), "checks": u1_checks, "candidate_fingerprints": [FP_A, FP_B, FP_C], "unresolved": []},
+    {"coverage_id": U2, "disposition": "candidate", "reviewed_paths": paths_union(u2_checks), "checks": u2_checks, "candidate_fingerprints": [FP_D], "unresolved": []},
+    {"coverage_id": U3, "disposition": "covered", "reviewed_paths": paths_union(u3_checks), "checks": u3_checks, "candidate_fingerprints": [], "unresolved": []},
+    {"coverage_id": U4, "disposition": "covered", "reviewed_paths": paths_union(u4_checks), "checks": u4_checks, "candidate_fingerprints": [], "unresolved": []},
+]
+
+BLK_DB = "No local Postgres with the migrated schema and no OS sandbox on this host; RLS and grant behavior was not executed."
+BLK_DEPLOY = "Deployed policy set unknown: whether every repository migration (including 20251022025825) was applied to the Lovable Cloud database cannot be checked without contacting it, which is out of scope."
+
+candidates = [
+ {
+  "proposed_verdict": "needs_validation",
+  "fingerprint": FP_A,
+  "title": "Student can read and alter another student's practice data by rewriting their own students.class_id",
+  "description": "Legacy RLS policies created in 20251022025825 ('Users can view own profile', 'Users can view own attempts', 'Users can view own WAJ entries', 'Users can view own session', 'Users can view own settings' and their INSERT/UPDATE siblings) authorize rows where class_id = get_user_class_id(auth.uid()). get_user_class_id returns students.class_id for the caller. The 20260406153113 rewrite dropped only policies named 'Students can ...', so these legacy policies still exist and are ORed with the newer class_id = auth.uid()::text policies. The students table lets any authenticated user INSERT or UPDATE their own row (checked on user_id only) with no restriction on class_id. A student who sets their students.class_id to another student's auth uid therefore satisfies the legacy policies for that student's profiles, attempts, wrong_answer_journal, sessions, settings, section_history, daily_stats, drill_templates, question_usage, voice and achievement rows, and can also insert or update rows under that class_id.",
+  "claimed_root_cause": "Owner identity for the legacy policies comes from a caller-writable column (students.class_id) instead of auth.uid(), and the legacy policies were never dropped because the cleanup migration dropped different policy names.",
+  "trace": [
+   {"kind": "entrypoint", "file": F_RLS2, "line": 9, "scope": "policy 'Students can update own data' on public.students", "description": "Authenticated PATCH /rest/v1/students?user_id=eq.<self> with {class_id: '<victim uid>'} passes USING/WITH CHECK user_id = auth.uid(); class_id is unconstrained."},
+   {"kind": "propagation", "file": F_FALLBACK, "line": 13, "scope": "public.get_user_class_id(uuid)", "description": "SECURITY DEFINER helper returns students.class_id for the caller, now the victim's uid."},
+   {"kind": "propagation", "file": F_LEG, "line": 35, "scope": "policy 'Users can view own profile' on public.profiles", "description": "USING (class_id = get_user_class_id(auth.uid())) matches the victim's profile row; same pattern at attempts (line 24), wrong_answer_journal (82), sessions (130), settings (144)."},
+   {"kind": "sink", "file": F_LEG, "line": 24, "scope": "policy 'Users can view own attempts' on public.attempts", "description": "GET /rest/v1/attempts?class_id=eq.<victim uid> returns the victim's full answer history; INSERT policy at line 27 accepts forged attempts under the victim's class_id."}
+  ],
+  "evidence": [
+   {"file": F_RLS2, "line": 1, "description": "Cleanup migration states it drops existing permissive policies but only drops 'Students can ...' names (lines 5-23); the 'Users can ...' names from 20251022025825 are never dropped anywhere in the repository."},
+   {"file": F_RLS2, "line": 10, "description": "students INSERT policy checks user_id only, so a user without a row can create one with any class_id."},
+   {"file": F_LEG, "line": 160, "description": "Legacy students UPDATE policy also checks user_id only."},
+   {"file": F_COLS, "line": 54, "description": "Only SELECT on students is column-restricted; no REVOKE UPDATE/INSERT or guard trigger exists for students.class_id."},
+   {"file": F_AUTH, "line": 75, "description": "Client provisioner writes class_id = user id, confirming class_id is the owner key and is client-supplied."}
+  ],
+  "blockers": [BLK_DB, BLK_DEPLOY, "Attacker must know the victim's auth uid; no source path in this unit was confirmed to disclose other students' uids to a student."],
+  "validation_plan": {
+   "local": "Apply all migrations in order to a disposable local Postgres with Supabase auth stubs; create users A and B with students rows class_id = own uid and an attempts row for B; as A (role authenticated, request.jwt.claims sub = A) run UPDATE public.students SET class_id = '<B uid>' WHERE user_id = '<A uid>'; then SELECT * FROM public.attempts WHERE class_id = '<B uid>' and SELECT * FROM public.profiles WHERE class_id = '<B uid>'. Expect zero rows if safe; rows returned confirms.",
+   "deployment": "Owner runs read-only SQL on the production database: SELECT policyname, tablename, qual FROM pg_policies WHERE qual ILIKE '%get_user_class_id%'; and SELECT grantee, privilege_type FROM information_schema.role_table_grants WHERE table_name = 'students' AND grantee = 'authenticated'. Any surviving 'Users can ...' policy plus UPDATE/INSERT grant confirms the precondition."
+  }
+ },
+ {
+  "proposed_verdict": "needs_validation",
+  "fingerprint": FP_B,
+  "title": "New signup can self-grant every access flag by inserting its own profiles row",
+  "description": "Access to paid features is controlled by profiles.has_*_access, access_tier and archived_at, which the design reserves to admins (approve_signup, admin-manage-users). The guard trigger guard_profile_admin_fields fires BEFORE UPDATE only, and the column-scoped privilege fix in 20260612153001 revokes and re-grants UPDATE only. The student INSERT policy on profiles checks only class_id = auth.uid()::text. Profiles are created by the client's first upsert (OrientationCard/PrepSection), not by a server trigger, so a freshly signed-up user can POST /rest/v1/profiles with class_id = own uid and every has_*_access true and access_tier 'tier_1'. Server-side checks that read these flags (for example can_sit_practice_test reading has_practice_access, and edge functions that read the flags) then treat the user as approved.",
+  "claimed_root_cause": "Admin-controlled columns are protected on UPDATE only; INSERT keeps the default table privilege and the INSERT policy does not constrain those columns.",
+  "trace": [
+   {"kind": "entrypoint", "file": F_RLS2, "line": 23, "scope": "policy 'Students can insert own profile' on public.profiles", "description": "POST /rest/v1/profiles {class_id: '<self uid>', has_practice_access: true, ...} passes WITH CHECK class_id = auth.uid()::text."},
+   {"kind": "propagation", "file": F_GUARD, "line": 34, "scope": "trigger guard_profile_admin_fields_trg", "description": "Defined BEFORE UPDATE ON public.profiles, so the access-flag guard does not run on INSERT (latest body in " + F_GUARD2 + " is unchanged in timing)."},
+   {"kind": "propagation", "file": F_SIGNUP, "line": 86, "scope": "trigger notify_admins_on_signup_trigger", "description": "AFTER INSERT only notifies admins; nothing resets self-supplied flags."},
+   {"kind": "sink", "file": F_PT, "line": 41, "scope": "public.can_sit_practice_test(uuid, integer)", "description": "Grants practice-test access when profiles.has_practice_access is true, now self-set."}
+  ],
+  "evidence": [
+   {"file": F_COLS, "line": 37, "description": "REVOKE UPDATE ON public.profiles FROM authenticated with column-scoped GRANT UPDATE; no matching REVOKE INSERT exists in any migration."},
+   {"file": F_ORIENT, "line": 349, "description": "Client creates the profile with an upsert on class_id, showing the row is not pre-created server-side."},
+   {"file": F_SIGNUP, "line": 1, "description": "Signup approval queue documents that access is granted by an admin action that 'can never be self-served by the account being approved'."},
+   {"file": F_PERM, "line": 193, "description": "Client permission gate reads the same profile flags."}
+  ],
+  "blockers": [BLK_DB, BLK_DEPLOY, "Whether the deployed profiles columns default to false and whether any dashboard-created trigger or default privilege revokes INSERT is not visible in the repository."],
+  "validation_plan": {
+   "local": "On a disposable local Postgres with all migrations applied, create auth user C with no profiles row; as C (authenticated) INSERT INTO public.profiles (class_id, has_practice_access, has_classroom_access, access_tier) VALUES ('<C uid>', true, true, 'tier_1'); then SELECT public.can_sit_practice_test('<C uid>', 101). Insert rejected = safe; true = confirmed.",
+   "deployment": "Owner checks read-only: SELECT tgname, tgtype FROM pg_trigger WHERE tgrelid = 'public.profiles'::regclass; and SELECT privilege_type FROM information_schema.role_table_grants WHERE table_name='profiles' AND grantee='authenticated'. INSERT privilege plus no BEFORE INSERT guard confirms the precondition."
+  }
+ },
+ {
+  "proposed_verdict": "needs_validation",
+  "fingerprint": FP_C,
+  "title": "Participant can move their conversation_participants row into any conversation and read its messages",
+  "description": "The UPDATE policy on conversation_participants checks only user_id = auth.uid() in USING and WITH CHECK. conversation_id remains writable because no column grant or trigger restricts it (20260826060000 explicitly relies on this policy for home_cleared_at). A student who UPDATEs their own participant row to another conversation's id becomes a participant of that conversation: is_conversation_participant then authorizes SELECT on its messages, message_attachments rows and message-attachments storage objects (folder = conversation id), INSERT of messages into it, and UPDATE of the conversation row (which has no WITH CHECK, so created_by can be rewritten and further participants added).",
+  "claimed_root_cause": "Self-row UPDATE policy binds only the user column and leaves the tenant key (conversation_id) mutable.",
+  "trace": [
+   {"kind": "entrypoint", "file": F_MSG, "line": 99, "scope": "policy 'Users can update own participant row' on public.conversation_participants", "description": "PATCH /rest/v1/conversation_participants?id=eq.<own row> {conversation_id: '<target conversation>'} passes user_id = auth.uid()."},
+   {"kind": "propagation", "file": F_MSG, "line": 49, "scope": "public.is_conversation_participant(uuid, uuid)", "description": "Returns true for the target conversation because the moved row now matches."},
+   {"kind": "propagation", "file": F_MSG, "line": 105, "scope": "policy 'Participants can view messages' on public.messages", "description": "Authorizes reading every message in the target conversation."},
+   {"kind": "sink", "file": F_MSG, "line": 173, "scope": "policy 'Participants can read attachment files' on storage.objects", "description": "Authorizes downloading the target conversation's attachment files from bucket message-attachments."}
+  ],
+  "evidence": [
+   {"file": F_MSG, "line": 77, "description": "conversations UPDATE policy has USING only, no WITH CHECK, so a participant can also rewrite created_by and then add participants via the creator INSERT policy."},
+   {"file": F_HOME, "line": 39, "description": "Migration comment relies on this UPDATE policy being scoped to user_id, confirming no column restriction was added."}
+  ],
+  "blockers": [BLK_DB, BLK_DEPLOY, "Attacker must obtain a target conversation UUID; no source path reviewed in this unit was confirmed to leak other users' conversation ids to a student."],
+  "validation_plan": {
+   "local": "On a disposable local Postgres with all migrations applied, create admin J, students A and B, conversations CA (J,A) and CB (J,B) with a message in CB; as A run UPDATE public.conversation_participants SET conversation_id = '<CB>' WHERE user_id = '<A>' AND conversation_id = '<CA>'; then SELECT body FROM public.messages WHERE conversation_id = '<CB>'. Update rejected or zero rows = safe.",
+   "deployment": "Owner checks read-only: SELECT column_name FROM information_schema.column_privileges WHERE table_name='conversation_participants' AND grantee='authenticated' AND privilege_type='UPDATE'; and lists triggers on public.conversation_participants. UPDATE on conversation_id with no guard trigger confirms the precondition."
+  }
+ },
+ {
+  "proposed_verdict": "needs_validation",
+  "fingerprint": FP_D,
+  "title": "Anyone with the anon key can rewrite booking availability overrides through set_booking_availability_overrides",
+  "description": "public.set_booking_availability_overrides(jsonb) is SECURITY DEFINER, performs no auth.uid() or has_role check, and no migration revokes EXECUTE from PUBLIC/anon/authenticated (every sibling booking RPC in the same feature is explicitly revoked and granted to service_role). It deletes every override dated today or later and inserts caller-supplied rows. booking_ranges_for_date treats override rows as replacing the weekly hours, so an anonymous caller can close every bookable day (null times) or open arbitrary hours, affecting public booking and pass redemption. The function also returns get_booking_availability(), which is otherwise service_role-only.",
+  "claimed_root_cause": "Admin-only SECURITY DEFINER mutation function created without an internal admin check and without revoking the default PUBLIC EXECUTE privilege.",
+  "trace": [
+   {"kind": "entrypoint", "file": F_BOOK, "line": 148, "scope": "public.set_booking_availability_overrides(jsonb)", "description": "POST /rest/v1/rpc/set_booking_availability_overrides with anon key and body {_overrides: [{date: '<each day>'}]}; SECURITY DEFINER, no caller check, default PUBLIC EXECUTE."},
+   {"kind": "propagation", "file": F_BOOK, "line": 168, "scope": "set_booking_availability_overrides body", "description": "DELETE FROM booking_availability_overrides WHERE date >= today, then INSERT of caller rows, bypassing the admin-only table policy."},
+   {"kind": "sink", "file": F_BOOK, "line": 91, "scope": "public.booking_ranges_for_date(date)", "description": "Override rows replace weekly availability for that date; a null-time row closes the day."}
+  ],
+  "evidence": [
+   {"file": F_BOOK, "line": 81, "description": "Table policy limits booking_availability_overrides to admins, showing the intended authority."},
+   {"file": F_BOOK, "line": 106, "description": "get_booking_availability, returned by the function, is revoked from public/anon/authenticated elsewhere, confirming sibling RPCs are meant to be service_role-only."}
+  ],
+  "blockers": [BLK_DB, "Whether the Lovable Cloud project retains Supabase's default EXECUTE grant for new public functions, or had it altered outside the repository, is not visible without contacting the database."],
+  "validation_plan": {
+   "local": "On a disposable local Supabase stack with all migrations applied, call SET ROLE anon; SELECT public.set_booking_availability_overrides('[{\"date\":\"<tomorrow>\"}]'::jsonb); then SELECT * FROM public.booking_ranges_for_date('<tomorrow>'). Permission denied = safe; empty ranges = confirmed.",
+   "deployment": "Owner runs read-only: SELECT has_function_privilege('anon', 'public.set_booking_availability_overrides(jsonb)', 'EXECUTE'), has_function_privilege('authenticated', 'public.set_booking_availability_overrides(jsonb)', 'EXECUTE'); true confirms the precondition without calling the function."
+  }
+ }
+]
+
+hardening = [
+ "get_or_create_personal_plan(uuid) (20260701180000) is SECURITY DEFINER with no caller check and keeps default PUBLIC EXECUTE; any caller can create a '__personal__' weekly_plans row for any student id. Add p_student = auth.uid() or admin check and REVOKE from PUBLIC, anon.",
+ "search_teaching_assets, search_guided_drill_sets and list_section_activities return excerpts/metadata of admin-only tables to any authenticated user; acceptable only if that content is meant for students.",
+ "get_user_class_id, can_sit_practice_test and booking_slot_is_clear keep default PUBLIC EXECUTE; revoke from anon.",
+ "Students can UPDATE status/score columns on their own homework_assignments, activity_assignments, ta_assignments and practice_test_runs rows (same-principal integrity); consider guard triggers like the classroom_items one.",
+ "noteExcerpt in src/components/classroom/ClassroomRouteViews.tsx and PostedRecapsList assign classroom content to innerHTML of a detached div, which still fires img onerror; content is admin/LLM-authored today, but use DOMParser or DOMPurify before extracting text.",
+ "Drop the legacy 'Users can ...' policies from 20251022025825 regardless of the class_id candidate outcome; two parallel policy generations make the effective policy hard to audit.",
+ "teacher_message_templates policies from 20260522152939 apply to role PUBLIC and let any authenticated user create templates for themselves; scope to admin if templates are teacher-only."
+]
+
+uncovered = [
+ {"surface": "supabase/migrations#dynamic SQL policies", "boundary": "supabase/migrations#RLS policies", "subsystem": "profile/quick/all-in-scope-subsystems", "attack_class": "DATA-ISOLATION-AND-LIFECYCLE.md#Policy and query disagreement", "starting_paths": ["supabase/migrations"], "reason": "Policies created inside DO blocks via EXECUTE format() (reading_center_*) were read manually but not replayed by the parser; overloaded function signatures were tracked by name only."},
+ {"surface": "Supabase dashboard state", "boundary": "Deployed database grants and policies", "subsystem": "profile/quick/all-in-scope-subsystems", "attack_class": "ATTACK-CLASSES.md#Access control", "starting_paths": ["supabase/migrations"], "reason": "Grants, triggers or policies changed outside the repository (Lovable Cloud console) cannot be observed under the no-network constraint."}
+]
+
+result = {"units": units, "candidates": candidates, "hardening": hardening, "uncovered": uncovered}
+out = r"C:/Users/Joshu/dev/ai-os/audits/security-2026-10-14/cloudflare-security-audit/agents/hunter-db/scratch/result.json"
+json.dump(result, open(out, "w", encoding="utf-8"), indent=1)
+print(open(out, encoding="utf-8").read())

@@ -1,0 +1,84 @@
+{
+ "qid": "PT158-S2-Q23",
+ "type": "Principle-Conform",
+ "difficulty": "2",
+ "key_db": "B",
+ "stimulus_db": "Journalist: Drivers of sport utility vehicles correctly tend to believe that occupants of such vehicles carry lower risk of serious injury as a result of accidents, and such drivers therefore tend to drive less carefully than they would in more traditional vehicles. Thus, the discovery of powerful cures for certain high-incidence forms of cancer would probably trigger an increase in behaviors such as smoking and overexposure to sun that are known to increase the risks of such cancers.",
+ "stem_db": "The journalist's reasoning most closely conforms to which one of the following principles?",
+ "choices_db": {
+  "A": "When people believe that there are several measures they could take to reduce the risk associated with a certain activity, generally they will take only the measure that they believe will most reduce that risk.",
+  "B": "The development of ways to protect people from the consequences of behaviors that would normally harm them often makes people less careful to avoid such behaviors.",
+  "C": "People generally take special care to avoid behaviors that they believe would likely lead to serious injury to them and generally do not take special care to avoid behaviors that they believe will not harm them at all.",
+  "D": "People generally exercise more care when performing activities they know to have risky consequences than when performing activities of unknown risk.",
+  "E": "Avoiding serious harm to themselves is given a high priority by people in their behavior, but avoiding lesser harms is frequently outweighed by various desires."
+ },
+ "bank": {
+  "stimulus": "Journalist: Drivers of sport utility vehicles correctly\n tend to believe that occupants of such vehicles\n carry lower risk of serious injury as a result of\n accidents, and such drivers therefore tend to drive\n less carefully than they would in more traditional\n vehicles. Thus, the discovery of powerful cures\n for certain high-incidence forms of cancer would\n probably trigger an increase in behaviors such as\n smoking and overexposure to sun that are known\n to increase the risks of such cancers.",
+  "stem": "The journalist’s reasoning most closely conforms to\n which one of the following principles?",
+  "choices": {
+   "A": "When people believe that there are several measures they could take to reduce the risk associated with a certain activity, generally they will take only the measure that they believe will most reduce that risk.",
+   "B": "The development of ways to protect people from the consequences of behaviors that would normally harm them often makes people less careful to avoid such behaviors.",
+   "C": "People generally take special care to avoid behaviors that they believe would likely lead to serious injury to them and generally do not take special care to avoid behaviors that they believe will not harm them at all.",
+   "D": "People generally exercise more care when performing activities they know to have risky consequences than when performing activities of unknown risk.",
+   "E": "Avoiding serious harm to themselves is given a high priority by people in their behavior, but avoiding lesser harms is frequently outweighed by various desires."
+  },
+  "key": "B"
+ },
+ "explanation_id": "cbcee8fe-e8c3-47e3-9ed3-158eaf21efa3",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "906018ff-3c98-4ff2-a70b-d3af69a61f16",
+   "position": 0,
+   "label": "Conclusion (thus)",
+   "body": "The discovery of powerful cures for certain high-incidence forms of cancer would probably trigger an increase in behaviors such as smoking and overexposure to sun that are known to increase the risks of such cancers."
+  },
+  {
+   "row_id": "9b53bcd4-adca-4491-9b71-ba96abccf37d",
+   "position": 1,
+   "label": "Evidence",
+   "body": "Drivers of SUVs correctly believe that they are at less risk of serious injury in an accident, and such drivers therefore tend to drive less carefully than they would in more traditional vehicles."
+  },
+  {
+   "row_id": "4470de7b-e5c2-4a07-8b23-a5d12a438c5a",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "The author is arguing by analogy. If we want, we can lay out the parts to help us articulate any missing ingredients.\n```\nSUVs                     Cures for Cancer\ndrivers know their       (people know their\nrisk of serious injury   risk of dying from\nin an accident is low    such cancer is low)\nso, the drivers drive    people would smoke\nless carefully than      more and not use\nthey otherwise would     sunscreen, despite\n                         the higher cancer risk\n```\nSince the argument is by analogy and the question stem is asking for an underlying principle, we should probably try to articulate the underlying general idea that operates in both halves of the analogy."
+  },
+  {
+   "row_id": "3df31203-315a-4c37-b4a5-06bbb2554b92",
+   "position": 3,
+   "label": "Goal",
+   "body": "Let's look for something like, \"If you know you're better protected from the potential downside of risky behavior X, then you're more likely to do X.\""
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "c52ddec7-ec2f-49ea-b2e7-2a54d5b9fff6",
+   "letter": "A",
+   "body": "This answer introduces a condition — people believing there are \"several measures they could take\" to reduce risk — that does not match the journalist's reasoning. The journalist's argument is about a single form of protection (cancer cures) reducing caution, not about people having multiple risk-reduction options. Additionally, the conclusion of this principle (\"most likely to take at least one of these measures\") is about people adopting protective measures, not about people increasing risky behavior. The journalist's conclusion is about increased risky behavior (smoking, sun exposure), not about people being more likely to adopt protective measures. Both the trigger and the outcome of this principle mismatch the argument. The word \"only\" in \"only when\" also makes it too restrictive."
+  },
+  {
+   "row_id": "bf25f385-b25d-4d8a-bbb5-afde8af02948",
+   "letter": "B",
+   "body": "This principle perfectly captures the journalist's reasoning. The principle states: developing ways to protect people from the consequences of otherwise risky behaviors tends to encourage those behaviors. This maps precisely onto both examples in the argument. SUVs protect people from consequences of risky driving (injury in accidents), and SUV drivers respond by driving less carefully (more risky behavior). Cancer cures would protect people from consequences of risky health behaviors (cancer from smoking and sun exposure), and people would respond by engaging in more of those behaviors. The principle identifies the general pattern: consequence mitigation leads to risk compensation. The key terms align perfectly — \"protect people from the consequences\" matches the reduced injury risk in SUVs and the potential for cancer cures, and \"encourage an increase in those behaviors\" matches less careful driving and increased smoking/sun exposure."
+  },
+  {
+   "row_id": "f629f96d-2160-4046-ad61-321886f85b96",
+   "letter": "C",
+   "body": "This principle says people take special care to avoid behaviors they believe would cause no harm at all to them. But the journalist's argument is not about behaviors that cause \"no harm at all\" — it is about behaviors whose harmful consequences can be mitigated or cured. Smoking with a cancer cure available still involves some harm (getting cancer, undergoing treatment); the point is that the ultimate consequence (death from cancer) is eliminated. The journalist's reasoning operates on reduced consequences, not eliminated ones. Additionally, this principle is about people being careful, while the journalist's conclusion is about people being less careful. The principle describes caution; the argument describes the abandonment of caution. Wrong direction, wrong scope."
+  },
+  {
+   "row_id": "527e3d7c-082e-4d93-abe5-27b16a6b32fd",
+   "letter": "D",
+   "body": "This principle says people are more careful when they know an activity is risky compared to when the risk is unknown. The journalist's argument is not about known versus unknown risks — the risks of smoking and sun exposure are well known in both scenarios (with and without cancer cures). The argument is about how the availability of a cure changes behavior despite known risks. The relevant variable is consequence severity, not risk awareness. People who know SUVs are safer do not become unaware of driving risks — they simply feel less vulnerable to those risks. This principle addresses the wrong variable: awareness of risk rather than severity of consequences."
+  },
+  {
+   "row_id": "6071dc4d-6710-40b2-a5cd-3119972d3f6c",
+   "letter": "E",
+   "body": "This principle says avoiding serious harm is a high priority in people's behavior. While superficially related to the argument's themes, this principle actually supports the opposite conclusion from what the journalist predicts. If people prioritize avoiding serious harm, and cancer cures make cancer less serious, then this principle would predict people give cancer-causing behaviors lower priority for avoidance — but the mechanism described here (prioritizing harm avoidance) is different from the one the journalist identifies (reducing caution because consequences are mitigated). More importantly, this principle describes a static priority system, while the journalist's reasoning is about dynamic behavioral change in response to changing circumstances. The principle does not capture the key insight: that protection from harm leads to increased risky behavior."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (8.8 em-dashes per 1k words; wrong-answer notes average 115.5 words).",
+ "tags": "emdash-heavy; pt157-158-register; possible-misquote"
+}

@@ -1,0 +1,572 @@
+=== PAGE 1 ===
+23 ClaudeMISTAKESyou're m aking
+A ROBONUGGETS GUIDE
+The habits that quietly eat your Claude usage or m ake the answers worse, and the fix for
+each one, from  easy fixes anyone can do today to the advanced ones even power users get
+wrong.
+23 CLAUD E M ISTAKES - THE G UID E
+
+=== PAGE 2 ===
+README
+W hat this is. The guide to the “23 Claude M istakes you're m aking” video. Every m istake from  the video, in the sam e order, each
+with why it m atters, the fix, the exact prom pts and com m ands, and the source. M ost of them  com e straight from  Anthropic's
+own published guidance: the Claude Code docs on best practices, costs, prom pt caching and m em ory, and the prom pting
+guides for the 5.5 m odels.
+How to use it. P age 3 has all 23 at a glance. P ages 4 to 16 are the m istakes, grouped Easy (from  page 4), Interm ediate (from
+page 10) and Advanced (from  page 15). Anything in an orange box is copy-paste ready. The fastest way to use it: send this P DF
+to your AI agent with the prom pt below, and it tells you which of these m istakes you're m aking.
+The com m unity. If you want to go further, building AI system s you can sell and m astering Claude Code along the way, that is
+what we do every week at skool.com /robonuggets.
+Which of these am I making?
+Drop this PDF into your AI agent (Claude Code, the Claude app or any agent that can read a PDF) and paste this prompt
+with it. It checks what it can see, asks you about the rest, and changes nothing until you say so.
+COPY-PASTE · SEND WITH THIS PDF
+i've attached a PDF guide to 23 Claude mistakes. read it, then help me work out which of these mistakes i'm 
+making.
+- check what you can see for yourself: how long my CLAUDE.md is, my Claude Code settings file, which MCP 
+servers, connectors and plugins i have switched on, and which model and effort level i use. ask me about 
+anything you can't check
+- also ask me how i work: do i keep one chat going all day, do i step away from long sessions, do i correct 
+the same mistake over and over
+- give me a short table: each mistake, yes, maybe or no, and one line on why for my setup
+- then pick the 3 fixes that would help me most, in order, with the exact prompts and commands from the guide
+- don't change anything yet. wait for my go on each fix
+Six words this guide uses a lot
+SESSION OR CHAT
+One conversation w ith Claude. Claude re-reads all of it every
+tim e you send a m essage.
+CONTEXT
+Everything Claude is holding in that conversation: your
+m essages, its answ ers and the files it read.
+TOKENS
+The sm all chunks of text Claude reads and w rites. Y our usage
+and your lim its are counted in them .
+CACHE
+A short-term  m em ory that lets Claude skip re-processing the
+part of the chat that did not change. Basically a discount.
+EFFORT
+How  hard Claude thinks before it answ ers: low, m edium , high,
+xhigh or m ax. M ore thinking uses m ore of your lim it.
+SLASH COMMANDS
+Com m ands like /clear , typed in Claude Code's chat box.
+W here the Claude app w orks differently, the fix says so.
+23 CLAUD E M ISTAKES - THE G UID E 2
+
+=== PAGE 3 ===
+All 23 at a glance
+Easy 11 · Intermediate 8 · Advanced 4. Fix the easy ones first: they take a minute each.
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21
+22 23
+# MISTAKE THE FIX, IN ONE LINE PAGE
+EASY · 11 MISTAKES
+01The kitchen sink session One task, one session: a new chat, or /clear in Claude Code 4
+02Switching models mid-chat Pick the model at the start; changing effort mid-chat is fine on the newest
+models
+5
+03Arguing instead of rewinding After two failed corrections: Esc twice (/rewind) and start from before it
+went wrong
+5
+04Side questions in your main chat /btw: the answer never enters the chat history 6
+05Using max effort more than you should Medium for most work, high or xhigh when it matters, max rarely 6
+06 One-liner vague prompts Name the output, who it is for, the goal and done; give Claude a harness 7
+07Giving Claude rules without a reason Add the “because” in one clause 7
+08Asking your agent to make it not look like AI
+made it
+Name the exact patterns to avoid, or give a design system 8
+09Taking the first draft Ask for 3 independent versions and have Claude grade them; for writing 8
+10 Drip feeding follow-ups One complete message; rewind and resend instead of correcting 8
+11 Using old school prompting techniques on the
+newer models
+Drop “think carefully”, “don't be lazy” and shouting; use effort 9
+INTERMEDIATE · 8 MISTAKES
+12 Walking away mid-session Clear or compact before a break; the cache goes cold after 1 hour 10
+13 Stuffing your CLAUDE md Under 200 lines, used as a router to where things live 10
+14 Turning off all safety Auto mode, plus a guard: DCG or Blast Radius 11
+15 Letting Claude edit important files with no
+backup
+A dated backup before big changes; git if you are more advanced 12
+16 Having everything connected all the time Audit your MCPs and connectors with a prompt; prefer CLI tools 13
+17 Infinite exploration Scope it, or hand it to a subagent on a smaller model 13
+18 Never checking usage /usage shows what ate your limit; a mod can show it all the time 14
+19 Skipping alignment Let Claude interview you first, then build from a spec 14
+ADVANCED · 4 MISTAKES
+20 Losing your old chats Sessions are deleted after 30 days; set cleanupPeriodDays to 365 15
+21Installing mods and plugins blind Assess first, or let Claude assess it for you 15
+22Not setting a direction for compaction /compact at a natural break with what to keep; Compact instructions 16
+23Not having a model routing system Sonnet for most work; let a router pick the model 16
+Facts checked 9 October 2026. Claude Code changes fast, so if som ething here no longer m atches, check the source link on that m istake's page.
+23 CLAUD E M ISTAKES - THE G UID E 3
+
+=== PAGE 4 ===
+EASYM istakes 1 to 11 · Fix these and you are already ahead of m ost people using Claude.
+01 The kitchen sink session EASY
+THE MISTAKE You keep one chat going all day. A client email, then research on some topic, then the copy on your website, all
+in the same session.
+WHY IT MATTERSClaude re-reads the whole conversation every time you send a message. The prompt cache, Claude's short-
+term memory, makes that re-read much cheaper, but you still pay for it and it still counts toward your limit.
+And all that unrelated stuff distracts Claude, so the answers get worse over time. This habit is so common that
+Anthropic has a name for it: the kitchen sink session.
+THE FIX One task, one session. When you switch to a new topic, start a new chat. Or, to use the fewest tokens, type
+/clear in Claude Code: the chat empties, and your CLAUDE md and other system prompts, like your skill
+descriptions, don't need to load again.
+“The kitchen sink session ... Context is full of irrelevant inform ation. Fix: /clear between unrelated tasks.”
+ANTHROPIC, CLAUDE CODE DOCS: BEST PRACTICES
+TYPE IN CLAUDE CODE
+/clear
+SO U RC E Docs: best practices (the kitchen sink session): https://code.claude.com /docs/en/best-practices
+SO U RC E Docs: costs (a one-line question late in the day): https://code.claude.com /docs/en/costs
+SO U RC E Help Center: models, usage and limits in Claude Code: https://support.claude.com /en/articles/14552983-m odels-usage-a
+nd-lim its-in-claude-code
+On Opus 5.5 and Sonnet 5.5 a cached re-read costs 5% of the norm al input price. But cache reads still count tow ard
+your plan lim its, and Anthropic does not publish how  m uch.
+A sim ple test from  Anthropic's Help Center: “if your next prom pt w ould m ake perfect sense in a brand-new
+term inal, clear before sending it.”
+It is about unrelated tasks. W hen you are deep in one problem , the history is w orth keeping.
+23 CLAUD E M ISTAKES - THE G UID E 4
+
+=== PAGE 5 ===
+02 Switching models mid-chat EASY
+THE MISTAKE You are deep in a session on Opus, and you flip to Haiku to save money on a quick question.
+WHY IT MATTERSEvery model has its own prompt cache, so switching means the whole conversation gets re-read with no
+discount. Anthropic's own engineer says if you are a hundred thousand tokens into an Opus chat, switching to
+Haiku for an easy question actually costs more than just letting Opus answer.
+THE FIX Pick your model at the start of a task and stick with it. The good news: on the newest models, all the 5.5
+models plus Fable 5.1, changing the effort mid-chat does not wipe the cache any more. So changing the model
+midway costs you more tokens, while changing the effort midway is okay now. This part depends on your
+setup, so check it on yours with the prompt below.
+“it would actually be m ore expensive to switch to Haiku than to have Opus answer, because we would need
+to rebuild the prom pt cache for Haiku.”
+THARIQ, ANTHROPIC
+COPY-PASTE · CHECK IT ON YOUR SETUP
+Check whether changing my effort level mid-chat keeps the prompt cache on my setup. Tell 
+me which model, plan and Claude Code version I'm on, and what Anthropic's docs say about 
+it.
+SO U RC E Docs: prompt caching (switching models, changing effort): https://code.claude.com /docs/en/prom pt-caching
+SO U RC E Thariq: prompt caching is everything: https://claude.dev/blog/lessons-from -building-claude-code-prom pt-caching-is-ev
+erything/
+03 Arguing instead of rewinding EASY
+THE MISTAKE Claude gets something wrong, you correct it, it is still wrong, you correct it again, and now you are five rounds
+deep giving feedback one prompt after another.
+WHY IT MATTERSEvery one of those failed attempts stays in the chat, and it pulls the next answer toward the same mistakes.
+And the whole conversation gets re-read with every prompt you send. The prompt cache gives you a discount,
+but it still drains your usage.
+THE FIX Anthropic's own rule: after two failed corrections, stop and rewind. Press Esc twice, or type /rewind. That
+brings up a list of your earlier messages, so you can pick the point just before it went wrong and start again
+from there.
+“If you've corrected Claude m ore than twice on the sam e issue in one session, the context is cluttered with
+failed approaches.”
+ANTHROPIC, CLAUDE CODE DOCS: BEST PRACTICES
+PRESS ESC TWICE, OR TYPE IN CLAUDE CODE
+/rewind
+SO U RC E Docs: best practices (correct twice, then clear): https://code.claude.com /docs/en/best-practices
+Anthropic's docs say effort changes keep the cache on Opus 5.5, Sonnet 5.5, Haiku 5.5 and Fable 5.1 “w ith an AP I
+key or a Claude subscription”. On older m odels, and on Am azon Bedrock, Google Cloud's Agent P latform  or a
+Claude apps gatew ay, changing effort still w ipes the cache.
+A skill or com m and that nam es a different m odel is also a sw itch for that turn.
+The sam e docs page gives the other w ay out: /clear  and w rite one better prom pt w ith w hat you learned. “A clean
+session w ith a better prom pt alm ost alw ays outperform s a long session w ith accum ulated corrections.”
+23 CLAUD E M ISTAKES - THE G UID E 5
+
+=== PAGE 6 ===
+04 Side questions in your main chat EASY
+THE MISTAKE You are in the middle of a task and you have a quick question. What is a webhook, which Claude just
+mentioned? What was the answer from a few prompts back? How far along is the long build Claude is working
+on? So you send it as a new prompt.
+WHY IT MATTERSThat little detour now stays in the conversation, and it can confuse your agent later on. It also gets re-sent with
+every message for the rest of the task, so it drains your limits even faster.
+THE FIX Type /btw (by the way), then your question. The answer pops up in a side panel, but it never goes into the
+chat history, so your main task stays clean.
+TYPE IN CLAUDE CODE
+/btw what's a webhook?
+SO U RC E Docs: best practices (/btw): https://code.claude.com /docs/en/best-practices
+05 Using max effort more than you should EASY
+THE MISTAKE Putting effort on max for every single task, because more thinking must be better.
+WHY IT MATTERSThinking counts as output, so it eats your usage, and Anthropic itself says max “may show diminishing returns
+and is prone to overthinking.” The independent tests agree. Artificial Analysis, an independent company that
+runs every AI model through the same tests, found that for Opus 5.5, max scores about four points higher than
+high, so only a bit, but costs over three times as much per task.
+THE FIX Unless you have an unlimited budget, leave effort on medium for most normal work, go high or xhigh (extra
+high) when it really matters, and save max for the rare big job.
+OPUS 5.5 EFFORT INTELLIGENCE INDEX COST PER TASK
+low 42.3 $0.55
+m edium 51.2 $1.34
+high 53.6 $1.82
+xhigh 56.0 $3.46
+m ax 57.6 $5.98
+Artificial Analysis, retrieved 9 October 2026. M ax against high: +4 points for 3.3x the cost per task.
+SO U RC E Docs: model config (max effort): https://code.claude.com /docs/en/m odel-config
+SO U RC E Artificial Analysis: https://artificialanalysis.ai
+SO U RC E Artificial Analysis: Anthropic models: https://artificialanalysis.ai/providers/anthropic
+Fable 5.1 tells the sam e story: m ax 53.4 ($7.63 per task) against high 51.2 ($3.91).
+The site updates, so check the latest num bers there. On a subscription, the cost show s up as lim it use, not dollars.
+23 CLAUD E M ISTAKES - THE G UID E 6
+
+=== PAGE 7 ===
+06 One-liner vague prompts EASY
+THE MISTAKE One-line vague prompts, like “make me a website”, “write a newsletter” or “write an article”.
+WHY IT MATTERSClaude has to guess, so it falls back to the most average answer, and then you spend five follow-ups fixing it.
+Anthropic says so in its guide to prompting Opus 5.5: ask for a design without a direction, and it falls back on a
+few default styles. That is where most AI slop comes from.
+THE FIX Name the output you want, and give the context: who it is for, the goal, and what done looks like. And for
+anything you do often, give Claude a harness, which at its core is just a set of instructions: a design system for
+anything visual, and skills (step-by-step guides your agent follows) for the jobs you repeat. That way it starts
+from your standards instead of from scratch every single time.
+“Asked for frontend work without design direction, Claude Opus 5.5 falls back on a few default styles.”
+ANTHROPIC, PROMPTING CLAUDE OPUS 5.5
+BEFORE
+make me a website
+AFTER · THE FOUR PARTS
+File: index.html
+Reader: e-commerce founders
+Goal: more demo calls
+Done: under 40 words, one call to action
+SO U RC E Anthropic: prompting Opus 5.5 (frontend defaults): https://platform .claude.com /docs/en/build-with-claude/prom pt-engi
+neering/prom pting-claude-opus-5-5
+SO U RC E Docs: costs (vague requests trigger broad scanning): https://code.claude.com /docs/en/costs
+07 Giving Claude rules without a reason EASY
+THE MISTAKE Giving your agent bare rules, like “never use bullet points” or “don't mention the price”.
+WHY IT MATTERSWithout the why, Claude mostly follows the rule blindly. Sometimes it misses the point, or uses the rule where it
+makes zero sense.
+THE FIX Add the reason in one short clause. With today's models, Claude is smart enough to work out the rest from the
+reason. And as models keep getting smarter, explaining your intention, instead of hemming your agent in with
+rules that are too specific, only matters more.
+INSTEAD OF WRITE
+NEVER use bullet points. → No bullet points, because this gets read aloud on a
+podcast.
+Don't mention the price. → Don't mention price, because this is a cold first
+email and price comes on the onboarding call.
+NEVER use ellipses → Your response will be read aloud by a text-to-
+speech engine, so never use ellipses.
+The third pair is Anthropic's ow n exam ple.
+SO U RC E Anthropic: prompting best practices (add context and motivation): https://platform .claude.com /docs/en/build-with-claud
+e/prom pt-engineering/claude-prom pting-best-practices
+23 CLAUD E M ISTAKES - THE G UID E 7
+
+=== PAGE 8 ===
+08 Asking your agent to make it not look like AI made it EASY
+THE MISTAKE Adding a general line like “avoid a generic AI look” to your prompt.
+WHY IT MATTERSAnthropic actually tested this. Even with the newest models, that line mostly just swaps one default style for
+another. So with Claude you still get the cream backgrounds and the italic headline words, because that is
+what Opus defaults to.
+THE FIX Name the exact patterns you don't want. If you don't want cream backgrounds or italic accents, say so. Or
+even better, give it your design system: a set of instructions, components and colour palettes your agent can
+copy and reference.
+COPY-PASTE · ADD TO YOUR DESIGN PROMPT
+no cream background, no italic accent words, no pill buttons
+SO U RC E Anthropic: prompting Opus 5.5 (frontend defaults): https://platform .claude.com /docs/en/build-with-claude/prom pt-engi
+neering/prom pting-claude-opus-5-5
+09 Taking the first draft EASY
+THE MISTAKE Taking Claude's first draft and editing from there.
+WHY IT MATTERSA first draft is Claude's safest, most average guess.
+THE FIX For anything that matters, ask for three different, independent versions, then ask Claude to grade each one
+against your goal and tell you which is strongest and why. For a lot of creative work this works well. Jay has a
+skill for it called burst, which he uses whenever he wants fresh ideas to filter later.
+COPY-PASTE
+Give me 3 different, independent versions. Grade each one against my goal and tell me 
+which is strongest and why.
+SO U RC E Seen in: One Person Empire, Stop Prompting Claude: https://www.youtube.com /watch?v=Y brrHwwBv1o
+10 Drip feeding follow-ups EASY
+THE MISTAKE You send half a prompt. Claude starts writing, then you follow up with “make it shorter”, then “actually, I want
+it for LinkedIn too, not just the newsletter”.
+WHY IT MATTERSWith every follow-up, Claude re-reads the whole conversation, which costs tokens. It also writes its whole
+answer again, and the writing is the expensive part. Five prompts in a row means five full answers, and the
+result drifts a little every time.
+THE FIX Write it once, properly, with everything in one message if you can. And if you spot a mistake in your prompt,
+rewind to that point and resend it, before you reach for more short prompts.
+SO U RC E Claude Help Center: usage limit best practices: https://support.claude.com /en/articles/9797557-usage-lim it-best-practic
+es
+Every extra version costs usage: 3 versions = 3x. Great for w riting, like hooks, titles and em ails. Skip it on a big
+project.
+P rom pt caching m akes the re-reading cheap, so this is a sm all tax, not a big leak. Our m aths from  Anthropic's list
+prices, not an Anthropic figure: in a 100K-token chat on Opus 5.5, five follow -ups cost about $0.15 against about
+$0.05 for one com bined m essage.
+23 CLAUD E M ISTAKES - THE G UID E 8
+
+=== PAGE 9 ===
+11 Using old school prompting techniques on the newer
+models
+EASY
+THE MISTAKE Lines like “think carefully step by step”, “don't be lazy”, or “you MUST ALWAYS do this” in all capitals.
+WHY IT MATTERSThose were written for older models that needed more pushing. The newer models follow instructions closely,
+so shouting does not really help. And Anthropic found that removing a “think carefully” line made replies start
+sooner, with no clear drop in quality.
+THE FIX Be clear in your instructions, and let the effort setting control how hard your agent thinks. You can even ask
+Claude to go through your CLAUDE md and your skills and find the lines that were written for older models,
+with the prompt below.
+INSTEAD OF WRITE
+Think carefully step by step. → Leave it out. Set the effort instead.
+CRITICAL: You MUST ALWAYS use this tool.→ Use this tool when...
+COPY-PASTE
+Go through my CLAUDE.md and my skills. Find every line written for older models, like 
+'think carefully step by step', 'don't be lazy', or rules written in all capitals. Show 
+me each one next to a plainer rewrite, and don't change anything until I say yes.
+SO U RC E Anthropic: prompting Opus 5.5: https://platform .claude.com /docs/en/build-with-claude/prom pt-engineering/prom pting
+-claude-opus-5-5
+SO U RC E Anthropic: prompting best practices (dial back aggressive language): https://platform .claude.com /docs/en/build-with-cla
+ude/prom pt-engineering/claude-prom pting-best-practices
+23 CLAUD E M ISTAKES - THE G UID E 9
+
+=== PAGE 10 ===
+INTERMEDIATEM istakes 12 to 19 · The ones even regular Claude Code users m ake every day.
+12 Walking away mid-session INTERMEDIATE
+THE MISTAKE You have a big conversation going, you leave Claude Code open over lunch, then come back and type
+“continue”.
+WHY IT MATTERSClaude keeps your chat in a cache, which is basically a discount on the conversation it has to re-read. On a
+subscription that cache goes cold after about an hour, and on an API key or extra usage credits, after just five
+minutes. Then your first message back re-reads the whole thing at full price. In one community example, a big
+session cost $0.15 to continue warm, and $11.72 cold.
+THE FIX When you come back, /clear it if you are done with that conversation. If saving tokens is your priority,
+/compact it before the break, while it is still warm. And if you really need to keep it warm, a trick a lot of
+power users use is to have Claude ping itself with /loop, say every 30 minutes, so each ping keeps the cache
+warm.
+POWER-USER TRICK · TYPE IN CLAUDE CODE
+/loop 30m reply ok
+SO U RC E Docs: costs (cache lifetime): https://code.claude.com /docs/en/costs
+SO U RC E Docs: prompt caching (which cache lifetime you get): https://code.claude.com /docs/en/prom pt-caching
+SO U RC E Docs: scheduled tasks (/loop): https://code.claude.com /docs/en/scheduled-tasks
+SO U RC E Cost example: warm vs cold (jdhodges.com, a 586K-token session): https://www.jdhodges.com /blog/claude-code-prom pt
+-cache-has-likely-expired/
+13 Stuffing your CLAUDE md INTERMEDIATE
+THE MISTAKE Every rule, every preference, your whole life story goes into your CLAUDE md, the instruction file Claude reads
+at the start of every session, until it is hundreds, sometimes thousands of lines long.
+WHY IT MATTERSThat file loads on every single message, so it costs usage every turn. And Anthropic says when it gets too long,
+Claude starts ignoring parts of it, because the important rules get lost in the noise.
+THE FIX Keep it under 200 lines, and treat it like a router. Instead of holding everything, it points Claude to where
+things live, like your skills, your docs and your project folders, so Claude only pulls in the detail when it actually
+needs it.
+“target under 200 lines per CLAUDE.m d file. Longer files consum e m ore context and reduce adherence.”
+ANTHROPIC, CLAUDE CODE DOCS: MEMORY
+SO U RC E Docs: memory (under 200 lines): https://code.claude.com /docs/en/m em ory
+SO U RC E Docs: best practices (the over-specified CLAUDE.md): https://code.claude.com /docs/en/best-practices
+This is a pow er-user trick, not Anthropic advice. Anthropic lists scheduled tasks as a cost driver.
+Each ping on a big session (500K tokens on Opus 5.5) costs around $0.10 and still counts tow ard your lim its. Use it
+only for a short break, and stop the loop w hen you are back.
+Use 30 m inutes, not 50. Loops can fire late, and a 50-m inute one can m iss the 1-hour w indow. Loops only fire w hile
+Claude Code is open and idle, and they expire after 7 days.
+Cache lifetim es as of October 2026. Anthropic has changed them  before.
+23 CLAUD E M ISTAKES - THE G UID E 10
+
+=== PAGE 11 ===
+14 Turning off all safety INTERMEDIATE
+THE MISTAKE Permission prompts get annoying, so you start Claude Code with the permissions skipped, or click yes to
+everything without reading.
+WHY IT MATTERSThis one is serious. On 7 October 2026, someone reported that Claude deleted his entire C drive while running
+in that mode. He got most of it back from backups, but there have been at least four similar reports from
+Windows users since September.
+THE FIX Use auto mode instead, where a second model checks each action and blocks the risky ones. And for extra
+protection, add a guard. DCG, short for destructive command guard, is a free open-source add-on that
+blocks dangerous commands, like deleting a folder or a force push, before they run. Blast Radius, a sample
+mod from Anthropic, shows you exactly which files a command would delete, with a Proceed and a Cancel
+button, so you decide before anything is deleted.
+TRY BLAST RADIUS FOR ONE SESSION · IN YOUR NORMAL TERMINAL
+git clone https://github.com/anthropics/claude-code-playground.git
+claude --plugin-dir ./claude-code-playground/claude-code/mods/blast-radius
+SO U RC E C drive story (madrobot.blog, 7 Oct 2026): https://m adrobot.blog/2026/10/07/claude-opus-5-5-deleted-c-drive-claude-
+code-auto-m ode-boris-cherny/
+SO U RC E Windows deletion reports (vibegraveyard.ai): https://vibegraveyard.ai/story/claude-code-windows-path-alias-recursive
+-deletions/
+SO U RC E Docs: permission modes: https://code.claude.com /docs/en/perm ission-m odes
+SO U RC E DCG, destructive command guard (Jeffrey Emanuel): https://github.com /Dicklesworthstone/destructive_com m and_guard
+SO U RC E Blast Radius sample mod (Anthropic): https://github.com /anthropics/claude-code-playground/tree/m ain/claude-code/m
+ods/blast-radius
+The C drive story and the other reports are com m unity reports, not confirm ed by Anthropic.
+DCG is m ade by Jeffrey Em anuel, not Anthropic. It can block a harm less com m and now  and then, w hich only costs
+a retry.
+Blast Radius is an unsupported sam ple, and Anthropic calls it a safety net, not a perm ission system . Keep your
+norm al perm issions on.
+23 CLAUD E M ISTAKES - THE G UID E 11
+
+=== PAGE 12 ===
+15 Letting Claude edit important files with no backup INTERMEDIATE
+THE MISTAKE Letting Claude loose on important files with no copy saved anywhere.
+WHY IT MATTERSBecause of the way AI agents work, there is no real undo button for a lot of what Claude does to your files:
+rewind only covers Claude's own file edits. There is a report from July where Claude read five lines of a file,
+then wrote a completely different document over it, and there was no copy left.
+THE FIX For important files, make a dated backup first: just ask Claude to copy the folder with today's date before any
+big change. And if you are a bit more advanced, ask Claude to set up git. Think of it as a save button for your
+whole project: every time you save, it keeps a snapshot, and you can jump back to any snapshot later. Then
+you can experiment freely, because you can always roll back.
+“Checkpoints only track changes m ade through Claude's file editing tools ... This isn't a replacem ent for
+git.”
+ANTHROPIC, CLAUDE CODE DOCS: BEST PRACTICES
+COPY-PASTE · THE DATED BACKUP
+Copy this folder with today's date before you change anything
+COPY-PASTE · GIT, FOR SNAPSHOTS
+Set up git for this folder, and save a snapshot before every big change.
+SO U RC E Docs: best practices (checkpoints): https://code.claude.com /docs/en/best-practices
+SO U RC E Overwrite report (claudeissues.com): https://claudeissues.com /issue/78273-claude-code-overwrote-existing-user-file-wi
+thout-confirm ation-irreversible-data
+23 CLAUD E M ISTAKES - THE G UID E 12
+
+=== PAGE 13 ===
+16 Having everything connected all the time INTERMEDIATE
+THE MISTAKE Gmail, Notion, Google Drive, Slack, plus five MCP servers, which are add-ons that plug Claude into other
+apps, all switched on for every chat.
+WHY IT MATTERSIt drains your usage, and it is riskier, because your agent has more access than it probably needs. Claude Code
+is smarter about this now, and only loads a tool's full details when it needs it. But every server still adds its list
+of tools to every chat, and in the Claude app, Anthropic says connectors are token-intensive, so they still eat
+into your limit.
+THE FIX Every so often, have Claude audit them with the prompt below. And prefer a CLI (command line interface)
+where there is one. A CLI is just a way to control an app by typing text, and AI models are very good at text.
+Claude already knows how to use most of them, they cost nothing until they run, and Claude can trim the
+results before they fill up your chat.
+“P refer CLI tools when available: Tools like gh, aws, gcloud, and sentry-cli are still m ore context-efficient
+than M CP  servers because they don't add any per-tool listing.”
+ANTHROPIC, CLAUDE CODE DOCS: COSTS
+COPY-PASTE · THE AUDIT
+Go through my MCP servers and connectors. Tell me which ones I actually used in the last 
+2 weeks, what each one costs in context, and which ones have a CLI I could use instead. 
+Then list what you'd switch off.
+SO U RC E Docs: costs (disable unused servers, prefer CLI tools): https://code.claude.com /docs/en/costs
+SO U RC E Claude Help Center: tools and connectors are token-intensive: https://support.claude.com /en/articles/11647753-understan
+ding-usage-and-length-lim its
+17 Infinite exploration INTERMEDIATE
+THE MISTAKE Research with no limit, in the same session you are working in. “Look into why sales dropped,” or “go through
+all my client folders.”
+WHY IT MATTERSClaude reads hundreds of files, and every one of them lands in your main chat before the real work even
+starts. Anthropic calls this the infinite exploration.
+THE FIX Either scope it, or hand it to a subagent. A subagent is a helper Claude can spawn that reads everything in its
+own separate window, and only hands back a summary. And you can run that helper on a lower-cost model
+like Sonnet or Haiku to do the grunt work.
+SCOPE IT
+only the Q3 reports in the sales folder
+OR HAND IT OFF
+use a subagent to investigate this
+IN A SUBAGENT'S SETTINGS · A SMALLER MODEL
+model: sonnet
+SO U RC E Docs: best practices (the infinite exploration): https://code.claude.com /docs/en/best-practices
+SO U RC E Docs: subagents: https://code.claude.com /docs/en/sub-agents
+A subagent still draw s on your usage. A sm aller m odel is w hat m akes it cheaper.
+23 CLAUD E M ISTAKES - THE G UID E 13
+
+=== PAGE 14 ===
+18 Never checking usage INTERMEDIATE
+THE MISTAKE You keep hitting your limit, and you have no idea what ate it.
+WHY IT MATTERSYou cannot fix a habit you cannot see.
+THE FIX Type /usage. It breaks your usage down by skill, subagent, plugin and MCP server, and it even flags any habit
+that is taking 10% or more. And if you want to see it all the time, build a mod, a small add-on that changes
+what Claude Code shows you, with the prompt below.
+TYPE IN CLAUDE CODE
+/usage
+COPY-PASTE · BUILD THE USAGE MOD
+Build me a mod that shows my 5-hour and weekly usage under the chat box, and warns me 
+when a session is getting expensive.
+SO U RC E Docs: costs (/usage breakdown): https://code.claude.com /docs/en/costs
+SO U RC E Docs: status line (usage fields): https://code.claude.com /docs/en/statusline
+19 Skipping alignment INTERMEDIATE
+THE MISTAKE For a bigger build, like a client portal or an onboarding system, you write one paragraph and hope Claude fills
+in the gaps.
+WHY IT MATTERSIt will fill them, with guesses. And you find out three hours later that it guessed wrong on the thing that
+mattered most.
+THE FIX Let Claude interview you first. Anthropic's own tip is to have Claude interview you with its question tool, write a
+full spec, then build it in a fresh session. Jay does this before almost every big task, with a skill he made called
+align. It asks a few numbered questions he answers just by typing the number and his choice. With the newer
+models it is fast, because they usually already get his intention and only need to confirm it.
+COPY-PASTE · A QUICK VERSION OF THE HABIT
+Before you build anything, interview me about this project. Ask a few numbered questions 
+at a time, with lettered choices, so I can answer like 1 b, 2 a. When you are sure what 
+I want, write a full spec, and we'll build it in a fresh session.
+SO U RC E Docs: best practices (let Claude interview you): https://code.claude.com /docs/en/best-practices
+The breakdow n is on P ro, M ax, Team  and Enterprise. P ress d or w  to sw itch betw een the last 24 hours and the last
+7 days.
+The status line already receives your 5-hour and w eekly percentages and reset tim es (P ro and M ax only), so the
+m od is a sm all build.
+23 CLAUD E M ISTAKES - THE G UID E 14
+
+=== PAGE 15 ===
+ADVANCEDM istakes 20 to 23 · The ones even som e power users m ake.
+20 Losing your old chats ADVANCED
+THE MISTAKE You go looking for a session from last month, to pick up where you left off, and it is gone.
+WHY IT MATTERSClaude Code deletes your local session history after 30 days by default.
+THE FIX If you want to keep them longer, ask Claude to set cleanupPeriodDays to 365 in your settings file, or any
+number of days you like. It will not bring back the ones that are already gone, but from then on, a whole year
+of sessions stays there, ready to pick up again with /resume.
+COPY-PASTE
+Set cleanupPeriodDays to 365 in my Claude Code settings file.
+WHAT IT ADDS TO SETTINGS.JSON
+"cleanupPeriodDays": 365
+SO U RC E Docs: settings: https://code.claude.com /docs/en/settings
+SO U RC E Docs: the .claude folder (cleaned up automatically): https://code.claude.com /docs/en/claude-directory
+21 Installing mods and plugins blind ADVANCED
+THE MISTAKE You see something cool on X, and you install it straight away.
+WHY IT MATTERSThat is very risky behaviour. A plugin can run scripts on your machine, and many of them add tokens to every
+single message too. Stack ten of them, and you pay for all ten on every turn, whether you use them or not.
+THE FIX Have a process for a quick assessment first. Check the plugin's details pane for what it installs and what it
+costs you every turn (look for “Will install” and “Context cost: Every turn”). Or even better, let Claude do it. Jay
+has a skill for this called personalise: he pastes in the repo or the plugin he plans to install, and it checks
+whether it fits his setup, whether it is safe, and whether he needs it at all.
+COPY-PASTE · OUR VERSION OF THE CHECK
+Here is a plugin I'm thinking of installing: [paste the repo link]. Before I install it, 
+tell me what it installs, what it costs me every turn, whether it's safe, whether it 
+fits my setup, and whether I need it at all.
+SO U RC E Docs: installing plugins (read the details pane first): https://code.claude.com /docs/en/plugins/install
+The m inim um  is 1. Setting 0 now  gives an error. Sessions in the Claude desktop app follow  a separate setting,
+desktopSessionCleanupP eriodDays.
+23 CLAUD E M ISTAKES - THE G UID E 15
+
+=== PAGE 16 ===
+22 Not setting a direction for compaction ADVANCED
+THE MISTAKE Letting the chat fill up until Claude summarises it on its own, often right in the middle of a task.
+WHY IT MATTERSAnthropic's own engineer says the model is at its least intelligent point when it is compacting, so details usually
+get dropped.
+THE FIX Compact it yourself whenever you can, at a natural break, and tell it what to keep. Or even better, add a
+Compact instructions section to your CLAUDE md, so every compaction keeps what you actually care about.
+And if you want a clean slate instead, /clear costs nothing.
+“the m odel is at its least intelligent point when com pacting.”
+THARIQ, ANTHROPIC
+TYPE IN CLAUDE CODE
+/compact keep the client brief and the final price list
+ADD TO YOUR CLAUDE.MD
+# Compact instructions
+Always keep: the client brief, prices, open decisions.
+SO U RC E Docs: prompt caching (compact at a natural break): https://code.claude.com /docs/en/prom pt-caching
+SO U RC E Docs: costs (/compact with instructions, Compact instructions): https://code.claude.com /docs/en/costs
+SO U RC E Thariq: session management and 1M context: https://claude.com /blog/using-claude-code-session-m anagem ent-and-1m
+-context
+23 Not having a model routing system ADVANCED
+THE MISTAKE Using the biggest model for everything, even renaming files or quick emails.
+WHY IT MATTERSAnthropic says surprise bills usually trace back to this one habit. And big models love to go big. One user says
+Fable spun up ten side agents on an open-ended task, and emptied his five-hour limit in five minutes.
+THE FIX The basic fix is Sonnet for most well-defined work and Opus for more exploratory work, picked with /model
+at the start of the task. The advanced fix is to let something route it for you. Jay uses Jev, a decision model
+that reads every prompt he sends and decides which model should handle it.
+9 in 10
+of Jay's prom pts were sm all
+enough for Sonnet or Haiku
+$0.13
+what all that routing cost
+40x
+cheaper per input token: Haiku 5.5
+against Opus 5.5
+Jay's Jev log, 21 Septem ber to 10 October 2026, prom pts he typed only: 1,257 prom pts sized, Haiku 51%, Sonnet 39%, Opus 9%, Fable
+1%. These are Jev's sizing calls, not a m easured saving. P rice gap from  Anthropic's pricing, per m illion input tokens: Opus 5.5 $4.00,
+Haiku 5.5 $0.10 (prom pts up to 100K tokens).
+SO U RC E Docs: costs (Opus left as the default model): https://code.claude.com /docs/en/costs
+SO U RC E Anthropic pricing: https://platform .claude.com /docs/en/about-claude/pricing
+SO U RC E Reddit: Fable 5.1 burned a Max 5x limit in 5 minutes: https://www.reddit.com /r/ClaudeCode/com m ents/1w6bour/fable_51_j
+ust_burned_through_m y_entire_m ax_5x/
+To sum m arise only part of a chat: press Esc tw ice for the rew ind m enu, then pick “Sum m arize from  here” or
+“Sum m arize up to here”.
+23 CLAUD E M ISTAKES - THE G UID E 16
+
+=== PAGE 17 ===
+W here this goes NEXT
+The easy part is the fix. Most of these take one command or one line in a settings file. The skill that pays is building the
+setup around them: sessions that stay lean, models picked for the job, guards on the risky stuff, and systems that do the
+work for you and for the clients you sell to.
+That is what we practise every week in the RoboNuggets community: building AI systems you can sell, and mastering
+Claude Code and Claude Design along the way.
+YOUR NEXT THREE MOVES
+1. Send this P DF to your agent with the prom pt on page 2, and find out which of the 23 you're m aking.
+2. Fix the three it flags first. M ost take a m inute.
+3. Com e and build the rest with us.
+join us at
+skool.com/robonuggets
+Anthropic's guidance this guide draws on
+code.claude.com /docs/en/best-practices - Claude Code best practices
+code.claude.com /docs/en/costs - what drives your usage and costs
+code.claude.com /docs/en/prom pt-caching - how the cache works
+code.claude.com /docs/en/m em ory - CLAUDE md and memory
+platform .claude.com /docs/en/build-with-claude/prom pt-engineering/claude-prom pting-best-practices - prompting best practices
+skool.com /robonuggets - the RoboNuggets community
+23 CLAUD E M ISTAKES - THE G UID E 17

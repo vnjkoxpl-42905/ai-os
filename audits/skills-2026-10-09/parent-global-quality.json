@@ -1,0 +1,412 @@
+[
+  {
+    "name": "persona-content-creator",
+    "disposition": "narrow-trigger",
+    "reason": "Useful Docs/Drive content organization role with separate publication and email actions. Scope to explicit Workspace content operations; creating or reviewing content does not authorize Chat announcements or review-request sends. This is a role recipe, not the documented-person agent factory.",
+    "path": "C:\\Users\\Joshu\\.agents\\skills\\persona-content-creator\\SKILL.md",
+    "sha256": "2fe6157ec5878961c1cf0967345fc1ae36e855650e61b7faa829d917b7c273d3",
+    "coverage": "parent fresh full-body read in three complete nontruncated batches on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static body review; Google live API operations untested"
+  },
+  {
+    "name": "persona-customer-support",
+    "disposition": "narrow-trigger",
+    "reason": "Combines support triage, task conversion, status sheets, escalation and follow-up scheduling. Preserve the orchestration reference but separate inspect/recommend from Chat escalation and calendar writes; resolving a support question does not authorize all listed operations.",
+    "path": "C:\\Users\\Joshu\\.agents\\skills\\persona-customer-support\\SKILL.md",
+    "sha256": "64ac23dc6aa5e187c75f62b8ff0e752d54ad11d509f8723216a826fddeba0a18",
+    "coverage": "parent fresh full-body read in three complete nontruncated batches on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static body review; Google live API operations untested"
+  },
+  {
+    "name": "persona-event-coordinator",
+    "disposition": "narrow-trigger",
+    "reason": "Distinct event logistics across calendars, invitations, files and RSVPs. Planning must remain draft-only until the user authorizes invitations/publication; do not perform every listed step on a generic event-planning request.",
+    "path": "C:\\Users\\Joshu\\.agents\\skills\\persona-event-coordinator\\SKILL.md",
+    "sha256": "a079f7cb8255c37f516bbeb48ed14a7a95461e6ebd209828fbb6a28bf66c0b9d",
+    "coverage": "parent fresh full-body read in three complete nontruncated batches on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static body review; Google live API operations untested"
+  },
+  {
+    "name": "persona-hr-coordinator",
+    "disposition": "narrow-trigger",
+    "reason": "Keep optional onboarding workflow knowledge, but a broad HR role should not auto-send bulk announcements or create events. Its blanket --sanitize directive needs a configured Model Armor template/scopes; do not assume the flag alone establishes privacy or availability.",
+    "path": "C:\\Users\\Joshu\\.agents\\skills\\persona-hr-coordinator\\SKILL.md",
+    "sha256": "9df0652986c62892c00100019abfd26c6ff1417e8896995d81d8dd4bde1f1b3f",
+    "coverage": "parent fresh full-body read in three complete nontruncated batches on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static body review; Google live API operations untested"
+  },
+  {
+    "name": "persona-it-admin",
+    "disposition": "keep-adapt",
+    "reason": "Distinct optional organizational administration reference. Dry-run and auth-status checks are useful; the prerequisite Gmail/Drive/Calendar set does not prove access to login audit logs or organizational policy administration. Verify the actual admin capability before claiming the requested work is supported.",
+    "path": "C:\\Users\\Joshu\\.agents\\skills\\persona-it-admin\\SKILL.md",
+    "sha256": "e2a4d08b8b262df2a5406a19ce2debd2b57351204606c5befd0bf604e3a15b15",
+    "coverage": "parent fresh full-body read in three complete nontruncated batches on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static body review; Google live API operations untested"
+  },
+  {
+    "name": "persona-project-manager",
+    "disposition": "narrow-trigger",
+    "reason": "Useful project status, digest and artifact orchestration with dry-run guidance. Generic project coordination must not automatically invite a team, announce files or send stakeholder email; select only the authorized operations and actual project tracker.",
+    "path": "C:\\Users\\Joshu\\.agents\\skills\\persona-project-manager\\SKILL.md",
+    "sha256": "549d1c6998a63e5ba7e286197c2b3a06dcc7d4be726ebd32d33d4afcef17ca05",
+    "coverage": "parent fresh full-body read in three complete nontruncated batches on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static body review; Google live API operations untested"
+  },
+  {
+    "name": "persona-researcher",
+    "disposition": "narrow-trigger",
+    "reason": "Useful Workspace research organization/logging reference, but broad research intent must preserve this AI OS raw/wiki homes rather than silently creating parallel Docs/Sheets truths. Collaboration announcements and peer-review sends require explicit authorization.",
+    "path": "C:\\Users\\Joshu\\.agents\\skills\\persona-researcher\\SKILL.md",
+    "sha256": "47223420f203dcb937b6ddf34133a95964698a73783c61a08a008a4b2a256a73",
+    "coverage": "parent fresh full-body read in three complete nontruncated batches on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static body review; Google live API operations untested"
+  },
+  {
+    "name": "persona-sales-ops",
+    "disposition": "keep-adapt",
+    "reason": "Distinct client meeting prep, deal tracking and follow-up task workflow. Preserve as optional role recipe; use the actual client record and live authority rather than inventing a new pipeline sheet, and confirm scheduling/sharing scope before writes.",
+    "path": "C:\\Users\\Joshu\\.agents\\skills\\persona-sales-ops\\SKILL.md",
+    "sha256": "4dd5662bcfa42c93c54a58f45e971f265436ae6270c5dbcfcf41c49d8b364b94",
+    "coverage": "parent fresh full-body read in three complete nontruncated batches on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static body review; Google live API operations untested"
+  },
+  {
+    "name": "persona-team-lead",
+    "disposition": "narrow-trigger",
+    "reason": "Useful standup/meeting/digest reference. Daily standup wording is not a configured schedule, and team leadership intent alone does not authorize piping reports into Chat or creating tasks. Scope explicit rituals and publication separately.",
+    "path": "C:\\Users\\Joshu\\.agents\\skills\\persona-team-lead\\SKILL.md",
+    "sha256": "8e88e843985e4b603fd028b32097ee78d21a06a71e35da29e3854eeb0350bfa6",
+    "coverage": "parent fresh full-body read in three complete nontruncated batches on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static body review; Google live API operations untested"
+  },
+  {
+    "name": "recipe-backup-sheet-as-csv",
+    "disposition": "keep-adapt",
+    "reason": "Distinct CSV export/values-read recipe. Specify sheet/tab coverage, actual output path and successful saved-file verification before calling it a local backup; the current commands alone do not demonstrate a saved local artifact.",
+    "path": "C:\\Users\\Joshu\\.agents\\skills\\recipe-backup-sheet-as-csv\\SKILL.md",
+    "sha256": "e75645a35812607c68ffe17c557cb386b1b0fb12287e9da0648e893efcd05abd",
+    "coverage": "parent fresh full-body read in three complete nontruncated batches on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static body review; Google live API operations untested"
+  },
+  {
+    "name": "recipe-batch-invite-to-event",
+    "disposition": "fix",
+    "reason": "Reads the event then patches a new attendees array without an explicit merge of existing attendees. Preserve existing guests and their fields, use the requested calendar/event, deduplicate new guests and authorize sendUpdates notifications. No live patch ran.",
+    "path": "C:\\Users\\Joshu\\.agents\\skills\\recipe-batch-invite-to-event\\SKILL.md",
+    "sha256": "2dd985c458fc696faf5d9beddc16374f80ef59774fd933da2b15e1b4db43ca4e",
+    "coverage": "parent fresh full-body read in three complete nontruncated batches on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static body review; Google live API operations untested"
+  },
+  {
+    "name": "recipe-block-focus-time",
+    "disposition": "keep-adapt",
+    "reason": "Useful recurring busy-block recipe. Replace sample dates/timezone with requested local interval, distinguish ordinary opaque events from any specialized Focus Time feature, and reuse existing blocks on repeated runs.",
+    "path": "C:\\Users\\Joshu\\.agents\\skills\\recipe-block-focus-time\\SKILL.md",
+    "sha256": "4bbe7c1d3787cc1bdd9cf49101e791cdfadc3b07023de80b294cf78f821ccd56",
+    "coverage": "parent fresh full-body read in three complete nontruncated batches on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static body review; Google live API operations untested"
+  },
+  {
+    "name": "recipe-compare-sheet-tabs",
+    "disposition": "keep",
+    "reason": "Focused read-only comparison of two named tab ranges, distinct from backup or write operations. Resolve row keys, requested ranges and actual tabs so reordered rows are not falsely called content changes. No live sheet read ran.",
+    "path": "C:\\Users\\Joshu\\.agents\\skills\\recipe-compare-sheet-tabs\\SKILL.md",
+    "sha256": "d8d931f1f64955b9ad60f06efed21527dfc714053ec30b7020da50fc6ad8771b",
+    "coverage": "parent fresh full-body read in three complete nontruncated batches on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static body review; Google live API operations untested"
+  },
+  {
+    "name": "recipe-copy-sheet-for-new-month",
+    "disposition": "fix",
+    "reason": "Useful tab duplication, but rename example hardcodes sheetId123 rather than consuming the copyTo response. Use returned new sheetId, requested month and existing-tab check; preserve original template.",
+    "path": "C:\\Users\\Joshu\\.agents\\skills\\recipe-copy-sheet-for-new-month\\SKILL.md",
+    "sha256": "9f509615b16812246d0bbfb4ac97dd099707bae3303736c03cc5f21e92e4bbb5",
+    "coverage": "parent fresh full-body read in three complete nontruncated batches on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static body review; Google live API operations untested"
+  },
+  {
+    "name": "recipe-create-classroom-course",
+    "disposition": "keep-adapt",
+    "reason": "Distinct optional Classroom creation/invitation recipe. Use returned course ID, actual students and requested course identity; invitation notification needs explicit scope. Classroom is not automatically a replacement for LSAT U assignment authority.",
+    "path": "C:\\Users\\Joshu\\.agents\\skills\\recipe-create-classroom-course\\SKILL.md",
+    "sha256": "57ea5b1a4cd794be5f29e74467f3811a6dfc35bbcfc826294c430f3e02f1ec9b",
+    "coverage": "parent fresh full-body read in three complete nontruncated batches on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static body review; Google live API operations untested"
+  },
+  {
+    "name": "recipe-create-events-from-sheet",
+    "disposition": "fix",
+    "reason": "Row-to-event bulk creation lacks explicit row mapping, timezone validation, stable row/event IDs and retry deduplication. Do a dry-run mapping and existing-event reconciliation before writing; sample attendees/dates are not actual sheet data.",
+    "path": "C:\\Users\\Joshu\\.agents\\skills\\recipe-create-events-from-sheet\\SKILL.md",
+    "sha256": "2a8d38059e4323e153f1fcbbff5faba0574c79d76c258f671ef6bf495b79d49e",
+    "coverage": "parent fresh full-body read in three complete nontruncated batches on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static body review; Google live API operations untested"
+  },
+  {
+    "name": "recipe-create-expense-tracker",
+    "disposition": "fix",
+    "reason": "Creates tracker then appends fabricated sample expense and shares with an example manager. Create structure only unless real entries/recipient are supplied; separate sharing authorization and consume returned spreadsheet ID.",
+    "path": "C:\\Users\\Joshu\\.agents\\skills\\recipe-create-expense-tracker\\SKILL.md",
+    "sha256": "5c436b612a1a093f28dcd487cd18bee84a20a73767e0468e01e52d522c2716b7",
+    "coverage": "parent fresh full-body read in three complete nontruncated batches on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static body review; Google live API operations untested"
+  },
+  {
+    "name": "recipe-create-feedback-form",
+    "disposition": "fix",
+    "reason": "Creates only a titled form before emailing its URL; no feedback questions are added or verified. Complete actual questions and response settings, verify respondent usability, then draft or send only as authorized.",
+    "path": "C:\\Users\\Joshu\\.agents\\skills\\recipe-create-feedback-form\\SKILL.md",
+    "sha256": "de71bce37ea1c63a3fe0927ee21f2d193823da598f008a34a880a11ab24bdf6b",
+    "coverage": "parent fresh full-body read in three complete nontruncated batches on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static body review; Google live API operations untested"
+  },
+  {
+    "name": "recipe-create-gmail-filter",
+    "disposition": "fix",
+    "reason": "A generic label/star/category request defaults to removeLabelIds INBOX, which also archives future matches. Preserve intended inbox behavior, reuse existing labels/filters and scope archival action separately; verify resulting criteria/action.",
+    "path": "C:\\Users\\Joshu\\.agents\\skills\\recipe-create-gmail-filter\\SKILL.md",
+    "sha256": "497696fb21b8e4f81e9297bf5131c034ea91d461d997a34ae864ee0c6e9940fc",
+    "coverage": "parent fresh full-body read in three complete nontruncated batches on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static body review; Google live API operations untested"
+  },
+  {
+    "name": "recipe-create-meet-space",
+    "disposition": "keep-adapt",
+    "reason": "Distinct Meet space/link creation. OPEN access is an explicit choice with user-relevant effect, not a universal default; separate creating the link from emailing it and verify returned meeting URI.",
+    "path": "C:\\Users\\Joshu\\.agents\\skills\\recipe-create-meet-space\\SKILL.md",
+    "sha256": "57348dce1947cbefe1f741b7e886be5d1f2d28c1454330c218047c744d5a699f",
+    "coverage": "parent fresh full-body read in three complete nontruncated batches on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static body review; Google live API operations untested"
+  },
+  {
+    "name": "recipe-create-presentation",
+    "disposition": "fix",
+    "reason": "Claims initial slides but creates only a presentation and shares it; no slides/content step exists. Add and verify requested slide content, include the Drive dependency needed by permission step, and authorize sharing separately.",
+    "path": "C:\\Users\\Joshu\\.agents\\skills\\recipe-create-presentation\\SKILL.md",
+    "sha256": "6b59162f57380c0f9edea01bd22eddc3eb79ffa902cc078a01881aacb07994ae",
+    "coverage": "parent fresh full-body read in three complete nontruncated batches on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static body review; Google live API operations untested"
+  },
+  {
+    "name": "recipe-create-shared-drive",
+    "disposition": "keep-adapt",
+    "reason": "Useful Shared Drive creation/membership recipe with read-after-write. Generate a fresh requestId per logical creation and reuse it on retry, consume actual returned ID and verify account eligibility/role; sample constant is not a real idempotency strategy.",
+    "path": "C:\\Users\\Joshu\\.agents\\skills\\recipe-create-shared-drive\\SKILL.md",
+    "sha256": "79d7f6d48239f92add3a4300c7b7f6908b54d24770482708c3011f08d43300f2",
+    "coverage": "parent fresh full-body read in three complete nontruncated batches on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static body review; Google live API operations untested"
+  },
+  {
+    "name": "recipe-create-task-list",
+    "disposition": "keep-adapt",
+    "reason": "Distinct list creation and initial tasks with readback. Consume actual list ID, use requested task text/due dates and existing-list reconciliation; sample Q2 dates are illustrative and must not become current obligations.",
+    "path": "C:\\Users\\Joshu\\.agents\\skills\\recipe-create-task-list\\SKILL.md",
+    "sha256": "c5ffd51d2359563f453225484a34e5e62fa95822990c40e8d14f2857f92124fc",
+    "coverage": "parent fresh full-body read in three complete nontruncated batches on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static body review; Google live API operations untested"
+  },
+  {
+    "name": "recipe-create-vacation-responder",
+    "disposition": "fix",
+    "reason": "Description promises a date range but update body omits start/end bounds and uses unrestricted contacts/domain settings. Apply requested dates/audience, preserve prior state and verify; disable-when-back is a manual action unless a separate automation is explicitly configured.",
+    "path": "C:\\Users\\Joshu\\.agents\\skills\\recipe-create-vacation-responder\\SKILL.md",
+    "sha256": "6342436d67def2a36d10c2d6e189db0ca66820a9763218b0714d6d891439b39b",
+    "coverage": "parent fresh full-body read in three complete nontruncated batches on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static body review; Google live API operations untested"
+  },
+  {
+    "name": "recipe-email-drive-link",
+    "disposition": "keep-adapt",
+    "reason": "Distinct file sharing plus email flow. Resolve ambiguous same-name files, use the actual file webViewLink rather than assuming every Drive item is a Google Doc, verify sharing, and send only when authorized; use --draft otherwise.",
+    "path": "C:\\Users\\Joshu\\.agents\\skills\\recipe-email-drive-link\\SKILL.md",
+    "sha256": "624deffa180d38e198422a91220598ca81d2319bdf99694a5b3eb420bbfb764d",
+    "coverage": "parent fresh full-body read in three complete nontruncated batches on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static body review; Google live API operations untested"
+  },
+  {
+    "name": "recipe-find-free-time",
+    "disposition": "fix",
+    "reason": "Read-only free-time discovery trigger continues into calendar event creation. Separate suggest-slot mode from explicit book mode; use requested current interval/timezone and actual free-busy result, with no write for an inspection-only request.",
+    "path": "C:\\Users\\Joshu\\.agents\\skills\\recipe-find-free-time\\SKILL.md",
+    "sha256": "a7239ad810dd000de8c6a30151f3cd8dcc22a75dafd1470e6acc51339cc98104",
+    "coverage": "parent fresh full-body read in three complete nontruncated batches on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static body review; Google live API operations untested"
+  },
+  {
+    "name": "recipe-find-large-files",
+    "disposition": "keep",
+    "reason": "Focused read-only largest-file shortlist using quota order and20items. Treat this as a top20result rather than a complete storage inventory; optional archival/moves remain a separate authorized operation.",
+    "path": "C:\\Users\\Joshu\\.agents\\skills\\recipe-find-large-files\\SKILL.md",
+    "sha256": "4d215fdd6989bb8fe31d53ed3b5eefbd09a5bb3474793cd789924656e2ca1206",
+    "coverage": "parent fresh full-body read in three complete nontruncated batches on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static body review; Google live API operations untested"
+  },
+  {
+    "name": "recipe-forward-labeled-emails",
+    "disposition": "keep-adapt",
+    "reason": "Distinct labeled-message forwarding recipe, not generic triage. Preserve original content/attachments as required, handle paging, deduplicate forwarded message IDs and confirm actual recipient; no automatic sends on a mere inbox review.",
+    "path": "C:\\Users\\Joshu\\.agents\\skills\\recipe-forward-labeled-emails\\SKILL.md",
+    "sha256": "ff1b468e7a81199d9c403241c58dc8a1239726b197bd5400264f8a8dde0851ac",
+    "coverage": "parent fresh full-body read in three complete nontruncated batches on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static body review; Google live API operations untested"
+  },
+  {
+    "name": "recipe-label-and-archive-emails",
+    "disposition": "keep-adapt",
+    "reason": "Explicit label-and-archive workflow with separate modifications. Resolve requested message set and existing label ID, include pagination/repeated-run checks and readback; archival is not deletion and should not be reported as one.",
+    "path": "C:\\Users\\Joshu\\.agents\\skills\\recipe-label-and-archive-emails\\SKILL.md",
+    "sha256": "505118e5f8234eed7fb1c8b1954921f97282a58d5cd3140dd5d5ee47ec05d520",
+    "coverage": "parent fresh full-body read in three complete nontruncated batches on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static body review; Google live API operations untested"
+  },
+  {
+    "name": "recipe-log-deal-update",
+    "disposition": "keep-adapt",
+    "reason": "Distinct actual deal-row logging flow with source-sheet read. Use supplied deal facts and stable record IDs, not illustrative Acme/amount/date data; record updates in existing authoritative pipeline rather than inventing a new tracker.",
+    "path": "C:\\Users\\Joshu\\.agents\\skills\\recipe-log-deal-update\\SKILL.md",
+    "sha256": "e93a334232968cefe4593910619fd99f87f9bb4c930b343c6a9ba6ffaf63642d",
+    "coverage": "parent fresh full-body read in three complete nontruncated batches on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static body review; Google live API operations untested"
+  },
+  {
+    "name": "recipe-organize-drive-folder",
+    "disposition": "keep-adapt",
+    "reason": "Useful folder creation and file move recipe with readback. Capture actual original parents, requested destination and permission consequences; parameterize Drive query literals correctly and reuse folders instead of multiplying similarly named structures.",
+    "path": "C:\\Users\\Joshu\\.agents\\skills\\recipe-organize-drive-folder\\SKILL.md",
+    "sha256": "1aa7744edc417466ff591bfec4bc4f6c2ec3a2b4fcb95eca8493fd8f0f1a17e4",
+    "coverage": "parent fresh full-body read in three complete nontruncated batches on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static body review; Google live API operations untested"
+  },
+  {
+    "name": "recipe-plan-weekly-schedule",
+    "disposition": "fix",
+    "reason": "Example queries a2025week then inserts an event in2026, so the shown availability check cannot cover the proposed event. Use one requested current interval/timezone and separate planning from explicitly authorized calendar writes.",
+    "path": "C:\\Users\\Joshu\\.agents\\skills\\recipe-plan-weekly-schedule\\SKILL.md",
+    "sha256": "2a382f56e861ef0a796bba4f0e433fd88a6f1f1241b1661fff5792674251f244",
+    "coverage": "parent fresh full-body read in three complete nontruncated batches on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static body review; Google live API operations untested"
+  },
+  {
+    "name": "recipe-reschedule-meeting",
+    "disposition": "keep-adapt",
+    "reason": "Distinct explicit event rescheduling with attendee notifications. Preserve selected occurrence/series semantics and actual timezone, check requested new availability, and read back times; authorize notifications rather than interpreting a scheduling discussion as send permission.",
+    "path": "C:\\Users\\Joshu\\.agents\\skills\\recipe-reschedule-meeting\\SKILL.md",
+    "sha256": "673165703d9f57b6956a5d8d56424b6005a249c21b7e3260134268bb90cbe78c",
+    "coverage": "parent fresh full-body read in three complete nontruncated batches on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static body review; Google live API operations untested"
+  },
+  {
+    "name": "recipe-review-meet-participants",
+    "disposition": "keep",
+    "reason": "Focused read-only conference/participant/session chain, distinct from creating Meet spaces. Select exact conference and page all records needed for requested coverage; include session gaps before claiming total attendance duration.",
+    "path": "C:\\Users\\Joshu\\.agents\\skills\\recipe-review-meet-participants\\SKILL.md",
+    "sha256": "de5f1284382347f71dbf2218bcadb017b9462cc5e470b4b2b5feabf70e555c1a",
+    "coverage": "parent fresh full-body read in three complete nontruncated batches on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static body review; Google live API operations untested"
+  },
+  {
+    "name": "recipe-review-overdue-tasks",
+    "disposition": "keep",
+    "reason": "Focused read-only overdue review across task lists with completed tasks excluded. Resolve due dates using current client date, include pagination and distinguish undated from overdue tasks; no implicit obligation writes.",
+    "path": "C:\\Users\\Joshu\\.agents\\skills\\recipe-review-overdue-tasks\\SKILL.md",
+    "sha256": "546876d20b42a2438579cc7c022297cbdbd7be93725d4d96150234783afb0b85",
+    "coverage": "parent fresh full-body read in three complete nontruncated batches on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static body review; Google live API operations untested"
+  },
+  {
+    "name": "recipe-schedule-recurring-event",
+    "disposition": "keep-adapt",
+    "reason": "Useful recurrence/attendee creation and agenda readback. Use actual requested start/timezone, bound or intentionally approve series lifetime and prevent duplicate series on retry; sample2024date is not current schedule data.",
+    "path": "C:\\Users\\Joshu\\.agents\\skills\\recipe-schedule-recurring-event\\SKILL.md",
+    "sha256": "0a45326b80d1c91513096f1ab67c49866bdc56470e7eb655c47fa7621f9c80af",
+    "coverage": "parent fresh full-body read in three complete nontruncated batches on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static body review; Google live API operations untested"
+  },
+  {
+    "name": "recipe-send-team-announcement",
+    "disposition": "fix",
+    "reason": "Distinct explicit dual-channel announcement, but example email claims attached policy changes while no attachment is included. Use actual content/assets, authorize each channel/recipient, verify one copy per channel and preserve Joshua's professional voice.",
+    "path": "C:\\Users\\Joshu\\.agents\\skills\\recipe-send-team-announcement\\SKILL.md",
+    "sha256": "9005380f196aab258bd72decf6037ea052c73b3b9526be4d552a89dc09cc7285",
+    "coverage": "parent fresh full-body read in three complete nontruncated batches on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static body review; Google live API operations untested"
+  },
+  {
+    "name": "recipe-share-doc-and-notify",
+    "disposition": "keep-adapt",
+    "reason": "Useful Docs editor sharing plus notification flow. Resolve actual document/collaborator and requested role, inspect existing permissions, authorize notification and verify access/send separately; draft-only work must not execute send.",
+    "path": "C:\\Users\\Joshu\\.agents\\skills\\recipe-share-doc-and-notify\\SKILL.md",
+    "sha256": "453082ed8382c27c781a104e98ee255840b4433d33ac24cf527d4d5bdfbbd194",
+    "coverage": "parent fresh full-body read in three complete nontruncated batches on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static body review; Google live API operations untested"
+  },
+  {
+    "name": "recipe-share-event-materials",
+    "disposition": "keep-adapt",
+    "reason": "Distinct attendee-derived materials sharing with permission readback. Use actual authorized attendee set and exclude unsuitable resource/group/external recipients as relevant; invitation membership alone should not imply access to every material.",
+    "path": "C:\\Users\\Joshu\\.agents\\skills\\recipe-share-event-materials\\SKILL.md",
+    "sha256": "2c97e68f291a0edb3e48a3c64bea5f1d433ca482114a75098958859976aab222",
+    "coverage": "parent fresh full-body read in three complete nontruncated batches on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static body review; Google live API operations untested"
+  },
+  {
+    "name": "recipe-share-folder-with-team",
+    "disposition": "keep-adapt",
+    "reason": "Useful multi-role folder sharing with readback. Apply only requested collaborators/roles and verify inherited or exceptional child permissions before asserting all contents are accessible; preserve existing sharing.",
+    "path": "C:\\Users\\Joshu\\.agents\\skills\\recipe-share-folder-with-team\\SKILL.md",
+    "sha256": "6dd172e55676a2a966b3662fbe98675cea0312dc5466e0b2e1def77faca54a47",
+    "coverage": "parent fresh full-body read in three complete nontruncated batches on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static body review; Google live API operations untested"
+  },
+  {
+    "name": "recipe-watch-drive-changes",
+    "disposition": "keep-adapt",
+    "reason": "Distinct event subscription and renewal reference. Description says file/folder but example targets a Drive resource; resolve actually supported target/event scope, PubSub endpoint, authorization and renewal lifecycle before claiming unattended monitoring. No subscription was created.",
+    "path": "C:\\Users\\Joshu\\.agents\\skills\\recipe-watch-drive-changes\\SKILL.md",
+    "sha256": "2ecaaf655482827703176f928dfe34e4c5ff920aca77a90a4660683ce296e027",
+    "coverage": "parent fresh full-body read in three complete nontruncated batches on 2026-10-10",
+    "reviewer": "root",
+    "confidence": "static body review; Google live API operations untested"
+  }
+]

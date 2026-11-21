@@ -1,0 +1,147 @@
+{
+  "status": "completed",
+  "mode": "review",
+  "provider": "claude",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "claude",
+    "builder": "codex",
+    "inspector": "claude"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-conditional-bootcamp",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os\\brainstorms\\2026-09-30-conditional-curriculum\\OPENING-VISUAL-BUILD-REVIEW.md",
+  "plan_sha256": "637f2736187a7ad9d155ece6845e140bf36a187d08e3175f3ceac570f694848e",
+  "requested_model": null,
+  "requested_effort": null,
+  "base": null,
+  "snapshot": null,
+  "previous": null,
+  "started_at": 1790972216.016317,
+  "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\brainstorms\\2026-09-30-conditional-curriculum\\claude-voice-application-plan-2\\claudex-h1van3uj",
+  "cli_version": "2.1.280 (Claude Code)",
+  "executable": [
+    "C:\\Users\\Joshu\\AppData\\Roaming\\npm\\node_modules\\@anthropic-ai\\claude-code\\bin\\claude.exe"
+  ],
+  "exit_code": 0,
+  "session_id": "f4c32bc1-930c-4013-9b62-61e83aff5d93",
+  "response": {
+    "verdict": "REVISE",
+    "summary": "Round 2 handles all six round-1 findings at the plan level. The voice direction matches the canonical standard: ordinary meaning before notation, sufficient and necessary taught in separate beats on one anchor, complete targets, must treated as a requirement, and scope ending at Group 2. Four integration problems remain in the code the plan touches. (1) The planned QuestionRunner reconciliation would compare saved runs against pools whose saved-progress keys don't record which assignment they came from, so switching assignments would reopen or reshape finished runs. (2) The F5 title fix would change nothing for existing students, because titles and descriptions are stored on each assignment row when it's created. (3) The planned link back to the expanded lesson depends on a condition that disappears once reconciliation runs, and it ignores practice-only gating. (4) The review screen that would need the historical registry is not named. Smaller gaps: ordering and no-op rules for reconciliation, a runtime check that each option has feedback, an ambiguity about whether rules-facts is in scope, and a pre-existing MCP file that must stay out of any commit.",
+    "findings": [
+      {
+        "id": "R2-1",
+        "severity": "high",
+        "path": "src/bootcamps/conditionals/routes.tsx",
+        "evidence": "Practice (routes.tsx:210-211) and Flashcards (routes.tsx:259-260) filter questions by selection.allowedUnits. Their run keys (`practice:${difficulty}:${unitId ?? area ?? phase}`, `flashcards:${unitId ?? area ?? 'conditional'}:${level}`) contain neither the assignment ID nor the allowed units. Admin pathSelection leaves allowedUnits undefined, so admins get the full pool under the same keys. Today a pool mismatch only shows the 'no longer in this set' notice, and only when the current item is missing. Under the plan, reconciliation would add every ID in the active pool and drop every ID outside it. Failure scenario: a student finishes the translation area run under assignment A, which allows group-1 and group-2. They then open assignment B, which allows every translation unit. Reconciliation adds the extra units' items and sets finished to false. When they return to A, those items are dropped again and the cursor moves. The run is rewritten on every assignment switch, even though no content changed.",
+        "fix": "Reconcile against content revisions, not against whatever pool is active. Add a small revision registry: retiredIds (group-1-a3, group-2-m2, group-2-a3) mapped to their v2 IDs, plus the list of newly added opening IDs. Only drop registered retired IDs, and only add registered new IDs whose unit and difficulty already appear in the run. Never drop or add an ID just because the assignment filter changed. Add a route test where two assignments share an area run key with different allowedUnits, and check that the run stays unchanged when switching between them."
+      },
+      {
+        "id": "R2-2",
+        "severity": "medium",
+        "path": "src/bootcamps/conditionals/progress.ts",
+        "evidence": "ConditionalRun stores questionIds in order plus an index (progress.ts:23-32). parseConditionalProgress rejects any index greater than questionIds.length (progress.ts:57). The accepted reordering puts the opening units first, which changes the order getConditionalQuestions returns for phase and area pools while keeping the same set of IDs. If reconciliation compares ordered arrays, it would rewrite unchanged sets and move the cursor. The finished-set summary counts every attempt whose ID starts with run.id (routes.tsx:231-234). After retired IDs leave the active sequence, a reconciled 9-item set could report something like '10 checked answers'. The 'Next question' handler advances index+1 even when that item is already checked, so spliced-in new IDs make resume order unclear.",
+        "fix": "Define reconciliation as order-insensitive. If the set of IDs is unchanged, return the same object so no save is triggered. Keep the saved order for retained IDs and append new IDs at the end. Set index to the first unchecked retained or new ID, and set finished to false only if one exists. Keep run.id so existing attempt IDs stay linked. Count the summary over attempts for IDs in the active questionIds only, or label retired attempts separately. Add tests: reordered but unchanged set (no write), completed old run, in-progress run with checked and unchecked drafts, and an index that stays valid under parseConditionalProgress."
+      },
+      {
+        "id": "R2-3",
+        "severity": "medium",
+        "path": "src/bootcamps/conditionals/routes.tsx",
+        "evidence": "The F4 disposition shows the review-expanded-lesson link 'when their saved practice pool needs reconciliation'. Reconciliation writes progress in an effect when the runner mounts. After the first save, the run no longer needs reconciling, so the link appears for one render or never. Practice-only assignments also block lessons: conditionalAssignmentAllowsAction returns false for non-practice actions unless mode is 'learn' (assignments.ts:80), and UnitActions hides lesson links for practiceOnly (routes.tsx:153). A link shown to those students would lead to a gated route.",
+        "fix": "Base the condition on stored data that persists: the unit is one of the four opening units, and its lessons[unit.id] timestamp is earlier than a constant expanded-lesson revision date. That needs no schema change and leaves read flags alone. Hide the link when selection.practiceOnly is true. Add a test covering an old read date, a new read date, and practice-only."
+      },
+      {
+        "id": "R2-4",
+        "severity": "medium",
+        "path": "src/lib/conditionalBootcampAssignment.ts",
+        "evidence": "assignWork.ts:329-330 stores conditional.title and conditional.description on the classroom row when the assignment is created. resolveConditionalAssignments uses `row.title || resolved.title` (assignments.ts:69). As a result, every existing conditional assignment already stores a generated title such as 'Group 1: ...: Level 2 practice', and the plan can't tell it apart from a title a teacher typed. Changing only the fallback affects no existing student. The stored description also includes 'Assigned level 2 practice' (conditionalBootcampAssignment.ts:76), which F5 does not cover. The exported recommendNext still builds a `Level ${level} activity` label (progress.ts:74).",
+        "fix": "Remove level numbers from both the generated title and the generated description. For existing rows, at render time in resolveConditionalAssignments, rebuild the old generated title and description for that row's target. When row.title or row.description exactly matches the old string, show the new wording; leave anything else unchanged, since a teacher must have edited it. Remove or neutralize the Level label in progress.ts:74. Test an old generated title, a teacher-edited title, and the description."
+      },
+      {
+        "id": "R2-5",
+        "severity": "medium",
+        "path": "src/bootcamps/conditionals/routes.tsx",
+        "evidence": "The review screen looks up a question only through `unit.guidedExample` or `unit.drills[attempt.difficulty].find(...)` (routes.tsx:272) and then renders `question.options[attempt.choice]`. The plan promises a historical-only registry 'used when reviewing old attempts' but never names this lookup. If the HEAD questions are removed from drills and this lookup isn't changed, old attempts on group-1-a3, group-2-m2 and group-2-a3 show 'The authored question is unavailable'. If the lookup somehow resolved to the v2 question, the saved choice index would be read against different options. That second outcome is exactly the change to stored answer meaning the plan forbids.",
+        "fix": "Route every attempt-to-question lookup, including the review screen and any review or export helpers, through a single resolver: current drills and guided example first, then the historical registry by exact ID. The registry must never feed getConditionalQuestions, nextSelectedStep or any runner pool. Test that the review screen shows each of the three exact HEAD prompts and options with the saved choice, and that none of them appears in a newly created run."
+      },
+      {
+        "id": "R2-6",
+        "severity": "low",
+        "path": "src/bootcamps/conditionals/components/ConditionalOpeningLesson.tsx",
+        "evidence": "Check is typed `feedback?: string[]` (ConditionalOpeningLesson.tsx:21). F2 makes feedback required. A required string[] still accepts an array shorter than options or containing blank entries, so the wrong-choice message could be undefined.",
+        "fix": "Require feedback to have one entry per option, either with a tuple-typed helper or a dev or test assertion that feedback.length equals options.length and every entry is non-empty. Add a content test that walks every opening Check and verifies this."
+      },
+      {
+        "id": "R2-7",
+        "severity": "low",
+        "path": "src/bootcamps/conditionals/content/foundations.source.ts",
+        "evidence": "The working tree gives rules-facts the prerequisite ['group-2'] (foundations.source.ts:61), and the 62-question count (9+9+23+21) covers only orientation, sufficient-necessary, group-1 and group-2. The 'Accepted review corrections' section still maps 'rule versus fact/direction to rules-facts' as one of the opening units placed before truth-validity. The plan never says whether rules-facts is in the voice revision's scope or where the fact-to-rule teaching now lives.",
+        "fix": "State the actual opening order (orientation, sufficient-necessary, group-1, group-2, then rules-facts) and say that rules-facts is outside this authoring scope. Also state that the fact-to-rule application required by the voice standard is taught inside orientation."
+      },
+      {
+        "id": "R2-8",
+        "severity": "low",
+        "path": "supabase/functions/mcp/index.ts",
+        "evidence": "This pre-existing modified file imports `npm:C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-conditional-bootcamp\\src\\lib\\mcp\\index.ts` (line 6), a local Windows absolute path that would break any deployment. The plan only says to preserve it.",
+        "fix": "Keep the hash check, and also state that this file and the other two protected files must be left out of any commit or diff produced for this revision. Final inspection should confirm they are absent from the change set."
+      }
+    ],
+    "coverage": [
+      "Read the full plan text supplied inline and the round-2 host dispositions",
+      "Read the complete canonical voice standard at C:/Users/Joshu/dev/ai-os/references/lsat-teaching-voice-standard.md (all 621 lines)",
+      "src/bootcamps/conditionals/progress.ts: run, draft and attempt model, parse invariants, recommendNext",
+      "src/bootcamps/conditionals/routes.tsx lines 45-285: nextSelectedStep, RecommendedForward, Lesson, GuidedActivity, Practice, QuestionRunner, Flashcards, Diagnostics review lookup",
+      "src/lib/conditionalBootcampAssignment.ts (full) and the assignWork.ts bootcamp branch (title and description persistence)",
+      "src/bootcamps/conditionals/assignments.ts resolveConditionalAssignments and conditionalAssignmentAllowsAction",
+      "foundations.source.ts unit IDs and prerequisites, plus the current definitions of group-1-a3, group-2-m2 and group-2-a3",
+      "ConditionalOpeningLesson.tsx Check signature",
+      "supabase/functions/mcp/index.ts import line"
+    ],
+    "limitations": [
+      "Couldn't run git, so I didn't compare HEAD 67230df with the working tree. I didn't verify that the three conflicted IDs differ semantically from HEAD or that group-2-a2 is only cosmetic.",
+      "Didn't read CONDITIONAL-OPENING-LESSONS-DRAFT.md, wiki/teaching-voice.md, COPY-CORRECTIONS.md, the source HTML transcription, or the external proof folder.",
+      "Didn't audit the wording of the current opening lesson components or the 62 opening questions for voice and logic. This is a plan review before edits, and the content will be rewritten.",
+      "Couldn't run tests, typecheck, build or a browser. Nothing here claims any of them pass.",
+      "Didn't trace the classroom UI that renders assignment descriptions to confirm exactly where students see them."
+    ]
+  },
+  "usage": {
+    "input_tokens": 32,
+    "cache_creation_input_tokens": 64059,
+    "cache_read_input_tokens": 742338,
+    "output_tokens": 14650,
+    "output_tokens_details": {
+      "thinking_tokens": 7099
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 64059,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 5827,
+        "cache_read_input_tokens": 66704,
+        "cache_creation_input_tokens": 1646,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1646
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "permission_denials": [],
+  "total_cost_usd": 0.9540675999999999,
+  "elapsed_seconds": 232.36
+}

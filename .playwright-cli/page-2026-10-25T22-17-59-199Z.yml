@@ -1,0 +1,35 @@
+- generic [ref=e4]:
+  - button "Exit" [ref=e5] [cursor=pointer]
+  - banner [ref=e8]:
+    - heading "Spot the Relationship" [level=1] [ref=e9]
+    - paragraph [ref=e10]: Decide whether each sentence contains a conditional, causal, or comparative relationship.
+  - generic [ref=e11]:
+    - generic [ref=e12]:
+      - region [ref=e13]:
+        - heading "Instructions" [level=2] [ref=e14]
+        - list [ref=e15]:
+          - listitem [ref=e16]:
+            - strong [ref=e17]: Read the whole sentence.
+          - listitem [ref=e18]:
+            - strong [ref=e19]: Give the type and a quotation.
+            - text: Quote the words you used to identify the relationship. If you find more than one type, include each one with its own quotation.
+      - region [ref=e20]:
+        - heading "Example" [level=2] [ref=e21]
+        - paragraph [ref=e22]: Sentence
+        - paragraph [ref=e23]:
+          - text: A lantern can be lit
+          - strong [ref=e24]: only if
+          - text: its wick is dry.
+        - paragraph [ref=e25]: Answer
+        - paragraph [ref=e26]: Conditional, “only if”
+        - paragraph [ref=e27]: The wick has to be dry for the lantern to be lit. “Only if” tells us that. A dry wick alone does not guarantee that the lantern can be lit.
+      - group [ref=e28]:
+        - generic "Review the three relationship types" [ref=e29] [cursor=pointer]
+      - contentinfo [ref=e30]:
+        - paragraph [ref=e32]: Preview only. Student progress is unchanged.
+        - button "Start" [ref=e33] [cursor=pointer]
+    - complementary [ref=e36]:
+      - heading "Video instructions" [level=2] [ref=e37]
+      - group [ref=e39]:
+        - generic "How to play Spot the Relationship" [ref=e40]: Your browser cannot play this video. Read the written instructions on this page.
+      - button "Expand video" [ref=e41] [cursor=pointer]

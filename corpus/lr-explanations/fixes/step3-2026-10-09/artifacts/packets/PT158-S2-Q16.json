@@ -1,0 +1,78 @@
+{
+ "qid": "PT158-S2-Q16",
+ "type": "Paradox",
+ "difficulty": "4",
+ "key_db": "C",
+ "stimulus_db": "Historians have found that significant intellectual advances generally occur in cities or countries that have a stable political system. But these same historians acknowledge that in ancient Athens, Plato and Aristotle made unparalleled intellectual progress during a period of great political and social unrest.",
+ "stem_db": "Which one of the following, if true, most helps to reconcile the historians' apparent counterexample with their general rule?",
+ "choices_db": {
+  "A": "The political systems that have emerged since the time of Plato and Aristotle have in various ways been different from the political system in ancient Athens.",
+  "B": "The citizens of ancient Athens generally held in high esteem people who were accomplished intellectually.",
+  "C": "Financial support for intellectual endeavors is typically unavailable in unstable political environments, but in ancient Athens such support was provided by wealthy citizens.",
+  "D": "Significant intellectual advances sometimes, though not always, lead to stable political environments.",
+  "E": "Many thinkers besides Plato and Aristotle contributed to the intellectual achievements of ancient Athens."
+ },
+ "bank": {
+  "stimulus": "Historians have found that significant intellectual\n advances generally occur in cities or countries that have\n a stable political system. But these same historians\n acknowledge that in ancient Athens, Plato and Aristotle\n made unparalleled intellectual progress during a period of\n great political and social unrest.",
+  "stem": "Which one of the following, if true, most helps to\n reconcile the historians’ apparent counterexample with\n their general rule?",
+  "choices": {
+   "A": "The political systems that have emerged since the time of Plato and Aristotle have in various ways been different from the political system in ancient Athens.",
+   "B": "The citizens of ancient Athens generally held in high esteem people who were accomplished intellectually.",
+   "C": "Financial support for intellectual endeavors is typically unavailable in unstable political environments, but in ancient Athens such support was provided by wealthy citizens.",
+   "D": "Significant intellectual advances sometimes, though not always, lead to stable political environments.",
+   "E": "Many thinkers besides Plato and Aristotle contributed to the intellectual achievements of ancient Athens."
+  },
+  "key": "C"
+ },
+ "explanation_id": "0e1705d8-633d-477e-8cc7-d9923bcd514e",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "6a3471d4-e4cb-4d4a-be52-430dc422c645",
+   "position": 0,
+   "label": "Given that ...",
+   "body": "Significant intellectual advances generally occur in cities or countries that have a stable political system."
+  },
+  {
+   "row_id": "d8c75ac0-24dd-45c0-9300-f35a33ea9c70",
+   "position": 1,
+   "label": "How can it be that ...",
+   "body": "Plato and Aristotle made unparalleled intellectual progress during a period of great political and social unrest?"
+  },
+  {
+   "row_id": "fd7cc7f3-0c52-4d37-aaf8-7873a2088d60",
+   "position": 2,
+   "label": "Evaluate / Goal",
+   "body": "This isn't really paradoxical, since the general rule in the first sentence is only saying that intellectual advances generally occur in stable political systems. That's not saying that advances only occur in stable political systems. So the fact that Plato and Aristotle are examples of advances that occurred in unstable political systems isn't really contradicting the general rule. It's just an exception. So we should probably understand our task as, \"how come Plato and Aristotle were able to make their intellectual advances, despite the unstable political system?\" (Maybe they were well-insulated from instability and so within the world of Plato's Academy it still felt like a stable political system)"
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "8d97cdea-36ea-4dd2-95b4-bd89a455d48e",
+   "letter": "A",
+   "body": "Knowing that modern political systems vary from those of Plato's time does not help explain how Plato and Aristotle achieved intellectual advances during political instability. This answer provides a general historical observation about the evolution of political systems without identifying any specific mechanism that would reconcile the counterexample with the rule. The paradox asks: why did instability not prevent intellectual progress in Athens? The fact that political systems have changed since then offers no insight into what feature of ancient Athens allowed intellectual work to flourish despite turmoil. It is background information that fails to address the specific puzzle."
+  },
+  {
+   "row_id": "5b963036-0097-4c78-a61f-1aeaa43de10b",
+   "letter": "B",
+   "body": "The citizens of Athens holding intellectuals in high esteem explains why intellectual work might have been socially rewarded, but it does not address the specific relationship between political instability and intellectual output. The general rule is that instability prevents intellectual advances — presumably because instability disrupts the conditions that make intellectual work possible (funding, safety, institutional support). Social esteem for intellectuals is a separate factor that does not address the mechanism by which instability normally blocks progress. Athens could have revered its thinkers while still having conditions that should have prevented their success. The paradox requires an explanation of how the usual barriers were circumvented, not merely evidence that intellectuals were popular."
+  },
+  {
+   "row_id": "114e83fd-ab48-4085-a287-8e874670d1ac",
+   "letter": "C",
+   "body": "This answer resolves the paradox by identifying the specific mechanism through which political instability normally prevents intellectual advances: the loss of financial support. If instability typically eliminates funding for intellectual work, then the general rule holds because thinkers cannot pursue their work without resources. The key word is \"typically,\" and ancient Athens was the exception: there, wealthy citizens provided that support even during the unrest. So the usual reason instability blocks intellectual progress did not apply to Plato and Aristotle. The general rule remains valid: instability normally defunds intellectual work. The counterexample is explained: in Athens, private money from wealthy citizens filled the gap. Both facts coexist."
+  },
+  {
+   "row_id": "8e0e9495-513d-4b9a-9400-ac34ec7c33eb",
+   "letter": "D",
+   "body": "The idea that intellectual advances sometimes lead to political stability reverses the direction of the relationship without resolving the paradox. The general rule says stability enables intellectual advances (stability causes progress). This answer says intellectual advances sometimes cause stability (progress causes stability). Even if both directions are sometimes true, this does not explain how Plato and Aristotle achieved their advances during instability. If anything, this answer raises a new puzzle: if intellectual advances can produce stability, why was Athens still unstable despite hosting Plato and Aristotle? The answer addresses a different causal direction from what the paradox requires and leaves the original puzzle untouched."
+  },
+  {
+   "row_id": "d7fec877-56bb-4d30-b311-5ae90dd30d8e",
+   "letter": "E",
+   "body": "The fact that other thinkers besides Plato and Aristotle contributed to Athenian intellectual achievement broadens the counterexample rather than resolving it. The paradox is that major intellectual advances occurred during instability. Knowing that more people participated in those advances does not explain how any of them — Plato, Aristotle, or others — managed to succeed despite political turmoil. If anything, this makes the counterexample more robust: it was not just two exceptional individuals defying the odds, but an entire intellectual community thriving during chaos. The paradox gets bigger, not smaller. A resolution needs to explain the mechanism that allowed intellectual work to proceed despite instability, not expand the list of people who accomplished it."
+  }
+ ],
+ "known_problem": "Correct note brings in Plato's family wealth and Philip of Macedon; breakdown says the paradox \"isn't really paradoxical\". (Found 2026-09-26; re-read here.)",
+ "tags": "emdash-heavy; pt157-158-register"
+}

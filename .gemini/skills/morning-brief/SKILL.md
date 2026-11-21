@@ -9,6 +9,10 @@ description: >
 allowed-tools: Bash Read Write Edit Glob Grep
 ---
 
+## Current AI OS execution contract
+
+Before creating a draft, check actual Gmail thread/sent/draft state with the stable event/thread/recipient key. Reuse an existing unsent draft. Update ledger status only from fresh authoritative evidence.
+
 # Morning brief
 
 **19% of every email Joshua writes is an apology for replying late.** That is a
@@ -18,6 +22,26 @@ queue he can clear in fifteen minutes.
 
 The output is a **ranked queue of drafts**. He reviews and sends. Nothing goes
 out on its own, ever.
+
+## 0. Preflight
+
+Before the sweep, prove the brief can actually read his mail and calendar. One
+cheap read per source:
+
+```
+gws gmail users getProfile --params '{"userId":"me","fields":"emailAddress"}'
+gws calendar calendars get --params '{"calendarId":"primary","fields":"id"}'
+```
+
+If either exits non-zero or prints an `"error"` object, **stop**. Do not sweep,
+do not draft, and never report "nothing waiting". Print the failure and the fix:
+
+```
+Morning brief stopped: Gmail preflight failed (<error code and message>).
+Fix: run `gws auth login` in your own terminal (it opens a browser), then
+`gws auth status` to confirm, and rerun the brief. If a 401 persists, check that
+GOOGLE_WORKSPACE_CLI_CONFIG_DIR is unset or points at ~/.config/gws.
+```
 
 ## 1. Sweep
 
@@ -130,7 +154,15 @@ Flagged, not drafted:
 - [payment] <name> — invoice question. Needs your call.
 
 Nothing else needed a reply.
+
+Checked: Gmail 38 of 38 messages since 2026-10-09 08:00 (newer_than:5d -from:me), 12 of 12 unread; Calendar 6 events today.
 ```
+
+The `Checked:` line is mandatory, last, and built from the actual sweep output:
+for each query, `len(messages)` of `resultSizeEstimate`, with the window start
+as an absolute date and time. If the first number is lower than the second, the
+sweep was capped: page further or say "capped at 40, more may exist". A brief
+without this line, or with 0 of 0 after a failed read, is not a finished brief.
 
 Then stop. Do not send. Do not ask which to send one at a time — he reviews the
 drafts in Gmail and sends what he wants.

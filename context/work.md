@@ -11,6 +11,8 @@ Authored context — what the business is and how it runs. One authoritative hom
 
 North star: **automate everything around the sessions so Joshua only shows up and teaches.**
 
+Reconfirmed 2026-10-12 ([capture](../brainstorms/2026-10-12-business-priorities.md)): LSAT U supports the tutoring now and becomes a paid public product later; target 34 sessions a week (measured about 13, 2026-07 to 2026-10); lead sources are mostly 7Sage and referrals, Reddit has faded. Pricing was not revisited. Current slate: [priorities](priorities.md).
+
 ## What is sold, to whom
 
 - Personalized 1-on-1 LSAT tutoring/coaching: individual sessions, and five-hour / ten-hour packages **with between-session coaching included**. All paid upfront — no package-balance model exists.
@@ -32,9 +34,13 @@ North star: **automate everything around the sessions so Joshua only shows up an
 - Send the consultation follow-up inside the existing consultation conversation when a usable Gmail thread exists. Otherwise, start a new message with the fixed subject `Next steps + tutoring options`.
 - Confirmed payment, not an email reply, triggers onboarding. Standard payments resolve through Stripe for packages and Stripe-linked Cal.com for single sessions; a verified special arrangement uses its stated authority. Cancel any scheduled consultation follow-up if payment arrives before its send time.
 - Automatic consultation follow-ups fail closed unless the recipient, current prospect state, prices, and price-to-link mapping all verify. Reject placeholders, malformed URLs, form editor links, login-token URLs, self-addressed tests, and one payment link reused across distinct paid tiers without an explicit arrangement. Run validation before scheduling and again before sending.
-- Verified standard links, all three re-checked live against Stripe/Cal.com on 2026-09-08: single session, `https://cal.com/joshua-jtx5ud/session-link` at $45 for 70 minutes; five-hour package, `https://buy.stripe.com/4gMaEY05F3dc9x13NqdZ61x`, renders "5 hours — $200.00"; ten-hour package, `https://buy.stripe.com/3cI6oI2dN5lk4cHcjWdZ61O`, renders "10 hour reduced — $350.00". The ten-hour link is correct; the earlier note that no verified $350 link existed was stale. Historical ten-hour links that charge $500 must still not be used.
+- Verified standard links, all three re-checked live against Stripe/Cal.com on 2026-09-08: single session, `https://cal.com/joshua-jtx5ud/session-link` at $45 (describe it as $45 for one hour); five-hour package, `https://buy.stripe.com/4gMaEY05F3dc9x13NqdZ61x`, renders "5 hours — $200.00"; ten-hour package, `https://buy.stripe.com/3cI6oI2dN5lk4cHcjWdZ61O`, renders "10 hour reduced — $350.00". The ten-hour link is correct; the earlier note that no verified $350 link existed was stale. Historical ten-hour links that charge $500 must still not be used.
 - Students in the **United States and Canada**.
-- Also building **LSAT U** (lsatprep.study) — the online prep platform; code and product docs live in `projects/lsatu/`.
+- Also building **LSAT U** (lsatprep.study), the online prep platform; application code and product docs live in the sibling `../lsatu/` repository (`vnjkoxpl-42905/lsatu-684d89db`; `../ai-os-projects/lsatu/` is a separate worktree hub). Vault project notes remain separate from application code.
+
+### Single-session pricing discrepancy requires verification
+
+Resolved 2026-11-18: Joshua says a single session is simply $45 for one hour. Describe it that way; the Cal.com 70-minute length is not a different price.
 
 ## Money and booking
 

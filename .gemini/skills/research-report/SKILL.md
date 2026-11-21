@@ -3,6 +3,10 @@ name: research-report
 description: Summarize deep research results into markdown report, cover all fields, skip uncertain values.
 ---
 
+## Current AI OS execution contract
+
+Keep generated executable helpers/dependencies in sibling ai-os-projects. Report uncertain fields and provenance in the report/appendix; do not silently remove evidence because it is uncertain.
+
 # Research Report - Summary Report
 
 ## Trigger

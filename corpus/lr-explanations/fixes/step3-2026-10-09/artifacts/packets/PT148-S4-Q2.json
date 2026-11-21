@@ -1,0 +1,78 @@
+{
+ "qid": "PT148-S4-Q2",
+ "type": "Agree/Disagree",
+ "difficulty": "1",
+ "key_db": "C",
+ "stimulus_db": "Bell: Commentators in the media are wrong to criticize the policies Klein implemented. Although her policies are unpopular, they avoided an impending catastrophe. Klein is just the person we need making important decisions in the future.\n\nSoltan: Klein's policies have been effective, but politics matters. In the future, important decisions will need to be made, and she will not have the political support to make them. So she should step down.",
+ "stem_db": "Bell and Soltan disagree with each other about which one of the following?",
+ "choices_db": {
+  "A": "Klein's policies have been effective.",
+  "B": "Klein's policies are unpopular.",
+  "C": "Klein should step down.",
+  "D": "There are important decisions to be made in the future.",
+  "E": "Klein's policies were implemented in the face of an impending catastrophe."
+ },
+ "bank": {
+  "stimulus": "Bell: Commentators in the media are wrong to criticize the policies Klein implemented. Although her policies are unpopular, they avoided an impending catastrophe. Klein is just the person we need making important decisions in the future.\nSoltan: Klein’s policies have been effective, but politics matters. In the future, important decisions will need to be made, and she will not have the political support to make them. So she should step down.",
+  "stem": "Bell and Soltan disagree with each other about which one of the following?",
+  "choices": {
+   "A": "Klein’s policies have been effective.",
+   "B": "Klein’s policies are unpopular.",
+   "C": "Klein should step down.",
+   "D": "There are important decisions to be made in the future.",
+   "E": "Klein’s policies were implemented in the face of an impending catastrophe."
+  },
+  "key": "C"
+ },
+ "explanation_id": "dfdb259f-4a76-4cd7-aa1a-45bdf5097d30",
+ "style": "single",
+ "steps": [
+  {
+   "row_id": "e13a3185-4cc6-45f0-b65a-e636faf3f1a2",
+   "position": 0,
+   "label": "Given Bell's Claims",
+   "body": "1. Commentators in the media are wrong to criticize the policies Klein implemented.\n\n2. Klein's policies are unpopular.\n\n3. Klein's policies avoided an impending catastrophe.\n\n4. Klein is just the person we need making important decisions in the future."
+  },
+  {
+   "row_id": "e43489ef-03d0-4a44-80c9-b80959f7ed81",
+   "position": 1,
+   "label": "Evaluate Soltan's Responses",
+   "body": "1. no comment\n2. potentially agrees\n3. potentially agrees\n4. disagrees\n\nFor claim #3, by saying, \"Klein's policies have been effective,\" Soltan is potentially agreeing with Bell that Klein's policies avoided an impending catastrophe. And for claim #2, by saying \"she will not have the political support to make them,\" Soltan potentially agrees that Klein's policies are unpopular. Neither of these are definite, but at best they would be points that both speakers **agree** on. We're being asked for their point of disagreement, and there's no evidence that they disagree about claim #2 or claim #3."
+  },
+  {
+   "row_id": "b498406b-c557-42f7-8ae9-4e69832345d3",
+   "position": 2,
+   "label": "Goal",
+   "body": "We'll look for an answer that addresses claim #4. Beware of answers that describe claim #2 or #3, which are potential points of agreement, not disagreement."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "4fa2c23e-fdc1-4441-b30b-219fca4d4d11",
+   "letter": "A",
+   "body": "Both speakers accept this. Soltan says the policies \"have been effective,\" and Bell says they \"avoided an impending catastrophe,\" which means they worked. So A is a point of agreement, not disagreement."
+  },
+  {
+   "row_id": "897ad25b-bfaa-461f-b618-99b556e27fdc",
+   "letter": "B",
+   "body": "Bell states this. Soltan never disagrees. In fact, by stating that \"politics matters\" and that Klein will not have the political support to make important decisions, Soltan appears to be agreeing with Bell."
+  },
+  {
+   "row_id": "b9cbdb41-4d2c-47ee-a0db-3a1c53b6085c",
+   "letter": "C",
+   "body": "Soltan states this. Bell disagrees, saying Klein \"is just the person we need making important decisions in the future.\""
+  },
+  {
+   "row_id": "bf8203de-b323-48c3-a910-9e65ae4d022b",
+   "letter": "D",
+   "body": "Both speakers accept this. Soltan says \"important decisions will need to be made,\" and Bell talks about Klein \"making important decisions in the future.\" There's no disagreement here."
+  },
+  {
+   "row_id": "26c9d0bd-7d8f-4d1a-a6e8-1f84a9423f94",
+   "letter": "E",
+   "body": "Bell says Klein's policies \"avoided an impending catastrophe.\" Soltan never disputes this and even calls the policies effective, so it is not a point of disagreement."
+  }
+ ],
+ "known_problem": "No breakdown; A and D notes list who said what but never say whether both speakers hold the view.",
+ "tags": "no-breakdown; verdict-only; thin-correct-note; thin-notes; very-short"
+}

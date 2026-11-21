@@ -1,0 +1,359 @@
+{
+  "status": "completed",
+  "mode": "inspect",
+  "provider": "claude",
+  "roles": {
+    "host": "claude",
+    "planner": "claude",
+    "reviewer": "codex",
+    "builder": "codex",
+    "inspector": "claude"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-rc-sonnet-build",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os\\brainstorms\\2026-10-16-rc-training-build-spec.md",
+  "plan_sha256": "fca69e3ea5cd2d31db2f1b3d19795fa41e0482eb157cdd0adfc5228e8d1b1e15",
+  "requested_model": "claude-sonnet-5-5",
+  "requested_effort": "medium",
+  "base": "efc748b0003e355f5bf93f55c3b7c88946c79bac",
+  "snapshot": {
+    "base": "efc748b0003e355f5bf93f55c3b7c88946c79bac",
+    "files": [
+      {
+        "path": "docs/rc-training/deployment-checklist.md",
+        "kind": "file",
+        "sha256": "d0641c5a70f168dc7495d263d2dc0b41b2bb117a68e7c40c7ccb43e42d267949"
+      },
+      {
+        "path": "docs/rc-training/video-script-and-storyboard.md",
+        "kind": "file",
+        "sha256": "7f32aa6d5d167a7efd53e99e177748b2825f4f2078bc6077d5143e84665b9d9a"
+      },
+      {
+        "path": "src/components/AssignmentGate.tsx",
+        "kind": "file",
+        "sha256": "3adc405cb56ce746f3a189995e78c3d1bbbb9e9e7febd5194d27565487a969fc"
+      },
+      {
+        "path": "src/components/ReadingCenterGate.tsx",
+        "kind": "file",
+        "sha256": "66ee580997abb27585c84d69ffae6c4c032ededa00019c7df9dee22cf158821a"
+      },
+      {
+        "path": "src/features/reading-center/components/AppShell.navigation.test.tsx",
+        "kind": "file",
+        "sha256": "f02c02b16bd4d0ae00cf7e636685e22efb1f8b9500ddf88453ae10fe750251a0"
+      },
+      {
+        "path": "src/features/reading-center/components/AppShell.tsx",
+        "kind": "file",
+        "sha256": "141a1a4ba787fe83a6c0dfa4a4f2c905309e86ba247fa8ad0746a6d2e4117631"
+      },
+      {
+        "path": "src/features/reading-center/components/RcTrainingProgress.test.tsx",
+        "kind": "file",
+        "sha256": "8f2deda444bd704efeefe6d690c36acb9d3255b7e358f0ee547ae85ffb33be52"
+      },
+      {
+        "path": "src/features/reading-center/components/RcTrainingProgress.tsx",
+        "kind": "file",
+        "sha256": "faa1ff283d3da1a2fa9582434456e37eb10c30c9135c444337977a18b5be7bbb"
+      },
+      {
+        "path": "src/features/reading-center/hooks/useRouteView.ts",
+        "kind": "file",
+        "sha256": "8efc935848bb1d562342c32b07bd43a6116c1432c1634aa90adc44ac54888b97"
+      },
+      {
+        "path": "src/features/reading-center/index.test.tsx",
+        "kind": "file",
+        "sha256": "0af8b680d890ddacbcd69c875d9867dda60376ca7142b79dba5b2f3e5102c670"
+      },
+      {
+        "path": "src/features/reading-center/index.tsx",
+        "kind": "file",
+        "sha256": "3a3c110a9371236ba037eb6a2de26a2826cf8949a26282ead4cb323136e4c692"
+      },
+      {
+        "path": "src/features/reading-center/pages/ProfilePage.test.tsx",
+        "kind": "file",
+        "sha256": "3d0ca70b9f7930bc77b0b82a0b31151a62123205e6d26c8a504b916f9ba0660d"
+      },
+      {
+        "path": "src/features/reading-center/pages/ProfilePage.tsx",
+        "kind": "file",
+        "sha256": "912092b77a4363a091acf96c55fd0452b75b07276e1db174df61550bc52e080a"
+      },
+      {
+        "path": "src/features/reading-center/pages/ReadingCenterHome.test.tsx",
+        "kind": "file",
+        "sha256": "f3ab27b7748b8a6952b5e1669c1eb04bb01b829f467848a99110f09512dd4a15"
+      },
+      {
+        "path": "src/features/reading-center/pages/ReadingCenterHome.tsx",
+        "kind": "file",
+        "sha256": "cd840dc7859e5732e94946fcf106bfab0e50323d8a3105b6a57cd81e2f1a8bf4"
+      },
+      {
+        "path": "src/features/reading-center/rc-recall/ExamplePlayer.test.tsx",
+        "kind": "file",
+        "sha256": "f310ac6ac1e3a89167bb03821441b92d62499168bad53a2c1992fa73495f481e"
+      },
+      {
+        "path": "src/features/reading-center/rc-recall/ExamplePlayer.tsx",
+        "kind": "file",
+        "sha256": "dee80afaddbe13c5f8a1e7a6eb0484b3f5f5418bf1d20e5a7820a4ab071f6d40"
+      },
+      {
+        "path": "src/features/reading-center/rc-recall/RcAttemptHistory.tsx",
+        "kind": "file",
+        "sha256": "0e43471e29f5a7a82eac87cf15a3e2d4c3f0d4b70e9fc53ac40431ea2d4f741d"
+      },
+      {
+        "path": "src/features/reading-center/rc-recall/RcRecallPage.test.tsx",
+        "kind": "file",
+        "sha256": "81e6ddf09deed4966c7c7e7331070517d8cb84cc402f74f0f463c1b941383ada"
+      },
+      {
+        "path": "src/features/reading-center/rc-recall/RcRecallPage.tsx",
+        "kind": "file",
+        "sha256": "6be591aed0dc99ca4e000bc65d8c3b1be1207e833ae40b412390e77ce38e1327"
+      },
+      {
+        "path": "src/features/reading-center/rc-recall/RcRecallRunner.css",
+        "kind": "file",
+        "sha256": "15a4c9c80fd94723d0eaf5ff45b668d0f8026ca8e8b66c5a0bacdba15106ef66"
+      },
+      {
+        "path": "src/features/reading-center/rc-recall/RcRecallRunner.test.tsx",
+        "kind": "file",
+        "sha256": "64a59e812fb593a042fd895dfd415541a8281443c3f363cab1357935c5dc5163"
+      },
+      {
+        "path": "src/features/reading-center/rc-recall/RcRecallRunner.tsx",
+        "kind": "file",
+        "sha256": "559968a29bcbe96a878a09921e59258596d4ef4348db5af41f40cd83a6fa2c6e"
+      },
+      {
+        "path": "src/features/reading-center/rc-recall/RcTraining.css",
+        "kind": "file",
+        "sha256": "12703af4848e63fa2c04a726402e090e5cb40826581ded26d59114525af46330"
+      },
+      {
+        "path": "src/features/reading-center/rc-recall/RcTrainingDemo.test.tsx",
+        "kind": "file",
+        "sha256": "09a8b2d4264fa4aa5487b6916139d7cf7eb1893ddf8ab71450280b5746c61977"
+      },
+      {
+        "path": "src/features/reading-center/rc-recall/RcTrainingDemo.tsx",
+        "kind": "file",
+        "sha256": "88ab8411f69e9cfbf4b45b88c3483c9696e1bf15369e7e69e0f7a9f9ff2496ac"
+      },
+      {
+        "path": "src/features/reading-center/rc-recall/lib/activeClock.ts",
+        "kind": "file",
+        "sha256": "7492695e5947539d043c66f87bd31dda098e4529821f82dc15868e45a1a215e8"
+      },
+      {
+        "path": "src/features/reading-center/rc-recall/lib/attempts.test.ts",
+        "kind": "file",
+        "sha256": "fcfafab19ce85c96e8b7f07189c6f923c7306c38402903bab96152f3f43eab42"
+      },
+      {
+        "path": "src/features/reading-center/rc-recall/lib/attempts.ts",
+        "kind": "file",
+        "sha256": "3ce677cc49a7e5840e6edaa7e4ed19f3ac18e110350bb055c98d147f4b37c26c"
+      },
+      {
+        "path": "src/features/reading-center/rc-recall/lib/backup.test.ts",
+        "kind": "file",
+        "sha256": "27e533a7057f995173a514ad37986d4c6dc4982970b9153676673f1580a27fc6"
+      },
+      {
+        "path": "src/features/reading-center/rc-recall/lib/backup.ts",
+        "kind": "file",
+        "sha256": "b9da0b6613b4fdf945c5fa7b12a981e17a22a5395a1c605b6e2c5124ffca5e59"
+      },
+      {
+        "path": "src/features/reading-center/rc-recall/lib/checkpoint.test.ts",
+        "kind": "file",
+        "sha256": "dac94b7122e0b9cf4c68e42111bf74edca4d51995fc08bf1623adc4b23b82e97"
+      },
+      {
+        "path": "src/features/reading-center/rc-recall/lib/checkpoint.ts",
+        "kind": "file",
+        "sha256": "1237153fae6153a5815d6c10e6bb01bc5b4148c8d6934a293695de34949542b4"
+      },
+      {
+        "path": "src/features/reading-center/rc-recall/lib/copy.test.ts",
+        "kind": "file",
+        "sha256": "c6db9fde38425069e6cc6725218c8950b6c38f1723b9abcf114a1f906bedd50d"
+      },
+      {
+        "path": "src/features/reading-center/rc-recall/lib/history.test.ts",
+        "kind": "file",
+        "sha256": "cb2ba1123e63a192c4574ca57f3005dcb5d8daf85a51dc6602fa5562cce4f8f0"
+      },
+      {
+        "path": "src/features/reading-center/rc-recall/lib/history.ts",
+        "kind": "file",
+        "sha256": "1049d471a069323b899355653ff067f52ac13259f0be2f28470f00bb7a7ee370"
+      },
+      {
+        "path": "src/features/reading-center/rc-recall/lib/instructions.ts",
+        "kind": "file",
+        "sha256": "b52c5f13c859e727de227a2dfad174360d5f7be2690dd5a6c85208fdc119bfe4"
+      },
+      {
+        "path": "src/features/reading-center/rc-recall/lib/pending.ts",
+        "kind": "file",
+        "sha256": "1a0ca3fad39f26aeeac175dfcb69e550eb971c0553b7b51041aa0d14db2a3fef"
+      },
+      {
+        "path": "src/features/reading-center/rc-recall/lib/sequence.ts",
+        "kind": "file",
+        "sha256": "f67d8cd748ed908681902af573328469897f538de6d11d4a5a47e87e078198a2"
+      },
+      {
+        "path": "src/features/reading-center/rc-recall/useRcHistory.ts",
+        "kind": "file",
+        "sha256": "9e1a5e70d862decb58f74c36a3bb6e291dca9e331b9349e496b1e5e8341df637"
+      },
+      {
+        "path": "src/features/reading-center/rc-recall/useRecapRecorder.ts",
+        "kind": "file",
+        "sha256": "33d461761eeec75b387ce640032de92d6b7075f6f6eed37c9803681ff3e0b550"
+      },
+      {
+        "path": "src/features/reading-center/rc-recall/useRecordingRecovery.test.tsx",
+        "kind": "file",
+        "sha256": "7e7111eaab9250cb14d402795cbeee523121d857668de0fd2340f3c400f63d33"
+      },
+      {
+        "path": "src/features/reading-center/rc-recall/useRecordingRecovery.ts",
+        "kind": "file",
+        "sha256": "95263155976380ec87fa6e60686f96d4431c22c54c1bfe43acda39bfd5390978"
+      },
+      {
+        "path": "src/features/reading-center/reading-center.css",
+        "kind": "file",
+        "sha256": "a0c673f75bfcf1df0127805a64d0c10932d9adaaf2b63ece0619e5f3e437702b"
+      }
+    ],
+    "diff_sha256": "9484f66fc8ee3dec68c2067aee51f97b401007481c0e2ad0f6d93effc056c39d",
+    "sha256": "c2aba4ca5b7a19379bff6105fffa5202482386b421b43068bc6c2609117d2d02"
+  },
+  "previous": null,
+  "started_at": 1792212709.6891274,
+  "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\handoffs\\rc-sonnet-build-2026-10-16\\claudex-8q8wjrjj",
+  "cli_version": "2.1.296 (Claude Code)",
+  "executable": [
+    "C:\\Users\\Joshu\\.local\\bin\\claude.exe"
+  ],
+  "exit_code": 0,
+  "session_id": "b6398e55-17e3-4dea-b580-048ec6c59db4",
+  "response": {
+    "verdict": "REVISE",
+    "summary": "The change is broadly careful. It reconciles lost responses, locks Finish/End, checkpoints per account and attempt, checks chunks for gaps, and separates the LR and RC access gates. I found one real recording-integrity defect (a permanent re-record block), one navigation regression, and several smaller correctness and spec-fidelity gaps. I did not read RcTrainingProgress.tsx, activeClock.ts, either docs file, the CSS beyond the diff, or the supabase migrations. I ran no tests.",
+    "findings": [
+      {
+        "id": "F1",
+        "severity": "medium",
+        "path": "src/features/reading-center/rc-recall/lib/backup.ts (beginBackup, recoverRcRecallBackups) with useRecapRecorder.ts start()",
+        "evidence": "beginBackup writes a run record before recorder.start(). If MediaRecorder.start throws (start() catch path), or the recorder is torn down before any chunk, an unstopped run with no chunks stays in IndexedDB. The runner then marks the recap failed and lets the student press Start recording again, reusing the same recapId through resetFailedRecap but with a new recordingPath. beginBackup now sees existing.path !== run.path and returns {ok:false, existing:true}, so start() refuses with 'A recording for this recall still needs recovery'. Recovery never clears it: for assemble reason 'empty' it only calls discard when run.stopped, and this run is never stopped. The recall can therefore never be recorded again on this device, and the retry the plan requires cannot succeed.",
+        "fix": "In start()'s catch path, discard (or markStopped and discard) the run that this call created, but only when it holds no chunks. In recovery, discard a never-stopped run that has no chunks once it is no longer live (heartbeat expired and no lock). In beginBackup, allow replacing an existing run that has zero chunks. Add a regression test: begin, fail start, then begin again with a new path succeeds."
+      },
+      {
+        "id": "F2",
+        "severity": "medium",
+        "path": "src/features/reading-center/components/AppShell.tsx (fullAccess, accessPending, nav filter)",
+        "evidence": "The shell now runs useReadingCenterAccess(!is_admin) for everyone and filters links with (n.to === RC_RRC_PATH ? showLr : fullAccess || accessPending). The hook has retry:false and refetchInterval 15s. If the access query errors (offline or a transient failure), isPending is false and allowed is false, so a hub member on /rc-recall or /tags loses every sidebar destination. Only LR remains, and only if showLr is true. R5 requires main destinations to stay available. For a signed-out visitor the query is disabled, so isPending stays true and the full nav shows around the sign-in redirect. Access enforcement still sits in the page gates.",
+        "fix": "Treat query.isError as 'unknown, show the destinations' (the page gates still enforce access) or keep the last known allowed value. Render no nav destinations while unauthenticated. Add AppShell tests for the access-error and signed-out cases."
+      },
+      {
+        "id": "F3",
+        "severity": "low",
+        "path": "src/features/reading-center/rc-recall/useRcHistory.ts and lib/attempts.ts listAttempts",
+        "evidence": "(a) Offset paging (range(offset, offset+size)) over a live table: an attempt inserted or finished between page fetches shifts the rows, so one can repeat or be skipped. The 'deterministic' claim holds only for a static list. (b) Local checkpoint attempts that are not in the loaded pages are appended from the cached checkpoint.attempt (finished_at null). A stale checkpoint for an attempt that is older than the loaded pages, or finished elsewhere or on the server, shows as 'In progress' or 'Result not saved yet' until its page loads. It also sits out of date order. Checkpoints are never cleared when the server shows the attempt finished.",
+        "fix": "Use keyset pagination on (started_at, id), or dedupe by id when merging pages. Only merge local-only attempts when the server list could not be loaded, or sort them by started_at. Clear a checkpoint's stale pending state when a read-back shows the attempt finished."
+      },
+      {
+        "id": "F4",
+        "severity": "low",
+        "path": "src/features/reading-center/rc-recall/lib/attempts.ts probeAttemptsBackend",
+        "evidence": "The probe selects only from rc_recall_attempts. If rc_recall_recaps or the recordings bucket is missing or denied, launch is enabled and the failure appears mid-section. Silent recalls then show 'could not be saved' and spoken uploads fail. A SELECT-only probe also cannot show that INSERT policies exist, so a read-only policy gives a false 'available'.",
+        "fix": "Also probe the recaps table with a read, and list the bucket folder. Document in the deployment checklist that insert permission is only proven by the first create. Keep the creation error path honest."
+      },
+      {
+        "id": "F5",
+        "severity": "low",
+        "path": "src/features/reading-center/rc-recall/lib/history.ts PROCEDURE_LABEL",
+        "evidence": "Every stored mode 'rc_recall' row is labelled 'RC Training (paragraph recall)', including attempts made under the earlier workout (previously 'RC Flow'). Those had spoken-by-default per-paragraph recaps and a different procedure. The plan says not to relabel all historical records indiscriminately, and there is no version or date discriminator.",
+        "fix": "Add a procedure marker for new attempts (or a cutoff on started_at) and label older rc_recall rows with their original name. Test that an old row keeps its label."
+      },
+      {
+        "id": "F6",
+        "severity": "low",
+        "path": "src/features/reading-center/rc-recall/RcRecallPage.tsx + useRecordingRecovery.ts",
+        "evidence": "useRecordingRecovery stays mounted in AccountRecallPage while RcRecallRunner is shown (the hooks run before the early return). An 'online' event during a section can recover a stopped run whose upload the runner is already performing, so two uploads of the same path run concurrently. uploadRecording tolerates 'already exists' with a size check, so this is probably benign. Both paths also call discard, and the runner's retained blob and checkpoint state may disagree with what recovery did.",
+        "fix": "Pause the recovery hook while a runner is active, or make recovery skip recap ids that the runner currently owns."
+      },
+      {
+        "id": "F7",
+        "severity": "low",
+        "path": "src/features/reading-center/rc-recall/RcRecallRunner.tsx (pageshow handler)",
+        "evidence": "The pageshow handler restarts the clock whenever !done && !inFlight, including after finalize failed and finished is set. Time keeps accumulating on the 'not saved yet' screen. The reported seconds are frozen by completionSeconds, but the clock state later written by persist drifts. Only pagehide pauses accumulation, so tab hiding does not pause either.",
+        "fix": "Do not restart the clock once finished is set or completionSeconds.current is non-null. Decide explicitly whether visibilitychange should pause."
+      }
+    ],
+    "coverage": [
+      "Read the full diff for AppShell, index, gates, Profile/Home, the RcRecallPage, Runner and Demo components and tests, attempts.ts, backup.ts, useRecapRecorder, instructions and sequence.",
+      "Read in full: checkpoint.ts, pending.ts, history.ts, useRcHistory.ts, RcAttemptHistory.tsx, useRecordingRecovery.ts, useRouteView.ts, and hooks/useReadingCenterAccess.ts.",
+      "Traced callers and shared state: the checkpoint writers (runner persist, unmount, pagehide, finalize) and readers (page resume, retryFinish, history), the backup writers and recovery readers, access-gate wiring against the shell, and the account-key isolation of the recall page."
+    ],
+    "limitations": [
+      "Not read: RcTrainingProgress.tsx and its test, activeClock.ts and its tests, checkpoint/history/copy/recovery test files, AppShell.navigation.test.tsx, the two docs files (deployment checklist and video script/storyboard), and the full CSS. R4 Dashboard/Progress behaviour and R7 deliverables are therefore unreviewed.",
+      "Supabase migrations, RLS policies and the unique constraint on (attempt_id, recap_key) were not inspected, so reconciliation assumptions about them are unverified.",
+      "No tests, typecheck, build or browser checks were run. Nothing here claims they pass."
+    ]
+  },
+  "usage": {
+    "input_tokens": 6,
+    "cache_creation_input_tokens": 141270,
+    "cache_read_input_tokens": 256745,
+    "output_tokens": 11431,
+    "output_tokens_details": {
+      "thinking_tokens": 7546
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 141270,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 7561,
+        "cache_read_input_tokens": 133242,
+        "cache_creation_input_tokens": 8028,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 8028
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "observed_models": [
+    "claude-sonnet-5-5"
+  ],
+  "permission_denials": [],
+  "total_cost_usd": 0.7050765,
+  "elapsed_seconds": 106.99
+}

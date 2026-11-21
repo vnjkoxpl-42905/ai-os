@@ -1,0 +1,78 @@
+{
+ "qid": "PT158-S3-Q20",
+ "type": "Must Be True",
+ "difficulty": "5",
+ "key_db": "B",
+ "stimulus_db": "The study of primates is interesting for many reasons, including the fact that only primates have opposable thumbs. The lemurs are lower primates and the only primates indigenous to Madagascar, a large island off the coast of southeastern Africa. Some species of lemurs are the only living lower primates that are diurnal—that is, active primarily during the day. All higher primates are thought to have evolved from a single diurnal species of lower primates.",
+ "stem_db": "Which one of the following can be properly inferred from the information above?",
+ "choices_db": {
+  "A": "The chimpanzee, a higher primate, evolved from the lemur.",
+  "B": "No primates indigenous to Madagascar are diurnal higher primates.",
+  "C": "No higher primate is nocturnal.",
+  "D": "There are some lemurs without opposable thumbs.",
+  "E": "There are no nocturnal lemurs."
+ },
+ "bank": {
+  "stimulus": "The study of primates is interesting for many reasons,\n including the fact that only primates have opposable\n thumbs. The lemurs are lower primates and the only\n primates indigenous to Madagascar, a large island off the\n coast of southeastern Africa. Some species of lemurs are\n the only living lower primates that are diurnal—that is,\n active primarily during the day. All higher primates are\n thought to have evolved from a single diurnal species of\n lower primates.",
+  "stem": "Which one of the following can be properly inferred\n from the information above?",
+  "choices": {
+   "A": "The chimpanzee, a higher primate, evolved from the lemur.",
+   "B": "No primates indigenous to Madagascar are diurnal higher primates.",
+   "C": "No higher primate is nocturnal.",
+   "D": "There are some lemurs without opposable thumbs.",
+   "E": "There are no nocturnal lemurs."
+  },
+  "key": "B"
+ },
+ "explanation_id": "873984b0-9ac3-4380-b85b-6f45db1b1d8b",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "305069f9-4d24-4a4c-a055-1c1eeed9cd2c",
+   "position": 0,
+   "label": "Information",
+   "body": "```\nconditionals (only / the only / all)\nhave opposable thumbs → primate\nprimate indigenous → lemurs\nto Madagascar\nlower primates and → certain lemurs\ndiurnal and living\nhigher primate → evolved from one single\ndiurnal lower primate\n```"
+  },
+  {
+   "row_id": "82c5e9d7-930d-43d7-8f41-8564cd2d04a3",
+   "position": 1,
+   "label": "Evaluate",
+   "body": "We're trying to figure out whether we can combine any of these claims. We got multiple conditionals, but it doesn't seem like any of them chain together. What are the Overlapping Concepts? Lots. Primates, lower primates, lemurs, and diurnal all show up multiple times. Given that we were told that all higher primates evolved from a single diurnal species of lower primates, and given that some species of lemur are the only living lower primates that are diurnal, we have some support for the inference that all higher primates evolved from a lemur species, but this is Must Be True, not Most Supported. We don't know that for sure."
+  },
+  {
+   "row_id": "ce66f17f-5b51-4866-8b4a-fcdbf9284a50",
+   "position": 2,
+   "label": "Goal",
+   "body": "Look for a provable answer. It's hard to predict what it will be since this assortment of facts didn't lend itself to any obvious combining / synthesizing."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "d09bbec0-51eb-49df-89af-535df224ddeb",
+   "letter": "A",
+   "body": "The passage states that all higher primates evolved from a single diurnal lower primate species, but it never identifies that species as a lemur. The passage says some lemurs are diurnal lower primates, and higher primates evolved from a diurnal lower primate — but these could be different species of diurnal lower primates. The passage does not establish that the ancestral species was a lemur, let alone a chimpanzee's specific ancestor. Furthermore, \"evolved from\" describes a distant ancestral relationship, not a direct lineage claim linking chimpanzees specifically to lemurs. This inference requires assumptions beyond what the passage states."
+  },
+  {
+   "row_id": "d64c48e3-e2d5-4ae0-991c-bb04e630db40",
+   "letter": "B",
+   "body": "The passage states that lemurs are the only primates indigenous to Madagascar (F3) and that lemurs are lower primates (F2). From these two facts, it follows necessarily that all primates indigenous to Madagascar are lower primates — and therefore no primates indigenous to Madagascar are higher primates. Since no higher primates are indigenous to Madagascar, no diurnal higher primates are indigenous to Madagascar either. This answer captures exactly this inference: \"no primates indigenous to Madagascar are diurnal higher primates.\" The reasoning is airtight — if the entire set (higher primates) is excluded from Madagascar, then any subset of that set (diurnal higher primates) is also excluded. No additional assumptions are needed."
+  },
+  {
+   "row_id": "e667bfa1-7239-4f50-87cf-0a48170a4d22",
+   "letter": "C",
+   "body": "The passage says all higher primates are thought to have evolved from a single diurnal species of lower primates. This tells us the ancestral species was diurnal, but it does not tell us that all current higher primates are diurnal. Evolution from a diurnal ancestor does not guarantee that all descendants remain diurnal. Many higher primate species could have evolved nocturnal habits over millions of years. The passage provides no information about the current activity patterns of higher primates as a group — only about their evolutionary origin."
+  },
+  {
+   "row_id": "4078470b-e989-4112-a78d-0fb9d5f62cc4",
+   "letter": "D",
+   "body": "The passage states that only primates have opposable thumbs. That means anything with opposable thumbs is a primate; it does not mean every primate has them. So the passage leaves open whether some lemurs lack opposable thumbs, but it gives no reason to think any do. With no support either way, this answer does not have to be true."
+  },
+  {
+   "row_id": "38a47ea5-e7dc-41b3-9346-aa7cfd5955c0",
+   "letter": "E",
+   "body": "The passage says some species of lemurs are the only living lower primates that are diurnal. This means some lemur species are diurnal, but it does not say all lemurs are diurnal. The word \"some\" leaves open the possibility that other lemur species are nocturnal. This answer claims there are no nocturnal lemurs, which goes beyond what the passage states."
+  }
+ ],
+ "known_problem": "D note reads \"only primates have opposable thumbs\" as \"ALL primates have them\" (a reversal); C and E notes cite real-world owl monkeys and nocturnal lemurs.",
+ "tags": "emdash-heavy; pt157-158-register; possible-misquote"
+}

@@ -1,0 +1,84 @@
+{
+ "qid": "PT119-S3-Q3",
+ "type": "Evaluate",
+ "difficulty": "",
+ "key_db": "D",
+ "stimulus_db": "A recent study involved feeding a high-salt diet to a rat colony. A few months after the experiment began, standard tests of the rats’ blood pressure revealed that about 25 percent of the colony had normal, healthy blood pressure, about 70 percent of the colony had high blood pressure, and 5 percent of the colony had extremely high blood pressure. The conclusion from these results is that high-salt diets are linked to high blood pressure in rats.",
+ "stem_db": "The answer to which one of the following questions is most relevant to evaluating the conclusion drawn above?",
+ "choices_db": {
+  "A": "How much more salt than is contained in a rat’s normal diet was there in the high-salt diet?",
+  "B": "Did the high blood pressure have any adverse health effects on those rats that developed it?",
+  "C": "What percentage of naturally occurring rat colonies feed on high-salt diets?",
+  "D": "How many rats in the colony studied had abnormally high blood pressure before the study began?",
+  "E": "Have other species of rodents been used in experiments of the same kind?"
+ },
+ "bank": {
+  "stimulus": "A recent study involved feeding a high-salt diet to a rat colony. A few months after the experiment began, standard tests of the rats’ blood pressure revealed that about 25 percent of the colony had normal, healthy blood pressure, about 70 percent of the colony had high blood pressure, and 5 percent of the colony had extremely high blood pressure. The conclusion from these results is that high-salt diets are linked to high blood pressure in rats.",
+  "stem": "The answer to which one of the following questions is most relevant to evaluating the conclusion drawn above?",
+  "choices": {
+   "A": "How much more salt than is contained in a rat's normal diet was there in the high-salt diet?",
+   "B": "Did the high blood pressure have any adverse health effects on those rats that developed it?",
+   "C": "What percentage of naturally occurring rat colonies feed on high-salt diets?",
+   "D": "How many rats in the colony studied had abnormally high blood pressure before the study began?",
+   "E": "Have other species of rodents been used in experiments of the same kind?"
+  },
+  "key": "D"
+ },
+ "explanation_id": "fac5fed9-caa3-409d-a5c3-44b496727007",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "65f1850e-98d9-441e-8746-8bf03d26a57b",
+   "position": 0,
+   "label": "Conclusion",
+   "body": "High-salt diets are linked to high blood pressure in rats."
+  },
+  {
+   "row_id": "dfb3414b-7299-447e-929f-c89a5f9aa85b",
+   "position": 1,
+   "label": "Evidence",
+   "body": "After several months on a high-salt diet, 75% of the rats in the colony had high or extremely high blood pressure; only 25% had normal blood pressure."
+  },
+  {
+   "row_id": "ebb4113c-41f0-41e3-8cd2-3520cf6cbd26",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "The argument needs the rats to have started out with normal blood pressure. If 75% of them already had high blood pressure before the experiment began, the high-salt diet did not cause anything — the high blood pressure was there all along."
+  },
+  {
+   "row_id": "2e41c9fa-3934-4afd-8862-c33846c4a63a",
+   "position": 3,
+   "label": "Goal",
+   "body": "Find a question whose answer would tell us whether the high-salt diet actually changed anything — i.e., the rats' baseline blood pressure before the study."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "5201a04c-8111-4353-93d9-b6599f6c1a52",
+   "letter": "A",
+   "body": "The dosage doesn't tell us whether the rats already had high blood pressure before the study, and that's the real gap."
+  },
+  {
+   "row_id": "cb25f9bc-5c54-402b-b304-cef5fa0449e6",
+   "letter": "B",
+   "body": "Health effects come after the high blood pressure. The conclusion is only about the link between salt and blood pressure."
+  },
+  {
+   "row_id": "ea79abb1-e1f7-4376-b6f9-6235bf63eb65",
+   "letter": "C",
+   "body": "Wild rat diets tell us nothing about the rats in this lab."
+  },
+  {
+   "row_id": "64884a51-d794-4886-84ae-ed3ef63e7e32",
+   "letter": "D",
+   "body": "The study only measured blood pressure after the diet. If most rats had high blood pressure before it began, the diet showed nothing. If almost none did, the diet looks like the cause."
+  },
+  {
+   "row_id": "834a2eeb-c931-4942-b72b-43979984981e",
+   "letter": "E",
+   "body": "Other rodents don't tell us whether this study supports the link in rats."
+  }
+ ],
+ "known_problem": "Breakdown only, no choice notes, no bank entry.",
+ "tags": "no-notes; very-short; no-bank-match"
+}

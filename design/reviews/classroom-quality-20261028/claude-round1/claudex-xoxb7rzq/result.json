@@ -1,0 +1,155 @@
+{
+  "status": "completed",
+  "mode": "review",
+  "provider": "claude",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "claude",
+    "builder": "codex",
+    "inspector": "claude"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-my-work-20261026",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os\\design\\reviews\\classroom-quality-20261028\\PLAN.md",
+  "plan_sha256": "f306dea448ee99dad6a6aefd8efa19b7f1731ac2a31676c4d13b8cae22204b8b",
+  "requested_model": null,
+  "requested_effort": null,
+  "base": null,
+  "snapshot": null,
+  "previous": null,
+  "started_at": 1793210378.780433,
+  "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\design\\reviews\\classroom-quality-20261028\\claude-round1\\claudex-xoxb7rzq",
+  "cli_version": "2.1.309 (Claude Code)",
+  "executable": [
+    "C:\\Users\\Joshu\\.local\\bin\\claude.EXE"
+  ],
+  "exit_code": 0,
+  "session_id": "03e1693a-93f1-42f6-9a1a-f8b56d225995",
+  "response": {
+    "verdict": "REVISE",
+    "summary": "VERDICT: REVISE. The direction is sound but needs concrete changes before implementation (token scoping, a deterministic focal-task rule, and the defects below).\n\nEVIDENCE BASIS\n- I actually viewed pixels of live-desktop.png. Only the top-left ~1020x860 region of the 2000px canvas is real content; the rest is empty canvas.\n- The capture ends mid-way through \"Students at a glance\". Nothing below that is seen, and the lower rows are cut off.\n- Freshness: every visible string in the screenshot is present in this checkout's TeacherHomeView.tsx, TeacherTasks.tsx and home.css. Examples: \"Teaching desk\", \"Prepare for X ↗\", \"Check connection\", \"Last 90 days\", the \"—\" Email count, and the \"Find a student\" placeholder.\n- The worktree's only tracked modification is supabase/functions/mcp/index.ts, so the UI source looks consistent with the render.\n- I cannot prove the deployed commit equals this branch. Treat source assertions as \"consistent with\", not \"identical to\", production.\n- No browser interaction, phone viewport, motion playback or student session was exercised.\n\nWEIGHTED SCORECARD (diagnostic, not a mandate)\n| Category | Earned/Max | Confidence | Basis |\n|---|---|---|---|\n| Ease of use / task priority | 11/20 | medium | Screenshot plus source. Interaction unexercised. |\n| Information organization | 9/15 | medium | Screenshot plus source. |\n| Visual hierarchy | 8/15 | medium | Screenshot. |\n| Palette / material depth | 9/20 | medium (subjective) | Screenshot plus tokens. |\n| Typography / spacing / detail | 9/15 | medium | Screenshot plus CSS. |\n| Accessibility / responsive / states | 5/10, desktop-only partial | low | Source only. Phone, keyboard and contrast measurements unobserved. |\n| Purposeful motion | unassessed (0 of 5 awarded) | none | Teacher Home sets data-motion-skip (TeacherHomeView.tsx:71). Hover and press transitions are 140ms CSS only. No playback was seen. |\n\n- Assessed subtotal: 51/95, about 54%.\n- Provisional overall: roughly 52-58 out of 100 if motion is scored neutral. Do not treat it as final.\n- Subjective aesthetics: palette/material depth, and parts of hierarchy.\n- Demonstrated functional or defect evidence: findings F1-F9 below.\n\nPRIORITIZED RECOMMENDATIONS (benefit / risk / acceptance)\n1. Scope the new neutral tokens to `.home-desk` rather than editing --lsatu-canvas.\n   - Benefit: the teacher Home gets off-white without restyling the whole app and student Home.\n   - Risk: low. Editing --lsatu-canvas (#f7f4ee, src/index.css:15) or --home-surface (home.css:24) is high-risk because they are shared with student Home.\n   - Acceptance: a student Home before/after diff shows zero change.\n2. Remove the peach panel wash from the sidebar (F6).\n   - Benefit: removes the pinkish gradient that contradicts \"off-white and charcoal\".\n   - Risk: the wash is shared by every classroom route.\n   - Acceptance: matched screenshots of Home, My Work and Practice.\n3. Collapse empty regions and de-duplicate counts (F2, F3).\n   - Benefit: removes the dead column under \"My list\" and triple-reporting of zero.\n   - Risk: reducing visibility of real \"unknown\" states, such as the Email \"—\".\n   - Acceptance: with all-empty fixtures the page shows no void taller than one row.\n   - Acceptance: setup and error states remain distinct from zero.\n4. Add an explicit, tested focal-task priority rule (F7).\n   - Benefit: the charcoal focal area is predictable and never fabricates work.\n   - Risk: layout shift if the focal panel appears and disappears.\n   - Acceptance: the empty state shows no dark focal block and no layout jump on load. A present session or task shows exactly one.\n5. Fix the contrast defects (F4) and the heading and meta type flattening (F5).\n   - Benefit: real accessibility gain.\n   - Acceptance: measured non-text contrast of at least 3:1 on actual surface tokens, in light and dark modes.\n6. Fix the \"More\" menu behavior and sentence-case copy (F1, F8).\n   - Acceptance: keyboard and pointer tests confirm Escape, outside-click and item-click close the menu, and the copy reads correctly.\n7. Process.\n   - Run matched before/after screenshots at 1440, 1024, 683, 390 and 320 widths.\n   - Test normal and reduced-motion playback.\n   - Test a real student fixture.\n   - Run typecheck and build. Also verify unchanged routes and read state.\n\nADEQUACY OF THE PROPOSED DIRECTION\n- It is mostly sound. \"Reduce panels rather than add cards\" is right: the screenshot shows five or six similarly pale sections.\n- Gap 1: it never defines the priority order, so the \"most useful present task\" cannot be implemented or tested. See F7.\n- Gap 2: it does not name shared-token blast radius. See F6 and recommendation 1.\n- Gap 3: it omits the type-size flattening, which is a hierarchy cause independent of palette. See F5.\n- Gap 4: it omits the accessibility contrast failures. See F4.\n- Gap 5: the existing student charcoal focus surface (`.classroom-home-focus`, home.css ~line 406) already implements the pattern. Reuse its tokens rather than inventing a new dark surface.",
+    "findings": [
+      {
+        "id": "F1",
+        "severity": "medium",
+        "path": "src/components/classroom/home/teacher/TeacherHomeView.tsx:94-104",
+        "evidence": "The \"More\" menu is an uncontrolled native <details>. Choosing \"Create session link\" calls setBooking(true) and \"All students\" calls onOpen without closing the details. The menu stays open behind the booking sheet. There is no Escape or outside-click close. The CSS (home.css:1305) positions it absolutely at z-index:10 as a popover.",
+        "fix": "Control the menu open state. Close it on item click, Escape and outside click, and return focus to the summary. Add a keyboard test."
+      },
+      {
+        "id": "F2",
+        "severity": "medium",
+        "path": "src/components/classroom/home/home.css:1310 (.home-desk-main)",
+        "evidence": "The layout is a two-column grid with align-items:start. In live-desktop.png the left column ends around y=320, while the right column runs to about y=485. That leaves a visible void under \"My list\" while the empty \"After-session work\" and \"My list\" sections each take a full card (TeacherHomeView.tsx:141-151).",
+        "fix": "Merge empty After-session and My list states into one compact row, or let the lower grid flow into the void. Keep the setup, loading and error states visible; only the true ready-and-zero state should be condensed."
+      },
+      {
+        "id": "F3",
+        "severity": "medium",
+        "path": "src/components/classroom/home/teacher/TeacherHomeView.tsx:107-138, 300-305",
+        "evidence": "The attention strip repeats counts that the region headers repeat. \"Payment decisions\" and \"Access decisions\" both call jump(\"home-decisions\"). \"Needs a decision\" repeats two empty sentences and two links duplicating \"History\" and \"All students\". Four destinations (\"Payments and history\", \"History\", \"All students\", \"Student access\") route to just two pages (/teacher/today and /teacher/students). \"Open email\" appears three times. The strip's \"—\" for Email (setup state) is shown right beside zeros as if comparable.",
+        "fix": "Show the strip only when something is nonzero or unknown. Merge the two payment and access counts into a single \"Decisions\" entry, or give them distinct jump targets. Remove duplicate links. Use a clearly labelled \"Not connected\" token for Email instead of \"—\"."
+      },
+      {
+        "id": "F4",
+        "severity": "medium",
+        "path": "src/components/classroom/home/home.css:1337, 1370",
+        "evidence": "The .home-desk-check border is #a4a69b on a transparent control over the #fbf9f4 surface. Estimated contrast is about 2.3:1, below the WCAG 1.4.11 minimum of 3:1. The input border #b7b9ae on #fffefa is about 1.9:1. The search field in the screenshot has a visibly faint border. These are hard-coded values that bypass the --classroom-line-strong token (#747773) used elsewhere. My ratios are estimates from hex values, not measured on rendered pixels.",
+        "fix": "Use the existing strong-field token (--lsatu-field-border #747773) or a darker value for input and checkbox borders. Measure on the actual surface and check dark mode."
+      },
+      {
+        "id": "F5",
+        "severity": "medium",
+        "path": "src/components/classroom/home/home.css:1408-1410",
+        "evidence": "A late override `.classroom-root .home-desk :is(button,a,summary){font-size:14px!important}` forces every button, link and summary to 14px. It silently defeats the earlier 12-13px sizes (lines 1308, 1315, 1346, 1352, 1367). Lines 1409-1410 raise empty text and correspondence snippets to 14px, so the intended hierarchy between action, body and metadata is flattened. In the screenshot, dates and \"Checked …\" are small while links and body are the same weight. The !important also makes the mobile 12px attention-strip rule (line 1401) ineffective. With white-space:nowrap in a two-column grid at 320px, that may overflow; unverified.",
+        "fix": "Replace the blanket !important rule with a small type scale (for example 15 body / 14 control / 13 meta) applied by selector, and delete the superseded rules. Test the attention strip at 320px for overflow."
+      },
+      {
+        "id": "F6",
+        "severity": "medium",
+        "path": "src/components/classroom/classroom.css:176-183 and src/index.css:15; home.css:24-27",
+        "evidence": "The sidebar wash gradient ends in rgba(243,227,214,.4), a peach tone. That is the pinkish bottom of the sidebar in the screenshot, which contradicts the off-white-and-charcoal direction. --lsatu-canvas #f7f4ee is shared app-wide and --home-surface #fbf9f4 / --home-plane #f0ede5 are defined on the shared .classroom-home and feed student Home. Page-to-section contrast is about 1.05:1. Region elevation is only `0 2px 0 #252b260b` with border:0 (home.css:1312), which overrides --home-contact. So edge separation is almost invisible.",
+        "fix": "Introduce teacher-scoped tokens on .home-desk. Neutralise the wash tint for the classroom stage or the teacher route. Add a hairline edge using --home-edge plus a restrained contact shadow. Do not change the --lsatu-canvas or shared --home-* tokens without student proof."
+      },
+      {
+        "id": "F7",
+        "severity": "medium",
+        "path": "design/reviews/classroom-quality-20261028/PLAN.md (proposed direction)",
+        "evidence": "The plan says a soft charcoal focal area ONLY for the most useful present task but gives no ordering. This Home has a primary action (Assign work), post-session tasks, a same-day session (\"Amanda, Oct 28, 7:00 PM\"), decisions and messages. Without a rule, an implementer may choose arbitrarily, or may promote the static Assign work CTA or the upcoming session into a fake next assignment. A dark panel that appears conditionally also risks a layout jump.",
+        "fix": "Specify a deterministic priority, for example: the oldest unhandled after-session task, then a session starting within N hours, then a decision, then nothing. Specify that nothing renders when empty, with reserved height or an in-flow layout so there is no shift. Test each branch with fixtures."
+      },
+      {
+        "id": "F8",
+        "severity": "low",
+        "path": "src/components/classroom/home/teacher/TeacherTasks.tsx:37-45",
+        "evidence": "DeskStatus builds the sentence `{noun} is not connected yet.` from a lowercase noun. In the screenshot this renders \"student and enquiry email is not connected yet.\" starting lowercase. \"My list is not connected yet\" would be mid-sentence-cased, and plural nouns (\"payment decisions is not connected\") are ungrammatical.",
+        "fix": "Pass a full sentence or a capitalised label and a verb per region. Add copy tests for each region."
+      },
+      {
+        "id": "F9",
+        "severity": "low",
+        "path": "src/components/classroom/home/home.css:1328, 1330",
+        "evidence": "`.home-desk :is(button,a,summary):hover{text-decoration:underline}` applies to every button, including the charcoal Assign work button and the checkbox. `.home-desk button:disabled{cursor:wait}` also shows a wait cursor on permanently disabled buttons, such as the Label event and classify buttons when !desk.classify, or an unavailable mutateManual. The focus outline #49685e is a teal tone off the stated palette and is unverified against dark mode.",
+        "fix": "Scope the underline to text links. Use cursor:not-allowed for permanent disabled and wait only for busy. Derive the focus colour from tokens and verify it in both modes."
+      }
+    ],
+    "coverage": [
+      "Viewed the pixels of live-desktop.png (the visible ~1020x860 region only).",
+      "Read TeacherHomeView.tsx, TeacherTasks.tsx and part of PostSessionWork.tsx (section id and header only).",
+      "Read home.css: the token block (lines 19-48), the teacher section (1295-1419) and responsive and reduced-motion blocks.",
+      "Read the classroom.css wash gradient, and found the --lsatu-* and --classroom-* token definitions in src/index.css and classroom.css.",
+      "Read the repo AGENTS.md and the shared design principles.md.",
+      "Checked freshness by matching rendered strings to source.",
+      "Checked data-motion-skip usage via grep."
+    ],
+    "limitations": [
+      "No browser, keyboard, dropdown, phone viewport or motion interaction was exercised. Those categories are unassessed or low-confidence.",
+      "No student session or fixture was inspected. The student Home was only checked via shared tokens. No claim is made about it.",
+      "Contrast ratios are estimated from hex values, not measured on rendered pixels.",
+      "The screenshot is cut off below \"Students at a glance\". Content under the fold is unseen.",
+      "I did not read the full PostSessionWork.tsx, teachingDeskModel, the booking and access sheets, or the whole 1400-line home.css, nor trace all consumers of the shared tokens.",
+      "I cannot prove the deployed production commit equals this branch checkout.",
+      "No tests, typecheck or build were run, and none are claimed to pass."
+    ]
+  },
+  "usage": {
+    "input_tokens": 22,
+    "cache_creation_input_tokens": 68818,
+    "cache_read_input_tokens": 395551,
+    "output_tokens": 10858,
+    "output_tokens_details": {
+      "thinking_tokens": 2749
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 68818,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 5264,
+        "cache_read_input_tokens": 71542,
+        "cache_creation_input_tokens": 861,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 861
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "observed_models": [
+    "claude-sonnet-5-5"
+  ],
+  "permission_denials": [],
+  "total_cost_usd": 0.42345109999999997,
+  "elapsed_seconds": 143.3
+}

@@ -4,6 +4,7 @@ type: runbook
 created: 2026-09-11
 updated: 2026-09-11
 tags: [runbook, lsatu, booking, calcom, scheduling]
+aliases: [just taken, booking availability, scheduling buffer]
 ---
 
 # LSAT U booking policy

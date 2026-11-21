@@ -1,0 +1,537 @@
+{
+  "plan_id": "ore-section-first-2026-10-25",
+  "student_id": "37fc00a6-3c8a-4785-b005-fa277c72cbca",
+  "dry_run": false,
+  "notifications": "none; prior notifications retain their original dates",
+  "completion_dependency": false,
+  "preflight": [
+    {
+      "card_id": "8674b6d7-bf8e-4aa4-8338-43a5da702329",
+      "rows": [
+        {
+          "table": "classroom_items",
+          "before": {
+            "id": "8674b6d7-bf8e-4aa4-8338-43a5da702329",
+            "student_id": "37fc00a6-3c8a-4785-b005-fa277c72cbca",
+            "class_id": null,
+            "created_by": "5ff160ef-016e-4ab5-aab1-55c7a2ad888f",
+            "type": "homework",
+            "title": "PT104.S1 (LR)",
+            "description": "PrepTest 104, Section 1 - Logical Reasoning. Standard time.",
+            "content_html": null,
+            "content_markdown": null,
+            "source_table": "homework_assignments",
+            "source_id": "8175b818-5522-43f7-bc39-d541c39251a4",
+            "status": "assigned",
+            "unlock_at": "2026-10-26T04:00:00+00:00",
+            "due_at": "2026-11-02T04:59:59+00:00",
+            "completed_at": null,
+            "priority": 0,
+            "visible_to_student": true,
+            "metadata_json": {
+              "set_id": "2277b6d2-3d48-413b-b570-e732b69e2e88",
+              "assigned_route": "/classroom/8175b818-5522-43f7-bc39-d541c39251a4"
+            },
+            "created_at": "2026-10-25T22:14:01.622159+00:00",
+            "updated_at": "2026-10-25T22:14:01.622159+00:00"
+          },
+          "target": {
+            "unlock_at": "2026-10-26T04:00:00.000Z",
+            "due_at": "2026-10-27T03:59:59.000Z"
+          },
+          "identity": [
+            "id",
+            "student_id",
+            "type",
+            "source_id",
+            "source_table"
+          ]
+        }
+      ]
+    },
+    {
+      "card_id": "e8db2765-86f2-4a0d-805a-93e6d1261ca0",
+      "rows": [
+        {
+          "table": "guided_drill_assignments",
+          "before": {
+            "id": "85452492-d37a-48f7-a86f-6d1900c046cb",
+            "guided_drill_id": "38a29856-a352-4633-a5e7-b03682126ae9",
+            "student_id": "37fc00a6-3c8a-4785-b005-fa277c72cbca",
+            "class_id": "37fc00a6-3c8a-4785-b005-fa277c72cbca",
+            "assigned_by": "5ff160ef-016e-4ab5-aab1-55c7a2ad888f",
+            "assigned_at": "2026-10-25T22:13:23.565335+00:00",
+            "scheduled_for": "2026-10-26",
+            "unlock_at": "2026-10-26T04:00:00+00:00",
+            "status": "assigned",
+            "read_card_at": null,
+            "started_at": null,
+            "completed_at": null,
+            "attempt_session_id": null,
+            "created_at": "2026-10-25T22:13:23.565335+00:00",
+            "updated_at": "2026-10-25T22:13:23.565335+00:00",
+            "question_qids": [],
+            "level": "beginner",
+            "question_count": null
+          },
+          "target": {
+            "scheduled_for": "2026-10-28",
+            "unlock_at": "2026-10-28T04:00:00.000Z"
+          },
+          "identity": [
+            "id",
+            "student_id"
+          ]
+        },
+        {
+          "table": "classroom_items",
+          "before": {
+            "id": "e8db2765-86f2-4a0d-805a-93e6d1261ca0",
+            "student_id": "37fc00a6-3c8a-4785-b005-fa277c72cbca",
+            "class_id": null,
+            "created_by": "5ff160ef-016e-4ab5-aab1-55c7a2ad888f",
+            "type": "drill",
+            "title": "The Core Connection",
+            "description": "New guided drill: The Core Connection",
+            "content_html": null,
+            "content_markdown": null,
+            "source_table": "guided_drill_assignments",
+            "source_id": "85452492-d37a-48f7-a86f-6d1900c046cb",
+            "status": "assigned",
+            "unlock_at": "2026-10-26T04:00:00+00:00",
+            "due_at": "2026-11-02T04:59:59+00:00",
+            "completed_at": null,
+            "priority": 0,
+            "visible_to_student": true,
+            "metadata_json": {
+              "work_plan": "ore-session-work-2026-10-25",
+              "assigned_route": "/guided/85452492-d37a-48f7-a86f-6d1900c046cb?returnTo=%2Fclassroom",
+              "guided_drill_id": "38a29856-a352-4633-a5e7-b03682126ae9"
+            },
+            "created_at": "2026-10-25T22:13:23.694373+00:00",
+            "updated_at": "2026-10-25T22:13:23.694373+00:00"
+          },
+          "target": {
+            "unlock_at": "2026-10-28T04:00:00.000Z",
+            "due_at": "2026-10-30T03:59:59.000Z"
+          },
+          "identity": [
+            "id",
+            "student_id",
+            "type",
+            "source_id",
+            "source_table"
+          ]
+        }
+      ]
+    },
+    {
+      "card_id": "66fcdc93-855a-43b9-85a8-f80a9d4d4611",
+      "rows": [
+        {
+          "table": "classroom_items",
+          "before": {
+            "id": "66fcdc93-855a-43b9-85a8-f80a9d4d4611",
+            "student_id": "37fc00a6-3c8a-4785-b005-fa277c72cbca",
+            "class_id": null,
+            "created_by": "5ff160ef-016e-4ab5-aab1-55c7a2ad888f",
+            "type": "activity",
+            "title": "Read, Recall, Colour · PT104 Section 1",
+            "description": "A whole section, out loud, against the clock",
+            "content_html": null,
+            "content_markdown": null,
+            "source_table": "activity_assignments",
+            "source_id": "bcb3668b-e72e-411d-9c7e-8df2675c3796",
+            "status": "assigned",
+            "unlock_at": "2026-10-26T04:00:00+00:00",
+            "due_at": "2026-11-02T04:59:59+00:00",
+            "completed_at": null,
+            "priority": 0,
+            "visible_to_student": true,
+            "metadata_json": {
+              "work_plan": "ore-session-work-2026-10-25",
+              "activity_id": "4bb1242b-6b5b-42bb-b4c6-7b4769117115",
+              "assigned_route": "/activities/bcb3668b-e72e-411d-9c7e-8df2675c3796"
+            },
+            "created_at": "2026-10-25T22:13:27.131265+00:00",
+            "updated_at": "2026-10-25T22:13:27.131265+00:00"
+          },
+          "target": {
+            "unlock_at": "2026-10-30T04:00:00.000Z",
+            "due_at": "2026-11-01T03:59:59.000Z"
+          },
+          "identity": [
+            "id",
+            "student_id",
+            "type",
+            "source_id",
+            "source_table"
+          ]
+        }
+      ]
+    }
+  ],
+  "writes": [
+    {
+      "table": "classroom_items",
+      "before": {
+        "id": "8674b6d7-bf8e-4aa4-8338-43a5da702329",
+        "student_id": "37fc00a6-3c8a-4785-b005-fa277c72cbca",
+        "class_id": null,
+        "created_by": "5ff160ef-016e-4ab5-aab1-55c7a2ad888f",
+        "type": "homework",
+        "title": "PT104.S1 (LR)",
+        "description": "PrepTest 104, Section 1 - Logical Reasoning. Standard time.",
+        "content_html": null,
+        "content_markdown": null,
+        "source_table": "homework_assignments",
+        "source_id": "8175b818-5522-43f7-bc39-d541c39251a4",
+        "status": "assigned",
+        "unlock_at": "2026-10-26T04:00:00+00:00",
+        "due_at": "2026-11-02T04:59:59+00:00",
+        "completed_at": null,
+        "priority": 0,
+        "visible_to_student": true,
+        "metadata_json": {
+          "set_id": "2277b6d2-3d48-413b-b570-e732b69e2e88",
+          "assigned_route": "/classroom/8175b818-5522-43f7-bc39-d541c39251a4"
+        },
+        "created_at": "2026-10-25T22:14:01.622159+00:00",
+        "updated_at": "2026-10-25T22:14:01.622159+00:00"
+      },
+      "target": {
+        "unlock_at": "2026-10-26T04:00:00.000Z",
+        "due_at": "2026-10-27T03:59:59.000Z"
+      },
+      "identity": [
+        "id",
+        "student_id",
+        "type",
+        "source_id",
+        "source_table"
+      ],
+      "after": {
+        "id": "8674b6d7-bf8e-4aa4-8338-43a5da702329",
+        "student_id": "37fc00a6-3c8a-4785-b005-fa277c72cbca",
+        "class_id": null,
+        "created_by": "5ff160ef-016e-4ab5-aab1-55c7a2ad888f",
+        "type": "homework",
+        "title": "PT104.S1 (LR)",
+        "description": "PrepTest 104, Section 1 - Logical Reasoning. Standard time.",
+        "content_html": null,
+        "content_markdown": null,
+        "source_table": "homework_assignments",
+        "source_id": "8175b818-5522-43f7-bc39-d541c39251a4",
+        "status": "assigned",
+        "unlock_at": "2026-10-26T04:00:00+00:00",
+        "due_at": "2026-10-27T03:59:59+00:00",
+        "completed_at": null,
+        "priority": 0,
+        "visible_to_student": true,
+        "metadata_json": {
+          "set_id": "2277b6d2-3d48-413b-b570-e732b69e2e88",
+          "assigned_route": "/classroom/8175b818-5522-43f7-bc39-d541c39251a4"
+        },
+        "created_at": "2026-10-25T22:14:01.622159+00:00",
+        "updated_at": "2026-10-25T23:21:12.570465+00:00"
+      }
+    },
+    {
+      "table": "guided_drill_assignments",
+      "before": {
+        "id": "85452492-d37a-48f7-a86f-6d1900c046cb",
+        "guided_drill_id": "38a29856-a352-4633-a5e7-b03682126ae9",
+        "student_id": "37fc00a6-3c8a-4785-b005-fa277c72cbca",
+        "class_id": "37fc00a6-3c8a-4785-b005-fa277c72cbca",
+        "assigned_by": "5ff160ef-016e-4ab5-aab1-55c7a2ad888f",
+        "assigned_at": "2026-10-25T22:13:23.565335+00:00",
+        "scheduled_for": "2026-10-26",
+        "unlock_at": "2026-10-26T04:00:00+00:00",
+        "status": "assigned",
+        "read_card_at": null,
+        "started_at": null,
+        "completed_at": null,
+        "attempt_session_id": null,
+        "created_at": "2026-10-25T22:13:23.565335+00:00",
+        "updated_at": "2026-10-25T22:13:23.565335+00:00",
+        "question_qids": [],
+        "level": "beginner",
+        "question_count": null
+      },
+      "target": {
+        "scheduled_for": "2026-10-28",
+        "unlock_at": "2026-10-28T04:00:00.000Z"
+      },
+      "identity": [
+        "id",
+        "student_id"
+      ],
+      "after": {
+        "id": "85452492-d37a-48f7-a86f-6d1900c046cb",
+        "guided_drill_id": "38a29856-a352-4633-a5e7-b03682126ae9",
+        "student_id": "37fc00a6-3c8a-4785-b005-fa277c72cbca",
+        "class_id": "37fc00a6-3c8a-4785-b005-fa277c72cbca",
+        "assigned_by": "5ff160ef-016e-4ab5-aab1-55c7a2ad888f",
+        "assigned_at": "2026-10-25T22:13:23.565335+00:00",
+        "scheduled_for": "2026-10-28",
+        "unlock_at": "2026-10-28T04:00:00+00:00",
+        "status": "assigned",
+        "read_card_at": null,
+        "started_at": null,
+        "completed_at": null,
+        "attempt_session_id": null,
+        "created_at": "2026-10-25T22:13:23.565335+00:00",
+        "updated_at": "2026-10-25T23:21:12.868628+00:00",
+        "question_qids": [],
+        "level": "beginner",
+        "question_count": null
+      }
+    },
+    {
+      "table": "classroom_items",
+      "before": {
+        "id": "e8db2765-86f2-4a0d-805a-93e6d1261ca0",
+        "student_id": "37fc00a6-3c8a-4785-b005-fa277c72cbca",
+        "class_id": null,
+        "created_by": "5ff160ef-016e-4ab5-aab1-55c7a2ad888f",
+        "type": "drill",
+        "title": "The Core Connection",
+        "description": "New guided drill: The Core Connection",
+        "content_html": null,
+        "content_markdown": null,
+        "source_table": "guided_drill_assignments",
+        "source_id": "85452492-d37a-48f7-a86f-6d1900c046cb",
+        "status": "assigned",
+        "unlock_at": "2026-10-26T04:00:00+00:00",
+        "due_at": "2026-11-02T04:59:59+00:00",
+        "completed_at": null,
+        "priority": 0,
+        "visible_to_student": true,
+        "metadata_json": {
+          "work_plan": "ore-session-work-2026-10-25",
+          "assigned_route": "/guided/85452492-d37a-48f7-a86f-6d1900c046cb?returnTo=%2Fclassroom",
+          "guided_drill_id": "38a29856-a352-4633-a5e7-b03682126ae9"
+        },
+        "created_at": "2026-10-25T22:13:23.694373+00:00",
+        "updated_at": "2026-10-25T22:13:23.694373+00:00"
+      },
+      "target": {
+        "unlock_at": "2026-10-28T04:00:00.000Z",
+        "due_at": "2026-10-30T03:59:59.000Z"
+      },
+      "identity": [
+        "id",
+        "student_id",
+        "type",
+        "source_id",
+        "source_table"
+      ],
+      "after": {
+        "id": "e8db2765-86f2-4a0d-805a-93e6d1261ca0",
+        "student_id": "37fc00a6-3c8a-4785-b005-fa277c72cbca",
+        "class_id": null,
+        "created_by": "5ff160ef-016e-4ab5-aab1-55c7a2ad888f",
+        "type": "drill",
+        "title": "The Core Connection",
+        "description": "New guided drill: The Core Connection",
+        "content_html": null,
+        "content_markdown": null,
+        "source_table": "guided_drill_assignments",
+        "source_id": "85452492-d37a-48f7-a86f-6d1900c046cb",
+        "status": "assigned",
+        "unlock_at": "2026-10-28T04:00:00+00:00",
+        "due_at": "2026-10-30T03:59:59+00:00",
+        "completed_at": null,
+        "priority": 0,
+        "visible_to_student": true,
+        "metadata_json": {
+          "work_plan": "ore-session-work-2026-10-25",
+          "assigned_route": "/guided/85452492-d37a-48f7-a86f-6d1900c046cb?returnTo=%2Fclassroom",
+          "guided_drill_id": "38a29856-a352-4633-a5e7-b03682126ae9"
+        },
+        "created_at": "2026-10-25T22:13:23.694373+00:00",
+        "updated_at": "2026-10-25T23:21:13.094444+00:00"
+      }
+    },
+    {
+      "table": "classroom_items",
+      "before": {
+        "id": "66fcdc93-855a-43b9-85a8-f80a9d4d4611",
+        "student_id": "37fc00a6-3c8a-4785-b005-fa277c72cbca",
+        "class_id": null,
+        "created_by": "5ff160ef-016e-4ab5-aab1-55c7a2ad888f",
+        "type": "activity",
+        "title": "Read, Recall, Colour · PT104 Section 1",
+        "description": "A whole section, out loud, against the clock",
+        "content_html": null,
+        "content_markdown": null,
+        "source_table": "activity_assignments",
+        "source_id": "bcb3668b-e72e-411d-9c7e-8df2675c3796",
+        "status": "assigned",
+        "unlock_at": "2026-10-26T04:00:00+00:00",
+        "due_at": "2026-11-02T04:59:59+00:00",
+        "completed_at": null,
+        "priority": 0,
+        "visible_to_student": true,
+        "metadata_json": {
+          "work_plan": "ore-session-work-2026-10-25",
+          "activity_id": "4bb1242b-6b5b-42bb-b4c6-7b4769117115",
+          "assigned_route": "/activities/bcb3668b-e72e-411d-9c7e-8df2675c3796"
+        },
+        "created_at": "2026-10-25T22:13:27.131265+00:00",
+        "updated_at": "2026-10-25T22:13:27.131265+00:00"
+      },
+      "target": {
+        "unlock_at": "2026-10-30T04:00:00.000Z",
+        "due_at": "2026-11-01T03:59:59.000Z"
+      },
+      "identity": [
+        "id",
+        "student_id",
+        "type",
+        "source_id",
+        "source_table"
+      ],
+      "after": {
+        "id": "66fcdc93-855a-43b9-85a8-f80a9d4d4611",
+        "student_id": "37fc00a6-3c8a-4785-b005-fa277c72cbca",
+        "class_id": null,
+        "created_by": "5ff160ef-016e-4ab5-aab1-55c7a2ad888f",
+        "type": "activity",
+        "title": "Read, Recall, Colour · PT104 Section 1",
+        "description": "A whole section, out loud, against the clock",
+        "content_html": null,
+        "content_markdown": null,
+        "source_table": "activity_assignments",
+        "source_id": "bcb3668b-e72e-411d-9c7e-8df2675c3796",
+        "status": "assigned",
+        "unlock_at": "2026-10-30T04:00:00+00:00",
+        "due_at": "2026-11-01T03:59:59+00:00",
+        "completed_at": null,
+        "priority": 0,
+        "visible_to_student": true,
+        "metadata_json": {
+          "work_plan": "ore-session-work-2026-10-25",
+          "activity_id": "4bb1242b-6b5b-42bb-b4c6-7b4769117115",
+          "assigned_route": "/activities/bcb3668b-e72e-411d-9c7e-8df2675c3796"
+        },
+        "created_at": "2026-10-25T22:13:27.131265+00:00",
+        "updated_at": "2026-10-25T23:21:13.391488+00:00"
+      }
+    }
+  ],
+  "rollback": [],
+  "status": "verified",
+  "readback": [
+    {
+      "table": "classroom_items",
+      "row": {
+        "id": "8674b6d7-bf8e-4aa4-8338-43a5da702329",
+        "student_id": "37fc00a6-3c8a-4785-b005-fa277c72cbca",
+        "class_id": null,
+        "created_by": "5ff160ef-016e-4ab5-aab1-55c7a2ad888f",
+        "type": "homework",
+        "title": "PT104.S1 (LR)",
+        "description": "PrepTest 104, Section 1 - Logical Reasoning. Standard time.",
+        "content_html": null,
+        "content_markdown": null,
+        "source_table": "homework_assignments",
+        "source_id": "8175b818-5522-43f7-bc39-d541c39251a4",
+        "status": "assigned",
+        "unlock_at": "2026-10-26T04:00:00+00:00",
+        "due_at": "2026-10-27T03:59:59+00:00",
+        "completed_at": null,
+        "priority": 0,
+        "visible_to_student": true,
+        "metadata_json": {
+          "set_id": "2277b6d2-3d48-413b-b570-e732b69e2e88",
+          "assigned_route": "/classroom/8175b818-5522-43f7-bc39-d541c39251a4"
+        },
+        "created_at": "2026-10-25T22:14:01.622159+00:00",
+        "updated_at": "2026-10-25T23:21:12.570465+00:00"
+      }
+    },
+    {
+      "table": "guided_drill_assignments",
+      "row": {
+        "id": "85452492-d37a-48f7-a86f-6d1900c046cb",
+        "guided_drill_id": "38a29856-a352-4633-a5e7-b03682126ae9",
+        "student_id": "37fc00a6-3c8a-4785-b005-fa277c72cbca",
+        "class_id": "37fc00a6-3c8a-4785-b005-fa277c72cbca",
+        "assigned_by": "5ff160ef-016e-4ab5-aab1-55c7a2ad888f",
+        "assigned_at": "2026-10-25T22:13:23.565335+00:00",
+        "scheduled_for": "2026-10-28",
+        "unlock_at": "2026-10-28T04:00:00+00:00",
+        "status": "assigned",
+        "read_card_at": null,
+        "started_at": null,
+        "completed_at": null,
+        "attempt_session_id": null,
+        "created_at": "2026-10-25T22:13:23.565335+00:00",
+        "updated_at": "2026-10-25T23:21:12.868628+00:00",
+        "question_qids": [],
+        "level": "beginner",
+        "question_count": null
+      }
+    },
+    {
+      "table": "classroom_items",
+      "row": {
+        "id": "e8db2765-86f2-4a0d-805a-93e6d1261ca0",
+        "student_id": "37fc00a6-3c8a-4785-b005-fa277c72cbca",
+        "class_id": null,
+        "created_by": "5ff160ef-016e-4ab5-aab1-55c7a2ad888f",
+        "type": "drill",
+        "title": "The Core Connection",
+        "description": "New guided drill: The Core Connection",
+        "content_html": null,
+        "content_markdown": null,
+        "source_table": "guided_drill_assignments",
+        "source_id": "85452492-d37a-48f7-a86f-6d1900c046cb",
+        "status": "assigned",
+        "unlock_at": "2026-10-28T04:00:00+00:00",
+        "due_at": "2026-10-30T03:59:59+00:00",
+        "completed_at": null,
+        "priority": 0,
+        "visible_to_student": true,
+        "metadata_json": {
+          "work_plan": "ore-session-work-2026-10-25",
+          "assigned_route": "/guided/85452492-d37a-48f7-a86f-6d1900c046cb?returnTo=%2Fclassroom",
+          "guided_drill_id": "38a29856-a352-4633-a5e7-b03682126ae9"
+        },
+        "created_at": "2026-10-25T22:13:23.694373+00:00",
+        "updated_at": "2026-10-25T23:21:13.094444+00:00"
+      }
+    },
+    {
+      "table": "classroom_items",
+      "row": {
+        "id": "66fcdc93-855a-43b9-85a8-f80a9d4d4611",
+        "student_id": "37fc00a6-3c8a-4785-b005-fa277c72cbca",
+        "class_id": null,
+        "created_by": "5ff160ef-016e-4ab5-aab1-55c7a2ad888f",
+        "type": "activity",
+        "title": "Read, Recall, Colour · PT104 Section 1",
+        "description": "A whole section, out loud, against the clock",
+        "content_html": null,
+        "content_markdown": null,
+        "source_table": "activity_assignments",
+        "source_id": "bcb3668b-e72e-411d-9c7e-8df2675c3796",
+        "status": "assigned",
+        "unlock_at": "2026-10-30T04:00:00+00:00",
+        "due_at": "2026-11-01T03:59:59+00:00",
+        "completed_at": null,
+        "priority": 0,
+        "visible_to_student": true,
+        "metadata_json": {
+          "work_plan": "ore-session-work-2026-10-25",
+          "activity_id": "4bb1242b-6b5b-42bb-b4c6-7b4769117115",
+          "assigned_route": "/activities/bcb3668b-e72e-411d-9c7e-8df2675c3796"
+        },
+        "created_at": "2026-10-25T22:13:27.131265+00:00",
+        "updated_at": "2026-10-25T23:21:13.391488+00:00"
+      }
+    }
+  ],
+  "audit_file": "C:\\Users\\Joshu\\dev\\ai-os\\students\\ore\\assignments\\ore-section-first-2026-10-25\\2026-10-25T23-21-12-385Z-reschedule.generated.json"
+}

@@ -1,0 +1,90 @@
+{
+ "qid": "PT157-S3-Q4",
+ "type": "Principle-Strengthen",
+ "difficulty": "2",
+ "key_db": "B",
+ "stimulus_db": "Principle: It is unethical for someone who has bought an item to return it to the store after getting all the use from it that he or she ever intended to get.\n\nApplication: James purchased a video camera and returned it to the store two weeks later. This return was unethical.",
+ "stem_db": "Which one of the following, if true, most justifies the above application of the principle?",
+ "choices_db": {
+  "A": "Before returning the camera, James used it extensively to record members of his family engaged in funny activities.",
+  "B": "James bought the camera to avoid having to hire a professional videographer for his sister's graduation party, and he returned the camera immediately after the party.",
+  "C": "James used the camera several times but returned it after he had dropped it and then discovered that some of the features did not work.",
+  "D": "James returned the camera after he discovered that the same model was on sale at another store at a considerably lower price.",
+  "E": "James used the camera in the manner for which he bought it, and, though he generally enjoyed it, he thought a different one might work better with his new computer."
+ },
+ "bank": {
+  "stimulus": "Principle: It is unethical for someone who has bought an\n item to return it to the store after getting all the\n use from it that he or she ever intended to get.\n Application: James purchased a video camera and\n returned it to the store two weeks later. This\n return was unethical.",
+  "stem": "Which one of the following, if true, most justifies the\n above application of the principle?",
+  "choices": {
+   "A": "Before returning the camera, James used it extensively to record members of his family engaged in funny activities.",
+   "B": "James bought the camera to avoid having to hire a professional videographer for his sister’s graduation party, and he returned the camera immediately after the party.",
+   "C": "James used the camera several times but returned it after he had dropped it and then discovered that some of the features did not work.",
+   "D": "James returned the camera after he discovered that the same model was on sale at another store at a considerably lower price.",
+   "E": "James used the camera in the manner for which he bought it, and, though he generally enjoyed it, he thought a different one might work better with his new computer."
+  },
+  "key": "B"
+ },
+ "explanation_id": "e6f89893-1e59-4b2a-b2b6-bf5ec6217555",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "68f4dd63-4abb-4379-a38b-9f30d974643e",
+   "position": 0,
+   "label": "Principle",
+   "body": "If someone buys an item, gets all of the use from it they intended to get, and returns it, then they are acting in an unethical way: `buy, use fully, and return → unethical`"
+  },
+  {
+   "row_id": "a10d6499-7ba9-406b-9f99-79f916f6258b",
+   "position": 1,
+   "label": "Evicence in Application",
+   "body": "James bought an item and later returned it."
+  },
+  {
+   "row_id": "4a297bb1-1f39-46ff-b540-3aedc00f39ba",
+   "position": 2,
+   "label": "Conclusion",
+   "body": "The return was unethical."
+  },
+  {
+   "row_id": "6068a1ee-d9d2-43fe-8b62-9b35dbecb2a9",
+   "position": 3,
+   "label": "Evaluate",
+   "body": "The evidence in the application doesn't state why James returned the video camera. The principle only allows us to conclude that the return was unethical if we have evidence that James got all of the use from the camera that he intended to get."
+  },
+  {
+   "row_id": "7dc481d2-4aeb-4b20-8666-167e40e4768e",
+   "position": 4,
+   "label": "Goal",
+   "body": "Look for an answer indicating that James got all of the use from the cameral that he intended."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "555939dc-cab9-4680-9f41-b4595ca9b117",
+   "letter": "A",
+   "body": "Using the camera \"extensively\" to record family members does not establish that James got all the use he intended from it. Extensive use is not the same as complete intended use. He might have bought the camera for a different purpose entirely, and the family recordings were just a bonus. Or he might have intended to use the camera extensively for many different occasions over a long period, making the family recordings only a fraction of his intended use. This answer provides evidence of significant use but not evidence that his intended use was fulfilled — which is what the principle requires."
+  },
+  {
+   "row_id": "c158920e-d2ec-4536-b703-aee17150c07f",
+   "letter": "B",
+   "body": "This answer establishes exactly what the principle requires. James bought the camera specifically to avoid hiring a videographer for his sister's graduation party. He returned the camera immediately after the party. This means James's entire intended use — recording the graduation party — was complete before the return. He got all the use he ever planned to get from the camera and then returned it, which satisfies all three conditions of the principle: purchase, fulfillment of intended use, and return. The return is therefore unethical under the stated principle."
+  },
+  {
+   "row_id": "8a41a455-07df-49e6-a075-7a671e46bf15",
+   "letter": "C",
+   "body": "This answer does not tell us whether James got all his intended use from the camera. He used it several times, but the return was prompted by dropping it and discovering broken features — not by having completed his intended use. If anything, this suggests James returned the camera because it no longer worked properly, which is a legitimate reason for a return that falls outside the principle's scope. The principle addresses returns after getting full intended use, not returns due to product malfunction. The ethics of returning a damaged item is a separate question the principle does not address."
+  },
+  {
+   "row_id": "e43688c0-ef1a-400a-92e1-dbd45c76d7d6",
+   "letter": "D",
+   "body": "James returned the camera because he found a lower price at another store, not because he completed his intended use. This does not tell us whether James used the camera at all, let alone whether he got all his intended use from it. The ethics of returning an item to repurchase it at a lower price is an entirely different question from the one the principle addresses. The principle is about returning items after getting full intended use, not about price-matching strategies."
+  },
+  {
+   "row_id": "1839d06e-b7a9-4805-b5bd-057cfc7b1c4c",
+   "letter": "E",
+   "body": "This answer is cleverly worded but falls short. \"Used the camera in the manner for which he bought it\" is not the same as \"got all the use from it that he ever intended to get.\" Consider someone who buys a camera to record an entire YouTube series. Recording one episode is using it \"in the manner intended,\" but it is not getting all the intended use. The principle requires that the full scope of intended use be completed, not merely that the item was used for its intended purpose. James used the camera as intended but thought a different one would work better — suggesting he planned to continue using a camera, meaning his intended use was not fulfilled."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (8.4 em-dashes per 1k words; wrong-answer notes average 100.5 words).",
+ "tags": "emdash-heavy; pt157-158-register; possible-misquote"
+}

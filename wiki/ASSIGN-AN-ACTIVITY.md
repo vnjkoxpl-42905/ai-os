@@ -29,6 +29,8 @@ core loop of the tutoring business and confirming each one made it useless.
 
 ## The path
 
+**Current route (2026-11-18): headless.** Use the `assign-lsatu-work` skill, which calls `assign_student_work` (decision 2026-10-25, `decisions/log.md`). No browser, no Lovable. The browser steps below are the historical fallback only.
+
 The Activity Centre lives at `/activities` — Classroom sidebar → **Study** →
 **Activities**. Joshua's account is admin, so each card in **The library** carries
 its own assign button.
@@ -77,7 +79,7 @@ deliberately wants her pinned to one section. The door is the default.
 
 ## What assigning actually does
 
-`assignWork()` — `projects/lsatu/src/lib/assignWork.ts`:
+`assignWork()` — `../lsatu/src/lib/assignWork.ts`:
 
 1. **Snapshots** the Activity into `activity_assignments`. The snapshot is
    immutable once issued, so later content edits do not reach an assignment
@@ -94,9 +96,10 @@ After assigning, the sheet closes and a toast confirms. To verify properly:
 open `/teacher` → the student's record, or have her Classroom show the item
 under **Assigned work**.
 
-If she says she cannot see it: check her **Activities access flag** first.
-Flags resolve in `projects/lsatu/src/hooks/useUserPermissions.ts`. An assignment
-lands regardless of flags, but the surface that displays it may be gated.
+If she says she cannot see it: verify the `activity_assignments` row and its
+`classroom_items` row. Do not grant or check an Activities access flag: activities
+are assignment-only, and a 2026-10-02 trigger forces that flag off (memory
+`activities-only-when-assigned`, 2026-11-17; `decisions/log.md`).
 
 ## Defects to mention when assigning Read, Recall, Colour
 

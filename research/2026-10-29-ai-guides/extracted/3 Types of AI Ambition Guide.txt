@@ -1,0 +1,387 @@
+=== PAGE 1 ===
+F E L IX  R IE S E B E R G 'S
+3 Types of AIAMBITION
+A RoboNuggets guide to “How to be more ambitious: A tutorial for humans with models” by Felix
+Rieseberg, who has led engineering for Claude.ai, Cowork and Claude Code Desktop at Anthropic.
+TASK
+ALTITUDE
+DEPTH
+RANGE RANGE
+UP · P2
+Altitude
+Ask for the outcome, not the task.
+DOWN · P4
+Depth
+Do the task the way a top expert in the field
+would.
+SIDEWAYS · P6
+Range
+Bring in other fields, a whole crew of them.
+README
+W hat this is. The guide to the video on Felix's three types of ambition. Every prompt from the video is here word for word,
+plus Felix's own prompts from his post, his key lines quoted exactly, and the free be-ambitious skill (page 9).
+How to use it. Read the three types in order, two pages each. Anything in an orange box is copy-paste ready. A box marked
+Felix's prompt holds his exact words; Our prompt is a RoboNuggets one. Quickest start: send this PDF to Claude with the
+prompt on page 10.
+W hy only three? Felix names four types. The fourth, Speed, is the same work in less time. It's how most people already use AI,
+so he skips it, and so do we.
+FELIX RIESEBERG'S 3 TYPES OF AI AMBITION - THE GUIDE
+
+=== PAGE 2 ===
+1
+TYPE ONE OF THREE
+Altitude
+Ask for the outcome, not the task.
+TASK
+“Going up in abstraction and considering the outcom e rather than the individual task.”
+FELIX RIESEBERG · HIS DEFINITION
+“W e often flippantly call this ‘letting the m odel operate at a higher abstraction’.” In plain w ords: w hen you give Claude a task, it
+only carries out your best guess at how  to get w hat you w ant. So before you hand over the task, ask yourself the question Felix
+asks: “what do you want to happen next? W hat's the goal beyond the goal?”
+Felix's own jum p
+“At the beginning of last year, I still asked Claude to fix individual crashes for m e. Eventually I asked Claude to sim ply keep our
+apps crash-free.”
+FELIX RIESEBERG · ON HIS OWN APPS
+FELIX'S JUMP
+Keep the apps crash-free
+↑
+Fix this crash
+THE SAME JUMP ON A PITCH
+Win this client
+↑
+Fill in these 10 slides
+W hy it's worth it
+“Altitude is also where people find durable workflows that take the hum an out of the loop, m aking it less necessary for you to
+constantly update the m odel with task after task.”
+FELIX RIESEBERG
+That's the prize. Claude ow ns the outcom e, and you stop handing it task after task.
+WHAT MOST PEOPLE DO
+Hand Claude the task: fill in the slides, fix this crash, reply to
+this em ail.
+WHAT THE TOP 1% DO
+Give Claude the goal behind the task, and let it choose how.
+WHEN IT WORKS · FELIX
+“The altitude approach works best if you really are after som e
+ultim ate outcom e; it works less well for creative endeavors.”
+The limit today. “‘Claude, go m ake m oney’ doesn't seem  to work
+for m ost businesses by itself in 2026”. But “m odels seem  to be
+able to operate at higher levels of abstraction the m ore capable
+they becom e”.
+SET IT UP FIRST
+To let Claude keep his apps crash-free, Felix first gave it crash
+reports, a m ap from  each app version to its code change, and
+W indows, m acOS and Linux m achines to reproduce and check
+every fix.
+The tell. Going to have m eetings about it? It's probably worth
+going up a level.
+FELIX RIESEBERG'S 3 TYPES OF AI AMBITION - THE GUIDE 2
+
+=== PAGE 3 ===
+TYPE 1 · ALTITUDE, CONTINUED IN YOUR BUSINESS
+Exam ple: the client pitch deck
+Y ou're putting together a pitch deck for a client, and you already have a slide tem plate. M ost people ask Claude to fill in the
+slides, and to be fair, that w orks. But the real goal is to im press the client so m uch that they say yes.
+WHAT MOST PEOPLE ASK
+Fill in these 10 slides
+OUR PROMPT · ASK FOR THE GOAL
+The goal: win this client. What would impress 
+them most?
+Give Claude the goal and it m ight com e back w ith a com pletely different approach. If the pitch involves a venue, m aybe an
+explorable 3D w orld of the space you can w alk the client through. Or, instead of a P ow erP oint pack, HTM L slides that anim ate
+and clearly show  w hat you'll deliver. Y ou stop asking for slides, and start asking for the yes.
+Felix's exam ple: clim b the quarterly review
+A quarterly business review  is the m eeting w here a team  looks back at the last three m onths and decides w hat to change. Give
+Claude as m uch of your data as you can, then clim b one step at a tim e. All three prom pts are Felix's, w ord for w ord.
+1
+Understand the quarter.
+FELIX'S PROMPT · WORD FOR WORD
+Tell me what changed this quarter, why, and what we should do about it.
+2
+Get to decisions. A good meeting ends with them.
+FELIX'S PROMPT · WORD FOR WORD
+Work out which three decisions are most urgent in the face of everything you've learned, and start 
+working on potential directions with for/against arguments.
+3
+Ask what the review is for. By now, the deck is just one possible answer.
+FELIX'S PROMPT · WORD FOR WORD
+The review exists so leadership catches problems early and moves money and people to the right 
+places. Design a better way to do that than a quarterly deck, show from our own history that it 
+would have caught things sooner, and run it beside the current one for a quarter.
+TRY IT ON YOUR NEXT TASK · FILL IT IN
+The task I was about to hand Claude
+W hat it's actually for
+The goal I will give Claude instead
+FELIX RIESEBERG'S 3 TYPES OF AI AMBITION - THE GUIDE 3
+
+=== PAGE 4 ===
+2
+TYPE TWO OF THREE
+Depth
+Do it the way a top expert would.
+TASK
+“Being am bitious in depth m eans pushing the m odel to use the tools, techniques, m edia, and knowledge em ployed by the best
+professionals in the field - and to keep pushing until even those people m ight learn som ething new from  your work.”
+FELIX RIESEBERG · HIS DEFINITION
+Instead of w orking at the level of the task, you go one level dow n, to w hat's underneath it: the raw  data, the tools and the real
+problem .
+The trap
+“W hen prom pted to act like a professional, m odels often switch vocabulary without actually switching m ethods.”
+FELIX RIESEBERG
+Claude starts using the jargon w ithout changing how  it w orks. So how  do you get it to w ork like an expert, not just sound like one?
+Felix's exam ple is Acm e, an im agined com pany that loses custom ers every m onth (that's called churn) and has its quarterly
+review  com ing up. Three techniques do m ost of the w ork.
+1 Insist on the expert's tools
+To w ork on Acm e's churn properly, Claude needs the tools the best data scientists and statisticians use. If it reaches for
+a sim ple table in the chat, push back and ask if that's really w hat the best in the field w ould use. In Felix's w ords, “W hen
+Claude reaches for m arkdow n tables, insist on the use of databases and statistical m odels. Y ou don't necessarily have
+to know  w hat the experts use, Claude usually does.”
+OUR PROMPT · ASK IT BEFORE IT STARTS
+Before you start: is this how the best data scientist would do it? If not, use the tools they would 
+use, like a real database or a statistical model.
+2 P ick unreasonable goals, and call them  reasonable
+“Y ou need your website to load in 5s instead of 10s? Ask for 200m s. Does som ething seem  im possible to the m odel?
+Reiterate that it's very m uch solvable, it just needs to keep going.”
+FELIX RIESEBERG
+200m s is a fifth of a second. And w hen Claude says it can't be done, send it straight back.
+OUR PROMPT · WHEN CLAUDE SAYS IT IS IMPOSSIBLE
+It's very much solvable. Keep going.
+FELIX RIESEBERG'S 3 TYPES OF AI AMBITION - THE GUIDE 4
+
+=== PAGE 5 ===
+TYPE 2 · DEPTH, CONTINUED TECHNIQUE 3 AND THE ONE PROMPT
+3 Use an outside judge
+“Do not ask the m odel to judge itself. I assum e that this will eventually be solved with increasing m odel intelligence,
+but in October 2026, I im plore you to insist on outside validation. Ideally that's a tool the m odel can run to get
+feedback im m ediately.”
+FELIX RIESEBERG
+This m atters because today's m odels are agreeable. It often takes only a few  prom pts to talk them  into agreeing w ith
+you. So on your m ost im portant w ork, give Claude a check it can't argue w ith.
+The one prompt to SAVE
+You can get most of the way with one prompt. Felix uses it himself to get a deeper version of any task. It asks Claude four
+things before it starts, then rewrites your prompt to ask for exactly that.
+FELIX'S PROMPT · WORD FOR WORD · DEEPER, NOT BIGGER
+I want a deeper version of this task, not a bigger one. Before rewriting it: (1) say 
+what a top professional in this field would do here that I'm not asking for; (2) name 
+the rawest material they would start from instead of what has already been digested for 
+me; (3) name the specific methods and tools they would use; (4) say what, other than you 
+or me, would show the result is right. Then rewrite my prompt to ask for exactly that.
+By Felix Rieseberg, from the Depth section of his post. Screenshot it, or use the be-ambitious skill (page 9), which has it built in.
+1
+W hat a top professional would do
+that you're not asking for.
+2
+The rawest m aterial they'd start
+from .
+3
+The m ethods and tools they'd use.
+4
+W hat, other than you or Claude,
+shows the result is right.
+WHAT MOST PEOPLE DO
+Tell Claude to act like an expert, and get the expert's words.
+WHAT THE TOP 1% DO
+Ask what the expert would actually do, from  the raw data,
+with their tools, and how you'd prove it's right.
+TWO MORE DEPTH TECHNIQUES IN FELIX'S POST
+Challenge what you know. Give Claude the raw data and ask it to check your beliefs: “We believe churn is an onboarding
+problem. Try to reproduce that from the raw data.”
+P roduce new knowledge. “Build a simulation of our customers that reproduces the last year from our logs. Then find the
+earliest signal of churn we don't know about yet, and show it predicts on data it has not seen.”
+A website. A speed test Claude runs after every change.
+Creative work. A separate helper (a subagent) whose only job is to judge the result.
+FELIX RIESEBERG'S 3 TYPES OF AI AMBITION - THE GUIDE 5
+
+=== PAGE 6 ===
+3
+TYPE THREE OF THREE
+Range
+Bring in other fields.
+TASK
+“Drawing on m ultiple fields rather than just the one the task m ight need at the surface, using knowledge, tools, and techniques
+you norm ally wouldn't.”
+FELIX RIESEBERG · HIS DEFINITION
+If altitude goes up and depth goes dow n, range goes sidew ays. Y ou look at the w ork from  the point of view  of other fields, m ore
+of them  than it ever m ade sense to pay for before. It isn't a new  idea: “every single heist m ovie spends the first 30 m inutes
+assem bling a diverse cast of characters and talents.” W hat's new  is how  cheap the crew  has becom e.
+“As AI products m ake it easier and easier to run m ulti-agent system s (with m ultiple threads, orchestrators, or sim ply
+subagents), I've seen really interesting results by im ploring Claude to bring in additional fields.”
+FELIX RIESEBERG
+Finding the unknown unknowns
+Different points of view  help you find the unknow n unknow ns: options you didn't know  you had. Felix adm its it takes creativity.
+“Until I saw m y colleague Alex Albert use Blender to render interior designs, I never considered using Claude for 3D
+environm ents for m y hom epage - even though I've previously m ade video gam es!”
+FELIX RIESEBERG
+He calls range the place w here “this is easily w here I see the m ost m agic happen.” Tw o tricks get you there.
+1 Swap the nouns for verbs
+An old trick from  The Art of Innovation by Tom  Kelley and Jonathan Littm an. A quarterly review  isn't a deck (the noun).
+In Felix's w ords, the verbs are “getting busy people to believe a story about cause and effect, and to decide under
+uncertainty, in 30 m inutes”.
+NOUN
+a deck →
+VERBS, AND A FIELD FOR EACH
+believe a story
+Journalist
+decide
+Decision scientist
+30 m inutes
+Editor
+W ith the verbs w ritten dow n, you and Claude can both see the real goal and w hich fields could help.
+TRY IT ON YOUR OWN WORK · FILL IT IN
+The noun I would norm ally ask for
+The verbs: what it actually has to do
+The fields that do those verbs best
+FELIX RIESEBERG'S 3 TYPES OF AI AMBITION - THE GUIDE 6
+
+=== PAGE 7 ===
+TYPE 3 · RANGE, CONTINUED TRICK 2 AND AN EXAMPLE
+2 Assem ble the crew
+Insist that Claude brings in several roles and points of view, not just its ow n. For the quarterly review, that could be:
+Analyst
+Finds what the num bers really
+say.
+Sales m anager
+Says what it m eans for
+custom ers and deals.
+Graphic designer
+M akes it land, if it's presented.
+Red team
+Their only job is to find holes in
+the work, like a devil's
+advocate.
+“For production quality, I'd bring in an analyst, a journalist, and an editor. If it has to be presented, probably a m otion
+and audio designer, too. It m ight be useful to em ploy an adversarial ‘red team ’, too, so let's bring in a short seller and
+a forensic accountant.”
+FELIX RIESEBERG · HIS OWN CREW
+Helpers use a lot of tokens, so save a full crew  for your m ost im portant w ork. This prom pt gets you started:
+OUR PROMPT · THE CREW STARTER
+Before you start, pick the five experts from different fields who would make this outstanding, 
+including two whose job is to find what's wrong with it. For each one, tell me what they would 
+actually do and which methods they would use. Then do that work. Don't role-play them, use their 
+methods.
+Skip the role play. “It is easy to accidentally engage in role play, w hich w ill m ake your transcript w eirder w ithout
+im proving the actual outcom e. Use this m ethod to find fields and techniques. Don't ask the m odel to w rite like a short
+seller, ask it to do w hat a short seller does to research their position.”
+ROLE PLAY THE REAL WORK
+Write like a short seller → Do what a short seller does to research a company
+Exam ple: a house to sell
+Y ou're a real estate agent, and selling this house m atters for your revenue target this year.
+WHAT MOST PEOPLE DO
+Ask Claude to write the listing. That's the noun.
+WHAT THE TOP 1% DO
+Start from  the verb: helping a fam ily picture their life in this
+house before they ever visit.
+Say it like that, and the crew  Claude brings in gets clearer:
+Interior designer
+Stages each room .
+3D artist
+Builds a walk-through, a bit like Felix's Blender
+exam ple.
+A local
+Knows the best restaurants nearby.
+The listing you get back isn't a generic real estate page. It's built for this house.
+FELIX RIESEBERG'S 3 TYPES OF AI AMBITION - THE GUIDE 7
+
+=== PAGE 8 ===
+W hy we hold ourselves BACK
+Felix ends his post on this, and it explains everything before it. “We humans have always been held back by what we
+believe possible”.
+Self-efficacy
+P sychology has a nam e for it: self-efficacy, or how  m uch you believe you can pull som ething off. Raise it, and w ith AI behind you,
+your chances go up in w hatever gam e you're playing.
+“people with high self-efficacy believe in their own abilities m ore, and in turn actually accom plish m ore.”
+FELIX RIESEBERG
+And it can be hacked. Edw in Locke and Gary Latham  w ent through 35 years of goal-setting research. P eople given specific, hard
+goals did better than people told to just do their best. Three hacks are w ell docum ented:
+1 Believe it's possible
+In 1939, George Dantzig turned up late to a statistics class at Berkeley and copied tw o problem s off the board, thinking they w ere
+hom ew ork. They w ere tw o unsolved problem s in statistics, and he handed in solutions.
+WITH CLAUDETell it the unreasonable goal is very reasonable (page 4).
+2 W atch som ebody else do it
+For decades, nobody could run a m ile in under four m inutes. Then Roger Bannister did it in M ay 1954, and only 46 days later,
+som eone else did it too.
+WITH CLAUDEFollow people who share what they build with AI, so you see what's possible.
+3 Give yourself perm ission to fail
+Felix points to The Inner Gam e of Tennis: “The book's core thesis is that you're not playing your best gam e of tennis if you're
+trying really, really hard.” Linux, w hich now  runs m uch of the internet, w as first announced as “just a hobby, w on't be big and
+professional like gnu”.
+WITH CLAUDEShip the am bitious version, put it out there, and im prove it each tim e.
+Am bition still needs a WHY
+“Self-efficacy isn't a new problem , but it is a m ore powerful one now.”
+FELIX RIESEBERG
+“In a world where our abilities m ake leaps every couple of weeks, we need techniques that allow us to do things we didn't really
+consider or believe possible.”
+FELIX RIESEBERG · CLOSING HIS POST
+But it needs balance. P ace the am bition, and find the w hy behind it. Otherw ise you just go faster and faster, m ore and m ore
+am bitious, w ithout a clear reason. Use these techniques, rem em ber w hy you're doing it, and pause w hen you need to.
+FELIX RIESEBERG'S 3 TYPES OF AI AMBITION - THE GUIDE 8
+
+=== PAGE 9 ===
+The be-ambitious SKILL
+Everything in this guide as a free skill for your agent. A skill is a saved set of instructions Claude pulls up when you need it,
+so ambition is one short command away.
+github.com/robonuggets/be-ambitious FREE · MIT LICENCE
+CLAUDE CODE AND CLAUDE.AI
+SEND THIS SKILL TO YOUR AGENT · COPY ALL OF IT
+Install the be-ambitious skill from https://github.com/robonuggets/be-ambitious into ~/.claude/skills/be-
+ambitious, then read its SKILL.md and tell me in one line what it does and when you'll use it.
+OR INSTALL IT YOURSELF · CLAUDE CODE, ALL PROJECTS
+git clone https://github.com/robonuggets/be-ambitious ~/.claude/skills/be-ambitious
+For one project only, run git clone https://github.com/robonuggets/be-ambitious .claude/skills/be-ambitious from the project folder. On
+Windows, ~/.claude is the .claude folder inside your user folder. In claude.ai, zip SKILL.md and LICENSE in a folder named be-ambitious, then upload
+it under Skills in your settings.
+W hat it does when you call it
+TRY IT · TYPE THE COMMAND AND YOUR TASK
+/be-ambitious our marketing website takes 8 seconds to load, speed it up
+W hat com es back(from a real test run, trimmed)
+W hat it needs
+“All the ways in which I describe am bition require the m odel to have a com puter with the ability to install software and access
+to all kinds of relevant data (either using M CP  connectors or other m eans).”
+FELIX RIESEBERG
+Tools like Claude Code and Cow ork give Claude that com puter. Connectors are the plugs that let it read your other apps, like
+your store, your inbox or your shared drive. The further you push, the m ore of your plan it uses, so start w ith one job you do every
+w eek, in one direction.
+Finds the goal beyond the goal.1
+P icks the types that fit your task: Altitude, Depth or Range, usually one or two, not all three.2
+W rites the plan: a three-rung ladder for Altitude, Felix's four expert questions for Depth, the crew for Range.3
+Lists the data, tools and access the plan needs, and what's m issing.4
+Rewrites your prom pt at that level, with an outside check and what counts as a pass. Then it does the work, or stops there if you only
+asked for a better prom pt.
+5
+Goal beyond the goal: visitors never leave because the site is slow.
+Types: Altitude and Depth. Range skipped, since a speed fix has m ostly one right answer.
+Depth: start from  a real trace, not guesses, with a hard target of about 200 m s to first useful content.
+Outside judge: repeated m easured runs, plus a speed budget checked on every release that fails when it slips.
+FELIX RIESEBERG'S 3 TYPES OF AI AMBITION - THE GUIDE 9
+
+=== PAGE 10 ===
+Every prompt on one PAGE
+All 13, starting with the quickest way in: send this PDF to Claude with the prompt below. Felix =
+his words, exactly as he wrote them. Ours = a RoboNuggets prompt.
+OUR PROMPT · SEND WITH THIS PDF
+Read this guide on the three types of AI ambition. Then pick the three prompts in it that fit my business 
+best, and rewrite each one for a job I do every week.
+PROMPT W HOSE PAGE
+ALTITUDE
+The goal: win this client. W hat would im press them  m ost? Ours 3
+Clim b 1: what changed this quarter, why, and what to do Felix 3
+Clim b 2: the three m ost urgent decisions, for and against Felix 3
+Clim b 3: design a better way than a quarterly deck Felix 3
+DEPTH
+Before you start: is this how the best data scientist would do it? Ours 4
+It's very m uch solvable. Keep going. Ours 4
+Deeper, not bigger: the four questions (the one to save) Felix 5
+Bonus: churn is an onboarding problem , and the churn sim ulation Felix 5
+RANGE
+The crew starter: five experts, two to find what's wrong Ours 7
+Do what a short seller does, instead of writing like one Ours 7
+THE SKILL
+Send the be-am bitious skill to your agent Ours 9
+/be-am bitious and your task Ours 9
+The prompt is the easy part. What pays is the setup behind it: Claude on your real data, an outside check on every result,
+and the habit of asking for the outcome. We build that every week in the RoboNuggets community, along with AI systems
+you can sell.
+skool.com/robonuggets
+Felix Rieseberg, “How to be m ore am bitious: A tutorial for hum ans with m odels”, 13 October 2026
+https://felixrieseberg.com /how-to-be-m ore-am bitious-a-tutorial-for-hum ans-with-m odels/
+The be-am bitious skill · https://github.com /robonuggets/be-am bitious · Edwin Locke and Gary Latham , goal-setting research, Am erican P sychologist, 2002
+FELIX RIESEBERG'S 3 TYPES OF AI AMBITION - THE GUIDE 10

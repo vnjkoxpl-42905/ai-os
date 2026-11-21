@@ -1,0 +1,1967 @@
+[
+  {
+    "start": 0.0,
+    "duration": 3.08,
+    "text": "So, this isn't the Claude that you know."
+  },
+  {
+    "start": 1.68,
+    "duration": 3.32,
+    "text": "I just turned one of the biggest minds"
+  },
+  {
+    "start": 3.08,
+    "duration": 3.64,
+    "text": "in AI into a Claude agent. Andrej"
+  },
+  {
+    "start": 5.0,
+    "duration": 4.0,
+    "text": "Karpathy is one of Anthropic's lead"
+  },
+  {
+    "start": 6.72,
+    "duration": 3.92,
+    "text": "engineers, a co-founder of OpenAI, and"
+  },
+  {
+    "start": 9.0,
+    "duration": 3.8,
+    "text": "the person that everyone says explains"
+  },
+  {
+    "start": 10.64,
+    "duration": 3.24,
+    "text": "AI better than anyone alive. And today,"
+  },
+  {
+    "start": 12.8,
+    "duration": 2.96,
+    "text": "I'm going to show you the exact four"
+  },
+  {
+    "start": 13.88,
+    "duration": 3.36,
+    "text": "steps to turn his thoughts into your own"
+  },
+  {
+    "start": 15.76,
+    "duration": 3.24,
+    "text": "Claude agent. So, let's get into it."
+  },
+  {
+    "start": 17.24,
+    "duration": 3.36,
+    "text": "Okay, so real quick, who is this guy? He"
+  },
+  {
+    "start": 19.0,
+    "duration": 3.8,
+    "text": "was a founding member of OpenAI back in"
+  },
+  {
+    "start": 20.6,
+    "duration": 4.2,
+    "text": "2015. Then he ran AI at Tesla for about"
+  },
+  {
+    "start": 22.8,
+    "duration": 4.4,
+    "text": "five years, leading the computer vision"
+  },
+  {
+    "start": 24.8,
+    "duration": 3.92,
+    "text": "team behind autopilot. Then he left to"
+  },
+  {
+    "start": 27.2,
+    "duration": 3.88,
+    "text": "do education full-time and started"
+  },
+  {
+    "start": 28.72,
+    "duration": 4.039,
+    "text": "Eureka Labs. And as of May of this year,"
+  },
+  {
+    "start": 31.08,
+    "duration": 3.24,
+    "text": "he's at Anthropic on the pre-training"
+  },
+  {
+    "start": 32.759,
+    "duration": 3.401,
+    "text": "team, which is the team that trains"
+  },
+  {
+    "start": 34.32,
+    "duration": 3.36,
+    "text": "Claude models before they're released to"
+  },
+  {
+    "start": 36.16,
+    "duration": 3.28,
+    "text": "the public. And on the side, he has put"
+  },
+  {
+    "start": 37.68,
+    "duration": 3.84,
+    "text": "out so many different YouTube videos and"
+  },
+  {
+    "start": 39.44,
+    "duration": 3.48,
+    "text": "courses on building with AI. So, what"
+  },
+  {
+    "start": 41.52,
+    "duration": 3.2,
+    "text": "we're building today is not a voice"
+  },
+  {
+    "start": 42.92,
+    "duration": 3.68,
+    "text": "clone of Andrej Karpathy. It's not an"
+  },
+  {
+    "start": 44.72,
+    "duration": 4.0,
+    "text": "impression of him. It's an agent that"
+  },
+  {
+    "start": 46.6,
+    "duration": 4.2,
+    "text": "condenses the way the best AI teacher,"
+  },
+  {
+    "start": 48.72,
+    "duration": 4.16,
+    "text": "Andrej Karpathy, explains things, and it"
+  },
+  {
+    "start": 50.8,
+    "duration": 3.68,
+    "text": "teaches you the same way. So, it follows"
+  },
+  {
+    "start": 52.88,
+    "duration": 3.52,
+    "text": "seven rules that all come from his own"
+  },
+  {
+    "start": 54.48,
+    "duration": 3.64,
+    "text": "writing and his blogs and his lectures,"
+  },
+  {
+    "start": 56.4,
+    "duration": 3.32,
+    "text": "stuff like build the smallest version"
+  },
+  {
+    "start": 58.12,
+    "duration": 3.32,
+    "text": "first, predict what's going to happen"
+  },
+  {
+    "start": 59.72,
+    "duration": 3.48,
+    "text": "before you run it, show the broken"
+  },
+  {
+    "start": 61.44,
+    "duration": 3.48,
+    "text": "version, and never hand over code that"
+  },
+  {
+    "start": 63.2,
+    "duration": 3.16,
+    "text": "you haven't run yourself. So, this is"
+  },
+  {
+    "start": 64.92,
+    "duration": 2.96,
+    "text": "more than just a clone of a person. It's"
+  },
+  {
+    "start": 66.36,
+    "duration": 3.76,
+    "text": "more about cloning the way that his"
+  },
+  {
+    "start": 67.88,
+    "duration": 3.52,
+    "text": "brain thinks. So, now I bet you guys are"
+  },
+  {
+    "start": 70.12,
+    "duration": 2.8,
+    "text": "wondering, why would you actually build"
+  },
+  {
+    "start": 71.4,
+    "duration": 3.04,
+    "text": "this? Let's think about what happens"
+  },
+  {
+    "start": 72.92,
+    "duration": 2.88,
+    "text": "when you ask Claude to explain something"
+  },
+  {
+    "start": 74.44,
+    "duration": 2.84,
+    "text": "that you don't understand. It might"
+  },
+  {
+    "start": 75.8,
+    "duration": 3.4,
+    "text": "overexplain. It might make stuff up"
+  },
+  {
+    "start": 77.28,
+    "duration": 3.44,
+    "text": "along the way. And you actually just end"
+  },
+  {
+    "start": 79.2,
+    "duration": 3.16,
+    "text": "up feeling like you learned nothing and"
+  },
+  {
+    "start": 80.72,
+    "duration": 3.32,
+    "text": "feeling more overwhelmed. And if you're"
+  },
+  {
+    "start": 82.36,
+    "duration": 2.8,
+    "text": "building something for a client, that's"
+  },
+  {
+    "start": 84.04,
+    "duration": 3.4,
+    "text": "how you end up shipping code that you"
+  },
+  {
+    "start": 85.16,
+    "duration": 3.8,
+    "text": "can't fix or explain when it breaks. And"
+  },
+  {
+    "start": 87.44,
+    "duration": 3.4,
+    "text": "Andrej Karpathy has run into this exact"
+  },
+  {
+    "start": 88.96,
+    "duration": 3.72,
+    "text": "same thing. Back in August of last year,"
+  },
+  {
+    "start": 90.84,
+    "duration": 3.52,
+    "text": "he actually posted publicly that he"
+  },
+  {
+    "start": 92.68,
+    "duration": 3.24,
+    "text": "tried to get Claude code to teach him"
+  },
+  {
+    "start": 94.36,
+    "duration": 3.36,
+    "text": "alongside the code that it was writing,"
+  },
+  {
+    "start": 95.92,
+    "duration": 3.64,
+    "text": "and in his words, it didn't work at all"
+  },
+  {
+    "start": 97.72,
+    "duration": 3.72,
+    "text": "because it really just wants to write"
+  },
+  {
+    "start": 99.56,
+    "duration": 3.28,
+    "text": "code a lot more than it wants to explain"
+  },
+  {
+    "start": 101.44,
+    "duration": 3.28,
+    "text": "anything along the way. So, building"
+  },
+  {
+    "start": 102.84,
+    "duration": 3.48,
+    "text": "this agent here is going to fix AI's"
+  },
+  {
+    "start": 104.72,
+    "duration": 3.04,
+    "text": "worst habit, which is sounding right"
+  },
+  {
+    "start": 106.32,
+    "duration": 3.56,
+    "text": "instead of being right. And the bigger"
+  },
+  {
+    "start": 107.76,
+    "duration": 4.24,
+    "text": "reason is honestly this, the quality of"
+  },
+  {
+    "start": 109.88,
+    "duration": 3.64,
+    "text": "what you build with AI comes down to the"
+  },
+  {
+    "start": 112.0,
+    "duration": 2.72,
+    "text": "expertise that's in the system, and"
+  },
+  {
+    "start": 113.52,
+    "duration": 2.68,
+    "text": "you're not going to be an expert on"
+  },
+  {
+    "start": 114.72,
+    "duration": 3.2,
+    "text": "everything. You know, I'm not a machine"
+  },
+  {
+    "start": 116.2,
+    "duration": 3.24,
+    "text": "learning researcher. I'm not a machine"
+  },
+  {
+    "start": 117.92,
+    "duration": 2.92,
+    "text": "learning expert, but I can certainly go"
+  },
+  {
+    "start": 119.44,
+    "duration": 3.28,
+    "text": "have agents pull in everything that a"
+  },
+  {
+    "start": 120.84,
+    "duration": 3.36,
+    "text": "real expert has said, compile it into"
+  },
+  {
+    "start": 122.72,
+    "duration": 2.92,
+    "text": "something that Claude can actually use,"
+  },
+  {
+    "start": 124.2,
+    "duration": 2.6,
+    "text": "and then I can just talk to it until I"
+  },
+  {
+    "start": 125.64,
+    "duration": 2.52,
+    "text": "understand it. And then, once I"
+  },
+  {
+    "start": 126.8,
+    "duration": 2.44,
+    "text": "understand a little bit better, I have"
+  },
+  {
+    "start": 128.16,
+    "duration": 2.68,
+    "text": "all that knowledge already in my"
+  },
+  {
+    "start": 129.24,
+    "duration": 3.4,
+    "text": "project, and I can wire that knowledge"
+  },
+  {
+    "start": 130.84,
+    "duration": 3.36,
+    "text": "into my own skills and my own agents and"
+  },
+  {
+    "start": 132.64,
+    "duration": 3.0,
+    "text": "my own workflows, which is exactly what"
+  },
+  {
+    "start": 134.2,
+    "duration": 2.64,
+    "text": "we're doing today with Karpathy. And"
+  },
+  {
+    "start": 135.64,
+    "duration": 2.56,
+    "text": "what's really cool is, once you've done"
+  },
+  {
+    "start": 136.84,
+    "duration": 2.84,
+    "text": "this with Karpathy, you can do this with"
+  },
+  {
+    "start": 138.2,
+    "duration": 3.12,
+    "text": "pretty much anyone. You can do this with"
+  },
+  {
+    "start": 139.68,
+    "duration": 3.56,
+    "text": "your favorite, you know, sales teacher,"
+  },
+  {
+    "start": 141.32,
+    "duration": 3.12,
+    "text": "or an author you really like, or a coach"
+  },
+  {
+    "start": 143.24,
+    "duration": 3.04,
+    "text": "that you're already paying for. And it's"
+  },
+  {
+    "start": 144.44,
+    "duration": 2.88,
+    "text": "basically just the same four steps, in"
+  },
+  {
+    "start": 146.28,
+    "duration": 2.56,
+    "text": "the same way that [music] we build this"
+  },
+  {
+    "start": 147.32,
+    "duration": 2.68,
+    "text": "sort of like second brain. Now, real"
+  },
+  {
+    "start": 148.84,
+    "duration": 3.04,
+    "text": "quick, before we get into the build,"
+  },
+  {
+    "start": 150.0,
+    "duration": 3.36,
+    "text": "I've got this completely free AI OS kit"
+  },
+  {
+    "start": 151.88,
+    "duration": 3.2,
+    "text": "for you guys to help you build and scale"
+  },
+  {
+    "start": 153.36,
+    "duration": 3.44,
+    "text": "your operating systems. If you combine"
+  },
+  {
+    "start": 155.08,
+    "duration": 3.04,
+    "text": "this sort of setup with things like"
+  },
+  {
+    "start": 156.8,
+    "duration": 2.48,
+    "text": "Karpathy's brain, it's just going to be"
+  },
+  {
+    "start": 158.12,
+    "duration": 2.72,
+    "text": "a huge unlock, and that's how I'm able"
+  },
+  {
+    "start": 159.28,
+    "duration": 3.0,
+    "text": "to move so fast. So, link for that will"
+  },
+  {
+    "start": 160.84,
+    "duration": 3.119,
+    "text": "be down in the description, but let's"
+  },
+  {
+    "start": 162.28,
+    "duration": 3.0,
+    "text": "get into the build. Okay, so I'm going"
+  },
+  {
+    "start": 163.959,
+    "duration": 3.521,
+    "text": "to do this inside of Claude Code, and"
+  },
+  {
+    "start": 165.28,
+    "duration": 3.52,
+    "text": "there are going to be six prompts to run"
+  },
+  {
+    "start": 167.48,
+    "duration": 2.6,
+    "text": "here, and I'll show all of them on"
+  },
+  {
+    "start": 168.8,
+    "duration": 2.84,
+    "text": "screen, so you can just kind of take a"
+  },
+  {
+    "start": 170.08,
+    "duration": 3.2,
+    "text": "screenshot and paste them into your own"
+  },
+  {
+    "start": 171.64,
+    "duration": 3.4,
+    "text": "Claude Code. So, first, Claude needs"
+  },
+  {
+    "start": 173.28,
+    "duration": 3.32,
+    "text": "everything that's inside of Andre"
+  },
+  {
+    "start": 175.04,
+    "duration": 3.2,
+    "text": "Karpathy's head. Things like his blogs,"
+  },
+  {
+    "start": 176.6,
+    "duration": 3.76,
+    "text": "his lecture transcripts, his GitHub"
+  },
+  {
+    "start": 178.24,
+    "duration": 3.4,
+    "text": "repos, his posts on X, all of that is"
+  },
+  {
+    "start": 180.36,
+    "duration": 3.28,
+    "text": "going to be just basically free and"
+  },
+  {
+    "start": 181.64,
+    "duration": 4.12,
+    "text": "public. But, Claude Code might not be"
+  },
+  {
+    "start": 183.64,
+    "duration": 3.4,
+    "text": "able to just grab all of that for free,"
+  },
+  {
+    "start": 185.76,
+    "duration": 3.56,
+    "text": "because it might be behind some sort of"
+  },
+  {
+    "start": 187.04,
+    "duration": 3.76,
+    "text": "like paywall or software wall. So, what"
+  },
+  {
+    "start": 189.32,
+    "duration": 4.0,
+    "text": "I did for YouTube is I had it pull"
+  },
+  {
+    "start": 190.8,
+    "duration": 5.439,
+    "text": "captions with two free Python packages,"
+  },
+  {
+    "start": 193.32,
+    "duration": 4.8,
+    "text": "YouTube Transcript API and yt-dlp. And"
+  },
+  {
+    "start": 196.239,
+    "duration": 4.561,
+    "text": "then, for X, I'm using a API called"
+  },
+  {
+    "start": 198.12,
+    "duration": 3.88,
+    "text": "twitterapi.io, which is a paid API, but"
+  },
+  {
+    "start": 200.8,
+    "duration": 3.24,
+    "text": "I've pulled basically every post that"
+  },
+  {
+    "start": 202.0,
+    "duration": 3.6,
+    "text": "he's made since 2023, and it was about a"
+  },
+  {
+    "start": 204.04,
+    "duration": 3.479,
+    "text": "dollar. It's not a very expensive API at"
+  },
+  {
+    "start": 205.6,
+    "duration": 3.48,
+    "text": "all. So, here is the prompt for the"
+  },
+  {
+    "start": 207.519,
+    "duration": 3.041,
+    "text": "crawl. It basically says where to get"
+  },
+  {
+    "start": 209.08,
+    "duration": 3.6,
+    "text": "everything, which tool to use for each"
+  },
+  {
+    "start": 210.56,
+    "duration": 4.2,
+    "text": "source, and I told it to run one agent"
+  },
+  {
+    "start": 212.68,
+    "duration": 3.48,
+    "text": "per source, so they all go at once and"
+  },
+  {
+    "start": 214.76,
+    "duration": 3.32,
+    "text": "parallel, so it doesn't take forever. I"
+  },
+  {
+    "start": 216.16,
+    "duration": 3.079,
+    "text": "told it to write down what it got, so"
+  },
+  {
+    "start": 218.08,
+    "duration": 3.4,
+    "text": "that you can actually check it. And this"
+  },
+  {
+    "start": 219.239,
+    "duration": 3.441,
+    "text": "took me about 45 minutes to an hour for"
+  },
+  {
+    "start": 221.48,
+    "duration": 2.64,
+    "text": "all of these agents to run and grab"
+  },
+  {
+    "start": 222.68,
+    "duration": 3.8,
+    "text": "everything. And what we end up with is"
+  },
+  {
+    "start": 224.12,
+    "duration": 5.36,
+    "text": "one raw folder with one subfolder per"
+  },
+  {
+    "start": 226.48,
+    "duration": 4.52,
+    "text": "source, and over 700,000 words, straight"
+  },
+  {
+    "start": 229.48,
+    "duration": 3.16,
+    "text": "from Andre Karpathy himself. Now, you"
+  },
+  {
+    "start": 231.0,
+    "duration": 3.68,
+    "text": "could just stop here and point Claude at"
+  },
+  {
+    "start": 232.64,
+    "duration": 3.68,
+    "text": "that folder, but all of these, you know,"
+  },
+  {
+    "start": 234.68,
+    "duration": 3.76,
+    "text": "messy words, it doesn't really fit into"
+  },
+  {
+    "start": 236.32,
+    "duration": 4.04,
+    "text": "Claude's head in the right way where it"
+  },
+  {
+    "start": 238.44,
+    "duration": 3.12,
+    "text": "actually can filter through it in a good"
+  },
+  {
+    "start": 240.36,
+    "duration": 2.6,
+    "text": "fashion, right? Like it's going to be"
+  },
+  {
+    "start": 241.56,
+    "duration": 2.84,
+    "text": "too messy. It's like finding a needle in"
+  },
+  {
+    "start": 242.96,
+    "duration": 3.0,
+    "text": "a haystack. So, what we're going to do"
+  },
+  {
+    "start": 244.4,
+    "duration": 3.6,
+    "text": "is what Karpathy told everyone to do"
+  },
+  {
+    "start": 245.96,
+    "duration": 4.6,
+    "text": "back in April. He posted about how he"
+  },
+  {
+    "start": 248.0,
+    "duration": 4.68,
+    "text": "has an LLM compile his raw sources into"
+  },
+  {
+    "start": 250.56,
+    "duration": 3.48,
+    "text": "a wiki. The raw files don't get touched,"
+  },
+  {
+    "start": 252.68,
+    "duration": 3.0,
+    "text": "but the LLM basically reads through all"
+  },
+  {
+    "start": 254.04,
+    "duration": 4.24,
+    "text": "of them and then links them together"
+  },
+  {
+    "start": 255.68,
+    "duration": 4.36,
+    "text": "with pages, keeps an index, keeps a log,"
+  },
+  {
+    "start": 258.28,
+    "duration": 2.679,
+    "text": "and now you're able to actually query"
+  },
+  {
+    "start": 260.04,
+    "duration": 1.8,
+    "text": "against it in a way that makes more"
+  },
+  {
+    "start": 260.959,
+    "duration": 2.441,
+    "text": "sense because there's like"
+  },
+  {
+    "start": 261.84,
+    "duration": 3.4,
+    "text": "relationships. And you put that whole"
+  },
+  {
+    "start": 263.4,
+    "duration": 3.519,
+    "text": "idea in a gist, and that's what I'm"
+  },
+  {
+    "start": 265.24,
+    "duration": 2.96,
+    "text": "going to paste into the coding agent."
+  },
+  {
+    "start": 266.919,
+    "duration": 2.401,
+    "text": "The link to the gist is in the"
+  },
+  {
+    "start": 268.2,
+    "duration": 2.2,
+    "text": "description of this video. So, what"
+  },
+  {
+    "start": 269.32,
+    "duration": 2.96,
+    "text": "we're doing is kind of funny. We're"
+  },
+  {
+    "start": 270.4,
+    "duration": 4.08,
+    "text": "storing Karpathy's brain inside of"
+  },
+  {
+    "start": 272.28,
+    "duration": 3.08,
+    "text": "Karpathy's own LLM wiki memory system."
+  },
+  {
+    "start": 274.48,
+    "duration": 2.16,
+    "text": "And if you guys have been following me"
+  },
+  {
+    "start": 275.36,
+    "duration": 2.84,
+    "text": "for a while, you know that I've made"
+  },
+  {
+    "start": 276.64,
+    "duration": 3.0,
+    "text": "quite a few videos on this topic, and"
+  },
+  {
+    "start": 278.2,
+    "duration": 3.68,
+    "text": "I've got a bunch of different LLM wikis"
+  },
+  {
+    "start": 279.64,
+    "duration": 3.68,
+    "text": "set up in my own AI OS. All right, so"
+  },
+  {
+    "start": 281.88,
+    "duration": 2.64,
+    "text": "here's prompt two to set up the wiki."
+  },
+  {
+    "start": 283.32,
+    "duration": 2.36,
+    "text": "You're going to paste in the gist, and"
+  },
+  {
+    "start": 284.52,
+    "duration": 2.68,
+    "text": "then you're going to tell Claude to use"
+  },
+  {
+    "start": 285.68,
+    "duration": 3.239,
+    "text": "it on the raw folder, which is just"
+  },
+  {
+    "start": 287.2,
+    "duration": 3.56,
+    "text": "everything that Claude previously just"
+  },
+  {
+    "start": 288.919,
+    "duration": 3.841,
+    "text": "extracted for you. And what comes out is"
+  },
+  {
+    "start": 290.76,
+    "duration": 3.4,
+    "text": "a wiki inside of Obsidian. Now, Obsidian"
+  },
+  {
+    "start": 292.76,
+    "duration": 2.4,
+    "text": "is just kind of the visual layer on top"
+  },
+  {
+    "start": 294.16,
+    "duration": 2.68,
+    "text": "of it, which is what I'm showing you"
+  },
+  {
+    "start": 295.16,
+    "duration": 3.04,
+    "text": "guys here. And you don't need Obsidian"
+  },
+  {
+    "start": 296.84,
+    "duration": 3.04,
+    "text": "to get this to work, but if you want to"
+  },
+  {
+    "start": 298.2,
+    "duration": 3.08,
+    "text": "look at it visually, Obsidian works. You"
+  },
+  {
+    "start": 299.88,
+    "duration": 3.32,
+    "text": "can see down here we have the sources,"
+  },
+  {
+    "start": 301.28,
+    "duration": 3.72,
+    "text": "we have one page per thing he wrote or"
+  },
+  {
+    "start": 303.2,
+    "duration": 3.28,
+    "text": "said, we have topics on what he knows,"
+  },
+  {
+    "start": 305.0,
+    "duration": 2.68,
+    "text": "we have principles, we have the rules,"
+  },
+  {
+    "start": 306.48,
+    "duration": 3.2,
+    "text": "we have methods, we have how he"
+  },
+  {
+    "start": 307.68,
+    "duration": 3.44,
+    "text": "explains, we have how he debugs, we have"
+  },
+  {
+    "start": 309.68,
+    "duration": 3.12,
+    "text": "basically, just like I said, the way his"
+  },
+  {
+    "start": 311.12,
+    "duration": 3.76,
+    "text": "brain works. And whenever you see one of"
+  },
+  {
+    "start": 312.8,
+    "duration": 4.28,
+    "text": "these purple links, that is the wiki"
+  },
+  {
+    "start": 314.88,
+    "duration": 4.4,
+    "text": "connecting one page to another or one"
+  },
+  {
+    "start": 317.08,
+    "duration": 3.68,
+    "text": "method to another. Every rule links back"
+  },
+  {
+    "start": 319.28,
+    "duration": 3.36,
+    "text": "to the source that it came from or"
+  },
+  {
+    "start": 320.76,
+    "duration": 3.64,
+    "text": "sources that it came from. Every source"
+  },
+  {
+    "start": 322.64,
+    "duration": 3.279,
+    "text": "links to the rules that it supports. So,"
+  },
+  {
+    "start": 324.4,
+    "duration": 3.28,
+    "text": "instead of just having a dump of notes"
+  },
+  {
+    "start": 325.919,
+    "duration": 3.641,
+    "text": "like we had earlier, we now have like"
+  },
+  {
+    "start": 327.68,
+    "duration": 3.76,
+    "text": "this interconnected web or sort of like"
+  },
+  {
+    "start": 329.56,
+    "duration": 3.44,
+    "text": "relationship map. And every time that"
+  },
+  {
+    "start": 331.44,
+    "duration": 3.479,
+    "text": "something new goes in, you ingest a new"
+  },
+  {
+    "start": 333.0,
+    "duration": 3.88,
+    "text": "blog or a new idea, the LLM will once"
+  },
+  {
+    "start": 334.919,
+    "duration": 3.681,
+    "text": "again ingest it and link it to a bunch"
+  },
+  {
+    "start": 336.88,
+    "duration": 3.16,
+    "text": "of other concepts. Now, this next step"
+  },
+  {
+    "start": 338.6,
+    "duration": 2.72,
+    "text": "is what makes it think like him instead"
+  },
+  {
+    "start": 340.04,
+    "duration": 2.92,
+    "text": "of just knowing what he said in the"
+  },
+  {
+    "start": 341.32,
+    "duration": 3.16,
+    "text": "past. So, here's the prompt for setting"
+  },
+  {
+    "start": 342.96,
+    "duration": 3.32,
+    "text": "up the rules. It basically pulls his"
+  },
+  {
+    "start": 344.48,
+    "duration": 4.32,
+    "text": "rules out of the the and every rule has"
+  },
+  {
+    "start": 346.28,
+    "duration": 3.8,
+    "text": "to connect with an exact quote from him"
+  },
+  {
+    "start": 348.8,
+    "duration": 2.96,
+    "text": "and where it came from. Because we don't"
+  },
+  {
+    "start": 350.08,
+    "duration": 3.56,
+    "text": "want Claude to just make things up. So,"
+  },
+  {
+    "start": 351.76,
+    "duration": 3.56,
+    "text": "what we got here were seven rules."
+  },
+  {
+    "start": 353.64,
+    "duration": 4.32,
+    "text": "Number one is build it or you don't"
+  },
+  {
+    "start": 355.32,
+    "duration": 4.72,
+    "text": "understand it. Number two is first order"
+  },
+  {
+    "start": 357.96,
+    "duration": 3.96,
+    "text": "term first. Basically, find the one"
+  },
+  {
+    "start": 360.04,
+    "duration": 3.48,
+    "text": "piece that matters, show it working, and"
+  },
+  {
+    "start": 361.92,
+    "duration": 3.0,
+    "text": "then add just one thing at a time. And"
+  },
+  {
+    "start": 363.52,
+    "duration": 3.2,
+    "text": "pretty much his whole course is built in"
+  },
+  {
+    "start": 364.92,
+    "duration": 3.96,
+    "text": "that way. Number three is to predict,"
+  },
+  {
+    "start": 366.72,
+    "duration": 3.72,
+    "text": "then run, then compare. He'll say the"
+  },
+  {
+    "start": 368.88,
+    "duration": 3.48,
+    "text": "number he expects before he runs the"
+  },
+  {
+    "start": 370.44,
+    "duration": 4.0,
+    "text": "cell because, in his words, most of the"
+  },
+  {
+    "start": 372.36,
+    "duration": 4.24,
+    "text": "time it will train, but silently work a"
+  },
+  {
+    "start": 374.44,
+    "duration": 4.04,
+    "text": "bit worse. Number four is to show the"
+  },
+  {
+    "start": 376.6,
+    "duration": 3.72,
+    "text": "wrong version first. He leaves his own"
+  },
+  {
+    "start": 378.48,
+    "duration": 3.56,
+    "text": "bugs in the recording on purpose. Number"
+  },
+  {
+    "start": 380.32,
+    "duration": 3.599,
+    "text": "five is prove it, don't claim it. Number"
+  },
+  {
+    "start": 382.04,
+    "duration": 3.32,
+    "text": "six is say what you assumed. His number"
+  },
+  {
+    "start": 383.919,
+    "duration": 3.481,
+    "text": "one complaint about Claude code is that"
+  },
+  {
+    "start": 385.36,
+    "duration": 3.92,
+    "text": "the models make wrong assumptions on"
+  },
+  {
+    "start": 387.4,
+    "duration": 3.36,
+    "text": "your behalf and then just run along them"
+  },
+  {
+    "start": 389.28,
+    "duration": 3.52,
+    "text": "without checking. And number seven is"
+  },
+  {
+    "start": 390.76,
+    "duration": 3.4,
+    "text": "that simpler wins. And what's cool is"
+  },
+  {
+    "start": 392.8,
+    "duration": 2.92,
+    "text": "you can check any of these. You can"
+  },
+  {
+    "start": 394.16,
+    "duration": 2.8,
+    "text": "click the quote and it will open up the"
+  },
+  {
+    "start": 395.72,
+    "duration": 3.0,
+    "text": "page that it came from with the"
+  },
+  {
+    "start": 396.96,
+    "duration": 3.28,
+    "text": "timestamp or with the exact source. And"
+  },
+  {
+    "start": 398.72,
+    "duration": 3.52,
+    "text": "if there is no source, the agent has to"
+  },
+  {
+    "start": 400.24,
+    "duration": 3.56,
+    "text": "say explicitly that it's inferring based"
+  },
+  {
+    "start": 402.24,
+    "duration": 2.92,
+    "text": "on things that Karpathy has said. Now,"
+  },
+  {
+    "start": 403.8,
+    "duration": 2.48,
+    "text": "these rules need to live somewhere where"
+  },
+  {
+    "start": 405.16,
+    "duration": 2.88,
+    "text": "the agent can actually read them. So,"
+  },
+  {
+    "start": 406.28,
+    "duration": 3.92,
+    "text": "here is prompt four. And it has Claude"
+  },
+  {
+    "start": 408.04,
+    "duration": 4.08,
+    "text": "turn them into two files for us. That"
+  },
+  {
+    "start": 410.2,
+    "duration": 3.08,
+    "text": "first file is a sub-agent. And in case"
+  },
+  {
+    "start": 412.12,
+    "duration": 2.32,
+    "text": "you don't know what that is, it's a"
+  },
+  {
+    "start": 413.28,
+    "duration": 2.639,
+    "text": "separate Claude with its own"
+  },
+  {
+    "start": 414.44,
+    "duration": 2.84,
+    "text": "instructions and its own memory and"
+  },
+  {
+    "start": 415.919,
+    "duration": 2.961,
+    "text": "context window, so that if you want to"
+  },
+  {
+    "start": 417.28,
+    "duration": 3.36,
+    "text": "hand off a task to a sub-agent, it"
+  },
+  {
+    "start": 418.88,
+    "duration": 3.0,
+    "text": "doesn't drag your whole conversation"
+  },
+  {
+    "start": 420.64,
+    "duration": 2.88,
+    "text": "along with it. And you can see here"
+  },
+  {
+    "start": 421.88,
+    "duration": 3.2,
+    "text": "inside of this sub-agent file, we can"
+  },
+  {
+    "start": 423.52,
+    "duration": 2.88,
+    "text": "see the seven rules. We can also see how"
+  },
+  {
+    "start": 425.08,
+    "duration": 3.24,
+    "text": "it talks. And we can see the loop that"
+  },
+  {
+    "start": 426.4,
+    "duration": 4.04,
+    "text": "it runs on every single task. So, this"
+  },
+  {
+    "start": 428.32,
+    "duration": 4.16,
+    "text": "is basically like a little mini Karpathy"
+  },
+  {
+    "start": 430.44,
+    "duration": 3.24,
+    "text": "agent. Now, the second one is a skill."
+  },
+  {
+    "start": 432.48,
+    "duration": 3.76,
+    "text": "So, you can see here that when I type"
+  },
+  {
+    "start": 433.68,
+    "duration": 4.4,
+    "text": "{slash} Karpathy-teach and then whatever"
+  },
+  {
+    "start": 436.24,
+    "duration": 3.36,
+    "text": "I'm stuck on, it goes into the agent"
+  },
+  {
+    "start": 438.08,
+    "duration": 3.2,
+    "text": "with the rules, and then it grades the"
+  },
+  {
+    "start": 439.6,
+    "duration": 3.24,
+    "text": "answer against a checklist, one line per"
+  },
+  {
+    "start": 441.28,
+    "duration": 2.92,
+    "text": "rule, and then it will actually show me"
+  },
+  {
+    "start": 442.84,
+    "duration": 3.48,
+    "text": "everything. So, those are the two things"
+  },
+  {
+    "start": 444.2,
+    "duration": 3.56,
+    "text": "we have, a Karpathy agent and a Karpathy"
+  },
+  {
+    "start": 446.32,
+    "duration": 2.32,
+    "text": "skill. Okay. Now, here's another thing"
+  },
+  {
+    "start": 447.76,
+    "duration": 2.28,
+    "text": "that's really important when we're"
+  },
+  {
+    "start": 448.64,
+    "duration": 2.68,
+    "text": "setting this up. We want the agent to"
+  },
+  {
+    "start": 450.04,
+    "duration": 2.48,
+    "text": "make sure that it's running its code"
+  },
+  {
+    "start": 451.32,
+    "duration": 2.4,
+    "text": "before it answers you. And that's why"
+  },
+  {
+    "start": 452.52,
+    "duration": 2.68,
+    "text": "building this inside of Claude code"
+  },
+  {
+    "start": 453.72,
+    "duration": 3.64,
+    "text": "works so well because it can already"
+  },
+  {
+    "start": 455.2,
+    "duration": 3.2,
+    "text": "write and run code. And it's a step that"
+  },
+  {
+    "start": 457.36,
+    "duration": 2.84,
+    "text": "we have to make sure that the agent"
+  },
+  {
+    "start": 458.4,
+    "duration": 3.24,
+    "text": "can't skip based on Karpathy's own"
+  },
+  {
+    "start": 460.2,
+    "duration": 3.12,
+    "text": "rules. So, here's prompt five. It's"
+  },
+  {
+    "start": 461.64,
+    "duration": 3.48,
+    "text": "basically adding a run gate. It adds a"
+  },
+  {
+    "start": 463.32,
+    "duration": 3.48,
+    "text": "hook, which is a little script that runs"
+  },
+  {
+    "start": 465.12,
+    "duration": 3.28,
+    "text": "right when the agent tries to finish its"
+  },
+  {
+    "start": 466.8,
+    "duration": 3.24,
+    "text": "turn. So, if it wrote code and it never"
+  },
+  {
+    "start": 468.4,
+    "duration": 3.4,
+    "text": "ran it, the hook will basically block"
+  },
+  {
+    "start": 470.04,
+    "duration": 3.24,
+    "text": "the answer and it will send it back with"
+  },
+  {
+    "start": 471.8,
+    "duration": 3.2,
+    "text": "one message saying, \"Hey, you have to"
+  },
+  {
+    "start": 473.28,
+    "duration": 2.8,
+    "text": "run this before you say it works.\" So,"
+  },
+  {
+    "start": 475.0,
+    "duration": 2.24,
+    "text": "we're kind of just baking in like a"
+  },
+  {
+    "start": 476.08,
+    "duration": 2.44,
+    "text": "verification loop. And you know,"
+  },
+  {
+    "start": 477.24,
+    "duration": 2.8,
+    "text": "obviously you don't have to code or"
+  },
+  {
+    "start": 478.52,
+    "duration": 3.0,
+    "text": "write this hook yourself. You just ask"
+  },
+  {
+    "start": 480.04,
+    "duration": 3.68,
+    "text": "for it with this prompt. So, now it will"
+  },
+  {
+    "start": 481.52,
+    "duration": 3.64,
+    "text": "run, it will test, and it will fix, and"
+  },
+  {
+    "start": 483.72,
+    "duration": 2.88,
+    "text": "then only after all that will you"
+  },
+  {
+    "start": 485.16,
+    "duration": 2.72,
+    "text": "actually see the final thing. And then"
+  },
+  {
+    "start": 486.6,
+    "duration": 2.88,
+    "text": "the last step, of course, is just to"
+  },
+  {
+    "start": 487.88,
+    "duration": 3.48,
+    "text": "test it. So, a few different prompts"
+  },
+  {
+    "start": 489.48,
+    "duration": 3.4,
+    "text": "that we used it. I asked it here to"
+  },
+  {
+    "start": 491.36,
+    "duration": 3.88,
+    "text": "build something real and teach me how it"
+  },
+  {
+    "start": 492.88,
+    "duration": 3.68,
+    "text": "works, which was a byte pair tokenizer,"
+  },
+  {
+    "start": 495.24,
+    "duration": 2.72,
+    "text": "which is the thing that turns text into"
+  },
+  {
+    "start": 496.56,
+    "duration": 2.68,
+    "text": "numbers before a large language model"
+  },
+  {
+    "start": 497.96,
+    "duration": 3.04,
+    "text": "ever sees it. And watch what it does"
+  },
+  {
+    "start": 499.24,
+    "duration": 3.84,
+    "text": "here. The first thing, it writes down"
+  },
+  {
+    "start": 501.0,
+    "duration": 3.4,
+    "text": "what done means before it touches any"
+  },
+  {
+    "start": 503.08,
+    "duration": 3.08,
+    "text": "code. And then it builds the smallest"
+  },
+  {
+    "start": 504.4,
+    "duration": 3.04,
+    "text": "version that works on a tiny input and"
+  },
+  {
+    "start": 506.16,
+    "duration": 2.84,
+    "text": "before it runs it, it tells me what it"
+  },
+  {
+    "start": 507.44,
+    "duration": 3.04,
+    "text": "expects to see. Then it runs it and"
+  },
+  {
+    "start": 509.0,
+    "duration": 3.44,
+    "text": "shows me the real output. And then, it"
+  },
+  {
+    "start": 510.48,
+    "duration": 3.119,
+    "text": "shows me a version that breaks and why,"
+  },
+  {
+    "start": 512.44,
+    "duration": 2.52,
+    "text": "and then it fixes it. And then at the"
+  },
+  {
+    "start": 513.599,
+    "duration": 3.681,
+    "text": "bottom it lists basically everything it"
+  },
+  {
+    "start": 514.96,
+    "duration": 3.84,
+    "text": "ran, what came out, what it changed, and"
+  },
+  {
+    "start": 517.28,
+    "duration": 3.12,
+    "text": "which rule it was following for each of"
+  },
+  {
+    "start": 518.8,
+    "duration": 3.52,
+    "text": "those moves. So, instead of getting just"
+  },
+  {
+    "start": 520.4,
+    "duration": 3.24,
+    "text": "a block of code back and then the agent"
+  },
+  {
+    "start": 522.32,
+    "duration": 2.56,
+    "text": "saying, \"Hey, this works.\" I basically"
+  },
+  {
+    "start": 523.64,
+    "duration": 2.6,
+    "text": "got walked through it one piece at a"
+  },
+  {
+    "start": 524.88,
+    "duration": 2.8,
+    "text": "time and now I can understand a lot"
+  },
+  {
+    "start": 526.24,
+    "duration": 3.0,
+    "text": "better what just happened. Now, another"
+  },
+  {
+    "start": 527.68,
+    "duration": 3.04,
+    "text": "thing you can test is its review. So,"
+  },
+  {
+    "start": 529.24,
+    "duration": 2.92,
+    "text": "before something goes to a client, I can"
+  },
+  {
+    "start": 530.72,
+    "duration": 3.08,
+    "text": "ask it one question, which is, \"Would"
+  },
+  {
+    "start": 532.16,
+    "duration": 3.24,
+    "text": "the client accept this and what would he"
+  },
+  {
+    "start": 533.8,
+    "duration": 2.72,
+    "text": "want to delete?\" Or, you know, questions"
+  },
+  {
+    "start": 535.4,
+    "duration": 2.48,
+    "text": "like that. And here's a script that"
+  },
+  {
+    "start": 536.52,
+    "duration": 2.92,
+    "text": "Claude wrote for me that I can use as an"
+  },
+  {
+    "start": 537.88,
+    "duration": 3.6,
+    "text": "example. This script pulls YouTube"
+  },
+  {
+    "start": 539.44,
+    "duration": 3.56,
+    "text": "comments and it ran fine when Claude"
+  },
+  {
+    "start": 541.48,
+    "duration": 3.28,
+    "text": "tested it. The agent reads it, predicts"
+  },
+  {
+    "start": 543.0,
+    "duration": 3.8,
+    "text": "it'll crash on an emoji under a normal"
+  },
+  {
+    "start": 544.76,
+    "duration": 3.52,
+    "text": "Windows terminal, it runs it that way,"
+  },
+  {
+    "start": 546.8,
+    "duration": 3.16,
+    "text": "and then it crashes before writing any"
+  },
+  {
+    "start": 548.28,
+    "duration": 3.68,
+    "text": "files. So, saying that it works was only"
+  },
+  {
+    "start": 549.96,
+    "duration": 3.08,
+    "text": "true in one specific setting or"
+  },
+  {
+    "start": 551.96,
+    "duration": 2.52,
+    "text": "terminal. So, here you can see that"
+  },
+  {
+    "start": 553.04,
+    "duration": 2.64,
+    "text": "Claude was able to go through and cut a"
+  },
+  {
+    "start": 554.48,
+    "duration": 2.32,
+    "text": "bunch of stuff that wasn't earning its"
+  },
+  {
+    "start": 555.68,
+    "duration": 2.84,
+    "text": "place. It was able to give me an"
+  },
+  {
+    "start": 556.8,
+    "duration": 3.4,
+    "text": "analysis on how we actually fix this and"
+  },
+  {
+    "start": 558.52,
+    "duration": 2.92,
+    "text": "clean it up and review it before we can"
+  },
+  {
+    "start": 560.2,
+    "duration": 2.639,
+    "text": "actually like ship it. And then it"
+  },
+  {
+    "start": 561.44,
+    "duration": 2.96,
+    "text": "proves the trimmed version catches the"
+  },
+  {
+    "start": 562.839,
+    "duration": 3.441,
+    "text": "same questions by running both of them"
+  },
+  {
+    "start": 564.4,
+    "duration": 2.68,
+    "text": "side by side and actually showing me."
+  },
+  {
+    "start": 566.28,
+    "duration": 2.0,
+    "text": "And then the other thing I wanted to"
+  },
+  {
+    "start": 567.08,
+    "duration": 2.96,
+    "text": "bring up is that this thing will just"
+  },
+  {
+    "start": 568.28,
+    "duration": 3.52,
+    "text": "keep learning. Back in July, Karpathy"
+  },
+  {
+    "start": 570.04,
+    "duration": 3.56,
+    "text": "posted about how he rambles at the model"
+  },
+  {
+    "start": 571.8,
+    "duration": 3.88,
+    "text": "by voice for 10 minutes and then he lets"
+  },
+  {
+    "start": 573.6,
+    "duration": 4.52,
+    "text": "the model clean up all that text. So, I"
+  },
+  {
+    "start": 575.68,
+    "duration": 3.8,
+    "text": "can run {slash} Karpathy {dash} ingest"
+  },
+  {
+    "start": 578.12,
+    "duration": 2.8,
+    "text": "with any sort of link. It will then"
+  },
+  {
+    "start": 579.48,
+    "duration": 2.76,
+    "text": "check the raw folder, it'll write a"
+  },
+  {
+    "start": 580.92,
+    "duration": 3.48,
+    "text": "source page for the [music] post, and"
+  },
+  {
+    "start": 582.24,
+    "duration": 4.0,
+    "text": "then it will update every page that post"
+  },
+  {
+    "start": 584.4,
+    "duration": 4.36,
+    "text": "touches. It added a new behavior here to"
+  },
+  {
+    "start": 586.24,
+    "duration": 4.32,
+    "text": "rule six. So, now the agent knows to ask"
+  },
+  {
+    "start": 588.76,
+    "duration": 3.64,
+    "text": "me a couple of questions when my request"
+  },
+  {
+    "start": 590.56,
+    "duration": 3.12,
+    "text": "is thin instead of just guessing. And a"
+  },
+  {
+    "start": 592.4,
+    "duration": 2.88,
+    "text": "rule that was sitting on the bench with"
+  },
+  {
+    "start": 593.68,
+    "duration": 3.56,
+    "text": "one source behind it got its second"
+  },
+  {
+    "start": 595.28,
+    "duration": 3.2,
+    "text": "source and became a real rule. And then,"
+  },
+  {
+    "start": 597.24,
+    "duration": 2.76,
+    "text": "because it understands how this wiki"
+  },
+  {
+    "start": 598.48,
+    "duration": 2.76,
+    "text": "works, it'll update the index, it'll"
+  },
+  {
+    "start": 600.0,
+    "duration": 2.92,
+    "text": "update the hot page, it'll update the"
+  },
+  {
+    "start": 601.24,
+    "duration": 3.28,
+    "text": "log. So, the brain just got better from"
+  },
+  {
+    "start": 602.92,
+    "duration": 3.48,
+    "text": "me adding one link. And I never had to"
+  },
+  {
+    "start": 604.52,
+    "duration": 4.24,
+    "text": "touch the wiki by hand or manually set"
+  },
+  {
+    "start": 606.4,
+    "duration": 4.12,
+    "text": "up these relationships or links. And"
+  },
+  {
+    "start": 608.76,
+    "duration": 3.28,
+    "text": "that, of course, was his rule two. Okay,"
+  },
+  {
+    "start": 610.52,
+    "duration": 2.84,
+    "text": "so zooming out, we had four steps. We"
+  },
+  {
+    "start": 612.04,
+    "duration": 3.04,
+    "text": "gave Claude everything inside of"
+  },
+  {
+    "start": 613.36,
+    "duration": 3.32,
+    "text": "someone's head, Karpathy's head, and we"
+  },
+  {
+    "start": 615.08,
+    "duration": 3.24,
+    "text": "compiled it into a wiki. We turned that"
+  },
+  {
+    "start": 616.68,
+    "duration": 3.4,
+    "text": "into his rules with a quote for each"
+  },
+  {
+    "start": 618.32,
+    "duration": 3.28,
+    "text": "one. We make it run before it talks, and"
+  },
+  {
+    "start": 620.08,
+    "duration": 2.52,
+    "text": "we make it test on things that are real."
+  },
+  {
+    "start": 621.6,
+    "duration": 2.48,
+    "text": "And the line that I'd want to leave you"
+  },
+  {
+    "start": 622.6,
+    "duration": 2.44,
+    "text": "guys with today is one of my favorite"
+  },
+  {
+    "start": 624.08,
+    "duration": 2.36,
+    "text": "quotes, and it's something that he"
+  },
+  {
+    "start": 625.04,
+    "duration": 2.6,
+    "text": "himself has said this year, which is"
+  },
+  {
+    "start": 626.44,
+    "duration": 2.24,
+    "text": "that you can outsource your thinking,"
+  },
+  {
+    "start": 627.64,
+    "duration": 2.28,
+    "text": "but you cannot outsource your"
+  },
+  {
+    "start": 628.68,
+    "duration": 2.28,
+    "text": "understanding. You are not going to be"
+  },
+  {
+    "start": 629.92,
+    "duration": 2.92,
+    "text": "the expert at everything, and that's"
+  },
+  {
+    "start": 630.96,
+    "duration": 4.04,
+    "text": "fine. But, you can certainly pull in the"
+  },
+  {
+    "start": 632.84,
+    "duration": 3.28,
+    "text": "expert and build on top of him or her."
+  },
+  {
+    "start": 635.0,
+    "duration": 2.36,
+    "text": "Anyways, that is going to do it for this"
+  },
+  {
+    "start": 636.12,
+    "duration": 2.2,
+    "text": "one. So, if you guys enjoyed the video"
+  },
+  {
+    "start": 637.36,
+    "duration": 1.96,
+    "text": "or you learned something new, please"
+  },
+  {
+    "start": 638.32,
+    "duration": 2.4,
+    "text": "give it a like. It definitely helps me"
+  },
+  {
+    "start": 639.32,
+    "duration": 2.28,
+    "text": "out a ton. And as always, I appreciate"
+  },
+  {
+    "start": 640.72,
+    "duration": 3.08,
+    "text": "you guys making it to the end of the"
+  },
+  {
+    "start": 641.6,
+    "duration": 4.72,
+    "text": "video, and I'll see you on the next one."
+  },
+  {
+    "start": 643.8,
+    "duration": 2.52,
+    "text": "Thanks, everyone."
+  }
+]

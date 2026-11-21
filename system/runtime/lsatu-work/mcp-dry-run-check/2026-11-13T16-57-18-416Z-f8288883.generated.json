@@ -1,0 +1,36 @@
+{
+  "plan_id": "mcp-dry-run-check",
+  "student": "Zeina",
+  "student_id": "aec4f2f8-d747-417f-937e-36bab513cb89",
+  "dry_run": true,
+  "verify_existing": false,
+  "results": [
+    {
+      "kind": "activity",
+      "title": "Negation Station",
+      "action": "would_assign",
+      "day": null,
+      "due": null,
+      "verified": false
+    }
+  ],
+  "metrics": {
+    "sign_ins": 1,
+    "student_lookups": 1,
+    "bank_reads": 0,
+    "planned": 1,
+    "assigned": 0,
+    "elapsed_ms": 2006
+  },
+  "runtime": {
+    "lock_ms": 5,
+    "fetch_ms": 165,
+    "setup_ms": 594,
+    "execute_ms": 3815,
+    "total_ms": 4579,
+    "cache_hit": true,
+    "ops_commit": "1c26d81f985f73774a27bdba3d97a507ea15d75c",
+    "source_sha256": "1a88aac53391cfdb4c9b94159636a6a5c5bbb25379a75bdab2f7dc191334c403"
+  },
+  "audit_file": "C:\\Users\\Joshu\\dev\\ai-os\\system\\runtime\\lsatu-work\\mcp-dry-run-check\\2026-11-13T16-57-18-416Z-f8288883.generated.json"
+}

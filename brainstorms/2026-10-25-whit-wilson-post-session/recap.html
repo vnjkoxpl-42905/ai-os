@@ -1,0 +1,119 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="lsatu-interactive-lesson" content="whit-2026-10-19-claim-precision"><title>Keep the small words · Session recap</title><style>  :root{
+    --cream:#FBF8F1; --ink:#1C1917; --ink-soft:#44403C; --ink-mute:#78716C;
+    --gold:#E8D08B; --gold-deep:#B8983F; --gold-wash:rgba(232,208,139,.16);
+    --card:#FFFFFF; --line:#E7E0D2;
+    --green:#3F6212; --green-wash:rgba(63,98,18,.09);
+    --red:#9F1239; --red-wash:rgba(159,18,57,.07);
+    --serif:"Fraunces","Garamond","Georgia",serif;
+    --sans:"Outfit","Avenir Next","Helvetica Neue",sans-serif;
+    --mono:"JetBrains Mono","SF Mono",Menlo,monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--ink);font-family:var(--sans);line-height:1.65;font-size:17px}
+  .wrap{max-width:800px;margin:0 auto;padding:0 24px}
+
+  header.hero{padding:68px 0 44px;border-bottom:1px solid var(--line)}
+  .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:18px}
+  h1{font-family:var(--serif);font-weight:600;font-size:clamp(36px,6vw,54px);line-height:1.06;letter-spacing:-.01em}
+  .hero p.lede{margin-top:20px;font-size:19px;color:var(--ink-soft);max-width:58ch}
+
+  section{padding:50px 0;border-bottom:1px solid var(--line)}
+  h2{font-family:var(--serif);font-weight:600;font-size:30px;line-height:1.15;margin-bottom:4px}
+  .sec-kicker{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:10px}
+  p{margin:14px 0;color:var(--ink-soft)}
+  p strong{color:var(--ink)}
+
+  .callout{background:var(--gold-wash);border-left:3px solid var(--gold-deep);border-radius:0 12px 12px 0;padding:16px 20px;margin:24px 0;font-size:16.5px;color:var(--ink-soft)}
+  .callout .tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-deep);display:block;margin-bottom:6px}
+  .callout strong{color:var(--ink)}
+
+  /* the three kinds */
+  .kinds{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:28px 0 8px}
+  .kind{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;box-shadow:0 1px 3px rgba(28,25,23,.06);transition:transform .18s,box-shadow .18s}
+  /* The colour carries the taxonomy, so it has to stay. A short rule inside
+     the padding does that without a 3px border running into a 14px corner. */
+  .kind .bar{display:block;width:32px;height:4px;border-radius:2px;background:var(--c);margin-bottom:14px}
+  .kind:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(28,25,23,.09)}
+  .kind.assume{--c:var(--gold-deep)}
+  .kind.object{--c:var(--red)}
+  .kind.describe{--c:var(--green)}
+  .kind .name{font-family:var(--serif);font-size:22px;color:var(--c);font-weight:600}
+  .kind .what{font-size:15px;margin:8px 0 0;color:var(--ink-soft)}
+  .kind .words{border-top:1px dashed var(--line);margin-top:14px;padding-top:12px}
+  .kind .words b{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--c);display:block;margin-bottom:7px}
+  .kind .words span{display:block;font-size:14px;color:var(--ink-mute);padding:2px 0}
+  .kind .test{margin-top:14px;background:var(--cream);border-radius:9px;padding:11px 13px;font-size:14.5px;color:var(--ink)}
+  .kind .test b{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-mute);display:block;margin-bottom:4px}
+
+  .opposite{display:flex;align-items:stretch;gap:0;margin:26px 0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--card)}
+  .opposite div{flex:1;padding:18px 20px;font-size:15.5px;color:var(--ink-soft)}
+  .opposite div:first-child{background:var(--gold-wash)}
+  .opposite div:last-child{background:var(--red-wash)}
+  .opposite b{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;margin-bottom:6px}
+  .opposite div:first-child b{color:var(--gold-deep)}
+  .opposite div:last-child b{color:var(--red)}
+
+  ol.steps{margin:20px 0;padding-left:0;list-style:none;counter-reset:step}
+  ol.steps li{counter-increment:step;position:relative;padding:14px 0 14px 54px;border-bottom:1px dashed var(--line);font-size:16px;color:var(--ink-soft)}
+  ol.steps li:last-child{border-bottom:none}
+  ol.steps li::before{content:counter(step);position:absolute;left:0;top:12px;width:34px;height:34px;border-radius:50%;background:var(--ink);color:var(--cream);font-family:var(--serif);display:flex;align-items:center;justify-content:center;font-size:16px}
+  ol.steps li b{color:var(--ink)}
+
+  .flags{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 4px}
+  .flag{font-family:var(--mono);font-size:12.5px;letter-spacing:.04em;background:var(--red-wash);color:var(--red);border:1px solid rgba(159,18,57,.2);border-radius:999px;padding:6px 14px}
+
+  .drill{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;margin:26px 0;box-shadow:0 2px 8px rgba(28,25,23,.06)}
+  .drill h3{font-family:var(--serif);font-size:19px;margin-bottom:4px}
+  .drill p.hint{font-size:14px;color:var(--ink-mute);margin:0 0 14px}
+  .chips{display:flex;gap:8px;flex-wrap:wrap}
+  .chip{font-family:var(--mono);font-size:13px;background:var(--cream);border:1px solid var(--line);border-radius:999px;padding:8px 15px;cursor:pointer;transition:all .16s;color:var(--ink-soft)}
+  .chip:hover{border-color:var(--ink-mute)}
+  .chip.on[data-k="assume"]{background:var(--gold-wash);border-color:var(--gold-deep);color:var(--gold-deep)}
+  .chip.on[data-k="object"]{background:var(--red-wash);border-color:var(--red);color:var(--red)}
+  .chip.on[data-k="describe"]{background:var(--green-wash);border-color:var(--green);color:var(--green)}
+  .chip .ans{display:none;font-weight:600}
+  .chip.on .ans{display:inline;margin-left:8px}
+
+  .quote{font-family:var(--serif);font-size:20px;line-height:1.45;color:var(--ink);border-left:3px solid var(--gold);padding:4px 0 4px 22px;margin:24px 0;font-style:italic}
+  .footer-note{padding:34px 0 56px}
+  .mark{font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-mute);opacity:.7}
+  .chip.on[data-k="neutral"]{background:var(--gold-wash);border-color:var(--ink-mute);color:var(--ink)}
+  .kind.link{--c:var(--gold-deep)}
+  .kind.apply{--c:var(--green)}
+  .kind.warn{--c:var(--red)}
+  .rule{font-family:var(--serif);font-size:20px;color:var(--ink);margin:18px 0}
+  .rule .ar{color:var(--gold-deep);font-weight:700;margin:0 6px}
+  table.t{width:100%;border-collapse:collapse;margin:20px 0;font-size:15.5px;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  table.t th{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold-deep);text-align:left;padding:12px 16px;border-bottom:1px solid var(--line)}
+  table.t td{padding:11px 16px;border-bottom:1px dashed var(--line);color:var(--ink-soft);vertical-align:top}
+  table.t tr:last-child td{border-bottom:none}
+  table.t td:first-child{color:var(--ink);font-weight:600;white-space:nowrap}
+  pre{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;font-family:var(--serif);font-size:18px;overflow-x:auto}
+  @media (max-width:560px){.opposite{flex-direction:column}table.t td:first-child{white-space:normal}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+details{margin:16px 0;border:1px solid var(--line);border-radius:10px;background:white}summary{cursor:pointer;padding:16px;font-weight:600}details p{padding:0 16px}summary:focus-visible{outline:3px solid #28594d}body{overflow-wrap:break-word}.kicker{color:#785b16}@media(max-width:600px){.kinds{grid-template-columns:1fr}}</style></head><body><header class="hero"><div class="wrap"><div class="kicker">Session recap · October 19</div><h1>Keep the small words.<br>Keep the meaning.</h1><p class="lede">The gap becomes easier to see when you can say exactly what each claim means. A comparison is not an absolute verdict. A lower accident rate is not the same measure as less serious injury. Keep those distinctions alive while you read.</p></div></header><section><div class="wrap"><h2>Step zero: one claim at a time</h2><p>Read a manageable piece. Look away and say it in your own words. Keep the group, the comparison, and the strength of the claim. Then connect it to the next piece.</p>
+<p>If your retelling is only about the topic, go back to what was actually claimed. A sentence about two groups is not just about health or safety. It says something specific about those groups.</p></div></section><section><div class="wrap"><h2>Better than something does not automatically mean good</h2><div class="kinds"><article class="kind describe"><span class="bar"></span><h3 class="name">Relative</h3><p class="what">The green route is quicker than the blue route.</p><div class="test"><b>What you know</b>One route takes less time than the other. You do not yet know whether either is quick.</div></article><article class="kind object"><span class="bar"></span><h3 class="name">Absolute</h3><p class="what">The green route is quick.</p><div class="test"><b>What you need</b>A standard or enough further information to judge its actual journey time.</div></article></div>
+
+<p>If the blue route takes four hours and the green route takes three, the comparison is true. The green route can still be slow. The comparison alone does not settle the absolute judgment.</p>
+<p>This does not mean comparisons can never help. If you also know a clear cutoff and where the routes fall against it, you may have enough information. The problem is the unsupported step, not the existence of a comparison.</p>
+<p>You identified the healthier-versus-healthy distinction after we separated the claims. That is the detail to preserve when you tell an argument back.</p></div></section><section><div class="wrap"><h2>An association does not tell you the cause</h2><p>Suppose cafés with longer opening hours sell more coffee. That describes an association. Longer hours might increase sales. High demand might lead a café to stay open longer. A busy location might affect both.</p>
+<p>Keep these possibilities separate from what you are told. A correlation alone does not identify a causal direction. A causal claim such as the new machine reduced waiting time says that something affected something else; it does not automatically claim that it was the only cause.</p>
+<p>You correctly refused to pick a causal direction from the accident statistics alone. Keep that restraint even when a question pushes you to explain why.</p></div></section><section><div class="wrap"><h2>Match the measure before accepting the conclusion</h2><p>Suppose two delivery services are compared. One damages fewer parcels, but its damaged parcels tend to suffer much more serious damage. The other damages more parcels, usually with small scratches. Which is safer for your goods?</p>
+<p>We cannot decide from the counts alone. We need to know how the relevant harms compare. Frequency and severity both concern risk, but they are different measures.</p>
+<div class="callout"><span class="tag">Preserve the exact wording</span>No safer means not safer. It allows equal safety or worse safety. Do not quietly change it into exactly equally safe.</div>
+
+<p>In the same way, body weight and body fat are different measures. A change in one is not automatically the same change in the other.</p></div></section><section><div class="wrap"><h2>A flaw answer needs two checks</h2><p>First, does it accurately describe the argument? Point to the claim or inference it describes. Second, does it identify a real problem for that conclusion?</p>
+<p>An answer can mention another cause or missing information without exposing the actual flaw. It may even give the author more support. Ask which direction the answer points before accepting it.</p>
+<p>Do not reject an accurate objection merely because it was not the one you predicted. The answer can help you notice a distinction you missed on the first reading. Return to the stimulus and verify it.</p></div></section><section><div class="wrap"><h2>Say it before you reveal it</h2><details><summary>One laptop is lighter than another. Does that prove it is light?</summary><p>No. Both could be heavy. You know their relative weights, not whether either meets an absolute standard for lightness.</p></details>
+
+<details><summary>A service makes fewer mistakes. Must its mistakes cause less harm overall?</summary><p>No. You need to know more about the seriousness and effects of those mistakes. Frequency alone does not settle overall harm.</p></details>
+
+<details><summary>A flaw choice describes something true about the argument. Is that enough?</summary><p>No. It must also expose a genuine reasoning problem. A true description such as the author discusses two groups does not by itself identify a flaw.</p></details></div></section><section><div class="wrap"><h2>When two answers remain</h2><ol>
+<li>Say the exact conclusion.</li>
+<li>State its supporting evidence separately.</li>
+<li>Check every part of each answer against the argument.</li>
+<li>Ask why the described issue harms the reasoning.</li>
+</ol>
+<p>During untimed review, keep working until you can explain the choice. That is the purpose of our deliberate-answer rule. It is not a rule to leave timed-test questions blank while seeking certainty.</p></div></section><section><div class="wrap"><h2>Your next practice</h2><p>Use Read, Recall, Colour for a full section, starting with PT103 Section 1. Read the accompanying primer before you begin. Preserve the details in each claim, then recall the whole argument in your own words.</p>
+<p>The matching guided follow-up is Relative vs. Absolute: seven questions to do untimed. Read each question stem because the set includes different tasks. Both assignments become available October 26 and are due November 1. Use the comparison check above on each relevant question. After a few days with the recall exercise, send me your thoughts about which details you are now keeping and which still slip away.</p></div></section><footer class="footer-note"><div class="wrap"><span class="mark">LSAT U</span></div></footer></body></html>

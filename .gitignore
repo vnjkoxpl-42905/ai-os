@@ -19,5 +19,16 @@ __pycache__/
 *.MP4
 .firecrawl/
 
+# Machine-only GitHub sync runtime (source/config/docs are tracked)
+setup/github-sync/state/
+setup/github-sync/tools/
+.cloud-private/
+system/logs/github-sync/
+
+
+
+
+# Ignore Smart Environment folder
+.smart-env
 # Nested repo (vendor skill clone); never track as a gitlink
 /skill-audit/

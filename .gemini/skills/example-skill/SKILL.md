@@ -1,8 +1,13 @@
 ---
 name: example-skill
-description: This skill should be used when the user asks to "demonstrate skills", "show skill format", "create a skill template", or discusses skill development patterns. Provides a reference template for creating Claude Code plugin skills.
+description: "Explicit request to inspect this plugin skill-format example. Reference only; not general skill creation."
 version: 1.0.0
+disable-model-invocation: true
 ---
+
+## Current AI OS execution contract
+
+Explicit reference example only. Real skill authoring uses the primary skill creator; this sample must not compete for general creation requests.
 
 # Example Skill
 

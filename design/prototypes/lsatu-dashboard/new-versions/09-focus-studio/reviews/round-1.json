@@ -1,0 +1,144 @@
+{
+  "status": "completed",
+  "mode": "review",
+  "provider": "claude",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "claude",
+    "builder": "codex",
+    "inspector": "claude"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\ai-os\\design\\prototypes\\lsatu-dashboard\\new-versions\\09-focus-studio",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os\\design\\prototypes\\lsatu-dashboard\\new-versions\\09-focus-studio\\REVIEW-BRIEF.md",
+  "plan_sha256": "c132533734d8f8492bd54e8ffa42839898421096906511cab157a79d1e7d0344",
+  "requested_model": null,
+  "requested_effort": null,
+  "base": null,
+  "snapshot": null,
+  "previous": null,
+  "started_at": 1792912040.0624673,
+  "artifacts": "C:\\Users\\Joshu\\.codex\\visualizations\\2026\\10\\25\\01a17081-6735-7fc2-b0e1-922ab635486c\\claude-09-review\\claudex-t97bcu79",
+  "cli_version": "2.1.309 (Claude Code)",
+  "executable": [
+    "C:\\Users\\Joshu\\.local\\bin\\claude.exe"
+  ],
+  "exit_code": 0,
+  "session_id": "aa654c92-99e1-4035-b594-a30d09b5b5b1",
+  "response": {
+    "verdict": "REVISE",
+    "summary": "Version 09 is a real improvement on 08 and none of the defects below are structural. Home stays compact, the sidebar and Home layout are unchanged, and the paper/ink/Newsreader/Manrope look is intact. Assignment rows now show LR/RC chips, status, assigned dates and countable ticks in aligned rows. The resume card shows \"5 of 12 complete · Statement 6\" with twelve ticks. Metadata moved from about 9-10px to 11-12px, which is clearly more legible than 08. Home is somewhat taller than 08, but it is still not a console. The 390 Home and Work images read comfortably.\n\nThe data mapping is correct. Five unique questions map one-to-one to five attempts: lr155, lr154 and lr156 on Oct 23 (2/3), rc155 and rc156 on Oct 22 (1/2). The totals are derived from `attempts`, giving 3/5 and 2 sets. Strip buttons and rows both pass `a.id`, so results map to the right question. The two missed questions (lr156, rc156) have distinct, response-specific hints. The question content and explanations I read are logically sound, including the permit necessary-condition item and the \"some\"/\"none\" negation. Typed-reference escaping is safe, and unsupported references are never substituted. Weekday arithmetic is right: Oct 24, 2026 is a Saturday, and the -04:00 offset is correct.\n\nRemaining defects:\n- The phone week strip looks clipped.\n- Real-looking PrepTest locators carry invented content.\n- Partial reference search misses.\n- Two hard-coded \"derived\" figures.\n- A focus loss after \"Mark as read\".\n- Negation feedback that ignores the student's input.\n- A whitespace-only reference edge case.\n- A corrupt-storage warning that is wrong.\n\nI read the host reports and did not run them. They report all checks passing, but they do not cover these edge cases.",
+    "findings": [
+      {
+        "id": "F1",
+        "severity": "medium",
+        "path": "style.css (final @media max-width:650px: .days, .day) and artifacts/home-390.png",
+        "evidence": "The 390px capture shows the week strip with Sat-Thu visible and the Thu tile cut at the right edge. Fri is off-screen behind a horizontal scroll (`overflow-x:auto`, `minmax(56px,1fr)`), and there is no scroll cue. The brief requires an unclipped calendar on phone. The report's 'no page overflow' check does not detect clipping inside the strip.",
+        "fix": "Size the tiles to fit all 7 columns at 320-390px, using `minmax(0,1fr)` with `padding:8px 1px` and a 12px label. Alternatively, wrap to a 4+3 grid. Do not scroll a tablist silently."
+      },
+      {
+        "id": "F2",
+        "severity": "medium",
+        "path": "app.js:8-17 (questions pt/section/number) and app.js:42",
+        "evidence": "The five 'original' samples use realistic PrepTest locators (PT155 S1 Q1, PT154 S2 Q14, and so on). A student who types a real locator such as PT155 S1 Q1 gets an invented question under that locator. The unsupported-reference message only appears for non-matches. The question page eyebrow is the only caveat. This risks confusing the sample with the real item.",
+        "fix": "Use visibly synthetic locators, for example 'Sample LR-1 · Section 1 · Question 1'. Or add a persistent 'Synthetic question, not the real PT155 item' line to the question page and result rows."
+      },
+      {
+        "id": "F3",
+        "severity": "low",
+        "path": "app.js:43 (filteredQuestions) and app.js:41 (reference)",
+        "evidence": "The search box matches only the substring 'PT 155 · Section 1 · Question 1'. Typing 'PT155', 'PT155 S1' or 'Q14' returns the empty state, although the placeholder says 'Search by title or reference' and the chips display 'PT155 S1 Q1'. Only a complete three-part reference matches via parseReference.",
+        "fix": "Add a normalized search key per question (for example 'pt155 s1 q1 lr'). Strip spaces and punctuation from both the query and the key before `includes`."
+      },
+      {
+        "id": "F4",
+        "severity": "low",
+        "path": "app.js:47-48",
+        "evidence": "The Review summary hard-codes '2 completed sample sets · 2 questions to revisit'. Progress hard-codes 'October 22 to 23, 2026'. The 3/5 and the set count come from `totals`, so these strings drift if `attempts` changes, which contradicts the 'derived totals' requirement.",
+        "fix": "Use `${totals.sets}` and `${totals.answered-totals.correct}`. Derive the date range from `attempts`."
+      },
+      {
+        "id": "F5",
+        "severity": "low",
+        "path": "app.js:72 and 76-82",
+        "evidence": "After 'Mark as read', `render(false)` removes the clicked button and moves no focus, so a keyboard user's focus drops to `body`. The filter handlers do restore focus, so this one is inconsistent. On Home or Messages the user must tab from the top again.",
+        "fix": "After a successful read, focus the Reply button, or the 'Read' text via a tabindex=-1 wrapper. Announce the change in `#status`."
+      },
+      {
+        "id": "F6",
+        "severity": "low",
+        "path": "app.js:71",
+        "evidence": "The Negation check returns the same 'Check your scope… needs to say that none of the books are illustrated' message for any non-empty text. A student who writes 'None of the books are illustrated' is still told to check scope, and one who writes 'Some are not illustrated' gets no specific correction. The text also hands over the answer. The copy says it does not grade, but it reads as a verdict on the student's input.",
+        "fix": "Branch on the text: acknowledge a 'none/no…' rewrite, and explain that 'some… are not' is not the contrapositive negation. Otherwise show a neutral reveal labelled 'Sample answer', not feedback on the student's work."
+      },
+      {
+        "id": "F7",
+        "severity": "low",
+        "path": "app.js:95",
+        "evidence": "A whitespace-only value passes the `required` attribute. parseReference then returns null, and the error renders as '   is not one of the five sample references.' with a blank quoted value. The same flow also gives no hint of the accepted formats.",
+        "fix": "Trim the value and show 'Enter a reference such as PT155 S1 Q1' when it is empty. Include the accepted forms in the error."
+      },
+      {
+        "id": "F8",
+        "severity": "low",
+        "path": "app.js:22 and 31",
+        "evidence": "A corrupt or non-object localStorage value sets `storageOK=false` only on a JSON.parse throw. The page then shows 'Local saving is unavailable…' even though writes would succeed, and the warning clears only after a later successful save. A getItem that throws and an invalid JSON string are conflated.",
+        "fix": "Treat a parse error as 'reset to defaults'. Set storageError only when setItem fails or getItem throws a SecurityError."
+      }
+    ],
+    "coverage": [
+      "Read in full: REVIEW-BRIEF.md, BRIEF.md, index.html, app.js, style.css, baseline.json.",
+      "Read the host reports: capture-report.json, interaction-report.json, motion-focus-report.json, features-09-report.json. I did not run them.",
+      "Images inspected: 09 artifacts home-1440.png, home-390.png, home-768.png, practice-1440.png, practice-390.png, review-1440.png, review-390.png, work-390.png, teacher-students-1440.png. Also 08 families/05-new-directions/08-combined-home/artifacts/home-1440.png.",
+      "Traced by reading source: result-to-question mapping across all five attempts, including the strip, rows and revisit; derived totals in Review and Progress; the parseReference regex with leading zeros and separators; esc() on all user-text sinks (typed reference, workQuery, studentQuery, note, draft, assign); work search/subject/status combinations; resume identity (resumeId is constant and assignment dialogs never change it); save() rollback and error paths for note, draft, bookmark and read; dialog trigger and focus return (modal, drawer, nested student/assign dialog, Ctrl+K); calendar arrow/Home/End handling; hashchange and role-switch routing; reduced-motion and content-only route animation (CSS and motion report).",
+      "Not compared: the 08 source line by line. I compared only its Home image and the baseline hashes."
+    ],
+    "limitations": [
+      "Read-only review. I could not run a browser, Playwright or the proof scripts, so all runtime behavior is inferred from source and the host-provided images and JSON reports.",
+      "I did not independently verify the pass results in the host reports or reproduce the keyboard, motion or storage-failure behavior.",
+      "I did not inspect the remaining images (progress, library, messages, reading, work-1440, teacher-home, 320/1100/1920, dialogs). I could not check component-level contrast ratios by measurement.",
+      "This is not a full repository diff or production acceptance. The enclosing ai-os repository has many unrelated modified files that I did not examine.",
+      "Visual judgment is based on static captures only, not on real-device rendering or font loading."
+    ]
+  },
+  "usage": {
+    "input_tokens": 10,
+    "cache_creation_input_tokens": 73379,
+    "cache_read_input_tokens": 110626,
+    "output_tokens": 12446,
+    "output_tokens_details": {
+      "thinking_tokens": 7254
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 73379,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 3885,
+        "cache_read_input_tokens": 59605,
+        "cache_creation_input_tokens": 17359,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 17359
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "observed_models": [
+    "claude-sonnet-5-5"
+  ],
+  "permission_denials": [],
+  "total_cost_usd": 0.42905860000000007,
+  "elapsed_seconds": 101.88
+}

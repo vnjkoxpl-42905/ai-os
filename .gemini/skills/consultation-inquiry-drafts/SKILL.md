@@ -7,6 +7,21 @@ description: "Daily sweep: draft, but do not send, personalized consultation-lin
 
 Find new LSAT tutoring inquiries and prepare Gmail drafts for Joshua to review. Never send. AI-generated replies remain drafts unless Joshua separately approves the exact message.
 
+## Preflight (first step, every run)
+
+Confirm Gmail is readable with one cheap read before anything else:
+
+```bash
+gws gmail users getProfile --params '{"userId":"me","fields":"emailAddress"}'
+```
+
+If it exits non-zero or prints an `"error"` object, stop the run. Never report "no new inquiries" after a failed read. Print:
+
+```text
+Inquiry sweep stopped: Gmail preflight failed (<error code and message>).
+Fix: run `gws auth login` in your own terminal (it opens a browser), then `gws auth status` to confirm, and rerun. If a 401 persists, check that GOOGLE_WORKSPACE_CLI_CONFIG_DIR is unset or points at ~/.config/gws.
+```
+
 ## Required context
 
 Before drafting:
@@ -55,10 +70,14 @@ Do not copy canned situation lines blindly. Mirror the person's message in natur
 
 ## Gmail draft behavior
 
+Before creating, list and inspect existing Gmail drafts through `gws`, following pagination and matching the inquiry thread ID + normalized recipient + workflow (`consultation-inquiry`). Reuse the matching unsent draft ID; update only that draft if the current request authorizes revision. Multiple matches are a conflict: report them without deletion. A failed/partial draft lookup blocks creation, rather than assuming none. Repeated sweeps must leave one matching draft. Record draft ID, thread ID and workflow key in the ledger, then verify the draft by ID after the write.
+
 Create the draft through `gws`. Reply inside the existing Gmail thread whenever one exists. Preserve the thread context and reply headers rather than starting a new conversation. Do not send.
 
 ## Report and log
 
 Report each prospect's name, email, the detail mirrored, and that a Gmail draft is waiting for review. Flag uncertain identity, prior-contact, pricing, or student-status cases.
+
+End every report, including a "nothing new" report, with a count line built from the actual search output: threads returned of the result-size estimate, the query, and the window start as an absolute date and time. For example: `Checked: Gmail 41 of 41 threads since 2026-10-12 08:00 (in:inbox newer_than:2d -in:sent); 2 inquiries, 2 drafts.` If the first number is lower than the second, page further or say the sweep was capped. A report without this line is not finished.
 
 Append each created draft to `wiki/send-ledger.md` with status `drafted`. Gmail remains the authority for whether anything was actually sent.

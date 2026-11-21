@@ -1,0 +1,3314 @@
+{
+  "skill": {
+    "name": "remotion-to-hyperframes",
+    "source": "C:\\Users\\Joshu\\dev\\ai-os\\.claude\\skills\\remotion-to-hyperframes",
+    "scanned_at": "2026-10-14T14:53:38.084771+00:00"
+  },
+  "risk_assessment": {
+    "score": 96,
+    "severity": "CRITICAL",
+    "recommendation": "DO_NOT_INSTALL",
+    "max_issue_severity": "HIGH"
+  },
+  "components": [
+    {
+      "path": "SKILL.md",
+      "type": "markdown",
+      "lines": 132,
+      "executable": false,
+      "size_bytes": 11080,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/.gitkeep",
+      "type": "other",
+      "lines": 0,
+      "executable": false,
+      "size_bytes": 0,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/.gitignore",
+      "type": "other",
+      "lines": 1,
+      "executable": false,
+      "size_bytes": 16,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/run.sh",
+      "type": "shell",
+      "lines": 249,
+      "executable": true,
+      "size_bytes": 8421,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-1-title-card/.gitignore",
+      "type": "other",
+      "lines": 10,
+      "executable": false,
+      "size_bytes": 128,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-1-title-card/README.md",
+      "type": "markdown",
+      "lines": 41,
+      "executable": false,
+      "size_bytes": 2221,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-1-title-card/expected.json",
+      "type": "json",
+      "lines": 26,
+      "executable": false,
+      "size_bytes": 1791,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-1-title-card/hf-src/compositions/title.html",
+      "type": "other",
+      "lines": 31,
+      "executable": false,
+      "size_bytes": 1099,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-1-title-card/hf-src/index.html",
+      "type": "other",
+      "lines": 46,
+      "executable": false,
+      "size_bytes": 1097,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-1-title-card/remotion-src/package.json",
+      "type": "json",
+      "lines": 14,
+      "executable": false,
+      "size_bytes": 296,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-1-title-card/remotion-src/remotion.config.ts",
+      "type": "typescript",
+      "lines": 13,
+      "executable": true,
+      "size_bytes": 497,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-1-title-card/remotion-src/src/Root.tsx",
+      "type": "other",
+      "lines": 13,
+      "executable": true,
+      "size_bytes": 259,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-1-title-card/remotion-src/src/TitleCard.tsx",
+      "type": "other",
+      "lines": 34,
+      "executable": true,
+      "size_bytes": 773,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-1-title-card/remotion-src/src/index.ts",
+      "type": "typescript",
+      "lines": 4,
+      "executable": true,
+      "size_bytes": 109,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-1-title-card/remotion-src/tsconfig.json",
+      "type": "json",
+      "lines": 15,
+      "executable": false,
+      "size_bytes": 337,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-2-multi-scene/.gitignore",
+      "type": "other",
+      "lines": 14,
+      "executable": false,
+      "size_bytes": 215,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-2-multi-scene/README.md",
+      "type": "markdown",
+      "lines": 54,
+      "executable": false,
+      "size_bytes": 3274,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-2-multi-scene/expected.json",
+      "type": "json",
+      "lines": 29,
+      "executable": false,
+      "size_bytes": 2117,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-2-multi-scene/hf-src/compositions/scene-1.html",
+      "type": "other",
+      "lines": 35,
+      "executable": false,
+      "size_bytes": 1152,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-2-multi-scene/hf-src/compositions/scene-2.html",
+      "type": "other",
+      "lines": 35,
+      "executable": false,
+      "size_bytes": 1158,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-2-multi-scene/hf-src/compositions/scene-3.html",
+      "type": "other",
+      "lines": 36,
+      "executable": false,
+      "size_bytes": 1004,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-2-multi-scene/hf-src/index.html",
+      "type": "other",
+      "lines": 75,
+      "executable": false,
+      "size_bytes": 1769,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-2-multi-scene/remotion-src/package.json",
+      "type": "json",
+      "lines": 14,
+      "executable": false,
+      "size_bytes": 298,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-2-multi-scene/remotion-src/remotion.config.ts",
+      "type": "typescript",
+      "lines": 13,
+      "executable": true,
+      "size_bytes": 497,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-2-multi-scene/remotion-src/src/MultiScene.tsx",
+      "type": "other",
+      "lines": 105,
+      "executable": true,
+      "size_bytes": 2367,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-2-multi-scene/remotion-src/src/Root.tsx",
+      "type": "other",
+      "lines": 13,
+      "executable": true,
+      "size_bytes": 264,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-2-multi-scene/remotion-src/src/index.ts",
+      "type": "typescript",
+      "lines": 4,
+      "executable": true,
+      "size_bytes": 109,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-2-multi-scene/remotion-src/tsconfig.json",
+      "type": "json",
+      "lines": 15,
+      "executable": false,
+      "size_bytes": 337,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-2-multi-scene/setup.sh",
+      "type": "shell",
+      "lines": 34,
+      "executable": true,
+      "size_bytes": 1244,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-3-data-driven/.gitignore",
+      "type": "other",
+      "lines": 10,
+      "executable": false,
+      "size_bytes": 128,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-3-data-driven/README.md",
+      "type": "markdown",
+      "lines": 85,
+      "executable": false,
+      "size_bytes": 5026,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-3-data-driven/expected.json",
+      "type": "json",
+      "lines": 41,
+      "executable": false,
+      "size_bytes": 3467,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-3-data-driven/hf-src/compositions/scene-1.html",
+      "type": "other",
+      "lines": 52,
+      "executable": false,
+      "size_bytes": 1618,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-3-data-driven/hf-src/compositions/scene-2.html",
+      "type": "other",
+      "lines": 99,
+      "executable": false,
+      "size_bytes": 3054,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-3-data-driven/hf-src/compositions/scene-3.html",
+      "type": "other",
+      "lines": 55,
+      "executable": false,
+      "size_bytes": 1657,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-3-data-driven/hf-src/index.html",
+      "type": "other",
+      "lines": 70,
+      "executable": false,
+      "size_bytes": 1707,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-3-data-driven/remotion-src/package.json",
+      "type": "json",
+      "lines": 15,
+      "executable": false,
+      "size_bytes": 319,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-3-data-driven/remotion-src/remotion.config.ts",
+      "type": "typescript",
+      "lines": 13,
+      "executable": true,
+      "size_bytes": 497,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-3-data-driven/remotion-src/src/Root.tsx",
+      "type": "other",
+      "lines": 27,
+      "executable": true,
+      "size_bytes": 681,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-3-data-driven/remotion-src/src/Stargazed.tsx",
+      "type": "other",
+      "lines": 37,
+      "executable": true,
+      "size_bytes": 970,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-3-data-driven/remotion-src/src/components/AnimatedNumber.tsx",
+      "type": "other",
+      "lines": 23,
+      "executable": true,
+      "size_bytes": 740,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-3-data-driven/remotion-src/src/components/StatCard.tsx",
+      "type": "other",
+      "lines": 59,
+      "executable": true,
+      "size_bytes": 1474,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-3-data-driven/remotion-src/src/components/UnderlinedText.tsx",
+      "type": "other",
+      "lines": 47,
+      "executable": true,
+      "size_bytes": 1154,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-3-data-driven/remotion-src/src/index.ts",
+      "type": "typescript",
+      "lines": 4,
+      "executable": true,
+      "size_bytes": 109,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-3-data-driven/remotion-src/src/scenes/OutroScene.tsx",
+      "type": "other",
+      "lines": 18,
+      "executable": true,
+      "size_bytes": 423,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-3-data-driven/remotion-src/src/scenes/StatsScene.tsx",
+      "type": "other",
+      "lines": 34,
+      "executable": true,
+      "size_bytes": 676,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-3-data-driven/remotion-src/src/scenes/TitleScene.tsx",
+      "type": "other",
+      "lines": 55,
+      "executable": true,
+      "size_bytes": 1230,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-3-data-driven/remotion-src/tsconfig.json",
+      "type": "json",
+      "lines": 15,
+      "executable": false,
+      "size_bytes": 337,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-4-escape-hatch/README.md",
+      "type": "markdown",
+      "lines": 51,
+      "executable": false,
+      "size_bytes": 2825,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-4-escape-hatch/cases/01-use-state.tsx",
+      "type": "other",
+      "lines": 29,
+      "executable": true,
+      "size_bytes": 1000,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-4-escape-hatch/cases/02-use-effect-deps.tsx",
+      "type": "other",
+      "lines": 29,
+      "executable": true,
+      "size_bytes": 954,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-4-escape-hatch/cases/03-async-metadata.tsx",
+      "type": "other",
+      "lines": 39,
+      "executable": true,
+      "size_bytes": 1128,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-4-escape-hatch/cases/04-third-party-react.tsx",
+      "type": "other",
+      "lines": 30,
+      "executable": true,
+      "size_bytes": 1183,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-4-escape-hatch/cases/05-lambda-config.tsx",
+      "type": "other",
+      "lines": 38,
+      "executable": true,
+      "size_bytes": 1425,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-4-escape-hatch/cases/06-warnings-only.tsx",
+      "type": "other",
+      "lines": 36,
+      "executable": true,
+      "size_bytes": 1387,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-4-escape-hatch/cases/07-custom-hook.tsx",
+      "type": "other",
+      "lines": 28,
+      "executable": true,
+      "size_bytes": 1094,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-4-escape-hatch/cases/08-mixed.tsx",
+      "type": "other",
+      "lines": 41,
+      "executable": true,
+      "size_bytes": 1166,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-4-escape-hatch/expected.json",
+      "type": "json",
+      "lines": 85,
+      "executable": false,
+      "size_bytes": 2784,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/test-corpus/tier-4-escape-hatch/validate.sh",
+      "type": "shell",
+      "lines": 110,
+      "executable": true,
+      "size_bytes": 3534,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "references/api-map.md",
+      "type": "markdown",
+      "lines": 142,
+      "executable": false,
+      "size_bytes": 15685,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "references/escape-hatch.md",
+      "type": "markdown",
+      "lines": 115,
+      "executable": false,
+      "size_bytes": 5403,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "references/eval.md",
+      "type": "markdown",
+      "lines": 140,
+      "executable": false,
+      "size_bytes": 5589,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "references/fonts.md",
+      "type": "markdown",
+      "lines": 112,
+      "executable": false,
+      "size_bytes": 3246,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "references/limitations.md",
+      "type": "markdown",
+      "lines": 136,
+      "executable": false,
+      "size_bytes": 5049,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "references/lottie.md",
+      "type": "markdown",
+      "lines": 119,
+      "executable": false,
+      "size_bytes": 4202,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "references/media.md",
+      "type": "markdown",
+      "lines": 166,
+      "executable": false,
+      "size_bytes": 4545,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "references/parameters.md",
+      "type": "markdown",
+      "lines": 172,
+      "executable": false,
+      "size_bytes": 4916,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "references/sequencing.md",
+      "type": "markdown",
+      "lines": 251,
+      "executable": false,
+      "size_bytes": 6992,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "references/timing.md",
+      "type": "markdown",
+      "lines": 165,
+      "executable": false,
+      "size_bytes": 6201,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "references/transitions.md",
+      "type": "markdown",
+      "lines": 114,
+      "executable": false,
+      "size_bytes": 4500,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "scripts/.gitkeep",
+      "type": "other",
+      "lines": 0,
+      "executable": false,
+      "size_bytes": 0,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "scripts/frame_strip.sh",
+      "type": "shell",
+      "lines": 107,
+      "executable": true,
+      "size_bytes": 3737,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "scripts/lint_source.py",
+      "type": "python",
+      "lines": 370,
+      "executable": true,
+      "size_bytes": 12978,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "scripts/render_diff.sh",
+      "type": "shell",
+      "lines": 103,
+      "executable": true,
+      "size_bytes": 3066,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    }
+  ],
+  "structured_summaries": [],
+  "issues": [
+    {
+      "id": "AE1",
+      "finding_id": "finding-47d03f4149fb4264b3e1365d6a979cef",
+      "category": "analysis-evasion",
+      "pattern": "Incomplete referenced artifact analysis",
+      "severity": "HIGH",
+      "confidence": 1.0,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 58,
+        "end_line": null
+      },
+      "finding": "references/api-map.md (partial)",
+      "explanation": "Referenced artifact was not completely inspected",
+      "remediation": "Review the target's analysis-completeness ledger and resolve all limitations. Keep required references; incomplete analysis is not proof of malicious evasion.",
+      "code_snippet": "Read [`references/api-map.md`](references/api-map.md) \u2014 the index of every Remotion API and its HF equivalent or per-topic reference. Identify which topic refer",
+      "intent": null,
+      "tags": [
+        "coverage",
+        "reference",
+        "target-disposition:partial"
+      ],
+      "evidence": {
+        "target_path": "references/api-map.md",
+        "target_disposition": "partial",
+        "reasons": [
+          {
+            "reason_code": "obfuscated_instruction_text",
+            "message": "Obfuscated instruction text could not be fully evaluated by the deterministic layer.",
+            "phase": "static",
+            "analyzers": [
+              "static_patterns_agent_snooping"
+            ]
+          },
+          {
+            "reason_code": "obfuscated_instruction_text",
+            "message": "Obfuscated instruction text could not be fully evaluated by the deterministic layer.",
+            "phase": "static",
+            "analyzers": [
+              "static_patterns_anti_refusal"
+            ]
+          },
+          {
+            "reason_code": "obfuscated_instruction_text",
+            "message": "Obfuscated instruction text could not be fully evaluated by the deterministic layer.",
+            "phase": "static",
+            "analyzers": [
+              "static_patterns_deserialization"
+            ]
+          },
+          {
+            "reason_code": "obfuscated_instruction_text",
+            "message": "Obfuscated instruction text could not be fully evaluated by the deterministic layer.",
+            "phase": "static",
+            "analyzers": [
+              "static_patterns_excessive_agency"
+            ]
+          },
+          {
+            "reason_code": "obfuscated_instruction_text",
+            "message": "Obfuscated instruction text could not be fully evaluated by the deterministic layer.",
+            "phase": "static",
+            "analyzers": [
+              "static_patterns_harmful_content"
+            ]
+          },
+          {
+            "reason_code": "obfuscated_instruction_text",
+            "message": "Obfuscated instruction text could not be fully evaluated by the deterministic layer.",
+            "phase": "static",
+            "analyzers": [
+              "static_patterns_memory_poisoning"
+            ]
+          },
+          {
+            "reason_code": "obfuscated_instruction_text",
+            "message": "Obfuscated instruction text could not be fully evaluated by the deterministic layer.",
+            "phase": "static",
+            "analyzers": [
+              "static_patterns_privilege_escalation"
+            ]
+          },
+          {
+            "reason_code": "obfuscated_instruction_text",
+            "message": "Obfuscated instruction text could not be fully evaluated by the deterministic layer.",
+            "phase": "static",
+            "analyzers": [
+              "static_patterns_prompt_injection"
+            ]
+          },
+          {
+            "reason_code": "obfuscated_instruction_text",
+            "message": "Obfuscated instruction text could not be fully evaluated by the deterministic layer.",
+            "phase": "static",
+            "analyzers": [
+              "static_patterns_rogue_agent"
+            ]
+          },
+          {
+            "reason_code": "obfuscated_instruction_text",
+            "message": "Obfuscated instruction text could not be fully evaluated by the deterministic layer.",
+            "phase": "static",
+            "analyzers": [
+              "static_patterns_ssrf"
+            ]
+          },
+          {
+            "reason_code": "obfuscated_instruction_text",
+            "message": "Obfuscated instruction text could not be fully evaluated by the deterministic layer.",
+            "phase": "static",
+            "analyzers": [
+              "static_patterns_supply_chain"
+            ]
+          },
+          {
+            "reason_code": "obfuscated_instruction_text",
+            "message": "Obfuscated instruction text could not be fully evaluated by the deterministic layer.",
+            "phase": "static",
+            "analyzers": [
+              "static_patterns_system_prompt_leakage"
+            ]
+          },
+          {
+            "reason_code": "obfuscated_instruction_text",
+            "message": "Obfuscated instruction text could not be fully evaluated by the deterministic layer.",
+            "phase": "static",
+            "analyzers": [
+              "static_patterns_tool_misuse"
+            ]
+          }
+        ]
+      },
+      "match_fingerprint": "0506072ae72a68add72b65cb02cc177d00c26b604027ed953bfb0a47ad4ff9a2",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 58,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "finding_id": "finding-88c96c164dd8448a8dd1f5bde867a934",
+      "category": "Prompt Injection",
+      "pattern": "Hidden Instructions",
+      "severity": "HIGH",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/sequencing.md",
+        "start_line": 36,
+        "end_line": 74,
+        "start_column": 26,
+        "end_column": 19
+      },
+      "finding": "<!-- 300/30 -->\n  data-fps=\"30\"\n  data-width=\"1280\"\n  data-height=\"720\"\n>\n  <!-- composition content -->\n</div>\n```\n\n`data-start=\"0\"` is required on `#stage` (the runtime needs it to anchor\nplayback; ",
+      "explanation": "Hidden instructions were detected in comments or invisible text. These could contain malicious directives. Manual review is recommended.",
+      "remediation": "Audit all comments and invisible characters. Remove any instructions that direct the agent to perform unauthorized actions. Use plain, reviewable content.",
+      "code_snippet": "  id=\"stage\"\n  data-composition-id=\"MyVideo\"\n  data-start=\"0\"\n  data-duration=\"10\"      <!-- 300/30 -->\n  data-fps=\"30\"\n  data-width=\"1280\"\n  data-height=\"720\"",
+      "intent": null,
+      "tags": [
+        "Prompt Injection"
+      ],
+      "evidence": {},
+      "match_fingerprint": "35dbbd369cbdf34384b2abc4b939b3fc87c3add3fd10e720b9b52e1ac2ef53e7",
+      "occurrences": [
+        {
+          "file": "references/sequencing.md",
+          "start_line": 36,
+          "end_line": 74,
+          "start_column": 26,
+          "end_column": 19
+        }
+      ]
+    },
+    {
+      "id": "LP3",
+      "finding_id": "finding-6d4fe35d10fe49348483b49cae3ae57d",
+      "category": "MCP Least Privilege",
+      "pattern": "Skill declares no tool scope ('permissions' or 'allowed-tools') but code capabilities were detected: env, file_read, file_write, network, shell.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 1,
+        "end_line": null
+      },
+      "finding": "Skill declares no tool scope ('permissions' or 'allowed-tools') but code capabilities were detected: env, file_read, file_write, network, shell.",
+      "explanation": "Without declared permissions the skill's intent is opaque and cannot be validated.",
+      "remediation": "Clarify the skill's intended tool scope and review how the host runtime enforces it; runtime permissions are unknown unless separately verified. For Claude Code / Agent Skills SKILL.md, 'allowed-tools' records preapproved tools, not a permission ceiling; add a tool only when it is independently approved as necessary, not to silence this finding. For MCP server manifests, use a 'permissions' list naming the required capabilities.",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI02"
+      ],
+      "evidence": {},
+      "match_fingerprint": null,
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 1,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-65840c34a15f4e479cb8ccac45fd6765",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx hyperframes'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 8,
+        "end_line": null
+      },
+      "finding": "npx hyperframes",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "9c0890cb5a51bdd7b5d559cbc121a60b04c456f948c1ea5579990d5b27969eed",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 8,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-2f8b41004e72406aa5acf2ce1f7dd5c0",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx hyperframes'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 72,
+        "end_line": null
+      },
+      "finding": "npx hyperframes",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "9c0890cb5a51bdd7b5d559cbc121a60b04c456f948c1ea5579990d5b27969eed",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 72,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-c6516570002b4cc4a82a86c8d1ea1813",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx hyperframes'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 94,
+        "end_line": null
+      },
+      "finding": "npx hyperframes",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "9c0890cb5a51bdd7b5d559cbc121a60b04c456f948c1ea5579990d5b27969eed",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 94,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-87f76a919afb4fa89b1d84765bea7549",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx hyperframes'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "assets/test-corpus/tier-1-title-card/README.md",
+        "start_line": 34,
+        "end_line": null
+      },
+      "finding": "npx hyperframes",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "9c0890cb5a51bdd7b5d559cbc121a60b04c456f948c1ea5579990d5b27969eed",
+      "occurrences": [
+        {
+          "file": "assets/test-corpus/tier-1-title-card/README.md",
+          "start_line": 34,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-19e4e8d74d7b44e486878480613fa96d",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx hyperframes'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "assets/test-corpus/tier-2-multi-scene/README.md",
+        "start_line": 43,
+        "end_line": null
+      },
+      "finding": "npx hyperframes",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "9c0890cb5a51bdd7b5d559cbc121a60b04c456f948c1ea5579990d5b27969eed",
+      "occurrences": [
+        {
+          "file": "assets/test-corpus/tier-2-multi-scene/README.md",
+          "start_line": 43,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-2af08f3aff1b4d9996da4cdb72df5c3c",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx hyperframes'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "assets/test-corpus/tier-3-data-driven/README.md",
+        "start_line": 81,
+        "end_line": null
+      },
+      "finding": "npx hyperframes",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "9c0890cb5a51bdd7b5d559cbc121a60b04c456f948c1ea5579990d5b27969eed",
+      "occurrences": [
+        {
+          "file": "assets/test-corpus/tier-3-data-driven/README.md",
+          "start_line": 81,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-29f4d837a16e44569df7faf23a8110e3",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx hyperframes'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/transitions.md",
+        "start_line": 46,
+        "end_line": null
+      },
+      "finding": "npx hyperframes",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "9c0890cb5a51bdd7b5d559cbc121a60b04c456f948c1ea5579990d5b27969eed",
+      "occurrences": [
+        {
+          "file": "references/transitions.md",
+          "start_line": 46,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-09deadfec63442f2a919ac4fdbe4d5f7",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx hyperframes'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/transitions.md",
+        "start_line": 69,
+        "end_line": null
+      },
+      "finding": "npx hyperframes",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "9c0890cb5a51bdd7b5d559cbc121a60b04c456f948c1ea5579990d5b27969eed",
+      "occurrences": [
+        {
+          "file": "references/transitions.md",
+          "start_line": 69,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "EA2",
+      "finding_id": "finding-4b99c5af28ff4791a3759acfdb069df8",
+      "category": "Excessive Agency",
+      "pattern": "Autonomous Decision Making",
+      "severity": "MEDIUM",
+      "confidence": 0.75,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 33,
+        "end_line": null,
+        "start_column": 44
+      },
+      "finding": "without asking",
+      "explanation": "Skill enables autonomous high-impact decisions without human-in-the-loop verification. Critical operations (destructive commands, financial transactions, data deletion) should require explicit user confirmation.",
+      "remediation": "Add human-in-the-loop confirmation for destructive, irreversible, or high-impact operations. Never auto-execute commands that modify files, send data, or alter system state.",
+      "code_snippet": "**Do NOT use this skill when:**\n\n- (a) The user is authoring a **new** HyperFrames composition, even if they have or are A/B-testing a similar Remotion video.\n- (b) The user mentions Remotion in passing without asking for migration.\n- (c) The user shares Remotion code as reference material rather than asking for a translation.\n- (d) The user asks for \"the same video as my Remotion one\" without explicitly asking to migrate the source \u2014 treat that as a fresh HyperFrames build.\n",
+      "intent": null,
+      "tags": [
+        "Excessive Agency"
+      ],
+      "evidence": {},
+      "match_fingerprint": "8dc77d3dce9ba1f2672e813265a1b1a0c8594866ef38a4e978bf4f4451795465",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 33,
+          "end_line": null,
+          "start_column": 44
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-c4d4a0b57b844ce5ae8a864d10b11ef5",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx remotion'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 91,
+        "end_line": null
+      },
+      "finding": "npx remotion",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "63e133b1944bf0e8419ca4e3cb7ff3157cb42dfdc2a2e775b28a71cd3e174a6d",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 91,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "E1",
+      "finding_id": "finding-0ebeaf1e4c4540a9be6fd7ded8c853b5",
+      "category": "Data Exfiltration",
+      "pattern": "External Transmission",
+      "severity": "MEDIUM",
+      "confidence": 0.5,
+      "location": {
+        "file": "assets/test-corpus/tier-4-escape-hatch/cases/03-async-metadata.tsx",
+        "start_line": 32,
+        "end_line": null,
+        "start_column": 5
+      },
+      "finding": "https://api.example.com/",
+      "explanation": "Data is being sent to an external URL. This could be legitimate telemetry or data exfiltration. Manual review is recommended.",
+      "remediation": "Verify the destination URL is trusted and necessary. Remove or replace with documented APIs. Ensure no secrets, tokens, or PII are transmitted.",
+      "code_snippet": "\nexport const calculateMetadata = async ({ props }: { props: Props }) => {\n  const response = await fetch(\n    `https://api.example.com/duration?text=%24%7BencodeURIComponent%28props.text%29%7D%60,\n  );\n  const { durationInFrames } = await response.json();\n  return {",
+      "intent": null,
+      "tags": [
+        "Data Exfiltration"
+      ],
+      "evidence": {},
+      "match_fingerprint": "88f1946300c8ae45d5ea7e81f2b6d4309a13082e928b6f7d1215d273945a1431",
+      "occurrences": [
+        {
+          "file": "assets/test-corpus/tier-4-escape-hatch/cases/03-async-metadata.tsx",
+          "start_line": 32,
+          "end_line": null,
+          "start_column": 5
+        }
+      ]
+    },
+    {
+      "id": "MP2",
+      "finding_id": "finding-5581fd6108d443dd9fcc86e17b09a355",
+      "category": "Memory Poisoning",
+      "pattern": "Context Window Stuffing",
+      "severity": "MEDIUM",
+      "confidence": 0.8,
+      "location": {
+        "file": "references/api-map.md",
+        "start_line": 56,
+        "end_line": null,
+        "start_column": 54
+      },
+      "finding": "                                                                                                                                                                                                        ",
+      "explanation": "Skill attempts to fill the context window with filler content, displacing legitimate instructions and safety constraints. This can degrade agent performance or bypass safety boundaries.",
+      "remediation": "Implement context-window management that detects and rejects padding or stuffing attempts. Prioritize system instructions over user-injected content.",
+      "code_snippet": "\nSee [media.md](media.md) for trim, volume ramps, and decoder notes.\n\n| Remotion                               | HyperFrames                                                                                                                                                                                                                                                                                                                                  |\n| -------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| `<Audio src volume>`                   | `<audio data-start data-duration data-track-index data-volume src>`                                                                ",
+      "intent": null,
+      "tags": [
+        "Memory Poisoning"
+      ],
+      "evidence": {},
+      "match_fingerprint": "5d64e38332663d53e94c5a06975d671b7ab689f1aa6a06ea60e074ded5c409f1",
+      "occurrences": [
+        {
+          "file": "references/api-map.md",
+          "start_line": 56,
+          "end_line": null,
+          "start_column": 54
+        }
+      ]
+    },
+    {
+      "id": "MP2",
+      "finding_id": "finding-50a801fb06164f6ea0663fbe150c2056",
+      "category": "Memory Poisoning",
+      "pattern": "Context Window Stuffing",
+      "severity": "MEDIUM",
+      "confidence": 0.8,
+      "location": {
+        "file": "references/api-map.md",
+        "start_line": 58,
+        "end_line": null,
+        "start_column": 110
+      },
+      "finding": "                                                                                                                                                                                                        ",
+      "explanation": "Skill attempts to fill the context window with filler content, displacing legitimate instructions and safety constraints. This can degrade agent performance or bypass safety boundaries.",
+      "remediation": "Implement context-window management that detects and rejects padding or stuffing attempts. Prioritize system instructions over user-injected content.",
+      "code_snippet": "          |\n| -------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| `<Audio src volume>`                   | `<audio data-start data-duration data-track-index data-volume src>`                                                                                                                                                                                                                                                                          |\n| `<Audio playbackRate startFrom endAt>` | `data-playback-rate`, `data-trim-start`, `data-trim-end`                                                                                                                                     ",
+      "intent": null,
+      "tags": [
+        "Memory Poisoning"
+      ],
+      "evidence": {},
+      "match_fingerprint": "5d64e38332663d53e94c5a06975d671b7ab689f1aa6a06ea60e074ded5c409f1",
+      "occurrences": [
+        {
+          "file": "references/api-map.md",
+          "start_line": 58,
+          "end_line": null,
+          "start_column": 110
+        }
+      ]
+    },
+    {
+      "id": "MP2",
+      "finding_id": "finding-7bf257c5108c4773b5c7dd36d9c9c954",
+      "category": "Memory Poisoning",
+      "pattern": "Context Window Stuffing",
+      "severity": "MEDIUM",
+      "confidence": 0.8,
+      "location": {
+        "file": "references/api-map.md",
+        "start_line": 59,
+        "end_line": null,
+        "start_column": 99
+      },
+      "finding": "                                                                                                                                                                                                        ",
+      "explanation": "Skill attempts to fill the context window with filler content, displacing legitimate instructions and safety constraints. This can degrade agent performance or bypass safety boundaries.",
+      "remediation": "Implement context-window management that detects and rejects padding or stuffing attempts. Prioritize system instructions over user-injected content.",
+      "code_snippet": "-------------------- |\n| `<Audio src volume>`                   | `<audio data-start data-duration data-track-index data-volume src>`                                                                                                                                                                                                                                                                          |\n| `<Audio playbackRate startFrom endAt>` | `data-playback-rate`, `data-trim-start`, `data-trim-end`                                                                                                                                                                                                                                                                                     |\n| `<Video src>`                          | `<video playsinline data-has-audio=\"true\" data-start data-duration data-track-index src>` only when the file has an audio stream (check with `ffprobe -v error -select_streams a -",
+      "intent": null,
+      "tags": [
+        "Memory Poisoning"
+      ],
+      "evidence": {},
+      "match_fingerprint": "5d64e38332663d53e94c5a06975d671b7ab689f1aa6a06ea60e074ded5c409f1",
+      "occurrences": [
+        {
+          "file": "references/api-map.md",
+          "start_line": 59,
+          "end_line": null,
+          "start_column": 99
+        }
+      ]
+    },
+    {
+      "id": "MP2",
+      "finding_id": "finding-e83f3b2c81c84ffb9c62ddbf68b1eb6d",
+      "category": "Memory Poisoning",
+      "pattern": "Context Window Stuffing",
+      "severity": "MEDIUM",
+      "confidence": 0.8,
+      "location": {
+        "file": "references/api-map.md",
+        "start_line": 61,
+        "end_line": null,
+        "start_column": 116
+      },
+      "finding": "                                                                                                                                                                                                        ",
+      "explanation": "Skill attempts to fill the context window with filler content, displacing legitimate instructions and safety constraints. This can degrade agent performance or bypass safety boundaries.",
+      "remediation": "Implement context-window management that detects and rejects padding or stuffing attempts. Prioritize system instructions over user-injected content.",
+      "code_snippet": "    |\n| `<Video src>`                          | `<video playsinline data-has-audio=\"true\" data-start data-duration data-track-index src>` only when the file has an audio stream (check with `ffprobe -v error -select_streams a -show_entries stream=codec_type -of csv=p=0 <file>`: non-empty means it has audio) and the source is not `muted` or `volume={0}`; otherwise `muted` instead |\n| `<OffthreadVideo>`                     | `<video>` \u2014 HF doesn't need the off-thread variant (uses headless Chrome)                                                                                                                                                                                                                                                                    |\n| `<Img src>`                            | `<img>`                                                                                                                                                                                            ",
+      "intent": null,
+      "tags": [
+        "Memory Poisoning"
+      ],
+      "evidence": {},
+      "match_fingerprint": "5d64e38332663d53e94c5a06975d671b7ab689f1aa6a06ea60e074ded5c409f1",
+      "occurrences": [
+        {
+          "file": "references/api-map.md",
+          "start_line": 61,
+          "end_line": null,
+          "start_column": 116
+        }
+      ]
+    },
+    {
+      "id": "MP2",
+      "finding_id": "finding-8dcda2de2010470facaaee328127fc68",
+      "category": "Memory Poisoning",
+      "pattern": "Context Window Stuffing",
+      "severity": "MEDIUM",
+      "confidence": 0.8,
+      "location": {
+        "file": "references/api-map.md",
+        "start_line": 62,
+        "end_line": null,
+        "start_column": 50
+      },
+      "finding": "                                                                                                                                                                                                        ",
+      "explanation": "Skill attempts to fill the context window with filler content, displacing legitimate instructions and safety constraints. This can degrade agent performance or bypass safety boundaries.",
+      "remediation": "Implement context-window management that detects and rejects padding or stuffing attempts. Prioritize system instructions over user-injected content.",
+      "code_snippet": " the source is not `muted` or `volume={0}`; otherwise `muted` instead |\n| `<OffthreadVideo>`                     | `<video>` \u2014 HF doesn't need the off-thread variant (uses headless Chrome)                                                                                                                                                                                                                                                                    |\n| `<Img src>`                            | `<img>`                                                                                                                                                                                                                                                                                                                                      |\n| `<IFrame src>`                         | `<iframe>` \u2014 HF auto-falls back to screenshot mode for nested iframes                                                            ",
+      "intent": null,
+      "tags": [
+        "Memory Poisoning"
+      ],
+      "evidence": {},
+      "match_fingerprint": "5d64e38332663d53e94c5a06975d671b7ab689f1aa6a06ea60e074ded5c409f1",
+      "occurrences": [
+        {
+          "file": "references/api-map.md",
+          "start_line": 62,
+          "end_line": null,
+          "start_column": 50
+        }
+      ]
+    },
+    {
+      "id": "MP2",
+      "finding_id": "finding-ae81bf9f8f994df9b2bc766e771d8732",
+      "category": "Memory Poisoning",
+      "pattern": "Context Window Stuffing",
+      "severity": "MEDIUM",
+      "confidence": 0.8,
+      "location": {
+        "file": "references/api-map.md",
+        "start_line": 63,
+        "end_line": null,
+        "start_column": 112
+      },
+      "finding": "                                                                                                                                                                                                        ",
+      "explanation": "Skill attempts to fill the context window with filler content, displacing legitimate instructions and safety constraints. This can degrade agent performance or bypass safety boundaries.",
+      "remediation": "Implement context-window management that detects and rejects padding or stuffing attempts. Prioritize system instructions over user-injected content.",
+      "code_snippet": "        |\n| `<Img src>`                            | `<img>`                                                                                                                                                                                                                                                                                                                                      |\n| `<IFrame src>`                         | `<iframe>` \u2014 HF auto-falls back to screenshot mode for nested iframes                                                                                                                                                                                                                                                                        |\n| `staticFile(\"x.png\")`                  | `\"assets/x.png\"` in the root, `\"../assets/x.png\"` inside a `compositions/` scene file \u2014 copy the file into `hf-src/assets/` next to `index.html`                                               ",
+      "intent": null,
+      "tags": [
+        "Memory Poisoning"
+      ],
+      "evidence": {},
+      "match_fingerprint": "5d64e38332663d53e94c5a06975d671b7ab689f1aa6a06ea60e074ded5c409f1",
+      "occurrences": [
+        {
+          "file": "references/api-map.md",
+          "start_line": 63,
+          "end_line": null,
+          "start_column": 112
+        }
+      ]
+    },
+    {
+      "id": "MP2",
+      "finding_id": "finding-0391b89fb8c4482fab0073305e9ee8e6",
+      "category": "Memory Poisoning",
+      "pattern": "Context Window Stuffing",
+      "severity": "MEDIUM",
+      "confidence": 0.8,
+      "location": {
+        "file": "references/api-map.md",
+        "start_line": 65,
+        "end_line": null,
+        "start_column": 107
+      },
+      "finding": "                                                                                                                                                                                                        ",
+      "explanation": "Skill attempts to fill the context window with filler content, displacing legitimate instructions and safety constraints. This can degrade agent performance or bypass safety boundaries.",
+      "remediation": "Implement context-window management that detects and rejects padding or stuffing attempts. Prioritize system instructions over user-injected content.",
+      "code_snippet": "                                                                                                                                                                                                                                  |\n| `staticFile(\"x.png\")`                  | `\"assets/x.png\"` in the root, `\"../assets/x.png\"` inside a `compositions/` scene file \u2014 copy the file into `hf-src/assets/` next to `index.html`                                                                                                                                                                                             |\n| `delayRender()` / `continueRender()`   | drop \u2014 HF waits on asset readiness via the Frame Adapter pattern                                                                                                                                                                                                                                                                             |\n\n## Transitions\n",
+      "intent": null,
+      "tags": [
+        "Memory Poisoning"
+      ],
+      "evidence": {},
+      "match_fingerprint": "5d64e38332663d53e94c5a06975d671b7ab689f1aa6a06ea60e074ded5c409f1",
+      "occurrences": [
+        {
+          "file": "references/api-map.md",
+          "start_line": 65,
+          "end_line": null,
+          "start_column": 107
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-0f3a8dc52f0c4a3db956d79093cd0e7b",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx esbuild'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "references/escape-hatch.md",
+        "start_line": 52,
+        "end_line": null
+      },
+      "finding": "npx esbuild",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c560fbf98e97d381ca133ee257a0ad1367aa1028617c77cc6af231676ed2bc4",
+      "occurrences": [
+        {
+          "file": "references/escape-hatch.md",
+          "start_line": 52,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "SC1",
+      "finding_id": "finding-e09483f39b0449e3839f46b77ce216fd",
+      "category": "Supply Chain",
+      "pattern": "Unpinned Dependencies",
+      "severity": "LOW",
+      "confidence": 0.4,
+      "location": {
+        "file": "assets/test-corpus/tier-1-title-card/remotion-src/package.json",
+        "start_line": 9,
+        "end_line": null,
+        "start_column": 4
+      },
+      "finding": "\"@remotion/cli\": \"^4.0.0\"",
+      "explanation": "Dependencies lack version pinning, allowing potential malicious package updates. Consider pinning versions.",
+      "remediation": "Pin all dependency versions in requirements.txt or pyproject.toml. Use exact versions (==) or compatible ranges. Run pip-audit regularly.",
+      "code_snippet": "    \"render\": \"remotion render TitleCard out/baseline.mp4\"\n  },\n  \"dependencies\": {\n    \"@remotion/cli\": \"^4.0.0\",\n    \"react\": \"^18.3.1\",\n    \"react-dom\": \"^18.3.1\",\n    \"remotion\": \"^4.0.0\"",
+      "intent": null,
+      "tags": [
+        "Supply Chain"
+      ],
+      "evidence": {},
+      "match_fingerprint": "2d701bdce7f0eda7ba0e32524ce335912fbd314db0920df11f95be203cadcfd1",
+      "occurrences": [
+        {
+          "file": "assets/test-corpus/tier-1-title-card/remotion-src/package.json",
+          "start_line": 9,
+          "end_line": null,
+          "start_column": 4
+        }
+      ]
+    },
+    {
+      "id": "SC1",
+      "finding_id": "finding-2f42e4480a4a4d149b7d85c3db2fc561",
+      "category": "Supply Chain",
+      "pattern": "Unpinned Dependencies",
+      "severity": "LOW",
+      "confidence": 0.4,
+      "location": {
+        "file": "assets/test-corpus/tier-2-multi-scene/remotion-src/package.json",
+        "start_line": 9,
+        "end_line": null,
+        "start_column": 4
+      },
+      "finding": "\"@remotion/cli\": \"^4.0.0\"",
+      "explanation": "Dependencies lack version pinning, allowing potential malicious package updates. Consider pinning versions.",
+      "remediation": "Pin all dependency versions in requirements.txt or pyproject.toml. Use exact versions (==) or compatible ranges. Run pip-audit regularly.",
+      "code_snippet": "    \"render\": \"remotion render MultiScene out/baseline.mp4\"\n  },\n  \"dependencies\": {\n    \"@remotion/cli\": \"^4.0.0\",\n    \"react\": \"^18.3.1\",\n    \"react-dom\": \"^18.3.1\",\n    \"remotion\": \"^4.0.0\"",
+      "intent": null,
+      "tags": [
+        "Supply Chain"
+      ],
+      "evidence": {},
+      "match_fingerprint": "2d701bdce7f0eda7ba0e32524ce335912fbd314db0920df11f95be203cadcfd1",
+      "occurrences": [
+        {
+          "file": "assets/test-corpus/tier-2-multi-scene/remotion-src/package.json",
+          "start_line": 9,
+          "end_line": null,
+          "start_column": 4
+        }
+      ]
+    },
+    {
+      "id": "SC1",
+      "finding_id": "finding-12d7742a09fc4b3c9ba0ef1f745416f1",
+      "category": "Supply Chain",
+      "pattern": "Unpinned Dependencies",
+      "severity": "LOW",
+      "confidence": 0.4,
+      "location": {
+        "file": "assets/test-corpus/tier-3-data-driven/remotion-src/package.json",
+        "start_line": 9,
+        "end_line": null,
+        "start_column": 4
+      },
+      "finding": "\"@remotion/cli\": \"^4.0.0\"",
+      "explanation": "Dependencies lack version pinning, allowing potential malicious package updates. Consider pinning versions.",
+      "remediation": "Pin all dependency versions in requirements.txt or pyproject.toml. Use exact versions (==) or compatible ranges. Run pip-audit regularly.",
+      "code_snippet": "    \"render\": \"remotion render Stargazed out/baseline.mp4\"\n  },\n  \"dependencies\": {\n    \"@remotion/cli\": \"^4.0.0\",\n    \"react\": \"^18.3.1\",\n    \"react-dom\": \"^18.3.1\",\n    \"remotion\": \"^4.0.0\",",
+      "intent": null,
+      "tags": [
+        "Supply Chain"
+      ],
+      "evidence": {},
+      "match_fingerprint": "2d701bdce7f0eda7ba0e32524ce335912fbd314db0920df11f95be203cadcfd1",
+      "occurrences": [
+        {
+          "file": "assets/test-corpus/tier-3-data-driven/remotion-src/package.json",
+          "start_line": 9,
+          "end_line": null,
+          "start_column": 4
+        }
+      ]
+    },
+    {
+      "id": "SC1",
+      "finding_id": "finding-ee34a090c59741ecae037e99494db7ca",
+      "category": "Supply Chain",
+      "pattern": "Unpinned Dependencies",
+      "severity": "LOW",
+      "confidence": 0.4,
+      "location": {
+        "file": "assets/test-corpus/tier-1-title-card/remotion-src/package.json",
+        "start_line": 10,
+        "end_line": null,
+        "start_column": 4
+      },
+      "finding": "\"react\": \"^18.3.1\"",
+      "explanation": "Dependencies lack version pinning, allowing potential malicious package updates. Consider pinning versions.",
+      "remediation": "Pin all dependency versions in requirements.txt or pyproject.toml. Use exact versions (==) or compatible ranges. Run pip-audit regularly.",
+      "code_snippet": "  },\n  \"dependencies\": {\n    \"@remotion/cli\": \"^4.0.0\",\n    \"react\": \"^18.3.1\",\n    \"react-dom\": \"^18.3.1\",\n    \"remotion\": \"^4.0.0\"\n  }",
+      "intent": null,
+      "tags": [
+        "Supply Chain"
+      ],
+      "evidence": {},
+      "match_fingerprint": "03bf4accd98348009feecdca8e80e8b011240b41de2a15cd0392b7b97f989e96",
+      "occurrences": [
+        {
+          "file": "assets/test-corpus/tier-1-title-card/remotion-src/package.json",
+          "start_line": 10,
+          "end_line": null,
+          "start_column": 4
+        }
+      ]
+    },
+    {
+      "id": "SC1",
+      "finding_id": "finding-075dedee99694258bfda671e206939d5",
+      "category": "Supply Chain",
+      "pattern": "Unpinned Dependencies",
+      "severity": "LOW",
+      "confidence": 0.4,
+      "location": {
+        "file": "assets/test-corpus/tier-2-multi-scene/remotion-src/package.json",
+        "start_line": 10,
+        "end_line": null,
+        "start_column": 4
+      },
+      "finding": "\"react\": \"^18.3.1\"",
+      "explanation": "Dependencies lack version pinning, allowing potential malicious package updates. Consider pinning versions.",
+      "remediation": "Pin all dependency versions in requirements.txt or pyproject.toml. Use exact versions (==) or compatible ranges. Run pip-audit regularly.",
+      "code_snippet": "  },\n  \"dependencies\": {\n    \"@remotion/cli\": \"^4.0.0\",\n    \"react\": \"^18.3.1\",\n    \"react-dom\": \"^18.3.1\",\n    \"remotion\": \"^4.0.0\"\n  }",
+      "intent": null,
+      "tags": [
+        "Supply Chain"
+      ],
+      "evidence": {},
+      "match_fingerprint": "03bf4accd98348009feecdca8e80e8b011240b41de2a15cd0392b7b97f989e96",
+      "occurrences": [
+        {
+          "file": "assets/test-corpus/tier-2-multi-scene/remotion-src/package.json",
+          "start_line": 10,
+          "end_line": null,
+          "start_column": 4
+        }
+      ]
+    },
+    {
+      "id": "SC1",
+      "finding_id": "finding-217d3d2c8948419b9bcf0aa997e2af65",
+      "category": "Supply Chain",
+      "pattern": "Unpinned Dependencies",
+      "severity": "LOW",
+      "confidence": 0.4,
+      "location": {
+        "file": "assets/test-corpus/tier-3-data-driven/remotion-src/package.json",
+        "start_line": 10,
+        "end_line": null,
+        "start_column": 4
+      },
+      "finding": "\"react\": \"^18.3.1\"",
+      "explanation": "Dependencies lack version pinning, allowing potential malicious package updates. Consider pinning versions.",
+      "remediation": "Pin all dependency versions in requirements.txt or pyproject.toml. Use exact versions (==) or compatible ranges. Run pip-audit regularly.",
+      "code_snippet": "  },\n  \"dependencies\": {\n    \"@remotion/cli\": \"^4.0.0\",\n    \"react\": \"^18.3.1\",\n    \"react-dom\": \"^18.3.1\",\n    \"remotion\": \"^4.0.0\",\n    \"zod\": \"^3.22.0\"",
+      "intent": null,
+      "tags": [
+        "Supply Chain"
+      ],
+      "evidence": {},
+      "match_fingerprint": "03bf4accd98348009feecdca8e80e8b011240b41de2a15cd0392b7b97f989e96",
+      "occurrences": [
+        {
+          "file": "assets/test-corpus/tier-3-data-driven/remotion-src/package.json",
+          "start_line": 10,
+          "end_line": null,
+          "start_column": 4
+        }
+      ]
+    },
+    {
+      "id": "SC4",
+      "finding_id": "finding-7ab9d9ba238a4020910089aa1490bccd",
+      "category": "Supply Chain",
+      "pattern": "Unverifiable Dependency: react has 2 known advisory(ies) (CVE-2013-7035 (Cross-Site Scripting in react); GHSA-hg79-j56m-fxgv (Cross-Site Scripting in react)), but the manifest does not pin a version, so it is unknown whether the installed release is affected",
+      "severity": "LOW",
+      "confidence": 0.4,
+      "location": {
+        "file": "assets/test-corpus/tier-1-title-card/remotion-src/package.json",
+        "start_line": 10,
+        "end_line": null
+      },
+      "finding": "react",
+      "explanation": "OSV returned advisories for this package, but its resolved version is unknown. A package-name lookup does not establish whether the installed release is affected by those advisories.",
+      "remediation": "Determine the dependency's exact resolved version from the environment or lockfile and compare it with the advisories in OSV (osv.dev). If it is affected, use a verified fixed release or remove or replace the dependency when no fix is available.",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "Supply Chain"
+      ],
+      "evidence": {},
+      "match_fingerprint": "f0edab2a4dd2bf7dd3e136a09bb47128228147017bd826620c6e873e0a066f77",
+      "occurrences": [
+        {
+          "file": "assets/test-corpus/tier-1-title-card/remotion-src/package.json",
+          "start_line": 10,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "SC4",
+      "finding_id": "finding-8a7f34c452094246b8734a68fe4f5a06",
+      "category": "Supply Chain",
+      "pattern": "Unverifiable Dependency: react has 2 known advisory(ies) (CVE-2013-7035 (Cross-Site Scripting in react); GHSA-hg79-j56m-fxgv (Cross-Site Scripting in react)), but the manifest does not pin a version, so it is unknown whether the installed release is affected",
+      "severity": "LOW",
+      "confidence": 0.4,
+      "location": {
+        "file": "assets/test-corpus/tier-2-multi-scene/remotion-src/package.json",
+        "start_line": 10,
+        "end_line": null
+      },
+      "finding": "react",
+      "explanation": "OSV returned advisories for this package, but its resolved version is unknown. A package-name lookup does not establish whether the installed release is affected by those advisories.",
+      "remediation": "Determine the dependency's exact resolved version from the environment or lockfile and compare it with the advisories in OSV (osv.dev). If it is affected, use a verified fixed release or remove or replace the dependency when no fix is available.",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "Supply Chain"
+      ],
+      "evidence": {},
+      "match_fingerprint": "f0edab2a4dd2bf7dd3e136a09bb47128228147017bd826620c6e873e0a066f77",
+      "occurrences": [
+        {
+          "file": "assets/test-corpus/tier-2-multi-scene/remotion-src/package.json",
+          "start_line": 10,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "SC4",
+      "finding_id": "finding-ba69784df2394b598d1e1994b8b6120c",
+      "category": "Supply Chain",
+      "pattern": "Unverifiable Dependency: react has 2 known advisory(ies) (CVE-2013-7035 (Cross-Site Scripting in react); GHSA-hg79-j56m-fxgv (Cross-Site Scripting in react)), but the manifest does not pin a version, so it is unknown whether the installed release is affected",
+      "severity": "LOW",
+      "confidence": 0.4,
+      "location": {
+        "file": "assets/test-corpus/tier-3-data-driven/remotion-src/package.json",
+        "start_line": 10,
+        "end_line": null
+      },
+      "finding": "react",
+      "explanation": "OSV returned advisories for this package, but its resolved version is unknown. A package-name lookup does not establish whether the installed release is affected by those advisories.",
+      "remediation": "Determine the dependency's exact resolved version from the environment or lockfile and compare it with the advisories in OSV (osv.dev). If it is affected, use a verified fixed release or remove or replace the dependency when no fix is available.",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "Supply Chain"
+      ],
+      "evidence": {},
+      "match_fingerprint": "f0edab2a4dd2bf7dd3e136a09bb47128228147017bd826620c6e873e0a066f77",
+      "occurrences": [
+        {
+          "file": "assets/test-corpus/tier-3-data-driven/remotion-src/package.json",
+          "start_line": 10,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "SC1",
+      "finding_id": "finding-b907957e24dc4af8b9340a13cf85ad9c",
+      "category": "Supply Chain",
+      "pattern": "Unpinned Dependencies",
+      "severity": "LOW",
+      "confidence": 0.4,
+      "location": {
+        "file": "assets/test-corpus/tier-1-title-card/remotion-src/package.json",
+        "start_line": 11,
+        "end_line": null,
+        "start_column": 4
+      },
+      "finding": "\"react-dom\": \"^18.3.1\"",
+      "explanation": "Dependencies lack version pinning, allowing potential malicious package updates. Consider pinning versions.",
+      "remediation": "Pin all dependency versions in requirements.txt or pyproject.toml. Use exact versions (==) or compatible ranges. Run pip-audit regularly.",
+      "code_snippet": "  \"dependencies\": {\n    \"@remotion/cli\": \"^4.0.0\",\n    \"react\": \"^18.3.1\",\n    \"react-dom\": \"^18.3.1\",\n    \"remotion\": \"^4.0.0\"\n  }\n}",
+      "intent": null,
+      "tags": [
+        "Supply Chain"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6aaf5b27fbac44eeebc5148464451c523bbe23ca17bb4f17056189761d24d385",
+      "occurrences": [
+        {
+          "file": "assets/test-corpus/tier-1-title-card/remotion-src/package.json",
+          "start_line": 11,
+          "end_line": null,
+          "start_column": 4
+        }
+      ]
+    },
+    {
+      "id": "SC1",
+      "finding_id": "finding-7e6e7492f80d401b8cd94acb1bba660a",
+      "category": "Supply Chain",
+      "pattern": "Unpinned Dependencies",
+      "severity": "LOW",
+      "confidence": 0.4,
+      "location": {
+        "file": "assets/test-corpus/tier-2-multi-scene/remotion-src/package.json",
+        "start_line": 11,
+        "end_line": null,
+        "start_column": 4
+      },
+      "finding": "\"react-dom\": \"^18.3.1\"",
+      "explanation": "Dependencies lack version pinning, allowing potential malicious package updates. Consider pinning versions.",
+      "remediation": "Pin all dependency versions in requirements.txt or pyproject.toml. Use exact versions (==) or compatible ranges. Run pip-audit regularly.",
+      "code_snippet": "  \"dependencies\": {\n    \"@remotion/cli\": \"^4.0.0\",\n    \"react\": \"^18.3.1\",\n    \"react-dom\": \"^18.3.1\",\n    \"remotion\": \"^4.0.0\"\n  }\n}",
+      "intent": null,
+      "tags": [
+        "Supply Chain"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6aaf5b27fbac44eeebc5148464451c523bbe23ca17bb4f17056189761d24d385",
+      "occurrences": [
+        {
+          "file": "assets/test-corpus/tier-2-multi-scene/remotion-src/package.json",
+          "start_line": 11,
+          "end_line": null,
+          "start_column": 4
+        }
+      ]
+    },
+    {
+      "id": "SC1",
+      "finding_id": "finding-4ea80f7103a94920a5df730b683318ba",
+      "category": "Supply Chain",
+      "pattern": "Unpinned Dependencies",
+      "severity": "LOW",
+      "confidence": 0.4,
+      "location": {
+        "file": "assets/test-corpus/tier-3-data-driven/remotion-src/package.json",
+        "start_line": 11,
+        "end_line": null,
+        "start_column": 4
+      },
+      "finding": "\"react-dom\": \"^18.3.1\"",
+      "explanation": "Dependencies lack version pinning, allowing potential malicious package updates. Consider pinning versions.",
+      "remediation": "Pin all dependency versions in requirements.txt or pyproject.toml. Use exact versions (==) or compatible ranges. Run pip-audit regularly.",
+      "code_snippet": "  \"dependencies\": {\n    \"@remotion/cli\": \"^4.0.0\",\n    \"react\": \"^18.3.1\",\n    \"react-dom\": \"^18.3.1\",\n    \"remotion\": \"^4.0.0\",\n    \"zod\": \"^3.22.0\"\n  }",
+      "intent": null,
+      "tags": [
+        "Supply Chain"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6aaf5b27fbac44eeebc5148464451c523bbe23ca17bb4f17056189761d24d385",
+      "occurrences": [
+        {
+          "file": "assets/test-corpus/tier-3-data-driven/remotion-src/package.json",
+          "start_line": 11,
+          "end_line": null,
+          "start_column": 4
+        }
+      ]
+    },
+    {
+      "id": "SC4",
+      "finding_id": "finding-819409cdf0a54889bd4e95ffb4ddb15b",
+      "category": "Supply Chain",
+      "pattern": "Unverifiable Dependency: react-dom has 1 known advisory(ies) (CVE-2018-6341 (Cross-Site Scripting in react-dom)), but the manifest does not pin a version, so it is unknown whether the installed release is affected",
+      "severity": "LOW",
+      "confidence": 0.4,
+      "location": {
+        "file": "assets/test-corpus/tier-1-title-card/remotion-src/package.json",
+        "start_line": 11,
+        "end_line": null
+      },
+      "finding": "react-dom",
+      "explanation": "OSV returned advisories for this package, but its resolved version is unknown. A package-name lookup does not establish whether the installed release is affected by those advisories.",
+      "remediation": "Determine the dependency's exact resolved version from the environment or lockfile and compare it with the advisories in OSV (osv.dev). If it is affected, use a verified fixed release or remove or replace the dependency when no fix is available.",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "Supply Chain"
+      ],
+      "evidence": {},
+      "match_fingerprint": "f89045a8baff5e86e1367dd31ea9e36a8a847a23455fff7fc18ff896d503c545",
+      "occurrences": [
+        {
+          "file": "assets/test-corpus/tier-1-title-card/remotion-src/package.json",
+          "start_line": 11,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "SC4",
+      "finding_id": "finding-dfb4a8a0ca00428996f7560808e48ce9",
+      "category": "Supply Chain",
+      "pattern": "Unverifiable Dependency: react-dom has 1 known advisory(ies) (CVE-2018-6341 (Cross-Site Scripting in react-dom)), but the manifest does not pin a version, so it is unknown whether the installed release is affected",
+      "severity": "LOW",
+      "confidence": 0.4,
+      "location": {
+        "file": "assets/test-corpus/tier-2-multi-scene/remotion-src/package.json",
+        "start_line": 11,
+        "end_line": null
+      },
+      "finding": "react-dom",
+      "explanation": "OSV returned advisories for this package, but its resolved version is unknown. A package-name lookup does not establish whether the installed release is affected by those advisories.",
+      "remediation": "Determine the dependency's exact resolved version from the environment or lockfile and compare it with the advisories in OSV (osv.dev). If it is affected, use a verified fixed release or remove or replace the dependency when no fix is available.",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "Supply Chain"
+      ],
+      "evidence": {},
+      "match_fingerprint": "f89045a8baff5e86e1367dd31ea9e36a8a847a23455fff7fc18ff896d503c545",
+      "occurrences": [
+        {
+          "file": "assets/test-corpus/tier-2-multi-scene/remotion-src/package.json",
+          "start_line": 11,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "SC4",
+      "finding_id": "finding-65e0e1d36f14458c9457af1fb04b8db6",
+      "category": "Supply Chain",
+      "pattern": "Unverifiable Dependency: react-dom has 1 known advisory(ies) (CVE-2018-6341 (Cross-Site Scripting in react-dom)), but the manifest does not pin a version, so it is unknown whether the installed release is affected",
+      "severity": "LOW",
+      "confidence": 0.4,
+      "location": {
+        "file": "assets/test-corpus/tier-3-data-driven/remotion-src/package.json",
+        "start_line": 11,
+        "end_line": null
+      },
+      "finding": "react-dom",
+      "explanation": "OSV returned advisories for this package, but its resolved version is unknown. A package-name lookup does not establish whether the installed release is affected by those advisories.",
+      "remediation": "Determine the dependency's exact resolved version from the environment or lockfile and compare it with the advisories in OSV (osv.dev). If it is affected, use a verified fixed release or remove or replace the dependency when no fix is available.",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "Supply Chain"
+      ],
+      "evidence": {},
+      "match_fingerprint": "f89045a8baff5e86e1367dd31ea9e36a8a847a23455fff7fc18ff896d503c545",
+      "occurrences": [
+        {
+          "file": "assets/test-corpus/tier-3-data-driven/remotion-src/package.json",
+          "start_line": 11,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "SC1",
+      "finding_id": "finding-07f50cd32b614781a3d77ac96f3ed905",
+      "category": "Supply Chain",
+      "pattern": "Unpinned Dependencies",
+      "severity": "LOW",
+      "confidence": 0.4,
+      "location": {
+        "file": "assets/test-corpus/tier-1-title-card/remotion-src/package.json",
+        "start_line": 12,
+        "end_line": null,
+        "start_column": 4
+      },
+      "finding": "\"remotion\": \"^4.0.0\"",
+      "explanation": "Dependencies lack version pinning, allowing potential malicious package updates. Consider pinning versions.",
+      "remediation": "Pin all dependency versions in requirements.txt or pyproject.toml. Use exact versions (==) or compatible ranges. Run pip-audit regularly.",
+      "code_snippet": "    \"@remotion/cli\": \"^4.0.0\",\n    \"react\": \"^18.3.1\",\n    \"react-dom\": \"^18.3.1\",\n    \"remotion\": \"^4.0.0\"\n  }\n}",
+      "intent": null,
+      "tags": [
+        "Supply Chain"
+      ],
+      "evidence": {},
+      "match_fingerprint": "aec0fff86c73e64e9e4726d07aca6eaa40ed3a76379fefc111c58351c3e06a99",
+      "occurrences": [
+        {
+          "file": "assets/test-corpus/tier-1-title-card/remotion-src/package.json",
+          "start_line": 12,
+          "end_line": null,
+          "start_column": 4
+        }
+      ]
+    },
+    {
+      "id": "SC1",
+      "finding_id": "finding-2c3a411171fa412b8fefdacc292740ab",
+      "category": "Supply Chain",
+      "pattern": "Unpinned Dependencies",
+      "severity": "LOW",
+      "confidence": 0.4,
+      "location": {
+        "file": "assets/test-corpus/tier-2-multi-scene/remotion-src/package.json",
+        "start_line": 12,
+        "end_line": null,
+        "start_column": 4
+      },
+      "finding": "\"remotion\": \"^4.0.0\"",
+      "explanation": "Dependencies lack version pinning, allowing potential malicious package updates. Consider pinning versions.",
+      "remediation": "Pin all dependency versions in requirements.txt or pyproject.toml. Use exact versions (==) or compatible ranges. Run pip-audit regularly.",
+      "code_snippet": "    \"@remotion/cli\": \"^4.0.0\",\n    \"react\": \"^18.3.1\",\n    \"react-dom\": \"^18.3.1\",\n    \"remotion\": \"^4.0.0\"\n  }\n}",
+      "intent": null,
+      "tags": [
+        "Supply Chain"
+      ],
+      "evidence": {},
+      "match_fingerprint": "aec0fff86c73e64e9e4726d07aca6eaa40ed3a76379fefc111c58351c3e06a99",
+      "occurrences": [
+        {
+          "file": "assets/test-corpus/tier-2-multi-scene/remotion-src/package.json",
+          "start_line": 12,
+          "end_line": null,
+          "start_column": 4
+        }
+      ]
+    },
+    {
+      "id": "SC1",
+      "finding_id": "finding-9b2cbe82bb504520b257cc7474e75db1",
+      "category": "Supply Chain",
+      "pattern": "Unpinned Dependencies",
+      "severity": "LOW",
+      "confidence": 0.4,
+      "location": {
+        "file": "assets/test-corpus/tier-3-data-driven/remotion-src/package.json",
+        "start_line": 12,
+        "end_line": null,
+        "start_column": 4
+      },
+      "finding": "\"remotion\": \"^4.0.0\"",
+      "explanation": "Dependencies lack version pinning, allowing potential malicious package updates. Consider pinning versions.",
+      "remediation": "Pin all dependency versions in requirements.txt or pyproject.toml. Use exact versions (==) or compatible ranges. Run pip-audit regularly.",
+      "code_snippet": "    \"@remotion/cli\": \"^4.0.0\",\n    \"react\": \"^18.3.1\",\n    \"react-dom\": \"^18.3.1\",\n    \"remotion\": \"^4.0.0\",\n    \"zod\": \"^3.22.0\"\n  }\n}",
+      "intent": null,
+      "tags": [
+        "Supply Chain"
+      ],
+      "evidence": {},
+      "match_fingerprint": "aec0fff86c73e64e9e4726d07aca6eaa40ed3a76379fefc111c58351c3e06a99",
+      "occurrences": [
+        {
+          "file": "assets/test-corpus/tier-3-data-driven/remotion-src/package.json",
+          "start_line": 12,
+          "end_line": null,
+          "start_column": 4
+        }
+      ]
+    },
+    {
+      "id": "SC4",
+      "finding_id": "finding-bba8779f594a4525be7fe6f4d6994604",
+      "category": "Supply Chain",
+      "pattern": "Unverifiable Dependency: remotion has 2 known advisory(ies) (CVE-2026-30120 (Remotion: remote code execution (RCE) vulnerability); CVE-2026-30121 (Remotion: arbitrary file write vulnerability)), but the manifest does not pin a version, so it is unknown whether the installed release is affected",
+      "severity": "LOW",
+      "confidence": 0.4,
+      "location": {
+        "file": "assets/test-corpus/tier-1-title-card/remotion-src/package.json",
+        "start_line": 12,
+        "end_line": null
+      },
+      "finding": "remotion",
+      "explanation": "OSV returned advisories for this package, but its resolved version is unknown. A package-name lookup does not establish whether the installed release is affected by those advisories.",
+      "remediation": "Determine the dependency's exact resolved version from the environment or lockfile and compare it with the advisories in OSV (osv.dev). If it is affected, use a verified fixed release or remove or replace the dependency when no fix is available.",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "Supply Chain"
+      ],
+      "evidence": {},
+      "match_fingerprint": "677e52cd0c6af4e0a5ab6c723a01152f331b9e805ca97775a54574f7127edc7c",
+      "occurrences": [
+        {
+          "file": "assets/test-corpus/tier-1-title-card/remotion-src/package.json",
+          "start_line": 12,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "SC4",
+      "finding_id": "finding-8fda00c6b5d540eebccee1811dc5a7ba",
+      "category": "Supply Chain",
+      "pattern": "Unverifiable Dependency: remotion has 2 known advisory(ies) (CVE-2026-30120 (Remotion: remote code execution (RCE) vulnerability); CVE-2026-30121 (Remotion: arbitrary file write vulnerability)), but the manifest does not pin a version, so it is unknown whether the installed release is affected",
+      "severity": "LOW",
+      "confidence": 0.4,
+      "location": {
+        "file": "assets/test-corpus/tier-2-multi-scene/remotion-src/package.json",
+        "start_line": 12,
+        "end_line": null
+      },
+      "finding": "remotion",
+      "explanation": "OSV returned advisories for this package, but its resolved version is unknown. A package-name lookup does not establish whether the installed release is affected by those advisories.",
+      "remediation": "Determine the dependency's exact resolved version from the environment or lockfile and compare it with the advisories in OSV (osv.dev). If it is affected, use a verified fixed release or remove or replace the dependency when no fix is available.",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "Supply Chain"
+      ],
+      "evidence": {},
+      "match_fingerprint": "677e52cd0c6af4e0a5ab6c723a01152f331b9e805ca97775a54574f7127edc7c",
+      "occurrences": [
+        {
+          "file": "assets/test-corpus/tier-2-multi-scene/remotion-src/package.json",
+          "start_line": 12,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "SC4",
+      "finding_id": "finding-41bf1ee41d53407cbf0e4f87e35c0f05",
+      "category": "Supply Chain",
+      "pattern": "Unverifiable Dependency: remotion has 2 known advisory(ies) (CVE-2026-30120 (Remotion: remote code execution (RCE) vulnerability); CVE-2026-30121 (Remotion: arbitrary file write vulnerability)), but the manifest does not pin a version, so it is unknown whether the installed release is affected",
+      "severity": "LOW",
+      "confidence": 0.4,
+      "location": {
+        "file": "assets/test-corpus/tier-3-data-driven/remotion-src/package.json",
+        "start_line": 12,
+        "end_line": null
+      },
+      "finding": "remotion",
+      "explanation": "OSV returned advisories for this package, but its resolved version is unknown. A package-name lookup does not establish whether the installed release is affected by those advisories.",
+      "remediation": "Determine the dependency's exact resolved version from the environment or lockfile and compare it with the advisories in OSV (osv.dev). If it is affected, use a verified fixed release or remove or replace the dependency when no fix is available.",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "Supply Chain"
+      ],
+      "evidence": {},
+      "match_fingerprint": "677e52cd0c6af4e0a5ab6c723a01152f331b9e805ca97775a54574f7127edc7c",
+      "occurrences": [
+        {
+          "file": "assets/test-corpus/tier-3-data-driven/remotion-src/package.json",
+          "start_line": 12,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "SC1",
+      "finding_id": "finding-4303fc61bce047008c1dda2b7350764e",
+      "category": "Supply Chain",
+      "pattern": "Unpinned Dependencies",
+      "severity": "LOW",
+      "confidence": 0.4,
+      "location": {
+        "file": "assets/test-corpus/tier-3-data-driven/remotion-src/package.json",
+        "start_line": 13,
+        "end_line": null,
+        "start_column": 4
+      },
+      "finding": "\"zod\": \"^3.22.0\"",
+      "explanation": "Dependencies lack version pinning, allowing potential malicious package updates. Consider pinning versions.",
+      "remediation": "Pin all dependency versions in requirements.txt or pyproject.toml. Use exact versions (==) or compatible ranges. Run pip-audit regularly.",
+      "code_snippet": "    \"react\": \"^18.3.1\",\n    \"react-dom\": \"^18.3.1\",\n    \"remotion\": \"^4.0.0\",\n    \"zod\": \"^3.22.0\"\n  }\n}",
+      "intent": null,
+      "tags": [
+        "Supply Chain"
+      ],
+      "evidence": {},
+      "match_fingerprint": "83b9ce92022b66d73db2c9692a9a0649efd705dd480c29eb610d2ab7db20b696",
+      "occurrences": [
+        {
+          "file": "assets/test-corpus/tier-3-data-driven/remotion-src/package.json",
+          "start_line": 13,
+          "end_line": null,
+          "start_column": 4
+        }
+      ]
+    },
+    {
+      "id": "SC4",
+      "finding_id": "finding-d8f9e65f62d2425ab06d4357c7969b57",
+      "category": "Supply Chain",
+      "pattern": "Unverifiable Dependency: zod has 1 known advisory(ies) (CVE-2023-4316 (Zod denial of service vulnerability)), but the manifest does not pin a version, so it is unknown whether the installed release is affected",
+      "severity": "LOW",
+      "confidence": 0.4,
+      "location": {
+        "file": "assets/test-corpus/tier-3-data-driven/remotion-src/package.json",
+        "start_line": 13,
+        "end_line": null
+      },
+      "finding": "zod",
+      "explanation": "OSV returned advisories for this package, but its resolved version is unknown. A package-name lookup does not establish whether the installed release is affected by those advisories.",
+      "remediation": "Determine the dependency's exact resolved version from the environment or lockfile and compare it with the advisories in OSV (osv.dev). If it is affected, use a verified fixed release or remove or replace the dependency when no fix is available.",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "Supply Chain"
+      ],
+      "evidence": {},
+      "match_fingerprint": "7c38c1841a95c57526af54b7df1d6dc7f78729f0090449106d9431f1e0e8c9ee",
+      "occurrences": [
+        {
+          "file": "assets/test-corpus/tier-3-data-driven/remotion-src/package.json",
+          "start_line": 13,
+          "end_line": null
+        }
+      ]
+    }
+  ],
+  "suppressed_count": 0,
+  "suppressed": [],
+  "metadata": {
+    "has_executable_scripts": true,
+    "skillspector_version": "2.12.0",
+    "llm_requested": false,
+    "llm_available": false,
+    "meta_analysis_applied": false,
+    "inference_usage": [],
+    "llm_provenance": {
+      "schema_version": 1,
+      "provider": {
+        "configured_adapter": "unknown",
+        "resolved_adapter": "unknown",
+        "effective_adapter": "not_applicable",
+        "effective_adapters": [],
+        "service": "unknown",
+        "routing": {
+          "deployment_override": null,
+          "deployment_source": "unknown",
+          "api_version": null,
+          "api_version_source": "unknown"
+        }
+      },
+      "analyzers": [
+        {
+          "analyzer_id": "mcp_tool_poisoning",
+          "model": "z-ai/glm-5.3",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "4c52fbb83bbca0dd13f2685453c9b661d8c95bf8",
+              "source": "package_vcs_metadata"
+            }
+          }
+        },
+        {
+          "analyzer_id": "semantic_developer_intent",
+          "model": "z-ai/glm-5.3",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "4c52fbb83bbca0dd13f2685453c9b661d8c95bf8",
+              "source": "package_vcs_metadata"
+            }
+          }
+        },
+        {
+          "analyzer_id": "semantic_quality_policy",
+          "model": "z-ai/glm-5.3",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "4c52fbb83bbca0dd13f2685453c9b661d8c95bf8",
+              "source": "package_vcs_metadata"
+            }
+          }
+        },
+        {
+          "analyzer_id": "semantic_security_discovery",
+          "model": "z-ai/glm-5.3",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "4c52fbb83bbca0dd13f2685453c9b661d8c95bf8",
+              "source": "package_vcs_metadata"
+            }
+          }
+        },
+        {
+          "analyzer_id": "meta_analyzer",
+          "model": "z-ai/glm-5.3",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "4c52fbb83bbca0dd13f2685453c9b661d8c95bf8",
+              "source": "package_vcs_metadata"
+            }
+          }
+        }
+      ],
+      "sampling": {
+        "temperature": {
+          "requested": null,
+          "source": "provider_default",
+          "forwarded_to_client": null,
+          "adapter_support": false,
+          "provider_support": "unknown"
+        },
+        "seed": {
+          "requested": null,
+          "source": "unset",
+          "forwarded_to_client": null,
+          "adapter_support": false,
+          "provider_support": "unknown"
+        },
+        "reasoning_effort": {
+          "requested": null,
+          "source": "provider_default",
+          "forwarded_to_client": null,
+          "adapter_support": false,
+          "provider_support": "unknown"
+        }
+      },
+      "determinism": {
+        "classification": "not_applicable",
+        "control_status": "not_applied",
+        "provider_guarantee": false,
+        "reason": "LLM analysis was not executed for this scan."
+      }
+    },
+    "filtering_mode": "heuristic"
+  },
+  "execution_successful": true,
+  "analysis_completeness": {
+    "total_components": 74,
+    "scanned_components": 72,
+    "coverage_percent": 97.3,
+    "is_complete": false,
+    "status": "partial",
+    "execution_successful": true,
+    "fully_inspected_files": 72,
+    "partially_inspected_files": 2,
+    "entirely_uninspected_files": 0,
+    "ledger_exceptions": [
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_missing",
+        "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+        "path": "SKILL.md",
+        "start_line": 54,
+        "end_line": 54,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_missing",
+        "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+        "path": "SKILL.md",
+        "start_line": 68,
+        "end_line": 68,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_missing",
+        "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+        "path": "SKILL.md",
+        "start_line": 72,
+        "end_line": 72,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_unresolved",
+        "message": "A local path-like reference matched more than one bundled artifact and could not be resolved to a single target.",
+        "path": "SKILL.md",
+        "start_line": 76,
+        "end_line": 76,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_missing",
+        "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+        "path": "SKILL.md",
+        "start_line": 91,
+        "end_line": 91,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_missing",
+        "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+        "path": "SKILL.md",
+        "start_line": 97,
+        "end_line": 97,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_unresolved",
+        "message": "A local path-like reference matched more than one bundled artifact and could not be resolved to a single target.",
+        "path": "SKILL.md",
+        "start_line": 102,
+        "end_line": 102,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_missing",
+        "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+        "path": "SKILL.md",
+        "start_line": 106,
+        "end_line": 106,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "static",
+        "reason_code": "static_parse_limit",
+        "message": "A security-relevant expression exceeded a bounded static parser's span limit.",
+        "path": "assets/test-corpus/tier-4-escape-hatch/cases/03-async-metadata.tsx",
+        "start_line": null,
+        "end_line": null,
+        "fatal": false,
+        "analyzers": [
+          "static_patterns_tool_misuse"
+        ]
+      },
+      {
+        "outcome": "partial",
+        "phase": "static",
+        "reason_code": "obfuscated_instruction_text",
+        "message": "Obfuscated instruction text could not be fully evaluated by the deterministic layer.",
+        "path": "references/api-map.md",
+        "start_line": null,
+        "end_line": null,
+        "fatal": false,
+        "analyzers": [
+          "static_patterns_agent_snooping",
+          "static_patterns_anti_refusal",
+          "static_patterns_deserialization",
+          "static_patterns_excessive_agency",
+          "static_patterns_harmful_content",
+          "static_patterns_memory_poisoning",
+          "static_patterns_privilege_escalation",
+          "static_patterns_prompt_injection",
+          "static_patterns_rogue_agent",
+          "static_patterns_ssrf",
+          "static_patterns_supply_chain",
+          "static_patterns_system_prompt_leakage",
+          "static_patterns_tool_misuse"
+        ]
+      }
+    ],
+    "scope_exclusions": [],
+    "analyzer_statuses": [
+      {
+        "analyzer_id": "artifact_integrity",
+        "status": "completed",
+        "planned_work": 74,
+        "completed": 74,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "behavioral_ast",
+        "status": "completed",
+        "planned_work": 1,
+        "completed": 1,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "behavioral_taint_tracking",
+        "status": "completed",
+        "planned_work": 1,
+        "completed": 1,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "bundled_execution_surface",
+        "status": "not_applicable",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "no_applicable_files",
+        "message": "No files matched this analyzer's applicability contract."
+      },
+      {
+        "analyzer_id": "mcp_least_privilege",
+        "status": "completed",
+        "planned_work": 33,
+        "completed": 33,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "mcp_rug_pull",
+        "status": "completed",
+        "planned_work": 74,
+        "completed": 74,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "mcp_tool_poisoning",
+        "status": "completed",
+        "planned_work": 1,
+        "completed": 1,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "meta_analyzer",
+        "status": "disabled",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "disabled_by_configuration",
+        "message": "Analyzer was disabled by the requested configuration."
+      },
+      {
+        "analyzer_id": "reference_coverage",
+        "status": "completed",
+        "planned_work": 1,
+        "completed": 1,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "semantic_developer_intent",
+        "status": "disabled",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "disabled_by_configuration",
+        "message": "Analyzer was disabled by the requested configuration."
+      },
+      {
+        "analyzer_id": "semantic_quality_policy",
+        "status": "disabled",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "disabled_by_configuration",
+        "message": "Analyzer was disabled by the requested configuration."
+      },
+      {
+        "analyzer_id": "semantic_security_discovery",
+        "status": "disabled",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "disabled_by_configuration",
+        "message": "Analyzer was disabled by the requested configuration."
+      },
+      {
+        "analyzer_id": "static_patterns_agent_snooping",
+        "status": "degraded",
+        "planned_work": 74,
+        "completed": 73,
+        "partial": 1,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_anti_refusal",
+        "status": "degraded",
+        "planned_work": 74,
+        "completed": 73,
+        "partial": 1,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_data_exfiltration",
+        "status": "completed",
+        "planned_work": 74,
+        "completed": 74,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_deserialization",
+        "status": "degraded",
+        "planned_work": 74,
+        "completed": 73,
+        "partial": 1,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_excessive_agency",
+        "status": "degraded",
+        "planned_work": 74,
+        "completed": 73,
+        "partial": 1,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_harmful_content",
+        "status": "degraded",
+        "planned_work": 74,
+        "completed": 73,
+        "partial": 1,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_memory_poisoning",
+        "status": "degraded",
+        "planned_work": 74,
+        "completed": 73,
+        "partial": 1,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_output_handling",
+        "status": "completed",
+        "planned_work": 74,
+        "completed": 74,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_privilege_escalation",
+        "status": "degraded",
+        "planned_work": 74,
+        "completed": 73,
+        "partial": 1,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_prompt_injection",
+        "status": "degraded",
+        "planned_work": 74,
+        "completed": 73,
+        "partial": 1,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_rogue_agent",
+        "status": "degraded",
+        "planned_work": 74,
+        "completed": 73,
+        "partial": 1,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_ssrf",
+        "status": "degraded",
+        "planned_work": 74,
+        "completed": 73,
+        "partial": 1,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_supply_chain",
+        "status": "degraded",
+        "planned_work": 74,
+        "completed": 73,
+        "partial": 1,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_system_prompt_leakage",
+        "status": "degraded",
+        "planned_work": 74,
+        "completed": 73,
+        "partial": 1,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_tool_misuse",
+        "status": "degraded",
+        "planned_work": 74,
+        "completed": 72,
+        "partial": 2,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_yara",
+        "status": "completed",
+        "planned_work": 74,
+        "completed": 74,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      }
+    ],
+    "references": [
+      {
+        "source_path": "SKILL.md",
+        "line": 6,
+        "column": 90,
+        "evidence": "installs:** Before setup or freshness commands, follow [plugin execution rules](../hyperframes/references/plugin-installation.md) when this skill is inside a Hy",
+        "target_path": null,
+        "status": "rejected",
+        "disposition": "out_of_scope",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 16,
+        "column": 417,
+        "evidence": "s seek-driven model and recommending the runtime interop pattern from [PR #214](https://github.com/heygen-com/hyperframes/pull/214) instead.",
+        "target_path": null,
+        "status": "rejected",
+        "disposition": "out_of_scope",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 48,
+        "column": 32,
+        "evidence": "Run [`scripts/lint_source.py`](scripts/lint_source.py) over the Remotion source directory. The lint detects patterns that can't translate cleanly:",
+        "target_path": "scripts/lint_source.py",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 48,
+        "column": 7,
+        "evidence": "Run [`scripts/lint_source.py`](scripts/lint_source.py) over the Remotion source directory. The lint detects patterns that can't translate cleanly:",
+        "target_path": "scripts/lint_source.py",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 54,
+        "column": 69,
+        "evidence": "If any blocker fires, **stop**. Read [`references/escape-hatch.md`](references/escape-hatch.md) and surface the recommendation message. Warnings don't stop tran",
+        "target_path": "references/escape-hatch.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 54,
+        "column": 40,
+        "evidence": "If any blocker fires, **stop**. Read [`references/escape-hatch.md`](references/escape-hatch.md) and surface the recommendation message. Warnings don't stop tran",
+        "target_path": "references/escape-hatch.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 54,
+        "column": 231,
+        "evidence": " stop translation \u2014 drop the offending construct in step 3 and note the gap in `TRANSLATION_NOTES.md`. `@remotion/lambda` config is the canonical warning case: ",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 58,
+        "column": 32,
+        "evidence": "Read [`references/api-map.md`](references/api-map.md) \u2014 the index of every Remotion API and its HF equivalent or per-topic reference. Identify which topic refer",
+        "target_path": "references/api-map.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 58,
+        "column": 8,
+        "evidence": "Read [`references/api-map.md`](references/api-map.md) \u2014 the index of every Remotion API and its HF equivalent or per-topic reference. Identify which topic refer",
+        "target_path": "references/api-map.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 62,
+        "column": 97,
+        "evidence": "| `Composition`, `defaultProps`, `schema`, `calculateMetadata` | [`parameters.md`](references/parameters.md) |",
+        "target_path": "references/parameters.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 62,
+        "column": 81,
+        "evidence": "| `Composition`, `defaultProps`, `schema`, `calculateMetadata` | [`parameters.md`](references/parameters.md) |",
+        "target_path": "references/parameters.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 63,
+        "column": 97,
+        "evidence": "| `Sequence`, `Series`, `Loop`, `AbsoluteFill`, `Freeze` | [`sequencing.md`](references/sequencing.md) |",
+        "target_path": "references/sequencing.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 63,
+        "column": 81,
+        "evidence": "| `Sequence`, `Series`, `Loop`, `AbsoluteFill`, `Freeze` | [`sequencing.md`](references/sequencing.md) |",
+        "target_path": "references/sequencing.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 64,
+        "column": 93,
+        "evidence": "| `useCurrentFrame`, `interpolate`, `spring`, `Easing`, `interpolateColors` | [`timing.md`](references/timing.md) |",
+        "target_path": "references/timing.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 64,
+        "column": 81,
+        "evidence": "| `useCurrentFrame`, `interpolate`, `spring`, `Easing`, `interpolateColors` | [`timing.md`](references/timing.md) |",
+        "target_path": "references/timing.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 65,
+        "column": 92,
+        "evidence": "| `Audio`, `Video`, `Img`, `IFrame`, `staticFile`, `delayRender` | [`media.md`](references/media.md) |",
+        "target_path": "references/media.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 65,
+        "column": 81,
+        "evidence": "| `Audio`, `Video`, `Img`, `IFrame`, `staticFile`, `delayRender` | [`media.md`](references/media.md) |",
+        "target_path": "references/media.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 66,
+        "column": 98,
+        "evidence": "| `TransitionSeries`, `@remotion/transitions` | [`transitions.md`](references/transitions.md) |",
+        "target_path": "references/transitions.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 66,
+        "column": 81,
+        "evidence": "| `TransitionSeries`, `@remotion/transitions` | [`transitions.md`](references/transitions.md) |",
+        "target_path": "references/transitions.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 67,
+        "column": 93,
+        "evidence": "| `@remotion/lottie` | [`lottie.md`](references/lottie.md) |",
+        "target_path": "references/lottie.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 67,
+        "column": 81,
+        "evidence": "| `@remotion/lottie` | [`lottie.md`](references/lottie.md) |",
+        "target_path": "references/lottie.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 68,
+        "column": 39,
+        "evidence": "| `@remotion/google-fonts/<Family>`, `Font.loadFont`, `@font-face` | [`fonts.md`](references/fonts.md) |",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 68,
+        "column": 92,
+        "evidence": "| `@remotion/google-fonts/<Family>`, `Font.loadFont`, `@font-face` | [`fonts.md`](references/fonts.md) |",
+        "target_path": "references/fonts.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 68,
+        "column": 81,
+        "evidence": "| `@remotion/google-fonts/<Family>`, `Font.loadFont`, `@font-face` | [`fonts.md`](references/fonts.md) |",
+        "target_path": "references/fonts.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 72,
+        "column": 515,
+        "evidence": "the whole hosted registry (~400 blocks and components) from any directory, and `transitions.md` already takes this route for `clockWipe()` / `iris()` via `npx h",
+        "target_path": "references/transitions.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 72,
+        "column": 892,
+        "evidence": "effect when a search returns nothing that fits, and record the substitution in `TRANSLATION_NOTES.md` either way.",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 76,
+        "column": 7,
+        "evidence": "Emit `index.html` with:",
+        "target_path": null,
+        "status": "ambiguous",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 83,
+        "column": 116,
+        "evidence": "s repeated HTML using the prop interface as the template (see [`parameters.md`](references/parameters.md) for the per-instance `data-*` pattern).",
+        "target_path": "references/parameters.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 83,
+        "column": 100,
+        "evidence": "ponents inline as repeated HTML using the prop interface as the template (see [`parameters.md`](references/parameters.md) for the per-instance `data-*` pattern)",
+        "target_path": "references/parameters.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 87,
+        "column": 47,
+        "evidence": "Run the eval harness \u2014 [`references/eval.md`](references/eval.md) for the full guide. Quick path:",
+        "target_path": "references/eval.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 87,
+        "column": 26,
+        "evidence": "Run the eval harness \u2014 [`references/eval.md`](references/eval.md) for the full guide. Quick path:",
+        "target_path": "references/eval.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 91,
+        "column": 56,
+        "evidence": "cd remotion-src && npx remotion render <CompositionId> out/baseline.mp4",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "plain_path"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 94,
+        "column": 81,
+        "evidence": "cd ../hf-src && npx hyperframes render --skill=remotion-to-hyperframes --output ../hf.mp4",
+        "target_path": null,
+        "status": "rejected",
+        "disposition": "out_of_scope",
+        "reference_kind": "plain_path"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 97,
+        "column": 1,
+        "evidence": "../../scripts/render_diff.sh ./remotion-src/out/baseline.mp4 ./hf.mp4 ./diff",
+        "target_path": null,
+        "status": "rejected",
+        "disposition": "out_of_scope",
+        "reference_kind": "plain_path"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 97,
+        "column": 30,
+        "evidence": "../../scripts/render_diff.sh ./remotion-src/out/baseline.mp4 ./hf.mp4 ./diff",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "plain_path"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 97,
+        "column": 62,
+        "evidence": "../../scripts/render_diff.sh ./remotion-src/out/baseline.mp4 ./hf.mp4 ./diff",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "plain_path"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 97,
+        "column": 71,
+        "evidence": "../../scripts/render_diff.sh ./remotion-src/out/baseline.mp4 ./hf.mp4 ./diff",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "plain_path"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 100,
+        "column": 68,
+        "evidence": "Threshold: ~0.02 below `p05` of the source's complexity tier (see `eval.md`'s validated thresholds table). If the diff fails, run [`scripts/frame_strip.sh`](scr",
+        "target_path": "references/eval.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 100,
+        "column": 158,
+        "evidence": " validated thresholds table). If the diff fails, run [`scripts/frame_strip.sh`](scripts/frame_strip.sh) to see _which_ frames diverged, then re-read the relevan",
+        "target_path": "scripts/frame_strip.sh",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 100,
+        "column": 133,
+        "evidence": "ity tier (see `eval.md`'s validated thresholds table). If the diff fails, run [`scripts/frame_strip.sh`](scripts/frame_strip.sh) to see _which_ frames diverged,",
+        "target_path": "scripts/frame_strip.sh",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 102,
+        "column": 160,
+        "evidence": "ImageFormat(\"png\")` + `Config.setColorSpace(\"bt709\")` in the Remotion source's `remotion.config.ts` \u2014 otherwise the diff measures encoder differences (~0.05 SSI",
+        "target_path": null,
+        "status": "ambiguous",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 106,
+        "column": 125,
+        "evidence": "me ramps dropped, custom presentations approximated, fonts substituted) gets a `TRANSLATION_NOTES.md` written next to the HF output. See [`references/limitation",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 106,
+        "column": 212,
+        "evidence": "TION_NOTES.md` written next to the HF output. See [`references/limitations.md`](references/limitations.md) for the format.",
+        "target_path": "references/limitations.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 106,
+        "column": 184,
+        "evidence": "substituted) gets a `TRANSLATION_NOTES.md` written next to the HF output. See [`references/limitations.md`](references/limitations.md) for the format.",
+        "target_path": "references/limitations.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 111,
+        "column": 111,
+        "evidence": "line alongside HyperFrames.** That's the runtime interop pattern from [PR #214](https://github.com/heygen-com/hyperframes/pull/214) \u2014 a separate solution for co",
+        "target_path": null,
+        "status": "rejected",
+        "disposition": "out_of_scope",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 113,
+        "column": 178,
+        "evidence": "ops it as a warning and translates the rest. See [`references/escape-hatch.md`](references/escape-hatch.md).)",
+        "target_path": "references/escape-hatch.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 113,
+        "column": 149,
+        "evidence": ", not animation. The skill drops it as a warning and translates the rest. See [`references/escape-hatch.md`](references/escape-hatch.md).)",
+        "target_path": "references/escape-hatch.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 120,
+        "column": 1,
+        "evidence": "./assets/test-corpus/run.sh",
+        "target_path": "assets/test-corpus/run.sh",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "plain_path"
+      }
+    ],
+    "limitations": [
+      "Analyzer static_patterns_agent_snooping status: degraded.",
+      "Analyzer static_patterns_anti_refusal status: degraded.",
+      "Analyzer static_patterns_deserialization status: degraded.",
+      "Analyzer static_patterns_excessive_agency status: degraded.",
+      "Analyzer static_patterns_harmful_content status: degraded.",
+      "Analyzer static_patterns_memory_poisoning status: degraded.",
+      "Analyzer static_patterns_privilege_escalation status: degraded.",
+      "Analyzer static_patterns_prompt_injection status: degraded.",
+      "Analyzer static_patterns_rogue_agent status: degraded.",
+      "Analyzer static_patterns_ssrf status: degraded.",
+      "Analyzer static_patterns_supply_chain status: degraded.",
+      "Analyzer static_patterns_system_prompt_leakage status: degraded.",
+      "Analyzer static_patterns_tool_misuse status: degraded."
+    ],
+    "findings_before_filtering": 46,
+    "findings_after_filtering": 46
+  }
+}

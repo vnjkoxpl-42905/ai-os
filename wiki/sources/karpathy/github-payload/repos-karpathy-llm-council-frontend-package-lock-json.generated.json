@@ -1,0 +1,1122 @@
+{
+  "bytes": 136497,
+  "characters": 136497,
+  "lines": 3760,
+  "wordlike_tokens": 6682,
+  "distinct_characters": 84,
+  "structured": {
+    "root_type": "dict",
+    "node_types": {
+      "dict": 717,
+      "str": 1818,
+      "bool": 261,
+      "list": 123,
+      "int": 1
+    },
+    "key_counts": {
+      "name": 2,
+      "version": 284,
+      "lockfileVersion": 1,
+      "requires": 1,
+      "packages": 1,
+      "": 1,
+      "node_modules/@babel/code-frame": 1,
+      "node_modules/@babel/compat-data": 1,
+      "node_modules/@babel/core": 1,
+      "node_modules/@babel/generator": 1,
+      "node_modules/@babel/helper-compilation-targets": 1,
+      "node_modules/@babel/helper-globals": 1,
+      "node_modules/@babel/helper-module-imports": 1,
+      "node_modules/@babel/helper-module-transforms": 1,
+      "node_modules/@babel/helper-plugin-utils": 1,
+      "node_modules/@babel/helper-string-parser": 1,
+      "node_modules/@babel/helper-validator-identifier": 1,
+      "node_modules/@babel/helper-validator-option": 1,
+      "node_modules/@babel/helpers": 1,
+      "node_modules/@babel/parser": 1,
+      "node_modules/@babel/plugin-transform-react-jsx-self": 1,
+      "node_modules/@babel/plugin-transform-react-jsx-source": 1,
+      "node_modules/@babel/template": 1,
+      "node_modules/@babel/traverse": 1,
+      "node_modules/@babel/types": 1,
+      "node_modules/@esbuild/aix-ppc64": 1,
+      "node_modules/@esbuild/android-arm": 1,
+      "node_modules/@esbuild/android-arm64": 1,
+      "node_modules/@esbuild/android-x64": 1,
+      "node_modules/@esbuild/darwin-arm64": 1,
+      "node_modules/@esbuild/darwin-x64": 1,
+      "node_modules/@esbuild/freebsd-arm64": 1,
+      "node_modules/@esbuild/freebsd-x64": 1,
+      "node_modules/@esbuild/linux-arm": 1,
+      "node_modules/@esbuild/linux-arm64": 1,
+      "node_modules/@esbuild/linux-ia32": 1,
+      "node_modules/@esbuild/linux-loong64": 1,
+      "node_modules/@esbuild/linux-mips64el": 1,
+      "node_modules/@esbuild/linux-ppc64": 1,
+      "node_modules/@esbuild/linux-riscv64": 1,
+      "node_modules/@esbuild/linux-s390x": 1,
+      "node_modules/@esbuild/linux-x64": 1,
+      "node_modules/@esbuild/netbsd-arm64": 1,
+      "node_modules/@esbuild/netbsd-x64": 1,
+      "node_modules/@esbuild/openbsd-arm64": 1,
+      "node_modules/@esbuild/openbsd-x64": 1,
+      "node_modules/@esbuild/openharmony-arm64": 1,
+      "node_modules/@esbuild/sunos-x64": 1,
+      "node_modules/@esbuild/win32-arm64": 1,
+      "node_modules/@esbuild/win32-ia32": 1,
+      "node_modules/@esbuild/win32-x64": 1,
+      "node_modules/@eslint-community/eslint-utils": 1,
+      "node_modules/@eslint-community/eslint-utils/node_modules/eslint-visitor-keys": 1,
+      "node_modules/@eslint-community/regexpp": 1,
+      "node_modules/@eslint/config-array": 1,
+      "node_modules/@eslint/config-helpers": 1,
+      "node_modules/@eslint/core": 1,
+      "node_modules/@eslint/eslintrc": 1,
+      "node_modules/@eslint/eslintrc/node_modules/globals": 1,
+      "node_modules/@eslint/js": 1,
+      "node_modules/@eslint/object-schema": 1,
+      "node_modules/@eslint/plugin-kit": 1,
+      "node_modules/@humanfs/core": 1,
+      "node_modules/@humanfs/node": 1,
+      "node_modules/@humanwhocodes/module-importer": 1,
+      "node_modules/@humanwhocodes/retry": 1,
+      "node_modules/@jridgewell/gen-mapping": 1,
+      "node_modules/@jridgewell/remapping": 1,
+      "node_modules/@jridgewell/resolve-uri": 1,
+      "node_modules/@jridgewell/sourcemap-codec": 1,
+      "node_modules/@jridgewell/trace-mapping": 1,
+      "node_modules/@rolldown/pluginutils": 1,
+      "node_modules/@rollup/rollup-android-arm-eabi": 1,
+      "node_modules/@rollup/rollup-android-arm64": 1,
+      "node_modules/@rollup/rollup-darwin-arm64": 1,
+      "node_modules/@rollup/rollup-darwin-x64": 1,
+      "node_modules/@rollup/rollup-freebsd-arm64": 1,
+      "node_modules/@rollup/rollup-freebsd-x64": 1,
+      "node_modules/@rollup/rollup-linux-arm-gnueabihf": 1,
+      "node_modules/@rollup/rollup-linux-arm-musleabihf": 1,
+      "node_modules/@rollup/rollup-linux-arm64-gnu": 1,
+      "node_modules/@rollup/rollup-linux-arm64-musl": 1,
+      "node_modules/@rollup/rollup-linux-loong64-gnu": 1,
+      "node_modules/@rollup/rollup-linux-ppc64-gnu": 1,
+      "node_modules/@rollup/rollup-linux-riscv64-gnu": 1,
+      "node_modules/@rollup/rollup-linux-riscv64-musl": 1,
+      "node_modules/@rollup/rollup-linux-s390x-gnu": 1,
+      "node_modules/@rollup/rollup-linux-x64-gnu": 1,
+      "node_modules/@rollup/rollup-linux-x64-musl": 1,
+      "node_modules/@rollup/rollup-openharmony-arm64": 1,
+      "node_modules/@rollup/rollup-win32-arm64-msvc": 1,
+      "node_modules/@rollup/rollup-win32-ia32-msvc": 1,
+      "node_modules/@rollup/rollup-win32-x64-gnu": 1,
+      "node_modules/@rollup/rollup-win32-x64-msvc": 1,
+      "node_modules/@types/babel__core": 1,
+      "node_modules/@types/babel__generator": 1,
+      "node_modules/@types/babel__template": 1,
+      "node_modules/@types/babel__traverse": 1,
+      "node_modules/@types/debug": 1,
+      "node_modules/@types/estree": 1,
+      "node_modules/@types/estree-jsx": 1,
+      "node_modules/@types/hast": 1,
+      "node_modules/@types/json-schema": 1,
+      "node_modules/@types/mdast": 1,
+      "node_modules/@types/ms": 1,
+      "node_modules/@types/react": 1,
+      "node_modules/@types/react-dom": 1,
+      "node_modules/@types/unist": 1,
+      "node_modules/@ungap/structured-clone": 1,
+      "node_modules/@vitejs/plugin-react": 1,
+      "node_modules/acorn": 1,
+      "node_modules/acorn-jsx": 1,
+      "node_modules/ajv": 1,
+      "node_modules/ansi-styles": 1,
+      "node_modules/argparse": 1,
+      "node_modules/bail": 1,
+      "node_modules/balanced-match": 1,
+      "node_modules/baseline-browser-mapping": 1,
+      "node_modules/brace-expansion": 1,
+      "node_modules/browserslist": 1,
+      "node_modules/callsites": 1,
+      "node_modules/caniuse-lite": 1,
+      "node_modules/ccount": 1,
+      "node_modules/chalk": 1,
+      "node_modules/character-entities": 1,
+      "node_modules/character-entities-html4": 1,
+      "node_modules/character-entities-legacy": 1,
+      "node_modules/character-reference-invalid": 1,
+      "node_modules/color-convert": 1,
+      "node_modules/color-name": 1,
+      "node_modules/comma-separated-tokens": 1,
+      "node_modules/concat-map": 1,
+      "node_modules/convert-source-map": 1,
+      "node_modules/cross-spawn": 1,
+      "node_modules/csstype": 1,
+      "node_modules/debug": 1,
+      "node_modules/decode-named-character-reference": 1,
+      "node_modules/deep-is": 1,
+      "node_modules/dequal": 1,
+      "node_modules/devlop": 1,
+      "node_modules/electron-to-chromium": 1,
+      "node_modules/esbuild": 1,
+      "node_modules/escalade": 1,
+      "node_modules/escape-string-regexp": 1,
+      "node_modules/eslint": 1,
+      "node_modules/eslint-plugin-react-hooks": 1,
+      "node_modules/eslint-plugin-react-refresh": 1,
+      "node_modules/eslint-scope": 1,
+      "node_modules/eslint-visitor-keys": 1,
+      "node_modules/espree": 1,
+      "node_modules/esquery": 1,
+      "node_modules/esrecurse": 1,
+      "node_modules/estraverse": 1,
+      "node_modules/estree-util-is-identifier-name": 1,
+      "node_modules/esutils": 1,
+      "node_modules/extend": 1,
+      "node_modules/fast-deep-equal": 1,
+      "node_modules/fast-json-stable-stringify": 1,
+      "node_modules/fast-levenshtein": 1,
+      "node_modules/fdir": 1,
+      "node_modules/file-entry-cache": 1,
+      "node_modules/find-up": 1,
+      "node_modules/flat-cache": 1,
+      "node_modules/flatted": 1,
+      "node_modules/fsevents": 1,
+      "node_modules/gensync": 1,
+      "node_modules/glob-parent": 1,
+      "node_modules/globals": 1,
+      "node_modules/has-flag": 1,
+      "node_modules/hast-util-to-jsx-runtime": 1,
+      "node_modules/hast-util-whitespace": 1,
+      "node_modules/hermes-estree": 1,
+      "node_modules/hermes-parser": 1,
+      "node_modules/html-url-attributes": 1,
+      "node_modules/ignore": 1,
+      "node_modules/import-fresh": 1,
+      "node_modules/imurmurhash": 1,
+      "node_modules/inline-style-parser": 1,
+      "node_modules/is-alphabetical": 1,
+      "node_modules/is-alphanumerical": 1,
+      "node_modules/is-decimal": 1,
+      "node_modules/is-extglob": 1,
+      "node_modules/is-glob": 1,
+      "node_modules/is-hexadecimal": 1,
+      "node_modules/is-plain-obj": 1,
+      "node_modules/isexe": 1,
+      "node_modules/js-tokens": 1,
+      "node_modules/js-yaml": 1,
+      "node_modules/jsesc": 1,
+      "node_modules/json-buffer": 1,
+      "node_modules/json-schema-traverse": 1,
+      "node_modules/json-stable-stringify-without-jsonify": 1,
+      "node_modules/json5": 1,
+      "node_modules/keyv": 1,
+      "node_modules/levn": 1,
+      "node_modules/locate-path": 1,
+      "node_modules/lodash.merge": 1,
+      "node_modules/longest-streak": 1,
+      "node_modules/lru-cache": 1,
+      "node_modules/mdast-util-from-markdown": 1,
+      "node_modules/mdast-util-mdx-expression": 1,
+      "node_modules/mdast-util-mdx-jsx": 1,
+      "node_modules/mdast-util-mdxjs-esm": 1,
+      "node_modules/mdast-util-phrasing": 1,
+      "node_modules/mdast-util-to-hast": 1,
+      "node_modules/mdast-util-to-markdown": 1,
+      "node_modules/mdast-util-to-string": 1,
+      "node_modules/micromark": 1,
+      "node_modules/micromark-core-commonmark": 1,
+      "node_modules/micromark-factory-destination": 1,
+      "node_modules/micromark-factory-label": 1,
+      "node_modules/micromark-factory-space": 1,
+      "node_modules/micromark-factory-title": 1,
+      "node_modules/micromark-factory-whitespace": 1,
+      "node_modules/micromark-util-character": 1,
+      "node_modules/micromark-util-chunked": 1,
+      "node_modules/micromark-util-classify-character": 1,
+      "node_modules/micromark-util-combine-extensions": 1,
+      "node_modules/micromark-util-decode-numeric-character-reference": 1,
+      "node_modules/micromark-util-decode-string": 1,
+      "node_modules/micromark-util-encode": 1,
+      "node_modules/micromark-util-html-tag-name": 1,
+      "node_modules/micromark-util-normalize-identifier": 1,
+      "node_modules/micromark-util-resolve-all": 1,
+      "node_modules/micromark-util-sanitize-uri": 1,
+      "node_modules/micromark-util-subtokenize": 1,
+      "node_modules/micromark-util-symbol": 1,
+      "node_modules/micromark-util-types": 1,
+      "node_modules/minimatch": 1,
+      "node_modules/ms": 1,
+      "node_modules/nanoid": 1,
+      "node_modules/natural-compare": 1,
+      "node_modules/node-releases": 1,
+      "node_modules/optionator": 1,
+      "node_modules/p-limit": 1,
+      "node_modules/p-locate": 1,
+      "node_modules/parent-module": 1,
+      "node_modules/parse-entities": 1,
+      "node_modules/parse-entities/node_modules/@types/unist": 1,
+      "node_modules/path-exists": 1,
+      "node_modules/path-key": 1,
+      "node_modules/picocolors": 1,
+      "node_modules/picomatch": 1,
+      "node_modules/postcss": 1,
+      "node_modules/prelude-ls": 1,
+      "node_modules/property-information": 1,
+      "node_modules/punycode": 1,
+      "node_modules/react": 1,
+      "node_modules/react-dom": 1,
+      "node_modules/react-markdown": 1,
+      "node_modules/react-refresh": 1,
+      "node_modules/remark-parse": 1,
+      "node_modules/remark-rehype": 1,
+      "node_modules/resolve-from": 1,
+      "node_modules/rollup": 1,
+      "node_modules/scheduler": 1,
+      "node_modules/semver": 1,
+      "node_modules/shebang-command": 1,
+      "node_modules/shebang-regex": 1,
+      "node_modules/source-map-js": 1,
+      "node_modules/space-separated-tokens": 1,
+      "node_modules/stringify-entities": 1,
+      "node_modules/strip-json-comments": 1,
+      "node_modules/style-to-js": 1,
+      "node_modules/style-to-object": 1,
+      "node_modules/supports-color": 1,
+      "node_modules/tinyglobby": 1,
+      "node_modules/trim-lines": 1,
+      "node_modules/trough": 1,
+      "node_modules/type-check": 1,
+      "node_modules/unified": 1,
+      "node_modules/unist-util-is": 1,
+      "node_modules/unist-util-position": 1,
+      "node_modules/unist-util-stringify-position": 1,
+      "node_modules/unist-util-visit": 1,
+      "node_modules/unist-util-visit-parents": 1,
+      "node_modules/update-browserslist-db": 1,
+      "node_modules/uri-js": 1,
+      "node_modules/vfile": 1,
+      "node_modules/vfile-message": 1,
+      "node_modules/vite": 1,
+      "node_modules/which": 1,
+      "node_modules/word-wrap": 1,
+      "node_modules/yallist": 1,
+      "node_modules/yocto-queue": 1,
+      "node_modules/zod": 1,
+      "node_modules/zod-validation-error": 1,
+      "node_modules/zwitch": 1,
+      "resolved": 282,
+      "integrity": 282,
+      "funding": 99,
+      "type": 103,
+      "url": 128,
+      "dev": 195,
+      "engines": 130,
+      "peerDependencies": 16,
+      "zod": 2,
+      "node": 130,
+      "dependencies": 121,
+      "bin": 15,
+      "node-which": 1,
+      "isexe": 1,
+      "optionalDependencies": 3,
+      "peerDependenciesMeta": 4,
+      "@types/node": 2,
+      "jiti": 4,
+      "less": 2,
+      "lightningcss": 2,
+      "sass": 2,
+      "sass-embedded": 2,
+      "stylus": 2,
+      "sugarss": 2,
+      "terser": 2,
+      "tsx": 2,
+      "yaml": 2,
+      "optional": 63,
+      "fsevents": 2,
+      "vite": 3,
+      "esbuild": 2,
+      "fdir": 2,
+      "picomatch": 4,
+      "postcss": 1,
+      "rollup": 2,
+      "tinyglobby": 1,
+      "@types/unist": 15,
+      "unist-util-stringify-position": 3,
+      "vfile-message": 3,
+      "punycode": 1,
+      "browserslist": 3,
+      "update-browserslist-db": 2,
+      "escalade": 1,
+      "picocolors": 3,
+      "unist-util-is": 3,
+      "unist-util-visit-parents": 1,
+      "bail": 1,
+      "devlop": 12,
+      "extend": 1,
+      "is-plain-obj": 1,
+      "trough": 1,
+      "vfile": 4,
+      "prelude-ls": 3,
+      "has-flag": 1,
+      "inline-style-parser": 1,
+      "style-to-object": 1,
+      "character-entities-html4": 1,
+      "character-entities-legacy": 2,
+      "shebang-regex": 1,
+      "semver": 3,
+      "@rollup/rollup-android-arm-eabi": 1,
+      "@rollup/rollup-android-arm64": 1,
+      "@rollup/rollup-darwin-arm64": 1,
+      "@rollup/rollup-darwin-x64": 1,
+      "@rollup/rollup-freebsd-arm64": 1,
+      "@rollup/rollup-freebsd-x64": 1,
+      "@rollup/rollup-linux-arm-gnueabihf": 1,
+      "@rollup/rollup-linux-arm-musleabihf": 1,
+      "@rollup/rollup-linux-arm64-gnu": 1,
+      "@rollup/rollup-linux-arm64-musl": 1,
+      "@rollup/rollup-linux-loong64-gnu": 1,
+      "@rollup/rollup-linux-ppc64-gnu": 1,
+      "@rollup/rollup-linux-riscv64-gnu": 1,
+      "@rollup/rollup-linux-riscv64-musl": 1,
+      "@rollup/rollup-linux-s390x-gnu": 1,
+      "@rollup/rollup-linux-x64-gnu": 1,
+      "@rollup/rollup-linux-x64-musl": 1,
+      "@rollup/rollup-openharmony-arm64": 1,
+      "@rollup/rollup-win32-arm64-msvc": 1,
+      "@rollup/rollup-win32-ia32-msvc": 1,
+      "@rollup/rollup-win32-x64-gnu": 1,
+      "@rollup/rollup-win32-x64-msvc": 1,
+      "npm": 1,
+      "@types/estree": 4,
+      "@types/hast": 8,
+      "@types/mdast": 11,
+      "mdast-util-to-hast": 2,
+      "unified": 3,
+      "mdast-util-from-markdown": 4,
+      "micromark-util-types": 14,
+      "@types/react": 3,
+      "react": 3,
+      "hast-util-to-jsx-runtime": 1,
+      "html-url-attributes": 1,
+      "remark-parse": 1,
+      "remark-rehype": 1,
+      "unist-util-visit": 3,
+      "scheduler": 1,
+      "nanoid": 2,
+      "source-map-js": 1,
+      "character-reference-invalid": 1,
+      "decode-named-character-reference": 5,
+      "is-alphanumerical": 1,
+      "is-decimal": 2,
+      "is-hexadecimal": 1,
+      "callsites": 1,
+      "p-limit": 1,
+      "yocto-queue": 1,
+      "deep-is": 1,
+      "fast-levenshtein": 1,
+      "levn": 2,
+      "type-check": 2,
+      "word-wrap": 1,
+      "brace-expansion": 1,
+      "micromark-util-chunked": 4,
+      "micromark-util-symbol": 15,
+      "micromark-util-character": 10,
+      "micromark-util-encode": 2,
+      "micromark-util-decode-numeric-character-reference": 3,
+      "micromark-factory-space": 4,
+      "micromark-factory-destination": 1,
+      "micromark-factory-label": 1,
+      "micromark-factory-title": 1,
+      "micromark-factory-whitespace": 1,
+      "micromark-util-classify-character": 2,
+      "micromark-util-html-tag-name": 1,
+      "micromark-util-normalize-identifier": 3,
+      "micromark-util-resolve-all": 2,
+      "micromark-util-subtokenize": 2,
+      "@types/debug": 1,
+      "debug": 6,
+      "micromark-core-commonmark": 1,
+      "micromark-util-combine-extensions": 1,
+      "micromark-util-sanitize-uri": 2,
+      "longest-streak": 1,
+      "mdast-util-phrasing": 1,
+      "mdast-util-to-string": 2,
+      "micromark-util-decode-string": 2,
+      "zwitch": 1,
+      "@ungap/structured-clone": 1,
+      "trim-lines": 1,
+      "unist-util-position": 2,
+      "@types/estree-jsx": 3,
+      "mdast-util-to-markdown": 3,
+      "ccount": 1,
+      "parse-entities": 1,
+      "stringify-entities": 1,
+      "micromark": 1,
+      "yallist": 1,
+      "p-locate": 1,
+      "json-buffer": 1,
+      "json5": 2,
+      "jsesc": 2,
+      "js-yaml": 2,
+      "argparse": 1,
+      "is-extglob": 1,
+      "is-alphabetical": 1,
+      "parent-module": 1,
+      "resolve-from": 1,
+      "hermes-estree": 1,
+      "comma-separated-tokens": 1,
+      "estree-util-is-identifier-name": 1,
+      "hast-util-whitespace": 1,
+      "mdast-util-mdx-expression": 1,
+      "mdast-util-mdx-jsx": 1,
+      "mdast-util-mdxjs-esm": 1,
+      "property-information": 1,
+      "space-separated-tokens": 1,
+      "style-to-js": 1,
+      "is-glob": 2,
+      "hasInstallScript": 2,
+      "os": 49,
+      "flatted": 1,
+      "keyv": 1,
+      "locate-path": 1,
+      "path-exists": 1,
+      "flat-cache": 1,
+      "estraverse": 3,
+      "acorn": 3,
+      "acorn-jsx": 1,
+      "eslint-visitor-keys": 3,
+      "esrecurse": 1,
+      "eslint": 5,
+      "@babel/core": 5,
+      "@babel/parser": 7,
+      "hermes-parser": 1,
+      "zod-validation-error": 1,
+      "@eslint-community/eslint-utils": 1,
+      "@eslint-community/regexpp": 1,
+      "@eslint/config-array": 1,
+      "@eslint/config-helpers": 1,
+      "@eslint/core": 3,
+      "@eslint/eslintrc": 1,
+      "@eslint/js": 2,
+      "@eslint/plugin-kit": 1,
+      "@humanfs/node": 1,
+      "@humanwhocodes/module-importer": 1,
+      "@humanwhocodes/retry": 2,
+      "ajv": 2,
+      "chalk": 1,
+      "cross-spawn": 1,
+      "escape-string-regexp": 1,
+      "eslint-scope": 1,
+      "espree": 2,
+      "esquery": 1,
+      "esutils": 1,
+      "fast-deep-equal": 2,
+      "file-entry-cache": 1,
+      "find-up": 1,
+      "glob-parent": 1,
+      "ignore": 2,
+      "imurmurhash": 1,
+      "json-stable-stringify-without-jsonify": 1,
+      "lodash.merge": 1,
+      "minimatch": 3,
+      "natural-compare": 1,
+      "optionator": 1,
+      "@esbuild/aix-ppc64": 1,
+      "@esbuild/android-arm": 1,
+      "@esbuild/android-arm64": 1,
+      "@esbuild/android-x64": 1,
+      "@esbuild/darwin-arm64": 1,
+      "@esbuild/darwin-x64": 1,
+      "@esbuild/freebsd-arm64": 1,
+      "@esbuild/freebsd-x64": 1,
+      "@esbuild/linux-arm": 1,
+      "@esbuild/linux-arm64": 1,
+      "@esbuild/linux-ia32": 1,
+      "@esbuild/linux-loong64": 1,
+      "@esbuild/linux-mips64el": 1,
+      "@esbuild/linux-ppc64": 1,
+      "@esbuild/linux-riscv64": 1,
+      "@esbuild/linux-s390x": 1,
+      "@esbuild/linux-x64": 1,
+      "@esbuild/netbsd-arm64": 1,
+      "@esbuild/netbsd-x64": 1,
+      "@esbuild/openbsd-arm64": 1,
+      "@esbuild/openbsd-x64": 1,
+      "@esbuild/openharmony-arm64": 1,
+      "@esbuild/sunos-x64": 1,
+      "@esbuild/win32-arm64": 1,
+      "@esbuild/win32-ia32": 1,
+      "@esbuild/win32-x64": 1,
+      "dequal": 1,
+      "character-entities": 1,
+      "supports-color": 2,
+      "ms": 1,
+      "path-key": 1,
+      "shebang-command": 1,
+      "which": 1,
+      "color-name": 1,
+      "ansi-styles": 1,
+      "baseline-browser-mapping": 2,
+      "caniuse-lite": 1,
+      "electron-to-chromium": 1,
+      "node-releases": 1,
+      "balanced-match": 1,
+      "concat-map": 1,
+      "color-convert": 1,
+      "fast-json-stable-stringify": 1,
+      "json-schema-traverse": 1,
+      "uri-js": 1,
+      "@babel/plugin-transform-react-jsx-self": 1,
+      "@babel/plugin-transform-react-jsx-source": 1,
+      "@rolldown/pluginutils": 1,
+      "@types/babel__core": 1,
+      "react-refresh": 1,
+      "csstype": 1,
+      "@types/ms": 1,
+      "@babel/types": 11,
+      "@types/babel__generator": 1,
+      "@types/babel__template": 1,
+      "@types/babel__traverse": 1,
+      "cpu": 48,
+      "@jridgewell/resolve-uri": 1,
+      "@jridgewell/sourcemap-codec": 2,
+      "@jridgewell/gen-mapping": 2,
+      "@jridgewell/trace-mapping": 3,
+      "@humanfs/core": 1,
+      "globals": 2,
+      "import-fresh": 1,
+      "strip-json-comments": 1,
+      "@types/json-schema": 1,
+      "@eslint/object-schema": 1,
+      "@babel/helper-string-parser": 1,
+      "@babel/helper-validator-identifier": 3,
+      "@babel/code-frame": 3,
+      "@babel/generator": 2,
+      "@babel/helper-globals": 1,
+      "@babel/template": 3,
+      "@babel/helper-plugin-utils": 2,
+      "parser": 1,
+      "@babel/helper-module-imports": 1,
+      "@babel/traverse": 3,
+      "@babel/compat-data": 1,
+      "@babel/helper-validator-option": 1,
+      "lru-cache": 1,
+      "@babel/helper-compilation-targets": 1,
+      "@babel/helper-module-transforms": 1,
+      "@babel/helpers": 1,
+      "@jridgewell/remapping": 1,
+      "convert-source-map": 1,
+      "gensync": 1,
+      "js-tokens": 1,
+      "devDependencies": 1,
+      "@types/react-dom": 1,
+      "@vitejs/plugin-react": 1,
+      "eslint-plugin-react-hooks": 1,
+      "eslint-plugin-react-refresh": 1,
+      "react-dom": 1,
+      "react-markdown": 1
+    },
+    "array_count": 123,
+    "arrays": [
+      {
+        "path": "$.packages.node_modules/update-browserslist-db.funding",
+        "length": 3
+      },
+      {
+        "path": "$.packages.node_modules/postcss.funding",
+        "length": 3
+      },
+      {
+        "path": "$.packages.node_modules/nanoid.funding",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/micromark-util-types.funding",
+        "length": 2
+      },
+      {
+        "path": "$.packages.node_modules/micromark-util-symbol.funding",
+        "length": 2
+      },
+      {
+        "path": "$.packages.node_modules/micromark-util-subtokenize.funding",
+        "length": 2
+      },
+      {
+        "path": "$.packages.node_modules/micromark-util-sanitize-uri.funding",
+        "length": 2
+      },
+      {
+        "path": "$.packages.node_modules/micromark-util-resolve-all.funding",
+        "length": 2
+      },
+      {
+        "path": "$.packages.node_modules/micromark-util-normalize-identifier.funding",
+        "length": 2
+      },
+      {
+        "path": "$.packages.node_modules/micromark-util-html-tag-name.funding",
+        "length": 2
+      },
+      {
+        "path": "$.packages.node_modules/micromark-util-encode.funding",
+        "length": 2
+      },
+      {
+        "path": "$.packages.node_modules/micromark-util-decode-string.funding",
+        "length": 2
+      },
+      {
+        "path": "$.packages.node_modules/micromark-util-decode-numeric-character-reference.funding",
+        "length": 2
+      },
+      {
+        "path": "$.packages.node_modules/micromark-util-combine-extensions.funding",
+        "length": 2
+      },
+      {
+        "path": "$.packages.node_modules/micromark-util-classify-character.funding",
+        "length": 2
+      },
+      {
+        "path": "$.packages.node_modules/micromark-util-chunked.funding",
+        "length": 2
+      },
+      {
+        "path": "$.packages.node_modules/micromark-util-character.funding",
+        "length": 2
+      },
+      {
+        "path": "$.packages.node_modules/micromark-factory-whitespace.funding",
+        "length": 2
+      },
+      {
+        "path": "$.packages.node_modules/micromark-factory-title.funding",
+        "length": 2
+      },
+      {
+        "path": "$.packages.node_modules/micromark-factory-space.funding",
+        "length": 2
+      },
+      {
+        "path": "$.packages.node_modules/micromark-factory-label.funding",
+        "length": 2
+      },
+      {
+        "path": "$.packages.node_modules/micromark-factory-destination.funding",
+        "length": 2
+      },
+      {
+        "path": "$.packages.node_modules/micromark-core-commonmark.funding",
+        "length": 2
+      },
+      {
+        "path": "$.packages.node_modules/micromark.funding",
+        "length": 2
+      },
+      {
+        "path": "$.packages.node_modules/fsevents.os",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/caniuse-lite.funding",
+        "length": 3
+      },
+      {
+        "path": "$.packages.node_modules/browserslist.funding",
+        "length": 3
+      },
+      {
+        "path": "$.packages.node_modules/@rollup/rollup-win32-x64-msvc.os",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@rollup/rollup-win32-x64-msvc.cpu",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@rollup/rollup-win32-x64-gnu.os",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@rollup/rollup-win32-x64-gnu.cpu",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@rollup/rollup-win32-ia32-msvc.os",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@rollup/rollup-win32-ia32-msvc.cpu",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@rollup/rollup-win32-arm64-msvc.os",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@rollup/rollup-win32-arm64-msvc.cpu",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@rollup/rollup-openharmony-arm64.os",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@rollup/rollup-openharmony-arm64.cpu",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@rollup/rollup-linux-x64-musl.os",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@rollup/rollup-linux-x64-musl.cpu",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@rollup/rollup-linux-x64-gnu.os",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@rollup/rollup-linux-x64-gnu.cpu",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@rollup/rollup-linux-s390x-gnu.os",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@rollup/rollup-linux-s390x-gnu.cpu",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@rollup/rollup-linux-riscv64-musl.os",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@rollup/rollup-linux-riscv64-musl.cpu",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@rollup/rollup-linux-riscv64-gnu.os",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@rollup/rollup-linux-riscv64-gnu.cpu",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@rollup/rollup-linux-ppc64-gnu.os",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@rollup/rollup-linux-ppc64-gnu.cpu",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@rollup/rollup-linux-loong64-gnu.os",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@rollup/rollup-linux-loong64-gnu.cpu",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@rollup/rollup-linux-arm64-musl.os",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@rollup/rollup-linux-arm64-musl.cpu",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@rollup/rollup-linux-arm64-gnu.os",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@rollup/rollup-linux-arm64-gnu.cpu",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@rollup/rollup-linux-arm-musleabihf.os",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@rollup/rollup-linux-arm-musleabihf.cpu",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@rollup/rollup-linux-arm-gnueabihf.os",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@rollup/rollup-linux-arm-gnueabihf.cpu",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@rollup/rollup-freebsd-x64.os",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@rollup/rollup-freebsd-x64.cpu",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@rollup/rollup-freebsd-arm64.os",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@rollup/rollup-freebsd-arm64.cpu",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@rollup/rollup-darwin-x64.os",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@rollup/rollup-darwin-x64.cpu",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@rollup/rollup-darwin-arm64.os",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@rollup/rollup-darwin-arm64.cpu",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@rollup/rollup-android-arm64.os",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@rollup/rollup-android-arm64.cpu",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@rollup/rollup-android-arm-eabi.os",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@rollup/rollup-android-arm-eabi.cpu",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@esbuild/win32-x64.os",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@esbuild/win32-x64.cpu",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@esbuild/win32-ia32.os",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@esbuild/win32-ia32.cpu",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@esbuild/win32-arm64.os",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@esbuild/win32-arm64.cpu",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@esbuild/sunos-x64.os",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@esbuild/sunos-x64.cpu",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@esbuild/openharmony-arm64.os",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@esbuild/openharmony-arm64.cpu",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@esbuild/openbsd-x64.os",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@esbuild/openbsd-x64.cpu",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@esbuild/openbsd-arm64.os",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@esbuild/openbsd-arm64.cpu",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@esbuild/netbsd-x64.os",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@esbuild/netbsd-x64.cpu",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@esbuild/netbsd-arm64.os",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@esbuild/netbsd-arm64.cpu",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@esbuild/linux-x64.os",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@esbuild/linux-x64.cpu",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@esbuild/linux-s390x.os",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@esbuild/linux-s390x.cpu",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@esbuild/linux-riscv64.os",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@esbuild/linux-riscv64.cpu",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@esbuild/linux-ppc64.os",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@esbuild/linux-ppc64.cpu",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@esbuild/linux-mips64el.os",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@esbuild/linux-mips64el.cpu",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@esbuild/linux-loong64.os",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@esbuild/linux-loong64.cpu",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@esbuild/linux-ia32.os",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@esbuild/linux-ia32.cpu",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@esbuild/linux-arm64.os",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@esbuild/linux-arm64.cpu",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@esbuild/linux-arm.os",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@esbuild/linux-arm.cpu",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@esbuild/freebsd-x64.os",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@esbuild/freebsd-x64.cpu",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@esbuild/freebsd-arm64.os",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@esbuild/freebsd-arm64.cpu",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@esbuild/darwin-x64.os",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@esbuild/darwin-x64.cpu",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@esbuild/darwin-arm64.os",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@esbuild/darwin-arm64.cpu",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@esbuild/android-x64.os",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@esbuild/android-x64.cpu",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@esbuild/android-arm64.os",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@esbuild/android-arm64.cpu",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@esbuild/android-arm.os",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@esbuild/android-arm.cpu",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@esbuild/aix-ppc64.os",
+        "length": 1
+      },
+      {
+        "path": "$.packages.node_modules/@esbuild/aix-ppc64.cpu",
+        "length": 1
+      }
+    ],
+    "numeric_values": 1,
+    "numeric_min": 3,
+    "numeric_max": 3,
+    "string_count": 1818,
+    "string_characters": 59499
+  },
+  "source_path": "repos/karpathy/llm-council/frontend/package-lock.json",
+  "source_sha256": "00ee9d327a55d8aa95d9d5e38ee91f6853af6ddb91bac6662ef2ee47e9aa3193",
+  "method": "json_parse_all_nodes",
+  "parse_error": null
+}

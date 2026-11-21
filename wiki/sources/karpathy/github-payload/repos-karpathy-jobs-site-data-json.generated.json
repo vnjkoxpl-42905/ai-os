@@ -1,0 +1,46 @@
+{
+  "bytes": 269174,
+  "characters": 269174,
+  "lines": 1,
+  "wordlike_tokens": 28528,
+  "distinct_characters": 80,
+  "structured": {
+    "root_type": "list",
+    "node_types": {
+      "list": 1,
+      "dict": 342,
+      "str": 2394,
+      "int": 1364,
+      "NoneType": 4
+    },
+    "key_counts": {
+      "title": 342,
+      "slug": 342,
+      "category": 342,
+      "pay": 342,
+      "jobs": 342,
+      "outlook": 342,
+      "outlook_desc": 342,
+      "education": 342,
+      "exposure": 342,
+      "exposure_rationale": 342,
+      "url": 342
+    },
+    "array_count": 1,
+    "arrays": [
+      {
+        "path": "$",
+        "length": 342
+      }
+    ],
+    "numeric_values": 1364,
+    "numeric_min": -14,
+    "numeric_max": 6950000,
+    "string_count": 2394,
+    "string_characters": 208237
+  },
+  "source_path": "repos/karpathy/jobs/site/data.json",
+  "source_sha256": "b3041ace1901d5accfdbce0d38f684f5a1a0b31bccf0d1908405e78488c9d894",
+  "method": "json_parse_all_nodes",
+  "parse_error": null
+}

@@ -1,0 +1,78 @@
+{
+ "qid": "PT119-S2-Q7",
+ "type": "Must Be True",
+ "difficulty": "2",
+ "key_db": "B",
+ "stimulus_db": "Although instinct enables organisms to make complex responses to stimuli, instinctual behavior involves no reasoning and requires far fewer nerve cells than does noninstinctual (also called flexible) behavior. A brain mechanism capable of flexible behavior must have a large number of neurons, and no insect brain has yet reached a size capable of providing a sufficiently large number of neurons.",
+ "stem_db": "Which one of the following can be properly inferred from the statements above?",
+ "choices_db": {
+  "A": "The behavior of organisms with elaborate brain mechanisms is usually not instinctual.",
+  "B": "Insect behavior is exclusively instinctual.",
+  "C": "All organisms with brains larger than insects’ brains are capable of some measure of flexible behavior.",
+  "D": "All organisms with large brains are biologically equipped for flexible behavior.",
+  "E": "Only organisms with brains of insect size or smaller engage in purely instinctual behavior."
+ },
+ "bank": {
+  "stimulus": "Although instinct enables organisms to make complex responses to stimuli, instinctual behavior involves no reasoning and requires far fewer nerve cells than does noninstinctual (also called flexible) behavior. A brain mechanism capable of flexible behavior must have a large number of neurons, and no insect brain has yet reached a size capable of providing a sufficiently large number of neurons.",
+  "stem": "Which one of the following can be properly inferred from the statements above?",
+  "choices": {
+   "A": "The behavior of organisms with elaborate brain mechanisms is usually not instinctual.",
+   "B": "Insect behavior is exclusively instinctual.",
+   "C": "All organisms with brains larger than insects' brains are capable of some measure of flexible behavior.",
+   "D": "All organisms with large brains are biologically equipped for flexible behavior.",
+   "E": "Only organisms with brains of insect size or smaller engage in purely instinctual behavior."
+  },
+  "key": "B"
+ },
+ "explanation_id": "a343e345-371c-419c-bee8-15c49d6371ff",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "f727e59c-bb83-41c7-a5f5-9b3b9f35113d",
+   "position": 0,
+   "label": "Facts",
+   "body": "conditionals (must, no, universal noun)\nFlexible —requires→ large # of neurons behavior\nInsect brain → doesn't have large # of neurons Instinctual → No reasoning and behavior fewer nerve cells than flex behavior"
+  },
+  {
+   "row_id": "e3ecd26c-6ee4-45e6-b372-59815aabb17f",
+   "position": 1,
+   "label": "Evaluate",
+   "body": "The #1 thing we read for on MBT is conditionals. We found three of them. Do they chain together? Do they have any overlapping concepts?\nYes, two of them mention flexible behavior. Two of them mention a large # of neurons. The last two claims chain together to give us this,\nInsect → not large # → not flexible brain of neurons behavior\nThat idea of \"not flexible\" behavior is the same as instinctual behavior, so we could also chain on the first claim.\nInsect → not large # → not flexible → no reasoning brain of neurons behavior fewer nerve cells"
+  },
+  {
+   "row_id": "62386109-6b6c-4f51-8d1b-13c3913491b4",
+   "position": 2,
+   "label": "Goal",
+   "body": "Let's look for anything we can prove. It'll probably reward us for having assembled this chain, though not necessarily with a Head → Tail inference."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "db4dc1df-5fab-4cd9-b137-b0d1cb3ef2c2",
+   "letter": "A",
+   "body": "Large brains make flexible behavior possible. Nothing says such organisms usually use it."
+  },
+  {
+   "row_id": "fde33acb-dc48-4914-ae5d-4ea0b6e14c71",
+   "letter": "B",
+   "body": "Flexible behavior needs many neurons, and no insect brain has enough. The only other kind of behavior is instinctual, so insect behavior is all instinctual."
+  },
+  {
+   "row_id": "06296952-c65d-422b-814b-1714860093e6",
+   "letter": "C",
+   "body": "Being larger than an insect's brain doesn't mean a brain has enough neurons for flexible behavior."
+  },
+  {
+   "row_id": "a804f0e2-9d72-492b-9f50-465b9ca0598b",
+   "letter": "D",
+   "body": "A large number of neurons is required for flexible behavior, not enough for it. A large brain isn't guaranteed to be equipped."
+  },
+  {
+   "row_id": "364af33b-7f64-43bb-86c8-340bfd18bdc1",
+   "letter": "E",
+   "body": "Insects are limited to instinct, but other organisms could be too. Nothing makes insect-sized brains the only ones."
+  }
+ ],
+ "known_problem": "Chain diagram in the breakdown; all five choice notes missing.",
+ "tags": "no-notes; very-short"
+}

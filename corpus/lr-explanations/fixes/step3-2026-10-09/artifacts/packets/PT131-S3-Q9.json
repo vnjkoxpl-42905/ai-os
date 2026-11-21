@@ -1,0 +1,72 @@
+{
+ "qid": "PT131-S3-Q9",
+ "type": "Main Conclusion",
+ "difficulty": "1",
+ "key_db": "D",
+ "stimulus_db": "Manager: There is no good reason to suppose that promoting creativity is a proper goal of an employee training program. Many jobs require little or no creativity and, in those positions, using creativity is more likely to be disruptive than innovative. Furthermore, even if creativity were in demand, there is no evidence that it can be taught.",
+ "stem_db": "Which one of the following most accurately expresses the main conclusion drawn in the manager's argument?",
+ "choices_db": {
+  "A": "Using creativity in jobs that require little or no creativity can be disruptive.",
+  "B": "Employee training programs are not able to teach employees creativity.",
+  "C": "Many jobs require little or no creativity.",
+  "D": "There is no good reason to suppose that employee training programs should promote creativity.",
+  "E": "Creativity is in demand, but there is no evidence that it can be taught."
+ },
+ "bank": {
+  "stimulus": "Manager: There is no good reason to suppose that promoting creativity is a proper goal of an employee training program. Many jobs require little or no creativity and, in those positions, using creativity is more likely to be disruptive than innovative. Furthermore, even if creativity were in demand, there is no evidence that it can be taught.",
+  "stem": "Which one of the following most accurately expresses the main conclusion drawn in the manager's argument?",
+  "choices": {
+   "A": "Using creativity in jobs that require little or no creativity can be disruptive.",
+   "B": "Employee training programs are not able to teach employees creativity.",
+   "C": "Many jobs require little or no creativity.",
+   "D": "There is no good reason to suppose that employee training programs should promote creativity.",
+   "E": "Creativity is in demand, but there is no evidence that it can be taught."
+  },
+  "key": "D"
+ },
+ "explanation_id": "737e7000-49dd-46b2-b774-be961f17f175",
+ "style": "single",
+ "steps": [
+  {
+   "row_id": "371c842b-008b-45ce-8e91-e5cdd9155bd3",
+   "position": 0,
+   "label": "Evidence",
+   "body": "Many jobs require little or no creativity and, in those positions, using creativity is more likely to be disruptive than innovative. Furthermore, even if creativity were in demand, there is no evidence that it can be taught."
+  },
+  {
+   "row_id": "6b2cc07e-4fc7-4228-a026-22963635a408",
+   "position": 1,
+   "label": "Conclusion",
+   "body": "There is no good reason to suppose that promoting creativity is a proper goal of an employee training program."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "7c7b7b75-0ace-4a19-a8a8-28de8d161595",
+   "letter": "A",
+   "body": "A restates the manager's first reason: in jobs that need little creativity, using it is more likely to be disruptive. That reason supports the claim that promoting creativity isn't a proper training goal, so A is a premise."
+  },
+  {
+   "row_id": "de2ae963-b65b-4342-a21b-be07fbc642f0",
+   "letter": "B",
+   "body": "B is stronger than the manager's premise. The manager says only that there is \"no evidence\" creativity can be taught, not that it can't be. And that is a reason for the main point, not the main point itself."
+  },
+  {
+   "row_id": "99213936-aad6-40ec-b9c2-28d56acfeccb",
+   "letter": "C",
+   "body": "C restates the start of the manager's first reason. That many jobs need little creativity supports the main point, but it isn't the main point."
+  },
+  {
+   "row_id": "4da7a1cb-8a7d-4d8f-96ec-ec6cbce71d48",
+   "letter": "D",
+   "body": "This best paraphrases the argument’s main point."
+  },
+  {
+   "row_id": "92761da6-f572-45dd-87ed-c22d645199d0",
+   "letter": "E",
+   "body": "The manager never concedes that creativity is in demand: \"even if creativity were in demand\" is only a hypothetical. And even corrected, this would be a reason for the main point, not the main point."
+  }
+ ],
+ "known_problem": "Role labels only (\"This is a premise\"); no reading of the rebuttal structure.",
+ "tags": "short-breakdown; verdict-only; thin-correct-note; thin-notes; no-prediction; very-short"
+}

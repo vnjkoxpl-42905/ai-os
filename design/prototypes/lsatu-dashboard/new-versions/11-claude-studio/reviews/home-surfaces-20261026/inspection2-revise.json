@@ -1,0 +1,129 @@
+{
+  "status": "completed",
+  "mode": "inspect",
+  "provider": "claude",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "claude",
+    "builder": "codex",
+    "inspector": "claude"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\ai-os",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os\\design\\prototypes\\lsatu-dashboard\\HOME-SURFACE-PLAN.md",
+  "plan_sha256": "da2454a7f42e734c88a644174cdd560c4212b2abc08f2348e366f0932a24d50c",
+  "requested_model": "claude-opus-5-5",
+  "requested_effort": "medium",
+  "base": "7e3a37c49aad80bc3d36352b796612425fe9b051",
+  "snapshot": {
+    "base": "7e3a37c49aad80bc3d36352b796612425fe9b051",
+    "files": [
+      {
+        "path": "design/prototypes/lsatu-dashboard/new-versions/11-claude-studio/style.css",
+        "kind": "file",
+        "sha256": "56ef633d80acb22796b03b671e1c3afda93d191b660cae2d9fbeaf6da62392a5"
+      }
+    ],
+    "diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "scope": [
+      "design/prototypes/lsatu-dashboard/new-versions/11-claude-studio/style.css"
+    ],
+    "sha256": "167ddbf914beb799e8563109d62be1de4083df04e98b84c828d7584d60514340"
+  },
+  "previous": null,
+  "started_at": 1793008859.0879955,
+  "artifacts": "C:\\Users\\Joshu\\.codex\\visualizations\\2026\\10\\25\\01a17081-6735-7fc2-b0e1-922ab635486c\\home-surface-20261026\\final-inspection\\claudex-gcd_qi6v",
+  "scope": [
+    "design/prototypes/lsatu-dashboard/new-versions/11-claude-studio/style.css"
+  ],
+  "cli_version": "2.1.309 (Claude Code)",
+  "executable": [
+    "C:\\Users\\Joshu\\.local\\bin\\claude.exe"
+  ],
+  "exit_code": 0,
+  "session_id": "e651b928-5b13-4918-89ac-c5e545aa9b97",
+  "response": {
+    "verdict": "REVISE",
+    "summary": "The Home surface rules in style.css lines 477–548 are added after the baseline stylesheet's last line (476). Every new component rule is scoped to main[data-route=\"home\"]. The only exceptions are the route-guarded html/body ground selectors, so shared .card/.panel/.session rules for subpages stay untouched. Most of the plan matches the code: rail separators for all five width ranges, ledger sheet and row geometry, calendar inline alignment (21/25/19/17px), strip-only day edges via media plus a nested container query, the --muted override on the rail, and the ledger numeral colour. My hand calculations put contrast at about 4.7–5.0:1 for the measured text-on-surface pairs. One material problem remains: the resume (dark workspace) changes go beyond the plan's 'reduce only its ambient shadow' limit. There are also two lower-severity points.",
+    "findings": [
+      {
+        "id": "F1-resume-beyond-shadow",
+        "severity": "medium",
+        "path": "design/prototypes/lsatu-dashboard/new-versions/11-claude-studio/style.css",
+        "evidence": "The plan says 'Preserve the16px resume radius and inset highlight while reducing only its ambient shadow' and 'Do not flatten the intended focal point'. Line 483 swaps the 0 0 0 1px rgb(19 23 24/.9) ring for a real 1px #303834 border. That adds 2px to the box and lightens the outer edge. Line 484 also cuts .resume-copy padding from 26px 30px 24px to 24px 26px. Lines 536 and 541 change the ≤640 and ≤380 padding too (24/20/22 becomes 22/20, and 22/16/20 becomes 22/16), which shifts the statement, track and Continue positions on mobile. None of these changes is in the plan.",
+        "fix": "Restore the base padding by deleting the Home .resume-copy rules on lines 484, 536 and 541. Keep the original 0 0 0 1px rgb(19 23 24 / .9) ring in place of border:1px solid #303834, so the only change is the ambient shadow: main[data-route=\"home\"] .resume{box-shadow:0 1px 0 rgb(255 255 255 / .12) inset,0 0 0 1px rgb(19 23 24 / .9),0 8px 18px -12px rgb(19 23 24 / .5)}. If the border or padding change is wanted, record it in the plan or review log first."
+      },
+      {
+        "id": "F2-finder-not-raised",
+        "severity": "low",
+        "path": "design/prototypes/lsatu-dashboard/new-versions/11-claude-studio/style.css",
+        "evidence": "Plan item 7 asks for a 'raised finder'. Line 514 instead takes the finder from #fff with var(--lift) (inset highlight, 1px ring, 12px/28px drop) down to #fdfcf8 with a single 0 1px 2px shadow. On the new #e6e7e2 ground it ends up less raised than before; only hover goes back to #fff.",
+        "fix": "Keep the finder's resting background #fff, or keep a short two-part lift such as 0 0 0 1px ring plus a 0 2px 4px drop. Otherwise, record that flattening the finder was intended and check it against the 1366px before render."
+      },
+      {
+        "id": "F3-rail-stretch-band",
+        "severity": "low",
+        "path": "design/prototypes/lsatu-dashboard/new-versions/11-claude-studio/style.css",
+        "evidence": "Above 1279px, .desk keeps align-items:stretch (line 132), so the .desk-side rail box still grows to the resume's height. align-content:start on line 485 only top-packs the grid rows inside it. The rail has a #e0e2db background, so if the resume is taller than coach + session (for example with no saved note, or at 1440 where the h2 clamp grows), an empty mid-tone band shows at the bottom of the rail. That is exactly the 'manufactured empty space' the plan wanted to avoid. Line 485 also sets grid-template-rows:auto auto at every width, which overrides the base grid-template-rows:none at ≤1279 (line 386). The result is an empty implicit row; with gap:0 it is harmless.",
+        "fix": "At 1366 and 1440, check the rail bottom in both the empty-note and saved-note states. If a band appears, add main[data-route=\"home\"] .desk-side{align-self:start} above 1279, or accept the band and record that choice. You can also limit grid-template-rows:auto auto to a min-width:1280px query."
+      }
+    ],
+    "coverage": [
+      "Read the full runtime style.css (548 lines), including every appended Home-scoped rule on lines 477–548",
+      "Read the end of the saved baseline reviews/home-surfaces-before-20261026/style.css and confirmed it ends at line 476 with no data-route rules, so the change is the appended block",
+      "Read the Home markup generators in app.js (assignmentRows, coachCard, sessionCard, home, daysHTML, agendaHTML) to confirm class names, element types (article rows, so :first-of-type and :last-child match), and that .ledger, .week, .coach and .session are .card elements",
+      "Checked specificity of the Home rules against the base media and container rules (row ::before offsets at ≤640/≤380, .card padding at ≤640/≤380, .week ordering at ≤1279/≤640/≤380)",
+      "Traced the rail separator axis for each width range against the base .desk-side column counts (>1279, 1000–1279, 721–999, 641–720, ≤640)",
+      "Checked the calendar inline-alignment arithmetic against ledger padding plus border at each width",
+      "Checked that the day-border logic targets the seven-column strip only (media plus a nested @container(width>36rem) on the .week container) and leaves the selected day's border alone",
+      "Calculated WCAG contrast by hand: --muted #616660 on #eceee7 is about 5.0:1, rail #596058 on #e0e2db about 4.96:1, and --muted on the #e6e7e2 ground about 4.71:1"
+    ],
+    "limitations": [
+      "I could not run node --check, the Playwright/Edge scripts (capture-11, calendar-internal, interactions, surfaces.cjs), or any rendering. Rendered ground L* separation, layout overflow, 200% text behaviour, the 1920px gutters and subpage computed-style equality are all unverified.",
+      "I could not hash files. The manifest SHA256 values, the baseline hash fb067868…, and whether lines 1–476 are byte-identical to the baseline are not independently confirmed; I only compared the tail of the baseline by eye.",
+      "The tracked diff given to me was empty (diff_sha256 is the empty-string hash), so this review is based on reading the runtime file directly against the saved baseline.",
+      "Files outside the inspection scope were read only for context and are not approved: app.js, index.html, the review archives, evidence artifacts and verification scripts.",
+      "I did not inspect the user screenshot or the before/after renders, so I make no visual-quality or taste judgement."
+    ]
+  },
+  "usage": {
+    "input_tokens": 14,
+    "cache_creation_input_tokens": 47930,
+    "cache_read_input_tokens": 214368,
+    "output_tokens": 11375,
+    "output_tokens_details": {
+      "thinking_tokens": 7616
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 47930,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 3193,
+        "cache_read_input_tokens": 51526,
+        "cache_creation_input_tokens": 908,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 908
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "permission_denials": [],
+  "total_cost_usd": 0.6538695999999999,
+  "elapsed_seconds": 119.64
+}

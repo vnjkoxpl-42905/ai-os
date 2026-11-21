@@ -1,0 +1,2240 @@
+{
+ "corruption-only": [
+  {
+   "install": "home-agents",
+   "skill": "canvas-design",
+   "unique_lines": 2,
+   "sample": [
+    "- **Leave creative space**: Remain specific about the aesthetic direction, but concise enough that the next Codex has room to make interpretive choices also at a extremely high level of craftmanship.",
+    "- **ARTISTIC FREEDOM**: The next Codex interprets the philosophy visually - provide creative room"
+   ],
+   "left": 0,
+   "left_sample": []
+  }
+ ],
+ "updater-owned": [
+  {
+   "install": "home-claude",
+   "skill": "brainstorming",
+   "unique_lines": 20,
+   "sample": [
+    "description: \"You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation.\"",
+    "<HARD-GATE>",
+    "Do NOT invoke any implementation skill, write any code, scaffold any project, or take any implementation action until you have presented a design and the user has approved it. This applies to EVERY project regardless of perceived simplicity.",
+    "</HARD-GATE>"
+   ],
+   "left": 19,
+   "left_sample": [
+    "<HARD-GATE>",
+    "Do NOT invoke any implementation skill, write any code, scaffold any project, or take any implementation action until you have presented a design and the user has approved it. This applies to EVERY project regardless of perceived simplicity.",
+    "</HARD-GATE>"
+   ]
+  },
+  {
+   "install": "home-claude",
+   "skill": "claude-handoff",
+   "unique_lines": 6,
+   "sample": [
+    "Write a handoff summary of the current conversation so a fresh agent can continue the work. Save it to the temporary directory of the user's OS, then launch a background agent seeded with it as its prompt: `claude --bg --name \"<descriptive name>\" -- \"$(cat <summary file>)\"`. Passing the file keeps the shell from running backticks or expanding `$` in the summary. It starts in the current working directory and returns immediately; the user manages it with `claude agents`.",
+    "Always pass `-n`/`--name` with a descriptive name (e.g. `--name \"Fix login bug\"`); it sets the display name shown in the job list, session picker, and terminal title.",
+    "Include a \"suggested skills\" section in the summary, naming which skills the next agent should call the Skill tool for.",
+    "Do not duplicate content already captured in other artifacts (specs, plans, ADRs, issues, commits, diffs). Reference them by path or URL instead."
+   ],
+   "left": 6,
+   "left_sample": [
+    "Write a handoff summary of the current conversation so a fresh agent can continue the work. Save it to the temporary directory of the user's OS, then launch a background agent seeded with it as its prompt: `claude --bg --name \"<descriptive name>\" -- \"$(cat <summary file>)\"`. Passing the file keeps the shell from running backticks or expanding `$` in the summary. It starts in the current working directory and returns immediately; the user manages it with `claude agents`.",
+    "Always pass `-n`/`--name` with a descriptive name (e.g. `--name \"Fix login bug\"`); it sets the display name shown in the job list, session picker, and terminal title.",
+    "Include a \"suggested skills\" section in the summary, naming which skills the next agent should call the Skill tool for."
+   ]
+  },
+  {
+   "install": "home-claude",
+   "skill": "decision-mapping",
+   "unique_lines": 6,
+   "sample": [
+    "- **Prototype**: Writing UI or logic code to test a hypothesis, or to explore a design space. Uses the /prototype skill. Creates a prototype as an asset. Use this when \"how should it look\" or \"how should it behave\" is the key question.",
+    "- **Discuss**: Conversation with the agent. Uses the /grilling and /domain-modeling skills. The default case.",
+    "1. Run a /grilling and /domain-modeling session to surface the open decisions.",
+    "2. Run a session to resolve the ticket, invoking skills as needed. If in doubt, use `/grilling` and `/domain-modeling`."
+   ],
+   "left": 6,
+   "left_sample": [
+    "- **Prototype**: Writing UI or logic code to test a hypothesis, or to explore a design space. Uses the /prototype skill. Creates a prototype as an asset. Use this when \"how should it look\" or \"how should it behave\" is the key question.",
+    "- **Discuss**: Conversation with the agent. Uses the /grilling and /domain-modeling skills. The default case.",
+    "1. Run a /grilling and /domain-modeling session to surface the open decisions."
+   ]
+  },
+  {
+   "install": "home-claude",
+   "skill": "edit-article",
+   "unique_lines": 5,
+   "sample": [
+    "1. First, divide the article into sections based on its headings. Think about the main points you want to make during those sections.",
+    "Consider that information is a directed acyclic graph, and that pieces of information can depend on other pieces of information. Make sure that the order of the sections and their contents respects these dependencies.",
+    "Confirm the sections with the user.",
+    "2. For each section:"
+   ],
+   "left": 5,
+   "left_sample": [
+    "1. First, divide the article into sections based on its headings. Think about the main points you want to make during those sections.",
+    "Consider that information is a directed acyclic graph, and that pieces of information can depend on other pieces of information. Make sure that the order of the sections and their contents respects these dependencies.",
+    "Confirm the sections with the user."
+   ]
+  },
+  {
+   "install": "home-claude",
+   "skill": "finishing-a-development-branch",
+   "unique_lines": 2,
+   "sample": [
+    "Then: Cleanup worktree (Step 6), then delete branch:",
+    "Then: Cleanup worktree (Step 6), then force-delete branch:"
+   ],
+   "left": 2,
+   "left_sample": [
+    "Then: Cleanup worktree (Step 6), then delete branch:",
+    "Then: Cleanup worktree (Step 6), then force-delete branch:"
+   ]
+  },
+  {
+   "install": "home-claude",
+   "skill": "handoff",
+   "unique_lines": 6,
+   "sample": [
+    "description: \"Use only when the user explicitly selects handoff or its specific documented preset/reference. Does not trigger on generic current-vault, frontend, AI or everyday workflow requests.\"",
+    "Write a handoff document summarising the current conversation so a fresh agent can continue the work. Save to the temporary directory of the user's OS (`$TMPDIR`, else `/tmp`; `%TEMP%` on Windows) - not the current workspace.",
+    "Include a \"suggested skills\" section in the document, naming which skills the next agent should call the Skill tool for.",
+    "Do not duplicate content already captured in other artifacts (specs, plans, ADRs, issues, commits, diffs). Reference them by path or URL instead."
+   ],
+   "left": 5,
+   "left_sample": [
+    "Write a handoff document summarising the current conversation so a fresh agent can continue the work. Save to the temporary directory of the user's OS (`$TMPDIR`, else `/tmp`; `%TEMP%` on Windows) - not the current workspace.",
+    "Include a \"suggested skills\" section in the document, naming which skills the next agent should call the Skill tool for.",
+    "Do not duplicate content already captured in other artifacts (specs, plans, ADRs, issues, commits, diffs). Reference them by path or URL instead."
+   ]
+  },
+  {
+   "install": "home-claude",
+   "skill": "implement",
+   "unique_lines": 6,
+   "sample": [
+    "Implement the work described by the user in the spec or tickets.",
+    "If the user passes a ticket reference, fetch it from the issue tracker and state its title before starting. If the reference is ambiguous, ask.",
+    "Call the Skill tool with \"tdd\" where possible, at pre-agreed seams.",
+    "Run typechecking regularly, single test files regularly, and the full test suite once at the end."
+   ],
+   "left": 6,
+   "left_sample": [
+    "Implement the work described by the user in the spec or tickets.",
+    "If the user passes a ticket reference, fetch it from the issue tracker and state its title before starting. If the reference is ambiguous, ask.",
+    "Call the Skill tool with \"tdd\" where possible, at pre-agreed seams."
+   ]
+  },
+  {
+   "install": "home-claude",
+   "skill": "implement-spec",
+   "unique_lines": 6,
+   "sample": [
+    "You have been provided a spec. This spec should have tickets associated with it, describing how to implement the spec.",
+    "The issue tracker should have been provided to you. If not, tell the user to run `/setup-matt-pocock-skills`.",
+    "The goal is the entire spec implemented on a single **integration branch**, with every ticket resolved the way the issue tracker closes work.",
+    "The tickets are not a list of steps. They are a **task graph** with blocking relationships between them. This means there is always a **frontier** of tickets which are ready to be grabbed."
+   ],
+   "left": 6,
+   "left_sample": [
+    "You have been provided a spec. This spec should have tickets associated with it, describing how to implement the spec.",
+    "The issue tracker should have been provided to you. If not, tell the user to run `/setup-matt-pocock-skills`.",
+    "The goal is the entire spec implemented on a single **integration branch**, with every ticket resolved the way the issue tracker closes work."
+   ]
+  },
+  {
+   "install": "home-claude",
+   "skill": "loop-me",
+   "unique_lines": 1,
+   "sample": [
+    "Run a stateful `/grilling` session whose only output is **workflow** specs. Use the grilling discipline (relentless, a round of questions at a time, a recommended answer attached to each) aimed at the vocabulary and goal below. Create, edit, and delete specs as the grilling resolves things."
+   ],
+   "left": 1,
+   "left_sample": [
+    "Run a stateful `/grilling` session whose only output is **workflow** specs. Use the grilling discipline (relentless, a round of questions at a time, a recommended answer attached to each) aimed at the vocabulary and goal below. Create, edit, and delete specs as the grilling resolves things."
+   ]
+  },
+  {
+   "install": "home-claude",
+   "skill": "qa",
+   "unique_lines": 5,
+   "sample": [
+    "description: \"Inspect and reproduce reported bugs, then produce a findings report. Publish GitHub issues only when explicitly authorized.\"",
+    "Run an interactive QA session. The user describes problems they're encountering. You clarify, explore the codebase for context, and draft issue reports that are durable, user-focused, and use the project's domain language.",
+    "### 4. Draft the report, or file explicitly authorized issues",
+    "Draft issue reports locally by default. When the user explicitly requests issue publication, use `gh issue create` and report actual URLs. Existing authorization needs no repeated confirmation."
+   ],
+   "left": 4,
+   "left_sample": [
+    "Run an interactive QA session. The user describes problems they're encountering. You clarify, explore the codebase for context, and draft issue reports that are durable, user-focused, and use the project's domain language.",
+    "### 4. Draft the report, or file explicitly authorized issues",
+    "Draft issue reports locally by default. When the user explicitly requests issue publication, use `gh issue create` and report actual URLs. Existing authorization needs no repeated confirmation."
+   ]
+  },
+  {
+   "install": "home-claude",
+   "skill": "request-refactor-plan",
+   "unique_lines": 10,
+   "sample": [
+    "This skill will be invoked when the user wants to create a refactor request. You should go through the steps below. You may skip steps if you don't consider them necessary.",
+    "1. Ask the user for a long, detailed description of the problem they want to solve and any potential ideas for solutions.",
+    "2. Explore the repo to verify their assertions and understand the current state of the codebase.",
+    "3. Ask whether they have considered other options, and present other options to them."
+   ],
+   "left": 10,
+   "left_sample": [
+    "This skill will be invoked when the user wants to create a refactor request. You should go through the steps below. You may skip steps if you don't consider them necessary.",
+    "1. Ask the user for a long, detailed description of the problem they want to solve and any potential ideas for solutions.",
+    "2. Explore the repo to verify their assertions and understand the current state of the codebase."
+   ]
+  },
+  {
+   "install": "home-claude",
+   "skill": "requesting-code-review",
+   "unique_lines": 3,
+   "sample": [
+    "**1. Get git SHAs:**",
+    "Dispatch a `general-purpose` subagent, filling the template at [code-reviewer.md](code-reviewer.md)",
+    "- `{BASE_SHA}` - Starting commit"
+   ],
+   "left": 3,
+   "left_sample": [
+    "**1. Get git SHAs:**",
+    "Dispatch a `general-purpose` subagent, filling the template at [code-reviewer.md](code-reviewer.md)",
+    "- `{BASE_SHA}` - Starting commit"
+   ]
+  },
+  {
+   "install": "home-claude",
+   "skill": "resolving-merge-conflicts",
+   "unique_lines": 3,
+   "sample": [
+    "1. **See the current state** of the merge/rebase. Check git history, and the conflicting files.",
+    "3. **Resolve each hunk.** Preserve both intents where possible. Where incompatible, pick the one matching the merge's stated goal and note the trade-off. Do **not** invent new behaviour. Always resolve; never `--abort`.",
+    "5. **Finish the merge/rebase.** Stage everything and commit. If rebasing, continue the rebase process until all commits are rebased."
+   ],
+   "left": 3,
+   "left_sample": [
+    "1. **See the current state** of the merge/rebase. Check git history, and the conflicting files.",
+    "3. **Resolve each hunk.** Preserve both intents where possible. Where incompatible, pick the one matching the merge's stated goal and note the trade-off. Do **not** invent new behaviour. Always resolve; never `--abort`.",
+    "5. **Finish the merge/rebase.** Stage everything and commit. If rebasing, continue the rebase process until all commits are rebased."
+   ]
+  },
+  {
+   "install": "home-claude",
+   "skill": "review",
+   "unique_lines": 6,
+   "sample": [
+    "Two-axis review of the diff between `HEAD` and a fixed point the user supplies:",
+    "- **Standards** \u2014 does the code conform to this repo's documented coding standards?",
+    "- **Spec** \u2014 does the code faithfully implement the originating issue / PRD / spec?",
+    "Both axes run as **parallel sub-agents** so they don't pollute each other's context, then this skill aggregates their findings."
+   ],
+   "left": 6,
+   "left_sample": [
+    "Two-axis review of the diff between `HEAD` and a fixed point the user supplies:",
+    "- **Standards** \u2014 does the code conform to this repo's documented coding standards?",
+    "- **Spec** \u2014 does the code faithfully implement the originating issue / PRD / spec?"
+   ]
+  },
+  {
+   "install": "home-claude",
+   "skill": "scaffold-exercises",
+   "unique_lines": 1,
+   "sample": [
+    "Create exercise directory structures that pass `pnpm ai-hero-cli internal lint`, then commit with `git commit`."
+   ],
+   "left": 1,
+   "left_sample": [
+    "Create exercise directory structures that pass `pnpm ai-hero-cli internal lint`, then commit with `git commit`."
+   ]
+  },
+  {
+   "install": "home-claude",
+   "skill": "setup-pre-commit",
+   "unique_lines": 5,
+   "sample": [
+    "### 1. Detect package manager",
+    "This creates `.husky/` dir and adds `prepare: \"husky\"` to package.json.",
+    "Write this file (no shebang needed for Husky v9+):",
+    "- [ ] Run `npx lint-staged` to verify it works"
+   ],
+   "left": 5,
+   "left_sample": [
+    "### 1. Detect package manager",
+    "This creates `.husky/` dir and adds `prepare: \"husky\"` to package.json.",
+    "Write this file (no shebang needed for Husky v9+):"
+   ]
+  },
+  {
+   "install": "home-claude",
+   "skill": "systematic-debugging",
+   "unique_lines": 1,
+   "sample": [
+    "python -c \"import os; print('IDENTITY present:', 'IDENTITY' in os.environ)\" || echo \"IDENTITY not in environment\""
+   ],
+   "left": 1,
+   "left_sample": [
+    "python -c \"import os; print('IDENTITY present:', 'IDENTITY' in os.environ)\" || echo \"IDENTITY not in environment\""
+   ]
+  },
+  {
+   "install": "home-claude",
+   "skill": "teach",
+   "unique_lines": 3,
+   "sample": [
+    "The user has asked you to teach them something. This is a stateful request - they intend to learn the topic over multiple sessions.",
+    "Treat the current directory as a teaching workspace. Workspace paths (`./lessons/` and the rest) resolve from the directory `/teach` was run in; only the `*-FORMAT.md` links resolve from this skill's folder. The state of their learning is captured in this directory in several files:",
+    "For quizzes, each answer should be exactly the same number of words (and characters, if possible). Vary which position holds the correct answer across questions. Don't give the user any clues about the answer through formatting or order."
+   ],
+   "left": 3,
+   "left_sample": [
+    "The user has asked you to teach them something. This is a stateful request - they intend to learn the topic over multiple sessions.",
+    "Treat the current directory as a teaching workspace. Workspace paths (`./lessons/` and the rest) resolve from the directory `/teach` was run in; only the `*-FORMAT.md` links resolve from this skill's folder. The state of their learning is captured in this directory in several files:",
+    "For quizzes, each answer should be exactly the same number of words (and characters, if possible). Vary which position holds the correct answer across questions. Don't give the user any clues about the answer through formatting or order."
+   ]
+  },
+  {
+   "install": "home-claude",
+   "skill": "test-driven-development",
+   "unique_lines": 67,
+   "sample": [
+    "**Always:**",
+    "- New features",
+    "- Bug fixes",
+    "- Refactoring"
+   ],
+   "left": 67,
+   "left_sample": [
+    "**Always:**",
+    "- New features",
+    "- Bug fixes"
+   ]
+  },
+  {
+   "install": "home-claude",
+   "skill": "to-questionnaire",
+   "unique_lines": 5,
+   "sample": [
+    "Turn something the user can't answer alone into a **questionnaire**: a Markdown document they hand to one person to fill in async, or fill out together over a meeting. The recipient holds knowledge the user lacks; the questionnaire pulls it out of them.",
+    "**Grill the send, not the subject.** Interview the user only about the _send_, which they can always answer: who it goes to, and what they need back. The questions in the document then target the **gap** between what the recipient knows and what the user needs.",
+    "1. **Who is it going to?** Ask, in one exchange, the recipient's role, expertise, and relationship to the user. This fixes the questionnaire's tone and how much context it must carry. Done when you know who the recipient is and what they know that the user doesn't.",
+    "2. **What do you need back?** Ask, in one exchange, the specific decisions or facts the user can't resolve alone and needs from this person. Done when you have a concrete list of what the user must walk away able to do or decide."
+   ],
+   "left": 5,
+   "left_sample": [
+    "Turn something the user can't answer alone into a **questionnaire**: a Markdown document they hand to one person to fill in async, or fill out together over a meeting. The recipient holds knowledge the user lacks; the questionnaire pulls it out of them.",
+    "**Grill the send, not the subject.** Interview the user only about the _send_, which they can always answer: who it goes to, and what they need back. The questions in the document then target the **gap** between what the recipient knows and what the user needs.",
+    "1. **Who is it going to?** Ask, in one exchange, the recipient's role, expertise, and relationship to the user. This fixes the questionnaire's tone and how much context it must carry. Done when you know who the recipient is and what they know that the user doesn't."
+   ]
+  },
+  {
+   "install": "home-claude",
+   "skill": "using-superpowers",
+   "unique_lines": 34,
+   "sample": [
+    "description: \"Use only when the user explicitly selects using-superpowers or its specific documented preset/reference. Does not trigger on generic current-vault, frontend, AI or everyday workflow requests.\"",
+    "<SUBAGENT-STOP>",
+    "If you were dispatched as a subagent to execute a specific task, ignore this skill.",
+    "</SUBAGENT-STOP>"
+   ],
+   "left": 33,
+   "left_sample": [
+    "<SUBAGENT-STOP>",
+    "If you were dispatched as a subagent to execute a specific task, ignore this skill.",
+    "</SUBAGENT-STOP>"
+   ]
+  },
+  {
+   "install": "home-claude",
+   "skill": "wayfinder",
+   "unique_lines": 10,
+   "sample": [
+    "A loose idea has arrived, too big for one agent session, and wrapped in fog: the way from here to the **destination** isn't visible yet. Wayfinding is about finding that way, not charging at the destination. This skill charts the way as a **shared map** on the repo's issue tracker, then works its **decision tickets** (questions whose resolution is a decision, not slices of a build to execute) one at a time until the route is clear.",
+    "The destination varies per effort, and naming it is the first act of charting: it shapes every ticket. It might be a spec to hand off and iterate on, a decision to lock before planning starts, or a change made in place like a data-structure migration. The map is domain-agnostic: engineering work, course content, whatever fits the shape.",
+    "A session **claims** a ticket by assigning it to the dev driving the map, **first**, before any work, so concurrent sessions skip it. That assignee _is_ the claim: an open, unassigned ticket is unclaimed.",
+    "- **Research** (AFK): Reading documentation, third-party APIs, or local resources like knowledge bases to surface a fact a decision waits on. Resolved by a subagent that calls the Skill tool with \"research\". Use when knowledge outside the current working directory is required."
+   ],
+   "left": 10,
+   "left_sample": [
+    "A loose idea has arrived, too big for one agent session, and wrapped in fog: the way from here to the **destination** isn't visible yet. Wayfinding is about finding that way, not charging at the destination. This skill charts the way as a **shared map** on the repo's issue tracker, then works its **decision tickets** (questions whose resolution is a decision, not slices of a build to execute) one at a time until the route is clear.",
+    "The destination varies per effort, and naming it is the first act of charting: it shapes every ticket. It might be a spec to hand off and iterate on, a decision to lock before planning starts, or a change made in place like a data-structure migration. The map is domain-agnostic: engineering work, course content, whatever fits the shape.",
+    "A session **claims** a ticket by assigning it to the dev driving the map, **first**, before any work, so concurrent sessions skip it. That assignee _is_ the claim: an open, unassigned ticket is unclaimed."
+   ]
+  },
+  {
+   "install": "home-claude",
+   "skill": "writing-beats",
+   "unique_lines": 11,
+   "sample": [
+    "<what-to-do>",
+    "The user has passed (or will pass) a markdown file of raw material. This is **exploit**: the exploring is done, the pile is fixed. Commit to a path through it and mine the pile to fill each beat.",
+    "If the user did not say where to save the article, ask once and remember the path.",
+    "Then run a beat-by-beat journey, choose-your-own-adventure style:"
+   ],
+   "left": 11,
+   "left_sample": [
+    "<what-to-do>",
+    "The user has passed (or will pass) a markdown file of raw material. This is **exploit**: the exploring is done, the pile is fixed. Commit to a path through it and mine the pile to fill each beat.",
+    "If the user did not say where to save the article, ask once and remember the path."
+   ]
+  },
+  {
+   "install": "home-claude",
+   "skill": "writing-great-skills",
+   "unique_lines": 3,
+   "sample": [
+    "description: \"Use only when the user explicitly selects writing-great-skills or its specific documented preset/reference. Does not trigger on generic current-vault, frontend, AI or everyday workflow requests.\"",
+    "A skill exists to wrangle determinism out of a stochastic system. **Predictability** \u2014 the agent taking the same _process_ every run, not producing the same output \u2014 is the root virtue; every lever below serves it.",
+    "**Bold terms** are defined in [`GLOSSARY.md`](GLOSSARY.md); look them up there for the full meaning."
+   ],
+   "left": 2,
+   "left_sample": [
+    "A skill exists to wrangle determinism out of a stochastic system. **Predictability** \u2014 the agent taking the same _process_ every run, not producing the same output \u2014 is the root virtue; every lever below serves it.",
+    "**Bold terms** are defined in [`GLOSSARY.md`](GLOSSARY.md); look them up there for the full meaning."
+   ]
+  },
+  {
+   "install": "home-claude",
+   "skill": "writing-plans",
+   "unique_lines": 1,
+   "sample": [
+    "# Only when task authorizes commit: git commit -m \"feat: add specific feature\""
+   ],
+   "left": 1,
+   "left_sample": [
+    "# Only when task authorizes commit: git commit -m \"feat: add specific feature\""
+   ]
+  },
+  {
+   "install": "home-claude",
+   "skill": "writing-skills",
+   "unique_lines": 55,
+   "sample": [
+    "description: \"Use only when the user explicitly selects writing-skills or its specific documented preset/reference. Does not trigger on generic current-vault, frontend, AI or everyday workflow requests.\"",
+    "Always use subagents (50-100x context savings). REQUIRED: Use [other-skill-name] for workflow.",
+    "## The Iron Law (Same as TDD)",
+    "NO SKILL WITHOUT A FAILING TEST FIRST"
+   ],
+   "left": 54,
+   "left_sample": [
+    "Always use subagents (50-100x context savings). REQUIRED: Use [other-skill-name] for workflow.",
+    "## The Iron Law (Same as TDD)",
+    "NO SKILL WITHOUT A FAILING TEST FIRST"
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "brainstorming",
+   "unique_lines": 20,
+   "sample": [
+    "description: \"You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation.\"",
+    "<HARD-GATE>",
+    "Do NOT invoke any implementation skill, write any code, scaffold any project, or take any implementation action until you have presented a design and the user has approved it. This applies to EVERY project regardless of perceived simplicity.",
+    "</HARD-GATE>"
+   ],
+   "left": 19,
+   "left_sample": [
+    "<HARD-GATE>",
+    "Do NOT invoke any implementation skill, write any code, scaffold any project, or take any implementation action until you have presented a design and the user has approved it. This applies to EVERY project regardless of perceived simplicity.",
+    "</HARD-GATE>"
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "claude-handoff",
+   "unique_lines": 6,
+   "sample": [
+    "Write a handoff summary of the current conversation so a fresh agent can continue the work. Save it to the temporary directory of the user's OS, then launch a background agent seeded with it as its prompt: `claude --bg --name \"<descriptive name>\" -- \"$(cat <summary file>)\"`. Passing the file keeps the shell from running backticks or expanding `$` in the summary. It starts in the current working directory and returns immediately; the user manages it with `claude agents`.",
+    "Always pass `-n`/`--name` with a descriptive name (e.g. `--name \"Fix login bug\"`); it sets the display name shown in the job list, session picker, and terminal title.",
+    "Include a \"suggested skills\" section in the summary, naming which skills the next agent should call the Skill tool for.",
+    "Do not duplicate content already captured in other artifacts (specs, plans, ADRs, issues, commits, diffs). Reference them by path or URL instead."
+   ],
+   "left": 6,
+   "left_sample": [
+    "Write a handoff summary of the current conversation so a fresh agent can continue the work. Save it to the temporary directory of the user's OS, then launch a background agent seeded with it as its prompt: `claude --bg --name \"<descriptive name>\" -- \"$(cat <summary file>)\"`. Passing the file keeps the shell from running backticks or expanding `$` in the summary. It starts in the current working directory and returns immediately; the user manages it with `claude agents`.",
+    "Always pass `-n`/`--name` with a descriptive name (e.g. `--name \"Fix login bug\"`); it sets the display name shown in the job list, session picker, and terminal title.",
+    "Include a \"suggested skills\" section in the summary, naming which skills the next agent should call the Skill tool for."
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "decision-mapping",
+   "unique_lines": 6,
+   "sample": [
+    "- **Prototype**: Writing UI or logic code to test a hypothesis, or to explore a design space. Uses the /prototype skill. Creates a prototype as an asset. Use this when \"how should it look\" or \"how should it behave\" is the key question.",
+    "- **Discuss**: Conversation with the agent. Uses the /grilling and /domain-modeling skills. The default case.",
+    "1. Run a /grilling and /domain-modeling session to surface the open decisions.",
+    "2. Run a session to resolve the ticket, invoking skills as needed. If in doubt, use `/grilling` and `/domain-modeling`."
+   ],
+   "left": 6,
+   "left_sample": [
+    "- **Prototype**: Writing UI or logic code to test a hypothesis, or to explore a design space. Uses the /prototype skill. Creates a prototype as an asset. Use this when \"how should it look\" or \"how should it behave\" is the key question.",
+    "- **Discuss**: Conversation with the agent. Uses the /grilling and /domain-modeling skills. The default case.",
+    "1. Run a /grilling and /domain-modeling session to surface the open decisions."
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "design-an-interface",
+   "unique_lines": 1,
+   "sample": [
+    "Spawn 3+ sub-agents simultaneously using Task tool. Each must produce a **radically different** approach."
+   ],
+   "left": 1,
+   "left_sample": [
+    "Spawn 3+ sub-agents simultaneously using Task tool. Each must produce a **radically different** approach."
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "edit-article",
+   "unique_lines": 5,
+   "sample": [
+    "1. First, divide the article into sections based on its headings. Think about the main points you want to make during those sections.",
+    "Consider that information is a directed acyclic graph, and that pieces of information can depend on other pieces of information. Make sure that the order of the sections and their contents respects these dependencies.",
+    "Confirm the sections with the user.",
+    "2. For each section:"
+   ],
+   "left": 5,
+   "left_sample": [
+    "1. First, divide the article into sections based on its headings. Think about the main points you want to make during those sections.",
+    "Consider that information is a directed acyclic graph, and that pieces of information can depend on other pieces of information. Make sure that the order of the sections and their contents respects these dependencies.",
+    "Confirm the sections with the user."
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "executing-plans",
+   "unique_lines": 1,
+   "sample": [
+    "**Note:** Tell your human partner that Superpowers works much better with access to subagents. The quality of its work will be significantly higher if run on a platform with subagent support (Codex, Codex CLI, Codex App, and Copilot CLI all qualify; see the per-platform tool refs in `../using-superpowers/references/`). If subagents are available, use superpowers:subagent-driven-development instead of this skill."
+   ],
+   "left": 1,
+   "left_sample": [
+    "**Note:** Tell your human partner that Superpowers works much better with access to subagents. The quality of its work will be significantly higher if run on a platform with subagent support (Claude, Claude CLI, Claude App, and Copilot CLI all qualify; see the per-platform tool refs in `../using-superpowers/references/`). If subagents are available, use superpowers:subagent-driven-development instead of this skill."
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "finishing-a-development-branch",
+   "unique_lines": 2,
+   "sample": [
+    "Then: Cleanup worktree (Step 6), then delete branch:",
+    "Then: Cleanup worktree (Step 6), then force-delete branch:"
+   ],
+   "left": 2,
+   "left_sample": [
+    "Then: Cleanup worktree (Step 6), then delete branch:",
+    "Then: Cleanup worktree (Step 6), then force-delete branch:"
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "handoff",
+   "unique_lines": 6,
+   "sample": [
+    "description: \"Use only when the user explicitly selects handoff or its specific documented preset/reference. Does not trigger on generic current-vault, frontend, AI or everyday workflow requests.\"",
+    "Write a handoff document summarising the current conversation so a fresh agent can continue the work. Save to the temporary directory of the user's OS (`$TMPDIR`, else `/tmp`; `%TEMP%` on Windows) - not the current workspace.",
+    "Include a \"suggested skills\" section in the document, naming which skills the next agent should call the Skill tool for.",
+    "Do not duplicate content already captured in other artifacts (specs, plans, ADRs, issues, commits, diffs). Reference them by path or URL instead."
+   ],
+   "left": 5,
+   "left_sample": [
+    "Write a handoff document summarising the current conversation so a fresh agent can continue the work. Save to the temporary directory of the user's OS (`$TMPDIR`, else `/tmp`; `%TEMP%` on Windows) - not the current workspace.",
+    "Include a \"suggested skills\" section in the document, naming which skills the next agent should call the Skill tool for.",
+    "Do not duplicate content already captured in other artifacts (specs, plans, ADRs, issues, commits, diffs). Reference them by path or URL instead."
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "implement",
+   "unique_lines": 6,
+   "sample": [
+    "Implement the work described by the user in the spec or tickets.",
+    "If the user passes a ticket reference, fetch it from the issue tracker and state its title before starting. If the reference is ambiguous, ask.",
+    "Call the Skill tool with \"tdd\" where possible, at pre-agreed seams.",
+    "Run typechecking regularly, single test files regularly, and the full test suite once at the end."
+   ],
+   "left": 6,
+   "left_sample": [
+    "Implement the work described by the user in the spec or tickets.",
+    "If the user passes a ticket reference, fetch it from the issue tracker and state its title before starting. If the reference is ambiguous, ask.",
+    "Call the Skill tool with \"tdd\" where possible, at pre-agreed seams."
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "implement-spec",
+   "unique_lines": 8,
+   "sample": [
+    "You have been provided a spec. This spec should have tickets associated with it, describing how to implement the spec.",
+    "The issue tracker should have been provided to you. If not, tell the user to run `/setup-matt-pocock-skills`.",
+    "The goal is the entire spec implemented on a single **integration branch**, with every ticket resolved the way the issue tracker closes work.",
+    "The tickets are not a list of steps. They are a **task graph** with blocking relationships between them. This means there is always a **frontier** of tickets which are ready to be grabbed."
+   ],
+   "left": 8,
+   "left_sample": [
+    "You have been provided a spec. This spec should have tickets associated with it, describing how to implement the spec.",
+    "The issue tracker should have been provided to you. If not, tell the user to run `/setup-matt-pocock-skills`.",
+    "The goal is the entire spec implemented on a single **integration branch**, with every ticket resolved the way the issue tracker closes work."
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "improve-codebase-architecture",
+   "unique_lines": 4,
+   "sample": [
+    "- Call the Skill tool with \"codebase-design\" for the architecture vocabulary (**module**, **interface**, **depth**, **seam**, **adapter**, **leverage**, **locality**) and its principles (the deletion test, \"the interface is the test surface\", \"one adapter = hypothetical seam, two = real\"). Use these terms exactly in every suggestion, and don't drift into \"component,\" \"service,\" \"API,\" or \"boundary.\"",
+    "Once the user picks a candidate, call the Skill tool with \"grilling\" to walk the decision tree with them: constraints, dependencies, the shape of the deepened module, what sits behind the seam, what tests survive.",
+    "Side effects happen inline as decisions crystallize; call the Skill tool with \"domain-modeling\" to keep the domain model current as you go:",
+    "- **Want to explore alternative interfaces for the deepened module?** Call the Skill tool with \"codebase-design\" and use its design-it-twice parallel sub-agent pattern."
+   ],
+   "left": 4,
+   "left_sample": [
+    "- Call the Skill tool with \"codebase-design\" for the architecture vocabulary (**module**, **interface**, **depth**, **seam**, **adapter**, **leverage**, **locality**) and its principles (the deletion test, \"the interface is the test surface\", \"one adapter = hypothetical seam, two = real\"). Use these terms exactly in every suggestion, and don't drift into \"component,\" \"service,\" \"API,\" or \"boundary.\"",
+    "Once the user picks a candidate, call the Skill tool with \"grilling\" to walk the decision tree with them: constraints, dependencies, the shape of the deepened module, what sits behind the seam, what tests survive.",
+    "Side effects happen inline as decisions crystallize; call the Skill tool with \"domain-modeling\" to keep the domain model current as you go:"
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "loop-me",
+   "unique_lines": 1,
+   "sample": [
+    "Run a stateful `/grilling` session whose only output is **workflow** specs. Use the grilling discipline (relentless, a round of questions at a time, a recommended answer attached to each) aimed at the vocabulary and goal below. Create, edit, and delete specs as the grilling resolves things."
+   ],
+   "left": 1,
+   "left_sample": [
+    "Run a stateful `/grilling` session whose only output is **workflow** specs. Use the grilling discipline (relentless, a round of questions at a time, a recommended answer attached to each) aimed at the vocabulary and goal below. Create, edit, and delete specs as the grilling resolves things."
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "qa",
+   "unique_lines": 5,
+   "sample": [
+    "description: \"Inspect and reproduce reported bugs, then produce a findings report. Publish GitHub issues only when explicitly authorized.\"",
+    "Run an interactive QA session. The user describes problems they're encountering. You clarify, explore the codebase for context, and draft issue reports that are durable, user-focused, and use the project's domain language.",
+    "### 4. Draft the report, or file explicitly authorized issues",
+    "Draft issue reports locally by default. When the user explicitly requests issue publication, use `gh issue create` and report actual URLs. Existing authorization needs no repeated confirmation."
+   ],
+   "left": 4,
+   "left_sample": [
+    "Run an interactive QA session. The user describes problems they're encountering. You clarify, explore the codebase for context, and draft issue reports that are durable, user-focused, and use the project's domain language.",
+    "### 4. Draft the report, or file explicitly authorized issues",
+    "Draft issue reports locally by default. When the user explicitly requests issue publication, use `gh issue create` and report actual URLs. Existing authorization needs no repeated confirmation."
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "request-refactor-plan",
+   "unique_lines": 10,
+   "sample": [
+    "This skill will be invoked when the user wants to create a refactor request. You should go through the steps below. You may skip steps if you don't consider them necessary.",
+    "1. Ask the user for a long, detailed description of the problem they want to solve and any potential ideas for solutions.",
+    "2. Explore the repo to verify their assertions and understand the current state of the codebase.",
+    "3. Ask whether they have considered other options, and present other options to them."
+   ],
+   "left": 10,
+   "left_sample": [
+    "This skill will be invoked when the user wants to create a refactor request. You should go through the steps below. You may skip steps if you don't consider them necessary.",
+    "1. Ask the user for a long, detailed description of the problem they want to solve and any potential ideas for solutions.",
+    "2. Explore the repo to verify their assertions and understand the current state of the codebase."
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "requesting-code-review",
+   "unique_lines": 3,
+   "sample": [
+    "**1. Get git SHAs:**",
+    "Dispatch a `general-purpose` subagent, filling the template at [code-reviewer.md](code-reviewer.md)",
+    "- `{BASE_SHA}` - Starting commit"
+   ],
+   "left": 3,
+   "left_sample": [
+    "**1. Get git SHAs:**",
+    "Dispatch a `general-purpose` subagent, filling the template at [code-reviewer.md](code-reviewer.md)",
+    "- `{BASE_SHA}` - Starting commit"
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "resolving-merge-conflicts",
+   "unique_lines": 3,
+   "sample": [
+    "1. **See the current state** of the merge/rebase. Check git history, and the conflicting files.",
+    "3. **Resolve each hunk.** Preserve both intents where possible. Where incompatible, pick the one matching the merge's stated goal and note the trade-off. Do **not** invent new behaviour. Always resolve; never `--abort`.",
+    "5. **Finish the merge/rebase.** Stage everything and commit. If rebasing, continue the rebase process until all commits are rebased."
+   ],
+   "left": 3,
+   "left_sample": [
+    "1. **See the current state** of the merge/rebase. Check git history, and the conflicting files.",
+    "3. **Resolve each hunk.** Preserve both intents where possible. Where incompatible, pick the one matching the merge's stated goal and note the trade-off. Do **not** invent new behaviour. Always resolve; never `--abort`.",
+    "5. **Finish the merge/rebase.** Stage everything and commit. If rebasing, continue the rebase process until all commits are rebased."
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "retro",
+   "unique_lines": 1,
+   "sample": [
+    "1. Call the Skill tool with `writing-for-agents` for the writing style guide."
+   ],
+   "left": 1,
+   "left_sample": [
+    "1. Call the Skill tool with `writing-for-agents` for the writing style guide."
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "review",
+   "unique_lines": 6,
+   "sample": [
+    "Two-axis review of the diff between `HEAD` and a fixed point the user supplies:",
+    "- **Standards** \u2014 does the code conform to this repo's documented coding standards?",
+    "- **Spec** \u2014 does the code faithfully implement the originating issue / PRD / spec?",
+    "Both axes run as **parallel sub-agents** so they don't pollute each other's context, then this skill aggregates their findings."
+   ],
+   "left": 6,
+   "left_sample": [
+    "Two-axis review of the diff between `HEAD` and a fixed point the user supplies:",
+    "- **Standards** \u2014 does the code conform to this repo's documented coding standards?",
+    "- **Spec** \u2014 does the code faithfully implement the originating issue / PRD / spec?"
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "scaffold-exercises",
+   "unique_lines": 1,
+   "sample": [
+    "Create exercise directory structures that pass `pnpm ai-hero-cli internal lint`, then commit with `git commit`."
+   ],
+   "left": 1,
+   "left_sample": [
+    "Create exercise directory structures that pass `pnpm ai-hero-cli internal lint`, then commit with `git commit`."
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "setup-pre-commit",
+   "unique_lines": 5,
+   "sample": [
+    "### 1. Detect package manager",
+    "This creates `.husky/` dir and adds `prepare: \"husky\"` to package.json.",
+    "Write this file (no shebang needed for Husky v9+):",
+    "- [ ] Run `npx lint-staged` to verify it works"
+   ],
+   "left": 5,
+   "left_sample": [
+    "### 1. Detect package manager",
+    "This creates `.husky/` dir and adds `prepare: \"husky\"` to package.json.",
+    "Write this file (no shebang needed for Husky v9+):"
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "setup-ts-deep-modules",
+   "unique_lines": 1,
+   "sample": [
+    "For the vocabulary (deep module, interface, seam, depth), call the Skill tool with \"codebase-design\" and use its language throughout."
+   ],
+   "left": 1,
+   "left_sample": [
+    "For the vocabulary (deep module, interface, seam, depth), call the Skill tool with \"codebase-design\" and use its language throughout."
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "systematic-debugging",
+   "unique_lines": 1,
+   "sample": [
+    "python -c \"import os; print('IDENTITY present:', 'IDENTITY' in os.environ)\" || echo \"IDENTITY not in environment\""
+   ],
+   "left": 1,
+   "left_sample": [
+    "python -c \"import os; print('IDENTITY present:', 'IDENTITY' in os.environ)\" || echo \"IDENTITY not in environment\""
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "tdd",
+   "unique_lines": 1,
+   "sample": [
+    "When the shape of that interface is itself in question (how deep the module is, where the seam belongs, what the interface should expose), call the Skill tool with \"codebase-design\" for the vocabulary. It is the shared source of the module, interface, depth, seam, adapter, leverage and locality terms, and it is a reference to consult, not a session to run."
+   ],
+   "left": 1,
+   "left_sample": [
+    "When the shape of that interface is itself in question (how deep the module is, where the seam belongs, what the interface should expose), call the Skill tool with \"codebase-design\" for the vocabulary. It is the shared source of the module, interface, depth, seam, adapter, leverage and locality terms, and it is a reference to consult, not a session to run."
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "teach",
+   "unique_lines": 3,
+   "sample": [
+    "The user has asked you to teach them something. This is a stateful request - they intend to learn the topic over multiple sessions.",
+    "Treat the current directory as a teaching workspace. Workspace paths (`./lessons/` and the rest) resolve from the directory `/teach` was run in; only the `*-FORMAT.md` links resolve from this skill's folder. The state of their learning is captured in this directory in several files:",
+    "For quizzes, each answer should be exactly the same number of words (and characters, if possible). Vary which position holds the correct answer across questions. Don't give the user any clues about the answer through formatting or order."
+   ],
+   "left": 3,
+   "left_sample": [
+    "The user has asked you to teach them something. This is a stateful request - they intend to learn the topic over multiple sessions.",
+    "Treat the current directory as a teaching workspace. Workspace paths (`./lessons/` and the rest) resolve from the directory `/teach` was run in; only the `*-FORMAT.md` links resolve from this skill's folder. The state of their learning is captured in this directory in several files:",
+    "For quizzes, each answer should be exactly the same number of words (and characters, if possible). Vary which position holds the correct answer across questions. Don't give the user any clues about the answer through formatting or order."
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "test-driven-development",
+   "unique_lines": 67,
+   "sample": [
+    "**Always:**",
+    "- New features",
+    "- Bug fixes",
+    "- Refactoring"
+   ],
+   "left": 67,
+   "left_sample": [
+    "**Always:**",
+    "- New features",
+    "- Bug fixes"
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "to-questionnaire",
+   "unique_lines": 5,
+   "sample": [
+    "Turn something the user can't answer alone into a **questionnaire**: a Markdown document they hand to one person to fill in async, or fill out together over a meeting. The recipient holds knowledge the user lacks; the questionnaire pulls it out of them.",
+    "**Grill the send, not the subject.** Interview the user only about the _send_, which they can always answer: who it goes to, and what they need back. The questions in the document then target the **gap** between what the recipient knows and what the user needs.",
+    "1. **Who is it going to?** Ask, in one exchange, the recipient's role, expertise, and relationship to the user. This fixes the questionnaire's tone and how much context it must carry. Done when you know who the recipient is and what they know that the user doesn't.",
+    "2. **What do you need back?** Ask, in one exchange, the specific decisions or facts the user can't resolve alone and needs from this person. Done when you have a concrete list of what the user must walk away able to do or decide."
+   ],
+   "left": 5,
+   "left_sample": [
+    "Turn something the user can't answer alone into a **questionnaire**: a Markdown document they hand to one person to fill in async, or fill out together over a meeting. The recipient holds knowledge the user lacks; the questionnaire pulls it out of them.",
+    "**Grill the send, not the subject.** Interview the user only about the _send_, which they can always answer: who it goes to, and what they need back. The questions in the document then target the **gap** between what the recipient knows and what the user needs.",
+    "1. **Who is it going to?** Ask, in one exchange, the recipient's role, expertise, and relationship to the user. This fixes the questionnaire's tone and how much context it must carry. Done when you know who the recipient is and what they know that the user doesn't."
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "using-git-worktrees",
+   "unique_lines": 3,
+   "sample": [
+    "git check-ignore -q <SELECTED_TARGET_DIRECTORY>",
+    "**If NOT ignored:** Add only the selected target to .gitignore if required, then proceed. Commit only if explicitly authorized.",
+    "| Directory not ignored | Add selected path to .gitignore; commit only as authorized |"
+   ],
+   "left": 3,
+   "left_sample": [
+    "git check-ignore -q <SELECTED_TARGET_DIRECTORY>",
+    "**If NOT ignored:** Add only the selected target to .gitignore if required, then proceed. Commit only if explicitly authorized.",
+    "| Directory not ignored | Add selected path to .gitignore; commit only as authorized |"
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "using-superpowers",
+   "unique_lines": 34,
+   "sample": [
+    "description: \"Use only when the user explicitly selects using-superpowers or its specific documented preset/reference. Does not trigger on generic current-vault, frontend, AI or everyday workflow requests.\"",
+    "<SUBAGENT-STOP>",
+    "If you were dispatched as a subagent to execute a specific task, ignore this skill.",
+    "</SUBAGENT-STOP>"
+   ],
+   "left": 33,
+   "left_sample": [
+    "<SUBAGENT-STOP>",
+    "If you were dispatched as a subagent to execute a specific task, ignore this skill.",
+    "</SUBAGENT-STOP>"
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "wayfinder",
+   "unique_lines": 10,
+   "sample": [
+    "A loose idea has arrived, too big for one agent session, and wrapped in fog: the way from here to the **destination** isn't visible yet. Wayfinding is about finding that way, not charging at the destination. This skill charts the way as a **shared map** on the repo's issue tracker, then works its **decision tickets** (questions whose resolution is a decision, not slices of a build to execute) one at a time until the route is clear.",
+    "The destination varies per effort, and naming it is the first act of charting: it shapes every ticket. It might be a spec to hand off and iterate on, a decision to lock before planning starts, or a change made in place like a data-structure migration. The map is domain-agnostic: engineering work, course content, whatever fits the shape.",
+    "A session **claims** a ticket by assigning it to the dev driving the map, **first**, before any work, so concurrent sessions skip it. That assignee _is_ the claim: an open, unassigned ticket is unclaimed.",
+    "- **Research** (AFK): Reading documentation, third-party APIs, or local resources like knowledge bases to surface a fact a decision waits on. Resolved by a subagent that calls the Skill tool with \"research\". Use when knowledge outside the current working directory is required."
+   ],
+   "left": 10,
+   "left_sample": [
+    "A loose idea has arrived, too big for one agent session, and wrapped in fog: the way from here to the **destination** isn't visible yet. Wayfinding is about finding that way, not charging at the destination. This skill charts the way as a **shared map** on the repo's issue tracker, then works its **decision tickets** (questions whose resolution is a decision, not slices of a build to execute) one at a time until the route is clear.",
+    "The destination varies per effort, and naming it is the first act of charting: it shapes every ticket. It might be a spec to hand off and iterate on, a decision to lock before planning starts, or a change made in place like a data-structure migration. The map is domain-agnostic: engineering work, course content, whatever fits the shape.",
+    "A session **claims** a ticket by assigning it to the dev driving the map, **first**, before any work, so concurrent sessions skip it. That assignee _is_ the claim: an open, unassigned ticket is unclaimed."
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "writing-beats",
+   "unique_lines": 11,
+   "sample": [
+    "<what-to-do>",
+    "The user has passed (or will pass) a markdown file of raw material. This is **exploit**: the exploring is done, the pile is fixed. Commit to a path through it and mine the pile to fill each beat.",
+    "If the user did not say where to save the article, ask once and remember the path.",
+    "Then run a beat-by-beat journey, choose-your-own-adventure style:"
+   ],
+   "left": 11,
+   "left_sample": [
+    "<what-to-do>",
+    "The user has passed (or will pass) a markdown file of raw material. This is **exploit**: the exploring is done, the pile is fixed. Commit to a path through it and mine the pile to fill each beat.",
+    "If the user did not say where to save the article, ask once and remember the path."
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "writing-great-skills",
+   "unique_lines": 3,
+   "sample": [
+    "description: \"Use only when the user explicitly selects writing-great-skills or its specific documented preset/reference. Does not trigger on generic current-vault, frontend, AI or everyday workflow requests.\"",
+    "A skill exists to wrangle determinism out of a stochastic system. **Predictability** \u2014 the agent taking the same _process_ every run, not producing the same output \u2014 is the root virtue; every lever below serves it.",
+    "**Bold terms** are defined in [`GLOSSARY.md`](GLOSSARY.md); look them up there for the full meaning."
+   ],
+   "left": 2,
+   "left_sample": [
+    "A skill exists to wrangle determinism out of a stochastic system. **Predictability** \u2014 the agent taking the same _process_ every run, not producing the same output \u2014 is the root virtue; every lever below serves it.",
+    "**Bold terms** are defined in [`GLOSSARY.md`](GLOSSARY.md); look them up there for the full meaning."
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "writing-plans",
+   "unique_lines": 1,
+   "sample": [
+    "# Only when task authorizes commit: git commit -m \"feat: add specific feature\""
+   ],
+   "left": 1,
+   "left_sample": [
+    "# Only when task authorizes commit: git commit -m \"feat: add specific feature\""
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "writing-skills",
+   "unique_lines": 55,
+   "sample": [
+    "description: \"Use only when the user explicitly selects writing-skills or its specific documented preset/reference. Does not trigger on generic current-vault, frontend, AI or everyday workflow requests.\"",
+    "Always use subagents (50-100x context savings). REQUIRED: Use [other-skill-name] for workflow.",
+    "## The Iron Law (Same as TDD)",
+    "NO SKILL WITHOUT A FAILING TEST FIRST"
+   ],
+   "left": 54,
+   "left_sample": [
+    "Always use subagents (50-100x context savings). REQUIRED: Use [other-skill-name] for workflow.",
+    "## The Iron Law (Same as TDD)",
+    "NO SKILL WITHOUT A FAILING TEST FIRST"
+   ]
+  },
+  {
+   "install": "home-codex",
+   "skill": "brainstorming",
+   "unique_lines": 20,
+   "sample": [
+    "description: \"You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation.\"",
+    "<HARD-GATE>",
+    "Do NOT invoke any implementation skill, write any code, scaffold any project, or take any implementation action until you have presented a design and the user has approved it. This applies to EVERY project regardless of perceived simplicity.",
+    "</HARD-GATE>"
+   ],
+   "left": 19,
+   "left_sample": [
+    "<HARD-GATE>",
+    "Do NOT invoke any implementation skill, write any code, scaffold any project, or take any implementation action until you have presented a design and the user has approved it. This applies to EVERY project regardless of perceived simplicity.",
+    "</HARD-GATE>"
+   ]
+  },
+  {
+   "install": "home-codex",
+   "skill": "decision-mapping",
+   "unique_lines": 6,
+   "sample": [
+    "- **Prototype**: Writing UI or logic code to test a hypothesis, or to explore a design space. Uses the /prototype skill. Creates a prototype as an asset. Use this when \"how should it look\" or \"how should it behave\" is the key question.",
+    "- **Discuss**: Conversation with the agent. Uses the /grilling and /domain-modeling skills. The default case.",
+    "1. Run a /grilling and /domain-modeling session to surface the open decisions.",
+    "2. Run a session to resolve the ticket, invoking skills as needed. If in doubt, use `/grilling` and `/domain-modeling`."
+   ],
+   "left": 6,
+   "left_sample": [
+    "- **Prototype**: Writing UI or logic code to test a hypothesis, or to explore a design space. Uses the /prototype skill. Creates a prototype as an asset. Use this when \"how should it look\" or \"how should it behave\" is the key question.",
+    "- **Discuss**: Conversation with the agent. Uses the /grilling and /domain-modeling skills. The default case.",
+    "1. Run a /grilling and /domain-modeling session to surface the open decisions."
+   ]
+  },
+  {
+   "install": "home-codex",
+   "skill": "design-an-interface",
+   "unique_lines": 1,
+   "sample": [
+    "Spawn 3+ sub-agents simultaneously using Task tool. Each must produce a **radically different** approach."
+   ],
+   "left": 1,
+   "left_sample": [
+    "Spawn 3+ sub-agents simultaneously using Task tool. Each must produce a **radically different** approach."
+   ]
+  },
+  {
+   "install": "home-codex",
+   "skill": "edit-article",
+   "unique_lines": 5,
+   "sample": [
+    "1. First, divide the article into sections based on its headings. Think about the main points you want to make during those sections.",
+    "Consider that information is a directed acyclic graph, and that pieces of information can depend on other pieces of information. Make sure that the order of the sections and their contents respects these dependencies.",
+    "Confirm the sections with the user.",
+    "2. For each section:"
+   ],
+   "left": 5,
+   "left_sample": [
+    "1. First, divide the article into sections based on its headings. Think about the main points you want to make during those sections.",
+    "Consider that information is a directed acyclic graph, and that pieces of information can depend on other pieces of information. Make sure that the order of the sections and their contents respects these dependencies.",
+    "Confirm the sections with the user."
+   ]
+  },
+  {
+   "install": "home-codex",
+   "skill": "finishing-a-development-branch",
+   "unique_lines": 2,
+   "sample": [
+    "Then: Cleanup worktree (Step 6), then delete branch:",
+    "Then: Cleanup worktree (Step 6), then force-delete branch:"
+   ],
+   "left": 2,
+   "left_sample": [
+    "Then: Cleanup worktree (Step 6), then delete branch:",
+    "Then: Cleanup worktree (Step 6), then force-delete branch:"
+   ]
+  },
+  {
+   "install": "home-codex",
+   "skill": "qa",
+   "unique_lines": 5,
+   "sample": [
+    "description: \"Inspect and reproduce reported bugs, then produce a findings report. Publish GitHub issues only when explicitly authorized.\"",
+    "Run an interactive QA session. The user describes problems they're encountering. You clarify, explore the codebase for context, and draft issue reports that are durable, user-focused, and use the project's domain language.",
+    "### 4. Draft the report, or file explicitly authorized issues",
+    "Draft issue reports locally by default. When the user explicitly requests issue publication, use `gh issue create` and report actual URLs. Existing authorization needs no repeated confirmation."
+   ],
+   "left": 4,
+   "left_sample": [
+    "Run an interactive QA session. The user describes problems they're encountering. You clarify, explore the codebase for context, and draft issue reports that are durable, user-focused, and use the project's domain language.",
+    "### 4. Draft the report, or file explicitly authorized issues",
+    "Draft issue reports locally by default. When the user explicitly requests issue publication, use `gh issue create` and report actual URLs. Existing authorization needs no repeated confirmation."
+   ]
+  },
+  {
+   "install": "home-codex",
+   "skill": "request-refactor-plan",
+   "unique_lines": 10,
+   "sample": [
+    "This skill will be invoked when the user wants to create a refactor request. You should go through the steps below. You may skip steps if you don't consider them necessary.",
+    "1. Ask the user for a long, detailed description of the problem they want to solve and any potential ideas for solutions.",
+    "2. Explore the repo to verify their assertions and understand the current state of the codebase.",
+    "3. Ask whether they have considered other options, and present other options to them."
+   ],
+   "left": 10,
+   "left_sample": [
+    "This skill will be invoked when the user wants to create a refactor request. You should go through the steps below. You may skip steps if you don't consider them necessary.",
+    "1. Ask the user for a long, detailed description of the problem they want to solve and any potential ideas for solutions.",
+    "2. Explore the repo to verify their assertions and understand the current state of the codebase."
+   ]
+  },
+  {
+   "install": "home-codex",
+   "skill": "requesting-code-review",
+   "unique_lines": 3,
+   "sample": [
+    "**1. Get git SHAs:**",
+    "Dispatch a `general-purpose` subagent, filling the template at [code-reviewer.md](code-reviewer.md)",
+    "- `{BASE_SHA}` - Starting commit"
+   ],
+   "left": 3,
+   "left_sample": [
+    "**1. Get git SHAs:**",
+    "Dispatch a `general-purpose` subagent, filling the template at [code-reviewer.md](code-reviewer.md)",
+    "- `{BASE_SHA}` - Starting commit"
+   ]
+  },
+  {
+   "install": "home-codex",
+   "skill": "review",
+   "unique_lines": 6,
+   "sample": [
+    "Two-axis review of the diff between `HEAD` and a fixed point the user supplies:",
+    "- **Standards** \u2014 does the code conform to this repo's documented coding standards?",
+    "- **Spec** \u2014 does the code faithfully implement the originating issue / PRD / spec?",
+    "Both axes run as **parallel sub-agents** so they don't pollute each other's context, then this skill aggregates their findings."
+   ],
+   "left": 6,
+   "left_sample": [
+    "Two-axis review of the diff between `HEAD` and a fixed point the user supplies:",
+    "- **Standards** \u2014 does the code conform to this repo's documented coding standards?",
+    "- **Spec** \u2014 does the code faithfully implement the originating issue / PRD / spec?"
+   ]
+  },
+  {
+   "install": "home-codex",
+   "skill": "systematic-debugging",
+   "unique_lines": 1,
+   "sample": [
+    "python -c \"import os; print('IDENTITY present:', 'IDENTITY' in os.environ)\" || echo \"IDENTITY not in environment\""
+   ],
+   "left": 1,
+   "left_sample": [
+    "python -c \"import os; print('IDENTITY present:', 'IDENTITY' in os.environ)\" || echo \"IDENTITY not in environment\""
+   ]
+  },
+  {
+   "install": "home-codex",
+   "skill": "test-driven-development",
+   "unique_lines": 68,
+   "sample": [
+    "**Always:**",
+    "- New features",
+    "- Bug fixes",
+    "- Refactoring"
+   ],
+   "left": 68,
+   "left_sample": [
+    "**Always:**",
+    "- New features",
+    "- Bug fixes"
+   ]
+  },
+  {
+   "install": "home-codex",
+   "skill": "to-prd",
+   "unique_lines": 2,
+   "sample": [
+    "description: Turn the current conversation into a PRD and publish it to the project issue tracker \u2014 no interview, just synthesis of what you've already discussed.",
+    "3. Write the PRD using the template below, then publish it to the project issue tracker. Apply the `ready-for-agent` triage label - no need for additional triage."
+   ],
+   "left": 1,
+   "left_sample": [
+    "3. Write the PRD using the template below, then publish it to the project issue tracker. Apply the `ready-for-agent` triage label - no need for additional triage."
+   ]
+  },
+  {
+   "install": "home-codex",
+   "skill": "using-git-worktrees",
+   "unique_lines": 3,
+   "sample": [
+    "git check-ignore -q <SELECTED_TARGET_DIRECTORY>",
+    "**If NOT ignored:** Add only the selected target to .gitignore if required, then proceed. Commit only if explicitly authorized.",
+    "| Directory not ignored | Add selected path to .gitignore; commit only as authorized |"
+   ],
+   "left": 3,
+   "left_sample": [
+    "git check-ignore -q <SELECTED_TARGET_DIRECTORY>",
+    "**If NOT ignored:** Add only the selected target to .gitignore if required, then proceed. Commit only if explicitly authorized.",
+    "| Directory not ignored | Add selected path to .gitignore; commit only as authorized |"
+   ]
+  },
+  {
+   "install": "home-codex",
+   "skill": "using-superpowers",
+   "unique_lines": 34,
+   "sample": [
+    "description: \"Use only when the user explicitly selects using-superpowers or its specific documented preset/reference. Does not trigger on generic current-vault, frontend, AI or everyday workflow requests.\"",
+    "<SUBAGENT-STOP>",
+    "If you were dispatched as a subagent to execute a specific task, ignore this skill.",
+    "</SUBAGENT-STOP>"
+   ],
+   "left": 33,
+   "left_sample": [
+    "<SUBAGENT-STOP>",
+    "If you were dispatched as a subagent to execute a specific task, ignore this skill.",
+    "</SUBAGENT-STOP>"
+   ]
+  },
+  {
+   "install": "home-codex",
+   "skill": "writing-great-skills",
+   "unique_lines": 3,
+   "sample": [
+    "description: \"Use only when the user explicitly selects writing-great-skills or its specific documented preset/reference. Does not trigger on generic current-vault, frontend, AI or everyday workflow requests.\"",
+    "A skill exists to wrangle determinism out of a stochastic system. **Predictability** \u2014 the agent taking the same _process_ every run, not producing the same output \u2014 is the root virtue; every lever below serves it.",
+    "**Bold terms** are defined in [`GLOSSARY.md`](GLOSSARY.md); look them up there for the full meaning."
+   ],
+   "left": 2,
+   "left_sample": [
+    "A skill exists to wrangle determinism out of a stochastic system. **Predictability** \u2014 the agent taking the same _process_ every run, not producing the same output \u2014 is the root virtue; every lever below serves it.",
+    "**Bold terms** are defined in [`GLOSSARY.md`](GLOSSARY.md); look them up there for the full meaning."
+   ]
+  },
+  {
+   "install": "home-codex",
+   "skill": "writing-plans",
+   "unique_lines": 1,
+   "sample": [
+    "# Only when task authorizes commit: git commit -m \"feat: add specific feature\""
+   ],
+   "left": 1,
+   "left_sample": [
+    "# Only when task authorizes commit: git commit -m \"feat: add specific feature\""
+   ]
+  },
+  {
+   "install": "home-codex",
+   "skill": "writing-skills",
+   "unique_lines": 55,
+   "sample": [
+    "description: \"Use only when the user explicitly selects writing-skills or its specific documented preset/reference. Does not trigger on generic current-vault, frontend, AI or everyday workflow requests.\"",
+    "Always use subagents (50-100x context savings). REQUIRED: Use [other-skill-name] for workflow.",
+    "## The Iron Law (Same as TDD)",
+    "NO SKILL WITHOUT A FAILING TEST FIRST"
+   ],
+   "left": 54,
+   "left_sample": [
+    "Always use subagents (50-100x context savings). REQUIRED: Use [other-skill-name] for workflow.",
+    "## The Iron Law (Same as TDD)",
+    "NO SKILL WITHOUT A FAILING TEST FIRST"
+   ]
+  }
+ ],
+ "decide": [
+  {
+   "install": "home-claude",
+   "skill": "academy-guide",
+   "unique_lines": 2,
+   "sample": [
+    "description: \"Recommend verified Anthropic Academy courses only for explicit Claude/Anthropic learning-resource requests. Does not activate for generic Codex work or ordinary task execution.\"",
+    "When a user asks a question about Claude, a Claude product, or an explicit Anthropic learning-resource request, check the Academy catalog (see \"The"
+   ],
+   "left": 1,
+   "left_sample": [
+    "When a user asks a question about Claude, a Claude product, or an explicit Anthropic learning-resource request, check the Academy catalog (see \"The"
+   ]
+  },
+  {
+   "install": "home-claude",
+   "skill": "chat-export",
+   "unique_lines": 11,
+   "sample": [
+    "`<current-project-root>/handoffs/` with a full transcript,",
+    "<current-project-root>/handoffs/YYYY-MM-DD_short-title.md",
+    "1. **Retrieve original session logs** for the requested conversation. Verify which turns are available and write retrieved user/assistant messages verbatim. If original logs are unavailable or incomplete, export visible turns only, label the transcript partial, and list missing or compacted ranges. Never reconstruct absent messages as verbatim.",
+    "- Point to the file: `Read <current-project-root>/handoffs/<filename>.md`"
+   ],
+   "left": 11,
+   "left_sample": [
+    "`<current-project-root>/handoffs/` with a full transcript,",
+    "<current-project-root>/handoffs/YYYY-MM-DD_short-title.md",
+    "1. **Retrieve original session logs** for the requested conversation. Verify which turns are available and write retrieved user/assistant messages verbatim. If original logs are unavailable or incomplete, export visible turns only, label the transcript partial, and list missing or compacted ranges. Never reconstruct absent messages as verbatim."
+   ]
+  },
+  {
+   "install": "home-claude",
+   "skill": "claude-api",
+   "unique_lines": 8,
+   "sample": [
+    "description: \"Build or modify explicitly Anthropic Claude API integrations using the Anthropic SDK. Does not trigger on generic AI, Codex, persona creation or provider-neutral tasks.\"",
+    "Scan the target file (or, if no target file, the prompt and project) for non-Anthropic provider markers - `import openai`, `from openai`, `langchain_openai`, `OpenAI(`, `gpt-4`, `gpt-5`, file names like `agent-openai.py` or `*-generic.py`, or any explicit instruction to keep the code provider-neutral. If you find any, stop and tell the user that this skill produces Claude/Anthropic SDK code; respect the selected provider and route to its appropriate documentation; do not propose switching providers merely to use this skill. Do not edit a non-Anthropic file with Anthropic SDK calls. (Exception: the `prompt-audit` subcommand is non-interactive and does not stop here - it records non-Anthropic provider markers in its report's stated assumptions and never proposes switching a non-Anthropic file to the Anthropic SDK.)",
+    "Use the user-selected Anthropic model ID when supplied. Otherwise discover supported model IDs through the installed SDK or current official Anthropic documentation before selecting one. Do not infer a model ID from a marketing name or mechanically substitute a provider. Enable thinking/streaming only according to that selected model and current SDK contract.",
+    "model=ACTUAL_VERIFIED_MODEL_ID, max_tokens=4096,"
+   ],
+   "left": 7,
+   "left_sample": [
+    "Scan the target file (or, if no target file, the prompt and project) for non-Anthropic provider markers - `import openai`, `from openai`, `langchain_openai`, `OpenAI(`, `gpt-4`, `gpt-5`, file names like `agent-openai.py` or `*-generic.py`, or any explicit instruction to keep the code provider-neutral. If you find any, stop and tell the user that this skill produces Claude/Anthropic SDK code; respect the selected provider and route to its appropriate documentation; do not propose switching providers merely to use this skill. Do not edit a non-Anthropic file with Anthropic SDK calls. (Exception: the `prompt-audit` subcommand is non-interactive and does not stop here - it records non-Anthropic provider markers in its report's stated assumptions and never proposes switching a non-Anthropic file to the Anthropic SDK.)",
+    "Use the user-selected Anthropic model ID when supplied. Otherwise discover supported model IDs through the installed SDK or current official Anthropic documentation before selecting one. Do not infer a model ID from a marketing name or mechanically substitute a provider. Enable thinking/streaming only according to that selected model and current SDK contract.",
+    "model=ACTUAL_VERIFIED_MODEL_ID, max_tokens=4096,"
+   ]
+  },
+  {
+   "install": "home-claude",
+   "skill": "code-review",
+   "unique_lines": 5,
+   "sample": [
+    "Whatever the user said is the fixed point (a commit SHA, branch name, tag, `main`, `HEAD~5`, etc.). If they didn't specify one, ask for it.",
+    "Capture the diff command once: `git diff <fixed-point>...HEAD` (three-dot, so the comparison is against the merge-base). Also note the list of commits via `git log <fixed-point>..HEAD --oneline`.",
+    "# Also inventory requested worktree scope: git status --short; git diff; git diff --cached; inspect relevant untracked files.",
+    "Before going further, confirm the fixed point resolves (`git rev-parse <fixed-point>`) and the diff is non-empty. A bad ref or empty diff should fail here, not inside two parallel sub-agents."
+   ],
+   "left": 5,
+   "left_sample": [
+    "Whatever the user said is the fixed point (a commit SHA, branch name, tag, `main`, `HEAD~5`, etc.). If they didn't specify one, ask for it.",
+    "Capture the diff command once: `git diff <fixed-point>...HEAD` (three-dot, so the comparison is against the merge-base). Also note the list of commits via `git log <fixed-point>..HEAD --oneline`.",
+    "# Also inventory requested worktree scope: git status --short; git diff; git diff --cached; inspect relevant untracked files."
+   ]
+  },
+  {
+   "install": "home-claude",
+   "skill": "design-taste-frontend",
+   "unique_lines": 4,
+   "sample": [
+    "description: \"Use only when the user explicitly selects design-taste-frontend or its specific documented preset/reference. Does not trigger on generic current-vault, frontend, AI or everyday workflow requests.\"",
+    "**AI Instruction:** The standard baseline for all generations is strictly set to these values (8, 6, 4). Do not ask the user to edit this file. Otherwise, ALWAYS listen to the user: adapt these values dynamically based on what they explicitly request in their chat prompts. Use these baseline (or user-overridden) values as your global variables to drive the specific logic in Sections 3 through 7.",
+    "All cards must contain **\"Perpetual Micro-Interactions.\"** Use the following Framer Motion principles:",
+    "* **Infinite Loops:** Every card must have an \"Active State\" that loops infinitely (Pulse, Typewriter, Float, or Carousel) to ensure the dashboard feels \"alive\"."
+   ],
+   "left": 3,
+   "left_sample": [
+    "**AI Instruction:** The standard baseline for all generations is strictly set to these values (8, 6, 4). Do not ask the user to edit this file. Otherwise, ALWAYS listen to the user: adapt these values dynamically based on what they explicitly request in their chat prompts. Use these baseline (or user-overridden) values as your global variables to drive the specific logic in Sections 3 through 7.",
+    "All cards must contain **\"Perpetual Micro-Interactions.\"** Use the following Framer Motion principles:",
+    "* **Infinite Loops:** Every card must have an \"Active State\" that loops infinitely (Pulse, Typewriter, Float, or Carousel) to ensure the dashboard feels \"alive\"."
+   ]
+  },
+  {
+   "install": "home-claude",
+   "skill": "find-skills",
+   "unique_lines": 5,
+   "sample": [
+    "description: Helps users discover and install agent skills when they ask questions like \"how do I do X\", \"find a skill for X\", \"is there a skill that can...\", or express interest in extending capabilities. This skill should be used when the user is looking for functionality that might exist as an installable skill.",
+    "- Asks \"how do I do X\" where X might be a common task with an existing skill",
+    "- Asks \"can you do X\" where X is a specialized capability",
+    "- `npx skills find [query]` - Search for skills interactively or by keyword"
+   ],
+   "left": 4,
+   "left_sample": [
+    "- Asks \"how do I do X\" where X might be a common task with an existing skill",
+    "- Asks \"can you do X\" where X is a specialized capability",
+    "- `npx skills find [query]` - Search for skills interactively or by keyword"
+   ]
+  },
+  {
+   "install": "home-claude",
+   "skill": "graphify",
+   "unique_lines": 42,
+   "sample": [
+    "\"$PYTHON\" -c \"import graphify\" 2>/dev/null || \"$PYTHON\" -m pip install graphifyy -q 2>/dev/null || \"$PYTHON\" -m pip install graphifyy -q --break-system-packages 2>&1 | tail -3",
+    "**MANDATORY: You MUST use the Agent tool here. Reading files yourself one-by-one is forbidden - it is 5-10x slower. If you do not use the Agent tool you are doing this wrong.**",
+    "Call the Agent tool multiple times IN THE SAME RESPONSE - one call per chunk. This is the only way they run in parallel. If you make one Agent call, wait, then make another, you are doing it sequentially and defeating the purpose.",
+    "**IMPORTANT - subagent type:** Always use `subagent_type=\"general-purpose\"`. Do NOT use `Explore` - it is read-only and cannot write chunk files to disk, which silently drops extraction results. General-purpose has Write and Bash access which the subagent needs."
+   ],
+   "left": 42,
+   "left_sample": [
+    "\"$PYTHON\" -c \"import graphify\" 2>/dev/null || \"$PYTHON\" -m pip install graphifyy -q 2>/dev/null || \"$PYTHON\" -m pip install graphifyy -q --break-system-packages 2>&1 | tail -3",
+    "**MANDATORY: You MUST use the Agent tool here. Reading files yourself one-by-one is forbidden - it is 5-10x slower. If you do not use the Agent tool you are doing this wrong.**",
+    "Call the Agent tool multiple times IN THE SAME RESPONSE - one call per chunk. This is the only way they run in parallel. If you make one Agent call, wait, then make another, you are doing it sequentially and defeating the purpose."
+   ]
+  },
+  {
+   "install": "home-claude",
+   "skill": "high-end-visual-design",
+   "unique_lines": 6,
+   "sample": [
+    "description: \"Use only when the user explicitly selects high-end-visual-design or its specific documented preset/reference. Does not trigger on generic current-vault, frontend, AI or everyday workflow requests.\"",
+    "- **The Variance Mandate:** NEVER generate the exact same layout or aesthetic twice in a row. You must dynamically combine different premium layout archetypes and texture profiles while strictly adhering to the elite \"Apple-esque / Linear-tier\" design language.",
+    "When the user selects this aesthetic, choose a suitable combination from the following archetypes based on the prompt's context to ensure the output is uniquely tailored but always premium:",
+    "When this specific preset is selected, optional double-bezel enclosures may create physical depth. Use flat containers where the existing design system or clarity calls for them."
+   ],
+   "left": 5,
+   "left_sample": [
+    "- **The Variance Mandate:** NEVER generate the exact same layout or aesthetic twice in a row. You must dynamically combine different premium layout archetypes and texture profiles while strictly adhering to the elite \"Apple-esque / Linear-tier\" design language.",
+    "When the user selects this aesthetic, choose a suitable combination from the following archetypes based on the prompt's context to ensure the output is uniquely tailored but always premium:",
+    "When this specific preset is selected, optional double-bezel enclosures may create physical depth. Use flat containers where the existing design system or clarity calls for them."
+   ]
+  },
+  {
+   "install": "home-claude",
+   "skill": "impeccable",
+   "unique_lines": 1,
+   "sample": [
+    "Designs and iterates production-grade frontend interfaces. Real working code, committed design choices, exceptional craft."
+   ],
+   "left": 1,
+   "left_sample": [
+    "Designs and iterates production-grade frontend interfaces. Real working code, committed design choices, exceptional craft."
+   ]
+  },
+  {
+   "install": "home-claude",
+   "skill": "level-up",
+   "unique_lines": 105,
+   "sample": [
+    "description: Use when someone asks to level up their AIOS, close an audit gap, find what to automate next, or improve one workflow. Walks the 3Ms from choosing the constraint to shipping one useful artifact or verified repair.",
+    "> *Adapted from The Three Ms of AI\u2122. \u00a9 2026 Nate Herk. All rights reserved.*",
+    "> *The Three Ms of AI\u2122 is a trademark of Nate Herk.*",
+    "Walks the user through the 3Ms each week to surface and ship one new automation. **One interview = one artifact.** It also installs the 3Ms framework into the user's head over time \u2014 after 4-6 runs, the user starts spotting opportunities mid-week without prompting because the questions have become internal defaults."
+   ],
+   "left": 104,
+   "left_sample": [
+    "> *Adapted from The Three Ms of AI\u2122. \u00a9 2026 Nate Herk. All rights reserved.*",
+    "> *The Three Ms of AI\u2122 is a trademark of Nate Herk.*",
+    "Walks the user through the 3Ms each week to surface and ship one new automation. **One interview = one artifact.** It also installs the 3Ms framework into the user's head over time \u2014 after 4-6 runs, the user starts spotting opportunities mid-week without prompting because the questions have become internal defaults."
+   ]
+  },
+  {
+   "install": "home-claude",
+   "skill": "lovable-prompt",
+   "unique_lines": 1,
+   "sample": [
+    "Produce a short, paste-ready prompt for Lovable's chat, for the residual class of changes Claude Code cannot reach directly."
+   ],
+   "left": 1,
+   "left_sample": [
+    "Produce a short, paste-ready prompt for Lovable's chat, for the residual class of changes Claude Code cannot reach directly."
+   ]
+  },
+  {
+   "install": "home-claude",
+   "skill": "lsat-lab-transcribe",
+   "unique_lines": 1,
+   "sample": [
+    "4. If continuing a prior run: the tab is likely parked on the last-captured question with the Question Details panel open. `get_page_text` to confirm the bottom-left `PrepTest <NNN> \u00b7 S# \u00b7 Q#` label matches the progress file's NEXT pointer, then click Next once to advance."
+   ],
+   "left": 1,
+   "left_sample": [
+    "4. If continuing a prior run: the tab is likely parked on the last-captured question with the Question Details panel open. `get_page_text` to confirm the bottom-left `PrepTest <NNN> \u00b7 S# \u00b7 Q#` label matches the progress file's NEXT pointer, then click Next once to advance."
+   ]
+  },
+  {
+   "install": "home-claude",
+   "skill": "minimalist-ui",
+   "unique_lines": 6,
+   "sample": [
+    "description: \"Use only when the user explicitly selects minimalist-ui or its specific documented preset/reference. Does not trigger on generic current-vault, frontend, AI or everyday workflow requests.\"",
+    "- Avoid prominent gradients, neon colors and 3D glassmorphism in this preset; subtle requested background radial treatments below are optional.",
+    "- Hero & Section Backgrounds: Sections should not feel empty and flat. Use subtle full-width background imagery at very low opacity, soft radial light spots (`radial-gradient` with warm tones at `opacity: 0.03`), or minimal geometric line patterns to add depth without breaking the clean aesthetic.",
+    "- Staggered Reveals: Lists and grid items enter with a cascade delay (`animation-delay: calc(var(--index) * 80ms)`). Never mount everything at once."
+   ],
+   "left": 5,
+   "left_sample": [
+    "- Avoid prominent gradients, neon colors and 3D glassmorphism in this preset; subtle requested background radial treatments below are optional.",
+    "- Hero & Section Backgrounds: Sections should not feel empty and flat. Use subtle full-width background imagery at very low opacity, soft radial light spots (`radial-gradient` with warm tones at `opacity: 0.03`), or minimal geometric line patterns to add depth without breaking the clean aesthetic.",
+    "- Staggered Reveals: Lists and grid items enter with a cascade delay (`animation-delay: calc(var(--index) * 80ms)`). Never mount everything at once."
+   ]
+  },
+  {
+   "install": "home-claude",
+   "skill": "notebooklm",
+   "unique_lines": 1,
+   "sample": [
+    "3. Run `notebooklm generate audio \"...\" --json` \u2192 parse `artifact_id` from output"
+   ],
+   "left": 1,
+   "left_sample": [
+    "3. Run `notebooklm generate audio \"...\" --json` \u2192 parse `artifact_id` from output"
+   ]
+  },
+  {
+   "install": "home-claude",
+   "skill": "obsidian-vault",
+   "unique_lines": 3,
+   "sample": [
+    "description: \"Explicit legacy/new-vault reference only. Existing AI OS work uses project ingest, second-brain-query and second-brain-lint; do not select alternate vault automatically.\"",
+    "`/mnt/d/Obsidian Vault/AI Research/`",
+    "- No folders for organization - use links and index notes instead"
+   ],
+   "left": 1,
+   "left_sample": [
+    "- No folders for organization - use links and index notes instead"
+   ]
+  },
+  {
+   "install": "home-claude",
+   "skill": "prompt-architect-refiner",
+   "unique_lines": 2,
+   "sample": [
+    "- Require approval before moving, deleting, overwriting, or restructuring files",
+    "4. Wait for approval"
+   ],
+   "left": 2,
+   "left_sample": [
+    "- Require approval before moving, deleting, overwriting, or restructuring files",
+    "4. Wait for approval"
+   ]
+  },
+  {
+   "install": "home-claude",
+   "skill": "redesign-existing-projects",
+   "unique_lines": 9,
+   "sample": [
+    "Check for these problems and fix them:",
+    "- **Generic names like \"John Doe\" or \"Jane Smith\".** Use diverse, realistic-sounding names.",
+    "- **Fake round numbers like `99.99%`, `50%`, `$100.00`.** Use organic, messy data: `47.2%`, `$99.00`, `+1 (312) 847-1928`.",
+    "- **Placeholder company names like \"Acme Corp\", \"Nexus\", \"SmartFlow\".** Invent contextual, believable brand names."
+   ],
+   "left": 9,
+   "left_sample": [
+    "Check for these problems and fix them:",
+    "- **Generic names like \"John Doe\" or \"Jane Smith\".** Use diverse, realistic-sounding names.",
+    "- **Fake round numbers like `99.99%`, `50%`, `$100.00`.** Use organic, messy data: `47.2%`, `$99.00`, `+1 (312) 847-1928`."
+   ]
+  },
+  {
+   "install": "home-claude",
+   "skill": "second-brain",
+   "unique_lines": 104,
+   "sample": [
+    "Set up a new Obsidian knowledge base with the LLM Wiki pattern. Use when",
+    "the user wants to create a second brain, initialize a vault, set up a",
+    "personal knowledge base, or says \"onboard\". Guides through an interactive",
+    "wizard to configure vault name, location, domain, agent support, and tooling."
+   ],
+   "left": 104,
+   "left_sample": [
+    "Set up a new Obsidian knowledge base with the LLM Wiki pattern. Use when",
+    "the user wants to create a second brain, initialize a vault, set up a",
+    "personal knowledge base, or says \"onboard\". Guides through an interactive"
+   ]
+  },
+  {
+   "install": "home-claude",
+   "skill": "watch",
+   "unique_lines": 16,
+   "sample": [
+    "description: Watch a video (URL or local path). Downloads with yt-dlp, extracts auto-scaled frames with ffmpeg, pulls the transcript from captions (or Whisper API fallback), and hands the result to Claude so it can answer questions about what's in the video.",
+    "## Step 0 \u2014 Setup preflight (runs every `/watch` invocation, silent on success)",
+    "**Python interpreter:** every `python3 ...` command in this skill is for macOS/Linux. On **Windows**, substitute `python` \u2014 the `python3` command on Windows is the Microsoft Store stub and will not run the script.",
+    "Before execution check installed Python, yt-dlp and FFmpeg without reinstalling. An API key is not required for captions or frames. Use current project get_youtube_transcript.py first for transcript-only requests. For frame extraction run the bundled watch script with --no-whisper. Skip the bundled setup wizard because it couples free extraction to a provider key."
+   ],
+   "left": 15,
+   "left_sample": [
+    "## Step 0 \u2014 Setup preflight (runs every `/watch` invocation, silent on success)",
+    "**Python interpreter:** every `python3 ...` command in this skill is for macOS/Linux. On **Windows**, substitute `python` \u2014 the `python3` command on Windows is the Microsoft Store stub and will not run the script.",
+    "Before execution check installed Python, yt-dlp and FFmpeg without reinstalling. An API key is not required for captions or frames. Use current project get_youtube_transcript.py first for transcript-only requests. For frame extraction run the bundled watch script with --no-whisper. Skip the bundled setup wizard because it couples free extraction to a provider key."
+   ]
+  },
+  {
+   "install": "home-claude",
+   "skill": "web-artifacts-builder",
+   "unique_lines": 7,
+   "sample": [
+    "5. (Optional) Test the artifact",
+    "Run the initialization script to create a new React project:",
+    "bash scripts/init-artifact.sh <project-name>",
+    "bash scripts/bundle-artifact.sh"
+   ],
+   "left": 7,
+   "left_sample": [
+    "5. (Optional) Test the artifact",
+    "Run the initialization script to create a new React project:",
+    "bash scripts/init-artifact.sh <project-name>"
+   ]
+  },
+  {
+   "install": "home-claude",
+   "skill": "webapp-testing",
+   "unique_lines": 4,
+   "sample": [
+    "1. Navigate and wait for the actual app-ready selector/state",
+    "page.wait_for_selector('ACTUAL_APP_READY_SELECTOR') # CRITICAL: Wait for JS to execute",
+    "\u274c **Don't** inspect the DOM before waiting for `networkidle` on dynamic apps",
+    "\u2705 **Do** wait for `page.wait_for_selector('ACTUAL_APP_READY_SELECTOR')` before inspection"
+   ],
+   "left": 4,
+   "left_sample": [
+    "1. Navigate and wait for the actual app-ready selector/state",
+    "page.wait_for_selector('ACTUAL_APP_READY_SELECTOR') # CRITICAL: Wait for JS to execute",
+    "\u274c **Don't** inspect the DOM before waiting for `networkidle` on dynamic apps"
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "academy-guide",
+   "unique_lines": 3,
+   "sample": [
+    "description: \"Recommend verified Anthropic Academy courses only for explicit Claude/Anthropic learning-resource requests. Does not activate for generic Codex work or ordinary task execution.\"",
+    "When a user asks a question about Claude, a Claude product, or an explicit Anthropic learning-resource request, check the Academy catalog (see \"The",
+    "[Claude](https://academy.claude.com/code),"
+   ],
+   "left": 2,
+   "left_sample": [
+    "When a user asks a question about Claude, a Claude product, or an explicit Anthropic learning-resource request, check the Academy catalog (see \"The",
+    "[Claude](https://academy.claude.com/code),"
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "algorithmic-art",
+   "unique_lines": 5,
+   "sample": [
+    "- **Leave creative space**: Be specific about the algorithmic direction, but concise enough that the next Codex has room to make interpretive implementation choices at an extremely high level of craftsmanship.",
+    "- **ARTISTIC FREEDOM**: The next Codex interprets the philosophy algorithmically - provide creative implementation room",
+    "The HTML artifact contains everything: p5.js (from CDN), the algorithm, parameter controls, and UI - all in one file that works immediately in the actual host artifact panel artifacts or any browser. Start from the template file, not from scratch.",
+    "To allow exploration of the generative art, create a single, self-contained HTML artifact. Ensure this artifact works immediately in the actual host artifact panel or any browser - no setup required. Embed everything inline."
+   ],
+   "left": 3,
+   "left_sample": [
+    "The HTML artifact contains everything: p5.js (from CDN), the algorithm, parameter controls, and UI - all in one file that works immediately in the actual host artifact panel artifacts or any browser. Start from the template file, not from scratch.",
+    "To allow exploration of the generative art, create a single, self-contained HTML artifact. Ensure this artifact works immediately in the actual host artifact panel or any browser - no setup required. Embed everything inline.",
+    "1. **In the actual host artifact panel**: Displayed as an interactive artifact - runs instantly"
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "chat-export",
+   "unique_lines": 11,
+   "sample": [
+    "`<current-project-root>/handoffs/` with a full transcript,",
+    "<current-project-root>/handoffs/YYYY-MM-DD_short-title.md",
+    "1. **Retrieve original session logs** for the requested conversation. Verify which turns are available and write retrieved user/assistant messages verbatim. If original logs are unavailable or incomplete, export visible turns only, label the transcript partial, and list missing or compacted ranges. Never reconstruct absent messages as verbatim.",
+    "- Point to the file: `Read <current-project-root>/handoffs/<filename>.md`"
+   ],
+   "left": 11,
+   "left_sample": [
+    "`<current-project-root>/handoffs/` with a full transcript,",
+    "<current-project-root>/handoffs/YYYY-MM-DD_short-title.md",
+    "1. **Retrieve original session logs** for the requested conversation. Verify which turns are available and write retrieved user/assistant messages verbatim. If original logs are unavailable or incomplete, export visible turns only, label the transcript partial, and list missing or compacted ranges. Never reconstruct absent messages as verbatim."
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "claude-api",
+   "unique_lines": 30,
+   "sample": [
+    "description: \"Build or modify explicitly Anthropic Claude API integrations using the Anthropic SDK. Does not trigger on generic AI, Codex, persona creation or provider-neutral tasks.\"",
+    "Scan the target file (or, if no target file, the prompt and project) for non-Anthropic provider markers - `import openai`, `from openai`, `langchain_openai`, `OpenAI(`, `gpt-4`, `gpt-5`, file names like `agent-openai.py` or `*-generic.py`, or any explicit instruction to keep the code provider-neutral. If you find any, stop and tell the user that this skill produces Claude/Anthropic SDK code; respect the selected provider and route to its appropriate documentation; do not propose switching providers merely to use this skill. Do not edit a non-Anthropic file with Anthropic SDK calls. (Exception: the `prompt-audit` subcommand is non-interactive and does not stop here - it records non-Anthropic provider markers in its report's stated assumptions and never proposes switching a non-Anthropic file to the Anthropic SDK.)",
+    "Use the user-selected Anthropic model ID when supplied. Otherwise discover supported model IDs through the installed SDK or current official Anthropic documentation before selecting one. Do not infer a model ID from a marketing name or mechanically substitute a provider. Enable thinking/streaming only according to that selected model and current SDK contract.",
+    "If the User Request at the bottom of this prompt is a bare subcommand string (no prose), search every **Subcommands** table in this document - including any in sections appended below - and follow the matching Action column directly. This lets users invoke specific flows via `/Claude-api <subcommand>`. If no table in the document matches, treat the request as normal prose."
+   ],
+   "left": 29,
+   "left_sample": [
+    "Scan the target file (or, if no target file, the prompt and project) for non-Anthropic provider markers - `import openai`, `from openai`, `langchain_openai`, `OpenAI(`, `gpt-4`, `gpt-5`, file names like `agent-openai.py` or `*-generic.py`, or any explicit instruction to keep the code provider-neutral. If you find any, stop and tell the user that this skill produces Claude/Anthropic SDK code; respect the selected provider and route to its appropriate documentation; do not propose switching providers merely to use this skill. Do not edit a non-Anthropic file with Anthropic SDK calls. (Exception: the `prompt-audit` subcommand is non-interactive and does not stop here - it records non-Anthropic provider markers in its report's stated assumptions and never proposes switching a non-Anthropic file to the Anthropic SDK.)",
+    "Use the user-selected Anthropic model ID when supplied. Otherwise discover supported model IDs through the installed SDK or current official Anthropic documentation before selecting one. Do not infer a model ID from a marketing name or mechanically substitute a provider. Enable thinking/streaming only according to that selected model and current SDK contract.",
+    "If the User Request at the bottom of this prompt is a bare subcommand string (no prose), search every **Subcommands** table in this document - including any in sections appended below - and follow the matching Action column directly. This lets users invoke specific flows via `/Claude-api <subcommand>`. If no table in the document matches, treat the request as normal prose."
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "code-review",
+   "unique_lines": 5,
+   "sample": [
+    "Whatever the user said is the fixed point (a commit SHA, branch name, tag, `main`, `HEAD~5`, etc.). If they didn't specify one, ask for it.",
+    "Capture the diff command once: `git diff <fixed-point>...HEAD` (three-dot, so the comparison is against the merge-base). Also note the list of commits via `git log <fixed-point>..HEAD --oneline`.",
+    "# Also inventory requested worktree scope: git status --short; git diff; git diff --cached; inspect relevant untracked files.",
+    "Before going further, confirm the fixed point resolves (`git rev-parse <fixed-point>`) and the diff is non-empty. A bad ref or empty diff should fail here, not inside two parallel sub-agents."
+   ],
+   "left": 5,
+   "left_sample": [
+    "Whatever the user said is the fixed point (a commit SHA, branch name, tag, `main`, `HEAD~5`, etc.). If they didn't specify one, ask for it.",
+    "Capture the diff command once: `git diff <fixed-point>...HEAD` (three-dot, so the comparison is against the merge-base). Also note the list of commits via `git log <fixed-point>..HEAD --oneline`.",
+    "# Also inventory requested worktree scope: git status --short; git diff; git diff --cached; inspect relevant untracked files."
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "design-taste-frontend",
+   "unique_lines": 4,
+   "sample": [
+    "description: \"Use only when the user explicitly selects design-taste-frontend or its specific documented preset/reference. Does not trigger on generic current-vault, frontend, AI or everyday workflow requests.\"",
+    "**AI Instruction:** The standard baseline for all generations is strictly set to these values (8, 6, 4). Do not ask the user to edit this file. Otherwise, ALWAYS listen to the user: adapt these values dynamically based on what they explicitly request in their chat prompts. Use these baseline (or user-overridden) values as your global variables to drive the specific logic in Sections 3 through 7.",
+    "All cards must contain **\"Perpetual Micro-Interactions.\"** Use the following Framer Motion principles:",
+    "* **Infinite Loops:** Every card must have an \"Active State\" that loops infinitely (Pulse, Typewriter, Float, or Carousel) to ensure the dashboard feels \"alive\"."
+   ],
+   "left": 3,
+   "left_sample": [
+    "**AI Instruction:** The standard baseline for all generations is strictly set to these values (8, 6, 4). Do not ask the user to edit this file. Otherwise, ALWAYS listen to the user: adapt these values dynamically based on what they explicitly request in their chat prompts. Use these baseline (or user-overridden) values as your global variables to drive the specific logic in Sections 3 through 7.",
+    "All cards must contain **\"Perpetual Micro-Interactions.\"** Use the following Framer Motion principles:",
+    "* **Infinite Loops:** Every card must have an \"Active State\" that loops infinitely (Pulse, Typewriter, Float, or Carousel) to ensure the dashboard feels \"alive\"."
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "doc-coauthoring",
+   "unique_lines": 23,
+   "sample": [
+    "1. **Context Gathering**: User provides all relevant context while Codex asks clarifying questions",
+    "3. **Reader Testing**: Test the doc with a fresh Codex (no context) to catch blind spots before others read it",
+    "Explain that this approach helps ensure the doc works well when others read it (including when they paste it into Codex). Ask if they want to try this workflow or prefer to work freeform.",
+    "**Goal:** Close the gap between what the user knows and what Codex knows, enabling smart guidance later."
+   ],
+   "left": 3,
+   "left_sample": [
+    "**If access to sub-agents is available (e.g., in Claude):**",
+    "**If no access to sub-agents (e.g., Claude.ai web interface):**",
+    "1. Open a fresh Claude conversation: https://Claude.ai"
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "find-skills",
+   "unique_lines": 5,
+   "sample": [
+    "description: Helps users discover and install agent skills when they ask questions like \"how do I do X\", \"find a skill for X\", \"is there a skill that can...\", or express interest in extending capabilities. This skill should be used when the user is looking for functionality that might exist as an installable skill.",
+    "- Asks \"how do I do X\" where X might be a common task with an existing skill",
+    "- Asks \"can you do X\" where X is a specialized capability",
+    "- `npx skills find [query]` - Search for skills interactively or by keyword"
+   ],
+   "left": 4,
+   "left_sample": [
+    "- Asks \"how do I do X\" where X might be a common task with an existing skill",
+    "- Asks \"can you do X\" where X is a specialized capability",
+    "- `npx skills find [query]` - Search for skills interactively or by keyword"
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "frontend-design",
+   "unique_lines": 40,
+   "sample": [
+    "description: \"Design requested frontend interfaces while preserving user brief, existing design system, factual data and accessibility. Opinionated legacy creative presets apply only when selected.\"",
+    "# Frontend Design",
+    "Approach this as the design lead at a design studio known for giving every client a distinct visual identity that is not mistaken for anyone else's. This client has already rejected proposals that felt clich\u00e9 or templated, and is paying for a distinctive point of view: make deliberate, opinionated choices about palette, typography, and layout that are specific to this brief, and take aesthetic risk if justified.",
+    "## Ground your designs in the subject matter"
+   ],
+   "left": 39,
+   "left_sample": [
+    "# Frontend Design",
+    "Approach this as the design lead at a design studio known for giving every client a distinct visual identity that is not mistaken for anyone else's. This client has already rejected proposals that felt clich\u00e9 or templated, and is paying for a distinctive point of view: make deliberate, opinionated choices about palette, typography, and layout that are specific to this brief, and take aesthetic risk if justified.",
+    "## Ground your designs in the subject matter"
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "graphify",
+   "unique_lines": 50,
+   "sample": [
+    "Three things it does that Codex alone cannot:",
+    "\"$PYTHON\" -c \"import graphify\" 2>/dev/null || \"$PYTHON\" -m pip install graphifyy -q 2>/dev/null || \"$PYTHON\" -m pip install graphifyy -q --break-system-packages 2>&1 | tail -3",
+    "This step has two parts: **structural extraction** (deterministic, free) and **semantic extraction** (Codex, costs tokens).",
+    "**MANDATORY: You MUST use the Agent tool here. Reading files yourself one-by-one is forbidden - it is 5-10x slower. If you do not use the Agent tool you are doing this wrong.**"
+   ],
+   "left": 46,
+   "left_sample": [
+    "\"$PYTHON\" -c \"import graphify\" 2>/dev/null || \"$PYTHON\" -m pip install graphifyy -q 2>/dev/null || \"$PYTHON\" -m pip install graphifyy -q --break-system-packages 2>&1 | tail -3",
+    "**MANDATORY: You MUST use the Agent tool here. Reading files yourself one-by-one is forbidden - it is 5-10x slower. If you do not use the Agent tool you are doing this wrong.**",
+    "Call the Agent tool multiple times IN THE SAME RESPONSE - one call per chunk. This is the only way they run in parallel. If you make one Agent call, wait, then make another, you are doing it sequentially and defeating the purpose."
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "grill-me",
+   "unique_lines": 58,
+   "sample": [
+    "description: A relentless interview to sharpen a plan, design, or topic, checkpointing every answer to a brainstorm file so nothing is lost. Use when the user wants to stress-test a plan, get grilled on a design, run a brainstorm or discovery session, extract what's in their head into a doc, build up their AI OS context over time, or says \"grill me\".",
+    "# Grill Me",
+    "Two layers. The **interview method** comes from the `grilling` skill and is not restated here. The **capture discipline** below is what this wrapper adds: every answer lands in a durable markdown file, so nothing is lost as context fills up.",
+    "## Step 1: set up the capture file (BEFORE the first question)"
+   ],
+   "left": 57,
+   "left_sample": [
+    "# Grill Me",
+    "Two layers. The **interview method** comes from the `grilling` skill and is not restated here. The **capture discipline** below is what this wrapper adds: every answer lands in a durable markdown file, so nothing is lost as context fills up.",
+    "## Step 1: set up the capture file (BEFORE the first question)"
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "high-end-visual-design",
+   "unique_lines": 6,
+   "sample": [
+    "description: \"Use only when the user explicitly selects high-end-visual-design or its specific documented preset/reference. Does not trigger on generic current-vault, frontend, AI or everyday workflow requests.\"",
+    "- **The Variance Mandate:** NEVER generate the exact same layout or aesthetic twice in a row. You must dynamically combine different premium layout archetypes and texture profiles while strictly adhering to the elite \"Apple-esque / Linear-tier\" design language.",
+    "When the user selects this aesthetic, choose a suitable combination from the following archetypes based on the prompt's context to ensure the output is uniquely tailored but always premium:",
+    "When this specific preset is selected, optional double-bezel enclosures may create physical depth. Use flat containers where the existing design system or clarity calls for them."
+   ],
+   "left": 5,
+   "left_sample": [
+    "- **The Variance Mandate:** NEVER generate the exact same layout or aesthetic twice in a row. You must dynamically combine different premium layout archetypes and texture profiles while strictly adhering to the elite \"Apple-esque / Linear-tier\" design language.",
+    "When the user selects this aesthetic, choose a suitable combination from the following archetypes based on the prompt's context to ensure the output is uniquely tailored but always premium:",
+    "When this specific preset is selected, optional double-bezel enclosures may create physical depth. Use flat containers where the existing design system or clarity calls for them."
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "impeccable",
+   "unique_lines": 1,
+   "sample": [
+    "Designs and iterates production-grade frontend interfaces. Real working code, committed design choices, exceptional craft."
+   ],
+   "left": 1,
+   "left_sample": [
+    "Designs and iterates production-grade frontend interfaces. Real working code, committed design choices, exceptional craft."
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "level-up",
+   "unique_lines": 105,
+   "sample": [
+    "description: Use when someone asks to level up their AIOS, close an audit gap, find what to automate next, or improve one workflow. Walks the 3Ms from choosing the constraint to shipping one useful artifact or verified repair.",
+    "> *Adapted from The Three Ms of AI\u2122. \u00a9 2026 Nate Herk. All rights reserved.*",
+    "> *The Three Ms of AI\u2122 is a trademark of Nate Herk.*",
+    "Walks the user through the 3Ms each week to surface and ship one new automation. **One interview = one artifact.** It also installs the 3Ms framework into the user's head over time \u2014 after 4-6 runs, the user starts spotting opportunities mid-week without prompting because the questions have become internal defaults."
+   ],
+   "left": 104,
+   "left_sample": [
+    "> *Adapted from The Three Ms of AI\u2122. \u00a9 2026 Nate Herk. All rights reserved.*",
+    "> *The Three Ms of AI\u2122 is a trademark of Nate Herk.*",
+    "Walks the user through the 3Ms each week to surface and ship one new automation. **One interview = one artifact.** It also installs the 3Ms framework into the user's head over time \u2014 after 4-6 runs, the user starts spotting opportunities mid-week without prompting because the questions have become internal defaults."
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "lovable-prompt",
+   "unique_lines": 3,
+   "sample": [
+    "Produce a short, paste-ready prompt for Lovable's chat, for the residual class of changes Codex cannot reach directly.",
+    "- **Code change in the repo** \u2192 make it directly and push via `.Codex/safe-push.sh` (see LSATU AGENTS.md). Do not hand this to Lovable.",
+    "- If the change touches product rules in the LSATU AGENTS.md (Foyer/Mainhub nav, granular feature flags, no fake data, etc.), restate the relevant constraint inside the prompt so Lovable doesn't violate it."
+   ],
+   "left": 3,
+   "left_sample": [
+    "Produce a short, paste-ready prompt for Lovable's chat, for the residual class of changes Claude cannot reach directly.",
+    "- **Code change in the repo** \u2192 make it directly and push via `.Claude/safe-push.sh` (see LSATU AGENTS.md). Do not hand this to Lovable.",
+    "- If the change touches product rules in the LSATU AGENTS.md (Foyer/Mainhub nav, granular feature flags, no fake data, etc.), restate the relevant constraint inside the prompt so Lovable doesn't violate it."
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "lsat-u-topic-builder",
+   "unique_lines": 20,
+   "sample": [
+    "description: Audit-driven bootstrap for a new LSAT U topic bootcamp. Walks the topic's source corpus, tier-grades every file (S/A/B/C/D), scans the Mac for related files outside /Curriculum/, identifies content gaps, anchors the quality bar to Causation Station / Abstraction (coaching tone, comprehensive, guiding), then generates the project folder with audit findings baked into all four files. Use when Joshua wants to start a new LSAT U topic bootcamp (Causation, Comparison, Necessary Assumption, Conditional Logic, etc.) and have the build start from real corpus knowledge, not generic templates. Trigger phrases include \"create a new LSAT U topic bootcamp\", \"spin up a [topic] bootcamp\", \"audit and init [topic]\", \"replicate Main Conclusion for [topic]\", \"scaffold [topic] project\".",
+    "Trigger when Joshua wants to start a new LSAT U topic bootcamp build. The skill replicates the Main Conclusion four-stage workflow into a new topic project, but does the work upfront so Codex starts Gate 0 with audited corpus, identified gaps, and topic-specific quality bar already established.",
+    "v1 was folder bootstrap with placeholder templates. v2 actually does Stage 1 work (audit + grading + gap analysis) before generating files. The resulting handoff and PROJECT_MEMORY.md are pre-populated with real findings: tier-graded source list, identified named tools, content gaps, scan-discovered additional files, quality bar specifics. Codex starts at Gate 0 with substantive context, not \"TBD at Gate 1\" everywhere.",
+    "- **Phase C**: Project Bootstrap + Codex Handoff"
+   ],
+   "left": 13,
+   "left_sample": [
+    "Trigger when Joshua wants to start a new LSAT U topic bootcamp build. The skill replicates the Main Conclusion four-stage workflow into a new topic project, but does the work upfront so Claude starts Gate 0 with audited corpus, identified gaps, and topic-specific quality bar already established.",
+    "v1 was folder bootstrap with placeholder templates. v2 actually does Stage 1 work (audit + grading + gap analysis) before generating files. The resulting handoff and PROJECT_MEMORY.md are pre-populated with real findings: tier-graded source list, identified named tools, content gaps, scan-discovered additional files, quality bar specifics. Claude starts at Gate 0 with substantive context, not \"TBD at Gate 1\" everywhere.",
+    "- **Phase C**: Project Bootstrap + Claude Handoff"
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "minimalist-ui",
+   "unique_lines": 6,
+   "sample": [
+    "description: \"Use only when the user explicitly selects minimalist-ui or its specific documented preset/reference. Does not trigger on generic current-vault, frontend, AI or everyday workflow requests.\"",
+    "- Avoid prominent gradients, neon colors and 3D glassmorphism in this preset; subtle requested background radial treatments below are optional.",
+    "- Hero & Section Backgrounds: Sections should not feel empty and flat. Use subtle full-width background imagery at very low opacity, soft radial light spots (`radial-gradient` with warm tones at `opacity: 0.03`), or minimal geometric line patterns to add depth without breaking the clean aesthetic.",
+    "- Staggered Reveals: Lists and grid items enter with a cascade delay (`animation-delay: calc(var(--index) * 80ms)`). Never mount everything at once."
+   ],
+   "left": 5,
+   "left_sample": [
+    "- Avoid prominent gradients, neon colors and 3D glassmorphism in this preset; subtle requested background radial treatments below are optional.",
+    "- Hero & Section Backgrounds: Sections should not feel empty and flat. Use subtle full-width background imagery at very low opacity, soft radial light spots (`radial-gradient` with warm tones at `opacity: 0.03`), or minimal geometric line patterns to add depth without breaking the clean aesthetic.",
+    "- Staggered Reveals: Lists and grid items enter with a cascade delay (`animation-delay: calc(var(--index) * 80ms)`). Never mount everything at once."
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "notebooklm",
+   "unique_lines": 2,
+   "sample": [
+    "3. Run `notebooklm generate audio \"...\" --json` \u2192 parse `artifact_id` from output",
+    "4. **Spawn a background agent** using Task tool:"
+   ],
+   "left": 2,
+   "left_sample": [
+    "3. Run `notebooklm generate audio \"...\" --json` \u2192 parse `artifact_id` from output",
+    "4. **Spawn a background agent** using Task tool:"
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "obsidian-vault",
+   "unique_lines": 3,
+   "sample": [
+    "description: \"Explicit legacy/new-vault reference only. Existing AI OS work uses project ingest, second-brain-query and second-brain-lint; do not select alternate vault automatically.\"",
+    "`/mnt/d/Obsidian Vault/AI Research/`",
+    "- No folders for organization - use links and index notes instead"
+   ],
+   "left": 1,
+   "left_sample": [
+    "- No folders for organization - use links and index notes instead"
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "prompt-architect-refiner",
+   "unique_lines": 15,
+   "sample": [
+    "description: Use this skill when the user wants to improve, rewrite, sharpen, structure, debug, compress, expand, or create a high-quality prompt for Codex Chat, Codex Cowork, Codex, Gemini, ChatGPT, Lovable, NotebookLM, MCP workflows, repo audits, file organization, curriculum production, or app-building tasks. Trigger on phrases like prompt enhancer, prompt refiner, improve this prompt, make this top notch, god mode prompt, Codex Cowork prompt, Codex prompt, system instructions, custom instructions, skill instructions, rewrite this for Codex, make it clearer, or turn this messy request into a professional prompt.",
+    "### Codex Chat mode",
+    "Strong Codex Chat prompts should:",
+    "### Codex Cowork mode"
+   ],
+   "left": 8,
+   "left_sample": [
+    "- Require approval before moving, deleting, overwriting, or restructuring files",
+    "4. Wait for approval",
+    "### Claude mode"
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "redesign-existing-projects",
+   "unique_lines": 9,
+   "sample": [
+    "Check for these problems and fix them:",
+    "- **Generic names like \"John Doe\" or \"Jane Smith\".** Use diverse, realistic-sounding names.",
+    "- **Fake round numbers like `99.99%`, `50%`, `$100.00`.** Use organic, messy data: `47.2%`, `$99.00`, `+1 (312) 847-1928`.",
+    "- **Placeholder company names like \"Acme Corp\", \"Nexus\", \"SmartFlow\".** Invent contextual, believable brand names."
+   ],
+   "left": 9,
+   "left_sample": [
+    "Check for these problems and fix them:",
+    "- **Generic names like \"John Doe\" or \"Jane Smith\".** Use diverse, realistic-sounding names.",
+    "- **Fake round numbers like `99.99%`, `50%`, `$100.00`.** Use organic, messy data: `47.2%`, `$99.00`, `+1 (312) 847-1928`."
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "site-teardown",
+   "unique_lines": 2,
+   "sample": [
+    "description: \"Reverse engineer any website into a complete build blueprint. Analyzes the HTML structure, fetches and extracts all animation/interaction code from the site's JavaScript, and pulls the complete design system from the CSS. Outputs a structured teardown document with tech stack, every visual effect and how it's implemented, design tokens, assets needed, and a section-by-section build plan. Use this skill whenever the user wants to analyze how a website was built, reverse engineer a site, clone or recreate a website, understand what tech stack or animations a site uses, do a site teardown, deconstruct a page, figure out how an effect works on a website, or says things like 'steal this website', 'break down this site', 'how did they build this', 'website blueprint', 'analyze this site for me', or gives you a URL and asks you to figure out how it works. Also trigger when the user pastes raw HTML source code and asks what's going on or how to recreate it.\"",
+    "Reverse engineer any website into a complete build blueprint \u2014 tech stack, every visual effect with implementation details, full design system, and a section-by-section build plan. The output should be thorough enough that someone could hand it to Codex in a fresh session and build a clone without ever visiting the original site."
+   ],
+   "left": 1,
+   "left_sample": [
+    "Reverse engineer any website into a complete build blueprint \u2014 tech stack, every visual effect with implementation details, full design system, and a section-by-section build plan. The output should be thorough enough that someone could hand it to Claude in a fresh session and build a clone without ever visiting the original site."
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "skill-creator",
+   "unique_lines": 284,
+   "sample": [
+    "description: Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, run evals to test a skill, benchmark skill performance with variance analysis, or optimize a skill's description for better triggering accuracy.",
+    "A skill for creating new skills and iteratively improving them.",
+    "At a high level, the process of creating a skill goes like this:",
+    "- Decide what you want the skill to do and roughly how it should do it"
+   ],
+   "left": 283,
+   "left_sample": [
+    "A skill for creating new skills and iteratively improving them.",
+    "At a high level, the process of creating a skill goes like this:",
+    "- Decide what you want the skill to do and roughly how it should do it"
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "watch",
+   "unique_lines": 20,
+   "sample": [
+    "description: Watch a video (URL or local path). Downloads with yt-dlp, extracts auto-scaled frames with ffmpeg, pulls the transcript from captions (or Whisper API fallback), and hands the result to Codex so it can answer questions about what's in the video.",
+    "homepage: https://github.com/bradautomates/Codex-video",
+    "repository: https://github.com/bradautomates/Codex-video",
+    "# /watch \u2014 Codex watches a video"
+   ],
+   "left": 18,
+   "left_sample": [
+    "homepage: https://github.com/bradautomates/Claude-video",
+    "repository: https://github.com/bradautomates/Claude-video",
+    "## Step 0 \u2014 Setup preflight (runs every `/watch` invocation, silent on success)"
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "web-artifacts-builder",
+   "unique_lines": 10,
+   "sample": [
+    "description: Suite of tools for creating elaborate, multi-component the actual host artifact panel HTML artifacts using modern frontend web technologies (React, Tailwind CSS, shadcn/ui). Use for complex artifacts requiring state management, routing, or shadcn/ui components - not for simple single-file HTML/JSX artifacts.",
+    "To build powerful frontend the actual host artifact panel artifacts, follow these steps:",
+    "5. (Optional) Test the artifact",
+    "Run the initialization script to create a new React project:"
+   ],
+   "left": 8,
+   "left_sample": [
+    "To build powerful frontend the actual host artifact panel artifacts, follow these steps:",
+    "5. (Optional) Test the artifact",
+    "Run the initialization script to create a new React project:"
+   ]
+  },
+  {
+   "install": "home-agents",
+   "skill": "webapp-testing",
+   "unique_lines": 4,
+   "sample": [
+    "1. Navigate and wait for the actual app-ready selector/state",
+    "page.wait_for_selector('ACTUAL_APP_READY_SELECTOR') # CRITICAL: Wait for JS to execute",
+    "\u274c **Don't** inspect the DOM before waiting for `networkidle` on dynamic apps",
+    "\u2705 **Do** wait for `page.wait_for_selector('ACTUAL_APP_READY_SELECTOR')` before inspection"
+   ],
+   "left": 4,
+   "left_sample": [
+    "1. Navigate and wait for the actual app-ready selector/state",
+    "page.wait_for_selector('ACTUAL_APP_READY_SELECTOR') # CRITICAL: Wait for JS to execute",
+    "\u274c **Don't** inspect the DOM before waiting for `networkidle` on dynamic apps"
+   ]
+  },
+  {
+   "install": "home-codex",
+   "skill": "chat-export",
+   "unique_lines": 11,
+   "sample": [
+    "`<current-project-root>/handoffs/` with a full transcript,",
+    "<current-project-root>/handoffs/YYYY-MM-DD_short-title.md",
+    "1. **Retrieve original session logs** for the requested conversation. Verify which turns are available and write retrieved user/assistant messages verbatim. If original logs are unavailable or incomplete, export visible turns only, label the transcript partial, and list missing or compacted ranges. Never reconstruct absent messages as verbatim.",
+    "- Point to the file: `Read <current-project-root>/handoffs/<filename>.md`"
+   ],
+   "left": 11,
+   "left_sample": [
+    "`<current-project-root>/handoffs/` with a full transcript,",
+    "<current-project-root>/handoffs/YYYY-MM-DD_short-title.md",
+    "1. **Retrieve original session logs** for the requested conversation. Verify which turns are available and write retrieved user/assistant messages verbatim. If original logs are unavailable or incomplete, export visible turns only, label the transcript partial, and list missing or compacted ranges. Never reconstruct absent messages as verbatim."
+   ]
+  },
+  {
+   "install": "home-codex",
+   "skill": "consultation-followup-drafts",
+   "unique_lines": 9,
+   "sample": [
+    "STEP 1 \u2014 Read voice + templates (required):",
+    "- Read /Users/joshuaf/ai-os/archive/wiki-pre-rebuild-2026-07-16/domains/lsat-u/knowledge/email-voice-principles.md",
+    "- Read /Users/joshuaf/ai-os/archive/wiki-pre-rebuild-2026-07-16/domains/lsat-u/knowledge/post-consultation-follow-up-template.md",
+    "- Read /Users/joshuaf/ai-os/projects/email-hq/Consultation Follow-Up Automation.md"
+   ],
+   "left": 6,
+   "left_sample": [
+    "STEP 1 \u2014 Read voice + templates (required):",
+    "Follow the voice and the template exactly. Prose only, no bullets beyond the short options/steps list, no em dashes, under ~150 words.",
+    "STEP 2 \u2014 Find consultations ready for follow-up. Use the Google Calendar connector (list_events) to list events whose title contains \"Consultation\" from the last 4 days that are already in the past (ended before now). For each, look for a \"Notes by Gemini\" attachment or a linked Transcript Google Doc on the event. If there is no such attachment yet, SKIP it (the call may not have happened or notes aren't ready)."
+   ]
+  },
+  {
+   "install": "home-codex",
+   "skill": "design-taste-frontend",
+   "unique_lines": 4,
+   "sample": [
+    "description: \"Use only when the user explicitly selects design-taste-frontend or its specific documented preset/reference. Does not trigger on generic current-vault, frontend, AI or everyday workflow requests.\"",
+    "**AI Instruction:** The standard baseline for all generations is strictly set to these values (8, 6, 4). Do not ask the user to edit this file. Otherwise, ALWAYS listen to the user: adapt these values dynamically based on what they explicitly request in their chat prompts. Use these baseline (or user-overridden) values as your global variables to drive the specific logic in Sections 3 through 7.",
+    "All cards must contain **\"Perpetual Micro-Interactions.\"** Use the following Framer Motion principles:",
+    "* **Infinite Loops:** Every card must have an \"Active State\" that loops infinitely (Pulse, Typewriter, Float, or Carousel) to ensure the dashboard feels \"alive\"."
+   ],
+   "left": 3,
+   "left_sample": [
+    "**AI Instruction:** The standard baseline for all generations is strictly set to these values (8, 6, 4). Do not ask the user to edit this file. Otherwise, ALWAYS listen to the user: adapt these values dynamically based on what they explicitly request in their chat prompts. Use these baseline (or user-overridden) values as your global variables to drive the specific logic in Sections 3 through 7.",
+    "All cards must contain **\"Perpetual Micro-Interactions.\"** Use the following Framer Motion principles:",
+    "* **Infinite Loops:** Every card must have an \"Active State\" that loops infinitely (Pulse, Typewriter, Float, or Carousel) to ensure the dashboard feels \"alive\"."
+   ]
+  },
+  {
+   "install": "home-codex",
+   "skill": "find-skills",
+   "unique_lines": 5,
+   "sample": [
+    "description: Helps users discover and install agent skills when they ask questions like \"how do I do X\", \"find a skill for X\", \"is there a skill that can...\", or express interest in extending capabilities. This skill should be used when the user is looking for functionality that might exist as an installable skill.",
+    "- Asks \"how do I do X\" where X might be a common task with an existing skill",
+    "- Asks \"can you do X\" where X is a specialized capability",
+    "- `npx skills find [query]` - Search for skills interactively or by keyword"
+   ],
+   "left": 4,
+   "left_sample": [
+    "- Asks \"how do I do X\" where X might be a common task with an existing skill",
+    "- Asks \"can you do X\" where X is a specialized capability",
+    "- `npx skills find [query]` - Search for skills interactively or by keyword"
+   ]
+  },
+  {
+   "install": "home-codex",
+   "skill": "frontend-design",
+   "unique_lines": 4,
+   "sample": [
+    "description: \"Design requested frontend interfaces while preserving user brief, existing design system, factual data and accessibility. Opinionated legacy creative presets apply only when selected.\"",
+    "- **Typography**: Choose fonts that are beautiful, unique, and interesting. Avoid generic fonts like Arial and Inter; opt instead for distinctive choices that elevate the frontend's aesthetics; unexpected, characterful font choices. Pair a distinctive display font with a refined body font.",
+    "NEVER use generic AI-generated aesthetics like overused font families (Inter, Roboto, Arial, system fonts), cliched color schemes (particularly purple gradients on white backgrounds), predictable layouts and component patterns, and cookie-cutter design that lacks context-specific character.",
+    "Interpret creatively and make unexpected choices that feel genuinely designed for the context. No design should be the same. Vary between light and dark themes, different fonts, different aesthetics. NEVER converge on common choices (Space Grotesk, for example) across generations."
+   ],
+   "left": 3,
+   "left_sample": [
+    "- **Typography**: Choose fonts that are beautiful, unique, and interesting. Avoid generic fonts like Arial and Inter; opt instead for distinctive choices that elevate the frontend's aesthetics; unexpected, characterful font choices. Pair a distinctive display font with a refined body font.",
+    "NEVER use generic AI-generated aesthetics like overused font families (Inter, Roboto, Arial, system fonts), cliched color schemes (particularly purple gradients on white backgrounds), predictable layouts and component patterns, and cookie-cutter design that lacks context-specific character.",
+    "Interpret creatively and make unexpected choices that feel genuinely designed for the context. No design should be the same. Vary between light and dark themes, different fonts, different aesthetics. NEVER converge on common choices (Space Grotesk, for example) across generations."
+   ]
+  },
+  {
+   "install": "home-codex",
+   "skill": "graphify",
+   "unique_lines": 42,
+   "sample": [
+    "\"$PYTHON\" -c \"import graphify\" 2>/dev/null || \"$PYTHON\" -m pip install graphifyy -q 2>/dev/null || \"$PYTHON\" -m pip install graphifyy -q --break-system-packages 2>&1 | tail -3",
+    "**MANDATORY: You MUST use the Agent tool here. Reading files yourself one-by-one is forbidden - it is 5-10x slower. If you do not use the Agent tool you are doing this wrong.**",
+    "Call the Agent tool multiple times IN THE SAME RESPONSE - one call per chunk. This is the only way they run in parallel. If you make one Agent call, wait, then make another, you are doing it sequentially and defeating the purpose.",
+    "**IMPORTANT - subagent type:** Always use `subagent_type=\"general-purpose\"`. Do NOT use `Explore` - it is read-only and cannot write chunk files to disk, which silently drops extraction results. General-purpose has Write and Bash access which the subagent needs."
+   ],
+   "left": 42,
+   "left_sample": [
+    "\"$PYTHON\" -c \"import graphify\" 2>/dev/null || \"$PYTHON\" -m pip install graphifyy -q 2>/dev/null || \"$PYTHON\" -m pip install graphifyy -q --break-system-packages 2>&1 | tail -3",
+    "**MANDATORY: You MUST use the Agent tool here. Reading files yourself one-by-one is forbidden - it is 5-10x slower. If you do not use the Agent tool you are doing this wrong.**",
+    "Call the Agent tool multiple times IN THE SAME RESPONSE - one call per chunk. This is the only way they run in parallel. If you make one Agent call, wait, then make another, you are doing it sequentially and defeating the purpose."
+   ]
+  },
+  {
+   "install": "home-codex",
+   "skill": "higgsfield-websites",
+   "unique_lines": 5,
+   "sample": [
+    "description: \"Use only when the user explicitly selects higgsfield-websites or its specific documented preset/reference. Does not trigger on generic current-vault, frontend, AI or everyday workflow requests.\"",
+    "Prepare preview only; public deployment requires explicit publication authorization.",
+    "metadata), no need to ask again; if no, only deploy. Don't block the build",
+    "infra, a single live deploy via `higgsfield website deploy <website_id>`,"
+   ],
+   "left": 4,
+   "left_sample": [
+    "Prepare preview only; public deployment requires explicit publication authorization.",
+    "metadata), no need to ask again; if no, only deploy. Don't block the build",
+    "infra, a single live deploy via `higgsfield website deploy <website_id>`,"
+   ]
+  },
+  {
+   "install": "home-codex",
+   "skill": "high-end-visual-design",
+   "unique_lines": 6,
+   "sample": [
+    "description: \"Use only when the user explicitly selects high-end-visual-design or its specific documented preset/reference. Does not trigger on generic current-vault, frontend, AI or everyday workflow requests.\"",
+    "- **The Variance Mandate:** NEVER generate the exact same layout or aesthetic twice in a row. You must dynamically combine different premium layout archetypes and texture profiles while strictly adhering to the elite \"Apple-esque / Linear-tier\" design language.",
+    "When the user selects this aesthetic, choose a suitable combination from the following archetypes based on the prompt's context to ensure the output is uniquely tailored but always premium:",
+    "When this specific preset is selected, optional double-bezel enclosures may create physical depth. Use flat containers where the existing design system or clarity calls for them."
+   ],
+   "left": 5,
+   "left_sample": [
+    "- **The Variance Mandate:** NEVER generate the exact same layout or aesthetic twice in a row. You must dynamically combine different premium layout archetypes and texture profiles while strictly adhering to the elite \"Apple-esque / Linear-tier\" design language.",
+    "When the user selects this aesthetic, choose a suitable combination from the following archetypes based on the prompt's context to ensure the output is uniquely tailored but always premium:",
+    "When this specific preset is selected, optional double-bezel enclosures may create physical depth. Use flat containers where the existing design system or clarity calls for them."
+   ]
+  },
+  {
+   "install": "home-codex",
+   "skill": "impeccable",
+   "unique_lines": 1,
+   "sample": [
+    "Designs and iterates production-grade frontend interfaces. Real working code, committed design choices, exceptional craft."
+   ],
+   "left": 1,
+   "left_sample": [
+    "Designs and iterates production-grade frontend interfaces. Real working code, committed design choices, exceptional craft."
+   ]
+  },
+  {
+   "install": "home-codex",
+   "skill": "level-up",
+   "unique_lines": 3,
+   "sample": [
+    "> *Adapted from The Three Ms of AI\u2122. \u00a9 2026 Nate Herk (MIT \u2014 github.com/nateherkai/AIS-OS).*",
+    "> *The Three Ms of AI\u2122 is a trademark of Nate Herk.*",
+    "**Save-to-both (this OS's standing rule):** write every new skill/agent to BOTH `.claude/skills/<name>/SKILL.md` (activated) AND the DB `skills/claude/<name>/SKILL.md`, project-scoped. For a Codex twin, mirror to `.agents/skills/`. Then note it for `system/scripts/gen-skill-index.py`."
+   ],
+   "left": 3,
+   "left_sample": [
+    "> *Adapted from The Three Ms of AI\u2122. \u00a9 2026 Nate Herk (MIT \u2014 github.com/nateherkai/AIS-OS).*",
+    "> *The Three Ms of AI\u2122 is a trademark of Nate Herk.*",
+    "**Save-to-both (this OS's standing rule):** write every new skill/agent to BOTH `.claude/skills/<name>/SKILL.md` (activated) AND the DB `skills/claude/<name>/SKILL.md`, project-scoped. For a Claude twin, mirror to `.agents/skills/`. Then note it for `system/scripts/gen-skill-index.py`."
+   ]
+  },
+  {
+   "install": "home-codex",
+   "skill": "lovable-prompt",
+   "unique_lines": 1,
+   "sample": [
+    "Produce a short, paste-ready prompt for Lovable's chat, for the residual class of changes Codex cannot reach directly."
+   ],
+   "left": 1,
+   "left_sample": [
+    "Produce a short, paste-ready prompt for Lovable's chat, for the residual class of changes Claude cannot reach directly."
+   ]
+  },
+  {
+   "install": "home-codex",
+   "skill": "minimalist-ui",
+   "unique_lines": 6,
+   "sample": [
+    "description: \"Use only when the user explicitly selects minimalist-ui or its specific documented preset/reference. Does not trigger on generic current-vault, frontend, AI or everyday workflow requests.\"",
+    "- Avoid prominent gradients, neon colors and 3D glassmorphism in this preset; subtle requested background radial treatments below are optional.",
+    "- Hero & Section Backgrounds: Sections should not feel empty and flat. Use subtle full-width background imagery at very low opacity, soft radial light spots (`radial-gradient` with warm tones at `opacity: 0.03`), or minimal geometric line patterns to add depth without breaking the clean aesthetic.",
+    "- Staggered Reveals: Lists and grid items enter with a cascade delay (`animation-delay: calc(var(--index) * 80ms)`). Never mount everything at once."
+   ],
+   "left": 5,
+   "left_sample": [
+    "- Avoid prominent gradients, neon colors and 3D glassmorphism in this preset; subtle requested background radial treatments below are optional.",
+    "- Hero & Section Backgrounds: Sections should not feel empty and flat. Use subtle full-width background imagery at very low opacity, soft radial light spots (`radial-gradient` with warm tones at `opacity: 0.03`), or minimal geometric line patterns to add depth without breaking the clean aesthetic.",
+    "- Staggered Reveals: Lists and grid items enter with a cascade delay (`animation-delay: calc(var(--index) * 80ms)`). Never mount everything at once."
+   ]
+  },
+  {
+   "install": "home-codex",
+   "skill": "notebooklm",
+   "unique_lines": 2,
+   "sample": [
+    "3. Run `notebooklm generate audio \"...\" --json` \u2192 parse `artifact_id` from output",
+    "4. **Spawn a background agent** using Task tool:"
+   ],
+   "left": 2,
+   "left_sample": [
+    "3. Run `notebooklm generate audio \"...\" --json` \u2192 parse `artifact_id` from output",
+    "4. **Spawn a background agent** using Task tool:"
+   ]
+  },
+  {
+   "install": "home-codex",
+   "skill": "obsidian-vault",
+   "unique_lines": 3,
+   "sample": [
+    "description: \"Explicit legacy/new-vault reference only. Existing AI OS work uses project ingest, second-brain-query and second-brain-lint; do not select alternate vault automatically.\"",
+    "`/mnt/d/Obsidian Vault/AI Research/`",
+    "- No folders for organization - use links and index notes instead"
+   ],
+   "left": 1,
+   "left_sample": [
+    "- No folders for organization - use links and index notes instead"
+   ]
+  },
+  {
+   "install": "home-codex",
+   "skill": "prompt-architect-refiner",
+   "unique_lines": 2,
+   "sample": [
+    "- Require approval before moving, deleting, overwriting, or restructuring files",
+    "4. Wait for approval"
+   ],
+   "left": 2,
+   "left_sample": [
+    "- Require approval before moving, deleting, overwriting, or restructuring files",
+    "4. Wait for approval"
+   ]
+  },
+  {
+   "install": "home-codex",
+   "skill": "redesign-existing-projects",
+   "unique_lines": 9,
+   "sample": [
+    "Check for these problems and fix them:",
+    "- **Generic names like \"John Doe\" or \"Jane Smith\".** Use diverse, realistic-sounding names.",
+    "- **Fake round numbers like `99.99%`, `50%`, `$100.00`.** Use organic, messy data: `47.2%`, `$99.00`, `+1 (312) 847-1928`.",
+    "- **Placeholder company names like \"Acme Corp\", \"Nexus\", \"SmartFlow\".** Invent contextual, believable brand names."
+   ],
+   "left": 9,
+   "left_sample": [
+    "Check for these problems and fix them:",
+    "- **Generic names like \"John Doe\" or \"Jane Smith\".** Use diverse, realistic-sounding names.",
+    "- **Fake round numbers like `99.99%`, `50%`, `$100.00`.** Use organic, messy data: `47.2%`, `$99.00`, `+1 (312) 847-1928`."
+   ]
+  },
+  {
+   "install": "home-codex",
+   "skill": "watch",
+   "unique_lines": 16,
+   "sample": [
+    "description: Watch a video (URL or local path). Downloads with yt-dlp, extracts auto-scaled frames with ffmpeg, pulls the transcript from captions (or Whisper API fallback), and hands the result to Claude so it can answer questions about what's in the video.",
+    "## Step 0 \u2014 Setup preflight (runs every `/watch` invocation, silent on success)",
+    "**Python interpreter:** every `python3 ...` command in this skill is for macOS/Linux. On **Windows**, substitute `python` \u2014 the `python3` command on Windows is the Microsoft Store stub and will not run the script.",
+    "Before execution check installed Python, yt-dlp and FFmpeg without reinstalling. An API key is not required for captions or frames. Use current project get_youtube_transcript.py first for transcript-only requests. For frame extraction run the bundled watch script with --no-whisper. Skip the bundled setup wizard because it couples free extraction to a provider key."
+   ],
+   "left": 15,
+   "left_sample": [
+    "## Step 0 \u2014 Setup preflight (runs every `/watch` invocation, silent on success)",
+    "**Python interpreter:** every `python3 ...` command in this skill is for macOS/Linux. On **Windows**, substitute `python` \u2014 the `python3` command on Windows is the Microsoft Store stub and will not run the script.",
+    "Before execution check installed Python, yt-dlp and FFmpeg without reinstalling. An API key is not required for captions or frames. Use current project get_youtube_transcript.py first for transcript-only requests. For frame extraction run the bundled watch script with --no-whisper. Skip the bundled setup wizard because it couples free extraction to a provider key."
+   ]
+  },
+  {
+   "install": "home-codex",
+   "skill": "webapp-testing",
+   "unique_lines": 4,
+   "sample": [
+    "1. Navigate and wait for the actual app-ready selector/state",
+    "page.wait_for_selector('ACTUAL_APP_READY_SELECTOR') # CRITICAL: Wait for JS to execute",
+    "\u274c **Don't** inspect the DOM before waiting for `networkidle` on dynamic apps",
+    "\u2705 **Do** wait for `page.wait_for_selector('ACTUAL_APP_READY_SELECTOR')` before inspection"
+   ],
+   "left": 4,
+   "left_sample": [
+    "1. Navigate and wait for the actual app-ready selector/state",
+    "page.wait_for_selector('ACTUAL_APP_READY_SELECTOR') # CRITICAL: Wait for JS to execute",
+    "\u274c **Don't** inspect the DOM before waiting for `networkidle` on dynamic apps"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,6 @@
+insert into lr_explanation_steps (explanation_id,position,label,body) select v.e,v.p,v.l,v.b from (values
+('5c91cbf0-d42a-460f-a52e-515517709794'::uuid,2,'Goal','Look for an answer about what counts as a life of moderation, something like: whether a person who never leaves the middle course is living a life of moderation. Expect it in general terms. Be wary of answers about whether risk or spontaneity is good, since both speakers seem to like a little of it.'),
+('a4bdc902-10bf-4039-b888-3fcface276e4'::uuid,2,'Goal','Look for: whether futuristic science fiction or conventional fiction is the better, or more promising, source of social criticism. Lutsina picks science fiction; Priscilla picks conventional fiction.'),
+('644767bf-220e-477d-bd9c-ecfc58f280cd'::uuid,2,'Goal','Look for: whether the win over the chess champion belongs to the computer or to the people who programmed it.'),
+('c8f7f015-04cf-4f30-b059-16e7d3f7511b'::uuid,2,'Goal','Look for a claim Tate supports and Wong''s "all countries" rules out: some countries are better off as autocracies than as democracies.')
+) v(e,p,l,b) where not exists (select 1 from lr_explanation_steps x where x.explanation_id=v.e and x.position=v.p) returning id;

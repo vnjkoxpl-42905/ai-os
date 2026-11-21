@@ -1,0 +1,16 @@
+[safe-push] origin/main has diverged (Lovable likely committed). Merging.
+Merge made by the 'ort' strategy.
+ docs/ops/teacher-home-full-release.md              |  7 +++-
+ docs/verification/full-home-db-check.mjs           | 33 ++++++++++-----
+ .../verification/teacher-home-actions-db-check.mjs |  2 +-
+ .../20261027190000_teacher_post_session.sql        |  4 +-
+ ...090000_teacher_home_profile_identity_repair.sql | 47 ++++++++++++++++++++++
+ .../20261028100000_teacher_home_desk.sql           | 12 +++---
+ .../20261028101000_teacher_home_access_booking.sql | 16 ++++----
+ 7 files changed, 93 insertions(+), 28 deletions(-)
+ create mode 100644 supabase/migrations/20261028090000_teacher_home_profile_identity_repair.sql
+[safe-push] Typechecking (npm run typecheck)...
+[safe-push] Typecheck passed.
+To https://github.com/vnjkoxpl-42905/lsatu-684d89db.git
+   2d6c74b9..c363e12c  HEAD -> main
+[safe-push] Pushed c363e12c Merge remote-tracking branch 'origin/main' into codex/my-work-organization-20261027

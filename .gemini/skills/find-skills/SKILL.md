@@ -1,7 +1,11 @@
 ---
 name: find-skills
-description: Helps users discover and install agent skills when they ask questions like "how do I do X", "find a skill for X", "is there a skill that can...", or express interest in extending capabilities. This skill should be used when the user is looking for functionality that might exist as an installable skill.
+description: "Discover candidate skills when the user explicitly asks to find, discover or install an additional skill. Not generic how-do-I requests."
 ---
+
+## Current AI OS execution contract
+
+Select only when the user asks to discover or install a skill. A generic how-do-I or can-you request is not a skill-search trigger. Adoption/popularity is not verified quality; inspect candidate instructions and dependencies.
 
 # Find Skills
 
@@ -11,9 +15,9 @@ This skill helps you discover and install skills from the open agent skills ecos
 
 Use this skill when the user:
 
-- Asks "how do I do X" where X might be a common task with an existing skill
+- Explicitly asks to discover an installable skill for X
 - Says "find a skill for X" or "is there a skill for X"
-- Asks "can you do X" where X is a specialized capability
+- Explicitly asks whether an additional skill provides X
 - Expresses interest in extending agent capabilities
 - Wants to search for tools, templates, or workflows
 - Mentions they wish they had help with a specific domain (design, testing, deployment, etc.)
@@ -24,9 +28,9 @@ The Skills CLI (`npx skills`) is the package manager for the open agent skills e
 
 **Key commands:**
 
-- `npx skills find [query]` - Search for skills interactively or by keyword
+- `npx skills find [query] [--owner <owner>]` - Search for skills interactively or by keyword, optionally scoped to a GitHub owner
 - `npx skills add <package>` - Install a skill from GitHub or other sources
-- `npx skills check` - Check for skill updates
+- `npx skills check` - Check for skill updates (still works in skills 1.7.2, verified 2026-10-14, but no longer listed in `npx skills --help`)
 - `npx skills update` - Update all installed skills
 
 **Browse skills at:** https://skills.sh/
@@ -54,7 +58,7 @@ For example, top skills for web development include:
 If the leaderboard doesn't cover the user's need, run the find command:
 
 ```bash
-npx skills find [query]
+npx skills find [query] [--owner <owner>]
 ```
 
 For example:
@@ -95,7 +99,15 @@ Learn more: https://skills.sh/vercel-labs/agent-skills/react-best-practices
 
 ### Step 6: Offer to Install
 
-If the user wants to proceed, you can install the skill for them:
+Before installing anything, scan it with SkillSpector (static mode, file contents stay on this machine):
+
+```bash
+skillspector scan --no-llm <folder or GitHub URL>
+```
+
+Stop on any HIGH or CRITICAL finding (recommendation `DO_NOT_INSTALL`): report the finding to the user and do not install unless they decide to after seeing it. Never drop `--no-llm`; without it the scanner sends file contents to an LLM provider. Install notes: `references/ai-workspace/windows-cli-toolchain.md`.
+
+If the scan is clean and the user wants to proceed, you can install the skill for them:
 
 ```bash
 npx skills add <owner/repo@skill> -g -y

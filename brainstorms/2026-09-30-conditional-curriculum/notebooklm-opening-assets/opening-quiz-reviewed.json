@@ -1,0 +1,637 @@
+{
+  "title": "LSAT U Opening: Opening Quiz",
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "question": "Suppose a rule states: 'All volunteers wear badges.' You are told that Ari is a volunteer. Based strictly on this rule, what is guaranteed about Ari?",
+      "answerOptions": [
+        {
+          "text": "Ari wears a badge.",
+          "isCorrect": true,
+          "rationale": "The rule covers every volunteer without exception, so knowing Ari is a volunteer guarantees that Ari wears a badge."
+        },
+        {
+          "text": "Ari is a staff member.",
+          "isCorrect": false,
+          "rationale": "The rule provides information only about volunteers wearing badges, not about Ari's employment or staff status."
+        },
+        {
+          "text": "Ari is the only person wearing a badge.",
+          "isCorrect": false,
+          "rationale": "The rule requires volunteers to wear badges, but it does not prevent non-volunteers from wearing badges as well."
+        },
+        {
+          "text": "Ari might not wear a badge depending on the shift.",
+          "isCorrect": false,
+          "rationale": "A conditional rule provides a strict guarantee with no room for exceptions."
+        }
+      ],
+      "hint": "Apply the rule directly to the fact given about Ari."
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Every order marked ready has been packed. Order B has been packed. What do we know about its ready status?",
+      "answerOptions": [
+        {
+          "text": "It could be ready or not ready.",
+          "isCorrect": true,
+          "rationale": "The rule guarantees packed whenever ready is met. It does not make packed enough to establish ready."
+        },
+        {
+          "text": "It must be marked ready.",
+          "isCorrect": false,
+          "rationale": "That reverses the rule. A packed order might still be waiting for its pickup label."
+        },
+        {
+          "text": "It cannot be marked ready.",
+          "isCorrect": false,
+          "rationale": "A ready order would be packed too. The fact that it is packed is compatible with being ready."
+        },
+        {
+          "text": "No order can be marked ready.",
+          "isCorrect": false,
+          "rationale": "The rule permits ready orders. It only requires that they are packed."
+        }
+      ],
+      "hint": "Which condition starts the rule, and which condition do we know?"
+    },
+    {
+      "type": "fill_in_the_blank",
+      "question": "In conditional logic, a condition that is enough by itself to guarantee an outcome is called a ___ condition.",
+      "bestAnswer": "sufficient",
+      "acceptableAnswers": [
+        "sufficient condition"
+      ],
+      "rationale": "The term sufficient describes a condition that acts as a trigger and provides enough information to guarantee the result on the right side of the arrow.",
+      "hint": "Think of the term that means 'enough' to trigger the result."
+    },
+    {
+      "type": "fill_in_the_blank",
+      "question": "When diagramming a conditional relationship using an arrow, the sufficient condition belongs on the ___ side.",
+      "bestAnswer": "left",
+      "acceptableAnswers": [
+        "left-hand",
+        "left hand"
+      ],
+      "rationale": "The left side of a conditional arrow represents the trigger or sufficient condition that leads directly to the necessary outcome.",
+      "hint": "Recall which side of the arrow holds the condition that acts as the trigger."
+    },
+    {
+      "type": "multiple_choice",
+      "question": "In the conditional relationship 'Earns full credit → Passes', what role does 'Passes' play?",
+      "answerOptions": [
+        {
+          "text": "It is the necessary condition required whenever full credit is earned.",
+          "isCorrect": true,
+          "rationale": "The right side of a conditional arrow represents the necessary condition, which must be true whenever the left side is met."
+        },
+        {
+          "text": "It is the sufficient condition that guarantees full credit was earned.",
+          "isCorrect": false,
+          "rationale": "Passing is necessary for earning full credit, but passing alone does not guarantee that full credit was earned."
+        },
+        {
+          "text": "It proves that earning full credit is the only way to pass.",
+          "isCorrect": false,
+          "rationale": "A sufficient condition is enough to guarantee an outcome, but it is not necessarily the only way to achieve it."
+        },
+        {
+          "text": "It shows that passing is optional for students who earn full credit.",
+          "isCorrect": false,
+          "rationale": "The necessary condition is required whenever the sufficient condition occurs, making passing mandatory for full credit."
+        }
+      ],
+      "hint": "Identify the role of the condition located on the right side of the arrow."
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Where is a necessary condition placed when diagramming a conditional rule with an arrow?",
+      "answerOptions": [
+        {
+          "text": "On the right side of the arrow.",
+          "isCorrect": true,
+          "rationale": "In standard conditional notation, the necessary condition is always placed on the right side of the arrow."
+        },
+        {
+          "text": "On the left side of the arrow.",
+          "isCorrect": false,
+          "rationale": "The left side of the arrow is reserved for the sufficient condition."
+        },
+        {
+          "text": "Above the arrow.",
+          "isCorrect": false,
+          "rationale": "Conditional relationships place conditions on either side of a horizontal arrow, not above it."
+        },
+        {
+          "text": "On either side depending on sentence word order.",
+          "isCorrect": false,
+          "rationale": "The diagram position depends on logical role (sufficient or necessary), not sentence word order."
+        }
+      ],
+      "hint": "Remember the placement rule: required conditions always go on a specific side of the arrow."
+    },
+    {
+      "type": "multiple_select",
+      "question": "Which of the following words or phrases are Group 1 indicators that introduce a sufficient condition?",
+      "answerOptions": [
+        {
+          "text": "if",
+          "isCorrect": true,
+          "rationale": "The word 'if' introduces a condition that is sufficient to trigger the result."
+        },
+        {
+          "text": "every",
+          "isCorrect": true,
+          "rationale": "The indicator 'every' points to a set of subjects, making membership in that set sufficient."
+        },
+        {
+          "text": "all",
+          "isCorrect": true,
+          "rationale": "The word 'all' introduces a universal condition that acts as a sufficient indicator."
+        },
+        {
+          "text": "requires",
+          "isCorrect": false,
+          "rationale": "The verb 'requires' belongs to Group 2, as it introduces a necessary condition rather than a sufficient one."
+        }
+      ],
+      "hint": "Select the words that introduce the trigger or sufficient idea.",
+      "hasAllOfTheAbove": false,
+      "hasNoneOfTheAbove": false
+    },
+    {
+      "type": "multiple_select",
+      "question": "Which of the following terms belong to Group 2 indicators, which introduce a necessary condition?",
+      "answerOptions": [
+        {
+          "text": "only if",
+          "isCorrect": true,
+          "rationale": "The phrase 'only if' introduces a requirement, placing its target condition on the right side of the arrow."
+        },
+        {
+          "text": "requires",
+          "isCorrect": true,
+          "rationale": "The word 'requires' explicitly signals that the following concept is necessary."
+        },
+        {
+          "text": "must",
+          "isCorrect": true,
+          "rationale": "The modal verb 'must' indicates a mandatory or required condition."
+        },
+        {
+          "text": "where",
+          "isCorrect": false,
+          "rationale": "The word 'where' is a Group 1 indicator that introduces a sufficient condition."
+        }
+      ],
+      "hint": "Look for terms that signify something is required or mandatory.",
+      "hasAllOfTheAbove": false,
+      "hasNoneOfTheAbove": false
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the correct conditional translation of 'A student receives feedback if the student revises the essay'?",
+      "answerOptions": [
+        {
+          "text": "Revises essay → Receives feedback",
+          "isCorrect": true,
+          "rationale": "The indicator 'if' refers to revising the essay, making 'Revises essay' the sufficient condition on the left."
+        },
+        {
+          "text": "Receives feedback → Revises essay",
+          "isCorrect": false,
+          "rationale": "This reverses the relationship by treating receiving feedback as sufficient rather than necessary."
+        },
+        {
+          "text": "Receives feedback → Does not revise essay",
+          "isCorrect": false,
+          "rationale": "This introduces an unwarranted negation that changes the sentence's meaning."
+        },
+        {
+          "text": "Revises essay → Does not receive feedback",
+          "isCorrect": false,
+          "rationale": "This contradicts the guarantee made by the original rule."
+        }
+      ],
+      "hint": "Find the indicator word 'if' and ask what condition it refers to."
+    },
+    {
+      "type": "multiple_choice",
+      "question": "In the sentence 'A student receives feedback if the student revises the essay', why does 'revises the essay' go on the left side of the arrow?",
+      "answerOptions": [
+        {
+          "text": "Because the indicator 'if' refers directly to revising the essay, making it the sufficient condition regardless of clause order.",
+          "isCorrect": true,
+          "rationale": "Indicators point to their target idea regardless of where that clause appears in sentence order."
+        },
+        {
+          "text": "Because 'revises the essay' is the second clause written in the sentence.",
+          "isCorrect": false,
+          "rationale": "Sentence word order does not dictate which side of the arrow a condition belongs on."
+        },
+        {
+          "text": "Because receiving feedback must happen chronologically before revising an essay.",
+          "isCorrect": false,
+          "rationale": "The conditional arrow indicates logical implication, not chronological timing."
+        },
+        {
+          "text": "Because 'if' is a Group 2 indicator that forces its clause to the left.",
+          "isCorrect": false,
+          "rationale": "'If' is a Group 1 indicator, which places its target on the left because it is sufficient."
+        }
+      ],
+      "hint": "Focus on what idea the indicator word 'if' targets, rather than physical word position."
+    },
+    {
+      "type": "fill_in_the_blank",
+      "question": "When translating 'Any applicant who submits late pays a fee', the complete sufficient idea that belongs on the left side of the arrow is '___'.",
+      "bestAnswer": "applicant who submits late",
+      "acceptableAnswers": [
+        "applicant who submits late",
+        "an applicant who submits late",
+        "applicant submits late"
+      ],
+      "rationale": "The indicator 'any' points to the entire target group of applicants who submit late, not just applicants in general.",
+      "hint": "Be sure to include the full phrase describing who the rule applies to, rather than just a single word."
+    },
+    {
+      "type": "multiple_choice",
+      "question": "How should the sentence 'The only vehicles permitted inside are electric vehicles' be translated into a conditional diagram?",
+      "answerOptions": [
+        {
+          "text": "Vehicle permitted inside → Electric vehicle",
+          "isCorrect": true,
+          "rationale": "The indicator 'the only' refers to 'vehicles permitted inside', making that phrase the sufficient condition on the left."
+        },
+        {
+          "text": "Electric vehicle → Vehicle permitted inside",
+          "isCorrect": false,
+          "rationale": "This would guarantee permission for every electric vehicle. The original statement only makes being electric a requirement for permission."
+        },
+        {
+          "text": "Vehicle permitted inside → Non-electric vehicle",
+          "isCorrect": false,
+          "rationale": "This incorrectly negates the necessary condition."
+        },
+        {
+          "text": "Not an electric vehicle → Vehicle permitted inside",
+          "isCorrect": false,
+          "rationale": "This contradicts the meaning of the original rule."
+        }
+      ],
+      "hint": "Ask what complete phrase 'the only' refers to in the sentence."
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which statement accurately compares the sentences 'Only members are admitted' and 'The only people admitted are members'?",
+      "answerOptions": [
+        {
+          "text": "Both translate to 'Admitted → Member' because both make membership a requirement for admission.",
+          "isCorrect": true,
+          "rationale": "'Only' points to 'members' as required (right side), while 'the only' points to 'people admitted' as sufficient (left side), yielding the same diagram."
+        },
+        {
+          "text": "They translate in opposite directions because 'only' and 'the only' belong to the same group.",
+          "isCorrect": false,
+          "rationale": "'Only' belongs to Group 2 while 'the only' belongs to Group 1, yet both express the exact same relationship."
+        },
+        {
+          "text": "'Only members are admitted' translates to 'Member → Admitted', while 'The only people admitted are members' translates to 'Admitted → Member'.",
+          "isCorrect": false,
+          "rationale": "'Only members are admitted' does not mean every member is admitted; membership is a requirement, not a guarantee."
+        },
+        {
+          "text": "Neither sentence can be represented using standard conditional arrows.",
+          "isCorrect": false,
+          "rationale": "Both sentences express strict conditional guarantees that are easily diagrammed."
+        }
+      ],
+      "hint": "Identify what each indicator refers to in its respective sentence and check what is required."
+    },
+    {
+      "type": "short_answer",
+      "question": "Explain the logical difference between a sufficient condition and a necessary condition.",
+      "hint": "Focus on which condition acts as an enough guarantee versus which condition is required.",
+      "grading": {
+        "modelAnswer": "A sufficient condition is enough to guarantee that an outcome will occur, and it belongs on the left side of the conditional arrow. A necessary condition is required whenever the sufficient condition is met, and it belongs on the right side of the arrow.",
+        "rationale": "Sufficient conditions act as triggers that guarantee an outcome, while necessary conditions represent required outcomes that must occur when triggered.",
+        "requiredAttributes": [
+          "Explains that sufficient means enough to guarantee the other condition.",
+          "Explains that necessary means required whenever the sufficient condition is met."
+        ],
+        "errors": {
+          "misconceptions": [
+            "Claiming that a necessary condition guarantees the sufficient condition.",
+            "Confusing sufficient with necessary or reversing their arrow positions."
+          ],
+          "bluffs": [
+            "Vague statements about conditions causing physical events over time without addressing logical guarantees."
+          ]
+        }
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the correct conditional translation of 'A student enters the archive only if the student has a pass'?",
+      "answerOptions": [
+        {
+          "text": "Enters archive → Has pass",
+          "isCorrect": true,
+          "rationale": "The phrase 'only if' is a Group 2 indicator that introduces 'has a pass' as a necessary condition on the right."
+        },
+        {
+          "text": "Has pass → Enters archive",
+          "isCorrect": false,
+          "rationale": "This misinterprets 'only if' as 'if', making having a pass sufficient rather than necessary."
+        },
+        {
+          "text": "Enters archive → Does not have pass",
+          "isCorrect": false,
+          "rationale": "This negates the necessary condition, contradicting the rule."
+        },
+        {
+          "text": "Does not enter archive → Has pass",
+          "isCorrect": false,
+          "rationale": "This distorts the logical requirement stated in the prompt."
+        }
+      ],
+      "hint": "Identify the Group 2 indicator 'only if' and determine what idea it makes required."
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Translate the statement 'Approval requires a signature' into a conditional diagram.",
+      "answerOptions": [
+        {
+          "text": "Approved → Has signature",
+          "isCorrect": true,
+          "rationale": "The word 'requires' indicates that 'signature' is necessary for approval, placing signature on the right."
+        },
+        {
+          "text": "Has signature → Approved",
+          "isCorrect": false,
+          "rationale": "This treats having a signature as sufficient for approval, whereas the rule only states that a signature is required."
+        },
+        {
+          "text": "Approved → No signature",
+          "isCorrect": false,
+          "rationale": "This directly contradicts the requirement stated in the rule."
+        },
+        {
+          "text": "No signature → Approved",
+          "isCorrect": false,
+          "rationale": "This is a different rule. It does not express that a signature is required for approval."
+        }
+      ],
+      "hint": "Ask what is required for approval to occur."
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which conditional diagram represents the rule 'A finalist must attend the interview'?",
+      "answerOptions": [
+        {
+          "text": "Finalist → Required to attend interview",
+          "isCorrect": true,
+          "rationale": "Here “must” states an obligation. Being a finalist establishes a requirement to attend, not actual attendance."
+        },
+        {
+          "text": "Attends interview → Finalist",
+          "isCorrect": false,
+          "rationale": "This mistakenly claims that attending an interview guarantees that someone is a finalist."
+        },
+        {
+          "text": "Finalist → Actually attends interview",
+          "isCorrect": false,
+          "rationale": "The rule establishes what a finalist must do. It does not establish that the finalist complies."
+        },
+        {
+          "text": "Attends interview → Not a finalist",
+          "isCorrect": false,
+          "rationale": "The sentence gives finalists an obligation. It does not establish anyone’s finalist status from their attendance."
+        }
+      ],
+      "hint": "Look for the indicator 'must' and ask what action is required of a finalist."
+    },
+    {
+      "type": "fill_in_the_blank",
+      "question": "In conditional diagrams, the arrow represents a logical guarantee where 'if this is true, then that must be true', rather than expressing cause or ___ order.",
+      "bestAnswer": "time",
+      "acceptableAnswers": [
+        "temporal",
+        "chronological"
+      ],
+      "rationale": "Conditional arrows express formal logical relationships rather than physical cause-and-effect or chronological time sequences.",
+      "hint": "Consider what kind of sequence (other than causal) an arrow might wrongly be thought to represent."
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Given the rule 'Every volunteer wears a badge' and the fact 'Ari wears a badge', can we conclude Ari is a volunteer?",
+      "answerOptions": [
+        {
+          "text": "No, because wearing a badge is necessary for volunteers, but other people might also wear badges.",
+          "isCorrect": true,
+          "rationale": "The rule states that all volunteers wear badges, but it does not restrict badge-wearing exclusively to volunteers."
+        },
+        {
+          "text": "Yes, because the rule guarantees that everyone wearing a badge is a volunteer.",
+          "isCorrect": false,
+          "rationale": "This reverses the direction of the rule, making an invalid inference."
+        },
+        {
+          "text": "Yes, because wearing a badge is the sufficient condition for being a volunteer.",
+          "isCorrect": false,
+          "rationale": "Being a volunteer is the sufficient condition for wearing a badge, not the other way around."
+        },
+        {
+          "text": "No, because the rule states that volunteers never wear badges.",
+          "isCorrect": false,
+          "rationale": "The premise explicitly states that every volunteer wears a badge."
+        }
+      ],
+      "hint": "Check whether wearing a badge is limited only to volunteers according to the rule."
+    },
+    {
+      "type": "multiple_select",
+      "question": "Which of the following indicators belong to Group 1, placing their target idea on the left side of the arrow?",
+      "answerOptions": [
+        {
+          "text": "when",
+          "isCorrect": true,
+          "rationale": "'When' is a Group 1 indicator that introduces a sufficient condition."
+        },
+        {
+          "text": "where",
+          "isCorrect": true,
+          "rationale": "'Where' is a Group 1 indicator that introduces a sufficient condition."
+        },
+        {
+          "text": "the only",
+          "isCorrect": true,
+          "rationale": "'The only' is a Group 1 indicator that introduces a sufficient condition."
+        },
+        {
+          "text": "only",
+          "isCorrect": false,
+          "rationale": "'Only' without 'the' belongs to Group 2 and introduces a necessary condition."
+        }
+      ],
+      "hint": "Recall which group of indicators introduce sufficient conditions rather than necessary ones.",
+      "hasAllOfTheAbove": false,
+      "hasNoneOfTheAbove": false
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Translate the rule 'A finalist always receives an invitation' into a conditional diagram.",
+      "answerOptions": [
+        {
+          "text": "Finalist → Receives invitation",
+          "isCorrect": true,
+          "rationale": "The word 'always' indicates that receiving an invitation is guaranteed for every finalist."
+        },
+        {
+          "text": "Receives invitation → Finalist",
+          "isCorrect": false,
+          "rationale": "This incorrectly claims that anyone receiving an invitation must be a finalist."
+        },
+        {
+          "text": "Finalist → Does not receive invitation",
+          "isCorrect": false,
+          "rationale": "This contradicts the stated rule that finalists always receive invitations."
+        },
+        {
+          "text": "Receives invitation → Not a finalist",
+          "isCorrect": false,
+          "rationale": "This alters the logical relationship established by the original sentence."
+        }
+      ],
+      "hint": "Identify the indicator word 'always' and determine what requirement it establishes for finalists."
+    },
+    {
+      "type": "fill_in_the_blank",
+      "question": "When translating conditional statements, you must avoid automatically assigning words based on position and instead ask what complete ___ the indicator refers to.",
+      "bestAnswer": "idea",
+      "acceptableAnswers": [
+        "concept",
+        "target idea"
+      ],
+      "rationale": "Accurate translation depends on finding the complete concept targeted by the indicator, rather than blindly taking words following it.",
+      "hint": "Focus on capturing the complete meaning targeted by the indicator."
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the correct conditional translation of 'All registered guests receive a wristband'?",
+      "answerOptions": [
+        {
+          "text": "Registered guest → Receives wristband",
+          "isCorrect": true,
+          "rationale": "The Group 1 indicator 'all' targets registered guests, placing 'Registered guest' on the left side of the arrow."
+        },
+        {
+          "text": "Receives wristband → Registered guest",
+          "isCorrect": false,
+          "rationale": "This mistake reverses the rule, claiming that anyone with a wristband is a registered guest."
+        },
+        {
+          "text": "Registered guest → Does not receive wristband",
+          "isCorrect": false,
+          "rationale": "This directly contradicts the original statement."
+        },
+        {
+          "text": "Receives wristband → Does not receive wristband",
+          "isCorrect": false,
+          "rationale": "This statement is logically incoherent."
+        }
+      ],
+      "hint": "Identify the Group 1 indicator 'all' and its target."
+    },
+    {
+      "type": "short_answer",
+      "question": "How does changing 'A student enters if the student has a pass' to 'A student enters only if the student has a pass' change the logical relationship between entering and having a pass?",
+      "hint": "Contrast what 'if' introduces versus what 'only if' introduces.",
+      "grading": {
+        "modelAnswer": "'A student enters if the student has a pass' makes having a pass sufficient to enter (Has pass → Enters). Adding 'only' creates 'only if', which makes having a pass necessary for entry (Enters → Has pass).",
+        "rationale": "The word 'if' introduces a sufficient condition, whereas 'only if' introduces a necessary condition, reversing the direction of the conditional arrow.",
+        "requiredAttributes": [
+          "States that 'if' makes having a pass sufficient (or enough) to enter.",
+          "States that 'only if' makes having a pass necessary (or required) to enter.",
+          "Describes or shows the reversal in arrow direction between the two statements."
+        ],
+        "errors": {
+          "misconceptions": [
+            "Claiming that 'if' and 'only if' express the exact same relationship.",
+            "Stating that 'only if' makes having a pass sufficient to enter."
+          ],
+          "bluffs": [
+            "Vague comments about grammar or phrasing without addressing sufficient vs. necessary concepts."
+          ]
+        }
+      }
+    },
+    {
+      "type": "multiple_choice",
+      "question": "How should 'The service operates only where a station is available' be translated?",
+      "answerOptions": [
+        {
+          "text": "Service operates → Station available",
+          "isCorrect": true,
+          "rationale": "The indicator 'only where' introduces 'station available' as a necessary condition on the right side of the arrow."
+        },
+        {
+          "text": "Station available → Service operates",
+          "isCorrect": false,
+          "rationale": "This treats having a station available as sufficient to guarantee that the service operates, which the rule does not claim."
+        },
+        {
+          "text": "Service operates → No station available",
+          "isCorrect": false,
+          "rationale": "This negates the required condition."
+        },
+        {
+          "text": "Station available → Service does not operate",
+          "isCorrect": false,
+          "rationale": "This adds a different guarantee: having a station prevents operation. The original rule does not say that."
+        }
+      ],
+      "hint": "Identify 'only where' as a Group 2 indicator pointing to a required condition."
+    },
+    {
+      "type": "fill_in_the_blank",
+      "question": "Under “Marked ready → Packed,” packed is a ___ condition for being marked ready.",
+      "bestAnswer": "necessary",
+      "acceptableAnswers": [
+        "necessary condition",
+        "required"
+      ],
+      "rationale": "Every order marked ready must be packed. Packed is required whenever ready is met, so it goes on the right.",
+      "hint": "Ask which condition is required whenever the left side is met."
+    },
+    {
+      "type": "multiple_select",
+      "question": "Which of the following statements translate to the conditional rule 'Admitted → Member'?",
+      "answerOptions": [
+        {
+          "text": "Only members are admitted.",
+          "isCorrect": true,
+          "rationale": "'Only' makes 'members' necessary for being admitted, translating to Admitted → Member."
+        },
+        {
+          "text": "The only people admitted are members.",
+          "isCorrect": true,
+          "rationale": "'The only' makes 'people admitted' sufficient, translating to Admitted → Member."
+        },
+        {
+          "text": "If someone is admitted, that person is a member.",
+          "isCorrect": true,
+          "rationale": "'If' makes being admitted sufficient for being a member, translating to Admitted → Member."
+        },
+        {
+          "text": "All members are admitted.",
+          "isCorrect": false,
+          "rationale": "This translates to Member → Admitted, which is the reverse direction."
+        }
+      ],
+      "hint": "Look for statements where being a member is required for admission, or where being admitted guarantees membership.",
+      "hasAllOfTheAbove": false,
+      "hasNoneOfTheAbove": false
+    }
+  ]
+}

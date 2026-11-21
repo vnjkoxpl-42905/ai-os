@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="lsatu-interactive-lesson" content="amanda-2026-10-21-rules-and-facts">
+<title>Rules, Facts, and What Follows · Session Manual</title>
+<style>  :root{
+    --cream:#FBF8F1; --ink:#1C1917; --ink-soft:#44403C; --ink-mute:#78716C;
+    --gold:#E8D08B; --gold-deep:#B8983F; --gold-wash:rgba(232,208,139,.16);
+    --card:#FFFFFF; --line:#E7E0D2;
+    --green:#3F6212; --green-wash:rgba(63,98,18,.09);
+    --red:#9F1239; --red-wash:rgba(159,18,57,.07);
+    --serif:"Fraunces","Garamond","Georgia",serif;
+    --sans:"Outfit","Avenir Next","Helvetica Neue",sans-serif;
+    --mono:"JetBrains Mono","SF Mono",Menlo,monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--ink);font-family:var(--sans);line-height:1.65;font-size:17px}
+  .wrap{max-width:800px;margin:0 auto;padding:0 24px}
+
+  header.hero{padding:68px 0 44px;border-bottom:1px solid var(--line)}
+  .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:18px}
+  h1{font-family:var(--serif);font-weight:600;font-size:clamp(36px,6vw,54px);line-height:1.06;letter-spacing:-.01em}
+  .hero p.lede{margin-top:20px;font-size:19px;color:var(--ink-soft);max-width:58ch}
+
+  section{padding:50px 0;border-bottom:1px solid var(--line)}
+  h2{font-family:var(--serif);font-weight:600;font-size:30px;line-height:1.15;margin-bottom:4px}
+  .sec-kicker{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:10px}
+  p{margin:14px 0;color:var(--ink-soft)}
+  p strong{color:var(--ink)}
+
+  .callout{background:var(--gold-wash);border-left:3px solid var(--gold-deep);border-radius:0 12px 12px 0;padding:16px 20px;margin:24px 0;font-size:16.5px;color:var(--ink-soft)}
+  .callout .tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-deep);display:block;margin-bottom:6px}
+  .callout strong{color:var(--ink)}
+
+  /* the three kinds */
+  .kinds{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:28px 0 8px}
+  .kind{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;box-shadow:0 1px 3px rgba(28,25,23,.06);transition:transform .18s,box-shadow .18s}
+  /* The colour carries the taxonomy, so it has to stay. A short rule inside
+     the padding does that without a 3px border running into a 14px corner. */
+  .kind .bar{display:block;width:32px;height:4px;border-radius:2px;background:var(--c);margin-bottom:14px}
+  .kind:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(28,25,23,.09)}
+  .kind.assume{--c:var(--gold-deep)}
+  .kind.object{--c:var(--red)}
+  .kind.describe{--c:var(--green)}
+  .kind .name{font-family:var(--serif);font-size:22px;color:var(--c);font-weight:600}
+  .kind .what{font-size:15px;margin:8px 0 0;color:var(--ink-soft)}
+  .kind .words{border-top:1px dashed var(--line);margin-top:14px;padding-top:12px}
+  .kind .words b{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--c);display:block;margin-bottom:7px}
+  .kind .words span{display:block;font-size:14px;color:var(--ink-mute);padding:2px 0}
+  .kind .test{margin-top:14px;background:var(--cream);border-radius:9px;padding:11px 13px;font-size:14.5px;color:var(--ink)}
+  .kind .test b{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-mute);display:block;margin-bottom:4px}
+
+  .opposite{display:flex;align-items:stretch;gap:0;margin:26px 0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--card)}
+  .opposite div{flex:1;padding:18px 20px;font-size:15.5px;color:var(--ink-soft)}
+  .opposite div:first-child{background:var(--gold-wash)}
+  .opposite div:last-child{background:var(--red-wash)}
+  .opposite b{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;margin-bottom:6px}
+  .opposite div:first-child b{color:var(--gold-deep)}
+  .opposite div:last-child b{color:var(--red)}
+
+  ol.steps{margin:20px 0;padding-left:0;list-style:none;counter-reset:step}
+  ol.steps li{counter-increment:step;position:relative;padding:14px 0 14px 54px;border-bottom:1px dashed var(--line);font-size:16px;color:var(--ink-soft)}
+  ol.steps li:last-child{border-bottom:none}
+  ol.steps li::before{content:counter(step);position:absolute;left:0;top:12px;width:34px;height:34px;border-radius:50%;background:var(--ink);color:var(--cream);font-family:var(--serif);display:flex;align-items:center;justify-content:center;font-size:16px}
+  ol.steps li b{color:var(--ink)}
+
+  .flags{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 4px}
+  .flag{font-family:var(--mono);font-size:12.5px;letter-spacing:.04em;background:var(--red-wash);color:var(--red);border:1px solid rgba(159,18,57,.2);border-radius:999px;padding:6px 14px}
+
+  .drill{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;margin:26px 0;box-shadow:0 2px 8px rgba(28,25,23,.06)}
+  .drill h3{font-family:var(--serif);font-size:19px;margin-bottom:4px}
+  .drill p.hint{font-size:14px;color:var(--ink-mute);margin:0 0 14px}
+  .chips{display:flex;gap:8px;flex-wrap:wrap}
+  .chip{font-family:var(--mono);font-size:13px;background:var(--cream);border:1px solid var(--line);border-radius:999px;padding:8px 15px;cursor:pointer;transition:all .16s;color:var(--ink-soft)}
+  .chip:hover{border-color:var(--ink-mute)}
+  .chip.on[data-k="assume"]{background:var(--gold-wash);border-color:var(--gold-deep);color:var(--gold-deep)}
+  .chip.on[data-k="object"]{background:var(--red-wash);border-color:var(--red);color:var(--red)}
+  .chip.on[data-k="describe"]{background:var(--green-wash);border-color:var(--green);color:var(--green)}
+  .chip .ans{display:none;font-weight:600}
+  .chip.on .ans{display:inline;margin-left:8px}
+
+  .quote{font-family:var(--serif);font-size:20px;line-height:1.45;color:var(--ink);border-left:3px solid var(--gold);padding:4px 0 4px 22px;margin:24px 0;font-style:italic}
+  .footer-note{padding:34px 0 56px}
+  .mark{font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-mute);opacity:.7}
+  .chip.on[data-k="neutral"]{background:var(--gold-wash);border-color:var(--ink-mute);color:var(--ink)}
+  .kind.link{--c:var(--gold-deep)}
+  .kind.apply{--c:var(--green)}
+  .kind.warn{--c:var(--red)}
+  .rule{font-family:var(--serif);font-size:20px;color:var(--ink);margin:18px 0}
+  .rule .ar{color:var(--gold-deep);font-weight:700;margin:0 6px}
+  table.t{width:100%;border-collapse:collapse;margin:20px 0;font-size:15.5px;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  table.t th{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold-deep);text-align:left;padding:12px 16px;border-bottom:1px solid var(--line)}
+  table.t td{padding:11px 16px;border-bottom:1px dashed var(--line);color:var(--ink-soft);vertical-align:top}
+  table.t tr:last-child td{border-bottom:none}
+  table.t td:first-child{color:var(--ink);font-weight:600;white-space:nowrap}
+  pre{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;font-family:var(--serif);font-size:18px;overflow-x:auto}
+  @media (max-width:560px){.opposite{flex-direction:column}table.t td:first-child{white-space:normal}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+/* Amanda's Session Manual: local teaching diagrams and native disclosures. */
+:root{--gold-deep:#785b16;--ink-mute:#625b55}
+body{font-size:18px;overflow-wrap:break-word}
+.kicker,.sec-kicker,.callout .tag{letter-spacing:.1em}
+.kinds{grid-template-columns:1fr;gap:20px}
+.kind{padding:24px}.kind:hover{transform:none}.kind .what{font-size:17px}.kind .name{font-size:25px}
+.kind .test{font-size:17px}.kind .test b{font-size:12px}.kind .words span{font-size:17px}
+.cs-figure{margin:20px 0;display:grid;grid-template-columns:minmax(0,1fr) 34px minmax(0,1fr);align-items:stretch;gap:8px}
+.cs-half{padding:15px;border:1px solid var(--line);border-radius:10px;background:var(--cream);color:var(--ink)}
+.cs-half b,.piece-label{display:block;font-size:12px;font-family:var(--mono);letter-spacing:.05em;margin-bottom:7px;color:var(--ink-soft)}
+.cs-arrow{align-self:center;text-align:center;font-size:26px;color:var(--gold-deep)}
+.shared{background:#edf2e6;border-color:#85996b}.result{padding:16px 18px;border-left:4px solid var(--green);background:var(--green-wash);margin-top:16px}
+.result b{display:block;color:#34530c}.chain-row{margin-top:10px}.and-input{display:flex;flex-direction:column;gap:8px}.and-word{font-weight:700;text-align:center;color:var(--green)}
+table.t{table-layout:fixed;font-size:16px}table.t caption{text-align:left;font-size:16px;color:var(--ink-soft);padding:0 0 12px}
+table.t th{font-size:12px;letter-spacing:.04em;padding:13px 10px}table.t td{padding:14px 10px}table.t td:first-child{white-space:normal}
+table.t th:nth-child(1){width:17%}table.t th:nth-child(2){width:28%}table.t th:nth-child(3){width:29%}table.t th:nth-child(4){width:26%}
+details{border:1px solid var(--line);border-radius:10px;background:var(--card);margin:12px 0;overflow:hidden}summary{cursor:pointer;padding:14px 16px;font-weight:600;color:var(--ink);line-height:1.5}details[open] summary{border-bottom:1px solid var(--line);background:var(--gold-wash)}details p{padding:0 16px;margin:14px 0}
+summary:focus-visible,button:focus-visible{outline:3px solid #1b5571;outline-offset:-4px;border-radius:5px}
+.case-number{font-family:var(--mono);font-size:12px;color:var(--gold-deep);display:block;margin-bottom:3px}.drill h3{font-size:23px}.drill p.hint{font-size:16px}.opposite div{font-size:17px}.opposite b{font-size:12px;letter-spacing:.04em}
+@media(max-width:600px){.wrap{padding:0 20px}header.hero{padding-top:42px}section{padding:36px 0}.kind,.drill{padding:18px}.cs-figure{grid-template-columns:1fr;gap:8px}.cs-arrow{transform:rotate(90deg);line-height:1.1}.opposite{flex-direction:column}table.t,table.t tbody,table.t tr,table.t td{display:block;width:100%}table.t thead{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}table.t tr{padding:14px 16px;border-bottom:1px solid var(--line)}table.t td{border:0;padding:5px 0}table.t td::before{content:attr(data-label) ": ";font-weight:600;color:var(--ink)}table.t td:first-child{font-family:var(--serif);font-size:23px}table.t td:first-child::before{content:none}table.t caption{display:block}h2{font-size:28px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+[hidden]{display:none!important}.explorer{margin:24px 0;padding:22px;border:1px solid #c9c0ac;border-radius:16px;background:#fff}.explorer h3{font-family:var(--serif);font-size:25px;line-height:1.2;margin-bottom:14px}.explorer h4{font-family:var(--serif);font-size:28px;margin-top:22px}.concept-tabs,.fact-choices{display:flex;flex-wrap:wrap;gap:8px}button{font:inherit;line-height:1.4;cursor:pointer;border:1px solid #b8b0a2;border-radius:9px;padding:10px 14px;background:var(--cream);color:var(--ink)}button[aria-selected=true],button[aria-pressed=true]{background:#193e37;color:#fff;border-color:#193e37;box-shadow:0 0 0 2px #fff,0 0 0 3px #193e37}.concept-tabs button{flex:1 0 28%;transition:background-color .18s}.concept-art{display:block;width:100%;max-height:170px;margin:18px 0;background:#f4f5ef;border-radius:12px}.concept-art rect{fill:#fff;stroke:#a1b29d;stroke-width:2}.concept-art path{fill:none;stroke:#345948;stroke-width:3}.concept-art text{font:16px var(--sans);fill:var(--ink)}.concept-art .big-number{font:58px var(--serif);fill:#345948}.example{border-left:3px solid #557967;padding-left:16px}.trace-art{width:100%;display:block;margin:15px 0}.trace-art path{fill:none;stroke-width:4}.trace-base{stroke:#d2d7cb}.trace-line{stroke:#456f50}.trace-art circle{fill:#456f50}.trace-art text{font:14px var(--sans);fill:var(--ink)}.trace-caption{font-size:16px}.application-diagram{display:grid;grid-template-columns:1fr 30px 1fr;gap:12px;align-items:center;margin:24px 0}.application-diagram>div{border:1px solid #b3c2a8;background:#f2f5ed;border-radius:12px;padding:16px;min-height:105px}#application-connector{font-size:28px;text-align:center}#application-result{margin-bottom:0}.supply-status{display:block;font-size:14px;margin-top:6px}.fact-choices button{flex:1 0 45%;text-align:left}#and-result{border-left:4px solid #557967;padding:16px;margin-top:22px;background:#eef3e7}#and-result p{margin-bottom:0}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}summary:focus-visible{outline-offset:-4px}.cs-half.shared{background:#e5eed9;border-color:#6d8656}.result{background:#e7efea;border-left-color:#28594d}.result b{color:#214b42}
+@media(max-width:600px){.explorer{padding:16px}.fact-choices button{flex-basis:100%}.application-diagram{grid-template-columns:1fr}.application-diagram>div{min-height:0}#application-connector[data-direction="forward"]{transform:rotate(90deg)}.concept-art text{font-size:16px}.trace-art text{font-size:15px}.concept-tabs button{padding:10px 7px;font-size:16px}}
+.concept-mobile,.trace-mobile{display:none}@media(max-width:600px){.concept-art,.trace-art{display:none}.concept-mobile{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px;background:#f1f5ec;border:1px solid #cad5be;border-radius:12px;padding:18px;margin:18px 0;font-size:18px}.concept-mobile span{display:block;text-align:center;flex:1 0 100%;line-height:1.5}.concept-mobile span:first-child{font-weight:600}.trace-mobile{display:flex;position:relative;flex-direction:column;align-items:center;gap:8px;margin:24px 0}.trace-mobile>svg{position:absolute;top:0;height:100%;width:10px;z-index:0}.trace-mobile path{fill:none;stroke:#456f50;stroke-width:3}.trace-mobile>span{position:relative;z-index:1;display:block;font-size:18px;line-height:1.5;text-align:center;background:#f2f5ed;border:1px solid #b3c2a8;border-radius:10px;padding:12px;width:100%}.trace-mobile>b{position:relative;z-index:1;background:#fff;color:#345948;font-size:24px;line-height:1.1}}
+.cs-half.derived{background:#e7efea;border-color:#28594d;border-left:4px solid #28594d}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap">
+<div class="kicker">Session Manual · October 21</div>
+<h1>Rules, Facts,<br>and What Follows</h1>
+<p class="lede">Two useful tasks from our session: join rules into a longer chain, and apply a rule to a fact. A question can need both. Start by seeing what each sentence gives you.</p>
+</div></header>
+
+<section id="sentence-types"><div class="wrap">
+<div class="sec-kicker">Read with a purpose</div><h2>What kind of claim is this?</h2>
+<p>As you finish a sentence, name what it says. These six types give you something specific to notice.</p>
+<table class="t" role="table"><caption>Read the meaning, then compare the example.</caption><thead role="rowgroup"><tr role="row"><th scope="col" role="columnheader">Type</th><th scope="col" role="columnheader">Meaning</th><th scope="col" role="columnheader">Example</th><th scope="col" role="columnheader">Ask yourself</th></tr></thead><tbody role="rowgroup">
+<tr role="row"><td role="cell" data-label="Type">Fact</td><td role="cell" data-label="Meaning">What is true in the situation.</td><td role="cell" data-label="Example">The library is open.</td><td role="cell" data-label="Ask yourself">What am I told is the case?</td></tr>
+<tr role="row"><td role="cell" data-label="Type">Rule</td><td role="cell" data-label="Meaning">If one complete condition is true, another must be true.</td><td role="cell" data-label="Example">If the library is open, its lights must be on.</td><td role="cell" data-label="Ask yourself">What is guaranteed, and under what condition?</td></tr>
+<tr role="row"><td role="cell" data-label="Type">Causal</td><td role="cell" data-label="Meaning">One thing produces or influences another.</td><td role="cell" data-label="Example">The outage caused the closure.</td><td role="cell" data-label="Ask yourself">What is said to affect what?</td></tr>
+<tr role="row"><td role="cell" data-label="Type">Correlation</td><td role="cell" data-label="Meaning">Two things occur together or vary together.</td><td role="cell" data-label="Example">Libraries with longer hours tend to have more visitors.</td><td role="cell" data-label="Ask yourself">Is this an association, or a claim about cause?</td></tr>
+<tr role="row"><td role="cell" data-label="Type">Normative</td><td role="cell" data-label="Meaning">What should happen, or is right, wrong, permitted or required.</td><td role="cell" data-label="Example">The library should open later.</td><td role="cell" data-label="Ask yourself">What is recommended or required?</td></tr>
+<tr role="row"><td role="cell" data-label="Type">Quantity</td><td role="cell" data-label="Meaning">How many or how much: some, most, all, none, a count or percentage.</td><td role="cell" data-label="Example">Some library visitors are students.</td><td role="cell" data-label="Ask yourself">How much is claimed, and about whom?</td></tr>
+</tbody></table>
+<div id="concept-explorer" class="explorer" hidden><h3>See what each claim gives you</h3><div class="concept-tabs" role="tablist" aria-label="Sentence types"><button type="button" role="tab" id="tab-fact" data-concept="fact" aria-controls="panel-fact" aria-selected="false" tabindex="-1">Fact</button><button type="button" role="tab" id="tab-rule" data-concept="rule" aria-controls="panel-rule" aria-selected="false" tabindex="-1">Rule</button><button type="button" role="tab" id="tab-causal" data-concept="causal" aria-controls="panel-causal" aria-selected="false" tabindex="-1">Causal</button><button type="button" role="tab" id="tab-correlation" data-concept="correlation" aria-controls="panel-correlation" aria-selected="false" tabindex="-1">Correlation</button><button type="button" role="tab" id="tab-normative" data-concept="normative" aria-controls="panel-normative" aria-selected="false" tabindex="-1">Normative</button><button type="button" role="tab" id="tab-quantity" data-concept="quantity" aria-controls="panel-quantity" aria-selected="false" tabindex="-1">Quantity</button></div><div id="panel-fact" role="tabpanel" aria-labelledby="tab-fact" tabindex="0" hidden><h4>Fact</h4><p>A fact gives you something to work with.</p><svg class="concept-art" viewBox="0 0 480 130" role="img" aria-label="Given: reading room open"><rect x="110" y="32" width="260" height="66" rx="12"/><text x="240.0" y="71" text-anchor="middle">Given: reading room open</text></svg><div class="concept-mobile" aria-hidden="true"><span>Given: reading room open</span></div><p class="example"><b>Example</b> The reading room is open right now.</p><p>That is given in this example. It does not by itself say a librarian is on duty; you would need a rule connecting those conditions.</p></div><div id="panel-rule" role="tabpanel" aria-labelledby="tab-rule" tabindex="0" hidden><h4>Rule</h4><p>A rule links complete conditions, whether or not they occur.</p><svg class="concept-art" viewBox="0 0 480 130" role="img" aria-label="If the reading room is open, a librarian must be on duty"><rect x="5" y="32" width="195" height="66" rx="12"/><text x="102.5" y="71" text-anchor="middle">Reading room open</text><path d="M210 65 H263 M251 56 L263 65 L251 74"/><rect x="278" y="32" width="195" height="66" rx="12"/><text x="375.5" y="71" text-anchor="middle">Librarian on duty</text></svg><div class="concept-mobile" aria-hidden="true"><span>Reading room open</span><span>Librarian on duty</span></div><p class="example"><b>Example</b> If the reading room is open, a librarian must be on duty.</p><p>An open reading room without a librarian on duty is ruled out. A librarian could be on duty while the room is closed. The rule alone does not say the room is open.</p></div><div id="panel-causal" role="tabpanel" aria-labelledby="tab-causal" tabindex="0" hidden><h4>Causal</h4><p>A causal claim says what produces or influences something.</p><svg class="concept-art" viewBox="0 0 480 130" role="img" aria-label="Claimed cause: renovation caused library closure"><rect x="5" y="32" width="195" height="66" rx="12"/><text x="102.5" y="71" text-anchor="middle">Renovation</text><path d="M210 65 H263 M251 56 L263 65 L251 74"/><text x="238" y="22" text-anchor="middle">caused</text><rect x="278" y="32" width="195" height="66" rx="12"/><text x="375.5" y="71" text-anchor="middle">Library closure</text></svg><div class="concept-mobile" aria-hidden="true"><span>Renovation</span><span>caused</span><span>Library closure</span></div><p class="example"><b>Example</b> The renovation caused the library to close.</p><p>This claims the renovation produced the closure. It does not say the renovation was the only contributing cause, or give a rule about every renovation.</p></div><div id="panel-correlation" role="tabpanel" aria-labelledby="tab-correlation" tabindex="0" hidden><h4>Correlation</h4><p>A correlation describes an association.</p><svg class="concept-art" viewBox="0 0 480 130" role="img" aria-label="Branches with cafés are associated with longer visits, without a causal direction"><rect x="5" y="32" width="195" height="66" rx="12"/><text x="102.5" y="71" text-anchor="middle">Branches with cafés</text><path class="association" d="M210 65 H270" stroke-dasharray="3 6"/><text x="240" y="22" text-anchor="middle">Associated</text><rect x="278" y="32" width="195" height="66" rx="12"/><text x="375.5" y="71" text-anchor="middle">Longer visits</text></svg><div class="concept-mobile" aria-hidden="true"><span>Branches with cafés</span><span>Associated</span><span>Longer visits</span></div><p class="example"><b>Example</b> Branches with cafés tend to have longer visits.</p><p>The two characteristics go together. This claim alone does not show that cafés caused longer visits. Perhaps branches serving people who stay longer choose to add cafés.</p></div><div id="panel-normative" role="tabpanel" aria-labelledby="tab-normative" tabindex="0" hidden><h4>Normative</h4><p>A normative claim says what ought to happen or what is permitted or required.</p><svg class="concept-art" viewBox="0 0 480 130" role="img" aria-label="Recommended: return books by Friday. Actual returns unknown"><rect x="5" y="32" width="220" height="66" rx="12"/><text x="115.0" y="71" text-anchor="middle">Return by Friday</text><rect x="250" y="32" width="225" height="66" rx="12"/><text x="362.5" y="71" text-anchor="middle">Actual returns unknown</text></svg><div class="concept-mobile" aria-hidden="true"><span>Return by Friday</span><span>Actual returns unknown</span></div><p class="example"><b>Example</b> Visitors should return books by Friday.</p><p>This recommends a return deadline. Whether visitors actually return their books by Friday is unknown. Do not turn the recommendation into a fact about compliance.</p></div><div id="panel-quantity" role="tabpanel" aria-labelledby="tab-quantity" tabindex="0" hidden><h4>Quantity</h4><p>A quantity claim tells you how much of a group is covered.</p><svg class="concept-art" viewBox="0 0 480 130" role="img" aria-label="Some means at least one library book is available online, possibly all"><text class="big-number" x="110" y="85">1+</text><text x="285" y="56" text-anchor="middle">At least one book</text><text x="285" y="85" text-anchor="middle">Possibly all books</text></svg><div class="concept-mobile" aria-hidden="true"><span>1+</span><span>At least one book</span><span>Possibly all books</span></div><p class="example"><b>Example</b> Some library books are available online.</p><p>At least one library book is available online. More could be available, possibly all. It does not identify any particular book as available online.</p></div></div>
+<p class="overlap"><strong>One sentence can fit more than one type.</strong> “Some visitors should register” combines quantity and normative language. Keep the amount and the recommendation.</p>
+<details><summary>Can one sentence fit more than one type?</summary><p>Yes. “Some library visitors are students” gives a quantity and states a fact. “Every visitor should register” combines quantity and normative language. These labels help you read; they aren't sealed boxes.</p></details>
+<p>In our conditional rules, <strong>must</strong> marks a logical guarantee. In a claim about duties, “must register” can mean registration is required; it doesn't prove anyone complied. Read the whole claim.</p>
+<p>Keep asking which claims support the conclusion. A correlation alone doesn't show that one thing caused the other. “Should” doesn't mean “does,” and “some visitors” doesn't mean this particular visitor.</p>
+<div class="callout"><span class="tag">A fact can activate a rule</span>The rule doesn't say the library is open. A separate fact can supply that condition. Keep the rule and the fact distinct.</div>
+<p><strong>Watch but, yet and however.</strong> Check how the ideas on either side relate. The contrast can matter, but it doesn't guarantee where the answer will come from.</p>
+</div></section>
+
+<section id="two-jobs"><div class="wrap">
+<div class="sec-kicker">Two different tasks</div><h2>Link rules. Apply a rule.</h2>
+<div class="kinds">
+<article class="kind link"><span class="bar"></span><h3 class="name">1. Link two rules</h3><p class="what">The same complete idea joins the rules.</p>
+<div class="cs-figure"><div class="cs-half"><b>Rule 1 · If</b>The library is open</div><div class="cs-arrow" role="img" aria-label="then">→</div><div class="cs-half shared"><b>Then · must be true</b>The lights are on</div></div>
+<div class="cs-figure chain-row"><div class="cs-half shared"><b>Rule 2 · If</b>The lights are on</div><div class="cs-arrow" role="img" aria-label="then">→</div><div class="cs-half"><b>Then · must be true</b>The main circuit has power</div></div>
+<div id="trace-chain" class="explorer"><div class="enhanced-controls" hidden><button type="button">Trace the connection</button></div><svg class="trace-art" viewBox="0 0 600 120" role="img" aria-label="Forward conditional chain from library open through lights on to main circuit has power"><defs><marker id="trace-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" style="fill:#456f50;stroke:none;stroke-width:0"/></marker></defs><path class="trace-base" d="M80 60 H520" marker-end="url(#trace-arrow)"/><path class="trace-line" d="M80 60 H520" pathLength="1"/><circle cx="80" cy="60" r="9"/><circle cx="300" cy="60" r="9"/><circle cx="520" cy="60" r="9"/><text x="80" y="100" text-anchor="middle">Library open</text><text x="300" y="27" text-anchor="middle">Lights on</text><text x="520" y="100" text-anchor="middle">Circuit has power</text></svg><div class="trace-mobile" role="img" aria-label="Forward conditional chain: library open, lights on, circuit has power"><svg aria-hidden="true" viewBox="0 0 10 240" preserveAspectRatio="none"><path class="trace-line" d="M5 5 V235" pathLength="1"/></svg><span>Library open</span><b aria-hidden="true">↓</b><span>Lights on</span><b aria-hidden="true">↓</b><span>Circuit has power</span></div><p class="trace-caption" aria-live="polite">The two rules share “the lights are on.” Follow each rule forward to get the combined rule.</p></div><div class="result"><b>The new rule</b>If the library is open, the main circuit must have power.</div>
+<p>The first rule gets you to “lights are on.” The second takes that same condition to “main circuit has power.”</p>
+<details><summary>What else does this chain tell you?</summary><p>Its contrapositive: if the main circuit has no power, the library must not be open. Neither rule tells you whether the library actually is open or the circuit actually has power.</p></details></article>
+<article class="kind apply"><span class="bar"></span><h3 class="name">2. Apply a rule to a fact</h3>
+<p class="what"><strong>Rule:</strong> If the library is open, the lights must be on.</p>
+<div class="cs-figure"><div class="cs-half"><b>Supplied fact</b>The library is open</div><div class="cs-arrow" role="img" aria-label="therefore">→</div><div class="cs-half derived"><b>What follows</b>The lights are on</div></div>
+<p>The fact meets the rule's condition, so its requirement must be true. This time you get a fact, not just another rule.</p>
+</article></div>
+<div class="quote">When I tried to bait you with the outcome, you said nothing follows, and you were right. Don't switch off that answer when someone pushes. Keep using it.</div>
+</div></section>
+
+<section id="fact-cases"><div class="wrap">
+<div class="sec-kicker">Change only the fact</div><h2>Four facts. Four separate cases.</h2>
+<p><strong>Same rule each time:</strong> If the library is open, the lights must be on.</p>
+<p>Each case starts fresh. Decide what follows from that one fact before opening the explanation.</p>
+<div id="application-explorer" class="explorer" hidden><h3>Supply one fact</h3><div class="fact-choices" role="group" aria-label="Choose the supplied fact"><button type="button" data-supplied-fact="left-true" aria-pressed="false">The library is open</button><button type="button" data-supplied-fact="right-false" aria-pressed="false">The lights aren't on</button><button type="button" data-supplied-fact="right-true" aria-pressed="false">The lights are on</button><button type="button" data-supplied-fact="left-false" aria-pressed="false">The library isn't open</button></div><div class="application-diagram"><div><span class="piece-label">Supplied fact</span><strong id="application-fact"></strong></div><span id="application-connector" aria-hidden="true">?</span><div><span class="piece-label">What can you conclude?</span><span id="application-conclusion">Think first.</span></div></div><p id="application-prompt">What follows from this fact and the rule? Explain why before checking.</p><button id="show-application-reasoning" type="button" aria-expanded="false" aria-controls="application-result">Show reasoning</button><div id="application-result" class="result" hidden></div><p id="application-announcement" class="sr-only" aria-live="polite"></p><p id="contrapositive-rule" hidden><strong>Use the contrapositive forward:</strong> If the lights aren't on, the library must not be open.</p></div><div id="fact-case-fallback"><details data-fact-case="left-true"><summary><span class="case-number">Case 1 · Matches the left side</span>The library is open.</summary><p><strong>The lights must be on.</strong> An open library with its lights off would break the rule.</p></details>
+<details data-fact-case="right-false"><summary><span class="case-number">Case 2 · Denies the right side</span>The lights aren't on.</summary><p><strong>The library isn't open.</strong> If it were open, its lights would have to be on. This is the contrapositive.</p></details>
+<details data-fact-case="right-true"><summary><span class="case-number">Case 3 · Matches the right side</span>The lights are on.</summary><p><strong>We don't know whether the library is open.</strong> It could be closed with the lights on for cleaners. That possibility fits the rule.</p></details>
+<details data-fact-case="left-false"><summary><span class="case-number">Case 4 · Denies the left side</span>The library isn't open.</summary><p><strong>We don't know whether the lights are on.</strong> A closed library could have its lights off or leave them on for cleaners. The rule allows either.</p></details>
+</div><p>The arrow gives a guarantee. It doesn't itself tell you what causes the lights to be on.</p>
+</div></section>
+
+<section id="same-pieces"><div class="wrap">
+<div class="sec-kicker">Use the same pieces</div><h2>Sufficient Assumption and Must Be True</h2>
+<p>Here's a simple way to see their different jobs.</p>
+<div class="callout"><span class="tag">Rule · Fact · Conclusion</span>If the library is open, the lights must be on.<br>The library is open.<br>Therefore, the lights are on.</div>
+<div class="opposite"><div><b>Sufficient Assumption</b>Given “the library is open,” what added rule would guarantee “the lights are on”? Our rule supplies that connection. Or, if the rule is given and the fact is missing, adding “the library is open” would complete this argument.</div><div><b>Must Be True</b>Given both the rule and the fact, what must follow? The lights are on.</div></div>
+<p>In Sufficient Assumption, the added answer works with the evidence to guarantee the conclusion. In Must Be True, follow the evidence to a guaranteed answer. These examples show the distinction; other questions can use more pieces.</p>
+</div></section>
+
+<section id="and-trap"><div class="wrap">
+<div class="sec-kicker">Keep the whole condition</div><h2>When the left side has an “and”</h2>
+<div class="cs-figure"><div class="cs-half and-input"><b>If both are true</b><span>The trail is dry</span><span class="and-word">and</span><span>The guide is certified</span></div><div class="cs-arrow" role="img" aria-label="then">→</div><div class="cs-half"><b>Then · must be true</b>The hike goes ahead</div></div>
+<div id="and-explorer" class="explorer" hidden><h3>Which facts have you been given?</h3><p>Supply a fact to use it. A fact not supplied is unknown, not false.</p><div class="fact-choices" role="group" aria-label="Supply the facts for the combined condition"><button type="button" data-given-fact="trail" aria-pressed="false" aria-label="Supply the fact: the trail is dry" aria-describedby="trail-supply-status">Supply the fact: the trail is dry<span class="supply-status" id="trail-supply-status" aria-hidden="true">Not supplied (unknown)</span></button><button type="button" data-given-fact="guide" aria-pressed="false" aria-label="Supply the fact: the guide is certified" aria-describedby="guide-supply-status">Supply the fact: the guide is certified<span class="supply-status" id="guide-supply-status" aria-hidden="true">Not supplied (unknown)</span></button></div><div id="and-result" aria-live="polite"><div data-and-state="00"><b>No facts supplied.</b><p>Whether the trail is dry and whether the guide is certified are both unknown. The rule alone leaves whether the hike goes ahead unknown.</p></div><div data-and-state="10" hidden><b>Given: the trail is dry.</b><p>The guide's certification is unknown. Only one part of the combined condition is given, so whether the hike goes ahead is unknown.</p></div><div data-and-state="01" hidden><b>Given: the guide is certified.</b><p>Whether the trail is dry is unknown. Only one part of the combined condition is given, so whether the hike goes ahead is unknown.</p></div><div data-and-state="11" hidden><b>Given: the trail is dry and the guide is certified.</b><p>Both parts of the sufficient condition are met. The hike must go ahead.</p></div></div></div><p>Given both conditions, the hike must go ahead. Having only a certified guide doesn't meet the whole condition.</p>
+<div class="callout"><span class="tag">The contrapositive</span>If the hike doesn't go ahead, the trail isn't dry <strong>or</strong> the guide isn't certified, or both. At least one required part of the combined condition must be missing.</div>
+<details><summary>The guide is certified and the hike goes ahead. Must the trail be dry?</summary><p><strong>No.</strong> They could hike on a wet trail. The rule guarantees a hike when both conditions hold; it doesn't say those are the only circumstances in which a hike can happen.</p></details>
+<div class="quote">You named this exact structure on the book tour question: two ideas on the left, one of them given, the result given, and a conclusion that claims the remaining left-side condition. That's how you picked C.</div>
+</div></section>
+
+<section id="practice"><div class="wrap">
+<div class="sec-kicker">Try the reasoning</div><h2>Explain your answer, then check</h2>
+<div class="drill"><h3>What kind of claim is it?</h3><p class="hint">Name the type and the words that support your answer.</p>
+<details><summary>Hospitals with more nurses tend to have shorter waits.</summary><p><strong>Correlation.</strong> “Tend to” describes an association between staffing and waits. It doesn't by itself say extra nurses caused the shorter waits.</p></details>
+<details><summary>The outage caused the game to be cancelled.</summary><p><strong>Causal.</strong> “Caused” claims the outage produced the cancellation. It needn't mean the outage was the only contributing cause.</p></details>
+<details><summary>The city should run more night buses.</summary><p><strong>Normative.</strong> “Should” recommends what the city ought to do. It doesn't say the city already does it.</p></details>
+<details><summary>Some of the nurses work weekends.</summary><p><strong>Quantity and fact.</strong> “Some” says at least one nurse works weekends. It doesn't tell you that most do, or whether a particular nurse does.</p></details>
+</div>
+<div class="drill"><h3>What follows from the whole condition?</h3><p class="hint">Rule: If the soup is salted and stirred, it must be ready. Treat each case separately.</p>
+<details><summary>The soup is salted and stirred.</summary><p><strong>It's ready.</strong> Both parts of the sufficient condition are met.</p></details>
+<details><summary>The soup isn't ready.</summary><p><strong>It isn't salted or isn't stirred, or both.</strong> If both were true, it would have to be ready.</p></details>
+<details><summary>The soup is salted, and it's ready.</summary><p><strong>We don't know whether it's stirred.</strong> Being ready doesn't prove both conditions were met. Salted, unstirred soup that's ready would still fit the rule.</p></details>
+<details><summary>The soup isn't salted.</summary><p><strong>We don't know whether it's ready.</strong> The rule guarantees readiness when both conditions hold. It leaves other cases open.</p></details>
+</div>
+</div></section>
+
+<section><div class="wrap"><div class="sec-kicker">Carry it into the next question</div><h2>When you get stuck</h2>
+<ol class="steps"><li><b>Sort the claims.</b> Track the evidence and conclusion.</li><li><b>Look for a connection.</b> Can you link rules, apply a rule to a fact, or do both?</li><li><b>Keep complete conditions.</b> Match the left side or deny the right side. Don't reverse the arrow.</li><li><b>Check “and.”</b> One part plus the result doesn't prove the other part.</li><li><b>Write one line</b> explaining why the tempting answer fails.</li></ol>
+</div></section>
+
+<section id="homework"><div class="wrap"><div class="sec-kicker">Before next session</div><h2>Your work this week</h2>
+<ol class="steps"><li><b>Unless drill,</b> as often as you can, until you clear it at 5 seconds.</li><li><b>Sort every sentence</b> by its sentence type, on every question you do.</li><li><b>Conditionals on Parallel and Must Be True questions.</b> Keep the Parallel Reasoning note open while you work.</li><li><b>Your assigned practice:</b> Conditional Rephrase; Must Be True - First Taste (6 questions); and Parallel Flaw + Famous Flaws (Set 2) (5 questions). All four assignments, including Unless Drill, are in your Classroom, due 2026-11-01.</li><li><b>Squeeze every question.</b> Before you move on, ask what it taught you.</li></ol>
+</div></section>
+<div class="footer-note"><div class="wrap"><span class="mark">LSAT U</span></div></div>
+<script>
+(function(){
+'use strict';
+const motion=window.matchMedia('(prefers-reduced-motion: reduce)');
+const running=new Set();
+function stopMotion(){running.forEach(a=>a.cancel());running.clear();}
+motion.addEventListener('change',e=>{if(e.matches)stopMotion();});
+function emphasize(el){if(motion.matches||!el.animate)return;const a=el.animate([{outline:'3px solid #456f50',outlineOffset:'3px'},{outline:'3px solid transparent',outlineOffset:'3px'}],{duration:650,iterations:1});running.add(a);a.onfinish=()=>running.delete(a);}
+const explorer=document.getElementById('concept-explorer');
+const tabs=[...explorer.querySelectorAll('[role=tab]')];
+function selectTab(i,focus){tabs.forEach((t,j)=>{const selected=i===j;t.setAttribute('aria-selected',String(selected));t.tabIndex=selected?0:-1;document.getElementById(t.getAttribute('aria-controls')).hidden=!selected;});if(focus)tabs[i].focus();}
+tabs.forEach((t,i)=>{t.addEventListener('click',()=>selectTab(i,false));t.addEventListener('keydown',e=>{let n=i;if(e.key==='ArrowRight')n=(i+1)%tabs.length;else if(e.key==='ArrowLeft')n=(i+tabs.length-1)%tabs.length;else if(e.key==='Home')n=0;else if(e.key==='End')n=tabs.length-1;else return;e.preventDefault();selectTab(n,true);});});selectTab(0,false);
+const trace=document.getElementById('trace-chain');trace.querySelector('button').addEventListener('click',()=>{stopMotion();trace.querySelectorAll('.trace-line').forEach(line=>{if(!motion.matches&&line.animate&&line.getClientRects().length){const a=line.animate([{strokeDasharray:'1',strokeDashoffset:1},{strokeDasharray:'1',strokeDashoffset:0}],{duration:1200,iterations:1});running.add(a);a.onfinish=()=>running.delete(a);}});document.querySelectorAll('.kind.link .cs-half.shared').forEach(emphasize);});
+const app=document.getElementById('application-explorer');const choices=[...app.querySelectorAll('[data-supplied-fact]')];const reveal=document.getElementById('show-application-reasoning');const result=document.getElementById('application-result');const conclusion=document.getElementById('application-conclusion');const connector=document.getElementById('application-connector');const announcement=document.getElementById('application-announcement');const fallback=document.getElementById('fact-case-fallback');let selected=choices[0];
+function choose(b){selected=b;choices.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));document.getElementById('application-fact').textContent=b.textContent;result.hidden=true;result.replaceChildren();reveal.setAttribute('aria-expanded','false');conclusion.textContent='Think first.';connector.textContent='?';connector.removeAttribute('data-direction');document.getElementById('contrapositive-rule').hidden=true;announcement.textContent=b.textContent;}
+choices.forEach(b=>b.addEventListener('click',()=>choose(b)));
+reveal.addEventListener('click',()=>{const open=reveal.getAttribute('aria-expanded')==='true';reveal.setAttribute('aria-expanded',String(!open));result.hidden=open;if(open){conclusion.textContent='Think first.';connector.textContent='?';connector.removeAttribute('data-direction');document.getElementById('contrapositive-rule').hidden=true;return;}const key=selected.dataset.suppliedFact;const answer=fallback.querySelector('[data-fact-case="'+key+'"] p');result.replaceChildren(answer.cloneNode(true));conclusion.textContent=answer.querySelector('strong').textContent;connector.textContent=(key==='left-true'||key==='right-false')?'→':'?';if(key==='left-true'||key==='right-false')connector.dataset.direction='forward';else connector.removeAttribute('data-direction');document.getElementById('contrapositive-rule').hidden=key!=='right-false';announcement.textContent=answer.textContent;emphasize(result);});choose(choices[0]);
+const and=document.getElementById('and-explorer');const givens=[...and.querySelectorAll('[data-given-fact]')];const outcomes=[...and.querySelectorAll('[data-and-state]')];function updateAnd(){const state=givens.map(b=>b.getAttribute('aria-pressed')==='true'?'1':'0').join('');outcomes.forEach(o=>o.hidden=o.dataset.andState!==state);}
+givens.forEach(b=>b.addEventListener('click',()=>{const active=b.getAttribute('aria-pressed')!=='true';b.setAttribute('aria-pressed',String(active));b.querySelector('.supply-status').textContent=active?'Supplied':'Not supplied (unknown)';updateAnd();emphasize(document.getElementById('and-result'));}));updateAnd();
+explorer.hidden=false;trace.querySelector('.enhanced-controls').hidden=false;app.hidden=false;fallback.hidden=true;and.hidden=false;
+})();
+</script>
+</body></html>

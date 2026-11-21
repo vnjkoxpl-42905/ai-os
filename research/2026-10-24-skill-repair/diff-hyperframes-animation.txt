@@ -1,0 +1,1247 @@
+### blueprints-index.md
+--- 
+
++++ 
+
+@@ -1,2 +1,9 @@
+
+ # Blueprints (the proven shapes)
++
++## Contents
++
++- [The 22 blueprints](#the-22-blueprints)
++- [Role → blueprint menu](#role--blueprint-menu)
++- [Picking guidance](#picking-guidance)
++- [Motion coverage](#motion-coverage)
+ 
+### rules-index.md
+--- 
+
++++ 
+
+@@ -1,2 +1,15 @@
+
+ # Rules Index
++
++## Contents
++
++- [The contract — every rule assumes this](#the-contract--every-rule-assumes-this)
++- [Text & Typography](#text--typography)
++- [Data & Stats](#data--stats)
++- [Camera & Viewport](#camera--viewport)
++- [Layout & Network](#layout--network)
++- [SVG & Icons](#svg--icons)
++- [Idle & Ambient](#idle--ambient)
++- [Transition & Motion](#transition--motion)
++- [Effect Recipes (moved from hyperframes-creative)](#effect-recipes-moved-from-hyperframes-creative)
++- [See Also](#see-also)
+ 
+### SKILL.md
+--- 
+
++++ 
+
+@@ -8,2 +8,13 @@
+
+ # HyperFrames Animation
++
++## Contents
++
++- [Default: compose atomic rules](#default-compose-atomic-rules)
++- [Load a blueprint when](#load-a-blueprint-when)
++- [Routing](#routing)
++- [Picking a runtime](#picking-a-runtime)
++- [Critical Constraints](#critical-constraints)
++- [Scripts](#scripts)
++- [See Also](#see-also)
++- [Reference files](#reference-files)
+ 
+@@ -89,2 +100,126 @@
+
+ 
++## Reference files
++
++Read the matching file directly when its topic applies; the indexes remain available for choosing among recipes.
++
++### Adapters
++
++- [Text Effects — Reference](adapters/animate-text.md) — Read when using this animation runtime or adapter API.
++- [Anime.js for HyperFrames](adapters/animejs.md) — Read when using this animation runtime or adapter API.
++- [CSS Animations for HyperFrames](adapters/css-animations.md) — Read when using this animation runtime or adapter API.
++- [Easing, Stagger, and Function-Based Values](adapters/gsap-easing-and-stagger.md) — Read when using this animation runtime or adapter API.
++- [Timelines and Labels](adapters/gsap-timeline-and-labels.md) — Read when using this animation runtime or adapter API.
++- [Transforms and Performance](adapters/gsap-transforms-and-perf.md) — Read when using this animation runtime or adapter API.
++- [HyperFrames GSAP](adapters/gsap.md) — Read when using this animation runtime or adapter API.
++- [HTML-in-Canvas Patterns](adapters/html-in-canvas-patterns.md) — Read when using this animation runtime or adapter API.
++- [Lottie for HyperFrames](adapters/lottie.md) — Read when using this animation runtime or adapter API.
++- [Three.js for HyperFrames](adapters/three.md) — Read when using this animation runtime or adapter API.
++- [TypeGPU / WebGPU for HyperFrames](adapters/typegpu.md) — Read when using this animation runtime or adapter API.
++- [Web Animations API for HyperFrames](adapters/waapi.md) — Read when using this animation runtime or adapter API.
++
++### Blueprints
++
++- [agent-progress-theater — Agent Progress Theater](blueprints/agent-progress-theater.md) — Read when composing this multi-phase scene.
++- [camera-journey — Camera Journey](blueprints/camera-journey.md) — Read when composing this multi-phase scene.
++- [comparison-split — Comparison Split-Cards](blueprints/comparison-split.md) — Read when composing this multi-phase scene.
++- [constellation-hub — Constellation / Hub + Satellites](blueprints/constellation-hub.md) — Read when composing this multi-phase scene.
++- [cta-morph-press — CTA Morph & Press](blueprints/cta-morph-press.md) — Read when composing this multi-phase scene.
++- [cursor-ui-demo — Cursor-Driven UI Demo](blueprints/cursor-ui-demo.md) — Read when composing this multi-phase scene.
++- [dataviz-countup — Data-Viz / Count-Up](blueprints/dataviz-countup.md) — Read when composing this multi-phase scene.
++- [device-surface-showcase — Device / Surface Showcase](blueprints/device-surface-showcase.md) — Read when composing this multi-phase scene.
++- [fixed-anchor-cycle — Fixed Anchor, Cycling World](blueprints/fixed-anchor-cycle.md) — Read when composing this multi-phase scene.
++- [grid-card-assemble — Grid / Card Assemble](blueprints/grid-card-assemble.md) — Read when composing this multi-phase scene.
++- [kinetic-type-beats — Kinetic-Type Beats](blueprints/kinetic-type-beats.md) — Read when composing this multi-phase scene.
++- [logo-assemble-lockup — Logo Assemble → Lockup](blueprints/logo-assemble-lockup.md) — Read when composing this multi-phase scene.
++- [overwhelm-surround — Overwhelm / Close-In](blueprints/overwhelm-surround.md) — Read when composing this multi-phase scene.
++- [panel-edit-live-sync — Panel Edit, Live Sync](blueprints/panel-edit-live-sync.md) — Read when composing this multi-phase scene.
++- [prompt-type-submit-generate — Prompt, Submit, Generate](blueprints/prompt-type-submit-generate.md) — Read when composing this multi-phase scene.
++- [spatial-pan-stations — Spatial Pan / Stations](blueprints/spatial-pan-stations.md) — Read when composing this multi-phase scene.
++- [ticker-takeover — Ticker Displace / Takeover](blueprints/ticker-takeover.md) — Read when composing this multi-phase scene.
++- [titlecard-reveal — Title-Card / Single-Card Reveal](blueprints/titlecard-reveal.md) — Read when composing this multi-phase scene.
++- [transcript-scroll-artifact-reveal — Transcript-Scroll Artifact Reveal](blueprints/transcript-scroll-artifact-reveal.md) — Read when composing this multi-phase scene.
++- [typewriter-reveal — Typewriter Reveal](blueprints/typewriter-reveal.md) — Read when composing this multi-phase scene.
++- [video-text-pivot — Video → Text Pivot](blueprints/video-text-pivot.md) — Read when composing this multi-phase scene.
++- [zoom-out-workspace-reveal — Zoom-Out Workspace Reveal](blueprints/zoom-out-workspace-reveal.md) — Read when composing this multi-phase scene.
++
++### Guides
++
++- [Blueprints (the proven shapes)](blueprints-index.md) — Read when choosing a scene blueprint.
++- [Rules Index](rules-index.md) — Read when choosing atomic motion rules by trigger or tag.
++- [Visual Techniques Reference](techniques.md) — Read when choosing broader motion-design techniques.
++
++### References
++
++- [Motion blur — shutter smear on any animated element](references/motion-blur.md) — Read when choosing element-level motion blur and its limits.
++
++### Rules
++
++- [3D Camera Flight](rules/3d-camera-flight.md) — Read when applying this atomic motion recipe.
++- [3D Page Scroll](rules/3d-page-scroll.md) — Read when applying this atomic motion recipe.
++- [3D Text Depth Layers](rules/3d-text-depth-layers.md) — Read when applying this atomic motion recipe.
++- [AI Tracking Box](rules/ai-tracking-box.md) — Read when applying this atomic motion recipe.
++- [Ambient Glow Bloom](rules/ambient-glow-bloom.md) — Read when applying this atomic motion recipe.
++- [Anchored Layout Expand](rules/anchored-layout-expand.md) — Read when applying this atomic motion recipe.
++- [ASR Keyword Glow](rules/asr-keyword-glow.md) — Read when applying this atomic motion recipe.
++- [Avatar Cloud Network](rules/avatar-cloud-network.md) — Read when applying this atomic motion recipe.
++- [Two-Phase Camera Cursor Tracking](rules/camera-cursor-tracking.md) — Read when applying this atomic motion recipe.
++- [Card Morph Anchor](rules/card-morph-anchor.md) — Read when applying this atomic motion recipe.
++- [Center-Outward Expansion](rules/center-outward-expansion.md) — Read when applying this atomic motion recipe.
++- [Chart Scrub Readout](rules/chart-scrub-readout.md) — Read when applying this atomic motion recipe.
++- [Chromatic Glitch](rules/chromatic-glitch.md) — Read when applying this atomic motion recipe.
++- [Context-Sensitive Cursor](rules/context-sensitive-cursor.md) — Read when applying this atomic motion recipe.
++- [Control-Target Sync](rules/control-target-sync.md) — Read when applying this atomic motion recipe.
++- [Coordinate Target Zoom](rules/coordinate-target-zoom.md) — Read when applying this atomic motion recipe.
++- [Counting with Dynamic Scale](rules/counting-dynamic-scale.md) — Read when applying this atomic motion recipe.
++- [CSS Patterns for Marker Highlighting](rules/css-marker-patterns.md) — Read when applying this atomic motion recipe.
++- [Cursor Click Ripple](rules/cursor-click-ripple.md) — Read when applying this atomic motion recipe.
++- [Cursor Drag](rules/cursor-drag.md) — Read when applying this atomic motion recipe.
++- [Depth-of-Field Blur (Selective Focus / Rack Focus)](rules/depth-of-field-blur.md) — Read when applying this atomic motion recipe.
++- [Depth Scatter ↔ Assemble](rules/depth-scatter-assemble.md) — Read when applying this atomic motion recipe.
++- [Discrete Text Sequence](rules/discrete-text-sequence.md) — Read when applying this atomic motion recipe.
++- [Dynamic Content Sequencing](rules/dynamic-content-sequencing.md) — Read when applying this atomic motion recipe.
++- [Gradient Text Sweep](rules/gradient-text-sweep.md) — Read when applying this atomic motion recipe.
++- [GSAP Effects for HyperFrames](rules/gsap-effects.md) — Read when applying this atomic motion recipe.
++- [Hacker Flip 3D Reveal](rules/hacker-flip-3d.md) — Read when applying this atomic motion recipe.
++- [Kinetic Beat Slam](rules/kinetic-beat-slam.md) — Read when applying this atomic motion recipe.
++- [Motion-Blur Streak](rules/motion-blur-streak.md) — Read when applying this atomic motion recipe.
++- [Multi-Cursor Choreography](rules/multi-cursor-choreography.md) — Read when applying this atomic motion recipe.
++- [Multi-Phase Camera](rules/multi-phase-camera.md) — Read when applying this atomic motion recipe.
++- [Nudge Curve](rules/nudge-curve.md) — Read when applying this atomic motion recipe.
++- [Orbit with 3D Entry](rules/orbit-3d-entry.md) — Read when applying this atomic motion recipe.
++- [Particle Burst](rules/particle-burst.md) — Read when applying this atomic motion recipe.
++- [Physics Press Reaction (Cursor + Element Synced)](rules/physics-press-reaction.md) — Read when applying this atomic motion recipe.
++- [Press-Release Spring Chain](rules/press-release-spring.md) — Read when applying this atomic motion recipe.
++- [Reactive Displacement](rules/reactive-displacement.md) — Read when applying this atomic motion recipe.
++- [Scale-Swap Transition](rules/scale-swap-transition.md) — Read when applying this atomic motion recipe.
++- [Sine Wave Loop (subtle jitter / bounded ambient)](rules/sine-wave-loop.md) — Read when applying this atomic motion recipe.
++- [Split Tilt Cards](rules/split-tilt-cards.md) — Read when applying this atomic motion recipe.
++- [Spring-Pop Entrance](rules/spring-pop-entrance.md) — Read when applying this atomic motion recipe.
++- [Stat Bars & Fills](rules/stat-bars-and-fills.md) — Read when applying this atomic motion recipe.
++- [SVG Icon Enrichment](rules/svg-icon-enrichment.md) — Read when applying this atomic motion recipe.
++- [SVG Path Draw](rules/svg-path-draw.md) — Read when applying this atomic motion recipe.
++- [Theme Crossfade Morph](rules/theme-crossfade-morph.md) — Read when applying this atomic motion recipe.
++- [Vertical Spring Ticker (Slot Machine)](rules/vertical-spring-ticker.md) — Read when applying this atomic motion recipe.
++- [Viewport Change (Virtual Camera)](rules/viewport-change.md) — Read when applying this atomic motion recipe.
++- [Waterfall Entry](rules/waterfall-entry.md) — Read when applying this atomic motion recipe.
++
++### Transitions
++
++- [Transition Registry — machine source of truth](transitions/TRANSITION-REGISTRY.md) — Read when choosing or implementing this scene transition.
++- [Transition Catalog](transitions/catalog.md) — Read when choosing or implementing this scene transition.
++- [3D](transitions/css-3d.md) — Read when choosing or implementing this scene transition.
++- [Blur](transitions/css-blur.md) — Read when choosing or implementing this scene transition.
++- [Cover](transitions/css-cover.md) — Read when choosing or implementing this scene transition.
++- [Destruction](transitions/css-destruction.md) — Read when choosing or implementing this scene transition.
++- [Dissolve](transitions/css-dissolve.md) — Read when choosing or implementing this scene transition.
++- [Distortion](transitions/css-distortion.md) — Read when choosing or implementing this scene transition.
++- [Grid](transitions/css-grid.md) — Read when choosing or implementing this scene transition.
++- [Light](transitions/css-light.md) — Read when choosing or implementing this scene transition.
++- [Mechanical](transitions/css-mechanical.md) — Read when choosing or implementing this scene transition.
++- [Other](transitions/css-other.md) — Read when choosing or implementing this scene transition.
++- [Linear / Push](transitions/css-push.md) — Read when choosing or implementing this scene transition.
++- [Radial / Shape](transitions/css-radial.md) — Read when choosing or implementing this scene transition.
++- [Scale / Zoom](transitions/css-scale.md) — Read when choosing or implementing this scene transition.
++- [Scene Transitions](transitions/overview.md) — Read when choosing or implementing this scene transition.
++
+ <!-- BEGIN GENERATED DESIGN HUB ROUTE -->
+### adapters\animejs.md
+--- 
+
++++ 
+
+@@ -6,2 +6,15 @@
+
+ # Anime.js for HyperFrames
++
++## Contents
++
++- [Contract](#contract)
++- [Loading v4](#loading-v4)
++- [Basic Pattern](#basic-pattern)
++- [Timeline Pattern](#timeline-pattern)
++- [Module Builds](#module-builds)
++- [Determinism](#determinism)
++- [Good Uses](#good-uses)
++- [Avoid](#avoid)
++- [Validation](#validation)
++- [Credits And References](#credits-and-references)
+ 
+@@ -122,3 +135,3 @@
+
+ npx hyperframes lint
+-npx hyperframes validate
++npx hyperframes check
+ ```
+### adapters\css-animations.md
+--- 
+
++++ 
+
+@@ -6,2 +6,13 @@
+
+ # CSS Animations for HyperFrames
++
++## Contents
++
++- [Contract](#contract)
++- [Basic Pattern](#basic-pattern)
++- [Stagger Pattern](#stagger-pattern)
++- [Good Uses](#good-uses)
++- [Avoid](#avoid)
++- [Composition Duration](#composition-duration)
++- [Validation](#validation)
++- [Credits And References](#credits-and-references)
+ 
+### adapters\gsap-easing-and-stagger.md
+--- 
+
++++ 
+
+@@ -1,2 +1,12 @@
+
+ # Easing, Stagger, and Function-Based Values
++
++## Contents
++
++- [Easing](#easing)
++- [Easing Vocabulary (character & mood)](#easing-vocabulary-character--mood)
++- [Defaults](#defaults)
++- [Spring Eases (baked physics, seek-safe)](#spring-eases-baked-physics-seek-safe)
++- [Stagger](#stagger)
++- [Function-Based Values](#function-based-values)
++- [gsap.matchMedia (preview only)](#gsapmatchmedia-preview-only)
+ 
+### adapters\gsap-transforms-and-perf.md
+--- 
+
++++ 
+
+@@ -1,2 +1,12 @@
+
+ # Transforms and Performance
++
++## Contents
++
++- [Transform Aliases](#transform-aliases)
++- [autoAlpha](#autoalpha)
++- [clearProps](#clearprops)
++- [CSS Variables](#css-variables)
++- [Relative and Directional Values](#relative-and-directional-values)
++- [SVG Specifics](#svg-specifics)
++- [Performance Rules](#performance-rules)
+ 
+### adapters\gsap.md
+--- 
+
++++ 
+
+@@ -6,2 +6,13 @@
+
+ # HyperFrames GSAP
++
++## Contents
++
++- [HyperFrames Contract](#hyperframes-contract)
++- [Core Tween Methods](#core-tween-methods)
++- [Common vars (cheatsheet)](#common-vars-cheatsheet)
++- [Animated Property Allowlist](#animated-property-allowlist)
++- [References](#references)
++- [Best Practices](#best-practices)
++- [Do Not](#do-not)
++- [Credits And References](#credits-and-references)
+ 
+### adapters\html-in-canvas-patterns.md
+--- 
+
++++ 
+
+@@ -1,2 +1,10 @@
+
+ # HTML-in-Canvas Patterns
++
++## Contents
++
++- [Core Boilerplate (same in every HTML-in-Canvas composition)](#core-boilerplate-same-in-every-html-in-canvas-composition)
++- [Effect Catalog](#effect-catalog)
++- [When to Use HTML-in-Canvas vs Standard GSAP](#when-to-use-html-in-canvas-vs-standard-gsap)
++- [More Effects You Can Build](#more-effects-you-can-build)
++- [Creating ANY Custom Effect](#creating-any-custom-effect)
+ 
+### adapters\lottie.md
+--- 
+
++++ 
+
+@@ -6,2 +6,15 @@
+
+ # Lottie for HyperFrames
++
++## Contents
++
++- [Contract](#contract)
++- [lottie-web Pattern](#lottie-web-pattern)
++- [dotLottie Pattern](#dotlottie-pattern)
++- [Multiple Animations](#multiple-animations)
++- [Composition Duration](#composition-duration)
++- [Characters](#characters)
++- [Good Uses](#good-uses)
++- [Avoid](#avoid)
++- [Validation](#validation)
++- [Credits And References](#credits-and-references)
+ 
+### adapters\three.md
+--- 
+
++++ 
+
+@@ -6,2 +6,17 @@
+
+ # Three.js for HyperFrames
++
++## Contents
++
++- [Contract](#contract)
++- [Basic Pattern](#basic-pattern)
++- [Loading Addons (`GLTFLoader`, `OrbitControls`, etc.)](#loading-addons-gltfloader-orbitcontrols-etc)
++- [Heavy Setup (Large Meshes, Shader Compiles)](#heavy-setup-large-meshes-shader-compiles)
++- [AnimationMixer Pattern](#animationmixer-pattern)
++- [Camera Cuts Inside One Canvas](#camera-cuts-inside-one-canvas)
++- [Lighting Lit Meshes](#lighting-lit-meshes)
++- [Shader Numeric Domains](#shader-numeric-domains)
++- [Good Uses](#good-uses)
++- [Avoid](#avoid)
++- [Validation](#validation)
++- [Credits And References](#credits-and-references)
+ 
+@@ -147,2 +162,14 @@
+
+ 
++## Shader Numeric Domains
++
++Clamp a cosine before subtracting it from one and passing it to GLSL `pow`:
++
++```glsl
++float rim = pow(1.0 - clamp(dot(normal, view), 0.0, 1.0), 1.6);
++```
++
++`max(dot(normal, view), 0.0)` only protects the lower end. Interpolation and GPU rounding can put the dot product above one even when vectors were normalized at vertices. A negative `pow` base is undefined in GLSL, including with integer exponents. Invalid color values from an opaque glow shader can enter glass transmission textures and spread through mipmaps or bloom; inspect the source shaders before disabling glass or replacing bad pixels with black.
++
++`hyperframes lint` warns with `shader_unbounded_cosine_pow` for this direct cosine-power pattern in static shader strings and GLSL script blocks. Project lint also reads directly linked local authored `.js`, `.mjs`, and `.cjs` files, excluding minified/vendor scripts. Dynamic shader assembly and imported modules are outside this narrow check. A clean lint or software-renderer frame does not certify GPU arithmetic: inspect the reported times and before/after frames on the affected hardware in both preview and export.
++
+ ## Good Uses
+@@ -176 +203,2 @@
+
+ - Three.js `AnimationMixer.setTime()` docs: https://threejs.org/docs/pages/AnimationMixer.html
++- GLSL `pow` domain: https://docs.vulkan.org/glsl/latest/chapters/builtinfunctions.html
+### adapters\typegpu.md
+--- 
+
++++ 
+
+@@ -6,2 +6,15 @@
+
+ # TypeGPU / WebGPU for HyperFrames
++
++## Contents
++
++- [Render-environment prerequisite (WebGPU + html-in-canvas)](#render-environment-prerequisite-webgpu--html-in-canvas)
++- [Contract](#contract)
++- [Basic Pattern](#basic-pattern)
++- [Timeline Registration](#timeline-registration)
++- [Video-Backed Effects (Liquid Glass, Distortion)](#video-backed-effects-liquid-glass-distortion)
++- [Frosted Blur via Downsample Pass](#frosted-blur-via-downsample-pass)
++- [Transparent vs Opaque Canvas](#transparent-vs-opaque-canvas)
++- [WGSL Full-Screen Triangle](#wgsl-full-screen-triangle)
++- [Rounded-Rect SDF (Liquid Glass Pill)](#rounded-rect-sdf-liquid-glass-pill)
++- [Deterministic Rendering](#deterministic-rendering)
+ 
+### adapters\waapi.md
+--- 
+
++++ 
+
+@@ -6,2 +6,13 @@
+
+ # Web Animations API for HyperFrames
++
++## Contents
++
++- [Contract](#contract)
++- [Basic Pattern](#basic-pattern)
++- [Stagger Pattern](#stagger-pattern)
++- [Good Uses](#good-uses)
++- [Composition Duration](#composition-duration)
++- [Avoid](#avoid)
++- [Validation](#validation)
++- [Credits And References](#credits-and-references)
+ 
+### blueprints\kinetic-type-beats.md
+--- 
+
++++ 
+
+@@ -1,2 +1,7 @@
+
+ # kinetic-type-beats — Kinetic-Type Beats
++
++## Contents
++
++- [roles served](#roles-served)
++- [rule mapping](#rule-mapping)
+ 
+@@ -4,3 +9,3 @@
+
+ 
+-**roles served**
++## roles served
+ 
+@@ -75,3 +80,3 @@
+
+ 
+-**rule mapping**
++## rule mapping
+ 
+### blueprints\logo-assemble-lockup.md
+--- 
+
++++ 
+
+@@ -1,2 +1,6 @@
+
+ # logo-assemble-lockup — Logo Assemble → Lockup
++
++## Contents
++
++- [roles served](#roles-served)
+ 
+@@ -4,3 +8,3 @@
+
+ 
+-**roles served**
++## roles served
+ 
+### references\motion-blur.md
+--- 
+
++++ 
+
+@@ -1,2 +1,13 @@
+
+ # Motion blur — shutter smear on any animated element
++
++## Contents
++
++- [Read this part before you blur anything](#read-this-part-before-you-blur-anything)
++- [Two routes, and they are not interchangeable](#two-routes-and-they-are-not-interchangeable)
++- [The contract: one attribute](#the-contract-one-attribute)
++- [Options](#options)
++- [The failure modes are all silent](#the-failure-modes-are-all-silent)
++- [Cost](#cost)
++- [The numbers, so you can argue with them](#the-numbers-so-you-can-argue-with-them)
++- [See also](#see-also)
+ 
+### rules\3d-camera-flight.md
+--- 
+
++++ 
+
+@@ -8,2 +8,11 @@
+
+ # 3D Camera Flight
++
++## Contents
++
++- [How It Works](#how-it-works)
++- [Recipe](#recipe)
++- [Variations](#variations)
++- [Values](#values)
++- [Critical Constraints](#critical-constraints)
++- [See also](#see-also)
+ 
+### rules\3d-page-scroll.md
+--- 
+
++++ 
+
+@@ -8,2 +8,11 @@
+
+ # 3D Page Scroll
++
++## Contents
++
++- [How It Works](#how-it-works)
++- [Recipe](#recipe)
++- [Variations](#variations)
++- [Values](#values)
++- [Critical Constraints](#critical-constraints)
++- [See also](#see-also)
+ 
+### rules\3d-text-depth-layers.md
+--- 
+
++++ 
+
+@@ -8,2 +8,11 @@
+
+ # 3D Text Depth Layers
++
++## Contents
++
++- [How It Works](#how-it-works)
++- [Recipe](#recipe)
++- [Variations](#variations)
++- [Values](#values)
++- [Critical Constraints](#critical-constraints)
++- [See also](#see-also)
+ 
+### rules\ai-tracking-box.md
+--- 
+
++++ 
+
+@@ -8,2 +8,11 @@
+
+ # AI Tracking Box
++
++## Contents
++
++- [How It Works](#how-it-works)
++- [Recipe](#recipe)
++- [Variations](#variations)
++- [Values](#values)
++- [Critical Constraints](#critical-constraints)
++- [See also](#see-also)
+ 
+### rules\ambient-glow-bloom.md
+--- 
+
++++ 
+
+@@ -8,2 +8,11 @@
+
+ # Ambient Glow Bloom
++
++## Contents
++
++- [How It Works](#how-it-works)
++- [Recipe](#recipe)
++- [Variations](#variations)
++- [Values](#values)
++- [Critical Constraints](#critical-constraints)
++- [See also](#see-also)
+ 
+### rules\anchored-layout-expand.md
+--- 
+
++++ 
+
+@@ -8,2 +8,11 @@
+
+ # Anchored Layout Expand
++
++## Contents
++
++- [How It Works](#how-it-works)
++- [Recipe](#recipe)
++- [Variations](#variations)
++- [Values](#values)
++- [Critical Constraints](#critical-constraints)
++- [See also](#see-also)
+ 
+### rules\asr-keyword-glow.md
+--- 
+
++++ 
+
+@@ -8,2 +8,11 @@
+
+ # ASR Keyword Glow
++
++## Contents
++
++- [How It Works](#how-it-works)
++- [Recipe](#recipe)
++- [Variations](#variations)
++- [Values](#values)
++- [Critical Constraints](#critical-constraints)
++- [See also](#see-also)
+ 
+### rules\avatar-cloud-network.md
+--- 
+
++++ 
+
+@@ -8,2 +8,11 @@
+
+ # Avatar Cloud Network
++
++## Contents
++
++- [How It Works](#how-it-works)
++- [Recipe](#recipe)
++- [Variations](#variations)
++- [Values](#values)
++- [Critical Constraints](#critical-constraints)
++- [See also](#see-also)
+ 
+### rules\camera-cursor-tracking.md
+--- 
+
++++ 
+
+@@ -8,2 +8,11 @@
+
+ # Two-Phase Camera Cursor Tracking
++
++## Contents
++
++- [How It Works](#how-it-works)
++- [Recipe](#recipe)
++- [Variations](#variations)
++- [Values](#values)
++- [Critical Constraints](#critical-constraints)
++- [See also](#see-also)
+ 
+### rules\card-morph-anchor.md
+--- 
+
++++ 
+
+@@ -8,2 +8,12 @@
+
+ # Card Morph Anchor
++
++## Contents
++
++- [How It Works](#how-it-works)
++- [Recipe](#recipe)
++- [Morph channels](#morph-channels)
++- [Variations](#variations)
++- [Values](#values)
++- [Critical Constraints](#critical-constraints)
++- [See also](#see-also)
+ 
+### rules\chart-scrub-readout.md
+--- 
+
++++ 
+
+@@ -8,2 +8,11 @@
+
+ # Chart Scrub Readout
++
++## Contents
++
++- [How It Works](#how-it-works)
++- [Recipe](#recipe)
++- [Variations](#variations)
++- [Values](#values)
++- [Critical Constraints](#critical-constraints)
++- [See also](#see-also)
+ 
+### rules\chromatic-glitch.md
+--- 
+
++++ 
+
+@@ -8,2 +8,11 @@
+
+ # Chromatic Glitch
++
++## Contents
++
++- [How It Works](#how-it-works)
++- [Recipe](#recipe)
++- [Variations](#variations)
++- [Values](#values)
++- [Critical Constraints](#critical-constraints)
++- [See also](#see-also)
+ 
+### rules\context-sensitive-cursor.md
+--- 
+
++++ 
+
+@@ -8,2 +8,11 @@
+
+ # Context-Sensitive Cursor
++
++## Contents
++
++- [How It Works](#how-it-works)
++- [Recipe](#recipe)
++- [Variations](#variations)
++- [Values](#values)
++- [Critical Constraints](#critical-constraints)
++- [See also](#see-also)
+ 
+### rules\control-target-sync.md
+--- 
+
++++ 
+
+@@ -8,2 +8,11 @@
+
+ # Control-Target Sync
++
++## Contents
++
++- [How It Works](#how-it-works)
++- [Recipe](#recipe)
++- [Variations](#variations)
++- [Values](#values)
++- [Critical Constraints](#critical-constraints)
++- [See also](#see-also)
+ 
+### rules\coordinate-target-zoom.md
+--- 
+
++++ 
+
+@@ -8,2 +8,12 @@
+
+ # Coordinate Target Zoom
++
++## Contents
++
++- [How It Works](#how-it-works)
++- [Getting the offset](#getting-the-offset)
++- [Recipe](#recipe)
++- [Variations](#variations)
++- [Values](#values)
++- [Critical Constraints](#critical-constraints)
++- [See also](#see-also)
+ 
+### rules\counting-dynamic-scale.md
+--- 
+
++++ 
+
+@@ -8,2 +8,11 @@
+
+ # Counting with Dynamic Scale
++
++## Contents
++
++- [How It Works](#how-it-works)
++- [Recipe](#recipe)
++- [Variations](#variations)
++- [Values](#values)
++- [Critical Constraints](#critical-constraints)
++- [See also](#see-also)
+ 
+### rules\css-marker-patterns.md
+--- 
+
++++ 
+
+@@ -1,2 +1,11 @@
+
+ # CSS Patterns for Marker Highlighting
++
++## Contents
++
++- [1. Highlight Mode](#1-highlight-mode)
++- [2. Circle Mode](#2-circle-mode)
++- [3. Burst Mode](#3-burst-mode)
++- [4. Scribble Mode](#4-scribble-mode)
++- [5. Sketchout Mode](#5-sketchout-mode)
++- [Combining Modes in Captions](#combining-modes-in-captions)
+ 
+### rules\cursor-click-ripple.md
+--- 
+
++++ 
+
+@@ -8,2 +8,10 @@
+
+ # Cursor Click Ripple
++
++## Contents
++
++- [Recipe](#recipe)
++- [Variations](#variations)
++- [Values](#values)
++- [Critical Constraints](#critical-constraints)
++- [See also](#see-also)
+ 
+### rules\cursor-drag.md
+--- 
+
++++ 
+
+@@ -8,2 +8,11 @@
+
+ # Cursor Drag
++
++## Contents
++
++- [How It Works](#how-it-works)
++- [Recipe](#recipe)
++- [Variations](#variations)
++- [Values](#values)
++- [Critical Constraints](#critical-constraints)
++- [See also](#see-also)
+ 
+### rules\depth-of-field-blur.md
+--- 
+
++++ 
+
+@@ -8,2 +8,11 @@
+
+ # Depth-of-Field Blur (Selective Focus / Rack Focus)
++
++## Contents
++
++- [How It Works](#how-it-works)
++- [Recipe](#recipe)
++- [Variations](#variations)
++- [Values](#values)
++- [Critical Constraints](#critical-constraints)
++- [See also](#see-also)
+ 
+### rules\depth-scatter-assemble.md
+--- 
+
++++ 
+
+@@ -8,2 +8,11 @@
+
+ # Depth Scatter ↔ Assemble
++
++## Contents
++
++- [How It Works](#how-it-works)
++- [Recipe](#recipe)
++- [Variations](#variations)
++- [Values](#values)
++- [Critical Constraints](#critical-constraints)
++- [See also](#see-also)
+ 
+### rules\discrete-text-sequence.md
+--- 
+
++++ 
+
+@@ -8,2 +8,11 @@
+
+ # Discrete Text Sequence
++
++## Contents
++
++- [How It Works](#how-it-works)
++- [Recipe](#recipe)
++- [Variations](#variations)
++- [Values](#values)
++- [Critical Constraints](#critical-constraints)
++- [See also](#see-also)
+ 
+### rules\dynamic-content-sequencing.md
+--- 
+
++++ 
+
+@@ -8,2 +8,11 @@
+
+ # Dynamic Content Sequencing
++
++## Contents
++
++- [How It Works](#how-it-works)
++- [Recipe](#recipe)
++- [Variations](#variations)
++- [Values](#values)
++- [Critical Constraints](#critical-constraints)
++- [See also](#see-also)
+ 
+### rules\gradient-text-sweep.md
+--- 
+
++++ 
+
+@@ -8,2 +8,11 @@
+
+ # Gradient Text Sweep
++
++## Contents
++
++- [How It Works](#how-it-works)
++- [Recipe](#recipe)
++- [Variations](#variations)
++- [Values](#values)
++- [Critical Constraints](#critical-constraints)
++- [See also](#see-also)
+ 
+### rules\hacker-flip-3d.md
+--- 
+
++++ 
+
+@@ -8,2 +8,11 @@
+
+ # Hacker Flip 3D Reveal
++
++## Contents
++
++- [How It Works](#how-it-works)
++- [Recipe](#recipe)
++- [Variations](#variations)
++- [Values](#values)
++- [Critical Constraints](#critical-constraints)
++- [See also](#see-also)
+ 
+### rules\kinetic-beat-slam.md
+--- 
+
++++ 
+
+@@ -8,2 +8,11 @@
+
+ # Kinetic Beat Slam
++
++## Contents
++
++- [How It Works](#how-it-works)
++- [Recipe](#recipe)
++- [Variations](#variations)
++- [Values](#values)
++- [Critical Constraints](#critical-constraints)
++- [See also](#see-also)
+ 
+### rules\motion-blur-streak.md
+--- 
+
++++ 
+
+@@ -8,2 +8,13 @@
+
+ # Motion-Blur Streak
++
++## Contents
++
++- [How It Works](#how-it-works)
++- [Recipe](#recipe)
++- [Variations](#variations)
++- [Camera-Travel Carve-Out](#camera-travel-carve-out)
++- [Per-Frame-Driven Carve-In (baked tracks)](#per-frame-driven-carve-in-baked-tracks)
++- [Values](#values)
++- [Critical Constraints](#critical-constraints)
++- [See also](#see-also)
+ 
+### rules\multi-cursor-choreography.md
+--- 
+
++++ 
+
+@@ -8,2 +8,11 @@
+
+ # Multi-Cursor Choreography
++
++## Contents
++
++- [How It Works](#how-it-works)
++- [Recipe](#recipe)
++- [Variations](#variations)
++- [Values](#values)
++- [Critical Constraints](#critical-constraints)
++- [See also](#see-also)
+ 
+### rules\multi-phase-camera.md
+--- 
+
++++ 
+
+@@ -8,2 +8,12 @@
+
+ # Multi-Phase Camera
++
++## Contents
++
++- [How It Works](#how-it-works)
++- [Recipe](#recipe)
++- [Phase Patterns](#phase-patterns)
++- [Variations](#variations)
++- [Values](#values)
++- [Critical Constraints](#critical-constraints)
++- [See also](#see-also)
+ 
+### rules\orbit-3d-entry.md
+--- 
+
++++ 
+
+@@ -8,2 +8,11 @@
+
+ # Orbit with 3D Entry
++
++## Contents
++
++- [How It Works](#how-it-works)
++- [Recipe](#recipe)
++- [Variations](#variations)
++- [Values](#values)
++- [Critical Constraints](#critical-constraints)
++- [See also](#see-also)
+ 
+### rules\particle-burst.md
+--- 
+
++++ 
+
+@@ -8,2 +8,11 @@
+
+ # Particle Burst
++
++## Contents
++
++- [How It Works](#how-it-works)
++- [Recipe](#recipe)
++- [Variations](#variations)
++- [Values](#values)
++- [Critical Constraints](#critical-constraints)
++- [See also](#see-also)
+ 
+### rules\physics-press-reaction.md
+--- 
+
++++ 
+
+@@ -8,2 +8,10 @@
+
+ # Physics Press Reaction (Cursor + Element Synced)
++
++## Contents
++
++- [Recipe](#recipe)
++- [Variations](#variations)
++- [Values](#values)
++- [Critical Constraints](#critical-constraints)
++- [See also](#see-also)
+ 
+### rules\press-release-spring.md
+--- 
+
++++ 
+
+@@ -8,2 +8,10 @@
+
+ # Press-Release Spring Chain
++
++## Contents
++
++- [Recipe](#recipe)
++- [Variations](#variations)
++- [Values](#values)
++- [Critical Constraints](#critical-constraints)
++- [See also](#see-also)
+ 
+### rules\split-tilt-cards.md
+--- 
+
++++ 
+
+@@ -8,2 +8,11 @@
+
+ # Split Tilt Cards
++
++## Contents
++
++- [How It Works](#how-it-works)
++- [Recipe](#recipe)
++- [Variations](#variations)
++- [Values](#values)
++- [Critical Constraints](#critical-constraints)
++- [See also](#see-also)
+ 
+### rules\spring-pop-entrance.md
+--- 
+
++++ 
+
+@@ -8,2 +8,11 @@
+
+ # Spring-Pop Entrance
++
++## Contents
++
++- [How It Works](#how-it-works)
++- [Recipe](#recipe)
++- [Variations](#variations)
++- [Values](#values)
++- [Critical Constraints](#critical-constraints)
++- [See also](#see-also)
+ 
+### rules\stat-bars-and-fills.md
+--- 
+
++++ 
+
+@@ -8,2 +8,9 @@
+
+ # Stat Bars & Fills
++
++## Contents
++
++- [Recipe](#recipe)
++- [Values](#values)
++- [Critical Constraints](#critical-constraints)
++- [See also](#see-also)
+ 
+### rules\svg-icon-enrichment.md
+--- 
+
++++ 
+
+@@ -8,2 +8,11 @@
+
+ # SVG Icon Enrichment
++
++## Contents
++
++- [❗ The transform-center gotcha](#-the-transform-center-gotcha)
++- [Recipe](#recipe)
++- [Variations](#variations)
++- [Values](#values)
++- [Critical Constraints](#critical-constraints)
++- [See also](#see-also)
+ 
+### rules\svg-path-draw.md
+--- 
+
++++ 
+
+@@ -8,2 +8,10 @@
+
+ # SVG Path Draw
++
++## Contents
++
++- [Recipe](#recipe)
++- [Variations](#variations)
++- [Values](#values)
++- [Critical Constraints](#critical-constraints)
++- [See also](#see-also)
+ 
+### rules\theme-crossfade-morph.md
+--- 
+
++++ 
+
+@@ -8,2 +8,11 @@
+
+ # Theme Crossfade Morph
++
++## Contents
++
++- [How It Works](#how-it-works)
++- [Recipe](#recipe)
++- [Variations](#variations)
++- [Values](#values)
++- [Critical Constraints](#critical-constraints)
++- [See also](#see-also)
+ 
+### rules\vertical-spring-ticker.md
+--- 
+
++++ 
+
+@@ -8,2 +8,11 @@
+
+ # Vertical Spring Ticker (Slot Machine)
++
++## Contents
++
++- [How It Works](#how-it-works)
++- [Recipe](#recipe)
++- [Variations](#variations)
++- [Values](#values)
++- [Critical Constraints](#critical-constraints)
++- [See also](#see-also)
+ 
+### rules\viewport-change.md
+--- 
+
++++ 
+
+@@ -8,2 +8,12 @@
+
+ # Viewport Change (Virtual Camera)
++
++## Contents
++
++- [How It Works](#how-it-works)
++- [Recipe](#recipe)
++- [Scale Value Guide](#scale-value-guide)
++- [Variations](#variations)
++- [Values](#values)
++- [Critical Constraints](#critical-constraints)
++- [See also](#see-also)
+ 
+### transitions\TRANSITION-REGISTRY.md
+--- 
+
++++ 
+
+@@ -2,7 +2,16 @@
+
+ 
++## Contents
++
++- [How the injector applies a transition](#how-the-injector-applies-a-transition)
++- [Template placeholders](#template-placeholders)
++- [Registry](#registry)
++- [Default-derivation (used by prep.mjs when the planner omits `**Transition:**`)](#default-derivation-used-by-prepmjs-when-the-planner-omits-transition)
++- [Choosing as a planner (the only agent touchpoint)](#choosing-as-a-planner-the-only-agent-touchpoint)
++
+ Single source of truth for **PLV scene-to-scene transitions**. The deterministic
+-injector (`product-launch-video/scripts/inject-transitions.mjs`) reads the JSON
+-block below and stamps the matching `gsap_template` onto the master timeline.
+-The planner (`product-launch-video/agents/visual-design.md`) names a transition
+-by its `name`; everything else is harness.
++injector (`product-launch-video/scripts/transitions.mjs inject`) reads its vendored
++copy of the JSON block below (`product-launch-video/scripts/lib/transitions.json`)
++and stamps the matching `gsap_template` onto the master timeline.
++The planner (`product-launch-video/references/story-design.md`) names a transition
++by its `name` in each frame's `transition_in`; everything else is harness.
+ 

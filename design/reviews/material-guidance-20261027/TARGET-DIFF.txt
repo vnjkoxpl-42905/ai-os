@@ -1,0 +1,49 @@
+--- before/design/principles.md
++++ design/principles.md
+@@ -19,7 +19,7 @@
+ | Decision | Principle to investigate | Owning source |
+ |---|---|---|
+ | What deserves attention first? | Start with the user's immediate decision. Give sections distinct jobs and one clear main action. | [Website planning](../references/website-design-planning.md) |
+-| How can an interface have depth? | Vary visual intensity and use purposeful layers. Depth is an option, not a requirement for glass, 3D or continuous motion. | [Website planning: later video methods](../references/website-design-planning.md#what-two-later-videos-add-ingested-2026-10-12) |
++| How can an interface have depth? | Vary visual intensity and use purposeful layers. Depth is an option, not a requirement for glass, 3D or continuous motion. | [Material and depth guidance](#material-depth-and-a-richer-layered-feel), [selected reference](../raw/sources/design/2026-10-27-dashboard-material/PROVENANCE.md), [website planning: later video methods](../references/website-design-planning.md#what-two-later-videos-add-ingested-2026-10-12) |
+ | How do we avoid blandness without changing everything? | Compare actual reference regions, identify hierarchy, scale, surface and spacing causes, then inspect a focused rendered revision. A style name or score alone is insufficient. | [Current methods and critique route](methods.md) |
+ | Which transition should run? | Separate page entrance, scroll reveal and panel movement. A filter update should not replay an entire page or remount working state. | [LexPrep motion teardown](../research/2026-10-21-lexprep-motion-teardown.md) |
+ | Is motion verified? | Inspect natural playback and reduced-motion behavior separately. Settled screenshots do not establish timing quality. Keep reading and controls immediately available. | [Motion evidence and constraints](../research/2026-10-21-lexprep-motion-teardown.md) |
+@@ -41,29 +41,31 @@
+ 
+ ### The selected dashboard reference
+ 
+-Joshua selected the live dashboard screenshot supplied in this conversation over the cooler neutral prototype, saying "this version and oclur scheme is better". On 2026-10-27 he explicitly asked to retain these lessons and route future design work here. See the [preserved screenshot and provenance](../raw/sources/design/2026-10-27-dashboard-material/PROVENANCE.md) and [reference image](../raw/sources/design/2026-10-27-dashboard-material/dashboard.png).
++Joshua selected a user-supplied screenshot of the classroom dashboard (supplied 2026-10-26; exact capture time unknown) over the cooler neutral prototype, saying "this version and oclur scheme is better". On 2026-10-27 he explicitly asked to retain these lessons and route future design work here. See the [preserved screenshot and provenance](../raw/sources/design/2026-10-27-dashboard-material/PROVENANCE.md) and [reference image](../raw/sources/design/2026-10-27-dashboard-material/dashboard.png).
+ 
+ The evidence is a user-supplied still image of https://lsatprep.study/classroom, not an independently exercised production session. The following explanations are visual interpretations of that image and Joshua's preference, not measured usability findings. Exact CSS values cannot be recovered reliably from a scaled screenshot.
+ 
+ For LSAT U, preserve warm off-white/beige paper, soft charcoal, restrained shadows, compact composition and the existing destination structure as the visual baseline. Do not replace it with cool gray, flat white, navy or gold by default. Other projects inherit the principles below, not a mandatory beige palette. A later explicit brief can supersede this selection.
+ 
++The reference is a starting point, not approval of every detail: its coloured dots appear to track the row type (Bootcamp/Activity), which is already shown in text; if a dot conveys status instead, pair it with a label or symbol. The diffuse haze above the header is not a feature to preserve; retain controlled contact and ambient shadows while keeping text and edges crisp. The screenshot came from a user-supplied clipboard attachment in a Codex design session; its transcript is not archived with this evidence.
++
+ ### Give each surface a physical job
+ 
+ Here, material design means treating surfaces as coherent materials with light, edges and relative elevation. It does not mean adopting Google's Material Design system or adding a component library.
+ 
+-| Observed treatment | Why it works | How to apply it |
++| Visible treatment in the still | Likely effect (interpretation) | Suggested application, not observed behavior |
+ |---|---|---|
+ | Warm paper ground, lighter assignment rows and soft charcoal | Related tones feel like parts of one environment while still separating content. | Define a small surface scale: page ground, section plane, interactive row, focal dark surface. Compare them together in the rendered host. |
+ | Broad header and main panels with shadows concentrated beneath their edges | A restrained contact shadow makes a panel feel supported above the ground. | Combine a fine edge/contact shadow with a soft lower ambient shadow. Keep light direction consistent and use stronger elevation only for a higher layer. |
+ | Large rounded section planes, smaller rounded rows and controls | Shape distinguishes containers from things users can operate. | Use a deliberate radius hierarchy and aligned inner padding. Do not give every object the same radius, border and shadow. |
+-| Compact charcoal next-assignment panel beside the greeting | Contrast identifies the next action without swallowing the workspace. | Size the focal element around its task. Keep surrounding assignments, messages and schedule legible together. A large atmospheric image is not a substitute for depth. |
+-| Raised action pills and quieter content planes | Small local elevation suggests something can be pressed. | Make resting, hover, pressed and keyboard-focus states distinct. Pressed controls can reduce shadow; focus needs a visible boundary independent of shadow. |
+-| Small status accents within a mostly paper/charcoal scheme | Limited colour supplies information and life without fragmenting the page. | Reserve accents for meaningful states. Include text or symbols so colour is not the sole signal. |
++| Compact charcoal next-assignment panel beside the greeting | Contrast appears to emphasize the next action without dominating the workspace; ease of finding it needs runtime testing. | Size the focal element around its task. Keep surrounding assignments, messages and schedule legible together. A large atmospheric image is not a substitute for depth. |
++| Raised action pills and quieter content planes | Small local elevation suggests something can be pressed. | Not visible in the still: define distinct resting, hover, pressed and keyboard-focus states. Pressed controls can reduce shadow; focus needs a visible boundary independent of shadow. |
++| Small coloured row accents within a mostly paper/charcoal scheme | Limited colour supplies information and life without fragmenting the page. | Reserve accents for meaningful states. Include text or symbols so colour is not the sole signal. |
+ 
+ ### Compose layers rather than piling on cards
+ 
+ - Establish a clear ground, a few section planes and local interactive elements. Group related content within a shared plane; separate it with spacing or rules when another card adds no meaning.
+-- Preserve compact balance: greeting and next action above assignments/messages, with the calendar as a quieter horizontal sequence. Density should support scanning without shrinking text to unreadable sizes.
++- Preserve compact balance as a priority order: make the next action easy to find, keep assignments and messages readable, and keep the schedule secondary. Adapt placement and sequence to the task and viewport; the screenshot's horizontal calendar and desktop grouping are examples, not required phone geometry. Density should support scanning without shrinking text to unreadable sizes.
+ - Use tonal separation, edge definition and shadow together. A broad gray blur around every panel creates haze; removing every shadow and tint creates flatness. Check the silhouette and the contact edge at actual display size.
+ - Let typography reinforce the layers: expressive display type for the greeting, readable working type for tasks and controls, restrained metadata. Maintain clear size/weight differences and aligned baselines. Do not spread tiny tracked labels or decorative italics across all content.
+ - Keep texture and gradients subtle enough that text remains crisp. They should suggest illumination or material, not decorate empty space or imitate metallic gold.

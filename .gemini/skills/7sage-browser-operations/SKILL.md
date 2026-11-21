@@ -12,7 +12,7 @@ Controls the dedicated, persistent Chrome browser instance for 7Sage operations.
 - **Tooling Directory**: `C:\Users\Joshu\Tools\7Sage-Agent\`
 - **Target URL**: `https://7sage.com`
 
-All sessions and cookies persist in `7Sage-Agent-Chrome`. Authentication is performed once by Joshua and remains permanently saved across reboots.
+All sessions and cookies persist in `7Sage-Agent-Chrome`. Authentication is performed once by Joshua and may persist across reboots; verify the rendered signed-in session before use.
 
 ## Commands
 

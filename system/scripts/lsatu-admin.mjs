@@ -11,7 +11,8 @@
 //   access  "Name" --revoke chat             turn flags off
 //   access  "Name" --all-off                 shut every door
 //   archive "Name" [--reason "..."]  |  unarchive "Name"
-//   items   "Name" [--all]                   Classroom items with ids (for due / unassign)
+//   reading-center "Name" [--dry-run]        assign the Reading Center (RC Training + LR Recall + library)
+//   items   "Name" [--all]                 Classroom items with ids (for due / unassign)
 //   due     <item-id> YYYY-MM-DD             move a due date (end of that local day)
 //   unassign <item-id>                       hide an item from her Classroom (archived, not deleted)
 //   passes  ["Name"]                         booking passes: credits used / total, status
@@ -50,7 +51,7 @@ const pos2 = argv[2] && !argv[2].startsWith("--") ? argv[2] : undefined;
 const flag = (n, d) => { const i = argv.indexOf(`--${n}`); return i >= 0 ? argv[i + 1] : d; };
 const has = (n) => argv.includes(`--${n}`);
 const dry = has("dry-run");
-const CMDS = ["signups", "access", "tier", "archive", "unarchive", "items", "post-lesson", "due", "unassign", "passes", "pass-detail", "pass-create", "credit", "notifications", "read", "drafts", "draft", "draft-set", "uploads", "upload-review", "notes", "note-resolve", "note-discard", "scan-notes", "plans", "unsend", "unsend-last"];
+const CMDS = ["reading-center", "signups", "access", "tier", "archive", "unarchive", "items", "post-lesson", "due", "unassign", "passes", "pass-detail", "pass-create", "credit", "notifications", "read", "drafts", "draft", "draft-set", "uploads", "upload-review", "notes", "note-resolve", "note-discard", "scan-notes", "plans", "unsend", "unsend-last"];
 if (!CMDS.includes(cmd)) { console.error(fs.readFileSync(fileURLToPath(import.meta.url), "utf8").split("\n").slice(5, 20).join("\n")); process.exit(2); }
 
 const tok = await (await fetch(`${URL_}/auth/v1/token?grant_type=password`, {
@@ -129,11 +130,22 @@ if (cmd === "post-lesson") {
     const previous = sameLesson.filter((item) => item.status !== "archived" && item.visible_to_student);
     console.log(`${nameOf(u)} <${u.email}>: post interactive lesson "${title}" [${lessonId}] (${Buffer.byteLength(html)} bytes)`);
     console.log(`  previous versions: ${previous.map((i) => i.id).join(", ") || "none"}`);
+    if (previous.length === 1 && previous[0].content_html !== html && !has("new-version")) console.log("  mode: update in place (same item, no new note, no new message)");
     if (dry) { console.log("(dry run — nothing changed)"); }
     else {
       const current = previous.find((item) => item.content_html === html);
       let result;
       if (current) result = { ok: true, item_id: current.id, route: `/classroom/item/${current.id}`, already_current: true, notified: false };
+      else if (previous.length === 1 && !has("new-version")) {
+        // A revision updates the one live copy in place (Joshua, 2026-11-17: an edit must not send a second note).
+        // Same item id, so the student's existing message and link keep working, and nothing is sent again.
+        // Pass --new-version to archive it and post a fresh, notified copy instead.
+        await rest(`classroom_items?id=eq.${previous[0].id}&student_id=eq.${u.class_id}`, {
+          method: "PATCH",
+          body: JSON.stringify({ content_html: html, updated_at: new Date().toISOString() }),
+        });
+        result = { ok: true, item_id: previous[0].id, route: `/classroom/item/${previous[0].id}`, updated_in_place: true, notified: false };
+      }
       else {
         // Archived copies count as prior generations. Reusing an old RPC key
         // would return the archived row instead of creating a visible copy.
@@ -221,11 +233,27 @@ if (cmd === "post-lesson") {
   if (dry) { console.log("(dry run — nothing changed)"); process.exit(0); }
   await fn("admin-manage-users", { action: `${cmd}_student`, class_id: u.class_id, ...(cmd === "archive" ? { reason: flag("reason", null) } : {}) });
   console.log("Done.");
+} else if (cmd === "reading-center") {
+  // Same RPC the Teacher Workspace form calls (assignReadingCenter in the app). Unlocks RC Training, LR Recall and the library.
+  const u = await resolve(pos);
+  const existing = await rest(`classroom_items?student_id=eq.${u.class_id}&type=eq.activity&source_table=eq.reading_center&source_id=eq.library&status=neq.archived&select=id,status,visible_to_student,created_at`);
+  if (existing.length) { console.log(`${nameOf(u)} already has Reading Center (${existing[0].status}, item ${existing[0].id}, added ${day(existing[0].created_at)}). Nothing changed.`); process.exit(0); }
+  if (dry) { console.log(`--dry-run: would assign Reading Center to ${nameOf(u)} <${u.email}> (unlocks now, email on).`); process.exit(0); }
+  const r = await rest("rpc/assign_reading_center", { method: "POST", body: JSON.stringify({
+    p_student_id: u.class_id, p_unlock_at: null, p_title: "Reading Center",
+    p_description: "Practice reading articles with five reading modes, bookmarks and reading goals.",
+    p_notification_policy: "auto", p_notification_group_id: null }) });
+  const id = r?.item?.id;
+  if (!id) throw new Error("Reading Center RPC returned no item");
+  const [saved] = await rest(`classroom_items?id=eq.${id}&student_id=eq.${u.class_id}&select=id,status,visible_to_student,source_table,source_id`);
+  const ok = saved && saved.visible_to_student && saved.source_table === "reading_center" && saved.source_id === "library";
+  console.log(`${ok ? "Assigned" : "NOT VERIFIED"}: Reading Center -> ${nameOf(u)} <${u.email}> item ${id} (${saved?.status}).`);
+  if (!ok) process.exit(1);
 } else if (cmd === "items") {
   const u = await resolve(pos);
   const rows = await rest(`classroom_items?student_id=eq.${u.class_id}${has("all") ? "" : "&status=not.in.(completed,archived)"}&select=id,type,title,status,due_at,unlock_at,created_at&order=created_at.desc&limit=100`);
   console.log(`${nameOf(u)}: ${rows.length} item(s)`);
-  for (const i of rows) console.log(`  ${i.id}  [${i.type}] ${i.title} · ${i.status}${i.due_at ? ` · due ${day(i.due_at)}` : ""}${i.unlock_at ? ` · unlocks ${day(i.unlock_at)}` : ""}`);
+  for (const i of rows) console.log(`  ${i.id}  [${i.type}] ${i.title} · ${i.status}${i.due_at ? ` · due ${day(i.due_at)}` : ""}${i.unlock_at ? ` · unlocks ${day(i.unlock_at)}` : ""}${i.created_at ? ` · added ${day(i.created_at)}` : ""}`);
 } else if (cmd === "due" || cmd === "unassign") {
   if (!pos || !/^[0-9a-f-]{36}$/.test(pos)) { console.error(`lsatu-admin: ${cmd} needs a classroom item id (lsatu items "<name>")`); process.exit(2); }
   const [item] = await rest(`classroom_items?id=eq.${pos}&select=id,student_id,title,status,due_at`);

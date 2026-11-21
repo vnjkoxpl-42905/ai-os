@@ -1,0 +1,41 @@
+
+[1m[46m RUN [49m[22m [36mv3.2.7 [39m[90mC:/Users/Joshu/dev/ai-os-projects/lsatu-my-work-20261026[39m
+
+[90mstderr[2m | src/hooks/useClassroomMotion.test.tsx[2m > [22m[2mreference motion safety[2m > [22m[2mcomposes the real My Work policy with assigned loading without a content entrance
+[22m[39m⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ [32m✓[39m src/hooks/useClassroomMotion.test.tsx [2m([22m[2m95 tests[22m[2m)[22m[33m 4518[2mms[22m[39m
+   [33m[2m✓[22m[39m real notes archive motion composition[2m > [22msettles real pointer type filtering and reveals new pointer Load more rows in order [33m 727[2mms[22m[39m
+   [33m[2m✓[22m[39m real notes archive motion composition[2m > [22msettles real pointer unread filtering and reveals new pointer Load more rows in order [33m 833[2mms[22m[39m
+   [33m[2m✓[22m[39m real notes archive motion composition[2m > [22mleaves marked cached reader blocks to their dedicated motion owner [33m 302[2mms[22m[39m
+   [33m[2m✓[22m[39m real notes archive motion composition[2m > [22msettles actual assigned-work portal filtering through its section ref without animating newly matched rows [33m 412[2mms[22m[39m
+[90mstderr[2m | src/pages/MyWorkPage.organization.test.tsx[2m > [22m[2mMy Work organization[2m > [22m[2mrecovers focus after failed-empty Clear with 0-detail keyboard activation
+[22m[39m⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ [32m✓[39m src/pages/MyWorkPage.organization.test.tsx [2m([22m[2m22 tests[22m[2m)[22m[33m 11798[2mms[22m[39m
+   [33m[2m✓[22m[39m My Work organization[2m > [22mrecovers focus after failed-empty Clear with 0-detail keyboard activation [33m 547[2mms[22m[39m
+   [33m[2m✓[22m[39m My Work organization[2m > [22mkeeps pointer portal reset away from Search: kind=Activity [33m 687[2mms[22m[39m
+   [33m[2m✓[22m[39m My Work organization[2m > [22mkeeps pointer portal reset away from Search: subject=rc [33m 680[2mms[22m[39m
+   [33m[2m✓[22m[39m My Work organization[2m > [22mreturns keyboard focus to Search after Clear filters removes the no-match action [33m 429[2mms[22m[39m
+   [33m[2m✓[22m[39m My Work organization[2m > [22mkeeps a valid Reading Center filter across denied, granted and revoked access without exposing other work [33m 1021[2mms[22m[39m
+   [33m[2m✓[22m[39m My Work organization[2m > [22mrecovers keyboard focus when clearing an absent selected filter: kind=Activity [33m 379[2mms[22m[39m
+   [33m[2m✓[22m[39m My Work organization[2m > [22mrecovers keyboard focus when clearing an absent selected filter: subject=rc [33m 348[2mms[22m[39m
+   [33m[2m✓[22m[39m My Work organization[2m > [22mdoes not move focus when a feed refresh removes an unselected picker [33m 506[2mms[22m[39m
+   [33m[2m✓[22m[39m My Work organization[2m > [22mfails open for invalid domain values, including inherited object names [33m 391[2mms[22m[39m
+   [33m[2m✓[22m[39m My Work organization[2m > [22mcombines subject and search filters and preserves the query on guided drill return [33m 2115[2mms[22m[39m
+   [33m[2m✓[22m[39m My Work organization[2m > [22mcombines work type with search and retains that filter when opening assigned work [33m 2020[2mms[22m[39m
+   [33m[2m✓[22m[39m My Work organization[2m > [22mkeeps repeated completed assignments and labels the available date as assigned [33m 631[2mms[22m[39m
+   [33m[2m✓[22m[39m shows unread independently of saved progress and completed work [33m 747[2mms[22m[39m
+[90mstderr[2m | src/components/my-work/AssignmentUpdate.test.tsx[2m > [22m[2mshows exact mixed note and assignment members with independent read labels
+[22m[39m⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ [32m✓[39m src/components/my-work/AssignmentUpdate.test.tsx [2m([22m[2m6 tests[22m[2m)[22m[33m 614[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m3 passed[39m[22m[90m (3)[39m
+[2m      Tests [22m [1m[32m123 passed[39m[22m[90m (123)[39m
+[2m   Start at [22m 08:10:57
+[2m   Duration [22m 34.73s[2m (transform 3.34s, setup 480ms, collect 8.40s, tests 16.93s, environment 3.16s, prepare 2.26s)[22m
+

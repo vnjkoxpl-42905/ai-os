@@ -1,0 +1,404 @@
+{
+  "audit_date": "2026-10-10",
+  "scope": "26 Claude canonical SKILL.md bodies assigned to canonical_long",
+  "read_method": "Full bounded body reads; truncated output segments explicitly recovered. Hash receipts computed from current files. Supporting tree existence checks selective, not full recursive support-file audit.",
+  "semantic_review_status": "26/26 full body reviewed",
+  "runtime_tests": "not performed: read-only catalog audit",
+  "mutations": "Only this report and its Markdown companion; no skill edits, deletes, activation changes, unknown scripts or external calls.",
+  "source_pages": [
+    "wiki/karpathy/hot.md",
+    "wiki/karpathy/rules.md"
+  ],
+  "rows": [
+    {
+      "name": "claude-api",
+      "path": "skills/claude/claude-api/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "disposition": "keep-and-fix",
+      "reason": "Correct Anthropic API capability, not a duplicate of Codex automation. Overbroad discovery and contradictory research instructions need repair.",
+      "evidence": [
+        "Frontmatter lines 3-6 triggers any natural-language generate/summarize/extract/rewrite and unstated provider; Before You Start asks to switch non-Anthropic code despite SKIP; line 32 requires WebFetch undocumented bindings, Common Pitfalls near end says do not WebFetch before writing. Cached models/prices are not live verified."
+      ],
+      "recommendation": "Narrow to Anthropic implementation/API questions, honor explicit provider; choose one documentation-then-compile policy; verify live model availability before use.",
+      "confidence": "Static body findings; host/runtime and live version compatibility explicitly unverified",
+      "sha256": "8227f0d1192594bfea04df6c9f1d9d727dd300c3f4b2c42d315dd9fe58b1a421",
+      "lines": 572,
+      "bytes": 86198
+    },
+    {
+      "name": "claude-automation-recommender",
+      "path": "skills/claude/claude-automation-recommender/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "disposition": "keep-with-host-overlay",
+      "reason": "Useful read-only tailored recommendations. General MCP/default automation advice needs the machine's CLI-first and cost rules.",
+      "evidence": [
+        "Body recommends only 1-2 items/category and no changes. MCP recommendation matrix includes services already reached through gws/gh/other CLIs. Host/tool metadata is Claude-oriented."
+      ],
+      "recommendation": "Keep as recommender, check current connections before proposing another server or paid automation.",
+      "confidence": "Static body findings; host/runtime and live version compatibility explicitly unverified",
+      "sha256": "bd8789052f89e784b744a2104d6f3f1373526ebe9e0576a3a5f6f4c73633f66f",
+      "lines": 288,
+      "bytes": 10856
+    },
+    {
+      "name": "command-development",
+      "path": "skills/claude/command-development/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "disposition": "keep-compatibility-reference",
+      "reason": "Legacy command reference can be useful for existing third-party plugins. It should not create a second AI OS activation path.",
+      "evidence": [
+        "Opening legacy note recommends new skills already. Later examples still build .claude/commands, use $ARGUMENTS/$1 and $IF conditional templates, and plugin commands."
+      ],
+      "recommendation": "Scope to maintaining legacy plugin commands; route new AI OS capabilities to skill creation and project/catalog copies. Verify special conditional syntax before recommending it.",
+      "confidence": "Static body findings; host/runtime and live version compatibility explicitly unverified",
+      "sha256": "c55ad02cfe4cbb2a947eea3b1ed5fa1871e722d627c3c6792c3ed87c10c4d7a8",
+      "lines": 884,
+      "bytes": 19233
+    },
+    {
+      "name": "design-taste-frontend",
+      "path": "skills/claude/design-taste-frontend/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "disposition": "keep-and-fix",
+      "reason": "A deliberately opinionated visual preset, not a universal product policy. Undefined dial and compulsory animation conflict with accessible app work.",
+      "evidence": [
+        "Baseline defines DESIGN_VARIANCE but line 50 uses LAYOUT_VARIANCE >4. Sections 4/9 require perpetual component motion and universal bento baseline without reduced-motion gate; forced libraries/RSC assumptions may not match Vite."
+      ],
+      "recommendation": "Fix dial; make preset explicit, preserve project stack/design system, make motion conditional and honor reduced motion. Retain layout/component quality guidance.",
+      "confidence": "Static body findings; host/runtime and live version compatibility explicitly unverified",
+      "sha256": "a23a9e4e74a87e3f458d53cbff60adbc666e7a1e8633d43f9e213111e48f69b0",
+      "lines": 226,
+      "bytes": 21140
+    },
+    {
+      "name": "doc-coauthoring",
+      "path": "skills/claude/doc-coauthoring/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "disposition": "keep-with-fast-path",
+      "reason": "Useful staged drafting and reader test, not redundant with format editors. Repeated permission/questions and root output default add friction.",
+      "evidence": [
+        "Stage 1 offers workflow and initial questions; section drafting asks 5-10 questions and 5-20 options. Lines 135/367 assume create_file host tool; local-output guidance uses working directory."
+      ],
+      "recommendation": "Use existing context first; scale drafting gates to ambiguity, respect already-authorized request, adapt file tools and file output in owning folder.",
+      "confidence": "Static body findings; host/runtime and live version compatibility explicitly unverified",
+      "sha256": "2e47d78846faeea4a56e9809c52700087a15a2155a3f293a3efbaded81398ef4",
+      "lines": 375,
+      "bytes": 15815
+    },
+    {
+      "name": "emil-design-eng",
+      "path": "skills/claude/emil-design-eng/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "disposition": "keep",
+      "reason": "Distinct interface polish method with concrete before/after reviews, motion-frequency decisions and accessibility.",
+      "evidence": [
+        "Full 679-line body includes Accessibility/prefers-reduced-motion at tail, touch-device hover gating, interruption/performance and clear Before/After table. Initial empty invocation only advertises course."
+      ],
+      "recommendation": "Keep as optional UI polish lens; improve empty-invocation response to describe available help. Do not strip its reduced-motion policy.",
+      "confidence": "Static body findings; host/runtime and live version compatibility explicitly unverified",
+      "sha256": "433b5a239cda18e0576e4e558532e7e53512e21fafe5b85db4894c28ec399b72",
+      "lines": 679,
+      "bytes": 27335
+    },
+    {
+      "name": "graphify",
+      "path": "skills/claude/graphify/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "disposition": "keep-and-fix",
+      "reason": "Useful optional derived graph, but current instructions can lose identity, retain stale relationships or reject valid output, and create competing intake.",
+      "evidence": [
+        "Lines 291/347: agent Output ONLY valid JSON while success requires .graphify_chunk_NN.json on disk, with no explicit write instruction in exact prompt. Line 338 filename-stem entity IDs collide across same basename directories. Lines 914-921 remove deleted-file nodes then update new graph, leaving removed nodes/edges from modified files. For add writes ./raw and automatic update; install uses --break-system-packages; claude install writes manual-owned CLAUDE.md."
+      ],
+      "recommendation": "Require file output or parent writes returned JSON; path-qualified identity aligned with extractor; replace affected-file subgraph on modification. Route sources through existing ingest, artifacts/deps to approved homes, and native instruction integration only as reviewed proposal.",
+      "confidence": "Static body findings; host/runtime and live version compatibility explicitly unverified",
+      "sha256": "edeec794075177bd7c275197e652b01a3011f332703239a8e9545f55117724f4",
+      "lines": 1377,
+      "bytes": 60532
+    },
+    {
+      "name": "hook-development",
+      "path": "skills/claude/hook-development/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "disposition": "keep-and-fix",
+      "reason": "Claude hook reference must be runtime-scoped and internally schema-consistent. It cannot prove native Codex hook trust.",
+      "evidence": [
+        "Lines 64-79 require plugin hooks wrapper, line 115 says user-settings events directly top-level, Plugin Hook Configuration later omits wrapper. Prompt event supported list conflicts with later PostToolUse prompt example. Local currently supported schemas need authoritative verification."
+      ],
+      "recommendation": "Fix contradictory examples after current host/schema check; explicit Claude scope; route Codex project hooks to .codex/hooks.json and /hooks trust. No native activation claimed.",
+      "confidence": "Static body findings; host/runtime and live version compatibility explicitly unverified",
+      "sha256": "f47e2d42f6360294216a859ae0c30b93caafdd2b2e5ffc007489ba4ca447fa5c",
+      "lines": 712,
+      "bytes": 16246
+    },
+    {
+      "name": "image-to-code",
+      "path": "skills/claude/image-to-code/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "disposition": "keep-as-explicit-preset",
+      "reason": "Image-first design method can add value, but broad mandatory regeneration is expensive and can replace authoritative supplied visuals.",
+      "evidence": [
+        "Claude catalog frontmatter names Codex. Sections 2/4 require generate first and one image per section; sections 5/6 prohibit crops and assert regenerated render is same design. Text extraction lacks approved-copy/factual authority gate; 38 repeated sections."
+      ],
+      "recommendation": "Narrow to requested image-first exploration; preserve user supplied image when faithful implementation requested; cap iterations based on observable quality, use approved copy, consolidate repeated body.",
+      "confidence": "Static body findings; host/runtime and live version compatibility explicitly unverified",
+      "sha256": "4c060a8064a8b13380bc2ef3d6e6a1d0b1e316aa093cd9807d0ce9e4eeb037fa",
+      "lines": 1228,
+      "bytes": 36442
+    },
+    {
+      "name": "json-canvas",
+      "path": "skills/claude/json-canvas/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "disposition": "keep",
+      "reason": "Distinct JSON Canvas format authoring, unrelated to graph extraction or note ingestion.",
+      "evidence": [
+        "Body covers text/file/link/group nodes, edges, colors, geometry, JSON validation and Obsidian reopen test. 16-character ID convention is asserted as field requirement rather than clearly a generation convention."
+      ],
+      "recommendation": "Retain; verify exact Canvas spec before treating ID length convention as universal validity requirement. No live renderer test performed.",
+      "confidence": "Static body findings; host/runtime and live version compatibility explicitly unverified",
+      "sha256": "97d1ae0728955c4203922753d5656890e5e4dd371b8306ea11884f9b510f1b85",
+      "lines": 244,
+      "bytes": 7624
+    },
+    {
+      "name": "kling-cli",
+      "path": "skills/claude/kling-cli/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "disposition": "keep-and-fix",
+      "reason": "Useful account/parameter/credit-aware video/image tool, with overbroad triggers and unrequested feedback behavior.",
+      "evidence": [
+        "Frontmatter includes generic install/MCP/global/region and image/video generation. Lines 300-307 explicitly allow silent agent-initiated feedback without authorization. Body otherwise verifies who_am_i, model parameter support and prevents automatic paid retry."
+      ],
+      "recommendation": "Narrow to Kling tasks; feedback only when user authorized; retain paid submission/identity/region discipline and use efficient status polling.",
+      "confidence": "Static body findings; host/runtime and live version compatibility explicitly unverified",
+      "sha256": "365a5d9bc73ad84486405fa5d3aa3c1fb89612e2f0d1b13ccca4b0d859f529f4",
+      "lines": 471,
+      "bytes": 40830
+    },
+    {
+      "name": "lsat-lab-mega-set",
+      "path": "skills/claude/lsat-lab-mega-set/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "disposition": "keep-and-fix",
+      "reason": "Distinct full-PT LR set assembly with useful count/URL gates, but destructive recovery and stale paths need correction.",
+      "evidence": [
+        "Lines 55/141 log to ~/ai-os/output/lsat-u/lsat-lab-set-log.md but lines 40/234 use output/lsat-lab-set-log.md. Line 120 deletes bad created set automatically; line 127 Cmd+A assumes Mac; footer assumes S1 Q1."
+      ],
+      "recommendation": "Use canonical owned log path, Windows/browser documented shortcuts, ask exact deletion confirmation, verify actual first section rather than hardcode S1.",
+      "confidence": "Static body findings; host/runtime and live version compatibility explicitly unverified",
+      "sha256": "5ecfa40a84b0d23af1f18f547bb0ee16897381889c7da86c7ef6626ac89c7d8a",
+      "lines": 241,
+      "bytes": 16870
+    },
+    {
+      "name": "lsat-lab-transcribe",
+      "path": "skills/claude/lsat-lab-transcribe/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "disposition": "keep-and-fix",
+      "reason": "Detailed capture workflow with strong completeness/provenance intent, but resume and first-item ordering can skip a question.",
+      "evidence": [
+        "Line 99 confirms NEXT pointer then advances; line 120 per-question loop starts with click Next. Body infers styles from prose heuristics, uses stale ref_34 example, asserts authorship wholesale and converts -- to em dash."
+      ],
+      "recommendation": "Capture current confirmed item before advance; separate last-completed and next pointers. Verify UI style label, dynamic refs, retain raw transcription and limit normalization to verified cases; document actual source rights.",
+      "confidence": "Static body findings; host/runtime and live version compatibility explicitly unverified",
+      "sha256": "a4f3500c9bb4b944e01afdfc594f69ef0232e88aaccdd2b6a450b00a6b14111a",
+      "lines": 162,
+      "bytes": 18203
+    },
+    {
+      "name": "math-olympiad",
+      "path": "skills/claude/math-olympiad/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "disposition": "keep-optional-and-fix",
+      "reason": "Specialized mathematical proof capability is distinct and not useless merely infrequent. Generic counterexample triggers and agent budget need scoping.",
+      "evidence": [
+        "Frontmatter includes generic find a counterexample/is this proof correct. Line 85 launches 8-12 simultaneous agents despite finite slots; body offers different model-tier counts, chooses hard interpretation by presumed intent, and small-n patterns as proof structure."
+      ],
+      "recommendation": "Explicit mathematical/competition domain; budget waves to available slots; resolve ambiguity from wording; small cases guide a general proof but do not replace it.",
+      "confidence": "Static body findings; host/runtime and live version compatibility explicitly unverified",
+      "sha256": "f697e195d343520f3db551bd4fb44c5120504ee2c47a9cc2016cd57767f23403",
+      "lines": 411,
+      "bytes": 19961
+    },
+    {
+      "name": "mcp-builder",
+      "path": "skills/claude/mcp-builder/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "disposition": "keep",
+      "reason": "Building MCP servers is distinct from configuring an existing server/plugin.",
+      "evidence": [
+        "Body has research-first SDK/protocol guidance, Python/TypeScript tracks, build/Inspector validation, workflow-friendly tools and read-only stable evaluation tasks."
+      ],
+      "recommendation": "Retain, with project policy least privilege and only required tools/coverage. Build/Inspector not run in this read-only audit.",
+      "confidence": "Static body findings; host/runtime and live version compatibility explicitly unverified",
+      "sha256": "0f4592dcb53cf2b5d6b7febee6b4152018b565551a1c29e3c612f57b218ab295",
+      "lines": 236,
+      "bytes": 9092
+    },
+    {
+      "name": "mcp-integration",
+      "path": "skills/claude/mcp-integration/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "disposition": "keep-and-fix",
+      "reason": "Useful Claude plugin MCP integration reference. Transport terminology/schema and broad external-service triggers need correction.",
+      "evidence": [
+        "Line 3 includes connect external service; line 120 and transport table label HTTP as REST. Lifecycle says servers start on plugin enable but line 405 says on demand. .mcp.json example direct map differs from plugin-structure mcpServers wrapper."
+      ],
+      "recommendation": "Narrow explicit Claude MCP integration, preserve CLI-first service routes, explain MCP HTTP transport not arbitrary REST, reconcile lifecycle and verify schema/transport support live before use.",
+      "confidence": "Static body findings; host/runtime and live version compatibility explicitly unverified",
+      "sha256": "2bcc3b5e93924d7632218f494890f6e6f75a9248138bc97070bc62aea942dd49",
+      "lines": 554,
+      "bytes": 12519
+    },
+    {
+      "name": "notebooklm",
+      "path": "skills/claude/notebooklm/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "disposition": "keep-and-fix",
+      "reason": "Distinct source-backed artifacts/chat, with explicit notebook IDs valuable. Examples and certainty overstate reliability.",
+      "evidence": [
+        "Lines 205/228/235 return task_id but automation line 288 parses artifact_id. Line 474 claims reliable operations always work despite errors/re-auth sections. Line 116 blanket confirmation for download even already-authorized full automation; timing examples differ."
+      ],
+      "recommendation": "Verify CLI JSON output, parse actual IDs; qualify reliability/account limits and use status rather than fixed promises; retain explicit notebook IDs and use existing authorization for requested downloads.",
+      "confidence": "Static body findings; host/runtime and live version compatibility explicitly unverified",
+      "sha256": "70d471c87b2eb763c8db9ef0def7f6a7607db11e59f9b438bde4fe01cb71b457",
+      "lines": 569,
+      "bytes": 25899
+    },
+    {
+      "name": "obsidian-bases",
+      "path": "skills/claude/obsidian-bases/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "disposition": "keep",
+      "reason": "Dedicated .base views/formula authoring adds value apart from Markdown/canvas/graph.",
+      "evidence": [
+        "Full body defines filters/properties/formulas/views, cards/list/map/table, syntax validation and reopen in Obsidian check."
+      ],
+      "recommendation": "Keep optional format skill, preserve current AI OS frontmatter/schema and avoid parallel intake. Renderer not tested.",
+      "confidence": "Static body findings; host/runtime and live version compatibility explicitly unverified",
+      "sha256": "1785f37a2b00d900d259ed57faac6a3f9c589f9fb40ec5ccdeba83daa850452c",
+      "lines": 497,
+      "bytes": 12903
+    },
+    {
+      "name": "obsidian-markdown",
+      "path": "skills/claude/obsidian-markdown/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "disposition": "keep-and-fix-overlay",
+      "reason": "Useful Obsidian syntax reference, but blanket internal wikilinks policy can conflict with portable canonical AI OS links.",
+      "evidence": [
+        "Lines 14/19 mandate wikilinks internally and Markdown links external only; frontmatter broadly triggers all .md work in Obsidian."
+      ],
+      "recommendation": "Honor owning schema/current link style first; narrow to Obsidian syntax/render features. Do not automatically rewrite every portable Markdown link.",
+      "confidence": "Static body findings; host/runtime and live version compatibility explicitly unverified",
+      "sha256": "7ad72e1f0a9081ed325e76b6402ad5de50a00e63e2341fd403a92f147234a007",
+      "lines": 196,
+      "bytes": 5367
+    },
+    {
+      "name": "pdf",
+      "path": "skills/claude/pdf/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "disposition": "keep-minor-fix",
+      "reason": "Distinct PDF extraction/OCR/merge/forms capability should stay.",
+      "evidence": [
+        "Line 25 concatenates page.extract_text() without None guard; OCR example needs installed Tesseract and Poppler beyond Python dependencies. FORMS.md and REFERENCE.md exist."
+      ],
+      "recommendation": "Guard image-only/empty extracted pages, report OCR prerequisites and missing sections; retain dedicated format workflow.",
+      "confidence": "Static body findings; host/runtime and live version compatibility explicitly unverified",
+      "sha256": "9f78b8359fbd4943ad260a7a1e436e5a96503406d6c34e99f69223d647d85b9c",
+      "lines": 314,
+      "bytes": 8072
+    },
+    {
+      "name": "plugin-settings",
+      "path": "skills/claude/plugin-settings/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "disposition": "keep-and-fix",
+      "reason": "Useful configurable plugin state, but shell parsing and reload guidance can fail.",
+      "evidence": [
+        "Lines 68-83 combine set -euo pipefail with optional grep pipelines; missing field aborts before defaults. sed range reads later --- body sections too. Runtime hooks read state each invocation but lines 200/369 say settings changes require restart. Quote-only escaping insufficient YAML serialization."
+      ],
+      "recommendation": "Use actual YAML parsing/serialization and missing-field defaults, bound first frontmatter; distinguish hook-definition reload from next-invocation state reads.",
+      "confidence": "Static body findings; host/runtime and live version compatibility explicitly unverified",
+      "sha256": "028b955244b937ebc1a5c268a12776b8ceae4cbfb60928fbca927227f4c8851d",
+      "lines": 544,
+      "bytes": 12097
+    },
+    {
+      "name": "plugin-structure",
+      "path": "skills/claude/plugin-structure/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "disposition": "keep-and-fix-examples",
+      "reason": "Claude plugin organization reference is distinct from ordinary AI OS project skill activation.",
+      "evidence": [
+        "Hooks example direct event root conflicts hook-development required wrapper; line 242 .mcp.json mcpServers wrapper conflicts mcp-integration direct map. Frontmatter example Skill Name conflicts own kebab-case convention."
+      ],
+      "recommendation": "Verify host schemas and align examples across reference skills; state project activation policy wins outside actual plugin development.",
+      "confidence": "Static body findings; host/runtime and live version compatibility explicitly unverified",
+      "sha256": "a2dbc1e5502aacb360d0ca74732cdd7be4f6a12a49edf4f2ade4134fbc026247",
+      "lines": 476,
+      "bytes": 13796
+    },
+    {
+      "name": "pptx",
+      "path": "skills/claude/pptx/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "disposition": "keep-with-host-overlay",
+      "reason": "Distinct slide creation/editing with content+visual QA is valuable.",
+      "evidence": [
+        "Body requires render/inspect every slide and OOXML validation; assumes preinstalled Node/React/sharp/office tools and sandbox-specific soffice advice. Slide-image cleanup rm pattern can affect shared output directory."
+      ],
+      "recommendation": "Use workspace runtime detection; all intermediates in dedicated task directory; retain visual and schema QA. No slide generation executed.",
+      "confidence": "Static body findings; host/runtime and live version compatibility explicitly unverified",
+      "sha256": "a7ff03e2c85b636f55232a6b1555f5dd90216b7a1a359ab289d8364e6acbc6a0",
+      "lines": 238,
+      "bytes": 20796
+    },
+    {
+      "name": "skill-creator",
+      "path": "skills/claude/skill-creator/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "disposition": "keep-and-fix-evaluation",
+      "reason": "Best candidate primary skill-authoring workflow; evaluations and negative trigger cases useful, but broad description advice and held-out selection need repair.",
+      "evidence": [
+        "Line 67 encourages pushy trigger on any company data; line 394 repeatedly evaluates candidates on held-out test and selects best by test score, making that split validation rather than untouched final test. Tool timings/browser commands are host-specific."
+      ],
+      "recommendation": "Use explicit positive+negative boundaries, validation for selection plus untouched final test, adapt actual tools/timing receipts and project/catalog activation; preserve creator baseline iteration.",
+      "confidence": "Static body findings; host/runtime and live version compatibility explicitly unverified",
+      "sha256": "dcd4803e61e913e6fc27294184cd3a71f09f5e924ff20c8a9a20173e7b3c2bcf",
+      "lines": 485,
+      "bytes": 33168
+    },
+    {
+      "name": "skill-development",
+      "path": "skills/claude/skill-development/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "disposition": "retain-plugin-reference",
+      "reason": "Useful Claude plugin packaging/progressive-disclosure reference, overlapping generic creation triggers should delegate core authoring to one primary creator.",
+      "evidence": [
+        "Frontmatter create a skill/write new skill overlaps skill-creator and writing-skills; Steps3/5 plugin directory/testing are unique. Testing uses cc --plugin-dir alias without verified availability; metadata example Skill Name conflicts canonical kebab-case."
+      ],
+      "recommendation": "Narrow to Claude plugin skill packaging/structure, compose primary creator evaluations, resolve actual claude executable, preserve AI OS catalog+activation policy.",
+      "confidence": "Static body findings; host/runtime and live version compatibility explicitly unverified",
+      "sha256": "d51b4e20043b13e462aa86c47ea82d43e216eb292871538127f4b12a54e4944f",
+      "lines": 637,
+      "bytes": 22825
+    },
+    {
+      "name": "writing-skills",
+      "path": "skills/claude/writing-skills/SKILL.md",
+      "semantic_review": "full body reviewed",
+      "disposition": "keep-testing-reference-and-fix",
+      "reason": "Useful pressure/wording tests and conditional contracts; destructive universal discipline and duplicate creator trigger are unsuitable as automatic primary authoring.",
+      "evidence": [
+        "Lines 382 onward require delete existing skill on any untested edit with no exceptions, conflicting preserve/explicit-deletion policy. Required superpowers:test-driven-development needs installed resolution. Max1024 total frontmatter is overbroad spec interpretation; push deployment commit/push as mandatory."
+      ],
+      "recommendation": "Retain pressure/negative tests as optional creator reference; replace deletion with preserve/revert proposed scoped changes under authorization, narrow trigger to behavioral skill testing, verify dependency and exact current metadata limits; publish only in authorized scope.",
+      "confidence": "Static body findings; host/runtime and live version compatibility explicitly unverified",
+      "sha256": "6b8d08fe863318be8480ae8428e169640309fa9208df84bb0510012764454146",
+      "lines": 689,
+      "bytes": 26431
+    }
+  ]
+}

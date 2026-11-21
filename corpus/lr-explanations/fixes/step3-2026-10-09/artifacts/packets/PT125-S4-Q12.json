@@ -1,0 +1,66 @@
+{
+ "qid": "PT125-S4-Q12",
+ "type": "Most Strongly Supported",
+ "difficulty": "2",
+ "key_db": "D",
+ "stimulus_db": "Linguist: The Sapir-Whorf hypothesis states that a society's world view is influenced by the language or languages its members speak. But this hypothesis does not have the verifiability of hypotheses of physical science, since it is not clear that the hypothesis could be tested.",
+ "stem_db": "If the linguist's statements are accurate, which one of the following is most supported by them?",
+ "choices_db": {
+  "A": "The Sapir-Whorf hypothesis is probably false.",
+  "B": "Only the hypotheses of physical science are verifiable.",
+  "C": "Only verifiable hypotheses should be seriously considered.",
+  "D": "We do not know whether the Sapir-Whorf hypothesis is true or false.",
+  "E": "Only the hypotheses of physical science should be taken seriously."
+ },
+ "bank": {
+  "stimulus": "Linguist: The Sapir-Whorf hypothesis states that a society's world view is influenced by the language or languages its members speak. But this hypothesis does not have the verifiability of hypotheses of physical science, since it is not clear that the hypothesis could be tested.",
+  "stem": "If the linguist's statements are accurate, which one of the following is most supported by them?",
+  "choices": {
+   "A": "The Sapir-Whorf hypothesis is probably false.",
+   "B": "Only the hypotheses of physical science are verifiable.",
+   "C": "Only verifiable hypotheses should be seriously considered.",
+   "D": "We do not know whether the Sapir-Whorf hypothesis is true or false.",
+   "E": "Only the hypotheses of physical science should be taken seriously."
+  },
+  "key": "D"
+ },
+ "explanation_id": "87919b24-e7fb-42a1-b12d-7f8ce5f8d72e",
+ "style": "single",
+ "steps": [
+  {
+   "row_id": "febec16a-0f3f-4bf7-8753-0efc9f41822d",
+   "position": 0,
+   "label": "Given",
+   "body": "The Sapir-Whorf hypothesis states that a society's world view is influenced by the language or languages its members speak.\nBut this hypothesis does not have the verifiability of hypotheses of physical science.\nIt is not clear that the hypothesis could be tested."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "397c754d-1182-4f18-b1ee-75711bf8d847",
+   "letter": "A",
+   "body": "The hypothesis has not been verified, but to say that it is probably false goes too far."
+  },
+  {
+   "row_id": "99ee3604-856f-40bc-bdef-b640efc8cd6d",
+   "letter": "B",
+   "body": "While the hypotheses of physical science are verifiable, they need not be the only verifiable hypotheses."
+  },
+  {
+   "row_id": "6cfc6704-6b7f-4152-9d85-d92a1cf9e41c",
+   "letter": "C",
+   "body": "Which hypotheses ought to be seriously considered is not discussed in the statements."
+  },
+  {
+   "row_id": "3ebae480-2210-4a95-a928-827b5f6fafa9",
+   "letter": "D",
+   "body": "This is supported by the second statement."
+  },
+  {
+   "row_id": "025294d2-9cc7-496f-8d67-9b1abfdbf33f",
+   "letter": "E",
+   "body": "Which hypotheses ought to be taken seriously is not discussed in the statements."
+  }
+ ],
+ "known_problem": "DB type says Parallel Flaw; it is Most Supported. Correct note is \"supported by the second statement\".",
+ "tags": "short-breakdown; verdict-only; thin-correct-note; thin-notes; no-prediction; very-short"
+}

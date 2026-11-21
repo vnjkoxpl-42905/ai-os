@@ -22,6 +22,7 @@ lifecycle: active
 - [[open-loops|Open loops]]
 - [[assignment-log|Assignment log]]
 - [[7sage|7Sage]]
+- [[transcript-downloads/2026-11-13-charles-moore-notes-by-gemini|2026-11-13 transcript (raw export)]]
 - [[sessions/2026-09-25-quantity-logic/transcript|2026-09-25 session]] · [[recaps/2026-09-25-recap|draft recap]]
 
 

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="lsatu-interactive-lesson" content="amanda-2026-10-21-rules-and-facts">
+<title>Rules, Facts, and What Follows · Session Manual</title>
+<style>  :root{
+    --cream:#FBF8F1; --ink:#1C1917; --ink-soft:#44403C; --ink-mute:#78716C;
+    --gold:#E8D08B; --gold-deep:#B8983F; --gold-wash:rgba(232,208,139,.16);
+    --card:#FFFFFF; --line:#E7E0D2;
+    --green:#3F6212; --green-wash:rgba(63,98,18,.09);
+    --red:#9F1239; --red-wash:rgba(159,18,57,.07);
+    --serif:"Fraunces","Garamond","Georgia",serif;
+    --sans:"Outfit","Avenir Next","Helvetica Neue",sans-serif;
+    --mono:"JetBrains Mono","SF Mono",Menlo,monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--ink);font-family:var(--sans);line-height:1.65;font-size:17px}
+  .wrap{max-width:800px;margin:0 auto;padding:0 24px}
+
+  header.hero{padding:68px 0 44px;border-bottom:1px solid var(--line)}
+  .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:18px}
+  h1{font-family:var(--serif);font-weight:600;font-size:clamp(36px,6vw,54px);line-height:1.06;letter-spacing:-.01em}
+  .hero p.lede{margin-top:20px;font-size:19px;color:var(--ink-soft);max-width:58ch}
+
+  section{padding:50px 0;border-bottom:1px solid var(--line)}
+  h2{font-family:var(--serif);font-weight:600;font-size:30px;line-height:1.15;margin-bottom:4px}
+  .sec-kicker{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:10px}
+  p{margin:14px 0;color:var(--ink-soft)}
+  p strong{color:var(--ink)}
+
+  .callout{background:var(--gold-wash);border-left:3px solid var(--gold-deep);border-radius:0 12px 12px 0;padding:16px 20px;margin:24px 0;font-size:16.5px;color:var(--ink-soft)}
+  .callout .tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-deep);display:block;margin-bottom:6px}
+  .callout strong{color:var(--ink)}
+
+  /* the three kinds */
+  .kinds{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:28px 0 8px}
+  .kind{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;box-shadow:0 1px 3px rgba(28,25,23,.06);transition:transform .18s,box-shadow .18s}
+  /* The colour carries the taxonomy, so it has to stay. A short rule inside
+     the padding does that without a 3px border running into a 14px corner. */
+  .kind .bar{display:block;width:32px;height:4px;border-radius:2px;background:var(--c);margin-bottom:14px}
+  .kind:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(28,25,23,.09)}
+  .kind.assume{--c:var(--gold-deep)}
+  .kind.object{--c:var(--red)}
+  .kind.describe{--c:var(--green)}
+  .kind .name{font-family:var(--serif);font-size:22px;color:var(--c);font-weight:600}
+  .kind .what{font-size:15px;margin:8px 0 0;color:var(--ink-soft)}
+  .kind .words{border-top:1px dashed var(--line);margin-top:14px;padding-top:12px}
+  .kind .words b{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--c);display:block;margin-bottom:7px}
+  .kind .words span{display:block;font-size:14px;color:var(--ink-mute);padding:2px 0}
+  .kind .test{margin-top:14px;background:var(--cream);border-radius:9px;padding:11px 13px;font-size:14.5px;color:var(--ink)}
+  .kind .test b{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-mute);display:block;margin-bottom:4px}
+
+  .opposite{display:flex;align-items:stretch;gap:0;margin:26px 0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--card)}
+  .opposite div{flex:1;padding:18px 20px;font-size:15.5px;color:var(--ink-soft)}
+  .opposite div:first-child{background:var(--gold-wash)}
+  .opposite div:last-child{background:var(--red-wash)}
+  .opposite b{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;margin-bottom:6px}
+  .opposite div:first-child b{color:var(--gold-deep)}
+  .opposite div:last-child b{color:var(--red)}
+
+  ol.steps{margin:20px 0;padding-left:0;list-style:none;counter-reset:step}
+  ol.steps li{counter-increment:step;position:relative;padding:14px 0 14px 54px;border-bottom:1px dashed var(--line);font-size:16px;color:var(--ink-soft)}
+  ol.steps li:last-child{border-bottom:none}
+  ol.steps li::before{content:counter(step);position:absolute;left:0;top:12px;width:34px;height:34px;border-radius:50%;background:var(--ink);color:var(--cream);font-family:var(--serif);display:flex;align-items:center;justify-content:center;font-size:16px}
+  ol.steps li b{color:var(--ink)}
+
+  .flags{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 4px}
+  .flag{font-family:var(--mono);font-size:12.5px;letter-spacing:.04em;background:var(--red-wash);color:var(--red);border:1px solid rgba(159,18,57,.2);border-radius:999px;padding:6px 14px}
+
+  .drill{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;margin:26px 0;box-shadow:0 2px 8px rgba(28,25,23,.06)}
+  .drill h3{font-family:var(--serif);font-size:19px;margin-bottom:4px}
+  .drill p.hint{font-size:14px;color:var(--ink-mute);margin:0 0 14px}
+  .chips{display:flex;gap:8px;flex-wrap:wrap}
+  .chip{font-family:var(--mono);font-size:13px;background:var(--cream);border:1px solid var(--line);border-radius:999px;padding:8px 15px;cursor:pointer;transition:all .16s;color:var(--ink-soft)}
+  .chip:hover{border-color:var(--ink-mute)}
+  .chip.on[data-k="assume"]{background:var(--gold-wash);border-color:var(--gold-deep);color:var(--gold-deep)}
+  .chip.on[data-k="object"]{background:var(--red-wash);border-color:var(--red);color:var(--red)}
+  .chip.on[data-k="describe"]{background:var(--green-wash);border-color:var(--green);color:var(--green)}
+  .chip .ans{display:none;font-weight:600}
+  .chip.on .ans{display:inline;margin-left:8px}
+
+  .quote{font-family:var(--serif);font-size:20px;line-height:1.45;color:var(--ink);border-left:3px solid var(--gold);padding:4px 0 4px 22px;margin:24px 0;font-style:italic}
+  .footer-note{padding:34px 0 56px}
+  .mark{font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-mute);opacity:.7}
+  .chip.on[data-k="neutral"]{background:var(--gold-wash);border-color:var(--ink-mute);color:var(--ink)}
+  .kind.link{--c:var(--gold-deep)}
+  .kind.apply{--c:var(--green)}
+  .kind.warn{--c:var(--red)}
+  .rule{font-family:var(--serif);font-size:20px;color:var(--ink);margin:18px 0}
+  .rule .ar{color:var(--gold-deep);font-weight:700;margin:0 6px}
+  table.t{width:100%;border-collapse:collapse;margin:20px 0;font-size:15.5px;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  table.t th{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold-deep);text-align:left;padding:12px 16px;border-bottom:1px solid var(--line)}
+  table.t td{padding:11px 16px;border-bottom:1px dashed var(--line);color:var(--ink-soft);vertical-align:top}
+  table.t tr:last-child td{border-bottom:none}
+  table.t td:first-child{color:var(--ink);font-weight:600;white-space:nowrap}
+  pre{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;font-family:var(--serif);font-size:18px;overflow-x:auto}
+  @media (max-width:560px){.opposite{flex-direction:column}table.t td:first-child{white-space:normal}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header class="hero"><div class="wrap">
+  <div class="kicker">Session Manual · October 21</div>
+  <h1>Rules, Facts,<br>and What Follows</h1>
+  <p class="lede">Every conditional question asks you to do one of two jobs. You either link rules together, or you apply a rule to a fact. When one of these questions stalls you, it is almost always because you are doing the wrong job, or because you read a fact as filler.</p>
+</div></header>
+
+<section><div class="wrap">
+  <div class="sec-kicker">Step zero</div>
+  <h2>Sort every sentence as you read</h2>
+  <p>"Read actively" only helps if you know what to do. Here is what to do: as you finish each sentence, put it in a bucket.</p>
+  <div class="flags"><span class="flag">fact</span><span class="flag">rule</span><span class="flag">causal</span><span class="flag">correlation</span><span class="flag">normative</span><span class="flag">quantity</span></div>
+  <p>The buckets tell you where the argument is headed before you finish reading it. A correlation followed by a causal conclusion? You already know where it breaks.</p>
+  <div class="callout"><span class="tag">A fact is not filler</span>
+    A fact says what actually happened. A rule only says what follows <strong>if</strong> something happens. Facts are what set rules off, so a fact sitting next to a rule is usually the most important sentence in the stimulus.
+  </div>
+  <p><strong>Watch the pivots.</strong> When you see <em>but</em>, <em>yet</em> or <em>however</em> in a Must Be True question, the right answer usually brings together what comes before the pivot and what comes after it.</p>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-kicker">The two jobs</div>
+  <h2>Link rules, or apply them</h2>
+  <p>Name the job before you do anything else. Everything after depends on it.</p>
+
+  <div class="kinds">
+    <div class="kind link">
+      <span class="bar"></span>
+      <div class="name">Link rules</div>
+      <p class="what">Rules and no facts. Two rules share an idea, and you join them into a longer chain.</p>
+      <div class="words"><b>Looks like</b>
+        <span>if A, then B</span>
+        <span>if B, then C</span>
+        <span>the same idea shows up twice</span>
+      </div>
+      <div class="test"><b>Test</b>Find the start of the chain and the end. What runs from one to the other?</div>
+    </div>
+
+    <div class="kind apply">
+      <span class="bar"></span>
+      <div class="name">Apply a rule</div>
+      <p class="what">A rule plus a fact. You check the fact against the rule, like a lawyer checks a client's situation against the law.</p>
+      <div class="words"><b>Looks like</b>
+        <span>if A, then B</span>
+        <span>A happened</span>
+        <span>B didn't happen</span>
+      </div>
+      <div class="test"><b>Test</b>Does the fact match the left side, or deny the right side? If neither, nothing follows.</div>
+    </div>
+  </div>
+
+  <div class="opposite">
+    <div><b>The fact matches the left side</b>The right side must happen.</div>
+    <div><b>The fact matches the right side</b>Nothing follows. You can't work backwards.</div>
+  </div>
+
+  <p>The second box is the trap. A rule runs one way. Seeing the result tells you nothing about what caused it.</p>
+  <div class="quote">When I tried to bait you with the outcome, you said nothing follows, and you were right. Don't switch off that answer when someone pushes. Keep using it.</div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-kicker">Job two, step by step</div>
+  <h2>Applying a rule to a fact</h2>
+  <p>Rule: <em>If the library card is valid, the holder can borrow books.</em></p>
+  <ol class="steps">
+    <li><b>The card is valid.</b> That matches the left side, so the holder can borrow books.</li>
+    <li><b>The holder can't borrow books.</b> That denies the right side, so the card isn't valid. This is the contrapositive at work, and it is what the test likes to use.</li>
+    <li><b>The holder borrowed books.</b> That only matches the right side. Nothing follows about the card.</li>
+  </ol>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-kicker">Same pieces</div>
+  <h2>Sufficient Assumption and Must Be True</h2>
+  <p>Both question types are built from the same three pieces. The only difference is which piece is missing.</p>
+  <p class="rule">Burns down a fence <span class="ar">→</span> damaged public property</p>
+  <p>Fact: Mike burned down a fence. Conclusion: Mike damaged public property.</p>
+  <div class="opposite">
+    <div><b>Hide the rule or the fact</b>Sufficient Assumption. You supply the missing piece of evidence.</div>
+    <div><b>Hide the conclusion</b>Must Be True. You supply where the evidence lands.</div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-kicker">The trap</div>
+  <h2>When the left side has an "and"</h2>
+  <p class="rule">Trail is dry + guide is certified <span class="ar">→</span> hike goes ahead</p>
+  <div class="callout"><span class="tag">"And" turns into "or"</span>
+    The contrapositive: <strong>if the hike doesn't go ahead, then the trail wasn't dry or the guide wasn't certified.</strong> "Or" means one or the other, or both.
+  </div>
+  <div class="callout"><span class="tag">The trap that costs the most</span>
+    The guide is certified, and the hike went ahead, so the trail must have been dry. <strong>That doesn't follow.</strong> The rule only tells you what happens when both left-side ideas are true. One of them plus the result proves nothing about the other. Maybe they hiked in the mud.
+  </div>
+  <div class="quote">You named this exact structure on the book tour question: two ideas on the left, one of them given, the result given, and a conclusion that claims the other one. That's how you picked C.</div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-kicker">Recognition drill</div>
+  <h2>Which bucket is it?</h2>
+  <div class="drill">
+    <h3>Tap each sentence to check yourself</h3>
+    <p class="hint">Say the bucket out loud first, then tap. You want this to be instant.</p>
+    <div class="chips">
+      <span class="chip" data-k="assume">If the pharmacy is closed, prescriptions go to the front desk.<span class="ans">· Rule</span></span>
+      <span class="chip" data-k="describe">The pharmacy closed at noon on Sunday.<span class="ans">· Fact</span></span>
+      <span class="chip" data-k="object">Hospitals with more nurses tend to have shorter waits.<span class="ans">· Correlation</span></span>
+      <span class="chip" data-k="object">The outage caused the game to be cancelled.<span class="ans">· Causal</span></span>
+      <span class="chip" data-k="neutral">The city should run more night buses.<span class="ans">· Normative</span></span>
+      <span class="chip" data-k="neutral">Some of the nurses work weekends.<span class="ans">· Quantity</span></span>
+    </div>
+  </div>
+
+  <div class="drill">
+    <h3>Does anything follow?</h3>
+    <p class="hint">Rule: if the soup is salted and stirred, it's ready. Decide, then tap.</p>
+    <div class="chips">
+      <span class="chip" data-k="describe">It's salted and stirred.<span class="ans">· It's ready</span></span>
+      <span class="chip" data-k="describe">It isn't ready.<span class="ans">· Not salted or not stirred, or both</span></span>
+      <span class="chip" data-k="object">It's salted, and it's ready.<span class="ans">· Nothing about stirring</span></span>
+      <span class="chip" data-k="object">It isn't salted.<span class="ans">· Nothing follows</span></span>
+    </div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-kicker">The finalist</div>
+  <h2>When a conditional question stalls you</h2>
+  <ol class="steps">
+    <li><b>Sort the sentences.</b> Which are rules and which are facts?</li>
+    <li><b>Name the job.</b> Rules only: link them. A rule and a fact: apply it.</li>
+    <li><b>Applying:</b> does the fact match the left side, or deny the right side? Anything else, nothing follows.</li>
+    <li><b>An "and" on the left?</b> Both have to be true. One plus the result proves nothing.</li>
+    <li><b>Write one line</b> on why the loser lost.</li>
+  </ol>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-kicker">Before next session</div>
+  <h2>Your work this week</h2>
+  <ol class="steps">
+    <li><b>Unless drill,</b> as often as you can, until you clear it at 5 seconds.</li>
+    <li><b>Sort every sentence</b> into its bucket, on every question you do.</li>
+    <li><b>Conditionals on Parallel and Must Be True questions.</b> Keep the Parallel Reasoning note open while you work.</li>
+    <li><b>One more conditional drill and a set of practice questions</b> are coming to your Classroom.</li>
+    <li><b>Squeeze every question.</b> Before you move on, ask what it taught you.</li>
+  </ol>
+</div></section>
+
+<div class="footer-note"><div class="wrap">
+  <span class="mark">LSAT U</span>
+</div></div>
+
+<script>
+  document.querySelectorAll('.chip').forEach(function(c){
+    c.setAttribute('role', 'button');
+    c.tabIndex = 0;
+    c.setAttribute('aria-expanded', 'false');
+    c.addEventListener('click', function(){
+      c.setAttribute('aria-expanded', String(c.classList.toggle('on')));
+    });
+    c.addEventListener('keydown', function(e){
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); c.click(); }
+    });
+  });
+</script>
+</body>
+</html>

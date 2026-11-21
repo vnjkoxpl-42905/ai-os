@@ -2,6 +2,8 @@
 
 The reviewed example is `brainstorms/2026-09-28-recap-format/07-quantity-statements-lesson.md` with `08-quantity-statements-visual-preview.html`. Inspect them when building a new lesson, then make a design that fits the new topic. The source is an example of depth and interaction, not a universal outline or permission to teach its topic. Read [recap calibration](recap-calibration.md) on every run for the dated feedback behind these requirements.
 
+For a session that teaches a set of named things, use [catalogue note pattern](catalogue-note-pattern.md) alongside this bar.
+
 ## What the reader experiences
 
 - A title names the concept. The first sentence explains it in ordinary language.

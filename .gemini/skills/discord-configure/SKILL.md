@@ -1,6 +1,6 @@
 ---
 name: discord-configure
-description: Set up the Discord channel — save the bot token and review access policy. Use when the user pastes a Discord bot token, asks to configure Discord, asks "how do I set this up" or "who can reach me," or wants to check channel status.
+description: Set up the Discord channel — save the bot token and review access policy. Use when the user explicitly requests Discord configuration, asks to configure Discord, asks those questions specifically about their Discord channel, or wants to check channel status.
 user-invocable: true
 allowed-tools:
   - Read
@@ -9,10 +9,14 @@ allowed-tools:
   - Bash(mkdir *)
 ---
 
+## Current AI OS execution contract
+
+Never print a token prefix or request tokens in chat. Credentials are entered privately into the central .env. Check presence only and use the approved loader without exposing values.
+
 # /discord:configure — Discord Channel Setup
 
-Writes the bot token to `~/.claude/channels/discord/.env` and orients the
-user on access policy. The server reads both files at boot.
+Writes the bot token to `the central private .env` and orients the
+user on access policy. Verify the installed server credential loader and access configuration before claiming it reads this location.
 
 Arguments passed: `$ARGUMENTS`
 
@@ -22,10 +26,9 @@ Arguments passed: `$ARGUMENTS`
 
 ### No args — status and guidance
 
-Read both state files and give the user a complete picture:
+Inspect non-secret channel state and check credential presence without reading a secret value into tool output:
 
-1. **Token** — check `~/.claude/channels/discord/.env` for
-   `DISCORD_BOT_TOKEN`. Show set/not-set; if set, show first 6 chars masked.
+1. **Token** — use a presence-only credential loader/check for `DISCORD_BOT_TOKEN` in the central private `.env`. Show set/not-set; if set, report present only; expose no characters.
 
 2. **Access** — read `~/.claude/channels/discord/access.json` (missing file
    = defaults: `dmPolicy: "pairing"`, empty allowlist). Show:
@@ -35,8 +38,7 @@ Read both state files and give the user a complete picture:
    - Guild channels opted in: count
 
 3. **What next** — end with a concrete next step based on state:
-   - No token → *"Run `/discord:configure <token>` with your bot token from
-     the Developer Portal → Bot → Reset Token."*
+   - No token → *"Enter DISCORD_BOT_TOKEN privately in the central .env using the editor, then rerun Discord status. Do not put a token in chat or a command argument."*
    - Token set, policy is pairing, nobody allowed → *"DM your bot on
      Discord. It replies with a code; approve with `/discord:access pair
      <code>`."*
@@ -72,20 +74,17 @@ Discord already gates reach (shared-server requirement + Public Bot toggle),
 but that's not a substitute for locking the allowlist. Never frame `pairing`
 as the correct long-term choice. Don't skip the lockdown offer.
 
-### `<token>` — save it
+### Private token entry
 
-1. Treat `$ARGUMENTS` as the token (trim whitespace). Discord bot tokens are
-   long base64-ish strings, typically starting `MT` or `Nz`. Generated from
-   Developer Portal → Bot → Reset Token; only shown once.
-2. `mkdir -p ~/.claude/channels/discord`
-3. Read existing `.env` if present; update/add the `DISCORD_BOT_TOKEN=` line,
-   preserve other keys. Write back, no quotes around the value.
-4. `chmod 600 ~/.claude/channels/discord/.env` — the token is a credential.
+1. Direct private credential entry into the central `.env` editor; never accept token arguments or values in chat.
+2. Verify the actual channel server's documented credential loader uses that central entry. If it only reads a plugin-local `.env`, report the mismatch and adapt its loader within authorized scope; do not duplicate credentials.
+3. Preserve other credential entries. Presence checks return booleans only, not token text.
+4. Use the private credential loader and verify presence only.
 5. Confirm, then show the no-args status so the user sees where they stand.
 
 ### `clear` — remove the token
 
-Delete the `DISCORD_BOT_TOKEN=` line (or the file if that's the only line).
+Clear this credential only after explicit removal authorization, preserving other entries.
 
 ---
 
@@ -93,7 +92,6 @@ Delete the `DISCORD_BOT_TOKEN=` line (or the file if that's the only line).
 
 - The channels dir might not exist if the server hasn't run yet. Missing file
   = not configured, not an error.
-- The server reads `.env` once at boot. Token changes need a session restart
-  or `/reload-plugins`. Say so after saving.
+- The server reads `.env` once at boot. Token reload behavior depends on the installed host/server. Verify the supported restart/reload route and report it; do not invent a `/reload-plugins` capability.
 - `access.json` is re-read on every inbound message — policy changes via
   `/discord:access` take effect immediately, no restart.

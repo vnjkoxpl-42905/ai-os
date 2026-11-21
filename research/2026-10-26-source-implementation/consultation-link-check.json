@@ -1,0 +1,72 @@
+[
+  {
+    "root": "skills\\claude\\consultation-followup-drafts",
+    "tier": "standard",
+    "exit": 0,
+    "stdout": "  $45   https://cal.com/joshua-jtx5ud/session-link\n  $40   https://buy.stripe.com/4gMaEY05F3dc9x13NqdZ61x\n  $35   https://buy.stripe.com/3cI6oI2dN5lk4cHcjWdZ61O\nPASS: tier standard, 3 price/link pairs\n",
+    "route": true
+  },
+  {
+    "root": "skills\\claude\\consultation-followup-drafts",
+    "tier": "higher",
+    "exit": 0,
+    "stdout": "  $60   https://buy.stripe.com/fZe5mW6N9aUT9IQ8x4\n  $55   https://buy.stripe.com/14A6oIg4DeVU6kPgAcdZ61A\n  $50   https://buy.stripe.com/28EfZi7y71549x15VydZ61z\nWARN: $60: Stripe id is 18 chars, others are 23; confirm in Stripe that https://buy.stripe.com/fZe5mW6N9aUT9IQ8x4 is live and charges $60\nPASS: tier higher, 3 price/link pairs\n",
+    "route": true
+  },
+  {
+    "root": "skills\\codex\\consultation-followup-drafts",
+    "tier": "standard",
+    "exit": 0,
+    "stdout": "  $45   https://cal.com/joshua-jtx5ud/session-link\n  $40   https://buy.stripe.com/4gMaEY05F3dc9x13NqdZ61x\n  $35   https://buy.stripe.com/3cI6oI2dN5lk4cHcjWdZ61O\nPASS: tier standard, 3 price/link pairs\n",
+    "route": true
+  },
+  {
+    "root": "skills\\codex\\consultation-followup-drafts",
+    "tier": "higher",
+    "exit": 0,
+    "stdout": "  $60   https://buy.stripe.com/fZe5mW6N9aUT9IQ8x4\n  $55   https://buy.stripe.com/14A6oIg4DeVU6kPgAcdZ61A\n  $50   https://buy.stripe.com/28EfZi7y71549x15VydZ61z\nWARN: $60: Stripe id is 18 chars, others are 23; confirm in Stripe that https://buy.stripe.com/fZe5mW6N9aUT9IQ8x4 is live and charges $60\nPASS: tier higher, 3 price/link pairs\n",
+    "route": true
+  },
+  {
+    "root": "C:\\Users\\Joshu\\.claude\\skills\\consultation-followup-drafts",
+    "tier": "standard",
+    "exit": 0,
+    "stdout": "  $45   https://cal.com/joshua-jtx5ud/session-link\n  $40   https://buy.stripe.com/4gMaEY05F3dc9x13NqdZ61x\n  $35   https://buy.stripe.com/3cI6oI2dN5lk4cHcjWdZ61O\nPASS: tier standard, 3 price/link pairs\n",
+    "route": true
+  },
+  {
+    "root": "C:\\Users\\Joshu\\.claude\\skills\\consultation-followup-drafts",
+    "tier": "higher",
+    "exit": 0,
+    "stdout": "  $60   https://buy.stripe.com/fZe5mW6N9aUT9IQ8x4\n  $55   https://buy.stripe.com/14A6oIg4DeVU6kPgAcdZ61A\n  $50   https://buy.stripe.com/28EfZi7y71549x15VydZ61z\nWARN: $60: Stripe id is 18 chars, others are 23; confirm in Stripe that https://buy.stripe.com/fZe5mW6N9aUT9IQ8x4 is live and charges $60\nPASS: tier higher, 3 price/link pairs\n",
+    "route": true
+  },
+  {
+    "root": "C:\\Users\\Joshu\\.agents\\skills\\consultation-followup-drafts",
+    "tier": "standard",
+    "exit": 0,
+    "stdout": "  $45   https://cal.com/joshua-jtx5ud/session-link\n  $40   https://buy.stripe.com/4gMaEY05F3dc9x13NqdZ61x\n  $35   https://buy.stripe.com/3cI6oI2dN5lk4cHcjWdZ61O\nPASS: tier standard, 3 price/link pairs\n",
+    "route": true
+  },
+  {
+    "root": "C:\\Users\\Joshu\\.agents\\skills\\consultation-followup-drafts",
+    "tier": "higher",
+    "exit": 0,
+    "stdout": "  $60   https://buy.stripe.com/fZe5mW6N9aUT9IQ8x4\n  $55   https://buy.stripe.com/14A6oIg4DeVU6kPgAcdZ61A\n  $50   https://buy.stripe.com/28EfZi7y71549x15VydZ61z\nWARN: $60: Stripe id is 18 chars, others are 23; confirm in Stripe that https://buy.stripe.com/fZe5mW6N9aUT9IQ8x4 is live and charges $60\nPASS: tier higher, 3 price/link pairs\n",
+    "route": true
+  },
+  {
+    "root": "C:\\Users\\Joshu\\.codex\\skills\\consultation-followup-drafts",
+    "tier": "standard",
+    "exit": 0,
+    "stdout": "  $45   https://cal.com/joshua-jtx5ud/session-link\n  $40   https://buy.stripe.com/4gMaEY05F3dc9x13NqdZ61x\n  $35   https://buy.stripe.com/3cI6oI2dN5lk4cHcjWdZ61O\nPASS: tier standard, 3 price/link pairs\n",
+    "route": true
+  },
+  {
+    "root": "C:\\Users\\Joshu\\.codex\\skills\\consultation-followup-drafts",
+    "tier": "higher",
+    "exit": 0,
+    "stdout": "  $60   https://buy.stripe.com/fZe5mW6N9aUT9IQ8x4\n  $55   https://buy.stripe.com/14A6oIg4DeVU6kPgAcdZ61A\n  $50   https://buy.stripe.com/28EfZi7y71549x15VydZ61z\nWARN: $60: Stripe id is 18 chars, others are 23; confirm in Stripe that https://buy.stripe.com/fZe5mW6N9aUT9IQ8x4 is live and charges $60\nPASS: tier higher, 3 price/link pairs\n",
+    "route": true
+  }
+]

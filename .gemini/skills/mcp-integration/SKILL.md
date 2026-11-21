@@ -4,6 +4,10 @@ description: This skill should be used when the user asks to "add MCP server", "
 version: 0.1.0
 ---
 
+## Current AI OS execution contract
+
+Scope to explicit Claude plugin MCP integration. Verify current transport/schema in the host documentation. A generic external-service task should first use existing connected CLI/API routes.
+
 # MCP Integration for Claude Code Plugins
 
 ## Overview

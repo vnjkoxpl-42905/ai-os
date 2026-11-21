@@ -21,6 +21,7 @@ lifecycle: active
 - [Teaching notes](teaching-notes.md)
 - [Open loops](open-loops.md)
 - [Assignment log](assignment-log.md)
+- [Assigned work, all notes as HTML · 2026-11-14](assigned-work/README.md)
 - [Live status](live-status.generated.md)
 - [Latest session · 2026-09-28](sessions/2026-09-28-flaw-questions-and-pt-plan/summary.md)
 - [Previous session · 2026-09-25](sessions/2026-09-25-must-be-true-and-sufficient-assumption/summary.md)

@@ -13,19 +13,22 @@ Your tool handlers are the only defense. Everything below is about building that
 The #1 bug in local MCP servers. If you take a path parameter and join it to a root, **resolve and check containment**.
 
 ```typescript
-import { resolve, relative, isAbsolute } from "node:path";
+import { resolve, relative, isAbsolute, sep } from "node:path";
+import { realpath } from "node:fs/promises";
 
-function safeJoin(root: string, userPath: string): string {
-  const full = resolve(root, userPath);
-  const rel = relative(root, full);
-  if (rel.startsWith("..") || isAbsolute(rel)) {
+async function safeJoin(root: string, userPath: string): Promise<string> {
+  if (isAbsolute(userPath)) throw new Error("Use a relative path");
+  const base = await realpath(root);
+  const full = await realpath(resolve(base, userPath));
+  const rel = relative(base, full);
+  if (rel === ".." || rel.startsWith(".." + sep) || isAbsolute(rel)) {
     throw new Error(`Path escapes root: ${userPath}`);
   }
   return full;
 }
 ```
 
-`resolve` normalizes `..`, symlink segments, etc. `relative` tells you if the result left the root. Don't just `String.includes("..")` — that misses encoded and symlink-based escapes.
+`resolve` normalizes lexical segments; it does not resolve symlinks. `realpath` resolves existing symlink/junction targets before containment is checked. Await `safeJoin` before reading. This example accepts existing targets only; validate a real parent separately for new writes. Concurrent filesystem replacement still requires handle-based protections or OS isolation.
 
 **Python equivalent:**
 
@@ -47,6 +50,7 @@ Before hardcoding `ROOT` from a config env var, check if the host supports `root
 
 ```typescript
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
+import { fileURLToPath } from "node:url";
 
 const server = new McpServer({ name: "...", version: "..." });
 
@@ -55,7 +59,7 @@ server.server.oninitialized = async () => {
   const caps = server.getClientCapabilities();
   if (caps?.roots) {
     const { roots } = await server.server.listRoots();
-    allowedRoots = roots.map(r => new URL(r.uri).pathname);
+    allowedRoots = roots.map(r => fileURLToPath(r.uri));
   } else {
     allowedRoots = [process.env.ROOT_DIR ?? process.cwd()];
   }

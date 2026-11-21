@@ -1,0 +1,84 @@
+{
+ "qid": "PT147-S4-Q4",
+ "type": "Sufficient Assumption",
+ "difficulty": "2",
+ "key_db": "A",
+ "stimulus_db": "Economist: Unemployment will soon decrease. If total government spending significantly increases next year, the economy will be stimulated in the short term and unemployment will decrease. If, on the other hand, total government spending significantly decreases next year, businesses will retain more of their earnings in the short term and employ more workers, thereby decreasing unemployment.",
+ "stem_db": "The conclusion drawn by the economist is properly inferred if which one of the following is assumed?",
+ "choices_db": {
+  "A": "Either total government spending will significantly decrease next year or else total government spending will significantly increase next year.",
+  "B": "Government officials are currently implementing policies that are intended to reduce unemployment.",
+  "C": "If there is a significantly increased demand for workers, then there will be a significant decrease in unemployment.",
+  "D": "A significant increase in total government spending will slow the economy in the long run.",
+  "E": "If the economy is not stimulated and businesses do not retain more of their earnings, then unemployment will not decrease."
+ },
+ "bank": {
+  "stimulus": "Economist: Unemployment will soon decrease. If total government spending significantly increases next year, the economy will be stimulated in the short term and unemployment will decrease. If, on the other hand, total government spending significantly decreases next year, businesses will retain more of their earnings in the short term and employ more workers, thereby decreasing unemployment.",
+  "stem": "The conclusion drawn by the economist is properly inferred if which one of the following is assumed?",
+  "choices": {
+   "A": "Either total government spending will significantly decrease next year or else total government spending will significantly increase next year.",
+   "B": "Government officials are currently implementing policies that are intended to reduce unemployment.",
+   "C": "If there is a significantly increased demand for workers, then there will be a significant decrease in unemployment.",
+   "D": "A significant increase in total government spending will slow the economy in the long run.",
+   "E": "If the economy is not stimulated and businesses do not retain more of their earnings, then unemployment will not decrease."
+  },
+  "key": "A"
+ },
+ "explanation_id": "40ae62ac-de80-47c8-baec-cfabe66715ef",
+ "style": "single",
+ "steps": [
+  {
+   "row_id": "b8630686-1d8d-4b91-bb33-e7c148dc0ee4",
+   "position": 0,
+   "label": "Conclusion",
+   "body": "Unemployment will soon decrease."
+  },
+  {
+   "row_id": "1cef0c96-8d24-400f-8898-c1da4fa516e0",
+   "position": 1,
+   "label": "Evidence",
+   "body": "If total govt spending significantly goes up, unemployment will decrease.\n\nIf total govt spending significantly decreases, unemployment will decrease."
+  },
+  {
+   "row_id": "e8c85123-28f1-4b94-801f-fcc6fe3a8a11",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "We ascertain that the first claim is the conclusion by seeing that the other two claims are clearly meant to work together. Conjunctions/connections like \"and / but / on the other hand\" show us that two claims are interacting together to move the argument forward.\n\nEach of the conditional premises involves TWO consequences, one of which is decreasing unemployment. I didn't bother writing out the other half of each outcome, because all we care about is proving that there will be decreasing unemployment.\n\nAt first, this argument seems pretty reasonable. It seems like an *Either Way You Slice It* style of argument: \"Whether spending increases significantly or decreases significantly, we end up with decreasing unemployment. So either way you slice it, we're gonna have decreasing unemployment.\"\n\nBut we know that an argument on Sufficient Assumption can't *already* be airtight. There has to be some gap, so that the correct answer can make it airtight.\n\nHow would unemployment *fail to decrease*?\n\nWell, I guess spending doesn't necessarily have to go significantly up or significantly down. It could more or less stay the same.\n\nThe author is presenting a *False Choice* (a false binary / a false dichotomy), acting like spending will either go up a bunch or down a bunch.\n\nBut she's failing to consider the middle ground, where spending basically stays the same."
+  },
+  {
+   "row_id": "0cf755b5-c56e-473b-8db9-5095d3dd3436",
+   "position": 3,
+   "label": "Goal",
+   "body": "We just need to rule out the possibility that govt spending will stay basically the same. We need to know that it'll definitely go up or down significantly."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "b7a65957-2e87-44e7-a774-b4de9da7ce21",
+   "letter": "A",
+   "body": "The economist covers two cases: spending goes up significantly, or spending goes down significantly. Both lead to lower unemployment. But nothing says one of those two things will happen. Spending could stay about the same, and then neither rule applies.\n\nThis answer closes that gap. If spending will either rise or fall significantly, one of the two cases must happen, and either way unemployment decreases. The conclusion follows."
+  },
+  {
+   "row_id": "e643f423-995d-406d-8018-f6de787bf37d",
+   "letter": "B",
+   "body": "B tells us officials intend to reduce unemployment, but intentions don't guarantee results. B says nothing about whether spending will significantly rise or fall, so the middle case, where spending stays about the same, is still open."
+  },
+  {
+   "row_id": "38715b68-3d82-447a-9fb4-f83157a24af1",
+   "letter": "C",
+   "body": "C links demand for workers to lower unemployment, but the premises already get us to lower unemployment in both spending cases. The gap is whether one of those cases happens at all. Since C doesn't tell us whether spending will go up or down, it doesn't do the job we need it to do."
+  },
+  {
+   "row_id": "3edb70f9-f304-41d1-a775-ab6b64837d6c",
+   "letter": "D",
+   "body": "D talks about the long run, while the conclusion is that unemployment will soon decrease. It also doesn't tell us whether spending will significantly go up or down, so the gap stays open."
+  },
+  {
+   "row_id": "74abf194-80aa-4ac4-b219-d502bca5f8fc",
+   "letter": "E",
+   "body": "E tells us what happens if neither effect occurs. It doesn't tell us whether spending will significantly go up or down, so it can't guarantee the conclusion."
+  }
+ ],
+ "known_problem": "No breakdown; correct note is the placeholder \"(No authored tag or explanation for this choice.)\"; B-E are one pasted sentence (C with a typo, \"gone up\").",
+ "tags": "no-breakdown; thin-correct-note; thin-notes; very-short"
+}

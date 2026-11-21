@@ -1,0 +1,150 @@
+{
+  "bytes": 29568,
+  "characters": 29568,
+  "lines": 238,
+  "wordlike_tokens": 1680,
+  "distinct_characters": 55,
+  "structured": {
+    "root_type": "dict",
+    "node_types": {
+      "dict": 140,
+      "list": 25,
+      "str": 333,
+      "int": 87
+    },
+    "key_counts": {
+      "version": 16,
+      "revision": 1,
+      "requires-python": 1,
+      "resolution-markers": 1,
+      "package": 1,
+      "name": 38,
+      "source": 15,
+      "sdist": 13,
+      "wheels": 14,
+      "url": 85,
+      "hash": 85,
+      "size": 85,
+      "upload-time": 85,
+      "registry": 14,
+      "dependencies": 8,
+      "metadata": 1,
+      "requires-dist": 1,
+      "specifier": 4,
+      "virtual": 1,
+      "marker": 3
+    },
+    "array_count": 25,
+    "arrays": [
+      {
+        "path": "$.package",
+        "length": 15
+      },
+      {
+        "path": "$.package[].wheels",
+        "length": 1
+      },
+      {
+        "path": "$.package[].wheels",
+        "length": 1
+      },
+      {
+        "path": "$.package[].wheels",
+        "length": 1
+      },
+      {
+        "path": "$.package[].wheels",
+        "length": 1
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 1
+      },
+      {
+        "path": "$.package[].wheels",
+        "length": 8
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 2
+      },
+      {
+        "path": "$.package[].metadata.requires-dist",
+        "length": 4
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 4
+      },
+      {
+        "path": "$.package[].wheels",
+        "length": 1
+      },
+      {
+        "path": "$.package[].wheels",
+        "length": 1
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 4
+      },
+      {
+        "path": "$.package[].wheels",
+        "length": 1
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 2
+      },
+      {
+        "path": "$.package[].wheels",
+        "length": 1
+      },
+      {
+        "path": "$.package[].wheels",
+        "length": 52
+      },
+      {
+        "path": "$.package[].wheels",
+        "length": 1
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 1
+      },
+      {
+        "path": "$.package[].wheels",
+        "length": 1
+      },
+      {
+        "path": "$.package[].wheels",
+        "length": 1
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 2
+      },
+      {
+        "path": "$.package[].wheels",
+        "length": 1
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 3
+      },
+      {
+        "path": "$.resolution-markers",
+        "length": 2
+      }
+    ],
+    "numeric_values": 87,
+    "numeric_min": 1,
+    "numeric_max": 46235268,
+    "string_count": 333,
+    "string_characters": 22299
+  },
+  "source_path": "repos/karpathy/jobs/uv.lock",
+  "source_sha256": "1040fab6c3e3b05faa1f772a89daf6c26bafa627b7d54ce779c0378741bf9697",
+  "method": "toml_parse_all_nodes",
+  "parse_error": null
+}

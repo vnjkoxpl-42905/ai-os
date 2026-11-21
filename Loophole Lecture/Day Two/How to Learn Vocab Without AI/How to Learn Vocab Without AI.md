@@ -1,0 +1,409 @@
+# How to Learn Vocab Without AI
+
+Source: https://new.theloophole.com/training-camp/browse/stage/translation/video/how-to-learn-vocab-without-ai?source=timeline&plan=rc-plan
+
+Duration: 4:54. Captured: 2026-10-14.
+
+Transcript origin: English auto-generated native captions. Complete caption extraction, not a human-verified verbatim transcript. Original wording retained.
+
+[00:00:00.035 - 00:00:02.805]
+Alright, how to learn vocab without ai.
+
+[00:00:02.805 - 00:00:04.125]
+And actually there will be like a little bit
+
+[00:00:04.125 - 00:00:05.725]
+of optional AI throw in, thrown in,
+
+[00:00:05.825 - 00:00:08.485]
+but I didn't wanna overwhelm this, you know, clean living,
+
+[00:00:08.905 - 00:00:11.885]
+uh, version of how to learn vocab with a bunch of AI stuff.
+
+[00:00:11.885 - 00:00:13.805]
+Even though AI is quite useful for learning vocab,
+
+[00:00:13.805 - 00:00:16.885]
+we'll have a separate video that's very AI in its focus.
+
+[00:00:17.305 - 00:00:19.085]
+Um, but first let's talk about how
+
+[00:00:19.365 - 00:00:21.285]
+to do this the old fashioned way,
+
+[00:00:21.285 - 00:00:23.805]
+which also uses the internet and a bunch of online tools.
+
+[00:00:24.225 - 00:00:27.285]
+Um, so the key thing, um, is that
+
+[00:00:27.285 - 00:00:29.405]
+after we harvest our vocab, we really want
+
+[00:00:29.405 - 00:00:31.165]
+to have really good definitions
+
+[00:00:31.265 - 00:00:32.965]
+and really good interaction with those words.
+
+[00:00:32.965 - 00:00:34.885]
+We wanna spend time enjoying living
+
+[00:00:34.885 - 00:00:36.325]
+with having fun with our words.
+
+[00:00:36.505 - 00:00:39.245]
+And so the first part of that is getting a great definition.
+
+[00:00:39.465 - 00:00:42.325]
+And so I'm going to kind of have the alternate path
+
+[00:00:42.325 - 00:00:43.925]
+for someone who's a non-native English speaker
+
+[00:00:43.945 - 00:00:45.805]
+and for someone who is a native English speaker.
+
+[00:00:46.105 - 00:00:47.885]
+Um, because the key difference in
+
+[00:00:47.885 - 00:00:50.165]
+how you write your definition involves uh, whether
+
+[00:00:50.165 - 00:00:52.205]
+or not you have a native language that is not English.
+
+[00:00:52.385 - 00:00:56.405]
+So the first thing we do in both cases is we look up our
+
+[00:00:56.715 - 00:00:57.925]
+word that is unfamiliar to us.
+
+[00:00:57.925 - 00:00:59.485]
+So you can just Google it, you know, of like,
+
+[00:00:59.485 - 00:01:00.605]
+let's say delineation.
+
+[00:01:00.665 - 00:01:02.525]
+That's the word I wanna do, define.
+
+[00:01:02.945 - 00:01:05.205]
+And if I'm a native English speaker, I'm just gonna get
+
+[00:01:05.205 - 00:01:06.445]
+that definition straight from Google.
+
+[00:01:06.745 - 00:01:08.485]
+I'm gonna combine that definition from Google
+
+[00:01:08.485 - 00:01:10.445]
+with the context I had from the original sentence.
+
+[00:01:10.465 - 00:01:13.085]
+And I'm gonna write my own one to four words,
+
+[00:01:13.265 - 00:01:16.205]
+simple definition of delineation
+
+[00:01:16.225 - 00:01:17.565]
+of the word that I want to know about.
+
+[00:01:17.625 - 00:01:19.365]
+And I'm gonna write that definition down myself.
+
+[00:01:19.745 - 00:01:21.725]
+If I'm a non-native English speaker, I'm going
+
+[00:01:21.725 - 00:01:23.925]
+to look up delineation in my native language
+
+[00:01:23.925 - 00:01:25.245]
+and I'm going to look it up in English
+
+[00:01:25.245 - 00:01:28.045]
+and I'm gonna combine all of that information, uh, together
+
+[00:01:28.045 - 00:01:29.845]
+to write a one to four word simple definition.
+
+[00:01:30.025 - 00:01:31.445]
+And so it's really important that
+
+[00:01:31.445 - 00:01:33.845]
+that definition is always written in English.
+
+[00:01:34.305 - 00:01:35.805]
+Um, really, really important
+
+[00:01:35.915 - 00:01:39.805]
+because ideally we want to be staying in English within, um,
+
+[00:01:39.905 - 00:01:41.805]
+our mental process in the question.
+
+[00:01:42.105 - 00:01:46.005]
+And so don't rush this step of thinking through the one
+
+[00:01:46.005 - 00:01:47.285]
+to four word simple definition
+
+[00:01:47.285 - 00:01:48.365]
+because you are going to have
+
+[00:01:48.365 - 00:01:51.205]
+to spontaneously generate the definition in your own head
+
+[00:01:51.205 - 00:01:53.405]
+when you see the word on the actual test.
+
+[00:01:53.665 - 00:01:56.645]
+And so we wanna get in the habit of you being the one
+
+[00:01:56.645 - 00:01:58.445]
+who comes up with that definition.
+
+[00:01:58.625 - 00:02:00.925]
+We don't wanna optimize this process for being
+
+[00:02:01.145 - 00:02:04.165]
+as maximally fast as it possibly could be,
+
+[00:02:04.165 - 00:02:06.365]
+because that's going to lead to mindless copy paste
+
+[00:02:06.365 - 00:02:08.325]
+and not actually spending time thinking about the words.
+
+[00:02:08.585 - 00:02:12.125]
+And so next step is the same for um, native English speakers
+
+[00:02:12.125 - 00:02:13.245]
+and non-native English speakers,
+
+[00:02:13.245 - 00:02:14.605]
+which is in your spreadsheet.
+
+[00:02:14.725 - 00:02:16.205]
+'cause remember we're throwing all this in our spreadsheet.
+
+[00:02:16.305 - 00:02:18.205]
+In our next column on each word, we're going
+
+[00:02:18.205 - 00:02:20.885]
+to write an example sentence that uses that word in context.
+
+[00:02:20.885 - 00:02:23.125]
+Because if you can't use the word in an example,
+
+[00:02:23.265 - 00:02:24.565]
+you don't really know what the word means.
+
+[00:02:25.105 - 00:02:27.325]
+And so we're gonna have our own example sentence there
+
+[00:02:27.435 - 00:02:29.245]
+written for us, which is awesome.
+
+[00:02:29.385 - 00:02:32.005]
+That's really helpful. So now we have all of our, uh,
+
+[00:02:32.005 - 00:02:33.445]
+information in our spreadsheet.
+
+[00:02:33.595 - 00:02:36.285]
+Okay, great. And so we're gonna do a few things to make sure
+
+[00:02:36.285 - 00:02:38.925]
+that we're actually retaining that we're, we're going
+
+[00:02:38.925 - 00:02:40.725]
+to memorize these words, all of that kind of good stuff.
+
+[00:02:40.985 - 00:02:43.165]
+So first thing is actually use these
+
+[00:02:43.165 - 00:02:44.365]
+words in your daily life.
+
+[00:02:44.445 - 00:02:46.765]
+I like to set goals for my tutoring students of try
+
+[00:02:46.785 - 00:02:48.765]
+and use, I don't know, three
+
+[00:02:49.185 - 00:02:52.325]
+of your vocab list words every day in casual
+
+[00:02:52.325 - 00:02:54.005]
+conversation with people.
+
+[00:02:54.385 - 00:02:57.085]
+Um, because that's what words are supposed to be for, right?
+
+[00:02:57.165 - 00:02:58.885]
+I mean, they're supposed to actually be part of
+
+[00:02:59.315 - 00:03:00.365]
+Your everyday life.
+
+[00:03:00.365 - 00:03:01.805]
+Your verbal lexicon aiding you
+
+[00:03:01.805 - 00:03:03.325]
+and expressing more complex ideas
+
+[00:03:03.665 - 00:03:05.725]
+and being able to just generally communicate in a
+
+[00:03:05.725 - 00:03:06.765]
+more nuanced, refined way.
+
+[00:03:06.765 - 00:03:10.285]
+And so that will actually bring the words into your body
+
+[00:03:10.305 - 00:03:11.325]
+and have them at the ready
+
+[00:03:11.425 - 00:03:12.725]
+for when you take the actual test.
+
+[00:03:13.105 - 00:03:15.885]
+In addition to that, it can be really helpful to use, uh,
+
+[00:03:15.935 - 00:03:18.685]
+flash carding tools like Onte or Quizlet.
+
+[00:03:19.075 - 00:03:20.485]
+Onte is really nice 'cause it has a
+
+[00:03:20.485 - 00:03:21.605]
+spaced repetition feature.
+
+[00:03:21.825 - 00:03:24.525]
+You can also upload spreadsheets directly into these tools.
+
+[00:03:24.545 - 00:03:25.885]
+You can copy paste word list,
+
+[00:03:25.945 - 00:03:27.045]
+all of that different kind of stuff.
+
+[00:03:27.325 - 00:03:28.325]
+I think you'll have to provide the
+
+[00:03:28.325 - 00:03:29.685]
+definitions yourself, I believe.
+
+[00:03:29.945 - 00:03:31.205]
+Um, but that's totally fine
+
+[00:03:31.205 - 00:03:32.845]
+because that's what we, uh, just did.
+
+[00:03:32.865 - 00:03:34.925]
+We provided definitions and example s
+
+[00:03:35.265 - 00:03:37.685]
+and so you can review with Quizlet on key
+
+[00:03:37.685 - 00:03:38.885]
+or paper flashcards.
+
+[00:03:38.885 - 00:03:40.925]
+If you prefer to write these on paper, that's totally fine.
+
+[00:03:40.925 - 00:03:42.885]
+Some of us are in a digital detox, um,
+
+[00:03:43.185 - 00:03:45.485]
+for let's say 10 minutes a day at the start
+
+[00:03:45.485 - 00:03:46.925]
+of your prep as a warmup.
+
+[00:03:47.145 - 00:03:49.925]
+Um, and it's really con nice to do this consistently
+
+[00:03:50.145 - 00:03:51.805]
+and notice the words that you tend to get wrong
+
+[00:03:51.865 - 00:03:53.765]
+and, you know, review them sooner.
+
+[00:03:53.765 - 00:03:56.365]
+That's why that's repetition feature anon key is so nice.
+
+[00:03:56.745 - 00:03:59.605]
+Um, but I really don't want you to just, you know,
+
+[00:03:59.605 - 00:04:01.845]
+make these vocab flashcards and then forget about them
+
+[00:04:01.905 - 00:04:03.965]
+and then look at them once in a blue moon
+
+[00:04:03.965 - 00:04:05.565]
+and maybe you like spend two hours
+
+[00:04:05.785 - 00:04:08.005]
+or an hour, like some longer period of time
+
+[00:04:08.185 - 00:04:09.485]
+or, you know, 10 minutes also not good.
+
+[00:04:09.785 - 00:04:12.845]
+Um, doing it like once in a while
+
+[00:04:12.845 - 00:04:15.285]
+because if you do vocab once in a while, even
+
+[00:04:15.345 - 00:04:17.765]
+for a longer time, you're not like making up
+
+[00:04:17.765 - 00:04:19.325]
+for the vocab practice you didn't do.
+
+[00:04:19.655 - 00:04:22.845]
+Vocab is something that it has to become part of you, uh,
+
+[00:04:22.845 - 00:04:26.525]
+because it's really the meat of how you interact with all
+
+[00:04:26.525 - 00:04:27.885]
+of these ideas is all vocab.
+
+[00:04:27.885 - 00:04:30.205]
+You're making vocab determinations, you know,
+
+[00:04:30.265 - 00:04:32.885]
+instantaneously with every single thing you read.
+
+[00:04:32.905 - 00:04:36.045]
+And so that's why it has to be like a consistent repetitive
+
+[00:04:36.685 - 00:04:38.965]
+practice, which is really, really good for the brain.
+
+[00:04:39.345 - 00:04:42.045]
+Um, and so, okay, I hope that that helps with
+
+[00:04:42.045 - 00:04:45.165]
+how you're gonna implement the learning of these new words
+
+[00:04:45.165 - 00:04:46.245]
+and you'll learn to love them.
+
+[00:04:46.245 - 00:04:48.565]
+Words are beautiful things, words are great friends. Okay?
+
+[00:04:48.745 - 00:04:51.245]
+And next we'll talk about how to use AI
+
+[00:04:51.265 - 00:04:53.165]
+to supercharge your vocab practice.
+
+[00:04:53.165 - 00:04:54.125]
+Alright, see you soon.

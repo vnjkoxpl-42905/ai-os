@@ -177,3 +177,8 @@ Do not use a single overall percentage as the only placement evidence. Distingui
 Proposed independently assignable subsection structure: a short explanation of one skill, one worked original example, a guided attempt, fresh independent practice, immediate move-specific feedback, and an exit check. The teacher should be able to assign the whole stage or only the failed skill. The student should see why that subsection is next and what would count as readiness to progress.
 
 Existing whole-resource assignments, browser-local refresher progress, saved hub practice and General indicator ledgers are different mechanisms. A unified curriculum needs to connect them; it should not silently claim they already form an adaptive mastery pathway.
+
+
+## Preserved generic Dashboard clips (2026-10-26)
+
+Three complete supplied lesson-text captures now have source summaries: [Lawgic language](../../wiki/sources/7sage-lawgic-language.md), [relational sufficiency/necessity](../../wiki/sources/7sage-sufficiency-relationships.md), and [Group 1 indicators](../../wiki/sources/7sage-group-one-indicators.md). Complementary evidence for the existing research, with no changed curriculum decision. Text was read; linked diagrams and lesson videos were not inspected in this batch.

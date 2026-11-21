@@ -1,0 +1,78 @@
+{
+ "qid": "PT157-S2-Q3",
+ "type": "Most Strongly Supported",
+ "difficulty": "2",
+ "key_db": "E",
+ "stimulus_db": "Although there are immediate short-term gains in crop yield from a single application of certain hydrocarbon-based pesticides to fields on which they have not been previously used, studies have shown clearly that long-term use gradually depresses crop yield from this initially elevated level. We should conclude that use of these pesticides _______.",
+ "stem_db": "Which one of the following would most logically complete the argument above?",
+ "choices_db": {
+  "A": "is uneconomic",
+  "B": "damages the environment",
+  "C": "will eventually make pest problems unmanageable",
+  "D": "is probably not occurring in accordance with manufacturers’ instructions",
+  "E": "gives financial returns that diminish over time"
+ },
+ "bank": {
+  "stimulus": "Although there are immediate short-term gains in crop\n yield from a single application of certain hydrocarbon-based pesticides to fields on which they have not been\n previously used, studies have shown clearly that long-term use gradually depresses crop yield from this initially\n elevated level. We should conclude that use of these\n pesticides _______.",
+  "stem": "Which one of the following would most logically\n complete the argument above?",
+  "choices": {
+   "A": "is uneconomic",
+   "B": "damages the environment",
+   "C": "will eventually make pest problems unmanageable",
+   "D": "is probably not occurring in accordance with manufacturers’ instructions",
+   "E": "gives financial returns that diminish over time"
+  },
+  "key": "E"
+ },
+ "explanation_id": "9fc4b751-88fe-411c-87c5-f5dec870593b",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "364c62a6-8a39-4fd2-8517-947033e3292e",
+   "position": 0,
+   "label": "Given",
+   "body": "  - There are immediate short-term gains in crop yield from a single application of certain hydrocarbon-based pesticides to fields on which they have not been previously used.\n  - Studies have shown clearly that long-term use gradually depresses crop yield from this initially elevated level."
+  },
+  {
+   "row_id": "90bd8980-9a76-4618-9087-855534bd9189",
+   "position": 1,
+   "label": "Evaluate",
+   "body": "The word \"although\" indicates a concession, and concessions are typically Opposing Ideas. So the first sentence about immediate short-term gains looks like an idea that the conclusion of the argument will contradict.\n  “We should conclude that” tells us that whatever fills the blank will be the conclusion, but it also tells us that the statement immediately before this sentence—the statement about long-term use—must be the evidence."
+  },
+  {
+   "row_id": "f498eaa0-c6c2-4cbc-a1ce-0f94331a4594",
+   "position": 2,
+   "label": "Goal",
+   "body": "We're looking for a conclusion about the use of these pesticides that is based on the fact that they gradually decrease crop yields. This conclusion will probably dampen our enthusiasm about the initial short-term gains. For a Most Strongly Supported question, beware of answers that are too strong for the evidence we're given or any answer with a new idea which might be out of scope."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "7e2a9b81-ee94-424d-a5c3-f552c52c4924",
+   "letter": "A",
+   "body": "Calling pesticide use \"uneconomic\" goes beyond what the evidence supports. The evidence states that long-term use depresses crop yield from the initially elevated level, but we do not know by how much. The yield could still remain higher than it would be without pesticides, in which case the pesticides would still provide an economic benefit — just a decreasing one. \"Uneconomic\" means the costs outweigh the benefits entirely, and the evidence does not establish that threshold. Additionally, economic analysis would require information about the cost of the pesticides relative to the value of increased yield, which the stimulus does not provide."
+  },
+  {
+   "row_id": "83a3ece8-e662-4e6d-a2f2-850fb5c50ca9",
+   "letter": "B",
+   "body": "The argument discusses crop yield, not environmental damage. Nothing in the stimulus addresses the environmental impact of hydrocarbon-based pesticides. While pesticides might damage the environment, this is an entirely separate topic from the agricultural economics discussed in the stimulus. The conclusion must follow from the given evidence about yield patterns, not from unstated concerns about ecology."
+  },
+  {
+   "row_id": "bd6d008c-6e20-4c93-96a2-1e91ea55b8e1",
+   "letter": "C",
+   "body": "This answer makes two unsupported leaps. First, the stimulus never discusses pest problems at all — it discusses crop yields. While pests and crop yields are related, the evidence does not address pest populations, resistance, or management. Second, \"unmanageable\" is an extreme descriptor that the evidence cannot support. Even if we could infer something about pest problems from crop yield data, the evidence only describes gradually declining yields, not catastrophic pest-management failure. This answer introduces both a new topic and an extreme conclusion."
+  },
+  {
+   "row_id": "9ed37f3e-07e3-4bc4-8df4-06738ef239c2",
+   "letter": "D",
+   "body": "The argument provides no information whatsoever about manufacturers' instructions. We do not know what those instructions recommend regarding application frequency, dosage, or duration. The evidence describes what happens when the pesticides are used long-term, but it does not compare actual usage patterns to recommended ones. Without any reference point for what manufacturers advise, we cannot conclude that usage is or is not occurring in accordance with their instructions."
+  },
+  {
+   "row_id": "022f6e42-13ae-4db2-8c25-d2fa9a1a0988",
+   "letter": "E",
+   "body": "This answer correctly captures the diminishing-returns pattern described in the evidence without overstating it. The evidence establishes that initial pesticide application produces gains in crop yield, and long-term use gradually depresses yields from that elevated level. \"Financial returns that diminish over time\" accurately describes this trajectory — there are returns (unlike answer A, which claims the whole enterprise is uneconomic), but they decrease over time. The answer avoids claims about environmental damage, pest management failure, or manufacturers' instructions, staying within the bounds of what the evidence supports. It correctly treats the initial yield gain as a financial return and the gradual decline as diminishing returns."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (8.4 em-dashes per 1k words; wrong-answer notes average 77.5 words).",
+ "tags": "emdash-heavy; pt157-158-register"
+}

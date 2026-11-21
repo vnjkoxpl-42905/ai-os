@@ -1,0 +1,287 @@
+{
+  "status": "completed",
+  "mode": "inspect",
+  "provider": "claude",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "claude",
+    "builder": "codex",
+    "inspector": "claude"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-my-work-20261026",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-my-work-20261026\\docs\\plans\\my-work-scroll-filters-gemini-review.md",
+  "plan_sha256": "a835d7b16a0fa6dde6e6aab94a53a458bcbd8fa01b71fe29d9b85750aa29bf3c",
+  "requested_model": "claude-opus-5-5",
+  "requested_effort": "medium",
+  "base": "e4035d9c8ec97a3aaec01b0b3464533872328bc8",
+  "snapshot": {
+    "base": "e4035d9c8ec97a3aaec01b0b3464533872328bc8",
+    "files": [
+      {
+        "path": "docs/verification/platform-motion-20261022.md",
+        "kind": "file",
+        "sha256": "73c9602b67d7d0c9294492e6edbff630c0fa1ab8f2e3b3417693eac6aeb9b25d"
+      },
+      {
+        "path": "scripts/verification/my-work-preview.tsx",
+        "kind": "file",
+        "sha256": "23880b3192f8663568d3cac68e7cfceb875ce22e048e430df7d83a79bc6b8622"
+      },
+      {
+        "path": "scripts/verification/start-my-work-preview.mjs",
+        "kind": "file",
+        "sha256": "c86132a8a69513fe6d8b47b26c0af9f4541fc8ab2929997a7e98024b66110132"
+      },
+      {
+        "path": "src/components/classroom/ClassroomRouteViews.notes.test.tsx",
+        "kind": "file",
+        "sha256": "32ce2428f5c27951fc3319f0e568ac0baebc0f500d0ea0d6e6d0b08d5ced56de"
+      },
+      {
+        "path": "src/components/classroom/ClassroomRouteViews.tsx",
+        "kind": "file",
+        "sha256": "3e2c55b1032aee936df4efc35fe407b1bd9939b3a562bb01d39e0cab435eff0a"
+      },
+      {
+        "path": "src/components/my-work/TeachingNotesArchive.test.tsx",
+        "kind": "file",
+        "sha256": "8dc1dcbd3d68f79ff7b3b330d0d0de28f99de2d38b25e60cc35fa64af9ac7722"
+      },
+      {
+        "path": "src/components/my-work/TeachingNotesArchive.tsx",
+        "kind": "file",
+        "sha256": "d7097452bf354beadc2704b04bbe1017d8a828fbe4b6f55938ce20713f5c45ec"
+      },
+      {
+        "path": "src/components/my-work/WorkFilterSelect.tsx",
+        "kind": "file",
+        "sha256": "10a9a0808361404b67236ad029f2ccf3ce35c379e990629574e3d2d68f1ec6d2"
+      },
+      {
+        "path": "src/components/my-work/assignedWorkOrganization.ts",
+        "kind": "file",
+        "sha256": "0454ff47d5cd15157b2b717d0433970ae3cb7409d4392a82900ab5b722934fed"
+      },
+      {
+        "path": "src/components/my-work/teachingNoteDates.test.ts",
+        "kind": "file",
+        "sha256": "6a75174b4bb3be831ac046660875a4cdbb45157b6004d9e6d1699d3ad5dadabd"
+      },
+      {
+        "path": "src/components/my-work/teachingNoteDates.ts",
+        "kind": "file",
+        "sha256": "7e065252a3d943835ce3cc8e8594c12e29a84ea5301e47202eefc2d9a580d9c1"
+      },
+      {
+        "path": "src/hooks/useClassroomMotion.test.tsx",
+        "kind": "file",
+        "sha256": "262c08f745924ce907ab9aa621124370dd05442790c3ea8ccaa3ce7039976aed"
+      },
+      {
+        "path": "src/hooks/useClassroomMotion.ts",
+        "kind": "file",
+        "sha256": "71783fa210dc64acc5c37c184f9ec48ab28f6cc7c82621a29d1184a7f9312de1"
+      },
+      {
+        "path": "src/hooks/useNotesArchiveScroll.test.ts",
+        "kind": "file",
+        "sha256": "3916c8525fffeb504427614c9282127c9c3081cbf5183fd4de6fa91b9c6fdb9d"
+      },
+      {
+        "path": "src/hooks/useNotesArchiveScroll.ts",
+        "kind": "file",
+        "sha256": "9249bd891d54f1c17dec3c81ccfa02a750bed0e872a6dd13345a8e4c5e436cff"
+      },
+      {
+        "path": "src/hooks/useNotesSelectMotion.ts",
+        "kind": "file",
+        "sha256": "8ffbbde6358a34638ff4df937496e537ba66037c302b486ed1c0462711fec0aa"
+      },
+      {
+        "path": "src/pages/MyWorkNotesPage.tsx",
+        "kind": "file",
+        "sha256": "52bd7e593540d0539e74c5e9ecdf24ec52abeb0e960dc69a65101a85aaecdec9"
+      },
+      {
+        "path": "src/pages/MyWorkPage.organization.test.tsx",
+        "kind": "file",
+        "sha256": "74fde0d9b32c37ffa091ae990e63c404b77f7f33d4f7deb7ff491d0fd1fe02c5"
+      },
+      {
+        "path": "src/pages/MyWorkPage.readingCenter.test.tsx",
+        "kind": "file",
+        "sha256": "838707bcba41e811b6adc38333b480eca060868781c8188a8ba634ea18e39082"
+      },
+      {
+        "path": "src/pages/MyWorkPage.tsx",
+        "kind": "file",
+        "sha256": "81720b020ba364257fc8e3d6820dd18b5f60fc657e5a7ab91790411bb8d947bf"
+      },
+      {
+        "path": "src/pages/StudentDestination.test.tsx",
+        "kind": "file",
+        "sha256": "e2a663fcbc111c5f97548609f388508d4785e86785a526490ac0b722c300febf"
+      },
+      {
+        "path": "src/pages/StudentDestination.tsx",
+        "kind": "file",
+        "sha256": "4c9fc2666e54a0fc5122f3fd6e2399d6926294be31f84a04d61ca1fefccc8bf7"
+      },
+      {
+        "path": "src/pages/myWorkNotes.css",
+        "kind": "file",
+        "sha256": "fd799c39283bc8be082c9f4eb05c19291083eec38ef3b78948b48da1b5e13b51"
+      },
+      {
+        "path": "src/pages/myWorkNotesRefinement.css",
+        "kind": "file",
+        "sha256": "97ab44a311fb41718ac53b658090f1b2719c6d0023245c6bce92532149263b0c"
+      },
+      {
+        "path": "src/pages/myWorkOrganization.css",
+        "kind": "file",
+        "sha256": "a9cb62f871bdd8e8405dfe72a0df504ae42dd535e867203a5f31e0f6abe00d02"
+      }
+    ],
+    "diff_sha256": "d87b5166d44838377895cd2af107f746347b5d324c04f3926f02da641f7fe2de",
+    "scope": [
+      "docs/verification/platform-motion-20261022.md",
+      "scripts/verification/my-work-preview.tsx",
+      "scripts/verification/start-my-work-preview.mjs",
+      "src/components/classroom/ClassroomRouteViews.notes.test.tsx",
+      "src/components/classroom/ClassroomRouteViews.tsx",
+      "src/components/my-work",
+      "src/hooks/useClassroomMotion.test.tsx",
+      "src/hooks/useClassroomMotion.ts",
+      "src/hooks/useNotesArchiveScroll.test.ts",
+      "src/hooks/useNotesArchiveScroll.ts",
+      "src/hooks/useNotesSelectMotion.ts",
+      "src/pages/MyWorkNotesPage.tsx",
+      "src/pages/MyWorkPage.organization.test.tsx",
+      "src/pages/MyWorkPage.readingCenter.test.tsx",
+      "src/pages/MyWorkPage.refetch.test.tsx",
+      "src/pages/MyWorkPage.tsx",
+      "src/pages/StudentDestination.test.tsx",
+      "src/pages/StudentDestination.tsx",
+      "src/pages/myWorkNotes.css",
+      "src/pages/myWorkNotesRefinement.css",
+      "src/pages/myWorkOrganization.css"
+    ],
+    "sha256": "593d2888bda6651bced4d2a991a3b84c9edd22d4b8bff531b5789f08279c52eb"
+  },
+  "previous": null,
+  "started_at": 1793150049.2111814,
+  "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\design\\reviews\\my-work-taste-v2-20261027\\claude-remediation\\claudex-m723ozrl",
+  "scope": [
+    "docs/verification/platform-motion-20261022.md",
+    "scripts/verification/my-work-preview.tsx",
+    "scripts/verification/start-my-work-preview.mjs",
+    "src/components/classroom/ClassroomRouteViews.notes.test.tsx",
+    "src/components/classroom/ClassroomRouteViews.tsx",
+    "src/components/my-work",
+    "src/hooks/useClassroomMotion.test.tsx",
+    "src/hooks/useClassroomMotion.ts",
+    "src/hooks/useNotesArchiveScroll.test.ts",
+    "src/hooks/useNotesArchiveScroll.ts",
+    "src/hooks/useNotesSelectMotion.ts",
+    "src/pages/MyWorkNotesPage.tsx",
+    "src/pages/MyWorkPage.organization.test.tsx",
+    "src/pages/MyWorkPage.readingCenter.test.tsx",
+    "src/pages/MyWorkPage.refetch.test.tsx",
+    "src/pages/MyWorkPage.tsx",
+    "src/pages/StudentDestination.test.tsx",
+    "src/pages/StudentDestination.tsx",
+    "src/pages/myWorkNotes.css",
+    "src/pages/myWorkNotesRefinement.css",
+    "src/pages/myWorkOrganization.css"
+  ],
+  "cli_version": "2.1.309 (Claude Code)",
+  "executable": [
+    "C:\\Users\\Joshu\\.local\\bin\\claude.EXE"
+  ],
+  "exit_code": 0,
+  "session_id": "e219c67b-0a3b-44cb-8b32-ffc4bf73cae6",
+  "response": {
+    "verdict": "REVISE",
+    "summary": "Most of the remediation matches the plan. The shared hook registers each list owner in a WeakMap, and the intent helper stops at the first registered owner, including reduced-motion owners. List rows start paused and join one requestAnimationFrame batch sorted in DOM order. The delay step is min(.05, .15/(n-1)), and restart(true) applies it. The non-list presets and the four-per-group/24-total caps are unchanged. Filter, restore and pointer-paginate intents fire before the URL changes, including from the portaled Radix menus, which use the page/section ref. Keyboard, input and change settlement stays sticky. The My Work content wrapper is marked list-only, and its loading and section markers were removed in the same change. Subject and work-type options use fixed domain lists; access filtering runs before options and counts; valid selections that match no rows stay selectable. Two concrete defects remain. First, archive restoration can fire for a navigation that never left the page (a modifier click, then a reload or Back), which moves focus and scroll. Second, the min-width/overflow-wrap rules in myWorkNotes.css were narrowed to the Notes page, so the Assigned work tab and every other destination lose them, and the 320px overflow check for those pages is not in the evidence. I also found a small harness inconsistency. I did not run any commands or tests.",
+    "findings": [
+      {
+        "id": "R1-stale-anchor-modifier-click",
+        "severity": "medium",
+        "path": "src/components/my-work/TeachingNotesArchive.tsx",
+        "evidence": "card() onClick calls remember(note.id, event.detail > 0) on every click. Ctrl/Cmd-click also fires click, but React Router's Link does not navigate in the current tab, so this saves an anchor whose archiveEntryKey is the current location.key. The restore useLayoutEffect accepts any POP whose location.key equals archiveEntryKey. Scenario A: the student Ctrl-clicks 'Reference 9' to open it in a new tab, stays on the archive, applies a filter (push, new key) and presses browser Back. That POP lands on the original key, the stored anchor matches, and the page calls notifyClassroomListIntent('restore'), focuses Reference 9 and scrolls to it, although the student never left. Scenario B: with BrowserRouter, a reload of the archive entry is also a POP whose history.state key survives, so the same focus and scroll jump happens on reload. The restore intent also settles every list row and suppresses later reveals until pointer pagination. The tests cover stale anchors reached by push/filter and by a default POP without a key, but not a modifier click followed by POP or reload.",
+        "fix": "Only call remember() when the Link will navigate in this tab: skip it when event.defaultPrevented, event.button !== 0, or any of metaKey/ctrlKey/shiftKey/altKey is set. Optionally also clear the anchor in a pagehide/reload path, or require the anchor to be written in the same history transition. Add a test: modifier click, push a filter, navigate(-1), and expect no focus change and no 'restore' intent."
+      },
+      {
+        "id": "R2-css-scope-narrowing-unverified",
+        "severity": "low",
+        "path": "src/pages/myWorkNotes.css",
+        "evidence": "Lines 2-3 used to apply min-width:0 to '.classroom-root.classroom-root-destination .classroom-column', '.student-destination' and '.student-destination-heading', and overflow-wrap:anywhere to '.student-destination-heading p', on every destination. They are now limited to ':has(.my-work-notes-page)'. The Assigned work and Completed tabs (.my-work-organized, no .my-work-notes-page) and every other destination (Library, Practice, Progress) lose these flex/overflow protections. ClassroomRouteViews now imports this stylesheet globally, so the change is not limited to My Work either. The host's stagger-viewport-checks cover the notes view only, at 320/684/768/1024/1281/1440. The plan requires overflow checks at 320–1280 and keyboard/reduced-motion checks for both tabs, but no to-do/completed or other-destination overflow evidence was presented.",
+        "fix": "Choose one: (a) restore the earlier global rules as a deliberate layout safeguard, or (b) keep the narrowing and add '.classroom-root:has(.my-work-organized)' to the same selectors. In either case, record overflow measurements at 320 and 390 for /my-work/to-do with long titles and long subject labels, and for at least one other destination, before claiming no regression."
+      },
+      {
+        "id": "R3-harness-scenario-list-incomplete",
+        "severity": "low",
+        "path": "scripts/verification/start-my-work-preview.mjs",
+        "evidence": "The scenarios line printed to the console lists only archive/personal/reader scenarios. my-work-preview.tsx also supports work-loading, work-error, work-empty, work-no-rows, work-empty-kind, work-empty-subject, work-no-match and archive-many-unread. The plan's acceptance list (empty/error/loading assigned states, selected empty work type, Clear filters) depends on those work-* scenarios. An operator following the printed list could leave the assigned-work state checks out.",
+        "fix": "Add the work-* and archive-many-unread scenarios to the printed scenarios line."
+      }
+    ],
+    "coverage": [
+      "Read in full: src/hooks/useClassroomMotion.ts (owner registry, consumeRestore, list batch scheduler, settle/settleLists, intent handling, list-only eligibility, cleanup), src/components/my-work/WorkFilterSelect.tsx, src/hooks/useNotesArchiveScroll.ts, src/components/my-work/teachingNoteDates.ts, src/components/classroom/shell/ClassroomMotionContent.tsx.",
+      "Reviewed the full supplied diff for: TeachingNotesArchive.tsx and its tests, MyWorkPage.tsx, assignedWorkOrganization.ts, StudentDestination.tsx and its test, useClassroomMotion.test.tsx, MyWorkPage.organization/readingCenter tests, ClassroomRouteViews.tsx and its notes test, MyWorkNotesPage.tsx, myWorkNotes.css, myWorkOrganization.css, scripts/verification/my-work-preview.tsx, start-my-work-preview.mjs, docs/verification/platform-motion-20261022.md.",
+      "Read lines 1-60 of myWorkNotesRefinement.css (portal palette is self-contained under .notes-select-content, with dark mode and forced-colours variants) and lines 10-29 of myWorkOrganization.css (long titles in rows wrap via overflow-wrap:anywhere and min-width:0).",
+      "Traced StudentDestination's separate heading owner (a classroom-motion-local header) and searched the classroom.css overflow scrollers to judge the scroll owner. The main column appears to scroll the window; only the aside and journal stage have their own overflow.",
+      "Traced the ordering of child restore against the parent owner's registration (marker consumption), keyed row identity across filtering, pointer vs keyboard pagination, the reduced-motion no-op owner, and access filtering before options and counts.",
+      "Images: listed the external design folder and inspected stagger-notes-desktop.png and stagger-work-phone.png. Both show warm paper, charcoal unread badges, 'Shared' dates and the Guided drill filter at 2 of 4 with status groups kept. I did not open stagger-notes-phone.png or stagger-work-desktop.png."
+    ],
+    "limitations": [
+      "I did not run tests, the typecheck, the build or the browser, and I cannot play motion. GSAP ScrollTrigger runtime behaviour (once/kill timing, the interaction between paused tweens and the trigger) was judged from source and GSAP API knowledge only.",
+      "I could not establish whether the stagger-* screenshots and JSON traces were captured before or after the current remediation edits, so I do not treat them as evidence for the current code.",
+      "Files I did not read: useNotesSelectMotion.ts, src/components/ui/select.tsx, teachingNotesArchiveData.ts, useAssignedTodoFeed.ts, the full MyWorkNotesPage.tsx (personal notes), MyWorkPage.refetch.test.tsx, useNotesArchiveScroll.test.ts, teachingNoteDates.test.ts, and the teacher and Reading Center shells beyond the hook contract.",
+      "The broader dirty checkout is not reviewed, including the unrelated supabase/functions/mcp/index.ts and the untracked docs and .taste-skill content. This is not approval of the whole repository.",
+      "Production auth, RLS, read-state persistence, physical phone/Safari behaviour and runtime acceptance of the other shared-hook callers are not certified."
+    ]
+  },
+  "usage": {
+    "input_tokens": 22,
+    "cache_creation_input_tokens": 107863,
+    "cache_read_input_tokens": 942708,
+    "output_tokens": 22138,
+    "output_tokens_details": {
+      "thinking_tokens": 17053
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 107863,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 4568,
+        "cache_read_input_tokens": 109937,
+        "cache_creation_input_tokens": 2407,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 2407
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "permission_denials": [],
+  "total_cost_usd": 1.4942936000000002,
+  "elapsed_seconds": 235.11
+}

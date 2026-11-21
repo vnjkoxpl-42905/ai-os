@@ -1,0 +1,45 @@
+{
+  "plan_id": "zeina-2026-11-11-recall",
+  "student": "Zeina",
+  "student_id": "aec4f2f8-d747-417f-937e-36bab513cb89",
+  "dry_run": false,
+  "verify_existing": false,
+  "results": [
+    {
+      "kind": "activity",
+      "title": "Read, Recall, Colour",
+      "action": "assigned",
+      "day": null,
+      "due": null,
+      "assignment_id": "0eb11cb3-a47e-4bd0-8f12-5532e7f93919",
+      "classroom_item_id": "0cdb7711-ad63-4a70-94bc-73f2e55ecedc",
+      "route": "/activities/0eb11cb3-a47e-4bd0-8f12-5532e7f93919",
+      "notify": {
+        "inbox_ok": true,
+        "bell_ok": true,
+        "email_ok": true
+      },
+      "verified": true,
+      "bell_count": 1
+    }
+  ],
+  "metrics": {
+    "sign_ins": 1,
+    "student_lookups": 1,
+    "bank_reads": 0,
+    "planned": 1,
+    "assigned": 1,
+    "elapsed_ms": 4992
+  },
+  "runtime": {
+    "lock_ms": 7,
+    "fetch_ms": 228,
+    "setup_ms": 754,
+    "execute_ms": 7279,
+    "total_ms": 8268,
+    "cache_hit": true,
+    "ops_commit": "258d41b5b261a89f2413c7639ede62553e311c49",
+    "source_sha256": "1a88aac53391cfdb4c9b94159636a6a5c5bbb25379a75bdab2f7dc191334c403"
+  },
+  "audit_file": "C:\\Users\\Joshu\\dev\\ai-os\\students\\zeina-borji\\assignments\\zeina-2026-11-11-recall\\2026-11-14T03-49-18-727Z-3d99c2f1.generated.json"
+}

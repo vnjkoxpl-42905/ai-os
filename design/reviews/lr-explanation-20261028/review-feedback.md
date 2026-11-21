@@ -1,0 +1,1 @@
+F1 accepted: deliberately retain visible 44px controls and accept taller rows, verify 320px Restore pairing. F2 accepted exact minmax/min-width/wrapping changes. F3 accepted wrapper-code inspection and pane-configuration screenshots, with authenticated parent limitations explicit. F4 accepted all-five always-open mode check. Plan revised throughout.

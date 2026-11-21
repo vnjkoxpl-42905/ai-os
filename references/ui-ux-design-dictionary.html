@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Vibe-to-Prompt UI/UX Playbook | LSAT U & Modern Web</title>
+  <style>
+    :root {
+      --bg: #f8f6f1;
+      --bg-card: #ffffff;
+      --bg-card-subtle: #faf8f5;
+      --border: #e4dfd5;
+      --border-hover: #cfc8bb;
+      --border-accent: #bfdbfe;
+      --ink: #191919;
+      --ink-muted: #4b5563;
+      --ink-subtle: #6b7280;
+      --accent: #1d4ed8;
+      --accent-bg: #eff6ff;
+      --gold: #b45309;
+      --gold-bg: #fef3c7;
+      --success: #15803d;
+      --success-bg: #f0fdf4;
+      --danger: #b91c1c;
+      --danger-bg: #fef2f2;
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 12px;
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.06), 0 2px 4px -2px rgba(0, 0, 0, 0.04);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      padding: 32px 20px 100px 20px;
+    }
+
+    .container {
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    header {
+      margin-bottom: 28px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 3px 10px;
+      border-radius: var(--radius-sm);
+      background-color: var(--gold-bg);
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 34px;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      font-size: 16px;
+      color: var(--ink-muted);
+      max-width: 880px;
+      line-height: 1.5;
+    }
+
+    /* Interactive Prompt Sandbox / Practice Workbench */
+    .workbench-card {
+      background: #1e293b;
+      color: #f8fafc;
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      margin-bottom: 32px;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid #334155;
+    }
+
+    .workbench-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .workbench-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #f1f5f9;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .workbench-desc {
+      font-size: 13px;
+      color: #94a3b8;
+      margin-top: 4px;
+    }
+
+    .workbench-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    @media (max-width: 860px) {
+      .workbench-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .workbench-field label {
+      display: block;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 700;
+      color: #cbd5e1;
+      margin-bottom: 6px;
+    }
+
+    .workbench-field select, .workbench-field input {
+      width: 100%;
+      padding: 10px 12px;
+      background: #0f172a;
+      border: 1px solid #334155;
+      border-radius: var(--radius-sm);
+      color: #f8fafc;
+      font-size: 13px;
+      outline: none;
+      transition: border-color 0.15s ease;
+    }
+
+    .workbench-field select:focus, .workbench-field input:focus {
+      border-color: #38bdf8;
+    }
+
+    .workbench-output {
+      background: #0f172a;
+      border: 1px solid #334155;
+      border-radius: var(--radius-md);
+      padding: 16px;
+      position: relative;
+    }
+
+    .workbench-output-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .workbench-output-header span {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 700;
+      color: #38bdf8;
+    }
+
+    .generated-prompt-text {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      line-height: 1.6;
+      color: #e2e8f0;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    /* Sticky Filter Controls */
+    .sticky-controls {
+      position: sticky;
+      top: 12px;
+      z-index: 100;
+      background: rgba(248, 246, 241, 0.96);
+      backdrop-filter: blur(10px);
+      padding: 16px 20px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+      margin-bottom: 28px;
+    }
+
+    .search-row {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 12px;
+      align-items: center;
+    }
+
+    .search-box {
+      flex: 1;
+      position: relative;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 12px 16px 12px 42px;
+      font-size: 15px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--bg-card);
+      color: var(--ink);
+      outline: none;
+      transition: all 0.15s ease;
+    }
+
+    .search-box input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.1);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--ink-subtle);
+      font-size: 16px;
+      pointer-events: none;
+    }
+
+    .counter-pill {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--ink-muted);
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 8px 14px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+
+    /* Fast Vibe Jump Pills */
+    .vibe-pills-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 10px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+    }
+
+    .vibe-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--ink-subtle);
+      margin-right: 6px;
+      white-space: nowrap;
+    }
+
+    .vibe-chip {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      color: var(--ink-muted);
+      font-size: 12px;
+      font-weight: 500;
+      padding: 4px 10px;
+      border-radius: 14px;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.15s ease;
+    }
+
+    .vibe-chip:hover {
+      border-color: var(--border-hover);
+      color: var(--ink);
+    }
+
+    .vibe-chip.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #ffffff;
+    }
+
+    /* Category Filter Pills */
+    .category-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .cat-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      color: var(--ink-muted);
+      padding: 6px 13px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .cat-btn:hover {
+      border-color: var(--border-hover);
+      color: var(--ink);
+    }
+
+    .cat-btn.active {
+      background: var(--ink);
+      border-color: var(--ink);
+      color: #ffffff;
+    }
+
+    /* Situation Cards Grid */
+    .situations-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    .situation-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      box-shadow: var(--shadow-sm);
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .situation-card:hover {
+      border-color: var(--border-hover);
+      box-shadow: var(--shadow-md);
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 12px;
+    }
+
+    .situation-feeling {
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.35;
+      margin-bottom: 6px;
+    }
+
+    .vibe-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding: 2px 8px;
+      border-radius: var(--radius-sm);
+      background: var(--gold-bg);
+      color: var(--gold);
+      margin-right: 6px;
+    }
+
+    .category-tag {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding: 2px 8px;
+      border-radius: var(--radius-sm);
+      background: var(--accent-bg);
+      color: var(--accent);
+      border: 1px solid var(--accent-border);
+      white-space: nowrap;
+    }
+
+    .card-meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .design-term {
+      font-family: var(--font-mono);
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--accent);
+      background: #eff6ff;
+      padding: 3px 8px;
+      border-radius: var(--radius-sm);
+    }
+
+    .heuristic-ref {
+      font-size: 12px;
+      color: var(--ink-subtle);
+      font-weight: 500;
+    }
+
+    .explanation-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+      padding: 14px 16px;
+      background: var(--bg-card-subtle);
+      border-radius: var(--radius-sm);
+      border: 1px solid #eee9df;
+    }
+
+    @media (max-width: 768px) {
+      .explanation-box {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .explanation-item h5 {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--ink-subtle);
+      margin-bottom: 4px;
+    }
+
+    .explanation-item p {
+      font-size: 13px;
+      color: var(--ink-muted);
+      line-height: 1.5;
+    }
+
+    /* Prompt Box */
+    .prompt-container {
+      background: #0f172a;
+      border-radius: var(--radius-sm);
+      padding: 14px 16px;
+      border: 1px solid #1e293b;
+      position: relative;
+    }
+
+    .prompt-top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .prompt-top-bar span {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #94a3b8;
+    }
+
+    .copy-btn {
+      background: #334155;
+      color: #f8fafc;
+      border: none;
+      padding: 5px 12px;
+      border-radius: var(--radius-sm);
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s ease;
+    }
+
+    .copy-btn:hover {
+      background: #475569;
+    }
+
+    .copy-btn.copied {
+      background: var(--success);
+      color: #ffffff;
+    }
+
+    .prompt-body {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      line-height: 1.6;
+      color: #e2e8f0;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    /* Empty state */
+    .empty-state {
+      display: none;
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--ink-muted);
+    }
+
+    .empty-state h3 {
+      font-size: 20px;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+
+    footer {
+      margin-top: 80px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-size: 13px;
+      color: var(--ink-subtle);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <div class="header-badge">LSAT U & Modern Web Product Playbook</div>
+      <h1>UI & UX Vibe-to-Prompt Playbook</h1>
+      <p class="subtitle">
+        Find the exact feeling or vibe you are experiencing, discover the underlying design principle and root cause, and copy a ready-to-run engineering prompt with precise measurements and architectural constraints.
+      </p>
+    </header>
+
+    <!-- Interactive Prompt Customizer / Practice Workbench -->
+    <div class="workbench-card">
+      <div class="workbench-header">
+        <div>
+          <div class="workbench-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            Interactive Prompt Builder & Practice Sandbox
+          </div>
+          <div class="workbench-desc">Select what you are experiencing to generate a targeted engineering directive.</div>
+        </div>
+        <button class="copy-btn" id="copyWorkbenchBtn" onclick="copyWorkbenchPrompt()">Copy Custom Prompt</button>
+      </div>
+
+      <div class="workbench-grid">
+        <div class="workbench-field">
+          <label>1. What vibe or feeling is off?</label>
+          <select id="wbVibeSelect" onchange="updateWorkbenchPrompt()">
+            <option value="too-many-pieces">"Too many pieces / Not simple"</option>
+            <option value="hard-to-read">"Hard to read / Reading fatigue"</option>
+            <option value="looks-cheap">"Looks cheap / Amateurish / Clunky"</option>
+            <option value="shouting">"Everything is shouting / Visual chaos"</option>
+            <option value="dead-click">"Feels dead / Tapped and nothing happened"</option>
+            <option value="jumping">"Page jumps around / Content shifts"</option>
+            <option value="lost">"Lost in the flow / No idea where I am"</option>
+            <option value="spoiled-answer">"Answer / Explanation spoiled prematurely"</option>
+            <option value="neck-strain">"Stimulus and question too far apart"</option>
+          </select>
+        </div>
+
+        <div class="workbench-field">
+          <label>2. What screen / surface are you looking at?</label>
+          <select id="wbSurfaceSelect" onchange="updateWorkbenchPrompt()">
+            <option value="Classroom Drill Runner">Classroom Drill Runner</option>
+            <option value="Teacher Desk Dashboard">Teacher Desk Dashboard</option>
+            <option value="Lesson / Reading Passage">Lesson / Reading Passage</option>
+            <option value="Multiple Choice Question Card">Multiple Choice Question Card</option>
+            <option value="Analytics & Score Breakdown">Analytics & Score Breakdown</option>
+            <option value="Mobile Screen / Responsive Layout">Mobile Screen / Responsive Layout</option>
+            <option value="Form / Settings Tray">Form / Settings Tray</option>
+          </select>
+        </div>
+
+        <div class="workbench-field">
+          <label>3. Optional Specific Element / Context</label>
+          <input type="text" id="wbContextInput" placeholder="e.g. Main Conclusion choices, Submit button..." oninput="updateWorkbenchPrompt()">
+        </div>
+      </div>
+
+      <div class="workbench-output">
+        <div class="workbench-output-header">
+          <span>Generated Directive for AI Assistant / Engineer</span>
+        </div>
+        <div class="generated-prompt-text" id="wbOutputPrompt">Select options above to preview prompt...</div>
+      </div>
+    </div>
+
+    <!-- Sticky Search and Filter Controls -->
+    <div class="sticky-controls">
+      <div class="search-row">
+        <div class="search-box">
+          <span class="search-icon">&#128269;</span>
+          <input type="text" id="searchInput" placeholder="Search by vibe (e.g. 'too many pieces', 'not simple', 'hard to read', 'cheap', 'jumping', 'dead click')...">
+        </div>
+        <div class="counter-pill" id="counterPill">Showing 30 situations</div>
+      </div>
+
+      <!-- Quick Vibe Jump Chips -->
+      <div class="vibe-pills-row" id="vibePillsRow">
+        <span class="vibe-label">Quick Vibe:</span>
+        <button class="vibe-chip active" data-vibe="all">All Vibes</button>
+        <button class="vibe-chip" data-vibe="too-many-pieces">Too Many Pieces</button>
+        <button class="vibe-chip" data-vibe="not-simple">Not Simple</button>
+        <button class="vibe-chip" data-vibe="hard-to-read">Hard to Read</button>
+        <button class="vibe-chip" data-vibe="looks-cheap">Looks Cheap / Amateur</button>
+        <button class="vibe-chip" data-vibe="feels-clunky">Feels Clunky / Dead</button>
+        <button class="vibe-chip" data-vibe="lost">Lost / Confusing Flow</button>
+        <button class="vibe-chip" data-vibe="edtech">LSAT Runner</button>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="category-pills" id="categoryPills">
+        <button class="cat-btn active" data-category="all">All Categories</button>
+        <button class="cat-btn" data-category="layout">Layout & Spacing</button>
+        <button class="cat-btn" data-category="typography">Typography & Reading</button>
+        <button class="cat-btn" data-category="affordance">Buttons & Affordance</button>
+        <button class="cat-btn" data-category="navigation">Navigation & Wayfinding</button>
+        <button class="cat-btn" data-category="feedback">State & Latency</button>
+        <button class="cat-btn" data-category="forms">Forms & Input</button>
+        <button class="cat-btn" data-category="density">Density & Tables</button>
+        <button class="cat-btn" data-category="pedagogy">LSAT U Pedagogical UI</button>
+      </div>
+    </div>
+
+    <!-- Situations Grid -->
+    <div class="situations-grid" id="situationsGrid">
+
+      <!-- SITUATION 1 -->
+      <div class="situation-card" data-category="layout" data-vibes="too-many-pieces not-simple looks-cheap">
+        <div class="card-top">
+          <div>
+            <div class="situation-feeling">"Whenever you feel like there are too many pieces and boxes inside boxes like Russian dolls..."</div>
+            <div class="card-meta-row">
+              <span class="vibe-badge">Too Many Pieces</span>
+              <span class="design-term">Container-itis / Nested Border Overload</span>
+              <span class="heuristic-ref">Gestalt Law of Proximity</span>
+            </div>
+          </div>
+          <span class="category-tag">Layout & Spacing</span>
+        </div>
+        <div class="explanation-box">
+          <div class="explanation-item">
+            <h5>Root Cause</h5>
+            <p>Relying on explicit border lines and nested card wrappers to separate content instead of letting whitespace and subtle background tint shifts do the work.</p>
+          </div>
+          <div class="explanation-item">
+            <h5>Professional Standard</h5>
+            <p>Refactoring UI: Eliminate borders on nested child containers. Use 24px to 32px of whitespace or a 1-step background contrast shift (e.g. stone-50 against white).</p>
+          </div>
+        </div>
+        <div class="prompt-container">
+          <div class="prompt-top-bar">
+            <span>Copy-Paste Engineering Directive</span>
+            <button class="copy-btn" onclick="copyCardPrompt(this)">Copy Prompt</button>
+          </div>
+          <div class="prompt-body">Refactor this view to eliminate nested card borders. Remove the outer border on all child containers inside the main card. Instead of drawing box outlines around every section, group related elements using vertical whitespace (margin-bottom: 24px) or a subtle surface tint shift (bg-stone-50 with 0px border). Keep only the primary outer card boundary.</div>
+        </div>
+      </div>
+
+      <!-- SITUATION 2 -->
+      <div class="situation-card" data-category="typography" data-vibes="hard-to-read not-simple">
+        <div class="card-top">
+          <div>
+            <div class="situation-feeling">"Whenever you feel like reading is exhausting, like a tennis match tracking across the monitor..."</div>
+            <div class="card-meta-row">
+              <span class="vibe-badge">Hard to Read</span>
+              <span class="design-term">Overextended Measure / Excessive Line Length</span>
+              <span class="heuristic-ref">Robert Bringhurst Typographic Standard (45-75 chars)</span>
+            </div>
+          </div>
+          <span class="category-tag">Typography & Reading</span>
+        </div>
+        <div class="explanation-box">
+          <div class="explanation-item">
+            <h5>Root Cause</h5>
+            <p>Allowing reading passages or lesson copy to expand to 100% width of a wide container or full monitor width (reaching 100+ characters per line).</p>
+          </div>
+          <div class="explanation-item">
+            <h5>Professional Standard</h5>
+            <p>Optimal reading length is 55 to 70 characters per line (approx. 65ch in CSS). Longer lines cause eye strain, loss of place, and cognitive fatigue.</p>
+          </div>
+        </div>
+        <div class="prompt-container">
+          <div class="prompt-top-bar">
+            <span>Copy-Paste Engineering Directive</span>
+            <button class="copy-btn" onclick="copyCardPrompt(this)">Copy Prompt</button>
+          </div>
+          <div class="prompt-body">Constrain the reading column to an optimal typographic measure. Apply max-width: 65ch (max-w-[65ch] or max-w-2xl) to the lesson text and question stimulus container. Center the reading container or dock it alongside an inspector column rather than letting text span the full monitor width.</div>
+        </div>
+      </div>
+
+      <!-- SITUATION 3 -->
+      <div class="situation-card" data-category="typography" data-vibes="hard-to-read not-simple">
+        <div class="card-top">
+          <div>
+            <div class="situation-feeling">"Whenever you feel like it's an intimidating wall of text and you don't even want to start..."</div>
+            <div class="card-meta-row">
+              <span class="vibe-badge">Hard to Read</span>
+              <span class="design-term">Monolithic Text Block / Scannability Failure</span>
+              <span class="heuristic-ref">Jakob Nielsen F-Pattern Scannability</span>
+            </div>
+          </div>
+          <span class="category-tag">Typography & Reading</span>
+        </div>
+        <div class="explanation-box">
+          <div class="explanation-item">
+            <h5>Root Cause</h5>
+            <p>Unbroken 10-line paragraphs without subheadings, bold lead-in phrases, bulleted points, or visual rest stops.</p>
+          </div>
+          <div class="explanation-item">
+            <h5>Professional Standard</h5>
+            <p>Break educational prose into 3 to 4 sentence paragraphs. Introduce descriptive H3 subheaders every 2 paragraphs, and bold key operative rule words.</p>
+          </div>
+        </div>
+        <div class="prompt-container">
+          <div class="prompt-top-bar">
+            <span>Copy-Paste Engineering Directive</span>
+            <button class="copy-btn" onclick="copyCardPrompt(this)">Copy Prompt</button>
+          </div>
+          <div class="prompt-body">Break up this monolithic wall of text. Divide paragraphs into 3-to-4 sentence blocks maximum. Add descriptive H3 subheadings every 2 paragraphs, bold key operative rule terms (e.g. conclusion indicators, condition triggers), and convert sequential steps into a numbered list with 8px vertical item spacing.</div>
+        </div>
+      </div>
+
+      <!-- SITUATION 4 -->
+      <div class="situation-card" data-category="layout" data-vibes="looks-cheap not-simple">
+        <div class="card-top">
+          <div>
+            <div class="situation-feeling">"Whenever you feel like the text is suffocating against the edges of the box..."</div>
+            <div class="card-meta-row">
+              <span class="vibe-badge">Looks Cheap</span>
+              <span class="design-term">Padding Deficit / Container Starvation</span>
+              <span class="heuristic-ref">Negative Space Ratio</span>
+            </div>
+          </div>
+          <span class="category-tag">Layout & Spacing</span>
+        </div>
+        <div class="explanation-box">
+          <div class="explanation-item">
+            <h5>Root Cause</h5>
+            <p>Using tiny internal padding (such as 6px or 8px) on cards that hold dense multi-line text or interactive elements.</p>
+          </div>
+          <div class="explanation-item">
+            <h5>Professional Standard</h5>
+            <p>Primary content cards require at least 24px internal padding on desktop (p-6) and 16px on mobile (p-4) to give elements room to breathe.</p>
+          </div>
+        </div>
+        <div class="prompt-container">
+          <div class="prompt-top-bar">
+            <span>Copy-Paste Engineering Directive</span>
+            <button class="copy-btn" onclick="copyCardPrompt(this)">Copy Prompt</button>
+          </div>
+          <div class="prompt-body">Increase the internal card padding from its current setting to 24px on desktop (p-6) and 16px on mobile (p-4). Give the text and buttons breathing room away from the card boundary. Maintain consistent 24px padding across all sibling cards.</div>
+        </div>
+      </div>
+
+      <!-- SITUATION 5 -->
+      <div class="situation-card" data-category="affordance" data-vibes="feels-clunky not-simple">
+        <div class="card-top">
+          <div>
+            <div class="situation-feeling">"Whenever you feel like: 'I didn't even realize I could click that; it looked like a static label'..."</div>
+            <div class="card-meta-row">
+              <span class="vibe-badge">Feels Clunky</span>
+              <span class="design-term">Affordance Starvation / Missing Signifier</span>
+              <span class="heuristic-ref">Don Norman Signifiers</span>
+            </div>
+          </div>
+          <span class="category-tag">Buttons & Affordance</span>
+        </div>
+        <div class="explanation-box">
+          <div class="explanation-item">
+            <h5>Root Cause</h5>
+            <p>Flat design stripped of borders, shadows, hover cues, cursor styles, or action icons, making interactive links look identical to inert text.</p>
+          </div>
+          <div class="explanation-item">
+            <h5>Professional Standard</h5>
+            <p>Interactive elements must visibly declare interactability via cursor: pointer, hover surface transitions, subtle elevation, and action icons (like trailing chevrons).</p>
+          </div>
+        </div>
+        <div class="prompt-container">
+          <div class="prompt-top-bar">
+            <span>Copy-Paste Engineering Directive</span>
+            <button class="copy-btn" onclick="copyCardPrompt(this)">Copy Prompt</button>
+          </div>
+          <div class="prompt-body">Add clear interactive signifiers to this clickable element. Set cursor: pointer, add a visible hover state (hover:bg-slate-100 or hover:text-blue-700), append a subtle trailing chevron or action icon, and add a subtle focus-visible outline for keyboard navigation.</div>
+        </div>
+      </div>
+
+      <!-- SITUATION 6 -->
+      <div class="situation-card" data-category="affordance" data-vibes="looks-cheap feels-clunky">
+        <div class="card-top">
+          <div>
+            <div class="situation-feeling">"Whenever you feel like: 'I keep clicking this badge expecting it to filter, but it's dead'..."</div>
+            <div class="card-meta-row">
+              <span class="vibe-badge">Looks Cheap</span>
+              <span class="design-term">False Affordance / Visual Misdirection</span>
+              <span class="heuristic-ref">Don Norman Conceptual Consistency</span>
+            </div>
+          </div>
+          <span class="category-tag">Buttons & Affordance</span>
+        </div>
+        <div class="explanation-box">
+          <div class="explanation-item">
+            <h5>Root Cause</h5>
+            <p>Styling static informational tags with heavy pill shapes, dark saturated fills, and drop shadows that mimic primary button styles.</p>
+          </div>
+          <div class="explanation-item">
+            <h5>Professional Standard</h5>
+            <p>Reserve saturated pill shapes for interactive buttons. Static status tags must use muted, desaturated outline styles with cursor: default.</p>
+          </div>
+        </div>
+        <div class="prompt-container">
+          <div class="prompt-top-bar">
+            <span>Copy-Paste Engineering Directive</span>
+            <button class="copy-btn" onclick="copyCardPrompt(this)">Copy Prompt</button>
+          </div>
+          <div class="prompt-body">De-emphasize this static status tag so users do not mistake it for a button. Remove any heavy drop shadows, set cursor: default, and style it as an outline badge with a subtle border and muted background (bg-stone-100, text-stone-600, border-stone-200).</div>
+        </div>
+      </div>
+
+      <!-- SITUATION 7 -->
+      <div class="situation-card" data-category="feedback" data-vibes="feels-clunky not-simple">
+        <div class="card-top">
+          <div>
+            <div class="situation-feeling">"Whenever you feel like you tapped a button and nothing happened for two seconds, so you tapped again..."</div>
+            <div class="card-meta-row">
+              <span class="vibe-badge">Feels Clunky</span>
+              <span class="design-term">Feedback Latency Gap / Double-Submit Vulnerability</span>
+              <span class="heuristic-ref">Nielsen Heuristic #1 & Doherty Threshold (&lt;400ms)</span>
+            </div>
+          </div>
+          <span class="category-tag">State & Latency</span>
+        </div>
+        <div class="explanation-box">
+          <div class="explanation-item">
+            <h5>Root Cause</h5>
+            <p>Awaiting an asynchronous backend response before updating the UI, with no immediate disabled state, inline spinner, or optimistic update.</p>
+          </div>
+          <div class="explanation-item">
+            <h5>Professional Standard</h5>
+            <p>System feedback must occur under 400ms. On click, immediately disable the button to prevent duplicate submissions and render an active loading state.</p>
+          </div>
+        </div>
+        <div class="prompt-container">
+          <div class="prompt-top-bar">
+            <span>Copy-Paste Engineering Directive</span>
+            <button class="copy-btn" onclick="copyCardPrompt(this)">Copy Prompt</button>
+          </div>
+          <div class="prompt-body">Add immediate synchronous interaction feedback to this submit action. On click, instantly disable the button to prevent duplicate submissions, swap the label for an inline spinner with 'Submitting...', and apply optimistic state updates locally where possible.</div>
+        </div>
+      </div>
+
+      <!-- SITUATION 8 -->
+      <div class="situation-card" data-category="feedback" data-vibes="feels-clunky looks-cheap">
+        <div class="card-top">
+          <div>
+            <div class="situation-feeling">"Whenever you feel like elements suddenly jump down right as you are tapping..."</div>
+            <div class="card-meta-row">
+              <span class="vibe-badge">Feels Clunky</span>
+              <span class="design-term">Cumulative Layout Shift (CLS) / Content Jank</span>
+              <span class="heuristic-ref">Core Web Vitals Standard (CLS &lt; 0.1)</span>
+            </div>
+          </div>
+          <span class="category-tag">State & Latency</span>
+        </div>
+        <div class="explanation-box">
+          <div class="explanation-item">
+            <h5>Root Cause</h5>
+            <p>Asynchronously loading questions, charts, or images without reserving their container height in advance, abruptly pushing content downward.</p>
+          </div>
+          <div class="explanation-item">
+            <h5>Professional Standard</h5>
+            <p>Reserve space with explicit min-height or aspect-ratio boxes. Use skeleton loaders that match the geometry of the incoming content.</p>
+          </div>
+        </div>
+        <div class="prompt-container">
+          <div class="prompt-top-bar">
+            <span>Copy-Paste Engineering Directive</span>
+            <button class="copy-btn" onclick="copyCardPrompt(this)">Copy Prompt</button>
+          </div>
+          <div class="prompt-body">Eliminate Cumulative Layout Shift (CLS) in this view. Replace full-page spinners with skeleton loaders that match the exact height and layout of the incoming card (e.g. min-h-[320px] and pulse placeholders). Prevent any layout jumping when data resolves.</div>
+        </div>
+      </div>
+
+      <!-- SITUATION 9 -->
+      <div class="situation-card" data-category="navigation" data-vibes="lost not-simple">
+        <div class="card-top">
+          <div>
+            <div class="situation-feeling">"Whenever you feel like: 'I am 4 screens deep in a drill and have no idea how to get back'..."</div>
+            <div class="card-meta-row">
+              <span class="vibe-badge">Lost / Confusing Flow</span>
+              <span class="design-term">Wayfinding Failure / Missing Context Anchor</span>
+              <span class="heuristic-ref">Steve Krug Trunk Test (Don't Make Me Think)</span>
+            </div>
+          </div>
+          <span class="category-tag">Navigation & Wayfinding</span>
+        </div>
+        <div class="explanation-box">
+          <div class="explanation-item">
+            <h5>Root Cause</h5>
+            <p>Hiding top-level navigation and breadcrumbs during multi-step flows without replacing them with a clear hierarchical progress header.</p>
+          </div>
+          <div class="explanation-item">
+            <h5>Professional Standard</h5>
+            <p>At any step, a student must know: Where am I? Where did I come from? How do I get back? Provide breadcrumbs and an explicit exit hatch.</p>
+          </div>
+        </div>
+        <div class="prompt-container">
+          <div class="prompt-top-bar">
+            <span>Copy-Paste Engineering Directive</span>
+            <button class="copy-btn" onclick="copyCardPrompt(this)">Copy Prompt</button>
+          </div>
+          <div class="prompt-body">Add a persistent breadcrumb trail and exit anchor at the top of the runner (e.g., 'Classroom > Main Conclusion Bootcamp > Drill 2 > Question 4 of 10'). Include a clear 'Save & Exit' button that preserves current progress and returns to the dashboard.</div>
+        </div>
+      </div>
+
+      <!-- SITUATION 10 -->
+      <div class="situation-card" data-category="navigation" data-vibes="too-many-pieces not-simple">
+        <div class="card-top">
+          <div>
+            <div class="situation-feeling">"Whenever you feel like there are 15 different buttons on the dashboard and you don't know what to do next..."</div>
+            <div class="card-meta-row">
+              <span class="vibe-badge">Too Many Pieces</span>
+              <span class="design-term">Decision Paralysis / Hick's Law Violation</span>
+              <span class="heuristic-ref">Hick's Law (Choice count increases decision latency)</span>
+            </div>
+          </div>
+          <span class="category-tag">Navigation & Wayfinding</span>
+        </div>
+        <div class="explanation-box">
+          <div class="explanation-item">
+            <h5>Root Cause</h5>
+            <p>Giving equal visual prominence to 10+ competing actions, drills, links, and cards without establishing a single primary recommended next step.</p>
+          </div>
+          <div class="explanation-item">
+            <h5>Professional Standard</h5>
+            <p>Establish a single 'Hero' primary action for the user's immediate next step. Subordinate secondary links to a quiet text list or grouped drawer.</p>
+          </div>
+        </div>
+        <div class="prompt-container">
+          <div class="prompt-top-bar">
+            <span>Copy-Paste Engineering Directive</span>
+            <button class="copy-btn" onclick="copyCardPrompt(this)">Copy Prompt</button>
+          </div>
+          <div class="prompt-body">Establish a single primary Call-to-Action on this student dashboard. Create a dominant hero card for 'Next Up in Your Study Plan' with a high-contrast action button. Move all other options into secondary cards with subdued outline buttons to eliminate decision paralysis.</div>
+        </div>
+      </div>
+
+      <!-- SITUATION 11 -->
+      <div class="situation-card" data-category="pedagogy" data-vibes="edtech not-simple">
+        <div class="card-top">
+          <div>
+            <div class="situation-feeling">"Whenever you feel like the explanation spoiled the answer before you could even try..."</div>
+            <div class="card-meta-row">
+              <span class="vibe-badge">LSAT Runner</span>
+              <span class="design-term">Premature Answer Revelation / Cognitive Crutching</span>
+              <span class="heuristic-ref">Pedagogical Active Retrieval Standard</span>
+            </div>
+          </div>
+          <span class="category-tag">LSAT U Pedagogical UI</span>
+        </div>
+        <div class="explanation-box">
+          <div class="explanation-item">
+            <h5>Root Cause</h5>
+            <p>Displaying the correct answer indicator and reasoning breakdown on the same screen before the student commits an answer attempt.</p>
+          </div>
+          <div class="explanation-item">
+            <h5>Professional Standard</h5>
+            <p>Active learning requires committing an answer before seeing feedback. Lock the explanation drawer behind an explicit submission gate.</p>
+          </div>
+        </div>
+        <div class="prompt-container">
+          <div class="prompt-top-bar">
+            <span>Copy-Paste Engineering Directive</span>
+            <button class="copy-btn" onclick="copyCardPrompt(this)">Copy Prompt</button>
+          </div>
+          <div class="prompt-body">Gate the question explanation behind an explicit submission check. Hide the correct answer key and explanation drawer completely until the student selects a choice and clicks 'Check Answer'. Preserve active retrieval.</div>
+        </div>
+      </div>
+
+      <!-- SITUATION 12 -->
+      <div class="situation-card" data-category="pedagogy" data-vibes="edtech hard-to-read">
+        <div class="card-top">
+          <div>
+            <div class="situation-feeling">"Whenever you feel like the stimulus is far left and choices are far right, causing neck strain..."</div>
+            <div class="card-meta-row">
+              <span class="vibe-badge">LSAT Runner</span>
+              <span class="design-term">Excessive Viewport Dispersion / Disjointed Biaxial Layout</span>
+              <span class="heuristic-ref">Fitts's Law & Visual Anchor Proximity</span>
+            </div>
+          </div>
+          <span class="category-tag">LSAT U Pedagogical UI</span>
+        </div>
+        <div class="explanation-box">
+          <div class="explanation-item">
+            <h5>Root Cause</h5>
+            <p>Using unconstrained flex justify-between across a 1920px or 2560px screen width without an enclosing max-width boundary on the two-column runner.</p>
+          </div>
+          <div class="explanation-item">
+            <h5>Professional Standard</h5>
+            <p>The two columns (stimulus passage on left, question and answer choices on right) must be enclosed in a max-w-6xl container with a fixed 32px gap.</p>
+          </div>
+        </div>
+        <div class="prompt-container">
+          <div class="prompt-top-bar">
+            <span>Copy-Paste Engineering Directive</span>
+            <button class="copy-btn" onclick="copyCardPrompt(this)">Copy Prompt</button>
+          </div>
+          <div class="prompt-body">Wrap the two-column drill runner inside a centered container with max-width: 1200px (max-w-6xl mx-auto). Set the grid layout to 1fr 1fr with a fixed gap of 32px so the stimulus and question choices remain in a comfortable reading field of view on ultra-wide screens.</div>
+        </div>
+      </div>
+
+      <!-- SITUATION 13 -->
+      <div class="situation-card" data-category="pedagogy" data-vibes="edtech not-simple">
+        <div class="card-top">
+          <div>
+            <div class="situation-feeling">"Whenever you feel like the 5 answer choices run together and it's hard to eliminate wrong answers..."</div>
+            <div class="card-meta-row">
+              <span class="vibe-badge">LSAT Runner</span>
+              <span class="design-term">Choice Clutter / Missing Elimination Affordance</span>
+              <span class="heuristic-ref">LSAC Digital Exam Standard</span>
+            </div>
+          </div>
+          <span class="category-tag">LSAT U Pedagogical UI</span>
+        </div>
+        <div class="explanation-box">
+          <div class="explanation-item">
+            <h5>Root Cause</h5>
+            <p>Displaying choices A through E as continuous blocks of text without individual card framing, letter badges, or strike-through elimination tools.</p>
+          </div>
+          <div class="explanation-item">
+            <h5>Professional Standard</h5>
+            <p>Each choice must be an isolated card with 12px vertical spacing, a distinct letter circle badge (A-E), and a quick strike-through button.</p>
+          </div>
+        </div>
+        <div class="prompt-container">
+          <div class="prompt-top-bar">
+            <span>Copy-Paste Engineering Directive</span>
+            <button class="copy-btn" onclick="copyCardPrompt(this)">Copy Prompt</button>
+          </div>
+          <div class="prompt-body">Style each answer choice as an individual card with margin-bottom: 12px, rounded-md border, and a circular badge for the choice letter (A-E). Add an elimination toggle icon on the right edge that applies line-through and opacity-50 when activated.</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Empty Search Results Placeholder -->
+    <div class="empty-state" id="emptyState">
+      <h3>No matching situations found</h3>
+      <p>Try searching for words like "simple", "read", "button", "clunky", "jumping", or "runner".</p>
+    </div>
+
+    <footer>
+      <p>LSAT U Product Design Reference &bull; Built for high-leverage UI/UX auditing and precise engineering direction.</p>
+    </footer>
+  </div>
+
+  <script>
+    // Filtering, Search, and Workbench Logic
+    const searchInput = document.getElementById('searchInput');
+    const categoryPills = document.getElementById('categoryPills');
+    const vibePillsRow = document.getElementById('vibePillsRow');
+    const situations = document.querySelectorAll('.situation-card');
+    const counterPill = document.getElementById('counterPill');
+    const emptyState = document.getElementById('emptyState');
+
+    let currentCategory = 'all';
+    let currentVibe = 'all';
+    let currentSearch = '';
+
+    function filterSituations() {
+      let visibleCount = 0;
+      const query = currentSearch.toLowerCase().trim();
+
+      situations.forEach(card => {
+        const category = card.getAttribute('data-category');
+        const vibes = card.getAttribute('data-vibes') || '';
+        const text = card.innerText.toLowerCase();
+
+        const matchesCat = (currentCategory === 'all' || category === currentCategory);
+        const matchesVibe = (currentVibe === 'all' || vibes.includes(currentVibe));
+        const matchesSearch = query === '' || text.includes(query);
+
+        if (matchesCat && matchesVibe && matchesSearch) {
+          card.style.display = 'block';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      counterPill.textContent = `Showing ${visibleCount} of ${situations.length} situations`;
+      emptyState.style.display = (visibleCount === 0) ? 'block' : 'none';
+    }
+
+    // Category button handlers
+    categoryPills.addEventListener('click', (e) => {
+      const btn = e.target.closest('.cat-btn');
+      if (!btn) return;
+
+      document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      currentCategory = btn.getAttribute('data-category');
+      filterSituations();
+    });
+
+    // Vibe chip handlers
+    vibePillsRow.addEventListener('click', (e) => {
+      const chip = e.target.closest('.vibe-chip');
+      if (!chip) return;
+
+      document.querySelectorAll('.vibe-chip').forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+
+      currentVibe = chip.getAttribute('data-vibe');
+      filterSituations();
+    });
+
+    // Search input handler
+    searchInput.addEventListener('input', (e) => {
+      currentSearch = e.target.value;
+      filterSituations();
+    });
+
+    // Copy card prompt function
+    function copyCardPrompt(button) {
+      const promptContainer = button.closest('.prompt-container');
+      const text = promptContainer.querySelector('.prompt-body').innerText;
+
+      navigator.clipboard.writeText(text).then(() => {
+        const originalText = button.innerText;
+        button.innerText = 'Copied!';
+        button.classList.add('copied');
+
+        setTimeout(() => {
+          button.innerText = originalText;
+          button.classList.remove('copied');
+        }, 2000);
+      }).catch(err => {
+        console.error('Copy failed: ', err);
+      });
+    }
+
+    // Workbench Prompt Generator Logic
+    function updateWorkbenchPrompt() {
+      const vibe = document.getElementById('wbVibeSelect').value;
+      const surface = document.getElementById('wbSurfaceSelect').value;
+      const context = document.getElementById('wbContextInput').value.trim();
+      const output = document.getElementById('wbOutputPrompt');
+
+      const targetText = context ? ` Specifically targeting: ${context}.` : '';
+
+      const directives = {
+        'too-many-pieces': `Refactor this ${surface} to apply progressive disclosure. Eliminate nested card borders and boxes-inside-boxes. Group related items by whitespace (24px to 32px) or a subtle 1-step background tint rather than border outlines. Establish a single dominant primary action and demote secondary controls into an accordion or overflow drawer.${targetText}`,
+        'hard-to-read': `Optimize reading ergonomics on this ${surface}. Constrain the text container to a maximum measure of 65ch (characters per line) or max-w-2xl. Increase line-height on instructional prose and stimuli to 1.65 (leading-relaxed). Ensure body contrast meets WCAG AAA standards (minimum 7:1 contrast ratio using near-black text).${targetText}`,
+        'looks-cheap': `Elevate the visual polish on this ${surface}. Replace arbitrary margins with a strict 8px spacing token system (8px, 16px, 24px, 32px). Increase internal card padding to 24px on desktop and 16px on mobile. Replace default harsh border outlines with subtle surface borders (border-stone-200) and refined 4px/8px corner radii.${targetText}`,
+        'shouting': `Re-establish visual hierarchy on this ${surface}. Reduce competing accent colors and badges. Limit loud filled pills strictly to the single primary Call to Action. Demote secondary metadata to muted typography (13px, text-stone-500) and style static tags as subtle outline badges rather than heavy colored buttons.${targetText}`,
+        'dead-click': `Add immediate interaction feedback to interactive elements on this ${surface}. On click/tap, instantly disable the button to prevent duplicate submissions, swap the label for an inline spinner with 'Submitting...', and apply optimistic state updates. Ensure minimum hit target size is 44x44px.${targetText}`,
+        'jumping': `Fix Cumulative Layout Shift (CLS) on this ${surface}. Pre-allocate layout height using skeleton placeholders that match the exact geometry of the incoming cards. Do not allow dynamically loaded content to abruptly push down existing elements.${targetText}`,
+        'lost': `Improve wayfinding and navigation context on this ${surface}. Add a persistent breadcrumb trail (e.g. 'Classroom > Module > Drill > Question') and a clear 'Save & Exit' button that preserves current progress and safely returns to the dashboard.${targetText}`,
+        'spoiled-answer': `Gate the question explanation on this ${surface} behind an explicit student attempt. Hide the correct answer indicator and reasoning breakdown completely until the student commits an answer choice and clicks 'Check Answer'. Preserve active retrieval.${targetText}`,
+        'neck-strain': `Constrain the two-column layout on this ${surface}. Wrap the split runner inside a centered container with max-width: 1200px (max-w-6xl mx-auto). Set a fixed 32px gap between the stimulus column and the question/choices column so reading stays within natural eye span on wide screens.${targetText}`
+      };
+
+      output.innerText = directives[vibe] || 'Select options above to preview prompt...';
+    }
+
+    function copyWorkbenchPrompt() {
+      const text = document.getElementById('wbOutputPrompt').innerText;
+      const btn = document.getElementById('copyWorkbenchBtn');
+
+      navigator.clipboard.writeText(text).then(() => {
+        const originalText = btn.innerText;
+        btn.innerText = 'Copied!';
+        btn.classList.add('copied');
+
+        setTimeout(() => {
+          btn.innerText = originalText;
+          btn.classList.remove('copied');
+        }, 2000);
+      });
+    }
+
+    // Initialize
+    filterSituations();
+    updateWorkbenchPrompt();
+  </script>
+</body>
+</html>

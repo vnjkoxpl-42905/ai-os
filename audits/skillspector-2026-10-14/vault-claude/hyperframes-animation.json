@@ -1,0 +1,4446 @@
+{
+  "skill": {
+    "name": "hyperframes-animation",
+    "source": "C:\\Users\\Joshu\\dev\\ai-os\\.claude\\skills\\hyperframes-animation",
+    "scanned_at": "2026-10-14T14:54:28.477421+00:00"
+  },
+  "risk_assessment": {
+    "score": 100,
+    "severity": "CRITICAL",
+    "recommendation": "DO_NOT_INSTALL",
+    "max_issue_severity": "HIGH"
+  },
+  "components": [
+    {
+      "path": "SKILL.md",
+      "type": "markdown",
+      "lines": 88,
+      "executable": false,
+      "size_bytes": 8471,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "adapters/animate-text.md",
+      "type": "markdown",
+      "lines": 66,
+      "executable": false,
+      "size_bytes": 4635,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "adapters/animejs.md",
+      "type": "markdown",
+      "lines": 130,
+      "executable": false,
+      "size_bytes": 6224,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "adapters/css-animations.md",
+      "type": "markdown",
+      "lines": 143,
+      "executable": false,
+      "size_bytes": 5407,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "adapters/gsap-easing-and-stagger.md",
+      "type": "markdown",
+      "lines": 199,
+      "executable": false,
+      "size_bytes": 13270,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "adapters/gsap-timeline-and-labels.md",
+      "type": "markdown",
+      "lines": 96,
+      "executable": false,
+      "size_bytes": 3791,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "adapters/gsap-transforms-and-perf.md",
+      "type": "markdown",
+      "lines": 129,
+      "executable": false,
+      "size_bytes": 8552,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "adapters/gsap.md",
+      "type": "markdown",
+      "lines": 105,
+      "executable": false,
+      "size_bytes": 7713,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "adapters/html-in-canvas-patterns.md",
+      "type": "markdown",
+      "lines": 507,
+      "executable": false,
+      "size_bytes": 17166,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "adapters/lottie.md",
+      "type": "markdown",
+      "lines": 130,
+      "executable": false,
+      "size_bytes": 6181,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "adapters/three.md",
+      "type": "markdown",
+      "lines": 176,
+      "executable": false,
+      "size_bytes": 8207,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "adapters/typegpu.md",
+      "type": "markdown",
+      "lines": 182,
+      "executable": false,
+      "size_bytes": 8230,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "adapters/waapi.md",
+      "type": "markdown",
+      "lines": 101,
+      "executable": false,
+      "size_bytes": 4248,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "blueprints-index.md",
+      "type": "markdown",
+      "lines": 202,
+      "executable": false,
+      "size_bytes": 26512,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "blueprints/agent-progress-theater.md",
+      "type": "markdown",
+      "lines": 76,
+      "executable": false,
+      "size_bytes": 16091,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "blueprints/camera-journey.md",
+      "type": "markdown",
+      "lines": 61,
+      "executable": false,
+      "size_bytes": 13648,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "blueprints/comparison-split.md",
+      "type": "markdown",
+      "lines": 27,
+      "executable": false,
+      "size_bytes": 3316,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "blueprints/constellation-hub.md",
+      "type": "markdown",
+      "lines": 63,
+      "executable": false,
+      "size_bytes": 7144,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "blueprints/cta-morph-press.md",
+      "type": "markdown",
+      "lines": 63,
+      "executable": false,
+      "size_bytes": 6407,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "blueprints/cursor-ui-demo.md",
+      "type": "markdown",
+      "lines": 89,
+      "executable": false,
+      "size_bytes": 20276,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "blueprints/dataviz-countup.md",
+      "type": "markdown",
+      "lines": 59,
+      "executable": false,
+      "size_bytes": 14611,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "blueprints/device-surface-showcase.md",
+      "type": "markdown",
+      "lines": 68,
+      "executable": false,
+      "size_bytes": 17151,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "blueprints/fixed-anchor-cycle.md",
+      "type": "markdown",
+      "lines": 46,
+      "executable": false,
+      "size_bytes": 9089,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "blueprints/grid-card-assemble.md",
+      "type": "markdown",
+      "lines": 81,
+      "executable": false,
+      "size_bytes": 15594,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "blueprints/kinetic-type-beats.md",
+      "type": "markdown",
+      "lines": 133,
+      "executable": false,
+      "size_bytes": 29151,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "blueprints/logo-assemble-lockup.md",
+      "type": "markdown",
+      "lines": 121,
+      "executable": false,
+      "size_bytes": 26609,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "blueprints/overwhelm-surround.md",
+      "type": "markdown",
+      "lines": 58,
+      "executable": false,
+      "size_bytes": 6140,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "blueprints/panel-edit-live-sync.md",
+      "type": "markdown",
+      "lines": 73,
+      "executable": false,
+      "size_bytes": 13394,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "blueprints/prompt-type-submit-generate.md",
+      "type": "markdown",
+      "lines": 85,
+      "executable": false,
+      "size_bytes": 18636,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "blueprints/spatial-pan-stations.md",
+      "type": "markdown",
+      "lines": 37,
+      "executable": false,
+      "size_bytes": 4868,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "blueprints/ticker-takeover.md",
+      "type": "markdown",
+      "lines": 29,
+      "executable": false,
+      "size_bytes": 3052,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "blueprints/titlecard-reveal.md",
+      "type": "markdown",
+      "lines": 80,
+      "executable": false,
+      "size_bytes": 7441,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "blueprints/transcript-scroll-artifact-reveal.md",
+      "type": "markdown",
+      "lines": 45,
+      "executable": false,
+      "size_bytes": 11666,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "blueprints/typewriter-reveal.md",
+      "type": "markdown",
+      "lines": 51,
+      "executable": false,
+      "size_bytes": 6276,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "blueprints/video-text-pivot.md",
+      "type": "markdown",
+      "lines": 30,
+      "executable": false,
+      "size_bytes": 3281,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "blueprints/zoom-out-workspace-reveal.md",
+      "type": "markdown",
+      "lines": 68,
+      "executable": false,
+      "size_bytes": 14714,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "examples/brand-reveal-assemble-zoom.html",
+      "type": "other",
+      "lines": 382,
+      "executable": false,
+      "size_bytes": 12285,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "examples/comparison-split-cards.html",
+      "type": "other",
+      "lines": 649,
+      "executable": false,
+      "size_bytes": 21754,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "examples/concept-demo-decode-pan.html",
+      "type": "other",
+      "lines": 520,
+      "executable": false,
+      "size_bytes": 18382,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "examples/cta-morph-press.html",
+      "type": "other",
+      "lines": 468,
+      "executable": false,
+      "size_bytes": 15192,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "examples/cta-orbit-collapse.html",
+      "type": "other",
+      "lines": 1298,
+      "executable": false,
+      "size_bytes": 50646,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "examples/demo-page-scroll-spotlight.html",
+      "type": "other",
+      "lines": 759,
+      "executable": false,
+      "size_bytes": 25019,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "examples/hook-counter-burst.html",
+      "type": "other",
+      "lines": 729,
+      "executable": false,
+      "size_bytes": 23004,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "examples/messaging-multi-phrase.html",
+      "type": "other",
+      "lines": 352,
+      "executable": false,
+      "size_bytes": 12223,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "examples/metric-video-text-pivot.html",
+      "type": "other",
+      "lines": 779,
+      "executable": false,
+      "size_bytes": 25640,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "examples/problem-mockup-overwhelm.html",
+      "type": "other",
+      "lines": 1374,
+      "executable": false,
+      "size_bytes": 44482,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "examples/proof-logo-chain.html",
+      "type": "other",
+      "lines": 861,
+      "executable": false,
+      "size_bytes": 28911,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "examples/takeover-ticker-displace.html",
+      "type": "other",
+      "lines": 347,
+      "executable": false,
+      "size_bytes": 10947,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "examples/workflow-approve-press.html",
+      "type": "other",
+      "lines": 606,
+      "executable": false,
+      "size_bytes": 20656,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "references/motion-blur.md",
+      "type": "markdown",
+      "lines": 134,
+      "executable": false,
+      "size_bytes": 14104,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "rules-index.md",
+      "type": "markdown",
+      "lines": 113,
+      "executable": false,
+      "size_bytes": 21484,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "rules/3d-camera-flight.md",
+      "type": "markdown",
+      "lines": 180,
+      "executable": false,
+      "size_bytes": 18137,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "rules/3d-page-scroll.md",
+      "type": "markdown",
+      "lines": 135,
+      "executable": false,
+      "size_bytes": 7406,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "rules/3d-text-depth-layers.md",
+      "type": "markdown",
+      "lines": 128,
+      "executable": false,
+      "size_bytes": 6708,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "rules/ai-tracking-box.md",
+      "type": "markdown",
+      "lines": 139,
+      "executable": false,
+      "size_bytes": 6562,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "rules/ambient-glow-bloom.md",
+      "type": "markdown",
+      "lines": 133,
+      "executable": false,
+      "size_bytes": 9840,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "rules/anchored-layout-expand.md",
+      "type": "markdown",
+      "lines": 148,
+      "executable": false,
+      "size_bytes": 10313,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "rules/asr-keyword-glow.md",
+      "type": "markdown",
+      "lines": 128,
+      "executable": false,
+      "size_bytes": 6762,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "rules/avatar-cloud-network.md",
+      "type": "markdown",
+      "lines": 145,
+      "executable": false,
+      "size_bytes": 6578,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "rules/camera-cursor-tracking.md",
+      "type": "markdown",
+      "lines": 133,
+      "executable": false,
+      "size_bytes": 7911,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "rules/card-morph-anchor.md",
+      "type": "markdown",
+      "lines": 134,
+      "executable": false,
+      "size_bytes": 7411,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "rules/center-outward-expansion.md",
+      "type": "markdown",
+      "lines": 88,
+      "executable": false,
+      "size_bytes": 4263,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "rules/chart-scrub-readout.md",
+      "type": "markdown",
+      "lines": 151,
+      "executable": false,
+      "size_bytes": 10348,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "rules/chromatic-glitch.md",
+      "type": "markdown",
+      "lines": 150,
+      "executable": false,
+      "size_bytes": 10339,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "rules/context-sensitive-cursor.md",
+      "type": "markdown",
+      "lines": 140,
+      "executable": false,
+      "size_bytes": 6938,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "rules/control-target-sync.md",
+      "type": "markdown",
+      "lines": 131,
+      "executable": false,
+      "size_bytes": 10276,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "rules/coordinate-target-zoom.md",
+      "type": "markdown",
+      "lines": 138,
+      "executable": false,
+      "size_bytes": 7607,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "rules/counting-dynamic-scale.md",
+      "type": "markdown",
+      "lines": 115,
+      "executable": false,
+      "size_bytes": 5977,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "rules/css-marker-patterns.md",
+      "type": "markdown",
+      "lines": 208,
+      "executable": false,
+      "size_bytes": 5702,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "rules/cursor-click-ripple.md",
+      "type": "markdown",
+      "lines": 104,
+      "executable": false,
+      "size_bytes": 6397,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "rules/cursor-drag.md",
+      "type": "markdown",
+      "lines": 141,
+      "executable": false,
+      "size_bytes": 10215,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "rules/depth-of-field-blur.md",
+      "type": "markdown",
+      "lines": 112,
+      "executable": false,
+      "size_bytes": 8876,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "rules/depth-scatter-assemble.md",
+      "type": "markdown",
+      "lines": 139,
+      "executable": false,
+      "size_bytes": 7054,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "rules/discrete-text-sequence.md",
+      "type": "markdown",
+      "lines": 146,
+      "executable": false,
+      "size_bytes": 6454,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "rules/dynamic-content-sequencing.md",
+      "type": "markdown",
+      "lines": 149,
+      "executable": false,
+      "size_bytes": 8558,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "rules/gradient-text-sweep.md",
+      "type": "markdown",
+      "lines": 136,
+      "executable": false,
+      "size_bytes": 8751,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "rules/gsap-effects.md",
+      "type": "markdown",
+      "lines": 196,
+      "executable": false,
+      "size_bytes": 6912,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "rules/hacker-flip-3d.md",
+      "type": "markdown",
+      "lines": 123,
+      "executable": false,
+      "size_bytes": 5586,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "rules/kinetic-beat-slam.md",
+      "type": "markdown",
+      "lines": 137,
+      "executable": false,
+      "size_bytes": 6445,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "rules/motion-blur-streak.md",
+      "type": "markdown",
+      "lines": 187,
+      "executable": false,
+      "size_bytes": 16190,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "rules/multi-cursor-choreography.md",
+      "type": "markdown",
+      "lines": 133,
+      "executable": false,
+      "size_bytes": 10520,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "rules/multi-phase-camera.md",
+      "type": "markdown",
+      "lines": 129,
+      "executable": false,
+      "size_bytes": 7773,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "rules/nudge-curve.md",
+      "type": "markdown",
+      "lines": 47,
+      "executable": false,
+      "size_bytes": 2689,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "rules/orbit-3d-entry.md",
+      "type": "markdown",
+      "lines": 148,
+      "executable": false,
+      "size_bytes": 6628,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "rules/particle-burst.md",
+      "type": "markdown",
+      "lines": 149,
+      "executable": false,
+      "size_bytes": 9956,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "rules/physics-press-reaction.md",
+      "type": "markdown",
+      "lines": 101,
+      "executable": false,
+      "size_bytes": 6687,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "rules/press-release-spring.md",
+      "type": "markdown",
+      "lines": 108,
+      "executable": false,
+      "size_bytes": 7041,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "rules/reactive-displacement.md",
+      "type": "markdown",
+      "lines": 92,
+      "executable": false,
+      "size_bytes": 6539,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "rules/scale-swap-transition.md",
+      "type": "markdown",
+      "lines": 88,
+      "executable": false,
+      "size_bytes": 5517,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "rules/sine-wave-loop.md",
+      "type": "markdown",
+      "lines": 85,
+      "executable": false,
+      "size_bytes": 6163,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "rules/split-tilt-cards.md",
+      "type": "markdown",
+      "lines": 123,
+      "executable": false,
+      "size_bytes": 5669,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "rules/spring-pop-entrance.md",
+      "type": "markdown",
+      "lines": 107,
+      "executable": false,
+      "size_bytes": 6533,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "rules/stat-bars-and-fills.md",
+      "type": "markdown",
+      "lines": 145,
+      "executable": false,
+      "size_bytes": 5486,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "rules/svg-icon-enrichment.md",
+      "type": "markdown",
+      "lines": 141,
+      "executable": false,
+      "size_bytes": 7621,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "rules/svg-path-draw.md",
+      "type": "markdown",
+      "lines": 122,
+      "executable": false,
+      "size_bytes": 5646,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "rules/theme-crossfade-morph.md",
+      "type": "markdown",
+      "lines": 126,
+      "executable": false,
+      "size_bytes": 9404,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "rules/vertical-spring-ticker.md",
+      "type": "markdown",
+      "lines": 104,
+      "executable": false,
+      "size_bytes": 5495,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "rules/viewport-change.md",
+      "type": "markdown",
+      "lines": 148,
+      "executable": false,
+      "size_bytes": 8974,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "rules/waterfall-entry.md",
+      "type": "markdown",
+      "lines": 81,
+      "executable": false,
+      "size_bytes": 4582,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "scripts/animation-map-sampling.mjs",
+      "type": "other",
+      "lines": 40,
+      "executable": true,
+      "size_bytes": 1400,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "scripts/animation-map-sampling.test.mjs",
+      "type": "other",
+      "lines": 48,
+      "executable": true,
+      "size_bytes": 1689,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "scripts/animation-map.mjs",
+      "type": "other",
+      "lines": 659,
+      "executable": true,
+      "size_bytes": 23340,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "scripts/animation-map.test.mjs",
+      "type": "other",
+      "lines": 444,
+      "executable": true,
+      "size_bytes": 19354,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "scripts/package-loader.mjs",
+      "type": "other",
+      "lines": 415,
+      "executable": true,
+      "size_bytes": 14451,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "scripts/package-loader.test.mjs",
+      "type": "other",
+      "lines": 114,
+      "executable": true,
+      "size_bytes": 4279,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "techniques.md",
+      "type": "markdown",
+      "lines": 537,
+      "executable": false,
+      "size_bytes": 17428,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "transitions/TRANSITION-REGISTRY.md",
+      "type": "markdown",
+      "lines": 168,
+      "executable": false,
+      "size_bytes": 8171,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "transitions/catalog.md",
+      "type": "markdown",
+      "lines": 127,
+      "executable": false,
+      "size_bytes": 6679,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "transitions/css-3d.md",
+      "type": "markdown",
+      "lines": 12,
+      "executable": false,
+      "size_bytes": 421,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "transitions/css-blur.md",
+      "type": "markdown",
+      "lines": 51,
+      "executable": false,
+      "size_bytes": 1787,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "transitions/css-cover.md",
+      "type": "markdown",
+      "lines": 43,
+      "executable": false,
+      "size_bytes": 1448,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "transitions/css-destruction.md",
+      "type": "markdown",
+      "lines": 95,
+      "executable": false,
+      "size_bytes": 4484,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "transitions/css-dissolve.md",
+      "type": "markdown",
+      "lines": 66,
+      "executable": false,
+      "size_bytes": 2462,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "transitions/css-distortion.md",
+      "type": "markdown",
+      "lines": 45,
+      "executable": false,
+      "size_bytes": 1803,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "transitions/css-grid.md",
+      "type": "markdown",
+      "lines": 10,
+      "executable": false,
+      "size_bytes": 370,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "transitions/css-light.md",
+      "type": "markdown",
+      "lines": 49,
+      "executable": false,
+      "size_bytes": 2376,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "transitions/css-mechanical.md",
+      "type": "markdown",
+      "lines": 30,
+      "executable": false,
+      "size_bytes": 1613,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "transitions/css-other.md",
+      "type": "markdown",
+      "lines": 25,
+      "executable": false,
+      "size_bytes": 838,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "transitions/css-push.md",
+      "type": "markdown",
+      "lines": 41,
+      "executable": false,
+      "size_bytes": 1243,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "transitions/css-radial.md",
+      "type": "markdown",
+      "lines": 37,
+      "executable": false,
+      "size_bytes": 1060,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "transitions/css-scale.md",
+      "type": "markdown",
+      "lines": 24,
+      "executable": false,
+      "size_bytes": 715,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "transitions/overview.md",
+      "type": "markdown",
+      "lines": 153,
+      "executable": false,
+      "size_bytes": 13857,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    }
+  ],
+  "structured_summaries": [],
+  "issues": [
+    {
+      "id": "AE1",
+      "finding_id": "finding-50401a42fbc84dfe9d6f85b93bce8b68",
+      "category": "analysis-evasion",
+      "pattern": "Incomplete referenced artifact analysis",
+      "severity": "HIGH",
+      "confidence": 1.0,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 36,
+        "end_line": null
+      },
+      "finding": "scripts/animation-map.mjs (partial)",
+      "explanation": "Referenced artifact was not completely inspected",
+      "remediation": "Review the reported expression and analyzer's parsing limitation; correct the scanner if it misinterprets valid source, then rerun the scan. Keep required references; incomplete analysis is not proof of malicious evasion.",
+      "code_snippet": "| Analyze an existing composition's animation map | `scripts/animation-map.mjs` |",
+      "intent": null,
+      "tags": [
+        "coverage",
+        "reference",
+        "target-disposition:partial"
+      ],
+      "evidence": {
+        "target_path": "scripts/animation-map.mjs",
+        "target_disposition": "partial",
+        "reasons": [
+          {
+            "reason_code": "static_parse_limit",
+            "message": "A security-relevant expression exceeded a bounded static parser's span limit.",
+            "phase": "static",
+            "analyzers": [
+              "static_patterns_tool_misuse"
+            ]
+          }
+        ]
+      },
+      "match_fingerprint": "4caeff4f4d7bde5d8de858a1b50ab9bd8656b1f76974c6998aa5762be748c147",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 36,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "AE1",
+      "finding_id": "finding-eed25be44cbd4640bc9265817ef1c979",
+      "category": "analysis-evasion",
+      "pattern": "Incomplete referenced artifact analysis",
+      "severity": "HIGH",
+      "confidence": 1.0,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 82,
+        "end_line": null
+      },
+      "finding": "scripts/animation-map.mjs (partial)",
+      "explanation": "Referenced artifact was not completely inspected",
+      "remediation": "Review the reported expression and analyzer's parsing limitation; correct the scanner if it misinterprets valid source, then rerun the scan. Keep required references; incomplete analysis is not proof of malicious evasion.",
+      "code_snippet": "`animation-map.mjs` resolves helper packages from the current project first, then can bootstrap the bundled HyperFrames package version. Set `HYPERFRAMES_SKILL_",
+      "intent": null,
+      "tags": [
+        "coverage",
+        "reference",
+        "target-disposition:partial"
+      ],
+      "evidence": {
+        "target_path": "scripts/animation-map.mjs",
+        "target_disposition": "partial",
+        "reasons": [
+          {
+            "reason_code": "static_parse_limit",
+            "message": "A security-relevant expression exceeded a bounded static parser's span limit.",
+            "phase": "static",
+            "analyzers": [
+              "static_patterns_tool_misuse"
+            ]
+          }
+        ]
+      },
+      "match_fingerprint": "4caeff4f4d7bde5d8de858a1b50ab9bd8656b1f76974c6998aa5762be748c147",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 82,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "finding_id": "finding-8d0e5eaa543d48a48cbb04ee5301853b",
+      "category": "Prompt Injection",
+      "pattern": "Hidden Instructions",
+      "severity": "HIGH",
+      "confidence": 0.7,
+      "location": {
+        "file": "adapters/html-in-canvas-patterns.md",
+        "start_line": 14,
+        "end_line": 27,
+        "start_column": 0,
+        "end_column": 68
+      },
+      "finding": "<!-- 1. Source HTML \u2014 your content goes inside a layoutsubtree canvas -->\n<canvas\n  id=\"hic-source\"\n  layoutsubtree\n  width=\"1920\"\n  height=\"1080\"\n  style=\"position:absolute;inset:0;opacity:0;\"\n>\n  <d",
+      "explanation": "Hidden instructions were detected in comments or invisible text. These could contain malicious directives. Manual review is recommended.",
+      "remediation": "Audit all comments and invisible characters. Remove any instructions that direct the agent to perform unauthorized actions. Use plain, reviewable content.",
+      "code_snippet": "Every HTML-in-Canvas effect shares this structure. Learn this once, adapt it for any effect.\n\n```html\n<!-- 1. Source HTML \u2014 your content goes inside a layoutsubtree canvas -->\n<canvas\n  id=\"hic-source\"\n  layoutsubtree",
+      "intent": null,
+      "tags": [
+        "Prompt Injection"
+      ],
+      "evidence": {},
+      "match_fingerprint": "fbf4c6145f78c35b542219732c541787ba8e39d0170be3ffd59c675d4798f11e",
+      "occurrences": [
+        {
+          "file": "adapters/html-in-canvas-patterns.md",
+          "start_line": 14,
+          "end_line": 27,
+          "start_column": 0,
+          "end_column": 68
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "finding_id": "finding-e107b32a35594ae7975e43400af0f176",
+      "category": "Prompt Injection",
+      "pattern": "Hidden Instructions",
+      "severity": "HIGH",
+      "confidence": 0.7,
+      "location": {
+        "file": "examples/brand-reveal-assemble-zoom.html",
+        "start_line": 8,
+        "end_line": 26,
+        "start_column": 4,
+        "end_column": 7
+      },
+      "finding": "<!--\n      HyperFrames composition.tsx.\n\n      Choreography (5 phases, 5 seconds total):\n        0.00 \u2013 0.67s   \"Just use\" assembles in a discrete sequence (with hold)\n        0.73 \u2013 1.23s   Pink logo",
+      "explanation": "Hidden instructions were detected in comments or invisible text. These could contain malicious directives. Manual review is recommended.",
+      "remediation": "Audit all comments and invisible characters. Remove any instructions that direct the agent to perform unauthorized actions. Use plain, reviewable content.",
+      "code_snippet": "    <meta name=\"viewport\" content=\"width=1920, height=1080\" />\n    <title>Scene 3 \u2014 Assembly Focus Reveal (hyperframes)</title>\n\n    <!--\n      HyperFrames composition.tsx.\n\n      Choreography (5 phases, 5 seconds total):",
+      "intent": null,
+      "tags": [
+        "Prompt Injection"
+      ],
+      "evidence": {},
+      "match_fingerprint": "f4e7a09c13d16e1fef68d26e2e5b39f4d63a278cd62dfb5c012c10578c7bd418",
+      "occurrences": [
+        {
+          "file": "examples/brand-reveal-assemble-zoom.html",
+          "start_line": 8,
+          "end_line": 26,
+          "start_column": 4,
+          "end_column": 7
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "finding_id": "finding-49fa628ffce645a1ba62af938a421161",
+      "category": "Prompt Injection",
+      "pattern": "Hidden Instructions",
+      "severity": "HIGH",
+      "confidence": 0.7,
+      "location": {
+        "file": "examples/brand-reveal-assemble-zoom.html",
+        "start_line": 8,
+        "end_line": 26,
+        "start_column": 4,
+        "end_column": 7
+      },
+      "finding": "<!--\n      HyperFrames composition.tsx.\n\n      Choreography (5 phases, 5 seconds total):\n        0.00 \u2013 0.67s   \"Just use\" assembles in a discrete sequence (with hold)\n        0.73 \u2013 1.23s   Pink logo",
+      "explanation": "Hidden instructions were detected in comments or invisible text. These could contain malicious directives. Manual review is recommended.",
+      "remediation": "Audit all comments and invisible characters. Remove any instructions that direct the agent to perform unauthorized actions. Use plain, reviewable content.",
+      "code_snippet": "    <meta name=\"viewport\" content=\"width=1920, height=1080\" />\n    <title>Scene 3 \u2014 Assembly Focus Reveal (hyperframes)</title>\n\n    <!--\n      HyperFrames composition.tsx.\n\n      Choreography (5 phases, 5 seconds total):",
+      "intent": null,
+      "tags": [
+        "Prompt Injection",
+        "normalized-view"
+      ],
+      "evidence": {},
+      "match_fingerprint": "cfbc0e8d6c3277ba18f289cc4e948c84aae9b8d1a4a27697a35393b7c4edafaf",
+      "occurrences": [
+        {
+          "file": "examples/brand-reveal-assemble-zoom.html",
+          "start_line": 8,
+          "end_line": 26,
+          "start_column": 4,
+          "end_column": 7
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "finding_id": "finding-62b037fcf58f495aa8f761fafb64e4f8",
+      "category": "Prompt Injection",
+      "pattern": "Hidden Instructions",
+      "severity": "HIGH",
+      "confidence": 0.7,
+      "location": {
+        "file": "examples/comparison-split-cards.html",
+        "start_line": 8,
+        "end_line": 365,
+        "start_column": 4,
+        "end_column": 22
+      },
+      "finding": "<!--\n      HyperFrames composition.tsx.\n\n      Choreography (3 phases, 5 seconds total):\n        0.17 \u2013 0.83s   Title slides down from top: \"Build Video With HyperFrames\"\n        0.50 \u2013 1.83s   Left c",
+      "explanation": "Hidden instructions were detected in comments or invisible text. These could contain malicious directives. Manual review is recommended.",
+      "remediation": "Audit all comments and invisible characters. Remove any instructions that direct the agent to perform unauthorized actions. Use plain, reviewable content.",
+      "code_snippet": "    <meta name=\"viewport\" content=\"width=1920, height=1080\" />\n    <title>Scene 09 \u2014 Split Comparison Reveal</title>\n\n    <!--\n      HyperFrames composition.tsx.\n\n      Choreography (3 phases, 5 seconds total):",
+      "intent": null,
+      "tags": [
+        "Prompt Injection"
+      ],
+      "evidence": {},
+      "match_fingerprint": "ea635f274050752764e1033e6215acfda61944275b1410ca2d4e94c8f1891d8d",
+      "occurrences": [
+        {
+          "file": "examples/comparison-split-cards.html",
+          "start_line": 8,
+          "end_line": 365,
+          "start_column": 4,
+          "end_column": 22
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "finding_id": "finding-a0a2a29caf9c430bba3a6eaf8501ddff",
+      "category": "Prompt Injection",
+      "pattern": "Hidden Instructions",
+      "severity": "HIGH",
+      "confidence": 0.7,
+      "location": {
+        "file": "examples/concept-demo-decode-pan.html",
+        "start_line": 8,
+        "end_line": 197,
+        "start_column": 4,
+        "end_column": 72
+      },
+      "finding": "<!--\n      HyperFrames composition.tsx.\n\n      Choreography (4 phases, 7 seconds total):\n        0.0 \u2013 0.7s   Shot 1 static text fades in + rises (\"HyperFrames renders\")\n        0.7 \u2013 1.6s   Hacker-fl",
+      "explanation": "Hidden instructions were detected in comments or invisible text. These could contain malicious directives. Manual review is recommended.",
+      "remediation": "Audit all comments and invisible characters. Remove any instructions that direct the agent to perform unauthorized actions. Use plain, reviewable content.",
+      "code_snippet": "    <meta name=\"viewport\" content=\"width=1920, height=1080\" />\n    <title>Scene 7 \u2014 HyperFrames Decrypt Pan Track</title>\n\n    <!--\n      HyperFrames composition.tsx.\n\n      Choreography (4 phases, 7 seconds total):",
+      "intent": null,
+      "tags": [
+        "Prompt Injection"
+      ],
+      "evidence": {},
+      "match_fingerprint": "44b5fc25bdc8dd8bf9ae8e00bd5443fe603453f90ce55c9f677f0300a8cf2260",
+      "occurrences": [
+        {
+          "file": "examples/concept-demo-decode-pan.html",
+          "start_line": 8,
+          "end_line": 197,
+          "start_column": 4,
+          "end_column": 72
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "finding_id": "finding-86a036e4820a480f90ab7ce13f1f3521",
+      "category": "Prompt Injection",
+      "pattern": "Hidden Instructions",
+      "severity": "HIGH",
+      "confidence": 0.7,
+      "location": {
+        "file": "examples/cta-morph-press.html",
+        "start_line": 8,
+        "end_line": 28,
+        "start_column": 4,
+        "end_column": 7
+      },
+      "finding": "<!--\n      HyperFrames composition.tsx.\n\n      Choreography (4 phases, 5.5 seconds total):\n        0.17 \u2013 0.64s   Hero \"HyperFrames\" + logo asset fade up (opacity + y rise)\n        0.17 \u2013 5.50s   Logo",
+      "explanation": "Hidden instructions were detected in comments or invisible text. These could contain malicious directives. Manual review is recommended.",
+      "remediation": "Audit all comments and invisible characters. Remove any instructions that direct the agent to perform unauthorized actions. Use plain, reviewable content.",
+      "code_snippet": "    <meta name=\"viewport\" content=\"width=1920, height=1080\" />\n    <title>Scene 10 \u2014 HyperFrames Morph Press Interact</title>\n\n    <!--\n      HyperFrames composition.tsx.\n\n      Choreography (4 phases, 5.5 seconds total):",
+      "intent": null,
+      "tags": [
+        "Prompt Injection"
+      ],
+      "evidence": {},
+      "match_fingerprint": "a5c5e073343355735886399d03aaacaa514b0574dcc6f09d25ffc52777ce3927",
+      "occurrences": [
+        {
+          "file": "examples/cta-morph-press.html",
+          "start_line": 8,
+          "end_line": 28,
+          "start_column": 4,
+          "end_column": 7
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "finding_id": "finding-82cd06070bbe421ebc601ea0cb700084",
+      "category": "Prompt Injection",
+      "pattern": "Hidden Instructions",
+      "severity": "HIGH",
+      "confidence": 0.7,
+      "location": {
+        "file": "examples/cta-morph-press.html",
+        "start_line": 194,
+        "end_line": 234,
+        "start_column": 8,
+        "end_column": 70
+      },
+      "finding": "<!-- =====================================================\n             HERO LOCKUP \u2014 \"HyperFrames\" + logo\n             ===================================================== -->\n        <div\n         ",
+      "explanation": "Hidden instructions were detected in comments or invisible text. These could contain malicious directives. Manual review is recommended.",
+      "remediation": "Audit all comments and invisible characters. Remove any instructions that direct the agent to perform unauthorized actions. Use plain, reviewable content.",
+      "code_snippet": "      data-height=\"1080\"\n    >\n      <div class=\"stage clip\" data-start=\"0\" data-duration=\"5.5\" data-track-index=\"1\" id=\"stage\">\n        <!-- =====================================================\n             HERO LOCKUP \u2014 \"HyperFrames\" + logo\n             ===================================================== -->\n        <div",
+      "intent": null,
+      "tags": [
+        "Prompt Injection"
+      ],
+      "evidence": {},
+      "match_fingerprint": "defd42bf83d1d4d6525dc95fb29c519c5c9f83a9656f814da255c5d81ff92458",
+      "occurrences": [
+        {
+          "file": "examples/cta-morph-press.html",
+          "start_line": 194,
+          "end_line": 234,
+          "start_column": 8,
+          "end_column": 70
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "finding_id": "finding-31ee97e5bb204cfda59083eef02d6fdb",
+      "category": "Prompt Injection",
+      "pattern": "Hidden Instructions",
+      "severity": "HIGH",
+      "confidence": 0.7,
+      "location": {
+        "file": "examples/cta-orbit-collapse.html",
+        "start_line": 8,
+        "end_line": 525,
+        "start_column": 4,
+        "end_column": 77
+      },
+      "finding": "<!--\n      Blueprint: cta-orbit-collapse (HyperFrames preview)\n      Six HyperFrames technology categories orbit a central \"Drop an HTML\n      scene \u00b7 Render\" CTA. A cursor flies in, clicks, the icons",
+      "explanation": "Hidden instructions were detected in comments or invisible text. These could contain malicious directives. Manual review is recommended.",
+      "remediation": "Audit all comments and invisible characters. Remove any instructions that direct the agent to perform unauthorized actions. Use plain, reviewable content.",
+      "code_snippet": "    <meta name=\"viewport\" content=\"width=1920, height=1080\" />\n    <title>Scene \u2014 HyperFrames CTA Orbit Collapse</title>\n\n    <!--\n      Blueprint: cta-orbit-collapse (HyperFrames preview)\n      Six HyperFrames technology categories orbit a central \"Drop an HTML\n      scene \u00b7 Render\" CTA. A cursor flies in, clicks, the icons collapse,",
+      "intent": null,
+      "tags": [
+        "Prompt Injection"
+      ],
+      "evidence": {},
+      "match_fingerprint": "88eaf96a9a753f2451d5b1ab33d205dbed377e46ef2c62ea85051cb58bf22153",
+      "occurrences": [
+        {
+          "file": "examples/cta-orbit-collapse.html",
+          "start_line": 8,
+          "end_line": 525,
+          "start_column": 4,
+          "end_column": 77
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "finding_id": "finding-ff6068749df84bfe80d3b35d56a5fe61",
+      "category": "Prompt Injection",
+      "pattern": "Hidden Instructions",
+      "severity": "HIGH",
+      "confidence": 0.7,
+      "location": {
+        "file": "examples/cta-orbit-collapse.html",
+        "start_line": 8,
+        "end_line": 525,
+        "start_column": 4,
+        "end_column": 77
+      },
+      "finding": "<!--\n      Blueprint: cta-orbit-collapse (HyperFrames preview)\n      Six HyperFrames technology categories orbit a central \"Drop an HTML\n      scene \u00b7 Render\" CTA. A cursor flies in, clicks, the icons",
+      "explanation": "Hidden instructions were detected in comments or invisible text. These could contain malicious directives. Manual review is recommended.",
+      "remediation": "Audit all comments and invisible characters. Remove any instructions that direct the agent to perform unauthorized actions. Use plain, reviewable content.",
+      "code_snippet": "    <meta name=\"viewport\" content=\"width=1920, height=1080\" />\n    <title>Scene \u2014 HyperFrames CTA Orbit Collapse</title>\n\n    <!--\n      Blueprint: cta-orbit-collapse (HyperFrames preview)\n      Six HyperFrames technology categories orbit a central \"Drop an HTML\n      scene \u00b7 Render\" CTA. A cursor flies in, clicks, the icons collapse,",
+      "intent": null,
+      "tags": [
+        "Prompt Injection",
+        "normalized-view"
+      ],
+      "evidence": {},
+      "match_fingerprint": "b2b6aa36a9d6a343ca69c7bc06f310e0a39e41064df4dc15e62fef4350a337c6",
+      "occurrences": [
+        {
+          "file": "examples/cta-orbit-collapse.html",
+          "start_line": 8,
+          "end_line": 525,
+          "start_column": 4,
+          "end_column": 77
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "finding_id": "finding-90ad5daaa3a340d6b7a55a55d03fec3c",
+      "category": "Prompt Injection",
+      "pattern": "Hidden Instructions",
+      "severity": "HIGH",
+      "confidence": 0.7,
+      "location": {
+        "file": "examples/cta-orbit-collapse.html",
+        "start_line": 527,
+        "end_line": 782,
+        "start_column": 10,
+        "end_column": 77
+      },
+      "finding": "<!-- 1. HTML \u2014 angle brackets + diagonal slash -->\n          <div class=\"icon-pos icon-html\">\n            <div class=\"icon-collapse\">\n              <div class=\"icon-entry\">\n                <div class=",
+      "explanation": "Hidden instructions were detected in comments or invisible text. These could contain malicious directives. Manual review is recommended.",
+      "remediation": "Audit all comments and invisible characters. Remove any instructions that direct the agent to perform unauthorized actions. Use plain, reviewable content.",
+      "code_snippet": "             ORBIT ICONS \u2014 6 genre icons distributed evenly around 2\u03c0\n             ============================================================ -->\n        <div class=\"orbit-stage\">\n          <!-- 1. HTML \u2014 angle brackets + diagonal slash -->\n          <div class=\"icon-pos icon-html\">\n            <div class=\"icon-collapse\">\n              <div class=\"icon-entry\">",
+      "intent": null,
+      "tags": [
+        "Prompt Injection"
+      ],
+      "evidence": {},
+      "match_fingerprint": "9c0cff8577f9cf4e9b13797d128fe05e40d5d70c94428f8acf5354c808e64cff",
+      "occurrences": [
+        {
+          "file": "examples/cta-orbit-collapse.html",
+          "start_line": 527,
+          "end_line": 782,
+          "start_column": 10,
+          "end_column": 77
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "finding_id": "finding-861316da4ecd45b98620fc4bd1749aed",
+      "category": "Prompt Injection",
+      "pattern": "Hidden Instructions",
+      "severity": "HIGH",
+      "confidence": 0.7,
+      "location": {
+        "file": "examples/demo-page-scroll-spotlight.html",
+        "start_line": 8,
+        "end_line": 26,
+        "start_column": 4,
+        "end_column": 7
+      },
+      "finding": "<!--\n      HyperFrames composition.tsx.\n\n      Choreography (4 phases, 9 seconds total):\n        0.00 \u2013 0.80s   3D-tilted page card scales 0.95 \u2192 1.0\n                       Navbar / title / CTA fade i",
+      "explanation": "Hidden instructions were detected in comments or invisible text. These could contain malicious directives. Manual review is recommended.",
+      "remediation": "Audit all comments and invisible characters. Remove any instructions that direct the agent to perform unauthorized actions. Use plain, reviewable content.",
+      "code_snippet": "    <meta name=\"viewport\" content=\"width=1920, height=1080\" />\n    <title>Scene 04 \u2014 Contextual Product Showcase</title>\n\n    <!--\n      HyperFrames composition.tsx.\n\n      Choreography (4 phases, 9 seconds total):",
+      "intent": null,
+      "tags": [
+        "Prompt Injection"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6d5d7aee9402047aef2b4840c0e3ca59fffc953ad35efb4999d5454f591e0264",
+      "occurrences": [
+        {
+          "file": "examples/demo-page-scroll-spotlight.html",
+          "start_line": 8,
+          "end_line": 26,
+          "start_column": 4,
+          "end_column": 7
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "finding_id": "finding-fa23ea1e79aa4a0381e5380214799c54",
+      "category": "Prompt Injection",
+      "pattern": "Hidden Instructions",
+      "severity": "HIGH",
+      "confidence": 0.7,
+      "location": {
+        "file": "examples/demo-page-scroll-spotlight.html",
+        "start_line": 480,
+        "end_line": 556,
+        "start_column": 10,
+        "end_column": 43
+      },
+      "finding": "<!-- Navbar (anchored to card top) -->\n          <nav class=\"page-navbar\" id=\"navbar\">\n            <div class=\"nav-left\">\n              <svg\n                class=\"nav-logo\"\n                viewBox=\"0",
+      "explanation": "Hidden instructions were detected in comments or invisible text. These could contain malicious directives. Manual review is recommended.",
+      "remediation": "Audit all comments and invisible characters. Remove any instructions that direct the agent to perform unauthorized actions. Use plain, reviewable content.",
+      "code_snippet": "          data-track-index=\"1\"\n          id=\"page-card\"\n        >\n          <!-- Navbar (anchored to card top) -->\n          <nav class=\"page-navbar\" id=\"navbar\">\n            <div class=\"nav-left\">\n              <svg",
+      "intent": null,
+      "tags": [
+        "Prompt Injection"
+      ],
+      "evidence": {},
+      "match_fingerprint": "f5383ad97ba7e84a264f8122ae1e064d4de15332aa09f91ed39cca2adf47e8cc",
+      "occurrences": [
+        {
+          "file": "examples/demo-page-scroll-spotlight.html",
+          "start_line": 480,
+          "end_line": 556,
+          "start_column": 10,
+          "end_column": 43
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "finding_id": "finding-151db9b5bd3542d7ac44cc7ff91120e5",
+      "category": "Prompt Injection",
+      "pattern": "Hidden Instructions",
+      "severity": "HIGH",
+      "confidence": 0.7,
+      "location": {
+        "file": "examples/hook-counter-burst.html",
+        "start_line": 8,
+        "end_line": 215,
+        "start_column": 4,
+        "end_column": 24
+      },
+      "finding": "<!--\n      HyperFrames composition.tsx.\n\n      Choreography (4 phases, 3.5 seconds total):\n        0.00 \u2013 0.17s   Background visible with dark overlay; nothing else\n        0.17 \u2013 0.57s   Four enriche",
+      "explanation": "Hidden instructions were detected in comments or invisible text. These could contain malicious directives. Manual review is recommended.",
+      "remediation": "Audit all comments and invisible characters. Remove any instructions that direct the agent to perform unauthorized actions. Use plain, reviewable content.",
+      "code_snippet": "    <meta name=\"viewport\" content=\"width=1920, height=1080\" />\n    <title>Scene 01 \u2014 Counting Icon Burst</title>\n\n    <!--\n      HyperFrames composition.tsx.\n\n      Choreography (4 phases, 3.5 seconds total):",
+      "intent": null,
+      "tags": [
+        "Prompt Injection"
+      ],
+      "evidence": {},
+      "match_fingerprint": "8d2a0341a94e0617a1e43e15b792029fdc2560bd5ee261448b4b95b2f12e9c0e",
+      "occurrences": [
+        {
+          "file": "examples/hook-counter-burst.html",
+          "start_line": 8,
+          "end_line": 215,
+          "start_column": 4,
+          "end_column": 24
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "finding_id": "finding-794a3315ba0d41bebbb574fbbf766910",
+      "category": "Prompt Injection",
+      "pattern": "Hidden Instructions",
+      "severity": "HIGH",
+      "confidence": 0.7,
+      "location": {
+        "file": "examples/hook-counter-burst.html",
+        "start_line": 8,
+        "end_line": 215,
+        "start_column": 4,
+        "end_column": 24
+      },
+      "finding": "<!--\n      HyperFrames composition.tsx.\n\n      Choreography (4 phases, 3.5 seconds total):\n        0.00 \u2013 0.17s   Background visible with dark overlay; nothing else\n        0.17 \u2013 0.57s   Four enriche",
+      "explanation": "Hidden instructions were detected in comments or invisible text. These could contain malicious directives. Manual review is recommended.",
+      "remediation": "Audit all comments and invisible characters. Remove any instructions that direct the agent to perform unauthorized actions. Use plain, reviewable content.",
+      "code_snippet": "    <meta name=\"viewport\" content=\"width=1920, height=1080\" />\n    <title>Scene 01 \u2014 Counting Icon Burst</title>\n\n    <!--\n      HyperFrames composition.tsx.\n\n      Choreography (4 phases, 3.5 seconds total):",
+      "intent": null,
+      "tags": [
+        "Prompt Injection",
+        "normalized-view"
+      ],
+      "evidence": {},
+      "match_fingerprint": "382ec871fadb0a4b43be48baf349370dab046a496f1adfe30a7ad0a0bf4bb207",
+      "occurrences": [
+        {
+          "file": "examples/hook-counter-burst.html",
+          "start_line": 8,
+          "end_line": 215,
+          "start_column": 4,
+          "end_column": 24
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "finding_id": "finding-911907f10c14443f93ff0b80d03e9380",
+      "category": "Prompt Injection",
+      "pattern": "Hidden Instructions",
+      "severity": "HIGH",
+      "confidence": 0.7,
+      "location": {
+        "file": "examples/metric-video-text-pivot.html",
+        "start_line": 8,
+        "end_line": 380,
+        "start_column": 4,
+        "end_column": 27
+      },
+      "finding": "<!--\n      HyperFrames composition.tsx.\n\n      Choreography (4 phases, 6.5 seconds total):\n        0.17 \u2013 0.87s   \"HyperFrames\" badge fades in (top)\n        0.17 \u2013 0.87s   Demo screen card enters cent",
+      "explanation": "Hidden instructions were detected in comments or invisible text. These could contain malicious directives. Manual review is recommended.",
+      "remediation": "Audit all comments and invisible characters. Remove any instructions that direct the agent to perform unauthorized actions. Use plain, reviewable content.",
+      "code_snippet": "    <meta name=\"viewport\" content=\"width=1920, height=1080\" />\n    <title>Scene 07 \u2014 HyperFrames Video Kinetic Text Pivot</title>\n\n    <!--\n      HyperFrames composition.tsx.\n\n      Choreography (4 phases, 6.5 seconds total):",
+      "intent": null,
+      "tags": [
+        "Prompt Injection"
+      ],
+      "evidence": {},
+      "match_fingerprint": "4d912834336963759274243f56ecd7813f55b78045fa56090333f2977cc53f92",
+      "occurrences": [
+        {
+          "file": "examples/metric-video-text-pivot.html",
+          "start_line": 8,
+          "end_line": 380,
+          "start_column": 4,
+          "end_column": 27
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "finding_id": "finding-3376a92626e74496b89a76fb33836c8d",
+      "category": "Prompt Injection",
+      "pattern": "Hidden Instructions",
+      "severity": "HIGH",
+      "confidence": 0.7,
+      "location": {
+        "file": "examples/problem-mockup-overwhelm.html",
+        "start_line": 8,
+        "end_line": 750,
+        "start_column": 4,
+        "end_column": 72
+      },
+      "finding": "<!--\n      Blueprint: problem-mockup-overwhelm (HyperFrames preview)\n      HyperFrames-native version of the scene-02-mockup-morph-overwhelm concept.\n\n      Choreography (4 phases, 6 seconds total):\n ",
+      "explanation": "Hidden instructions were detected in comments or invisible text. These could contain malicious directives. Manual review is recommended.",
+      "remediation": "Audit all comments and invisible characters. Remove any instructions that direct the agent to perform unauthorized actions. Use plain, reviewable content.",
+      "code_snippet": "    <meta name=\"viewport\" content=\"width=1920, height=1080\" />\n    <title>Scene \u2014 HyperFrames Problem Mockup Overwhelm</title>\n\n    <!--\n      Blueprint: problem-mockup-overwhelm (HyperFrames preview)\n      HyperFrames-native version of the scene-02-mockup-morph-overwhelm concept.\n",
+      "intent": null,
+      "tags": [
+        "Prompt Injection"
+      ],
+      "evidence": {},
+      "match_fingerprint": "67b67a0d03f66720f66d7d5989a2e62ca6bae905669f4cbb7dfb4c9e81216161",
+      "occurrences": [
+        {
+          "file": "examples/problem-mockup-overwhelm.html",
+          "start_line": 8,
+          "end_line": 750,
+          "start_column": 4,
+          "end_column": 72
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "finding_id": "finding-75d7f80c8eb443fe837de696c6e63891",
+      "category": "Prompt Injection",
+      "pattern": "Hidden Instructions",
+      "severity": "HIGH",
+      "confidence": 0.7,
+      "location": {
+        "file": "examples/problem-mockup-overwhelm.html",
+        "start_line": 752,
+        "end_line": 802,
+        "start_column": 10,
+        "end_column": 68
+      },
+      "finding": "<!-- HyperFrames Check mockup (left) -->\n          <div class=\"mockup mockup-left\">\n            <div class=\"phone-shell\">\n              <div class=\"phone-notch\"></div>\n              <div class=\"phone-",
+      "explanation": "Hidden instructions were detected in comments or invisible text. These could contain malicious directives. Manual review is recommended.",
+      "remediation": "Audit all comments and invisible characters. Remove any instructions that direct the agent to perform unauthorized actions. Use plain, reviewable content.",
+      "code_snippet": "      >\n        <!-- ===== Phase 1-2: Mockup cluster + scattered icons ===== -->\n        <div class=\"mockup-cluster\">\n          <!-- HyperFrames Check mockup (left) -->\n          <div class=\"mockup mockup-left\">\n            <div class=\"phone-shell\">\n              <div class=\"phone-notch\"></div>",
+      "intent": null,
+      "tags": [
+        "Prompt Injection"
+      ],
+      "evidence": {},
+      "match_fingerprint": "c37f1ea2775a323d883f9ba1b3d40e6b8cc876a60e9cdae31c66520ed29b9159",
+      "occurrences": [
+        {
+          "file": "examples/problem-mockup-overwhelm.html",
+          "start_line": 752,
+          "end_line": 802,
+          "start_column": 10,
+          "end_column": 68
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "finding_id": "finding-9d1a44dac6e742a6ba4ba167a0397959",
+      "category": "Prompt Injection",
+      "pattern": "Hidden Instructions",
+      "severity": "HIGH",
+      "confidence": 0.7,
+      "location": {
+        "file": "examples/proof-logo-chain.html",
+        "start_line": 8,
+        "end_line": 344,
+        "start_column": 4,
+        "end_column": 70
+      },
+      "finding": "<!--\n      HyperFrames-native version of the scene-03-anchor-chain-reveal concept.\n      Same 5-phase choreography, GSAP-driven, seek-safe.\n\n      Audio (assumed accompanying narration):\n        \"Meet",
+      "explanation": "Hidden instructions were detected in comments or invisible text. These could contain malicious directives. Manual review is recommended.",
+      "remediation": "Audit all comments and invisible characters. Remove any instructions that direct the agent to perform unauthorized actions. Use plain, reviewable content.",
+      "code_snippet": "    <meta name=\"viewport\" content=\"width=1920, height=1080\" />\n    <title>Scene 03 \u2014 HyperFrames Anchor Chain Reveal</title>\n\n    <!--\n      HyperFrames-native version of the scene-03-anchor-chain-reveal concept.\n      Same 5-phase choreography, GSAP-driven, seek-safe.\n",
+      "intent": null,
+      "tags": [
+        "Prompt Injection"
+      ],
+      "evidence": {},
+      "match_fingerprint": "ee122c707f601897f36a52f513e55a3fb520672578fa9e4d4622a9fec80a4337",
+      "occurrences": [
+        {
+          "file": "examples/proof-logo-chain.html",
+          "start_line": 8,
+          "end_line": 344,
+          "start_column": 4,
+          "end_column": 70
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "finding_id": "finding-9ce4f314b5cf43ecbd98a197a100d24a",
+      "category": "Prompt Injection",
+      "pattern": "Hidden Instructions",
+      "severity": "HIGH",
+      "confidence": 0.7,
+      "location": {
+        "file": "examples/proof-logo-chain.html",
+        "start_line": 8,
+        "end_line": 344,
+        "start_column": 4,
+        "end_column": 70
+      },
+      "finding": "<!--\n      HyperFrames-native version of the scene-03-anchor-chain-reveal concept.\n      Same 5-phase choreography, GSAP-driven, seek-safe.\n\n      Audio (assumed accompanying narration):\n        \"Meet",
+      "explanation": "Hidden instructions were detected in comments or invisible text. These could contain malicious directives. Manual review is recommended.",
+      "remediation": "Audit all comments and invisible characters. Remove any instructions that direct the agent to perform unauthorized actions. Use plain, reviewable content.",
+      "code_snippet": "    <meta name=\"viewport\" content=\"width=1920, height=1080\" />\n    <title>Scene 03 \u2014 HyperFrames Anchor Chain Reveal</title>\n\n    <!--\n      HyperFrames-native version of the scene-03-anchor-chain-reveal concept.\n      Same 5-phase choreography, GSAP-driven, seek-safe.\n",
+      "intent": null,
+      "tags": [
+        "Prompt Injection",
+        "normalized-view"
+      ],
+      "evidence": {},
+      "match_fingerprint": "07b1008fc875b6f2b5ba3030970b8efb83823c38872774ce326d8e26c0c8e2a6",
+      "occurrences": [
+        {
+          "file": "examples/proof-logo-chain.html",
+          "start_line": 8,
+          "end_line": 344,
+          "start_column": 4,
+          "end_column": 70
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "finding_id": "finding-720e1a9bcd7e489fa3c6a6bc3ce0725a",
+      "category": "Prompt Injection",
+      "pattern": "Hidden Instructions",
+      "severity": "HIGH",
+      "confidence": 0.7,
+      "location": {
+        "file": "examples/proof-logo-chain.html",
+        "start_line": 353,
+        "end_line": 385,
+        "start_column": 12,
+        "end_column": 40
+      },
+      "finding": "<!-- Anchor logo \u2014 persists across all phases -->\n            <div class=\"anchor-logo\">\n              <!-- Inline-SVG placeholder mark \u2014 swap for your logo image -->\n              <svg\n               ",
+      "explanation": "Hidden instructions were detected in comments or invisible text. These could contain malicious directives. Manual review is recommended.",
+      "remediation": "Audit all comments and invisible characters. Remove any instructions that direct the agent to perform unauthorized actions. Use plain, reviewable content.",
+      "code_snippet": "          data-track-index=\"1\"\n        >\n          <div class=\"anchor-shift\" data-layout-allow-overflow>\n            <!-- Anchor logo \u2014 persists across all phases -->\n            <div class=\"anchor-logo\">\n              <!-- Inline-SVG placeholder mark \u2014 swap for your logo image -->\n              <svg",
+      "intent": null,
+      "tags": [
+        "Prompt Injection"
+      ],
+      "evidence": {},
+      "match_fingerprint": "c19b58b4aee3041b2de328827db3b0bc775e6700f361e70085e6ac528fb1d2a7",
+      "occurrences": [
+        {
+          "file": "examples/proof-logo-chain.html",
+          "start_line": 353,
+          "end_line": 385,
+          "start_column": 12,
+          "end_column": 40
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "finding_id": "finding-0f158572f183455690cc287b18d9f0df",
+      "category": "Prompt Injection",
+      "pattern": "Hidden Instructions",
+      "severity": "HIGH",
+      "confidence": 0.7,
+      "location": {
+        "file": "examples/takeover-ticker-displace.html",
+        "start_line": 8,
+        "end_line": 158,
+        "start_column": 4,
+        "end_column": 48
+      },
+      "finding": "<!--\n      HyperFrames composition.tsx.\n\n      Choreography (4 phases, 7.5 seconds total):\n        0.00 \u2013 0.67s   Typewriter reveals \"HyperFrames turns\" (3 \u2192 17 chars)\n        1.67 \u2013 2.22s   Ticker sc",
+      "explanation": "Hidden instructions were detected in comments or invisible text. These could contain malicious directives. Manual review is recommended.",
+      "remediation": "Audit all comments and invisible characters. Remove any instructions that direct the agent to perform unauthorized actions. Use plain, reviewable content.",
+      "code_snippet": "    <meta name=\"viewport\" content=\"width=1920, height=1080\" />\n    <title>Scene 5 \u2014 HyperFrames Displace Reveal</title>\n\n    <!--\n      HyperFrames composition.tsx.\n\n      Choreography (4 phases, 7.5 seconds total):",
+      "intent": null,
+      "tags": [
+        "Prompt Injection"
+      ],
+      "evidence": {},
+      "match_fingerprint": "7a4254d9f611ae47d6159f38296720d4a0c654fc0c4b76794ddd3265c8c6bc44",
+      "occurrences": [
+        {
+          "file": "examples/takeover-ticker-displace.html",
+          "start_line": 8,
+          "end_line": 158,
+          "start_column": 4,
+          "end_column": 48
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "finding_id": "finding-adc13c835ce34ece97e4f2813391e3d6",
+      "category": "Prompt Injection",
+      "pattern": "Hidden Instructions",
+      "severity": "HIGH",
+      "confidence": 0.7,
+      "location": {
+        "file": "examples/takeover-ticker-displace.html",
+        "start_line": 8,
+        "end_line": 158,
+        "start_column": 4,
+        "end_column": 48
+      },
+      "finding": "<!--\n      HyperFrames composition.tsx.\n\n      Choreography (4 phases, 7.5 seconds total):\n        0.00 \u2013 0.67s   Typewriter reveals \"HyperFrames turns\" (3 \u2192 17 chars)\n        1.67 \u2013 2.22s   Ticker sc",
+      "explanation": "Hidden instructions were detected in comments or invisible text. These could contain malicious directives. Manual review is recommended.",
+      "remediation": "Audit all comments and invisible characters. Remove any instructions that direct the agent to perform unauthorized actions. Use plain, reviewable content.",
+      "code_snippet": "    <meta name=\"viewport\" content=\"width=1920, height=1080\" />\n    <title>Scene 5 \u2014 HyperFrames Displace Reveal</title>\n\n    <!--\n      HyperFrames composition.tsx.\n\n      Choreography (4 phases, 7.5 seconds total):",
+      "intent": null,
+      "tags": [
+        "Prompt Injection",
+        "normalized-view"
+      ],
+      "evidence": {},
+      "match_fingerprint": "681f9512998649ad21b3c79a5aabdfeac7a867b5efa4fb231029f4787147125d",
+      "occurrences": [
+        {
+          "file": "examples/takeover-ticker-displace.html",
+          "start_line": 8,
+          "end_line": 158,
+          "start_column": 4,
+          "end_column": 48
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "finding_id": "finding-658f6ce45491444382cc7335a6c4fa94",
+      "category": "Prompt Injection",
+      "pattern": "Hidden Instructions",
+      "severity": "HIGH",
+      "confidence": 0.7,
+      "location": {
+        "file": "examples/workflow-approve-press.html",
+        "start_line": 8,
+        "end_line": 378,
+        "start_column": 4,
+        "end_column": 32
+      },
+      "finding": "<!--\n      Blueprint: workflow-approve-press\n      HyperFrames composition.tsx.\n      Same four-phase choreography, GSAP-driven, seek-safe.\n\n      Audio (assumed accompanying narration):\n        \"This",
+      "explanation": "Hidden instructions were detected in comments or invisible text. These could contain malicious directives. Manual review is recommended.",
+      "remediation": "Audit all comments and invisible characters. Remove any instructions that direct the agent to perform unauthorized actions. Use plain, reviewable content.",
+      "code_snippet": "    <meta name=\"viewport\" content=\"width=1920, height=1080\" />\n    <title>Scene \u2014 HyperFrames Workflow Approve & Press</title>\n\n    <!--\n      Blueprint: workflow-approve-press\n      HyperFrames composition.tsx.\n      Same four-phase choreography, GSAP-driven, seek-safe.",
+      "intent": null,
+      "tags": [
+        "Prompt Injection"
+      ],
+      "evidence": {},
+      "match_fingerprint": "d69cadd17dc08f45e8373ad69fb293fb18c91fa7e7ff5fdbb9a5c3564f9593e0",
+      "occurrences": [
+        {
+          "file": "examples/workflow-approve-press.html",
+          "start_line": 8,
+          "end_line": 378,
+          "start_column": 4,
+          "end_column": 32
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "finding_id": "finding-c0c6201ade9943f99d77b42b385848eb",
+      "category": "Prompt Injection",
+      "pattern": "Hidden Instructions",
+      "severity": "HIGH",
+      "confidence": 0.7,
+      "location": {
+        "file": "examples/workflow-approve-press.html",
+        "start_line": 8,
+        "end_line": 378,
+        "start_column": 4,
+        "end_column": 32
+      },
+      "finding": "<!--\n      Blueprint: workflow-approve-press\n      HyperFrames composition.tsx.\n      Same four-phase choreography, GSAP-driven, seek-safe.\n\n      Audio (assumed accompanying narration):\n        \"This",
+      "explanation": "Hidden instructions were detected in comments or invisible text. These could contain malicious directives. Manual review is recommended.",
+      "remediation": "Audit all comments and invisible characters. Remove any instructions that direct the agent to perform unauthorized actions. Use plain, reviewable content.",
+      "code_snippet": "    <meta name=\"viewport\" content=\"width=1920, height=1080\" />\n    <title>Scene \u2014 HyperFrames Workflow Approve & Press</title>\n\n    <!--\n      Blueprint: workflow-approve-press\n      HyperFrames composition.tsx.\n      Same four-phase choreography, GSAP-driven, seek-safe.",
+      "intent": null,
+      "tags": [
+        "Prompt Injection",
+        "normalized-view"
+      ],
+      "evidence": {},
+      "match_fingerprint": "19e9eeb91e5184678c94b6793077c0106f5f4f723aeca39bf199dd05328a535f",
+      "occurrences": [
+        {
+          "file": "examples/workflow-approve-press.html",
+          "start_line": 8,
+          "end_line": 378,
+          "start_column": 4,
+          "end_column": 32
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "finding_id": "finding-a347b84bb05e428d9b39ef0c723c354f",
+      "category": "Prompt Injection",
+      "pattern": "Hidden Instructions",
+      "severity": "HIGH",
+      "confidence": 0.7,
+      "location": {
+        "file": "examples/workflow-approve-press.html",
+        "start_line": 381,
+        "end_line": 397,
+        "start_column": 6,
+        "end_column": 13
+      },
+      "finding": "<!-- PHASE 1: Headline -->\n      <div class=\"headline-wrap\">\n        <div class=\"headline\">\n          HyperFrames builds\n          <span class=\"accent\">WITH</span>\n          you\n        </div>\n      <",
+      "explanation": "Hidden instructions were detected in comments or invisible text. These could contain malicious directives. Manual review is recommended.",
+      "remediation": "Audit all comments and invisible characters. Remove any instructions that direct the agent to perform unauthorized actions. Use plain, reviewable content.",
+      "code_snippet": "      <!-- Background layers -->\n      <div class=\"bg\"></div>\n\n      <!-- PHASE 1: Headline -->\n      <div class=\"headline-wrap\">\n        <div class=\"headline\">\n          HyperFrames builds",
+      "intent": null,
+      "tags": [
+        "Prompt Injection"
+      ],
+      "evidence": {},
+      "match_fingerprint": "0bb80d473b1d4a656c95d0e0856bd1087709cedd0973db15ce16980b8e85137f",
+      "occurrences": [
+        {
+          "file": "examples/workflow-approve-press.html",
+          "start_line": 381,
+          "end_line": 397,
+          "start_column": 6,
+          "end_column": 13
+        }
+      ]
+    },
+    {
+      "id": "AR2",
+      "finding_id": "finding-9feb56978aa345deb9b7891aeb8ced77",
+      "category": "Anti-Refusal",
+      "pattern": "Anti-Refusal Statement",
+      "severity": "HIGH",
+      "confidence": 0.8,
+      "location": {
+        "file": "references/motion-blur.md",
+        "start_line": 96,
+        "end_line": 96,
+        "start_column": 12,
+        "end_column": 22
+      },
+      "finding": "no warning",
+      "explanation": "Skill instructs the agent to omit warnings, disclaimers, or ethical commentary. Stripping safety caveats hides risk from the user and is a common jailbreak preamble.",
+      "remediation": "Remove instructions that suppress warnings, disclaimers, or ethical commentary. Let the agent surface safety-relevant caveats to the user.",
+      "code_snippet": " One `attachMotionBlur` call named elements in two compositions whose `data-fps` differ                              | One call per composition                                                             |\n| Console warns a second timeline registered for an element                | The same `data-composition-id` key was registered twice with different timelines; the copies still follow the first | Register once per composition                                                        |\n| No smear, no warning                                                     | The beat animates `left`, `top`, `width` or `height`; the snippet reads the resolved `transform`                    | Animate `x`, `y`, `scale`, `rotation`                                                |\n| No smear on a container's children                                       | The marked element does not move; its children do                                                                   | Mark the elements that move        ",
+      "intent": null,
+      "tags": [
+        "Anti-Refusal"
+      ],
+      "evidence": {},
+      "match_fingerprint": "449e47b25897541aa26f8824417d1280ef58d2d29e5e3ba95502143b7207c9ec",
+      "occurrences": [
+        {
+          "file": "references/motion-blur.md",
+          "start_line": 96,
+          "end_line": 96,
+          "start_column": 12,
+          "end_column": 22
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "finding_id": "finding-33792eb235b24b7c87f1b09404bde1f2",
+      "category": "Prompt Injection",
+      "pattern": "Hidden Instructions",
+      "severity": "HIGH",
+      "confidence": 0.7,
+      "location": {
+        "file": "rules/control-target-sync.md",
+        "start_line": 25,
+        "end_line": 27,
+        "start_column": 0,
+        "end_column": 84
+      },
+      "finding": "<!-- Bipartite by construction: target surface + inspector panel share the frame.\n     Every scrubbed readout gets `font-variant-numeric: tabular-nums` and a fixed\n     min-width (\u2265 the longest value)",
+      "explanation": "Hidden instructions were detected in comments or invisible text. These could contain malicious directives. Manual review is recommended.",
+      "remediation": "Audit all comments and invisible characters. Remove any instructions that direct the agent to perform unauthorized actions. Use plain, reviewable content.",
+      "code_snippet": "## Recipe\n\n```html\n<!-- Bipartite by construction: target surface + inspector panel share the frame.\n     Every scrubbed readout gets `font-variant-numeric: tabular-nums` and a fixed\n     min-width (\u2265 the longest value) or the panel edge jitters as digits change. -->\n<div class=\"target-surface\">",
+      "intent": null,
+      "tags": [
+        "Prompt Injection"
+      ],
+      "evidence": {},
+      "match_fingerprint": "7bd7457cc5728388a7deef0b90a22840cb9e180b041e6b57ad08012ccd976ce9",
+      "occurrences": [
+        {
+          "file": "rules/control-target-sync.md",
+          "start_line": 25,
+          "end_line": 27,
+          "start_column": 0,
+          "end_column": 84
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "finding_id": "finding-4ff75e1f2b9f445eb485f6cbfb124c1a",
+      "category": "Prompt Injection",
+      "pattern": "Hidden Instructions",
+      "severity": "HIGH",
+      "confidence": 0.7,
+      "location": {
+        "file": "rules/cursor-click-ripple.md",
+        "start_line": 16,
+        "end_line": 17,
+        "start_column": 20,
+        "end_column": 83
+      },
+      "finding": "<!-- arrow SVG, positioned at the entry corner --></div>\n<!-- Rings live in DOM from t=0 at the click-target CENTER, scale 0 + opacity 0 -->",
+      "explanation": "Hidden instructions were detected in comments or invisible text. These could contain malicious directives. Manual review is recommended.",
+      "remediation": "Audit all comments and invisible characters. Remove any instructions that direct the agent to perform unauthorized actions. Use plain, reviewable content.",
+      "code_snippet": "\n```html\n<button class=\"target-button\">{ctaLabel}</button>\n<div class=\"cursor\"><!-- arrow SVG, positioned at the entry corner --></div>\n<!-- Rings live in DOM from t=0 at the click-target CENTER, scale 0 + opacity 0 -->\n<div class=\"ripple ripple-1\"></div>\n<div class=\"ripple ripple-2\"></div>",
+      "intent": null,
+      "tags": [
+        "Prompt Injection"
+      ],
+      "evidence": {},
+      "match_fingerprint": "28a42378b8a569ffbf86a530bef8c8c3a73aa17a6e78270d2bdee4a7c64aa2a5",
+      "occurrences": [
+        {
+          "file": "rules/cursor-click-ripple.md",
+          "start_line": 16,
+          "end_line": 17,
+          "start_column": 20,
+          "end_column": 83
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "finding_id": "finding-a5f59e04e0c34546b5fdb04a61c2a913",
+      "category": "Prompt Injection",
+      "pattern": "Hidden Instructions",
+      "severity": "HIGH",
+      "confidence": 0.7,
+      "location": {
+        "file": "rules/depth-scatter-assemble.md",
+        "start_line": 31,
+        "end_line": 35,
+        "start_column": 0,
+        "end_column": 45
+      },
+      "finding": "<!-- inside a standard scene clip (hyperframes-core) -->\n<div class=\"cloud-stage\">\n  <div class=\"frag\" data-target-x=\"-260\" data-target-y=\"0\">{glyph1}</div>\n  <div class=\"frag\" data-target-x=\"-130\" da",
+      "explanation": "Hidden instructions were detected in comments or invisible text. These could contain malicious directives. Manual review is recommended.",
+      "remediation": "Audit all comments and invisible characters. Remove any instructions that direct the agent to perform unauthorized actions. Use plain, reviewable content.",
+      "code_snippet": "## Recipe\n\n```html\n<!-- inside a standard scene clip (hyperframes-core) -->\n<div class=\"cloud-stage\">\n  <div class=\"frag\" data-target-x=\"-260\" data-target-y=\"0\">{glyph1}</div>\n  <div class=\"frag\" data-target-x=\"-130\" data-target-y=\"0\">{glyph2}</div>",
+      "intent": null,
+      "tags": [
+        "Prompt Injection"
+      ],
+      "evidence": {},
+      "match_fingerprint": "71a47066b0a65a02e08cab8c035200e39f3d76d83b2cff7906defa4686b3e714",
+      "occurrences": [
+        {
+          "file": "rules/depth-scatter-assemble.md",
+          "start_line": 31,
+          "end_line": 35,
+          "start_column": 0,
+          "end_column": 45
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "finding_id": "finding-1e939016f32b4a6184fa46ab1a1ef791",
+      "category": "Prompt Injection",
+      "pattern": "Hidden Instructions",
+      "severity": "HIGH",
+      "confidence": 0.7,
+      "location": {
+        "file": "rules/depth-scatter-assemble.md",
+        "start_line": 31,
+        "end_line": 35,
+        "start_column": 0,
+        "end_column": 45
+      },
+      "finding": "<!-- inside a standard scene clip (hyperframes-core) -->\n<div class=\"cloud-stage\">\n  <div class=\"frag\" data-target-x=\"-260\" data-target-y=\"0\">{glyph1}</div>\n  <div class=\"frag\" data-target-x=\"-130\" da",
+      "explanation": "Hidden instructions were detected in comments or invisible text. These could contain malicious directives. Manual review is recommended.",
+      "remediation": "Audit all comments and invisible characters. Remove any instructions that direct the agent to perform unauthorized actions. Use plain, reviewable content.",
+      "code_snippet": "## Recipe\n\n```html\n<!-- inside a standard scene clip (hyperframes-core) -->\n<div class=\"cloud-stage\">\n  <div class=\"frag\" data-target-x=\"-260\" data-target-y=\"0\">{glyph1}</div>\n  <div class=\"frag\" data-target-x=\"-130\" data-target-y=\"0\">{glyph2}</div>",
+      "intent": null,
+      "tags": [
+        "Prompt Injection",
+        "normalized-view"
+      ],
+      "evidence": {},
+      "match_fingerprint": "3131191936714decf05e72cf0f611629353d4431b193702b4fa64dfb5be97c3d",
+      "occurrences": [
+        {
+          "file": "rules/depth-scatter-assemble.md",
+          "start_line": 31,
+          "end_line": 35,
+          "start_column": 0,
+          "end_column": 45
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "finding_id": "finding-76e90ccc56bc4fc0a9b9f954a6d9e28a",
+      "category": "Prompt Injection",
+      "pattern": "Hidden Instructions",
+      "severity": "HIGH",
+      "confidence": 0.7,
+      "location": {
+        "file": "rules/hacker-flip-3d.md",
+        "start_line": 19,
+        "end_line": 21,
+        "start_column": 0,
+        "end_column": 66
+      },
+      "finding": "<!-- inside a standard scene clip (hyperframes-core) -->\n<div class=\"hacker-text-wrap\" id=\"hacker-text\" data-target=\"{phrase}\">\n  <!-- ghost row + per-char spans injected by the setup script -->",
+      "explanation": "Hidden instructions were detected in comments or invisible text. These could contain malicious directives. Manual review is recommended.",
+      "remediation": "Audit all comments and invisible characters. Remove any instructions that direct the agent to perform unauthorized actions. Use plain, reviewable content.",
+      "code_snippet": "## Recipe\n\n```html\n<!-- inside a standard scene clip (hyperframes-core) -->\n<div class=\"hacker-text-wrap\" id=\"hacker-text\" data-target=\"{phrase}\">\n  <!-- ghost row + per-char spans injected by the setup script -->\n</div>",
+      "intent": null,
+      "tags": [
+        "Prompt Injection"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6925abe842d4e761daa1ecc46afa0583bf89d08760d11102e83aeae708dba645",
+      "occurrences": [
+        {
+          "file": "rules/hacker-flip-3d.md",
+          "start_line": 19,
+          "end_line": 21,
+          "start_column": 0,
+          "end_column": 66
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "finding_id": "finding-d322879a5cb74df485309dda2f2eb0af",
+      "category": "Prompt Injection",
+      "pattern": "Hidden Instructions",
+      "severity": "HIGH",
+      "confidence": 0.7,
+      "location": {
+        "file": "rules/motion-blur-streak.md",
+        "start_line": 26,
+        "end_line": 112,
+        "start_column": 0,
+        "end_column": 69
+      },
+      "finding": "<!-- inside a standard scene clip; overflow: hidden on the scene (the smear extends past rest) -->\n<svg width=\"0\" height=\"0\" aria-hidden=\"true\" style=\"position: absolute\">\n  <filter id=\"streak\" x=\"-50",
+      "explanation": "Hidden instructions were detected in comments or invisible text. These could contain malicious directives. Manual review is recommended.",
+      "remediation": "Audit all comments and invisible characters. Remove any instructions that direct the agent to perform unauthorized actions. Use plain, reviewable content.",
+      "code_snippet": "## Recipe\n\n```html\n<!-- inside a standard scene clip; overflow: hidden on the scene (the smear extends past rest) -->\n<svg width=\"0\" height=\"0\" aria-hidden=\"true\" style=\"position: absolute\">\n  <filter id=\"streak\" x=\"-50%\" y=\"-50%\" width=\"200%\" height=\"200%\">\n    <feGaussianBlur id=\"streak-blur\" in=\"SourceGraphic\" stdDeviation=\"0 0\" />",
+      "intent": null,
+      "tags": [
+        "Prompt Injection"
+      ],
+      "evidence": {},
+      "match_fingerprint": "a6e0461e03a1115c3924337bfbc173523115a68c8fa70bfe5885eee36ec02973",
+      "occurrences": [
+        {
+          "file": "rules/motion-blur-streak.md",
+          "start_line": 26,
+          "end_line": 112,
+          "start_column": 0,
+          "end_column": 69
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "finding_id": "finding-cff6ecf428484f7a8403d7e3b1b476bf",
+      "category": "Prompt Injection",
+      "pattern": "Hidden Instructions",
+      "severity": "HIGH",
+      "confidence": 0.7,
+      "location": {
+        "file": "rules/motion-blur-streak.md",
+        "start_line": 26,
+        "end_line": 112,
+        "start_column": 0,
+        "end_column": 69
+      },
+      "finding": "<!-- inside a standard scene clip; overflow: hidden on the scene (the smear extends past rest) -->\n<svg width=\"0\" height=\"0\" aria-hidden=\"true\" style=\"position: absolute\">\n  <filter id=\"streak\" x=\"-50",
+      "explanation": "Hidden instructions were detected in comments or invisible text. These could contain malicious directives. Manual review is recommended.",
+      "remediation": "Audit all comments and invisible characters. Remove any instructions that direct the agent to perform unauthorized actions. Use plain, reviewable content.",
+      "code_snippet": "## Recipe\n\n```html\n<!-- inside a standard scene clip; overflow: hidden on the scene (the smear extends past rest) -->\n<svg width=\"0\" height=\"0\" aria-hidden=\"true\" style=\"position: absolute\">\n  <filter id=\"streak\" x=\"-50%\" y=\"-50%\" width=\"200%\" height=\"200%\">\n    <feGaussianBlur id=\"streak-blur\" in=\"SourceGraphic\" stdDeviation=\"0 0\" />",
+      "intent": null,
+      "tags": [
+        "Prompt Injection",
+        "normalized-view"
+      ],
+      "evidence": {},
+      "match_fingerprint": "8a8e9c06badc8a977426e71fcb2e3703c7eac41e4d46e075049306429867a98a",
+      "occurrences": [
+        {
+          "file": "rules/motion-blur-streak.md",
+          "start_line": 26,
+          "end_line": 112,
+          "start_column": 0,
+          "end_column": 69
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "finding_id": "finding-367deac2806e4f9a929af3e12e87279b",
+      "category": "Prompt Injection",
+      "pattern": "Hidden Instructions",
+      "severity": "HIGH",
+      "confidence": 0.7,
+      "location": {
+        "file": "rules/svg-icon-enrichment.md",
+        "start_line": 30,
+        "end_line": 30,
+        "start_column": 0,
+        "end_column": 80
+      },
+      "finding": "<!-- inside a standard scene clip \u2014 named children are the animation targets -->",
+      "explanation": "Hidden instructions were detected in comments or invisible text. These could contain malicious directives. Manual review is recommended.",
+      "remediation": "Audit all comments and invisible characters. Remove any instructions that direct the agent to perform unauthorized actions. Use plain, reviewable content.",
+      "code_snippet": "## Recipe\n\n```html\n<!-- inside a standard scene clip \u2014 named children are the animation targets -->\n<svg class=\"icon-svg\" viewBox=\"0 0 120 120\" xmlns=\"http://www.w3.org/2000/svg\">\n  <circle cx=\"60\" cy=\"60\" r=\"50\" fill=\"none\" stroke=\"{accentColor}\" stroke-width=\"6\" />\n  <line",
+      "intent": null,
+      "tags": [
+        "Prompt Injection"
+      ],
+      "evidence": {},
+      "match_fingerprint": "1a9eee1c74cf604aa7068ec5b994ae06999b811597213b56c1007025691825b7",
+      "occurrences": [
+        {
+          "file": "rules/svg-icon-enrichment.md",
+          "start_line": 30,
+          "end_line": 30,
+          "start_column": 0,
+          "end_column": 80
+        }
+      ]
+    },
+    {
+      "id": "LP3",
+      "finding_id": "finding-4a326963afc5454d94a22ce1fb08c01c",
+      "category": "MCP Least Privilege",
+      "pattern": "Skill declares no tool scope ('permissions' or 'allowed-tools') but code capabilities were detected: env.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 1,
+        "end_line": null
+      },
+      "finding": "Skill declares no tool scope ('permissions' or 'allowed-tools') but code capabilities were detected: env.",
+      "explanation": "Without declared permissions the skill's intent is opaque and cannot be validated.",
+      "remediation": "Clarify the skill's intended tool scope and review how the host runtime enforces it; runtime permissions are unknown unless separately verified. For Claude Code / Agent Skills SKILL.md, 'allowed-tools' records preapproved tools, not a permission ceiling; add a tool only when it is independently approved as necessary, not to silence this finding. For MCP server manifests, use a 'permissions' list naming the required capabilities.",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI02"
+      ],
+      "evidence": {},
+      "match_fingerprint": null,
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 1,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-512cc415255d471fbebcdd599d7a3740",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx hyperframes'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 88,
+        "end_line": null
+      },
+      "finding": "npx hyperframes",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "9c0890cb5a51bdd7b5d559cbc121a60b04c456f948c1ea5579990d5b27969eed",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 88,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-c9e2ed78202c43d0969712d173039c98",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx hyperframes'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "adapters/animejs.md",
+        "start_line": 122,
+        "end_line": null
+      },
+      "finding": "npx hyperframes",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "9c0890cb5a51bdd7b5d559cbc121a60b04c456f948c1ea5579990d5b27969eed",
+      "occurrences": [
+        {
+          "file": "adapters/animejs.md",
+          "start_line": 122,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-eae9f75b99e240c9a45695e4a29199c8",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx hyperframes'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "adapters/animejs.md",
+        "start_line": 123,
+        "end_line": null
+      },
+      "finding": "npx hyperframes",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "9c0890cb5a51bdd7b5d559cbc121a60b04c456f948c1ea5579990d5b27969eed",
+      "occurrences": [
+        {
+          "file": "adapters/animejs.md",
+          "start_line": 123,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-d35b56851dcc45bca35a648908de9ea1",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx hyperframes'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "adapters/css-animations.md",
+        "start_line": 115,
+        "end_line": null
+      },
+      "finding": "npx hyperframes",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "9c0890cb5a51bdd7b5d559cbc121a60b04c456f948c1ea5579990d5b27969eed",
+      "occurrences": [
+        {
+          "file": "adapters/css-animations.md",
+          "start_line": 115,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-686626cc49f240aa877461bdcec9ec60",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx hyperframes'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "adapters/css-animations.md",
+        "start_line": 134,
+        "end_line": null
+      },
+      "finding": "npx hyperframes",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "9c0890cb5a51bdd7b5d559cbc121a60b04c456f948c1ea5579990d5b27969eed",
+      "occurrences": [
+        {
+          "file": "adapters/css-animations.md",
+          "start_line": 134,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-7647517a86314ad69dbb62b2d2e12704",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx hyperframes'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "adapters/css-animations.md",
+        "start_line": 135,
+        "end_line": null
+      },
+      "finding": "npx hyperframes",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "9c0890cb5a51bdd7b5d559cbc121a60b04c456f948c1ea5579990d5b27969eed",
+      "occurrences": [
+        {
+          "file": "adapters/css-animations.md",
+          "start_line": 135,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-0e63d9b1822b464d92a4062a33f68ebe",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx hyperframes'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "adapters/lottie.md",
+        "start_line": 99,
+        "end_line": null
+      },
+      "finding": "npx hyperframes",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "9c0890cb5a51bdd7b5d559cbc121a60b04c456f948c1ea5579990d5b27969eed",
+      "occurrences": [
+        {
+          "file": "adapters/lottie.md",
+          "start_line": 99,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-5af7d450fd9b478c8753b19dfc9d3e11",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx hyperframes'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "adapters/lottie.md",
+        "start_line": 120,
+        "end_line": null
+      },
+      "finding": "npx hyperframes",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "9c0890cb5a51bdd7b5d559cbc121a60b04c456f948c1ea5579990d5b27969eed",
+      "occurrences": [
+        {
+          "file": "adapters/lottie.md",
+          "start_line": 120,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-d8160baed66c4c2faf25e795e52fac35",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx hyperframes'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "adapters/lottie.md",
+        "start_line": 121,
+        "end_line": null
+      },
+      "finding": "npx hyperframes",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "9c0890cb5a51bdd7b5d559cbc121a60b04c456f948c1ea5579990d5b27969eed",
+      "occurrences": [
+        {
+          "file": "adapters/lottie.md",
+          "start_line": 121,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-5698a301586d4bb58187b68a2ba938cb",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx hyperframes'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "adapters/three.md",
+        "start_line": 17,
+        "end_line": null
+      },
+      "finding": "npx hyperframes",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "9c0890cb5a51bdd7b5d559cbc121a60b04c456f948c1ea5579990d5b27969eed",
+      "occurrences": [
+        {
+          "file": "adapters/three.md",
+          "start_line": 17,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-62afe54b808543e7a36fc6618684e41b",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx hyperframes'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "adapters/three.md",
+        "start_line": 142,
+        "end_line": null
+      },
+      "finding": "npx hyperframes",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "9c0890cb5a51bdd7b5d559cbc121a60b04c456f948c1ea5579990d5b27969eed",
+      "occurrences": [
+        {
+          "file": "adapters/three.md",
+          "start_line": 142,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-1f58cfcb019a4d4bbd5a7b2094075aaf",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx hyperframes'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "adapters/three.md",
+        "start_line": 167,
+        "end_line": null
+      },
+      "finding": "npx hyperframes",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "9c0890cb5a51bdd7b5d559cbc121a60b04c456f948c1ea5579990d5b27969eed",
+      "occurrences": [
+        {
+          "file": "adapters/three.md",
+          "start_line": 167,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-6efde056168e43f5aa885cae98f8533a",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx hyperframes'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "adapters/three.md",
+        "start_line": 168,
+        "end_line": null
+      },
+      "finding": "npx hyperframes",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "9c0890cb5a51bdd7b5d559cbc121a60b04c456f948c1ea5579990d5b27969eed",
+      "occurrences": [
+        {
+          "file": "adapters/three.md",
+          "start_line": 168,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-a2047d90a128459496c1364a54b2202f",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx hyperframes'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "adapters/typegpu.md",
+        "start_line": 12,
+        "end_line": null
+      },
+      "finding": "npx hyperframes",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "9c0890cb5a51bdd7b5d559cbc121a60b04c456f948c1ea5579990d5b27969eed",
+      "occurrences": [
+        {
+          "file": "adapters/typegpu.md",
+          "start_line": 12,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-07566dda46a346e8adc8e092a09deadf",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx hyperframes'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "adapters/waapi.md",
+        "start_line": 77,
+        "end_line": null
+      },
+      "finding": "npx hyperframes",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "9c0890cb5a51bdd7b5d559cbc121a60b04c456f948c1ea5579990d5b27969eed",
+      "occurrences": [
+        {
+          "file": "adapters/waapi.md",
+          "start_line": 77,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-b83f9f32ecee4bb2b0f9910831f4a690",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx hyperframes'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "adapters/waapi.md",
+        "start_line": 92,
+        "end_line": null
+      },
+      "finding": "npx hyperframes",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "9c0890cb5a51bdd7b5d559cbc121a60b04c456f948c1ea5579990d5b27969eed",
+      "occurrences": [
+        {
+          "file": "adapters/waapi.md",
+          "start_line": 92,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-ff7b3c8e80974950a3cde3333c69c52e",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx hyperframes'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "adapters/waapi.md",
+        "start_line": 93,
+        "end_line": null
+      },
+      "finding": "npx hyperframes",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "9c0890cb5a51bdd7b5d559cbc121a60b04c456f948c1ea5579990d5b27969eed",
+      "occurrences": [
+        {
+          "file": "adapters/waapi.md",
+          "start_line": 93,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-f8ed1aeb0b554f8498ab89f5ee03c6ac",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx hyperframes'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "techniques.md",
+        "start_line": 239,
+        "end_line": null
+      },
+      "finding": "npx hyperframes",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "9c0890cb5a51bdd7b5d559cbc121a60b04c456f948c1ea5579990d5b27969eed",
+      "occurrences": [
+        {
+          "file": "techniques.md",
+          "start_line": 239,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-ccf7f817585f4e92bdae62ba5ae3b577",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx skills'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "adapters/animate-text.md",
+        "start_line": 13,
+        "end_line": null
+      },
+      "finding": "npx skills",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "2b5664f2a936abba4141331e7b3e83205cce617d2cea9af83aa306db07500782",
+      "occurrences": [
+        {
+          "file": "adapters/animate-text.md",
+          "start_line": 13,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "MP2",
+      "finding_id": "finding-5ece8157d4864defb167b97ed8d0bcee",
+      "category": "Memory Poisoning",
+      "pattern": "Context Window Stuffing",
+      "severity": "MEDIUM",
+      "confidence": 0.8,
+      "location": {
+        "file": "references/motion-blur.md",
+        "start_line": 64,
+        "end_line": null,
+        "start_column": 92
+      },
+      "finding": "                                                                                                                                                                                                        ",
+      "explanation": "Skill attempts to fill the context window with filler content, displacing legitimate instructions and safety constraints. This can degrade agent performance or bypass safety boundaries.",
+      "remediation": "Implement context-window management that detects and rejects padding or stuffing attempts. Prioritize system instructions over user-injected content.",
+      "code_snippet": "\n## Options\n\n| Option            | Default                                                      | Meaning                                                                                                                                                                                                                                                                                                         |\n| ----------------- | ------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| `shutterAngle`    | 720                                                          | Degrees of the frame interval the shutter is open. 720 is two frames, measured off a real After Effects export. 360 is o",
+      "intent": null,
+      "tags": [
+        "Memory Poisoning"
+      ],
+      "evidence": {},
+      "match_fingerprint": "5d64e38332663d53e94c5a06975d671b7ab689f1aa6a06ea60e074ded5c409f1",
+      "occurrences": [
+        {
+          "file": "references/motion-blur.md",
+          "start_line": 64,
+          "end_line": null,
+          "start_column": 92
+        }
+      ]
+    },
+    {
+      "id": "P9",
+      "finding_id": "finding-890debb52f6d4e2ab2004067027bcfb5",
+      "category": "Prompt Injection",
+      "pattern": "Whitespace Padding",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "rules/3d-camera-flight.md",
+        "start_line": 157,
+        "end_line": null
+      },
+      "finding": "U+0020 x142",
+      "explanation": "Large whitespace padding was detected (a block of blank lines or a long run of spaces). This can push injected instructions below or to the right of the visible area so a human reviewer never sees them while the agent still reads them. Manual review of the hidden content is recommended.",
+      "remediation": "Remove the large whitespace padding (blank-line blocks or long space runs) and review any content hidden below or to the right of it. Keep skill files compact and reviewable so no instructions can be concealed off-screen.",
+      "code_snippet": "                                                                        |\n| DIVE_Z / LAND_Z           | 300\u2013700 px at PERSPECTIVE_PX \u2248 1000                              | **Z budget**: `cam.z + PROP_Z \u2264 ~0.6 \u00d7 PERSPECTIVE_PX` for readable content \u2014 near the perspective distance, scale blows toward infinity and elements invert/vanish past the camera plane |\n| WIDE_Z                    | \u2212100 to \u2212400 px                                                  | negative z = world pushed away = camera wide                                                                                                                                              |\n| DIVE_X/Y, LAND_X/Y        | read off a screenshot at the baked tilt                          | screen-aligned (translate outside rotations)                                                                                                                                              |\n| DIVE_DUR / LAND_DUR       | 0.6\u20131.0 s                                ",
+      "intent": null,
+      "tags": [
+        "Prompt Injection"
+      ],
+      "evidence": {},
+      "match_fingerprint": "a3cbad98dbd64c8f71fa27c0cde1ff300eebea2e891ff5a99829a36cac327b7f",
+      "occurrences": [
+        {
+          "file": "rules/3d-camera-flight.md",
+          "start_line": 157,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "P9",
+      "finding_id": "finding-5cb3ee2cefa4411d9fa0270dec43632a",
+      "category": "Prompt Injection",
+      "pattern": "Whitespace Padding",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "rules/3d-camera-flight.md",
+        "start_line": 158,
+        "end_line": null
+      },
+      "finding": "U+0020 x142",
+      "explanation": "Large whitespace padding was detected (a block of blank lines or a long run of spaces). This can push injected instructions below or to the right of the visible area so a human reviewer never sees them while the agent still reads them. Manual review of the hidden content is recommended.",
+      "remediation": "Remove the large whitespace padding (blank-line blocks or long space runs) and review any content hidden below or to the right of it. Keep skill files compact and reviewable so no instructions can be concealed off-screen.",
+      "code_snippet": " blows toward infinity and elements invert/vanish past the camera plane |\n| WIDE_Z                    | \u2212100 to \u2212400 px                                                  | negative z = world pushed away = camera wide                                                                                                                                              |\n| DIVE_X/Y, LAND_X/Y        | read off a screenshot at the baked tilt                          | screen-aligned (translate outside rotations)                                                                                                                                              |\n| DIVE_DUR / LAND_DUR       | 0.6\u20131.0 s                                                        | commitment, not a polite zoom; under 0.5 s reads as a cut                                                                                                                                 |\n| FLATTEN_DUR               | 1.2\u20132.0 s                                ",
+      "intent": null,
+      "tags": [
+        "Prompt Injection"
+      ],
+      "evidence": {},
+      "match_fingerprint": "a3cbad98dbd64c8f71fa27c0cde1ff300eebea2e891ff5a99829a36cac327b7f",
+      "occurrences": [
+        {
+          "file": "rules/3d-camera-flight.md",
+          "start_line": 158,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "P9",
+      "finding_id": "finding-76683c70de584182bb8fe805b3749ea1",
+      "category": "Prompt Injection",
+      "pattern": "Whitespace Padding",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "rules/3d-camera-flight.md",
+        "start_line": 159,
+        "end_line": null
+      },
+      "finding": "U+0020 x129",
+      "explanation": "Large whitespace padding was detected (a block of blank lines or a long run of spaces). This can push injected instructions below or to the right of the visible area so a human reviewer never sees them while the agent still reads them. Manual review of the hidden content is recommended.",
+      "remediation": "Remove the large whitespace padding (blank-line blocks or long space runs) and review any content hidden below or to the right of it. Keep skill files compact and reviewable so no instructions can be concealed off-screen.",
+      "code_snippet": "                                                           |\n| DIVE_X/Y, LAND_X/Y        | read off a screenshot at the baked tilt                          | screen-aligned (translate outside rotations)                                                                                                                                              |\n| DIVE_DUR / LAND_DUR       | 0.6\u20131.0 s                                                        | commitment, not a polite zoom; under 0.5 s reads as a cut                                                                                                                                 |\n| FLATTEN_DUR               | 1.2\u20132.0 s                                                        | the repositioning is the breath between dives                                                                                                                                             |\n| PAN_DUR                   | 0.8\u20131.5 s plain; 0.5\u20130.8 s whip                       ",
+      "intent": null,
+      "tags": [
+        "Prompt Injection"
+      ],
+      "evidence": {},
+      "match_fingerprint": "7d7f206801d7fb9c3db748f13c299f1fdd1861c694d0600ee37aaecb4f02ec5b",
+      "occurrences": [
+        {
+          "file": "rules/3d-camera-flight.md",
+          "start_line": 159,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "P9",
+      "finding_id": "finding-c0ffc29722c84fda99bce93184814ac2",
+      "category": "Prompt Injection",
+      "pattern": "Whitespace Padding",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "rules/3d-camera-flight.md",
+        "start_line": 160,
+        "end_line": null
+      },
+      "finding": "U+0020 x141",
+      "explanation": "Large whitespace padding was detected (a block of blank lines or a long run of spaces). This can push injected instructions below or to the right of the visible area so a human reviewer never sees them while the agent still reads them. Manual review of the hidden content is recommended.",
+      "remediation": "Remove the large whitespace padding (blank-line blocks or long space runs) and review any content hidden below or to the right of it. Keep skill files compact and reviewable so no instructions can be concealed off-screen.",
+      "code_snippet": "                                                                       |\n| DIVE_DUR / LAND_DUR       | 0.6\u20131.0 s                                                        | commitment, not a polite zoom; under 0.5 s reads as a cut                                                                                                                                 |\n| FLATTEN_DUR               | 1.2\u20132.0 s                                                        | the repositioning is the breath between dives                                                                                                                                             |\n| PAN_DUR                   | 0.8\u20131.5 s plain; 0.5\u20130.8 s whip                                  |                                                                                                                                                                                           |\n| Ease law                  | `power4.out` dives/landings; `power2.inOut",
+      "intent": null,
+      "tags": [
+        "Prompt Injection"
+      ],
+      "evidence": {},
+      "match_fingerprint": "b1fd5af603699b841fa2daf1b32a6ff47f39b44614af4b24e98bde31207c013f",
+      "occurrences": [
+        {
+          "file": "rules/3d-camera-flight.md",
+          "start_line": 160,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "P9",
+      "finding_id": "finding-6571e1f26dc94cdeb146a774d847cfda",
+      "category": "Prompt Injection",
+      "pattern": "Whitespace Padding",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "rules/3d-camera-flight.md",
+        "start_line": 161,
+        "end_line": null
+      },
+      "finding": "U+0020 x187",
+      "explanation": "Large whitespace padding was detected (a block of blank lines or a long run of spaces). This can push injected instructions below or to the right of the visible area so a human reviewer never sees them while the agent still reads them. Manual review of the hidden content is recommended.",
+      "remediation": "Remove the large whitespace padding (blank-line blocks or long space runs) and review any content hidden below or to the right of it. Keep skill files compact and reviewable so no instructions can be concealed off-screen.",
+      "code_snippet": "                                                                                                                     |\n| FLATTEN_DUR               | 1.2\u20132.0 s                                                        | the repositioning is the breath between dives                                                                                                                                             |\n| PAN_DUR                   | 0.8\u20131.5 s plain; 0.5\u20130.8 s whip                                  |                                                                                                                                                                                           |\n| Ease law                  | `power4.out` dives/landings; `power2.inOut` repositioning/cruise | spring/back on a camera reads as the world wobbling on a string; four identical pushes read as a slideshow \u2014 vary the leg verbs                                                           |\n| Holds                   ",
+      "intent": null,
+      "tags": [
+        "Prompt Injection"
+      ],
+      "evidence": {},
+      "match_fingerprint": "a6913f8fc559f71334891ca1c4c8dff065f1036f01b71a72e471bd2da8cde035",
+      "occurrences": [
+        {
+          "file": "rules/3d-camera-flight.md",
+          "start_line": 161,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "P9",
+      "finding_id": "finding-4cbbf66f1ad64b4bbd36aca057cb5da6",
+      "category": "Prompt Injection",
+      "pattern": "Whitespace Padding",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "rules/3d-camera-flight.md",
+        "start_line": 163,
+        "end_line": null
+      },
+      "finding": "U+0020 x159",
+      "explanation": "Large whitespace padding was detected (a block of blank lines or a long run of spaces). This can push injected instructions below or to the right of the visible area so a human reviewer never sees them while the agent still reads them. Manual review of the hidden content is recommended.",
+      "remediation": "Remove the large whitespace padding (blank-line blocks or long space runs) and review any content hidden below or to the right of it. Keep skill files compact and reviewable so no instructions can be concealed off-screen.",
+      "code_snippet": "                                                                                                                       |\n| Ease law                  | `power4.out` dives/landings; `power2.inOut` repositioning/cruise | spring/back on a camera reads as the world wobbling on a string; four identical pushes read as a slideshow \u2014 vary the leg verbs                                                           |\n| Holds                     | \u2265 0.8 s between legs; final dwell \u2265 1 s                          | unless ending held mid-dive                                                                                                                                                               |\n| BLUR_PER_DEPTH / MAX_BLUR | per [depth-of-field-blur.md](depth-of-field-blur.md)             | 3\u20136 px per step, terminal 8\u201324 px, leaf elements only; travel-blur peak per [motion-blur-streak.md](motion-blur-streak.md) (~18\u201320 px full-frame, on `.stage`)                            |\n\n## Critical Constraints",
+      "intent": null,
+      "tags": [
+        "Prompt Injection"
+      ],
+      "evidence": {},
+      "match_fingerprint": "33b140070b58b71b130bba68be90c89a1156b52b8be2176859b297d1b41581f3",
+      "occurrences": [
+        {
+          "file": "rules/3d-camera-flight.md",
+          "start_line": 163,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "EA3",
+      "finding_id": "finding-24e5328d1b44462691960885d00ebe61",
+      "category": "Excessive Agency",
+      "pattern": "Scope Creep",
+      "severity": "LOW",
+      "confidence": 0.7,
+      "location": {
+        "file": "adapters/html-in-canvas-patterns.md",
+        "start_line": 507,
+        "end_line": null,
+        "start_column": 10
+      },
+      "finding": "not limited to",
+      "explanation": "Skill's behavior or capabilities extend beyond its stated purpose. Scope creep allows an agent to perform actions unrelated to its documented functionality, increasing the attack surface.",
+      "remediation": "Limit the skill's scope to its documented purpose. Remove instructions that enable the agent to perform actions outside its stated functionality.",
+      "code_snippet": "- Film grain + scan lines = retro\n- Multiple passes stack \u2014 add as many as you want\n\n**You are not limited to the effects listed here.** If you can imagine a visual treatment, you can build it. The HTML-in-Canvas API gives you the source material (any HTML rendered as a texture), and WebGL/Three.js gives you unlimited creative control over how that material is presented.",
+      "intent": null,
+      "tags": [
+        "Excessive Agency"
+      ],
+      "evidence": {},
+      "match_fingerprint": "943d9aae8743c129fe98eb6cc5e984f5e35ceba0b44ce4ca00f42b97f0bf3eaf",
+      "occurrences": [
+        {
+          "file": "adapters/html-in-canvas-patterns.md",
+          "start_line": 507,
+          "end_line": null,
+          "start_column": 10
+        }
+      ]
+    }
+  ],
+  "suppressed_count": 0,
+  "suppressed": [],
+  "metadata": {
+    "has_executable_scripts": true,
+    "skillspector_version": "2.12.0",
+    "llm_requested": false,
+    "llm_available": false,
+    "meta_analysis_applied": false,
+    "inference_usage": [],
+    "llm_provenance": {
+      "schema_version": 1,
+      "provider": {
+        "configured_adapter": "unknown",
+        "resolved_adapter": "unknown",
+        "effective_adapter": "not_applicable",
+        "effective_adapters": [],
+        "service": "unknown",
+        "routing": {
+          "deployment_override": null,
+          "deployment_source": "unknown",
+          "api_version": null,
+          "api_version_source": "unknown"
+        }
+      },
+      "analyzers": [
+        {
+          "analyzer_id": "mcp_tool_poisoning",
+          "model": "z-ai/glm-5.3",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "4c52fbb83bbca0dd13f2685453c9b661d8c95bf8",
+              "source": "package_vcs_metadata"
+            }
+          }
+        },
+        {
+          "analyzer_id": "semantic_developer_intent",
+          "model": "z-ai/glm-5.3",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "4c52fbb83bbca0dd13f2685453c9b661d8c95bf8",
+              "source": "package_vcs_metadata"
+            }
+          }
+        },
+        {
+          "analyzer_id": "semantic_quality_policy",
+          "model": "z-ai/glm-5.3",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "4c52fbb83bbca0dd13f2685453c9b661d8c95bf8",
+              "source": "package_vcs_metadata"
+            }
+          }
+        },
+        {
+          "analyzer_id": "semantic_security_discovery",
+          "model": "z-ai/glm-5.3",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "4c52fbb83bbca0dd13f2685453c9b661d8c95bf8",
+              "source": "package_vcs_metadata"
+            }
+          }
+        },
+        {
+          "analyzer_id": "meta_analyzer",
+          "model": "z-ai/glm-5.3",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "4c52fbb83bbca0dd13f2685453c9b661d8c95bf8",
+              "source": "package_vcs_metadata"
+            }
+          }
+        }
+      ],
+      "sampling": {
+        "temperature": {
+          "requested": null,
+          "source": "provider_default",
+          "forwarded_to_client": null,
+          "adapter_support": false,
+          "provider_support": "unknown"
+        },
+        "seed": {
+          "requested": null,
+          "source": "unset",
+          "forwarded_to_client": null,
+          "adapter_support": false,
+          "provider_support": "unknown"
+        },
+        "reasoning_effort": {
+          "requested": null,
+          "source": "provider_default",
+          "forwarded_to_client": null,
+          "adapter_support": false,
+          "provider_support": "unknown"
+        }
+      },
+      "determinism": {
+        "classification": "not_applicable",
+        "control_status": "not_applied",
+        "provider_guarantee": false,
+        "reason": "LLM analysis was not executed for this scan."
+      }
+    },
+    "filtering_mode": "heuristic"
+  },
+  "execution_successful": true,
+  "analysis_completeness": {
+    "total_components": 122,
+    "scanned_components": 104,
+    "coverage_percent": 85.2,
+    "is_complete": false,
+    "status": "partial",
+    "execution_successful": true,
+    "fully_inspected_files": 104,
+    "partially_inspected_files": 18,
+    "entirely_uninspected_files": 0,
+    "ledger_exceptions": [
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_missing",
+        "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+        "path": "SKILL.md",
+        "start_line": 48,
+        "end_line": 48,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_missing",
+        "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+        "path": "SKILL.md",
+        "start_line": 66,
+        "end_line": 66,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_missing",
+        "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+        "path": "SKILL.md",
+        "start_line": 80,
+        "end_line": 80,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "static",
+        "reason_code": "static_parse_limit",
+        "message": "A security-relevant expression exceeded a bounded static parser's span limit.",
+        "path": "examples/brand-reveal-assemble-zoom.html",
+        "start_line": null,
+        "end_line": null,
+        "fatal": false,
+        "analyzers": [
+          "static_patterns_tool_misuse"
+        ]
+      },
+      {
+        "outcome": "partial",
+        "phase": "static",
+        "reason_code": "obfuscated_instruction_text",
+        "message": "Obfuscated instruction text could not be fully evaluated by the deterministic layer.",
+        "path": "examples/concept-demo-decode-pan.html",
+        "start_line": null,
+        "end_line": null,
+        "fatal": false,
+        "analyzers": [
+          "static_patterns_agent_snooping",
+          "static_patterns_anti_refusal",
+          "static_patterns_deserialization",
+          "static_patterns_excessive_agency",
+          "static_patterns_harmful_content",
+          "static_patterns_memory_poisoning",
+          "static_patterns_privilege_escalation",
+          "static_patterns_prompt_injection",
+          "static_patterns_rogue_agent",
+          "static_patterns_ssrf",
+          "static_patterns_supply_chain",
+          "static_patterns_system_prompt_leakage"
+        ]
+      },
+      {
+        "outcome": "partial",
+        "phase": "static",
+        "reason_code": "static_parse_limit",
+        "message": "A security-relevant expression exceeded a bounded static parser's span limit.",
+        "path": "examples/concept-demo-decode-pan.html",
+        "start_line": null,
+        "end_line": null,
+        "fatal": false,
+        "analyzers": [
+          "static_patterns_tool_misuse"
+        ]
+      },
+      {
+        "outcome": "partial",
+        "phase": "static",
+        "reason_code": "obfuscated_instruction_text",
+        "message": "Obfuscated instruction text could not be fully evaluated by the deterministic layer.",
+        "path": "examples/problem-mockup-overwhelm.html",
+        "start_line": null,
+        "end_line": null,
+        "fatal": false,
+        "analyzers": [
+          "static_patterns_agent_snooping",
+          "static_patterns_anti_refusal",
+          "static_patterns_deserialization",
+          "static_patterns_excessive_agency",
+          "static_patterns_harmful_content",
+          "static_patterns_memory_poisoning",
+          "static_patterns_privilege_escalation",
+          "static_patterns_prompt_injection",
+          "static_patterns_rogue_agent",
+          "static_patterns_ssrf",
+          "static_patterns_supply_chain",
+          "static_patterns_system_prompt_leakage",
+          "static_patterns_tool_misuse"
+        ]
+      },
+      {
+        "outcome": "partial",
+        "phase": "static",
+        "reason_code": "obfuscated_instruction_text",
+        "message": "Obfuscated instruction text could not be fully evaluated by the deterministic layer.",
+        "path": "examples/proof-logo-chain.html",
+        "start_line": null,
+        "end_line": null,
+        "fatal": false,
+        "analyzers": [
+          "static_patterns_agent_snooping",
+          "static_patterns_anti_refusal",
+          "static_patterns_deserialization",
+          "static_patterns_excessive_agency",
+          "static_patterns_harmful_content",
+          "static_patterns_memory_poisoning",
+          "static_patterns_privilege_escalation",
+          "static_patterns_prompt_injection",
+          "static_patterns_rogue_agent",
+          "static_patterns_ssrf",
+          "static_patterns_supply_chain",
+          "static_patterns_system_prompt_leakage"
+        ]
+      },
+      {
+        "outcome": "partial",
+        "phase": "static",
+        "reason_code": "static_parse_limit",
+        "message": "A security-relevant expression exceeded a bounded static parser's span limit.",
+        "path": "examples/proof-logo-chain.html",
+        "start_line": null,
+        "end_line": null,
+        "fatal": false,
+        "analyzers": [
+          "static_patterns_tool_misuse"
+        ]
+      },
+      {
+        "outcome": "partial",
+        "phase": "static",
+        "reason_code": "runtime_limit",
+        "message": "Inspection reached its configured runtime limit.",
+        "path": "rules",
+        "start_line": null,
+        "end_line": null,
+        "fatal": false,
+        "analyzers": [
+          "static_patterns_supply_chain_bytecode_runtime_limit"
+        ]
+      },
+      {
+        "outcome": "partial",
+        "phase": "static",
+        "reason_code": "static_parse_limit",
+        "message": "A security-relevant expression exceeded a bounded static parser's span limit.",
+        "path": "rules/3d-camera-flight.md",
+        "start_line": null,
+        "end_line": null,
+        "fatal": false,
+        "analyzers": [
+          "static_patterns_tool_misuse"
+        ]
+      },
+      {
+        "outcome": "partial",
+        "phase": "static",
+        "reason_code": "static_parse_limit",
+        "message": "A security-relevant expression exceeded a bounded static parser's span limit.",
+        "path": "rules/ambient-glow-bloom.md",
+        "start_line": null,
+        "end_line": null,
+        "fatal": false,
+        "analyzers": [
+          "static_patterns_tool_misuse"
+        ]
+      },
+      {
+        "outcome": "partial",
+        "phase": "static",
+        "reason_code": "static_parse_limit",
+        "message": "A security-relevant expression exceeded a bounded static parser's span limit.",
+        "path": "rules/chart-scrub-readout.md",
+        "start_line": null,
+        "end_line": null,
+        "fatal": false,
+        "analyzers": [
+          "static_patterns_tool_misuse"
+        ]
+      },
+      {
+        "outcome": "partial",
+        "phase": "static",
+        "reason_code": "static_parse_limit",
+        "message": "A security-relevant expression exceeded a bounded static parser's span limit.",
+        "path": "rules/chromatic-glitch.md",
+        "start_line": null,
+        "end_line": null,
+        "fatal": false,
+        "analyzers": [
+          "static_patterns_tool_misuse"
+        ]
+      },
+      {
+        "outcome": "partial",
+        "phase": "static",
+        "reason_code": "static_parse_limit",
+        "message": "A security-relevant expression exceeded a bounded static parser's span limit.",
+        "path": "rules/control-target-sync.md",
+        "start_line": null,
+        "end_line": null,
+        "fatal": false,
+        "analyzers": [
+          "static_patterns_tool_misuse"
+        ]
+      },
+      {
+        "outcome": "partial",
+        "phase": "static",
+        "reason_code": "static_parse_limit",
+        "message": "A security-relevant expression exceeded a bounded static parser's span limit.",
+        "path": "rules/depth-of-field-blur.md",
+        "start_line": null,
+        "end_line": null,
+        "fatal": false,
+        "analyzers": [
+          "static_patterns_tool_misuse"
+        ]
+      },
+      {
+        "outcome": "partial",
+        "phase": "static",
+        "reason_code": "static_parse_limit",
+        "message": "A security-relevant expression exceeded a bounded static parser's span limit.",
+        "path": "rules/motion-blur-streak.md",
+        "start_line": null,
+        "end_line": null,
+        "fatal": false,
+        "analyzers": [
+          "static_patterns_tool_misuse"
+        ]
+      },
+      {
+        "outcome": "partial",
+        "phase": "static",
+        "reason_code": "static_parse_limit",
+        "message": "A security-relevant expression exceeded a bounded static parser's span limit.",
+        "path": "rules/multi-phase-camera.md",
+        "start_line": null,
+        "end_line": null,
+        "fatal": false,
+        "analyzers": [
+          "static_patterns_tool_misuse"
+        ]
+      },
+      {
+        "outcome": "partial",
+        "phase": "static",
+        "reason_code": "static_parse_limit",
+        "message": "A security-relevant expression exceeded a bounded static parser's span limit.",
+        "path": "rules/particle-burst.md",
+        "start_line": null,
+        "end_line": null,
+        "fatal": false,
+        "analyzers": [
+          "static_patterns_tool_misuse"
+        ]
+      },
+      {
+        "outcome": "partial",
+        "phase": "static",
+        "reason_code": "static_parse_limit",
+        "message": "A security-relevant expression exceeded a bounded static parser's span limit.",
+        "path": "rules/physics-press-reaction.md",
+        "start_line": null,
+        "end_line": null,
+        "fatal": false,
+        "analyzers": [
+          "static_patterns_tool_misuse"
+        ]
+      },
+      {
+        "outcome": "partial",
+        "phase": "static",
+        "reason_code": "static_parse_limit",
+        "message": "A security-relevant expression exceeded a bounded static parser's span limit.",
+        "path": "rules/press-release-spring.md",
+        "start_line": null,
+        "end_line": null,
+        "fatal": false,
+        "analyzers": [
+          "static_patterns_tool_misuse"
+        ]
+      },
+      {
+        "outcome": "partial",
+        "phase": "static",
+        "reason_code": "static_parse_limit",
+        "message": "A security-relevant expression exceeded a bounded static parser's span limit.",
+        "path": "rules/vertical-spring-ticker.md",
+        "start_line": null,
+        "end_line": null,
+        "fatal": false,
+        "analyzers": [
+          "static_patterns_tool_misuse"
+        ]
+      },
+      {
+        "outcome": "partial",
+        "phase": "static",
+        "reason_code": "static_parse_limit",
+        "message": "A security-relevant expression exceeded a bounded static parser's span limit.",
+        "path": "scripts/animation-map.mjs",
+        "start_line": null,
+        "end_line": null,
+        "fatal": false,
+        "analyzers": [
+          "static_patterns_tool_misuse"
+        ]
+      },
+      {
+        "outcome": "partial",
+        "phase": "static",
+        "reason_code": "static_parse_limit",
+        "message": "A security-relevant expression exceeded a bounded static parser's span limit.",
+        "path": "scripts/animation-map.test.mjs",
+        "start_line": null,
+        "end_line": null,
+        "fatal": false,
+        "analyzers": [
+          "static_patterns_tool_misuse"
+        ]
+      }
+    ],
+    "scope_exclusions": [],
+    "analyzer_statuses": [
+      {
+        "analyzer_id": "artifact_integrity",
+        "status": "completed",
+        "planned_work": 122,
+        "completed": 122,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "behavioral_ast",
+        "status": "not_applicable",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "no_applicable_files",
+        "message": "No files matched this analyzer's applicability contract."
+      },
+      {
+        "analyzer_id": "behavioral_taint_tracking",
+        "status": "not_applicable",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "no_applicable_files",
+        "message": "No files matched this analyzer's applicability contract."
+      },
+      {
+        "analyzer_id": "bundled_execution_surface",
+        "status": "not_applicable",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "no_applicable_files",
+        "message": "No files matched this analyzer's applicability contract."
+      },
+      {
+        "analyzer_id": "mcp_least_privilege",
+        "status": "completed",
+        "planned_work": 7,
+        "completed": 7,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "mcp_rug_pull",
+        "status": "completed",
+        "planned_work": 122,
+        "completed": 122,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "mcp_tool_poisoning",
+        "status": "completed",
+        "planned_work": 1,
+        "completed": 1,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "meta_analyzer",
+        "status": "disabled",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "disabled_by_configuration",
+        "message": "Analyzer was disabled by the requested configuration."
+      },
+      {
+        "analyzer_id": "reference_coverage",
+        "status": "completed",
+        "planned_work": 2,
+        "completed": 2,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "semantic_developer_intent",
+        "status": "disabled",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "disabled_by_configuration",
+        "message": "Analyzer was disabled by the requested configuration."
+      },
+      {
+        "analyzer_id": "semantic_quality_policy",
+        "status": "disabled",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "disabled_by_configuration",
+        "message": "Analyzer was disabled by the requested configuration."
+      },
+      {
+        "analyzer_id": "semantic_security_discovery",
+        "status": "disabled",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "disabled_by_configuration",
+        "message": "Analyzer was disabled by the requested configuration."
+      },
+      {
+        "analyzer_id": "static_patterns_agent_snooping",
+        "status": "degraded",
+        "planned_work": 122,
+        "completed": 119,
+        "partial": 3,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_anti_refusal",
+        "status": "degraded",
+        "planned_work": 122,
+        "completed": 119,
+        "partial": 3,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_data_exfiltration",
+        "status": "completed",
+        "planned_work": 122,
+        "completed": 122,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_deserialization",
+        "status": "degraded",
+        "planned_work": 122,
+        "completed": 119,
+        "partial": 3,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_excessive_agency",
+        "status": "degraded",
+        "planned_work": 122,
+        "completed": 119,
+        "partial": 3,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_harmful_content",
+        "status": "degraded",
+        "planned_work": 122,
+        "completed": 119,
+        "partial": 3,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_memory_poisoning",
+        "status": "degraded",
+        "planned_work": 122,
+        "completed": 119,
+        "partial": 3,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_output_handling",
+        "status": "completed",
+        "planned_work": 122,
+        "completed": 122,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_privilege_escalation",
+        "status": "degraded",
+        "planned_work": 122,
+        "completed": 119,
+        "partial": 3,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_prompt_injection",
+        "status": "degraded",
+        "planned_work": 122,
+        "completed": 119,
+        "partial": 3,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_rogue_agent",
+        "status": "degraded",
+        "planned_work": 122,
+        "completed": 119,
+        "partial": 3,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_ssrf",
+        "status": "degraded",
+        "planned_work": 122,
+        "completed": 119,
+        "partial": 3,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_supply_chain",
+        "status": "degraded",
+        "planned_work": 123,
+        "completed": 119,
+        "partial": 4,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_system_prompt_leakage",
+        "status": "degraded",
+        "planned_work": 122,
+        "completed": 119,
+        "partial": 3,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_tool_misuse",
+        "status": "degraded",
+        "planned_work": 122,
+        "completed": 104,
+        "partial": 18,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_yara",
+        "status": "completed",
+        "planned_work": 122,
+        "completed": 122,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      }
+    ],
+    "references": [
+      {
+        "source_path": "SKILL.md",
+        "line": 6,
+        "column": 90,
+        "evidence": "installs:** Before setup or freshness commands, follow [plugin execution rules](../hyperframes/references/plugin-installation.md) when this skill is inside a Hy",
+        "target_path": null,
+        "status": "rejected",
+        "disposition": "out_of_scope",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 16,
+        "column": 22,
+        "evidence": "Pick 2-4 rules from `rules-index.md`, glue them together with a single paused GSAP timeline, done. This is faster and produces less code than starting from a bl",
+        "target_path": "rules-index.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 23,
+        "column": 21,
+        "evidence": "Blueprints live in `blueprints-index.md`. Each entry points to `blueprints/<id>.md` (recipe). Do not read it speculatively; load it when you've already decided ",
+        "target_path": "blueprints-index.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 29,
+        "column": 85,
+        "evidence": "| Pick an atomic motion pattern by trigger / tag | `rules-index.md` |",
+        "target_path": "rules-index.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 31,
+        "column": 85,
+        "evidence": "| Pick a multi-phase scene template | `blueprints-index.md` |",
+        "target_path": "blueprints-index.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 33,
+        "column": 85,
+        "evidence": "| Author a scene transition (CSS-driven, between two clips) | `transitions/overview.md`, `transitions/catalog.md` |",
+        "target_path": "transitions/overview.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 33,
+        "column": 112,
+        "evidence": "| Author a scene transition (CSS-driven, between two clips) | `transitions/overview.md`, `transitions/catalog.md` |",
+        "target_path": "transitions/catalog.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 34,
+        "column": 85,
+        "evidence": "| Look up a broader motion-design technique | `techniques.md` |",
+        "target_path": "techniques.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 35,
+        "column": 85,
+        "evidence": "| Motion blur \u2014 shutter smear on an element, and when not to use it | `references/motion-blur.md` |",
+        "target_path": "references/motion-blur.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 36,
+        "column": 85,
+        "evidence": "| Analyze an existing composition's animation map | `scripts/animation-map.mjs` |",
+        "target_path": "scripts/animation-map.mjs",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 37,
+        "column": 85,
+        "evidence": "| GSAP API \u2014 timeline / tweens / position parameters | `adapters/gsap.md` |",
+        "target_path": "adapters/gsap.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 38,
+        "column": 85,
+        "evidence": "| GSAP \u2014 drop-in effect recipes | `rules/gsap-effects.md` |",
+        "target_path": "rules/gsap-effects.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 39,
+        "column": 85,
+        "evidence": "| GSAP \u2014 transforms / perf | `adapters/gsap-transforms-and-perf.md` |",
+        "target_path": "adapters/gsap-transforms-and-perf.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 40,
+        "column": 85,
+        "evidence": "| GSAP \u2014 eases / stagger | `adapters/gsap-easing-and-stagger.md` |",
+        "target_path": "adapters/gsap-easing-and-stagger.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 41,
+        "column": 85,
+        "evidence": "| GSAP \u2014 timeline / labels | `adapters/gsap-timeline-and-labels.md` |",
+        "target_path": "adapters/gsap-timeline-and-labels.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 42,
+        "column": 85,
+        "evidence": "| Lottie / dotLottie (After Effects exports, `window.__hfLottie`) | `adapters/lottie.md` |",
+        "target_path": "adapters/lottie.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 43,
+        "column": 85,
+        "evidence": "| Character animation (walk cycle, mascot, jointed puppet, gestures) | `adapters/lottie.md` \u2192 Characters |",
+        "target_path": "adapters/lottie.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 44,
+        "column": 85,
+        "evidence": "| Three.js / WebGL (3D scenes, `AnimationMixer`, `hf-seek`) | `adapters/three.md` |",
+        "target_path": "adapters/three.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 45,
+        "column": 85,
+        "evidence": "| Anime.js (`window.__hfAnime`) | `adapters/animejs.md` |",
+        "target_path": "adapters/animejs.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 46,
+        "column": 85,
+        "evidence": "| CSS keyframes (`animation-delay` / `play-state` / `fill-mode`) | `adapters/css-animations.md` |",
+        "target_path": "adapters/css-animations.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 47,
+        "column": 85,
+        "evidence": "| Web Animations API (`element.animate()`, `currentTime` seek) | `adapters/waapi.md` |",
+        "target_path": "adapters/waapi.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 48,
+        "column": 22,
+        "evidence": "| TypeGPU / WebGPU (`navigator.gpu`, WGSL, compute pipelines) | `adapters/typegpu.md` |",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 48,
+        "column": 85,
+        "evidence": "| TypeGPU / WebGPU (`navigator.gpu`, WGSL, compute pipelines) | `adapters/typegpu.md` |",
+        "target_path": "adapters/typegpu.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 49,
+        "column": 85,
+        "evidence": "| HTML-as-texture + WebGL/GLSL post-fx (capture live DOM via `drawElementImage`) | `adapters/html-in-canvas-patterns.md` |",
+        "target_path": "adapters/html-in-canvas-patterns.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 50,
+        "column": 85,
+        "evidence": "| Named text-animation effects (24 IDs via external `animate-text` skill) | `adapters/animate-text.md` |",
+        "target_path": "adapters/animate-text.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 66,
+        "column": 144,
+        "evidence": "negotiable rules** (single paused timeline, `data-duration` governs length, no `Math.random` / `Date.now` / `performance.now`, no `repeat: -1` without a finite ",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 66,
+        "column": 160,
+        "evidence": "** (single paused timeline, `data-duration` governs length, no `Math.random` / `Date.now` / `performance.now`, no `repeat: -1` without a finite root `data-durat",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 66,
+        "column": 173,
+        "evidence": "used timeline, `data-duration` governs length, no `Math.random` / `Date.now` / `performance.now`, no `repeat: -1` without a finite root `data-duration`, no page",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 66,
+        "column": 260,
+        "evidence": "ance.now`, no `repeat: -1` without a finite root `data-duration`, no page-load `gsap.set` on later-scene clips, no `display` or raw `visibility` tweens, and reg",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 66,
+        "column": 453,
+        "evidence": "is fully built, including when the build runs inside an async callback such as `document.fonts.ready`). GSAP `autoAlpha` and zero-duration visibility sets at ex",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 80,
+        "column": 123,
+        "evidence": "indow.__timelines`, enumerates tweens, samples bboxes, computes flags, outputs `animation-map.json`. Use it to audit choreography (dead zones, stagger consisten",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 82,
+        "column": 2,
+        "evidence": "`animation-map.mjs` resolves helper packages from the current project first, then can bootstrap the bundled HyperFrames package version. Set `HYPERFRAMES_SKILL_",
+        "target_path": "scripts/animation-map.mjs",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "quoted_or_code"
+      }
+    ],
+    "limitations": [
+      "Analyzer static_patterns_agent_snooping status: degraded.",
+      "Analyzer static_patterns_anti_refusal status: degraded.",
+      "Analyzer static_patterns_deserialization status: degraded.",
+      "Analyzer static_patterns_excessive_agency status: degraded.",
+      "Analyzer static_patterns_harmful_content status: degraded.",
+      "Analyzer static_patterns_memory_poisoning status: degraded.",
+      "Analyzer static_patterns_privilege_escalation status: degraded.",
+      "Analyzer static_patterns_prompt_injection status: degraded.",
+      "Analyzer static_patterns_rogue_agent status: degraded.",
+      "Analyzer static_patterns_ssrf status: degraded.",
+      "Analyzer static_patterns_supply_chain status: degraded.",
+      "Analyzer static_patterns_system_prompt_leakage status: degraded.",
+      "Analyzer static_patterns_tool_misuse status: degraded."
+    ],
+    "findings_before_filtering": 64,
+    "findings_after_filtering": 64
+  }
+}

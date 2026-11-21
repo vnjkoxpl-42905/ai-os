@@ -62,3 +62,7 @@ API — only in the cal.com dashboard under the paid event's settings.
 2026-09-08 — Whitney Wilson lost two bookings this way (Sep 10 and Sep 12) within four minutes
 of each other and emailed asking to e-transfer instead. Eight older ones found from Lydia (3),
 atamaami (2), Bella, Vinay and ocebate, going back to May.
+
+## Local API credential (2026-11-16)
+
+For Codex and Claude on Joshua's Windows machine, the Cal.com API credential is stored as `CALCOM_API_KEY` in `C:\Users\Joshu\dev\lsatu\.env.local`. This file is Git-ignored. Load it only in a trusted server-side process; never copy its value into notes, commits, or browser-exposed VITE variables. Verified on 2026-11-16: the Cal.com v2 bookings endpoint returned HTTP 200 and status success. Other endpoints and permissions were not verified.

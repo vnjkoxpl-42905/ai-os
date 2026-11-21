@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Up next variations</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#252b26;--muted:#6f726b;--line:#e4e0d6;--paper:#f6f3ec;--surface:#fbf9f4;--charcoal:#181c1d;--on:#efede6;--urgent:#9f1239;--ease:cubic-bezier(.23,1,.32,1)}
+*{box-sizing:border-box;margin:0}
+body{background:var(--paper);color:var(--ink);font-family:Outfit,system-ui,sans-serif;padding:40px 16px 80px}
+.wrap{max-width:820px;margin:0 auto;display:grid;gap:56px}
+.label{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.why{font-size:14px;color:var(--muted);margin-bottom:22px;max-width:620px;line-height:1.5}
+h2{font:400 28px/1.1 Fraunces,Georgia,serif;letter-spacing:-.02em;margin-bottom:14px}
+ul{list-style:none;padding:0}
+button{all:unset;cursor:pointer;box-sizing:border-box}
+button:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:10px}
+
+/* A — Hairline ledger */
+.a li+li{border-top:1px solid var(--line)}
+.a button{display:grid;grid-template-columns:28px 1fr auto 20px;align-items:baseline;gap:16px;width:100%;padding:20px 4px}
+.a .n{font:300 14px Fraunces,serif;color:var(--muted);font-variant-numeric:tabular-nums}
+.a .t{font-size:17px;font-weight:500;letter-spacing:-.01em}
+.a .m{font-size:13px;color:var(--muted);margin-top:4px}
+.a .s{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:6px}
+.a .s i{width:5px;height:5px;border-radius:9px;background:var(--ink)}
+.a .ar{color:var(--muted);transition:transform .25s var(--ease),color .25s}
+.a button:hover .ar{transform:translateX(4px);color:var(--ink)}
+.a button:hover .t{text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}
+
+/* B — Editorial */
+.b li+li{border-top:1px solid var(--line)}
+.b button{display:grid;grid-template-columns:1fr auto;gap:6px 24px;width:100%;padding:22px 0}
+.b .k{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);grid-column:1}
+.b .t{font:400 23px/1.2 Fraunces,serif;letter-spacing:-.015em;grid-column:1}
+.b .m{font-size:13px;color:var(--muted);grid-column:1}
+.b .side{grid-column:2;grid-row:1/4;align-self:center;text-align:right;display:grid;gap:8px;justify-items:end}
+.b .s{font:italic 400 14px Fraunces,serif;color:var(--muted)}
+.b .go{font-size:14px;font-weight:500;border-bottom:1px solid var(--ink);padding-bottom:2px;transition:letter-spacing .25s var(--ease)}
+.b button:hover .go{letter-spacing:.02em}
+
+/* C — Timeline rail */
+.c ul{position:relative}
+.c ul::before{content:"";position:absolute;left:7px;top:26px;bottom:26px;width:1px;background:var(--line)}
+.c button{display:grid;grid-template-columns:15px 1fr auto;gap:22px;align-items:center;width:100%;padding:16px 14px 16px 0;border-radius:16px;transition:background .2s}
+.c button:hover{background:var(--surface);box-shadow:0 1px 2px rgb(37 43 38/.05),0 8px 20px rgb(37 43 38/.05)}
+.c .node{width:15px;height:15px;border-radius:99px;border:1.5px solid var(--ink);background:var(--paper);position:relative;z-index:1}
+.c .node.new{background:var(--ink)}
+.c .node.read{border-color:var(--muted)}
+.c .k{font-size:12px;color:var(--muted)}
+.c .t{font-size:17px;font-weight:500;margin:2px 0}
+.c .m{font-size:13px;color:var(--muted)}
+.c .go{width:38px;height:38px;border-radius:99px;display:grid;place-items:center;background:var(--charcoal);color:var(--on);opacity:0;transform:scale(.9);transition:.2s var(--ease)}
+.c button:hover .go,.c button:focus-visible .go{opacity:1;transform:none}
+.c .tag{font-size:12px;font-weight:500;margin-left:8px;color:var(--ink)}
+@media (hover:none){.c .go{opacity:1;transform:none}}
+@media (max-width:560px){.a button{grid-template-columns:22px 1fr 16px}.a .s{grid-column:2;grid-row:2}.b .t{font-size:20px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style></head><body><div class="wrap">
+
+<section class="a"><p class="label">A · Hairline ledger</p>
+<p class="why">Strip it to type and hairlines, the way Linear and Things handle lists. No tiles, no pill borders. The arrow moves and the title underlines on hover.</p>
+<h2>Up next</h2><ul>
+<li><button><span class="n">01</span><span><div class="t">PrepTest 148, Section 2</div><div class="m">Timed section · 25 questions</div></span><span class="s"><i></i>New</span><span class="ar">→</span></button></li>
+<li><button><span class="n">02</span><span><div class="t">Review your conditional translations</div><div class="m">Session recap · November 16</div></span><span class="s"></span><span class="ar">→</span></button></li>
+<li><button><span class="n">03</span><span><div class="t">Conditional Rephrase</div><div class="m">Activity · Put the statement into if-then · assigned Aug 22</div></span><span class="s"><i></i>New</span><span class="ar">→</span></button></li>
+</ul></section>
+
+<section class="b"><p class="label">B · Editorial contents</p>
+<p class="why">Read it like a journal's table of contents. Serif titles carry the weight, the status is a quiet italic, and the action is an underlined word rather than a button.</p>
+<h2>Up next</h2><ul>
+<li><button><span class="k">Timed section</span><span class="t">PrepTest 148, Section 2</span><span class="m">25 questions</span><span class="side"><span class="s">New</span><span class="go">Open</span></span></button></li>
+<li><button><span class="k">Session recap</span><span class="t">Review your conditional translations</span><span class="m">November 16</span><span class="side"><span class="s">&nbsp;</span><span class="go">Read</span></span></button></li>
+<li><button><span class="k">Activity</span><span class="t">Conditional Rephrase</span><span class="m">Put the statement into if-then · assigned Aug 22</span><span class="side"><span class="s">New</span><span class="go">Open</span></span></button></li>
+</ul></section>
+
+<section class="c"><p class="label">C · Timeline rail</p>
+<p class="why">A vertical path through the work. A filled node means new, a ring means started or read. The row lifts onto paper on hover and a charcoal arrow appears; on touch screens it always shows.</p>
+<h2>Up next</h2><ul>
+<li><button><span class="node new"></span><span><div class="k">Timed section<span class="tag">· New</span></div><div class="t">PrepTest 148, Section 2</div><div class="m">25 questions</div></span><span class="go">→</span></button></li>
+<li><button><span class="node read"></span><span><div class="k">Session recap</div><div class="t">Review your conditional translations</div><div class="m">November 16</div></span><span class="go">→</span></button></li>
+<li><button><span class="node new"></span><span><div class="k">Activity<span class="tag">· New</span></div><div class="t">Conditional Rephrase</div><div class="m">Put the statement into if-then · assigned Aug 22</div></span><span class="go">→</span></button></li>
+</ul></section>
+</div></body></html>

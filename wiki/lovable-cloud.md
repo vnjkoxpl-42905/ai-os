@@ -7,7 +7,7 @@ aliases: []
 
 # Lovable Cloud (LSAT U backend platform)
 
-Source: [[Lovable Cloud|Lovable Cloud docs clipping]] (`raw/sources/clips/lovable-cloud/`) (docs.lovable.dev/integrations/cloud, ingested 2026-07-19). This is what runs the LSAT U production backend (`atrcqxpmqrynmtvvyjju.supabase.co`).
+Source: [Lovable Cloud docs clipping](<../raw/sources/clips/lovable-cloud/Lovable Cloud.md>) (`raw/sources/clips/lovable-cloud/`) (docs.lovable.dev/integrations/cloud, ingested 2026-07-19). This is what runs the LSAT U production backend (`atrcqxpmqrynmtvvyjju.supabase.co`).
 
 ## What it is
 
@@ -17,7 +17,7 @@ Lovable Cloud is Lovable's managed backend: a Supabase-based stack (Postgres, Au
 
 - **Database**: schema changes via SQL migrations that *Lovable* applies (pushed migrations do not auto-apply — confirmed 2026-07-19 when two booking migrations sat unapplied while edge functions synced). Daily backups, ~14 days retained, restorable from Cloud tab (restore is destructive/permanent).
 - **Storage**: private-by-default buckets, files up to 2 GB. Public buckets blocked by default (workspace setting). Files are NOT included in DB exports — downloaded separately from Cloud tab → Storage.
-- **Edge Functions**: deployed automatically on git push (this part does auto-sync). Logs visible in Cloud tab.
+- **Edge Functions**: deploy them through the Lovable agent (root CLAUDE.md guardrail). A git push may sync code but is not a proven deploy; confirm with the function's build marker. Logs visible in Cloud tab. (Corrected 2026-11-18.)
 - **Jobs**: cron-style scheduled tasks, created/changed via SQL or Lovable chat.
 - **Auth**: email/phone/Google/Apple; settings managed in Cloud tab.
 - **Secrets**: write-only store for backend keys, injected into edge functions. `SUPABASE_*` and `LOVABLE_*` are reserved/auto-managed; the service-role key exists in the edge-function env (`Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")`) but is never shown to the user.
@@ -27,7 +27,7 @@ Lovable Cloud is Lovable's managed backend: a Supabase-based stack (Postgres, Au
 
 ## Control boundaries (Jay 2 vs Lovable)
 
-Jay 2 can reach the backend only through: the deployed edge functions (admin JWT via `LSATPREP_ADMIN_*` creds), the public REST/auth APIs (anon key), and the git repo (code + migrations that Lovable then deploys/applies).
+As of 2026-11-18 Jay 2 also runs SQL directly through the Lovable MCP `query_database` (free; see memory `minimize-lovable-credits`), so the SQL-editor-only note below is historical (2026-07-19). Other paths: the deployed edge functions (admin JWT via `LSATPREP_ADMIN_*` creds), the public REST/auth APIs (anon key), and the git repo (code + migrations that Lovable then deploys/applies).
 
 **Lovable-UI-only** (no API path, but Joshua can drive manually): the **Cloud tab → SQL editor** runs arbitrary SQL including DDL — discovered 2026-07-19 — so pending migrations never actually block on Lovable chat: Jay 2 writes the SQL, Joshua pastes and Runs. Still UI-only with no external path: secrets management, storage browsing/download, backups/restore, instance sizing, auth provider config, pause/remove, DB exports. There is no service-role key or DB connection string available outside Lovable, by design.
 

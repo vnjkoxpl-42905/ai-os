@@ -22,6 +22,7 @@ lifecycle: active
 - [[recaps/2026-09-21-recap|Draft recap · 2026-09-21]]
 - [[teaching-notes|Teaching notes]]
 - [[open-loops|Open loops]]
+- [[assigned-work/README|Assigned work, all notes as HTML · 2026-11-14]]
 - [[7sage|7Sage]]
 
 

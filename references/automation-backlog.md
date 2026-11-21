@@ -16,7 +16,7 @@ aliases: []
 | **A. Morning brief** | **Built** — `morning-brief` skill. Drafts only, payment flag-only, logs to `wiki/send-ledger.md`. **Not yet scheduled** — runs on request until Joshua opts into a cron. |
 | **B. Reschedule assistant** | Not built. Now the highest-leverage remaining item (25% of his mail). |
 | **C. Payment follow-up** | Not built. `morning-brief` deliberately flags payment rather than drafting it, so this stays a conscious gap. |
-| **D. Session-notes ingest** | **Built** — `ingest` skill + `system/scripts/transcript-inventory.py`. Maps 44 of 52 transcripts; the rest are named gaps, not failures. |
+| **D. Session-notes ingest** | **Built** — `transcript-intake` skill (built under the old `ingest` skill) + `system/scripts/transcript-inventory.py`. Maps 44 of 52 transcripts; the rest are named gaps, not failures. |
 | **E. Student roster** | **Built** — `system/scripts/build-roster.py` → `students/roster.generated.md`. Implemented as a generated markdown table rather than an Obsidian Base, since the data is small and a script is portable to Codex. |
 | **F. Gone-quiet detector** | Not built, but now cheap: the roster carries last-session dates, which is the data it needed. |
 

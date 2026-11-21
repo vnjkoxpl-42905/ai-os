@@ -1,0 +1,123 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="lsatu-interactive-lesson" content="charles-parallel-day3-chains-v1"><title>Conditional Chains in Parallel Questions</title><style>  :root{
+    --cream:#FBF8F1; --ink:#1C1917; --ink-soft:#44403C; --ink-mute:#78716C;
+    --gold:#E8D08B; --gold-deep:#B8983F; --gold-wash:rgba(232,208,139,.16);
+    --card:#FFFFFF; --line:#E7E0D2;
+    --green:#3F6212; --green-wash:rgba(63,98,18,.09);
+    --red:#9F1239; --red-wash:rgba(159,18,57,.07);
+    --serif:"Fraunces","Garamond","Georgia",serif;
+    --sans:"Outfit","Avenir Next","Helvetica Neue",sans-serif;
+    --mono:"JetBrains Mono","SF Mono",Menlo,monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--ink);font-family:var(--sans);line-height:1.65;font-size:17px}
+  .wrap{max-width:800px;margin:0 auto;padding:0 24px}
+
+  header.hero{padding:68px 0 44px;border-bottom:1px solid var(--line)}
+  .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:18px}
+  h1{font-family:var(--serif);font-weight:600;font-size:clamp(36px,6vw,54px);line-height:1.06;letter-spacing:-.01em}
+  .hero p.lede{margin-top:20px;font-size:19px;color:var(--ink-soft);max-width:58ch}
+
+  section{padding:50px 0;border-bottom:1px solid var(--line)}
+  h2{font-family:var(--serif);font-weight:600;font-size:30px;line-height:1.15;margin-bottom:4px}
+  h3{font-family:var(--serif);font-weight:600;font-size:21px;line-height:1.2;margin:30px 0 4px;color:var(--ink)}
+  p{margin:14px 0;color:var(--ink-soft)}
+  p strong{color:var(--ink)}
+  ul{margin:14px 0 14px 22px;color:var(--ink-soft)}
+  ul li{margin:6px 0}
+
+  .callout{background:var(--gold-wash);border-left:3px solid var(--gold-deep);border-radius:0 12px 12px 0;padding:16px 20px;margin:24px 0;font-size:16.5px;color:var(--ink-soft)}
+  .callout strong{color:var(--ink)}
+  .callout p{margin:8px 0}
+
+  ol.steps{margin:20px 0;padding-left:0;list-style:none;counter-reset:step}
+  ol.steps li{counter-increment:step;position:relative;padding:14px 0 14px 54px;border-bottom:1px dashed var(--line);font-size:16px;color:var(--ink-soft)}
+  ol.steps li:last-child{border-bottom:none}
+  ol.steps li::before{content:counter(step);position:absolute;left:0;top:12px;width:34px;height:34px;border-radius:50%;background:var(--ink);color:var(--cream);font-family:var(--serif);display:flex;align-items:center;justify-content:center;font-size:16px}
+  ol.steps li b{color:var(--ink)}
+  ol.steps li span.say{display:block;margin-top:4px}
+
+  table.t{width:100%;border-collapse:collapse;margin:20px 0;font-size:15.5px;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  table.t th{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold-deep);text-align:left;padding:12px 16px;border-bottom:1px solid var(--line)}
+  table.t td{padding:11px 16px;border-bottom:1px dashed var(--line);color:var(--ink-soft);vertical-align:top}
+  table.t tr:last-child td{border-bottom:none}
+  table.t td:first-child{color:var(--ink);font-weight:600;white-space:nowrap}
+
+  .strength{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:22px 0}
+  .strength div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;text-align:center;font-family:var(--serif);font-size:22px;color:var(--ink);box-shadow:0 1px 3px rgba(28,25,23,.06)}
+  .strength div:nth-child(1){border-top:4px solid var(--gold)}
+  .strength div:nth-child(2){border-top:4px solid var(--gold-deep)}
+  .strength div:nth-child(3){border-top:4px solid var(--ink)}
+
+  .diagram{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 22px;margin:20px 0;font-family:var(--serif);font-size:22px;line-height:2;color:var(--ink)}
+  .diagram .ar{color:var(--gold-deep);font-weight:700;margin:0 8px}
+  .neg{position:relative;display:inline-block;padding:0 3px;line-height:1.15}
+  .neg::after{content:"";position:absolute;left:0;right:0;top:0;bottom:0;background:linear-gradient(to bottom left,transparent calc(50% - 1.25px),currentColor calc(50% - 1.25px),currentColor calc(50% + 1.25px),transparent calc(50% + 1.25px))}
+  .quote{font-family:var(--serif);font-size:19px;line-height:1.5;color:var(--ink);border-left:3px solid var(--gold);padding:4px 0 4px 22px;margin:24px 0;font-style:italic}
+  .quote p{color:var(--ink);margin:6px 0}
+
+  .wrong{border:1px solid rgba(159,18,57,.25);background:var(--red-wash);border-radius:12px;padding:12px 16px;margin:10px 0;color:var(--ink-soft)}
+  .wrong b{color:var(--red)}
+
+  .footer-note{padding:34px 0 56px}
+  .mark{font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-mute);opacity:.7}
+  @media (max-width:560px){table.t td:first-child{white-space:normal}.strength{grid-template-columns:1fr}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+  .ok{border:1px solid rgba(63,98,18,.28);background:var(--green-wash);border-radius:12px;padding:12px 16px;margin:10px 0;color:var(--ink-soft)}
+  .ok b{color:var(--green)}
+  details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:10px 0}
+  details summary{cursor:pointer;color:var(--ink)}
+  details p{margin:10px 0 2px}
+</style></head><body>
+<header class="hero"><div class="wrap"><div class="kicker">Wednesday · Goes with Conditional Logic (Medium) Set 4</div><h1>Conditional Chains in Parallel Questions</h1><p class="lede">When the stimulus runs on if-then claims, the thing to match is the chain. Find where the claims link, and where they do not.</p></div></header>
+
+<section><div class="wrap"><h2>When do two claims link?</h2>
+<p>A chain forms when the outcome of one claim is the trigger of another. That repeated idea is the hinge. Where the repeat sits decides everything.</p>
+<table class="t"><thead><tr><th>Where the repeated idea sits</th><th>Written out</th><th>Does it link?</th></tr></thead><tbody>
+<tr><td>Outcome, then trigger</td><td>fountain on <span class="ar">→</span> crowded<br>crowded <span class="ar">→</span> out of cups</td><td>Yes. Fountain on leads to out of cups.</td></tr>
+<tr><td>Trigger, then trigger</td><td>fountain on <span class="ar">→</span> crowded<br>fountain on <span class="ar">→</span> out of cups</td><td>No. Both outcomes follow from the same trigger. They tell you nothing about each other.</td></tr>
+<tr><td>Outcome, then outcome</td><td>fountain on <span class="ar">→</span> crowded<br>street fair <span class="ar">→</span> crowded</td><td>No. Two different things lead to crowded. Crowded does not tell you which.</td></tr>
+</tbody></table>
+<p>This is the copycat step from your Parallel Reasoning note, with one addition: in a conditional, <strong>position tells you something</strong>.</p>
+</div></section>
+
+<section><div class="wrap"><h2>Match the chain</h2>
+<div class="quote"><p>If the fountain is on, the plaza is crowded. If the plaza is crowded, the café runs out of cups. So if the fountain is on, the café runs out of cups.</p></div>
+<p><strong>Requirement:</strong> two conditionals joined at the outcome of the first and the trigger of the second, and a conclusion from the first trigger to the last outcome.</p>
+<div class="ok"><b>Matches.</b> If the lamp is lit, the room is warm. If the room is warm, the window is open. So if the lamp is lit, the window is open.</div>
+<div class="wrong"><b>Link is broken.</b> If the lamp is lit, the room is warm. If the lamp is lit, the window is open. So if the room is warm, the window is open. <i>Both claims start from the same trigger. The conclusion joins two outcomes that were never connected.</i></div>
+<div class="wrong"><b>Chain read backwards.</b> If the lamp is lit, the room is warm. If the room is warm, the window is open. So if the window is open, the lamp is lit. <i>The chain runs one way. The conclusion runs against it.</i></div>
+</div></section>
+
+<section><div class="wrap"><h2>Writing the contrapositive</h2>
+<p>Flip the two sides, then negate both. A conditional and its contrapositive say the same thing.</p>
+<div class="diagram">
+<div>fountain on <span class="ar">→</span> out of cups</div>
+<div><span class="neg">out of cups</span> <span class="ar">→</span> <span class="neg">fountain on</span></div>
+</div>
+<p>In words: if the café still has cups, the fountain was off.</p>
+<div class="callout"><p><strong>The right answer is often the chain written backwards.</strong> If an answer reads like a mismatch and you cannot name the rule it broke, flip it before you cut it.</p></div>
+</div></section>
+
+<section><div class="wrap"><h2>Words that hide a conditional</h2>
+<table class="t"><thead><tr><th>Wording</th><th>Written as</th></tr></thead><tbody>
+<tr><td>Whenever the alarm sounds, the doors lock.</td><td>alarm sounds <span class="ar">→</span> doors lock</td></tr>
+<tr><td>The doors lock only if the alarm sounds.</td><td>doors lock <span class="ar">→</span> alarm sounds</td></tr>
+<tr><td>The doors stay unlocked unless the alarm sounds.</td><td><span class="neg">alarm sounds</span> <span class="ar">→</span> doors unlocked</td></tr>
+<tr><td>None of the guests who arrived late got a seat.</td><td>arrived late <span class="ar">→</span> <span class="neg">got a seat</span></td></tr>
+</tbody></table>
+<p><i>Whenever</i> and <i>only if</i> point opposite ways. That one swap decides whether a chain links, so slow down on them.</p>
+</div></section>
+
+<section><div class="wrap"><h2>Try it before the drill</h2>
+<h3>1</h3>
+<p>Write this as an arrow: "A visitor may enter the archive only if a librarian signs them in."</p>
+<details><summary><b>Open the answer</b></summary><p>may enter <span class="ar">→</span> librarian signs in. <i>Only if</i> puts the thing you need on the outcome side.</p></details>
+<h3>2</h3>
+<p>If the bridge is closed, traffic uses the tunnel. If traffic uses the tunnel, the toll booth backs up. Which conclusion follows?</p>
+<details><summary><b>Open the answer</b></summary><p>If the bridge is closed, the toll booth backs up. Its contrapositive also follows: if the toll booth does not back up, the bridge is not closed.</p></details>
+</div></section>
+
+<div class="footer-note"><div class="wrap"><span class="mark">LSAT U</span></div></div>
+</body></html>

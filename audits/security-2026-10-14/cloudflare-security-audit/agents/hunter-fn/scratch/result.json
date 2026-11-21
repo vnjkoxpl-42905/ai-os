@@ -1,0 +1,562 @@
+{
+ "units": [
+  {
+   "coverage_id": "supabase%2Fconfig.toml%23verify_jwt%3Dfalse%20functions::supabase%2Ffunctions%23signature%20and%20shared-secret%20checks::profile%2Fquick%2Fall-in-scope-subsystems::WEB-PROTOCOL-AND-AUTH.md%23API-key%20scope%20and%20resource%20binding",
+   "disposition": "candidate",
+   "reviewed_paths": [
+    "supabase/config.toml",
+    "supabase/functions/gemini-proxy/index.ts",
+    "supabase/functions/booking-commerce-webhook/index.ts",
+    "supabase/functions/_shared/singleSessionCrypto.ts",
+    "supabase/migrations/20261002090000_automatic_stripe_package_credits.sql",
+    "supabase/functions/single-session-sweeper/index.ts",
+    "supabase/functions/single-session-outbox/index.ts",
+    "supabase/functions/sweep-rrc-grading/index.ts",
+    "supabase/functions/gcal-reconcile/index.ts",
+    "supabase/functions/gcal-sync-pull/index.ts",
+    "supabase/functions/preview-transactional-email/index.ts",
+    "supabase/functions/booking-pass/index.ts",
+    "supabase/functions/mcp-scratch/index.ts",
+    "supabase/functions/mcp/index.ts",
+    "src/lib/mcp/index.ts",
+    "src/lib/mcp/tools/_shared.ts",
+    "src/lib/mcp/admin-client.ts",
+    "src/lib/mcp/tools/get-my-profile.ts",
+    "src/lib/mcp/tools/list-my-homework.ts",
+    "src/lib/mcp/tools/list-my-classroom-items.ts",
+    "supabase/migrations/20260728214214_a7ef2dd1-5911-4892-b84e-4587ba46c5e1.sql",
+    "supabase/functions/public-booking/index.ts",
+    "supabase/functions/_shared/bookingPassLinks.ts",
+    "supabase/functions/booking-upload/index.ts",
+    "supabase/functions/single-session/index.ts",
+    "supabase/functions/_shared/singleSessionCore.ts",
+    "supabase/migrations/20260830010000_booking_event_types.sql",
+    "supabase/migrations/20260915170000_booking_confirmation_details.sql",
+    "supabase/functions/handle-email-events/index.ts"
+   ],
+   "checks": [
+    {
+     "agent_id": "hunter-fn",
+     "reviewed_paths": [
+      "supabase/config.toml"
+     ],
+     "invariant": "Every verify_jwt=false function has its own gate",
+     "method": "source",
+     "result": "Listed: preview-transactional-email, public-booking, booking-upload, gemini-proxy, gcal-sync-pull, gcal-reconcile, booking-pass, booking-commerce-webhook, single-session, single-session-sweeper, single-session-outbox, mcp, sweep-rrc-grading. Each traced below.",
+     "artifact": null
+    },
+    {
+     "agent_id": "hunter-fn",
+     "reviewed_paths": [
+      "supabase/functions/gemini-proxy/index.ts"
+     ],
+     "invariant": "Internal LLM proxy rejects callers without EDGE_INTERNAL_KEY and fails closed when it is unset",
+     "method": "source",
+     "result": "Holds: internalKey defaults to empty string and the guard rejects when it is empty; constant-time compare; model pinned server-side. No open LLM spend.",
+     "artifact": null
+    },
+    {
+     "agent_id": "hunter-fn",
+     "reviewed_paths": [
+      "supabase/functions/booking-commerce-webhook/index.ts",
+      "supabase/functions/_shared/singleSessionCrypto.ts"
+     ],
+     "invariant": "Stripe events verified with constructEventAsync and the dedicated webhook secret; Cal.com HMAC over raw body with constant-time compare; both fail closed",
+     "method": "source",
+     "result": "Holds: requiredEnv throws for STRIPE_BOOKING_WEBHOOK_SECRET and CALCOM_BOOKING_WEBHOOK_SECRET, raw body read before parse, Stripe tolerance 300s, safeEqual for Cal.com, livemode checked against STRIPE_LIVEMODE.",
+     "artifact": null
+    },
+    {
+     "agent_id": "hunter-fn",
+     "reviewed_paths": [
+      "supabase/functions/booking-commerce-webhook/index.ts",
+      "supabase/migrations/20261002090000_automatic_stripe_package_credits.sql"
+     ],
+     "invariant": "Duplicate Stripe delivery cannot double-grant package credits or double-finalize a single session",
+     "method": "source",
+     "result": "Holds in source: auto_grant_stripe_payment locks the stripe_payments row FOR UPDATE and returns early unless grant_state='awaiting'; admin notice only when the ledger row is newly inserted; finalize_single_session_payment receives the provider event id; Cal.com upserts keyed on provider_booking_id and provider_event_id.",
+     "artifact": null
+    },
+    {
+     "agent_id": "hunter-fn",
+     "reviewed_paths": [
+      "supabase/functions/single-session-sweeper/index.ts",
+      "supabase/functions/single-session-outbox/index.ts",
+      "supabase/functions/sweep-rrc-grading/index.ts",
+      "supabase/functions/gcal-reconcile/index.ts",
+      "supabase/functions/gcal-sync-pull/index.ts"
+     ],
+     "invariant": "Worker endpoints require BOOKING_WORKER_SECRET (constant time, fail closed when empty), service-role bearer, single-use DB ticket, or admin JWT",
+     "method": "source",
+     "result": "Holds: sweeper and sweep-rrc-grading use requiredEnv (throws when unset); outbox returns false when expected is empty; gcal-reconcile requires workerKey.length>0 (plain === compare, hardening only); gcal-sync-pull accepts ticket, service role, or admin role.",
+     "artifact": null
+    },
+    {
+     "agent_id": "hunter-fn",
+     "reviewed_paths": [
+      "supabase/functions/preview-transactional-email/index.ts"
+     ],
+     "invariant": "Template preview gated by LOVABLE_API_KEY and fails closed",
+     "method": "source",
+     "result": "Holds: 500 when key unset, 401 on mismatch (non-constant-time compare, hardening). Renders only static previewData.",
+     "artifact": null
+    },
+    {
+     "agent_id": "hunter-fn",
+     "reviewed_paths": [
+      "supabase/functions/booking-pass/index.ts",
+      "supabase/functions/mcp-scratch/index.ts"
+     ],
+     "invariant": "Retired or scratch functions expose nothing",
+     "method": "source",
+     "result": "booking-pass returns 410 only; mcp-scratch returns version and timestamp only.",
+     "artifact": null
+    },
+    {
+     "agent_id": "hunter-fn",
+     "reviewed_paths": [
+      "supabase/functions/mcp/index.ts",
+      "src/lib/mcp/index.ts",
+      "src/lib/mcp/tools/_shared.ts",
+      "src/lib/mcp/admin-client.ts",
+      "src/lib/mcp/tools/get-my-profile.ts",
+      "src/lib/mcp/tools/list-my-homework.ts",
+      "src/lib/mcp/tools/list-my-classroom-items.ts",
+      "supabase/migrations/20260728214214_a7ef2dd1-5911-4892-b84e-4587ba46c5e1.sql"
+     ],
+     "invariant": "MCP tools act only with the caller's own token and admin tools re-check admin",
+     "method": "source",
+     "result": "Holds: OAuth issuer pinned to the project ref with audience 'authenticated'; every tool uses an anon-key client carrying the caller's bearer so RLS applies; self tools filter by ctx.getUserId(); admin RPCs call mcp_require_admin(); list tools call requireAdmin.",
+     "artifact": null
+    },
+    {
+     "agent_id": "hunter-fn",
+     "reviewed_paths": [
+      "supabase/functions/public-booking/index.ts",
+      "supabase/functions/_shared/bookingPassLinks.ts"
+     ],
+     "invariant": "Anonymous slug caller reads only its own pass and no PII; slug is unguessable",
+     "method": "source",
+     "result": "Holds: slug tail is 26 chars from a 31-char alphabet via getRandomValues (about 128 bits); info DTO omits email, name and slug; redemptions filtered by the resolved pass id; invalid-slug lockout per IP hash; identity comes only from the pass row.",
+     "artifact": null
+    },
+    {
+     "agent_id": "hunter-fn",
+     "reviewed_paths": [
+      "supabase/functions/booking-upload/index.ts"
+     ],
+     "invariant": "Anonymous uploads bound to the resolved pass, size and type limited, storage key confined",
+     "method": "source",
+     "result": "Holds for binding and limits: 5 files, 20 MB each, 60 MB total, extension allowlist plus MIME blocklist, key prefix booking/<pass.id>/; discard and adopt lookups filter by pass id; cleanup requires service key or EDGE_INTERNAL_KEY and an unset env var (undefined) never equals the empty header. idempotency_key and client_upload_id characters are unconstrained in the key (hardening note).",
+     "artifact": null
+    },
+    {
+     "agent_id": "hunter-fn",
+     "reviewed_paths": [
+      "supabase/functions/single-session/index.ts",
+      "supabase/functions/_shared/singleSessionCore.ts",
+      "supabase/migrations/20260830010000_booking_event_types.sql",
+      "supabase/migrations/20260915170000_booking_confirmation_details.sql",
+      "supabase/functions/booking-commerce-webhook/index.ts",
+      "supabase/functions/single-session-outbox/index.ts"
+     ],
+     "invariant": "Turnstile fails closed and an anonymous hold cannot obtain another person's negotiated price",
+     "method": "source",
+     "result": "Turnstile holds (requiredEnv TURNSTILE_SECRET throws when unset; success===true required). Price binding fails: booking_price_cents applies booking_price_overrides keyed on the caller-typed, unverified email; the quote is persisted from that email and the webhook validates payment against that quote. Candidate single-session/hold/booking_price_cents-keyed-on-unverified-caller-email.",
+     "artifact": null
+    },
+    {
+     "agent_id": "hunter-fn",
+     "reviewed_paths": [
+      "supabase/functions/handle-email-events/index.ts"
+     ],
+     "invariant": "Lovable email-event webhook verifies its sender",
+     "method": "source",
+     "result": "Signature check is delegated to @lovable.dev/email-js createEmailWebhookHandler with LOVABLE_API_KEY; library internals and the deployed verify_jwt default for this function (absent from config.toml) are not visible. Writes are limited to suppression and audit rows. Recorded as hardening, not a candidate.",
+     "artifact": null
+    }
+   ],
+   "candidate_fingerprints": [
+    "single-session/hold/booking_price_cents-keyed-on-unverified-caller-email"
+   ],
+   "unresolved": []
+  },
+  {
+   "coverage_id": "supabase%2Ffunctions%23service-role%20functions%20with%20user%20JWT::supabase%2Ffunctions%23caller%20authorization%20before%20service-role%20use::profile%2Fquick%2Fall-in-scope-subsystems::ATTACK-CLASSES.md%23Access%20control",
+   "disposition": "candidate",
+   "reviewed_paths": [
+    "supabase/functions/_shared/authClaims.ts",
+    "supabase/functions/admin-manage-users/index.ts",
+    "supabase/functions/gmail/index.ts",
+    "supabase/functions/gdrive/index.ts",
+    "supabase/functions/gcal-event-write/index.ts",
+    "supabase/functions/gcal-list-calendars/index.ts",
+    "supabase/functions/gcal-smoke/index.ts",
+    "supabase/functions/memory-admin/index.ts",
+    "supabase/functions/admin-tutor-corpus/index.ts",
+    "supabase/functions/booking-pass-admin/index.ts",
+    "supabase/functions/send-assignment-email/index.ts",
+    "supabase/functions/stripe-sync/index.ts",
+    "supabase/functions/inspect/index.ts",
+    "supabase/functions/polish-message/index.ts",
+    "supabase/functions/ingest-session-note/index.ts",
+    "supabase/functions/scan-session-notes/index.ts",
+    "supabase/functions/synthesize-session-bundle/index.ts",
+    "supabase/functions/teacher-link-search/index.ts",
+    "supabase/functions/ingest-lsat-knowledge/index.ts",
+    "supabase/functions/send-section-report/index.ts",
+    "supabase/functions/parse-external-work/index.ts",
+    "supabase/functions/grade-rrc-section/index.ts",
+    "supabase/functions/onboarding-intake-notify/index.ts",
+    "supabase/functions/retrieve-lsat-knowledge/index.ts",
+    "supabase/functions/student-booking/index.ts",
+    "supabase/functions/_shared/linkPassToAccount.ts",
+    "supabase/functions/public-booking/index.ts",
+    "supabase/functions/booking-upload/index.ts",
+    "supabase/config.toml",
+    "src/contexts/AuthContext.tsx",
+    "supabase/functions/study-chat/index.ts",
+    "supabase/functions/activity-coach/index.ts",
+    "supabase/functions/tutor-chat/index.ts",
+    "supabase/functions/gemini-proxy/index.ts"
+   ],
+   "checks": [
+    {
+     "agent_id": "hunter-fn",
+     "reviewed_paths": [
+      "supabase/functions/_shared/authClaims.ts"
+     ],
+     "invariant": "Shared verifier rejects missing, invalid, or sub-less tokens",
+     "method": "source",
+     "result": "Holds: getClaims on an anon client verifies the signature locally; returns null on error or missing sub, so anon-key JWTs are rejected.",
+     "artifact": null
+    },
+    {
+     "agent_id": "hunter-fn",
+     "reviewed_paths": [
+      "supabase/functions/admin-manage-users/index.ts",
+      "supabase/functions/gmail/index.ts",
+      "supabase/functions/gdrive/index.ts",
+      "supabase/functions/gcal-event-write/index.ts",
+      "supabase/functions/gcal-list-calendars/index.ts",
+      "supabase/functions/gcal-smoke/index.ts",
+      "supabase/functions/memory-admin/index.ts",
+      "supabase/functions/admin-tutor-corpus/index.ts",
+      "supabase/functions/booking-pass-admin/index.ts",
+      "supabase/functions/send-assignment-email/index.ts",
+      "supabase/functions/stripe-sync/index.ts",
+      "supabase/functions/inspect/index.ts",
+      "supabase/functions/polish-message/index.ts",
+      "supabase/functions/ingest-session-note/index.ts",
+      "supabase/functions/scan-session-notes/index.ts",
+      "supabase/functions/synthesize-session-bundle/index.ts",
+      "supabase/functions/teacher-link-search/index.ts",
+      "supabase/functions/ingest-lsat-knowledge/index.ts"
+     ],
+     "invariant": "Admin-surface functions authenticate and check the admin role before any service-role read or write",
+     "method": "source",
+     "result": "Holds: each verifies the JWT (getClaims, getUser or userFromRequest) then requires a user_roles admin row or has_role(admin) before acting; failures return 401 or 403.",
+     "artifact": null
+    },
+    {
+     "agent_id": "hunter-fn",
+     "reviewed_paths": [
+      "supabase/functions/send-section-report/index.ts",
+      "supabase/functions/parse-external-work/index.ts",
+      "supabase/functions/grade-rrc-section/index.ts",
+      "supabase/functions/onboarding-intake-notify/index.ts",
+      "supabase/functions/retrieve-lsat-knowledge/index.ts"
+     ],
+     "invariant": "Student-callable service-role functions bind request-supplied ids to the caller",
+     "method": "source",
+     "result": "Holds: section_history.user_id must equal the caller; upload.student_id owner or admin; assignment.student_id owner or admin (service-role bearer compared in constant time); onboarding default path uses the caller's own class_id and sweep requires admin; knowledge bodies and higher limits require admin or the internal key (fail closed when empty).",
+     "artifact": null
+    },
+    {
+     "agent_id": "hunter-fn",
+     "reviewed_paths": [
+      "supabase/functions/student-booking/index.ts",
+      "supabase/functions/_shared/linkPassToAccount.ts",
+      "supabase/functions/public-booking/index.ts",
+      "supabase/functions/booking-pass-admin/index.ts",
+      "supabase/functions/booking-upload/index.ts",
+      "supabase/config.toml",
+      "src/contexts/AuthContext.tsx"
+     ],
+     "invariant": "A booking pass issued to an email attaches only to an account that has proven control of that email",
+     "method": "source",
+     "result": "Fails in source unless Auth enforces email confirmation: student-booking attaches any account-less active pass whose student_email matches the JWT email claim; linkPassToAccount and findAuthUserIdByEmail match listUsers emails without checking email_confirmed_at. config.toml has no [auth] section, so the deployed confirmation setting is not visible. Candidate booking-pass/email-auto-link-trusts-unverified-account-email.",
+     "artifact": null
+    },
+    {
+     "agent_id": "hunter-fn",
+     "reviewed_paths": [
+      "supabase/functions/study-chat/index.ts",
+      "supabase/functions/activity-coach/index.ts",
+      "supabase/functions/tutor-chat/index.ts"
+     ],
+     "invariant": "Service-role clients in student functions use the verified user id",
+     "method": "source",
+     "result": "Holds: study-chat only calls getUser (its Authorization override makes the client act as the user); activity-coach passes _au.user.id; tutor-chat filters attempts by user.id and reads only shared knowledge.",
+     "artifact": null
+    },
+    {
+     "agent_id": "hunter-fn",
+     "reviewed_paths": [
+      "supabase/functions/gemini-proxy/index.ts"
+     ],
+     "invariant": "CORS '*' combined with cookie credentials",
+     "method": "source",
+     "result": "Not reportable: functions use bearer tokens, not cookies, and send no Access-Control-Allow-Credentials.",
+     "artifact": null
+    }
+   ],
+   "candidate_fingerprints": [
+    "booking-pass/email-auto-link-trusts-unverified-account-email"
+   ],
+   "unresolved": []
+  },
+  {
+   "coverage_id": "supabase%2Ffunctions%23LLM%20tool-calling%20functions::supabase%2Ffunctions%23tool%20dispatch%20authority::profile%2Fquick%2Fall-in-scope-subsystems::AI-AND-LLM.md%23Excessive%20agency%20and%20confused-deputy%20authority",
+   "disposition": "covered",
+   "reviewed_paths": [
+    "supabase/functions/ta-agent/index.ts",
+    "supabase/functions/ta-chat/index.ts",
+    "supabase/functions/teacher-operator-chat/index.ts",
+    "supabase/functions/tutor-chat/index.ts",
+    "supabase/functions/study-chat/index.ts",
+    "supabase/functions/activity-coach/index.ts",
+    "supabase/functions/voice-coach-respond/index.ts",
+    "supabase/functions/motivation-engine/index.ts"
+   ],
+   "checks": [
+    {
+     "agent_id": "hunter-fn",
+     "reviewed_paths": [
+      "supabase/functions/ta-agent/index.ts",
+      "supabase/functions/ta-chat/index.ts",
+      "supabase/functions/teacher-operator-chat/index.ts"
+     ],
+     "invariant": "Tool-calling agents that act with service-role authority are reachable only by admins",
+     "method": "source",
+     "result": "Holds: verifyAdmin (getUser then user_roles admin) runs before body parse and before any tool dispatch; teacher-operator-chat checks admin before reading the payload. Tool student arguments are admin-chosen; no student principal reaches these tools.",
+     "artifact": null
+    },
+    {
+     "agent_id": "hunter-fn",
+     "reviewed_paths": [
+      "supabase/functions/tutor-chat/index.ts",
+      "supabase/functions/study-chat/index.ts",
+      "supabase/functions/activity-coach/index.ts",
+      "supabase/functions/voice-coach-respond/index.ts",
+      "supabase/functions/motivation-engine/index.ts"
+     ],
+     "invariant": "Student-facing chats have no tool path to other students' data and scope reads to the JWT user",
+     "method": "source",
+     "result": "Holds: no tools are sent; tutor-chat reads attempts with .eq('user_id', user.id) and writes events for user.id; activity-coach grades with the verified user id; voice-coach-respond and motivation-engine authenticate via getUser and do not use the service role.",
+     "artifact": null
+    },
+    {
+     "agent_id": "hunter-fn",
+     "reviewed_paths": [
+      "supabase/functions/tutor-chat/index.ts"
+     ],
+     "invariant": "No cross-session context bleed through in-memory caches",
+     "method": "source",
+     "result": "knowledgeCache is keyed by qid and holds shared question knowledge only, not per-user data.",
+     "artifact": null
+    }
+   ],
+   "candidate_fingerprints": [],
+   "unresolved": []
+  }
+ ],
+ "candidates": [
+  {
+   "proposed_verdict": "needs_validation",
+   "fingerprint": "single-session/hold/booking_price_cents-keyed-on-unverified-caller-email",
+   "title": "Anonymous single-session hold gets a student's negotiated price by typing that student's email",
+   "description": "The public single-session booking (verify_jwt=false, Turnstile only) prices the hold with booking_price_cents(event_slug, email), where email is whatever the anonymous booker typed. booking_price_overrides holds per-student rates keyed by email. The quote is persisted from that same email and the Stripe webhook validates the payment against that quote, so a stranger who knows an override email can buy a session at that student's rate. The booker can also list their own address in guests, and the outbox puts guests on the Calendar invite, so they receive the Meet link. The hold response also reveals which emails carry an override.",
+   "claimed_root_cause": "A price entitlement is bound to an unverified, caller-supplied identifier (the booker email) instead of an authenticated principal or a server-issued capability.",
+   "trace": [
+    {
+     "kind": "entrypoint",
+     "file": "supabase/functions/single-session/index.ts",
+     "line": 393,
+     "scope": "Deno.serve action=hold",
+     "description": "Anonymous POST with name, email, guests, start_at and turnstile_token."
+    },
+    {
+     "kind": "propagation",
+     "file": "supabase/functions/single-session/index.ts",
+     "line": 395,
+     "scope": "Deno.serve action=hold",
+     "description": "email = normalizeEmail(body.email); no proof of ownership."
+    },
+    {
+     "kind": "propagation",
+     "file": "supabase/functions/single-session/index.ts",
+     "line": 403,
+     "scope": "Deno.serve action=hold",
+     "description": "booking_price_cents is called with the caller's email to set amountCents."
+    },
+    {
+     "kind": "propagation",
+     "file": "supabase/migrations/20260830010000_booking_event_types.sql",
+     "line": 90,
+     "scope": "public.booking_price_cents",
+     "description": "Override row selected where lower(o.email)=lower(_email)."
+    },
+    {
+     "kind": "propagation",
+     "file": "supabase/migrations/20260915170000_booking_confirmation_details.sql",
+     "line": 66,
+     "scope": "public.claim_single_session_slot",
+     "description": "quoted_amount_cents persisted from booking_price_cents(event_slug, booking.email)."
+    },
+    {
+     "kind": "propagation",
+     "file": "supabase/functions/single-session/index.ts",
+     "line": 560,
+     "scope": "Deno.serve action=hold",
+     "description": "Checkout fingerprint built with amountCents and the typed email."
+    },
+    {
+     "kind": "sink",
+     "file": "supabase/functions/single-session/index.ts",
+     "line": 581,
+     "scope": "Deno.serve action=hold",
+     "description": "Stripe Checkout session created at the override price; the webhook later accepts a payment matching quoted_amount_cents."
+    }
+   ],
+   "evidence": [
+    {
+     "file": "supabase/migrations/20260830010000_booking_event_types.sql",
+     "line": 52,
+     "description": "booking_price_overrides is keyed by email; the comment says the booker is not necessarily signed in."
+    },
+    {
+     "file": "supabase/functions/single-session/index.ts",
+     "line": 401,
+     "description": "The only gate before pricing is Turnstile, which proves a human, not email ownership."
+    },
+    {
+     "file": "supabase/functions/booking-commerce-webhook/index.ts",
+     "line": 280,
+     "description": "Webhook uses booking.quoted_amount_cents as the expected amount."
+    },
+    {
+     "file": "supabase/functions/_shared/singleSessionCore.ts",
+     "line": 91,
+     "description": "normalizeGuests accepts up to 10 arbitrary guest emails."
+    },
+    {
+     "file": "supabase/functions/single-session-outbox/index.ts",
+     "line": 180,
+     "description": "Guests are added as Calendar attendees, so the booker can receive the invite and Meet link."
+    }
+   ],
+   "blockers": [
+    "Edge function and SQL not executed locally (no OS sandbox available).",
+    "Whether production booking_price_overrides holds any rate below the event default is not visible in source.",
+    "Stripe Checkout handling of a prefilled customer_email is provider-side."
+   ],
+   "validation_plan": {
+    "local": "In a local Supabase with the migrations applied, insert booking_price_overrides(email='student@example.test', event_slug='single-session', price_cents=1000), call claim_single_session_slot as service_role with _email='student@example.test', and confirm quoted_amount_cents=1000 while another email gets 4500.",
+    "deployment": "Owner check: query booking_price_overrides for rows with price_cents below the event default. Fix by binding overrides to an authenticated user id or a server-minted one-off link, and quote the default price for anonymous holds."
+   }
+  },
+  {
+   "proposed_verdict": "needs_validation",
+   "fingerprint": "booking-pass/email-auto-link-trusts-unverified-account-email",
+   "title": "Booking passes auto-attach to any account whose email matches, with no email-verification check",
+   "description": "Admins create booking passes by name and email with student_id NULL. student-booking runs activePassRow on every request: when the caller has no pass, it finds an active account-less pass whose student_email equals the JWT email claim, sets student_id to the caller, and the caller can then book sessions against that pass's paid credits. linkPassToAccount (public-booking book path, booking-pass-admin) and findAuthUserIdByEmail also match accounts by listUsers email without checking email_confirmed_at. If Auth issues sessions to unconfirmed emails, someone who registers with a student's address first takes over the pass, its Meet links, and the uploads and history tied to it.",
+   "claimed_root_cause": "Pass ownership is derived from the email string on an account rather than from a verified email (email_confirmed_at) or an explicit admin link.",
+   "trace": [
+    {
+     "kind": "entrypoint",
+     "file": "supabase/functions/student-booking/index.ts",
+     "line": 59,
+     "scope": "Deno.serve",
+     "description": "Authenticated request carrying a bearer JWT."
+    },
+    {
+     "kind": "propagation",
+     "file": "supabase/functions/student-booking/index.ts",
+     "line": 81,
+     "scope": "Deno.serve",
+     "description": "userEmail taken from the JWT email claim."
+    },
+    {
+     "kind": "propagation",
+     "file": "supabase/functions/student-booking/index.ts",
+     "line": 90,
+     "scope": "Deno.serve",
+     "description": "activePassRow(supabase, userId, userEmail) runs for every action."
+    },
+    {
+     "kind": "propagation",
+     "file": "supabase/functions/student-booking/index.ts",
+     "line": 38,
+     "scope": "activePassRow",
+     "description": "Service-role query for an active pass with student_id NULL and student_email ilike the claim email."
+    },
+    {
+     "kind": "propagation",
+     "file": "supabase/functions/student-booking/index.ts",
+     "line": 42,
+     "scope": "activePassRow",
+     "description": "Pass permanently updated to student_id = caller."
+    },
+    {
+     "kind": "sink",
+     "file": "supabase/functions/student-booking/index.ts",
+     "line": 209,
+     "scope": "Deno.serve action=book",
+     "description": "bookSession consumes a credit of that pass for the caller."
+    }
+   ],
+   "evidence": [
+    {
+     "file": "supabase/functions/_shared/linkPassToAccount.ts",
+     "line": 20,
+     "description": "findAuthUserIdByEmail matches listUsers by email only, with no email_confirmed_at check."
+    },
+    {
+     "file": "supabase/functions/_shared/linkPassToAccount.ts",
+     "line": 34,
+     "description": "linkPassToAccount writes student_id for the matched account."
+    },
+    {
+     "file": "src/contexts/AuthContext.tsx",
+     "line": 187,
+     "description": "Self-service email/password signUp is exposed; confirmation enforcement lives in Auth settings."
+    },
+    {
+     "file": "supabase/config.toml",
+     "line": 1,
+     "description": "No [auth] section or enable_confirmations setting exists in the repository."
+    }
+   ],
+   "blockers": [
+    "Lovable Cloud Auth 'confirm email' setting is not in source. If confirmation is required, an unconfirmed signup cannot get a JWT and the student-booking path is closed (linkPassToAccount would still attach the pass to an unusable account).",
+    "Edge function not executed locally."
+   ],
+   "validation_plan": {
+    "local": "In a local Supabase with enable_confirmations=false, create an account-less active pass for victim@example.test, sign up a second user with that email, call student-booking action=info, and observe booking_passes.student_id set to that user's id; repeat with confirmations on.",
+    "deployment": "Owner check: in Lovable Cloud Auth settings, confirm whether email confirmation is required and whether unconfirmed users can sign in. Fix by requiring email_confirmed_at (and email_verified for OAuth identities) before any email-based pass link."
+   }
+  }
+ ],
+ "hardening": [
+  "booking-upload cleanup compares the service-role key and EDGE_INTERNAL_KEY with !== (non-constant time); gcal-reconcile compares X-Worker-Secret with ===; preview-transactional-email compares LOVABLE_API_KEY with !==. All fail closed when the env var is unset; switch to the constant-time helper used elsewhere.",
+  "booking-upload places idempotency_key (8-200 chars) and client_upload_id (8-100 chars) into the storage key with no character restriction, so '/' and '..' segments are accepted under booking/<pass_id>/. Hosted S3 keys are literal, so no escape was shown; restrict both to [A-Za-z0-9-].",
+  "booking-upload resolves the slug before any rate limit and does not count misses toward the invalid-slug lockout that public-booking applies; slugs carry about 128 bits, so this is not exploitable today.",
+  "public-booking and booking-upload key their throttles on the first X-Forwarded-For hop, which the client controls; single-session already prefers cf-connecting-ip or the last hop.",
+  "handle-email-events is not listed in supabase/config.toml and delegates signature verification to @lovable.dev/email-js; confirm the deployed verify_jwt mode and that the library rejects unsigned events (writes are limited to suppressed_emails and email_send_log).",
+  "booking-commerce-webhook (Cal.com branch) matches a student by a unique case-insensitive display_name when the attendee email does not match, then mirrors a Calendar event for that student; attendee fields are booker-typed, so a stranger's booking can be misattributed to a student.",
+  "single-session hold replay returns the original booking_token (decrypted from the checkout fingerprint success_url) to any caller presenting the same client_idempotency_key; safe only while that key stays client-random.",
+  "study-chat forwards client-supplied messages with arbitrary roles (including system) to the model; same-principal only, with no tools or data access."
+ ],
+ "uncovered": []
+}

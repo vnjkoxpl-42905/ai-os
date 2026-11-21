@@ -1,0 +1,188 @@
+{"provider": "claude", "model": "CLI default (unresolved)", "mode": "inspect", "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\design\\reviews\\classroom-quality-20261028\\claude-inspect-final\\claudex-9rfsnksf"}
+{
+  "status": "completed",
+  "mode": "inspect",
+  "provider": "claude",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "claude",
+    "builder": "codex",
+    "inspector": "claude"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-my-work-20261026",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os\\design\\reviews\\classroom-quality-20261028\\PLAN.md",
+  "plan_sha256": "e470285d30f8b95d0de317e33812d3aa187aef6deef58ba8a8095b0527434196",
+  "requested_model": null,
+  "requested_effort": null,
+  "base": "18fc8af7e1ff7d83defb62b9e0d8dd720f90b3a3",
+  "snapshot": {
+    "base": "18fc8af7e1ff7d83defb62b9e0d8dd720f90b3a3",
+    "files": [
+      {
+        "path": "scripts/verification/start-teacher-home-preview.mjs",
+        "kind": "file",
+        "sha256": "10e1b173bd492c5a73346173bab4701826025325fb93f3fc83e09704e923e2f1"
+      },
+      {
+        "path": "scripts/verification/teacher-home-preview.html",
+        "kind": "file",
+        "sha256": "764de64adc816feb6c96a3b6a0f92b9b23d19e5d32195330eaef826ef7388ec2"
+      },
+      {
+        "path": "scripts/verification/teacher-home-preview.tsx",
+        "kind": "file",
+        "sha256": "003a0a96e324deec6d9fd1177977bd29f77964a297904ad8887e50f0114dfd35"
+      },
+      {
+        "path": "src/components/classroom/home/home.css",
+        "kind": "file",
+        "sha256": "8934eb2764e374542c9f4d4abccf4415fc68b491352d4e7606cf33558079a2e2"
+      },
+      {
+        "path": "src/components/classroom/home/teacher/TeacherHomeView.test.tsx",
+        "kind": "file",
+        "sha256": "a7449ddb1b955ac4e91ddc096ae5db3abad8355ef9b8b807d5b86097a233c02e"
+      },
+      {
+        "path": "src/components/classroom/home/teacher/TeacherHomeView.tsx",
+        "kind": "file",
+        "sha256": "b5882528fb0ae888aa3d1fb68e4b7b235ce582d22692400075abeeb072426b0d"
+      },
+      {
+        "path": "src/components/classroom/home/teacher/TeacherTasks.tsx",
+        "kind": "file",
+        "sha256": "2c29df334bfea04a1e22dd02e68b2d721f2e176d80848c61e4805c41c8175be4"
+      },
+      {
+        "path": "src/components/classroom/home/teacher/teacherWeek.test.ts",
+        "kind": "file",
+        "sha256": "b996c12a55783f2971651ec91c0b8d126b961196993d0edcef88520764d6e038"
+      },
+      {
+        "path": "src/components/classroom/home/teacher/teacherWeek.ts",
+        "kind": "file",
+        "sha256": "fccbfee0d3e3160d21d39779e80bbdcb344119529d01066efb6f7e4ffec57c83"
+      }
+    ],
+    "diff_sha256": "951d8f3b8b681111ad026c205da60e171a796198581242a40d533b3ec4dd6732",
+    "scope": [
+      "scripts/verification/start-teacher-home-preview.mjs",
+      "scripts/verification/teacher-home-preview.html",
+      "scripts/verification/teacher-home-preview.tsx",
+      "src/components/classroom/home/home.css",
+      "src/components/classroom/home/teacher/TeacherHomeView.test.tsx",
+      "src/components/classroom/home/teacher/TeacherHomeView.tsx",
+      "src/components/classroom/home/teacher/TeacherTasks.tsx",
+      "src/components/classroom/home/teacher/TeachingDesk.test.tsx",
+      "src/components/classroom/home/teacher/teacherWeek.test.ts",
+      "src/components/classroom/home/teacher/teacherWeek.ts"
+    ],
+    "sha256": "d036931f6ac7f0d8695e92774ba78ebf3b54336d04967c992b5b1c859cba90c6"
+  },
+  "previous": null,
+  "started_at": 1793212911.958273,
+  "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\design\\reviews\\classroom-quality-20261028\\claude-inspect-final\\claudex-9rfsnksf",
+  "scope": [
+    "scripts/verification/start-teacher-home-preview.mjs",
+    "scripts/verification/teacher-home-preview.html",
+    "scripts/verification/teacher-home-preview.tsx",
+    "src/components/classroom/home/home.css",
+    "src/components/classroom/home/teacher/TeacherHomeView.test.tsx",
+    "src/components/classroom/home/teacher/TeacherHomeView.tsx",
+    "src/components/classroom/home/teacher/TeacherTasks.tsx",
+    "src/components/classroom/home/teacher/TeachingDesk.test.tsx",
+    "src/components/classroom/home/teacher/teacherWeek.test.ts",
+    "src/components/classroom/home/teacher/teacherWeek.ts"
+  ],
+  "cli_version": "2.1.309 (Claude Code)",
+  "executable": [
+    "C:\\Users\\Joshu\\.local\\bin\\claude.EXE"
+  ],
+  "exit_code": 0,
+  "session_id": "bd78b532-6e10-4ba4-89a4-a371b559bf89",
+  "response": {
+    "verdict": "APPROVED",
+    "summary": "I found no material unresolved defects in the scoped final code. I read the Home source and CSS diffs, the calendar helpers and their tests, and the preview harness script. I did not run tests, typecheck or build.\n\nI actually viewed the pixels of after-desktop.png and viewport-390.png.\n\n- **Desktop:** Off-white ground with a charcoal selected day tile and a charcoal first follow-up card. A real seven-day strip shows counts, and Next up, the after-session sheet and the decisions rail are kept. The composition is clearly less uniform than uniform pale boxes.\n- **390px phone:** The calendar strip scrolls inside its own region with a visible scrollbar. The page itself does not scroll sideways, and day tiles are legible.\n- **Not a new score:** I am not assigning a new 100-point grade. These are synthetic components in a simplified shell, so student Home, real devices, auth/backend and dark-theme runtime remain unverified.\n\nCode review notes:\n- Calendar semantics are sound. Day keys use the validated calendar zone. Date-only events stay on their authored date. Coverage comes from the snapshot's seven-day window, and aged, invalid or missing snapshots show \"Unknown\" rather than zero. Past timed starts are filtered, and selection falls back to today when it leaves the window.\n- Removed controls (\"Open email\" header link, \"All students\" menu item, \"Payments and history\" button) all have equivalent links elsewhere in the file, at lines 428, 466 and 565 of TeacherHomeView.tsx. Routes are preserved.\n- The More menu now uses the accessible dropdown primitive, with tests for Escape and focus return.\n- The preview harness binds to 127.0.0.1 and replaces the Supabase client with a throwing stub.\n\nLow-priority improvements, none blocking:\n1. A speech-input accessible-name mismatch on \"None shown\" day tiles.\n2. A day with no loaded events can be labelled \"None shown\" even when the cursor cap hides later events.\n3. Two visual nits visible in the desktop screenshot.\n\nRecommendations with expected benefit / risk / acceptance:\n- **Align accessible names with visible text.**\n  - Benefit: speech-control users can activate a day by saying what they see.\n  - Risk: low.\n  - Acceptance: the aria-label contains the visible status string.\n- **Treat days after the last loaded event as unknown when next_cursor is set.**\n  - Benefit: the strip never implies a free day when events were truncated.\n  - Risk: more \"Unknown\" tiles on busy weeks.\n  - Acceptance: a test with a cursor and a late last event.\n- **Add a few px between the caption and the strip, and drop the duplicated hairline** above \"The next seven days\".\n  - Benefit: cleaner rhythm.\n  - Risk: low.\n  - Acceptance: matched before/after screenshots.",
+    "findings": [
+      {
+        "id": "R-A11Y-1",
+        "severity": "low",
+        "path": "src/components/classroom/home/teacher/TeacherHomeView.tsx",
+        "evidence": "Day buttons show the visible text 'None shown' but the aria-label says 'No upcoming events shown'. The visible string is not a substring of the accessible name, which is a WCAG 2.5.3 Label in Name mismatch for speech-control users. 'N upcoming' and 'Unknown' do match.",
+        "fix": "Make the visible status and the aria-label share the exact phrase, for example 'None shown' in both. Alternatively, drop the custom label for the empty case so the name includes the visible text."
+      },
+      {
+        "id": "R-CAL-2",
+        "severity": "low",
+        "path": "src/components/classroom/home/teacher/TeacherHomeView.tsx",
+        "evidence": "dayKnown() treats every day in the snapshot window as covered even when agenda.data.next_cursor is set (the backend caps results at 20). Days after the last loaded event can show 'None shown' although later events were truncated. The caption does warn that some events may not be shown, so this is a mitigated edge case.",
+        "fix": "When next_cursor is present, mark days after the last loaded event's day as unknown, or qualify those tiles. Add a test."
+      },
+      {
+        "id": "R-VIS-3",
+        "severity": "low",
+        "path": "src/components/classroom/home/home.css",
+        "evidence": "In after-desktop.png the 'Events starting…' caption sits about 4px above the day tiles. The scroll wrapper's margin:-4px eats into the caption's 12px bottom margin. There are also two stacked hairlines above 'The next seven days', one from the attention strip's border-bottom and one from the week's border-top.",
+        "fix": "Increase .home-desk-week-caption margin-bottom to about 16px. Remove one of the duplicate rules when the attention strip is shown."
+      }
+    ],
+    "coverage": [
+      "Read teacherWeek.ts and teacherWeek.test.ts in full.",
+      "Read the tracked diffs for TeacherHomeView.tsx (TeacherWeek, menu, hideAttention, focus return), TeacherTasks.tsx (DeskStatus plural, aria-busy, ready-empty), home.css, and the new TeacherHomeView tests.",
+      "Read start-teacher-home-preview.mjs. I did not read teacher-home-preview.tsx or .html, nor TeachingDesk.test.tsx beyond a grep that found no removed copy still referenced.",
+      "Grepped src for the removed controls ('Payments and history', 'Student access', 'All students', 'Open email') and the routes they opened. No other component references them, and equivalent controls remain in TeacherHomeView.tsx.",
+      "Viewed the pixels of after-desktop.png and viewport-390.png myself."
+    ],
+    "limitations": [
+      "I did not run tests, typecheck or build, and did not reproduce the host's 51/51 focused-test report.",
+      "I did not drive a browser. Keyboard behaviour, menu focus return, reduced motion, computed contrast and width-by-width overflow are host-reported or inferred from source, not my own observations.",
+      "I did not inspect the shared dropdown-menu primitive, PostSessionWork, TeacherAccessBooking, teachingDeskModel or postSessionModel beyond the diff context.",
+      "The screenshots are synthetic components in a simplified shell. I have not seen the real student session, real devices, real auth/backend writes or the dark theme at runtime.",
+      "Source consistency does not establish the deployed SHA.",
+      "I did not inspect files outside the listed scope, including the supabase/functions/mcp change in the working tree."
+    ]
+  },
+  "usage": {
+    "input_tokens": 8,
+    "cache_creation_input_tokens": 37025,
+    "cache_read_input_tokens": 112216,
+    "output_tokens": 5765,
+    "output_tokens_details": {
+      "thinking_tokens": 2666
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 37025,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2304,
+        "cache_read_input_tokens": 38634,
+        "cache_creation_input_tokens": 2872,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 2872
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "observed_models": [
+    "claude-sonnet-5-5"
+  ],
+  "permission_denials": [],
+  "total_cost_usd": 0.2169876,
+  "elapsed_seconds": 63.57
+}
+
+EXIT_CODE=0

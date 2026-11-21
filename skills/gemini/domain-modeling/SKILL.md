@@ -9,6 +9,8 @@ Actively build and sharpen the project's domain model as you design. This is the
 
 ## File structure
 
+**Equivalent names:** `CONTEXT-MAP.md` = `GLOSSARY-MAP.md` and `CONTEXT.md` = `GLOSSARY.md`. Check for both before reading or creating. If a repo already uses the CONTEXT names, keep using them and never add a parallel GLOSSARY file.
+
 Most repos have a single context:
 
 ```

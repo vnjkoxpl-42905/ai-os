@@ -1,0 +1,72 @@
+{
+ "qid": "PT125-S2-Q11",
+ "type": "Main Conclusion",
+ "difficulty": "2",
+ "key_db": "B",
+ "stimulus_db": "Contrary to recent speculations, no hardware store will be opening in the shopping plaza. If somebody were going to open a store there, they would already have started publicizing it. But there has been no such publicity.",
+ "stem_db": "Which one of the following most accurately expresses the conclusion drawn in the argument?",
+ "choices_db": {
+  "A": "Some people have surmised that a hardware store will be opening in the shopping plaza.",
+  "B": "A hardware store will not be opening in the shopping plaza.",
+  "C": "If somebody were going to open a hardware store in the shopping plaza, that person would already have started publicizing it.",
+  "D": "It would be unwise to open a hardware store in the shopping plaza.",
+  "E": "There has been no publicity concerning the opening of a hardware store in the shopping plaza."
+ },
+ "bank": {
+  "stimulus": "Contrary to recent speculations, no hardware store will be opening in the shopping plaza. If somebody were going to open a store there, they would already have started publicizing it. But there has been no such publicity.",
+  "stem": "Which one of the following most accurately expresses the conclusion drawn in the argument?",
+  "choices": {
+   "A": "Some people have surmised that a hardware store will be opening in the shopping plaza.",
+   "B": "A hardware store will not be opening in the shopping plaza.",
+   "C": "If somebody were going to open a hardware store in the shopping plaza, that person would already have started publicizing it.",
+   "D": "It would be unwise to open a hardware store in the shopping plaza.",
+   "E": "There has been no publicity concerning the opening of a hardware store in the shopping plaza."
+  },
+  "key": "B"
+ },
+ "explanation_id": "5dab36d2-be42-4dac-b4c3-9a1758a48326",
+ "style": "single",
+ "steps": [
+  {
+   "row_id": "42021c54-2a28-44f8-adc7-964938630d2b",
+   "position": 0,
+   "label": "Evidence",
+   "body": "If somebody were going to open a store there, they would already have started publicizing it.\nBut there has been no such publicity."
+  },
+  {
+   "row_id": "96be1514-f9da-47c9-9782-e02eb3ea4590",
+   "position": 1,
+   "label": "Conclusion",
+   "body": "Contrary to recent speculations, no hardware store will be opening in the shopping plaza"
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "f99b0d36-c60b-4900-9c5a-2b2d26dde6df",
+   "letter": "A",
+   "body": "A describes the recent speculations that the author argues against. \"Contrary to recent speculations\" tells us the author rejects that idea, so it is the opposing point, not the conclusion."
+  },
+  {
+   "row_id": "a9e13024-e182-4076-8269-c29edba9d2ed",
+   "letter": "B",
+   "body": "This best paraphrases the argument's main point."
+  },
+  {
+   "row_id": "686f5293-b6ec-400d-8a16-a4b0e38f9809",
+   "letter": "C",
+   "body": "C is the first premise: anyone opening a store there would already be publicizing it. Together with the lack of publicity, it supports the claim that no hardware store will open, so it is evidence, not the main point."
+  },
+  {
+   "row_id": "b4f6aa47-cfcf-4be5-86c5-374667eadeff",
+   "letter": "D",
+   "body": "The argument does not discuss whether it would be wise to open a hardware store in the shopping plaza"
+  },
+  {
+   "row_id": "155048f9-c15b-4b50-9e3b-2e2dc0d0ddd0",
+   "letter": "E",
+   "body": "E is the second premise: there has been no publicity. Paired with the claim that a store opener would already be publicizing, it is the reason no hardware store will be opening. That makes it evidence, not the main point."
+  }
+ ],
+ "known_problem": "Role labels only; C note is cut off mid-sentence (\"supports the argument's\").",
+ "tags": "short-breakdown; verdict-only; thin-correct-note; thin-notes; no-prediction; damage; very-short"
+}

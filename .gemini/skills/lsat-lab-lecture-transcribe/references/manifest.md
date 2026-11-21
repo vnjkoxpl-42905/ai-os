@@ -1,0 +1,53 @@
+# Local package contract
+
+Run with Python 3, no third-party libraries:
+
+```powershell
+python .agents/skills/lsat-lab-lecture-transcribe/scripts/package_lecture.py --manifest <manifest.json> --transcript <captured-transcript.txt> --output <lecture-folder>
+```
+
+The transcript is copied byte-for-byte into `transcript.md` on initial preservation. It can contain timestamps; use its actual physical lines in `source_lines`. If an existing source differs, the helper stops. Screenshots must already exist beneath the output folder's `screenshots/` directory. The output folder must be dedicated to this lecture.
+
+Canonical output home: `corpus/lectures/<logical-reasoning-or-reading-comprehension>/<topic>/<core-or-advanced>/<date>-<videoid>/`. Add metadata `section`, `topic`, `topic_type`, `difficulty`, `platform`, and `tags`. Topic type may be `question-type`, `question-family`, or `reasoning-skill`. Add `teaching_brief` containing the unspoken preparation text; the helper writes `teaching-brief.md` and an initially expanded preparation panel before the first script section. The helper accepts older manifests without this field, but new lecture packages require it under the skill workflow. Optional segment `nav_label` keeps navigation compact.
+
+```json
+{
+  "title": "Example lecture",
+  "instructor": "Verified instructor",
+  "lecture_date": "2026-08-27",
+  "video_id": "33013",
+  "source_url": "https://app.lsatlab.com/video-library/?videoid=33013",
+  "duration_seconds": 3600,
+  "capture_date": "2026-09-30",
+  "transcript_method": "native automated captions, checked against playback",
+  "source_complete": false,
+  "verification_notes": ["Opening and ending checked; remaining review pending"],
+  "gaps": ["Question 2 final board not yet captured"],
+  "omissions": ["Greetings and student names removed from reading script"],
+  "teaching_points": [{"id": "linking", "description": "Link compatible conditional rules", "segment_ids": ["concept-1"]}],
+  "segments": [{
+    "id": "concept-1", "title": "Link the rules", "kind": "concept",
+    "start_seconds": 60, "end_seconds": 120,
+    "source_lines": [3, 8], "concepts": ["conditional-linking"],
+    "script": "First, look for the term that the two rules share.\n\nThat term gives us the connection.",
+    "cues": ["Pause for the student to identify the shared term"],
+    "images": [{"path": "screenshots/01-concept-board.png", "at_seconds": 95, "kind": "concept_board", "caption": "Initial linking board"}]
+  }]
+}
+```
+
+Segment `kind`: `concept`, `question`, or `closing`. Question segments require `question_id`. Image `kind`: `concept_board`, `question`, or `annotated_board`. Every question ID requires at least one `question` image; capture all text even if this needs several images. The first question must be preceded by a `concept_board` image in a concept segment. Image timestamps must fall within their segment. Split long explanations into separate segments if helpful. Segment times must be chronological and non-overlapping; deliberate transcript omissions are listed separately. Each teaching point must map to existing segments. Coverage proves referenced points have mappings, not that an agent identified every point.
+
+Use `source_complete: false` plus specific gaps while capture is unfinished. Verification notes must say what was actually checked. The helper rejects missing/misplaced images, invalid source ranges, unmapped teaching points, and inconsistent timestamps before writing deliverables. It checks previous source hashes before repackaging. Derived files can be regenerated; preserved source cannot be silently changed.
+
+## Private teaching moments
+
+New teaching packages also contain sibling `lesson-steps.json`, which the helper automatically loads. Its `question_bank` is a list of `{id, stimulus, stem, choices, image_path}` entries. `choices` is an A-E object or a list of `{label,text}`. Verify exact text against original question frames before packaging; never reconstruct absent words from the spoken explanation.
+
+Its `steps` is an ordered list of `{id, section_id, type, title, text}`. Types are `say`, `ask`, `wait`, `expected`, `board`, and `question`. `section_id` references a manifest segment. Optional fields: `question_id`, `image_path`, `source_time`, `spoken_intro`, and `teacher_note`. QUESTION steps reference the exact question bank. BOARD text contains only plain ASCII board content for copying to a live board; place source warnings and private instructions in `teacher_note`, hidden by default. SAY chunks target 40-80 words; the helper rejects chunks exceeding 80. Preserve the source script across consecutive SAY chunks, with natural line breaks. Additional ASK/WAIT/EXPECTED prompts must be accurate and marked as adapted facilitation rather than source quotations. Auto-read pauses when preparation, image, or copy interaction begins.
+
+Before every walkthrough, add a question-associated WAIT with `duration_seconds: 120` and a `pacing_note` explaining that it is a suggested teaching pace. The next ASK becomes a separate card after the timed wait, so the question remains visible during independent work. Expected responses are hidden until revealed. Optional top-level `voice_replacements: [{old,new}]` records finite voice cleanup; the helper applies these when checking that SAY content retains the entire original adapted script. This does not authorize dropping teaching points.
+
+EXPECTED steps can carry optional `likely_mistake` and `recovery_prompt`. The former is private guidance; the latter is an exact question to read aloud if the student makes that mistake. Both appear within the hidden expected-response panel, with recovery explicitly labeled ASK. Next up shows only the next moment's type/title and a concise spoken preview, not an expected answer. Expandable Read ahead shows the next five teaching moments with complete SAY/ASK text, WAIT directions, board/question content, and separately hidden private expected guidance. The reader remains teacher-only throughout.
+
+When steps exist, `teleprompter.html` becomes the teacher-only one-moment view. Full script stays in `teleprompter.md`, `full-script.html`, and `continuous-script.html`. This is derived content; regenerate only after checking the original source hashes.

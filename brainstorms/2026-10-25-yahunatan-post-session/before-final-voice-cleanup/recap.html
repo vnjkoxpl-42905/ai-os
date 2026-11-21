@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="lsatu-interactive-lesson" content="yahunatan-2026-10-20-necessary-assumptions">
+<title>Necessary Assumptions and Negation · Session recap</title>
+<style>  :root{
+    --cream:#FBF8F1; --ink:#1C1917; --ink-soft:#44403C; --ink-mute:#78716C;
+    --gold:#E8D08B; --gold-deep:#B8983F; --gold-wash:rgba(232,208,139,.16);
+    --card:#FFFFFF; --line:#E7E0D2;
+    --green:#3F6212; --green-wash:rgba(63,98,18,.09);
+    --red:#9F1239; --red-wash:rgba(159,18,57,.07);
+    --serif:"Fraunces","Garamond","Georgia",serif;
+    --sans:"Outfit","Avenir Next","Helvetica Neue",sans-serif;
+    --mono:"JetBrains Mono","SF Mono",Menlo,monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--ink);font-family:var(--sans);line-height:1.65;font-size:17px}
+  .wrap{max-width:800px;margin:0 auto;padding:0 24px}
+
+  header.hero{padding:68px 0 44px;border-bottom:1px solid var(--line)}
+  .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:18px}
+  h1{font-family:var(--serif);font-weight:600;font-size:clamp(36px,6vw,54px);line-height:1.06;letter-spacing:-.01em}
+  .hero p.lede{margin-top:20px;font-size:19px;color:var(--ink-soft);max-width:58ch}
+
+  section{padding:50px 0;border-bottom:1px solid var(--line)}
+  h2{font-family:var(--serif);font-weight:600;font-size:30px;line-height:1.15;margin-bottom:4px}
+  .sec-kicker{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:10px}
+  p{margin:14px 0;color:var(--ink-soft)}
+  p strong{color:var(--ink)}
+
+  .callout{background:var(--gold-wash);border-left:3px solid var(--gold-deep);border-radius:0 12px 12px 0;padding:16px 20px;margin:24px 0;font-size:16.5px;color:var(--ink-soft)}
+  .callout .tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-deep);display:block;margin-bottom:6px}
+  .callout strong{color:var(--ink)}
+
+  /* the three kinds */
+  .kinds{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:28px 0 8px}
+  .kind{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;box-shadow:0 1px 3px rgba(28,25,23,.06);transition:transform .18s,box-shadow .18s}
+  /* The colour carries the taxonomy, so it has to stay. A short rule inside
+     the padding does that without a 3px border running into a 14px corner. */
+  .kind .bar{display:block;width:32px;height:4px;border-radius:2px;background:var(--c);margin-bottom:14px}
+  .kind:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(28,25,23,.09)}
+  .kind.assume{--c:var(--gold-deep)}
+  .kind.object{--c:var(--red)}
+  .kind.describe{--c:var(--green)}
+  .kind .name{font-family:var(--serif);font-size:22px;color:var(--c);font-weight:600}
+  .kind .what{font-size:15px;margin:8px 0 0;color:var(--ink-soft)}
+  .kind .words{border-top:1px dashed var(--line);margin-top:14px;padding-top:12px}
+  .kind .words b{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--c);display:block;margin-bottom:7px}
+  .kind .words span{display:block;font-size:14px;color:var(--ink-mute);padding:2px 0}
+  .kind .test{margin-top:14px;background:var(--cream);border-radius:9px;padding:11px 13px;font-size:14.5px;color:var(--ink)}
+  .kind .test b{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-mute);display:block;margin-bottom:4px}
+
+  .opposite{display:flex;align-items:stretch;gap:0;margin:26px 0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--card)}
+  .opposite div{flex:1;padding:18px 20px;font-size:15.5px;color:var(--ink-soft)}
+  .opposite div:first-child{background:var(--gold-wash)}
+  .opposite div:last-child{background:var(--red-wash)}
+  .opposite b{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;margin-bottom:6px}
+  .opposite div:first-child b{color:var(--gold-deep)}
+  .opposite div:last-child b{color:var(--red)}
+
+  ol.steps{margin:20px 0;padding-left:0;list-style:none;counter-reset:step}
+  ol.steps li{counter-increment:step;position:relative;padding:14px 0 14px 54px;border-bottom:1px dashed var(--line);font-size:16px;color:var(--ink-soft)}
+  ol.steps li:last-child{border-bottom:none}
+  ol.steps li::before{content:counter(step);position:absolute;left:0;top:12px;width:34px;height:34px;border-radius:50%;background:var(--ink);color:var(--cream);font-family:var(--serif);display:flex;align-items:center;justify-content:center;font-size:16px}
+  ol.steps li b{color:var(--ink)}
+
+  .flags{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 4px}
+  .flag{font-family:var(--mono);font-size:12.5px;letter-spacing:.04em;background:var(--red-wash);color:var(--red);border:1px solid rgba(159,18,57,.2);border-radius:999px;padding:6px 14px}
+
+  .drill{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;margin:26px 0;box-shadow:0 2px 8px rgba(28,25,23,.06)}
+  .drill h3{font-family:var(--serif);font-size:19px;margin-bottom:4px}
+  .drill p.hint{font-size:14px;color:var(--ink-mute);margin:0 0 14px}
+  .chips{display:flex;gap:8px;flex-wrap:wrap}
+  .chip{font-family:var(--mono);font-size:13px;background:var(--cream);border:1px solid var(--line);border-radius:999px;padding:8px 15px;cursor:pointer;transition:all .16s;color:var(--ink-soft)}
+  .chip:hover{border-color:var(--ink-mute)}
+  .chip.on[data-k="assume"]{background:var(--gold-wash);border-color:var(--gold-deep);color:var(--gold-deep)}
+  .chip.on[data-k="object"]{background:var(--red-wash);border-color:var(--red);color:var(--red)}
+  .chip.on[data-k="describe"]{background:var(--green-wash);border-color:var(--green);color:var(--green)}
+  .chip .ans{display:none;font-weight:600}
+  .chip.on .ans{display:inline;margin-left:8px}
+
+  .quote{font-family:var(--serif);font-size:20px;line-height:1.45;color:var(--ink);border-left:3px solid var(--gold);padding:4px 0 4px 22px;margin:24px 0;font-style:italic}
+  .footer-note{padding:34px 0 56px}
+  .mark{font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-mute);opacity:.7}
+  .chip.on[data-k="neutral"]{background:var(--gold-wash);border-color:var(--ink-mute);color:var(--ink)}
+  .kind.link{--c:var(--gold-deep)}
+  .kind.apply{--c:var(--green)}
+  .kind.warn{--c:var(--red)}
+  .rule{font-family:var(--serif);font-size:20px;color:var(--ink);margin:18px 0}
+  .rule .ar{color:var(--gold-deep);font-weight:700;margin:0 6px}
+  table.t{width:100%;border-collapse:collapse;margin:20px 0;font-size:15.5px;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  table.t th{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold-deep);text-align:left;padding:12px 16px;border-bottom:1px solid var(--line)}
+  table.t td{padding:11px 16px;border-bottom:1px dashed var(--line);color:var(--ink-soft);vertical-align:top}
+  table.t tr:last-child td{border-bottom:none}
+  table.t td:first-child{color:var(--ink);font-weight:600;white-space:nowrap}
+  pre{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;font-family:var(--serif);font-size:18px;overflow-x:auto}
+  @media (max-width:560px){.opposite{flex-direction:column}table.t td:first-child{white-space:normal}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+ details{border:1px solid var(--line);border-radius:10px;padding:14px;margin:14px 0;background:white}summary{cursor:pointer;font-weight:600}summary:focus-visible,.chip:focus-visible{outline:3px solid #28594d;outline-offset:3px}.kicker{color:#785b16}body{overflow-wrap:break-word}</style>
+</head>
+<body>
+
+<header class="hero"><div class="wrap">
+  <div class="kicker">Session recap · October 20</div>
+  <h1>Necessary Assumptions<br>and Negation</h1>
+  <p class="lede">A necessary assumption is something the argument needs for its reasoning to work. Start with the evidence and the exact conclusion. Then ask what connection the author is taking for granted.</p>
+</div></header>
+
+<section><div class="wrap">
+  <div class="sec-kicker">Step zero</div>
+  <h2>Split the argument in two</h2>
+  <p>Conclusion on one side, evidence on the other. Then treat them completely differently.</p>
+  <div class="opposite">
+    <div><b>The evidence</b>Accept every word as true. You don't fight it.</div>
+    <div><b>The conclusion</b>Ask whether the evidence supports it. Do not take it as proven.</div>
+  </div>
+  <div class="callout"><span class="tag">Grant nothing that isn't written</span>
+    Common sense will fill in the gaps for you, and that's exactly what the test is counting on. <strong>Primary doesn't mean only.</strong> Most means more than half, but does not guarantee all. If it isn't on the page, the author doesn't get it.
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-kicker">Finding the gap</div>
+  <h2>What the author never said</h2>
+  <p>The town promised to repave Elm Street. Not one block has been finished this month. So the town has broken its promise.</p>
+  <p class="rule">No block finished this month <span class="ar">→</span> promise broken</p>
+  <p>Those aren't the same thing. To get from one to the other, the author has to believe something he never wrote down.</p>
+  <div class="callout"><span class="tag">The assumption</span>
+    <strong>If the town were keeping its promise, at least one block would be finished within a month.</strong> Nobody said how long the promise was supposed to take. Maybe a block takes six weeks.
+  </div>
+  <div class="quote">After we separated the plan from the evidence, you explained that the plan had no stated one-year deadline. Keep checking the time limit instead of supplying one.</div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-kicker">Before you test the answers</div>
+  <h2>Look for what the argument needs, not everything that would help</h2>
+  <p>Necessary assumption answers often use weak language: <strong>some, may, might, at least one.</strong> That is useful. We only need something the argument cannot do without. An answer that claims much more can sound convincing while going beyond what is required.</p>
+  <p>Take this argument: <strong>The prize went to a member of the hiking club. So the prize went to someone who lives nearby.</strong> What do we need to know about the club?</p>
+  <div class="kinds">
+    <div class="kind link"><span class="bar"></span><div class="name">Some members live nearby</div><p class="what">The argument needs at least this much. If no club members lived nearby, the prize could not have gone to both a club member and someone nearby.</p><div class="test"><b>What it leaves open</b>Other members could live far away. We have not shown that the particular member who won lives nearby, so this answer does not prove the conclusion on its own.</div></div>
+    <div class="kind warn"><span class="bar"></span><div class="name">Most or all members live nearby</div><p class="what">These say more. Most means more than half. All means every member. The conclusion is about one winner, so we do not need either claim about the rest of the club.</p><div class="test"><b>Try it</b>Suppose the winner lives nearby and the other ninety-nine members live far away. The conclusion can still be true. Most and all were not required.</div></div>
+  </div>
+  <div class="callout"><span class="tag">Why strong language is a warning</span>With words such as all, always, most and primarily, ask: <strong>does the author really need that much?</strong> Often the argument only needs a smaller claim. Prefer the answer that supplies what is required without adding more.</div>
+  <p>That is a preference, not permission to skip the argument. A weak answer about an unrelated subject will not help. And if the reasoning really needs a claim about every member, do not reject it just because it says every. Check how much this particular argument needs.</p>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-kicker">Now check an answer</div>
+  <h2>Negate it: treat it as not true</h2>
+  <p>Negate an answer you are considering. That means treating it as not true. Leave the author's evidence alone. Then ask whether that evidence can still support the conclusion.</p>
+  <p>Our answer says <strong>some hiking-club members live nearby.</strong> Treat that as not true: <strong>none of them lives nearby.</strong> Now the evidence says a club member won, but no club member lives nearby. The author's conclusion no longer works. That is why the answer is necessary.</p>
+  <p>Notice that we did not turn some into most or all. To make some false, there must be none. To make all false, one exception is enough. Work out what would make the answer false, rather than choosing a much stronger opposite.</p>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-kicker">Keep these separate</div>
+  <h2>Negation and the contrapositive do different jobs</h2>
+  <p>Start with the same sentence for both: <strong>If the café is busy, Sam works late.</strong></p>
+  <div class="kinds">
+    <div class="kind link"><span class="bar"></span><div class="name">The contrapositive says the same thing</div><p class="what"><strong>If Sam does not work late, the café is not busy.</strong> Why? A busy café would mean Sam works late. If Sam did not work late, the café could not have been busy. We have said the original rule another way.</p><div class="test"><b>Use it</b>When you want to know what the rule tells you.</div></div>
+    <div class="kind warn"><span class="bar"></span><div class="name">The negation makes it false</div><p class="what"><strong>The café is busy, and Sam does not work late.</strong> That is exactly what the original sentence rules out. Both things happen together: the café is busy, but Sam does not do what the sentence said he would do.</p><div class="test"><b>Use it</b>When you want to test an assumption by treating it as not true.</div></div>
+  </div>
+  <p>If the café was quiet, Sam could work late or leave early without breaking the original sentence. It only told us what happens when the café is busy. That is why the negation needs a busy café and Sam not working late.</p>
+  <div class="quote">You put the distinction in your own words: negating an idea is different from writing its contrapositive. Keep asking whether you are saying the same thing another way or making the original false.</div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-kicker">Recognition drill</div>
+  <h2>Negate it</h2>
+  <div class="drill">
+    <h3>Say the negation out loud, then tap to check</h3>
+    <p class="hint">The weakest claim that contradicts the original. Not the opposite.</p>
+    <div class="chips">
+      <span class="chip" data-k="object">All of the guests arrived.<span class="ans">· Not all of the guests arrived</span></span>
+      <span class="chip" data-k="object">Some of the guests arrived.<span class="ans">· None of the guests arrived</span></span>
+      <span class="chip" data-k="object">The shop is open on Monday.<span class="ans">· The shop is not open on Monday</span></span>
+      <span class="chip" data-k="object">If it rains, the game is off.<span class="ans">· It rains, and the game is still on</span></span>
+    </div>
+  </div>
+
+  <div class="drill"><h3>What is actually required?</h3><p class="hint">A club's only voting rule says that a person may vote only if registered. The author concludes that Maya may vote. What must be true?</p><details><summary>Maya is registered.</summary><p>Required. Negate it: Maya is not registered. The supplied rule then rules out permission to vote. Registration alone does not prove permission, but it is necessary.</p></details><details><summary>Every registered person may vote.</summary><p>Not required. Other registered people could be barred while Maya is allowed. The conclusion concerns Maya, not every registered person.</p></details></div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-kicker">The finalist</div>
+  <h2>On every necessary assumption question</h2>
+  <ol class="steps">
+    <li><b>Separate the reasons from the conclusion.</b> Accept the reasons as true. Ask what they actually tell you about the conclusion.</li>
+    <li><b>Find the gap.</b> What does the conclusion need that the evidence never said?</li>
+    <li><b>Check how much the answer claims.</b> Some is less demanding than most or all. Does the argument need that much, or would a smaller claim do?</li>
+    <li><b>Keep the subject straight.</b> The answer has to address the people, situation and missing information in this argument. Weak wording alone does not make it relevant.</li>
+    <li><b>Negate an answer you are still considering.</b> Treat it as not true, without changing the evidence. If the reasons still support the conclusion without it, it was not necessary.</li>
+  </ol>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-kicker">Before next session</div>
+  <h2>Your work this week</h2>
+  <p>Start with negation, then apply it to the necessary assumption questions. These practice days give you an order to follow; the saved deadline belongs to the ten-question set.</p>
+  <ol class="steps">
+    <li><b>Monday and Tuesday, 2026-10-26 and 2026-10-27: Negation Station.</b> It is already in your Classroom. Read the short Negation Station note first, then repeat the set until you can explain each negation without second-guessing. These are suggested practice days, not new account deadlines.</li>
+    <li><b>Wednesday, 2026-10-28: Necessary Assumption: First Taste opens.</b> Work through the ten questions once you can explain your negations confidently. The saved due date is <b>Sunday, 2026-11-01</b>. Keep the Necessary Assumption reference open. The opening date does not mean you must start before you are ready. If negation still feels uncertain, keep practising and let me know before the deadline.</li>
+    <li><b>LR Recall every other day.</b> Use your existing Read, Recall, Colour activity alongside this work. A suggested rhythm is Monday 2026-10-26, Wednesday 2026-10-28, Friday 2026-10-30 and Sunday 2026-11-01, about one section each time. These are practice suggestions; the activity has no saved due date.</li>
+    <li><b>Conditionals refresher:</b> we discussed a possible short bootcamp. That remains on hold while the material is being completed. There is nothing new to start for it yet.</li>
+  </ol>
+</div></section>
+
+<div class="footer-note"><div class="wrap">
+  <span class="mark">LSAT U</span>
+</div></div>
+
+<script>
+  document.querySelectorAll('.chip').forEach(function(c){
+    c.setAttribute('role', 'button');
+    c.tabIndex = 0;
+    c.setAttribute('aria-expanded', 'false');
+    c.addEventListener('click', function(){
+      c.setAttribute('aria-expanded', String(c.classList.toggle('on')));
+    });
+    c.addEventListener('keydown', function(e){
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); c.click(); }
+    });
+  });
+</script>
+</body>
+</html>

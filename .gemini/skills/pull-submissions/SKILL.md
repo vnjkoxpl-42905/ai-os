@@ -3,6 +3,10 @@ name: pull-submissions
 description: Pull booking-time student submissions (files + comments) from the LSAT U backend into students/<name>/submissions/. Use when Joshua says "pull submissions", "get the booking uploads", "sync student submissions", or as part of /pickup. On-demand only — no cron, no watcher.
 ---
 
+## Current AI OS execution contract
+
+Resolve current booking mirror paths and relationship IDs from the canonical root/live systems. Use stable source IDs for idempotent filing and do not infer a student identity from a loose name match.
+
 # Pull Submissions
 
 When a student books a session through their `/book/<slug>` link, the confirm step lets them optionally attach work (any file, up to 5) and leave a comment. Those land in the LSAT U backend (Supabase storage + `external_work_uploads`, comment on `booking_pass_redemptions.student_note`) and are surfaced in the Bookings admin tab and the booking confirmation email to Joshua.
@@ -11,19 +15,21 @@ This skill is the **on-demand pull** that mirrors those submissions into the ai-
 
 ## What it does
 
-1. Logs in with the admin creds in `~/ai-os/.env` (`LSATPREP_ADMIN_*`) against GoTrue, exactly as the admin UI authenticates.
+1. Logs in with the admin creds in the AI OS root `.env` (`LSATPREP_ADMIN_*`) against GoTrue, exactly as the admin UI authenticates.
 2. Calls `booking-pass-admin` → `list_bookings`, keeps every booking that has a note or attached files.
 3. For each new one, downloads the files (via short-lived signed URLs from `get_booking_uploads`) and writes the comment, into `students/<name>/submissions/`.
 4. Records each pulled redemption in a per-student `.pulled.json` manifest so re-running only fetches what's new (idempotent).
 
 ## Run it
 
+From the AI OS root:
+
 ```bash
-bash ~/ai-os/skills/claude/pull-submissions/pull-submissions.sh            # pull everything new
-bash ~/ai-os/skills/claude/pull-submissions/pull-submissions.sh --dry-run  # list only, write nothing
+bash skills/claude/pull-submissions/pull-submissions.sh            # pull everything new
+bash skills/claude/pull-submissions/pull-submissions.sh --dry-run  # list only, write nothing
 ```
 
-Requires `curl` and `jq`. Reads `VITE_SUPABASE_URL` / `VITE_SUPABASE_PUBLISHABLE_KEY` from `../ai-os-projects/lsatu/.env` and the admin creds from the root `.env` (both sourced with absolute paths — cwd is unreliable).
+Requires `curl` and `jq` (on Windows: `winget install jqlang.jq`; it was not installed as of 2026-10-12). The script finds the AI OS root from `AIOS_ROOT`, then the vault it sits in, then `~/dev/ai-os` (Windows) or `~/ai-os` (Mac). Reads `VITE_SUPABASE_URL` / `VITE_SUPABASE_PUBLISHABLE_KEY` from `../ai-os-projects/lsatu/.env` and the admin creds from the root `.env` (both sourced with absolute paths — cwd is unreliable).
 
 ## Output layout
 

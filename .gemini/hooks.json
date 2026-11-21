@@ -11,6 +11,16 @@
             "timeout": 10
           }
         ]
+      },
+      {
+        "matcher": "write_to_file|replace_file_content",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\scripts\\guard_raw_sources.py",
+            "timeout": 10
+          }
+        ]
       }
     ]
   }

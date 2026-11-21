@@ -1,0 +1,612 @@
+## abstract_drill_attempts RLS
+  - 20260514120000 81 public.abstract_drill_attempts for select using (auth.uid() = user_id or public.is_admin())
+  - 20260514120000 85 public.abstract_drill_attempts for insert with check (auth.uid() = user_id)
+  - 20260514233828 33 public.abstract_drill_attempts FOR SELECT USING (auth.uid() = user_id)
+  - 20260514233828 35 public.abstract_drill_attempts FOR INSERT WITH CHECK (auth.uid() = user_id)
+  - 20260514233828 37 public.abstract_drill_attempts FOR SELECT USING (public.has_role(auth.uid(),'admin'))
+## abstract_final_set RLS
+  - 20260514120000 97 public.abstract_final_set for select using (auth.uid() = user_id or public.is_admin())
+  - 20260514120000 101 public.abstract_final_set for insert with check (auth.uid() = user_id)
+  - 20260514120000 105 public.abstract_final_set for update using (auth.uid() = user_id)
+  - 20260514233828 68 public.abstract_final_set FOR SELECT USING (auth.uid() = user_id)
+  - 20260514233828 70 public.abstract_final_set FOR INSERT WITH CHECK (auth.uid() = user_id)
+  - 20260514233828 72 public.abstract_final_set FOR SELECT USING (public.has_role(auth.uid(),'admin'))
+## abstract_gauntlet_attempts RLS
+  - 20260514120000 89 public.abstract_gauntlet_attempts for select using (auth.uid() = user_id or public.is_admin())
+  - 20260514120000 93 public.abstract_gauntlet_attempts for insert with check (auth.uid() = user_id)
+  - 20260514233828 52 public.abstract_gauntlet_attempts FOR SELECT USING (auth.uid() = user_id)
+  - 20260514233828 54 public.abstract_gauntlet_attempts FOR INSERT WITH CHECK (auth.uid() = user_id)
+  - 20260514233828 56 public.abstract_gauntlet_attempts FOR SELECT USING (public.has_role(auth.uid(),'admin'))
+## abstract_lesson_progress RLS
+  - 20260514120000 69 public.abstract_lesson_progress for select using (auth.uid() = user_id or public.is_admin())
+  - 20260514120000 73 public.abstract_lesson_progress for insert with check (auth.uid() = user_id)
+  - 20260514120000 77 public.abstract_lesson_progress for update using (auth.uid() = user_id)
+  - 20260514233828 11 public.abstract_lesson_progress FOR SELECT USING (auth.uid() = user_id)
+  - 20260514233828 13 public.abstract_lesson_progress FOR INSERT WITH CHECK (auth.uid() = user_id)
+  - 20260514233828 15 public.abstract_lesson_progress FOR UPDATE USING (auth.uid() = user_id)
+  - 20260514233828 17 public.abstract_lesson_progress FOR SELECT USING (public.has_role(auth.uid(),'admin'))
+## abstract_module_progress RLS
+  - 20260515000000 22 public.abstract_module_progress for select using (auth.uid() = user_id or public.is_admin())
+  - 20260515000000 27 public.abstract_module_progress for insert with check (auth.uid() = user_id)
+  - 20260515000000 32 public.abstract_module_progress for update using (auth.uid() = user_id)
+## abstract_translator_attempts RLS
+  - 20260514130000 22 public.abstract_translator_attempts for select using (auth.uid() = user_id or public.is_admin())
+  - 20260514130000 26 public.abstract_translator_attempts for insert with check (auth.uid() = user_id)
+  - 20260517020359 17 public.abstract_translator_attempts FOR INSERT WITH CHECK (auth.uid() = user_id)
+  - 20260517020359 21 public.abstract_translator_attempts FOR SELECT USING (auth.uid() = user_id)
+  - 20260517020359 25 public.abstract_translator_attempts FOR SELECT USING (public.has_role(auth.uid(), 'admin'::app_role))
+## achievements RLS
+  - 20251019072353 85 public.achievements FOR SELECT USING (true)
+  - 20260823115012 8 public.achievements FOR SELECT TO authenticated USING (class_id = auth.uid())
+  - 20260823115012 12 public.achievements FOR INSERT TO authenticated WITH CHECK (class_id = auth.uid())
+  - 20260823115012 16 public.achievements FOR UPDATE TO authenticated USING (class_id = auth.uid()) WITH CHECK (class_id = auth.uid())
+## activities RLS
+  - 20260614205124 28 public.activities FOR INSERT TO authenticated WITH CHECK (public.has_role(auth.uid(), 'admin') AND created_by = auth.uid())
+  - 20260614205124 33 public.activities FOR UPDATE TO authenticated USING (public.has_role(auth.uid(), 'admin') AND created_by = auth.uid()) WITH CHECK (public.has_role(auth.uid(), 'admin') AND created_by = auth.uid())
+  - 20260614205124 39 public.activities FOR DELETE TO authenticated USING (public.has_role(auth.uid(), 'admin') AND created_by = auth.uid())
+  - 20260817000000 28 public.activities FOR SELECT TO authenticated USING (public.has_role(auth.uid(), 'admin'))
+## activity_ai_budget_buckets_v1 RLS
+## activity_ai_configuration_v1 RLS
+## activity_ai_receipts_v1 RLS
+## activity_ai_request_keys_v1 RLS
+## activity_assignments RLS
+  - 20260614205124 85 public.activity_assignments FOR SELECT TO authenticated USING (student_id = auth.uid())
+  - 20260614205124 90 public.activity_assignments FOR UPDATE TO authenticated USING (student_id = auth.uid()) WITH CHECK (student_id = auth.uid())
+  - 20260614205124 96 public.activity_assignments FOR SELECT TO authenticated USING (public.has_role(auth.uid(), 'admin'))
+  - 20260614205124 101 public.activity_assignments FOR INSERT TO authenticated WITH CHECK (public.has_role(auth.uid(), 'admin') AND assigned_by = auth.uid())
+  - 20260614205124 106 public.activity_assignments FOR UPDATE TO authenticated USING (public.has_role(auth.uid(), 'admin')) WITH CHECK (public.has_role(auth.uid(), 'admin'))
+  - 20260614205124 112 public.activity_assignments FOR DELETE TO authenticated USING (public.has_role(auth.uid(), 'admin'))
+## activity_grade_disputes RLS
+  - 20260904140000 76 public.activity_grade_disputes for insert to authenticated with check (student_id = auth.uid())
+  - 20260904140000 81 public.activity_grade_disputes for select to authenticated using (student_id = auth.uid())
+  - 20260904140000 87 public.activity_grade_disputes for select to authenticated using (public.has_role(auth.uid(), 'admin'))
+## activity_item_responses RLS
+  - 20260614205124 173 public.activity_item_responses FOR SELECT TO authenticated USING (auth.uid() = student_id OR public.has_role(auth.uid(), 'admin'))
+  - 20260614205124 178 public.activity_item_responses FOR INSERT TO authenticated WITH CHECK (auth.uid() = student_id)
+## activity_section_grades RLS
+  - 20260901210000 48 public.activity_section_grades for select to authenticated using (student_id = auth.uid())
+  - 20260901210000 54 public.activity_section_grades for select to authenticated using (public.has_role(auth.uid(), 'admin'))
+## activity_section_grading_claims RLS
+## admin_question_notes RLS
+  - 20260828120000 50 public.admin_question_notes for select using (public.has_role(auth.uid(), 'admin') and author_id = auth.uid())
+  - 20260828120000 55 public.admin_question_notes for insert with check (public.has_role(auth.uid(), 'admin') and author_id = auth.uid())
+  - 20260828120000 60 public.admin_question_notes for update using (public.has_role(auth.uid(), 'admin') and author_id = auth.uid()) with check (public.has_role(auth.uid(), 'admin') and author_id = auth.uid())
+  - 20260828120000 66 public.admin_question_notes for delete using (public.has_role(auth.uid(), 'admin') and author_id = auth.uid())
+## ai_ta_drafts RLS
+  - 20260506164047 198 public.ai_ta_drafts FOR ALL TO authenticated USING (public.has_role(auth.uid(),'admin')) WITH CHECK (public.has_role(auth.uid(),'admin'))
+  - 20260612153001 60 public.ai_ta_drafts FOR SELECT TO authenticated USING (student_id = auth.uid() AND status IN ('approved','posted'))
+## assistant_turn_outcomes RLS
+  - 20260620120000 179 public.assistant_turn_outcomes for all to authenticated using (public.has_role(auth.uid(),'admin')) with check (public.has_role(auth.uid(),'admin'))
+## attempts RLS
+  - 20251022025825 24 public.attempts FOR SELECT TO authenticated USING (class_id = public.get_user_class_id(auth.uid()))
+  - 20251022025825 27 public.attempts FOR INSERT TO authenticated WITH CHECK (class_id = public.get_user_class_id(auth.uid()))
+  - 20260406153113 15 public.attempts FOR SELECT TO authenticated USING (class_id = auth.uid()::text)
+  - 20260406153113 16 public.attempts FOR INSERT TO authenticated WITH CHECK (class_id = auth.uid()::text)
+## availability_requests RLS
+  - 20260506000600 26 public.availability_requests for select to authenticated using (student_id = auth.uid())
+  - 20260506000600 30 public.availability_requests for update to authenticated using (student_id = auth.uid()) with check (student_id = auth.uid())
+  - 20260506000600 35 public.availability_requests for all to authenticated using (public.has_role(auth.uid(), 'admin')) with check (public.has_role(auth.uid(), 'admin'))
+## blind_review_sessions RLS
+  - 20251022025825 199 public.blind_review_sessions FOR SELECT TO authenticated USING (class_id = public.get_user_class_id(auth.uid()))
+  - 20251022025825 202 public.blind_review_sessions FOR INSERT TO authenticated WITH CHECK (class_id = public.get_user_class_id(auth.uid()))
+  - 20251022025825 205 public.blind_review_sessions FOR UPDATE TO authenticated USING (class_id = public.get_user_class_id(auth.uid()))
+  - 20251022025825 208 public.blind_review_sessions FOR DELETE TO authenticated USING (class_id = public.get_user_class_id(auth.uid()))
+  - 20260406153113 62 public.blind_review_sessions FOR SELECT TO authenticated USING (class_id = auth.uid()::text)
+  - 20260406153113 63 public.blind_review_sessions FOR INSERT TO authenticated WITH CHECK (class_id = auth.uid()::text)
+  - 20260406153113 64 public.blind_review_sessions FOR UPDATE TO authenticated USING (class_id = auth.uid()::text) WITH CHECK (class_id = auth.uid()::text)
+## booking_availability RLS
+  - 20260719002502 31 public.booking_availability FOR ALL TO authenticated USING (public.has_role(auth.uid(), 'admin')) WITH CHECK (public.has_role(auth.uid(), 'admin'))
+## booking_availability_config RLS
+  - 20260719002502 36 public.booking_availability_config FOR ALL TO authenticated USING (public.has_role(auth.uid(), 'admin')) WITH CHECK (public.has_role(auth.uid(), 'admin'))
+## booking_availability_overrides RLS
+  - 20260911000000 81 public.booking_availability_overrides FOR ALL USING (public.has_role(auth.uid(), 'admin'::app_role)) WITH CHECK (public.has_role(auth.uid(), 'admin'::app_role))
+## booking_calendar_alerts RLS
+  - 20260720170000 42 public.booking_calendar_alerts FOR ALL TO authenticated USING (public.has_role(auth.uid(), 'admin')) WITH CHECK (public.has_role(auth.uid(), 'admin'))
+## booking_commerce_events RLS
+  - 20260819075740 85 public.booking_commerce_events FOR SELECT TO authenticated USING (student_id = auth.uid())
+## booking_event_types RLS
+  - 20260830010000 67 public.booking_event_types FOR ALL TO authenticated USING (public.has_role(auth.uid(), 'admin')) WITH CHECK (public.has_role(auth.uid(), 'admin'))
+## booking_link_hits RLS
+## booking_offers RLS
+  - 20260819075740 81 public.booking_offers FOR SELECT TO authenticated USING (active)
+  - 20260830040000 17 public.booking_offers FOR ALL TO authenticated USING (public.has_role(auth.uid(), 'admin')) WITH CHECK (public.has_role(auth.uid(), 'admin'))
+## booking_pass_redemptions RLS
+  - 20260708111013 60 public.booking_pass_redemptions FOR ALL TO authenticated USING (public.has_role(auth.uid(),'admin')) WITH CHECK (public.has_role(auth.uid(),'admin'))
+## booking_passes RLS
+  - 20260708111013 25 public.booking_passes FOR ALL TO authenticated USING (public.has_role(auth.uid(),'admin')) WITH CHECK (public.has_role(auth.uid(),'admin'))
+## booking_price_overrides RLS
+  - 20260830010000 72 public.booking_price_overrides FOR ALL TO authenticated USING (public.has_role(auth.uid(), 'admin')) WITH CHECK (public.has_role(auth.uid(), 'admin'))
+## booking_refusals RLS
+  - 20260911010000 19 public.booking_refusals FOR SELECT USING (public.has_role(auth.uid(), 'admin'::app_role))
+## booking_worker_heartbeats RLS
+## bootcamp_kv RLS
+  - 20260603142340 23 public.bootcamp_kv FOR SELECT TO authenticated USING (auth.uid() = user_id)
+  - 20260603142340 27 public.bootcamp_kv FOR INSERT TO authenticated WITH CHECK (auth.uid() = user_id)
+  - 20260603142340 31 public.bootcamp_kv FOR UPDATE TO authenticated USING (auth.uid() = user_id) WITH CHECK (auth.uid() = user_id)
+  - 20260811131056 3 public.bootcamp_kv FOR DELETE TO authenticated USING (public.has_role(auth.uid(), 'admin'))
+## challenges RLS
+  - 20251019072353 98 public.challenges FOR SELECT USING (active = true)
+## chapter_progress RLS
+  - 20260514234012 14 public.chapter_progress FOR SELECT TO authenticated USING (auth.uid() = user_id)
+  - 20260514234012 15 public.chapter_progress FOR SELECT TO authenticated USING (public.has_role(auth.uid(), 'admin'))
+  - 20260514234012 16 public.chapter_progress FOR INSERT TO authenticated WITH CHECK (auth.uid() = user_id)
+  - 20260514234012 17 public.chapter_progress FOR UPDATE TO authenticated USING (auth.uid() = user_id) WITH CHECK (auth.uid() = user_id)
+## classroom_items RLS
+  - 20260506124235 64 public.classroom_items for all to authenticated using (public.has_role(auth.uid(), 'admin')) with check (public.has_role(auth.uid(), 'admin'))
+  - 20260506170411 2 public.classroom_items FOR SELECT TO authenticated USING ( student_id = auth.uid() AND visible_to_student = true AND ( type = 'bootcamp_module' OR unlock_at IS NULL OR unlock_at <= now() ) )
+  - 20260811133621 43 public.classroom_items for update to authenticated using (student_id = auth.uid()) with check (student_id = auth.uid())
+## concept_library RLS
+  - 20260406070036 152 concept_library FOR SELECT USING (true)
+## conditional_practice_runs RLS
+  - 20260916180000 25 public.conditional_practice_runs for select to authenticated using (user_id = auth.uid())
+  - 20260916180000 27 public.conditional_practice_runs for insert to authenticated with check (user_id = auth.uid() and revision = 0)
+  - 20260916180000 29 public.conditional_practice_runs for update to authenticated using (user_id = auth.uid()) with check (user_id = auth.uid())
+## conversation_participants RLS
+  - 20260416234013 82 public.conversation_participants FOR SELECT TO authenticated USING ( public.is_conversation_participant(conversation_id, auth.uid()) OR public.has_role(auth.uid(), 'admin') )
+  - 20260416234013 89 public.conversation_participants FOR INSERT TO authenticated WITH CHECK ( public.has_role(auth.uid(), 'admin') OR EXISTS ( SELECT 1 FROM public.conversations c WHERE c.id = conversation_id AND c.created_by = auth.uid() ) )
+  - 20260416234013 99 public.conversation_participants FOR UPDATE TO authenticated USING (user_id = auth.uid()) WITH CHECK (user_id = auth.uid())
+## conversations RLS
+  - 20260416234013 69 public.conversations FOR SELECT TO authenticated USING (public.is_conversation_participant(id, auth.uid()) OR public.has_role(auth.uid(), 'admin'))
+  - 20260416234013 73 public.conversations FOR INSERT TO authenticated WITH CHECK (public.has_role(auth.uid(), 'admin') AND created_by = auth.uid())
+  - 20260416234013 77 public.conversations FOR UPDATE TO authenticated USING (public.is_conversation_participant(id, auth.uid()) OR public.has_role(auth.uid(), 'admin'))
+  - 20260702000000 5 public.conversations FOR DELETE TO authenticated USING (public.has_role(auth.uid(), 'admin'))
+## cs_attempts RLS
+  - 20260822193808 20 public.cs_attempts for select to authenticated using (auth.uid() = user_id)
+  - 20260822193808 24 public.cs_attempts for insert to authenticated with check (auth.uid() = user_id)
+  - 20260822193808 28 public.cs_attempts for select to authenticated using (public.has_role(auth.uid(), 'admin'))
+  - 20260822193808 32 public.cs_attempts for delete to authenticated using (public.has_role(auth.uid(), 'admin'))
+## curriculum_track_items RLS
+  - 20260805002000 139 public.curriculum_track_items FOR ALL TO authenticated USING (public.has_role(auth.uid(), 'admin')) WITH CHECK (public.has_role(auth.uid(), 'admin'))
+  - 20260805002000 178 public.curriculum_track_items FOR SELECT TO authenticated USING (EXISTS ( SELECT 1 FROM public.student_curriculum_enrollments e WHERE e.student_id = auth.uid() AND e.track_id = curriculum_track_items.track_id ))
+## curriculum_tracks RLS
+  - 20260805002000 133 public.curriculum_tracks FOR ALL TO authenticated USING (public.has_role(auth.uid(), 'admin')) WITH CHECK (public.has_role(auth.uid(), 'admin'))
+  - 20260805002000 170 public.curriculum_tracks FOR SELECT TO authenticated USING (EXISTS ( SELECT 1 FROM public.student_curriculum_enrollments e WHERE e.student_id = auth.uid() AND e.track_id = curriculum_tracks.id ))
+## daily_stats RLS
+  - 20251022025825 106 public.daily_stats FOR SELECT TO authenticated USING (class_id = public.get_user_class_id(auth.uid()))
+  - 20251022025825 109 public.daily_stats FOR INSERT TO authenticated WITH CHECK (class_id = public.get_user_class_id(auth.uid()))
+  - 20251022025825 112 public.daily_stats FOR UPDATE TO authenticated USING (class_id = public.get_user_class_id(auth.uid()))
+  - 20260406153113 70 public.daily_stats FOR SELECT TO authenticated USING (class_id = auth.uid()::text)
+  - 20260406153113 71 public.daily_stats FOR INSERT TO authenticated WITH CHECK (class_id = auth.uid()::text)
+  - 20260406153113 72 public.daily_stats FOR UPDATE TO authenticated USING (class_id = auth.uid()::text) WITH CHECK (class_id = auth.uid()::text)
+## deleted_students RLS
+  - 20260922140000 76 public.deleted_students FOR SELECT USING (public.has_role(auth.uid(), 'admin'))
+## drill_templates RLS
+  - 20251022025825 50 public.drill_templates FOR SELECT TO authenticated USING (class_id = public.get_user_class_id(auth.uid()))
+  - 20251022025825 53 public.drill_templates FOR INSERT TO authenticated WITH CHECK (class_id = public.get_user_class_id(auth.uid()))
+  - 20251022025825 56 public.drill_templates FOR UPDATE TO authenticated USING (class_id = public.get_user_class_id(auth.uid()))
+  - 20251022025825 59 public.drill_templates FOR DELETE TO authenticated USING (class_id = public.get_user_class_id(auth.uid()))
+  - 20260406153113 79 public.drill_templates FOR SELECT TO authenticated USING (class_id = auth.uid()::text)
+  - 20260406153113 80 public.drill_templates FOR INSERT TO authenticated WITH CHECK (class_id = auth.uid()::text)
+  - 20260406153113 81 public.drill_templates FOR UPDATE TO authenticated USING (class_id = auth.uid()::text) WITH CHECK (class_id = auth.uid()::text)
+  - 20260406153113 82 public.drill_templates FOR DELETE TO authenticated USING (class_id = auth.uid()::text)
+## drive_files RLS
+  - 20260420123314 19 public.drive_files FOR SELECT TO authenticated USING (auth.uid() = admin_user_id)
+  - 20260420123314 23 public.drive_files FOR INSERT TO authenticated WITH CHECK (auth.uid() = admin_user_id)
+  - 20260420123314 27 public.drive_files FOR DELETE TO authenticated USING (auth.uid() = admin_user_id)
+## events RLS
+  - 20251022025825 215 public.events FOR SELECT TO authenticated USING (class_id = public.get_user_class_id(auth.uid()))
+  - 20251022025825 218 public.events FOR INSERT TO authenticated WITH CHECK (class_id = public.get_user_class_id(auth.uid()))
+  - 20260406153113 87 public.events FOR SELECT TO authenticated USING (class_id = auth.uid()::text)
+  - 20260406153113 88 public.events FOR INSERT TO authenticated WITH CHECK (class_id = auth.uid()::text)
+## external_booking_events RLS
+  - 20260819075740 87 public.external_booking_events FOR SELECT TO authenticated USING (student_id = auth.uid())
+## external_work_uploads RLS
+  - 20260506000200 46 public.external_work_uploads for select to authenticated using (student_id = auth.uid())
+  - 20260506000200 50 public.external_work_uploads for insert to authenticated with check (student_id = auth.uid() and uploaded_by = auth.uid())
+  - 20260506000200 54 public.external_work_uploads for all to authenticated using (public.has_role(auth.uid(), 'admin')) with check (public.has_role(auth.uid(), 'admin'))
+  - 20260508144012 55 public.external_work_uploads FOR INSERT TO authenticated WITH CHECK (student_id = auth.uid() AND uploaded_by = auth.uid())
+  - 20260508144012 60 public.external_work_uploads FOR SELECT TO authenticated USING (student_id = auth.uid())
+  - 20260508144012 65 public.external_work_uploads FOR ALL TO authenticated USING (public.has_role(auth.uid(), 'admin')) WITH CHECK (public.has_role(auth.uid(), 'admin'))
+## flagged_questions RLS
+  - 20251022025825 65 public.flagged_questions FOR SELECT TO authenticated USING (user_id = auth.uid())
+  - 20251022025825 68 public.flagged_questions FOR INSERT TO authenticated WITH CHECK (user_id = auth.uid())
+  - 20251022025825 71 public.flagged_questions FOR UPDATE TO authenticated USING (user_id = auth.uid())
+  - 20251022025825 74 public.flagged_questions FOR DELETE TO authenticated USING (user_id = auth.uid())
+  - 20260406153113 94 public.flagged_questions FOR SELECT TO authenticated USING (class_id = auth.uid()::text)
+  - 20260406153113 95 public.flagged_questions FOR INSERT TO authenticated WITH CHECK (class_id = auth.uid()::text)
+  - 20260406153113 96 public.flagged_questions FOR DELETE TO authenticated USING (class_id = auth.uid()::text)
+  - 20260727120000 13 public.flagged_questions FOR UPDATE TO authenticated USING (class_id = auth.uid()::text) WITH CHECK (class_id = auth.uid()::text)
+## flashcard_reviews RLS
+  - 20260514234012 34 public.flashcard_reviews FOR SELECT TO authenticated USING (auth.uid() = user_id)
+  - 20260514234012 35 public.flashcard_reviews FOR SELECT TO authenticated USING (public.has_role(auth.uid(), 'admin'))
+  - 20260514234012 36 public.flashcard_reviews FOR INSERT TO authenticated WITH CHECK (auth.uid() = user_id)
+## gcal_sync_state RLS
+  - 20260513111010 68 public.gcal_sync_state FOR UPDATE TO authenticated USING (public.has_role(auth.uid(), 'admin'))
+  - 20260712074608 4 public.gcal_sync_state FOR SELECT TO authenticated USING (public.has_role(auth.uid(), 'admin'::public.app_role))
+## google_oauth_tokens RLS
+  - 20260701180000 94 public.google_oauth_tokens for all to authenticated using (user_id = auth.uid()) with check (user_id = auth.uid())
+## guided_drill_assignments RLS
+  - 20260507170553 60 public.guided_drill_assignments FOR ALL TO authenticated USING (public.has_role(auth.uid(), 'admin')) WITH CHECK (public.has_role(auth.uid(), 'admin'))
+  - 20260507170553 65 public.guided_drill_assignments FOR SELECT TO authenticated USING (student_id = auth.uid())
+  - 20260507170553 69 public.guided_drill_assignments FOR UPDATE TO authenticated USING (student_id = auth.uid()) WITH CHECK (student_id = auth.uid())
+## guided_drills RLS
+  - 20260507170553 28 public.guided_drills FOR ALL TO authenticated USING (public.has_role(auth.uid(), 'admin')) WITH CHECK (public.has_role(auth.uid(), 'admin'))
+  - 20260511084844 26 public.guided_drills FOR SELECT TO authenticated USING (is_published = true)
+## homework_assignments RLS
+  - 20260421112209 28 public.homework_assignments FOR SELECT TO authenticated USING (student_id = auth.uid())
+  - 20260421112209 32 public.homework_assignments FOR UPDATE TO authenticated USING (student_id = auth.uid()) WITH CHECK (student_id = auth.uid())
+  - 20260421112209 38 public.homework_assignments FOR SELECT TO authenticated USING (public.has_role(auth.uid(), 'admin'))
+  - 20260421112209 42 public.homework_assignments FOR INSERT TO authenticated WITH CHECK (public.has_role(auth.uid(), 'admin') AND assigned_by = auth.uid())
+  - 20260421112209 46 public.homework_assignments FOR UPDATE TO authenticated USING (public.has_role(auth.uid(), 'admin')) WITH CHECK (public.has_role(auth.uid(), 'admin'))
+  - 20260421112209 51 public.homework_assignments FOR DELETE TO authenticated USING (public.has_role(auth.uid(), 'admin'))
+## homework_sets RLS
+  - 20260421112208 19 public.homework_sets FOR SELECT TO authenticated USING (public.has_role(auth.uid(), 'admin') AND created_by = auth.uid())
+  - 20260421112208 23 public.homework_sets FOR INSERT TO authenticated WITH CHECK (public.has_role(auth.uid(), 'admin') AND created_by = auth.uid())
+  - 20260421112208 27 public.homework_sets FOR UPDATE TO authenticated USING (public.has_role(auth.uid(), 'admin') AND created_by = auth.uid()) WITH CHECK (public.has_role(auth.uid(), 'admin') AND created_by = auth.uid())
+  - 20260421112208 32 public.homework_sets FOR DELETE TO authenticated USING (public.has_role(auth.uid(), 'admin') AND created_by = auth.uid())
+  - 20260511084844 31 public.homework_sets FOR SELECT TO authenticated USING (EXISTS ( SELECT 1 FROM public.homework_assignments ha WHERE ha.set_id = homework_sets.id AND ha.student_id = auth.uid() ))
+## intro_lr_attempts RLS
+  - 20260611080153 22 public.intro_lr_attempts FOR ALL USING (auth.uid() = user_id) WITH CHECK (auth.uid() = user_id)
+  - 20260611080153 27 public.intro_lr_attempts FOR SELECT USING (public.has_role(auth.uid(), 'admin'))
+## journal_databases RLS
+  - 20260612120000 93 public.journal_databases FOR SELECT TO authenticated USING (auth.uid() = user_id)
+  - 20260612120000 99 public.journal_databases FOR SELECT TO authenticated USING (public.has_role(auth.uid(), 'admin'))
+  - 20260612120000 105 public.journal_databases FOR INSERT TO authenticated WITH CHECK (auth.uid() = user_id)
+  - 20260612120000 111 public.journal_databases FOR UPDATE TO authenticated USING (auth.uid() = user_id) WITH CHECK (auth.uid() = user_id)
+  - 20260612120000 118 public.journal_databases FOR DELETE TO authenticated USING (auth.uid() = user_id)
+## journal_pages RLS
+  - 20260612120000 44 public.journal_pages FOR SELECT TO authenticated USING (auth.uid() = user_id)
+  - 20260612120000 50 public.journal_pages FOR SELECT TO authenticated USING (public.has_role(auth.uid(), 'admin'))
+  - 20260612120000 56 public.journal_pages FOR INSERT TO authenticated WITH CHECK (auth.uid() = user_id)
+  - 20260612120000 62 public.journal_pages FOR UPDATE TO authenticated USING (auth.uid() = user_id) WITH CHECK (auth.uid() = user_id)
+  - 20260612120000 69 public.journal_pages FOR DELETE TO authenticated USING (auth.uid() = user_id)
+## journal_views RLS
+  - 20260612120000 148 public.journal_views FOR SELECT TO authenticated USING (auth.uid() = user_id)
+  - 20260612120000 154 public.journal_views FOR SELECT TO authenticated USING (public.has_role(auth.uid(), 'admin'))
+  - 20260612120000 160 public.journal_views FOR INSERT TO authenticated WITH CHECK (auth.uid() = user_id)
+  - 20260612120000 166 public.journal_views FOR UPDATE TO authenticated USING (auth.uid() = user_id) WITH CHECK (auth.uid() = user_id)
+  - 20260612120000 173 public.journal_views FOR DELETE TO authenticated USING (auth.uid() = user_id)
+## lr_answer_choices RLS
+  - 20260803020348 109 public.lr_answer_choices FOR SELECT TO authenticated USING (true)
+## lr_explanation_choice_notes RLS
+  - 20260803020348 112 public.lr_explanation_choice_notes FOR SELECT TO authenticated USING (true)
+## lr_explanation_steps RLS
+  - 20260803020348 111 public.lr_explanation_steps FOR SELECT TO authenticated USING (true)
+## lr_explanations RLS
+  - 20260803020348 110 public.lr_explanations FOR SELECT TO authenticated USING (true)
+## lr_preptests RLS
+  - 20260803020348 106 public.lr_preptests FOR SELECT TO authenticated USING (true)
+## lr_questions RLS
+  - 20260803020348 108 public.lr_questions FOR SELECT TO authenticated USING (true)
+## lr_sections RLS
+  - 20260803020348 107 public.lr_sections FOR SELECT TO authenticated USING (true)
+## lsat_knowledge_sources RLS
+  - 20260711012515 25 public.lsat_knowledge_sources FOR SELECT TO authenticated USING (public.has_role(auth.uid(), 'admin'))
+## lsatu_content_index RLS
+  - 20260619233835 24 public.lsatu_content_index FOR SELECT TO authenticated USING (public.has_role(auth.uid(), 'admin'))
+## lsatu_content_staging RLS
+  - 20260711040226 46 public.lsatu_content_staging FOR SELECT TO authenticated USING (public.has_role(auth.uid(), 'admin'))
+## mcp_write_audit RLS
+  - 20260728210058 24 public.mcp_write_audit for select to authenticated using (public.has_role(auth.uid(), 'admin'))
+## memory_audit RLS
+  - 20260620120000 177 public.memory_audit for all to authenticated using (public.has_role(auth.uid(),'admin')) with check (public.has_role(auth.uid(),'admin'))
+## memory_context_usage RLS
+  - 20260620120000 181 public.memory_context_usage for all to authenticated using (public.has_role(auth.uid(),'admin')) with check (public.has_role(auth.uid(),'admin'))
+## memory_events RLS
+  - 20260620120000 175 public.memory_events for all to authenticated using (public.has_role(auth.uid(),'admin')) with check (public.has_role(auth.uid(),'admin'))
+## memory_items RLS
+  - 20260620120000 173 public.memory_items for all to authenticated using (public.has_role(auth.uid(),'admin')) with check (public.has_role(auth.uid(),'admin'))
+## memory_namespaces RLS
+  - 20260620120000 171 public.memory_namespaces for all to authenticated using (public.has_role(auth.uid(),'admin')) with check (public.has_role(auth.uid(),'admin'))
+## message_attachments RLS
+  - 20260416234013 120 public.message_attachments FOR SELECT TO authenticated USING ( EXISTS ( SELECT 1 FROM public.messages m WHERE m.id = message_id AND (public.is_conversation_participant(m.conversation_id, auth.uid()) OR public.has_role(auth.uid(), 'admin')) ) )
+  - 20260421013408 18 public.message_attachments FOR INSERT TO authenticated WITH CHECK ( EXISTS ( SELECT 1 FROM public.messages m WHERE m.id = message_attachments.message_id AND m.sender_id = auth.uid() ) AND ( (kind = 'storage' AND storage_path IS NOT NULL) OR (kind = 'drive' AND web_view_link IS NOT NULL AND public.has_role(auth.uid(), 'admin'::ap
+  - 20260612153001 67 public.message_attachments FOR UPDATE TO authenticated USING (public.has_role(auth.uid(), 'admin')) WITH CHECK (public.has_role(auth.uid(), 'admin'))
+## messages RLS
+  - 20260416234013 105 public.messages FOR SELECT TO authenticated USING (public.is_conversation_participant(conversation_id, auth.uid()) OR public.has_role(auth.uid(), 'admin'))
+  - 20260416234013 109 public.messages FOR INSERT TO authenticated WITH CHECK ( sender_id = auth.uid() AND ( public.is_conversation_participant(conversation_id, auth.uid()) OR public.has_role(auth.uid(), 'admin') ) )
+  - 20260630000000 4 public.messages FOR DELETE TO authenticated USING (sender_id = auth.uid() OR public.has_role(auth.uid(), 'admin'))
+## messenger_conversations RLS
+  - 20260513115444 36 public.messenger_conversations FOR ALL TO authenticated USING (public.has_role(auth.uid(), 'admin')) WITH CHECK (public.has_role(auth.uid(), 'admin'))
+## messenger_messages RLS
+  - 20260513115444 43 public.messenger_messages FOR ALL TO authenticated USING (public.has_role(auth.uid(), 'admin')) WITH CHECK (public.has_role(auth.uid(), 'admin'))
+## model_runs RLS
+  - 20260901140000 88 public.model_runs for select to authenticated using (public.has_role(auth.uid(), 'admin'))
+  - 20260901140000 97 public.model_runs for insert to authenticated with check (public.has_role(auth.uid(), 'admin'))
+  - 20260901140000 101 public.model_runs for update to authenticated using (public.has_role(auth.uid(), 'admin')) with check (public.has_role(auth.uid(), 'admin'))
+  - 20260901140000 106 public.model_runs for delete to authenticated using (public.has_role(auth.uid(), 'admin'))
+  - 20260903210000 31 public.model_runs for select to authenticated using ( exists ( select 1 from public.activity_section_grades g where g.student_id = auth.uid() and g.source_section = model_runs.source_section ) )
+## notifications RLS
+  - 20260506124235 84 public.notifications for select to authenticated using (user_id = auth.uid())
+  - 20260506124235 89 public.notifications for delete to authenticated using (user_id = auth.uid())
+  - 20260506124235 94 public.notifications for update to authenticated using (user_id = auth.uid()) with check (user_id = auth.uid())
+  - 20260506124235 100 public.notifications for select to authenticated using (public.has_role(auth.uid(), 'admin'))
+  - 20260506124235 105 public.notifications for insert to authenticated with check (public.has_role(auth.uid(), 'admin'))
+  - 20260506124235 110 public.notifications for update to authenticated using (public.has_role(auth.uid(), 'admin')) with check (public.has_role(auth.uid(), 'admin'))
+  - 20260506124235 116 public.notifications for delete to authenticated using (public.has_role(auth.uid(), 'admin'))
+## operator_conversations RLS
+  - 20260508112429 31 public.operator_conversations FOR SELECT USING (public.has_role(auth.uid(),'admin') AND admin_id = auth.uid())
+  - 20260508112429 35 public.operator_conversations FOR INSERT WITH CHECK (public.has_role(auth.uid(),'admin') AND admin_id = auth.uid())
+  - 20260508112429 39 public.operator_conversations FOR UPDATE USING (public.has_role(auth.uid(),'admin') AND admin_id = auth.uid())
+  - 20260508112429 43 public.operator_conversations FOR DELETE USING (public.has_role(auth.uid(),'admin') AND admin_id = auth.uid())
+## operator_messages RLS
+  - 20260508112429 48 public.operator_messages FOR SELECT USING ( public.has_role(auth.uid(),'admin') AND EXISTS ( SELECT 1 FROM public.operator_conversations c WHERE c.id = conversation_id AND c.admin_id = auth.uid() ) )
+  - 20260508112429 57 public.operator_messages FOR INSERT WITH CHECK ( public.has_role(auth.uid(),'admin') AND EXISTS ( SELECT 1 FROM public.operator_conversations c WHERE c.id = conversation_id AND c.admin_id = auth.uid() ) )
+  - 20260508112429 66 public.operator_messages FOR DELETE USING ( public.has_role(auth.uid(),'admin') AND EXISTS ( SELECT 1 FROM public.operator_conversations c WHERE c.id = conversation_id AND c.admin_id = auth.uid() ) )
+## practice_test_assignments RLS
+  - 20260923010300 25 public.practice_test_assignments FOR ALL USING (public.has_role(auth.uid(), 'admin')) WITH CHECK (public.has_role(auth.uid(), 'admin'))
+  - 20260923010300 31 public.practice_test_assignments FOR SELECT USING ( student_id = auth.uid() AND status <> 'archived' AND (unlock_at IS NULL OR unlock_at <= now()) )
+## practice_test_runs RLS
+  - 20260829120000 127 public.practice_test_runs for select using (user_id = auth.uid())
+  - 20260829120000 135 public.practice_test_runs for update using (user_id = auth.uid()) with check (user_id = auth.uid())
+  - 20260829120000 139 public.practice_test_runs for select using (public.has_role(auth.uid(), 'admin'))
+  - 20260923010300 63 public.practice_test_runs FOR INSERT WITH CHECK (user_id = auth.uid() AND public.can_sit_practice_test(auth.uid(), pt))
+## profiles RLS
+  - 20251022025825 35 public.profiles FOR SELECT TO authenticated USING (class_id = public.get_user_class_id(auth.uid()))
+  - 20251022025825 38 public.profiles FOR INSERT TO authenticated WITH CHECK (class_id = public.get_user_class_id(auth.uid()))
+  - 20251022025825 41 public.profiles FOR UPDATE TO authenticated USING (class_id = public.get_user_class_id(auth.uid()))
+  - 20260406153113 22 public.profiles FOR SELECT TO authenticated USING (class_id = auth.uid()::text)
+  - 20260406153113 23 public.profiles FOR INSERT TO authenticated WITH CHECK (class_id = auth.uid()::text)
+  - 20260415210932 47 public.profiles FOR SELECT TO authenticated USING (public.has_role(auth.uid(), 'admin'))
+  - 20260415210932 52 public.profiles FOR UPDATE TO authenticated USING (public.has_role(auth.uid(), 'admin')) WITH CHECK (public.has_role(auth.uid(), 'admin'))
+  - 20260612153001 46 public.profiles FOR UPDATE TO authenticated USING (class_id = (auth.uid())::text) WITH CHECK (class_id = (auth.uid())::text)
+## question_exposures RLS
+  - 20260512100000 21 public.question_exposures FOR SELECT TO authenticated USING (auth.uid() = user_id)
+  - 20260512100000 27 public.question_exposures FOR INSERT TO authenticated WITH CHECK (auth.uid() = user_id)
+  - 20260806180100 30 public.question_exposures FOR SELECT TO authenticated USING (auth.uid() = user_id)
+  - 20260806180100 34 public.question_exposures FOR INSERT TO authenticated WITH CHECK (auth.uid() = user_id)
+## question_tutor_cache RLS
+  - 20260612140000 36 public.question_tutor_cache FOR SELECT TO authenticated USING (true)
+  - 20260612150000 21 public.question_tutor_cache FOR UPDATE TO authenticated USING (public.has_role(auth.uid(), 'admin')) WITH CHECK (public.has_role(auth.uid(), 'admin'))
+## question_type_strategies RLS
+  - 20260406070036 170 question_type_strategies FOR SELECT USING (true)
+## question_usage RLS
+  - 20251022025825 184 public.question_usage FOR SELECT TO authenticated USING (class_id = public.get_user_class_id(auth.uid()))
+  - 20251022025825 187 public.question_usage FOR INSERT TO authenticated WITH CHECK (class_id = public.get_user_class_id(auth.uid()))
+  - 20251022025825 190 public.question_usage FOR UPDATE TO authenticated USING (class_id = public.get_user_class_id(auth.uid()))
+  - 20251022025825 193 public.question_usage FOR DELETE TO authenticated USING (class_id = public.get_user_class_id(auth.uid()))
+  - 20260406153113 102 public.question_usage FOR SELECT TO authenticated USING (class_id = auth.uid()::text)
+  - 20260406153113 103 public.question_usage FOR INSERT TO authenticated WITH CHECK (class_id = auth.uid()::text)
+  - 20260406153113 104 public.question_usage FOR UPDATE TO authenticated USING (class_id = auth.uid()::text) WITH CHECK (class_id = auth.uid()::text)
+## question_views RLS
+  - 20260412201001 18 public.question_views FOR SELECT TO authenticated USING (class_id = auth.uid()::text)
+  - 20260412201001 23 public.question_views FOR INSERT TO authenticated WITH CHECK (class_id = auth.uid()::text)
+  - 20260412201001 28 public.question_views FOR UPDATE TO authenticated USING (class_id = auth.uid()::text) WITH CHECK (class_id = auth.uid()::text)
+## rc_annotations RLS
+  - 20260806000000 37 rc_annotations for all using (auth.uid() = user_id) with check (auth.uid() = user_id)
+## rc_answer_choices RLS
+  - 20260806032901 109 public.rc_answer_choices for select to authenticated using (true)
+## rc_attempts RLS
+  - 20260806000000 36 rc_attempts for all using (auth.uid() = user_id) with check (auth.uid() = user_id)
+## rc_drill_sessions RLS
+  - 20260806000000 35 rc_drill_sessions for all using (auth.uid() = user_id) with check (auth.uid() = user_id)
+## rc_lesson_progress RLS
+  - 20260725060000 21 public.rc_lesson_progress FOR SELECT USING (auth.uid() = user_id)
+  - 20260725060000 23 public.rc_lesson_progress FOR INSERT WITH CHECK (auth.uid() = user_id)
+  - 20260725060000 25 public.rc_lesson_progress FOR UPDATE USING (auth.uid() = user_id)
+  - 20260725060000 27 public.rc_lesson_progress FOR SELECT USING (public.has_role(auth.uid(),'admin'))
+## rc_passage_frameworks RLS
+  - 20260806032901 105 public.rc_passage_frameworks for select to authenticated using (true)
+## rc_passages RLS
+  - 20260806032901 104 public.rc_passages for select to authenticated using (true)
+## rc_question_features RLS
+  - 20260806032901 107 public.rc_question_features for select to authenticated using (true)
+## rc_question_legacy_tags RLS
+  - 20260806032901 108 public.rc_question_legacy_tags for select to authenticated using (true)
+## rc_questions RLS
+  - 20260806032901 106 public.rc_questions for select to authenticated using (true)
+## rc_taxonomy RLS
+  - 20260806032901 103 public.rc_taxonomy for select to authenticated using (true)
+## reading_center_bookmarks RLS
+  - 20261013120000 109 public.reading_center_bookmarks for all to authenticated using (user_id = auth.uid()) with check (user_id = auth.uid())
+  - 20261013120000 112 public.reading_center_bookmarks for select to authenticated using (public.has_role(auth.uid(), 'admin'))
+## reading_center_passage_metadata NORLS?
+  - 20261013220000 162 public.reading_center_passage_metadata for all to authenticated using (user_id=auth.uid() and public.has_reading_center_access() and exists ( select 1 from public.reading_center_passages p where p.id=passage_id )) with check (user_id=auth.uid() and public.has_reading_center_access() and exists ( select 1 from public.reading_cent
+## reading_center_passages RLS
+  - 20261013120000 83 public.reading_center_passages for insert to authenticated with check (public.has_role(auth.uid(), 'admin'))
+  - 20261013120000 86 public.reading_center_passages for update to authenticated using (public.has_role(auth.uid(), 'admin')) with check (public.has_role(auth.uid(), 'admin'))
+  - 20261013120000 90 public.reading_center_passages for delete to authenticated using (public.has_role(auth.uid(), 'admin'))
+  - 20261013220000 129 public.reading_center_passages for select to authenticated using (public.has_role(auth.uid(),'admin') or (public.has_reading_center_access() and (owner_id=auth.uid() or (owner_id is null and is_published))))
+  - 20261013220000 133 public.reading_center_passages for insert to authenticated with check (owner_id=auth.uid() and public.has_reading_center_access())
+  - 20261013220000 136 public.reading_center_passages for update to authenticated using (owner_id=auth.uid() and public.has_reading_center_access()) with check (owner_id=auth.uid() and public.has_reading_center_access())
+  - 20261013220000 140 public.reading_center_passages for delete to authenticated using (owner_id=auth.uid() and public.has_reading_center_access())
+## reading_center_preferences RLS
+  - 20261013120000 95 public.reading_center_preferences for all to authenticated using (user_id = auth.uid()) with check (user_id = auth.uid())
+  - 20261013120000 98 public.reading_center_preferences for select to authenticated using (public.has_role(auth.uid(), 'admin'))
+## reading_center_profile NORLS?
+## reading_center_progress RLS
+  - 20261013120000 102 public.reading_center_progress for all to authenticated using (user_id = auth.uid()) with check (user_id = auth.uid())
+  - 20261013120000 105 public.reading_center_progress for select to authenticated using (public.has_role(auth.uid(), 'admin'))
+## reading_center_sessions RLS
+  - 20261013120000 116 public.reading_center_sessions for all to authenticated using (user_id = auth.uid()) with check (user_id = auth.uid())
+  - 20261013120000 119 public.reading_center_sessions for select to authenticated using (public.has_role(auth.uid(), 'admin'))
+## reading_center_tags NORLS?
+## realtime.messages RLS
+  - 20260511181822 13 realtime.messages FOR SELECT TO authenticated USING ( CASE WHEN realtime.topic() LIKE 'conversation:%' THEN public.is_conversation_participant( NULLIF(split_part(realtime.topic(), ':', 2), '')::uuid, auth.uid() ) WHEN realtime.topic() LIKE 'user:%' THEN NULLIF(split_part(realtime.topic(), ':', 2), '')::uuid = auth.uid() ELSE fal
+  - 20260511181822 32 realtime.messages FOR INSERT TO authenticated WITH CHECK ( CASE WHEN realtime.topic() LIKE 'conversation:%' THEN public.is_conversation_participant( NULLIF(split_part(realtime.topic(), ':', 2), '')::uuid, auth.uid() ) WHEN realtime.topic() LIKE 'user:%' THEN NULLIF(split_part(realtime.topic(), ':', 2), '')::uuid = auth.uid() ELS
+## reasoning_type_guidance RLS
+  - 20260406070036 186 reasoning_type_guidance FOR SELECT USING (true)
+## schedule_events RLS
+  - 20260513111010 35 public.schedule_events FOR INSERT TO authenticated WITH CHECK (public.has_role(auth.uid(), 'admin'))
+  - 20260513111010 39 public.schedule_events FOR UPDATE TO authenticated USING (public.has_role(auth.uid(), 'admin'))
+  - 20260513111010 43 public.schedule_events FOR DELETE TO authenticated USING (public.has_role(auth.uid(), 'admin'))
+  - 20260712074608 10 public.schedule_events FOR SELECT TO authenticated USING (public.has_role(auth.uid(), 'admin'::public.app_role))
+  - 20260719033600 12 public.schedule_events FOR SELECT TO authenticated USING ( deleted_at IS NULL AND ( created_by = auth.uid() OR EXISTS ( SELECT 1 FROM public.booking_pass_redemptions r JOIN public.booking_passes p ON p.id = r.booking_pass_id WHERE r.schedule_event_id = schedule_events.id AND p.student_id = auth.uid() ) ) )
+## schedule_templates RLS
+  - 20260508000000 32 public.schedule_templates for all to authenticated using (public.has_role(auth.uid(), 'admin')) with check (public.has_role(auth.uid(), 'admin'))
+  - 20260805003000 75 public.schedule_templates FOR ALL TO authenticated USING (public.has_role(auth.uid(), 'admin')) WITH CHECK (public.has_role(auth.uid(), 'admin'))
+  - 20260805003000 94 public.schedule_templates FOR SELECT TO authenticated USING ( is_default OR EXISTS ( SELECT 1 FROM public.student_schedules s WHERE s.student_id = auth.uid() AND s.schedule_template_id = schedule_templates.id ) )
+## section_history RLS
+  - 20251022025825 119 public.section_history FOR SELECT TO authenticated USING (class_id = public.get_user_class_id(auth.uid()))
+  - 20251022025825 122 public.section_history FOR INSERT TO authenticated WITH CHECK (class_id = public.get_user_class_id(auth.uid()))
+  - 20260406153113 109 public.section_history FOR SELECT TO authenticated USING (class_id = auth.uid()::text)
+  - 20260406153113 110 public.section_history FOR INSERT TO authenticated WITH CHECK (class_id = auth.uid()::text)
+  - 20260829120000 62 public.section_history for insert with check ( user_id = auth.uid() and class_id = public.get_user_class_id(auth.uid()) )
+## session_ingestions RLS
+  - 20260624204004 33 public.session_ingestions FOR SELECT TO authenticated USING (public.has_role(auth.uid(), 'admin'::app_role))
+  - 20260624204004 37 public.session_ingestions FOR INSERT TO authenticated WITH CHECK (public.has_role(auth.uid(), 'admin'::app_role) AND created_by = auth.uid())
+  - 20260624204004 41 public.session_ingestions FOR UPDATE TO authenticated USING (public.has_role(auth.uid(), 'admin'::app_role)) WITH CHECK (public.has_role(auth.uid(), 'admin'::app_role))
+  - 20260624204004 46 public.session_ingestions FOR DELETE TO authenticated USING (public.has_role(auth.uid(), 'admin'::app_role))
+## session_replays RLS
+  - 20260420091136 16 public.session_replays FOR INSERT TO authenticated WITH CHECK (user_id = auth.uid())
+  - 20260420091136 20 public.session_replays FOR SELECT TO authenticated USING (user_id = auth.uid())
+  - 20260420091136 24 public.session_replays FOR SELECT TO authenticated USING (public.has_role(auth.uid(), 'admin'))
+  - 20260508144159 13 public.session_replays FOR INSERT TO authenticated WITH CHECK (class_id = (auth.uid())::text)
+  - 20260508144159 16 public.session_replays FOR SELECT TO authenticated USING (class_id = (auth.uid())::text)
+  - 20260508144159 19 public.session_replays FOR SELECT TO authenticated USING (public.has_role(auth.uid(),'admin'))
+## sessions RLS
+  - 20251022025825 130 public.sessions FOR SELECT TO authenticated USING (class_id = public.get_user_class_id(auth.uid()))
+  - 20251022025825 133 public.sessions FOR INSERT TO authenticated WITH CHECK (class_id = public.get_user_class_id(auth.uid()))
+  - 20251022025825 136 public.sessions FOR UPDATE TO authenticated USING (class_id = public.get_user_class_id(auth.uid()))
+  - 20260406153113 30 public.sessions FOR SELECT TO authenticated USING (class_id = auth.uid()::text)
+  - 20260406153113 31 public.sessions FOR INSERT TO authenticated WITH CHECK (class_id = auth.uid()::text)
+  - 20260406153113 32 public.sessions FOR UPDATE TO authenticated USING (class_id = auth.uid()::text) WITH CHECK (class_id = auth.uid()::text)
+## settings RLS
+  - 20251022025825 144 public.settings FOR SELECT TO authenticated USING (class_id = public.get_user_class_id(auth.uid()))
+  - 20251022025825 147 public.settings FOR INSERT TO authenticated WITH CHECK (class_id = public.get_user_class_id(auth.uid()))
+  - 20251022025825 150 public.settings FOR UPDATE TO authenticated USING (class_id = public.get_user_class_id(auth.uid()))
+  - 20260406153113 38 public.settings FOR SELECT TO authenticated USING (class_id = auth.uid()::text)
+  - 20260406153113 39 public.settings FOR INSERT TO authenticated WITH CHECK (class_id = auth.uid()::text)
+  - 20260406153113 40 public.settings FOR UPDATE TO authenticated USING (class_id = auth.uid()::text) WITH CHECK (class_id = auth.uid()::text)
+## single_session_bookings RLS
+## single_session_outbox RLS
+## smartboard_sessions RLS
+  - 20260506000500 33 public.smartboard_sessions for all to authenticated using (public.has_role(auth.uid(), 'admin')) with check (public.has_role(auth.uid(), 'admin'))
+  - 20260508144123 18 public.smartboard_sessions FOR ALL TO authenticated USING (public.has_role(auth.uid(),'admin')) WITH CHECK (public.has_role(auth.uid(),'admin'))
+  - 20260508144123 22 public.smartboard_sessions FOR SELECT TO authenticated USING (student_id = auth.uid())
+## stripe_payments RLS
+  - 20260927090000 46 public.stripe_payments FOR SELECT TO authenticated USING (public.has_role(auth.uid(), 'admin'))
+## stripe_sync_runs RLS
+  - 20260927090000 60 public.stripe_sync_runs FOR SELECT TO authenticated USING (public.has_role(auth.uid(), 'admin'))
+## student_analytics_sources RLS
+  - 20260506000400 32 public.student_analytics_sources for all to authenticated using (public.has_role(auth.uid(), 'admin')) with check (public.has_role(auth.uid(), 'admin'))
+  - 20260508144012 23 public.student_analytics_sources FOR ALL TO authenticated USING (public.has_role(auth.uid(), 'admin')) WITH CHECK (public.has_role(auth.uid(), 'admin'))
+  - 20260508144012 29 public.student_analytics_sources FOR SELECT TO authenticated USING (student_id = auth.uid())
+## student_booking_offers RLS
+  - 20260819075740 83 public.student_booking_offers FOR SELECT TO authenticated USING (student_id = auth.uid())
+  - 20260830040000 12 public.student_booking_offers FOR ALL TO authenticated USING (public.has_role(auth.uid(), 'admin')) WITH CHECK (public.has_role(auth.uid(), 'admin'))
+## student_context RLS
+  - 20260506164047 134 public.student_context FOR SELECT TO authenticated USING (public.has_role(auth.uid(),'admin'))
+  - 20260506164047 136 public.student_context FOR INSERT TO authenticated WITH CHECK (public.has_role(auth.uid(),'admin') AND created_by=auth.uid())
+  - 20260506164047 138 public.student_context FOR UPDATE TO authenticated USING (public.has_role(auth.uid(),'admin')) WITH CHECK (public.has_role(auth.uid(),'admin'))
+  - 20260506164047 140 public.student_context FOR DELETE TO authenticated USING (public.has_role(auth.uid(),'admin'))
+## student_curriculum_enrollments RLS
+  - 20260805002000 151 public.student_curriculum_enrollments FOR ALL TO authenticated USING (public.has_role(auth.uid(), 'admin')) WITH CHECK (public.has_role(auth.uid(), 'admin'))
+  - 20260805002000 160 public.student_curriculum_enrollments FOR SELECT TO authenticated USING (student_id = auth.uid())
+## student_curriculum_overrides RLS
+  - 20260805002000 145 public.student_curriculum_overrides FOR ALL TO authenticated USING (public.has_role(auth.uid(), 'admin')) WITH CHECK (public.has_role(auth.uid(), 'admin'))
+  - 20260805002000 165 public.student_curriculum_overrides FOR SELECT TO authenticated USING (student_id = auth.uid())
+## student_external_metrics RLS
+  - 20260702101820 31 public.student_external_metrics for select to authenticated using (student_id = auth.uid())
+  - 20260702101820 36 public.student_external_metrics for all to authenticated using (public.has_role(auth.uid(), 'admin')) with check (public.has_role(auth.uid(), 'admin'))
+## student_schedules RLS
+  - 20260805003000 81 public.student_schedules FOR ALL TO authenticated USING (public.has_role(auth.uid(), 'admin')) WITH CHECK (public.has_role(auth.uid(), 'admin'))
+  - 20260805003000 89 public.student_schedules FOR SELECT TO authenticated USING (student_id = auth.uid())
+## student_sessions RLS
+  - 20260506164047 160 public.student_sessions FOR SELECT TO authenticated USING (public.has_role(auth.uid(),'admin'))
+  - 20260506164047 162 public.student_sessions FOR INSERT TO authenticated WITH CHECK (public.has_role(auth.uid(),'admin') AND created_by=auth.uid())
+  - 20260506164047 164 public.student_sessions FOR UPDATE TO authenticated USING (public.has_role(auth.uid(),'admin')) WITH CHECK (public.has_role(auth.uid(),'admin'))
+  - 20260506164047 166 public.student_sessions FOR DELETE TO authenticated USING (public.has_role(auth.uid(),'admin'))
+## students RLS
+  - 20251022025825 157 public.students FOR SELECT TO authenticated USING (user_id = auth.uid())
+  - 20251022025825 160 public.students FOR UPDATE TO authenticated USING (user_id = auth.uid())
+  - 20260329000000 27 public.students FOR INSERT TO authenticated WITH CHECK (user_id = auth.uid())
+  - 20260406153113 8 public.students FOR SELECT TO authenticated USING (user_id = auth.uid())
+  - 20260406153113 9 public.students FOR UPDATE TO authenticated USING (user_id = auth.uid()) WITH CHECK (user_id = auth.uid())
+  - 20260406153113 10 public.students FOR INSERT TO authenticated WITH CHECK (user_id = auth.uid())
+## ta_assignments RLS
+  - 20260506164047 91 public.ta_assignments FOR SELECT TO authenticated USING (student_id=auth.uid())
+  - 20260506164047 93 public.ta_assignments FOR UPDATE TO authenticated USING (student_id=auth.uid()) WITH CHECK (student_id=auth.uid())
+  - 20260506164047 95 public.ta_assignments FOR SELECT TO authenticated USING (public.has_role(auth.uid(),'admin'))
+  - 20260506164047 97 public.ta_assignments FOR INSERT TO authenticated WITH CHECK (public.has_role(auth.uid(),'admin') AND assigned_by=auth.uid())
+  - 20260506164047 99 public.ta_assignments FOR UPDATE TO authenticated USING (public.has_role(auth.uid(),'admin')) WITH CHECK (public.has_role(auth.uid(),'admin'))
+  - 20260506164047 101 public.ta_assignments FOR DELETE TO authenticated USING (public.has_role(auth.uid(),'admin'))
+## ta_interactions RLS
+  - 20260506164047 58 public.ta_interactions FOR SELECT TO authenticated USING (public.has_role(auth.uid(),'admin'))
+  - 20260506164047 60 public.ta_interactions FOR INSERT TO authenticated WITH CHECK (public.has_role(auth.uid(),'admin'))
+  - 20260506164047 62 public.ta_interactions FOR UPDATE TO authenticated USING (public.has_role(auth.uid(),'admin')) WITH CHECK (public.has_role(auth.uid(),'admin'))
+  - 20260506164047 64 public.ta_interactions FOR DELETE TO authenticated USING (public.has_role(auth.uid(),'admin'))
+  - 20260620205011 8 public.ta_interactions FOR SELECT TO authenticated USING ( student_id = auth.uid() AND ( draft_status IS NULL OR draft_status = ANY (ARRAY['approved','posted']) ) )
+## tactical_patterns RLS
+  - 20260406070036 202 tactical_patterns FOR SELECT USING (true)
+## teacher_message_templates RLS
+  - 20260520043000 31 public.teacher_message_templates for select to authenticated using (public.has_role(auth.uid(), 'admin') and owner_id = auth.uid())
+  - 20260520043000 35 public.teacher_message_templates for insert to authenticated with check (public.has_role(auth.uid(), 'admin') and owner_id = auth.uid())
+  - 20260520043000 39 public.teacher_message_templates for update to authenticated using (public.has_role(auth.uid(), 'admin') and owner_id = auth.uid()) with check (public.has_role(auth.uid(), 'admin') and owner_id = auth.uid())
+  - 20260520043000 44 public.teacher_message_templates for delete to authenticated using (public.has_role(auth.uid(), 'admin') and owner_id = auth.uid())
+  - 20260522152939 17 public.teacher_message_templates FOR SELECT USING (auth.uid() = owner_id OR public.has_role(auth.uid(), 'admin'))
+  - 20260522152939 21 public.teacher_message_templates FOR INSERT WITH CHECK (auth.uid() = owner_id)
+  - 20260522152939 25 public.teacher_message_templates FOR UPDATE USING (auth.uid() = owner_id)
+  - 20260522152939 29 public.teacher_message_templates FOR DELETE USING (auth.uid() = owner_id)
+## teacher_todo_dismissals RLS
+  - 20260619204235 17 public.teacher_todo_dismissals FOR ALL TO authenticated USING (public.has_role(auth.uid(), 'admin') AND admin_user_id = auth.uid()) WITH CHECK (public.has_role(auth.uid(), 'admin') AND admin_user_id = auth.uid())
+## teaching_assets RLS
+  - 20260506164047 16 public.teaching_assets FOR SELECT TO authenticated USING (public.has_role(auth.uid(),'admin'))
+  - 20260506164047 18 public.teaching_assets FOR INSERT TO authenticated WITH CHECK (public.has_role(auth.uid(),'admin') AND created_by=auth.uid())
+  - 20260506164047 20 public.teaching_assets FOR UPDATE TO authenticated USING (public.has_role(auth.uid(),'admin')) WITH CHECK (public.has_role(auth.uid(),'admin'))
+  - 20260506164047 22 public.teaching_assets FOR DELETE TO authenticated USING (public.has_role(auth.uid(),'admin'))
+## tutor_conversations RLS
+  - 20260508064154 22 public.tutor_conversations FOR SELECT USING (auth.uid() = user_id)
+  - 20260508064154 26 public.tutor_conversations FOR INSERT WITH CHECK (auth.uid() = user_id)
+  - 20260508064154 30 public.tutor_conversations FOR SELECT USING (public.has_role(auth.uid(), 'admin'))
+## tutor_interaction_log RLS
+  - 20260612140000 69 public.tutor_interaction_log FOR SELECT TO authenticated USING (auth.uid() = user_id)
+  - 20260612140000 75 public.tutor_interaction_log FOR SELECT TO authenticated USING (public.has_role(auth.uid(), 'admin'))
+## user_achievements RLS
+  - 20251022025825 225 public.user_achievements FOR SELECT TO authenticated USING (class_id = public.get_user_class_id(auth.uid()))
+  - 20251022025825 228 public.user_achievements FOR INSERT TO authenticated WITH CHECK (class_id = public.get_user_class_id(auth.uid()))
+  - 20260406153113 54 public.user_achievements FOR SELECT TO authenticated USING (class_id = auth.uid()::text)
+  - 20260406153113 55 public.user_achievements FOR INSERT TO authenticated WITH CHECK (class_id = auth.uid()::text)
+  - 20260406153113 56 public.user_achievements FOR UPDATE TO authenticated USING (class_id = auth.uid()::text) WITH CHECK (class_id = auth.uid()::text)
+## user_challenges RLS
+  - 20251022025825 236 public.user_challenges FOR SELECT TO authenticated USING (class_id = public.get_user_class_id(auth.uid()))
+  - 20251022025825 239 public.user_challenges FOR INSERT TO authenticated WITH CHECK (class_id = public.get_user_class_id(auth.uid()))
+  - 20251022025825 242 public.user_challenges FOR UPDATE TO authenticated USING (class_id = public.get_user_class_id(auth.uid()))
+## user_last_activity RLS
+  - 20260512000000 24 public.user_last_activity FOR SELECT TO authenticated USING (auth.uid() = user_id)
+  - 20260512000000 30 public.user_last_activity FOR INSERT TO authenticated WITH CHECK (auth.uid() = user_id)
+  - 20260512000000 36 public.user_last_activity FOR UPDATE TO authenticated USING (auth.uid() = user_id) WITH CHECK (auth.uid() = user_id)
+  - 20260806180000 33 public.user_last_activity FOR SELECT TO authenticated USING (auth.uid() = user_id)
+  - 20260806180000 37 public.user_last_activity FOR INSERT TO authenticated WITH CHECK (auth.uid() = user_id)
+  - 20260806180000 42 public.user_last_activity FOR UPDATE TO authenticated USING (auth.uid() = user_id) WITH CHECK (auth.uid() = user_id)
+## user_roles RLS
+  - 20260415210932 31 public.user_roles FOR SELECT TO authenticated USING (user_id = auth.uid())
+  - 20260415210932 35 public.user_roles FOR ALL TO authenticated USING (public.has_role(auth.uid(), 'admin'))
+## user_saved_sets RLS
+  - 20260512100100 26 public.user_saved_sets FOR SELECT TO authenticated USING (auth.uid() = user_id)
+  - 20260512100100 32 public.user_saved_sets FOR INSERT TO authenticated WITH CHECK (auth.uid() = user_id)
+  - 20260512100100 38 public.user_saved_sets FOR UPDATE TO authenticated USING (auth.uid() = user_id) WITH CHECK (auth.uid() = user_id)
+  - 20260512100100 45 public.user_saved_sets FOR DELETE TO authenticated USING (auth.uid() = user_id)
+  - 20260806180200 29 public.user_saved_sets FOR SELECT TO authenticated USING (auth.uid() = user_id)
+  - 20260806180200 33 public.user_saved_sets FOR INSERT TO authenticated WITH CHECK (auth.uid() = user_id)
+  - 20260806180200 37 public.user_saved_sets FOR UPDATE TO authenticated USING (auth.uid() = user_id) WITH CHECK (auth.uid() = user_id)
+  - 20260806180200 43 public.user_saved_sets FOR DELETE TO authenticated USING (auth.uid() = user_id)
+## user_voice_settings RLS
+  - 20251022025825 166 public.user_voice_settings FOR SELECT TO authenticated USING (class_id = public.get_user_class_id(auth.uid()))
+  - 20251022025825 169 public.user_voice_settings FOR INSERT TO authenticated WITH CHECK (class_id = public.get_user_class_id(auth.uid()))
+  - 20251022025825 172 public.user_voice_settings FOR UPDATE TO authenticated USING (class_id = public.get_user_class_id(auth.uid()))
+  - 20251022025825 175 public.user_voice_settings FOR DELETE TO authenticated USING (class_id = public.get_user_class_id(auth.uid()))
+## voice_coaching_sessions RLS
+  - 20251022025825 95 public.voice_coaching_sessions FOR SELECT TO authenticated USING (class_id = public.get_user_class_id(auth.uid()))
+  - 20251022025825 98 public.voice_coaching_sessions FOR INSERT TO authenticated WITH CHECK (class_id = public.get_user_class_id(auth.uid()))
+  - 20260406153113 115 public.voice_coaching_sessions FOR SELECT TO authenticated USING (class_id = auth.uid()::text)
+  - 20260406153113 116 public.voice_coaching_sessions FOR INSERT TO authenticated WITH CHECK (class_id = auth.uid()::text)
+## weekly_plan_items RLS
+  - 20260506000100 76 public.weekly_plan_items for select to authenticated using ( student_id = auth.uid() and exists ( select 1 from public.weekly_plans p where p.id = weekly_plan_id and p.status = 'published' ) )
+  - 20260506000100 86 public.weekly_plan_items for update to authenticated using (student_id = auth.uid()) with check (student_id = auth.uid())
+  - 20260506000100 91 public.weekly_plan_items for all to authenticated using (public.has_role(auth.uid(), 'admin')) with check (public.has_role(auth.uid(), 'admin'))
+  - 20260508144123 73 public.weekly_plan_items FOR ALL TO authenticated USING (public.has_role(auth.uid(),'admin')) WITH CHECK (public.has_role(auth.uid(),'admin'))
+  - 20260508144123 77 public.weekly_plan_items FOR SELECT TO authenticated USING ( student_id = auth.uid() AND EXISTS ( SELECT 1 FROM public.weekly_plans p WHERE p.id = weekly_plan_items.weekly_plan_id AND p.status = 'published' ) )
+  - 20260701180000 24 public.weekly_plan_items for insert to authenticated with check (student_id = auth.uid() and source = 'self')
+  - 20260701180000 30 public.weekly_plan_items for delete to authenticated using (student_id = auth.uid())
+## weekly_plans RLS
+  - 20260506000100 33 public.weekly_plans for select to authenticated using (student_id = auth.uid() and status = 'published')
+  - 20260506000100 37 public.weekly_plans for all to authenticated using (public.has_role(auth.uid(), 'admin')) with check (public.has_role(auth.uid(), 'admin'))
+  - 20260508144123 45 public.weekly_plans FOR ALL TO authenticated USING (public.has_role(auth.uid(),'admin')) WITH CHECK (public.has_role(auth.uid(),'admin'))
+  - 20260508144123 49 public.weekly_plans FOR SELECT TO authenticated USING (student_id = auth.uid() AND status = 'published')
+## wrong_answer_journal RLS
+  - 20251022025825 82 public.wrong_answer_journal FOR SELECT TO authenticated USING (class_id = public.get_user_class_id(auth.uid()))
+  - 20251022025825 85 public.wrong_answer_journal FOR INSERT TO authenticated WITH CHECK (class_id = public.get_user_class_id(auth.uid()))
+  - 20251022025825 88 public.wrong_answer_journal FOR UPDATE TO authenticated USING (class_id = public.get_user_class_id(auth.uid()))
+  - 20260406153113 122 public.wrong_answer_journal FOR SELECT TO authenticated USING (class_id = auth.uid()::text)
+  - 20260406153113 123 public.wrong_answer_journal FOR INSERT TO authenticated WITH CHECK (class_id = auth.uid()::text)
+  - 20260406153113 124 public.wrong_answer_journal FOR UPDATE TO authenticated USING (class_id = auth.uid()::text) WITH CHECK (class_id = auth.uid()::text)
+  - 20260719065430 5 public.wrong_answer_journal FOR SELECT USING (class_id = (auth.uid())::text)
+  - 20260719065430 8 public.wrong_answer_journal FOR INSERT WITH CHECK (class_id = (auth.uid())::text)
+  - 20260719065430 11 public.wrong_answer_journal FOR UPDATE USING (class_id = (auth.uid())::text) WITH CHECK (class_id = (auth.uid())::text)
+## wrong_answer_journal_notes RLS
+  - 20260612130000 32 public.wrong_answer_journal_notes FOR SELECT TO authenticated USING (auth.uid() = user_id)
+  - 20260612130000 38 public.wrong_answer_journal_notes FOR SELECT TO authenticated USING (public.has_role(auth.uid(), 'admin'))
+  - 20260612130000 44 public.wrong_answer_journal_notes FOR INSERT TO authenticated WITH CHECK (auth.uid() = user_id)
+  - 20260612130000 50 public.wrong_answer_journal_notes FOR UPDATE TO authenticated USING (auth.uid() = user_id) WITH CHECK (auth.uid() = user_id)
+  - 20260811131056 12 public.wrong_answer_journal_notes FOR DELETE TO authenticated USING (public.has_role(auth.uid(), 'admin'))

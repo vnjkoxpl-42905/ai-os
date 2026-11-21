@@ -1,0 +1,45 @@
+{
+  "plan_id": "lanae-conditional-bootcamp-2026-11-17",
+  "student": "Lanae",
+  "student_id": "be56faa7-58e2-4fd0-886f-251166d08b80",
+  "dry_run": false,
+  "verify_existing": false,
+  "results": [
+    {
+      "kind": "bootcamp",
+      "title": "Conditional Logic Bootcamp",
+      "action": "assigned",
+      "day": null,
+      "due": null,
+      "assignment_id": null,
+      "classroom_item_id": "28314761-4616-4e81-a9e8-63e8c4d696fe",
+      "route": "/bootcamp/conditionals",
+      "notify": {
+        "inbox_ok": true,
+        "bell_ok": true,
+        "email_ok": true
+      },
+      "verified": true,
+      "bell_count": 1
+    }
+  ],
+  "metrics": {
+    "sign_ins": 1,
+    "student_lookups": 1,
+    "bank_reads": 0,
+    "planned": 1,
+    "assigned": 1,
+    "elapsed_ms": 4397
+  },
+  "runtime": {
+    "lock_ms": 7,
+    "fetch_ms": 1976,
+    "setup_ms": 1188,
+    "execute_ms": 8161,
+    "total_ms": 11332,
+    "cache_hit": true,
+    "ops_commit": "75d683a81e7a103f563a735bc19c51893908f056",
+    "source_sha256": "1a88aac53391cfdb4c9b94159636a6a5c5bbb25379a75bdab2f7dc191334c403"
+  },
+  "audit_file": "C:\\Users\\Joshu\\dev\\ai-os\\students\\lanae\\assignments\\lanae-conditional-bootcamp-2026-11-17\\2026-11-17T22-48-26-968Z-b5943891.generated.json"
+}

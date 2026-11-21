@@ -1,0 +1,84 @@
+{
+ "qid": "PT158-S2-Q18",
+ "type": "Flaw",
+ "difficulty": "5",
+ "key_db": "E",
+ "stimulus_db": "Records reveal that of physical therapy patients who received less than six weeks of treatment, about 31 percent showed major improvement, regardless of whether they were treated by a general practitioner or by a specialist. Of patients who received physical therapy for a longer time, again regardless of whether they were treated by a general practitioner or by a specialist, about 50 percent showed major improvement. Therefore, the choice between seeing a specialist or a general practitioner for necessary physical therapy will not affect one's chances of major improvement.",
+ "stem_db": "The reasoning in the argument is most vulnerable to criticism on the grounds that the argument",
+ "choices_db": {
+  "A": "presumes, without providing justification, that effectiveness of different practitioners in bringing about major improvement cannot differ at all if their effectiveness in bringing about any improvement does not differ",
+  "B": "provides no information about the kinds of injuries that require short-term as opposed to long-term treatment",
+  "C": "overlooks the possibility that patients are more strongly biased to report favorably on one of the two types of medical professionals than on the other",
+  "D": "fails to indicate whether the number of patients surveyed who saw a general practitioner was equal to the number who saw a specialist",
+  "E": "overlooks the possibility that specialists and general practitioners each tend to excel at treating a different type of injury"
+ },
+ "bank": {
+  "stimulus": "Records reveal that of physical therapy patients who\n received less than six weeks of treatment, about 31\n percent showed major improvement, regardless of\n whether they were treated by a general practitioner or by\n a specialist. Of patients who received physical therapy\n for a longer time, again regardless of whether they were\n treated by a general practitioner or by a specialist, about\n 50 percent showed major improvement. Therefore,\n the choice between seeing a specialist or a general\n practitioner for necessary physical therapy will not affect\n one’s chances of major improvement.",
+  "stem": "The reasoning in the argument is most vulnerable to\n criticism on the grounds that the argument",
+  "choices": {
+   "A": "presumes, without providing justification, that effectiveness of different practitioners in bringing about major improvement cannot differ at all if their effectiveness in bringing about any improvement does not differ",
+   "B": "provides no information about the kinds of injuries that require short-term as opposed to long-term treatment",
+   "C": "overlooks the possibility that patients are more strongly biased to report favorably on one of the two types of medical professionals than on the other",
+   "D": "fails to indicate whether the number of patients surveyed who saw a general practitioner was equal to the number who saw a specialist",
+   "E": "overlooks the possibility that specialists and general practitioners each tend to excel at treating a different type of injury"
+  },
+  "key": "E"
+ },
+ "explanation_id": "9dc92652-6d3d-474d-b725-2d5369d40bbd",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "fdd102c0-8e90-4ab3-9b95-383d7ed5d2b1",
+   "position": 0,
+   "label": "Conclusion (therefore)",
+   "body": "The choice between seeing a specialist or a general practitioner for needed PT will not affect one's chances of major improvement."
+  },
+  {
+   "row_id": "3763d81a-64c3-4fb9-ae0a-a4bc3c7a30cc",
+   "position": 1,
+   "label": "Evidence",
+   "body": "Among people who received less than six weeks of PT, 31% showed major improvement, whether they were treated by a general practitioner or a by a specialist. Among people who received more PT, again about 50% showed major improvement, regardless of whether they were treated by a general practitioner or by a specialist."
+  },
+  {
+   "row_id": "cb8adb6d-d0e9-4940-b968-8cdcd4c6227b",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "This conclusion is essentially anti-causal, saying it doesn't make a difference whether you're assigned to a general practitioner or to a specialist. If we were going to argue that it does make a difference which one you're assigned to, then how are we going to explain why people seem to be getting the same rate of major improvement regardless of which type of PT they see? There is a tiny detail that crops up in the conclusion about \"necessary physical therapy\". The evidence didn't say that the people receiving physical therapy were getting needed physical therapy. Maybe when it's needed, it really makes a difference whether you see a GP vs. a specialist, but the records are distorted by the fact that tons of people get PT when they don't need it. Maybe we're currently doing a great job of assigning people to a GP vs. a specialist based on what their specific situation is, and if we stopped caring about which type of therapist we assigned patients, the 31% and 50% marks would go way down. Conversely, maybe we're currently not doing a great job of assigning people to a GP vs. a specialist based on their specific situation, and if we started caring about which type we assigned patients to, we would do better than 31% and 50% of patients showing major improvement."
+  },
+  {
+   "row_id": "db1f7ed4-5792-4923-90d8-a4c6f39f24ae",
+   "position": 3,
+   "label": "Goal",
+   "body": "The author is assuming that if both types of therapist are getting the same percent of their patients to show major improvement, then it doesn't matter whether a patient sees one or the other (for the sake of major improvement). But the author is failing to consider that those current rates of major improvement might change were we to concentrate more or concentrate less on caring about whether patients saw a specialist vs. GP based on their specific needs."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "25055e28-603e-41ba-a038-2e99a1c467d8",
+   "letter": "A",
+   "body": "The argument does not make this presumption. It never mentions patients who showed any improvement at all; its evidence and its conclusion are both about major improvement. So it cannot be inferring something about major improvement from facts about any improvement. The argument's real flaw is the failure to control for confounding variables: it does not account for differences in the types of conditions treated by specialists versus generalists. Two practitioners can show the same major-improvement rates, and the comparison can still be meaningless if they are treating fundamentally different patient populations."
+  },
+  {
+   "row_id": "d55ccc72-2bc7-40b2-b69f-5b0b79b48d53",
+   "letter": "B",
+   "body": "Knowing which kinds of injuries require short-term versus long-term treatment is unnecessary for the argument's conclusion. The argument groups patients by duration and compares outcomes within each group. Whether back injuries need six weeks and knee injuries need twelve is irrelevant to the question of whether practitioner type affects outcomes. The argument's flaw is about who treats what types of patients, not about which injuries require which treatment durations. This answer points to missing information that would be useful for a different analysis but does not identify the logical error in the argument as presented."
+  },
+  {
+   "row_id": "50ac8dfa-b0b7-402f-af44-9c90e7836fcf",
+   "letter": "C",
+   "body": "Patient reporting bias — whether patients are more favorable toward one type of practitioner — is a valid methodological concern in general, but it is not the specific flaw in this argument. The argument assumes the reported improvement rates are accurate and draws a flawed conclusion from them. Even if the data is perfectly unbiased, the comparison fails because it does not control for differences in the patient populations seen by each type of practitioner. Introducing a reporting bias concern shifts attention from the argument's actual logical error (comparing non-equivalent groups) to a hypothetical data quality issue that, even if resolved, would not fix the underlying problem."
+  },
+  {
+   "row_id": "d719533f-d6de-486c-9cd6-90c1a21059da",
+   "letter": "D",
+   "body": "Whether the number of patients surveyed was equal between groups is not the argument's flaw. Statistical comparisons of percentages do not require equal sample sizes — the percentages are already normalized. The argument compares 31% to 31% and 50% to 50%; these percentages can be equally meaningful whether derived from 100 patients or 10,000. The flaw is that equal percentages from different patient populations are being treated as evidence of equal effectiveness. If specialists treat harder cases, equal improvement rates actually indicate superior performance by specialists. The sample size question is a statistical concern that is separate from and less fundamental than the confounding-variable problem that actually undermines the argument."
+  },
+  {
+   "row_id": "5cdd5e95-22eb-4381-8fdc-7e784071f139",
+   "letter": "E",
+   "body": "This answer identifies the argument's central flaw: it compares raw improvement rates without accounting for the possibility that specialists and generalists treat fundamentally different types of conditions. If specialists tend to handle complex, difficult cases (torn ligaments, post-surgical rehabilitation, chronic conditions) while generalists handle simpler problems (mild strains, basic mobility issues), then equal improvement rates actually indicate that specialists are more effective — they are achieving the same results with harder cases. Conversely, if generalists excel at treating certain conditions and specialists at others, a patient's choice of practitioner absolutely matters, even though the aggregate numbers look identical. The argument committed the ecological fallacy: drawing individual-level conclusions from group-level data that masks crucial subgroup differences. By overlooking that each practitioner type might have a comparative advantage with different conditions, the argument prematurely concluded that the choice does not matter."
+  }
+ ],
+ "known_problem": "A note argues against a claim A does not make. (Found in the 2026-09-26 survey; not re-read.)",
+ "tags": "emdash-heavy; pt157-158-register"
+}

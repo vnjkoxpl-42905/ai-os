@@ -1,0 +1,601 @@
+# How to Diagram (and Contrapositive) And/Or
+
+Source: https://new.theloophole.com/training-camp/browse/concept-review/conditional-reasoning/how-to-diagram-and-contrapositive-and-or
+
+Captured: 2026-10-19T00:22:29.632Z. Displayed duration: 462.9963130000002.
+
+Caption origin: English (auto-generated). This is a complete native-caption extraction, not word-by-word listening verification. Caption wording is retained without editorial correction. Original cue bytes remain in source.vtt; rendered site transcript is preserved separately.
+
+[00:00:00.535 - 00:00:01.715]
+Ugh, how to diagram.
+
+[00:00:02.015 - 00:00:03.555]
+And or you may be asking yourself, Ellen,
+
+[00:00:03.615 - 00:00:06.795]
+do we really need a whole video on just how to diagram and
+
+[00:00:06.815 - 00:00:08.155]
+or, yes, my friends.
+
+[00:00:08.575 - 00:00:10.995]
+Yes you do. Because no matter
+
+[00:00:11.055 - 00:00:13.835]
+how many times in The Loophole I've asked y'all
+
+[00:00:14.015 - 00:00:17.235]
+to become my favorite human by following one simple rule,
+
+[00:00:18.045 - 00:00:19.115]
+y'all often refuse.
+
+[00:00:19.695 - 00:00:23.595]
+And so, um, get ready to hear my real sales pitch
+
+[00:00:23.615 - 00:00:25.115]
+for why I want you to diagram and
+
+[00:00:25.115 - 00:00:26.955]
+or the way I want you to diagram and or,
+
+[00:00:27.335 - 00:00:29.235]
+and some bonus A Court of Thorns
+
+[00:00:29.235 - 00:00:30.675]
+and Roses content, um,
+
+[00:00:30.885 - 00:00:33.875]
+which will qualify under fair use in copyright.
+
+[00:00:34.215 - 00:00:37.835]
+Uh, so, uh, we're gonna learn by doing a little bit here
+
+[00:00:37.975 - 00:00:39.155]
+and I'll, I'll stop and pause
+
+[00:00:39.155 - 00:00:40.715]
+and give you a few, you know, inside tips
+
+[00:00:40.815 - 00:00:43.475]
+and more unlessie, um, kind
+
+[00:00:43.475 - 00:00:46.075]
+of advanced Easter eggs as we go.
+
+[00:00:46.335 - 00:00:48.395]
+But let's give it a try. Let's start.
+
+[00:00:48.495 - 00:00:51.835]
+So Thea escapes the human world if she is surly
+
+[00:00:52.055 - 00:00:53.115]
+and kills a wolf.
+
+[00:00:53.305 - 00:00:55.115]
+Okay, so the first thing I'm noticing here, right,
+
+[00:00:55.175 - 00:00:59.355]
+is I've got my, if that is my initial sufficient indicator,
+
+[00:00:59.415 - 00:01:01.275]
+and I have to ask myself, okay, what's it targeting?
+
+[00:01:01.305 - 00:01:03.955]
+Well, it's targeting surly, it's targeting this
+
+[00:01:04.095 - 00:01:06.275]
+and it's really useful to actually think of the and
+
+[00:01:06.275 - 00:01:08.075]
+and the or as a thing that is being targeted
+
+[00:01:08.075 - 00:01:09.675]
+by the conditional indicator itself as well.
+
+[00:01:10.015 - 00:01:13.755]
+And it's also targeting, killing this wolf.
+
+[00:01:14.165 - 00:01:16.555]
+Don't worry, it'll, it was, it was okay.
+
+[00:01:16.555 - 00:01:17.795]
+It was for the best. Um,
+
+[00:01:18.215 - 00:01:21.275]
+but so now I'm like, okay, so
+
+[00:01:21.275 - 00:01:22.555]
+that's my sufficient condition.
+
+[00:01:22.975 - 00:01:25.675]
+I'm going to diagram it vertically
+
+[00:01:26.585 - 00:01:29.075]
+because that's what Ellen begs me to do in The Loophole.
+
+[00:01:29.695 - 00:01:33.115]
+Um, and so things to note just so far, um,
+
+[00:01:33.115 - 00:01:34.355]
+this is my sufficient condition.
+
+[00:01:34.355 - 00:01:37.075]
+I'll draw by a little arrow, but notice this.
+
+[00:01:37.455 - 00:01:39.235]
+And um, I'm doing it as a plus.
+
+[00:01:39.335 - 00:01:40.355]
+I'm not writing out the word.
+
+[00:01:40.455 - 00:01:43.875]
+And, and most importantly, I am diagramming this vertically,
+
+[00:01:43.875 - 00:01:46.115]
+meaning that s is on top of the kw.
+
+[00:01:46.755 - 00:01:48.955]
+I did not diagram it S
+
+[00:01:49.535 - 00:01:51.915]
+and KW arrow.
+
+[00:01:52.295 - 00:01:54.715]
+Um, that is what I don't want people to do.
+
+[00:01:54.775 - 00:01:57.195]
+Bad, bad, bad, bad, bad. Don't do that. Don't do that.
+
+[00:01:57.575 - 00:01:59.395]
+Um, because it makes it impossible
+
+[00:01:59.395 - 00:02:01.195]
+to change your conditionals and it just makes it harder
+
+[00:02:01.195 - 00:02:02.475]
+to read overall harder to see
+
+[00:02:02.475 - 00:02:03.635]
+where the arrow is coming off of.
+
+[00:02:03.985 - 00:02:07.835]
+It's much, much, much, much better to diagram it this way so
+
+[00:02:07.835 - 00:02:11.275]
+that this arrow is coming directly off of that.
+
+[00:02:11.375 - 00:02:13.275]
+And because this, um,
+
+[00:02:13.305 - 00:02:15.355]
+this sufficient condition is being activated
+
+[00:02:15.535 - 00:02:17.915]
+by the combination of these two variables,
+
+[00:02:18.375 - 00:02:19.675]
+not one variable by itself.
+
+[00:02:19.935 - 00:02:21.435]
+One other thing that I'll often see people do
+
+[00:02:21.435 - 00:02:22.715]
+that is also wrong, um,
+
+[00:02:22.715 - 00:02:24.475]
+besides just diagramming it horizontally,
+
+[00:02:24.475 - 00:02:26.995]
+is they'll put the arrow up here, um,
+
+[00:02:27.255 - 00:02:29.835]
+and they'll be like, oh yeah, oh, I remembered I have
+
+[00:02:29.835 - 00:02:30.835]
+to do this and now.
+
+[00:02:30.895 - 00:02:32.835]
+And so, oh, you know, I'll just put that below.
+
+[00:02:32.975 - 00:02:36.275]
+No, no, no, no. We want this arrow to be coming directly off
+
+[00:02:36.275 - 00:02:38.675]
+of the, and on the kind of level ground with the,
+
+[00:02:38.695 - 00:02:41.395]
+and that tells us that if surly
+
+[00:02:41.655 - 00:02:45.315]
+and kills a wolf then something else needs to happen.
+
+[00:02:45.615 - 00:02:47.395]
+And it doesn't let us get confused thinking
+
+[00:02:47.425 - 00:02:48.635]
+it's just a solo variable.
+
+[00:02:48.635 - 00:02:50.955]
+Because if I actually did want to chain,
+
+[00:02:51.155 - 00:02:52.355]
+I would be pointing, you know,
+
+[00:02:52.695 - 00:02:55.355]
+toward this guy solo and all that stuff.
+
+[00:02:55.435 - 00:02:57.915]
+I want that as a notation that's available to me.
+
+[00:02:58.015 - 00:03:00.085]
+That's why we need to always, um,
+
+[00:03:00.085 - 00:03:02.325]
+Diagram directly to and from our and or
+
+[00:03:02.385 - 00:03:04.125]
+or when that's what we mean. Um,
+
+[00:03:04.185 - 00:03:05.525]
+So lemme diagram the other half of this.
+
+[00:03:05.715 - 00:03:07.165]
+Fara escaping the human world. So
+
+[00:03:07.275 - 00:03:08.805]
+Fara escapes the Humans.
+
+[00:03:09.195 - 00:03:11.925]
+Okay, great. And so this is my nice
+
+[00:03:11.925 - 00:03:14.325]
+Little conditional, nice and Simple with my if, but
+
+[00:03:14.335 - 00:03:16.245]
+Let's talk through the contrapositive for a second
+
+[00:03:16.245 - 00:03:19.405]
+because there is a little bit of interestingness
+
+[00:03:19.405 - 00:03:21.165]
+that happens when we start, um,
+
+[00:03:21.165 - 00:03:22.805]
+thinking about the contrapositive of and or,
+
+[00:03:23.065 - 00:03:25.525]
+and these are ones I actually mind a lot less
+
+[00:03:25.545 - 00:03:26.645]
+of people diagram just
+
+[00:03:26.765 - 00:03:28.645]
+'cause they are diagram the contrapositive just
+
+[00:03:28.765 - 00:03:29.805]
+'cause they are a little more complicated.
+
+[00:03:30.025 - 00:03:31.285]
+And so let's think this through first.
+
+[00:03:31.545 - 00:03:33.925]
+So if I'm just doing my Contrapositive as
+
+[00:03:33.925 - 00:03:34.925]
+Normal, right?
+
+[00:03:34.925 - 00:03:36.005]
+I would be like, okay,
+
+[00:03:36.145 - 00:03:38.365]
+So if my necessary is not happening,
+
+[00:03:38.475 - 00:03:40.965]
+then my sufficient is not happening, right?
+
+[00:03:41.185 - 00:03:44.805]
+And so here for my sufficient to not be,
+
+[00:03:44.805 - 00:03:48.165]
+or sorry, my necessary to not be happening, I would say,
+
+[00:03:48.195 - 00:03:51.245]
+okay, if Farah does not escape the humans, then
+
+[00:03:52.065 - 00:03:53.405]
+she is not surly.
+
+[00:03:53.745 - 00:03:54.765]
+And now here's the key.
+
+[00:03:54.865 - 00:03:58.885]
+I'm gonna write the, or she does not kill the wolf.
+
+[00:03:59.505 - 00:04:02.885]
+And so this contrapositive needs us
+
+[00:04:03.265 - 00:04:04.605]
+to negate that.
+
+[00:04:04.985 - 00:04:09.325]
+And, and just like when I'm negating the, not like the S
+
+[00:04:09.325 - 00:04:10.965]
+to become a not s I'm negating the, and,
+
+[00:04:10.965 - 00:04:12.125]
+and when I negate the, and it
+
+[00:04:12.125 - 00:04:13.685]
+Becomes an, or at least that's how I like
+
+[00:04:13.685 - 00:04:15.205]
+to think about it, is like it's the flip side.
+
+[00:04:15.225 - 00:04:17.805]
+So anytime I'm applying a negation to a condition
+
+[00:04:17.825 - 00:04:19.085]
+and that condition has an and
+
+[00:04:19.085 - 00:04:21.125]
+or in it, I apply that negation to the and
+
+[00:04:21.145 - 00:04:23.205]
+or it flips to the other half of the
+
+[00:04:23.205 - 00:04:26.365]
+And or, and so this guy becomes this guy
+
+[00:04:26.705 - 00:04:29.005]
+and you know, boom, easy, not too bad, right?
+
+[00:04:29.265 - 00:04:31.045]
+And so now my contrapositive
+
+[00:04:31.045 - 00:04:32.245]
+of my original statement would read,
+
+[00:04:32.245 - 00:04:33.925]
+if Fara does not escape the humans, then
+
+[00:04:33.935 - 00:04:36.005]
+She's not surly or she did not kill the wolf.
+
+[00:04:36.385 - 00:04:38.805]
+And it's really important to remember to do this
+
+[00:04:39.085 - 00:04:41.245]
+whenever you're handling a contrapositive on an and
+
+[00:04:41.305 - 00:04:43.005]
+or it's just one of those little
+
+[00:04:43.175 - 00:04:45.805]
+Extra Things about conditionals to make sure, um,
+
+[00:04:45.985 - 00:04:47.445]
+you get right, uh, so that
+
+[00:04:47.445 - 00:04:48.445]
+You don't make any mistakes.
+
+[00:04:48.545 - 00:04:50.485]
+And you might be like, uh, Ellen, this is
+
+[00:04:50.485 - 00:04:52.165]
+Exactly why I don't like doing conditionals
+
+[00:04:52.165 - 00:04:53.285]
+because there are too many rules
+
+[00:04:53.285 - 00:04:54.325]
+and all that kind of nonsense.
+
+[00:04:54.475 - 00:04:56.045]
+Well, if you don't follow this rule,
+
+[00:04:56.045 - 00:04:57.125]
+but you choose not to diagram,
+
+[00:04:57.385 - 00:04:58.685]
+you'll also get the question wrong.
+
+[00:04:58.705 - 00:05:01.205]
+And so it's better, it's better to diagram
+
+[00:05:01.725 - 00:05:03.245]
+ensuring you follow the rule because you actually have like,
+
+[00:05:03.245 - 00:05:05.325]
+you know, steps to ensure that it's really happening rather
+
+[00:05:05.325 - 00:05:06.885]
+than just opt out of diagramming,
+
+[00:05:07.165 - 00:05:08.325]
+probably missing the rule anyway
+
+[00:05:08.385 - 00:05:10.925]
+and then messing up in a worse way that's not
+
+[00:05:10.925 - 00:05:11.925]
+Trackable. And so
+
+[00:05:11.925 - 00:05:14.125]
+let's do the next question.
+
+[00:05:14.625 - 00:05:17.245]
+If it's wrong to mention Akatar in an LSAT course,
+
+[00:05:17.565 - 00:05:19.925]
+I don't want to be right or I will suffer the
+
+[00:05:19.925 - 00:05:21.205]
+consequences, perhaps both.
+
+[00:05:21.625 - 00:05:24.125]
+Um, and actually that brings me, brings me to a,
+
+[00:05:24.245 - 00:05:27.285]
+a real LSAT point that when I said perhaps both that
+
+[00:05:27.345 - 00:05:29.525]
+or all ors
+
+[00:05:29.795 - 00:05:31.405]
+That you see on the LSAT
+
+[00:05:31.665 - 00:05:34.005]
+Are inclusive and what does inclusive mean?
+
+[00:05:34.145 - 00:05:37.325]
+It means I can always have both sides. Meaning in this case,
+
+[00:05:37.645 - 00:05:39.845]
+I can both not want to be right and
+
+[00:05:40.105 - 00:05:42.005]
+Suffer the consequences that's at least
+
+[00:05:42.605 - 00:05:43.845]
+possible according to this.
+
+[00:05:43.865 - 00:05:45.125]
+Or of course it's not required
+
+[00:05:45.225 - 00:05:47.725]
+or does mean I need at least one, right?
+
+[00:05:48.025 - 00:05:49.885]
+So it must be the case here
+
+[00:05:50.075 - 00:05:52.005]
+That I either don't want to be
+
+[00:05:52.005 - 00:05:53.525]
+Right or I will suffer the consequence.
+
+[00:05:53.645 - 00:05:54.805]
+I have to have one of those two things,
+
+[00:05:54.985 - 00:05:56.845]
+but it's not impossible for
+
+[00:05:56.845 - 00:05:57.845]
+Me to have both. That's
+
+[00:05:57.845 - 00:05:58.885]
+what, or on the LSAT means,
+
+[00:05:58.885 - 00:06:00.085]
+that's what being inclusive means.
+
+[00:06:00.265 - 00:06:02.405]
+And so let me diagram this without further ado.
+
+[00:06:02.485 - 00:06:04.205]
+I keep on going on so many tangents.
+
+[00:06:04.625 - 00:06:06.685]
+Um, but okay, I've got my if
+
+[00:06:06.825 - 00:06:11.085]
+and what is my if targeting, um, wrong to mention Acotar.
+
+[00:06:11.275 - 00:06:16.105]
+Okay, so wrong to mention aar, wrong mention
+
+[00:06:16.925 - 00:06:17.945]
+aar, then.
+
+[00:06:18.565 - 00:06:21.185]
+All right. Uh, I don't want to be right.
+
+[00:06:22.175 - 00:06:24.985]
+Well, let's do with a negation not want, right,
+
+[00:06:25.725 - 00:06:28.945]
+or suffer consequences, right?
+
+[00:06:29.045 - 00:06:33.545]
+And so I have my nice vertical diagramming here again
+
+[00:06:33.545 - 00:06:35.905]
+with my and or which is so, so,
+
+[00:06:36.005 - 00:06:37.625]
+so important and so soothing.
+
+[00:06:37.925 - 00:06:39.825]
+Um, and it works just like the,
+
+[00:06:39.825 - 00:06:43.105]
+and so we're going to diagram the contrapositive now.
+
+[00:06:43.105 - 00:06:44.265]
+And so how are we gonna do that?
+
+[00:06:44.315 - 00:06:46.505]
+We're going to negate our necessary
+
+[00:06:46.525 - 00:06:49.225]
+and then we're gonna read over to our negated sufficient.
+
+[00:06:49.635 - 00:06:51.185]
+Let's do it. Okay?
+
+[00:06:51.685 - 00:06:55.265]
+So if I want to be right
+
+[00:06:56.555 - 00:07:00.135]
+and I do not suffer the consequences,
+
+[00:07:00.235 - 00:07:03.495]
+notice I am negating my or and it's becoming that.
+
+[00:07:03.555 - 00:07:08.335]
+And just right now, then I do not, uh,
+
+[00:07:09.285 - 00:07:10.535]
+find it wrong to mention
+
+[00:07:11.055 - 00:07:14.095]
+Acotar also made sure this was spoiler free.
+
+[00:07:14.635 - 00:07:16.175]
+Um, okay.
+
+[00:07:16.355 - 00:07:19.415]
+And so notice how all my negations line up here, right?
+
+[00:07:19.715 - 00:07:21.335]
+Um, as I took the contrapositive,
+
+[00:07:21.415 - 00:07:24.215]
+I made sure every single term got properly negated.
+
+[00:07:24.565 - 00:07:27.575]
+This guy became this guy my or became and,
+
+[00:07:27.575 - 00:07:29.255]
+the SC became the odyssey.
+
+[00:07:29.395 - 00:07:32.335]
+All of that kind of good stuff down the line. All right.
+
+[00:07:32.695 - 00:07:33.775]
+I hope that this was helpful.
+
+[00:07:34.255 - 00:07:36.895]
+I hope that you enjoyed me, you know,
+
+[00:07:37.515 - 00:07:39.375]
+and just being, you know, accepting
+
+[00:07:39.375 - 00:07:40.455]
+that I don't wanna be right.
+
+[00:07:40.795 - 00:07:42.495]
+But I do. Alright, I'll see you soon.

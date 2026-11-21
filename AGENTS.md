@@ -24,6 +24,7 @@ Paths are relative to the repository root.
 | Master index · work ledger · dated history | `wiki/index.md` · `wiki/tasks.md` · `wiki/log.md` |
 | Product ground truth (pointers to live backends) | `wiki/dashboard.md` |
 | LSAT teaching knowledge | `corpus/index.md` |
+| Loophole sources: LR/RC lessons, demos, homework, bootcamps, feedback and question records | `corpus/loophole-online/AI-RETRIEVAL.md` (shared Claude/Codex/Gemini retrieval entry) |
 | A student — profile, transcripts, work, correspondence | `students/<name>/` — start at `students/README.md` |
 | Voice for anything a student or prospect reads | `wiki/teaching-voice.md` |
 | Was it sent? (every outbound draft/send) | `wiki/send-ledger.md` — append-only; Gmail is authority |
@@ -35,29 +36,35 @@ Paths are relative to the repository root.
 | Automation build backlog (what to build next, ranked) | `references/automation-backlog.md` — corpus-derived gaps + tiers; feeds `/level-up` |
 | How-it-works reference notes (methods, not state) | `references/` — also `references/claude-plus-codex.md`, `references/obsidian-command-center.md`, `references/second-brain-levels.md` |
 | Web research and Firecrawl agents | `references/firecrawl.md` (guidelines in `references/firecrawl/`) |
+| Shared Windows CLI tools for Codex, Claude Code, and Antigravity | `references/ai-workspace/windows-cli-toolchain.md` — installed paths, PATH refresh, and usage for `uv`, `yt-dlp`, FFmpeg, and Deno |
 | Immutable source evidence · intake queue | `raw/sources/` · `raw/inbox/` — one inbox, one archive |
 | Archived web clips, with provenance + hashes | `raw/sources/clips/<slug>/` — clip + `PROVENANCE.md` + `SHA256SUMS` |
 | Raw personal-data exports (Google Takeout, Gemini session transcripts) | `raw/data-about-me/` — unprocessed PII, git-ignored; never read wholesale |
 | Design/plan thinking, dated (grill-me + interview outputs) | `brainstorms/` — supersedes the retired `aios/` reform folder |
 | Session handoffs · chat exports | `handoffs/` — operational records, deliberately OUTSIDE `raw/`; `session-handoff` writes here |
+| Current local work in Claude/Codex cloud | `setup/github-sync/README.md`; private `codex/local-sync/<machine>/<checkout>` branches and generated `.cloud-sync/` metadata/conversation exports. Cloud edits use separate task branches. |
+| New or unset-up machine (Claude Code, Codex, Antigravity) | `setup/BOOTSTRAP.md`; detail in `setup/backup/new-machine-README.md` |
 | External teardowns and research, dated | `research/` |
-| Web-clipped articles (Obsidian Web Clipper) | `raw/inbox/` — unprocessed only; `ingest` copies and hash-verifies them into `raw/sources/clips/`; processed originals stay until removal is authorized |
-| Application code | `../ai-os-projects/lsatu/` — own repo, own instructions, own remote |
+| Web-clipped articles (Obsidian Web Clipper) | `raw/inbox/` — intake queue; `second-brain-ingest` copies and hash-verifies clips into `raw/sources/clips/`; processed originals stay until removal is authorized, so inbox presence alone does not mean unprocessed |
+| Saved UI components (21st.dev etc.): find one before building UI | `wiki/component-library.md` — catalog + pointer to `../component-library/` (gallery: `node serve.mjs`) |
+| Application code | `../lsatu/` — navigation home and own repo; `../ai-os-projects/lsatu/` remains a separate working-tree hub. Check the actual checkout and its instructions before editing. |
 | Other projects (life-path, …) | `../ai-os-projects/<name>/` — each with its own `CLAUDE.md` + `.claude/` |
 
-Application repositories and dependencies stay outside this Obsidian vault, in sibling `../ai-os-projects/`. Do not create a junction from the vault back into that directory.
+Application repositories and dependencies stay outside this Obsidian vault. LSAT U navigation uses `../lsatu/`; its separate worktree hub and other projects remain under `../ai-os-projects/`. Do not create a junction from the vault back into those directories.
 
 ## Retrieval order
 
+**Loophole requests:** Automatically read `corpus/loophole-online/AI-RETRIEVAL.md` before finding or explaining Loophole material; Joshua need not name the folder or skill. From this repository root, use `python system/scripts/query-loophole.py search "<query>"`, then `open "<returned identity>"` with the same script to locate the complete source and companions; use `instructions "<title>"` for full workout/routine procedures. Follow the guide for filters, ambiguity, pagination and evidence limits. Read the returned source before answering, cite its local path, and keep Loophole sources separate from Joshua's curriculum.
+
 1. `wiki/hot.md` — current-session narrative and open threads.
-2. `wiki/index.md` → the page (teaching knowledge: `corpus/index.md`; a student: their folder). Follow links; there is no semantic search and none is needed at this size.
+2. `wiki/index.md` → the page (teaching knowledge: `corpus/index.md`; a student: their folder). Follow links.
 3. The live system — the final freshness escalation.
 
 **Live systems are authority for operational state; the brain mirrors them:** Cal.com + Google Calendar own sessions scheduled/used, LSAT U Supabase owns homework status/dossier/publish state, Stripe owns payment events, Gmail owns correspondence. On any disagreement, the backend wins. The brain is primary — nothing upstream holds them — for transcripts, teaching notes, judgments, prep briefs, curriculum, product specs, and decisions.
 
-**Do not read the wiki unless the task needs it.** Retrieval costs context every turn. Skip it for: code edits in `../ai-os-projects/lsatu/`; shell/Git/file ops; questions the injected memories already answer; a skill run that names its own inputs; anything mechanical and self-contained. Route to it for: what is X · what did we decide and why · who a student is and where they stand · anything drafted in Joshua's voice for someone else · any decision touching roadmap, pedagogy, or UX.
+**Do not read the wiki unless the task needs it.** Retrieval costs context every turn. Skip it for: code edits in the actual LSAT U checkout; shell/Git/file ops; questions the injected memories already answer; a skill run that names its own inputs; anything mechanical and self-contained. Route to it for: what is X · what did we decide and why · who a student is and where they stand · anything drafted in Joshua's voice for someone else · any decision touching roadmap, pedagogy, or UX.
 
-**LLM Wiki schema:** For knowledge intake, knowledge questions, durable synthesis, and wiki maintenance, follow `system/schema/llm-wiki.md`. Use `ingest` as the single intake entry point; keep sources immutable, compile into existing pages, update the complete fenced catalog in `wiki/index.md`, and append changes to `wiki/log.md`. Preserve domain homes and live-system authority. Mechanical tasks retain the retrieval exceptions above.
+**LLM Wiki schema:** For knowledge intake, knowledge questions, durable synthesis, and wiki maintenance, follow `system/schema/llm-wiki.md`. Use `second-brain-ingest` as the single intake entry point; keep sources immutable, compile into existing pages, update the complete fenced catalog in `wiki/index.md`, and append changes to `wiki/log.md`. Preserve domain homes and live-system authority. Mechanical tasks retain the retrieval exceptions above.
 
 **Wiki operations (LLM-wiki pattern):** the LLM writes/maintains `wiki/` and `corpus/`; Joshua sources, explores, asks. Raw sources are immutable — read, never modify. *Ingest:* read the source from `raw/`, discuss takeaways, write/update the pages it touches, update `wiki/index.md`, append to `wiki/log.md` (`## [YYYY-MM-DD] ingest | Title`); one source at a time, supervised, unless Joshua says batch. *Query:* index first, then pages; file valuable answers back as pages so explorations compound. *Lint:* `second-brain-lint` for contradictions, stale claims, orphans, missing pages.
 
@@ -66,19 +73,23 @@ Application repositories and dependencies stay outside this Obsidian vault, in s
 - **No em-dashes, ever.** Joshua never types them; a stray em-dash reads as AI and costs trust.
 - **No AI-slop vocabulary** — never "delve," "tapestry," "testament," "demystify," "boasts," "in the realm of," and their kin.
 - **Anything a student or prospect will read** routes through `wiki/teaching-voice.md` and is drafted, never sent, unless it is a pre-approved template.
+- **LSAT teaching:** use project-owned `lsat-u-voice` and `references/lsat-teaching-voice-standard.md`; this Joshua-selected standard takes precedence over older vendor voice blends.
 - **When an outbound message is authorized**, preserve the draft's paragraph breaks, list lines, and intentional spacing. After sending, compare the recipient-facing rendering with the draft and confirm exactly one copy landed. Report any mismatch; never resend automatically.
 - **Lead with your recommendation, not a menu.** Be decisive; don't over-hedge.
 - **Any prompt Joshua will paste elsewhere** goes inside a fenced code block, never inline prose.
 
 ## Tools, keys, and secrets
 
+- **LSAT U Browser is the agents' browser.** For any visual check, design check, or LSAT U change verification, use the signed-in LSAT U Browser: MCP server `lsatu-browser` (chrome-devtools on CDP `http://127.0.0.1:9222`, teacher login), or Playwright `connectOverCDP` on 9222. If it is closed, start the desktop shortcut "LSAT U Browser". Never clear its storage, sign out, or close its context. Joshua's click-to-annotate notes ("Send to Claude", Alt+Shift+A) land in `C:/Users/Joshu/dev/agent-browser/inbox/`: on "check my annotations" run `node C:/Users/Joshu/dev/agent-browser/inbox.mjs`, open both images of each note (element crop and outlined page view), fix it, verify it in the browser, then `node .../inbox.mjs done <id>`. While working on his visual feedback, watch live with Monitor on `tail -f .../inbox/server.log | grep --line-buffered ANNOTATION`. Details: `C:/Users/Joshu/dev/agent-browser/README.md`.
 - **The entire secret model is `.env` + `.gitignore`.** The root `.env` (git-ignored — verify with `git check-ignore .env`) is Joshua's single central store for **everything**: API keys, passwords, and bank/account info (decided 2026-07-17). OAuth client secrets live in `~/.config/gws/`, outside the repo. There is no vault, no Keychain, no encrypted store (`records.sparsebundle` is dead) and none is wanted. Never paste a credential into chat — add it to `.env` directly in the editor.
 - **Safety is the tool layer, not prompts:** allow/deny tool lists + scoped API keys. Jay 2 acts under its own credentials and never impersonates Joshua.
 - **Connected live systems:** Cal.com, Google Calendar, LSAT U Supabase, Stripe, Gmail. Full registry in `connections.md`.
 - **Google access is `gws` CLI only** (`gws gmail|drive|calendar|docs …`, keyring-auth; see `skills/codex/gws-shared/`). Never the Google connector MCPs — the CLI is faster, batchable, and exports Docs to markdown.
+- **Shared Windows command tools:** use `uv`, `yt-dlp`, `ffmpeg`, `ffprobe`, `ffplay`, and `deno` from the Windows user PATH. For versions, locations, how to invoke them, or a stale terminal environment, read `references/ai-workspace/windows-cli-toolchain.md`. Check before reinstalling; restart the affected IDE when its inherited PATH is stale.
 - **Government IDs stay outside this OS.** Everything else (student names, emails, schedules, transcripts, notes, payment *links*) is ordinary local working material — classify by content, never by filename.
-- **Git remote is enabled.** `origin` is GitHub (`vnjkoxpl-42905/ai-os`, decided 2026-09-29). The outer repo never tracks `.env`, `../ai-os-projects/lsatu/` (own repo), runtime logs, or locks. Do not create gitlinks.
+- **Git remote is enabled.** `origin` is GitHub (`vnjkoxpl-42905/ai-os`, decided 2026-09-29). The outer repo never tracks `.env`, the separate LSAT U repositories or worktrees, runtime logs, or locks. Do not create gitlinks.
 - **New laptop restore:** GitHub contains tracked ai-os files and skills. It deliberately excludes `.env`, `raw/`, app repos, credentials, and machine sessions. Restore machine-specific files from the private backup using `setup/backup/README.md` and its `README - START HERE.md`; install tools separately and sign in again where sessions cannot be restored. Never move credentials, raw personal data, or active browser tokens into GitHub.
+- **Authorized cloud transfer (2026-10-07):** private sync branches also carry portable skills, memory and conversation exports. Joshua explicitly authorized credential transfer; implementation uses the authenticated encrypted package described in `setup/github-sync/README.md`; plaintext secrets and its unlock key stay outside GitHub and Drive. Cloud authentication and native browser sessions still require separate verification.
 
 ## Skills
 
@@ -93,6 +104,7 @@ Active in this root. Run `pickup` only when Joshua explicitly asks for it. Do no
 | `audit` | scoring the OS against the Four Cs (structural health, /100) |
 | `level-up` | weekly 3Ms interview to find + ship one automation |
 | `consultation-inquiry-drafts`, `-followup-drafts`, `inbound-tutoring-replies` | drafting to prospects/students — always via the teaching voice |
+| `transcript-intake` | retrieving, filing or reconciling student/session transcripts; separate from knowledge `second-brain-ingest` |
 | `guided-drill-assignment` | assigning a student a drill |
 | `lsat-u-platform-actions` | doing anything ON lsatprep.study from here (assign, post, message, ingest) |
 | `tutorocean-profile-fill` | TutorOcean profile work |
@@ -105,9 +117,12 @@ When a skill run exposes a gap, improve the skill before moving on. Runtime-spec
 
 - **Laptop first (2026-11-20).** The second brain is the folder `C:\Users\Joshu\dev\ai-os` on Joshua's laptop. All reads and edits happen there. Never work from the Google Drive mirror (`G:\My Drive\CLAUDE-CODE-BACKUP - START HERE`), a GitHub clone, or a copy such as `ai-os-codex-ore` or `ai-os-github-copy`. Drive and GitHub are backups only; restore from them only when Joshua asks. If the laptop folder is missing or unreadable, stop and say so.
 
+- **Verify by plan.** Before a multi-step build, state the check and evidence that will prove it worked; run it before calling the work done.
+
 - **95% rule.** Make no changes until you are 95% confident what Joshua wants. Ask until you are.
 - **Lovable credits require confirmation.** Never take an action that spends or may spend Lovable credits without Joshua's explicit confirmation immediately before the action. Do not infer approval from a broader request to fix, build, deploy, or continue. Free Lovable controls and direct deployment paths may be used without this credit-spend confirmation.
 - **Lovable Cloud deploys through Lovable.** LSAT U currently uses a Lovable Cloud-managed backend. Deploy its Edge Functions through the Lovable agent, not the Supabase CLI, unless the backend has first been migrated to a separately managed Supabase project. Confirm this route with Joshua before starting a Lovable deployment.
+- **Publish LSAT U after every merge to main.** Joshua's standing rule (2026-10-17), for Claude, Codex and Gemini alike: once an authorized change lands on LSAT U `main`, the same agent publishes the frontend with the free Lovable `deploy_project` (project `53b9a6f2-aba7-4ae4-8dd1-fa5b8aab4d76`) without asking, then proves it live. Before deploying, check `get_project` `latest_commit_sha` equals the merged HEAD; after, confirm the `index-*` bundle hash on lsatprep.study changed and a string only your commit adds is present. This rule does not authorize pushing or merging to `main` (use a branch and PR; merge only when Joshua says so) and does not cover edge functions or anything that spends Lovable credits.
 - **Root stays thin.** Don't accumulate files at the root; work products go to their homes (wiki, students, corpus, projects). Anything left at root gets filed before the session ends.
 - **Delegate bulk work.** Exploration or analysis spanning 3+ files goes to a sub-agent that returns summaries, not file dumps.
 - **Shell ergonomics.** Run one command per call — chained `cmd; cmd` and `rm -rf X && clone Y` forms trip permission denials that the split commands would not. Never poll with `sleep`. Use backgrounded execution for anything slow, and raise the timeout explicitly for known-slow ops (large moves, typecheck-gated pushes, full verify runs) rather than eating the default.
@@ -127,3 +142,8 @@ When a skill run exposes a gap, improve the skill before moving on. Runtime-spec
 - Claude reads `CLAUDE.md` and never this file. Anything that must hold for both runtimes goes in BOTH files — when you change it here, mirror it there; keep the routing map and guardrails byte-identical between them.
 - Activation is unequal by design: Codex reads copies in `.agents/skills/`, Claude reads copies in `.claude/skills/`. Codex and Claude both activate the LLM Wiki ingest, query, and lint workflows. Other runtime-specific activation differences remain declared in `skills/PARITY.md`. Never have separate runtimes writing the same page concurrently.
 - Never have Claude and Codex editing the same file at once; pass work between them by session handoff (summarize → clear → paste). At ~250k tokens, hand off rather than riding autocompact.
+
+
+<!-- DESIGN DOMAIN ROUTER -->
+Before any design, UI/UX, typography, colour, component, motion or visual build/review, start at `design/README.md`, then the relevant `design/principles.md` guidance, including material, depth and purposeful layers. Follow the current brief; do not replace the selected reference with a generic aesthetic. Keep using `second-brain-ingest` for new sources; this is the shared home for Claude and Codex.
+<!-- END DESIGN DOMAIN ROUTER -->

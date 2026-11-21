@@ -1,0 +1,84 @@
+{
+ "qid": "PT156-S2-Q19",
+ "type": "Weaken",
+ "difficulty": "2",
+ "key_db": "B",
+ "stimulus_db": "Geologist: As a spinning object's radius decreases, its rate of rotation increases; for example, figure skaters can twirl faster by bringing their arms closer to their sides. This law of physics helps to explain why, over the past decade, Earth's rate of rotation increased. For earthquakes have increased in number and severity during the past decade; and since immediately after an earthquake Earth's tectonic plates move toward the center of the earth, their movement causes Earth's radius to decrease.",
+ "stem_db": "Which one of the following, if true, would most undermine the geologist's explanation of why Earth's rate of rotation increased over the last decade?",
+ "choices_db": {
+  "A": "In the beginning of the twentieth century, geologists observed an increase in number and severity of earthquakes, accompanied by a decrease of Earth's radius.",
+  "B": "During the past decade, other geological events have counteracted the movements of the tectonic plates that occur immediately after earthquakes.",
+  "C": "Only skillful figure skaters succeed in twirling faster by bringing their arms closer to their sides.",
+  "D": "Since the time of the ancient Egyptians, Earth's rate of rotation has been known to fluctuate.",
+  "E": "Increased volcanic activity over the last ten years suggests that the overall movement of the tectonic plates has increased."
+ },
+ "bank": {
+  "stimulus": "Geologist: As a spinning object’s radius decreases, its rate\n of rotation increases; for example, figure skaters\n can twirl faster by bringing their arms closer to\n their sides. This law of physics helps to explain\n why, over the past decade, Earth’s rate of rotation\n increased. For earthquakes have increased in\n number and severity during the past decade; and\n since immediately after an earthquake Earth’s\n tectonic plates move toward the center of the\n earth, their movement causes Earth’s radius to\n decrease.",
+  "stem": "Which one of the following, if true, would most\n undermine the geologist’s explanation of why Earth’s\n rate of rotation increased over the last decade?",
+  "choices": {
+   "A": "In the beginning of the twentieth century, geologists observed an increase in number and severity of earthquakes, accompanied by a decrease of Earth’s radius.",
+   "B": "During the past decade, other geological events have counteracted the movements of the tectonic plates that occur immediately after earthquakes.",
+   "C": "Only skillful figure skaters succeed in twirling faster by bringing their arms closer to their sides.",
+   "D": "Since the time of the ancient Egyptians, Earth’s rate of rotation has been known to fluctuate.",
+   "E": "Increased volcanic activity over the last ten years suggests that the overall movement of the tectonic plates has increased."
+  },
+  "key": "B"
+ },
+ "explanation_id": "4ce5c003-1fb6-429d-b62b-63eec4bf1563",
+ "style": "single",
+ "steps": [
+  {
+   "row_id": "dfa97c6c-ed99-497b-9234-993f6337124a",
+   "position": 0,
+   "label": "Conclusion",
+   "body": "Earth's rotation sped up over the past decade because more earthquakes shrank Earth's radius."
+  },
+  {
+   "row_id": "2b4a0393-35d7-4ad9-ab67-302885996589",
+   "position": 1,
+   "label": "Evidence",
+   "body": "A spinning object speeds up as its radius shrinks. Earthquakes increased in number and severity. Right after an earthquake, tectonic plates move toward Earth's center, shrinking the radius."
+  },
+  {
+   "row_id": "5bed442a-0871-4c85-b185-6b44a3002a69",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "The geologist assumes the plate movement after earthquakes produced a net decrease in the radius. If other forces pushed the other way, the radius may not have shrunk at all, and the explanation falls apart."
+  },
+  {
+   "row_id": "67be5e38-0e7c-48b6-b0e6-d4997ffbd8df",
+   "position": 3,
+   "label": "Goal",
+   "body": "Show the radius may not have shrunk overall."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "35265abe-a620-4ba4-ac53-881bab2d7ae7",
+   "letter": "A",
+   "body": "Another case of more earthquakes going with a smaller radius supports the geologist, if anything."
+  },
+  {
+   "row_id": "30f37111-d65c-4381-92c1-e5bdabace383",
+   "letter": "B",
+   "body": "Disrupts the assumption that the tectonic plate movement causes a net decrease in the Earth's radius by raising the possibility that any decreases are counteracted by other movements."
+  },
+  {
+   "row_id": "69fbcbba-ec6a-4a2c-9c49-13936db671d9",
+   "letter": "C",
+   "body": "Limiting the example to a subset of skaters doesn't change the law of physics the example is exemplifying."
+  },
+  {
+   "row_id": "4af466bd-7891-4bec-ac69-7d794b98a2f6",
+   "letter": "D",
+   "body": "This might seem at first like an alternative explanation for the current rate of rotation increase. It isn't, however, because the reason for the historic fluctuations aren't specified. We can't, therefore, say the current change in rotation rate is any less likely to be due to the contraction of Earth's radius than it was before we knew that similar rotation fluctuations have happened throughout history."
+  },
+  {
+   "row_id": "4ed90aec-1a55-4bc7-b926-12de0fb40ada",
+   "letter": "E",
+   "body": "The overall amount of tectonic movement increasing in the last decade doesn't attack the idea that the movement ultimately leads to a net decrease in the size of the Earth."
+  }
+ ],
+ "known_problem": "No breakdown; no note for A; typos (\"possiblitiy\").",
+ "tags": "no-breakdown; missing-notes; thin-correct-note; very-short"
+}

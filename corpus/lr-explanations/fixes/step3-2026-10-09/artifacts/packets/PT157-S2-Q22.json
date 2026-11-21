@@ -1,0 +1,84 @@
+{
+ "qid": "PT157-S2-Q22",
+ "type": "Sufficient Assumption",
+ "difficulty": "5",
+ "key_db": "B",
+ "stimulus_db": "Because of the ubiquity of television in modern households, few children today spend their free time reading stories, which lack the visual appeal of flashy television programs. Thus, few children today will develop a lifelong interest in literature.",
+ "stem_db": "The conclusion drawn above follows logically if which one of the following is assumed?",
+ "choices_db": {
+  "A": "No children who spend their free time reading stories fail to develop a lifelong interest in literature.",
+  "B": "Only those people who currently spend their free time reading stories will develop a lifelong interest in literature.",
+  "C": "No children who grow up in a household that lacks a television fail to spend their free time reading stories.",
+  "D": "Few people who watch a great deal of television develop a lifelong interest in literature.",
+  "E": "Few children who spend their free time reading stories watch television."
+ },
+ "bank": {
+  "stimulus": "Because of the ubiquity of television in modern\n households, few children today spend their free time\n reading stories, which lack the visual appeal of flashy\n television programs. Thus, few children today will\n develop a lifelong interest in literature.",
+  "stem": "The conclusion drawn above follows logically if which\n one of the following is assumed?",
+  "choices": {
+   "A": "No children who spend their free time reading stories fail to develop a lifelong interest in literature.",
+   "B": "Only those people who currently spend their free time reading stories will develop a lifelong interest in literature.",
+   "C": "No children who grow up in a household that lacks a television fail to spend their free time reading stories.",
+   "D": "Few people who watch a great deal of television develop a lifelong interest in literature.",
+   "E": "Few children who spend their free time reading stories watch television."
+  },
+  "key": "B"
+ },
+ "explanation_id": "b9883fc9-1124-404a-97c0-080e91e5f3b2",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "9728151b-3a9a-45fe-873a-4f54d2e8c7a9",
+   "position": 0,
+   "label": "Evidence",
+   "body": "Few children today spend their free time reading stories."
+  },
+  {
+   "row_id": "5a21ebe5-3958-439e-a71e-f0be9b8d2d35",
+   "position": 1,
+   "label": "Conclusion",
+   "body": "Few children today will develop a lifelong interest in literature."
+  },
+  {
+   "row_id": "fa2f2545-0ba5-431b-931f-a8d91caad3b1",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "We can reach this conclusion if we assume that children who do not spend their free time reading stories will not develop a lifelong interest in literature: (~ spend free time reading → ~ lifelong interest in lit)"
+  },
+  {
+   "row_id": "0492dc85-3192-4e83-9065-5aca24fe75d8",
+   "position": 3,
+   "label": "Goal",
+   "body": "We'll keep our eyes open for an answer containing the statement above or its contrapositive: (lifelong interest in lit → spend free time reading) We can also eliminate any answer that doesn't include the idea of developing a lifelong interest in literature."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "df92f509-18c5-488e-8e3f-79691fa31640",
+   "letter": "A",
+   "body": "This answer says no children who spend free time reading stories fail to develop a lifelong interest in literature. Cutting through the double negative: children who read -> lifelong interest. This makes reading sufficient for developing interest, but the argument needs reading to be necessary for interest, not sufficient. The argument's gap is: few read -> few develop interest. To validate this, we need: developing interest requires reading (interest -> read). This answer instead says: reading guarantees interest (read -> interest). Knowing that readers always develop interest does not tell us anything about whether non-readers might also develop interest through other means. This is the classic sufficient-necessary confusion."
+  },
+  {
+   "row_id": "097d09d0-0d0f-4c7a-b7ca-f7b268399f05",
+   "letter": "B",
+   "body": "This answer says only those who currently spend their free time reading stories will develop a lifelong interest in literature. The word \"only\" establishes reading as a necessary condition: lifelong interest -> currently reads stories. Contrapositive: does not currently read -> will not develop lifelong interest. The evidence tells us few children currently read. Combined with this assumption: few children read, and only readers develop lifelong interest, therefore few children will develop lifelong interest. The conclusion follows directly. This is the precise bridge needed: reading during childhood is the only pathway to lifelong literary interest."
+  },
+  {
+   "row_id": "caf2e5e2-9c98-40d1-a49e-fd22f76ac9f5",
+   "letter": "C",
+   "body": "This answer says children growing up without a television in the household do not fail to read stories. Parsing the double negative: no TV -> reads stories. This describes what happens in TV-free homes but says nothing about developing a lifelong interest in literature. The conclusion is about lifelong literary interest, and this answer never mentions that concept. Even if we know that TV-free children read, we still have no link between reading and developing lifelong interest. The assumption needs to connect reading behavior to the conclusion's outcome, and this answer stops at the reading step without reaching the literary interest step."
+  },
+  {
+   "row_id": "1d44775a-4e98-421f-964c-d6b6286654de",
+   "letter": "D",
+   "body": "This answer says few people who watch a great deal of television develop lifelong literary interest. The evidence states that children prefer TV over reading because of its visual appeal, but it does not say children watch \"a great deal\" of television. A child might watch only a small amount of TV but still find it more appealing than reading. This answer addresses heavy TV watchers, while the evidence describes a broader group — children who simply do not read, regardless of how much TV they watch. The assumption does not accurately connect to the evidence's population. Additionally, this answer does not establish reading as necessary for literary interest; it only says heavy TV watching prevents it."
+  },
+  {
+   "row_id": "205203ef-a168-4cc4-86b2-d955dbac0a00",
+   "letter": "E",
+   "body": "This answer says few children who spend free time reading stories watch television. This describes reading children's TV habits but says nothing about developing lifelong literary interest. The conclusion is about whether children will develop a lifelong interest in literature, and this answer never addresses that concept. Whether young readers watch TV is irrelevant to bridging the gap between \"few read\" and \"few will love literature.\" Like answer C, this answer operates entirely in the reading-and-TV-watching domain without ever reaching the literary-interest domain that the conclusion requires."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (1.7 em-dashes per 1k words; wrong-answer notes average 104.0 words).",
+ "tags": "pt157-158-register; possible-misquote"
+}

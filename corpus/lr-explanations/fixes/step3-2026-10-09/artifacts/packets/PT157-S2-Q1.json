@@ -1,0 +1,78 @@
+{
+ "qid": "PT157-S2-Q1",
+ "type": "Must Be True",
+ "difficulty": "2",
+ "key_db": "E",
+ "stimulus_db": "One should not do anything that has the potential to produce serious harm to one’s society. The public actions—or inactions—of celebrities and of people who are widely respected are widely emulated. Some celebrities do not vote. Serious harm befalls a society in which many people refrain from voting.",
+ "stem_db": "Which one of the following principles can be properly inferred from the statements above?",
+ "choices_db": {
+  "A": "A society should require all celebrities to vote.",
+  "B": "One should vote only if one expects that doing so will cause many other people to do likewise.",
+  "C": "Celebrities who do not vote should not be widely respected.",
+  "D": "People should not emulate celebrities who are not widely respected.",
+  "E": "Widely respected people should not publicly refrain from voting."
+ },
+ "bank": {
+  "stimulus": "One should not do anything that has the potential to\n produce serious harm to one’s society. The public\n actions—or inactions—of celebrities and of people\n who are widely respected are widely emulated. Some\n celebrities do not vote. Serious harm befalls a society in\n which many people refrain from voting.",
+  "stem": "Which one of the following principles can be properly\n inferred from the statements above?",
+  "choices": {
+   "A": "A society should require all celebrities to vote.",
+   "B": "One should vote only if one expects that doing so will cause many other people to do likewise.",
+   "C": "Celebrities who do not vote should not be widely respected.",
+   "D": "People should not emulate celebrities who are not widely respected.",
+   "E": "Widely respected people should not publicly refrain from voting."
+  },
+  "key": "E"
+ },
+ "explanation_id": "c00ca65c-bd43-44a0-b90b-8bc88f8ec5a6",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "50a4f069-39d5-4963-bca5-2e241e4ba078",
+   "position": 0,
+   "label": "Given",
+   "body": "  - One should not do anything that has the potential to produce serious harm to one’s society.\n  - The public actions of celebrities and of people who are widely respected are widely emulated.\n  - Some celebrities do not vote.\n  - Serious harm befalls a society in which many people refrain from voting."
+  },
+  {
+   "row_id": "d46ae81c-0089-4b1b-a04c-f4f4110fc495",
+   "position": 1,
+   "label": "Evaluate",
+   "body": "Since this is a Must Be True question, we want to combine statements that are about the same concepts. Does anything show up in more than one statement?\n  Statements #2 and #3 are both about celebrities. We're told that celebrities' public actions or inactions are widely emulated, and that some celebrities do not vote. We can conclude that, if celebrities' decisions to not vote were made public, many other people would refrain from voting.\n  \"Harm\" shows up in statements #1 and #4. We're told that one should avoid doing anything that might cause serious harm to one's society, and that serious harm will occur when many people in a society refrain from voting. From these statements, we can conclude that one should not do anything that would cause many people to refrain from voting.\n  We can infer an additional recommendation by combining these two conclusions: if celebrities are going to refrain from voting, they should not make the public aware of it."
+  },
+  {
+   "row_id": "7c4b65b6-6626-4bf5-abff-c35b8341a81b",
+   "position": 2,
+   "label": "Goal",
+   "body": "Look for an answer that is absolutely irrefutable. It will probably be derived from combining at least two of the given statements, and maybe more. But it doesn’t have to tie in every statement to be correct. Beware answers that are too strong, bring in out of scope ideas, or express unsupported relationships between the concepts in the stimulus."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "2a267b7e-79bf-4109-afab-69671f0fb30b",
+   "letter": "A",
+   "body": "This answer says society should \"require all celebrities to vote.\" The stimulus never makes prescriptions about what society should require — it only states what an individual \"should not do.\" Additionally, the statements do not demand that every celebrity vote. The key insight from the stimulus is that celebrities' public inactions are emulated. A celebrity could refrain from voting without causing harm, as long as that decision is not made public. Requiring all celebrities to vote goes far beyond what the premises support."
+  },
+  {
+   "row_id": "c16e0540-7c3f-4ac5-9f4e-1b22a56d7d3a",
+   "letter": "B",
+   "body": "This answer says \"one should vote only if one expects that doing so will cause many other people to do likewise.\" The word \"one\" applies the principle to everyone, but the stimulus specifically focuses on celebrities and widely respected people — those whose public actions are widely emulated. The stimulus does not make claims about ordinary individuals whose behavior is not emulated. Furthermore, the stimulus never says anyone \"should vote.\" The argument establishes that celebrities should not publicly refrain from voting, which is very different from saying they should vote. This answer also wrongly introduces a condition about expecting to cause others to vote, which has no basis in the premises."
+  },
+  {
+   "row_id": "8b264e58-f23b-4436-8782-ce5d05e19f34",
+   "letter": "C",
+   "body": "This answer says celebrities who do not vote \"should not be widely respected.\" While the stimulus does establish that celebrities who publicly refrain from voting can cause societal harm, it never addresses what consequences should follow for such celebrities. The stimulus provides no basis for concluding that someone should lose respect because of their voting behavior. The argument is about what actions should or should not be taken publicly — not about whether someone deserves respect. This answer requires speculative reasoning that goes beyond what the premises directly support."
+  },
+  {
+   "row_id": "28612e4c-1a0b-4863-8afb-936c118fe6cf",
+   "letter": "D",
+   "body": "This answer says \"people should not emulate celebrities who are not widely respected.\" The stimulus discusses celebrities and widely respected people together in the second premise, stating that their public actions are widely emulated. This answer asks us to speculate about a category not addressed in the stimulus: celebrities who are not widely respected. The stimulus provides no information about whether people emulate such celebrities or what they should do about it. Additionally, the stimulus never tells people who they should or should not emulate — it addresses what celebrities and respected people should or should not do publicly. This answer rearranges the stimulus concepts into a combination the premises do not support."
+  },
+  {
+   "row_id": "b930fb56-7464-4012-bca2-345e066469b7",
+   "letter": "E",
+   "body": "This answer follows directly from combining the stimulus's premises. Widely respected people's public actions are widely emulated (premise 2). If widely respected people publicly refrain from voting, many others will follow suit. Serious harm befalls a society where many refrain from voting (premise 4). One should not do anything that could produce serious harm to one's society (premise 1). Therefore, widely respected people should not publicly refrain from voting. The stimulus specifically mentions celebrities in premise 3, but premise 2 extends the emulation effect to \"people who are widely respected\" as well. This answer captures the correct scope and avoids the overreach of requiring people to vote — it only prohibits publicly refraining from voting."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (6.4 em-dashes per 1k words; wrong-answer notes average 98.0 words).",
+ "tags": "emdash-heavy; pt157-158-register"
+}

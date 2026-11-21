@@ -1,0 +1,90 @@
+{
+ "qid": "PT157-S2-Q4",
+ "type": "Weaken",
+ "difficulty": "2",
+ "key_db": "B",
+ "stimulus_db": "Economist: Our country needs as much capital as possible from overseas investors in order to sustain our economy. Hence, we cannot afford any reduction in the amount of capital that overseas investors have invested here. Therefore, to sustain our economy, we should pass laws making it much more difficult for overseas investors to remove their capital.",
+ "stem_db": "Which one of the following, if true, most weakens the economist’s reasoning?",
+ "choices_db": {
+  "A": "To sustain its economy, the country needs to diversify its investments more evenly across the country’s industries.",
+  "B": "Laws that would make it more difficult for overseas investors to remove their capital would strongly discourage them from investing any additional capital.",
+  "C": "The historical periods during which the country’s economy had the highest rate of growth were those periods during which the amount of capital invested by overseas investors was highest.",
+  "D": "In countries other than the economist’s, passage of laws that made it very difficult for overseas investors to remove their capital have not entirely prevented the removal of capital invested by overseas investors.",
+  "E": "Two years ago, the country enacted laws that place some restrictions on the removal of capital by overseas investors."
+ },
+ "bank": {
+  "stimulus": "Economist: Our country needs as much capital as\n possible from overseas investors in order to\n sustain our economy. Hence, we cannot afford\n any reduction in the amount of capital that\n overseas investors have invested here. Therefore,\n to sustain our economy, we should pass laws\n making it much more difficult for overseas\n investors to remove their capital.",
+  "stem": "Which one of the following, if true, most weakens the\n economist’s reasoning?",
+  "choices": {
+   "A": "To sustain its economy, the country needs to diversify its investments more evenly across the country’s industries.",
+   "B": "Laws that would make it more difficult for overseas investors to remove their capital would strongly discourage them from investing any additional capital.",
+   "C": "The historical periods during which the country’s economy had the highest rate of growth were those periods during which the amount of capital invested by overseas investors was highest.",
+   "D": "In countries other than the economist’s, passage of laws that made it very difficult for overseas investors to remove their capital have not entirely prevented the removal of capital invested by overseas investors.",
+   "E": "Two years ago, the country enacted laws that place some restrictions on the removal of capital by overseas investors."
+  },
+  "key": "B"
+ },
+ "explanation_id": "62077a54-ff17-4680-946e-df586a4cac75",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "bb45bbf4-f47f-4b9a-9c86-93d70fd1b165",
+   "position": 0,
+   "label": "Evidence",
+   "body": "Our country needs as much capital as possible from overseas investors in order to sustain our economy."
+  },
+  {
+   "row_id": "43b3029f-8de3-465b-b28e-15dd0f3f2f98",
+   "position": 1,
+   "label": "Intermediate Conclusion (Hence)",
+   "body": "We cannot afford any reduction in the amount of capital that these investors have invested here."
+  },
+  {
+   "row_id": "4fdd1719-44db-42bc-8a75-9222f6aaacd0",
+   "position": 2,
+   "label": "Main Conclusion (Therefore)",
+   "body": "To sustain our economy, we should pass laws making it much more difficult for overseas investors to remove their capital."
+  },
+  {
+   "row_id": "a0e0bee0-1faf-4a65-bea8-ec3c897f4ec8",
+   "position": 3,
+   "label": "Evaluate",
+   "body": "There isn't a huge gap in logic between needing as much capital as possible (the evidence) and not wanting any reduction in the existing amount of capital (the intermediate conclusion).\n  But there is a significant gap between the intermediate conclusion and the main conclusion. Wanting to avoid any reduction in investments does not automatically support the idea that we should pass laws making it more difficult for investors to remove their capital.\n  This main conclusion is a recommendation. Plans and recommendations tend to be vulnerable to a variety of objections, and the correct answer to a Weaken question might focus on any one of them. It helps to think about the kinds of objections that this argument is particularly vulnerable to.\n  For example, a recommendation might have the opposite effect. Maybe these laws would discourage investors from making future investments, which would prevent us from acquiring \"as much capital as possible.\" Or there might be some reason why this particular recommendation can't be implemented, or won't be effective. Maybe these types of laws are almost impossible to enforce, and therefore tend to be ineffective."
+  },
+  {
+   "row_id": "ffd63310-4f17-4e0a-8c8c-9c3fc4b8a313",
+   "position": 4,
+   "label": "Goal",
+   "body": "Look for an answer that suggests the recommendation might backfire or be impossible to implement correctly. But, since objections can take many forms, read answers with an open mind. We want to notice if one attacks the recommendation in another way."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "4c5033ed-c8b2-4d5d-94f5-7032144b9d07",
+   "letter": "A",
+   "body": "This answer discusses diversifying investments across the country's industries. The argument is about attracting and retaining overseas investment capital, not about how that capital is distributed across industries. Whether the country needs to diversify its own investments is a separate issue from whether it should restrict overseas investors' ability to remove their capital. This answer addresses a different economic question entirely."
+  },
+  {
+   "row_id": "1e6f0245-6555-4164-b894-ac48aa65573c",
+   "letter": "B",
+   "body": "This is a classic \"the recommendation backfires\" weakener. The economist argues for laws that would make it harder for overseas investors to remove their capital, in order to retain as much overseas capital as possible. But this answer reveals a devastating unintended consequence: such laws would strongly discourage overseas investors from investing any additional capital. If investors know that once they put money in, they cannot get it out, they will simply not invest in the first place. The country needs \"as much capital as possible\" from overseas investors, but the restrictive laws would reduce the total pool of overseas capital by deterring new investment — directly undermining the stated goal of the policy."
+  },
+  {
+   "row_id": "6a105f40-c9ee-40bf-88f9-4a535d754380",
+   "letter": "C",
+   "body": "This answer provides historical evidence that overseas investment is correlated with economic growth. But this merely supports the premise that the country needs overseas capital to sustain its economy — something we are already given as evidence. Reinforcing a premise that is not in dispute does not weaken the argument. If anything, this makes the economist's concern about capital flight seem more justified, which would tend to strengthen rather than weaken the recommendation."
+  },
+  {
+   "row_id": "9338b4bc-cac8-4874-914c-046223e88a89",
+   "letter": "D",
+   "body": "This answer notes that similar laws in other countries have not \"entirely prevented\" the removal of overseas capital. While this suggests the laws might not be fully effective, it does not tell us they were wholly ineffective either. The laws might have prevented most capital removal while failing to stop all of it, which would still make them a useful policy. \"Not entirely prevented\" leaves open the possibility that the laws prevented a significant amount of capital removal. The correct answer provides a much stronger and clearer reason to reject the policy — it does not merely suggest partial ineffectiveness but shows the policy would actively backfire."
+  },
+  {
+   "row_id": "345afe31-9399-4049-b8a4-8c5e4deeca6a",
+   "letter": "E",
+   "body": "This answer states that two years ago, the country enacted some restrictions on overseas capital removal. But we have no information about the effects of those laws. Were they helpful? Harmful? Neutral? Did they deter new investment? Did they prevent capital flight? This answer provides a bare fact without any indication of its consequences. It could potentially strengthen the argument (if the existing restrictions helped), weaken it (if they backfired), or have no effect at all (if they were insignificant). Without knowing the outcome, this answer's directional impact is completely indeterminate."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (4.2 em-dashes per 1k words; wrong-answer notes average 82.5 words).",
+ "tags": "emdash-heavy; pt157-158-register"
+}

@@ -1,0 +1,84 @@
+{
+ "qid": "PT158-S4-Q18",
+ "type": "Flaw",
+ "difficulty": "5",
+ "key_db": "B",
+ "stimulus_db": "Lindsey: Several people claim that our company was unfair when it failed to give bonuses to the staff. Perhaps they recalled that the company had promised that if it increased its profits over last year's, the staff would all get bonuses. However, the company's profit was much smaller this year than it was last year. Clearly, then, the company acted fairly.",
+ "stem_db": "The argument is flawed in that it",
+ "choices_db": {
+  "A": "relies on the opinions of certain unnamed people without establishing that those people were well informed on the matter",
+  "B": "infers that an opinion is false merely because one potential reason for that opinion has been undermined",
+  "C": "dismisses a claim on the basis of certain irrelevant attributes of the people who made the claim",
+  "D": "confuses the size of a quantity with the amount by which that quantity has increased",
+  "E": "overlooks the possibility that a policy can be fair even when it is not generous"
+ },
+ "bank": {
+  "stimulus": "Lindsey: Several people claim that our company was\n unfair when it failed to give bonuses to the staff. Perhaps they recalled that the company had\n promised that if it increased its profits over last\n year’s, the staff would all get bonuses. However,\n the company’s profit was much smaller this year\n than it was last year. Clearly, then, the company\n acted fairly.",
+  "stem": "The argument is flawed in that it",
+  "choices": {
+   "A": "relies on the opinions of certain unnamed people without establishing that those people were well informed on the matter",
+   "B": "infers that an opinion is false merely because one potential reason for that opinion has been undermined",
+   "C": "dismisses a claim on the basis of certain irrelevant attributes of the people who made the claim",
+   "D": "confuses the size of a quantity with the amount by which that quantity has increased",
+   "E": "overlooks the possibility that a policy can be fair even when it is not generous"
+  },
+  "key": "B"
+ },
+ "explanation_id": "3938735a-771d-4812-ba9e-3a06ca316f5e",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "80262166-9149-4073-9c16-c3cec1292df7",
+   "position": 0,
+   "label": "Conclusion (clearly, then)",
+   "body": "The company acted fairly in failing to give bonuses to the staff."
+  },
+  {
+   "row_id": "c0ed5ba8-3c91-4dc8-afd9-41fca51e413b",
+   "position": 1,
+   "label": "Evidence",
+   "body": "Some people claim the company was unfair, perhaps because they recall that the company promised that if profits were higher than last year's, the staff would get bonuses.\nBut profits were much smaller than last year's."
+  },
+  {
+   "row_id": "6da4f1d9-4f19-4c6f-bd37-76f449cb2203",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "Whenever we're doing Flaw and the author is rebutting some other position and concluding the polar opposite position, we want to be thinking about the famous Unproven vs. Proven False flaw.\nEXAMPLE - Some people claim that cell phones cause cancer. But no scientific study has ever determined this. Thus, cell phones do not cause cancer.\nThe flaw here is that even though someone else failed to prove that cell phones DO cause cancer, that doesn't mean the author has presented any evidence that proves cell phones DON'T cause cancer.\nIn this argument, some people claim \"the company acted unfairly\" in failing to give the staff bonuses. Our author ends up concluding \"the company acted fairly\", and this is not by presenting positive evidence of her own in favor of this conclusion.\nInstead, she's just taking down the argument that (she thinks) was being made in favor of the opposite conclusion."
+  },
+  {
+   "row_id": "a6b9a3bb-235d-48b4-bc1a-ec837003f877",
+   "position": 3,
+   "label": "Goal",
+   "body": "The author should be responding to the actual reasons these several people offered in defense of their claim that the company was unfair, not speculating that \"Perhaps they were basing their claim on X\". So an answer might complain about that.\nEven if the author is correct, and the people were basing their argument on X, the fact that the author has shown that X is not a valid way to prove \"Unfair\" doesn't suddenly mean that the author has proven \"Fair\". This is more in the Unproven vs. Proven False vein."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "b0fdbcb6-08fc-41a1-b078-dbc139e95525",
+   "letter": "A",
+   "body": "This answer describes a flaw involving reliance on unnamed or poorly informed authorities. But Lindsey does not rely on unnamed sources to build her OWN case — she responds to other people's complaint by challenging their reasoning. The issue is not WHO is making the complaint or whether they are well-informed. The issue is HOW Lindsey responds to the complaint. She defeats one reason for the opinion and concludes the opinion is false. The flaw is structural (incomplete refutation), not epistemic (unreliable sources). Even if the complainers were perfectly informed experts, Lindsey's logical error would be identical."
+  },
+  {
+   "row_id": "1d96afcb-3473-4255-8cd0-e5055612f01a",
+   "letter": "B",
+   "body": "This answer precisely identifies Lindsey's logical error. People claimed the company's decision was unfair, and one supporting reason was that the company had large profits (or profits had increased). Lindsey showed that this particular reason is factually weak — profits were actually smaller. So far, so good. But then she makes the leap: since this one reason is undermined, the entire opinion must be wrong, and the company acted fairly.\n\nThis is a textbook incomplete refutation. An opinion can rest on multiple independent reasons. The employees might believe the decision was unfair because of contractual promises, precedent, management compensation, industry norms, or other factors Lindsey never addresses. By treating one challenged reason as the entire foundation for the opinion, Lindsey dramatically overstates what her evidence accomplishes. She refuted one premise and concluded she had refuted the conclusion — but conclusions can survive the loss of a single supporting reason if other reasons remain intact."
+  },
+  {
+   "row_id": "ba7fece3-e72c-48a5-b387-12b303ec07ce",
+   "letter": "C",
+   "body": "This answer describes an ad hominem fallacy — dismissing a claim by attacking the character or attributes of the people making it rather than addressing the substance. But Lindsey does not attack the complainers personally. She does not question their intelligence, motives, credibility, or character. Instead, she directly engages with one factual claim they rely on (the profit level) and attempts to refute it. Lindsey's flaw is different: she engages with the substance but treats her rebuttal of one supporting reason as a complete refutation of the opinion. She deserves credit for engaging with the argument — she just does so in a logically incomplete way."
+  },
+  {
+   "row_id": "c9842652-47f5-414e-825b-5d27e75dcc93",
+   "letter": "D",
+   "body": "This answer accuses Lindsey of confusing the size of profits with the amount by which profits increased — conflating absolute levels with rates of change. But Lindsey does not make this mathematical error. Her argument about profits is straightforward: people thought profits were large (or had increased), and Lindsey points out that profits were actually much smaller. She does not mix up \"total profits\" with \"profit growth.\" Her error lies elsewhere — in the logical leap from \"one reason for the opinion is wrong\" to \"the opinion itself is wrong.\" This answer identifies a mathematical confusion that is not present in the argument."
+  },
+  {
+   "row_id": "fa1fdb14-7877-44a0-b4f2-08a3ab77768b",
+   "letter": "E",
+   "body": "This answer suggests Lindsey conflates fairness with generosity — perhaps arguing the company was fair when the real issue is that it was not generous. But Lindsey does not slide between these concepts. She directly argues the company's decision was fair, and the complainers directly argue it was unfair. Neither side introduces or confuses the concept of generosity. Lindsey's actual flaw is structural: she shows one reason for the unfairness claim is wrong and leaps to the conclusion that the company acted fairly. This is an incomplete refutation error, not a semantic confusion between \"fair\" and \"generous.\" The flaw described in this answer simply is not present in Lindsey's reasoning."
+  }
+ ],
+ "known_problem": "Correct; padded.",
+ "tags": "emdash-heavy; pt157-158-register; possible-misquote"
+}

@@ -1,0 +1,1 @@
+Host setup complete: all45 current dirty/untracked files imported and hash-verified from immutable input manifest. Baseline import is host setup, not Claude authorship. Do not reconstruct it. Dependencies will be handled by host. Current ready marker authorizes implementation within specified isolated repo only. No trust or permission changes.

@@ -1,0 +1,1 @@
+This is a test note sent from the admin account to confirm the classroom note pipeline works. No action needed.

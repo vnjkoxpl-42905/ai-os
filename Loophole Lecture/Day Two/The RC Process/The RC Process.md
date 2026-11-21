@@ -1,0 +1,406 @@
+# The RC Process
+
+Source: https://new.theloophole.com/training-camp/browse/stage/learn/video/the-rc-process?source=timeline&plan=rc-plan
+
+Duration: 7:27. Captured: 2026-10-14.
+
+Transcript origin: English auto-generated native captions. Complete caption extraction, not a human-verified verbatim transcript. Original wording retained.
+
+[00:00:00.540 - 00:00:04.490]
+All right, the full RC process. I'm really glad to get into this
+
+[00:00:04.500 - 00:00:07.420]
+because I want to give you a sense of what this is all going to add up to
+
+[00:00:08.020 - 00:00:12.000]
+once your individual skill components are really ready to go.
+
+[00:00:13.060 - 00:00:16.990]
+That we do have a full plan, it's just that you have to get good at all the little
+
+[00:00:17.040 - 00:00:20.860]
+pieces of the full plan. And so this is what you'll be doing in the
+
+[00:00:20.940 - 00:00:24.860]
+end game of timed sections and non-timed sections,
+
+[00:00:24.890 - 00:00:28.830]
+and whenever you're doing a baseline straight-through
+
+[00:00:28.920 - 00:00:32.160]
+RC section, this process is what you're going to follow. And so let's get into it.
+
+[00:00:32.220 - 00:00:35.320]
+So the first step always is just translating the passage.
+
+[00:00:35.340 - 00:00:38.990]
+And yes, there are a lot of different translation styles, but there will
+
+[00:00:39.040 - 00:00:41.480]
+be some kind of translation style.
+
+[00:00:41.730 - 00:00:43.100]
+There's cav and then there's decav.
+
+[00:00:43.420 - 00:00:46.560]
+I create spins on RC translation all the time.
+
+[00:00:46.600 - 00:00:50.260]
+And so the key is to remember that translation doesn't
+
+[00:00:50.360 - 00:00:53.680]
+end. You're still translating on test day.
+
+[00:00:53.690 - 00:00:56.260]
+And so I don't want you to think that it's like, "Oh, this is all fine and fun,
+
+[00:00:56.320 - 00:00:59.710]
+Ellen, to practice translation, but then on test day, what do I do?" It's like, no,
+
+[00:00:59.890 - 00:01:03.150]
+on test day you translate. It's just that you get fast enough and good enough at
+
+[00:01:03.180 - 00:01:05.970]
+translation that it can become a test day timed process.
+
+[00:01:06.440 - 00:01:09.600]
+And so that's number one. So whatever version of
+
+[00:01:09.640 - 00:01:13.120]
+translation works for your testing style and all that different kind of stuff,
+
+[00:01:13.360 - 00:01:16.140]
+that's what you'll be doing on test day, but there will be a version of translation
+
+[00:01:16.180 - 00:01:20.020]
+there. Okay, so then you go to your first question, and one really big
+
+[00:01:20.080 - 00:01:23.300]
+key here is to translate that question stem.
+
+[00:01:23.640 - 00:01:25.900]
+So RC question stems are
+
+[00:01:27.040 - 00:01:30.940]
+multifaceted, beautiful sunbeams that do not
+
+[00:01:31.040 - 00:01:34.580]
+always fit really nicely into our pre-programmed types.
+
+[00:01:34.600 - 00:01:38.240]
+And even when they do, the question stem itself will actually contain really,
+
+[00:01:38.260 - 00:01:42.140]
+really, really, really, really important information that you do not want to leave
+
+[00:01:42.260 - 00:01:46.190]
+out just because you're typing the question as a function question or
+
+[00:01:46.220 - 00:01:49.470]
+whatever. The actual individual details of the question stem are
+
+[00:01:49.600 - 00:01:53.260]
+absolutely crucial to hitting those highest ends of the RC
+
+[00:01:53.300 - 00:01:55.140]
+accuracy curve, and so we really want that for you.
+
+[00:01:55.200 - 00:01:59.080]
+So always you translate that question stem, and then we go into making a mission.
+
+[00:01:59.960 - 00:02:03.720]
+And so I want you to make a mission on each individualized RC
+
+[00:02:03.800 - 00:02:07.440]
+question stem, and what that means is answer the question yourself
+
+[00:02:07.480 - 00:02:09.521]
+before you go into the answer choices.
+
+[00:02:09.820 - 00:02:13.780]
+And yes, this pertains to inference questions or what would the author be most
+
+[00:02:13.800 - 00:02:15.460]
+likely to agree with questions as well.
+
+[00:02:15.760 - 00:02:19.520]
+And you may be saying, "But Ellen, there are so many different things, I don't know
+
+[00:02:19.560 - 00:02:23.160]
+what to pick." It's like, okay, so just say something that the author would be
+
+[00:02:23.200 - 00:02:26.340]
+likely to agree with or something you've inferred from the passage.
+
+[00:02:26.760 - 00:02:30.680]
+And the reason why I think this is a really important thing is because it actually
+
+[00:02:30.700 - 00:02:34.310]
+forces you, number one, to actually translate the stem and have a really good idea
+
+[00:02:34.340 - 00:02:38.200]
+of what the stem actually means. And secondly, if you can't
+
+[00:02:38.260 - 00:02:42.120]
+answer the question yourself, what business do you have judging someone else's
+
+[00:02:42.140 - 00:02:43.540]
+answer to it in the answer choices, right?
+
+[00:02:44.500 - 00:02:48.260]
+It should be pretty simple for you to come
+
+[00:02:48.400 - 00:02:51.780]
+up with a mission to most questions if you're prepared to go into the answer
+
+[00:02:51.840 - 00:02:55.620]
+choices. If you're not prepared to go into the answer choices, that's totally
+
+[00:02:55.740 - 00:02:58.280]
+fine. In that mission stage, you are allowed to go back to the
+
+[00:02:59.480 - 00:03:03.460]
+passage and refresh yourself, do whatever work you need to do to prepare
+
+[00:03:03.500 - 00:03:05.660]
+yourself to answer that question. Wonderful.
+
+[00:03:06.040 - 00:03:08.230]
+But then you come up with that answer yourself first.
+
+[00:03:08.480 - 00:03:12.020]
+And we're coming up with that answer first not so that we can go and match it in
+
+[00:03:12.060 - 00:03:14.800]
+the answer choices or predict the correct answer.
+
+[00:03:14.840 - 00:03:18.800]
+We're doing it to exercise our brains and show we actually can answer the
+
+[00:03:18.840 - 00:03:20.580]
+question. It's not that big of a deal.
+
+[00:03:20.600 - 00:03:24.540]
+Because the test writers might not come up with our exact mission in
+
+[00:03:24.560 - 00:03:28.000]
+the answer choices, and we don't want to have a process that is so vulnerable to
+
+[00:03:28.060 - 00:03:32.000]
+exploitation that the mere fact that somebody could choose to say a different
+
+[00:03:32.040 - 00:03:33.940]
+inference is a big vulnerability.
+
+[00:03:34.860 - 00:03:36.460]
+Instead, we want to
+
+[00:03:37.380 - 00:03:39.680]
+have our own mission because we know how to answer the question.
+
+[00:03:39.980 - 00:03:42.730]
+And then as we go through the answer choices, we're vetting them against our
+
+[00:03:42.740 - 00:03:46.670]
+translated stem as we go. It's like, okay, is this what that part of the passage
+
+[00:03:46.720 - 00:03:48.910]
+was doing? Is this what the part of the passage was doing?
+
+[00:03:49.020 - 00:03:52.720]
+Not just looking for exact words for our mission, because that will not work on a
+
+[00:03:52.740 - 00:03:56.620]
+reliable level over time. And so
+
+[00:03:56.720 - 00:03:59.660]
+that is the point in which we want you to go back to the passage is in that mission
+
+[00:03:59.720 - 00:04:01.480]
+stage. If relevant. You don't have to.
+
+[00:04:01.840 - 00:04:04.810]
+Then, once you go through and you're reading and translating the answer choices,
+
+[00:04:04.960 - 00:04:08.780]
+matching them against your question stem, then that is when we
+
+[00:04:08.840 - 00:04:10.500]
+don't want you going back to the passage.
+
+[00:04:10.750 - 00:04:13.780]
+And so I know this might be just heresy
+
+[00:04:14.960 - 00:04:18.890]
+that I don't want you going back on answer B and looking for words
+
+[00:04:18.921 - 00:04:22.600]
+from answer B in the passage, but this actually will really, really improve your
+
+[00:04:22.620 - 00:04:23.760]
+time and accuracy.
+
+[00:04:24.980 - 00:04:28.800]
+It's much better to go back in the mission or in the hyperskip than it is to go
+
+[00:04:28.900 - 00:04:32.180]
+back in individual answer choices digging for treasure,
+
+[00:04:32.540 - 00:04:36.200]
+because there will often be a lot of false positives when you go and dig for
+
+[00:04:36.240 - 00:04:39.800]
+treasure in the passage. Creates peak and valley tendencies.
+
+[00:04:39.940 - 00:04:41.920]
+It's just generally not a great thing to do.
+
+[00:04:41.930 - 00:04:45.340]
+And if you've properly translated the passage really well, you've properly
+
+[00:04:45.380 - 00:04:48.640]
+missioned, you know what you're doing, you're going to be fine running through
+
+[00:04:48.680 - 00:04:50.920]
+those answers and going with your gut a little bit.
+
+[00:04:51.260 - 00:04:54.040]
+Of course, if you aren't sure, we can hyperskip that question.
+
+[00:04:54.140 - 00:04:57.700]
+And honestly, people should get used to hyperskipping a lot more than they
+
+[00:04:57.780 - 00:04:58.440]
+already do.
+
+[00:04:59.820 - 00:05:02.980]
+Typically, I like to hyperskip maybe five to seven questions per section.
+
+[00:05:03.760 - 00:05:07.000]
+And because I've got that hyperskip pass up my sleeve, I can be comfortable
+
+[00:05:07.120 - 00:05:09.940]
+actually leaving that question in an expeditious manner.
+
+[00:05:09.969 - 00:05:13.960]
+I don't have to sit there and linger and be like, "Oh, no, this is my one shot." I
+
+[00:05:13.980 - 00:05:17.940]
+can be like, "You know what? I didn't seize the move right now, and I'm not
+
+[00:05:18.040 - 00:05:20.950]
+really sure. I'm going to flag it. I'm going to choose C, and I'll see you on the
+
+[00:05:20.980 - 00:05:23.280]
+hyperskip." And then boom, out of my brain.
+
+[00:05:23.380 - 00:05:25.740]
+I don't think about it anymore until the very end.
+
+[00:05:26.020 - 00:05:29.290]
+And so you go back to those hyperskipped questions, and you're allowed to look at
+
+[00:05:29.340 - 00:05:32.940]
+the passage again when you're in the hyperskip, only at the very end of the
+
+[00:05:33.040 - 00:05:35.620]
+section, not at the end of the passage.
+
+[00:05:36.000 - 00:05:39.850]
+And so this is a purposeful choice, and I can already hear the objections of, "But
+
+[00:05:39.940 - 00:05:42.550]
+I'm not going to remember the passage" and all this stuff.
+
+[00:05:42.680 - 00:05:46.100]
+Actually, the blurrier you get on the passage, where you're less emotionally
+
+[00:05:46.120 - 00:05:49.870]
+invested in the kind of assumptions and tendencies you've
+
+[00:05:49.940 - 00:05:53.910]
+already made about the passage that created the difficulty on the question that
+
+[00:05:53.940 - 00:05:57.140]
+we hyperskipped, we're more removed from them, and that's actually good.
+
+[00:05:57.180 - 00:06:00.460]
+So we come back at the end, and we've got that little bit of beneficial blur.
+
+[00:06:00.660 - 00:06:03.760]
+I know that might seem weird, but it actually is true that it can be beneficial to
+
+[00:06:03.780 - 00:06:07.500]
+blur the passage out a little bit to see everything a little more objectively.
+
+[00:06:07.980 - 00:06:11.280]
+Then as you return to that question that you hyperskipped, you can review the
+
+[00:06:11.340 - 00:06:14.160]
+passage in your mission again, look back, do more stuff,
+
+[00:06:15.120 - 00:06:18.860]
+and then reattempt the answers with a clearer head and be a lot more decisive.
+
+[00:06:19.240 - 00:06:23.160]
+The longer the break between when you approach a question the first time
+
+[00:06:23.180 - 00:06:25.100]
+and the hyperskip pass, the better.
+
+[00:06:25.420 - 00:06:27.630]
+That's why we want to push it to the end of the section as well.
+
+[00:06:27.910 - 00:06:31.620]
+And so if, say, you hyperskipped some in the first, second, third, and fourth
+
+[00:06:31.680 - 00:06:34.880]
+passage, don't go back to those four passage hyperskips first.
+
+[00:06:35.220 - 00:06:39.090]
+Go back in the order, either chronologically of doing the question,
+
+[00:06:39.460 - 00:06:41.920]
+or of importance mixed with chronological.
+
+[00:06:41.980 - 00:06:45.540]
+Let's say you hyperskip seven questions and there are four of them that you're
+
+[00:06:45.580 - 00:06:49.120]
+like, "These are really high-priority hyperskips." You're going to go back and do
+
+[00:06:49.160 - 00:06:52.340]
+those high-priority ones first, but prioritizing them
+
+[00:06:53.060 - 00:06:56.960]
+as far back in the early part of the section as possible so that
+
+[00:06:57.000 - 00:06:59.680]
+you get a decent break between your first
+
+[00:07:00.820 - 00:07:03.500]
+attempt at the question and the hyperskip attempt at the question.
+
+[00:07:03.560 - 00:07:06.920]
+You don't want to just chill in the fourth passage redoing the hyperskips, because
+
+[00:07:07.500 - 00:07:09.300]
+there isn't that much of a break. It's still fresh in your mind.
+
+[00:07:09.340 - 00:07:10.800]
+You aren't going to get that much benefit from it.
+
+[00:07:10.840 - 00:07:14.070]
+You'll just do the exact same stuff you did on the first pass that created the
+
+[00:07:14.080 - 00:07:17.900]
+problem in the first place. And so that is how we do RC.
+
+[00:07:18.020 - 00:07:21.900]
+I'm so excited to get you spun up on this methodology and see
+
+[00:07:21.920 - 00:07:25.720]
+all the time and accuracy improvements that I really hope are on the way for you.
+
+[00:07:25.820 - 00:07:27.700]
+All right, see you soon.

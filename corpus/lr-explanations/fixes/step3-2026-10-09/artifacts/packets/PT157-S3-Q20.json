@@ -1,0 +1,84 @@
+{
+ "qid": "PT157-S3-Q20",
+ "type": "Necessary Assumption",
+ "difficulty": "4",
+ "key_db": "D",
+ "stimulus_db": "Psychologist: In an experiment, business managers who normally drank coffee on a daily basis were given more than their normal amount. The managers got faster at processing new information, but were less able to integrate it with past information when making decisions. Because successful management depends more on integrating information than on speed, this study demonstrates that drinking more coffee than usual impairs overall management ability.",
+ "stem_db": "Which one of the following is an assumption on which the psychologist's argument depends?",
+ "choices_db": {
+  "A": "The business managers in the experiment were different from each other in both the speed at which they processed information and in their ability to integrate information.",
+  "B": "Drinking less coffee than usual would not impede a manager's overall management ability as much as would drinking more coffee than usual.",
+  "C": "There is no other factor that is more important to successful business management than either speed of processing information or ability to integrate it.",
+  "D": "In the experiment, drinking more coffee than usual did not have beneficial effects on overall management ability that outweighed the reduction in ability to integrate past information.",
+  "E": "The amount of coffee one drinks is the most important factor influencing the speed at which one processes new information."
+ },
+ "bank": {
+  "stimulus": "Psychologist: In an experiment, business managers who\n normally drank coffee on a daily basis were given\n more than their normal amount. The managers\n got faster at processing new information,\n but were less able to integrate it with past\n information when making decisions. Because\n successful management depends more on\n integrating information than on speed, this study\n demonstrates that drinking more coffee than usual\n impairs overall management ability.",
+  "stem": "Which one of the following is an assumption on which\n the psychologist’s argument depends?",
+  "choices": {
+   "A": "The business managers in the experiment were different from each other in both the speed at which they processed information and in their ability to integrate information.",
+   "B": "Drinking less coffee than usual would not impede a manager’s overall management ability as much as would drinking more coffee than usual.",
+   "C": "There is no other factor that is more important to successful business management than either speed of processing information or ability to integrate it.",
+   "D": "In the experiment, drinking more coffee than usual did not have beneficial effects on overall management ability that outweighed the reduction in ability to integrate past information.",
+   "E": "The amount of coffee one drinks is the most important factor influencing the speed at which one processes new information."
+  },
+  "key": "D"
+ },
+ "explanation_id": "c53ccc2d-86f2-48ee-b36e-0ca912f94b78",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "0573bb38-cee1-403d-a8e8-9a7c6950ca38",
+   "position": 0,
+   "label": "Evidence",
+   "body": "Business managers who normally drank coffee on a daily basis were given more than their normal amount. The managers got faster at processing new information, but were less able to integrate it with past information when making decisions. Successful management depends more on integrating information than on speed."
+  },
+  {
+   "row_id": "e6c185ac-7209-4f9a-94a3-805a09f53c91",
+   "position": 1,
+   "label": "Conclusion",
+   "body": "Drinking more coffee than usual impairs overall management ability."
+  },
+  {
+   "row_id": "53fcb575-8e3c-4cd6-861b-eb92df5bceae",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "The evidence compares the speed of processing new information to the ability to integrate information. However, the evidence only compares these two specific factors. We aren't told that these two factors are the only ones that influence a person's success as a manager. Most people would agree that other abilities play an important role in successful management. Drinking more coffee than usual might drastically improve a managers' performance in one of these other areas, like attention to detail. The argument doesn't address this. We don't know if any other abilities were affected, or how. Based on evidence that only discusses those two specific factors, the conclusion makes a significant leap to a claim about overall management ability. We can't draw this conclusion about overall ability when it's very possible that other factors are at least equally as important. Since other factors are likely to be at least equally important, we need to know how coffee affects those factors."
+  },
+  {
+   "row_id": "b78d8539-5163-430b-b27f-22a233ace4ee",
+   "position": 3,
+   "label": "Goal",
+   "body": "A correct answer is likely to rule out the possibility that drinking additional coffee improves other abilities that play an equal or even more important role in overall management ability."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "f0700707-34f8-4675-a947-04f260f9f566",
+   "letter": "A",
+   "body": "Differences between individual managers in the study are irrelevant to the argument's logic. The argument compares what happens when managers drink normal amounts of coffee versus extra coffee. Whether the managers differed from each other in baseline abilities does not affect whether extra coffee impairs overall management ability. The argument could hold whether the managers were identical or wildly different in their individual capacities."
+  },
+  {
+   "row_id": "1782ac5b-3845-44f6-883a-61745db406d6",
+   "letter": "B",
+   "body": "The argument is about what happens when managers drink more coffee than usual. What happens when they drink less coffee is a different question entirely. The conclusion could be true regardless of whether drinking less coffee helps, hurts, or has no effect. Negating this answer — even if drinking less coffee impeded management ability just as much — would not destroy the conclusion that extra coffee impairs management ability."
+  },
+  {
+   "row_id": "3bf1ad8e-18a0-41ab-a453-25b0a8996104",
+   "letter": "C",
+   "body": "This answer is tempting because it addresses other factors in management. But it says no other factor is more important than speed or integration — it does not say anything about whether extra coffee affects those other factors. The argument's gap is not about the relative importance of factors but about whether coffee improves other factors enough to offset the integration loss. Even if speed and integration are the two most important factors, a modest improvement in a third factor could still offset the integration loss. The answer would need to address coffee's effect on other factors, not just their importance ranking."
+  },
+  {
+   "row_id": "f13dec0c-a973-45af-b396-ee61f1861b15",
+   "letter": "D",
+   "body": "Apply the negation test: what if drinking more coffee did have beneficial effects on overall management ability that outweighed the reduction in integration? Then the conclusion — that extra coffee impairs overall management ability — would collapse. The conclusion depends on there being no offsetting benefits large enough to overcome the integration loss. This answer directly addresses the argument's gap: it rules out the possibility that extra coffee improves other management skills enough to produce a net positive effect. Without this assumption, the argument cannot move from \"integration got worse\" to \"overall ability got worse.\""
+  },
+  {
+   "row_id": "ad514253-f918-4dcc-bd7a-fa7dfe74c2b1",
+   "letter": "E",
+   "body": "Whether coffee is the most important factor affecting processing speed is irrelevant. The argument already establishes as experimental fact that extra coffee increased processing speed. The argument does not need coffee to be the primary driver of speed — it only needs to know the consequences of the observed speed increase and integration decrease on overall management ability. This answer supports a premise that is already established rather than bridging the gap to the conclusion."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (9.3 em-dashes per 1k words; wrong-answer notes average 76.5 words).",
+ "tags": "emdash-heavy; pt157-158-register; possible-misquote"
+}

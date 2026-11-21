@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lamplight · Student home · LSAT U</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="lamplight.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="mark" href="#">LSAT <span>U</span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#" aria-current="page">Home</a>
+      <a href="#">My work</a>
+      <a href="#">Practice</a>
+      <a href="#">Review</a>
+      <a href="#">Progress</a>
+      <a href="#">Library</a>
+    </nav>
+    <div class="top__end">
+      <button class="inbox-btn" type="button" data-act="inbox">Inbox <b id="inbox-count">1</b></button>
+      <span class="avatar" aria-label="Ada, student">A</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="stage" aria-label="Tonight">
+      <div class="lit">
+        <div class="cone" aria-hidden="true"></div>
+        <div class="lamp" aria-hidden="true">
+          <div class="lamp__cord"></div>
+          <svg class="lamp__shade" viewBox="0 0 220 70">
+            <defs>
+              <linearGradient id="shade" x1="0" x2="1">
+                <stop offset="0" stop-color="#1d2029"/><stop offset=".42" stop-color="#4a4f5d"/><stop offset=".55" stop-color="#5a5f6c"/><stop offset="1" stop-color="#1a1d25"/>
+              </linearGradient>
+              <radialGradient id="rim" cx=".5" cy=".5" r=".5">
+                <stop offset="0" stop-color="#fff6e2"/><stop offset=".55" stop-color="#ffd598"/><stop offset="1" stop-color="#b36d1e"/>
+              </radialGradient>
+            </defs>
+            <rect x="104" y="0" width="12" height="9" rx="2" fill="#3a3e49"/>
+            <path d="M96 8 h28 C 186 16 212 42 218 61 H2 C 8 42 34 16 96 8 Z" fill="url(#shade)"/>
+            <path d="M40 30 C 70 18 110 15 150 20" stroke="rgba(255,255,255,.18)" stroke-width="1.5" fill="none"/>
+            <ellipse class="lamp__rim" cx="110" cy="62" rx="108" ry="7" fill="url(#rim)"/>
+          </svg>
+          <div class="lamp__glow"></div>
+        </div>
+        <div id="paper-slot"></div>
+      </div>
+
+      <div class="side">
+        <div class="hello">
+          <p class="hello__date">Thursday evening, October 22</p>
+          <h1>Good evening, Ada.</h1>
+          <p id="summary">One thing is due tonight, and three more are waiting. Joshua left you a note.</p>
+        </div>
+
+        <section class="waiting" aria-labelledby="waiting-h">
+          <div class="side-h"><h2 id="waiting-h">After this</h2><span id="waiting-count">Pick one to look at it under the lamp</span></div>
+          <ul class="q" id="queue"></ul>
+        </section>
+
+        <section id="note-slot" aria-label="Note from Joshua"></section>
+      </div>
+    </section>
+
+    <section class="band" aria-labelledby="week-h">
+      <div class="band-h">
+        <h2 id="week-h">The week, by evening</h2>
+        <p>Each lit window has something in it. Warm light is work that's due; cool light is a session with Joshua.</p>
+      </div>
+      <div class="windows" id="windows"></div>
+      <p class="caveat" id="week-caveat">Shows assignments and platform sessions only. A dark window means nothing is listed here, not that the evening is free.</p>
+    </section>
+
+    <section class="band" aria-labelledby="ev-h">
+      <div class="band-h">
+        <h2 id="ev-h">Thirty-eight evenings to test day</h2>
+        <p>Each dot is one evening between tonight and Sunday, November 29.</p>
+      </div>
+      <div class="evenings">
+        <div class="evenings__row" id="evenings" role="img" aria-label="38 days from tonight to test day on November 29. Your next session is Saturday."></div>
+        <div class="evenings__labels"><span><b>Tonight</b>Thursday, Oct 22</span><span><b>Test day</b>Sunday, Nov 29</span></div>
+        <div class="legend"><span><i style="background:var(--lamp-hot)"></i>Tonight</span><span><i style="background:var(--moon)"></i>Session with Joshua, Saturday 7:15 pm</span></div>
+      </div>
+    </section>
+
+    <section class="band" aria-labelledby="tools-h">
+      <div class="band-h">
+        <h2 id="tools-h">Practice on your own</h2>
+        <p>None of this counts against your assignments.</p>
+      </div>
+      <div class="tools">
+        <div class="tool tool--search">
+          <h3><label for="q-search">Find a question</label></h3>
+          <div class="field">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="q-search" type="search" placeholder="PT105 S2 Q14, or a question type" autocomplete="off">
+          </div>
+        </div>
+        <button class="tool" type="button" data-act="smart"><h3>Smart Drill</h3><p>A set built from the questions you've missed.</p></button>
+        <button class="tool" type="button" data-act="timed"><h3>Timed section</h3><p>35 minutes, test conditions.</p></button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot"><span>LSAT U · Lamplight direction</span><span>Prototype with sample data. Actions are simulated.</span></footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Flip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="../shared/sample.js"></script>
+<script>
+(function () {
+  const { student: S, mountSampleBar, toast, Word, word, daysBetween, esc, reduced } = window.LSATU;
+  const state = mountSampleBar({ other: 'teacher.html', otherLabel: 'Teacher home' });
+  const hasGsap = !!window.gsap;
+  if (hasGsap) gsap.registerPlugin(Flip, ScrollTrigger);
+  const $ = (s, r = document) => r.querySelector(s);
+  document.body.classList.add('is-' + state);
+
+  // one ordered list; index 0 is under the lamp
+  const tonight = Object.assign({ isTonight: true }, S.focus);
+  let items = state === 'full' ? [tonight, ...S.queue.map((q) => Object.assign({}, q))] : [];
+  let msg = state === 'full' ? Object.assign({}, S.message) : null;
+
+  const icoResume = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 5.5v13l10-6.5z" fill="currentColor" stroke="none"/></svg>';
+
+  function ledger(total, done) {
+    let h = '';
+    for (let i = 0; i < total; i++) h += `<i class="${i < done ? 'is-done' : i === done ? 'is-next' : ''}"></i>`;
+    return `<div class="ledger" style="--n:${total}" role="img" aria-label="${done < 0 ? 'Progress loading' : `${done} of ${total} done`}">${h}</div>`;
+  }
+
+  function paperHTML(it) {
+    if (state === 'loading') {
+      return `<article class="paper" aria-busy="true"><div class="paper__meta"><span class="bar" style="width:180px"></span></div>
+        <h2><span class="bar" style="height:56px;width:70%"></span></h2><p class="paper__blurb"><span class="bar" style="width:90%"></span></p>
+        ${ledger(12, -1)}<p class="ledger-note">Turning on the lamp. Counts appear once your work loads.</p></article>`;
+    }
+    if (state === 'error') {
+      return `<article class="paper"><div class="paper__meta"><strong>Couldn't load tonight's work</strong></div>
+        <h2>The lamp didn't come on.</h2><p class="paper__blurb">Your saved work is safe. This is a loading problem, not a lost assignment. Try again, or open My work directly.</p>
+        <div class="paper__actions"><button class="btn-ink" type="button" data-act="retry">Try again</button><button class="btn-line" type="button" data-act="mywork">Open My work</button></div></article>`;
+    }
+    if (!it) {
+      return `<article class="paper"><div class="paper__meta"><span>Nothing assigned right now</span></div>
+        <h2>A free evening.</h2><p class="paper__blurb">Joshua hasn't assigned anything new. If you want to practise, a Smart Drill builds a set from the questions you've missed.</p>
+        <div class="paper__actions"><button class="btn-ink" type="button" data-act="smart">${icoResume}Start a Smart Drill</button></div></article>`;
+    }
+    const total = it.total || 0, done = it.done || 0;
+    const prog = total ? `${ledger(total, done)}<p class="ledger-note">${done ? `${Word(done)} of ${word(total)} prompts set. Your work is saved.` : `Not started. ${Word(total)} questions.`}</p>` : '';
+    const primary = it.isTonight ? it.action : it.id === 'a-flaw' ? 'Start the drill' : it.id === 'a-notes' ? 'Open the notes' : 'Read the recap';
+    const meta = it.isTonight
+      ? `<strong>Due ${esc(it.due)}</strong><span>${esc(it.kind)}, ${word(total)} prompts</span>`
+      : `<span>${esc(it.kind)}</span><span>${esc(it.meta)}</span>`;
+    const back = !it.isTonight && items.some((x) => x.isTonight) ? `<button class="paper__back" type="button" data-act="back">Back to tonight's work</button>` : '';
+    return `<article class="paper" data-flip-id="${it.id}" aria-live="polite">${back}
+      <div class="paper__meta">${meta}</div>
+      <h2>${esc(it.title)}</h2>
+      <p class="paper__blurb">${esc(it.blurb)}</p>
+      ${prog}
+      <div class="paper__actions">
+        <button class="btn-ink" type="button" data-act="open" data-id="${it.id}">${icoResume}${esc(primary)}</button>
+        ${it.canMarkDone ? `<button class="btn-line" type="button" data-act="done" data-id="${it.id}">Mark done</button>` : ''}
+      </div></article>`;
+  }
+
+  function queueHTML() {
+    if (state === 'loading') return [1, 2, 3].map(() => `<li><div class="q-row"><div><span class="bar" style="width:90px;height:10px"></span><span class="bar" style="width:80%;height:22px;margin-top:10px"></span></div></div></li>`).join('');
+    if (state === 'error') return `<li><p class="notice">The rest of your list didn't load either. Nothing has been lost.</p></li>`;
+    const rest = items.slice(1);
+    if (!rest.length) return `<li><p class="notice">${items.length ? 'Nothing else is waiting after this.' : 'Nothing is waiting.'}</p></li>`;
+    return rest.map((it) => `<li><div class="q-row" data-flip-id="${it.id}">
+        <button class="q-look" type="button" data-act="look" data-id="${it.id}" aria-label="Look at ${esc(it.title)}">
+          <span class="q-kind">${esc(it.kind)}${it.isNew ? '<span class="q-new">New</span>' : ''}</span>
+          <span class="q-title">${esc(it.title)}</span>
+          <span class="q-meta">${esc(it.isTonight ? 'Due ' + it.due : it.meta)}</span>
+          <span class="q-hint">Bring it under the lamp</span>
+        </button>
+        <div class="q-acts">${it.canMarkDone ? `<button class="pill" type="button" data-act="done" data-id="${it.id}">Mark done</button>` : ''}<button class="pill" type="button" data-act="open" data-id="${it.id}">${esc(it.isTonight ? 'Continue' : it.action)}</button></div>
+      </div></li>`).join('');
+  }
+
+  function noteHTML() {
+    if (state === 'loading') return `<div class="note"><div class="note__head"><span class="bar" style="width:120px;height:10px"></span></div><p><span class="bar" style="width:85%;height:18px"></span></p></div>`;
+    if (state === 'error') return `<div class="note"><div class="note__head"><span class="note__from">From Joshua</span></div><p style="font-size:18px;font-family:var(--sans);color:var(--ivory-2)">Messages didn't load, so the unread count is unknown.</p></div>`;
+    if (!msg) return `<div class="note"><div class="note__head"><span class="note__from">From Joshua</span><span>Nothing new</span></div><p style="font-size:18px;font-family:var(--sans);color:var(--dim)">No new notes. Your conversation with Joshua is in the inbox.</p><div class="note__acts"><button class="pill" type="button" data-act="inbox">Open the inbox</button></div></div>`;
+    return `<div class="note">
+      <div class="note__head"><span><span class="note__from">${esc(msg.from)}</span>, ${esc(msg.time)}</span>
+        <span class="ember${msg.unread ? '' : ' is-out'}" id="ember"><i></i>${msg.unread ? 'Unread' : 'Read'}</span></div>
+      <p>${esc(msg.text)}</p>
+      <div class="note__acts">
+        ${msg.unread ? '<button class="pill pill--solid" type="button" data-act="read">Mark read</button>' : ''}
+        <button class="pill" type="button" data-act="reply">Reply</button>
+        <button class="pill" type="button" data-act="clear">Clear from Home</button>
+      </div></div>`;
+  }
+
+  function windowsHTML() {
+    return S.week.map((d) => {
+      let items = state === 'full' ? d.items : state === 'empty' ? d.items.filter((x) => x.k === 'session') : [];
+      const pane = items.length
+        ? `<div class="pane ${items[0].k === 'session' ? 'is-cool' : 'is-warm'}" data-lit>${items.map((x) => `<div><div class="pane__t">${esc(x.t)}</div><div class="pane__s">${esc(x.s)}</div></div>`).join('')}</div>`
+        : `<div class="pane"><span class="pane__empty">${state === 'loading' ? 'Loading' : state === 'error' ? 'Unknown' : 'Nothing listed'}</span></div>`;
+      return `<div class="win${d.today ? ' is-today' : ''}"><div class="win__label"><span>${d.today ? 'Tonight' : d.dow}</span><b>${d.d}</b></div>${pane}</div>`;
+    }).join('');
+  }
+
+  function eveningsHTML() {
+    const n = daysBetween(S.now, S.testDay);
+    let h = '';
+    for (let i = 0; i <= n; i++) h += `<i class="${i === 0 ? 'is-tonight' : i === n ? 'is-test' : i === 2 ? 'is-session' : ''}"></i>`;
+    $('#evenings').style.setProperty('--days', n + 1);
+    $('#evenings').innerHTML = h;
+  }
+
+  function summary() {
+    const s = $('#summary'), c = $('#inbox-count');
+    if (state === 'loading') { s.textContent = 'Getting tonight’s work ready.'; c.textContent = '—'; return; }
+    if (state === 'error') { s.textContent = 'Some of your home page didn’t load. Counts are unknown until it does.'; c.textContent = '?'; return; }
+    const unread = msg && msg.unread ? 1 : 0;
+    c.textContent = unread; c.classList.toggle('is-zero', !unread);
+    const hasTonight = items.some((x) => x.isTonight);
+    const rest = items.length - (hasTonight ? 1 : 0);
+    const parts = [];
+    if (hasTonight) parts.push('One thing is due tonight'); else parts.push(items.length ? 'Nothing is due tonight' : 'Nothing is assigned right now');
+    if (rest) parts[0] += `, and ${word(rest)} more ${rest === 1 ? 'is' : 'are'} waiting.`; else parts[0] += '.';
+    if (unread) parts.push('Joshua left you a note.');
+    s.textContent = parts.join(' ');
+    $('#waiting-count').textContent = rest ? 'Pick one to look at it under the lamp' : '';
+  }
+
+  function render() {
+    $('#paper-slot').innerHTML = paperHTML(items[0]);
+    $('#queue').innerHTML = queueHTML();
+    $('#note-slot').innerHTML = noteHTML();
+    summary();
+  }
+
+  render();
+  $('#windows').innerHTML = windowsHTML();
+  eveningsHTML();
+
+  /* ---- motion ---- */
+  const lamp = $('.lamp');
+  function swingLamp(amount) {
+    if (!hasGsap || reduced()) return;
+    gsap.fromTo(lamp, { rotation: amount }, { rotation: 0, duration: 2.4, ease: 'elastic.out(1, 0.28)', overwrite: true });
+  }
+
+  let swapping = false;
+  function bringForward(id) {
+    const i = items.findIndex((x) => x.id === id);
+    if (i <= 0 || swapping) return;
+    const commit = () => { const [it] = items.splice(i, 1); items.unshift(it); const y = window.scrollY; render(); window.scrollTo(0, y); };
+    const focusBtn = () => { const btn = $('.paper .btn-ink'); if (btn) btn.focus({ preventScroll: true }); };
+    if (!hasGsap || reduced()) { commit(); focusBtn(); return; }
+    swapping = true;
+    // 1. the sheet under the lamp slides out of the light; the chosen row lifts away
+    gsap.timeline({ onComplete: () => {
+      const rows = Flip.getState('.q-row');
+      commit();
+      // 2. the queue closes up around the gap and the returning item drifts into its row
+      Flip.from(rows, { targets: '.q-row', duration: .55, ease: 'power3.inOut',
+        onEnter: (els) => gsap.fromTo(els, { opacity: 0, x: -24 }, { opacity: 1, x: 0, duration: .45, delay: .42, ease: 'power2.out' }) });
+      // 3. the new sheet is set down under the lamp and warms up
+      gsap.fromTo('.paper', { x: 70, y: -18, rotation: 2.4, opacity: 0 },
+        { x: 0, y: 0, rotation: -0.4, opacity: 1, duration: .7, ease: 'power3.out', clearProps: 'opacity', onComplete: () => { swapping = false; } });
+      // the lamp flickers as something new is set down under it
+      gsap.timeline().to(['.cone', '.lamp__glow'], { opacity: .45, duration: .06 }).to(['.cone', '.lamp__glow'], { opacity: 1, duration: .08 }).to(['.cone', '.lamp__glow'], { opacity: .7, duration: .05 }).to(['.cone', '.lamp__glow'], { opacity: 1, duration: .3 });
+      swingLamp(-5);
+      focusBtn();
+    } })
+      .to('.paper', { x: -50, y: 26, rotation: -2.5, opacity: 0, duration: .32, ease: 'power2.in' }, 0)
+      .to(`.q-row[data-flip-id="${id}"]`, { x: -18, opacity: 0, duration: .24, ease: 'power2.in' }, 0);
+    setTimeout(() => { swapping = false; }, 1600);
+  }
+
+  // pointer: a faint candle that follows you, and light that spills on queue rows
+  if (!reduced()) {
+    let raf = 0, px = 0, py = 0;
+    window.addEventListener('pointermove', (e) => {
+      px = e.clientX; py = e.clientY;
+      if (raf) return;
+      raf = requestAnimationFrame(() => {
+        raf = 0;
+        document.body.style.setProperty('--mx', px + 'px');
+        document.body.style.setProperty('--my', (py + window.scrollY) + 'px');
+        const row = document.elementFromPoint(px, py)?.closest('.q-row');
+        if (row) { const r = row.getBoundingClientRect(); row.style.setProperty('--lx', (px - r.left) + 'px'); row.style.setProperty('--ly', (py - r.top) + 'px'); }
+        if (hasGsap) {
+          const r = lamp.getBoundingClientRect();
+          const dx = (px - (r.left + r.width / 2)) / window.innerWidth;
+          gsap.to(lamp, { rotation: gsap.utils.clamp(-3, 3, dx * 5), duration: 1.8, ease: 'power3.out', overwrite: 'auto' });
+        }
+      });
+    }, { passive: true });
+  }
+
+  if (hasGsap && !reduced()) {
+    // the one orchestrated moment: the lamp comes on. Content is readable from the first frame.
+    const tl = gsap.timeline({ defaults: { ease: 'power2.out' } });
+    gsap.set(['.cone', '.lamp__glow'], { opacity: 0 });
+    gsap.set('.paper', { filter: 'brightness(.42) saturate(.6)' });
+    gsap.set('.lamp__rim', { opacity: .25 });
+    tl.to(['.cone', '.lamp__glow', '.lamp__rim'], { opacity: 1, duration: .06 }, .35)
+      .to(['.cone', '.lamp__glow', '.lamp__rim'], { opacity: .35, duration: .07 })
+      .to(['.cone', '.lamp__glow', '.lamp__rim'], { opacity: 1, duration: .5 })
+      .to('.paper', { filter: 'brightness(1) saturate(1)', duration: .9, clearProps: 'filter' }, .4)
+      .from('.ledger i.is-done', { scaleY: 0, transformOrigin: '50% 100%', duration: .35, stagger: .06, ease: 'back.out(2)' }, .75)
+      .from('.ledger i.is-next', { opacity: 0, duration: .4 }, '>-.1');
+    swingLamp(-4);
+    // if frames stall (background tab, throttled pane) never leave the page dimmed
+    setTimeout(() => { if (tl.progress() < 1) tl.progress(1); }, 2200);
+
+    // the week: windows light up as you reach them, in order
+    const lit = gsap.utils.toArray('.pane[data-lit]');
+    lit.forEach((p) => gsap.set(p, { filter: 'brightness(.18) saturate(.3)' }));
+    ScrollTrigger.create({
+      trigger: '#windows', start: 'top 78%', once: true,
+      onEnter: () => lit.forEach((p, i) => {
+        gsap.timeline({ delay: i * .28 })
+          .to(p, { filter: 'brightness(1) saturate(1)', duration: .05 })
+          .to(p, { filter: 'brightness(.5) saturate(.7)', duration: .06 })
+          .to(p, { filter: 'brightness(1) saturate(1)', duration: .45, clearProps: 'filter' });
+        setTimeout(() => gsap.set(p, { clearProps: 'filter' }), 2600);
+      }),
+    });
+    ScrollTrigger.create({
+      trigger: '#evenings', start: 'top 85%', once: true,
+      onEnter: () => {
+        gsap.from('#evenings i', { opacity: 0, scale: 0, duration: .5, stagger: { each: .018, from: 'start' }, ease: 'back.out(3)' });
+        setTimeout(() => gsap.set('#evenings i', { clearProps: 'all' }), 2400);
+      },
+    });
+  }
+
+  /* ---- actions ---- */
+  document.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-act]');
+    if (!b) return;
+    const act = b.dataset.act, id = b.dataset.id;
+    const it = id && items.find((x) => x.id === id);
+    if (act === 'look') return bringForward(id);
+    if (act === 'back') { const t = items.find((x) => x.isTonight); if (t) bringForward(t.id); return; }
+    if (act === 'open' && it) return toast(it.isTonight ? `Opening ${it.title} at prompt ${it.done + 1}.` : `Opening ${it.title}.`);
+    if (act === 'done' && it) {
+      const row = b.closest('.q-row, .paper');
+      const finish = () => { items = items.filter((x) => x.id !== id); render(); toast('Marked done. You can still find it in My work.'); };
+      if (hasGsap && !reduced() && row) gsap.to(row, { opacity: 0, y: -8, duration: .35, ease: 'power2.in', onComplete: finish }); else finish();
+      return;
+    }
+    if (act === 'read' && msg) {
+      msg.unread = false;
+      const ember = $('#ember');
+      const done = () => { $('#note-slot').innerHTML = noteHTML(); summary(); toast('Marked read. The message stays in your conversation.'); };
+      if (hasGsap && !reduced() && ember) gsap.to('#ember i', { scale: 2.2, opacity: 0, duration: .45, ease: 'power2.out', onComplete: done }); else done();
+      return;
+    }
+    if (act === 'clear' && msg) {
+      const n = $('#note-slot .note');
+      const done = () => { msg = null; $('#note-slot').innerHTML = ''; summary(); toast('Cleared from Home. The conversation stays in your inbox.'); };
+      if (hasGsap && !reduced()) gsap.to(n, { height: 0, opacity: 0, marginTop: 0, paddingTop: 0, paddingBottom: 0, duration: .5, ease: 'power3.inOut', onComplete: done }); else done();
+      return;
+    }
+    if (act === 'reply') return toast('Opening your conversation with Joshua.');
+    if (act === 'inbox') return toast('Opening the inbox.');
+    if (act === 'smart') return toast('Building a Smart Drill from your missed questions.');
+    if (act === 'timed') return toast('Setting up a 35-minute timed section.');
+    if (act === 'mywork') return toast('Opening My work.');
+    if (act === 'retry') { const u = new URL(location.href); u.searchParams.set('state', 'full'); location.href = u; }
+  });
+  $('#q-search').addEventListener('keydown', (e) => { if (e.key === 'Enter' && e.target.value.trim()) toast(`Searching for “${e.target.value.trim()}”.`); });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,285 @@
+{
+  "status": "completed",
+  "mode": "inspect",
+  "provider": "claude",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "claude",
+    "builder": "codex",
+    "inspector": "claude"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-my-work-20261026",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-my-work-20261026\\docs\\plans\\my-work-scroll-filters-gemini-review.md",
+  "plan_sha256": "a835d7b16a0fa6dde6e6aab94a53a458bcbd8fa01b71fe29d9b85750aa29bf3c",
+  "requested_model": "claude-opus-5-5",
+  "requested_effort": "medium",
+  "base": "e4035d9c8ec97a3aaec01b0b3464533872328bc8",
+  "snapshot": {
+    "base": "e4035d9c8ec97a3aaec01b0b3464533872328bc8",
+    "files": [
+      {
+        "path": "docs/verification/platform-motion-20261022.md",
+        "kind": "file",
+        "sha256": "73c9602b67d7d0c9294492e6edbff630c0fa1ab8f2e3b3417693eac6aeb9b25d"
+      },
+      {
+        "path": "scripts/verification/my-work-preview.tsx",
+        "kind": "file",
+        "sha256": "23880b3192f8663568d3cac68e7cfceb875ce22e048e430df7d83a79bc6b8622"
+      },
+      {
+        "path": "scripts/verification/start-my-work-preview.mjs",
+        "kind": "file",
+        "sha256": "224ad6a48c5a24912db096ec0fe6e370a4fdd2923ce560c81e4893567222a24d"
+      },
+      {
+        "path": "src/components/classroom/ClassroomRouteViews.notes.test.tsx",
+        "kind": "file",
+        "sha256": "32ce2428f5c27951fc3319f0e568ac0baebc0f500d0ea0d6e6d0b08d5ced56de"
+      },
+      {
+        "path": "src/components/classroom/ClassroomRouteViews.tsx",
+        "kind": "file",
+        "sha256": "3e2c55b1032aee936df4efc35fe407b1bd9939b3a562bb01d39e0cab435eff0a"
+      },
+      {
+        "path": "src/components/my-work/TeachingNotesArchive.test.tsx",
+        "kind": "file",
+        "sha256": "6c96ce43a20a3731c1b2c57539ede3ca0287a08311a9e9ecb1886593f092e652"
+      },
+      {
+        "path": "src/components/my-work/TeachingNotesArchive.tsx",
+        "kind": "file",
+        "sha256": "b44fe52d666524d202c0a132c063fc1707dc57ec35066a4f22e74871f323e5c9"
+      },
+      {
+        "path": "src/components/my-work/WorkFilterSelect.tsx",
+        "kind": "file",
+        "sha256": "10a9a0808361404b67236ad029f2ccf3ce35c379e990629574e3d2d68f1ec6d2"
+      },
+      {
+        "path": "src/components/my-work/assignedWorkOrganization.ts",
+        "kind": "file",
+        "sha256": "0454ff47d5cd15157b2b717d0433970ae3cb7409d4392a82900ab5b722934fed"
+      },
+      {
+        "path": "src/components/my-work/teachingNoteDates.test.ts",
+        "kind": "file",
+        "sha256": "6a75174b4bb3be831ac046660875a4cdbb45157b6004d9e6d1699d3ad5dadabd"
+      },
+      {
+        "path": "src/components/my-work/teachingNoteDates.ts",
+        "kind": "file",
+        "sha256": "7e065252a3d943835ce3cc8e8594c12e29a84ea5301e47202eefc2d9a580d9c1"
+      },
+      {
+        "path": "src/hooks/useClassroomMotion.test.tsx",
+        "kind": "file",
+        "sha256": "49da15eb48eb367fa0e5643117d4b7dc40629f78bf7a39195baa188f1d14442b"
+      },
+      {
+        "path": "src/hooks/useClassroomMotion.ts",
+        "kind": "file",
+        "sha256": "96eb589488ad3bfef00939c64a31afedb112476cec27935436ab1e9b227b23a2"
+      },
+      {
+        "path": "src/hooks/useNotesArchiveScroll.test.ts",
+        "kind": "file",
+        "sha256": "3916c8525fffeb504427614c9282127c9c3081cbf5183fd4de6fa91b9c6fdb9d"
+      },
+      {
+        "path": "src/hooks/useNotesArchiveScroll.ts",
+        "kind": "file",
+        "sha256": "9249bd891d54f1c17dec3c81ccfa02a750bed0e872a6dd13345a8e4c5e436cff"
+      },
+      {
+        "path": "src/hooks/useNotesSelectMotion.ts",
+        "kind": "file",
+        "sha256": "8ffbbde6358a34638ff4df937496e537ba66037c302b486ed1c0462711fec0aa"
+      },
+      {
+        "path": "src/pages/MyWorkNotesPage.tsx",
+        "kind": "file",
+        "sha256": "52bd7e593540d0539e74c5e9ecdf24ec52abeb0e960dc69a65101a85aaecdec9"
+      },
+      {
+        "path": "src/pages/MyWorkPage.organization.test.tsx",
+        "kind": "file",
+        "sha256": "10145343d7906aedc97cbcfe49c21e2b39c861860e16fb70c6157135871415be"
+      },
+      {
+        "path": "src/pages/MyWorkPage.readingCenter.test.tsx",
+        "kind": "file",
+        "sha256": "838707bcba41e811b6adc38333b480eca060868781c8188a8ba634ea18e39082"
+      },
+      {
+        "path": "src/pages/MyWorkPage.tsx",
+        "kind": "file",
+        "sha256": "b6c0805b940d2fcf570c5546ed7cfae403030d22f50647dc8ef4cedcb7016953"
+      },
+      {
+        "path": "src/pages/StudentDestination.test.tsx",
+        "kind": "file",
+        "sha256": "e2a663fcbc111c5f97548609f388508d4785e86785a526490ac0b722c300febf"
+      },
+      {
+        "path": "src/pages/StudentDestination.tsx",
+        "kind": "file",
+        "sha256": "4c9fc2666e54a0fc5122f3fd6e2399d6926294be31f84a04d61ca1fefccc8bf7"
+      },
+      {
+        "path": "src/pages/myWorkNotes.css",
+        "kind": "file",
+        "sha256": "3e8816afc285ee16f10997bdddc3d0bfc0dc9d79da12f2554df7416ccab32234"
+      },
+      {
+        "path": "src/pages/myWorkNotesRefinement.css",
+        "kind": "file",
+        "sha256": "97ab44a311fb41718ac53b658090f1b2719c6d0023245c6bce92532149263b0c"
+      },
+      {
+        "path": "src/pages/myWorkOrganization.css",
+        "kind": "file",
+        "sha256": "a9cb62f871bdd8e8405dfe72a0df504ae42dd535e867203a5f31e0f6abe00d02"
+      }
+    ],
+    "diff_sha256": "184e3d1214c3a0b9d6ab5ba31662ff7f38ae6936d17e70cb573356e0df4f3365",
+    "scope": [
+      "docs/verification/platform-motion-20261022.md",
+      "scripts/verification/my-work-preview.tsx",
+      "scripts/verification/start-my-work-preview.mjs",
+      "src/components/classroom/ClassroomRouteViews.notes.test.tsx",
+      "src/components/classroom/ClassroomRouteViews.tsx",
+      "src/components/my-work",
+      "src/hooks/useClassroomMotion.test.tsx",
+      "src/hooks/useClassroomMotion.ts",
+      "src/hooks/useNotesArchiveScroll.test.ts",
+      "src/hooks/useNotesArchiveScroll.ts",
+      "src/hooks/useNotesSelectMotion.ts",
+      "src/pages/MyWorkNotesPage.tsx",
+      "src/pages/MyWorkPage.organization.test.tsx",
+      "src/pages/MyWorkPage.readingCenter.test.tsx",
+      "src/pages/MyWorkPage.refetch.test.tsx",
+      "src/pages/MyWorkPage.tsx",
+      "src/pages/StudentDestination.test.tsx",
+      "src/pages/StudentDestination.tsx",
+      "src/pages/myWorkNotes.css",
+      "src/pages/myWorkNotesRefinement.css",
+      "src/pages/myWorkOrganization.css"
+    ],
+    "sha256": "541ff7ce373730930b507357e3fe7e84d6238b195dd591aac5838726e59a82d7"
+  },
+  "previous": null,
+  "started_at": 1793151801.7539952,
+  "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\design\\reviews\\my-work-taste-v2-20261027\\claude-remediation\\claudex-x2_ylv76",
+  "scope": [
+    "docs/verification/platform-motion-20261022.md",
+    "scripts/verification/my-work-preview.tsx",
+    "scripts/verification/start-my-work-preview.mjs",
+    "src/components/classroom/ClassroomRouteViews.notes.test.tsx",
+    "src/components/classroom/ClassroomRouteViews.tsx",
+    "src/components/my-work",
+    "src/hooks/useClassroomMotion.test.tsx",
+    "src/hooks/useClassroomMotion.ts",
+    "src/hooks/useNotesArchiveScroll.test.ts",
+    "src/hooks/useNotesArchiveScroll.ts",
+    "src/hooks/useNotesSelectMotion.ts",
+    "src/pages/MyWorkNotesPage.tsx",
+    "src/pages/MyWorkPage.organization.test.tsx",
+    "src/pages/MyWorkPage.readingCenter.test.tsx",
+    "src/pages/MyWorkPage.refetch.test.tsx",
+    "src/pages/MyWorkPage.tsx",
+    "src/pages/StudentDestination.test.tsx",
+    "src/pages/StudentDestination.tsx",
+    "src/pages/myWorkNotes.css",
+    "src/pages/myWorkNotesRefinement.css",
+    "src/pages/myWorkOrganization.css"
+  ],
+  "cli_version": "2.1.309 (Claude Code)",
+  "executable": [
+    "C:\\Users\\Joshu\\.local\\bin\\claude.EXE"
+  ],
+  "exit_code": 0,
+  "session_id": "c86d3040-3644-4143-b401-e394e9b8b87f",
+  "response": {
+    "verdict": "REVISE",
+    "summary": "I read the scoped implementation against the five authorized remediation items. Most of it matches. Items 1 to 5 are implemented as specified: the module-WeakMap owner with nearest-owner resolution and a reduced-motion no-op handler, filter/restore/paginate intents called synchronously before URL updates (including portaled selects through page or section refs), a single DOM-ordered rAF batch with paused 240ms/8px/opacity list tweens, layout-phase restore settlement (including the case where a child focuses a row before the parent owner registers), the domain whitelists that fail open on invalid values while keeping valid absent selections, access filtering before counts and options, and the list-only My Work content policy. I found one material phone-UX defect introduced by the new focus-recovery code. Focus is moved programmatically into the search input after pointer or touch actions, not only keyboard ones. On phones this opens the soft keyboard and scrolls the page after a tap on Clear filters or a picker reset. There is also one low-severity motion-stickiness note. I did not run any tests, builds or browsers. Host-reported checks were not treated as evidence.",
+    "findings": [
+      {
+        "id": "F1-pointer-clear-focuses-search",
+        "severity": "medium",
+        "path": "src/components/my-work/TeachingNotesArchive.tsx",
+        "evidence": "In TeachingNotesArchive, clearFilters() always sets recoverClearFocus.current = true. The dependency-free useLayoutEffect then calls searchRef.current?.focus() during the commit triggered by the click. That commit runs synchronously inside the tap's user-gesture task, so iOS Safari and Android Chrome open the soft keyboard and scroll to the input. Scenario: a phone user taps Unread, gets 'No notes match these filters', taps Clear filters, and the keyboard covers the restored archive. The same happens through changeType: Radix focuses options under pointer hover/touch, so focus.closest('.notes-select-content') is true for a pointer choice of 'All types' when the selector disappears. src/pages/MyWorkPage.tsx has the same pattern. The Clear filters handler sets 'clear' when event.currentTarget === document.activeElement, and Chrome on desktop and Android focuses buttons on tap. WorkFilterSelect's focusedWithin is also true for pointer selection inside the portal content. The MyWorkList effect then focuses search. The tests only exercise keyboard and detail-0 paths (e.g. 'returns keyboard focus to search after Clear filters'), so the pointer/touch side effect is untested. The plan's rendered checks require pointer Clear filters and the 390px phone state to be correct.",
+        "fix": "Recover focus only when the removed control actually held focus because of keyboard interaction. The cleanest gate is event.detail === 0 on the Clear filters click; for the Select, use the existing selectModality/modality state === 'keyboard'. Otherwise, focus the section/heading with preventScroll, or leave focus alone if it is still on a mounted element. Add tests: a pointer click on Clear filters (detail 1) and a pointer 'All types'/'All work types' choice do not focus the search input."
+      },
+      {
+        "id": "F2-any-keydown-sticky",
+        "severity": "low",
+        "path": "src/hooks/useClassroomMotion.ts",
+        "evidence": "useList is attached to every keydown, input and change event that bubbles to the root (line 242-243). It permanently sets keyboardInteraction = true, so a later pointer paginate never re-enables reveals for that route visit. Pressing a lone modifier (holding Cmd/Ctrl before a Cmd-click to open a note in a new tab) or Escape counts. So does any key pressed while focus is on an earlier-clicked row link. Each of these silently disables the requested Load more stagger for the rest of the visit. This is consistent with the docs' 'sticky' wording, so it is a fidelity and edge-case concern, not a crash.",
+        "fix": "Optionally ignore modifier-only and Escape keydowns (event.key in Meta/Control/Shift/Alt/Escape) when setting keyboardInteraction, or set the sticky flag only for navigation and activation keys (Tab, arrows, Enter, Space, PageUp/PageDown) and text input. Add a unit test showing that a Meta keydown followed by pointer paginate still reveals new rows."
+      }
+    ],
+    "coverage": [
+      "Read the plan text and the full tracked diff for every manifest path",
+      "Read src/hooks/useClassroomMotion.ts in full: owner registry, consumeRestore, list-only eligibility, batch scheduler, settle/intent handling, resize/mutation/print listeners, cleanup",
+      "Read src/components/my-work/WorkFilterSelect.tsx (untracked, not in the diff)",
+      "Read src/components/my-work/teachingNoteDates.ts (local-calendar key/month/label)",
+      "Read src/hooks/useNotesArchiveScroll.ts (return-scroll modality)",
+      "Read src/components/classroom/shell/ClassroomMotionContent.tsx and StudentDestination.tsx lines 40-104 (heading local owner vs. list-only content wrapper)",
+      "Traced callers of useClassroomMotion across src (TeacherSmartboard, StudentDossier, TeacherWorkspaceShell, Reading Center AppShell, ClassroomMotionContent, StudentDestination heading) for nested-owner resolution",
+      "Read src/App.tsx lines 560-649 for the My Work route nesting, gates and the reader route under the same ClassroomLayout (old-owner cleanup and new-owner ordering on reader Back)",
+      "Checked myWorkNotesRefinement.css select/menu variables, reader styles and scoping; checked that the My Work CSS variable mappings in myWorkOrganization.css feed the shared trigger styles",
+      "Checked the AssignedTodoRow.workSection typing in useAssignedTodoFeed.ts for the subject whitelist"
+    ],
+    "limitations": [
+      "I did not run tests, typecheck, build or a browser. All host-reported results (test counts, scroll traces, viewport checks) are unverified.",
+      "I did not inspect the design-report screenshots under C:/Users/Joshu/dev/ai-os/design/reviews/my-work-taste-v2-20261027 or the docs/verification images. No visual inspection was performed.",
+      "GSAP ScrollTrigger runtime semantics are unverified from source: specifically whether once:true self-kill leaves the paused list tween alive for the deferred rAF restart(true). The correctness of below-fold reveals depends on this; only the host trace attests to it.",
+      "Not read in full: useNotesSelectMotion.ts, myWorkNotes.css beyond the grep hits, the full myWorkOrganization.css/MyWorkPage.tsx outside the diff hunks, teachingNotesArchiveData.ts, ui/select.tsx (Radix BubbleSelect change-event behavior was assessed from library knowledge only), and the full test files beyond the diff.",
+      "The broader dirty checkout outside the explicit scope, including supabase/functions/mcp/index.ts, the untracked docs/plans files and .taste-skill/, was not reviewed. This is not a whole-repository approval.",
+      "Physical phone/Safari behavior, production RLS/read-state and runtime acceptance for other shared motion callers are not certified."
+    ]
+  },
+  "usage": {
+    "input_tokens": 18,
+    "cache_creation_input_tokens": 106663,
+    "cache_read_input_tokens": 764390,
+    "output_tokens": 20561,
+    "output_tokens_details": {
+      "thinking_tokens": 16218
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 106663,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 4026,
+        "cache_read_input_tokens": 109094,
+        "cache_creation_input_tokens": 2050,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 2050
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "permission_denials": [],
+  "total_cost_usd": 1.4174740000000001,
+  "elapsed_seconds": 212.54
+}

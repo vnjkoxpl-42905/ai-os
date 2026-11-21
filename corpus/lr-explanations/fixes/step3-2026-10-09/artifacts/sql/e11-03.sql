@@ -1,0 +1,7 @@
+insert into lr_explanation_steps (explanation_id,position,label,body) select v.e,v.p,v.l,v.b from (values
+('bac90585-099b-4faf-8c88-95545859dfec'::uuid,3,'Goal','Look for an answer that links plumper beans to a better dish. When the conclusion brings in an idea the evidence never mentioned (quality), the gap is usually the link between the evidence''s idea and that new one. Confirm it with the negation test: if plumper beans do nothing for a dish, the argument falls apart.'),
+('e1ff871b-d20d-4367-a2a1-0536a6093a4b'::uuid,3,'Goal','Predict the bridge between "strong incentives" in the evidence and "expensive bonuses" in the conclusion: expensive bonuses work as strong incentives for these employees. Negate that, and the evidence''s condition is never met by the bonuses, so nothing connects the bonuses to any savings and the conclusion loses its support.
+
+Watch for two traps: an answer that makes bonuses the only way to save, and an answer that explains why the plan would work if it already worked.'),
+('a2c47cef-4985-40e5-9b84-e604a10211eb'::uuid,3,'Goal','Expect a link between the conclusion''s new idea, a reasoned approach, and the evidence''s idea, injuring others. Something like: people who take a reasoned approach are less likely to injure others. Negate it, and reasoned people need government''s protection just as much, so there''s no reason for government''s power to shrink.')
+) v(e,p,l,b) where not exists (select 1 from lr_explanation_steps x where x.explanation_id=v.e and x.position=v.p) returning id;

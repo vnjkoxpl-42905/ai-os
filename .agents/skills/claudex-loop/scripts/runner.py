@@ -48,6 +48,24 @@ def save(path: Path, value) -> None:
     path.write_text(json.dumps(value, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
 
+def inspection_manifest_prompt(snapshot_value: dict, run_dir: Path) -> str:
+    """Keep the complete manifest available without exceeding CLI stdin limits."""
+    body = json.dumps(snapshot_value, ensure_ascii=False)
+    heading = "\nCHANGE MANIFEST (read every added/changed file; deleted files are in diff):\n"
+    if len(body.encode("utf-8")) <= 1_000_000:
+        return heading + body
+    manifest_path = run_dir / "change-manifest.json"
+    save(manifest_path, snapshot_value)
+    return (heading + f"CHANGE MANIFEST FILE: {manifest_path}\n"
+            f"FILE SHA256: {digest(manifest_path.read_bytes())}\n"
+            f"SNAPSHOT SHA256: {snapshot_value['sha256']}\n"
+            f"FILE ENTRIES: {len(snapshot_value['files'])}\n"
+            "Read the complete manifest from this file in bounded chunks, then inspect "
+            "the added/changed files. No entries have been omitted or filtered. "
+            "Report any coverage limits; the external file has the same full snapshot "
+            "as snapshot.json and result.json.\n")
+
+
 def resolve_roles(host: str, reviewer: str | None = None,
                   builder: str | None = None) -> dict:
     reviewer = reviewer or next(p for p in PROVIDERS if p != host)
@@ -84,11 +102,30 @@ def git(repo: Path, *args: str) -> bytes:
     return result.stdout
 
 
-def snapshot(repo: Path, base: str) -> dict:
+def inspection_scope(repo: Path, paths: list[str] | None) -> list[str] | None:
+    """Validate explicit literal repository paths, never arbitrary Git pathspecs."""
+    if not paths:
+        return None
+    values = []
+    for value in paths:
+        if (not isinstance(value, str) or not value or value.startswith('/') or
+                any(char in value for char in ('\\', ':', '\0', '\n', '\r')) or
+                any(part in ('', '.', '..') for part in value.split('/'))):
+            raise RunError('--scope requires confined relative file/directory paths, not Git pathspec magic.')
+        resolved = (repo / value).resolve()
+        if resolved != repo.resolve() and repo.resolve() not in resolved.parents:
+            raise RunError('--scope path resolves outside the repository.')
+        values.append(value)
+    return sorted(set(values))
+
+
+def snapshot(repo: Path, base: str, scope: list[str] | None = None) -> dict:
     """Read tracked, staged, deleted and untracked changes without staging anything."""
     base_id = git(repo, "rev-parse", "--verify", base + "^{commit}").decode().strip()
-    tracked = git(repo, "diff", "--no-ext-diff", "--name-only", "-z", base_id, "--")
-    untracked = git(repo, "ls-files", "--others", "--exclude-standard", "-z")
+    scope = inspection_scope(repo, scope)
+    paths = scope or []
+    tracked = git(repo, "--literal-pathspecs", "diff", "--no-ext-diff", *(["--no-renames"] if scope else []), "--name-only", "-z", base_id, "--", *paths)
+    untracked = git(repo, "--literal-pathspecs", "ls-files", "--others", "--exclude-standard", "-z", "--", *paths)
     names = sorted(set(os.fsdecode(n) for n in (tracked + untracked).split(b"\0") if n))
     files = []
     for name in names:
@@ -104,8 +141,10 @@ def snapshot(repo: Path, base: str) -> dict:
         else:
             body, kind = b"", "deleted"
         files.append({"path": name, "kind": kind, "sha256": digest(body)})
-    diff = git(repo, "diff", "--no-ext-diff", "--no-textconv", "--binary", base_id, "--")
+    diff = git(repo, "--literal-pathspecs", "diff", "--no-ext-diff", "--no-textconv", "--binary", base_id, "--", *paths)
     value = {"base": base_id, "files": files, "diff_sha256": digest(diff)}
+    if scope is not None:
+        value['scope'] = scope
     value["sha256"] = digest(json.dumps(value, sort_keys=True).encode())
     return value
 
@@ -334,6 +373,9 @@ def previous_record(path: Path, repo: Path, plan: Path, provider: str, mode: str
 
 def run(args) -> int:
     repo = Path(args.repo).resolve(strict=True)
+    if args.scope and args.mode != 'inspect':
+        raise RunError('--scope is available only for inspect.')
+    scope = inspection_scope(repo, args.scope)
     plan = Path(args.plan)
     plan = (repo / plan).resolve(strict=True) if not plan.is_absolute() else plan.resolve(strict=True)
     roles = resolve_roles(args.host, builder=args.builder)
@@ -353,7 +395,7 @@ def run(args) -> int:
         raise RunError("Inspection requires --base and a fresh session (no --resume).")
     previous = (previous_record(Path(args.resume), repo, plan, provider, args.mode,
                                 args.model, args.effort) if args.resume else None)
-    before = snapshot(repo, args.base) if args.mode == "inspect" else None
+    before = snapshot(repo, args.base, scope) if args.mode == "inspect" else None
     if args.mode == "build":
         if not previous and git(repo, "status", "--porcelain", "--untracked-files=all").strip():
             raise RunError("Build requires a clean checkout. Use an isolated worktree; preserve existing work.")
@@ -378,6 +420,8 @@ def run(args) -> int:
               "requested_model": args.model, "requested_effort": args.effort,
               "base": args.base, "snapshot": before, "previous": args.resume,
               "started_at": time.time(), "artifacts": str(run_dir)}
+    if scope is not None:
+        record['scope'] = scope
     save(run_dir / "result.json", record)
     save(run_dir / "schema.json", REVIEW_SCHEMA)
     instructions = (
@@ -405,9 +449,20 @@ def run(args) -> int:
         prompt += "Check prior findings against this revision; do not relitigate resolved items without new evidence.\n"
     if before:
         save(run_dir / "snapshot.json", before)
-        diff = git(repo, "diff", "--no-ext-diff", "--no-textconv", before["base"], "--").decode("utf-8", errors="replace")
-        prompt += "\nCHANGE MANIFEST (read every added/changed file; deleted files are in diff):\n"
-        prompt += json.dumps(before, ensure_ascii=False) + "\nTRACKED DIFF:\n" + diff
+        if scope is not None:
+            prompt += ("\nEXPLICIT INSPECTION SCOPE (literal repository paths):\n" + json.dumps(scope) +
+                       "\nThe snapshot and diff cover all changed/staged/deleted/untracked files inside "
+                       "these paths only. Files outside these paths are not fingerprinted or approved. "
+                       "Read related callers as needed, and explicitly report out-of-scope areas as "
+                       "unreviewed limitations. Do not imply whole-repository approval.\n")
+        diff = git(repo, "--literal-pathspecs", "diff", "--no-ext-diff", "--no-textconv", before["base"], "--", *(scope or [])).decode("utf-8", errors="replace")
+        prompt += inspection_manifest_prompt(before, run_dir)
+        if len(diff.encode("utf-8")) > 1_000_000:
+            diff_path = run_dir / "tracked-diff.txt"
+            diff_path.write_text(diff, encoding="utf-8")
+            prompt += f"\nTRACKED DIFF FILE: {diff_path}\nRead relevant diff sections from this file and inspect the changed files in the manifest. Report any coverage limits.\n"
+        else:
+            prompt += "\nTRACKED DIFF:\n" + diff
     if args.feedback:
         prompt += "\nHOST DISPOSITIONS / FIX REQUEST:\n" + Path(args.feedback).read_text(encoding="utf-8")
     (run_dir / "prompt.txt").write_text(prompt, encoding="utf-8")
@@ -434,7 +489,7 @@ def run(args) -> int:
                                    previous["session_id"] if previous else None))
         if digest(plan.read_bytes()) != record["plan_sha256"]:
             raise RunError("Plan changed during the run; result cannot approve the current plan.")
-        if before and snapshot(repo, args.base)["sha256"] != before["sha256"]:
+        if before and snapshot(repo, args.base, scope)["sha256"] != before["sha256"]:
             raise RunError("Code changed during inspection; inspect the final code again.")
         if args.mode == "build":
             if git(repo, "rev-parse", "HEAD").decode().strip() != args.base:
@@ -464,6 +519,7 @@ def main(argv=None) -> int:
     parser.add_argument("--resume", help="Prior successful result.json, never a guessed session or --last.")
     parser.add_argument("--feedback", help="Host-authored UTF-8 dispositions/fix-list file.")
     parser.add_argument("--base", help="Pre-build commit for complete code inspection.")
+    parser.add_argument("--scope", action="append", help="Inspect only this literal relative file/directory; repeat for additional paths. Inspect mode only; omitted means the full repository.")
     parser.add_argument("--approval", help="Successful plan-review result.json.")
     parser.add_argument("--unreviewed-spec", action="store_true")
     parser.add_argument("--proof", help="Exact agreed proof command, passed as data to the builder.")

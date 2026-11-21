@@ -1,0 +1,180 @@
+{
+  "scope": "Hand-selected eight-case local top-three retrieval smoke benchmark; not a blind learner or model benchmark.",
+  "indexed_pages": 186,
+  "cases": [
+    {
+      "query": "apology emails",
+      "expected_any_in_top3": [
+        "wiki/teaching-voice.md"
+      ],
+      "top3": [
+        "wiki/teaching-voice.md",
+        "wiki/sources/consultation-followup-workflow-memory-2026-07-07.md",
+        "wiki/COPY-CORRECTIONS.md"
+      ],
+      "passed": true,
+      "five_runs_ms": [
+        109.602,
+        108.548,
+        109.409,
+        108.986,
+        105.981
+      ],
+      "median_ms": 108.986,
+      "returned_excerpt_characters": 3185,
+      "same_candidate_full_page_characters": 86525
+    },
+    {
+      "query": "just taken",
+      "expected_any_in_top3": [
+        "wiki/LSATU-BOOKING-POLICY.md"
+      ],
+      "top3": [
+        "wiki/LSATU-BOOKING-POLICY.md",
+        "wiki/sources/anthropic-small-business-13-skills-austin-marchese.md",
+        "wiki/sources/herdr-claude-codex-headache.md"
+      ],
+      "passed": true,
+      "five_runs_ms": [
+        109.811,
+        108.898,
+        108.248,
+        106.456,
+        105.146
+      ],
+      "median_ms": 108.248,
+      "returned_excerpt_characters": 2032,
+      "same_candidate_full_page_characters": 13408
+    },
+    {
+      "query": "ARMS applications routines memory skills",
+      "expected_any_in_top3": [
+        "wiki/sources/ultimate-second-brain-arms-robonuggets.md"
+      ],
+      "top3": [
+        "references/ai-workspace/operating-inventory.md",
+        "wiki/sources/jev-claude-os-chase-ai.md",
+        "wiki/sources/ultimate-second-brain-arms-robonuggets.md"
+      ],
+      "passed": true,
+      "five_runs_ms": [
+        112.471,
+        108.078,
+        106.325,
+        111.404,
+        105.897
+      ],
+      "median_ms": 108.078,
+      "returned_excerpt_characters": 4200,
+      "same_candidate_full_page_characters": 22834
+    },
+    {
+      "query": "Karpathy tokenizer",
+      "expected_any_in_top3": [
+        "references/ai-workspace/karpathy-method.md",
+        "wiki/karpathy/log.md"
+      ],
+      "top3": [
+        "wiki/karpathy/log.md",
+        "wiki/sources/karpathy/animals-vs-ghosts.md",
+        "references/ai-workspace/karpathy-method.md"
+      ],
+      "passed": true,
+      "five_runs_ms": [
+        113.607,
+        108.474,
+        109.205,
+        117.941,
+        107.988
+      ],
+      "median_ms": 109.205,
+      "returned_excerpt_characters": 2530,
+      "same_candidate_full_page_characters": 13113
+    },
+    {
+      "query": "vocabulary unfamiliar reading",
+      "expected_any_in_top3": [
+        "corpus/loophole-online/shared/README.md"
+      ],
+      "top3": [
+        "references/rc-source-adoption-checklist.md",
+        "corpus/loophole-online/shared/README.md",
+        "corpus/Curriculum/Reading Comprehension/Notes/cumulative-translation-review.md"
+      ],
+      "passed": true,
+      "five_runs_ms": [
+        116.845,
+        111.729,
+        124.54,
+        163.449,
+        152.699
+      ],
+      "median_ms": 124.54,
+      "returned_excerpt_characters": 3145,
+      "same_candidate_full_page_characters": 20770
+    },
+    {
+      "query": "MCAT CARS questions",
+      "expected_any_in_top3": [
+        "wiki/sources/mcat-cars-three-passages-2026-10-15.md"
+      ],
+      "top3": [
+        "corpus/reading-center/mcat-question-adjudication-2026-10-26.md",
+        "wiki/sources/mcat-cars-three-passages-2026-10-15.md",
+        "corpus/lr-explanations/drafts/pilot-2026-09-27.md"
+      ],
+      "passed": true,
+      "five_runs_ms": [
+        145.338,
+        151.9,
+        145.569,
+        144.563,
+        151.168
+      ],
+      "median_ms": 145.569,
+      "returned_excerpt_characters": 4110,
+      "same_candidate_full_page_characters": 96669
+    },
+    {
+      "query": "conditional contrapositive",
+      "expected_any_in_top3": [
+        "wiki/contrapositive-teaching.md",
+        "corpus/Curriculum/Conditional Logic/Notes/_megadoc_reference_conditionals.md"
+      ],
+      "top3": [
+        "references/lsat-teaching-voice-standard.md",
+        "wiki/contrapositive-teaching.md",
+        "corpus/Curriculum/Conditional Logic/Notes/_megadoc_reference_conditionals.md"
+      ],
+      "passed": true,
+      "five_runs_ms": [
+        143.043,
+        140.227,
+        139.844,
+        146.986,
+        137.16
+      ],
+      "median_ms": 140.227,
+      "returned_excerpt_characters": 3218,
+      "same_candidate_full_page_characters": 70893
+    },
+    {
+      "query": "quasarx imaginary thing",
+      "expected_any_in_top3": [],
+      "top3": [],
+      "passed": true,
+      "five_runs_ms": [
+        129.472,
+        137.817,
+        138.803,
+        138.306,
+        125.067
+      ],
+      "median_ms": 137.817,
+      "returned_excerpt_characters": 0,
+      "same_candidate_full_page_characters": 0
+    }
+  ],
+  "passes": 8,
+  "limits": "Characters compare excerpts with the same candidate pages in full, not an equivalent rg session. Actual model tokens and end-to-end agent cost were not measured."
+}

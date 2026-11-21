@@ -1,0 +1,84 @@
+{
+ "qid": "PT158-S4-Q23",
+ "type": "Flaw",
+ "difficulty": "4",
+ "key_db": "E",
+ "stimulus_db": "Official: Six months ago, the fines for parking violations on the city's streets were raised to help pay for the parking garage that had just opened. Since then, parking violations on our streets have dropped by 50 percent. Hence, if we want there to be even fewer parking violations, the fines should be raised again.",
+ "stem_db": "The reasoning in the official's argument is flawed in that the argument",
+ "choices_db": {
+  "A": "takes a possible effect of a reduction to be a possible cause of that reduction",
+  "B": "takes for granted that raising fines a second time will reduce parking violations at least as much as it did the first time",
+  "C": "fails to take into account the financial benefits the city is now deriving from fines for parking violations",
+  "D": "takes for granted that people who park their cars illegally would prefer to park legally",
+  "E": "fails to establish that the initial decrease in parking violations was not due to the availability of additional parking spaces"
+ },
+ "bank": {
+  "stimulus": "Official: Six months ago, the fines for parking violations\n on the city’s streets were raised to help pay for\n the parking garage that had just opened. Since\n then, parking violations on our streets have\n dropped by 50 percent. Hence, if we want there\n to be even fewer parking violations, the fines\n should be raised again.",
+  "stem": "The reasoning in the official’s argument is flawed in that\n the argument",
+  "choices": {
+   "A": "takes a possible effect of a reduction to be a possible cause of that reduction",
+   "B": "takes for granted that raising fines a second time will reduce parking violations at least as much as it did the first time",
+   "C": "fails to take into account the financial benefits the city is now deriving from fines for parking violations",
+   "D": "takes for granted that people who park their cars illegally would prefer to park legally",
+   "E": "fails to establish that the initial decrease in parking violations was not due to the availability of additional parking spaces"
+  },
+  "key": "E"
+ },
+ "explanation_id": "b0432b66-9b91-446d-92aa-f0a637db98af",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "37d7861e-65da-41ee-8bd9-e5fb66e8a762",
+   "position": 0,
+   "label": "Conclusion (Hence)",
+   "body": "If we want there to be even fewer parking violations, the fines should be raised again."
+  },
+  {
+   "row_id": "d90cc213-c178-450e-8472-21d25661714a",
+   "position": 1,
+   "label": "Evidence",
+   "body": "Six months ago we raised the fines for parking violations, and since then parking violations on our streets have dropped by 50%."
+  },
+  {
+   "row_id": "a080ae89-c3a2-4236-8112-a1b0217ea8b3",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "A common trope in Logical Reasoning is to say, \"Policy change X went into effect. Then thing Y happened. So, apparently policy change X caused thing Y.\"\nIt seems here that our author is definitely making that same causal assumption, that the increase in fines is the cause of the 50% drop in parking violations.\nThe conclusion has implicit causality. When you say, \"If you want X, you should do Y\", you're implying that Y can bring about X.\nThis is the classic Explain Curious Fact argument structure, and when it shows up on Flaw, it means that they are usually just testing our awareness that the author has overconfidently arrived at one possible explanation for a curious fact, even though others could exist."
+  },
+  {
+   "row_id": "6a3f4f2e-bc5b-472f-b3f3-a54cd6a1c8e4",
+   "position": 3,
+   "label": "Goal",
+   "body": "So we might see answers saying, \"The author takes for granted that because X was followed by Y, X caused Y\" or \"the author fails to consider other things could have caused there to be 50% fewer parking violations (a pandemic or storm that led to there being fewer people out and about, or maybe an increase in visibility of meter maids making people worry about whether they still had value left on their meter).\nBut there's also a prediction aspect to the conclusion, so even if we thought the fines were the causal reason that violations dropped by 50%, we won't necessarily get a further reduction by increasing fines even more. At a certain point, you've already maxed out the disincentive to get a parking violation. Whether it's a $500 or $600 fine, I'm equally determined to not get that ticket."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "f9f704d2-75c0-441d-b3df-1f5701a4ea93",
+   "letter": "A",
+   "body": "Confusing cause and effect means reversing the causal direction — claiming X caused Y when actually Y caused X. The argument's timeline is straightforward and correct: fines were raised, then violations decreased. There is no reversal of the causal arrow. The actual flaw is different: the argument ignores a confounding variable (the parking garage) that could explain the same outcome. This is an alternative-cause error, not a reversed-causation error. The argument gets the temporal sequence right but fails to consider that another simultaneous change might be the real explanation. These are distinct logical errors, and this answer identifies the wrong one."
+  },
+  {
+   "row_id": "71454257-6260-48fe-bcae-03452f3d21b4",
+   "letter": "B",
+   "body": "This answer identifies a real but secondary issue: diminishing returns. Perhaps the first fine increase captured the \"easy wins\" — the most price-sensitive violators — and a second increase would affect fewer people. But this critique is premature. The primary flaw is more fundamental: the argument has not established that fines caused the initial decrease at all. The parking garage is an unexamined alternative explanation. Before questioning whether a second dose of medicine will work as well as the first, we should first confirm the first dose was actually medicine and not a placebo. This answer skips ahead to a secondary objection while missing the foundational problem."
+  },
+  {
+   "row_id": "e63d7d36-7191-4c25-ba4e-24c505ce84b5",
+   "letter": "C",
+   "body": "This answer introduces a cost-benefit analysis: do the revenues from fines justify the costs of enforcement? But the argument's conclusion is about effectiveness (\"raise fines to reduce violations further\"), not about profitability (\"raise fines to make money\"). The logical flaw lies in the causal reasoning — attributing the decrease in violations to fines while ignoring the garage. Whether fines are financially worthwhile is a completely separate question from whether they actually caused the behavioral change. This answer operates in the wrong analytical framework for a flaw question about causal reasoning."
+  },
+  {
+   "row_id": "97d5639c-5b3b-40a3-ba4a-769bb338a3f6",
+   "letter": "D",
+   "body": "This answer claims the flaw is assuming illegal parkers would prefer to park legally. But the argument's logic relies on deterrence through financial punishment, not on changing people's parking preferences. Deterrence works even when people prefer the illegal option — they choose the legal option to avoid the fine, not because they like it better. The argument does not need to assume anything about preferences; it only needs to assume fines change behavior through the threat of cost. The actual flaw is much simpler and more fundamental: the argument ignores that the new parking garage, not the fines, might explain the reduced violations."
+  },
+  {
+   "row_id": "2e26a5ce-8279-402a-83d3-32a74fc07b18",
+   "letter": "E",
+   "body": "This is the classic alternative-cause or confounding-variable flaw. Two events occurred simultaneously: the fine increase and the garage opening. Violations decreased by 50%. The argument attributes the decrease entirely to the fine increase and recommends a second increase. But it fails to consider that the parking garage — which provided new legal parking spaces — could be the actual explanation. People may have stopped parking illegally because they finally had a convenient legal option, not because they feared costlier tickets. Without controlling for this alternative cause, the argument's causal attribution is unjustified, and its recommendation (raise fines again) rests on an unproven foundation."
+  }
+ ],
+ "known_problem": "Notes right, but the breakdown never mentions the new garage, which is the whole answer.",
+ "tags": "emdash-heavy; pt157-158-register; possible-misquote"
+}

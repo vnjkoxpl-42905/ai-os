@@ -1,0 +1,130 @@
+{
+  "status": "completed",
+  "mode": "review",
+  "provider": "claude",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "claude",
+    "builder": "codex",
+    "inspector": "claude"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-relationship-ui",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os\\brainstorms\\2026-10-16-spot-intro-redesign.md",
+  "plan_sha256": "b6a3a1644c437b9bbd2019bcc4f518574a18ac2e00aabf3ec8497b4ee4208e42",
+  "requested_model": null,
+  "requested_effort": null,
+  "base": null,
+  "snapshot": null,
+  "previous": null,
+  "started_at": 1792199212.3345568,
+  "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\handoffs\\claudex\\spot-intro-2026-10-16\\claudex-bc8ftna0",
+  "cli_version": "2.1.296 (Claude Code)",
+  "executable": [
+    "C:\\Users\\Joshu\\.local\\bin\\claude.EXE"
+  ],
+  "exit_code": 0,
+  "session_id": "d5c00f9d-3aa4-4b2a-85c0-53e36d6b6ca8",
+  "response": {
+    "verdict": "REVISE",
+    "summary": "The plan is mostly sound, but it leaves several gaps. Some existing tests contradict the plan's scope. The \"signal it\" cleanup misses student-facing surfaces. The new placeholder drops the multi-type requirement. The video fallback wording will become false after reordering. None of these needs a redesign, and each can be fixed in the plan.",
+    "findings": [
+      {
+        "id": "F1",
+        "severity": "medium",
+        "path": "src/features/activity-centre/content/spot-the-relationship.json",
+        "evidence": "The plan says to update the 'authoritative instructions task/placeholder' without listing fields. 'signal it' appears in `subtitle` (line 4), `instructions.coach.drill` (line 8), `instructions.task` (line 41) and `answer_placeholder` (line 61). `spot-the-relationship.answerKey.test.ts:181` asserts `coach.drill` contains 'signal it' and not 'create it'. `drill` feeds the coach/grader prompt, and `activityCoachAnswerKeyPayload.test.ts` imports this JSON. An implementer who follows 'replace signal it' could change grader input and break that test. `subtitle` and `task` are student-facing in `SectionLaunch` and the editorial intro.",
+        "fix": "Name the fields to change: `subtitle`, `task` and `answer_placeholder`. State explicitly that `coach.drill`, rubrics and keys stay untouched, so the answerKey test stays valid. Add a grep-based acceptance check over student-visible fields. `SectionLaunch` (mode=section) also shows the subtitle, so cover that."
+      },
+      {
+        "id": "F2",
+        "severity": "medium",
+        "path": "src/features/activity-centre/relationshipPresentation.ts",
+        "evidence": "The planned placeholder is 'Give the relationship type and quote the relevant words.' This is singular. The prompt now at `relationshipPresentation.ts:4` says 'Name each relationship', and grading requires every type present. The intro copy keeps the multiple-type case, but the placeholder, which is what students see while typing, drops it. A student may give only one type.",
+        "fix": "Use wording that keeps the multiple-type case, e.g. 'Give each relationship type and quote the words that show it.' Update `relationshipPresentation.test.ts` if it asserts the old prompt."
+      },
+      {
+        "id": "F3",
+        "severity": "medium",
+        "path": "src/features/activity-centre/components/RelationshipIntro.tsx",
+        "evidence": "The video `<video>` fallback text (line 30) and the error status (line 32) say 'written instructions below'. After the redesign the video is an aside that sits after the written content in the DOM. On desktop it sits beside the content. 'Below' is then false or ambiguous. The plan requires a 'truthful fallback' but does not give the wording.",
+        "fix": "Make the fallback position-neutral, e.g. 'The video could not load. The written instructions on this page cover the same steps.' Keep the 'The video could not load.' prefix, which the existing test matches."
+      },
+      {
+        "id": "F4",
+        "severity": "medium",
+        "path": "src/features/activity-centre/components/RelationshipIntro.test.tsx",
+        "evidence": "The existing tests assert behaviour the plan reverses: video before 'What to write' (line 26), headings 'What to write' and 'Worked example' (lines 33, 39, 42), step titles (40-41), and /Teacher preview:/ (54, 55). The plan only says to run existing tests. Run as-is, they fail, or they get weakened to pass.",
+        "fix": "List the test rewrites. Written instructions must precede the video in DOM order (`compareDocumentPosition`). Start must follow the example and reference and precede the video. Assert the 'Instructions', 'Example' and 'Answer' labels, the new preview text, and that the rejected strings are absent. Keep the Exit, resume, video attribute, error and no-transcript assertions."
+      },
+      {
+        "id": "F5",
+        "severity": "low",
+        "path": "src/features/activity-centre/components/RelationshipIntro.tsx",
+        "evidence": "The lead uses 'condition, cause, comparison'. Step 1 and the reference use 'conditional, causal, comparative'. The answer is 'Conditional, “only if”'. Three vocabularies for the same types in one view could confuse students about what to type.",
+        "fix": "Use the same type names throughout, or state that the answer should use the type names shown in the reference."
+      },
+      {
+        "id": "F6",
+        "severity": "low",
+        "path": "src/features/activity-centre/components/ActivityIntro.tsx",
+        "evidence": "The dispatch is gated on `title === 'Spot the Relationship'` and `mode !== 'section'`. The plan puts 'the actual activity title' in the h1 and says the 'No Start in docked' check applies to every context. A renamed assignment title silently falls back to the old editorial intro with the rejected copy. Section mode renders `SectionLaunch` with the old JSON text. Neither is covered by the acceptance checks.",
+        "fix": "Acknowledge the title coupling and section-mode scope in the plan. Add a test that section mode is unchanged, or include it in the copy audit. Confirm that the docked-width check applies to the Start button and the reading order."
+      }
+    ],
+    "coverage": [
+      "Read the plan in full.",
+      "Read RelationshipIntro.tsx, RelationshipIntro.test.tsx and ActivityIntro.tsx.",
+      "Searched src for 'Worked example', 'What to write', 'signal', RELATIONSHIP_ANSWER_PROMPT and answer_placeholder.",
+      "Traced callers of the prompt constant in ActivityRunner.tsx and ActivityLab.tsx.",
+      "Read the spot-the-relationship.answerKey.test.ts assertion on coach.drill."
+    ],
+    "limitations": [
+      "I did not read relationship-intro.css, so the layout, token and contrast claims are unverified.",
+      "I did not read DESIGN.md, the surface brief, or the vault files (teaching-voice, COPY-CORRECTIONS) or the memory path. They are outside the repo and I did not inspect them.",
+      "I did not inspect the video, captions or poster assets.",
+      "I did not check whether Supabase assignment snapshots hold stale copies of the instructions.",
+      "I cannot run tests, builds or a browser, and I cannot view images. This review does not show that anything passes and says nothing about visual preference."
+    ]
+  },
+  "usage": {
+    "input_tokens": 10,
+    "cache_creation_input_tokens": 24534,
+    "cache_read_input_tokens": 59752,
+    "output_tokens": 4969,
+    "output_tokens_details": {
+      "thinking_tokens": 1473
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 24534,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 3204,
+        "cache_read_input_tokens": 21003,
+        "cache_creation_input_tokens": 3531,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 3531
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "observed_models": [
+    "claude-sonnet-5-5"
+  ],
+  "permission_denials": [],
+  "total_cost_usd": 0.1538212,
+  "elapsed_seconds": 46.09
+}

@@ -1,0 +1,227 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="lsatu-interactive-lesson" content="sofia-minassian-2026-11-10-warm-up">
+<title>The Warm-Up: pick the version that gets you in fastest</title>
+<style>
+  :root{
+    --cream:#FBF8F1; --ink:#1C1917; --ink-soft:#44403C; --ink-mute:#6F6A63;
+    --gold-deep:#B8983F; --gold-text:#85650F; --gold-wash:rgba(232,208,139,.16);
+    --card:#FFFFFF; --line:#E7E0D2;
+    --serif:"Fraunces","Garamond","Georgia",serif;
+    --sans:"Outfit","Avenir Next","Helvetica Neue",sans-serif;
+    --mono:"JetBrains Mono","SF Mono",Menlo,monospace;
+
+    /* one colour per warm-up; each has a strong tone, a text tone and a wash */
+    --spark:#C2410C;   --spark-text:#9A3412;   --spark-wash:rgba(194,65,12,.09);
+    --steady:#3F6212;  --steady-text:#3F6212;  --steady-wash:rgba(63,98,18,.10);
+    --cross:#1D5F8A;   --cross-text:#174E72;   --cross-wash:rgba(29,95,138,.09);
+    --deep:#5B2A6E;    --deep-text:#5B2A6E;    --deep-wash:rgba(91,42,110,.09);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--ink);font-family:var(--sans);line-height:1.65;font-size:17px}
+  .wrap{max-width:860px;margin:0 auto;padding:0 24px}
+  p{margin:14px 0;color:var(--ink-soft)}
+  p strong{color:var(--ink)}
+
+  header.hero{padding:68px 0 40px;border-bottom:1px solid var(--line)}
+  .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-text);margin-bottom:18px}
+  h1{font-family:var(--serif);font-weight:600;font-size:clamp(34px,6vw,54px);line-height:1.06;letter-spacing:-.01em}
+  .lede{margin-top:20px;font-size:19px;color:var(--ink-soft);max-width:58ch}
+
+  /* jump pills */
+  nav.pills{position:sticky;top:0;z-index:5;background:rgba(251,248,241,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+  nav.pills .wrap{display:flex;gap:8px;overflow-x:auto;padding-top:12px;padding-bottom:12px}
+  nav.pills a{flex:0 0 auto;font-family:var(--mono);font-size:12.5px;letter-spacing:.06em;text-decoration:none;color:var(--c);background:var(--w);border:1px solid color-mix(in srgb,var(--c) 35%,transparent);border-radius:999px;padding:8px 16px;transition:transform .16s,background .16s}
+  nav.pills a:hover{transform:translateY(-1px);background:color-mix(in srgb,var(--c) 16%,var(--cream))}
+  a.p-spark{--c:var(--spark-text);--w:var(--spark-wash)} a.p-steady{--c:var(--steady-text);--w:var(--steady-wash)}
+  a.p-cross{--c:var(--cross-text);--w:var(--cross-wash)} a.p-deep{--c:var(--deep-text);--w:var(--deep-wash)}
+
+  section.block{padding:38px 0;border-bottom:1px solid var(--line)}
+  h2{font-family:var(--serif);font-weight:600;font-size:29px;line-height:1.15;margin-bottom:6px}
+  .sec-kicker{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-text);margin-bottom:10px}
+
+  /* the four steps you know */
+  .moves{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:22px 0 4px}
+  .move{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;box-shadow:0 1px 3px rgba(28,25,23,.05)}
+  .move b{font-family:var(--serif);font-size:19px;display:block;color:var(--ink)}
+  .move span{font-size:14.5px;color:var(--ink-soft);display:block;margin-top:4px}
+  .move i{font-style:normal;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-mute);display:block;margin-top:8px}
+
+  .rules{counter-reset:r;list-style:none;margin:20px 0 0}
+  .rules li{counter-increment:r;position:relative;padding:12px 0 12px 48px;border-bottom:1px dashed var(--line);color:var(--ink-soft);font-size:16.5px}
+  .rules li:last-child{border-bottom:none}
+  .rules li::before{content:counter(r);position:absolute;left:0;top:11px;width:32px;height:32px;border-radius:50%;background:var(--ink);color:var(--cream);font-family:var(--serif);display:flex;align-items:center;justify-content:center}
+  .rules b{color:var(--ink)}
+
+  /* compare strip */
+  table.cmp{width:100%;border-collapse:collapse;margin:22px 0 6px;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;font-size:15px}
+  table.cmp th{font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-mute);text-align:left;padding:12px 14px;border-bottom:1px solid var(--line)}
+  table.cmp td{padding:12px 14px;border-bottom:1px dashed var(--line);vertical-align:middle;color:var(--ink-soft)}
+  table.cmp tr:last-child td{border-bottom:none}
+  table.cmp td:first-child{font-family:var(--serif);font-weight:600;font-size:18px;color:var(--c)}
+  .pips{display:inline-flex;gap:4px}
+  .pips i{width:12px;height:12px;border-radius:50%;background:var(--card);border:1.5px solid color-mix(in srgb,var(--c) 40%,#fff)}
+  .pips i.on{background:var(--c);border-color:var(--c)}
+
+  /* the four warm-ups */
+  .warm{scroll-margin-top:84px;margin:34px 0;background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 2px 10px rgba(28,25,23,.06);transition:transform .2s,box-shadow .2s}
+  .warm:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(28,25,23,.10)}
+  .warm .top{background:var(--w);padding:28px 28px 22px;border-bottom:1px solid color-mix(in srgb,var(--c) 22%,transparent);position:relative}
+  .warm .top::after{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--c)}
+  .glyph{width:64px;height:64px;border-radius:18px;background:var(--card);border:1px solid color-mix(in srgb,var(--c) 30%,transparent);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+  .glyph svg{width:38px;height:38px;stroke:var(--c);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+  .glyph svg .fill{fill:color-mix(in srgb,var(--c) 22%,transparent)}
+  .warm .tag{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--tc)}
+  .warm h3,.warm h1{font-family:var(--serif);font-weight:600;font-size:clamp(34px,6vw,46px);line-height:1.02;color:var(--c);margin:6px 0 4px;letter-spacing:-.01em}
+  .warm .tagline{font-family:var(--serif);font-style:italic;font-size:19px;color:var(--ink-soft);margin:0}
+  .warm .time{display:inline-block;margin-top:16px;font-family:var(--mono);font-size:13px;color:var(--tc);background:var(--card);border:1px solid color-mix(in srgb,var(--c) 30%,transparent);border-radius:999px;padding:6px 14px}
+  .warm .body{padding:24px 28px 28px}
+  .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-bottom:22px}
+  .fact{background:var(--cream);border-radius:12px;padding:12px 15px;font-size:15px;color:var(--ink-soft)}
+  .fact b{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--tc);margin-bottom:4px}
+  .fact .pips{margin-top:2px}
+  ol.go{list-style:none;counter-reset:s;margin:0}
+  ol.go li{counter-increment:s;position:relative;padding:14px 0 14px 54px;border-bottom:1px dashed var(--line);font-size:16.5px;color:var(--ink-soft)}
+  ol.go li:last-child{border-bottom:none}
+  ol.go li::before{content:counter(s);position:absolute;left:0;top:12px;width:34px;height:34px;border-radius:50%;background:var(--c);color:#fff;font-family:var(--serif);font-size:16px;display:flex;align-items:center;justify-content:center}
+  ol.go li b{color:var(--ink)}
+  ol.go li.start{color:var(--ink);font-weight:600}
+  ol.go li.start::before{content:"\2192";background:var(--ink)}
+  .seq .mv:not(:last-child)::after{content:"\2192";margin-left:7px;opacity:.55}
+  .mv{font-family:var(--mono);font-size:12.5px;background:var(--w);color:var(--tc);border-radius:6px;padding:1px 7px;white-space:nowrap}
+
+  .w-spark{--c:var(--spark);--tc:var(--spark-text);--w:var(--spark-wash)}
+  .w-steady{--c:var(--steady);--tc:var(--steady-text);--w:var(--steady-wash)}
+  .w-cross{--c:var(--cross);--tc:var(--cross-text);--w:var(--cross-wash)}
+  .w-deep{--c:var(--deep);--tc:var(--deep-text);--w:var(--deep-wash)}
+  table.cmp tr.r-spark{--c:var(--spark)} table.cmp tr.r-steady{--c:var(--steady)}
+  table.cmp tr.r-cross{--c:var(--cross)} table.cmp tr.r-deep{--c:var(--deep)}
+
+  .callout{background:var(--gold-wash);border-left:3px solid var(--gold-deep);border-radius:0 12px 12px 0;padding:16px 20px;margin:24px 0;color:var(--ink-soft)}
+  .callout b{color:var(--ink)}
+  .footer-note{padding:34px 0 56px}
+  .mark{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-mute)}
+  @media (max-width:560px){nav.pills .wrap{display:grid;grid-template-columns:1fr 1fr;gap:6px;overflow:visible;padding-top:8px;padding-bottom:8px}nav.pills a{text-align:center;padding:7px 6px;font-size:12px}.warm{scroll-margin-top:104px}.warm .top,.warm .body{padding-left:20px;padding-right:20px}table.cmp{font-size:14px}table.cmp td,table.cmp th{padding:10px 8px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+  a.warm{display:block;text-decoration:none;color:inherit}
+  .open{display:inline-block;margin-top:18px;font-family:var(--mono);font-size:13px;font-weight:600;color:var(--tc)}
+  .back{display:inline-block;margin:22px 0 0;font-family:var(--mono);font-size:12.5px;text-decoration:none;color:var(--ink-mute)}
+  .back:hover{color:var(--ink)}
+  nav.pills a.cur{background:color-mix(in srgb,var(--c) 18%,var(--cream));border-color:var(--c);font-weight:600}
+  .more{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 0}
+  .more a{font-family:var(--mono);font-size:12.5px;text-decoration:none;color:var(--c);background:var(--w);border:1px solid color-mix(in srgb,var(--c) 35%,transparent);border-radius:999px;padding:8px 16px}
+  table.cmp td:first-child a{color:inherit;text-decoration:none;border-bottom:1px solid color-mix(in srgb,var(--c) 40%,transparent)}
+</style></head><body>
+
+<header class="hero"><div class="wrap">
+  <div class="kicker">Before test day · The warm-up</div>
+  <h1>The Warm-Up. Pick the version that gets you in fastest.</h1>
+  <p class="lede">You told me the hard part is getting out of your head and into LSAT mode. Once you're in, you're strong. A warm-up gets you there before Section 1 starts. There are four versions, each in its own note. Try each one, see which works for you, and keep it.</p>
+</div></header>
+
+<section class="block"><div class="wrap">
+  <div class="sec-kicker">The moves</div>
+  <h2>Four moves you already know</h2>
+  <p>Every version is built from these. The first three are the steps from Read, Recall, Colour. The fourth comes from our last session. You can do any of them out loud or silently, whichever you can do where you are. Then do what each step says.</p>
+  <div class="moves">
+    <div class="move"><b>Read it.</b><span>One sentence at a time, silently.</span><i>Read, Recall, Colour</i></div>
+    <div class="move"><b>Tell it back.</b><span>Look away and say it in your own words, as simply as you can. Out loud or in your head.</span><i>Read, Recall, Colour</i></div>
+    <div class="move"><b>Colour it.</b><span>React: a doubt, a question, an example, a joke. Out loud or in your head.</span><i>Read, Recall, Colour</i></div>
+    <div class="move"><b>Find the spot.</b><span>Before the answers, say what the right answer has to do for this argument.</span><i>Our last session</i></div>
+  </div>
+  <div class="sec-kicker" style="margin-top:38px">The rules</div>
+  <h2>Three rules for every version</h2>
+  <ol class="rules">
+    <li><b>Warm up on sections you've already done.</b> Use a section you have taken before, so none of the questions are new to you. Save new sections for real timed practice.</li>
+    <li><b>Don't look at the answers before you start.</b> That includes the answer key and your notes on the spots. Looking pulls you out of the flow you just built.</li>
+    <li><b>Don't take a break between the warm-up and Section 1.</b> Go straight in. Treat the warm-up as part of the test.</li>
+  </ol>
+  <div class="callout"><b>What "already done" means.</b> It is a section from a PrepTest you have already worked through. You have seen the questions and reviewed them. Pick one that is far enough back that you don't remember the answers. LR is Logical Reasoning and RC is Reading Comprehension. A stimulus is the short argument above an LR question.</div>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="sec-kicker">Side by side</div>
+  <h2>Energy against ramp-up</h2>
+  <p>A bigger version gets you further into the zone. It also spends more of the energy you need at the end of the test.</p>
+  <table class="cmp">
+    <tr><th>Version</th><th>Time</th><th>Energy it costs</th><th>How far it ramps you</th></tr>
+    <tr class="r-spark"><td>Spark</td><td>15+ min</td><td><span class="pips" role="img" aria-label="1 of 5"><i class="on"></i><i></i><i></i><i></i><i></i></span></td><td><span class="pips" role="img" aria-label="1 of 5"><i class="on"></i><i></i><i></i><i></i><i></i></span></td></tr>
+    <tr class="r-steady"><td>Steady</td><td>20+ min</td><td><span class="pips" role="img" aria-label="2 of 5"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span></td><td><span class="pips" role="img" aria-label="3 of 5"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></td></tr>
+    <tr class="r-cross"><td>Crossover</td><td>about 25 min</td><td><span class="pips" role="img" aria-label="3 of 5"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></td><td><span class="pips" role="img" aria-label="4 of 5"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></td></tr>
+    <tr class="r-deep"><td>Deep End</td><td>40+ min</td><td><span class="pips" role="img" aria-label="5 of 5"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></td><td><span class="pips" role="img" aria-label="5 of 5"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></td></tr>
+  </table>
+  <div class="callout"><b>Where to start.</b> Try Steady first, then Crossover. You told me you start slow and get strong once you're in, so Spark may leave you short of that. Try it last, if at all. Try Deep End only if you have already done long stretches of sections without your energy dropping.</div>
+</div></section>
+
+<main class="wrap">
+<div class="warm w-spark" id="spark">
+  <div class="top">
+    <div class="glyph"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="fill" d="M12 3c2.4 3 4.4 5.2 4.4 8.2a4.4 4.4 0 0 1-8.8 0C7.6 8.2 9.6 6 12 3z"/><path d="M12 3c2.4 3 4.4 5.2 4.4 8.2a4.4 4.4 0 0 1-8.8 0C7.6 8.2 9.6 6 12 3z"/><path d="M9 21h6"/><path d="M12 15.6V21"/></svg></div>
+    <div class="tag">Version 1 · The lightest touch</div>
+    <h3>Spark</h3>
+    <p class="tagline">The shortest version. It costs you the least energy.</p>
+    <span class="time">15+ min</span>
+  </div>
+  <div class="body">
+    <div class="facts">
+      <div class="fact"><b>Energy it costs</b><span class="pips" role="img" aria-label="1 of 5"><i class="on"></i><i></i><i></i><i></i><i></i></span></div>
+      <div class="fact"><b>It fits you if</b>You want the smallest energy cost and you already score well on the first section of a sitting.</div>
+    </div>
+    <span class="open">Find it in your notes: Warm-Up Version 1: Spark</span>
+  </div>
+</div>
+<div class="warm w-steady" id="steady">
+  <div class="top">
+    <div class="glyph"><svg viewBox="0 0 24 24" aria-hidden="true"><rect class="fill" x="3.5" y="14" width="3.5" height="6" rx="1"/><rect class="fill" x="10.25" y="10" width="3.5" height="10" rx="1"/><rect class="fill" x="17" y="6" width="3.5" height="14" rx="1"/><rect x="3.5" y="14" width="3.5" height="6" rx="1"/><rect x="10.25" y="10" width="3.5" height="10" rx="1"/><rect x="17" y="6" width="3.5" height="14" rx="1"/></svg></div>
+    <div class="tag">Version 2 · The standard</div>
+    <h3>Steady</h3>
+    <p class="tagline">One LR section, every stimulus, the same four moves.</p>
+    <span class="time">20+ min</span>
+  </div>
+  <div class="body">
+    <div class="facts">
+      <div class="fact"><b>Energy it costs</b><span class="pips" role="img" aria-label="2 of 5"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span></div>
+      <div class="fact"><b>It fits you if</b>You want the standard version. It gets your reading habits running for the whole section.</div>
+    </div>
+    <span class="open">Find it in your notes: Warm-Up Version 2: Steady</span>
+  </div>
+</div>
+<div class="warm w-cross" id="crossover">
+  <div class="top">
+    <div class="glyph"><svg viewBox="0 0 24 24" aria-hidden="true"><circle class="fill" cx="9" cy="12" r="5.6"/><circle class="fill" cx="15" cy="12" r="5.6"/><circle cx="9" cy="12" r="5.6"/><circle cx="15" cy="12" r="5.6"/></svg></div>
+    <div class="tag">Version 3 · Both section types</div>
+    <h3>Crossover</h3>
+    <p class="tagline">Some LR and some RC, and shorter than a full section.</p>
+    <span class="time">about 25 min</span>
+  </div>
+  <div class="body">
+    <div class="facts">
+      <div class="fact"><b>Energy it costs</b><span class="pips" role="img" aria-label="3 of 5"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></div>
+      <div class="fact"><b>It fits you if</b>You want to warm up on both LR and RC before you start.</div>
+    </div>
+    <span class="open">Find it in your notes: Warm-Up Version 3: Crossover</span>
+  </div>
+</div>
+<div class="warm w-deep" id="deep-end">
+  <div class="top">
+    <div class="glyph"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="fill" d="M3 13c2-2 4-2 6 0s4 2 6 0 4-2 6 0V20H3z"/><path d="M3 13c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><path d="M3 18c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><path d="M12 3v6"/><path d="M9.5 6.8 12 9.3l2.5-2.5"/></svg></div>
+    <div class="tag">Version 4 · The full commitment</div>
+    <h3>Deep End</h3>
+    <p class="tagline">A full LR section before the real Section 1.</p>
+    <span class="time">40+ min</span>
+  </div>
+  <div class="body">
+    <div class="facts">
+      <div class="fact"><b>Energy it costs</b><span class="pips" role="img" aria-label="5 of 5"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></div>
+      <div class="fact"><b>It fits you if</b>You usually score better on your later sections than your early ones, and you have already done long stretches of sections without your energy dropping.</div>
+    </div>
+    <span class="open">Find it in your notes: Warm-Up Version 4: Deep End</span>
+  </div>
+</div>
+
+<div class="callout"><b>How to try them.</b> Before each timed section this week, use a different version of the warm-up. Keep the time of day and the section type the same each time. Keep the version that gets you locked in earliest without running out of energy at the end, and tell me which it is. On test day, use the one you have already practised.</div>
+</main>
+
+<div class="footer-note"><div class="wrap"><span class="mark">LSAT U</span></div></div>
+</body></html>

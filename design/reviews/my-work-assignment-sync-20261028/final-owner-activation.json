@@ -1,0 +1,41 @@
+{
+  "activation": {
+    "rows": [
+      {
+        "activation": {
+          "cron_job_id": 381,
+          "enabled": true,
+          "frontend_sha": "18fc8af7e1ff7d83defb62b9e0d8dd720f90b3a3"
+        }
+      }
+    ]
+  },
+  "state": {
+    "rows": [
+      {
+        "final_state": {
+          "control": {
+            "activated_at": "2026-10-28T16:10:27.410265+00:00",
+            "enabled": true,
+            "singleton": true,
+            "verified_frontend_sha": "18fc8af7e1ff7d83defb62b9e0d8dd720f90b3a3"
+          },
+          "cron": [
+            {
+              "active": true,
+              "id": 381,
+              "schedule": "* * * * *"
+            }
+          ],
+          "events": 0,
+          "last_run": {
+            "end_time": "2026-10-28T17:05:00.242698+00:00",
+            "status": "succeeded"
+          },
+          "messages": 499,
+          "receipts": 194
+        }
+      }
+    ]
+  }
+}

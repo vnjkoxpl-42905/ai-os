@@ -1,0 +1,25 @@
+
+[1m[46m RUN [49m[22m [36mv3.2.7 [39m[90mC:/Users/Joshu/dev/ai-os-projects/lsatu-my-work-20261026[39m
+
+ [32m✓[39m src/components/classroom/home/teacher/teacherWeek.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 51[2mms[22m[39m
+ [32m✓[39m src/components/classroom/home/homeStyles.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 32[2mms[22m[39m
+ [32m✓[39m src/components/classroom/home/teacher/PostSessionWork.test.tsx [2m([22m[2m8 tests[22m[2m)[22m[33m 2139[2mms[22m[39m
+   [33m[2m✓[22m[39m After-session work[2m > [22mdoes not claim a stale or never-checked calendar is up to date [33m 778[2mms[22m[39m
+   [33m[2m✓[22m[39m After-session work[2m > [22mmarks a conflicting automatic transcript for review [33m 917[2mms[22m[39m
+ [32m✓[39m src/components/classroom/home/teacher/TeachingDesk.test.tsx [2m([22m[2m10 tests[22m[2m)[22m[33m 9184[2mms[22m[39m
+   [33m[2m✓[22m[39m Teaching desk interactions[2m > [22mcaps Home at two sessions using the true total and preserves unsaved input across disclosure [33m 3239[2mms[22m[39m
+   [33m[2m✓[22m[39m Teaching desk interactions[2m > [22mshows manual add errors without losing the task draft [33m 401[2mms[22m[39m
+   [33m[2m✓[22m[39m Teaching desk interactions[2m > [22mloads filtered history pages and reopens through the revisioned manual writer [33m 2099[2mms[22m[39m
+   [33m[2m✓[22m[39m Teaching desk interactions[2m > [22mnever changes access on opening, choosing or cancelling, then confirms the named target [33m 581[2mms[22m[39m
+   [33m[2m✓[22m[39m Teaching desk interactions[2m > [22mkeeps a changed draft while the original unknown task request is confirmed [33m 964[2mms[22m[39m
+   [33m[2m✓[22m[39m Teaching desk interactions[2m > [22mreactivates an expired link only after explicit confirmation and never adds sessions automatically [33m 1171[2mms[22m[39m
+ [32m✓[39m src/components/classroom/home/teacher/TeacherHomeView.test.tsx [2m([22m[2m23 tests[22m[2m)[22m[33m 10832[2mms[22m[39m
+   [33m[2m✓[22m[39m TeacherHomeView[2m > [22muses an accessible More menu that closes on Escape and returns focus [33m 3307[2mms[22m[39m
+   [33m[2m✓[22m[39m TeacherHomeView[2m > [22mhands More selection to the booking sheet and returns to an interactive page [33m 3300[2mms[22m[39m
+   [33m[2m✓[22m[39m TeacherHomeView[2m > [22mkeeps Assign work in the header without a student assignment promotion [33m 3126[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m5 passed[39m[22m[90m (5)[39m
+[2m      Tests [22m [1m[32m51 passed[39m[22m[90m (51)[39m
+[2m   Start at [22m 14:40:30
+[2m   Duration [22m 22.39s[2m (transform 3.28s, setup 858ms, collect 9.98s, tests 22.24s, environment 19.45s, prepare 2.01s)[22m
+

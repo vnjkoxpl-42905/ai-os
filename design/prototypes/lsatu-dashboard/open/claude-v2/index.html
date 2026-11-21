@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LSAT U Home: three directions</title>
+
+
+<link href="../../vendor/f35b5b64a9dc33a011.css" rel="stylesheet">
+<style>
+  :root { --bg: #f1f0eb; --ink: #17181b; --mid: #55585f; --rule: #d6d5ce; --serif: 'Literata', Georgia, serif; --sans: 'IBM Plex Sans', system-ui, sans-serif; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; }
+  .wrap { max-width: 1240px; margin: 0 auto; padding: 0 40px; }
+  header { padding: 72px 0 40px; border-bottom: 1px solid var(--rule); }
+  header p.k { margin: 0 0 14px; color: var(--mid); font-size: 14.5px; }
+  h1 { font-family: var(--serif); font-weight: 300; font-size: clamp(44px, 6vw, 80px); line-height: 1; letter-spacing: -.02em; margin: 0 0 22px; }
+  .lede { max-width: 40em; font-size: 18px; color: #2c2e33; margin: 0; }
+  .jump { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+  .jump a { text-decoration: none; padding: 9px 16px; border-radius: 999px; border: 1px solid var(--rule); background: #fff; font-weight: 500; font-size: 14.5px; }
+  .jump a:hover { border-color: var(--ink); }
+  section.dir { padding: 72px 0 24px; border-bottom: 1px solid var(--rule); }
+  .dir__head { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 24px 56px; align-items: start; margin-bottom: 34px; }
+  .dir__n { font-size: 14px; color: var(--mid); margin: 0 0 6px; }
+  .dir h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(40px, 4.6vw, 60px); line-height: 1; margin: 0; letter-spacing: -.015em; }
+  .dir__idea { font-size: 18px; margin: 0 0 14px; }
+  .dir dl { margin: 0; display: grid; grid-template-columns: 130px minmax(0, 1fr); gap: 8px 18px; font-size: 15px; }
+  .dir dt { color: var(--mid); }
+  .dir dd { margin: 0; }
+  .shots { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px; }
+  .shot { display: block; text-decoration: none; }
+  .shot__img { display: grid; grid-template-columns: minmax(0, 1fr) 110px; gap: 12px; align-items: end; }
+  .shot img { display: block; width: 100%; height: auto; border-radius: 6px; box-shadow: 0 1px 2px rgba(0,0,0,.12), 0 18px 36px -18px rgba(0,0,0,.35); transition: transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s; }
+  .shot:hover img { transform: translateY(-4px); box-shadow: 0 1px 2px rgba(0,0,0,.12), 0 26px 44px -18px rgba(0,0,0,.4); }
+  .shot__cap { display: flex; justify-content: space-between; gap: 12px; margin-top: 12px; font-size: 15px; }
+  .shot__cap b { font-weight: 600; }
+  .shot__cap span { color: var(--mid); }
+  .try { margin: 26px 0 0; font-size: 15px; color: #2c2e33; }
+  .try b { font-weight: 600; }
+  .notes { padding: 64px 0 100px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr) minmax(0, 1fr); gap: 40px; font-size: 15px; }
+  .notes h3 { font-family: var(--serif); font-weight: 500; font-size: 22px; margin: 0 0 10px; }
+  .notes p, .notes ul { margin: 0 0 10px; color: #2c2e33; }
+  .notes ul { padding-left: 18px; }
+  :focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; border-radius: 4px; }
+  @media (max-width: 860px) {
+    .wrap { padding: 0 16px; }
+    header { padding-top: 44px; }
+    .dir__head, .shots, .notes { grid-template-columns: minmax(0, 1fr); }
+    .shot__img { grid-template-columns: minmax(0, 1fr) 84px; }
+    .dir dl { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+    .dir dd { margin-bottom: 8px; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <p class="k">LSAT U home redesign, 2026-10-23. Prototypes with sample data.</p>
+    <h1>Three ideas about what a home page is.</h1>
+    <p class="lede">Each direction answers the same jobs: for a student, know what to do next, resume it, and hear from your teacher; for the teacher, see who is waiting, what is scheduled, and assign work. They differ in the idea underneath: light, objects, and language.</p>
+    <nav class="jump" aria-label="Directions"><a href="#lamplight">Lamplight</a><a href="#carrel">Carrel</a><a href="#marginalia">Marginalia</a></nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="dir" id="lamplight" aria-labelledby="lamplight-h">
+    <div class="dir__head">
+      <div><p class="dir__n">Direction one</p><h2 id="lamplight-h">Lamplight</h2></div>
+      <div>
+        <p class="dir__idea">An evening study. One thing sits under the lamp; everything else waits in the shadow until you bring it forward.</p>
+        <dl>
+          <dt>Hierarchy</dt><dd>The only light surface on the page is the task that matters now. For the teacher, the lamp falls on a person, not a channel: Celia's message and her session are one entry.</dd>
+          <dt>Motion</dt><dd>The light animates, never the content: the lamp comes on with a filament flicker, sways toward your pointer, and flickers again when something new is set under it. The week's windows light up as you reach them.</dd>
+          <dt>Type</dt><dd>Cormorant Garamond and Hanken Grotesk on blue-black, with warm and cool light standing for due work and sessions.</dd>
+        </dl>
+      </div>
+    </div>
+    <div class="shots">
+      <a class="shot" href="lamplight/student.html"><span class="shot__img"><img src="screenshots/thumbs/lamplight-student-1440.jpg" alt="Lamplight student home, desktop"><img src="screenshots/thumbs/lamplight-student-390.jpg" alt="Lamplight student home, phone"></span><span class="shot__cap"><b>Student home</b><span>Open the prototype</span></span></a>
+      <a class="shot" href="lamplight/teacher.html"><span class="shot__img"><img src="screenshots/thumbs/lamplight-teacher-1440.jpg" alt="Lamplight teacher home, desktop"><img src="screenshots/thumbs/lamplight-teacher-390.jpg" alt="Lamplight teacher home, phone"></span><span class="shot__cap"><b>Teacher home</b><span>Open the prototype</span></span></a>
+    </div>
+    <p class="try"><b>Try:</b> pick an item under "After this" to bring it under the lamp; type a name in Students; scroll to the week.</p>
+  </section>
+
+  <section class="dir" id="carrel" aria-labelledby="carrel-h">
+    <div class="dir__head">
+      <div><p class="dir__n">Direction two</p><h2 id="carrel-h">Carrel</h2></div>
+      <div>
+        <p class="dir__idea">A library study desk. Real objects whose physical behaviour matches the job they do.</p>
+        <dl>
+          <dt>Hierarchy</dt><dd>Assignments are index cards with divider tabs; prompt progress is a punch strip; Joshua's note is a letter with a postage stamp that turns to a postmark when read. The teacher gets a rolodex of students, a letter tray, a desk diary drawn to the hour and a work-order pad.</dd>
+          <dt>Motion</dt><dd>Physical and brief: a card lifts out of the pile and is set down on top, the holes punch in, the counter flips to 38, the rolodex flicks through cards to the student you typed, the work order tears off when you assign.</dd>
+          <dt>Type</dt><dd>Schibsted Grotesk on green linoleum, paper, and one signal orange.</dd>
+        </dl>
+      </div>
+    </div>
+    <div class="shots">
+      <a class="shot" href="carrel/student.html"><span class="shot__img"><img src="screenshots/thumbs/carrel-student-1440.jpg" alt="Carrel student home, desktop"><img src="screenshots/thumbs/carrel-student-390.jpg" alt="Carrel student home, phone"></span><span class="shot__cap"><b>Student home</b><span>Open the prototype</span></span></a>
+      <a class="shot" href="carrel/teacher.html"><span class="shot__img"><img src="screenshots/thumbs/carrel-teacher-1440.jpg" alt="Carrel teacher home, desktop"><img src="screenshots/thumbs/carrel-teacher-390.jpg" alt="Carrel teacher home, phone"></span><span class="shot__cap"><b>Teacher home</b><span>Open the prototype</span></span></a>
+    </div>
+    <p class="try"><b>Try:</b> drag the top card aside (or swipe on a phone, or use the arrow keys); click a divider tab; mark Joshua's letter read; on the teacher page type "webb" into the rolodex, scroll it with the wheel or arrow keys, and tear off a work order.</p>
+  </section>
+
+  <section class="dir" id="marginalia" aria-labelledby="marginalia-h">
+    <div class="dir__head">
+      <div><p class="dir__n">Direction three</p><h2 id="marginalia-h">Marginalia</h2></div>
+      <div>
+        <p class="dir__idea">The home page as a short letter. Every phrase that carries data is underlined in blue pencil, and its details and actions sit in a numbered sidenote beside it.</p>
+        <dl>
+          <dt>Hierarchy</dt><dd>Reading order is priority order. Margin labels name each paragraph; the week is set as a table of contents; the student index reads like the back of a book; assigning work is a sentence with blanks.</dd>
+          <dt>Motion</dt><dd>The pencil: underlines ink in as the page is read, tally marks write themselves, hovering a phrase draws a pencil line to its note, and marking a note read strikes through "Unread".</dd>
+          <dt>Type</dt><dd>Literata for the letter, IBM Plex Sans in the margin, one editor's blue pencil.</dd>
+        </dl>
+      </div>
+    </div>
+    <div class="shots">
+      <a class="shot" href="marginalia/student.html"><span class="shot__img"><img src="screenshots/thumbs/marginalia-student-1440.jpg" alt="Marginalia student home, desktop"><img src="screenshots/thumbs/marginalia-student-390.jpg" alt="Marginalia student home, phone"></span><span class="shot__cap"><b>Student home</b><span>Open the prototype</span></span></a>
+      <a class="shot" href="marginalia/teacher.html"><span class="shot__img"><img src="screenshots/thumbs/marginalia-teacher-1440.jpg" alt="Marginalia teacher home, desktop"><img src="screenshots/thumbs/marginalia-teacher-390.jpg" alt="Marginalia teacher home, phone"></span><span class="shot__cap"><b>Teacher home</b><span>Open the prototype</span></span></a>
+    </div>
+    <p class="try"><b>Try:</b> hover or tab to an underlined phrase; on a phone, tap a note to open it; on the teacher page choose a student in the assign sentence, and type in "Find a student".</p>
+  </section>
+
+  <section class="notes" aria-label="Notes">
+    <div>
+      <h3>Every page has four states</h3>
+      <p>Use the small "Sample data" control at the bottom right to switch between full, empty, loading and error. Unknown counts show as unknown, never as zero, and calendars say that a blank evening is not proof of a free one.</p>
+    </div>
+    <div>
+      <h3>What was checked, 2026-10-23</h3>
+      <ul>
+        <li>Headless Microsoft Edge at 1440 and 390 wide, in all four states: no horizontal overflow, no script errors.</li>
+        <li>A keyboard walkthrough of every page: skip link first, visible focus, and each signature interaction done with keys alone.</li>
+        <li>Reduced motion: the first frame is the final frame, with no running animations.</li>
+        <li>Marking a message read lowers the inbox count and keeps the history.</li>
+        <li>Natural-speed frame captures of each entrance and signature interaction, including a real drag and a phone swipe.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>What this is not</h3>
+      <p>These are standalone interactive prototypes with sample data. Actions are simulated with a confirmation message; nothing reaches a backend, and none of this is in the LSAT U app yet. The Design canvas holds static screenshots of these pages; motion and interaction exist only here.</p>
+    </div>
+  </section>
+</main>
+</body>
+</html>

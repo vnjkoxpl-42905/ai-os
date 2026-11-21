@@ -1,13 +1,19 @@
 ---
 name: guided-drill-assignment
-description: Use this whenever Joshua asks to look at a student's transcript, choose an appropriate LSAT U guided drill, verify the drill works, assign it through the platform, or confirm that the student received a clear notification. This skill covers the full workflow from transcript review to guided drill recommendation, platform/browser QA, assignment, and notification verification.
+description: Select and verify an LSAT U guided drill when Joshua asks for a drill recommendation or guided drill assignment. Transcript retrieval belongs to transcript-intake; transcript analysis alone does not trigger assignment. Inspection/recommendation are read-only; assign only when requested, through the current platform executor.
 ---
 
 # Guided Drill Assignment
 
 Use this skill to turn student performance context into a verified guided drill assignment in LSAT U.
 
-The operating standard is: do not merely recommend a drill. Choose the right drill from the student's recent transcript/context, verify the drill actually launches and is wired correctly, assign it through the platform, then verify the student's notification surface.
+Choose the mode from the request:
+
+- **Inspect:** analyze the student evidence only; no assignment, notifications or new student run.
+- **Recommend:** select and explain a drill, with available metadata/access evidence; stop before assignment.
+- **Assign:** when Joshua has requested assignment, use the current `assign-lsatu-work` / `lsat-u-platform-actions` executor and its catalog, identity, duplicate, authorization and read-after-write contract. This skill supplies selection/verification knowledge, not a competing executor.
+
+Opening a drill runner can create progress/run records; do that only within authorized QA/assignment scope. A read-only request uses existing evidence and reports untested launch status.
 
 ## Inputs
 
@@ -133,7 +139,9 @@ After a new drill passes browser verification, add it to `wiki/guided-drill-veri
 
 ## Assignment Flow
 
-Assign through the platform, not by manually inserting rows, unless the user explicitly asks for a backend-only repair.
+This section applies only in assign mode. Resolve and read the current platform executor before a live mutation; defer to its approved UI/API transport and duplicate checks. The UI sequence below is a fallback reference when that executor permits it.
+
+Use the executor's approved platform transport. Do not insert rows manually unless the task explicitly authorizes a backend repair.
 
 Teacher UI sequence:
 
@@ -193,7 +201,7 @@ Assignment:
 
 Keep the final response short and operational.
 
-Use this shape:
+In inspect/recommend mode, report findings/recommendation and state `Not assigned`. In assign mode use this shape:
 
 ```markdown
 Assigned <drill title> to <student>.

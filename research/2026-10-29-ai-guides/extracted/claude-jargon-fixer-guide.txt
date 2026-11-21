@@ -1,0 +1,167 @@
+=== PAGE 1 ===
+CLAUDE GUIDE
+ClaudeJargonFIXER
+A ROBONUGGETS GUIDE
+Three ways to m ake Claude talk like a hum an: an output style, a skill, or one rule
+in your CLAUDE m d file. Every resource in here is com plete - copy it straight off
+the page.
+CLAUDE JARGON FIXER
+
+=== PAGE 2 ===
+README
+WHAT THIS IS - a complete fix kit for Claude's over-explaining habit. Three
+fixes, smallest first. Page 3 holds the ONE prompt that sets everything up;
+every other resource is linked on pages 4, 5, and 8.
+HOW TO SET IT UP - copy the prompt on page 3, paste it into Claude Code, and
+restart when it tells you. Pages 4-5 link the on-demand skills and the rule
+this all builds on.
+THE COMMUNITY - a pre-built version of this kit and the people using it live at
+skool.com/robonuggets - where we build and sell AI systems, and master
+Claude Code + Claude Design.
+01 The problem, in one page
+You ask Claude (Opus 5) for one small thing. It does the thing well. Then it keeps going: a caveat you did not ask for, a
+"one thing worth knowing", three paragraphs of jargon. Two real costs:
+1. It does not speak hum an. Answers read like a systems engineer wrote them. "Tracking pixels", "proxy-
+prefetching", "telemetry" - for a question about a newsletter.
+2. The real note drowns. Sometimes one caveat genuinely matters. You cannot find it in the sea, so you either read
+everything or you skim past the one line that counted.
+The three fixes at a glance
+FIX WHERE IT LIVES WHEN IT FIRES
+1 · Output style
+from  Anthropic
+a m d file in ~/.claude/output-styles/ the whole session, every reply, until you
+sw itch back
+2 · A skill
+/bro · /w ait-what
+a m d file in ~/.claude/skills/ only when Y OU type the com m and on a
+reply that lost you
+3 · One rule
+ASD-STE100
+one line in your CLAUDE m d alw ays on, every session, zero effort after
+day one
+CLAUDE JARGON FIXER 2
+
+=== PAGE 3 ===
+02 Fix 1 · Output Styles - the one-prompt setup
+Anthropic's official mechanism. This single prompt installs the style, flips the settings, and tells you when to restart.
+The ASD-STE100 rule (page 5) is already baked in.
+COPY EVERYTHING BELOW · PASTE INTO CLAUDE CODE · DONE
+Set my Output Style to the one below.
+Save it in my global output-styles folder. Name the file after its name field.
+Then set outputStyle to that name in my global settings file and in my local
+project settings files. Create the folder or the key if either is missing.
+Do not break the existing JSON.
+Then list the files you changed and tell me to restart Claude Code.
+---
+name: ELI5
+description: keep it simple pls
+keep-coding-instructions: true
+---
+It's been a long day and my brain is fried, talk to me like I'm 5.
+Only report to me in ASD-STE100 Simplified Technical English. That means
+approved plain words, active voice, and one instruction or idea per sentence.
+Small words, short sentences, short paragraphs. If you have to use
+a big word, explain it right after. Only return what's actually necessary.
+Just tell me what you did, did it work, what do I do now.
+If I have to decide something: 2 options max, the context I need to pick fast,
+and which one you'd go with.
+Keep paths and commands exact. I have no brain cells left for the rest.
+Good to know:keep-coding-instructions: true changes the voice while keeping Claude coding norm ally. To switch back
+later, run /config and pick Default under Output style (the old /output-style com m and was rem oved in v2.1.91).
+W here this style came from:x.com /lydiahallie/status/2080378470111256907
+Official docs:code.claude.com /docs/en/output-styles
+CLAUDE JARGON FIXER 3
+
+=== PAGE 4 ===
+03 Fix 2 · Make a skill
+The on-demand path. Nothing changes until a reply loses you - then one command re-explains it. Send your agent
+a link below and ask it to install the skill.
+1. A reply comes back dense. You type the command.
+2. The same answer comes back in plain words - facts, paths, and numbers stay identical.
+3. These skills are a few lines each. You can write your own version in 5 minutes.
+The three skills from  the video
+/bro - restates the last reply in plain hum an language, no jargon
+github.com /dm m ulroy/skills/blob/m ain/bro/SKILL.m d
+/wait-what - re-pitches the m essage that lost you, w ith the context you w ere m issing
+github.com /m attpocock/skills (skills/productivity/w ait-what)
+/quick - answ er-fast: the action first, num bered steps, one next step, no pream ble
+skool.com /robonuggets
+W hen to reach for these: keep one installed even if you run the page-3 style. A skill is the escape hatch for the one reply
+that still lands dense.
+CLAUDE JARGON FIXER 4
+
+=== PAGE 5 ===
+04 Fix 3 · The ASD-STE100 rule
+The principle underneath the whole kit - and the reason the page-3 prompt works.
+W hat is ASD-STE100? A real writing standard from the 1980s aviation industry. Aircraft manuals are written in it so
+that mechanics - often non-native English speakers - cannot misread an instruction. Limited vocabulary, active voice,
+short sentences, one idea per sentence, no metaphors. If it is safe enough for jet engines, it can survive your inbox
+summary.
+Y ou already have it: the page-3 prom pt carries this rule inside the ELI5 style ("Only report to m e in ASD-STE100 Sim plified
+Technical English"). W ant it always-on without an output style? P ut that sam e line in your CLAUDE m d instead - that is what
+I run.
+W here this cam e from
+P ieter Levels: "This finally stopped Claude's crazy pursuit of talking m ore and m ore unintelligible"
+x.com /levelsio/status/2086046112142545061
+M att P ocock: added it to his global CLAUDE m d
+x.com /m attpocockuk/status/2084753070437609606
+M ike Hostetler: early m ention
+x.com /m ikehostetler/status/2079245119455150418
+kr0der: "m ight actually be w orking wtf"
+x.com /kr0der/status/2085950632041885975
+The counter-take (worth reading): it w as built for aircraft m anuals, not prose
+x.com /sujayath/status/2085230441918022036
+As a packaged skill:github.com /danyuchn/asd-ste100-skill
+The standard itself:en.w ikipedia.org/w iki/Sim plified_Technical_English
+CLAUDE JARGON FIXER 5
+
+=== PAGE 6 ===
+05 Any voice you want
+The bigger pattern: these are not "make it simple" tools. They are three places to change how ANY model writes -
+Claude, Codex, anything that reads a md file. Same grid, any intent:
+OUTPUT STYLE A SKILL AGENT MD RULE
+M ore
+hum an?
+hum an.m d: "talk like a friend" /casual: say it w arm er rule: write like you speak
+M ore
+corporate?
+corp.m d: "exec sum m ary tone" /form al: boardroom  it rule: form al business English
+M ore
+copywriter?
+copy.m d: "sell, do not explain" /punchy: rewrite as ad copy rule: hooks first, short lines
+Read the columns as commitment levels: a style is a mode you enter, a skill is a button you press, a rule is a default you
+set. Pick by how often you want the voice, not by which tool sounds cleverest.
+Rem em ber: Opus 5 still tops m ost benchm arks. The voice is a settings problem , not an intelligence problem  - which is
+exactly why a m arkdown file can fix it.
+CLAUDE JARGON FIXER 6
+
+=== PAGE 7 ===
+06 W here this goes next
+The easy part is pasting a fix from this guide. The skill that pays is knowing which lever to reach for - style, skill, or rule -
+for any behaviour you want out of an agent, and being able to write that file yourself in minutes.
+That is what we practise every week: building AI systems you can actually sell, and mastering Claude Code + Claude
+Design along the way. The pre-built version of this kit lives there too.
+join us at
+skool.com/robonuggets
+CLAUDE JARGON FIXER 7
+
+=== PAGE 8 ===
+07 The one-page recap
+1. The one prom pt - copy it from page 3, paste into Claude Code, restart when it tells you. The ASD-STE100 rule
+rides inside it.
+2. Skills - /bro, /wait-what, /quick. Send your agent the link, ask it to install. Fires only when you call it. Page 4.
+3. The rule - already inside the page-3 prompt. Skip the style? Put the same line in your CLAUDE md. Page 5.
+Every link in this guide
+x.com /lydiahallie/status/2080378470111256907 - the original eli5 output style
+code.claude.com /docs/en/output-styles - official docs
+github.com /dm m ulroy/skills/blob/m ain/bro/SKILL.m d - /bro
+github.com /m attpocock/skills - /w ait-what (skills/productivity/w ait-what)
+skool.com /robonuggets - /quick
+x.com /levelsio/status/2086046112142545061 - the ASD-STE100 trend post
+x.com /m attpocockuk/status/2084753070437609606 - the CLAUDE m d rule
+x.com /m ikehostetler/status/2079245119455150418 - early m ention
+x.com /kr0der/status/2085950632041885975 - "m ight actually be w orking"
+x.com /sujayath/status/2085230441918022036 - the counter-take
+github.com /danyuchn/asd-ste100-skill - the standard as a skill
+en.w ikipedia.org/w iki/Sim plified_Technical_English - what ASD-STE100 is
+CLAUDE JARGON FIXER · ROBONUGGETS 8

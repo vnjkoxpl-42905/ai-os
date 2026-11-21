@@ -1,0 +1,57 @@
+{
+  "run_id": "lsatu-2026-10-14-run-1",
+  "repo": "vnjkoxpl-42905/lsatu-684d89db",
+  "target": "C:/Users/Joshu/dev/ai-os-projects/lsatu",
+  "source_ref": {
+    "commit": "2805e3bf77300ac328016ee60c064fbbfb36af3a",
+    "branch": "codex/rc-quality (HEAD equals origin/main tip)",
+    "dirty": true,
+    "dirty_paths": [
+      "src/features/rc/hooks/useRcFlagPersistence.test.ts",
+      "src/features/rc/hooks/useRcHighlights.test.ts",
+      "src/features/rc/lib/rcAnswerBackup.test.ts",
+      "src/features/rc/lib/rcAnswerBackup.ts"
+    ],
+    "note": "Dirty paths are unreviewed local RC edits outside the security-relevant scope; they are not treated as a separate revision."
+  },
+  "profile": "quick",
+  "scope_paths": [
+    "supabase/migrations",
+    "supabase/functions",
+    "supabase/config.toml",
+    "src (client-side auth, admin gating, Supabase client use, secrets)",
+    "repository-wide committed secrets"
+  ],
+  "budget": 16,
+  "execution_policy": "sandboxed-source-and-local-only",
+  "execution_note": "No OS-enforced sandbox with the required controls is available on this Windows host, so no target-controlled code is executed. Every check is source-only. Candidates that would need a local observed result stay needs_validation.",
+  "skill_source": "cloudflare/security-audit-skill@c1c8a8c1471069fb0e188eeaff69b8e8db6564a8, fetched to C:/Users/Joshu/AppData/Local/Temp/claude/sec-audit-skill/repo-20261014, not activated",
+  "selected_companion_files": [
+    "ATTACK-CLASSES.md",
+    "WEB-PROTOCOL-AND-AUTH.md",
+    "DATA-ISOLATION-AND-LIFECYCLE.md",
+    "AI-AND-LLM.md",
+    "PROTOCOLS-RPC-AND-MESSAGING.md",
+    "CLIENT-SIDE.md"
+  ],
+  "prior_run_paths": [],
+  "prior_run_note": "No prior coverage-ledger.json or findings.json exists for this repo.",
+  "shared_file_owners": {
+    "run-metadata.json": "parent",
+    "architecture.md": "parent",
+    "coverage-ledger.json": "parent",
+    "findings.json": "parent",
+    "REPORT.md": "parent",
+    "FINDINGS-DETAIL.md": "parent",
+    "NEEDS-VALIDATION.md": "parent"
+  },
+  "started_utc": "2026-10-14T13:28:52Z",
+  "run_status": "incomplete",
+  "incomplete_reason": "validation_budget_exhausted: the independent verifier agent hit an API rate limit; parent re-checked sources. Recon agents also hit the rate limit; parent did reconnaissance. No final coverage critic ran.",
+  "finished_utc": "2026-10-15T01:10:35Z",
+  "agents_spent": {
+    "recon_launched_failed": 4,
+    "hunters": 2,
+    "verifier_failed": 1
+  }
+}

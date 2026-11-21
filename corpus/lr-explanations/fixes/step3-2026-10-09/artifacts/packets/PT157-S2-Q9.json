@@ -1,0 +1,90 @@
+{
+ "qid": "PT157-S2-Q9",
+ "type": "Flaw",
+ "difficulty": "3",
+ "key_db": "C",
+ "stimulus_db": "Psychologists report that children in nine-month schools typically forget a significant amount of schooling during summer breaks. So, some educators have proposed a twelve-month schedule in which there are three month-long breaks spread throughout the year. We should conclude, on the basis of the psychologists' research, that the twelve-month schedule is to be preferred insofar as academic learning is concerned, since this schedule will insure that students will not forget their schooling during their breaks.",
+ "stem_db": "The reasoning above is most vulnerable to the criticism that it",
+ "choices_db": {
+  "A": "relies on an unsubstantiated assumption about the comparative worth of academic and nonacademic learning experiences",
+  "B": "draws on an arbitrary distinction between two groups",
+  "C": "takes for granted, in comparing two situations, that a certain undesirable result is correlated with only one of them",
+  "D": "fails to show that the data on which the psychologists' conclusions were based was adequately representative of children in the population as a whole",
+  "E": "claims to accept a view, but then rejects it in the course of argument"
+ },
+ "bank": {
+  "stimulus": "Psychologists report that children in nine-month schools\n typically forget a significant amount of schooling during\n summer breaks. So, some educators have proposed a\n twelve-month schedule in which there are three month-long breaks spread throughout the year. We should\n conclude, on the basis of the psychologists’ research, that\n the twelve-month schedule is to be preferred insofar as\n academic learning is concerned, since this schedule will\n insure that students will not forget their schooling during\n their breaks.",
+  "stem": "The reasoning above is most vulnerable to the criticism\n that it",
+  "choices": {
+   "A": "relies on an unsubstantiated assumption about the comparative worth of academic and nonacademic learning experiences",
+   "B": "draws on an arbitrary distinction between two groups",
+   "C": "takes for granted, in comparing two situations, that a certain undesirable result is correlated with only one of them",
+   "D": "fails to show that the data on which the psychologists’ conclusions were based was adequately representative of children in the population as a whole",
+   "E": "claims to accept a view, but then rejects it in the course of argument"
+  },
+  "key": "C"
+ },
+ "explanation_id": "40ff01fe-84f8-49cb-a485-bcbc8956445d",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "2db064e5-bd3a-4fce-9723-4572f7eb0355",
+   "position": 0,
+   "label": "Evidence",
+   "body": "Psychologists report that children in nine-month schools typically forget a significant amount of schooling during summer breaks."
+  },
+  {
+   "row_id": "57c2a9a0-5a83-4112-a420-73695e26f1d6",
+   "position": 1,
+   "label": "Conclusion (We should conclude)",
+   "body": "The twelve-month schedule is to be preferred insofar as academic learning is concerned."
+  },
+  {
+   "row_id": "d3137130-857c-402d-a087-70bc570daabf",
+   "position": 2,
+   "label": "Intermediate Conclusion",
+   "body": "[The twelve-month schedule with three month-long breaks] will insure that students will not forget their schooling during their breaks."
+  },
+  {
+   "row_id": "4d006c9f-2adb-4b45-ad0a-c61058ef5e47",
+   "position": 3,
+   "label": "Evaluate",
+   "body": "This argument compares one plan [12-month schedule] to another [9-month schedule] and states that the 12-month schedule is preferable. We should consider factors that might have been left out of this comparison. For example, what if a longer, 12-month schedule with three month-long breaks will somehow make students even more forgetful? The argument claims that the 12-month schedule \"will insure\" that students will not forget their schooling during breaks. But that's a prediction about the future. That's what makes it an intermediate conclusion, not just a premise. It's a claim that might or might not be true. The conclusion is about \"academic learning,\" not just remembering or forgetting. Could the 12-month plan have some unintended negative consequences that would make it worse for learning overall, even if it was better for retention? Comparative arguments frequently overlook these types of potential objections. They'll tell us that one of two options has a certain good quality. Based on that, they'll conclude that this option is better overall. It's a classic example of an \"incomplete comparison.\""
+  },
+  {
+   "row_id": "730ec4b7-2e8c-497f-b24e-11ad4b771c51",
+   "position": 4,
+   "label": "Goal",
+   "body": "A correct answer might describe an objection like the ones we've considered here, pointing out that the argument has \"failed to consider\" or \"overlooked\" this possible objection. Beware of answers that describe something which isn't actually happening in the argument, even if it seems related at first glance."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "e34d0838-18d8-4ccd-8b0d-337355c43b69",
+   "letter": "A",
+   "body": "The argument's assumptions are about whether students will forget schooling during breaks, not about the comparative value of academic vs. nonacademic learning. The argument explicitly states its conclusion applies \"insofar as academic learning is concerned,\" so it is already limiting itself to academic considerations. An assumption about the relative worth of academic and nonacademic experiences is not what makes this argument vulnerable."
+  },
+  {
+   "row_id": "3549c011-a0fb-4d8c-a7fc-5134a91b642c",
+   "letter": "B",
+   "body": "This answer describes an arbitrary distinction between two groups. But the argument compares two scheduling plans, not two groups of students. No actual group of twelve-month-schedule students is mentioned — the argument is making predictions about a proposed schedule. Furthermore, the distinction between the two schedules (nine months with summer vs. twelve months with shorter breaks) is not \"arbitrary\" — it is the substantive basis for the comparison. The argument's flaw is not that it makes an arbitrary distinction but that it assumes an unproven advantage for one of the compared options."
+  },
+  {
+   "row_id": "abf5c035-ed10-43f4-80e2-0a928c7019d1",
+   "letter": "C",
+   "body": "This precisely describes the argument's flaw. The argument identifies an undesirable result — students forgetting their schooling during breaks — and presents evidence that this result occurs in the nine-month schedule. It then assumes this result is correlated only with the nine-month schedule, concluding that the twelve-month schedule will prevent forgetting. But no evidence is offered about whether students in twelve-month programs also forget during their month-long breaks. The argument \"takes for granted\" that the negative outcome is unique to one option when it could easily affect both. This is the incomplete-comparison flaw at the heart of the argument."
+  },
+  {
+   "row_id": "5e9e56b6-b330-429a-a95c-1978c233a16e",
+   "letter": "D",
+   "body": "This answer suggests the data on nine-month schools might not be representative of children generally. But the argument does not need the data to be representative of all children — it only needs the data to be accurate about children in nine-month schools, which is what the psychologists studied. Furthermore, the argument's flaw is not about the quality of the evidence about nine-month schools; it is about the absence of evidence about twelve-month schools. The data could be perfectly representative, and the argument would still be flawed for assuming the twelve-month schedule avoids the forgetting problem."
+  },
+  {
+   "row_id": "0e57e7f7-876d-47a4-86e7-37a3d9d78a20",
+   "letter": "E",
+   "body": "This answer describes a self-contradiction flaw: accepting a view and then rejecting it. No such contradiction exists in this argument. The argument presents the psychologists' finding about nine-month schools and uses it as evidence — it never rejects or contradicts it. The argument consistently treats the finding as reliable and builds upon it. If anything, the problem is that the argument over-relies on the finding by applying it selectively to one schedule while assuming the other is immune."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (8.4 em-dashes per 1k words; wrong-answer notes average 83.5 words).",
+ "tags": "emdash-heavy; pt157-158-register"
+}

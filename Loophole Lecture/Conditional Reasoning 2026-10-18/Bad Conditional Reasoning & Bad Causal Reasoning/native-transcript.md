@@ -1,0 +1,784 @@
+# Bad Conditional Reasoning & Bad Causal Reasoning
+
+Source: https://new.theloophole.com/training-camp/browse/concept-review/argumentation-101/bad-conditional-reasoning-and-bad-causal-reasoning
+
+Captured: 2026-10-19T00:46:13.399Z. Displayed duration: 607.333333.
+
+Caption origin: English (auto-generated). This is a complete native-caption extraction, not word-by-word listening verification. Caption wording is retained without editorial correction. Original cue bytes remain in source.vtt; rendered site transcript is preserved separately.
+
+[00:00:00.145 - 00:00:02.285]
+Bad conditional reasoning and bad causal reasoning.
+
+[00:00:02.585 - 00:00:04.085]
+Two frenemies that are often confused.
+
+[00:00:04.305 - 00:00:07.645]
+Um, and so I wanna go into just the basic overview of
+
+[00:00:07.645 - 00:00:08.725]
+what these concepts are
+
+[00:00:08.785 - 00:00:11.125]
+and then we'll get into some more, um, advanced iterations
+
+[00:00:11.125 - 00:00:12.645]
+of them to help you get these questions
+
+[00:00:12.645 - 00:00:13.805]
+right in different contexts.
+
+[00:00:13.805 - 00:00:15.365]
+So first bad conditional reasoning.
+
+[00:00:15.365 - 00:00:16.485]
+What is bad conditional reasoning?
+
+[00:00:16.485 - 00:00:18.365]
+It's tom foolery in
+
+[00:00:18.885 - 00:00:22.405]
+a stimulus in which the author was misreading a conditional
+
+[00:00:22.745 - 00:00:23.805]
+in some sort of way.
+
+[00:00:23.945 - 00:00:25.685]
+And so how does somebody misread a conditional?
+
+[00:00:25.715 - 00:00:28.445]
+Well, they give you, let's say if a, then b,
+
+[00:00:28.565 - 00:00:30.685]
+a nice little statement, A arrow B,
+
+[00:00:30.985 - 00:00:33.965]
+and then maybe they read it backwards without negating.
+
+[00:00:33.965 - 00:00:36.205]
+They're like, alright, if A, then B, everyone
+
+[00:00:36.425 - 00:00:40.645]
+and then we saw b, b happened and this isn't a premise,
+
+[00:00:40.955 - 00:00:42.565]
+therefore a is true.
+
+[00:00:43.025 - 00:00:45.845]
+Um, and you can see there that the author, if you're kind
+
+[00:00:45.845 - 00:00:48.085]
+of reading into their mind for a second, oh,
+
+[00:00:48.465 - 00:00:50.445]
+you gave me this conditional statement,
+
+[00:00:50.585 - 00:00:52.525]
+but then you said, okay, I've got the necessary,
+
+[00:00:52.525 - 00:00:53.925]
+therefore I have the sufficient,
+
+[00:00:54.065 - 00:00:55.605]
+you were reading it backwards.
+
+[00:00:55.785 - 00:00:58.045]
+And so instance of bad conditional reasoning.
+
+[00:00:58.155 - 00:01:01.005]
+Then the other classic way they might do this is say, okay,
+
+[00:01:01.025 - 00:01:05.925]
+if A, then B, everyone, hey, premise, no A, a didn't happen.
+
+[00:01:06.745 - 00:01:08.845]
+Um, therefore no B
+
+[00:01:09.225 - 00:01:11.205]
+and here we're negating and reading forward, right?
+
+[00:01:11.205 - 00:01:12.205]
+Which we know according to the rules
+
+[00:01:12.205 - 00:01:13.885]
+of conditional reasoning, we're not allowed to do that.
+
+[00:01:14.025 - 00:01:16.205]
+And so again, bad conditional reasoning,
+
+[00:01:16.505 - 00:01:19.965]
+but you know, this is kind of the, the basic surface level
+
+[00:01:19.965 - 00:01:21.525]
+of what bad conditional reasoning is.
+
+[00:01:22.025 - 00:01:24.805]
+In reality, they can, you know, use words
+
+[00:01:24.945 - 00:01:27.165]
+to make it seem a lot more complicated than this.
+
+[00:01:27.165 - 00:01:28.165]
+And it can expand
+
+[00:01:28.165 - 00:01:30.165]
+to just honestly general tom
+
+[00:01:30.235 - 00:01:31.725]
+foolery involving the indicators.
+
+[00:01:31.725 - 00:01:34.685]
+Like there's one question that I really love that, oh,
+
+[00:01:34.695 - 00:01:37.765]
+maybe it's the hardest last question of any section in LR
+
+[00:01:37.905 - 00:01:39.725]
+Ah, maybe, um, I love it
+
+[00:01:39.725 - 00:01:42.205]
+because in the premises they use only if
+
+[00:01:42.385 - 00:01:44.565]
+to describe a certain relationship between variables
+
+[00:01:44.665 - 00:01:47.405]
+and then they just stealthily get rid of the only
+
+[00:01:47.465 - 00:01:50.845]
+and just use if to describe the, the same relationship
+
+[00:01:50.845 - 00:01:53.485]
+between variables, thinking they're referencing the
+
+[00:01:53.485 - 00:01:54.605]
+same thing from the premises.
+
+[00:01:54.715 - 00:01:56.525]
+They just switch the only if to and if,
+
+[00:01:56.865 - 00:01:58.885]
+and then they make a claim that, you know,
+
+[00:01:59.015 - 00:02:01.965]
+would be much more supported if the, uh,
+
+[00:02:01.965 - 00:02:03.925]
+only if had actually been adequately transferred.
+
+[00:02:04.105 - 00:02:06.325]
+And this is another instance of bad conditional reasoning.
+
+[00:02:06.465 - 00:02:11.005]
+Um, but people tend to not diagram it, tend
+
+[00:02:11.005 - 00:02:13.845]
+to not realize that the only if has been switched for an if.
+
+[00:02:13.985 - 00:02:15.925]
+And so then when they get into that answer choice
+
+[00:02:15.945 - 00:02:18.885]
+and it's, you know, mistakes that which would be sufficient
+
+[00:02:18.885 - 00:02:20.805]
+for that which is necessary or whatever that answer says.
+
+[00:02:21.145 - 00:02:23.525]
+Um, and they don't, they don't think of it
+
+[00:02:23.525 - 00:02:24.965]
+as conditional at all because they didn't really pay
+
+[00:02:24.965 - 00:02:26.005]
+much attention to the indicators.
+
+[00:02:26.025 - 00:02:29.805]
+And so of course in general, you know, I've been on you
+
+[00:02:30.445 - 00:02:32.525]
+a lot over memorizing the conditional indicators
+
+[00:02:32.545 - 00:02:33.805]
+and so I really do want you
+
+[00:02:33.805 - 00:02:35.085]
+to memorize the conditional indicators
+
+[00:02:35.085 - 00:02:37.765]
+because in a question like what I just described,
+
+[00:02:37.765 - 00:02:39.205]
+obviously if you don't know
+
+[00:02:39.205 - 00:02:40.885]
+that only if is a necessary indicator
+
+[00:02:40.905 - 00:02:42.765]
+and you don't know that if is a sufficient indicator,
+
+[00:02:42.865 - 00:02:44.525]
+you essentially can't get that question right?
+
+[00:02:44.705 - 00:02:47.405]
+You won't notice the switch between the premises
+
+[00:02:47.405 - 00:02:49.565]
+and conclusion and you know, that's one point lost,
+
+[00:02:49.565 - 00:02:50.965]
+which obviously we don't want.
+
+[00:02:51.185 - 00:02:53.805]
+And so be on the lookout for any sort
+
+[00:02:53.805 - 00:02:55.565]
+of tom foolery involving the indicators.
+
+[00:02:55.745 - 00:02:57.765]
+And then, um, when you get into the answer
+
+[00:02:57.765 - 00:02:58.885]
+choices, if you've seen
+
+[00:02:59.145 - 00:03:01.965]
+Any conditional indicators in the stimulus, um,
+
+[00:03:02.305 - 00:03:03.805]
+and it's a classic flaw question
+
+[00:03:03.825 - 00:03:05.685]
+and then there's an answer that um,
+
+[00:03:06.115 - 00:03:07.125]
+uses conditional language
+
+[00:03:07.125 - 00:03:08.725]
+and we have the amazing flaw chart for you.
+
+[00:03:08.725 - 00:03:10.645]
+We have a lot of resources, uh, dedicated
+
+[00:03:10.645 - 00:03:13.125]
+to identifying which classic flaw answer choice, uh,
+
+[00:03:13.445 - 00:03:14.965]
+language goes with which classic flaw.
+
+[00:03:14.965 - 00:03:17.685]
+And so avail yourself of that, uh, link
+
+[00:03:17.685 - 00:03:18.805]
+to some of it in the description.
+
+[00:03:19.185 - 00:03:21.085]
+But if you see any
+
+[00:03:21.085 - 00:03:23.645]
+of those bad conditional reasoning sounding answers,
+
+[00:03:23.745 - 00:03:24.965]
+if there are any indicators
+
+[00:03:24.965 - 00:03:26.485]
+or any sort of conditional reasoning upstairs,
+
+[00:03:26.865 - 00:03:30.885]
+and let's say you're maybe not 100% sure of what's going on
+
+[00:03:30.885 - 00:03:32.845]
+or what the flaw was, at least keep
+
+[00:03:32.845 - 00:03:34.885]
+that conditional reasoning answer choice open,
+
+[00:03:35.115 - 00:03:38.205]
+even if you did not necessarily detect any problems
+
+[00:03:38.205 - 00:03:39.885]
+with the conditional reasoning, just
+
+[00:03:39.905 - 00:03:41.005]
+to keep your options open
+
+[00:03:41.005 - 00:03:42.885]
+because like if there was conditional reasoning up
+
+[00:03:42.885 - 00:03:44.085]
+there, let's keep it around.
+
+[00:03:44.415 - 00:03:46.445]
+Often bad conditional reasoning can be a flaw
+
+[00:03:46.635 - 00:03:49.885]
+that flies a little more under the radar than you would
+
+[00:03:49.885 - 00:03:52.125]
+think because of course the way I just described it,
+
+[00:03:52.125 - 00:03:55.325]
+it's like, okay, this is like pretty,
+
+[00:03:55.945 - 00:03:57.525]
+you know, getable, right?
+
+[00:03:57.525 - 00:03:58.605]
+Like this is something
+
+[00:03:58.605 - 00:04:00.405]
+that has like very distinct indicators
+
+[00:04:00.405 - 00:04:01.925]
+that can tip me off, this is going on.
+
+[00:04:02.265 - 00:04:05.365]
+But with the language sometimes they can really shroud their
+
+[00:04:05.365 - 00:04:06.925]
+actions because essentially reading
+
+[00:04:06.925 - 00:04:08.525]
+for bad conditional reasoning is reading for
+
+[00:04:08.525 - 00:04:11.925]
+how the author was using the conditional that they gave you
+
+[00:04:12.065 - 00:04:13.805]
+and seeing if they did something wrong.
+
+[00:04:14.095 - 00:04:15.645]
+Which, you know, that can
+
+[00:04:16.205 - 00:04:17.605]
+manifest in lots and lots of different ways.
+
+[00:04:17.605 - 00:04:19.365]
+And so that's why we wanna take a really nice
+
+[00:04:19.705 - 00:04:21.845]
+and kind of conservative approach in the answer choices
+
+[00:04:21.975 - 00:04:23.765]
+where we'll keep around any answer
+
+[00:04:23.765 - 00:04:26.885]
+that's mentioning conditionals, um, at all.
+
+[00:04:26.885 - 00:04:28.965]
+And they usually don't put more than one, um,
+
+[00:04:29.025 - 00:04:30.645]
+bad conditional reasoning answer choice
+
+[00:04:30.665 - 00:04:31.765]
+in the answer choices.
+
+[00:04:32.105 - 00:04:34.325]
+And so as I'm going through my first sorting pass
+
+[00:04:34.325 - 00:04:36.325]
+through the answers, I'll just wanna keep that answer open
+
+[00:04:36.505 - 00:04:38.045]
+and then I'll see what I've got overall
+
+[00:04:38.385 - 00:04:40.845]
+and hopefully I did detect the bad conditional reasoning
+
+[00:04:40.845 - 00:04:41.965]
+and I will choose this answer.
+
+[00:04:42.025 - 00:04:43.365]
+Or if I did not detect that,
+
+[00:04:43.395 - 00:04:44.725]
+then I might have to do a second pass.
+
+[00:04:44.725 - 00:04:45.685]
+We'll see what happens, but at least
+
+[00:04:45.685 - 00:04:46.445]
+I'll have that answer open.
+
+[00:04:46.665 - 00:04:48.605]
+Now let's get into bad causal reasoning though.
+
+[00:04:48.625 - 00:04:50.405]
+So bad causal reasoning.
+
+[00:04:50.625 - 00:04:53.125]
+Um, and you may reference my previous video on the
+
+[00:04:53.125 - 00:04:55.085]
+differences between causal and conditional reasoning
+
+[00:04:55.205 - 00:04:56.285]
+'cause that is very relevant here.
+
+[00:04:56.545 - 00:04:59.205]
+Um, but bad causal reasoning essentially is
+
+[00:04:59.905 - 00:05:01.085]
+any causal claim.
+
+[00:05:02.145 - 00:05:04.885]
+Um, any, like all causal reasoning is bad
+
+[00:05:04.885 - 00:05:06.005]
+reasoning on the LSAT.
+
+[00:05:06.005 - 00:05:08.965]
+And so causal reasoning is bad causal reasoning.
+
+[00:05:09.265 - 00:05:11.885]
+Um, but so if they are making any sort
+
+[00:05:11.885 - 00:05:14.925]
+of causal claim in the conclusion of like, X causes Y
+
+[00:05:15.225 - 00:05:17.285]
+for instance, or X is a contributing factor
+
+[00:05:17.345 - 00:05:20.085]
+to YX makes y more likely to happen, you know,
+
+[00:05:20.085 - 00:05:21.125]
+all of your causal language.
+
+[00:05:21.385 - 00:05:23.725]
+And so if they have a causal claim in the conclusion,
+
+[00:05:23.995 - 00:05:26.885]
+then very likely the flaw is going
+
+[00:05:26.885 - 00:05:29.325]
+to be bad causal reasoning in some form.
+
+[00:05:30.355 - 00:05:34.925]
+Problem is they will often phrase bad causal reasoning in
+
+[00:05:34.925 - 00:05:37.205]
+the answer choices in many different ways.
+
+[00:05:37.625 - 00:05:40.325]
+Not on every question. You know, there are plenty of plug
+
+[00:05:40.325 - 00:05:41.845]
+and play bad causal reasoning
+
+[00:05:42.845 - 00:05:44.885]
+questions in the world in which they say something like,
+
+[00:05:44.885 - 00:05:47.885]
+correlation doesn't necessarily imply causation.
+
+[00:05:48.025 - 00:05:50.725]
+And it's like, oh, it's answer D great, you know,
+
+[00:05:51.065 - 00:05:52.485]
+that's wonderful when that happens.
+
+[00:05:52.985 - 00:05:54.965]
+Um, or it's just one
+
+[00:05:54.965 - 00:05:56.765]
+of your omitted options. You know, if it's one
+
+[00:05:56.765 - 00:05:58.245]
+Of your omitted options which just,
+
+[00:05:58.395 - 00:06:00.245]
+just review backwards causation,
+
+[00:06:00.345 - 00:06:01.685]
+new factor causing one or both
+
+[00:06:01.825 - 00:06:04.005]
+or no relationship, if they outline one
+
+[00:06:04.005 - 00:06:05.805]
+of your omitted options in the answer choices,
+
+[00:06:06.135 - 00:06:08.965]
+great bad causal reasoning buoy for all of us.
+
+[00:06:09.585 - 00:06:14.205]
+Uh, but sometimes the bad causal reasoning answer choices
+
+[00:06:14.875 - 00:06:18.325]
+will almost be like a mini method question.
+
+[00:06:18.785 - 00:06:20.685]
+In a flaw question they'll ask you
+
+[00:06:20.685 - 00:06:24.005]
+to do a much more detailed job describing
+
+[00:06:24.625 - 00:06:27.205]
+how the stimulus did its bad causal reasoning.
+
+[00:06:27.345 - 00:06:30.445]
+And I pulled just, um, two, uh, answer choices that I,
+
+[00:06:30.685 - 00:06:32.005]
+I paraphrased, I changed around
+
+[00:06:32.165 - 00:06:33.605]
+'cause I don't wanna spoil the question of course.
+
+[00:06:34.145 - 00:06:35.685]
+Um, but I want
+
+[00:06:35.685 - 00:06:38.285]
+to just translate these two bad causal reasoning answer
+
+[00:06:38.285 - 00:06:42.165]
+choices for you so that I can, you know, just show you
+
+[00:06:42.165 - 00:06:44.485]
+what we're working with here on the harder questions.
+
+[00:06:44.785 - 00:06:48.965]
+So a phenomenon could causally contribute to two
+
+[00:06:49.345 - 00:06:50.805]
+or more different effects.
+
+[00:06:50.915 - 00:06:53.765]
+Okay? So there's this given phenomenon, this given thing,
+
+[00:06:54.025 - 00:06:58.325]
+and hey, it could be causing more than one effect, right?
+
+[00:06:58.615 - 00:07:01.205]
+Let's say I drank this yogurt
+
+[00:07:01.825 - 00:07:04.765]
+and by drinking this yogurt I became full
+
+[00:07:04.945 - 00:07:07.165]
+and I also protected myself against my antibiotic.
+
+[00:07:08.215 - 00:07:10.765]
+Those two things both happened from drinking the yogurt,
+
+[00:07:10.985 - 00:07:13.205]
+you know, my phenomenon of drinking the yogurt,
+
+[00:07:14.275 - 00:07:15.605]
+just great things happening.
+
+[00:07:17.025 - 00:07:19.605]
+And so those, those two things are both happening.
+
+[00:07:19.605 - 00:07:22.805]
+They're forking off. And so if that were the flaw, right?
+
+[00:07:22.805 - 00:07:24.085]
+If that were like the correct answer,
+
+[00:07:24.305 - 00:07:26.485]
+it seems like probably the stimulus would've been assuming
+
+[00:07:26.635 - 00:07:30.445]
+that there can only be one effect per cause, right?
+
+[00:07:30.445 - 00:07:33.205]
+Because if, if I'm in here saying, Hey, what you did wrong,
+
+[00:07:33.425 - 00:07:34.685]
+here's what was questionable.
+
+[00:07:34.955 - 00:07:37.965]
+It's because a phenomenon could causally contribute to two
+
+[00:07:37.965 - 00:07:40.085]
+or more different effects that must be like
+
+[00:07:40.495 - 00:07:41.605]
+disastrous for you.
+
+[00:07:41.795 - 00:07:44.965]
+Like you upstairs as author doing bad causal reasoning,
+
+[00:07:45.075 - 00:07:47.445]
+must have thought, oh, I've got a phenomenon.
+
+[00:07:47.635 - 00:07:50.965]
+Only one effect for that phenomenon, um,
+
+[00:07:50.965 - 00:07:52.365]
+which like, silliness.
+
+[00:07:52.585 - 00:07:54.205]
+But let me give you this next answer, choice.
+
+[00:07:54.225 - 00:07:55.525]
+And this was from the same question.
+
+[00:07:55.785 - 00:07:59.285]
+And so two different phenomena could each causally
+
+[00:07:59.285 - 00:08:01.165]
+contribute to the same effect
+
+[00:08:01.835 - 00:08:04.645]
+even though neither causally contributes to the other?
+
+[00:08:04.755 - 00:08:06.085]
+Okay? So there are these
+
+[00:08:06.085 - 00:08:07.605]
+two phenomena, two different things.
+
+[00:08:07.955 - 00:08:11.045]
+They could each be causing the same effect,
+
+[00:08:11.345 - 00:08:12.685]
+but they don't really have a relationship
+
+[00:08:12.685 - 00:08:15.005]
+to each other causally, they're not causing one another.
+
+[00:08:15.225 - 00:08:19.165]
+And so let's say me drinking my water,
+
+[00:08:19.335 - 00:08:20.485]
+which I don't have in my hand
+
+[00:08:20.485 - 00:08:23.565]
+and drinking my yogurt, they're both causally contributing
+
+[00:08:23.565 - 00:08:25.805]
+to the same effect of me taking my antibiotic.
+
+[00:08:26.265 - 00:08:28.845]
+Um, and okay, great, but drinking the yogurt
+
+[00:08:28.945 - 00:08:30.085]
+and drinking the water,
+
+[00:08:30.715 - 00:08:33.325]
+it's not like I'm one is making me do the other, right?
+
+[00:08:33.325 - 00:08:34.285]
+They, they don't really have a
+
+[00:08:34.365 - 00:08:35.525]
+causal relationship between them.
+
+[00:08:35.525 - 00:08:38.005]
+They're just both independently contributing
+
+[00:08:38.265 - 00:08:40.205]
+to this effect of taking my antibiotic.
+
+[00:08:40.545 - 00:08:42.045]
+Um, and so that's great.
+
+[00:08:42.425 - 00:08:44.965]
+Now imagine this is the correct answer, okay?
+
+[00:08:45.315 - 00:08:48.485]
+They must have been assuming, right, that these two, um,
+
+[00:08:48.575 - 00:08:51.565]
+these two causes, these two phenomena would've necessarily
+
+[00:08:51.705 - 00:08:52.925]
+had a relationship to each other.
+
+[00:08:53.025 - 00:08:54.805]
+If it's worth pointing out that
+
+[00:08:54.865 - 00:08:56.925]
+Hey, you could have two causes
+
+[00:08:56.925 - 00:08:58.445]
+and they could just go to the same effect
+
+[00:08:58.445 - 00:09:00.445]
+and they don't have to have anything to do with one another.
+
+[00:09:00.715 - 00:09:03.685]
+It's like, if that's like the really bad thing the author
+
+[00:09:03.815 - 00:09:05.085]
+would have pointed out to them,
+
+[00:09:05.315 - 00:09:07.725]
+well then the author must have been, you know,
+
+[00:09:07.775 - 00:09:09.685]
+doing some kind of tom foolery with their causation
+
+[00:09:09.685 - 00:09:11.725]
+where they thought, oh, right, you have these two,
+
+[00:09:12.175 - 00:09:13.405]
+these two phenomena
+
+[00:09:13.525 - 00:09:15.805]
+and they're contributing to the same, uh, effect.
+
+[00:09:16.075 - 00:09:18.605]
+They must be causing and contributing to one another.
+
+[00:09:19.905 - 00:09:23.325]
+Um, which obviously not necessarily true causation is really
+
+[00:09:23.835 - 00:09:27.005]
+complicated and it's hard to make a lot of, uh, assumptions
+
+[00:09:27.005 - 00:09:28.285]
+and a lot of conclusions about causation.
+
+[00:09:28.585 - 00:09:31.005]
+And so hopefully this goes to show
+
+[00:09:31.195 - 00:09:33.805]
+that translating those causal reasoning, um,
+
+[00:09:33.825 - 00:09:36.205]
+answer choices in a classic flaw question
+
+[00:09:37.345 - 00:09:39.325]
+is a thing you need to be able to do.
+
+[00:09:39.665 - 00:09:42.125]
+Um, it's something to take a second as you're going
+
+[00:09:42.125 - 00:09:44.365]
+through those classic flaw answer choices, when you hit one
+
+[00:09:44.365 - 00:09:46.165]
+of those gnarly causal reasoning answers,
+
+[00:09:46.355 - 00:09:47.525]
+just take a second,
+
+[00:09:47.925 - 00:09:49.685]
+actually translate it like a method answer choice,
+
+[00:09:49.865 - 00:09:52.245]
+and you'll be a lot better served than just keywording
+
+[00:09:52.245 - 00:09:54.125]
+and saying, oh, cause okay, that's it.
+
+[00:09:54.395 - 00:09:56.525]
+That doesn't really work. It works much better that way.
+
+[00:09:56.585 - 00:10:00.845]
+And the conditional stimuli not so much on the causal ones.
+
+[00:10:00.905 - 00:10:03.005]
+And so hopefully this can take you to the next level
+
+[00:10:03.145 - 00:10:04.005]
+as you're identifying
+
+[00:10:04.125 - 00:10:05.245]
+causal and conditional reasoning and the answers.
+
+[00:10:05.465 - 00:10:06.685]
+And I will see you soon.

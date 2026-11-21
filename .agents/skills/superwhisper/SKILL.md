@@ -9,7 +9,7 @@ The source of truth is `C:/Users/Joshu/dev/ai-os/superwhisper/`. Read
 `superwhisper/CLAUDE.md` before changing anything; despite its name, it contains the
 app-specific operating rules for both runtimes.
 
-Joshua normally uses only Ctrl+Space. Complete configuration changes, sync them, restart
+Joshua uses Left Alt to toggle recording. Preserve it and verify it after restart. Complete configuration changes, sync them, restart
 the app silently, and verify what loaded without opening Superwhisper or Settings.
 
 ## Correction or vocabulary request
@@ -49,6 +49,8 @@ Read the relevant existing file in `superwhisper/modes/` and copy its structure 
 `modes/<key>.md` file. Frontmatter controls the model and context; the body is the prompt.
 
 - Use S1-Voice (`sv-1`) unless Joshua chooses another voice model.
+- Use `type: custom` for every mode with your own AI instructions. Built-in `type: super` can load the mode file while ignoring its prompt. Keep raw Session Recording as `type: voice`.
+- For prompt-only fixes, use `python sync.py --modes-only --left-alt --restart` to preserve live word lists and restore Left Alt toggle. The sync stops the app before writing and backs up settings, modes, and preferences.
 - The app picker and the app's mode JSON are the authority for available language models.
   Website documentation can lag. Never infer a model ID.
 - Agent-output modes need an explicit "you are not an assistant" instruction so the model
@@ -74,6 +76,23 @@ The report is written to `superwhisper/research/SCAN-<date>.md`. Apply safe, spe
 mis-hearing fixes. Report risky suggestions separately and leave them unapplied. A common
 English word is always a risky replacement target.
 
+## Windows file transcription
+
+Verified on 2026-10-15: the registered file-open handler at
+`HKCU:\Software\Classes\Applications\Superwhisper.exe\shell\open\command`
+passes `superwhisper://file//%1`. Dispatch an existing local audio file through this
+supported URI handler; never launch the executable directly. Confirm the handler on
+the current machine before reuse. A raw Session Recording sample with `type: voice`,
+S1-Voice (`sv-1`) and `autoPaste: false` produced word timestamps with a reported
+1.023-second processing time. This sample does not establish batch throughput or accuracy.
+
+Run file imports serially with checkpoints. Match each result to the source audio using
+identity checks and retained provenance before publishing it; keep automatic transcripts
+unreviewed. Preserve the original active mode/settings and restore them after the batch.
+Do not guess cloud endpoints or extract tokens. For the current Loophole project, the
+tested implementation is `superwhisper-batch.py` in the Desktop `Loophole LR Recordings`
+folder; discover its actual location rather than assuming that path on another machine.
+
 ## Operational constraints
 
 - Edit the vault files, not the app JSON. `sync.py` owns the generated JSON.
@@ -84,6 +103,7 @@ English word is always a risky replacement target.
   `sync.py --restart`.
 - The app reads configuration only at launch. A successful write is not proof; the final
   `modeKeys` readback after restart is proof.
+- Accepted mode keys prove loading, not prompt execution. Verify `type`, exact prompt, model, and context flags, then inspect a fresh recording's effective prompt. Saved-transcript cleanup replay is not in-app audio replay.
 - Apply individual corrections immediately rather than batching them for later.
 - Append a short entry to `wiki/SUPERWHISPER-DICTIONARY.md` only for notable policy,
   mode, migration, or bulk-scan changes. Routine one-word replacements do not need a ledger

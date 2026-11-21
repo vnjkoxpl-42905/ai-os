@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="lsatu-interactive-lesson" content="celia-cutler-2026-10-29-fewest-problems">
+<title>Choose the Answer With the Fewest Problems · Session recap</title>
+<style>  :root{
+    --cream:#FBF8F1; --ink:#1C1917; --ink-soft:#44403C; --ink-mute:#6F6A63;
+    --gold:#E8D08B; --gold-deep:#B8983F; --gold-text:#85650F; --gold-wash:rgba(232,208,139,.16);
+    --card:#FFFFFF; --line:#E7E0D2;
+    --green:#3F6212; --green-wash:rgba(63,98,18,.09);
+    --red:#9F1239; --red-wash:rgba(159,18,57,.07);
+    --serif:"Fraunces","Garamond","Georgia",serif;
+    --sans:"Outfit","Avenir Next","Helvetica Neue",sans-serif;
+    --mono:"JetBrains Mono","SF Mono",Menlo,monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--ink);font-family:var(--sans);line-height:1.65;font-size:17px}
+  .wrap{max-width:800px;margin:0 auto;padding:0 24px}
+
+  header.hero{padding:68px 0 44px;border-bottom:1px solid var(--line)}
+  .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-text);margin-bottom:18px}
+  h1{font-family:var(--serif);font-weight:600;font-size:clamp(36px,6vw,54px);line-height:1.06;letter-spacing:-.01em}
+  .hero p.lede{margin-top:20px;font-size:19px;color:var(--ink-soft);max-width:58ch}
+
+  section{padding:50px 0;border-bottom:1px solid var(--line)}
+  h2{font-family:var(--serif);font-weight:600;font-size:30px;line-height:1.15;margin-bottom:4px}
+  .sec-kicker{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-text);margin-bottom:10px}
+  p{margin:14px 0;color:var(--ink-soft)}
+  p strong{color:var(--ink)}
+
+  .callout{background:var(--gold-wash);border-left:3px solid var(--gold-deep);border-radius:0 12px 12px 0;padding:16px 20px;margin:24px 0;font-size:16.5px;color:var(--ink-soft)}
+  .callout .tag{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-text);display:block;margin-bottom:6px}
+  .callout strong{color:var(--ink)}
+
+  /* the three kinds */
+  .kinds{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:28px 0 8px}
+  .kind{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;box-shadow:0 1px 3px rgba(28,25,23,.06);transition:transform .18s,box-shadow .18s}
+  /* The colour carries the taxonomy, so it has to stay. A short rule inside
+     the padding does that without a 3px border running into a 14px corner. */
+  .kind .bar{display:block;width:32px;height:4px;border-radius:2px;background:var(--c);margin-bottom:14px}
+  .kind:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(28,25,23,.09)}
+  .kind.assume{--c:var(--gold-deep)}
+  .kind.object{--c:var(--red)}
+  .kind.describe{--c:var(--green)}
+  .kind .name{font-family:var(--serif);font-size:22px;color:var(--c);font-weight:600}
+  .kind .what{font-size:15px;margin:8px 0 0;color:var(--ink-soft)}
+  .kind .words{border-top:1px dashed var(--line);margin-top:14px;padding-top:12px}
+  .kind .words b{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--c);display:block;margin-bottom:7px}
+  .kind .words span{display:block;font-size:14px;color:var(--ink-mute);padding:2px 0}
+  .kind .test{margin-top:14px;background:var(--cream);border-radius:9px;padding:11px 13px;font-size:14.5px;color:var(--ink)}
+  .kind .test b{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-mute);display:block;margin-bottom:4px}
+
+  .opposite{display:flex;align-items:stretch;gap:0;margin:26px 0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--card)}
+  .opposite div{flex:1;padding:18px 20px;font-size:15.5px;color:var(--ink-soft)}
+  .opposite div:first-child{background:var(--gold-wash)}
+  .opposite div:last-child{background:var(--red-wash)}
+  .opposite b{display:block;font-family:var(--mono);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;margin-bottom:6px}
+  .opposite div:first-child b{color:var(--gold-text)}
+  .opposite div:last-child b{color:var(--red)}
+
+  ol.steps{margin:20px 0;padding-left:0;list-style:none;counter-reset:step}
+  ol.steps li{counter-increment:step;position:relative;padding:14px 0 14px 54px;border-bottom:1px dashed var(--line);font-size:16px;color:var(--ink-soft)}
+  ol.steps li:last-child{border-bottom:none}
+  ol.steps li::before{content:counter(step);position:absolute;left:0;top:12px;width:34px;height:34px;border-radius:50%;background:var(--ink);color:var(--cream);font-family:var(--serif);display:flex;align-items:center;justify-content:center;font-size:16px}
+  ol.steps li b{color:var(--ink)}
+
+  .flags{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 4px}
+  .flag{font-family:var(--mono);font-size:12.5px;letter-spacing:.04em;background:var(--red-wash);color:var(--red);border:1px solid rgba(159,18,57,.2);border-radius:999px;padding:6px 14px}
+
+  .drill{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;margin:26px 0;box-shadow:0 2px 8px rgba(28,25,23,.06)}
+  .drill h3{font-family:var(--serif);font-size:19px;margin-bottom:4px}
+  .drill p.hint{font-size:14px;color:var(--ink-mute);margin:0 0 14px}
+  .chips{display:flex;gap:8px;flex-wrap:wrap}
+  .chip{font-family:var(--mono);font-size:13px;background:var(--cream);border:1px solid var(--line);border-radius:999px;padding:8px 15px;cursor:pointer;transition:all .16s;color:var(--ink-soft)}
+  .chip:hover{border-color:var(--ink-mute)}
+  .chip.on[data-k="assume"]{background:var(--gold-wash);border-color:var(--gold-deep);color:var(--gold-text)}
+  .chip.on[data-k="object"]{background:var(--red-wash);border-color:var(--red);color:var(--red)}
+  .chip.on[data-k="describe"]{background:var(--green-wash);border-color:var(--green);color:var(--green)}
+  .chip .ans{display:none;font-weight:600}
+  .chip.on .ans{display:inline;margin-left:8px}
+
+  .quote{font-family:var(--serif);font-size:20px;line-height:1.45;color:var(--ink);border-left:3px solid var(--gold);padding:4px 0 4px 22px;margin:24px 0;font-style:italic}
+  .footer-note{padding:34px 0 56px}
+  .mark{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-mute)}
+  .chip.on[data-k="neutral"]{background:var(--gold-wash);border-color:var(--ink-mute);color:var(--ink)}
+  .kind.link{--c:var(--gold-deep)}
+  .kind.link .name,.kind.assume .name,.kind.link .words b,.kind.assume .words b{color:var(--gold-text)}
+  .kind.apply{--c:var(--green)}
+  .kind.warn{--c:var(--red)}
+  .rule{font-family:var(--serif);font-size:20px;color:var(--ink);margin:18px 0}
+  .rule .ar{color:var(--gold-text);font-weight:700;margin:0 6px}
+  table.t{width:100%;border-collapse:collapse;margin:20px 0;font-size:15.5px;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  table.t th{font-family:var(--mono);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold-text);text-align:left;padding:12px 16px;border-bottom:1px solid var(--line)}
+  table.t td{padding:11px 16px;border-bottom:1px dashed var(--line);color:var(--ink-soft);vertical-align:top}
+  table.t tr:last-child td{border-bottom:none}
+  table.t td:first-child{color:var(--ink);font-weight:600;white-space:nowrap}
+  pre{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;font-family:var(--serif);font-size:18px;overflow-x:auto}
+  @media (max-width:560px){.opposite{flex-direction:column}table.t td:first-child{white-space:normal}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+  .chip:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+</style>
+<style>/* palette D-highlighter */
+/* D, highlighter. Navy ground for the hero, white page, one marker colour.
+   The motif is the answer-sheet bubble: step numbers, practice choices and the
+   section markers are all circles that fill when you use them. */
+:root{
+  --cream:#FFFFFF; --page:#F5F7FC; --ink:#0B1431; --ink-soft:#2C3556; --ink-mute:#566083;
+  --navy:#0B1431; --navy-2:#17234F;
+  --marker:#D8F54A; --marker-soft:rgba(216,245,74,.38);
+  --cobalt:#2A45F0;
+  --gold:#D8F54A; --gold-deep:#2A45F0; --gold-text:#1F36C8; --gold-wash:rgba(42,69,240,.07);
+  --card:#FFFFFF; --line:#DCE1F0;
+  --green:#14683A; --green-wash:rgba(20,104,58,.10);
+  --red:#B4173D; --red-wash:rgba(180,23,61,.08);
+  --serif:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --mono:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --disp:"Arial Black","Segoe UI Black","Helvetica Neue",system-ui,sans-serif;
+}
+body{background:var(--page);color:var(--ink);font-size:17px;line-height:1.62}
+.wrap{max-width:780px;padding:0 24px}
+
+/* Hero: the whole top of the page is navy, with the title at poster size */
+header.hero{background:var(--navy);color:#fff;border-bottom:0;padding:clamp(44px,9vw,92px) 0 clamp(40px,8vw,76px)}
+.kicker{display:inline-block;font-family:var(--sans);font-weight:800;font-size:13px;letter-spacing:.04em;text-transform:none;
+  color:var(--navy);background:var(--marker);padding:6px 14px;border-radius:999px;margin-bottom:26px}
+h1{font-family:var(--disp);font-weight:900;font-size:clamp(32px,6.6vw,56px);line-height:1.02;letter-spacing:-.035em;color:#fff}
+.hero p.lede{color:#C9D1F2;font-size:clamp(17px,2.2vw,20px);max-width:56ch;margin-top:28px}
+
+/* Sections: a bubble marker leads each heading instead of a rule and a label */
+section{border-bottom:0;padding:clamp(40px,7vw,68px) 0 8px}
+section:last-of-type{padding-bottom:28px}
+.sec-kicker{font-family:var(--sans);font-weight:800;font-size:13px;letter-spacing:.02em;text-transform:none;color:var(--ink);
+  display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.sec-kicker::before{content:"";width:16px;height:16px;border-radius:50%;background:var(--marker);box-shadow:0 0 0 2px var(--navy) inset}
+h2{font-family:var(--disp);font-weight:900;font-size:clamp(27px,5vw,40px);line-height:1.04;letter-spacing:-.03em;margin-bottom:10px}
+p{color:var(--ink-soft)}
+p strong,.steps b{color:var(--ink)}
+em{font-style:normal;background:linear-gradient(transparent 58%,var(--marker) 58%,var(--marker) 92%,transparent 92%);color:var(--ink);padding:0 2px}
+
+/* Callouts: full navy blocks, no side stripe */
+.callout{background:var(--navy);color:#DDE3FA;border:0;border-radius:18px;padding:22px 24px;margin:30px 0;font-size:17px}
+.callout strong{color:#fff}
+.callout em{background:none;color:var(--marker);font-weight:700}
+.callout .tag{font-family:var(--sans);font-weight:800;font-size:12.5px;letter-spacing:.03em;text-transform:none;
+  color:var(--navy);background:var(--marker);padding:4px 11px;border-radius:999px;margin-bottom:12px;display:block;width:max-content;max-width:100%}
+
+/* Kinds: one navy card and one marker card, so the pair reads as a contrast */
+.kinds{gap:16px;margin:32px 0 18px}
+.kind{border:0;border-radius:20px;padding:26px 24px;box-shadow:none}
+.kind .bar{display:none}
+.kind .name{font-family:var(--disp);font-weight:900;font-size:26px;letter-spacing:-.02em}
+.kind.link{background:var(--navy);color:#DDE3FA;--c:#fff}
+.kind.link .name,.kind.link .words b{color:var(--marker)}
+.kind.link .what{color:#DDE3FA}
+.kind.link .words span{color:#B9C3EC}
+.kind.link .test{background:rgba(255,255,255,.08);color:#fff}
+.kind.link .test b{color:var(--marker)}
+.kind.warn{background:var(--marker);color:var(--navy);--c:var(--navy)}
+.kind.warn .name,.kind.warn .words b,.kind.warn .test b{color:var(--navy)}
+.kind.warn .what,.kind.warn .words span{color:#2B3510}
+.kind.warn .test{background:rgba(11,20,49,.09);color:var(--navy)}
+.kind .what{font-size:16.5px}
+.kind .words b,.kind .test b,.opposite b{font-family:var(--sans);font-weight:800;font-size:12.5px;letter-spacing:.03em;text-transform:none}
+.kind .words,.kind .test{border-top:0}
+.kind .test{border-radius:12px}
+
+.opposite{border:0;border-radius:18px;overflow:hidden;gap:0}
+.opposite div{padding:20px 22px;font-size:16px;color:var(--ink-soft)}
+.opposite div:first-child{background:#E5EAFB}
+.opposite div:last-child{background:#EEF0F7}
+.opposite div:first-child b{color:var(--gold-text)}
+.opposite div:last-child b{color:var(--ink)}
+
+/* Steps: answer-sheet bubbles */
+ol.steps li{border-bottom:0;padding:16px 0 16px 62px;font-size:17px}
+ol.steps li::before{top:12px;width:42px;height:42px;background:var(--navy);color:var(--marker);font-family:var(--disp);font-weight:900;font-size:19px;
+  box-shadow:0 0 0 3px var(--page),0 0 0 5px var(--navy)}
+
+/* Flags and quote */
+.flag{font-family:var(--sans);font-weight:800;font-size:14px;background:#fff;color:var(--red);border:2px solid var(--red);padding:5px 14px}
+.quote{font-family:var(--sans);font-style:normal;font-weight:600;font-size:clamp(19px,3vw,23px);line-height:1.4;color:var(--navy);
+  background:var(--marker);border:0;border-radius:18px;padding:24px 26px;margin:34px 0}
+.quote em{background:none;text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:4px}
+
+.rule{font-family:var(--sans);font-weight:800;font-size:19px;color:var(--ink)}
+.rule .ar{color:var(--cobalt)}
+
+/* Practice checks: each choice is a bubble that fills when you tap it */
+.drill{background:#fff;border:2px solid var(--navy);border-radius:20px;box-shadow:none;padding:24px}
+.drill h3{font-family:var(--disp);font-weight:900;font-size:21px;letter-spacing:-.02em}
+.drill p.hint{color:var(--ink-soft);font-size:15px}
+.chips{flex-direction:column;gap:10px}
+.chip{display:block;font-family:var(--sans);font-size:15.5px;font-weight:500;color:var(--ink);background:#fff;border:2px solid var(--line);border-radius:14px;
+  padding:12px 16px 12px 48px;position:relative;line-height:1.45;transition:border-color .15s,background .15s}
+.chip::before{content:"";position:absolute;left:14px;top:13px;width:20px;height:20px;border-radius:50%;border:2px solid var(--navy);background:#fff;transition:background .15s}
+.chip:hover{border-color:var(--navy)}
+.chip.on{border-color:var(--navy)}
+.chip.on::before{background:var(--navy);box-shadow:0 0 0 3px #fff inset}
+.chip .ans{display:none;margin:8px 0 0;font-weight:600;font-size:15px}
+.chip.on .ans{display:block;margin-left:0}
+.chip.on[data-k="describe"]{background:var(--green-wash);border-color:var(--green);color:var(--ink)}
+.chip.on[data-k="describe"] .ans{color:var(--green)}
+.chip.on[data-k="describe"]::before{background:var(--green);border-color:var(--green)}
+.chip.on[data-k="object"]{background:var(--red-wash);border-color:var(--red);color:var(--ink)}
+.chip.on[data-k="object"] .ans{color:var(--red)}
+.chip.on[data-k="object"]::before{background:var(--red);border-color:var(--red)}
+.chip.on[data-k="neutral"]{background:#EEF1FB;border-color:var(--navy);color:var(--ink)}
+.chip.on[data-k="neutral"] .ans{color:var(--gold-text)}
+.chip:focus-visible{outline:3px solid var(--cobalt);outline-offset:2px}
+
+/* Tables (reference page) */
+table.t{border-collapse:separate;border-spacing:0;border:2px solid var(--navy);border-radius:16px;overflow:hidden;background:#fff}
+table.t th{font-family:var(--sans);font-weight:800;font-size:12.5px;letter-spacing:.02em;text-transform:none;color:var(--marker);background:var(--navy);border-bottom:0}
+table.t td{border-bottom:1px solid var(--line)}
+table.t tr:last-child td{border-bottom:0}
+
+.footer-note{background:var(--navy);margin-top:56px;padding:30px 0 40px}
+.mark{font-family:var(--disp);font-weight:900;font-size:15px;letter-spacing:.08em;color:var(--marker)}
+</style></head>
+<body>
+
+<header class="hero"><div class="wrap">
+  <div class="kicker">Session recap · October 29</div>
+  <h1>Choose the Answer<br>With the Fewest Problems</h1>
+  <p class="lede">Some questions have a rule that settles the answer. Most Strongly Supported and Weaken don't. You weigh the choices, and none of them will be perfect. That's why these questions feel flimsy, and it's why the goal changes: find the answer with the fewest problems.</p>
+</div></header>
+
+<section><div class="wrap">
+  <div class="sec-kicker">Before the answers</div>
+  <h2>Name what each sentence is doing</h2>
+  <p>On both questions you brought, the first job was the same: read each sentence and say what kind of claim it is. Is it a rule, a cause, a quantity? Each kind pushes the right answer in a different direction, so naming them lets you predict what the answer will play with.</p>
+
+  <div class="kinds">
+    <div class="kind link">
+      <span class="bar"></span>
+      <div class="name">Conditional</div>
+      <p class="what">A hard line. If the first idea is true, the second one has to be true. There's nothing in between.</p>
+      <div class="words"><b>Sounds like</b>
+        <span>Everyone on the guest list gets a wristband.</span>
+      </div>
+      <div class="test"><b>Test</b>Wristband on? That tells you nothing about the list. Not on the list? That tells you nothing about the wristband.</div>
+    </div>
+
+    <div class="kind warn">
+      <span class="bar"></span>
+      <div class="name">Causal</div>
+      <p class="what">A dial, not a switch. Think of a volume knob: more of the cause makes the effect more likely, and less of it makes the effect less likely.</p>
+      <div class="words"><b>Sounds like</b>
+        <span>Daily practice leads to faster reading.</span>
+      </div>
+      <div class="test"><b>Test</b>No practice? Faster reading gets less likely. It doesn't become impossible.</div>
+    </div>
+  </div>
+
+  <div class="opposite">
+    <div><b>A conditional chain</b>Two rules that share an idea link into a new rule. Without the first idea, you learn nothing new about the last.</div>
+    <div><b>A causal chain</b>Without the cause, the effect is less likely. If the effect keeps showing up with no cause around, doubt the cause.</div>
+  </div>
+
+  <div class="callout"><span class="tag">When you see a pivot</span>
+    <strong>But, yet and however</strong> mark a point of tension between two ideas. The right answer almost always settles that tension. Look at the idea just before the pivot and the idea just after it.
+  </div>
+  <div class="flags"><span class="flag">but</span><span class="flag">yet</span><span class="flag">however</span></div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-kicker">Most Strongly Supported</div>
+  <h2>The stronger the answer, the heavier the lift</h2>
+  <p>A Most Strongly Supported question never gives you an argument. It gives you information, and the right answer is the conclusion that information supports. Treat it like a Must Be True question with a lighter touch.</p>
+  <p>Picture an Olympic weightlifter. The stimulus is the lifter. Each answer is a weight. The heavier the weight, the less likely he gets it overhead. So lean toward the answer that asks the least of what you've read.</p>
+
+  <div class="callout"><span class="tag">Check the verb</span>
+    Say a stimulus tells you that construction noise <em>pulls students' attention away</em> from their reading. That supports <em>the noise can make reading harder</em>. It doesn't support <em>students who hear it inevitably forget what they just read</em>. Pulling attention away is not the same as losing it, and <em>inevitably</em> means every time, with no exceptions.
+  </div>
+  <div class="flags"><span class="flag">inevitably</span><span class="flag">always</span><span class="flag">never</span><span class="flag">every</span><span class="flag">must</span></div>
+
+  <p>The stimulus is your whole data set. If an answer reaches for a bigger idea, or a different idea that sounds close, it has added something. A soft answer still has to be about what the stimulus said. A strong word is fine when the stimulus says it just as strongly.</p>
+
+  <p>The right answer also doesn't have to be perfect. Say a stimulus tells you that background chatter pulls attention away from a task. An answer saying chatter in the room can make an exam slightly harder to finish is supported. <em>Can</em> and <em>slightly</em> ask for very little. You're not looking for guaranteed. You're looking for most supported.</p>
+
+  <div class="quote">You picked out <em>inevitably</em> as the strong word on your own, and you said what it means: it always happens. Keep looking for that word first.</div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-kicker">Weaken</div>
+  <h2>Stay inside the author's world</h2>
+  <p>Weaken questions are argument questions. They mostly run on cause or comparison, so you won't often get a rule to take apart.</p>
+  <p>Many of these arguments end with a plan. A city says downtown workers drive because biking feels unsafe, so a protected bike lane will make fewer of them drive.</p>
+  <p class="rule">Add a bike lane <span class="ar">→</span> fewer workers drive</p>
+  <p>That's a prediction about a new world, one that doesn't exist yet. Your job is to find a way the prediction could fail even if the city builds the lane.</p>
+
+  <p><strong>The people don't change.</strong> Maybe the workers live too far to bike. Maybe they never notice the lane.</p>
+  <p><strong>A little is enough for the author.</strong> If a few more workers bike, the prediction holds. So <em>many workers already ride</em> doesn't hurt it. You'd need <em>the workers already ride as much as they possibly can</em>.</p>
+
+  <div class="callout"><span class="tag">Land the heaviest blow</span>
+    A good Weaken answer hits the prediction hard and directly. Answers about <em>some</em> people, or one case, are rarely heavy enough. That's a tendency in how these tests are built, not a law.
+  </div>
+
+  <div class="quote">You pointed out that a single failed case is enough to break a conditional claim. That's valid. Keep it, and add a second check: the answer also has to hit exactly what the conclusion says.</div>
+
+  <div class="callout"><span class="tag">A trap: the world as it is</span>
+    An answer about how things are right now says nothing about the new world. If I tell you <em>practice in the morning and you'll read faster</em>, and you answer <em>I already read fast</em>, you haven't touched my claim. Ask which world each answer is about.
+  </div>
+
+  <p>One more check. Some effects arrive over time, as things wear out and get replaced. If an answer seems to change nothing right away, run the new world forward and compare the whole of it with the whole of the old one.</p>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-kicker">Both question types</div>
+  <h2>The answer with the fewest problems wins</h2>
+  <p>Neither question hands you a perfect answer. A Most Strongly Supported answer doesn't have to be guaranteed. A Weaken answer doesn't have to knock the argument over. It has to push further than the others do.</p>
+  <p>So cross out the answers with obvious problems first. Then compare what's left by how many problems each one has, and take the one with the fewest. Process of elimination is your best tool here. Strengthen works the same way. It's the flimsiest of the three, and the one I find hardest.</p>
+  <div class="callout"><span class="tag">Spend your time where it counts</span>
+    Some questions are hard enough that you can afford to miss them. What costs you points is missing the ones you should get. When a question is this slippery, give yourself room and keep moving.
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-kicker">Try it</div>
+  <h2>Check your read</h2>
+
+  <div class="drill">
+    <h3>Supported, or too strong?</h3>
+    <p class="hint">Stimulus: Loud music in a store pulls shoppers' attention away from the prices on the shelves. Which answers does that support? Decide first, then tap.</p>
+    <div class="chips">
+      <span class="chip" data-k="describe" role="button" tabindex="0" aria-expanded="false">Loud music can make it harder for shoppers to notice prices.<span class="ans">· Supported. Soft wording, and the same idea the stimulus gave.</span></span>
+      <span class="chip" data-k="object" role="button" tabindex="0" aria-expanded="false">Shoppers in loud stores inevitably overpay.<span class="ans">· Too strong, and a new idea. Nothing here says anyone overpays, and inevitably means every time.</span></span>
+      <span class="chip" data-k="object" role="button" tabindex="0" aria-expanded="false">Loud music makes shoppers forget prices they just read.<span class="ans">· A different idea. Pulling attention away is not the same as losing what you already saw.</span></span>
+    </div>
+  </div>
+
+  <div class="drill">
+    <h3>Which world is the answer about?</h3>
+    <p class="hint">Argument: A café owner says customers wait too long because only one person takes orders. So if she hires a second cashier, customers will wait less. Which answer weakens it most? Decide first, then tap.</p>
+    <div class="chips">
+      <span class="chip" data-k="object" role="button" tabindex="0" aria-expanded="false">Right now, only one person takes orders.<span class="ans">· The world as it is. It's where the author starts, and it says nothing about what a second cashier changes.</span></span>
+      <span class="chip" data-k="object" role="button" tabindex="0" aria-expanded="false">Some customers will still wait a while.<span class="ans">· Too light. Some leaves most customers unaccounted for.</span></span>
+      <span class="chip" data-k="describe" role="button" tabindex="0" aria-expanded="false">Most of the wait is for the single espresso machine, which a second cashier doesn't speed up.<span class="ans">· Heavy and aimed at the prediction. If the machine is the real wait, a second cashier changes little.</span></span>
+    </div>
+  </div>
+
+  <div class="drill">
+    <h3>Conditional or causal?</h3>
+    <p class="hint">Name the kind of claim, then tap.</p>
+    <div class="chips">
+      <span class="chip" data-k="neutral" role="button" tabindex="0" aria-expanded="false">Everyone who enters the pool area must shower first.<span class="ans">· Conditional. A hard line.</span></span>
+      <span class="chip" data-k="neutral" role="button" tabindex="0" aria-expanded="false">Regular sleep improves memory.<span class="ans">· Causal. A dial, not a switch.</span></span>
+      <span class="chip" data-k="neutral" role="button" tabindex="0" aria-expanded="false">Most of the shop's customers are students.<span class="ans">· Neither. It's a quantity.</span></span>
+    </div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-kicker">The checklist</div>
+  <h2>When no answer will be perfect</h2>
+  <ol class="steps">
+    <li><b>Know what you're holding.</b> Information on Most Strongly Supported. An argument on Weaken.</li>
+    <li><b>Name each claim.</b> Conditional, causal or quantity. Mark any pivot.</li>
+    <li><b>Say the range.</b> What could the right answer play with? For a plan, what's the old world and what's the new one?</li>
+    <li><b>Check each answer against the words on the page.</b> On Most Strongly Supported, look for strong words and swapped-in ideas. On Weaken, look for the wrong world, a light blow, or <em>some</em>.</li>
+    <li><b>Take the answer with the fewest problems.</b> It won't be perfect.</li>
+  </ol>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-kicker">Before next session</div>
+  <h2>Your work this week</h2>
+  <ol class="steps">
+    <li><b>Drills are coming from me.</b> I said I'd assign Most Strongly Supported, Weaken and Strengthen drills over the next several days. Timing comes in as you go.</li>
+    <li><b>Keep the Most Strongly Supported reference open</b> while you work them.</li>
+    <li><b>Watch for a scheduling link.</b> A group session is planned for this weekend, though it isn't confirmed. I'll send a link so you can tell me which times work. Fill it in when it arrives.</li>
+  </ol>
+</div></section>
+
+<div class="footer-note"><div class="wrap">
+  <span class="mark">LSAT U</span>
+</div></div>
+
+<script>
+  document.querySelectorAll('.chip').forEach(function(c){
+    function flip(){
+      var on = c.classList.toggle('on');
+      c.setAttribute('aria-expanded', on ? 'true' : 'false');
+    }
+    c.addEventListener('click', flip);
+    c.addEventListener('keydown', function(e){
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); flip(); }
+    });
+  });
+</script>
+</body>
+</html>

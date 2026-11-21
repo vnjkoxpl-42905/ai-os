@@ -1,0 +1,1 @@
+Accept F8/F9. All snapshots now end in .before; no nested active instruction files and no duplicate Markdown pages. Hashes remain unchanged. Plan documents suffix mapping and exclusion from Markdown link checks. F1-F7 remain settled.

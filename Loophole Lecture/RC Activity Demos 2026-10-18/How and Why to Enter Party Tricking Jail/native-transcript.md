@@ -1,0 +1,703 @@
+# How and Why to Enter Party Tricking Jail
+
+Source: https://new.theloophole.com/training-camp/browse/stage/accuracy/video/how-and-why-to-enter-party-tricking-jail
+
+Captured: 2026-10-18 (documented local date; original timestamp 2026-10-19T01:27:20.182Z). Displayed duration: 539.466667.
+
+Caption origin: English (auto-generated). This is a complete native-caption extraction, not word-by-word listening verification. Caption wording is retained without editorial correction. Original cue bytes remain in source.vtt; rendered site transcript is preserved separately.
+
+[00:00:00.225 - 00:00:02.125]
+How and why to enter Party Tricking jail.
+
+[00:00:02.225 - 00:00:04.725]
+So Party Tricking Jail is a little corner
+
+[00:00:04.945 - 00:00:06.645]
+of the elemental curriculum that
+
+[00:00:07.205 - 00:00:09.165]
+honestly very few people typically see.
+
+[00:00:09.465 - 00:00:12.045]
+Um, I typically only assign it to my students
+
+[00:00:12.065 - 00:00:15.885]
+who are both the most advanced and who trusts me the most.
+
+[00:00:16.545 - 00:00:18.925]
+Um, and you know, you may have advanced students
+
+[00:00:18.925 - 00:00:21.925]
+that they're just not as down to clown and that's okay.
+
+[00:00:22.225 - 00:00:24.725]
+Um, but if somebody is both very
+
+[00:00:25.615 - 00:00:27.485]
+adept at the LSAT process
+
+[00:00:27.865 - 00:00:31.125]
+and they are very down to try anything and do anything
+
+[00:00:31.145 - 00:00:32.485]
+and experiment, um,
+
+[00:00:32.835 - 00:00:34.525]
+then I will send them to Party Trick in Jail.
+
+[00:00:34.705 - 00:00:37.245]
+And if you read some of the student stories on the website,
+
+[00:00:37.245 - 00:00:40.045]
+you'll see that some of them, uh, most notably Sarah
+
+[00:00:40.105 - 00:00:43.565]
+and her 1 79 notably mentioned Party tricking jail
+
+[00:00:43.745 - 00:00:48.125]
+as intrinsic to, uh, a significant amount of improvement
+
+[00:00:48.125 - 00:00:49.325]
+that they experienced in their prep.
+
+[00:00:49.705 - 00:00:51.165]
+And why is that?
+
+[00:00:51.225 - 00:00:52.965]
+And when does Party Tricking Jail get assigned?
+
+[00:00:52.965 - 00:00:54.205]
+You know, why would I give it to these people
+
+[00:00:54.205 - 00:00:57.725]
+who are both the most trusting in me and the most advanced?
+
+[00:00:57.835 - 00:01:01.165]
+Well, um, party Tricking Jail is something that you have
+
+[00:01:01.165 - 00:01:04.605]
+to have a pretty good working basis with the LSAT
+
+[00:01:04.625 - 00:01:06.165]
+to make it a profitable experience.
+
+[00:01:06.165 - 00:01:08.965]
+Meaning you have to have done a pretty significant number
+
+[00:01:08.965 - 00:01:10.965]
+of sections to really understand how the test works.
+
+[00:01:11.145 - 00:01:13.485]
+You have to have a working knowledge of powerful provable
+
+[00:01:13.705 - 00:01:16.885]
+and you have to be pretty good with your working memory.
+
+[00:01:17.185 - 00:01:20.325]
+Um, this may mean that you've beaten level five on MAC,
+
+[00:01:20.625 - 00:01:23.445]
+or it may mean that you are just somebody
+
+[00:01:23.445 - 00:01:25.445]
+who has a great working memory, um,
+
+[00:01:25.625 - 00:01:28.805]
+and you don't find it very difficult to remember five sets
+
+[00:01:28.805 - 00:01:29.965]
+of answers pretty passively.
+
+[00:01:30.105 - 00:01:32.085]
+Um, five sets, five answer choices,
+
+[00:01:32.275 - 00:01:33.965]
+five answer choices pretty passively.
+
+[00:01:34.185 - 00:01:36.165]
+And so if you're in that kind of situation,
+
+[00:01:36.165 - 00:01:38.805]
+it means you're set up to profitably run
+
+[00:01:38.805 - 00:01:39.845]
+through some party shirking.
+
+[00:01:40.025 - 00:01:42.245]
+Um, but why would someone do it?
+
+[00:01:42.245 - 00:01:44.325]
+What, what is the point and what is the situation
+
+[00:01:44.335 - 00:01:45.645]
+where someone would be in it
+
+[00:01:45.645 - 00:01:46.645]
+and it would be like, okay, this is gonna be
+
+[00:01:46.645 - 00:01:47.005]
+helpful for them.
+
+[00:01:47.235 - 00:01:51.605]
+Well, if somebody is kind, plateaued around that three
+
+[00:01:51.705 - 00:01:53.685]
+to five range, um,
+
+[00:01:54.145 - 00:01:56.965]
+but they are having trouble breaking through it
+
+[00:01:56.985 - 00:01:58.725]
+and they need to get out of their head
+
+[00:01:58.725 - 00:02:01.005]
+and kind of take a break from the monotony
+
+[00:02:01.025 - 00:02:02.805]
+of sectioning over and over again
+
+[00:02:03.065 - 00:02:05.245]
+and they need to like get a fresh perspective.
+
+[00:02:05.585 - 00:02:08.165]
+Um, very often I'll send these, uh, specific students
+
+[00:02:08.165 - 00:02:10.205]
+that I'm talking about to Party Turking Jail when they're in
+
+[00:02:10.525 - 00:02:12.885]
+that sort of ish situation.
+
+[00:02:13.105 - 00:02:14.845]
+And it could go as much as like,
+
+[00:02:14.915 - 00:02:16.885]
+this person really wants 1 75 plus
+
+[00:02:16.945 - 00:02:18.885]
+and they're stuck at a minus two to four
+
+[00:02:19.025 - 00:02:21.165]
+or something like that on per LR section.
+
+[00:02:21.355 - 00:02:24.085]
+Well then Party tricking gel might be a good idea there too.
+
+[00:02:24.345 - 00:02:26.645]
+Um, it really depends on, uh, where that range is,
+
+[00:02:26.865 - 00:02:28.965]
+but I will send them there
+
+[00:02:29.225 - 00:02:31.845]
+as a break from all the other sections that they're doing.
+
+[00:02:32.065 - 00:02:34.365]
+And so the nature of Party Tricking Jail is
+
+[00:02:34.365 - 00:02:36.685]
+that you only do party tricking jail.
+
+[00:02:36.705 - 00:02:39.725]
+That's why it's called jail, um, until further notice.
+
+[00:02:40.065 - 00:02:42.525]
+Um, and you are then not p ting,
+
+[00:02:42.525 - 00:02:43.965]
+you are not doing your other sections.
+
+[00:02:44.145 - 00:02:45.565]
+You can maybe combine a translation
+
+[00:02:45.565 - 00:02:46.605]
+clear with Party Tricking Jail.
+
+[00:02:46.725 - 00:02:48.285]
+I mean that's not gonna like hurt anybody.
+
+[00:02:48.545 - 00:02:52.085]
+Um, but the point is also the break, um,
+
+[00:02:52.085 - 00:02:54.925]
+because we wanna step away from our normal sectioning so
+
+[00:02:54.925 - 00:02:56.725]
+that we can allow ourselves to gain insights,
+
+[00:02:56.755 - 00:02:58.765]
+gain a little bit of a fresh perspective. Um,
+
+[00:02:58.785 - 00:03:02.645]
+And so it's just as much the break that is like worthwhile
+
+[00:03:02.985 - 00:03:04.125]
+as it is the actual action
+
+[00:03:04.125 - 00:03:05.565]
+of party tricking that is worthwhile.
+
+[00:03:05.745 - 00:03:07.645]
+And so why is it worthwhile though?
+
+[00:03:07.645 - 00:03:10.285]
+You know, what does it matter? Um, it matters
+
+[00:03:10.285 - 00:03:11.525]
+because anybody
+
+[00:03:11.665 - 00:03:14.485]
+who can choose the correct answer pretty reliably without
+
+[00:03:14.485 - 00:03:18.165]
+the stimulus is going to have a more refined understanding
+
+[00:03:18.265 - 00:03:20.605]
+of the mechanics of the answer choices versus
+
+[00:03:20.605 - 00:03:21.805]
+someone who can't.
+
+[00:03:22.025 - 00:03:25.285]
+Um, and in the rigors of test day, you are going to be able
+
+[00:03:25.285 - 00:03:28.885]
+to rely on that in like deep nuanced understanding of
+
+[00:03:28.885 - 00:03:31.885]
+how the answers work to get you out of various jams.
+
+[00:03:31.885 - 00:03:33.725]
+Because with Party tricky, you know,
+
+[00:03:33.725 - 00:03:35.165]
+where you are not reading the stimulus
+
+[00:03:35.265 - 00:03:37.445]
+and you're still doing the question time and answer choices
+
+[00:03:37.625 - 00:03:39.685]
+or RC party tricking where you're not reading the passage
+
+[00:03:39.745 - 00:03:41.285]
+but you're reading the answer choices
+
+[00:03:41.425 - 00:03:42.965]
+and doing all the questions, um,
+
+[00:03:43.225 - 00:03:45.445]
+you essentially turn every question
+
+[00:03:45.955 - 00:03:47.565]
+into a hard question, right?
+
+[00:03:47.575 - 00:03:48.925]
+There are basically no more
+
+[00:03:48.955 - 00:03:50.365]
+easy questions in party tricking.
+
+[00:03:50.365 - 00:03:53.885]
+And so it makes you uplift your noticing skills, um,
+
+[00:03:53.975 - 00:03:56.285]
+which are really, really important
+
+[00:03:56.545 - 00:03:58.765]
+to extremely high level performance.
+
+[00:03:58.865 - 00:04:01.125]
+Um, on the lsat, um, very often
+
+[00:04:01.685 - 00:04:03.565]
+students will attribute my noticing skills,
+
+[00:04:04.025 - 00:04:05.685]
+um, to my performance.
+
+[00:04:05.685 - 00:04:06.605]
+Maybe they'll attribute my
+
+[00:04:06.605 - 00:04:07.605]
+performance to my noticing skills.
+
+[00:04:07.685 - 00:04:09.805]
+I said that backwards, um, that I am able
+
+[00:04:09.805 - 00:04:13.605]
+to notice a lot more about answer choices than they are
+
+[00:04:13.605 - 00:04:16.005]
+because students tend to want to see answer choices
+
+[00:04:16.005 - 00:04:18.045]
+through the lens of it's right or it's wrong,
+
+[00:04:18.065 - 00:04:20.005]
+and that's all I have to know or care about it.
+
+[00:04:20.225 - 00:04:22.565]
+Um, and that's like a fine thing to think and everything,
+
+[00:04:22.745 - 00:04:24.445]
+but you aren't going to know whether it's right
+
+[00:04:24.445 - 00:04:25.645]
+or it's wrong when you first read it.
+
+[00:04:25.645 - 00:04:27.765]
+And so when you first read it, you have to have those,
+
+[00:04:27.865 - 00:04:30.405]
+you know, massive noticing skills, really attuned to
+
+[00:04:30.595 - 00:04:32.165]
+what exactly is there so
+
+[00:04:32.165 - 00:04:34.085]
+that you can have all the conceptual informations
+
+[00:04:34.085 - 00:04:35.645]
+and then make a judgment based
+
+[00:04:35.645 - 00:04:36.685]
+on that conceptual information.
+
+[00:04:36.985 - 00:04:39.925]
+And so if you're noticing skills are not quite as good,
+
+[00:04:40.235 - 00:04:41.525]
+well you're not going to get
+
+[00:04:41.525 - 00:04:42.965]
+as much information out of answer choices.
+
+[00:04:43.025 - 00:04:45.045]
+And that right, wrong judgment is going to get clouded.
+
+[00:04:45.195 - 00:04:49.445]
+When you're party tricking, you have to just by force get
+
+[00:04:50.035 - 00:04:51.845]
+more information out of an answer.
+
+[00:04:52.065 - 00:04:55.245]
+So it forces you honestly through deprivation of you,
+
+[00:04:55.345 - 00:04:58.445]
+you don't have any more easy eliminations to get
+
+[00:04:58.445 - 00:04:59.645]
+that information out of it.
+
+[00:04:59.645 - 00:05:02.045]
+So it changes the way that you read answer choices,
+
+[00:05:02.295 - 00:05:03.645]
+which is really, really cool.
+
+[00:05:03.905 - 00:05:08.045]
+Um, I liken it to how, you know, aria trained, uh,
+
+[00:05:08.265 - 00:05:11.165]
+to be a like masked man, um,
+
+[00:05:11.385 - 00:05:12.925]
+or whatever it was called, I forget what it's called,
+
+[00:05:13.025 - 00:05:14.285]
+you know, that she had to learn to fight
+
+[00:05:14.285 - 00:05:15.285]
+with a blindfold on.
+
+[00:05:15.545 - 00:05:17.845]
+Um, and that's kind of what Party tricking is.
+
+[00:05:17.915 - 00:05:19.725]
+It's fighting with a blindfold on.
+
+[00:05:19.745 - 00:05:21.645]
+And I know that no one has seen Game of Thrones anymore,
+
+[00:05:21.645 - 00:05:23.285]
+and so I'm really sad about that, but it's all fine.
+
+[00:05:23.625 - 00:05:26.845]
+Um, and so when you're in Party Tricking Jail,
+
+[00:05:26.845 - 00:05:28.365]
+the way you do it is you go into a section,
+
+[00:05:28.385 - 00:05:29.845]
+it could be either LR or rc,
+
+[00:05:30.065 - 00:05:31.645]
+and you party trick all the questions.
+
+[00:05:31.665 - 00:05:33.045]
+You choose answers. Okay, great.
+
+[00:05:33.175 - 00:05:35.485]
+After the section, you immediately put it into camo.
+
+[00:05:35.485 - 00:05:38.285]
+This is an exception to my normal wait 24 hours af
+
+[00:05:38.285 - 00:05:39.445]
+before camo wing rule.
+
+[00:05:39.705 - 00:05:41.525]
+Um, you immediately throw it into camo
+
+[00:05:41.545 - 00:05:43.645]
+and you redo, uh, the questions
+
+[00:05:43.645 - 00:05:46.485]
+that come back on camo party, tricking them again,
+
+[00:05:47.145 - 00:05:48.405]
+not looking at the stimulus.
+
+[00:05:48.785 - 00:05:50.325]
+Um, because if you go and look at the stimulus,
+
+[00:05:50.465 - 00:05:51.885]
+you're no longer party tricking jail.
+
+[00:05:52.065 - 00:05:53.685]
+And so you reattempt those questions
+
+[00:05:53.785 - 00:05:56.685]
+and game the camo a little bit here. People, um,
+
+[00:05:56.825 - 00:05:59.765]
+If you're getting like 10 questions back in camo,
+
+[00:06:00.515 - 00:06:02.125]
+it's not 'cause nine of them were right.
+
+[00:06:02.465 - 00:06:05.205]
+And so use this as an opportunity to try
+
+[00:06:05.205 - 00:06:07.445]
+and change your answer to maybe some second choices.
+
+[00:06:07.945 - 00:06:09.765]
+And of course, some of them are gonna be decoys
+
+[00:06:09.765 - 00:06:11.205]
+and so, you know, you don't wanna change on everything,
+
+[00:06:11.265 - 00:06:13.485]
+but try and get a minus zero on that camo.
+
+[00:06:13.785 - 00:06:16.845]
+Um, this is like the point of the camo is so
+
+[00:06:16.845 - 00:06:18.765]
+that you can go back and reorient yourself
+
+[00:06:18.765 - 00:06:21.445]
+and have a second guess at, uh, certain questions
+
+[00:06:21.445 - 00:06:22.965]
+that may not have been as straightforward.
+
+[00:06:23.305 - 00:06:25.445]
+And your goal is to get as close to minus zero
+
+[00:06:25.465 - 00:06:28.005]
+as you can on both passes, uh, through the section.
+
+[00:06:28.425 - 00:06:31.045]
+Now you don't exit party tricking jail, it used to say
+
+[00:06:31.255 - 00:06:32.605]
+until further instructions.
+
+[00:06:32.765 - 00:06:34.005]
+'cause I would literally be there
+
+[00:06:34.005 - 00:06:35.885]
+to tell the person when to exit party tricking jail.
+
+[00:06:36.245 - 00:06:37.285]
+I I changed it for you
+
+[00:06:37.445 - 00:06:39.205]
+'cause I am not going to be there unfortunately
+
+[00:06:39.225 - 00:06:41.365]
+to tell you when to exit party tricking jail as
+
+[00:06:41.415 - 00:06:43.485]
+until you reach minus five or better pre camo.
+
+[00:06:44.345 - 00:06:46.525]
+But I'm not married to that minus five
+
+[00:06:46.525 - 00:06:48.805]
+or better pre camo often for a lot of my students,
+
+[00:06:48.805 - 00:06:51.125]
+I'll say a minus three or minus two or something like that,
+
+[00:06:51.425 - 00:06:53.365]
+or better, um, pre camo.
+
+[00:06:53.625 - 00:06:56.685]
+And if you want to make it a minus seven, you know what?
+
+[00:06:56.705 - 00:06:58.685]
+Be my guess, like make this work for you.
+
+[00:06:58.945 - 00:07:01.565]
+Um, just set a goal and work toward it.
+
+[00:07:01.745 - 00:07:04.165]
+Um, because often you can get
+
+[00:07:04.165 - 00:07:06.205]
+to about 50 50 accuracy on party
+
+[00:07:06.205 - 00:07:07.485]
+tricking relatively quickly.
+
+[00:07:07.675 - 00:07:09.005]
+It's actually not that hard to get
+
+[00:07:09.005 - 00:07:13.045]
+to maybe a minus 12 ish on party tricking.
+
+[00:07:13.185 - 00:07:16.445]
+Um, that can come relatively quickly, that minus, um,
+
+[00:07:16.655 - 00:07:17.885]
+50% accuracy.
+
+[00:07:18.345 - 00:07:20.605]
+But as you work forward, you'll find
+
+[00:07:20.755 - 00:07:22.845]
+that the score does move as long
+
+[00:07:22.845 - 00:07:24.165]
+as you're keeping the right things in mind.
+
+[00:07:24.165 - 00:07:25.165]
+And so I really encourage you
+
+[00:07:25.165 - 00:07:27.325]
+to rely on the party tricking parts of this curriculum
+
+[00:07:27.345 - 00:07:29.725]
+and fun fact of a little behind the scenes.
+
+[00:07:30.025 - 00:07:33.405]
+So I've made hundreds of videos in the past few months
+
+[00:07:33.745 - 00:07:37.485]
+and I made myself one core promise, which is
+
+[00:07:38.165 - 00:07:40.845]
+I will not touch any of these party tricking videos
+
+[00:07:41.055 - 00:07:42.565]
+until I've done every video.
+
+[00:07:42.875 - 00:07:44.285]
+That is harder for me to do
+
+[00:07:44.285 - 00:07:48.405]
+because girl, I love party tricking.
+
+[00:07:49.085 - 00:07:50.805]
+I get chills honestly thinking about it.
+
+[00:07:50.905 - 00:07:53.285]
+The whole party tricking part of this platform has not
+
+[00:07:53.285 - 00:07:55.605]
+yet been made and I haven't even let myself roadmap it
+
+[00:07:55.605 - 00:07:59.845]
+because teaching you about party tricking is truly the,
+
+[00:08:01.145 - 00:08:02.765]
+it is the dessert at the end of this meal.
+
+[00:08:02.785 - 00:08:04.365]
+It is the reward that I'm going to get
+
+[00:08:04.545 - 00:08:07.205]
+of actually being able to share this methodology with you.
+
+[00:08:07.465 - 00:08:09.365]
+And I knew if I started making a bunch
+
+[00:08:09.365 - 00:08:10.565]
+of party tricking strategy videos,
+
+[00:08:10.845 - 00:08:12.805]
+I was never gonna go do that decaf demo.
+
+[00:08:13.485 - 00:08:15.925]
+Um, and so it hasn't been made yet,
+
+[00:08:15.945 - 00:08:19.165]
+but I know it is going to give you a lot of information,
+
+[00:08:19.195 - 00:08:21.605]
+more than you ever wanted to know on how to party trick.
+
+[00:08:21.605 - 00:08:23.005]
+And so really lean on the party
+
+[00:08:23.005 - 00:08:24.285]
+tricking sections of this platform.
+
+[00:08:24.425 - 00:08:26.325]
+And if you want more of them, tell me
+
+[00:08:26.325 - 00:08:29.045]
+because this can turn into a essentially, you know,
+
+[00:08:29.195 - 00:08:32.365]
+70% party tricking platform if the demand is there
+
+[00:08:32.365 - 00:08:34.525]
+because I love making party tricking videos so much.
+
+[00:08:34.745 - 00:08:35.965]
+And so I can't wait
+
+[00:08:35.965 - 00:08:37.885]
+to hopefully instill in you just a little bit
+
+[00:08:37.885 - 00:08:39.965]
+of the enthusiasm that I have for party tricking
+
+[00:08:39.965 - 00:08:43.445]
+because it really is like, it's such a fun little game.
+
+[00:08:43.675 - 00:08:45.925]
+It's like you actually get to be a detective.
+
+[00:08:46.305 - 00:08:48.725]
+Um, and so I hope that it doesn't make you frustrated.
+
+[00:08:48.805 - 00:08:50.445]
+I hope that you can love it just a little bit
+
+[00:08:50.505 - 00:08:53.445]
+and see the way it is uplifting your skills by, you know,
+
+[00:08:53.505 - 00:08:55.805]
+taking away any easy eliminations.
+
+[00:08:55.915 - 00:08:58.085]
+Alright? I love you and I hope this helps.
+
+[00:08:58.115 - 00:08:58.765]
+I'll see you soon.

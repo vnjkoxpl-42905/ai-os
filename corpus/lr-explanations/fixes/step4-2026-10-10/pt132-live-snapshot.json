@@ -1,0 +1,122 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\n  \"rows\": [\n    {\n      \"choices\": [\n        {\n          \"choice_text\": \"Medication M can be produced in liquid form.\",\n          \"id\": \"ea23a667-b0cf-4427-9746-6decd26f2110\",\n          \"is_correct\": false,\n          \"letter\": \"A\",\n          \"tag\": \"Too Weak\"\n        },\n        {\n          \"choice_text\": \"Medication M has an unpleasant taste.\",\n          \"id\": \"40f00a2b-ef4a-4567-a028-4ef2e201cac9\",\n          \"is_correct\": true,\n          \"letter\": \"B\",\n          \"tag\": \"Correct\"\n        },\n        {\n          \"choice_text\": \"No medication is produced in both capsule and soft-gel form.\",\n          \"id\": \"2d091b90-e57e-4520-8c79-2d62be1d4e13\",\n          \"is_correct\": false,\n          \"letter\": \"C\",\n          \"tag\": \"Irrelevant Relationship\"\n        },\n        {\n          \"choice_text\": \"Most medications with a low melting point are produced in soft-gel form.\",\n          \"id\": \"d33fa458-cbfb-4ba5-b6f8-e6096326874b\",\n          \"is_correct\": false,\n          \"letter\": \"D\",\n          \"tag\": \"Out of Scope\"\n        },\n        {\n          \"choice_text\": \"Medications in capsule form taste less unpleasant than those in tablet or soft-gel form.\",\n          \"id\": \"32b0b3e7-77ba-4f4f-9c1b-ae78b4617df7\",\n          \"is_correct\": false,\n          \"letter\": \"E\",\n          \"tag\": \"Reversal / Too Weak\"\n        }\n      ],\n      \"correct_choice\": \"B\",\n      \"explanation_id\": \"ac574eb4-f700-4220-91ae-c2fd4783e199\",\n      \"notes\": [\n        {\n          \"body\": \"If M can be made as a liquid, that adds a fourth option outside tablet, capsule, and soft-gel. That makes capsule less certain, not more. It also does nothing to show that M tastes unpleasant, so the three-option rule still isn't triggered.\",\n          \"id\": \"63ff81ea-97b3-4c18-979e-d96f1723e02f\",\n          \"letter\": \"A\",\n          \"md5\": \"3b2072c08abacf895510d9c672c017ab\"\n        },\n        {\n          \"body\": \"This is the missing trigger. With M tasting unpleasant, the first premise applies: M will generally come as a tablet, capsule, or soft-gel. The heat rules out tablet, the company's missing technology rules out soft-gel, and capsule is what remains.\\nPT → (T or C or SG)\\nPT, ~T, ~SG, so C\\n\\nThe move: when an argument eliminates options from a rule, check that the rule actually applies to the thing in the conclusion.\",\n          \"id\": \"47fe78f1-cd86-492d-b1cf-bb1b3decbfd2\",\n          \"letter\": \"B\",\n          \"md5\": \"a021aa9db386c33ebd78ff19817711b9\"\n        },\n        {\n          \"body\": \"This says a capsule medication isn't also a soft-gel (C → ~SG). We already know M won't be a soft-gel, so this adds nothing. And it still doesn't tell us M is limited to the three forms, because nothing says M tastes unpleasant.\",\n          \"id\": \"d1cd2901-904c-49c5-853a-013b60d5475a\",\n          \"letter\": \"C\",\n          \"md5\": \"20e37f1596033e16283b1d615dfadf5e\"\n        },\n        {\n          \"body\": \"If most low-melting-point medications are soft-gels, that points M toward a form this company can't make. It gives no reason to think M ends up as a capsule, and it never puts M under the unpleasant-taste rule.\",\n          \"id\": \"242195a2-95b6-484f-b56e-d57bc5cb503b\",\n          \"letter\": \"D\",\n          \"md5\": \"9b29b7a714bdd7fc17115a5ed80bc17f\"\n        },\n        {\n          \"body\": \"This gives a reason to choose capsules for bad-tasting medicine, but it only matters if M tastes bad. E never says it does. Without that, M isn't covered by the rule and could be produced in a form outside the three listed.\",\n          \"id\": \"ef879f8c-59b5-47d1-a3e0-9cfd7646a061\",\n          \"letter\": \"E\",\n          \"md5\": \"2f739507c3328718a9f0d318ddd4082f\"\n        }\n      ],\n      \"prompt\": \"The conclusion is most strongly supported by the reasoning in the argument if which one of the following is assumed?\",\n      \"qid\": \"PT132-S2-Q3\",\n      \"question_id\": \"a120b576-079e-416f-ab8f-689fcc0afc42\",\n      \"question_type\": \"Strengthen\",\n      \"steps\": [\n        {\n          \"body\": \"Medications with an unpleasant taste are generally produced only in tablet, capsule, or soft-gel form.\\nPT → (T or C or SG)\\n\\nThe active ingredient in medication M is a waxy substance that cannot tolerate the heat used to manufacture tablets because it has a low melting point.\\n~T\\n\\nThe company developing M does not have soft-gel manufacturing technology and manufactures all its medications itself.\\n~SG\",\n          \"id\": \"41eff948-d99b-4ede-b6e1-9d513e0de2f8\",\n          \"label\": \"Evidence\",\n          \"md5\": \"41fbdb0fb68260cf91a839602ba59e59\",\n          \"position\": 0\n        },\n        {\n          \"body\": \"M will most likely be produced in capsule form.\\nC\",\n          \"id\": \"bfdc099c-b881-48a9-a793-c558726d8a4a\",\n          \"label\": \"Conclusion\",\n          \"md5\": \"b80c1b4cfb978cb10c8fcbcdabfa84f8\",\n          \"position\": 1\n        },\n        {\n          \"body\": \"The conclusion follows a process of elimination. Medications with an unpleasant taste are \\\"generally produced only in tablet, capsule, or soft-gel form.\\\" M can't be a tablet, because its waxy ingredient can't take the heat. M can't be a soft-gel, because the company \\\"does not have soft-gel manufacturing technology\\\" and makes everything itself. Capsule is what's left.\\n\\nBut look at who the first rule covers: only medications with an unpleasant taste. Nothing tells us M tastes bad. If M tastes fine, the rule never applies, and M could come in a liquid, a powder, or anything else. The elimination only works if M is in the group the rule covers.\\nPT → (T or C or SG)\\n~T\\n~SG\\nmissing: PT\",\n          \"id\": \"dfe89858-b232-4a53-b9da-12973ec59c10\",\n          \"label\": \"Evaluate\",\n          \"md5\": \"6594fb8982722c5f1925afab0e0c4adf\",\n          \"position\": 2\n        },\n        {\n          \"body\": \"The stem says \\\"if which one of the following is assumed\\\", so we want the piece that makes the conclusion follow. The missing piece is the rule's trigger: M has an unpleasant taste. Once that's in place, the three-option rule applies, two options are gone, and capsule is the one left.\",\n          \"id\": \"a65bed50-5aa2-42be-9d04-2abc72aa56fd\",\n          \"label\": \"Goal\",\n          \"md5\": \"79bf7d390e41204b0242b1abc060d3f9\",\n          \"position\": 3\n        }\n      ],\n      \"stimulus\": \"Medications with an unpleasant taste are generally produced only in tablet, capsule, or soft-gel form. The active ingredient in medication M is a waxy substance that cannot tolerate the heat used to manufacture tablets because it has a low melting point. So, since the company developing M does not have soft-gel manufacturing technology and manufactures all its medications itself, M will most likely be produced in capsule form.\",\n      \"style\": \"single\"\n    }\n  ]\n}"
+    }
+  ],
+  "structuredContent": {
+    "rows": [
+      {
+        "choices": [
+          {
+            "choice_text": "Medication M can be produced in liquid form.",
+            "id": "ea23a667-b0cf-4427-9746-6decd26f2110",
+            "is_correct": false,
+            "letter": "A",
+            "tag": "Too Weak"
+          },
+          {
+            "choice_text": "Medication M has an unpleasant taste.",
+            "id": "40f00a2b-ef4a-4567-a028-4ef2e201cac9",
+            "is_correct": true,
+            "letter": "B",
+            "tag": "Correct"
+          },
+          {
+            "choice_text": "No medication is produced in both capsule and soft-gel form.",
+            "id": "2d091b90-e57e-4520-8c79-2d62be1d4e13",
+            "is_correct": false,
+            "letter": "C",
+            "tag": "Irrelevant Relationship"
+          },
+          {
+            "choice_text": "Most medications with a low melting point are produced in soft-gel form.",
+            "id": "d33fa458-cbfb-4ba5-b6f8-e6096326874b",
+            "is_correct": false,
+            "letter": "D",
+            "tag": "Out of Scope"
+          },
+          {
+            "choice_text": "Medications in capsule form taste less unpleasant than those in tablet or soft-gel form.",
+            "id": "32b0b3e7-77ba-4f4f-9c1b-ae78b4617df7",
+            "is_correct": false,
+            "letter": "E",
+            "tag": "Reversal / Too Weak"
+          }
+        ],
+        "correct_choice": "B",
+        "explanation_id": "ac574eb4-f700-4220-91ae-c2fd4783e199",
+        "notes": [
+          {
+            "body": "If M can be made as a liquid, that adds a fourth option outside tablet, capsule, and soft-gel. That makes capsule less certain, not more. It also does nothing to show that M tastes unpleasant, so the three-option rule still isn't triggered.",
+            "id": "63ff81ea-97b3-4c18-979e-d96f1723e02f",
+            "letter": "A",
+            "md5": "3b2072c08abacf895510d9c672c017ab"
+          },
+          {
+            "body": "This is the missing trigger. With M tasting unpleasant, the first premise applies: M will generally come as a tablet, capsule, or soft-gel. The heat rules out tablet, the company's missing technology rules out soft-gel, and capsule is what remains.\nPT → (T or C or SG)\nPT, ~T, ~SG, so C\n\nThe move: when an argument eliminates options from a rule, check that the rule actually applies to the thing in the conclusion.",
+            "id": "47fe78f1-cd86-492d-b1cf-bb1b3decbfd2",
+            "letter": "B",
+            "md5": "a021aa9db386c33ebd78ff19817711b9"
+          },
+          {
+            "body": "This says a capsule medication isn't also a soft-gel (C → ~SG). We already know M won't be a soft-gel, so this adds nothing. And it still doesn't tell us M is limited to the three forms, because nothing says M tastes unpleasant.",
+            "id": "d1cd2901-904c-49c5-853a-013b60d5475a",
+            "letter": "C",
+            "md5": "20e37f1596033e16283b1d615dfadf5e"
+          },
+          {
+            "body": "If most low-melting-point medications are soft-gels, that points M toward a form this company can't make. It gives no reason to think M ends up as a capsule, and it never puts M under the unpleasant-taste rule.",
+            "id": "242195a2-95b6-484f-b56e-d57bc5cb503b",
+            "letter": "D",
+            "md5": "9b29b7a714bdd7fc17115a5ed80bc17f"
+          },
+          {
+            "body": "This gives a reason to choose capsules for bad-tasting medicine, but it only matters if M tastes bad. E never says it does. Without that, M isn't covered by the rule and could be produced in a form outside the three listed.",
+            "id": "ef879f8c-59b5-47d1-a3e0-9cfd7646a061",
+            "letter": "E",
+            "md5": "2f739507c3328718a9f0d318ddd4082f"
+          }
+        ],
+        "prompt": "The conclusion is most strongly supported by the reasoning in the argument if which one of the following is assumed?",
+        "qid": "PT132-S2-Q3",
+        "question_id": "a120b576-079e-416f-ab8f-689fcc0afc42",
+        "question_type": "Strengthen",
+        "steps": [
+          {
+            "body": "Medications with an unpleasant taste are generally produced only in tablet, capsule, or soft-gel form.\nPT → (T or C or SG)\n\nThe active ingredient in medication M is a waxy substance that cannot tolerate the heat used to manufacture tablets because it has a low melting point.\n~T\n\nThe company developing M does not have soft-gel manufacturing technology and manufactures all its medications itself.\n~SG",
+            "id": "41eff948-d99b-4ede-b6e1-9d513e0de2f8",
+            "label": "Evidence",
+            "md5": "41fbdb0fb68260cf91a839602ba59e59",
+            "position": 0
+          },
+          {
+            "body": "M will most likely be produced in capsule form.\nC",
+            "id": "bfdc099c-b881-48a9-a793-c558726d8a4a",
+            "label": "Conclusion",
+            "md5": "b80c1b4cfb978cb10c8fcbcdabfa84f8",
+            "position": 1
+          },
+          {
+            "body": "The conclusion follows a process of elimination. Medications with an unpleasant taste are \"generally produced only in tablet, capsule, or soft-gel form.\" M can't be a tablet, because its waxy ingredient can't take the heat. M can't be a soft-gel, because the company \"does not have soft-gel manufacturing technology\" and makes everything itself. Capsule is what's left.\n\nBut look at who the first rule covers: only medications with an unpleasant taste. Nothing tells us M tastes bad. If M tastes fine, the rule never applies, and M could come in a liquid, a powder, or anything else. The elimination only works if M is in the group the rule covers.\nPT → (T or C or SG)\n~T\n~SG\nmissing: PT",
+            "id": "dfe89858-b232-4a53-b9da-12973ec59c10",
+            "label": "Evaluate",
+            "md5": "6594fb8982722c5f1925afab0e0c4adf",
+            "position": 2
+          },
+          {
+            "body": "The stem says \"if which one of the following is assumed\", so we want the piece that makes the conclusion follow. The missing piece is the rule's trigger: M has an unpleasant taste. Once that's in place, the three-option rule applies, two options are gone, and capsule is the one left.",
+            "id": "a65bed50-5aa2-42be-9d04-2abc72aa56fd",
+            "label": "Goal",
+            "md5": "79bf7d390e41204b0242b1abc060d3f9",
+            "position": 3
+          }
+        ],
+        "stimulus": "Medications with an unpleasant taste are generally produced only in tablet, capsule, or soft-gel form. The active ingredient in medication M is a waxy substance that cannot tolerate the heat used to manufacture tablets because it has a low melting point. So, since the company developing M does not have soft-gel manufacturing technology and manufactures all its medications itself, M will most likely be produced in capsule form.",
+        "style": "single"
+      }
+    ]
+  },
+  "isError": false
+}

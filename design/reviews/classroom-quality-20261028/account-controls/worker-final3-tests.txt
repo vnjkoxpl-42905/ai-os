@@ -1,0 +1,14 @@
+
+ RUN  v3.2.7 C:/Users/Joshu/dev/ai-os-projects/lsatu-my-work-20261026
+
+ ✓ src/components/classroom/home/teacher/TeachingDesk.test.tsx (25 tests) 2346ms
+ ✓ src/components/classroom/home/teacher/TeacherHomeView.test.tsx (25 tests) 2975ms
+   ✓ TeacherHomeView > keeps direct access editing open after a blank selection and returns focus to its own row  690ms
+   ✓ TeacherHomeView > hands More selection to the booking sheet and returns to an interactive page  454ms
+   ✓ TeacherHomeView > keeps Assign work in the header without a student assignment promotion  316ms
+
+ Test Files  2 passed (2)
+      Tests  50 passed (50)
+   Start at  17:51:30
+   Duration  5.93s (transform 536ms, setup 414ms, collect 1.98s, tests 5.32s, environment 2.19s, prepare 432ms)
+

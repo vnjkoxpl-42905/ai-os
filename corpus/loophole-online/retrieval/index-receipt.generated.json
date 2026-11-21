@@ -1,0 +1,60 @@
+{
+  "schema_version": 2,
+  "built_at": "2026-11-20T00:39:21.051873+00:00",
+  "counts": {
+    "bootcamp": 83,
+    "workout": 84,
+    "routine": 58,
+    "lecture": 111,
+    "notes": 68,
+    "reference": 127,
+    "prep-map": 67,
+    "question": 5015
+  },
+  "documents": 5613,
+  "guards": {
+    "C:\\Users\\Joshu\\dev\\ai-os\\corpus\\loophole-online\\source-catalog.generated.json": {
+      "size": 266437,
+      "mtime_ns": 1794435140748663700,
+      "sha256": "55b96d9343a783fc4325399716850dc396342bc3aaa5c57ba7c9e6a365eaaffd"
+    },
+    "C:\\Users\\Joshu\\dev\\ai-os\\corpus\\loophole-online\\workouts\\catalog.generated.json": {
+      "size": 61842103,
+      "mtime_ns": 1794435224346510000,
+      "sha256": "33e79e26eb79c040fa80bfe830a5ee9aaf0dc8923b4912c3a472d0f03ff7cfce"
+    },
+    "C:\\Users\\Joshu\\dev\\ai-os\\corpus\\loophole-online\\routines\\catalog.generated.json": {
+      "size": 30155916,
+      "mtime_ns": 1794435221591777300,
+      "sha256": "f9e78e957494ba3c17d62cd9b4164df69aa74f79268238781620d0281c53e380"
+    },
+    "C:\\Users\\Joshu\\dev\\ai-os\\corpus\\loophole-online\\question-database\\library\\manifest.json": {
+      "size": 4868126,
+      "mtime_ns": 1794435142085787500,
+      "sha256": "8c0ad3c9beba7d9a1f769d58dd82fdf601cb18a580858e2c7b7a0cfeccff5c7c"
+    },
+    "C:\\Users\\Joshu\\dev\\ai-os\\raw\\sources\\loophole-routines-2026-10-15\\prep-points.json": {
+      "size": 972405,
+      "mtime_ns": 1794435400071341400,
+      "sha256": "5f64a6036e954315af7b37e8fe591505dcc1b95c6149ab0cc39eaddc78e03a3b"
+    },
+    "C:\\Users\\Joshu\\dev\\ai-os\\corpus\\loophole-online\\bootcamps\\catalog.generated.json": {
+      "size": 46832,
+      "mtime_ns": 1794435140762866500,
+      "sha256": "ed7c9844412c8508049ec3b8b9b3d2d449659c84851e0e0d80a82a07decc2b08"
+    },
+    "C:\\Users\\Joshu\\dev\\ai-os\\corpus\\loophole-online\\bootcamps\\verification.generated.json": {
+      "size": 53309,
+      "mtime_ns": 1794435140769665800,
+      "sha256": "7e0526f168cc33a147ded4166ebbee3746c0ccba1d1e8f6f4ed025d1404fb816"
+    }
+  },
+  "index_seconds": 82.57,
+  "prep_map_scope": "67 independently searchable prep-map records: 62 workout-linked captures (29 captured, 33 source errors) and 5 exact text projections of routine-linked captures. Routine-linked instructions also remain embedded in full routine sourcebooks.",
+  "limitations": [
+    "Local lexical retrieval, not semantic inference.",
+    "Read returned source excerpts and qualified status before answering.",
+    "Automatic captions and ASR are unreviewed; source errors remain explicit.",
+    "Duplicate archive copies, HTML duplicates, private dictionary backups, and media bytes are not indexed."
+  ]
+}

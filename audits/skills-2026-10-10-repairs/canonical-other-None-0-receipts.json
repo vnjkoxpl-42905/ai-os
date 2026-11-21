@@ -1,0 +1,1770 @@
+[
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\watch\\SKILL.md",
+    "name": "watch",
+    "before": "4ec9d13c13fe3d8d67df61f67402a77111d3aaaf1615e283cbc69ac6b8418a78",
+    "after": "d6d580fc297ae65dfcaa738c177645de90ba42460609003a5122bcd2eac0cd7f",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\claude\\watch\\SKILL.md",
+    "repair": "For transcript-only YouTube requests use the existing free get_youtube_transcript.py collector first. For visual frame inspection check binaries without requiring an API key, then run watch.py with --no-whisper. Credentials stay in the central .env; do not create ~/.config/watch/.env. Optional external audio transcription requires explicit bounded provider/cost authorization and an approved loader. Preserve output until deletion is expressly authorized."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\wayfinder\\SKILL.md",
+    "name": "wayfinder",
+    "before": "9be7b478c389605a24517d27752f278933588da97a1b5921b165f455edf4c5b7",
+    "after": "dc5c4120f185a85b992bb6901d39efa3e29210d264bfaa01d7cb4a382633301a",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\claude\\wayfinder\\SKILL.md",
+    "repair": "Resolve actual host tools rather than literal Skill calls. Pushes, external tracker writes and deletion are separate explicitly authorized actions, not automatic defaults of decision mapping."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\web-artifacts-builder\\SKILL.md",
+    "name": "web-artifacts-builder",
+    "before": "81c5002c6643b0de7b8710b00e7a9038daa6fb9b68d59870ee6adb12da8d10f8",
+    "after": "2d8929f50d092e85914dd45beab8c4ee69f573fe640cb95ca3904315cbc3c644",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\claude\\web-artifacts-builder\\SKILL.md",
+    "repair": "Select a sibling application project before initializing dependencies. Build and run meaningful interaction checks before presenting completion; the old no-test/default-cwd examples are not the current contract."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\webapp-testing\\SKILL.md",
+    "name": "webapp-testing",
+    "before": "51b7349e77ec63b7744a6f63647e7566a0b4d2e301121cc10e8c2113af6556a2",
+    "after": "c84e02082ba53d1ead372ec86c83790762876a131221055af189a047128b0aa6",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\claude\\webapp-testing\\SKILL.md",
+    "repair": "Wait for the actual app state with element/route/assertion readiness. networkidle is optional diagnostic evidence and can hang on polling apps; it is not a universal UI-readiness gate. Resolve helper paths from this installed skill."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\writing-beats\\SKILL.md",
+    "name": "writing-beats",
+    "before": "a96abafa2372eede8267d770138b322d6125da8adaa7ccf0a5e08e4ee13ee71e",
+    "after": "5f0d10b4f046358b55487cfbb01d18d452e6d1d67d998279df0c2539107507b6",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\claude\\writing-beats\\SKILL.md",
+    "repair": "Explicit beat-mode authoring variant of the shared source-to-article shaping process. Do not compete with writing-shape for generic article requests; preserve distinct beat sequencing and use the authoritative source pile."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\writing-great-skills\\SKILL.md",
+    "name": "writing-great-skills",
+    "before": "7c6ba7ec25bb2c0e173c52cdc2da878aef0b083ec19a9c1799934e480c8833cc",
+    "after": "36fc7c7b71f78fc90fa04e3f520cb053bbdee69e728006c044d916858a894437",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\claude\\writing-great-skills\\SKILL.md",
+    "repair": "Explicit skill-writing reference, not an automatic competing creator. Use the primary skill creator for implementation and writing-for-agents for shared vocabulary; retain specialized mechanics."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\writing-plans\\SKILL.md",
+    "name": "writing-plans",
+    "before": "272e1af349f5062c28dc282b3e21b220d58d683a7314a10c455b7432ec91d845",
+    "after": "5d4e06990bf59f9f1a9292287518d92b5a571632579994d6a4be1faea5f3df60",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\claude\\writing-plans\\SKILL.md",
+    "repair": "Reuse approved scope, choose proportional task boundaries and host-supported tools. Do not require repeated Superpowers invocations, speculative full implementations or automatic commits for every small edit."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\writing-skills\\SKILL.md",
+    "name": "writing-skills",
+    "before": "6b8d08fe863318be8480ae8428e169640309fa9208df84bb0510012764454146",
+    "after": "3ec6ef7bbbd17d8721ac148fe0ca3f7a2d2215796eb1dae8c00fb8c194832960",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\claude\\writing-skills\\SKILL.md",
+    "repair": "Explicit pressure-testing/reference workflow, not automatic primary creator. Preserve unrelated implementation; never delete existing user code solely because a test-first ceremony was absent."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\xlsx\\SKILL.md",
+    "name": "xlsx",
+    "before": "6712b39718fe815054abca9c3ee72f989613e6f771c8a5c58f30a65a6c905622",
+    "after": "02043ce0454b1d664a0c5a02b011d5a974f1f38c93c95280b521ed0a9ffe0525",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\claude\\xlsx\\SKILL.md",
+    "repair": "Preserve the original workbook and macros/external links where relevant; produce a separate output copy and verify formulas/cached values and the requested changes."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\youtube-full\\SKILL.md",
+    "name": "youtube-full",
+    "before": "1889041d61be4f20033701ce70ff4add59207609d914bc97f2efcf4e6b4ffa62",
+    "after": "91d67ddd447ef7f8f429da796c69f942de3c3fccc1833849e91799ca7bbf86ac",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\claude\\youtube-full\\SKILL.md",
+    "repair": "Optional TranscriptAPI provider reference only. Ordinary transcript requests first use the existing free get_youtube_transcript.py collector. Do not create accounts or spend provider credits without explicit bounded authorization. Preserve unique channel/search/playlist documentation as reference."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\implement\\SKILL.md",
+    "name": "implement",
+    "before": "483bdc4ccf4ac31d86ac7beeaa0d0db80313e71e120bb8c59b3196ae5decd53d",
+    "after": "4e5e4cbf5b38a4247b17540a2e90f7cf6d43cdb62ac41257042f2fe7dbca7188",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\codex\\implement\\SKILL.md",
+    "repair": "Resolve available host tools before execution. Stage and commit only owned paths when authorized; retain focused checks and fresh review."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\implement-spec\\SKILL.md",
+    "name": "implement-spec",
+    "before": "7a22dd2e60b8fcece478ced9d2533582adf3520d695acd3ab715341535c9e56d",
+    "after": "a922e98d462bf260be5ef3ee325ecc6d1d1ca4271f1d90a1d54321f302652d6c",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\codex\\implement-spec\\SKILL.md",
+    "repair": "Prefer the native managed worktree facility when available; reuse a suitable active worktree. Do not create an unsolicited extra checkout. Preserve task graph, integration checks and user work."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\inbound-tutoring-replies\\SKILL.md",
+    "name": "inbound-tutoring-replies",
+    "before": "085711e5c82c66e9c1845a11e0c99bee045c036819f8e6e4216814282ceead9d",
+    "after": "f5550fb7e116a96b409ea83fc38d714b263dd23e5ac2f9eddd60caeac067c61c",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\codex\\inbound-tutoring-replies\\SKILL.md",
+    "repair": "Verify recipient, current thread and the current offer/template authority before drafting. The saved reference is not authority for fresh operational status. Sending remains separately authorized."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\internal-comms\\SKILL.md",
+    "name": "internal-comms",
+    "before": "067b7587a344a928fc6534ef66b1bcd591fc7c26d207ea7ca3334aeb678d6475",
+    "after": "9c9ac51097b3f6a84e51a71ed0bc661d320d510950c5315ec8c293ec7582e7d1",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\codex\\internal-comms\\SKILL.md",
+    "repair": "Load the required format reference and Joshua teaching voice where applicable. Vendor voice examples are not a replacement for Joshua's selected voice."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\karpathy-teach\\SKILL.md",
+    "name": "karpathy-teach",
+    "before": "07f8ac4e4b606101215665249137c956b0002908fcbeb7a2174699040d0ebf4d",
+    "after": "b92e66a832c72e9ab180900a0f7d2114784f0229e76be50e482700f840f3b3e9",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\codex\\karpathy-teach\\SKILL.md",
+    "repair": "Verify hook activation separately from configuration or old receipts. Current-file execution receipts are required for edited code; never claim new native trust based solely on a historical acceptance report."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.agents\\skills\\karpathy-teach\\SKILL.md",
+    "name": "karpathy-teach",
+    "before": "07f8ac4e4b606101215665249137c956b0002908fcbeb7a2174699040d0ebf4d",
+    "after": "b92e66a832c72e9ab180900a0f7d2114784f0229e76be50e482700f840f3b3e9",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.agents\\skills\\karpathy-teach\\SKILL.md",
+    "repair": "Verify hook activation separately from configuration or old receipts. Current-file execution receipts are required for edited code; never claim new native trust based solely on a historical acceptance report."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\kling-cli\\SKILL.md",
+    "name": "kling-cli",
+    "before": "365a5d9bc73ad84486405fa5d3aa3c1fb89612e2f0d1b13ccca4b0d859f529f4",
+    "after": "f18e6b7a4e428a255bb94452e04c8a4927b3e0620967745d352539766f8239ac",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\codex\\kling-cli\\SKILL.md",
+    "repair": "Use only for an explicit Kling/media-generation task. Do not submit unrequested feedback. Verify current parameter and credit/price contracts before any billable call, with the user's bounded authorization."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.agents\\skills\\kling-cli\\SKILL.md",
+    "name": "kling-cli",
+    "before": "365a5d9bc73ad84486405fa5d3aa3c1fb89612e2f0d1b13ccca4b0d859f529f4",
+    "after": "f18e6b7a4e428a255bb94452e04c8a4927b3e0620967745d352539766f8239ac",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.agents\\skills\\kling-cli\\SKILL.md",
+    "repair": "Use only for an explicit Kling/media-generation task. Do not submit unrequested feedback. Verify current parameter and credit/price contracts before any billable call, with the user's bounded authorization."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\level-up\\SKILL.md",
+    "name": "level-up",
+    "before": "0ebf38fcf474ed4ed4e86d2bca5559e5383d5ec41d740fa5b5fe1ee0af541269",
+    "after": "a2c631207cba328f95810730e6f41869dcb14542b0faed16c55bc6432e835c32",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\codex\\level-up\\SKILL.md",
+    "repair": "New shared skills require their matching catalog and project activation copies for Claude and Codex, with deliberate differences documented. Application code/dependencies live in sibling ai-os-projects. Eliminating an unnecessary workflow can be a completed result without creating a new artifact."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\loop-me\\SKILL.md",
+    "name": "loop-me",
+    "before": "e44d1cc3e760fb86ac42964c2a5f1fcac511715db50fb375f3f7be814de1eaa7",
+    "after": "e56e0ab3089767cbf832d16d12abb978ac33cb3003fba778d145bec75c9b0875",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\codex\\loop-me\\SKILL.md",
+    "repair": "Workflow deletion requires explicit deletion authorization. Reuse existing canonical project notes; do not assume ownership of root NOTES.md. Scope edit/create actions to the selected workflow."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\lovable-prompt\\SKILL.md",
+    "name": "lovable-prompt",
+    "before": "b54357c9070e1430c03428cd244c49245a8734ef7824a0172383a238062e73a7",
+    "after": "2d9f82081e5c2515bc842c9ede8343099e1062ab9ae1b9b746c99909f35fc322",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\codex\\lovable-prompt\\SKILL.md",
+    "repair": "Read the owning application manual for current backend and deployment. Discover available approved transport instead of assuming Supabase MCP. Lovable-managed Edge Functions deploy through the authorized Lovable route; this does not prohibit approved direct SQL. Lovable credit spending requires immediate confirmation."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\lsat-lab-mega-set\\SKILL.md",
+    "name": "lsat-lab-mega-set",
+    "before": "5ecfa40a84b0d23af1f18f547bb0ee16897381889c7da86c7ef6626ac89c7d8a",
+    "after": "76f3ea8c501f7cf60e68500d9c90e445f2c99fe8dfbf505f649e8e52d6fa6460",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\codex\\lsat-lab-mega-set\\SKILL.md",
+    "repair": "Use the active host-supported browser and current Windows/project log homes. Wrongly created sets are preserved and flagged until deletion is explicitly authorized; do not delete as automatic recovery. Verify count and set identity before declaring success."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\lsat-lab-sync\\SKILL.md",
+    "name": "lsat-lab-sync",
+    "before": "1f2ce26b50e7bf0fdee6aee32b0019da5fffb3bb53b9c4187a3e0d9347614e39",
+    "after": "cd566402844bdb14fc28e741ac3db20014709e113a97606f7cb72a8b34e0a302",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\codex\\lsat-lab-sync\\SKILL.md",
+    "repair": "Resolve current host scripts and output homes before action. Surface conflicting answer keys before writes, use a representative sample and guarded full reconciliation. Mac-specific legacy shortcuts are not instructions on this Windows host."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.agents\\skills\\lsat-lab-sync\\SKILL.md",
+    "name": "lsat-lab-sync",
+    "before": "1f2ce26b50e7bf0fdee6aee32b0019da5fffb3bb53b9c4187a3e0d9347614e39",
+    "after": "cd566402844bdb14fc28e741ac3db20014709e113a97606f7cb72a8b34e0a302",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.agents\\skills\\lsat-lab-sync\\SKILL.md",
+    "repair": "Resolve current host scripts and output homes before action. Surface conflicting answer keys before writes, use a representative sample and guarded full reconciliation. Mac-specific legacy shortcuts are not instructions on this Windows host."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\lsat-lab-transcribe\\SKILL.md",
+    "name": "lsat-lab-transcribe",
+    "before": "73f444bdb3bbaa5e18fc216ea6dd6d197f227f1ff3b4e1ea69dc6cdcd619a9e2",
+    "after": "9efc0ad7ed0896bc46e96c8f9ecbeb8a19e03449f7349a3d199ca49a6726b193",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\codex\\lsat-lab-transcribe\\SKILL.md",
+    "repair": "Read the current item identity first. Capture and persist all required styles for that item before advancing. On resume, compare the saved completed-item identity and NEXT pointer; do not click Next merely because the browser is open. Use current registered corpus and handoffs homes and supported browser, not obsolete Mac shortcuts or legacy docs paths."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\lsat-u-architecture\\SKILL.md",
+    "name": "lsat-u-architecture",
+    "before": "d0c1f55ff2b350e536566b8e5ac1bf1717876e53f197bc5cfcd379c051845a22",
+    "after": "ebe32b39f7cec323a9be6108dc712ab8d274590df7d965f633dfdca9a0a1f566",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\codex\\lsat-u-architecture\\SKILL.md",
+    "repair": "Treat backend identifiers in the reference as historical. Resolve current application root and backend from its nearest hand-owned manual/live configuration before use. Do not copy a historical backend ID or Mac path into new work."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\lsat-u-platform-actions\\SKILL.md",
+    "name": "lsat-u-platform-actions",
+    "before": "a6d329fbe3a295f2d766a41da5888041ffff88085cb6c357bcc4654fe5e84b69",
+    "after": "23a2e376b89651287936510c77741b6a58095057a7c0fa7855770443a122d6ed",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\codex\\lsat-u-platform-actions\\SKILL.md",
+    "repair": "Resolve the actual host browser/CLI before use, preserve marker-based idempotency, exact recipient/action verification and live readback. Do not replace a working transport simply because a reference names another runtime."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.agents\\skills\\lsat-u-platform-actions\\SKILL.md",
+    "name": "lsat-u-platform-actions",
+    "before": "a6d329fbe3a295f2d766a41da5888041ffff88085cb6c357bcc4654fe5e84b69",
+    "after": "23a2e376b89651287936510c77741b6a58095057a7c0fa7855770443a122d6ed",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.agents\\skills\\lsat-u-platform-actions\\SKILL.md",
+    "repair": "Resolve the actual host browser/CLI before use, preserve marker-based idempotency, exact recipient/action verification and live readback. Do not replace a working transport simply because a reference names another runtime."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\lsat-u-topic-builder\\SKILL.md",
+    "name": "lsat-u-topic-builder",
+    "before": "c10625661c68de4d84de806e7b479e036ecc273a8922c7a193de18b7bad4c463",
+    "after": "c5f53ee9de97a9c0e5404e31ad9f594c49c4cdb9db404f1a1f7eda8d8fa01c1a",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\codex\\lsat-u-topic-builder\\SKILL.md",
+    "repair": "Historical teaching reference only. New bootcamp work routes to bootcamp-builder. Never move immutable sources or deduplicate by filename/size/first bytes: copy and verify full hashes with provenance. Resolve current corpus homes rather than Mac Spotlight."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\minimalist-ui\\SKILL.md",
+    "name": "minimalist-ui",
+    "before": "36bc7328f085405f43b476938e62460fa573bf7e984e949e072bcf014831a44c",
+    "after": "cd07c186a0bbba61a904820b3590c0f2426f24d723f963d78714333e461e9391",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\codex\\minimalist-ui\\SKILL.md",
+    "repair": "Explicit editorial-minimalism preset only. Preserve the project palette and accessibility. Use flat color by default; decorative radial gradients below are optional examples only when expressly requested. Reveals respect reduced motion and never hide required content."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\notebooklm\\SKILL.md",
+    "name": "notebooklm",
+    "before": "70d471c87b2eb763c8db9ef0def7f6a7607db11e59f9b438bde4fe01cb71b457",
+    "after": "8dfc7b64568ba805474990195440026d70372caed90eedbc65cd3823a459c3c0",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\codex\\notebooklm\\SKILL.md",
+    "repair": "Use explicit full notebook/source/artifact IDs. Inspect current --help and real JSON response: generation may return task_id, while polling/download requires the corresponding artifact ID. Resolve the actual artifact from the returned response or artifact listing; never pretend the fields are interchangeable. Unsupported IDs/capabilities remain explicit blocked steps. Generation/readback, not a CLI exit alone, proves artifact completion."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\obsidian-cli\\SKILL.md",
+    "name": "obsidian-cli",
+    "before": "b54257cdc0e5d04488b35b0c797bfe427b24359f0848d3c73924dcacf8da6358",
+    "after": "1f0fc62b8f001515251f0c514f2a17fac451512df0111c5dc660400da08c1c31",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\codex\\obsidian-cli\\SKILL.md",
+    "repair": "Pin the exact AI OS vault root/identity from AGENTS.md before any command; the last-focused vault may be the older one. Check actual installed CLI help and read back the target, not just command availability."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\obsidian-markdown\\SKILL.md",
+    "name": "obsidian-markdown",
+    "before": "7ad72e1f0a9081ed325e76b6402ad5de50a00e63e2341fd403a92f147234a007",
+    "after": "669193a3f6b8459851751fc5b92fdf15e43ca65bee6e1d191d37da1708d6e23b",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\codex\\obsidian-markdown\\SKILL.md",
+    "repair": "Use syntax appropriate to the owning page. Preserve portable Markdown links required by the AI OS schema; Obsidian wikilinks are supported syntax, not a universal mandate to rewrite all links."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\obsidian-vault\\SKILL.md",
+    "name": "obsidian-vault",
+    "before": "7bed1d552aa5e9345e493cd62cb13e65c5d829d153c349afdb2cb91c809fa6c4",
+    "after": "e6c7c4f7306ff44354e66d8278410ac71b7095b2f0d802e4265c8f0fdddd6dc3",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\codex\\obsidian-vault\\SKILL.md",
+    "repair": "Historical alternate-vault reference only. Do not run it against current AI OS. Current knowledge work routes to ingest, second-brain-query or second-brain-lint and its existing folder schema."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\pdf\\SKILL.md",
+    "name": "pdf",
+    "before": "9f78b8359fbd4943ad260a7a1e436e5a96503406d6c34e99f69223d647d85b9c",
+    "after": "2a092d1d53c26917541632b8dfaf2676005944a5e30bb8d0667db9f44741221b",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\codex\\pdf\\SKILL.md",
+    "repair": "Preserve source PDFs and write edited outputs to a separate task-owned file. Verify extraction/OCR or form/render output appropriate to the requested change; do not silently overwrite originals."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\post-session-recap\\SKILL.md",
+    "name": "post-session-recap",
+    "before": "54826ddc4f5d9a9be42610921b46f4715a56a05818f541cb822abb8b26f7796e",
+    "after": "4a762e7d12d312f2c005b8b708eebbfc1d1cce162a7556f33fccd007c979581e",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\codex\\post-session-recap\\SKILL.md",
+    "repair": "Reuse the exact student artifact and prior approval; preserve transcript grounding, teaching-first structure and read-after-write checks. New transcript retrieval routes to transcript-intake, not knowledge ingest."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.agents\\skills\\post-session-recap\\SKILL.md",
+    "name": "post-session-recap",
+    "before": "54826ddc4f5d9a9be42610921b46f4715a56a05818f541cb822abb8b26f7796e",
+    "after": "4a762e7d12d312f2c005b8b708eebbfc1d1cce162a7556f33fccd007c979581e",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.agents\\skills\\post-session-recap\\SKILL.md",
+    "repair": "Reuse the exact student artifact and prior approval; preserve transcript grounding, teaching-first structure and read-after-write checks. New transcript retrieval routes to transcript-intake, not knowledge ingest."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\pptx\\SKILL.md",
+    "name": "pptx",
+    "before": "a7ff03e2c85b636f55232a6b1555f5dd90216b7a1a359ab289d8364e6acbc6a0",
+    "after": "12c2bfa3d02f63cb91f385e1d164279ce1dc420dd36d5b576837789a0233e3fe",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\codex\\pptx\\SKILL.md",
+    "repair": "Resolve installed host runtimes and support files before execution. Preserve content and render/visual QA; no claim of live slide acceptance follows from a file existing."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\prompt-architect-refiner\\SKILL.md",
+    "name": "prompt-architect-refiner",
+    "before": "311e47edd43923ec372706ba1a944cae59e53b67be7edcccabcac8487d4b1886",
+    "after": "3f3d4921fa3834c13679a6631546d4fced2d3c431b0638b5f5552245ace0518a",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\codex\\prompt-architect-refiner\\SKILL.md",
+    "repair": "Respect prior approval and the actual requested brief. Premium dark-glass UI is an optional selected style, not a default for every prompt. Ask only consequential missing questions."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\prototype\\SKILL.md",
+    "name": "prototype",
+    "before": "714de632d116bb73f65cdb5a882db15b9369a6713b9a47c0fad827848f0bfbe3",
+    "after": "733ab28e5b534efcb2010c80f3a59618f7014c1f984a8a77bf916c55f1daf791",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\codex\\prototype\\SKILL.md",
+    "repair": "Place application dependencies and temporary executable projects in sibling ai-os-projects, not the vault root. Keep the probe limited to the design question and do not promote it to production without authorization."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\pull-submissions\\SKILL.md",
+    "name": "pull-submissions",
+    "before": "af6bef8077a5d8979ab185fc97e8f049ce0439d71c22076d3db21a6839ec3177",
+    "after": "cb42f7c4b52387035b84ad61b2698e9c0bd08b1d5b07120beec8abab9ee12f01",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\codex\\pull-submissions\\SKILL.md",
+    "repair": "Resolve current booking mirror paths and relationship IDs from the canonical root/live systems. Use stable source IDs for idempotent filing and do not infer a student identity from a loose name match."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\redesign-existing-projects\\SKILL.md",
+    "name": "redesign-existing-projects",
+    "before": "98ad3e5b051bfb71b2795f7e8a6aa0d32b51ee095606c098a4b2822ac07926c9",
+    "after": "19c81e10f9e384ab364560c66dca8499619daa56eb8f32e037bbdb2b7163c8bf",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\codex\\redesign-existing-projects\\SKILL.md",
+    "repair": "Preserve the current design system, product facts and real dates/data. Fix demonstrated usability/accessibility defects within the brief. Do not replace factual values with organic invented values or impose an unrelated palette/font/density."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\request-refactor-plan\\SKILL.md",
+    "name": "request-refactor-plan",
+    "before": "d59de4ba6cc1fe2dd267e8b9b5a1fd88e3e739e2130bc9dd78061d2a072830b8",
+    "after": "ca46ef2c63934619825fb69227a99bec94a49e7385277e065c9ac3a8ef397e53",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\codex\\request-refactor-plan\\SKILL.md",
+    "repair": "Plan around behavior-preserving seams and relevant checks. Commit increments only when authorized and stage owned paths; preserve unrelated work."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\research-add-items\\SKILL.md",
+    "name": "research-add-items",
+    "before": "52195e187e55941525e6006709dacb0b409448717958af86e73cbf6682b9e616",
+    "after": "f3c04dd1a56fce2c9ec569404caa894c69a44a62fc329b80f94530ea1443ac8e",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\codex\\research-add-items\\SKILL.md",
+    "repair": "Use only within an explicitly selected existing outline.yaml research workflow. Do not create an unrelated second research pipeline or mutate an arbitrary outline."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\research-report\\SKILL.md",
+    "name": "research-report",
+    "before": "3f338b814cda64564170b821eb9d9f597126639d8330b0d9b43dff9fbcbb945b",
+    "after": "0c44367a1bdd79ede65b1dbc298f8c6b1ca4b1e57608725c0a85ded559d02cb3",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\codex\\research-report\\SKILL.md",
+    "repair": "Keep generated executable helpers/dependencies in sibling ai-os-projects. Report uncertain fields and provenance in the report/appendix; do not silently remove evidence because it is uncertain."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\review\\SKILL.md",
+    "name": "review",
+    "before": "0f1c3edf07b730ae7644c68d716faaa43be0fd81a27c06e13baf6b55712e7edb",
+    "after": "06e27b5a7c83efdf9234bffad18bff17043fcf8198e07885bfaf2502924913c7",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\codex\\review\\SKILL.md",
+    "repair": "For work-in-progress review, inventory committed, staged, unstaged and untracked paths in the requested scope. Three-dot merge-base...HEAD is committed changes only. Preserve exact reviewed scope and do not claim dirty code was reviewed from that range."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\scaffold-exercises\\SKILL.md",
+    "name": "scaffold-exercises",
+    "before": "75f5c9d771606fb9762f16522efc954df11c324f87148d8ff069bce166257de9",
+    "after": "5fd486e9cdb1feb3a78d96aacee44a8c835b264653e7c5072924365b3e5b6368",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\codex\\scaffold-exercises\\SKILL.md",
+    "repair": "Run only in the actual selected AI Hero exercise repository with its installed lint command. A scaffold request does not authorize an automatic commit; preserve user work."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\session-handoff\\SKILL.md",
+    "name": "session-handoff",
+    "before": "9783b133e40e0e6ab5da3789fa918511750baf177f2890cdb16c120d45a14781",
+    "after": "de3fc18667231d0f41d8d0bcd2f2b029b85c18354115dc15d1469cf966949f18",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\codex\\session-handoff\\SKILL.md",
+    "repair": "Use the host-supported time/file tools, preserve current open state and explicit scope. Chat-only continuity remains distinct from file-writing wrapup or a broad system audit."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.agents\\skills\\session-handoff\\SKILL.md",
+    "name": "session-handoff",
+    "before": "9783b133e40e0e6ab5da3789fa918511750baf177f2890cdb16c120d45a14781",
+    "after": "de3fc18667231d0f41d8d0bcd2f2b029b85c18354115dc15d1469cf966949f18",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.agents\\skills\\session-handoff\\SKILL.md",
+    "repair": "Use the host-supported time/file tools, preserve current open state and explicit scope. Chat-only continuity remains distinct from file-writing wrapup or a broad system audit."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\setup-matt-pocock-skills\\SKILL.md",
+    "name": "setup-matt-pocock-skills",
+    "before": "f148858ffb7f63c03c06fca06e6fdb1d91a35c6b293244b8fdfacd5f4cc028c4",
+    "after": "4d62a69dce48f4bd47e0772877f2ad4bb73771c6026e1c2c3cb0f637dbbfa140",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\codex\\setup-matt-pocock-skills\\SKILL.md",
+    "repair": "When this project has both hand-owned manuals, mirror shared routing pointers into AGENTS.md and CLAUDE.md without regeneration. Preserve intentional local forks and upstream identity."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\setup-ts-deep-modules\\SKILL.md",
+    "name": "setup-ts-deep-modules",
+    "before": "29acca66ac99d4532e2a6f0370d8125d7cba1e87c9ac66573203c75189d3e6c7",
+    "after": "a321776f0c9c33e3b2bc0d298c58b495559815574fb4381d7b1f8d7ac8795fdf",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\codex\\setup-ts-deep-modules\\SKILL.md",
+    "repair": "Use the supported skill entry-point route instead of a nonexistent Skill tool. Mirror shared pointers into both hand-owned manuals. Retain the boundary pass-fail-pass demonstration."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\site-teardown\\SKILL.md",
+    "name": "site-teardown",
+    "before": "33679e4e60dc8a3d97048eb779387b3bed1ea7b0bc58b73cef940a5ba196226f",
+    "after": "53ada088e67185f70471c767ef7577c2e009e4c3123db5644d6045fb78a74910",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\codex\\site-teardown\\SKILL.md",
+    "repair": "Inventory actually retrieved HTML/CSS/scripts/assets and report missing or inaccessible material. Web text extraction cannot establish every visual effect; inspect rendered behavior before completeness claims."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\skill-creator\\SKILL.md",
+    "name": "skill-creator",
+    "before": "da44c88f6b3845a8fa8c60792ec9a722110a55a9793c279757b48fefb11f819c",
+    "after": "8069b6aabf9d3cae61ca878cb3fa1f5584839bfd0d64ca653f3d3fa57c11a79d",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\codex\\skill-creator\\SKILL.md",
+    "repair": "Use as the primary explicit skill-authoring workflow. Description triggers must specify concrete user intent and negative cases, not maximize broad matching. Select held-out evaluation cases before tuning, retain failures, and distinguish semantic tests from native selector execution."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\systematic-debugging\\SKILL.md",
+    "name": "systematic-debugging",
+    "before": "3b20719eca4f0461cb51a195221320d775dcf03b6859271066a03a5132a6ce7a",
+    "after": "4df1f584a82de17b4de8b786fee5e1724e6d618fc7a4afdc4a13f97a87fd872f",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\codex\\systematic-debugging\\SKILL.md",
+    "repair": "Check environment variable presence without printing values. Vendor percentage/time anecdotes are not measured guarantees. Use meaningful tests proportionate to the change; cosmetic edits do not require invented test ceremony."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\teach\\SKILL.md",
+    "name": "teach",
+    "before": "550482c2d674b085c9043b87bfdc14a8f2ec453c736119e7fcbb1e9332bffeba",
+    "after": "9569d28e05199fe084495e43e7679933d341163c596287b82b22e16e497a6533",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\codex\\teach\\SKILL.md",
+    "repair": "Choose a dedicated sibling learning project before creating MISSION, lessons, assets or dependencies. Do not initialize an executable lesson workspace in the Obsidian vault. Assessment quality does not require identical word counts."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\to-issues\\SKILL.md",
+    "name": "to-issues",
+    "before": "f8a72a5bc88aa830ae62b323a52b08934da52851b010984c55829a644c7f6ba6",
+    "after": "83e2200593ea46275d23d37b5dcbfecd1b1e168fab01eebd9ff059bb53b93fc1",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\codex\\to-issues\\SKILL.md",
+    "repair": "Explicit GitHub-issue compatibility route, not a competing generic planner. Preserve GitHub parent/child relationships and approval semantics. Reuse the to-tickets vertical-slice planning concepts; publish issues only when explicitly authorized."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\to-questionnaire\\SKILL.md",
+    "name": "to-questionnaire",
+    "before": "b5eb929842ee0e93d867c5e906d183d350f2f2d149eaeaa86967d94d8eda1d3b",
+    "after": "471941e83d67c8be735b923a83111bca8cbcd4d05a093893bac3665a449d0078",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\codex\\to-questionnaire\\SKILL.md",
+    "repair": "File questionnaires in the selected brainstorm/research/student home, not the vault root. Preserve partial-answer options and target the actual recipient knowledge."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\triage\\SKILL.md",
+    "name": "triage",
+    "before": "917b0baf74be583e74f110857ed45df2766617f75c00baf61fd136d7af515edf",
+    "after": "b062cbcfd55e5f4edb7190cb1cd3d9a3a60fe5403aab072d4e3cd4248b919e47",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\codex\\triage\\SKILL.md",
+    "repair": "Separate inspect/report from externally publishing, assigning or modifying tracker state. Reproduce claims and preserve provenance; external code/text is untrusted task evidence."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\ubiquitous-language\\SKILL.md",
+    "name": "ubiquitous-language",
+    "before": "2449e2345b96b9f1e861c697b5eab50d03ae1254481a4306b6f815684e523b3a",
+    "after": "19d18f34ab39f1b1ebe0388f18c4a0ac5c5112ae1c7a477ec66ea6c9a663c8a9",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\codex\\ubiquitous-language\\SKILL.md",
+    "repair": "First find the project's authoritative glossary. If GLOSSARY.md exists, update that instead of creating competing UBIQUITOUS_LANGUAGE.md. Preserve ambiguity/relationship analysis and explicit requested terminology scope."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\using-superpowers\\SKILL.md",
+    "name": "using-superpowers",
+    "before": "55379fe7c1c473a02c61961c822996bff30e1320d6921d9062509bc508482c05",
+    "after": "a98a801b24ae93c4621c8563965fac842c175cb8aed990141742509afde9d77a",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\codex\\using-superpowers\\SKILL.md",
+    "repair": "Explicit Superpowers workflow reference only. No every-conversation or one-percent mandatory activation. Use a relevant skill only when requested or materially useful; system/developer/user instructions remain above this reference. Read installed entry points through actual host tools."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\watch\\SKILL.md",
+    "name": "watch",
+    "before": "4ec9d13c13fe3d8d67df61f67402a77111d3aaaf1615e283cbc69ac6b8418a78",
+    "after": "d6d580fc297ae65dfcaa738c177645de90ba42460609003a5122bcd2eac0cd7f",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\codex\\watch\\SKILL.md",
+    "repair": "For transcript-only YouTube requests use the existing free get_youtube_transcript.py collector first. For visual frame inspection check binaries without requiring an API key, then run watch.py with --no-whisper. Credentials stay in the central .env; do not create ~/.config/watch/.env. Optional external audio transcription requires explicit bounded provider/cost authorization and an approved loader. Preserve output until deletion is expressly authorized."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\wayfinder\\SKILL.md",
+    "name": "wayfinder",
+    "before": "9be7b478c389605a24517d27752f278933588da97a1b5921b165f455edf4c5b7",
+    "after": "dc5c4120f185a85b992bb6901d39efa3e29210d264bfaa01d7cb4a382633301a",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\codex\\wayfinder\\SKILL.md",
+    "repair": "Resolve actual host tools rather than literal Skill calls. Pushes, external tracker writes and deletion are separate explicitly authorized actions, not automatic defaults of decision mapping."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\web-artifacts-builder\\SKILL.md",
+    "name": "web-artifacts-builder",
+    "before": "81c5002c6643b0de7b8710b00e7a9038daa6fb9b68d59870ee6adb12da8d10f8",
+    "after": "2d8929f50d092e85914dd45beab8c4ee69f573fe640cb95ca3904315cbc3c644",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\codex\\web-artifacts-builder\\SKILL.md",
+    "repair": "Select a sibling application project before initializing dependencies. Build and run meaningful interaction checks before presenting completion; the old no-test/default-cwd examples are not the current contract."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\webapp-testing\\SKILL.md",
+    "name": "webapp-testing",
+    "before": "51b7349e77ec63b7744a6f63647e7566a0b4d2e301121cc10e8c2113af6556a2",
+    "after": "c84e02082ba53d1ead372ec86c83790762876a131221055af189a047128b0aa6",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\codex\\webapp-testing\\SKILL.md",
+    "repair": "Wait for the actual app state with element/route/assertion readiness. networkidle is optional diagnostic evidence and can hang on polling apps; it is not a universal UI-readiness gate. Resolve helper paths from this installed skill."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\writing-beats\\SKILL.md",
+    "name": "writing-beats",
+    "before": "a96abafa2372eede8267d770138b322d6125da8adaa7ccf0a5e08e4ee13ee71e",
+    "after": "5f0d10b4f046358b55487cfbb01d18d452e6d1d67d998279df0c2539107507b6",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\codex\\writing-beats\\SKILL.md",
+    "repair": "Explicit beat-mode authoring variant of the shared source-to-article shaping process. Do not compete with writing-shape for generic article requests; preserve distinct beat sequencing and use the authoritative source pile."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\writing-great-skills\\SKILL.md",
+    "name": "writing-great-skills",
+    "before": "7c6ba7ec25bb2c0e173c52cdc2da878aef0b083ec19a9c1799934e480c8833cc",
+    "after": "36fc7c7b71f78fc90fa04e3f520cb053bbdee69e728006c044d916858a894437",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\codex\\writing-great-skills\\SKILL.md",
+    "repair": "Explicit skill-writing reference, not an automatic competing creator. Use the primary skill creator for implementation and writing-for-agents for shared vocabulary; retain specialized mechanics."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\writing-plans\\SKILL.md",
+    "name": "writing-plans",
+    "before": "272e1af349f5062c28dc282b3e21b220d58d683a7314a10c455b7432ec91d845",
+    "after": "5d4e06990bf59f9f1a9292287518d92b5a571632579994d6a4be1faea5f3df60",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\codex\\writing-plans\\SKILL.md",
+    "repair": "Reuse approved scope, choose proportional task boundaries and host-supported tools. Do not require repeated Superpowers invocations, speculative full implementations or automatic commits for every small edit."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\writing-skills\\SKILL.md",
+    "name": "writing-skills",
+    "before": "6b8d08fe863318be8480ae8428e169640309fa9208df84bb0510012764454146",
+    "after": "3ec6ef7bbbd17d8721ac148fe0ca3f7a2d2215796eb1dae8c00fb8c194832960",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\codex\\writing-skills\\SKILL.md",
+    "repair": "Explicit pressure-testing/reference workflow, not automatic primary creator. Preserve unrelated implementation; never delete existing user code solely because a test-first ceremony was absent."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\codex\\xlsx\\SKILL.md",
+    "name": "xlsx",
+    "before": "6712b39718fe815054abca9c3ee72f989613e6f771c8a5c58f30a65a6c905622",
+    "after": "02043ce0454b1d664a0c5a02b011d5a974f1f38c93c95280b521ed0a9ffe0525",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\codex\\xlsx\\SKILL.md",
+    "repair": "Preserve the original workbook and macros/external links where relevant; produce a separate output copy and verify formulas/cached values and the requested changes."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\discord-configure\\SKILL.md",
+    "name": "discord-configure",
+    "before": "cd685d5befd75a98b03df6fba39badd0d903fdea1f92c3ac8cbc59392a9fb0f5",
+    "after": "2a315da431b878aa39edb374fa906ff643fdd07ad9f74eb6ad3558008433fece",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\discord-configure\\SKILL.md",
+    "repair": "Never print a token prefix or request tokens in chat. Credentials are entered privately into the central .env. Check presence only and use the approved loader without exposing values."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\discord-configure\\SKILL.md",
+    "name": "discord-configure",
+    "before": "cd685d5befd75a98b03df6fba39badd0d903fdea1f92c3ac8cbc59392a9fb0f5",
+    "after": "2a315da431b878aa39edb374fa906ff643fdd07ad9f74eb6ad3558008433fece",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\discord-configure\\SKILL.md",
+    "repair": "Never print a token prefix or request tokens in chat. Credentials are entered privately into the central .env. Check presence only and use the approved loader without exposing values."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\doc-coauthoring\\SKILL.md",
+    "name": "doc-coauthoring",
+    "before": "2e47d78846faeea4a56e9809c52700087a15a2155a3f293a3efbaded81398ef4",
+    "after": "6b5d9e9be746c8056d3fda265af8ac5b7195641262ba7843311c4f7d46f00dd5",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\doc-coauthoring\\SKILL.md",
+    "repair": "Reuse the supplied brief and prior approval. Skip redundant staged interviews when the user has given a complete authorized writing task. Save output in its registered document home, not the vault root."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\doc-coauthoring\\SKILL.md",
+    "name": "doc-coauthoring",
+    "before": "2e47d78846faeea4a56e9809c52700087a15a2155a3f293a3efbaded81398ef4",
+    "after": "6b5d9e9be746c8056d3fda265af8ac5b7195641262ba7843311c4f7d46f00dd5",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\doc-coauthoring\\SKILL.md",
+    "repair": "Reuse the supplied brief and prior approval. Skip redundant staged interviews when the user has given a complete authorized writing task. Save output in its registered document home, not the vault root."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\edit-article\\SKILL.md",
+    "name": "edit-article",
+    "before": "e10fba546f45357fe0aaa7494b9e186910d4525818d19f9b2ad6f28cc506aa5e",
+    "after": "4847fa1d21b790b12090fa8e067babad3452e6e876cb11b54e11bd306fbf8656",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\edit-article\\SKILL.md",
+    "repair": "Use paragraph length as a readability heuristic, not a 240-character truncation rule. Preserve complete reasoning and existing approved scope; do not impose a new approval question for each section already authorized."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\edit-article\\SKILL.md",
+    "name": "edit-article",
+    "before": "e10fba546f45357fe0aaa7494b9e186910d4525818d19f9b2ad6f28cc506aa5e",
+    "after": "4847fa1d21b790b12090fa8e067babad3452e6e876cb11b54e11bd306fbf8656",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\edit-article\\SKILL.md",
+    "repair": "Use paragraph length as a readability heuristic, not a 240-character truncation rule. Preserve complete reasoning and existing approved scope; do not impose a new approval question for each section already authorized."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\example-command\\SKILL.md",
+    "name": "example-command",
+    "before": "d561981660827f3818b0daec456ae5b31894f68c22407d8c495a77b3105ba96d",
+    "after": "3c8c5f802f86faf4595c54b4127107ccaa20b9d25b721fa6949bd5934eecd4a1",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\example-command\\SKILL.md",
+    "repair": "Explicit reference example only. Do not auto-select for real creation tasks; use the primary skill creator. The legacy command equivalence below describes a third-party host and is not the AI OS activation model."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\example-command\\SKILL.md",
+    "name": "example-command",
+    "before": "d561981660827f3818b0daec456ae5b31894f68c22407d8c495a77b3105ba96d",
+    "after": "3c8c5f802f86faf4595c54b4127107ccaa20b9d25b721fa6949bd5934eecd4a1",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\example-command\\SKILL.md",
+    "repair": "Explicit reference example only. Do not auto-select for real creation tasks; use the primary skill creator. The legacy command equivalence below describes a third-party host and is not the AI OS activation model."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\example-skill\\SKILL.md",
+    "name": "example-skill",
+    "before": "87d90442621ace039aa3379805f99c3f95bf500e9f7b96f9e7876ac2dcf804f5",
+    "after": "160e919a5d31771da594a5cc0fc155dbf7e4ab981c1766a1eb78e1a2e831ba42",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\example-skill\\SKILL.md",
+    "repair": "Explicit reference example only. Real skill authoring uses the primary skill creator; this sample must not compete for general creation requests."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\example-skill\\SKILL.md",
+    "name": "example-skill",
+    "before": "87d90442621ace039aa3379805f99c3f95bf500e9f7b96f9e7876ac2dcf804f5",
+    "after": "160e919a5d31771da594a5cc0fc155dbf7e4ab981c1766a1eb78e1a2e831ba42",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\example-skill\\SKILL.md",
+    "repair": "Explicit reference example only. Real skill authoring uses the primary skill creator; this sample must not compete for general creation requests."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\find-skills\\SKILL.md",
+    "name": "find-skills",
+    "before": "1e85f6f9686e145aca4a124e3b704b9bbea9aa87e08515c1e352eee70f6e6e7a",
+    "after": "e70dbad3e9a8ca3867359ebe7fb5807b54ffba0b46e674632c49be5b256537ad",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\find-skills\\SKILL.md",
+    "repair": "Select only when the user asks to discover or install a skill. A generic how-do-I or can-you request is not a skill-search trigger. Adoption/popularity is not verified quality; inspect candidate instructions and dependencies."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\find-skills\\SKILL.md",
+    "name": "find-skills",
+    "before": "1e85f6f9686e145aca4a124e3b704b9bbea9aa87e08515c1e352eee70f6e6e7a",
+    "after": "e70dbad3e9a8ca3867359ebe7fb5807b54ffba0b46e674632c49be5b256537ad",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\find-skills\\SKILL.md",
+    "repair": "Select only when the user asks to discover or install a skill. A generic how-do-I or can-you request is not a skill-search trigger. Adoption/popularity is not verified quality; inspect candidate instructions and dependencies."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\finishing-a-development-branch\\SKILL.md",
+    "name": "finishing-a-development-branch",
+    "before": "e6d4a812de900d33c6eacfb40747f99427f25c304a7b7099120f9373b115a47f",
+    "after": "0747e7c170a1d1003850d3325af1d441517dd74616a2ae86ad5a64a64c1e87e6",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\finishing-a-development-branch\\SKILL.md",
+    "repair": "Honor the already requested completion route and existing valid test receipts. Push/commit/PR actions require the task authorization and owned path scope. A PR request must actually create or update the PR, then attach it, not merely push a branch."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\finishing-a-development-branch\\SKILL.md",
+    "name": "finishing-a-development-branch",
+    "before": "e6d4a812de900d33c6eacfb40747f99427f25c304a7b7099120f9373b115a47f",
+    "after": "0747e7c170a1d1003850d3325af1d441517dd74616a2ae86ad5a64a64c1e87e6",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\finishing-a-development-branch\\SKILL.md",
+    "repair": "Honor the already requested completion route and existing valid test receipts. Push/commit/PR actions require the task authorization and owned path scope. A PR request must actually create or update the PR, then attach it, not merely push a branch."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\graphify\\SKILL.md",
+    "name": "graphify",
+    "before": "edeec794075177bd7c275197e652b01a3011f332703239a8e9545f55117724f4",
+    "after": "4a50a8e5a9873a4bf913026f4ffdcadb562608f66778f03ad23a386c090dadd8",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\graphify\\SKILL.md",
+    "repair": "Graphify is optional derived analysis, not an intake pipeline. Use existing ingest for new sources. Workers must write valid JSON to the exact assigned .graphify_chunk_NN.json path; validate disk content before counting success. Current basename AST IDs are not collision-safe: check duplicate IDs across source_file paths and stop with the collisions rather than silently merge. Until a shared AST/semantic path-ID migration is verified, use a fresh full rebuild for changed/deleted inputs, not stale incremental merge. Missing chunks prevent a completeness claim. Preserve intermediates unless removal is explicitly authorized."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\graphify\\SKILL.md",
+    "name": "graphify",
+    "before": "edeec794075177bd7c275197e652b01a3011f332703239a8e9545f55117724f4",
+    "after": "4a50a8e5a9873a4bf913026f4ffdcadb562608f66778f03ad23a386c090dadd8",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\graphify\\SKILL.md",
+    "repair": "Graphify is optional derived analysis, not an intake pipeline. Use existing ingest for new sources. Workers must write valid JSON to the exact assigned .graphify_chunk_NN.json path; validate disk content before counting success. Current basename AST IDs are not collision-safe: check duplicate IDs across source_file paths and stop with the collisions rather than silently merge. Until a shared AST/semantic path-ID migration is verified, use a fresh full rebuild for changed/deleted inputs, not stale incremental merge. Missing chunks prevent a completeness claim. Preserve intermediates unless removal is explicitly authorized."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\grill-me\\SKILL.md",
+    "name": "grill-me",
+    "before": "4a43b623446139176cc513c198ac32a90b09b73f64b3eab40e7206c07b2b2e1a",
+    "after": "e978706e6078890627e66d616af4b813a854d610536b6c59ed079db7c20a48c7",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\grill-me\\SKILL.md",
+    "repair": "Preserve the current host-specific checkpoint behavior and explain it accurately in routers. Do not erase saved brainstorm state merely to make another host stateless. Reuse answered questions and prior approval."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\grill-me\\SKILL.md",
+    "name": "grill-me",
+    "before": "4a43b623446139176cc513c198ac32a90b09b73f64b3eab40e7206c07b2b2e1a",
+    "after": "e978706e6078890627e66d616af4b813a854d610536b6c59ed079db7c20a48c7",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\grill-me\\SKILL.md",
+    "repair": "Preserve the current host-specific checkpoint behavior and explain it accurately in routers. Do not erase saved brainstorm state merely to make another host stateless. Reuse answered questions and prior approval."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\grill-with-docs\\SKILL.md",
+    "name": "grill-with-docs",
+    "before": "7de372c13488f1ee96cc11cd8907b56b6809cc93eef776eeddd37de6b6cbe3fe",
+    "after": "93cfa1a0c0d99e336ce1a03aa3558de5f7bbc4f018fbe5360edf00f5987a9afb",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\grill-with-docs\\SKILL.md",
+    "repair": "Resolve domain-modeling and the actual host-supported interview skill from the installed entry point. Do not invoke an unavailable literal Skill tool. Preserve the document-backed composition and previously resolved requirements."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\grill-with-docs\\SKILL.md",
+    "name": "grill-with-docs",
+    "before": "7517b82504a1efe6d404edf4a226b9b602cebc470383858fa7da571a544a90a6",
+    "after": "c676e0d2fec95d094b1d18167a38b16a57b88e1b7781901c3bc125e99c971ae4",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\grill-with-docs\\SKILL.md",
+    "repair": "Resolve domain-modeling and the actual host-supported interview skill from the installed entry point. Do not invoke an unavailable literal Skill tool. Preserve the document-backed composition and previously resolved requirements."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\grilling\\SKILL.md",
+    "name": "grilling",
+    "before": "befdff1e27a1dfe2a294d5871169ac1afe16d983911daa4f32627514a48c1e15",
+    "after": "3b4ea71d96da703522d9a000efb7c464c7a86d4172d73a10c620aef49508df41",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\grilling\\SKILL.md",
+    "repair": "Ask only unresolved decision-frontier questions. Reuse earlier answers and approval; gather reachable facts before asking the user."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\grilling\\SKILL.md",
+    "name": "grilling",
+    "before": "05eda00533d358bb646147c2ffa8c38129103629f679d7c977f67a6afc18ccaf",
+    "after": "70a6545512aaaf202ff4f30ea393cad3124b740176ad8c707b3037d991655b0b",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\grilling\\SKILL.md",
+    "repair": "Ask only unresolved decision-frontier questions. Reuse earlier answers and approval; gather reachable facts before asking the user."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\handoff\\SKILL.md",
+    "name": "handoff",
+    "before": "4cbb043950dad2ffd3662ff1a5a0b51ae676004b5cae10e3787e8ee7a4ee69d3",
+    "after": "b5a136f2f252ba26bd305ba4333ab05e31abe2249ee1b633fe293b45fbdc8772",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\handoff\\SKILL.md",
+    "repair": "Explicit legacy compatibility reference. Prefer session-handoff for current continuity. Resolve host-supported skill entry points rather than assuming a Skill invocation tool."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\handoff\\SKILL.md",
+    "name": "handoff",
+    "before": "7c62de979fdc7ac32fb5ddb2146156c917f80ee070d30fadc9d40343c4b6ed25",
+    "after": "51edf2a1df82f6a6ef44391861124dbde9e5af7ea1ae2462a44b19f4853432b7",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\handoff\\SKILL.md",
+    "repair": "Explicit legacy compatibility reference. Prefer session-handoff for current continuity. Resolve host-supported skill entry points rather than assuming a Skill invocation tool."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\high-end-visual-design\\SKILL.md",
+    "name": "high-end-visual-design",
+    "before": "e1e32f5e2d420872c6c7332b53d5ff7721946766b78c4822b424c2d512c8fdbc",
+    "after": "827d108631992ee95bed1e7aa4e99156c57e09869087998bbfb3067213319084",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\high-end-visual-design\\SKILL.md",
+    "repair": "Apply only when the user selects this agency-style preset. Existing design system, supplied visuals, labels and accessibility take precedence. Nested cards are an optional compositional choice, not a universal mandate. Scroll reveals must respect reduced motion and leave content accessible without animation."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\high-end-visual-design\\SKILL.md",
+    "name": "high-end-visual-design",
+    "before": "e1e32f5e2d420872c6c7332b53d5ff7721946766b78c4822b424c2d512c8fdbc",
+    "after": "827d108631992ee95bed1e7aa4e99156c57e09869087998bbfb3067213319084",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\high-end-visual-design\\SKILL.md",
+    "repair": "Apply only when the user selects this agency-style preset. Existing design system, supplied visuals, labels and accessibility take precedence. Nested cards are an optional compositional choice, not a universal mandate. Scroll reveals must respect reduced motion and leave content accessible without animation."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\hook-development\\SKILL.md",
+    "name": "hook-development",
+    "before": "f47e2d42f6360294216a859ae0c30b93caafdd2b2e5ffc007489ba4ca447fa5c",
+    "after": "9df4df2498368ed9e42949193b9750eb5816d7e86182752c32dc1a7730abe58e",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\hook-development\\SKILL.md",
+    "repair": "Claude hook schemas are reference material for Claude only. For Codex use the current native schema and /hooks trust review. Never infer native activation or blocking from writing a configuration; merge existing definitions and verify a safe scoped block-and-recover case."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\hook-development\\SKILL.md",
+    "name": "hook-development",
+    "before": "f47e2d42f6360294216a859ae0c30b93caafdd2b2e5ffc007489ba4ca447fa5c",
+    "after": "9df4df2498368ed9e42949193b9750eb5816d7e86182752c32dc1a7730abe58e",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\hook-development\\SKILL.md",
+    "repair": "Claude hook schemas are reference material for Claude only. For Codex use the current native schema and /hooks trust review. Never infer native activation or blocking from writing a configuration; merge existing definitions and verify a safe scoped block-and-recover case."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\image-to-code\\SKILL.md",
+    "name": "image-to-code",
+    "before": "4c060a8064a8b13380bc2ef3d6e6a1d0b1e316aa093cd9807d0ce9e4eeb037fa",
+    "after": "1eac09ec20fed7a059c38a6b58f87b5b3d50f238e8cb62ac348c52edad3f891c",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\image-to-code\\SKILL.md",
+    "repair": "Use only when the user chooses the image-first design method. Preserve authoritative supplied visuals; do not regenerate or incur image-generation cost by default."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\image-to-code\\SKILL.md",
+    "name": "image-to-code",
+    "before": "4c060a8064a8b13380bc2ef3d6e6a1d0b1e316aa093cd9807d0ce9e4eeb037fa",
+    "after": "1eac09ec20fed7a059c38a6b58f87b5b3d50f238e8cb62ac348c52edad3f891c",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\image-to-code\\SKILL.md",
+    "repair": "Use only when the user chooses the image-first design method. Preserve authoritative supplied visuals; do not regenerate or incur image-generation cost by default."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\impeccable\\SKILL.md",
+    "name": "impeccable",
+    "before": "e034374978326b564a86b7ebc580ab587e750f14f9984bd095e203f86da11fb7",
+    "after": "4de51f25d36cac9df1f98e9fd13c3cc2d5985dc7a3b43924b5da309deaef8ffc",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\impeccable\\SKILL.md",
+    "repair": "Locate the installed skill and support directory before loading references. Do not assume .agents/skills/impeccable is activated. Honor the approved brief instead of imposing another approval round."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\impeccable\\SKILL.md",
+    "name": "impeccable",
+    "before": "e034374978326b564a86b7ebc580ab587e750f14f9984bd095e203f86da11fb7",
+    "after": "4de51f25d36cac9df1f98e9fd13c3cc2d5985dc7a3b43924b5da309deaef8ffc",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\impeccable\\SKILL.md",
+    "repair": "Locate the installed skill and support directory before loading references. Do not assume .agents/skills/impeccable is activated. Honor the approved brief instead of imposing another approval round."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\implement\\SKILL.md",
+    "name": "implement",
+    "before": "483bdc4ccf4ac31d86ac7beeaa0d0db80313e71e120bb8c59b3196ae5decd53d",
+    "after": "4e5e4cbf5b38a4247b17540a2e90f7cf6d43cdb62ac41257042f2fe7dbca7188",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\implement\\SKILL.md",
+    "repair": "Resolve available host tools before execution. Stage and commit only owned paths when authorized; retain focused checks and fresh review."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\implement\\SKILL.md",
+    "name": "implement",
+    "before": "6d3fd9e83b8f36e5213854779db49b256a457a7ebb4a503e53fa7dcff696adc3",
+    "after": "c0360699461ba87f35820d81bc9123f80e49d52275a9234b1895a57a8dd3ee8e",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\implement\\SKILL.md",
+    "repair": "Resolve available host tools before execution. Stage and commit only owned paths when authorized; retain focused checks and fresh review."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\implement-spec\\SKILL.md",
+    "name": "implement-spec",
+    "before": "7a22dd2e60b8fcece478ced9d2533582adf3520d695acd3ab715341535c9e56d",
+    "after": "a922e98d462bf260be5ef3ee325ecc6d1d1ca4271f1d90a1d54321f302652d6c",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\implement-spec\\SKILL.md",
+    "repair": "Prefer the native managed worktree facility when available; reuse a suitable active worktree. Do not create an unsolicited extra checkout. Preserve task graph, integration checks and user work."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\implement-spec\\SKILL.md",
+    "name": "implement-spec",
+    "before": "f703b5f41df9c2202e19540d203e0d5fc32613572a838a070136cc22e712b129",
+    "after": "6c955920b2dc0a37a9618864d18e1aefcb31f8add1fdbfe04154cca4b38f4363",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\implement-spec\\SKILL.md",
+    "repair": "Prefer the native managed worktree facility when available; reuse a suitable active worktree. Do not create an unsolicited extra checkout. Preserve task graph, integration checks and user work."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\inbound-tutoring-replies\\SKILL.md",
+    "name": "inbound-tutoring-replies",
+    "before": "085711e5c82c66e9c1845a11e0c99bee045c036819f8e6e4216814282ceead9d",
+    "after": "f5550fb7e116a96b409ea83fc38d714b263dd23e5ac2f9eddd60caeac067c61c",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\inbound-tutoring-replies\\SKILL.md",
+    "repair": "Verify recipient, current thread and the current offer/template authority before drafting. The saved reference is not authority for fresh operational status. Sending remains separately authorized."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\inbound-tutoring-replies\\SKILL.md",
+    "name": "inbound-tutoring-replies",
+    "before": "085711e5c82c66e9c1845a11e0c99bee045c036819f8e6e4216814282ceead9d",
+    "after": "f5550fb7e116a96b409ea83fc38d714b263dd23e5ac2f9eddd60caeac067c61c",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\inbound-tutoring-replies\\SKILL.md",
+    "repair": "Verify recipient, current thread and the current offer/template authority before drafting. The saved reference is not authority for fresh operational status. Sending remains separately authorized."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\internal-comms\\SKILL.md",
+    "name": "internal-comms",
+    "before": "067b7587a344a928fc6534ef66b1bcd591fc7c26d207ea7ca3334aeb678d6475",
+    "after": "9c9ac51097b3f6a84e51a71ed0bc661d320d510950c5315ec8c293ec7582e7d1",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\internal-comms\\SKILL.md",
+    "repair": "Load the required format reference and Joshua teaching voice where applicable. Vendor voice examples are not a replacement for Joshua's selected voice."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\internal-comms\\SKILL.md",
+    "name": "internal-comms",
+    "before": "067b7587a344a928fc6534ef66b1bcd591fc7c26d207ea7ca3334aeb678d6475",
+    "after": "9c9ac51097b3f6a84e51a71ed0bc661d320d510950c5315ec8c293ec7582e7d1",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\internal-comms\\SKILL.md",
+    "repair": "Load the required format reference and Joshua teaching voice where applicable. Vendor voice examples are not a replacement for Joshua's selected voice."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\kling-cli\\SKILL.md",
+    "name": "kling-cli",
+    "before": "88ef64f04daced2aa10a1f6b53add260007d201f670ccf89dc89c5e4928e132d",
+    "after": "e2fd6c17bbaa3ede6e1fdb0ed7d52f0230917ffbc7a3de9507a05d975096a60f",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\kling-cli\\SKILL.md",
+    "repair": "Use only for an explicit Kling/media-generation task. Do not submit unrequested feedback. Verify current parameter and credit/price contracts before any billable call, with the user's bounded authorization."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\kling-cli\\SKILL.md",
+    "name": "kling-cli",
+    "before": "88ef64f04daced2aa10a1f6b53add260007d201f670ccf89dc89c5e4928e132d",
+    "after": "e2fd6c17bbaa3ede6e1fdb0ed7d52f0230917ffbc7a3de9507a05d975096a60f",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\kling-cli\\SKILL.md",
+    "repair": "Use only for an explicit Kling/media-generation task. Do not submit unrequested feedback. Verify current parameter and credit/price contracts before any billable call, with the user's bounded authorization."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\level-up\\SKILL.md",
+    "name": "level-up",
+    "before": "0ebf38fcf474ed4ed4e86d2bca5559e5383d5ec41d740fa5b5fe1ee0af541269",
+    "after": "a2c631207cba328f95810730e6f41869dcb14542b0faed16c55bc6432e835c32",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\level-up\\SKILL.md",
+    "repair": "New shared skills require their matching catalog and project activation copies for Claude and Codex, with deliberate differences documented. Application code/dependencies live in sibling ai-os-projects. Eliminating an unnecessary workflow can be a completed result without creating a new artifact."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\level-up\\SKILL.md",
+    "name": "level-up",
+    "before": "0ebf38fcf474ed4ed4e86d2bca5559e5383d5ec41d740fa5b5fe1ee0af541269",
+    "after": "a2c631207cba328f95810730e6f41869dcb14542b0faed16c55bc6432e835c32",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\level-up\\SKILL.md",
+    "repair": "New shared skills require their matching catalog and project activation copies for Claude and Codex, with deliberate differences documented. Application code/dependencies live in sibling ai-os-projects. Eliminating an unnecessary workflow can be a completed result without creating a new artifact."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\loop-me\\SKILL.md",
+    "name": "loop-me",
+    "before": "e44d1cc3e760fb86ac42964c2a5f1fcac511715db50fb375f3f7be814de1eaa7",
+    "after": "e56e0ab3089767cbf832d16d12abb978ac33cb3003fba778d145bec75c9b0875",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\loop-me\\SKILL.md",
+    "repair": "Workflow deletion requires explicit deletion authorization. Reuse existing canonical project notes; do not assume ownership of root NOTES.md. Scope edit/create actions to the selected workflow."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\loop-me\\SKILL.md",
+    "name": "loop-me",
+    "before": "e44d1cc3e760fb86ac42964c2a5f1fcac511715db50fb375f3f7be814de1eaa7",
+    "after": "e56e0ab3089767cbf832d16d12abb978ac33cb3003fba778d145bec75c9b0875",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\loop-me\\SKILL.md",
+    "repair": "Workflow deletion requires explicit deletion authorization. Reuse existing canonical project notes; do not assume ownership of root NOTES.md. Scope edit/create actions to the selected workflow."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\lovable-prompt\\SKILL.md",
+    "name": "lovable-prompt",
+    "before": "29184a438b4ad09e8cddd19bb7a466c0835321ce66e78304cf8af11aca3199af",
+    "after": "87b06f0bebf195b68371718e5a767eb80e1f019fd14200061e46cf6016b0e1fa",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\lovable-prompt\\SKILL.md",
+    "repair": "Read the owning application manual for current backend and deployment. Discover available approved transport instead of assuming Supabase MCP. Lovable-managed Edge Functions deploy through the authorized Lovable route; this does not prohibit approved direct SQL. Lovable credit spending requires immediate confirmation."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\lovable-prompt\\SKILL.md",
+    "name": "lovable-prompt",
+    "before": "29184a438b4ad09e8cddd19bb7a466c0835321ce66e78304cf8af11aca3199af",
+    "after": "87b06f0bebf195b68371718e5a767eb80e1f019fd14200061e46cf6016b0e1fa",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\lovable-prompt\\SKILL.md",
+    "repair": "Read the owning application manual for current backend and deployment. Discover available approved transport instead of assuming Supabase MCP. Lovable-managed Edge Functions deploy through the authorized Lovable route; this does not prohibit approved direct SQL. Lovable credit spending requires immediate confirmation."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\lsat-lab-mega-set\\SKILL.md",
+    "name": "lsat-lab-mega-set",
+    "before": "5ecfa40a84b0d23af1f18f547bb0ee16897381889c7da86c7ef6626ac89c7d8a",
+    "after": "76f3ea8c501f7cf60e68500d9c90e445f2c99fe8dfbf505f649e8e52d6fa6460",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\lsat-lab-mega-set\\SKILL.md",
+    "repair": "Use the active host-supported browser and current Windows/project log homes. Wrongly created sets are preserved and flagged until deletion is explicitly authorized; do not delete as automatic recovery. Verify count and set identity before declaring success."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\lsat-lab-mega-set\\SKILL.md",
+    "name": "lsat-lab-mega-set",
+    "before": "5ecfa40a84b0d23af1f18f547bb0ee16897381889c7da86c7ef6626ac89c7d8a",
+    "after": "76f3ea8c501f7cf60e68500d9c90e445f2c99fe8dfbf505f649e8e52d6fa6460",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\lsat-lab-mega-set\\SKILL.md",
+    "repair": "Use the active host-supported browser and current Windows/project log homes. Wrongly created sets are preserved and flagged until deletion is explicitly authorized; do not delete as automatic recovery. Verify count and set identity before declaring success."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\lsat-lab-transcribe\\SKILL.md",
+    "name": "lsat-lab-transcribe",
+    "before": "5e3d0a9125da0f06bb55677792291a947d574662004ee4298ea5252788c509e8",
+    "after": "28ed57e5ec3cb0bee481398bde2d2693859ab83a4f68b5eef63c97bc3a215cc0",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\lsat-lab-transcribe\\SKILL.md",
+    "repair": "Read the current item identity first. Capture and persist all required styles for that item before advancing. On resume, compare the saved completed-item identity and NEXT pointer; do not click Next merely because the browser is open. Use current registered corpus and handoffs homes and supported browser, not obsolete Mac shortcuts or legacy docs paths."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\lsat-lab-transcribe\\SKILL.md",
+    "name": "lsat-lab-transcribe",
+    "before": "5e3d0a9125da0f06bb55677792291a947d574662004ee4298ea5252788c509e8",
+    "after": "28ed57e5ec3cb0bee481398bde2d2693859ab83a4f68b5eef63c97bc3a215cc0",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\lsat-lab-transcribe\\SKILL.md",
+    "repair": "Read the current item identity first. Capture and persist all required styles for that item before advancing. On resume, compare the saved completed-item identity and NEXT pointer; do not click Next merely because the browser is open. Use current registered corpus and handoffs homes and supported browser, not obsolete Mac shortcuts or legacy docs paths."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\lsat-u-architecture\\SKILL.md",
+    "name": "lsat-u-architecture",
+    "before": "d0c1f55ff2b350e536566b8e5ac1bf1717876e53f197bc5cfcd379c051845a22",
+    "after": "ebe32b39f7cec323a9be6108dc712ab8d274590df7d965f633dfdca9a0a1f566",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\lsat-u-architecture\\SKILL.md",
+    "repair": "Treat backend identifiers in the reference as historical. Resolve current application root and backend from its nearest hand-owned manual/live configuration before use. Do not copy a historical backend ID or Mac path into new work."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\lsat-u-architecture\\SKILL.md",
+    "name": "lsat-u-architecture",
+    "before": "d0c1f55ff2b350e536566b8e5ac1bf1717876e53f197bc5cfcd379c051845a22",
+    "after": "ebe32b39f7cec323a9be6108dc712ab8d274590df7d965f633dfdca9a0a1f566",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\lsat-u-architecture\\SKILL.md",
+    "repair": "Treat backend identifiers in the reference as historical. Resolve current application root and backend from its nearest hand-owned manual/live configuration before use. Do not copy a historical backend ID or Mac path into new work."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\lsat-u-platform-actions\\SKILL.md",
+    "name": "lsat-u-platform-actions",
+    "before": "688d7dc1e141981de6a2b1810341d06db86c2c34636187b1e675c22b95ada6fd",
+    "after": "27e64355e8975237b0a88954782f22a5ddf7de24fcc6e7c8a92a2a2fe8efc723",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\lsat-u-platform-actions\\SKILL.md",
+    "repair": "Resolve the actual host browser/CLI before use, preserve marker-based idempotency, exact recipient/action verification and live readback. Do not replace a working transport simply because a reference names another runtime."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\lsat-u-platform-actions\\SKILL.md",
+    "name": "lsat-u-platform-actions",
+    "before": "688d7dc1e141981de6a2b1810341d06db86c2c34636187b1e675c22b95ada6fd",
+    "after": "27e64355e8975237b0a88954782f22a5ddf7de24fcc6e7c8a92a2a2fe8efc723",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\lsat-u-platform-actions\\SKILL.md",
+    "repair": "Resolve the actual host browser/CLI before use, preserve marker-based idempotency, exact recipient/action verification and live readback. Do not replace a working transport simply because a reference names another runtime."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\lsat-u-topic-builder\\SKILL.md",
+    "name": "lsat-u-topic-builder",
+    "before": "c10625661c68de4d84de806e7b479e036ecc273a8922c7a193de18b7bad4c463",
+    "after": "c5f53ee9de97a9c0e5404e31ad9f594c49c4cdb9db404f1a1f7eda8d8fa01c1a",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\lsat-u-topic-builder\\SKILL.md",
+    "repair": "Historical teaching reference only. New bootcamp work routes to bootcamp-builder. Never move immutable sources or deduplicate by filename/size/first bytes: copy and verify full hashes with provenance. Resolve current corpus homes rather than Mac Spotlight."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\lsat-u-topic-builder\\SKILL.md",
+    "name": "lsat-u-topic-builder",
+    "before": "c10625661c68de4d84de806e7b479e036ecc273a8922c7a193de18b7bad4c463",
+    "after": "c5f53ee9de97a9c0e5404e31ad9f594c49c4cdb9db404f1a1f7eda8d8fa01c1a",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\lsat-u-topic-builder\\SKILL.md",
+    "repair": "Historical teaching reference only. New bootcamp work routes to bootcamp-builder. Never move immutable sources or deduplicate by filename/size/first bytes: copy and verify full hashes with provenance. Resolve current corpus homes rather than Mac Spotlight."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\math-olympiad\\SKILL.md",
+    "name": "math-olympiad",
+    "before": "f697e195d343520f3db551bd4fb44c5120504ee2c47a9cc2016cd57767f23403",
+    "after": "d72b03d1342e4b1206a5839106bd22333c747f48d433c2950fbdecdc69fccc35",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\math-olympiad\\SKILL.md",
+    "repair": "Activate for an explicit mathematical proof/problem request, not generic counterexample/debugging wording. Use only available justified agent budget; preserve the distinct proof reference."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\math-olympiad\\SKILL.md",
+    "name": "math-olympiad",
+    "before": "f697e195d343520f3db551bd4fb44c5120504ee2c47a9cc2016cd57767f23403",
+    "after": "d72b03d1342e4b1206a5839106bd22333c747f48d433c2950fbdecdc69fccc35",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\math-olympiad\\SKILL.md",
+    "repair": "Activate for an explicit mathematical proof/problem request, not generic counterexample/debugging wording. Use only available justified agent budget; preserve the distinct proof reference."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\mcp-integration\\SKILL.md",
+    "name": "mcp-integration",
+    "before": "2bcc3b5e93924d7632218f494890f6e6f75a9248138bc97070bc62aea942dd49",
+    "after": "a433f9a0f78245707f792f14082eb64641daf2b80fb37c14c459948939d33821",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\mcp-integration\\SKILL.md",
+    "repair": "Scope to explicit Claude plugin MCP integration. Verify current transport/schema in the host documentation. A generic external-service task should first use existing connected CLI/API routes."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\mcp-integration\\SKILL.md",
+    "name": "mcp-integration",
+    "before": "2bcc3b5e93924d7632218f494890f6e6f75a9248138bc97070bc62aea942dd49",
+    "after": "a433f9a0f78245707f792f14082eb64641daf2b80fb37c14c459948939d33821",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\mcp-integration\\SKILL.md",
+    "repair": "Scope to explicit Claude plugin MCP integration. Verify current transport/schema in the host documentation. A generic external-service task should first use existing connected CLI/API routes."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\minimalist-ui\\SKILL.md",
+    "name": "minimalist-ui",
+    "before": "36bc7328f085405f43b476938e62460fa573bf7e984e949e072bcf014831a44c",
+    "after": "cd07c186a0bbba61a904820b3590c0f2426f24d723f963d78714333e461e9391",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\minimalist-ui\\SKILL.md",
+    "repair": "Explicit editorial-minimalism preset only. Preserve the project palette and accessibility. Use flat color by default; decorative radial gradients below are optional examples only when expressly requested. Reveals respect reduced motion and never hide required content."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\minimalist-ui\\SKILL.md",
+    "name": "minimalist-ui",
+    "before": "36bc7328f085405f43b476938e62460fa573bf7e984e949e072bcf014831a44c",
+    "after": "cd07c186a0bbba61a904820b3590c0f2426f24d723f963d78714333e461e9391",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\minimalist-ui\\SKILL.md",
+    "repair": "Explicit editorial-minimalism preset only. Preserve the project palette and accessibility. Use flat color by default; decorative radial gradients below are optional examples only when expressly requested. Reveals respect reduced motion and never hide required content."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\morning-brief\\SKILL.md",
+    "name": "morning-brief",
+    "before": "27da6ef12753c27ed73811d51d75a543161d79394c93f2bf7831f757aef52efe",
+    "after": "b5c52dbe92a74a483f84ecab1bc3fc041f91af9e3d8f55643c4fa9b538e11f67",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\morning-brief\\SKILL.md",
+    "repair": "Before creating a draft, check actual Gmail thread/sent/draft state with the stable event/thread/recipient key. Reuse an existing unsent draft. Update ledger status only from fresh authoritative evidence."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\morning-brief\\SKILL.md",
+    "name": "morning-brief",
+    "before": "27da6ef12753c27ed73811d51d75a543161d79394c93f2bf7831f757aef52efe",
+    "after": "b5c52dbe92a74a483f84ecab1bc3fc041f91af9e3d8f55643c4fa9b538e11f67",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\morning-brief\\SKILL.md",
+    "repair": "Before creating a draft, check actual Gmail thread/sent/draft state with the stable event/thread/recipient key. Reuse an existing unsent draft. Update ledger status only from fresh authoritative evidence."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\notebooklm\\SKILL.md",
+    "name": "notebooklm",
+    "before": "70d471c87b2eb763c8db9ef0def7f6a7607db11e59f9b438bde4fe01cb71b457",
+    "after": "8dfc7b64568ba805474990195440026d70372caed90eedbc65cd3823a459c3c0",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\notebooklm\\SKILL.md",
+    "repair": "Use explicit full notebook/source/artifact IDs. Inspect current --help and real JSON response: generation may return task_id, while polling/download requires the corresponding artifact ID. Resolve the actual artifact from the returned response or artifact listing; never pretend the fields are interchangeable. Unsupported IDs/capabilities remain explicit blocked steps. Generation/readback, not a CLI exit alone, proves artifact completion."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\notebooklm\\SKILL.md",
+    "name": "notebooklm",
+    "before": "70d471c87b2eb763c8db9ef0def7f6a7607db11e59f9b438bde4fe01cb71b457",
+    "after": "8dfc7b64568ba805474990195440026d70372caed90eedbc65cd3823a459c3c0",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\notebooklm\\SKILL.md",
+    "repair": "Use explicit full notebook/source/artifact IDs. Inspect current --help and real JSON response: generation may return task_id, while polling/download requires the corresponding artifact ID. Resolve the actual artifact from the returned response or artifact listing; never pretend the fields are interchangeable. Unsupported IDs/capabilities remain explicit blocked steps. Generation/readback, not a CLI exit alone, proves artifact completion."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\obsidian-cli\\SKILL.md",
+    "name": "obsidian-cli",
+    "before": "b54257cdc0e5d04488b35b0c797bfe427b24359f0848d3c73924dcacf8da6358",
+    "after": "1f0fc62b8f001515251f0c514f2a17fac451512df0111c5dc660400da08c1c31",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\obsidian-cli\\SKILL.md",
+    "repair": "Pin the exact AI OS vault root/identity from AGENTS.md before any command; the last-focused vault may be the older one. Check actual installed CLI help and read back the target, not just command availability."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\obsidian-cli\\SKILL.md",
+    "name": "obsidian-cli",
+    "before": "b54257cdc0e5d04488b35b0c797bfe427b24359f0848d3c73924dcacf8da6358",
+    "after": "1f0fc62b8f001515251f0c514f2a17fac451512df0111c5dc660400da08c1c31",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\obsidian-cli\\SKILL.md",
+    "repair": "Pin the exact AI OS vault root/identity from AGENTS.md before any command; the last-focused vault may be the older one. Check actual installed CLI help and read back the target, not just command availability."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\obsidian-markdown\\SKILL.md",
+    "name": "obsidian-markdown",
+    "before": "7ad72e1f0a9081ed325e76b6402ad5de50a00e63e2341fd403a92f147234a007",
+    "after": "669193a3f6b8459851751fc5b92fdf15e43ca65bee6e1d191d37da1708d6e23b",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\obsidian-markdown\\SKILL.md",
+    "repair": "Use syntax appropriate to the owning page. Preserve portable Markdown links required by the AI OS schema; Obsidian wikilinks are supported syntax, not a universal mandate to rewrite all links."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\obsidian-markdown\\SKILL.md",
+    "name": "obsidian-markdown",
+    "before": "7ad72e1f0a9081ed325e76b6402ad5de50a00e63e2341fd403a92f147234a007",
+    "after": "669193a3f6b8459851751fc5b92fdf15e43ca65bee6e1d191d37da1708d6e23b",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\obsidian-markdown\\SKILL.md",
+    "repair": "Use syntax appropriate to the owning page. Preserve portable Markdown links required by the AI OS schema; Obsidian wikilinks are supported syntax, not a universal mandate to rewrite all links."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\obsidian-vault\\SKILL.md",
+    "name": "obsidian-vault",
+    "before": "7bed1d552aa5e9345e493cd62cb13e65c5d829d153c349afdb2cb91c809fa6c4",
+    "after": "e6c7c4f7306ff44354e66d8278410ac71b7095b2f0d802e4265c8f0fdddd6dc3",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\obsidian-vault\\SKILL.md",
+    "repair": "Historical alternate-vault reference only. Do not run it against current AI OS. Current knowledge work routes to ingest, second-brain-query or second-brain-lint and its existing folder schema."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\obsidian-vault\\SKILL.md",
+    "name": "obsidian-vault",
+    "before": "7bed1d552aa5e9345e493cd62cb13e65c5d829d153c349afdb2cb91c809fa6c4",
+    "after": "e6c7c4f7306ff44354e66d8278410ac71b7095b2f0d802e4265c8f0fdddd6dc3",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\obsidian-vault\\SKILL.md",
+    "repair": "Historical alternate-vault reference only. Do not run it against current AI OS. Current knowledge work routes to ingest, second-brain-query or second-brain-lint and its existing folder schema."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\pdf\\SKILL.md",
+    "name": "pdf",
+    "before": "9f78b8359fbd4943ad260a7a1e436e5a96503406d6c34e99f69223d647d85b9c",
+    "after": "2a092d1d53c26917541632b8dfaf2676005944a5e30bb8d0667db9f44741221b",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\pdf\\SKILL.md",
+    "repair": "Preserve source PDFs and write edited outputs to a separate task-owned file. Verify extraction/OCR or form/render output appropriate to the requested change; do not silently overwrite originals."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\pdf\\SKILL.md",
+    "name": "pdf",
+    "before": "9f78b8359fbd4943ad260a7a1e436e5a96503406d6c34e99f69223d647d85b9c",
+    "after": "2a092d1d53c26917541632b8dfaf2676005944a5e30bb8d0667db9f44741221b",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\pdf\\SKILL.md",
+    "repair": "Preserve source PDFs and write edited outputs to a separate task-owned file. Verify extraction/OCR or form/render output appropriate to the requested change; do not silently overwrite originals."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\playground\\SKILL.md",
+    "name": "playground",
+    "before": "521a3d62211e5f47b65ed17b660e001b15cf8d88d058cbf31bc00e889bcb63cc",
+    "after": "718ee3336e2332b541df292e5f63b50edaae89ed504e8174e26a726732f3c97d",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\playground\\SKILL.md",
+    "repair": "Open the saved artifact through the supported host UI (open_in_codex where available), not an assumed macOS open command. Keep standalone interactions and useful state visible."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\playground\\SKILL.md",
+    "name": "playground",
+    "before": "521a3d62211e5f47b65ed17b660e001b15cf8d88d058cbf31bc00e889bcb63cc",
+    "after": "718ee3336e2332b541df292e5f63b50edaae89ed504e8174e26a726732f3c97d",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\playground\\SKILL.md",
+    "repair": "Open the saved artifact through the supported host UI (open_in_codex where available), not an assumed macOS open command. Keep standalone interactions and useful state visible."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\plugin-settings\\SKILL.md",
+    "name": "plugin-settings",
+    "before": "028b955244b937ebc1a5c268a12776b8ceae4cbfb60928fbca927227f4c8851d",
+    "after": "5ee9d8e6f2d9360a88ce29a2703b91f04c2c8a4c0e691f79f058405e145b0f0d",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\plugin-settings\\SKILL.md",
+    "repair": "Parse YAML with a proper parser rather than sourcing it as shell code. Under set -e/pipefail, optional grep misses must be handled explicitly. Verify the installed host's reload behavior; config edits are not proof a plugin reloaded."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\plugin-settings\\SKILL.md",
+    "name": "plugin-settings",
+    "before": "028b955244b937ebc1a5c268a12776b8ceae4cbfb60928fbca927227f4c8851d",
+    "after": "5ee9d8e6f2d9360a88ce29a2703b91f04c2c8a4c0e691f79f058405e145b0f0d",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\plugin-settings\\SKILL.md",
+    "repair": "Parse YAML with a proper parser rather than sourcing it as shell code. Under set -e/pipefail, optional grep misses must be handled explicitly. Verify the installed host's reload behavior; config edits are not proof a plugin reloaded."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\plugin-structure\\SKILL.md",
+    "name": "plugin-structure",
+    "before": "a2dbc1e5502aacb360d0ca74732cdd7be4f6a12a49edf4f2ade4134fbc026247",
+    "after": "d018d21d6ec18f909cc87e5ca768543d8076c24a9a3c72859f16dfbc4830c689",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\plugin-structure\\SKILL.md",
+    "repair": "This is a Claude plugin packaging reference, not the AI OS project skill activation model. Verify wrapper output and current host tools before treating sample scaffolds as executable complete plugins."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\plugin-structure\\SKILL.md",
+    "name": "plugin-structure",
+    "before": "a2dbc1e5502aacb360d0ca74732cdd7be4f6a12a49edf4f2ade4134fbc026247",
+    "after": "d018d21d6ec18f909cc87e5ca768543d8076c24a9a3c72859f16dfbc4830c689",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\plugin-structure\\SKILL.md",
+    "repair": "This is a Claude plugin packaging reference, not the AI OS project skill activation model. Verify wrapper output and current host tools before treating sample scaffolds as executable complete plugins."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\post-session-recap\\SKILL.md",
+    "name": "post-session-recap",
+    "before": "4fee3b24d8a2c142db1f4cbeecb1b40bba1a7581b80ceee877ddf56f77c1d6cb",
+    "after": "d27a97f9c8d0d56bf12cf04d2be42bd7235f4dec948100ed654cae901795716b",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\post-session-recap\\SKILL.md",
+    "repair": "Reuse the exact student artifact and prior approval; preserve transcript grounding, teaching-first structure and read-after-write checks. New transcript retrieval routes to transcript-intake, not knowledge ingest."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\post-session-recap\\SKILL.md",
+    "name": "post-session-recap",
+    "before": "4fee3b24d8a2c142db1f4cbeecb1b40bba1a7581b80ceee877ddf56f77c1d6cb",
+    "after": "d27a97f9c8d0d56bf12cf04d2be42bd7235f4dec948100ed654cae901795716b",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\post-session-recap\\SKILL.md",
+    "repair": "Reuse the exact student artifact and prior approval; preserve transcript grounding, teaching-first structure and read-after-write checks. New transcript retrieval routes to transcript-intake, not knowledge ingest."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\pptx\\SKILL.md",
+    "name": "pptx",
+    "before": "a7ff03e2c85b636f55232a6b1555f5dd90216b7a1a359ab289d8364e6acbc6a0",
+    "after": "12c2bfa3d02f63cb91f385e1d164279ce1dc420dd36d5b576837789a0233e3fe",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\pptx\\SKILL.md",
+    "repair": "Resolve installed host runtimes and support files before execution. Preserve content and render/visual QA; no claim of live slide acceptance follows from a file existing."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\pptx\\SKILL.md",
+    "name": "pptx",
+    "before": "a7ff03e2c85b636f55232a6b1555f5dd90216b7a1a359ab289d8364e6acbc6a0",
+    "after": "12c2bfa3d02f63cb91f385e1d164279ce1dc420dd36d5b576837789a0233e3fe",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\pptx\\SKILL.md",
+    "repair": "Resolve installed host runtimes and support files before execution. Preserve content and render/visual QA; no claim of live slide acceptance follows from a file existing."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\prompt-architect-refiner\\SKILL.md",
+    "name": "prompt-architect-refiner",
+    "before": "311e47edd43923ec372706ba1a944cae59e53b67be7edcccabcac8487d4b1886",
+    "after": "3f3d4921fa3834c13679a6631546d4fced2d3c431b0638b5f5552245ace0518a",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\prompt-architect-refiner\\SKILL.md",
+    "repair": "Respect prior approval and the actual requested brief. Premium dark-glass UI is an optional selected style, not a default for every prompt. Ask only consequential missing questions."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\prompt-architect-refiner\\SKILL.md",
+    "name": "prompt-architect-refiner",
+    "before": "311e47edd43923ec372706ba1a944cae59e53b67be7edcccabcac8487d4b1886",
+    "after": "3f3d4921fa3834c13679a6631546d4fced2d3c431b0638b5f5552245ace0518a",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\prompt-architect-refiner\\SKILL.md",
+    "repair": "Respect prior approval and the actual requested brief. Premium dark-glass UI is an optional selected style, not a default for every prompt. Ask only consequential missing questions."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\prototype\\SKILL.md",
+    "name": "prototype",
+    "before": "714de632d116bb73f65cdb5a882db15b9369a6713b9a47c0fad827848f0bfbe3",
+    "after": "733ab28e5b534efcb2010c80f3a59618f7014c1f984a8a77bf916c55f1daf791",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\prototype\\SKILL.md",
+    "repair": "Place application dependencies and temporary executable projects in sibling ai-os-projects, not the vault root. Keep the probe limited to the design question and do not promote it to production without authorization."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\prototype\\SKILL.md",
+    "name": "prototype",
+    "before": "714de632d116bb73f65cdb5a882db15b9369a6713b9a47c0fad827848f0bfbe3",
+    "after": "733ab28e5b534efcb2010c80f3a59618f7014c1f984a8a77bf916c55f1daf791",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\prototype\\SKILL.md",
+    "repair": "Place application dependencies and temporary executable projects in sibling ai-os-projects, not the vault root. Keep the probe limited to the design question and do not promote it to production without authorization."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\pull-submissions\\SKILL.md",
+    "name": "pull-submissions",
+    "before": "af6bef8077a5d8979ab185fc97e8f049ce0439d71c22076d3db21a6839ec3177",
+    "after": "cb42f7c4b52387035b84ad61b2698e9c0bd08b1d5b07120beec8abab9ee12f01",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\pull-submissions\\SKILL.md",
+    "repair": "Resolve current booking mirror paths and relationship IDs from the canonical root/live systems. Use stable source IDs for idempotent filing and do not infer a student identity from a loose name match."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\pull-submissions\\SKILL.md",
+    "name": "pull-submissions",
+    "before": "af6bef8077a5d8979ab185fc97e8f049ce0439d71c22076d3db21a6839ec3177",
+    "after": "cb42f7c4b52387035b84ad61b2698e9c0bd08b1d5b07120beec8abab9ee12f01",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\pull-submissions\\SKILL.md",
+    "repair": "Resolve current booking mirror paths and relationship IDs from the canonical root/live systems. Use stable source IDs for idempotent filing and do not infer a student identity from a loose name match."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\redesign-existing-projects\\SKILL.md",
+    "name": "redesign-existing-projects",
+    "before": "98ad3e5b051bfb71b2795f7e8a6aa0d32b51ee095606c098a4b2822ac07926c9",
+    "after": "19c81e10f9e384ab364560c66dca8499619daa56eb8f32e037bbdb2b7163c8bf",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\redesign-existing-projects\\SKILL.md",
+    "repair": "Preserve the current design system, product facts and real dates/data. Fix demonstrated usability/accessibility defects within the brief. Do not replace factual values with organic invented values or impose an unrelated palette/font/density."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\redesign-existing-projects\\SKILL.md",
+    "name": "redesign-existing-projects",
+    "before": "98ad3e5b051bfb71b2795f7e8a6aa0d32b51ee095606c098a4b2822ac07926c9",
+    "after": "19c81e10f9e384ab364560c66dca8499619daa56eb8f32e037bbdb2b7163c8bf",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\redesign-existing-projects\\SKILL.md",
+    "repair": "Preserve the current design system, product facts and real dates/data. Fix demonstrated usability/accessibility defects within the brief. Do not replace factual values with organic invented values or impose an unrelated palette/font/density."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\request-refactor-plan\\SKILL.md",
+    "name": "request-refactor-plan",
+    "before": "d59de4ba6cc1fe2dd267e8b9b5a1fd88e3e739e2130bc9dd78061d2a072830b8",
+    "after": "ca46ef2c63934619825fb69227a99bec94a49e7385277e065c9ac3a8ef397e53",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\request-refactor-plan\\SKILL.md",
+    "repair": "Plan around behavior-preserving seams and relevant checks. Commit increments only when authorized and stage owned paths; preserve unrelated work."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\request-refactor-plan\\SKILL.md",
+    "name": "request-refactor-plan",
+    "before": "d59de4ba6cc1fe2dd267e8b9b5a1fd88e3e739e2130bc9dd78061d2a072830b8",
+    "after": "ca46ef2c63934619825fb69227a99bec94a49e7385277e065c9ac3a8ef397e53",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\request-refactor-plan\\SKILL.md",
+    "repair": "Plan around behavior-preserving seams and relevant checks. Commit increments only when authorized and stage owned paths; preserve unrelated work."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\research-add-items\\SKILL.md",
+    "name": "research-add-items",
+    "before": "52195e187e55941525e6006709dacb0b409448717958af86e73cbf6682b9e616",
+    "after": "f3c04dd1a56fce2c9ec569404caa894c69a44a62fc329b80f94530ea1443ac8e",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\research-add-items\\SKILL.md",
+    "repair": "Use only within an explicitly selected existing outline.yaml research workflow. Do not create an unrelated second research pipeline or mutate an arbitrary outline."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\research-add-items\\SKILL.md",
+    "name": "research-add-items",
+    "before": "52195e187e55941525e6006709dacb0b409448717958af86e73cbf6682b9e616",
+    "after": "f3c04dd1a56fce2c9ec569404caa894c69a44a62fc329b80f94530ea1443ac8e",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\research-add-items\\SKILL.md",
+    "repair": "Use only within an explicitly selected existing outline.yaml research workflow. Do not create an unrelated second research pipeline or mutate an arbitrary outline."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\research-report\\SKILL.md",
+    "name": "research-report",
+    "before": "3f338b814cda64564170b821eb9d9f597126639d8330b0d9b43dff9fbcbb945b",
+    "after": "0c44367a1bdd79ede65b1dbc298f8c6b1ca4b1e57608725c0a85ded559d02cb3",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\research-report\\SKILL.md",
+    "repair": "Keep generated executable helpers/dependencies in sibling ai-os-projects. Report uncertain fields and provenance in the report/appendix; do not silently remove evidence because it is uncertain."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\research-report\\SKILL.md",
+    "name": "research-report",
+    "before": "3f338b814cda64564170b821eb9d9f597126639d8330b0d9b43dff9fbcbb945b",
+    "after": "0c44367a1bdd79ede65b1dbc298f8c6b1ca4b1e57608725c0a85ded559d02cb3",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\research-report\\SKILL.md",
+    "repair": "Keep generated executable helpers/dependencies in sibling ai-os-projects. Report uncertain fields and provenance in the report/appendix; do not silently remove evidence because it is uncertain."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\resume\\SKILL.md",
+    "name": "resume",
+    "before": "bdfd9d7d60a52de24845e3811a8d4e98d6e626871acacb032fdebc549a3ce557",
+    "after": "79f3d9fd87f131269e1fdb594060e6863c613fcc9aa8d77639dc1fcf7363f8c8",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\resume\\SKILL.md",
+    "repair": "Resolve the requested active task from its explicit ledger/handoff pointer. Newest-file time alone cannot identify the right project or task. Preserve unresolved context and report ambiguity."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\resume\\SKILL.md",
+    "name": "resume",
+    "before": "bdfd9d7d60a52de24845e3811a8d4e98d6e626871acacb032fdebc549a3ce557",
+    "after": "79f3d9fd87f131269e1fdb594060e6863c613fcc9aa8d77639dc1fcf7363f8c8",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\resume\\SKILL.md",
+    "repair": "Resolve the requested active task from its explicit ledger/handoff pointer. Newest-file time alone cannot identify the right project or task. Preserve unresolved context and report ambiguity."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\review\\SKILL.md",
+    "name": "review",
+    "before": "0f1c3edf07b730ae7644c68d716faaa43be0fd81a27c06e13baf6b55712e7edb",
+    "after": "06e27b5a7c83efdf9234bffad18bff17043fcf8198e07885bfaf2502924913c7",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\review\\SKILL.md",
+    "repair": "For work-in-progress review, inventory committed, staged, unstaged and untracked paths in the requested scope. Three-dot merge-base...HEAD is committed changes only. Preserve exact reviewed scope and do not claim dirty code was reviewed from that range."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\review\\SKILL.md",
+    "name": "review",
+    "before": "0f1c3edf07b730ae7644c68d716faaa43be0fd81a27c06e13baf6b55712e7edb",
+    "after": "06e27b5a7c83efdf9234bffad18bff17043fcf8198e07885bfaf2502924913c7",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\review\\SKILL.md",
+    "repair": "For work-in-progress review, inventory committed, staged, unstaged and untracked paths in the requested scope. Three-dot merge-base...HEAD is committed changes only. Preserve exact reviewed scope and do not claim dirty code was reviewed from that range."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\scaffold-exercises\\SKILL.md",
+    "name": "scaffold-exercises",
+    "before": "75f5c9d771606fb9762f16522efc954df11c324f87148d8ff069bce166257de9",
+    "after": "5fd486e9cdb1feb3a78d96aacee44a8c835b264653e7c5072924365b3e5b6368",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\scaffold-exercises\\SKILL.md",
+    "repair": "Run only in the actual selected AI Hero exercise repository with its installed lint command. A scaffold request does not authorize an automatic commit; preserve user work."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\scaffold-exercises\\SKILL.md",
+    "name": "scaffold-exercises",
+    "before": "75f5c9d771606fb9762f16522efc954df11c324f87148d8ff069bce166257de9",
+    "after": "5fd486e9cdb1feb3a78d96aacee44a8c835b264653e7c5072924365b3e5b6368",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\scaffold-exercises\\SKILL.md",
+    "repair": "Run only in the actual selected AI Hero exercise repository with its installed lint command. A scaffold request does not authorize an automatic commit; preserve user work."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\session-handoff\\SKILL.md",
+    "name": "session-handoff",
+    "before": "4db01e4999c1d38130f6bc3ddc90f39b0f415554e0946940923c9043f23e36fd",
+    "after": "7a50540028f51c9280837dca5820752ab41227688a41ba6f7b8468353e5d1bec",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\session-handoff\\SKILL.md",
+    "repair": "Use the host-supported time/file tools, preserve current open state and explicit scope. Chat-only continuity remains distinct from file-writing wrapup or a broad system audit."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\session-handoff\\SKILL.md",
+    "name": "session-handoff",
+    "before": "4db01e4999c1d38130f6bc3ddc90f39b0f415554e0946940923c9043f23e36fd",
+    "after": "7a50540028f51c9280837dca5820752ab41227688a41ba6f7b8468353e5d1bec",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\session-handoff\\SKILL.md",
+    "repair": "Use the host-supported time/file tools, preserve current open state and explicit scope. Chat-only continuity remains distinct from file-writing wrapup or a broad system audit."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\setup-matt-pocock-skills\\SKILL.md",
+    "name": "setup-matt-pocock-skills",
+    "before": "f148858ffb7f63c03c06fca06e6fdb1d91a35c6b293244b8fdfacd5f4cc028c4",
+    "after": "4d62a69dce48f4bd47e0772877f2ad4bb73771c6026e1c2c3cb0f637dbbfa140",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\setup-matt-pocock-skills\\SKILL.md",
+    "repair": "When this project has both hand-owned manuals, mirror shared routing pointers into AGENTS.md and CLAUDE.md without regeneration. Preserve intentional local forks and upstream identity."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\setup-matt-pocock-skills\\SKILL.md",
+    "name": "setup-matt-pocock-skills",
+    "before": "2bcd89e97777cdb705914424e39c97d5db524c8eb4eafac8120778a07774f0ec",
+    "after": "6f2e4ce00085efc68cbf3014c8ce293864e2dcc9088a5631e4a428131f6a005b",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\setup-matt-pocock-skills\\SKILL.md",
+    "repair": "When this project has both hand-owned manuals, mirror shared routing pointers into AGENTS.md and CLAUDE.md without regeneration. Preserve intentional local forks and upstream identity."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\setup-ts-deep-modules\\SKILL.md",
+    "name": "setup-ts-deep-modules",
+    "before": "29acca66ac99d4532e2a6f0370d8125d7cba1e87c9ac66573203c75189d3e6c7",
+    "after": "a321776f0c9c33e3b2bc0d298c58b495559815574fb4381d7b1f8d7ac8795fdf",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\setup-ts-deep-modules\\SKILL.md",
+    "repair": "Use the supported skill entry-point route instead of a nonexistent Skill tool. Mirror shared pointers into both hand-owned manuals. Retain the boundary pass-fail-pass demonstration."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\setup-ts-deep-modules\\SKILL.md",
+    "name": "setup-ts-deep-modules",
+    "before": "29acca66ac99d4532e2a6f0370d8125d7cba1e87c9ac66573203c75189d3e6c7",
+    "after": "a321776f0c9c33e3b2bc0d298c58b495559815574fb4381d7b1f8d7ac8795fdf",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\setup-ts-deep-modules\\SKILL.md",
+    "repair": "Use the supported skill entry-point route instead of a nonexistent Skill tool. Mirror shared pointers into both hand-owned manuals. Retain the boundary pass-fail-pass demonstration."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\site-teardown\\SKILL.md",
+    "name": "site-teardown",
+    "before": "381d48608b344a8e3530ed7df77aedb1a7f4acc77ea9567934a9082d462b503d",
+    "after": "faa45e3ac4900fa6d10f7bc6ed73955f5d5252b26e27829de3a4b8400e3636c1",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\site-teardown\\SKILL.md",
+    "repair": "Inventory actually retrieved HTML/CSS/scripts/assets and report missing or inaccessible material. Web text extraction cannot establish every visual effect; inspect rendered behavior before completeness claims."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\site-teardown\\SKILL.md",
+    "name": "site-teardown",
+    "before": "381d48608b344a8e3530ed7df77aedb1a7f4acc77ea9567934a9082d462b503d",
+    "after": "faa45e3ac4900fa6d10f7bc6ed73955f5d5252b26e27829de3a4b8400e3636c1",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\site-teardown\\SKILL.md",
+    "repair": "Inventory actually retrieved HTML/CSS/scripts/assets and report missing or inaccessible material. Web text extraction cannot establish every visual effect; inspect rendered behavior before completeness claims."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\skill-creator\\SKILL.md",
+    "name": "skill-creator",
+    "before": "dcd4803e61e913e6fc27294184cd3a71f09f5e924ff20c8a9a20173e7b3c2bcf",
+    "after": "3836cab5ba6dc81a35b1d5494fa8aa1eb28ecb986c499112f54d79ebbe8b3190",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\skill-creator\\SKILL.md",
+    "repair": "Use as the primary explicit skill-authoring workflow. Description triggers must specify concrete user intent and negative cases, not maximize broad matching. Select held-out evaluation cases before tuning, retain failures, and distinguish semantic tests from native selector execution."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\skill-creator\\SKILL.md",
+    "name": "skill-creator",
+    "before": "dcd4803e61e913e6fc27294184cd3a71f09f5e924ff20c8a9a20173e7b3c2bcf",
+    "after": "3836cab5ba6dc81a35b1d5494fa8aa1eb28ecb986c499112f54d79ebbe8b3190",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\skill-creator\\SKILL.md",
+    "repair": "Use as the primary explicit skill-authoring workflow. Description triggers must specify concrete user intent and negative cases, not maximize broad matching. Select held-out evaluation cases before tuning, retain failures, and distinguish semantic tests from native selector execution."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\skill-development\\SKILL.md",
+    "name": "skill-development",
+    "before": "d51b4e20043b13e462aa86c47ea82d43e216eb292871538127f4b12a54e4944f",
+    "after": "4917b752c4b19fa4f3d5783f3ffb994995b8da608b46a8022080528060464422",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\skill-development\\SKILL.md",
+    "repair": "Use for explicit Claude plugin skill packaging; delegate generic skill authoring to the primary skill creator. Preserve progressive disclosure and plugin-specific references."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\skill-development\\SKILL.md",
+    "name": "skill-development",
+    "before": "d51b4e20043b13e462aa86c47ea82d43e216eb292871538127f4b12a54e4944f",
+    "after": "4917b752c4b19fa4f3d5783f3ffb994995b8da608b46a8022080528060464422",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\skill-development\\SKILL.md",
+    "repair": "Use for explicit Claude plugin skill packaging; delegate generic skill authoring to the primary skill creator. Preserve progressive disclosure and plugin-specific references."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\systematic-debugging\\SKILL.md",
+    "name": "systematic-debugging",
+    "before": "3b20719eca4f0461cb51a195221320d775dcf03b6859271066a03a5132a6ce7a",
+    "after": "4df1f584a82de17b4de8b786fee5e1724e6d618fc7a4afdc4a13f97a87fd872f",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\systematic-debugging\\SKILL.md",
+    "repair": "Check environment variable presence without printing values. Vendor percentage/time anecdotes are not measured guarantees. Use meaningful tests proportionate to the change; cosmetic edits do not require invented test ceremony."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\systematic-debugging\\SKILL.md",
+    "name": "systematic-debugging",
+    "before": "3b20719eca4f0461cb51a195221320d775dcf03b6859271066a03a5132a6ce7a",
+    "after": "4df1f584a82de17b4de8b786fee5e1724e6d618fc7a4afdc4a13f97a87fd872f",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\systematic-debugging\\SKILL.md",
+    "repair": "Check environment variable presence without printing values. Vendor percentage/time anecdotes are not measured guarantees. Use meaningful tests proportionate to the change; cosmetic edits do not require invented test ceremony."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\teach\\SKILL.md",
+    "name": "teach",
+    "before": "550482c2d674b085c9043b87bfdc14a8f2ec453c736119e7fcbb1e9332bffeba",
+    "after": "9569d28e05199fe084495e43e7679933d341163c596287b82b22e16e497a6533",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\teach\\SKILL.md",
+    "repair": "Choose a dedicated sibling learning project before creating MISSION, lessons, assets or dependencies. Do not initialize an executable lesson workspace in the Obsidian vault. Assessment quality does not require identical word counts."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\teach\\SKILL.md",
+    "name": "teach",
+    "before": "a32df9dcdfc0c4fdc1c98e1ed3940c5f56b84c1aa90ff60346f32b8b53915b43",
+    "after": "a4ed4997a7a298e7601377c642c73dde4e48a0e161082aeb6fbf06347c97c382",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\teach\\SKILL.md",
+    "repair": "Choose a dedicated sibling learning project before creating MISSION, lessons, assets or dependencies. Do not initialize an executable lesson workspace in the Obsidian vault. Assessment quality does not require identical word counts."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\to-issues\\SKILL.md",
+    "name": "to-issues",
+    "before": "f8a72a5bc88aa830ae62b323a52b08934da52851b010984c55829a644c7f6ba6",
+    "after": "83e2200593ea46275d23d37b5dcbfecd1b1e168fab01eebd9ff059bb53b93fc1",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\to-issues\\SKILL.md",
+    "repair": "Explicit GitHub-issue compatibility route, not a competing generic planner. Preserve GitHub parent/child relationships and approval semantics. Reuse the to-tickets vertical-slice planning concepts; publish issues only when explicitly authorized."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\to-issues\\SKILL.md",
+    "name": "to-issues",
+    "before": "f8a72a5bc88aa830ae62b323a52b08934da52851b010984c55829a644c7f6ba6",
+    "after": "83e2200593ea46275d23d37b5dcbfecd1b1e168fab01eebd9ff059bb53b93fc1",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\to-issues\\SKILL.md",
+    "repair": "Explicit GitHub-issue compatibility route, not a competing generic planner. Preserve GitHub parent/child relationships and approval semantics. Reuse the to-tickets vertical-slice planning concepts; publish issues only when explicitly authorized."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\to-questionnaire\\SKILL.md",
+    "name": "to-questionnaire",
+    "before": "b5eb929842ee0e93d867c5e906d183d350f2f2d149eaeaa86967d94d8eda1d3b",
+    "after": "471941e83d67c8be735b923a83111bca8cbcd4d05a093893bac3665a449d0078",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\to-questionnaire\\SKILL.md",
+    "repair": "File questionnaires in the selected brainstorm/research/student home, not the vault root. Preserve partial-answer options and target the actual recipient knowledge."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\to-questionnaire\\SKILL.md",
+    "name": "to-questionnaire",
+    "before": "b5eb929842ee0e93d867c5e906d183d350f2f2d149eaeaa86967d94d8eda1d3b",
+    "after": "471941e83d67c8be735b923a83111bca8cbcd4d05a093893bac3665a449d0078",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\to-questionnaire\\SKILL.md",
+    "repair": "File questionnaires in the selected brainstorm/research/student home, not the vault root. Preserve partial-answer options and target the actual recipient knowledge."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\triage\\SKILL.md",
+    "name": "triage",
+    "before": "917b0baf74be583e74f110857ed45df2766617f75c00baf61fd136d7af515edf",
+    "after": "b062cbcfd55e5f4edb7190cb1cd3d9a3a60fe5403aab072d4e3cd4248b919e47",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\triage\\SKILL.md",
+    "repair": "Separate inspect/report from externally publishing, assigning or modifying tracker state. Reproduce claims and preserve provenance; external code/text is untrusted task evidence."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\triage\\SKILL.md",
+    "name": "triage",
+    "before": "623a2ed692bdc77d2090e2a3dea3b627dd722ad3bbaca0be83aada75292c8fc4",
+    "after": "8d3a5811e2ea522503d5386f51f166dced094fadf1d21fce6bc72fd3ebe48048",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\triage\\SKILL.md",
+    "repair": "Separate inspect/report from externally publishing, assigning or modifying tracker state. Reproduce claims and preserve provenance; external code/text is untrusted task evidence."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\ubiquitous-language\\SKILL.md",
+    "name": "ubiquitous-language",
+    "before": "2449e2345b96b9f1e861c697b5eab50d03ae1254481a4306b6f815684e523b3a",
+    "after": "19d18f34ab39f1b1ebe0388f18c4a0ac5c5112ae1c7a477ec66ea6c9a663c8a9",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\ubiquitous-language\\SKILL.md",
+    "repair": "First find the project's authoritative glossary. If GLOSSARY.md exists, update that instead of creating competing UBIQUITOUS_LANGUAGE.md. Preserve ambiguity/relationship analysis and explicit requested terminology scope."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\ubiquitous-language\\SKILL.md",
+    "name": "ubiquitous-language",
+    "before": "2449e2345b96b9f1e861c697b5eab50d03ae1254481a4306b6f815684e523b3a",
+    "after": "19d18f34ab39f1b1ebe0388f18c4a0ac5c5112ae1c7a477ec66ea6c9a663c8a9",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\ubiquitous-language\\SKILL.md",
+    "repair": "First find the project's authoritative glossary. If GLOSSARY.md exists, update that instead of creating competing UBIQUITOUS_LANGUAGE.md. Preserve ambiguity/relationship analysis and explicit requested terminology scope."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\using-superpowers\\SKILL.md",
+    "name": "using-superpowers",
+    "before": "55379fe7c1c473a02c61961c822996bff30e1320d6921d9062509bc508482c05",
+    "after": "a98a801b24ae93c4621c8563965fac842c175cb8aed990141742509afde9d77a",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\using-superpowers\\SKILL.md",
+    "repair": "Explicit Superpowers workflow reference only. No every-conversation or one-percent mandatory activation. Use a relevant skill only when requested or materially useful; system/developer/user instructions remain above this reference. Read installed entry points through actual host tools."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\using-superpowers\\SKILL.md",
+    "name": "using-superpowers",
+    "before": "55379fe7c1c473a02c61961c822996bff30e1320d6921d9062509bc508482c05",
+    "after": "a98a801b24ae93c4621c8563965fac842c175cb8aed990141742509afde9d77a",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\using-superpowers\\SKILL.md",
+    "repair": "Explicit Superpowers workflow reference only. No every-conversation or one-percent mandatory activation. Use a relevant skill only when requested or materially useful; system/developer/user instructions remain above this reference. Read installed entry points through actual host tools."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\watch\\SKILL.md",
+    "name": "watch",
+    "before": "4ec9d13c13fe3d8d67df61f67402a77111d3aaaf1615e283cbc69ac6b8418a78",
+    "after": "d6d580fc297ae65dfcaa738c177645de90ba42460609003a5122bcd2eac0cd7f",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\watch\\SKILL.md",
+    "repair": "For transcript-only YouTube requests use the existing free get_youtube_transcript.py collector first. For visual frame inspection check binaries without requiring an API key, then run watch.py with --no-whisper. Credentials stay in the central .env; do not create ~/.config/watch/.env. Optional external audio transcription requires explicit bounded provider/cost authorization and an approved loader. Preserve output until deletion is expressly authorized."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\watch\\SKILL.md",
+    "name": "watch",
+    "before": "4ec9d13c13fe3d8d67df61f67402a77111d3aaaf1615e283cbc69ac6b8418a78",
+    "after": "d6d580fc297ae65dfcaa738c177645de90ba42460609003a5122bcd2eac0cd7f",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\watch\\SKILL.md",
+    "repair": "For transcript-only YouTube requests use the existing free get_youtube_transcript.py collector first. For visual frame inspection check binaries without requiring an API key, then run watch.py with --no-whisper. Credentials stay in the central .env; do not create ~/.config/watch/.env. Optional external audio transcription requires explicit bounded provider/cost authorization and an approved loader. Preserve output until deletion is expressly authorized."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\wayfinder\\SKILL.md",
+    "name": "wayfinder",
+    "before": "9be7b478c389605a24517d27752f278933588da97a1b5921b165f455edf4c5b7",
+    "after": "dc5c4120f185a85b992bb6901d39efa3e29210d264bfaa01d7cb4a382633301a",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\wayfinder\\SKILL.md",
+    "repair": "Resolve actual host tools rather than literal Skill calls. Pushes, external tracker writes and deletion are separate explicitly authorized actions, not automatic defaults of decision mapping."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\wayfinder\\SKILL.md",
+    "name": "wayfinder",
+    "before": "fee6e1d0c50f0e736b4ef8a599060c959afae904c9a97d82c97f049fcc3aa0f1",
+    "after": "0f65fd4c873b07bab36173cde5b0df074d9d1a088c92b2af9263f6e251048126",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\wayfinder\\SKILL.md",
+    "repair": "Resolve actual host tools rather than literal Skill calls. Pushes, external tracker writes and deletion are separate explicitly authorized actions, not automatic defaults of decision mapping."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\web-artifacts-builder\\SKILL.md",
+    "name": "web-artifacts-builder",
+    "before": "81c5002c6643b0de7b8710b00e7a9038daa6fb9b68d59870ee6adb12da8d10f8",
+    "after": "2d8929f50d092e85914dd45beab8c4ee69f573fe640cb95ca3904315cbc3c644",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\web-artifacts-builder\\SKILL.md",
+    "repair": "Select a sibling application project before initializing dependencies. Build and run meaningful interaction checks before presenting completion; the old no-test/default-cwd examples are not the current contract."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\web-artifacts-builder\\SKILL.md",
+    "name": "web-artifacts-builder",
+    "before": "81c5002c6643b0de7b8710b00e7a9038daa6fb9b68d59870ee6adb12da8d10f8",
+    "after": "2d8929f50d092e85914dd45beab8c4ee69f573fe640cb95ca3904315cbc3c644",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\web-artifacts-builder\\SKILL.md",
+    "repair": "Select a sibling application project before initializing dependencies. Build and run meaningful interaction checks before presenting completion; the old no-test/default-cwd examples are not the current contract."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\webapp-testing\\SKILL.md",
+    "name": "webapp-testing",
+    "before": "51b7349e77ec63b7744a6f63647e7566a0b4d2e301121cc10e8c2113af6556a2",
+    "after": "c84e02082ba53d1ead372ec86c83790762876a131221055af189a047128b0aa6",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\webapp-testing\\SKILL.md",
+    "repair": "Wait for the actual app state with element/route/assertion readiness. networkidle is optional diagnostic evidence and can hang on polling apps; it is not a universal UI-readiness gate. Resolve helper paths from this installed skill."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\webapp-testing\\SKILL.md",
+    "name": "webapp-testing",
+    "before": "51b7349e77ec63b7744a6f63647e7566a0b4d2e301121cc10e8c2113af6556a2",
+    "after": "c84e02082ba53d1ead372ec86c83790762876a131221055af189a047128b0aa6",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\webapp-testing\\SKILL.md",
+    "repair": "Wait for the actual app state with element/route/assertion readiness. networkidle is optional diagnostic evidence and can hang on polling apps; it is not a universal UI-readiness gate. Resolve helper paths from this installed skill."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\writing-beats\\SKILL.md",
+    "name": "writing-beats",
+    "before": "a96abafa2372eede8267d770138b322d6125da8adaa7ccf0a5e08e4ee13ee71e",
+    "after": "5f0d10b4f046358b55487cfbb01d18d452e6d1d67d998279df0c2539107507b6",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\writing-beats\\SKILL.md",
+    "repair": "Explicit beat-mode authoring variant of the shared source-to-article shaping process. Do not compete with writing-shape for generic article requests; preserve distinct beat sequencing and use the authoritative source pile."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\writing-beats\\SKILL.md",
+    "name": "writing-beats",
+    "before": "a96abafa2372eede8267d770138b322d6125da8adaa7ccf0a5e08e4ee13ee71e",
+    "after": "5f0d10b4f046358b55487cfbb01d18d452e6d1d67d998279df0c2539107507b6",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\writing-beats\\SKILL.md",
+    "repair": "Explicit beat-mode authoring variant of the shared source-to-article shaping process. Do not compete with writing-shape for generic article requests; preserve distinct beat sequencing and use the authoritative source pile."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\writing-great-skills\\SKILL.md",
+    "name": "writing-great-skills",
+    "before": "7c6ba7ec25bb2c0e173c52cdc2da878aef0b083ec19a9c1799934e480c8833cc",
+    "after": "36fc7c7b71f78fc90fa04e3f520cb053bbdee69e728006c044d916858a894437",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\writing-great-skills\\SKILL.md",
+    "repair": "Explicit skill-writing reference, not an automatic competing creator. Use the primary skill creator for implementation and writing-for-agents for shared vocabulary; retain specialized mechanics."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\writing-great-skills\\SKILL.md",
+    "name": "writing-great-skills",
+    "before": "7c6ba7ec25bb2c0e173c52cdc2da878aef0b083ec19a9c1799934e480c8833cc",
+    "after": "36fc7c7b71f78fc90fa04e3f520cb053bbdee69e728006c044d916858a894437",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\writing-great-skills\\SKILL.md",
+    "repair": "Explicit skill-writing reference, not an automatic competing creator. Use the primary skill creator for implementation and writing-for-agents for shared vocabulary; retain specialized mechanics."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\writing-plans\\SKILL.md",
+    "name": "writing-plans",
+    "before": "272e1af349f5062c28dc282b3e21b220d58d683a7314a10c455b7432ec91d845",
+    "after": "5d4e06990bf59f9f1a9292287518d92b5a571632579994d6a4be1faea5f3df60",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\writing-plans\\SKILL.md",
+    "repair": "Reuse approved scope, choose proportional task boundaries and host-supported tools. Do not require repeated Superpowers invocations, speculative full implementations or automatic commits for every small edit."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\writing-plans\\SKILL.md",
+    "name": "writing-plans",
+    "before": "272e1af349f5062c28dc282b3e21b220d58d683a7314a10c455b7432ec91d845",
+    "after": "5d4e06990bf59f9f1a9292287518d92b5a571632579994d6a4be1faea5f3df60",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\writing-plans\\SKILL.md",
+    "repair": "Reuse approved scope, choose proportional task boundaries and host-supported tools. Do not require repeated Superpowers invocations, speculative full implementations or automatic commits for every small edit."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\writing-skills\\SKILL.md",
+    "name": "writing-skills",
+    "before": "6b8d08fe863318be8480ae8428e169640309fa9208df84bb0510012764454146",
+    "after": "3ec6ef7bbbd17d8721ac148fe0ca3f7a2d2215796eb1dae8c00fb8c194832960",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\writing-skills\\SKILL.md",
+    "repair": "Explicit pressure-testing/reference workflow, not automatic primary creator. Preserve unrelated implementation; never delete existing user code solely because a test-first ceremony was absent."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\writing-skills\\SKILL.md",
+    "name": "writing-skills",
+    "before": "6b8d08fe863318be8480ae8428e169640309fa9208df84bb0510012764454146",
+    "after": "3ec6ef7bbbd17d8721ac148fe0ca3f7a2d2215796eb1dae8c00fb8c194832960",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\writing-skills\\SKILL.md",
+    "repair": "Explicit pressure-testing/reference workflow, not automatic primary creator. Preserve unrelated implementation; never delete existing user code solely because a test-first ceremony was absent."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\xlsx\\SKILL.md",
+    "name": "xlsx",
+    "before": "6712b39718fe815054abca9c3ee72f989613e6f771c8a5c58f30a65a6c905622",
+    "after": "02043ce0454b1d664a0c5a02b011d5a974f1f38c93c95280b521ed0a9ffe0525",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\xlsx\\SKILL.md",
+    "repair": "Preserve the original workbook and macros/external links where relevant; produce a separate output copy and verify formulas/cached values and the requested changes."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\xlsx\\SKILL.md",
+    "name": "xlsx",
+    "before": "6712b39718fe815054abca9c3ee72f989613e6f771c8a5c58f30a65a6c905622",
+    "after": "02043ce0454b1d664a0c5a02b011d5a974f1f38c93c95280b521ed0a9ffe0525",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\xlsx\\SKILL.md",
+    "repair": "Preserve the original workbook and macros/external links where relevant; produce a separate output copy and verify formulas/cached values and the requested changes."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\gemini\\youtube-full\\SKILL.md",
+    "name": "youtube-full",
+    "before": "1889041d61be4f20033701ce70ff4add59207609d914bc97f2efcf4e6b4ffa62",
+    "after": "91d67ddd447ef7f8f429da796c69f942de3c3fccc1833849e91799ca7bbf86ac",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\skills\\gemini\\youtube-full\\SKILL.md",
+    "repair": "Optional TranscriptAPI provider reference only. Ordinary transcript requests first use the existing free get_youtube_transcript.py collector. Do not create accounts or spend provider credits without explicit bounded authorization. Preserve unique channel/search/playlist documentation as reference."
+  },
+  {
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\.gemini\\skills\\youtube-full\\SKILL.md",
+    "name": "youtube-full",
+    "before": "1889041d61be4f20033701ce70ff4add59207609d914bc97f2efcf4e6b4ffa62",
+    "after": "91d67ddd447ef7f8f429da796c69f942de3c3fccc1833849e91799ca7bbf86ac",
+    "backup": "C:\\Users\\Joshu\\dev\\ai-os\\audits\\skills-2026-10-10-repairs\\backups\\canonical-other\\.gemini\\skills\\youtube-full\\SKILL.md",
+    "repair": "Optional TranscriptAPI provider reference only. Ordinary transcript requests first use the existing free get_youtube_transcript.py collector. Do not create accounts or spend provider credits without explicit bounded authorization. Preserve unique channel/search/playlist documentation as reference."
+  }
+]

@@ -1,0 +1,78 @@
+{
+ "qid": "PT134-S2-Q17",
+ "type": "Sufficient Assumption",
+ "difficulty": "4",
+ "key_db": "E",
+ "stimulus_db": "People want to be instantly and intuitively liked. Those persons who are perceived as forming opinions of others only after cautiously gathering and weighing the evidence are generally resented. Thus, it is imprudent to appear prudent.",
+ "stem_db": "Which one of the following, if assumed, enables the argument's conclusion to be properly drawn?",
+ "choices_db": {
+  "A": "People who act spontaneously are well liked.",
+  "B": "Imprudent people act instantly and intuitively.",
+  "C": "People resent those less prudent than themselves.",
+  "D": "People who are intuitive know instantly when they like someone.",
+  "E": "It is imprudent to cause people to resent you."
+ },
+ "bank": {
+  "stimulus": "People want to be instantly and intuitively liked. Those persons who are perceived as forming opinions of others only after cautiously gathering and weighing the evidence are generally resented. Thus, it is imprudent to appear prudent.",
+  "stem": "Which one of the following, if assumed, enables the argument’s conclusion to be properly drawn?",
+  "choices": {
+   "A": "People who act spontaneously are well liked.",
+   "B": "Imprudent people act instantly and intuitively.",
+   "C": "People resent those less prudent than themselves.",
+   "D": "People who are intuitive know instantly when they like someone.",
+   "E": "It is imprudent to cause people to resent you."
+  },
+  "key": "E"
+ },
+ "explanation_id": "fb8ddc3c-c341-45cf-99e1-83bd347de5f2",
+ "style": "single",
+ "steps": [
+  {
+   "row_id": "db6c1efe-c0d1-456f-ad76-549a53a60d6a",
+   "position": 0,
+   "label": "Evidence",
+   "body": "Those persons who are perceived as forming opinions of others only after cautiously gathering and weighing the evidence are generally resented.\nAP → R"
+  },
+  {
+   "row_id": "82c7591b-dce5-49e2-8b20-53233f5721ef",
+   "position": 1,
+   "label": "Conclusion",
+   "body": "It is imprudent to appear prudent.\nAP → ~P"
+  },
+  {
+   "row_id": "e81ea5ed-4f01-491d-9945-b76f6fc53393",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "The argument assumes that it is not prudent to be resented.\nR → ~P"
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "22ea66a2-1b49-4d4a-9e6b-06db83e87cc6",
+   "letter": "A",
+   "body": "This flips the premise around rather than adding what the argument needs. The premise says people who appear cautious are resented; this answer says people who act spontaneously are well liked, roughly ~AP → ~R. That says nothing about whether being resented is imprudent, which is the gap between the premise and the conclusion.\n~AP → ~R"
+  },
+  {
+   "row_id": "d3bfaf37-b722-48ff-8344-0335eec1d047",
+   "letter": "B",
+   "body": "This answer is about how imprudent people act, which is irrelevant to this argument about how people appear."
+  },
+  {
+   "row_id": "0a252cd3-c2c0-4c71-9d51-5fca62ff3efa",
+   "letter": "C",
+   "body": "This answer doesn’t go so far as suggesting that people resent those who are imprudent. While someone may be less prudent than someone else, they still may be prudent. The opposite is also true—someone may be more prudent than someone else and yet still be imprudent."
+  },
+  {
+   "row_id": "22cc2a02-2e4b-4448-a2ae-b5104d4db920",
+   "letter": "D",
+   "body": "Knowing when someone likes another is not relevant to this argument."
+  },
+  {
+   "row_id": "f533f925-38b7-477d-8ab3-151992ee45fe",
+   "letter": "E",
+   "body": "This links being resented with being imprudent.\nR → ~P"
+  }
+ ],
+ "known_problem": "d4 SA explained by margin diagrams; A note calls A a negation of the premise, which it is not.",
+ "tags": "short-breakdown; verdict-only; thin-correct-note; thin-notes; no-prediction; very-short"
+}

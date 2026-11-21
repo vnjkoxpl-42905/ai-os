@@ -1,0 +1,285 @@
+{
+  "status": "completed",
+  "mode": "inspect",
+  "provider": "claude",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "claude",
+    "builder": "codex",
+    "inspector": "claude"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-conditional-bootcamp",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os\\brainstorms\\2026-09-30-conditional-curriculum\\OPENING-VISUAL-BUILD-REVIEW.md",
+  "plan_sha256": "b1068b2c9c288d77328ab7cd1b895b8dd702a4ecb65dc2c0e0ddf0ff96ea3330",
+  "requested_model": null,
+  "requested_effort": null,
+  "base": "67230dfae74a1466515d570fcb7b8a96ab5cb9c5",
+  "snapshot": {
+    "base": "67230dfae74a1466515d570fcb7b8a96ab5cb9c5",
+    "files": [
+      {
+        "path": "public/data/_bank.generated.json",
+        "kind": "file",
+        "sha256": "69f34f6dc7c1c2772d0fc212851873ca92a6c0a40e15af83e97b56575e004f75"
+      },
+      {
+        "path": "public/data/finder-address-index.json",
+        "kind": "file",
+        "sha256": "3f8216dacc9a968b6e4e19da90472b8591b32204f912dcf97ed87459b5406007"
+      },
+      {
+        "path": "src/App.tsx",
+        "kind": "file",
+        "sha256": "eef49221a7a4b4f3496c4979abb11355dfd437fd57df109c261c202de3965260"
+      },
+      {
+        "path": "src/bootcamps/conditionals/assignments.test.ts",
+        "kind": "file",
+        "sha256": "ec97ae7e4b36cb39855d048d83a2431d93a7f4e7b2eb2f91a9a5001e5bc1ec2f"
+      },
+      {
+        "path": "src/bootcamps/conditionals/assignments.ts",
+        "kind": "file",
+        "sha256": "5e1963c6cf4c1a9438164cf3c27215133ed17f0db460570be0882704c88489dd"
+      },
+      {
+        "path": "src/bootcamps/conditionals/components/ConditionalLessonNote.test.tsx",
+        "kind": "file",
+        "sha256": "ef091fbb188cd95be009574edd6f1dfdc93a1b9051b3dc2738000be85b9b5754"
+      },
+      {
+        "path": "src/bootcamps/conditionals/components/ConditionalLessonNote.tsx",
+        "kind": "file",
+        "sha256": "55c7be469bfef6d60c1e0c90b15d83464967a3604e16d50da058bf2d50a170b2"
+      },
+      {
+        "path": "src/bootcamps/conditionals/components/ConditionalOpeningLesson.review.test.tsx",
+        "kind": "file",
+        "sha256": "0fb9b8d7269e744af669438c23663010d00b1f26cebcf66846616d169ffd342f"
+      },
+      {
+        "path": "src/bootcamps/conditionals/components/ConditionalOpeningLesson.tsx",
+        "kind": "file",
+        "sha256": "6bf8ad6d74bb52ce187a10835419fd26e97d664298114fa1ec7ff9f92d3595a4"
+      },
+      {
+        "path": "src/bootcamps/conditionals/components/ConditionalOpeningMedia.tsx",
+        "kind": "file",
+        "sha256": "4972eef71e99fbe88669da4e7f0327ded7241a07049fba2b98d85ccbe64d6172"
+      },
+      {
+        "path": "src/bootcamps/conditionals/components/opening.css",
+        "kind": "file",
+        "sha256": "4a2c76be3910d2e41c878dcf16f61ed6c2faca0bea52119dccf3c824ecb9a12d"
+      },
+      {
+        "path": "src/bootcamps/conditionals/content/foundations.source.ts",
+        "kind": "file",
+        "sha256": "9ff0875546c486f42588874ef51d2df7a860f773c7c2c1cf8b3b1531184c2f8b"
+      },
+      {
+        "path": "src/bootcamps/conditionals/content/legacyQuestions.ts",
+        "kind": "file",
+        "sha256": "ad91b8a4a6fd59acd5c5d9b72ab3c9bc00e54d64475a2bcb18891b3ad54b04b9"
+      },
+      {
+        "path": "src/bootcamps/conditionals/content/opening-coverage.test.ts",
+        "kind": "file",
+        "sha256": "1e81a86f79d1cc85854f1f4591757776899ae7026e4ea16723f400015a4cda7d"
+      },
+      {
+        "path": "src/bootcamps/conditionals/data/curriculum.generated.json",
+        "kind": "file",
+        "sha256": "78a839c32a1c60c2a4d898f920eb47494c990650f88b48ba114f6f85a576e5f6"
+      },
+      {
+        "path": "src/bootcamps/conditionals/openingRevision.ts",
+        "kind": "file",
+        "sha256": "2e69c6ce090b902c6436d31cde11062eae1b19ef9ddb917811547463ff11e98f"
+      },
+      {
+        "path": "src/bootcamps/conditionals/progress.test.ts",
+        "kind": "file",
+        "sha256": "1ae71bc0da2bbf74c61d86c8f367024d610553450e437fc124d57324eb28baa1"
+      },
+      {
+        "path": "src/bootcamps/conditionals/progress.ts",
+        "kind": "file",
+        "sha256": "511b034fbe58e47d0fd01f65b1ac82cb0a34a332b2039638ef94dee29634d1f0"
+      },
+      {
+        "path": "src/bootcamps/conditionals/routes.test.tsx",
+        "kind": "file",
+        "sha256": "4636ead45f635c5ab6551a710dbe555e672e6dc1ef084746f2f81fb5e2d7c0c6"
+      },
+      {
+        "path": "src/bootcamps/conditionals/routes.tsx",
+        "kind": "file",
+        "sha256": "7acab603c34943a280aa80ae6cd76830dcbd51facbb8a1103d51af981658e0c6"
+      },
+      {
+        "path": "src/bootcamps/conditionals/useConditionalAssignments.ts",
+        "kind": "file",
+        "sha256": "a8988f5701f5f524e3c6373798c3a0bc0c6511ecec5a95183c652f61e308bd74"
+      },
+      {
+        "path": "src/components/teacher/ConditionalAssignmentFields.test.tsx",
+        "kind": "file",
+        "sha256": "10c903b7a3533499971e332f577dbd62e0c015bb7300ad51303ad9dcae4a9928"
+      },
+      {
+        "path": "src/components/teacher/ConditionalAssignmentFields.tsx",
+        "kind": "file",
+        "sha256": "9975d3cd7bbf3def762ac0acceee66e58579f9923f804829a2ba9a440d6c8e18"
+      },
+      {
+        "path": "src/dev/ConditionalOpeningPreview.tsx",
+        "kind": "file",
+        "sha256": "bdc5b3507ee3e1d99635b2d926312a139578481966ddabc21451a7781779dc4c"
+      },
+      {
+        "path": "src/lib/conditionalBootcampAssignment.test.ts",
+        "kind": "file",
+        "sha256": "0229c69844db67553d6560eab1d2a479831c839f8b388eb2c4b31077eecaab86"
+      },
+      {
+        "path": "src/lib/conditionalBootcampAssignment.ts",
+        "kind": "file",
+        "sha256": "0a22afc2750ad92f2920496ff3d49d53e16cf1bc29e84ce8e8f0166f082e06f8"
+      },
+      {
+        "path": "supabase/functions/mcp/index.ts",
+        "kind": "file",
+        "sha256": "f731b29c4fcd1517dc99276a998944494a86720e0cd103061e1799d149c7d32c"
+      }
+    ],
+    "diff_sha256": "f8e6a8a4816d152ecc9ba911baf4c6dc67b4e38286eb5dd6364c13918c8823e2",
+    "sha256": "b90be479827cc40a9d5e7c74b31fd2f7b611c95c41d0439589261c79825cdd2c"
+  },
+  "previous": null,
+  "started_at": 1790975812.8086393,
+  "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\brainstorms\\2026-09-30-conditional-curriculum\\claude-voice-application-inspect-2\\claudex-xlogfyt1",
+  "cli_version": "2.1.280 (Claude Code)",
+  "executable": [
+    "C:\\Users\\Joshu\\AppData\\Roaming\\npm\\node_modules\\@anthropic-ai\\claude-code\\bin\\claude.exe"
+  ],
+  "exit_code": 0,
+  "session_id": "a595c472-a82b-4ffa-af9b-999277f0c201",
+  "response": {
+    "verdict": "REVISE",
+    "summary": "I read the full 621-line voice guide first. The opening lessons apply it closely, and the round-1 corrections hold up. Orientation defines a condition and a conditional statement before it shows an example. Sufficient and necessary are taught as separate steps on the same ready/packed rule. Prediction questions really do pause before the answer is revealed. 'Must' stays an obligation everywhere. Wrong answers in the in-lesson checks and diagram builder get feedback specific to that choice. All 44 Group 1/2 practice items are logically correct. The four historical questions match HEAD exactly. Reconciling saved practice runs is limited to registered content changes and repeats safely. The scoped diff leaves out the bank, finder and MCP files.\n\nTwo medium defects remain:\n- **Review-link date resets on every build.** The cut-off date for the 'Review expanded lesson' link now comes from BUILD_TIME, which Vite regenerates on every build. Each later deploy, even an unrelated one, would show the link again to everyone who read the lesson before that deploy.\n- **Two named methods are never taught.** The guided activities, the method checklist and the reference tell students to use a 'Personalized If/Then' and the 'What Test'. The opening lesson that students actually see never teaches either name, because the old lesson text that did is no longer shown for these four units.\n\nLow-severity issues:\n- The 'Review the move' link for the four opening lessons points to a #repair section that the new lesson doesn't have.\n- The orientation lesson's title changed, so the 'Level N' wording is not removed from its existing assignment titles. Classroom pages outside the bootcamp also still show the stored 'Level N' titles.\n- Repeated 'waiting for a ready label' wording suggests a timeline, which the lesson itself says the arrow does not mean.\n- Optional: one weak distractor, and two stock phrases ('under this rule', 'hasn't been made enough') repeated 47 times.",
+    "findings": [
+      {
+        "id": "FI-1",
+        "severity": "medium",
+        "path": "src/bootcamps/conditionals/openingRevision.ts",
+        "evidence": "Line 14 sets CONDITIONAL_OPENING_REVISED_AT from BUILD_TIME. vite.config.ts:19 sets BUILD_TIME = new Date().toISOString() on every build and injects it through define (line 37). No VITE_CONDITIONAL_OPENING_RELEASED_AT is set in any env file; the only reference is in openingRevision.ts. needsExpandedConditionalLessonReview (line 16) returns true whenever lessons[unit.id] is earlier than the cut-off. Failure scenario: the expanded lesson ships on build T1, and a student reads it at T1+1 day. A later unrelated deploy at T2 moves the cut-off to T2. ExpandedLessonReview (routes.tsx:202-210) then shows 'Review expanded lesson' to that student, who already read the expanded lesson. This happens again after every deploy. progress.test.ts:51 asserts CONDITIONAL_OPENING_REVISED_AT === BUILD_TIME, so the tests lock in this behavior. The fix for OR-4 swapped 'too early' for 'moves with every build'. The R2-3 rule (show the link only to readers of the shorter lesson) is not met in production.",
+        "fix": "Pin the cut-off to one fixed publication time. Either hard-code an ISO date in openingRevision.ts at release, or require VITE_CONDITIONAL_OPENING_RELEASED_AT in a committed .env.production and fail the production build when it is missing or invalid. Use BUILD_TIME only in dev/test, never in production. Replace the progress.test assertion with one that the production cut-off is a fixed literal value that does not depend on the build."
+      },
+      {
+        "id": "FI-2",
+        "severity": "medium",
+        "path": "src/bootcamps/conditionals/content/foundations.source.ts",
+        "evidence": "ConditionalLessonNote.tsx:26 sends all four opening units to ConditionalOpeningLesson, which never renders unit.teaching. The only explanation of the 'Personalized If/Then' is in the sufficient-necessary teaching array (lines 114-115), which is no longer shown. The rendered lesson (ConditionalOpeningLesson.tsx) never mentions it (grep finds no 'Personalized' in components). Yet the next recorded step tells students to use it. sufficient-necessary-guide (line 129) says: 'Before choosing, use a Personalized If/Then'. group-2-guide (line 333) and the Group 2 method (line 325) say the same. The Group 1/2 method steps (lines 259, 322) name the 'What Test', which the rendered lesson practices ('Add what to the indicator') but never names. These method lists appear in the guided activity's 'Build your response in these steps' (routes.tsx:272), in the reference dialog (routes.tsx:168) and on the Reference page. The guide's review step asks: 'Does each new term refer to an idea they have seen?' The plan also says recorded work must use only what was taught. This is the same kind of gap as OR-3.",
+        "fix": "Add a short rendered section to the sufficient-necessary lesson on reading a rule from the inside. Example: a ThinkPause with 'If my account is verified, what must it have?' followed by trying the reverse. Name it Personalized If/Then there, and reuse it in Group 2's 'Only if' section. In Group 1's 'Find the target, then place it' section, name the 'What Test' where 'If what? All what?' is introduced. Alternatively, reword the guided prompts and method steps to describe the check without the untaught names. Add a test that every named method in an opening unit's method or guidedExample appears in the rendered lesson text."
+      },
+      {
+        "id": "FI-3",
+        "severity": "low",
+        "path": "src/bootcamps/conditionals/routes.tsx",
+        "evidence": "UnitActions (line 157) shows '4. Review the move', which links to lessons/{unit}#repair through actionUrl (line 152). For the four opening units, ConditionalLessonNote returns ConditionalOpeningLesson early (ConditionalLessonNote.tsx:26). The '#repair' section with commonMistake exists only in the legacy note (line 36). The opening component has no id='repair' and does not show unit.commonMistake (grep finds no 'repair' anchor). Clicking 'Review the move' from an opening unit's guided activity or practice page opens the top of the lesson, and the corrected repair text (including the OR-7 pass/entry wording) is not on that page.",
+        "fix": "In ConditionalOpeningLesson, add a 'Catch the tempting mistake' section with id='repair' that shows unit.commonMistake. Or point actionUrl's repair action at an existing opening section for these four units. Add a route test that opening units have a #repair target."
+      },
+      {
+        "id": "FI-4",
+        "severity": "low",
+        "path": "src/lib/conditionalBootcampAssignment.ts",
+        "evidence": "conditionalAssignmentDisplayCopy (lines 83-104) rebuilds the old generated title from the current unit title. The scoped diff renames orientation from 'Find the Guarantee' to 'What Are Conditionals?' (tracked diff line 400-402). An existing orientation skill row stores 'Find the Guarantee: Level 1 learning and practice'. That no longer matches the rebuilt 'What Are Conditionals?: Level 1 …', so the row keeps showing the level label and the old title. Stage titles ('…start with Find the Guarantee') keep the old name the same way. Separately, normalization runs only in resolveConditionalAssignments. Student classroom pages show the raw stored title, for example BootcampsSection.tsx:90 renders {it.title}. Existing rows therefore still say 'Level N' outside the bootcamp. The assignments test covers only the group-2 title, which did not change.",
+        "fix": "Keep a map of HEAD-era unit titles (at least orientation: 'Find the Guarantee') and match against both the old and new labels when detecting generated copy. Either apply the same display normalization where classroom item titles are rendered, or document clearly that classroom surfaces outside the bootcamp keep the stored 'Level N' titles. Add a test for an orientation row."
+      },
+      {
+        "id": "FI-5",
+        "severity": "low",
+        "path": "src/bootcamps/conditionals/components/ConditionalOpeningLesson.tsx",
+        "evidence": "Line 691 says correctly: 'The arrow doesn't mean \"and then.\" ... We're recording what follows logically, not a timeline.' The guide's accuracy table also warns against reading a conditional as a time sequence. Yet the case where an order is packed but not ready is repeatedly described as waiting: SetExplorer button 'Could be waiting for a ready label' (line 40), GateExplorer 'Packing might be complete before that label is added' (line 45), 'packed and waiting for a ready label' (697), 'D could be packed and waiting for its label' (723), 'packed and waiting for its ready label' (800). ConditionalOpeningMedia.tsx:15 and 74 say the same, and so does the teaching array. A packed order that is not marked ready need not ever get the label. Saying it is 'waiting' quietly suggests every packed order ends up ready, which is the reverse the lesson is trying to rule out.",
+        "fix": "Describe the allowed case without a timeline: 'packed but not marked ready', and label the button 'Could be packed without a ready label'. Mention timing at most once, in the arrow-is-not-a-timeline paragraph."
+      },
+      {
+        "id": "FI-6",
+        "severity": "low",
+        "path": "src/bootcamps/conditionals/components/ConditionalOpeningLesson.tsx",
+        "evidence": "Optional. The Check at line 750 asks 'Every finalist receives an invitation. What is necessary for being a finalist?' with the options 'Receiving an invitation' and 'Being the winner'. The distractor brings in an idea from nowhere instead of the confusion the section just taught: mixing up required and enough, or reversing the arrow. The guide's 'Tempting reverse' pattern calls for making the attractive wrong choice visible.",
+        "fix": "Replace 'Being the winner' with a reversal-based distractor such as 'Being a finalist is necessary for an invitation', and give it feedback that names the reversed requirement."
+      },
+      {
+        "id": "FI-7",
+        "severity": "low",
+        "path": "src/bootcamps/conditionals/components/ConditionalOpeningLesson.tsx",
+        "evidence": "Optional voice issue. 'under this rule' / 'under the rule' / 'hasn't been made [enough|proof]' / 'stated enough' appear 29 times in ConditionalOpeningLesson.tsx and 18 times in foundations.source.ts. Examples: 'hasn't been made a promise of a key', 'Membership hasn't been made enough', 'A record alone hasn't been stated enough'. The guide warns against 'a recurring catchphrase that sounds inserted' and asks writers to 'Remove repeated catchphrases'. Read aloud across 14 explanations and 44 drills, these become a stock phrase rather than reasoning, and the passive 'hasn't been made enough' is stiffer than the guide's own examples ('The rule hasn't answered that question').",
+        "fix": "Vary the wording by what each sentence needs. Name the actual missing promise ('nothing says every booking gets a key'), and keep 'under this rule' for places where the stated-rule qualification actually matters."
+      }
+    ],
+    "coverage": [
+      "Read first and in full (lines 1-621): C:/Users/Joshu/dev/ai-os/references/lsat-teaching-voice-standard.md. Did not read the optional source HTML; nothing here is judged against it.",
+      "Voice principle 'Define before demonstrating' / 'relationship comes before its parts': met. Orientation defines condition and conditional statement (ConditionalOpeningLesson.tsx:660-664) and explains why it matters (667-669) before the order rule and the arrow (687-691).",
+      "Voice principle 'Questions that make the reader think' (pause before reveal): met. ThinkPause hides the reasoning until the learner presses Show the reasoning. Each Check gives option-specific feedback that names the gap, close to the guide's 'Make feedback identify the missed connection' example.",
+      "Voice principle 'Repetition changes the reader's view': met. The ready/packed rule is reused for the ordinary reading, applying it to a case, the reverse, sufficient, necessary, the arrow, and the Group 2 only/the only transfer. Each reuse does different work. Fresh independent practice uses new sentences (diagram/flashcard banks).",
+      "Voice principle 'Technical names arrive at the useful moment' and 'Does each new term refer to an idea they have seen?': partly unmet. The Personalized If/Then and What Test are named in recorded work but not taught in the rendered lesson (FI-2).",
+      "Voice/accuracy boundaries: 'must' kept as an obligation (Group 2 must section, drills b7/m7/a2, Required to attend labels). Possibility vs. established fact separated in SetExplorer. The lesson states the arrow is not a timeline, though its 'waiting for a label' wording works against that (FI-5). Repeated catchphrases checked (FI-7).",
+      "Read all of ConditionalOpeningLesson.tsx (852 lines), ConditionalOpeningMedia.tsx, ConditionalLessonNote.tsx, openingRevision.ts, legacyQuestions.ts, progress.ts, opening-coverage.test.ts, conditionalBootcampAssignment.ts and assignments.ts. Read routes.tsx lines 130-312 (Shell, Lesson, Guided, ExpandedLessonReview, Practice, QuestionRunner, Reference, Flashcards, Diagnostics).",
+      "Read foundations.source.ts for orientation, rules-facts, sufficient-necessary (partial) and all of group-1/group-2: teaching, method, worked/guided examples, commonMistake, and all 44 Group 1/2 drills, which I checked by hand for logic, keys and scope.",
+      "Checked the four historical questions against the HEAD lines removed in tracked-diff.txt: exact match.",
+      "Traced reconciliation: limited to registered revisions, repeats safely, keeps drafts and attempts, and finished summaries count only active IDs. Diagnostics looks up current questions first, then historical ones.",
+      "Checked the scoped-tracked.diff file list: protected bank/finder/MCP files are absent. Read VERIFICATION.md. App.tsx preview route is DEV-only.",
+      "Checked vite.config.ts BUILD_TIME generation, the reduced-motion and motion-pause CSS rules, the useConditionalAssignments select including description, and student classroom title rendering (BootcampsSection.tsx)."
+    ],
+    "limitations": [
+      "I could not run tests, typecheck, build or git. The pass counts in VERIFICATION.md are the host's claims, not mine.",
+      "Screenshots were not viewed. No rendered visual or browser verification was done; this is a source-level review only.",
+      "I did not read the optional source HTML, wiki/teaching-voice.md or COPY-CORRECTIONS.md. Voice was judged against the full canonical guide only.",
+      "I did not read the full bodies of routes.test.tsx, progress.test.ts, ConditionalLessonNote.test.tsx, ConditionalOpeningLesson.review.test.tsx, ConditionalAssignmentFields(.test).tsx, ConditionalOpeningPreview.tsx, useConditionalAssignments.ts (beyond its select) or all of opening.css. curriculum.generated.json was not compared line by line; I relied on the equality assertion in opening-coverage.test.",
+      "supabase/functions/mcp/index.ts and the bank/finder files were not inspected beyond confirming they are absent from the scoped diff. Their hashes come from the host's before/after JSON.",
+      "I checked the stable option order (OR-2) by reading the code; I did not compute the hash parity for each item."
+    ]
+  },
+  "usage": {
+    "input_tokens": 74,
+    "cache_creation_input_tokens": 163967,
+    "cache_read_input_tokens": 4328247,
+    "output_tokens": 24774,
+    "output_tokens_details": {
+      "thinking_tokens": 12523
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 163967,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 5753,
+        "cache_read_input_tokens": 167735,
+        "cache_creation_input_tokens": 523,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 523
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "permission_denials": [],
+  "total_cost_usd": 2.6731613999999997,
+  "elapsed_seconds": 272.16
+}

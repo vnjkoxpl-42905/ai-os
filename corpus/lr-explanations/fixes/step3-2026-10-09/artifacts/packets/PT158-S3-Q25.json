@@ -1,0 +1,72 @@
+{
+ "qid": "PT158-S3-Q25",
+ "type": "Principle-Conform",
+ "difficulty": "4",
+ "key_db": "E",
+ "stimulus_db": "A government is justified in interfering with a person's action if the action would increase the likelihood of physical harm to others and the action is not motivated by a desire to help others.",
+ "stem_db": "Of the following judgments, which one most closely conforms to the principle above?",
+ "choices_db": {
+  "A": "Jerry's hobby, making home movies, does not harm anyone, nor does it increase the likelihood of harm to anyone. He does it because he thinks that it will benefit his children by preserving a record of their childhoods. So the government is unjustified in interfering with Jerry's moviemaking.",
+  "B": "It is well known that a property is aesthetically less pleasing when neighboring properties have unkempt lawns. My neighbor often forgets to mow his lawn for several weeks. The city council, therefore, is justified in fining my neighbor for not mowing his lawn more frequently.",
+  "C": "Because a motorcyclist who is not wearing a helmet is much more likely to suffer a serious head injury in the event of an accident, the government is justified in requiring motorcyclists to wear helmets.",
+  "D": "Because Zabziew Pharmaceutical Corporation's research is motivated by the desire to make profits and not by the desire to benefit customers, it has been of little help to people suffering from serious illness. So the government is justified in suspending Zabziew's license to test new drugs.",
+  "E": "To further her own political ambitions, Jill wanted to give a speech advocating the use of violence to achieve political ends. But her speech would most likely have caused a riot and people would have gotten hurt. Hence, the government was justified in preventing her from giving her speech."
+ },
+ "bank": {
+  "stimulus": "A government is justified in interfering with a person’s\n action if the action would increase the likelihood of\n physical harm to others and the action is not motivated by\n a desire to help others.",
+  "stem": "Of the following judgments, which one most closely\n conforms to the principle above?",
+  "choices": {
+   "A": "Jerry’s hobby, making home movies, does not harm anyone, nor does it increase the likelihood of harm to anyone. He does it because he thinks that it will benefit his children by preserving a record of their childhoods. So the government is unjustified in interfering with Jerry’s moviemaking.",
+   "B": "It is well known that a property is aesthetically less pleasing when neighboring properties have unkempt lawns. My neighbor often forgets to mow his lawn for several weeks. The city council, therefore, is justified in fining my neighbor for not mowing his lawn more frequently.",
+   "C": "Because a motorcyclist who is not wearing a helmet is much more likely to suffer a serious head injury in the event of an accident, the government is justified in requiring motorcyclists to wear helmets.",
+   "D": "Because Zabziew Pharmaceutical Corporation’s research is motivated by the desire to make profits and not by the desire to benefit customers, it has been of little help to people suffering from serious illness. So the government is justified in suspending Zabziew’s license to test new drugs.",
+   "E": "To further her own political ambitions, Jill wanted to give a speech advocating the use of violence to achieve political ends. But her speech would most likely have caused a riot and people would have gotten hurt. Hence, the government was justified in preventing her from giving her speech."
+  },
+  "key": "E"
+ },
+ "explanation_id": "6e9e7782-9719-4816-8214-9c868630f26a",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "1dde6fab-5c10-4a07-b511-468af1024a8f",
+   "position": 0,
+   "label": "Principle",
+   "body": "```\nAction would increase likelihood\nof physical harm to others         govt. justified\nand                             →  in interfering\nNot motivated by desire            with person's\nto help others                     action\n```"
+  },
+  {
+   "row_id": "165edab2-960b-43b1-90b6-13e5401a0cf0",
+   "position": 1,
+   "label": "Evaluate / Goal",
+   "body": "The conclusion should match the right side of the arrow. So, this principle can only prove that the government is justified in interfering, so we can immediately throw out any answers that conclude the government isn't justified or answers that say someone besides the government is justified. For answers that correctly conclude \"government is justified\", we just have to ensure that both criteria are met: 1. action increases likelihood of harming others; 2. not motivated by desire to help others"
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "71b7fecc-9c8e-4bab-a960-5281b8994111",
+   "letter": "A",
+   "body": "This judgment concludes that the government is NOT justified in interfering with Jerry's hobby. The answer explicitly states that making home movies \"does not harm anyone, nor does it increase the likelihood of harm.\" Since criterion 1 (increases likelihood of physical harm to others) is not met, the principle does not apply, and the judgment that no interference is warranted could be consistent with the principle. However, this answer reaches a \"not justified\" conclusion, and the principle only tells us when interference IS justified — it does not tell us when it is NOT justified. More fundamentally, this answer does not demonstrate the principle in action because the triggering conditions are not met. An answer that conforms to the principle should show the principle being applied: criteria met → interference justified."
+  },
+  {
+   "row_id": "fb983a5a-200b-456e-b16a-e28af79aa6c1",
+   "letter": "B",
+   "body": "This answer discusses a property being aesthetically less pleasing when neighboring properties are poorly maintained. The harm described is aesthetic — reduced property appearance — not physical harm to others. The principle specifically requires that the action increase the likelihood of PHYSICAL harm to others. Aesthetic displeasure, property value impacts, or general unpleasantness do not constitute physical harm. Without establishing criterion 1 (physical harm to others), the principle's conditions are not met, and this judgment does not conform to the principle regardless of what it concludes about government interference."
+  },
+  {
+   "row_id": "988fc8a3-804f-4bcb-9871-bdd77a802fe1",
+   "letter": "C",
+   "body": "A motorcyclist not wearing a helmet increases the risk of harm to THE MOTORCYCLIST, not to others. The principle requires that the action increase the likelihood of physical harm to OTHERS. Self-harm is not covered. The action of riding without a helmet primarily endangers the rider, not bystanders. Additionally, the answer does not establish the motorcyclist's motivation, so criterion 2 (not motivated by desire to help others) is neither satisfied nor addressed. Without establishing that others face increased physical harm, this judgment does not trigger the principle's conditions."
+  },
+  {
+   "row_id": "5978fe37-f39b-4f52-b14c-7d076a311670",
+   "letter": "D",
+   "body": "Zabziew Pharmaceutical Corporation's research is described as \"motivated by the desire to make profits that will allow it to expand its work\" — not by a desire to help others. However, the answer also notes the research is pharmaceutical, which could be seen as helping others through medical advances. More critically, the answer needs to establish criterion 1 (the action increases likelihood of physical harm to others), and pharmaceutical research alone does not obviously do this unless the research itself creates dangerous conditions. The situation described here is ambiguous on both the harm-to-others criterion and the motivation criterion, making it a poor match for the principle. Most importantly, the answer does not clearly establish that the research increases the likelihood of physical harm to others."
+  },
+  {
+   "row_id": "711c3689-a7e1-4279-814f-7a9c55a14617",
+   "letter": "E",
+   "body": "Jill wants to give a speech advocating the use of a dangerous pesticide to further her OWN political ambitions. Check both criteria: Criterion 1 — does this increase the likelihood of physical harm to others? Yes. Advocating for a dangerous pesticide could lead to its adoption, which would physically harm others through pesticide exposure. Criterion 2 — is the action NOT motivated by a desire to help others? Yes. Jill's motivation is explicitly her own political ambitions, not a desire to help anyone. Both conditions of the principle are met: the action risks physical harm to others, and the motivation is self-serving rather than altruistic. The principle therefore applies, and the government is justified in interfering with Jill's speech advocating the dangerous pesticide. This judgment conforms perfectly to the principle."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (9.0 em-dashes per 1k words; wrong-answer notes average 107.8 words).",
+ "tags": "emdash-heavy; pt157-158-register; possible-misquote; damage"
+}

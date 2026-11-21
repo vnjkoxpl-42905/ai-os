@@ -1,0 +1,41 @@
+{
+  "skill_name": "pre-consultation-check-in",
+  "notes": "Runs hit the live calendar. Eval 1 and 3 are read-only. Eval 2 registers real tasks if a consultation exists in the window; that is the intended behaviour under Joshua's standing permission (2026-09-11).",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "who's got a consultation coming up in the next 5 days and did they get their check-in scheduled already? don't send anything, just tell me",
+      "expected_output": "Runs scripts/checkin.py find --days 5 (not schedule). Reports each consultation with start time (Toronto), name, email, and coverage from wiki/PRE-CONSULT-LOG.md. If none, says so in one line. Does not create tasks or send.",
+      "files": [],
+      "assertions": [
+        "Ran checkin.py find (or find --json) rather than querying gws calendar by hand",
+        "Did not run checkin.py schedule and did not send any email",
+        "Reported the window it used in America/Toronto time",
+        "If zero consultations were found, said so plainly without inventing any"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "schedule the pre-consult check-ins for the next three days",
+      "expected_output": "Runs find --days 3 then schedule --days 3 without asking for confirmation (standing permission). Reports scheduled / sent-now / skipped rows with fire times and addresses, and points at wiki/PRE-CONSULT-LOG.md. Flagged (non-Cal.com) events are reported but not scheduled without --include-flagged.",
+      "files": [],
+      "assertions": [
+        "Used --days 3 (not the 5-day default)",
+        "Ran checkin.py schedule without pausing to ask Joshua for approval",
+        "Did not hand-write or send the email through any path other than the script",
+        "Mentioned wiki/PRE-CONSULT-LOG.md as where the record lives"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Sofia has a session Monday at 2 - make sure she gets the check-in email 30 min before",
+      "expected_output": "Recognises that 'Sofia session' is a paid tutoring session, not a Cal.com consultation, so this skill does not cover it. Says so, explains the rule (title must start 'Consultation between Joshua and'), does not schedule anything and does not send Sofia the consultation check-in.",
+      "files": [],
+      "assertions": [
+        "Did not schedule or send anything for the Sofia session",
+        "Explained that sessions and consultations are different and why the check-in text would be wrong for a session",
+        "Did not loosen the identification rule or use --include-flagged to force it"
+      ]
+    }
+  ]
+}

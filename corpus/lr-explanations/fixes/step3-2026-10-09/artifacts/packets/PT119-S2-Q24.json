@@ -1,0 +1,84 @@
+{
+ "qid": "PT119-S2-Q24",
+ "type": "Flaw",
+ "difficulty": "3",
+ "key_db": "D",
+ "stimulus_db": "It is now clear that the ancient Egyptians were the first society to produce alcoholic beverages. It had been thought that the ancient Babylonians were the first; they had mastered the process of fermentation for making wine as early as 1500 B.C. However, archaeologists have discovered an Egyptian cup dating from 2000 B.C. whose sides depict what appears to be an Egyptian brewery, and whose chemical residue reveals that it contained a form of alcoholic beer.",
+ "stem_db": "The reasoning above is most vulnerable to criticism on which one of the following grounds?",
+ "choices_db": {
+  "A": "It makes a generalization about Egyptian society based on a sample so small that it is likely to be unrepresentative.",
+  "B": "It uses the term “alcoholic beverage” in a different sense in the premises than in the conclusion.",
+  "C": "It presumes, without providing justification, that because one society developed a technology before another, the development in the latter was dependent on the development in the former.",
+  "D": "It ignores the possibility that the first known instance of a kind is not the first instance of that kind.",
+  "E": "It provides no evidence for the claim that the Babylonians produced wine as early as 1500 B.C."
+ },
+ "bank": {
+  "stimulus": "It is now clear that the ancient Egyptians were the first society to produce alcoholic beverages. It had been thought that the ancient Babylonians were the first; they had mastered the process of fermentation for making wine as early as 1500 B.C. However, archaeologists have discovered an Egyptian cup dating from 2000 B.C. whose sides depict what appears to be an Egyptian brewery, and whose chemical residue reveals that it contained a form of alcoholic beer.",
+  "stem": "The reasoning above is most vulnerable to criticism on which one of the following grounds?",
+  "choices": {
+   "A": "It makes a generalization about Egyptian society based on a sample so small that it is likely to be unrepresentative.",
+   "B": "It uses the term \"alcoholic beverage\" in a different sense in the premises than in the conclusion.",
+   "C": "It presumes, without providing justification, that because one society developed a technology before another, the development in the latter was dependent on the development in the former.",
+   "D": "It ignores the possibility that the first known instance of a kind is not the first instance of that kind.",
+   "E": "It provides no evidence for the claim that the Babylonians produced wine as early as 1500 B.C."
+  },
+  "key": "D"
+ },
+ "explanation_id": "530b861d-8d2a-4e8d-8a83-b394c89148d4",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "1fef53e3-e7e6-4e67-a73a-586afc6fab73",
+   "position": 0,
+   "label": "Conclusion",
+   "body": "The ancient Egyptians were the first society to produce alcoholic beverages."
+  },
+  {
+   "row_id": "e29f83ec-ca14-4f4a-92d1-f1a4fdfcbbc6",
+   "position": 1,
+   "label": "Evidence",
+   "body": "An Egyptian cup dating from 2000 B.C. depicts a brewery and contains residue of alcoholic beer — older than the Babylonian fermentation evidence from 1500 B.C."
+  },
+  {
+   "row_id": "df1b22a1-32f7-4e82-bcfd-fd61bec76946",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "\"First known\" and \"first ever\" are different. The Egyptian cup is the earliest *archaeological evidence* of alcoholic beverage production we have found, but other societies — including the Egyptians themselves earlier or some entirely different civilization — could have produced alcohol earlier without leaving evidence behind, or with evidence we have not yet found."
+  },
+  {
+   "row_id": "0ada7665-3af7-4a79-8e8c-2da7c382c1f4",
+   "position": 3,
+   "label": "Goal",
+   "body": "Find an answer that points out the gap between \"earliest evidence we have\" and \"first ever.\""
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "88fa80c1-6a8d-4f41-a4e2-06bc9b93e03e",
+   "letter": "A",
+   "body": "The author is not using one Egyptian cup to generalize about what most Egyptians did. The cup establishes an instance of alcoholic beer in Egypt by 2000 B.C.; the issue is whether that instance was the world's first."
+  },
+  {
+   "row_id": "f0375ec8-e3e1-4fef-ba3d-2bfba1f62a19",
+   "letter": "B",
+   "body": "\"Alcoholic beverage\" includes wine and beer in both the evidence and the conclusion. The argument compares dates, not two meanings of the term."
+  },
+  {
+   "row_id": "3de5d70d-4fdc-4b17-9043-13b657a42b57",
+   "letter": "C",
+   "body": "The author does not say Babylonian wine production depended on Egyptian beer production. Being earlier than one known Babylonian example is offered as evidence for priority, not for transmission of technology."
+  },
+  {
+   "row_id": "4a8201c9-e781-4de8-94ba-6bcce841130c",
+   "letter": "D",
+   "body": "The cup is older than the cited Babylonian evidence, so Egypt has the earlier *known* example of the two. Another society might have made alcohol even earlier without leaving evidence we have found. The oldest discovered instance need not be the first historical instance."
+  },
+  {
+   "row_id": "81ca6f1f-1b28-4e5e-a272-c34f0e0e98a1",
+   "letter": "E",
+   "body": "The author supplies the 1500 B.C. Babylonian wine date as background. Even if that date were well documented, the Egyptian cup would not establish that no society produced alcohol before Egypt."
+  }
+ ],
+ "known_problem": "Breakdown exists (em-dash heavy, different register) but all five choice notes are missing.",
+ "tags": "no-notes; emdash-heavy; very-short"
+}

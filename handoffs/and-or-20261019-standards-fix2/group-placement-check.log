@@ -1,0 +1,59 @@
+
+> check
+> npx --yes hyperframes@0.8.149 check
+
+◆  Checking group-placement
+[hyperframes] browserGpuMode probe → hardware (WebGL renderer vendor="Google Inc. (AMD)" renderer="ANGLE (AMD, AMD Radeon (TM) Graphics (0x000015E7) Direct3D11 vs_5_0 ps_5_0, D3D11)")
+
+Lint
+  ⚠ studio_missing_editable_id: <div class="bg" data-start="0" data-track-index="0"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.
+    C:\Users\Joshu\dev\ai-os-projects\conditional-and-or-video-20261019\group-placement\index.html [data-composition-id] t=0s
+    Fix: Add a stable, human-readable id such as id="hero-title" or id="scene-1-card" to every timeline-visible element you want agents or Studio to edit.
+  ⚠ studio_missing_editable_id: <div class="chrome" data-start="0" data-track-index="1"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.
+    C:\Users\Joshu\dev\ai-os-projects\conditional-and-or-video-20261019\group-placement\index.html [data-composition-id] t=0s
+    Fix: Add a stable, human-readable id such as id="hero-title" or id="scene-1-card" to every timeline-visible element you want agents or Studio to edit.
+  ⚠ nested_structure_needs_subcomposition: <div> is a timeline element that contains nested <div id="orbA">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.
+    C:\Users\Joshu\dev\ai-os-projects\conditional-and-or-video-20261019\group-placement\index.html [data-composition-id] t=0s
+    Fix: Move <div> and its contents into a sub-composition file and mount it with data-composition-src.
+  ⚠ nested_structure_needs_subcomposition: <div> is a timeline element that contains nested <div id="kicker">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.
+    C:\Users\Joshu\dev\ai-os-projects\conditional-and-or-video-20261019\group-placement\index.html [data-composition-id] t=0s
+    Fix: Move <div> and its contents into a sub-composition file and mount it with data-composition-src.
+  ⚠ nested_structure_needs_subcomposition: <div id="s-left"> is a timeline element that contains nested <div id="i-left">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.
+    C:\Users\Joshu\dev\ai-os-projects\conditional-and-or-video-20261019\group-placement\index.html #s-left t=0s
+    Fix: Move <div id="s-left"> and its contents into a sub-composition file and mount it with data-composition-src.
+  ⚠ nested_structure_needs_subcomposition: <div id="s-left-or"> is a timeline element that contains nested <div id="i-left-or">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.
+    C:\Users\Joshu\dev\ai-os-projects\conditional-and-or-video-20261019\group-placement\index.html #s-left-or t=0s
+    Fix: Move <div id="s-left-or"> and its contents into a sub-composition file and mount it with data-composition-src.
+  ⚠ nested_structure_needs_subcomposition: <div id="s-right"> is a timeline element that contains nested <div id="i-right">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.
+    C:\Users\Joshu\dev\ai-os-projects\conditional-and-or-video-20261019\group-placement\index.html #s-right t=0s
+    Fix: Move <div id="s-right"> and its contents into a sub-composition file and mount it with data-composition-src.
+  ⚠ nested_structure_needs_subcomposition: <div id="s-right-or"> is a timeline element that contains nested <div id="i-right-or">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.
+    C:\Users\Joshu\dev\ai-os-projects\conditional-and-or-video-20261019\group-placement\index.html #s-right-or t=0s
+    Fix: Move <div id="s-right-or"> and its contents into a sub-composition file and mount it with data-composition-src.
+  ⚠ nested_structure_needs_subcomposition: <div id="s-close"> is a timeline element that contains nested <div id="i-close">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.
+    C:\Users\Joshu\dev\ai-os-projects\conditional-and-or-video-20261019\group-placement\index.html #s-close t=0s
+    Fix: Move <div id="s-close"> and its contents into a sub-composition file and mount it with data-composition-src.
+  0 error(s), 9 warning(s), 0 info(s)
+
+Runtime
+  ◇ 0 errors, 0 warnings
+
+Layout
+  ℹ t=3.242, 9.726, 16.21, 22.694, 29.178, 35.661, 42.145, 48.629, 55.113s panel_out_of_canvas #orbA inside #root overflowed left 138.79px, top 159.32px — Painted panel extends outside the composition canvas.
+        Fix: Move the panel inward, or mark intentional off-canvas animation with data-layout-allow-overflow.
+  ℹ t=3.242, 9.726, 16.21, 22.694, 29.178, 35.661, 42.145, 48.629, 55.113s panel_out_of_canvas #orbT inside #root overflowed right 178.64px, bottom 219.17px — Painted panel extends outside the composition canvas.
+        Fix: Move the panel inward, or mark intentional off-canvas animation with data-layout-allow-overflow.
+  ℹ t=39.362s content_overlap #i-right > div:nth-of-type(10) inside #i-right > div:nth-of-type(11) "THE RULE GUARANTEES EVERY MEMBER" — Two text blocks overlap and may render unreadable.
+        Fix: Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.
+  0 error(s), 0 warning(s), 3 info(s)
+
+Motion
+  ◇ 0 errors, 0 warnings
+
+Contrast
+  ◇ 23/23 text checks pass WCAG AA
+
+Snapshots
+  ◇ disabled
+
+◇  Check passed

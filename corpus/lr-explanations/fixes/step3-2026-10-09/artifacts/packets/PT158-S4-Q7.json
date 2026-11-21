@@ -1,0 +1,84 @@
+{
+ "qid": "PT158-S4-Q7",
+ "type": "Necessary Assumption",
+ "difficulty": "3",
+ "key_db": "C",
+ "stimulus_db": "Newspaper article: Recently discovered clay tablets from southern Egypt date to between 3300 and 3200 B.C. Though most of the tablets translated thus far are tax records, one of them appears to contain literary writing. Hence, these tablets challenge the widely held belief among historians that the Sumerian civilization in Mesopotamia was the first to create literature.",
+ "stem_db": "The argument in the newspaper article requires the assumption that",
+ "choices_db": {
+  "A": "most of the recently discovered tablets that have not yet been translated contain literary writing",
+  "B": "every civilization that has kept tax records has also kept other written records",
+  "C": "historians generally believe that the Sumerians did not create literature earlier than 3300 B.C.",
+  "D": "some historians are skeptical about the authenticity of the recently discovered tablets",
+  "E": "the Sumerian civilization arose sometime between 3300 and 3200 B.C."
+ },
+ "bank": {
+  "stimulus": "Newspaper article: Recently discovered clay tablets\n from southern Egypt date to between 3300 and\n 3200 B.C. Though most of the tablets translated\n thus far are tax records, one of them appears\n to contain literary writing. Hence, these tablets\n challenge the widely held belief among historians\n that the Sumerian civilization in Mesopotamia\n was the first to create literature.",
+  "stem": "The argument in the newspaper article requires the\n assumption that",
+  "choices": {
+   "A": "most of the recently discovered tablets that have not yet been translated contain literary writing",
+   "B": "every civilization that has kept tax records has also kept other written records",
+   "C": "historians generally believe that the Sumerians did not create literature earlier than 3300 B.C.",
+   "D": "some historians are skeptical about the authenticity of the recently discovered tablets",
+   "E": "the Sumerian civilization arose sometime between 3300 and 3200 B.C."
+  },
+  "key": "C"
+ },
+ "explanation_id": "54665780-9a7d-42a4-b0a2-9177d5e9f844",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "bb415b81-a006-4a40-911d-a53b35d9599c",
+   "position": 0,
+   "label": "Conclusion (Hence)",
+   "body": "These tablets challenge the widely held belief among historians that the Sumerian civilization in Mesopotamia was the first to create literature.\nrephrase: it seems like someone created literature earlier than the Sumerians in Mesopotamia"
+  },
+  {
+   "row_id": "43ea8d65-463c-4ab8-a9b9-70967bbcc13a",
+   "position": 1,
+   "label": "Evidence",
+   "body": "Recently discovered clay tablets from southern Egypt date to between 3300 and 3200 B.C.\nOne of them appears to contain literary writing."
+  },
+  {
+   "row_id": "8dde1203-b987-4e5e-8c6b-3b85336686bc",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "The conclusion has a real conspicuous new term: the Sumerian civilization in Mesopotamia.\nIf the author thinks this Egyptian tablet with literary writing from 3300-3200 B.C. suggests that someone was creating literature prior to the Sumerians, then the author must be thinking that the Sumerians didn't create literature until later than 3200 B.C.\nIf I said, \"Jerry can bench press 200 lbs. Hence, this accomplishment challenges the widely held belief among students that Maggie is the strongest student in school\", then what are we assuming about Maggie?\nHer maximum bench press is less than 200 lbs."
+  },
+  {
+   "row_id": "bc066e4f-d952-412f-8416-94a29eb59057",
+   "position": 3,
+   "label": "Goal",
+   "body": "Look for an answer spelling out that Sumerian's first literature was more recent than 3200 B.C. That must be what the author is thinking, if she thinks that literary writing from 3300-3200 B.C. predates the Sumerian's first literature."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "fb81a85d-efc2-4013-8e8e-475141d39573",
+   "letter": "A",
+   "body": "The argument does not need most untranslated tablets to contain literature. Its evidential foundation rests on the already-translated tablets, at least one of which appears to contain literary writing. That is sufficient to pose the challenge described in the conclusion. Whether additional untranslated tablets also contain literature would further strengthen the argument, but the argument functions perfectly well without that additional assumption. Apply the negation test: if most untranslated tablets do NOT contain literature, the argument still works because the translated literary tablet is sufficient evidence. An assumption that can be negated without destroying the argument is not a necessary assumption — it is merely a helpful bonus."
+  },
+  {
+   "row_id": "f5bd9ec2-65c5-4bda-af59-74139fd9e2f6",
+   "letter": "B",
+   "body": "This answer describes an assumption about inferring literary records from the presence of tax records. But the argument does not make this indirect inference because it has direct evidence of literary content on the tablets. The argument does not say \"they had tax records, so they must have had literature too.\" It says \"we found literature on the tablets.\" The assumption described here would only be necessary if the argument were reasoning indirectly from one type of record to another. Since the literary evidence is direct and explicit, this intermediate assumption is superfluous. Additionally, the universal quantifier \"every\" makes this far stronger than anything the argument could reasonably require. Apply the negation test: if tax records do NOT imply other literary records, the argument survives because the literary evidence is independent of the tax records."
+  },
+  {
+   "row_id": "074cc8b5-fcb8-4e6c-89c5-0507d8cd9401",
+   "letter": "C",
+   "body": "The argument concludes that Egyptian tablets from 3300-3200 BC challenge the belief that Sumerians were first to create literature. For this challenge to have any force, the Egyptian tablets must be at least as old as what historians believe about Sumerian literary origins. If historians believed Sumerian literature dated to well before 3300 BC — say, 4000 BC — then discovering Egyptian literature from 3300 BC would not challenge anything. The Sumerians would still be first by centuries. Apply the negation test: if historians believe Sumerians DID create literature earlier than 3300 BC, then the Egyptian tablets are too late to threaten Sumerian primacy, and the argument's conclusion completely collapses. This assumption is genuinely necessary — it is the temporal bridge connecting the evidence (tablets from 3300 BC) to the conclusion (challenge to Sumerian-first belief). Without it, the evidence and conclusion are disconnected."
+  },
+  {
+   "row_id": "07960647-5b03-4694-9b3e-62e2f4c098a7",
+   "letter": "D",
+   "body": "If some historians are already skeptical about the tablets' authenticity, that would undermine the argument, not support it. The argument treats the translated tablets as credible evidence. Historian skepticism about whether the tablets are genuine introduces doubt about the evidence's reliability, which would weaken the challenge to Sumerian primacy rather than being something the argument needs to assume. The argument needs the opposite: that the tablets are genuine and their dating is reliable. This answer describes a condition that would damage the argument if true, which is the reverse of what a necessary assumption does. A necessary assumption is something the argument requires to be true; this describes something whose truth would hurt the argument."
+  },
+  {
+   "row_id": "c8acb044-6f0a-4456-a01e-f6eaa7094bb2",
+   "letter": "E",
+   "body": "This answer conflates the origin of Sumerian civilization with the origin of Sumerian literature. These are distinct events separated potentially by centuries or millennia. A civilization can exist for a very long time before producing literary works. Even if Sumerian civilization arose in 5000 BC, the relevant question is when the Sumerians began writing literature, not when their civilization first appeared. The argument concerns literary chronology, not civilizational chronology. If Sumerian civilization arose in 3300 BC but their literature did not appear until 3000 BC, the Egyptian tablets would still pose a challenge. If the civilization arose in 5000 BC but literature appeared in 3200 BC, the challenge would equally hold. The founding date of the civilization is simply the wrong variable to focus on."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (4.9 em-dashes per 1k words; wrong-answer notes average 120.8 words).",
+ "tags": "emdash-heavy; pt157-158-register; possible-misquote"
+}

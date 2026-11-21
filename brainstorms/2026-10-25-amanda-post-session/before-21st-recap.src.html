@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="lsatu-interactive-lesson" content="amanda-2026-10-21-rules-and-facts">
+<title>Rules, Facts, and What Follows · Session Manual</title>
+<style>/*CSS*/
+/* Amanda's Session Manual: local teaching diagrams and native disclosures. */
+:root{--gold-deep:#785b16;--ink-mute:#625b55}
+body{font-size:18px;overflow-wrap:break-word}
+.kicker,.sec-kicker,.callout .tag{letter-spacing:.1em}
+.kinds{grid-template-columns:1fr;gap:20px}
+.kind{padding:24px}.kind:hover{transform:none}.kind .what{font-size:17px}.kind .name{font-size:25px}
+.kind .test{font-size:17px}.kind .test b{font-size:12px}.kind .words span{font-size:17px}
+.cs-figure{margin:20px 0;display:grid;grid-template-columns:minmax(0,1fr) 34px minmax(0,1fr);align-items:stretch;gap:8px}
+.cs-half{padding:15px;border:1px solid var(--line);border-radius:10px;background:var(--cream);color:var(--ink)}
+.cs-half b,.piece-label{display:block;font-size:12px;font-family:var(--mono);letter-spacing:.05em;margin-bottom:7px;color:var(--ink-soft)}
+.cs-arrow{align-self:center;text-align:center;font-size:26px;color:var(--gold-deep)}
+.shared{background:#edf2e6;border-color:#85996b}.result{padding:16px 18px;border-left:4px solid var(--green);background:var(--green-wash);margin-top:16px}
+.result b{display:block;color:#34530c}.chain-row{margin-top:10px}.and-input{display:flex;flex-direction:column;gap:8px}.and-word{font-weight:700;text-align:center;color:var(--green)}
+table.t{table-layout:fixed;font-size:16px}table.t caption{text-align:left;font-size:16px;color:var(--ink-soft);padding:0 0 12px}
+table.t th{font-size:12px;letter-spacing:.04em;padding:13px 10px}table.t td{padding:14px 10px}table.t td:first-child{white-space:normal}
+table.t th:nth-child(1){width:17%}table.t th:nth-child(2){width:28%}table.t th:nth-child(3){width:29%}table.t th:nth-child(4){width:26%}
+details{border:1px solid var(--line);border-radius:10px;background:var(--card);margin:12px 0;overflow:hidden}summary{cursor:pointer;padding:14px 16px;font-weight:600;color:var(--ink);line-height:1.5}details[open] summary{border-bottom:1px solid var(--line);background:var(--gold-wash)}details p{padding:0 16px;margin:14px 0}
+summary:focus-visible,button:focus-visible{outline:3px solid #1b5571;outline-offset:-4px;border-radius:5px}
+.case-number{font-family:var(--mono);font-size:12px;color:var(--gold-deep);display:block;margin-bottom:3px}.drill h3{font-size:23px}.drill p.hint{font-size:16px}.opposite div{font-size:17px}.opposite b{font-size:12px;letter-spacing:.04em}
+@media(max-width:600px){.wrap{padding:0 20px}header.hero{padding-top:42px}section{padding:36px 0}.kind,.drill{padding:18px}.cs-figure{grid-template-columns:1fr;gap:8px}.cs-arrow{transform:rotate(90deg);line-height:1.1}.opposite{flex-direction:column}table.t,table.t tbody,table.t tr,table.t td{display:block;width:100%}table.t thead{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}table.t tr{padding:14px 16px;border-bottom:1px solid var(--line)}table.t td{border:0;padding:5px 0}table.t td::before{content:attr(data-label) ": ";font-weight:600;color:var(--ink)}table.t td:first-child{font-family:var(--serif);font-size:23px}table.t td:first-child::before{content:none}table.t caption{display:block}h2{font-size:28px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap">
+<div class="kicker">Session Manual · October 21</div>
+<h1>Rules, Facts,<br>and What Follows</h1>
+<p class="lede">Two useful tasks from our session: join rules into a longer chain, and apply a rule to a fact. A question can need both. Start by seeing what each sentence gives you.</p>
+</div></header>
+
+<section id="sentence-types"><div class="wrap">
+<div class="sec-kicker">Read with a purpose</div><h2>What kind of claim is this?</h2>
+<p>As you finish a sentence, name what it says. These six types give you something specific to notice.</p>
+<table class="t"><caption>Read the meaning, then compare the example.</caption><thead><tr><th scope="col">Type</th><th scope="col">Meaning</th><th scope="col">Example</th><th scope="col">Ask yourself</th></tr></thead><tbody>
+<tr><td data-label="Type">Fact</td><td data-label="Meaning">What is true in the situation.</td><td data-label="Example">The library is open.</td><td data-label="Ask yourself">What am I told is the case?</td></tr>
+<tr><td data-label="Type">Rule</td><td data-label="Meaning">If one complete condition is true, another must be true.</td><td data-label="Example">If the library is open, its lights are on.</td><td data-label="Ask yourself">What is guaranteed, and under what condition?</td></tr>
+<tr><td data-label="Type">Causal</td><td data-label="Meaning">One thing produces or influences another.</td><td data-label="Example">The outage caused the closure.</td><td data-label="Ask yourself">What is said to affect what?</td></tr>
+<tr><td data-label="Type">Correlation</td><td data-label="Meaning">Two things occur together or vary together.</td><td data-label="Example">Libraries with longer hours tend to have more visitors.</td><td data-label="Ask yourself">Is this an association, or a claim about cause?</td></tr>
+<tr><td data-label="Type">Normative</td><td data-label="Meaning">What should happen, or is right, wrong, permitted or required.</td><td data-label="Example">The library should open later.</td><td data-label="Ask yourself">What is recommended or required?</td></tr>
+<tr><td data-label="Type">Quantity</td><td data-label="Meaning">How many or how much: some, most, all, none, a count or percentage.</td><td data-label="Example">Some library visitors are students.</td><td data-label="Ask yourself">How much is claimed, and about whom?</td></tr>
+</tbody></table>
+<details><summary>Can one sentence fit more than one type?</summary><p>Yes. “Some library visitors are students” gives a quantity and states a fact. “Every visitor must register” can give a rule and a requirement. These labels help you read; they aren't sealed boxes.</p></details>
+<p>Keep asking which claims support the conclusion. A correlation alone doesn't show that one thing caused the other. “Should” doesn't mean “does,” and “some visitors” doesn't mean this particular visitor.</p>
+<div class="callout"><span class="tag">A fact can activate a rule</span>The rule doesn't say the library is open. A separate fact can supply that condition. Keep the rule and the fact distinct.</div>
+<p><strong>Watch but, yet and however.</strong> Check how the ideas on either side relate. The contrast can matter, but it doesn't guarantee where the answer will come from.</p>
+</div></section>
+
+<section id="two-jobs"><div class="wrap">
+<div class="sec-kicker">Two different tasks</div><h2>Link rules. Apply a rule.</h2>
+<div class="kinds">
+<article class="kind link"><span class="bar"></span><h3 class="name">1. Link two rules</h3><p class="what">The same complete idea joins the rules.</p>
+<div class="cs-figure"><div class="cs-half"><b>Rule 1 · If</b>The library is open</div><div class="cs-arrow" aria-label="then">→</div><div class="cs-half shared"><b>Then</b>The lights are on</div></div>
+<div class="cs-figure chain-row"><div class="cs-half shared"><b>Rule 2 · If</b>The lights are on</div><div class="cs-arrow" aria-label="then">→</div><div class="cs-half"><b>Then</b>The main circuit has power</div></div>
+<div class="result"><b>The new rule</b>If the library is open, the main circuit has power.</div>
+<p>The first rule gets you to “lights are on.” The second takes that same condition to “main circuit has power.”</p>
+<details><summary>What else does this chain tell you?</summary><p>Its contrapositive: if the main circuit has no power, the library isn't open. Neither rule tells you whether the library actually is open or the circuit actually has power.</p></details></article>
+<article class="kind apply"><span class="bar"></span><h3 class="name">2. Apply a rule to a fact</h3>
+<p class="what"><strong>Rule:</strong> If the library is open, the lights are on.</p>
+<div class="cs-figure"><div class="cs-half"><b>Supplied fact</b>The library is open</div><div class="cs-arrow" aria-label="therefore">→</div><div class="cs-half shared"><b>What follows</b>The lights are on</div></div>
+<p>The fact meets the rule's condition, so its requirement must be true. This time you get a fact, not just another rule.</p>
+</article></div>
+<div class="quote">When I tried to bait you with the outcome, you said nothing follows, and you were right. Don't switch off that answer when someone pushes. Keep using it.</div>
+</div></section>
+
+<section id="fact-cases"><div class="wrap">
+<div class="sec-kicker">Change only the fact</div><h2>Four facts. Four separate cases.</h2>
+<p><strong>Same rule each time:</strong> If the library is open, the lights are on.</p>
+<p>Each case starts fresh. Decide what follows from that one fact before opening the explanation.</p>
+<details data-fact-case="left-true"><summary><span class="case-number">Case 1 · Matches the left side</span>The library is open.</summary><p><strong>The lights must be on.</strong> An open library with its lights off would break the rule.</p></details>
+<details data-fact-case="right-false"><summary><span class="case-number">Case 2 · Denies the right side</span>The lights aren't on.</summary><p><strong>The library isn't open.</strong> If it were open, its lights would have to be on. This is the contrapositive.</p></details>
+<details data-fact-case="right-true"><summary><span class="case-number">Case 3 · Matches the right side</span>The lights are on.</summary><p><strong>We don't know whether the library is open.</strong> It could be closed with the lights on for cleaners. That possibility fits the rule.</p></details>
+<details data-fact-case="left-false"><summary><span class="case-number">Case 4 · Denies the left side</span>The library isn't open.</summary><p><strong>We don't know whether the lights are on.</strong> A closed library could have its lights off or leave them on for cleaners. The rule allows either.</p></details>
+<p>The arrow gives a guarantee. It doesn't itself tell you what causes the lights to be on.</p>
+</div></section>
+
+<section id="same-pieces"><div class="wrap">
+<div class="sec-kicker">Use the same pieces</div><h2>Sufficient Assumption and Must Be True</h2>
+<p>Here's a simple way to see their different jobs.</p>
+<div class="callout"><span class="tag">Rule · Fact · Conclusion</span>If the library is open, the lights are on.<br>The library is open.<br>Therefore, the lights are on.</div>
+<div class="opposite"><div><b>Sufficient Assumption</b>Given “the library is open,” what added rule would guarantee “the lights are on”? Our rule supplies that connection.</div><div><b>Must Be True</b>Given both the rule and the fact, what must follow? The lights are on.</div></div>
+<p>In Sufficient Assumption, the added answer works with the evidence to guarantee the conclusion. In Must Be True, follow the evidence to a guaranteed answer. These examples show the distinction; other questions can use more pieces.</p>
+</div></section>
+
+<section id="and-trap"><div class="wrap">
+<div class="sec-kicker">Keep the whole condition</div><h2>When the left side has an “and”</h2>
+<div class="cs-figure"><div class="cs-half and-input"><b>If both are true</b><span>The trail is dry</span><span class="and-word">and</span><span>The guide is certified</span></div><div class="cs-arrow" aria-label="then">→</div><div class="cs-half"><b>Then</b>The hike goes ahead</div></div>
+<p>Given both conditions, the hike must go ahead. Having only a certified guide doesn't meet the whole condition.</p>
+<div class="callout"><span class="tag">The contrapositive</span>If the hike doesn't go ahead, the trail isn't dry <strong>or</strong> the guide isn't certified, or both. At least one required part of the combined condition must be missing.</div>
+<details><summary>The guide is certified and the hike goes ahead. Must the trail be dry?</summary><p><strong>No.</strong> They could hike on a wet trail. The rule guarantees a hike when both conditions hold; it doesn't say those are the only circumstances in which a hike can happen.</p></details>
+<div class="quote">You named this exact structure on the book tour question: two ideas on the left, one of them given, the result given, and a conclusion that claims the remaining left-side condition. That's how you picked C.</div>
+</div></section>
+
+<section id="practice"><div class="wrap">
+<div class="sec-kicker">Try the reasoning</div><h2>Explain your answer, then check</h2>
+<div class="drill"><h3>What kind of claim is it?</h3><p class="hint">Name the type and the words that support your answer.</p>
+<details><summary>Hospitals with more nurses tend to have shorter waits.</summary><p><strong>Correlation.</strong> “Tend to” describes an association between staffing and waits. It doesn't by itself say extra nurses caused the shorter waits.</p></details>
+<details><summary>The outage caused the game to be cancelled.</summary><p><strong>Causal.</strong> “Caused” claims the outage produced the cancellation. It needn't mean the outage was the only contributing cause.</p></details>
+<details><summary>The city should run more night buses.</summary><p><strong>Normative.</strong> “Should” recommends what the city ought to do. It doesn't say the city already does it.</p></details>
+<details><summary>Some of the nurses work weekends.</summary><p><strong>Quantity and fact.</strong> “Some” says at least one nurse works weekends. It doesn't tell you that most do, or whether a particular nurse does.</p></details>
+</div>
+<div class="drill"><h3>What follows from the whole condition?</h3><p class="hint">Rule: If the soup is salted and stirred, it's ready. Treat each case separately.</p>
+<details><summary>The soup is salted and stirred.</summary><p><strong>It's ready.</strong> Both parts of the sufficient condition are met.</p></details>
+<details><summary>The soup isn't ready.</summary><p><strong>It isn't salted or isn't stirred, or both.</strong> If both were true, it would have to be ready.</p></details>
+<details><summary>The soup is salted, and it's ready.</summary><p><strong>We don't know whether it's stirred.</strong> Being ready doesn't prove both conditions were met. Salted, unstirred soup that's ready would still fit the rule.</p></details>
+<details><summary>The soup isn't salted.</summary><p><strong>We don't know whether it's ready.</strong> The rule guarantees readiness when both conditions hold. It leaves other cases open.</p></details>
+</div>
+</div></section>
+
+<section><div class="wrap"><div class="sec-kicker">Carry it into the next question</div><h2>When you get stuck</h2>
+<ol class="steps"><li><b>Sort the claims.</b> Track the evidence and conclusion.</li><li><b>Look for a connection.</b> Can you link rules, apply a rule to a fact, or do both?</li><li><b>Keep complete conditions.</b> Match the left side or deny the right side. Don't reverse the arrow.</li><li><b>Check “and.”</b> One part plus the result doesn't prove the other part.</li><li><b>Write one line</b> explaining why the tempting answer fails.</li></ol>
+</div></section>
+
+<section id="homework"><div class="wrap"><div class="sec-kicker">Before next session</div><h2>Your work this week</h2>
+<ol class="steps"><li><b>Unless drill,</b> as often as you can, until you clear it at 5 seconds.</li><li><b>Sort every sentence</b> into its bucket, on every question you do.</li><li><b>Conditionals on Parallel and Must Be True questions.</b> Keep the Parallel Reasoning note open while you work.</li><li><b>One more conditional drill and a set of practice questions</b> are coming to your Classroom.</li><li><b>Squeeze every question.</b> Before you move on, ask what it taught you.</li></ol>
+</div></section>
+<div class="footer-note"><div class="wrap"><span class="mark">LSAT U</span></div></div>
+</body></html>

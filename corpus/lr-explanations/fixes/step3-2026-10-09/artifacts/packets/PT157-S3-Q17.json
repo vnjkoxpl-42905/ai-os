@@ -1,0 +1,78 @@
+{
+ "qid": "PT157-S3-Q17",
+ "type": "Flaw",
+ "difficulty": "3",
+ "key_db": "E",
+ "stimulus_db": "Anarchist: People can either fight for anarchy or they can tolerate totalitarian government control. But history shows that government control of all facets of human life destroys the spirit, making life miserable. So, people should fight for anarchy, which allows each individual the freedom to pursue a personal course of happiness.",
+ "stem_db": "Which one of the following most accurately describes a flaw in the argument's reasoning?",
+ "choices_db": {
+  "A": "Governments provide many social goods, and the argument does not attempt to explain why anarchy is a desirable alternative to government control of all facets of human life.",
+  "B": "By asserting that people both should and should not tolerate totalitarian government, the argument contradicts itself.",
+  "C": "The argument infers from the assertion that people should fight for anarchy that totalitarianism is objectionable.",
+  "D": "The argument offers no indication that there is evidence for its claim that totalitarianism destroys the spirit and makes life miserable.",
+  "E": "The argument sets out anarchy and totalitarianism as the only two political alternatives that are available."
+ },
+ "bank": {
+  "stimulus": "Anarchist: People can either fight for anarchy or they\n can tolerate totalitarian government control.\n But history shows that government control\n of all facets of human life destroys the spirit,\n making life miserable. So, people should fight\n for anarchy, which allows each individual the\n freedom to pursue a personal course of happiness.",
+  "stem": "Which one of the following most accurately describes a\n flaw in the argument’s reasoning?",
+  "choices": {
+   "A": "Governments provide many social goods, and the argument does not attempt to explain why anarchy is a desirable alternative to government control of all facets of human life.",
+   "B": "By asserting that people both should and should not tolerate totalitarian government, the argument contradicts itself.",
+   "C": "The argument infers from the assertion that people should fight for anarchy that totalitarianism is objectionable.",
+   "D": "The argument offers no indication that there is evidence for its claim that totalitarianism destroys the spirit and makes life miserable.",
+   "E": "The argument sets out anarchy and totalitarianism as the only two political alternatives that are available."
+  },
+  "key": "E"
+ },
+ "explanation_id": "1d85577c-9c31-4d04-b00c-58e6989a52d7",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "1b502b7a-21b1-44a5-b996-7a54aaf7347a",
+   "position": 0,
+   "label": "Evidence",
+   "body": "People can either fight for anarchy or they can tolerate totalitarian government control. History shows that government control of all facets of human life destroys the spirit, making life miserable. Anarchy allows each individual the freedom to pursue a personal course of happiness."
+  },
+  {
+   "row_id": "4dab6c87-ea15-4a92-b5d4-530012d923a6",
+   "position": 1,
+   "label": "Conclusion",
+   "body": "People should fight for anarchy."
+  },
+  {
+   "row_id": "bdf29502-171b-4a69-a682-dcb73b880d1c",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "\"Should\" tends to be a strong word on the LSAT. When the conclusion of an argument makes a recommendation, stating what someone \"should\" do, the evidence is supposed to clearly justify why that is the best course of action. As a general rule, we accept the evidence that we're given in LR questions. However, difficult LR questions will occasionally test our critical thinking skills in a more holistic way. To answer these questions correctly, we need to be flexible and take a big-picture view, rather than mechanically following general rules. Even though we can consider the first sentence of this argument as evidence, it stands out as rather extreme statement. Anarchy and totalitarian government control are extremes at the opposite ends of the spectrum. Most systems of government that exist fall somewhere in between. Is it reasonable to think that anarchy and totalitarian government control are the only two options available? No, it's not. There is a clear false choice flaw baked into this premise, which makes the argument questionable from the start."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "6bd57511-0dfa-420c-aa04-c0e0b4b6f9a6",
+   "letter": "A",
+   "body": "The argument does explain why anarchy is desirable — it allows freedom to pursue happiness. And it explains why totalitarianism is undesirable — it destroys the spirit. This answer mischaracterizes the argument."
+  },
+  {
+   "row_id": "9a25312d-531c-44b2-a51d-c7257f7d3f3c",
+   "letter": "B",
+   "body": "The argument does not say people should tolerate totalitarianism — it argues they should fight for anarchy instead. The first sentence presents toleration as one option; the conclusion recommends against it. There is no contradiction within the argument."
+  },
+  {
+   "row_id": "65454df0-03b0-42b4-87eb-f21bec5477f7",
+   "letter": "C",
+   "body": "This answer reverses the argument's actual logic. The argument infers from \"totalitarianism is objectionable\" that \"people should fight for anarchy\" — not the other way around. This answer has the direction of inference backwards."
+  },
+  {
+   "row_id": "af5d9a8a-1e44-4e4d-8c0d-cef7451d55e2",
+   "letter": "D",
+   "body": "The argument says \"history shows\" that totalitarianism makes life miserable. \"History\" is offered as evidence. This answer claims no evidence is indicated, which contradicts the text."
+  },
+  {
+   "row_id": "d0611d74-d9d1-49f8-9d07-278fbd372de1",
+   "letter": "E",
+   "body": "This identifies the false dichotomy. The argument presents only two options — anarchy and totalitarianism — as if nothing exists between them. In reality, most political systems occupy the vast middle ground: democracies, republics, constitutional monarchies, and numerous other forms of limited government. By excluding these alternatives, the argument artificially narrows the choice to make anarchy seem like the only reasonable option."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (14.7 em-dashes per 1k words; wrong-answer notes average 31.5 words).",
+ "tags": "no-prediction; emdash-heavy; pt157-158-register"
+}

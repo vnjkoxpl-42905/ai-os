@@ -1,0 +1,268 @@
+{
+  "bytes": 21574,
+  "characters": 21574,
+  "lines": 840,
+  "wordlike_tokens": 1624,
+  "distinct_characters": 54,
+  "structured": {
+    "root_type": "dict",
+    "node_types": {
+      "dict": 95,
+      "list": 58,
+      "str": 535,
+      "int": 1
+    },
+    "key_counts": {
+      "version": 95,
+      "package": 1,
+      "name": 94,
+      "source": 93,
+      "checksum": 93,
+      "dependencies": 57
+    },
+    "array_count": 58,
+    "arrays": [
+      {
+        "path": "$.package",
+        "length": 94
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 3
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 1
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 1
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 1
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 2
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 1
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 5
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 2
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 5
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 1
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 2
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 2
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 3
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 5
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 3
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 1
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 2
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 1
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 10
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 3
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 4
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 2
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 2
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 1
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 5
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 4
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 3
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 2
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 1
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 9
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 1
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 1
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 5
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 1
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 1
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 2
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 1
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 3
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 1
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 2
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 3
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 4
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 3
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 1
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 2
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 2
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 18
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 6
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 2
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 1
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 2
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 3
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 1
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 1
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 1
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 1
+      },
+      {
+        "path": "$.package[].dependencies",
+        "length": 5
+      }
+    ],
+    "numeric_values": 1,
+    "numeric_min": 4,
+    "numeric_max": 4,
+    "string_count": 535,
+    "string_characters": 13781
+  },
+  "source_path": "repos/karpathy/rustbpe/Cargo.lock",
+  "source_sha256": "00938938690d205ba4279ea5b1c1873963945d14e2f7c72650757068b1c33024",
+  "method": "toml_parse_all_nodes",
+  "parse_error": null
+}

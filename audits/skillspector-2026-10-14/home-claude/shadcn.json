@@ -1,0 +1,4065 @@
+{
+  "skill": {
+    "name": "shadcn",
+    "source": "C:\\Users\\Joshu\\.claude\\skills\\shadcn",
+    "scanned_at": "2026-10-14T15:11:18.624710+00:00"
+  },
+  "risk_assessment": {
+    "score": 100,
+    "severity": "CRITICAL",
+    "recommendation": "DO_NOT_INSTALL",
+    "max_issue_severity": "HIGH"
+  },
+  "components": [
+    {
+      "path": "SKILL.md",
+      "type": "markdown",
+      "lines": 260,
+      "executable": false,
+      "size_bytes": 18114,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "agents/openai.yml",
+      "type": "yaml",
+      "lines": 5,
+      "executable": false,
+      "size_bytes": 238,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/shadcn-small.png",
+      "type": "other",
+      "lines": 26,
+      "executable": false,
+      "size_bytes": 1049,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "assets/shadcn.png",
+      "type": "other",
+      "lines": 111,
+      "executable": false,
+      "size_bytes": 3852,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "cli.md",
+      "type": "markdown",
+      "lines": 276,
+      "executable": false,
+      "size_bytes": 16426,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "customization.md",
+      "type": "markdown",
+      "lines": 209,
+      "executable": false,
+      "size_bytes": 6074,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "evals/evals.json",
+      "type": "json",
+      "lines": 47,
+      "executable": false,
+      "size_bytes": 3118,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "mcp.md",
+      "type": "markdown",
+      "lines": 94,
+      "executable": false,
+      "size_bytes": 2385,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "rules/base-vs-radix.md",
+      "type": "markdown",
+      "lines": 306,
+      "executable": false,
+      "size_bytes": 6954,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "rules/composition.md",
+      "type": "markdown",
+      "lines": 195,
+      "executable": false,
+      "size_bytes": 4268,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "rules/forms.md",
+      "type": "markdown",
+      "lines": 192,
+      "executable": false,
+      "size_bytes": 4857,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "rules/icons.md",
+      "type": "markdown",
+      "lines": 101,
+      "executable": false,
+      "size_bytes": 1958,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    },
+    {
+      "path": "rules/styling.md",
+      "type": "markdown",
+      "lines": 162,
+      "executable": false,
+      "size_bytes": 3795,
+      "source_url": null,
+      "source_identity": null,
+      "source_digest": null
+    }
+  ],
+  "structured_summaries": [],
+  "issues": [
+    {
+      "id": "AE1",
+      "finding_id": "finding-8448758655244aaca2dc46564e2b78b3",
+      "category": "analysis-evasion",
+      "pattern": "Incomplete referenced artifact analysis",
+      "severity": "HIGH",
+      "confidence": 1.0,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 55,
+        "end_line": null
+      },
+      "finding": "rules/base-vs-radix.md (partial)",
+      "explanation": "Referenced artifact was not completely inspected",
+      "remediation": "Review the reported expression and analyzer's parsing limitation; correct the scanner if it misinterprets valid source, then rerun the scan. Keep required references; incomplete analysis is not proof of malicious evasion.",
+      "code_snippet": "ggers.** Check `base` field from `npx shadcn@latest info`. \u2192 [base-vs-radix.md](./rules/base-vs-radix.md)",
+      "intent": null,
+      "tags": [
+        "coverage",
+        "reference",
+        "target-disposition:partial"
+      ],
+      "evidence": {
+        "target_path": "rules/base-vs-radix.md",
+        "target_disposition": "partial",
+        "reasons": [
+          {
+            "reason_code": "static_parse_limit",
+            "message": "A security-relevant expression exceeded a bounded static parser's span limit.",
+            "phase": "static",
+            "analyzers": [
+              "static_patterns_tool_misuse"
+            ]
+          }
+        ]
+      },
+      "match_fingerprint": "30315a64928cd06c826f943b8687990fac06cb6b97829cfb319ec0774a6d0cbe",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 55,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "AE1",
+      "finding_id": "finding-30eade70ec87498ca77f9c41ae168598",
+      "category": "analysis-evasion",
+      "pattern": "Incomplete referenced artifact analysis",
+      "severity": "HIGH",
+      "confidence": 1.0,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 258,
+        "end_line": null
+      },
+      "finding": "rules/base-vs-radix.md (partial)",
+      "explanation": "Referenced artifact was not completely inspected",
+      "remediation": "Review the reported expression and analyzer's parsing limitation; correct the scanner if it misinterprets valid source, then rerun the scan. Keep required references; incomplete analysis is not proof of malicious evasion.",
+      "code_snippet": "- [rules/base-vs-radix.md](./rules/base-vs-radix.md) \u2014 asChild vs render, Select, ToggleGroup, Slider, Accordion",
+      "intent": null,
+      "tags": [
+        "coverage",
+        "reference",
+        "target-disposition:partial"
+      ],
+      "evidence": {
+        "target_path": "rules/base-vs-radix.md",
+        "target_disposition": "partial",
+        "reasons": [
+          {
+            "reason_code": "static_parse_limit",
+            "message": "A security-relevant expression exceeded a bounded static parser's span limit.",
+            "phase": "static",
+            "analyzers": [
+              "static_patterns_tool_misuse"
+            ]
+          }
+        ]
+      },
+      "match_fingerprint": "30315a64928cd06c826f943b8687990fac06cb6b97829cfb319ec0774a6d0cbe",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 258,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "MP3",
+      "finding_id": "finding-9b9ce42721244f66bd23524eb1404acc",
+      "category": "Memory Poisoning",
+      "pattern": "Memory Manipulation",
+      "severity": "HIGH",
+      "confidence": 0.8,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 220,
+        "end_line": null,
+        "start_column": 36
+      },
+      "finding": "reset state",
+      "explanation": "Skill manipulates agent memory, state, or stored context. Memory corruption can alter personality, override safety rules, or cause unpredictable behavior.",
+      "remediation": "Protect agent memory and state from modification by untrusted content. Use read-only memory for critical instructions and validate all state changes.",
+      "code_snippet": "npx shadcn@latest apply a2r6bw --only font\nnpx shadcn@latest apply a2r6bw --only theme,font\n\n# Inspect preset codes and project preset state.\nnpx shadcn@latest preset decode a2r6bw\nnpx shadcn@latest preset url a2r6bw\nnpx shadcn@latest preset open a2r6bw",
+      "intent": null,
+      "tags": [
+        "Memory Poisoning"
+      ],
+      "evidence": {},
+      "match_fingerprint": "5f0fdb0527f0bec7db880d6f88889dd7288b0fff4404e02b1af045aa90bfc18c",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 220,
+          "end_line": null,
+          "start_column": 36
+        }
+      ]
+    },
+    {
+      "id": "RA1",
+      "finding_id": "finding-0f6c8d26695a416ebf3ec7d82abea374",
+      "category": "Rogue Agent",
+      "pattern": "Self-Modification",
+      "severity": "HIGH",
+      "confidence": 0.85,
+      "location": {
+        "file": "cli.md",
+        "start_line": 34,
+        "end_line": null,
+        "start_column": 42
+      },
+      "finding": "overwrite existing config",
+      "explanation": "Skill modifies its own code, configuration, or behavior at runtime. Self-modification enables an agent to escalate privileges, disable safety constraints, or install persistent backdoors.",
+      "remediation": "Prevent the skill from modifying its own code, SKILL.md, or configuration files. Treat skill files as read-only at runtime.",
+      "code_snippet": "| `--preset [name]`       | `-p`  | Preset configuration (named, code, or URL)                | \u2014       |\n| `--yes`                 | `-y`  | Skip confirmation prompt                                  | `true`  |\n| `--defaults`            | `-d`  | Use defaults (`--template=next --preset=base-nova`)       | `false` |\n| `--force`               | `-f`  | Force overwrite existing configuration                    | `false` |\n| `--cwd <cwd>`           | `-c`  | Working directory                                         | current |\n| `--name <name>`         | `-n`  | Name for new project                                      | \u2014       |\n| `--silent`              | `-s`  | Mute output                                               | `false` |",
+      "intent": null,
+      "tags": [
+        "Rogue Agent"
+      ],
+      "evidence": {},
+      "match_fingerprint": "eddfcdb4062ba97e5b1af8d17c7974815fc6e5228d1a40be5083e9711f7ddb2d",
+      "occurrences": [
+        {
+          "file": "cli.md",
+          "start_line": 34,
+          "end_line": null,
+          "start_column": 42
+        }
+      ]
+    },
+    {
+      "id": "RA1",
+      "finding_id": "finding-ecd16a4ba32e45e392eed17ea3581043",
+      "category": "Rogue Agent",
+      "pattern": "Self-Modification",
+      "severity": "HIGH",
+      "confidence": 0.85,
+      "location": {
+        "file": "cli.md",
+        "start_line": 76,
+        "end_line": null,
+        "start_column": 28
+      },
+      "finding": "Overwrite existing file",
+      "explanation": "Skill modifies its own code, configuration, or behavior at runtime. Self-modification enables an agent to escalate privileges, disable safety constraints, or install persistent backdoors.",
+      "remediation": "Prevent the skill from modifying its own code, SKILL.md, or configuration files. Treat skill files as read-only at runtime.",
+      "code_snippet": "| Flag            | Short | Description                                                                                                          | Default |\n| --------------- | ----- | -------------------------------------------------------------------------------------------------------------------- | ------- |\n| `--yes`         | `-y`  | Skip confirmation prompt                                                                                             | `false` |\n| `--overwrite`   | `-o`  | Overwrite existing files                                                                                             | `false` |\n| `--cwd <cwd>`   | `-c`  | Working directory                                                                                                    | current |\n| `--all`         | `-a`  | Add all available components                                                                                         | `false` |\n| `--path <path>` | `-p`  | Target path for the component ",
+      "intent": null,
+      "tags": [
+        "Rogue Agent"
+      ],
+      "evidence": {},
+      "match_fingerprint": "ab825fad36644c7a7bb0fa0aa8ce605fb4ed63a23c0f134568b8dfd5c96f7cf8",
+      "occurrences": [
+        {
+          "file": "cli.md",
+          "start_line": 76,
+          "end_line": null,
+          "start_column": 28
+        }
+      ]
+    },
+    {
+      "id": "AS1",
+      "finding_id": "finding-2cfd1a1003264128b3aeb9b0b623334f",
+      "category": "Agent Snooping",
+      "pattern": "Agent Config Directory Access",
+      "severity": "HIGH",
+      "confidence": 0.9,
+      "location": {
+        "file": "mcp.md",
+        "start_line": 22,
+        "end_line": null,
+        "start_column": 11
+      },
+      "finding": "~/.codex/config.toml",
+      "explanation": "Skill reads from agent configuration directories (.claude/, .codex/, .gemini/). These directories may contain API keys, personal settings, and other credentials that the skill has no legitimate need to access.",
+      "remediation": "Remove all code or instructions that access agent configuration directories (.claude/, .codex/, .gemini/). If configuration values are needed, pass them explicitly as parameters or environment variables \u2014 never read the agent's own config files.",
+      "code_snippet": "| Cursor | `.cursor/mcp.json` |\n| VS Code | `.vscode/mcp.json` |\n| OpenCode | `opencode.json` |\n| Codex | `~/.codex/config.toml` (manual) |\n\n---\n",
+      "intent": null,
+      "tags": [
+        "Agent Snooping"
+      ],
+      "evidence": {},
+      "match_fingerprint": "ac8a2c85e2eeb5e14c174cae3d679d330225a562a4847ce1a64de3a1bcf488fb",
+      "occurrences": [
+        {
+          "file": "mcp.md",
+          "start_line": 22,
+          "end_line": null,
+          "start_column": 11
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-2410c9f83ed84cf5a1b97c473c2087a7",
+      "category": "MCP Rug Pull",
+      "pattern": "Manifest references MCP server without version pin: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 1,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "MCP server references in the skill manifest without version pinning are a rug-pull risk.",
+      "remediation": "Always pin MCP server versions in manifest references.",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 1,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-09e2165dbb014e3fb29bb4f0d7b0fafb",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 5,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 5,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-4ffb965ceef14576a89e0cd82427c129",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 12,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 12,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-84c828c33ab248e99b755408faaaef2c",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 17,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 17,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-ef6692e9de1f4d689bf2260a277ee6b4",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 20,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 20,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-044ab6fc8a5d4ca78306fba6e14aa784",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 24,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 24,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-989b1930dd7b40c38b59c9c6dfc136a1",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 55,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 55,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-feca243d7ff44f57bc5b5982de08e3fd",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 80,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 80,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-622fef03f3b24a7ca9643c5ff414d815",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 81,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 81,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-4159fbc311b14266822c50f7330e4ed8",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 154,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 154,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-a718cc8a3608442094b4896567dc0ac8",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 160,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 160,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-627b6c372a0e48e68759d9d7a834722f",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 163,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 163,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-5e23bc3ca3b746029aa4d6b8a7c65afa",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 166,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 166,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-2f126890dcbd4ea9a7593975c64ee4ca",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 170,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 170,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-cfe032e96fec4cafaac07c3bd8a9f904",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 172,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 172,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-b8c399e5168246619c70f246bca3e259",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 173,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 173,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-95bd240df7b144edb5ab59c14a451a0d",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 174,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 174,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-178d2b7f9ead4691ae55647663e20187",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 175,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 175,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-dc628c60c02a4ecc8422f3404c267c7c",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 179,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 179,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-374f76dedb35410baa26fb9bf50761f1",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 180,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 180,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-8efdab3827794708a330544bc91ae46a",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 181,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 181,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-87bff2eaf26d4c39bd7930b29425f122",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 182,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 182,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-e28c5566f77a481e82add6096dcfe728",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 183,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 183,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-2a8122e2c69448d1a3e7a5cffc913632",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 184,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 184,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-f1eaffbf1d664b49b433812413b7b074",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 191,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 191,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-cf76acd4f1074014a9cd39776396ab15",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 192,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 192,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-8bfef79619f4468e9c9bde28e202ac59",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 203,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 203,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-02574acae0394362beb3825edbec7619",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 204,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 204,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-a336b460b99648469607bec860e0fa4e",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 207,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 207,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-e215f66b83a8480694460645cc5013b7",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 208,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 208,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-35f69e15604d48b89ee5b6c974d5a35b",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 211,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 211,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-64ab867fc6cd4a08a314bc3f590217c3",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 212,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 212,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-a43cf041c12d450a835add418bf03316",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 215,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 215,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-5b8d601977b4478a8958f2fe1cd3a2e6",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 216,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 216,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-e810a416321d4c27937e64c19a28ffdd",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 217,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 217,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-e95c4eec20fc4fee99667c0308e8fca5",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 218,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 218,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-b988f4c1c3ab4411b53904b614a8dcb0",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 221,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 221,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-bdcb53178b334aecb293d497fdd4666d",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 222,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 222,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-a0f306486f274b99b68dee43b3a66714",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 223,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 223,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-4861b943142a49119c86c9057035f38a",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 224,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 224,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-8727cf92e7a94ef0a2f84962933272ea",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 225,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 225,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-c468fdfd4e554e8f824ac913d4e62eba",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 228,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 228,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-ae3aa799f8004663b32df8c185e1651a",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 229,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 229,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-13f8b695b01e40adbd614b9600d0d3fa",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 230,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 230,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-255af5c00ec84a0da4b01176a85c3e0e",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 233,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 233,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-8b4ac33be9314c96bc2c2fd11b1ea5cb",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 234,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 234,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-caf243cb3e9442feaf4033302060b268",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 235,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 235,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-99f9158483e14af0a54a940cd8b90091",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 238,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 238,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-57b07b73904e4b2fb0340cf687436106",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 239,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 239,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-0bcf9f07207f4528ba6943b0355f29c4",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 242,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 242,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-fb7cd8b9e35f4e8e80390add9f251994",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "SKILL.md",
+        "start_line": 245,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "SKILL.md",
+          "start_line": 245,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-169189d21fb74251bdbee5db623d51e8",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "cli.md",
+        "start_line": 5,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "cli.md",
+          "start_line": 5,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-0febd844d5134cf1b66404ffbd68b1b7",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "cli.md",
+        "start_line": 23,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "cli.md",
+          "start_line": 23,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-302bd30594f3473ca12b9c01a8a56d5a",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "cli.md",
+        "start_line": 43,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "cli.md",
+          "start_line": 43,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-45f84b0641574a0db43d7d496ad221b3",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "cli.md",
+        "start_line": 48,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "cli.md",
+          "start_line": 48,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-8334eecf693b480d909e52d827d37a97",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "cli.md",
+        "start_line": 65,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "cli.md",
+          "start_line": 65,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-c3d1c1f2b772495a8d951927da2645d3",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "cli.md",
+        "start_line": 68,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "cli.md",
+          "start_line": 68,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-cc03988228c548159fbe751735463a6d",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "cli.md",
+        "start_line": 91,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "cli.md",
+          "start_line": 91,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-1cefb63a62eb40d585431b2c89bc5247",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "cli.md",
+        "start_line": 94,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "cli.md",
+          "start_line": 94,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-10f1343cf5a647a5986ae02488911e90",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "cli.md",
+        "start_line": 97,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "cli.md",
+          "start_line": 97,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-87528d63c5504b2d89e3570c111d4230",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "cli.md",
+        "start_line": 100,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "cli.md",
+          "start_line": 100,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-af23edc91346441e8408b1b5e21e89d1",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "cli.md",
+        "start_line": 103,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "cli.md",
+          "start_line": 103,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-4cd967f99a62446a8d0480c4cfd52e1d",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "cli.md",
+        "start_line": 106,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "cli.md",
+          "start_line": 106,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-e3fdd46e8e014029bec44354dbef8e00",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "cli.md",
+        "start_line": 109,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "cli.md",
+          "start_line": 109,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-c2413dfe54b14ee08cc648c0e7d7d28a",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "cli.md",
+        "start_line": 120,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "cli.md",
+          "start_line": 120,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-2666e35f3ab946f2b5769edd09fa72e0",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "cli.md",
+        "start_line": 129,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "cli.md",
+          "start_line": 129,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-3a426b1f05234e0a90c69e7857e062b0",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "cli.md",
+        "start_line": 132,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "cli.md",
+          "start_line": 132,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-b8dc48178b104e939b520cddfb0fe4ca",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "cli.md",
+        "start_line": 144,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "cli.md",
+          "start_line": 144,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-fba7cf70316940e783ae5753eb24f494",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "cli.md",
+        "start_line": 147,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "cli.md",
+          "start_line": 147,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-a103d21a219d4a95b11909d0edb8e701",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "cli.md",
+        "start_line": 152,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "cli.md",
+          "start_line": 152,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-5b0543357851496ca5bfd3ca0066fd15",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "cli.md",
+        "start_line": 157,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "cli.md",
+          "start_line": 157,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-7b023fcd545f4e548f337f212d8b0b8d",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "cli.md",
+        "start_line": 175,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "cli.md",
+          "start_line": 175,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-68c96c20075f42d2a61ef68de4be7ed0",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "cli.md",
+        "start_line": 180,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "cli.md",
+          "start_line": 180,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-4995b6f8dffb44338deb8f39e2fb7d1b",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "cli.md",
+        "start_line": 225,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "cli.md",
+          "start_line": 225,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-72bfff7fc5e747f2876f048825a89057",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "cli.md",
+        "start_line": 230,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "cli.md",
+          "start_line": 230,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-4bac1537b7484fd6bcdaae772379eaa7",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "cli.md",
+        "start_line": 265,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "cli.md",
+          "start_line": 265,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-e6c753c5bd694587a998ee68b20b8162",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "cli.md",
+        "start_line": 266,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "cli.md",
+          "start_line": 266,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-df9939da6ace4b53ba9b898b44b0edce",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "cli.md",
+        "start_line": 272,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "cli.md",
+          "start_line": 272,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-b6801a9c5f5f48b1b6a3feee20b90ae3",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "cli.md",
+        "start_line": 273,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "cli.md",
+          "start_line": 273,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-1cd6b15efece4496be69ee7e22a7cdb8",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "cli.md",
+        "start_line": 274,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "cli.md",
+          "start_line": 274,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-933d605d3b1d4298bfa02b60f9247637",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "customization.md",
+        "start_line": 68,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "customization.md",
+          "start_line": 68,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-94397949fc844a71ace3e0ce289d4826",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "customization.md",
+        "start_line": 71,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "customization.md",
+          "start_line": 71,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-71e2f16998b84087bd0806a6765e97b2",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "customization.md",
+        "start_line": 74,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "customization.md",
+          "start_line": 74,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-025c0958770c40e7825a6eaaab05f4f9",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "customization.md",
+        "start_line": 77,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "customization.md",
+          "start_line": 77,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-e52d5fec3ed84df5a5ff2edfda99e19e",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "customization.md",
+        "start_line": 80,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "customization.md",
+          "start_line": 80,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-0f594b9a937047c9a2a7ff75b355d9ba",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "customization.md",
+        "start_line": 89,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "customization.md",
+          "start_line": 89,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-d4d501fd57644b42b3790cd104699980",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "customization.md",
+        "start_line": 111,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "customization.md",
+          "start_line": 111,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-d041ffb21ea743f4ae62edeb8836311a",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "customization.md",
+        "start_line": 199,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "customization.md",
+          "start_line": 199,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-d8f03cc2835f44ac91fabe77d6aa8110",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "customization.md",
+        "start_line": 205,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "customization.md",
+          "start_line": 205,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-fbe7c546ffa84ba0833503cc888ae45d",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "customization.md",
+        "start_line": 206,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "customization.md",
+          "start_line": 206,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-824e309143344145be551952aa609d2c",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "mcp.md",
+        "start_line": 28,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "mcp.md",
+          "start_line": 28,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "RP1",
+      "finding_id": "finding-78fb608222fb48658ae5b31066cb440b",
+      "category": "MCP Rug Pull",
+      "pattern": "MCP server referenced without pinned version: 'npx shadcn'.",
+      "severity": "MEDIUM",
+      "confidence": 0.7,
+      "location": {
+        "file": "rules/base-vs-radix.md",
+        "start_line": 3,
+        "end_line": null
+      },
+      "finding": "npx shadcn",
+      "explanation": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update.",
+      "remediation": "Pin the version: npx @scope/server@1.2.3",
+      "code_snippet": null,
+      "intent": null,
+      "tags": [
+        "ASI16"
+      ],
+      "evidence": {},
+      "match_fingerprint": "6c764939ae27574d4fab2f3831679cdcaf8ea064eb9d57e5227437e8695d7325",
+      "occurrences": [
+        {
+          "file": "rules/base-vs-radix.md",
+          "start_line": 3,
+          "end_line": null
+        }
+      ]
+    },
+    {
+      "id": "EA2",
+      "finding_id": "finding-a0fe832697324792988d0e329ea83c23",
+      "category": "Excessive Agency",
+      "pattern": "Autonomous Decision Making",
+      "severity": "MEDIUM",
+      "confidence": 0.85,
+      "location": {
+        "file": "cli.md",
+        "start_line": 32,
+        "end_line": null,
+        "start_column": 36
+      },
+      "finding": "Skip confirmation",
+      "explanation": "Skill enables autonomous high-impact decisions without human-in-the-loop verification. Critical operations (destructive commands, financial transactions, data deletion) should require explicit user confirmation.",
+      "remediation": "Add human-in-the-loop confirmation for destructive, irreversible, or high-impact operations. Never auto-execute commands that modify files, send data, or alter system state.",
+      "code_snippet": "| ----------------------- | ----- | --------------------------------------------------------- | ------- |\n| `--template <template>` | `-t`  | Template (next, start, vite, next-monorepo, react-router) | \u2014       |\n| `--preset [name]`       | `-p`  | Preset configuration (named, code, or URL)                | \u2014       |\n| `--yes`                 | `-y`  | Skip confirmation prompt                                  | `true`  |\n| `--defaults`            | `-d`  | Use defaults (`--template=next --preset=base-nova`)       | `false` |\n| `--force`               | `-f`  | Force overwrite existing configuration                    | `false` |\n| `--cwd <cwd>`           | `-c`  | Working directory                                         | current |",
+      "intent": null,
+      "tags": [
+        "Excessive Agency"
+      ],
+      "evidence": {},
+      "match_fingerprint": "f2585ed1a9f8ffe69bade4f4a85869690c663180a11cc20f5d4a1c41371c139d",
+      "occurrences": [
+        {
+          "file": "cli.md",
+          "start_line": 32,
+          "end_line": null,
+          "start_column": 36
+        }
+      ]
+    },
+    {
+      "id": "EA2",
+      "finding_id": "finding-a470ae61d744420f8fbaff3715cb64c0",
+      "category": "Excessive Agency",
+      "pattern": "Autonomous Decision Making",
+      "severity": "MEDIUM",
+      "confidence": 0.85,
+      "location": {
+        "file": "cli.md",
+        "start_line": 56,
+        "end_line": null,
+        "start_column": 32
+      },
+      "finding": "Skip confirmation",
+      "explanation": "Skill enables autonomous high-impact decisions without human-in-the-loop verification. Critical operations (destructive commands, financial transactions, data deletion) should require explicit user confirmation.",
+      "remediation": "Add human-in-the-loop confirmation for destructive, irreversible, or high-impact operations. Never auto-execute commands that modify files, send data, or alter system state.",
+      "code_snippet": "| Flag                | Short | Description                                | Default |\n| ------------------- | ----- | ------------------------------------------ | ------- |\n| `--preset <preset>` | \u2014     | Preset configuration (named, code, or URL) | \u2014       |\n| `--yes`             | `-y`  | Skip confirmation prompt                   | `false` |\n| `--cwd <cwd>`       | `-c`  | Working directory                          | current |\n| `--silent`          | `-s`  | Mute output                                | `false` |\n",
+      "intent": null,
+      "tags": [
+        "Excessive Agency"
+      ],
+      "evidence": {},
+      "match_fingerprint": "f2585ed1a9f8ffe69bade4f4a85869690c663180a11cc20f5d4a1c41371c139d",
+      "occurrences": [
+        {
+          "file": "cli.md",
+          "start_line": 56,
+          "end_line": null,
+          "start_column": 32
+        }
+      ]
+    },
+    {
+      "id": "EA2",
+      "finding_id": "finding-5bc5303f47574d0a92182af13dc5eb8b",
+      "category": "Excessive Agency",
+      "pattern": "Autonomous Decision Making",
+      "severity": "MEDIUM",
+      "confidence": 0.85,
+      "location": {
+        "file": "cli.md",
+        "start_line": 75,
+        "end_line": null,
+        "start_column": 28
+      },
+      "finding": "Skip confirmation",
+      "explanation": "Skill enables autonomous high-impact decisions without human-in-the-loop verification. Critical operations (destructive commands, financial transactions, data deletion) should require explicit user confirmation.",
+      "remediation": "Add human-in-the-loop confirmation for destructive, irreversible, or high-impact operations. Never auto-execute commands that modify files, send data, or alter system state.",
+      "code_snippet": "\n| Flag            | Short | Description                                                                                                          | Default |\n| --------------- | ----- | -------------------------------------------------------------------------------------------------------------------- | ------- |\n| `--yes`         | `-y`  | Skip confirmation prompt                                                                                             | `false` |\n| `--overwrite`   | `-o`  | Overwrite existing files                                                                                             | `false` |\n| `--cwd <cwd>`   | `-c`  | Working directory                                                                                                    | current |\n| `--all`         | `-a`  | Add all available components                                                                                         | `false` |",
+      "intent": null,
+      "tags": [
+        "Excessive Agency"
+      ],
+      "evidence": {},
+      "match_fingerprint": "f2585ed1a9f8ffe69bade4f4a85869690c663180a11cc20f5d4a1c41371c139d",
+      "occurrences": [
+        {
+          "file": "cli.md",
+          "start_line": 75,
+          "end_line": null,
+          "start_column": 28
+        }
+      ]
+    },
+    {
+      "id": "E1",
+      "finding_id": "finding-bf722e29c74f4409b39b815b47a866f3",
+      "category": "Data Exfiltration",
+      "pattern": "External Transmission",
+      "severity": "MEDIUM",
+      "confidence": 0.5,
+      "location": {
+        "file": "cli.md",
+        "start_line": 106,
+        "end_line": null,
+        "start_column": 22
+      },
+      "finding": "https://api.npoint.io/",
+      "explanation": "Data is being sent to an external URL. This could be legitimate telemetry or data exfiltration. Manual review is recommended.",
+      "remediation": "Verify the destination URL is trusted and necessary. Remove or replace with documented APIs. Ensure no secrets, tokens, or PII are transmitted.",
+      "code_snippet": "npx shadcn@latest add button --view button.tsx\n\n# Works with URLs too.\nnpx shadcn@latest add https://api.npoint.io/abc123 --dry-run\n\n# CSS diffs.\nnpx shadcn@latest add button --diff globals.css",
+      "intent": null,
+      "tags": [
+        "Data Exfiltration"
+      ],
+      "evidence": {},
+      "match_fingerprint": "3d35a7b867ad516f0c1ec84d7514e5c39d86e8ca8da59f73f4b8ec7f5d221e6d",
+      "occurrences": [
+        {
+          "file": "cli.md",
+          "start_line": 106,
+          "end_line": null,
+          "start_column": 22
+        }
+      ]
+    }
+  ],
+  "suppressed_count": 0,
+  "suppressed": [],
+  "metadata": {
+    "has_executable_scripts": false,
+    "skillspector_version": "2.12.0",
+    "llm_requested": false,
+    "llm_available": false,
+    "meta_analysis_applied": false,
+    "inference_usage": [],
+    "llm_provenance": {
+      "schema_version": 1,
+      "provider": {
+        "configured_adapter": "unknown",
+        "resolved_adapter": "unknown",
+        "effective_adapter": "not_applicable",
+        "effective_adapters": [],
+        "service": "unknown",
+        "routing": {
+          "deployment_override": null,
+          "deployment_source": "unknown",
+          "api_version": null,
+          "api_version_source": "unknown"
+        }
+      },
+      "analyzers": [
+        {
+          "analyzer_id": "mcp_tool_poisoning",
+          "model": "z-ai/glm-5.3",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "4c52fbb83bbca0dd13f2685453c9b661d8c95bf8",
+              "source": "package_vcs_metadata"
+            }
+          }
+        },
+        {
+          "analyzer_id": "semantic_developer_intent",
+          "model": "z-ai/glm-5.3",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "4c52fbb83bbca0dd13f2685453c9b661d8c95bf8",
+              "source": "package_vcs_metadata"
+            }
+          }
+        },
+        {
+          "analyzer_id": "semantic_quality_policy",
+          "model": "z-ai/glm-5.3",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "4c52fbb83bbca0dd13f2685453c9b661d8c95bf8",
+              "source": "package_vcs_metadata"
+            }
+          }
+        },
+        {
+          "analyzer_id": "semantic_security_discovery",
+          "model": "z-ai/glm-5.3",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "4c52fbb83bbca0dd13f2685453c9b661d8c95bf8",
+              "source": "package_vcs_metadata"
+            }
+          }
+        },
+        {
+          "analyzer_id": "meta_analyzer",
+          "model": "z-ai/glm-5.3",
+          "model_source": "resolved_configuration",
+          "analyzer_revision": {
+            "value": "2.12.0",
+            "source": "skillspector_package",
+            "source_revision": {
+              "value": "4c52fbb83bbca0dd13f2685453c9b661d8c95bf8",
+              "source": "package_vcs_metadata"
+            }
+          }
+        }
+      ],
+      "sampling": {
+        "temperature": {
+          "requested": null,
+          "source": "provider_default",
+          "forwarded_to_client": null,
+          "adapter_support": false,
+          "provider_support": "unknown"
+        },
+        "seed": {
+          "requested": null,
+          "source": "unset",
+          "forwarded_to_client": null,
+          "adapter_support": false,
+          "provider_support": "unknown"
+        },
+        "reasoning_effort": {
+          "requested": null,
+          "source": "provider_default",
+          "forwarded_to_client": null,
+          "adapter_support": false,
+          "provider_support": "unknown"
+        }
+      },
+      "determinism": {
+        "classification": "not_applicable",
+        "control_status": "not_applied",
+        "provider_guarantee": false,
+        "reason": "LLM analysis was not executed for this scan."
+      }
+    },
+    "filtering_mode": "heuristic"
+  },
+  "execution_successful": true,
+  "analysis_completeness": {
+    "total_components": 11,
+    "scanned_components": 10,
+    "coverage_percent": 90.9,
+    "is_complete": false,
+    "status": "partial",
+    "execution_successful": true,
+    "fully_inspected_files": 10,
+    "partially_inspected_files": 1,
+    "entirely_uninspected_files": 0,
+    "ledger_exceptions": [
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_missing",
+        "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+        "path": "SKILL.md",
+        "start_line": 146,
+        "end_line": 146,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_missing",
+        "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+        "path": "SKILL.md",
+        "start_line": 171,
+        "end_line": 171,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "reference_resolution",
+        "reason_code": "reference_missing",
+        "message": "A local path-like reference does not match any bundled artifact, such as a file the skill writes at runtime.",
+        "path": "SKILL.md",
+        "start_line": 185,
+        "end_line": 185,
+        "fatal": false
+      },
+      {
+        "outcome": "partial",
+        "phase": "static",
+        "reason_code": "static_parse_limit",
+        "message": "A security-relevant expression exceeded a bounded static parser's span limit.",
+        "path": "rules/base-vs-radix.md",
+        "start_line": null,
+        "end_line": null,
+        "fatal": false,
+        "analyzers": [
+          "static_patterns_tool_misuse"
+        ]
+      }
+    ],
+    "scope_exclusions": [
+      {
+        "outcome": "out_of_scope",
+        "phase": "static",
+        "reason_code": "binary_content",
+        "message": "Binary content is unsupported by this analyzer.",
+        "path": "assets/shadcn-small.png",
+        "start_line": null,
+        "end_line": null,
+        "fatal": false,
+        "analyzers": [
+          "static_patterns_agent_snooping",
+          "static_patterns_anti_refusal",
+          "static_patterns_data_exfiltration",
+          "static_patterns_deserialization",
+          "static_patterns_excessive_agency",
+          "static_patterns_harmful_content",
+          "static_patterns_memory_poisoning",
+          "static_patterns_output_handling",
+          "static_patterns_privilege_escalation",
+          "static_patterns_prompt_injection",
+          "static_patterns_rogue_agent",
+          "static_patterns_ssrf",
+          "static_patterns_supply_chain",
+          "static_patterns_system_prompt_leakage",
+          "static_patterns_tool_misuse"
+        ]
+      },
+      {
+        "outcome": "out_of_scope",
+        "phase": "static",
+        "reason_code": "binary_content",
+        "message": "Binary content is unsupported by this analyzer.",
+        "path": "assets/shadcn.png",
+        "start_line": null,
+        "end_line": null,
+        "fatal": false,
+        "analyzers": [
+          "static_patterns_agent_snooping",
+          "static_patterns_anti_refusal",
+          "static_patterns_data_exfiltration",
+          "static_patterns_deserialization",
+          "static_patterns_excessive_agency",
+          "static_patterns_harmful_content",
+          "static_patterns_memory_poisoning",
+          "static_patterns_output_handling",
+          "static_patterns_privilege_escalation",
+          "static_patterns_prompt_injection",
+          "static_patterns_rogue_agent",
+          "static_patterns_ssrf",
+          "static_patterns_supply_chain",
+          "static_patterns_system_prompt_leakage",
+          "static_patterns_tool_misuse"
+        ]
+      }
+    ],
+    "analyzer_statuses": [
+      {
+        "analyzer_id": "artifact_integrity",
+        "status": "completed",
+        "planned_work": 13,
+        "completed": 13,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "behavioral_ast",
+        "status": "not_applicable",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "no_applicable_files",
+        "message": "No files matched this analyzer's applicability contract."
+      },
+      {
+        "analyzer_id": "behavioral_taint_tracking",
+        "status": "not_applicable",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "no_applicable_files",
+        "message": "No files matched this analyzer's applicability contract."
+      },
+      {
+        "analyzer_id": "bundled_execution_surface",
+        "status": "not_applicable",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "no_applicable_files",
+        "message": "No files matched this analyzer's applicability contract."
+      },
+      {
+        "analyzer_id": "mcp_least_privilege",
+        "status": "not_applicable",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "no_applicable_files",
+        "message": "No files matched this analyzer's applicability contract."
+      },
+      {
+        "analyzer_id": "mcp_rug_pull",
+        "status": "completed",
+        "planned_work": 13,
+        "completed": 13,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "mcp_tool_poisoning",
+        "status": "completed",
+        "planned_work": 1,
+        "completed": 1,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "meta_analyzer",
+        "status": "disabled",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "disabled_by_configuration",
+        "message": "Analyzer was disabled by the requested configuration."
+      },
+      {
+        "analyzer_id": "reference_coverage",
+        "status": "completed",
+        "planned_work": 2,
+        "completed": 2,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "semantic_developer_intent",
+        "status": "disabled",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "disabled_by_configuration",
+        "message": "Analyzer was disabled by the requested configuration."
+      },
+      {
+        "analyzer_id": "semantic_quality_policy",
+        "status": "disabled",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "disabled_by_configuration",
+        "message": "Analyzer was disabled by the requested configuration."
+      },
+      {
+        "analyzer_id": "semantic_security_discovery",
+        "status": "disabled",
+        "planned_work": 0,
+        "completed": 0,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0,
+        "reason_code": "disabled_by_configuration",
+        "message": "Analyzer was disabled by the requested configuration."
+      },
+      {
+        "analyzer_id": "static_patterns_agent_snooping",
+        "status": "completed",
+        "planned_work": 11,
+        "completed": 11,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_anti_refusal",
+        "status": "completed",
+        "planned_work": 11,
+        "completed": 11,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_data_exfiltration",
+        "status": "completed",
+        "planned_work": 11,
+        "completed": 11,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_deserialization",
+        "status": "completed",
+        "planned_work": 11,
+        "completed": 11,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_excessive_agency",
+        "status": "completed",
+        "planned_work": 11,
+        "completed": 11,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_harmful_content",
+        "status": "completed",
+        "planned_work": 11,
+        "completed": 11,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_memory_poisoning",
+        "status": "completed",
+        "planned_work": 11,
+        "completed": 11,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_output_handling",
+        "status": "completed",
+        "planned_work": 11,
+        "completed": 11,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_privilege_escalation",
+        "status": "completed",
+        "planned_work": 11,
+        "completed": 11,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_prompt_injection",
+        "status": "completed",
+        "planned_work": 11,
+        "completed": 11,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_rogue_agent",
+        "status": "completed",
+        "planned_work": 11,
+        "completed": 11,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_ssrf",
+        "status": "completed",
+        "planned_work": 11,
+        "completed": 11,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_supply_chain",
+        "status": "completed",
+        "planned_work": 11,
+        "completed": 11,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_system_prompt_leakage",
+        "status": "completed",
+        "planned_work": 11,
+        "completed": 11,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_patterns_tool_misuse",
+        "status": "degraded",
+        "planned_work": 11,
+        "completed": 10,
+        "partial": 1,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      },
+      {
+        "analyzer_id": "static_yara",
+        "status": "completed",
+        "planned_work": 13,
+        "completed": 13,
+        "partial": 0,
+        "skipped": 0,
+        "failed": 0,
+        "unaccounted": 0
+      }
+    ],
+    "references": [
+      {
+        "source_path": "SKILL.md",
+        "line": 33,
+        "column": 39,
+        "evidence": "### Styling & Tailwind \u2192 [styling.md](./rules/styling.md)",
+        "target_path": "rules/styling.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 43,
+        "column": 33,
+        "evidence": "### Forms & Inputs \u2192 [forms.md](./rules/forms.md)",
+        "target_path": "rules/forms.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 52,
+        "column": 44,
+        "evidence": "### Component Structure \u2192 [composition.md](./rules/composition.md)",
+        "target_path": "rules/composition.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 55,
+        "column": 140,
+        "evidence": "ggers.** Check `base` field from `npx shadcn@latest info`. \u2192 [base-vs-radix.md](./rules/base-vs-radix.md)",
+        "target_path": "rules/base-vs-radix.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 62,
+        "column": 58,
+        "evidence": "### Use Components, Not Custom Markup \u2192 [composition.md](./rules/composition.md)",
+        "target_path": "rules/composition.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 72,
+        "column": 24,
+        "evidence": "### Icons \u2192 [icons.md](./rules/icons.md)",
+        "target_path": "rules/icons.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 146,
+        "column": 76,
+        "evidence": "- **`tailwindVersion`** \u2192 `\"v4\"` uses `@theme inline` blocks; `\"v3\"` uses `tailwind.config.js`.",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 156,
+        "column": 31,
+        "evidence": "See [cli.md \u2014 `info` command](./cli.md) for the full field reference.",
+        "target_path": "cli.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 171,
+        "column": 134,
+        "evidence": "ing `add`, always check the `components` list from project context or list the `resolvedPaths.ui` directory. Don't import components that haven't been added, an",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 174,
+        "column": 169,
+        "evidence": "se `--dry-run` and `--diff` to preview changes first (see [Updating Components](#updating-components) below).",
+        "target_path": null,
+        "status": "rejected",
+        "disposition": "out_of_scope",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 176,
+        "column": 302,
+        "evidence": ", missing imports, incorrect composition, or violations of the [Critical Rules](#critical-rules). Also replace any icon imports with the project's `iconLibrary`",
+        "target_path": null,
+        "status": "rejected",
+        "disposition": "out_of_scope",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 183,
+        "column": 226,
+        "evidence": "n for each installed component use `--dry-run` and `--diff` to [smart merge](#updating-components) it individually.",
+        "target_path": null,
+        "status": "rejected",
+        "disposition": "out_of_scope",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 185,
+        "column": 135,
+        "evidence": " user's project directory. `apply` only works in an existing project with a `components.json` file. The CLI automatically preserves the current base (`base` vs ",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 185,
+        "column": 233,
+        "evidence": ". The CLI automatically preserves the current base (`base` vs `radix`) from `components.json`. If you must use a scratch/temp directory (e.g. for `--dry-run` co",
+        "target_path": null,
+        "status": "missing",
+        "disposition": "partial",
+        "reference_kind": "quoted_or_code"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 250,
+        "column": 97,
+        "evidence": "**Preset codes:** Version-prefixed base62 strings (e.g. `a2r6bw` or `b0`), from [ui.shadcn.com](https://ui.shadcn.com).",
+        "target_path": null,
+        "status": "rejected",
+        "disposition": "out_of_scope",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 254,
+        "column": 20,
+        "evidence": "- [rules/forms.md](./rules/forms.md) \u2014 FieldGroup, Field, InputGroup, ToggleGroup, FieldSet, validation states",
+        "target_path": "rules/forms.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 254,
+        "column": 4,
+        "evidence": "- [rules/forms.md](./rules/forms.md) \u2014 FieldGroup, Field, InputGroup, ToggleGroup, FieldSet, validation states",
+        "target_path": "rules/forms.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "plain_path"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 255,
+        "column": 26,
+        "evidence": "- [rules/composition.md](./rules/composition.md) \u2014 Groups, overlays, Card, Tabs, Avatar, Alert, Empty, Toast, Separator, Skeleton, Badge, Button loading",
+        "target_path": "rules/composition.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 255,
+        "column": 4,
+        "evidence": "- [rules/composition.md](./rules/composition.md) \u2014 Groups, overlays, Card, Tabs, Avatar, Alert, Empty, Toast, Separator, Skeleton, Badge, Button loading",
+        "target_path": "rules/composition.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "plain_path"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 256,
+        "column": 20,
+        "evidence": "- [rules/icons.md](./rules/icons.md) \u2014 data-icon, icon sizing, passing icons as objects",
+        "target_path": "rules/icons.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 256,
+        "column": 4,
+        "evidence": "- [rules/icons.md](./rules/icons.md) \u2014 data-icon, icon sizing, passing icons as objects",
+        "target_path": "rules/icons.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "plain_path"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 257,
+        "column": 22,
+        "evidence": "- [rules/styling.md](./rules/styling.md) \u2014 Semantic colors, variants, className, spacing, size, truncate, dark mode, cn(), z-index",
+        "target_path": "rules/styling.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 257,
+        "column": 4,
+        "evidence": "- [rules/styling.md](./rules/styling.md) \u2014 Semantic colors, variants, className, spacing, size, truncate, dark mode, cn(), z-index",
+        "target_path": "rules/styling.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "plain_path"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 258,
+        "column": 28,
+        "evidence": "- [rules/base-vs-radix.md](./rules/base-vs-radix.md) \u2014 asChild vs render, Select, ToggleGroup, Slider, Accordion",
+        "target_path": "rules/base-vs-radix.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 258,
+        "column": 4,
+        "evidence": "- [rules/base-vs-radix.md](./rules/base-vs-radix.md) \u2014 asChild vs render, Select, ToggleGroup, Slider, Accordion",
+        "target_path": "rules/base-vs-radix.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "plain_path"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 259,
+        "column": 12,
+        "evidence": "- [cli.md](./cli.md) \u2014 Commands, flags, presets, templates",
+        "target_path": "cli.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      },
+      {
+        "source_path": "SKILL.md",
+        "line": 260,
+        "column": 22,
+        "evidence": "- [customization.md](./customization.md) \u2014 Theming, CSS variables, extending components",
+        "target_path": "customization.md",
+        "status": "resolved",
+        "disposition": "analyzed",
+        "reference_kind": "markdown_link"
+      }
+    ],
+    "limitations": [
+      "Analyzer static_patterns_tool_misuse status: degraded."
+    ],
+    "findings_before_filtering": 117,
+    "findings_after_filtering": 117
+  }
+}

@@ -4,6 +4,10 @@ description: Audit and improve CLAUDE.md files in repositories. Use when user as
 tools: Read, Glob, Grep, Bash, Edit
 ---
 
+## Current AI OS execution contract
+
+Discovery must enumerate all in-scope manuals without a silent head -50 cap. Shared rules in this repository belong in both hand-owned AGENTS.md and CLAUDE.md. Respect nested protected manuals and already authorized edit scope.
+
 # CLAUDE.md Improver
 
 Audit, evaluate, and improve CLAUDE.md files across a codebase to ensure Claude Code has optimal project context.
@@ -17,7 +21,7 @@ Audit, evaluate, and improve CLAUDE.md files across a codebase to ensure Claude 
 Find all CLAUDE.md files in the repository:
 
 ```bash
-find . -name "CLAUDE.md" -o -name ".claude.md" -o -name ".claude.local.md" 2>/dev/null | head -50
+find . -name "CLAUDE.md" -o -name ".claude.md" -o -name ".claude.local.md" 2>/dev/null
 ```
 
 **File Types & Locations:**

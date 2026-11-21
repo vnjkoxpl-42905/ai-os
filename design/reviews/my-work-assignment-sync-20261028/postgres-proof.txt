@@ -1,0 +1,16 @@
+UTC: 2026-10-28T12:43:32.749667+00:00
+Command: node scripts/test-student-work-delivery.mjs
+Container: lsatu-assignment-sync-test-20261028 (disposable local DB only)
+PostgreSQL 17.11 on x86_64-pc-linux-musl, compiled by gcc (Alpine 15.2.0) 15.2.0, 64-bit
+
+PASS PostgreSQL baseline old-index=false: owner/RLS, source/mirror, gates, generation, receipts, group/schedule/recovery, seven-day flows, lifetime delivery and silent replay
+PASS PostgreSQL baseline old-index=true: owner/RLS, source/mirror, gates, generation, receipts, group/schedule/recovery, seven-day flows, lifetime delivery and silent replay
+
+Exit code: 0
+
+Cases: actual deployed /activities/UUID and /guided/UUID?returnTo routes; exact refresher/unless/topics/reading/bootcamp aliases; metadata route and validated bootcamps.source_id fallback; TA/homework; target-query/content ambiguity preserved; no owned row means no retired-route guessing; /classroom and /inbox unmapped; mapping never clears until actual destination load. Also actual progress vocabulary, >125future readiness, one-item vs mixed groups, announcements, recap vs Inbox, section/focus quiet writers, same-UUID supersession/current routing, old receipts/new unread across replay, cross-student ownership, control/SHA/timestamp/grants replay.
+supabase/migrations/20261028140000_student_work_delivery.sql: 3f45f93243016e92a3511f3c1083a7bcf069f9e8d8d4e338f5c2873b81f3fd1a
+supabase/migrations/20261028141000_student_work_mcp_writers.sql: 1db1f16076623264da0b885b6233e8493a566a028e20d2399c40f98069fe904f
+supabase/migrations/20261028142000_reading_center_delivery_policy.sql: 88bcfa49e4a4cd8183c4a0af7ef80b8c6db089101799b81a90030ee8cd174141
+supabase/migrations/20261028143000_section_attempt_delivery_policy.sql: bc4eed432dc3316f74ae36ddff172cbbfbd94f038ce53cf79170024aa0554b14
+Limitations: representative live-evidence columns/ownership baseline and exact saved live SQL writers, not every production policy. Actual pg_cron absent from postgres:17-alpine; worker execution tested, registration needs live readback. No production records/notifications touched.

@@ -1,7 +1,7 @@
 ---
 type: task-list
 subject: Fix list, LR explanation project
-updated: 2026-09-28
+updated: 2026-10-10
 ---
 
 # Fix list
@@ -25,8 +25,8 @@ The database is the source of truth for explanations, not the local `Explanation
 - [x] ~~**LSAT Lab has a written Argument Breakdown for 247 questions LSAT U lacks.**~~ 2026-09-27: 221 loaded from the full app text (26 are video-only, skipped). Verified: all 221 have steps, 0 glued emphasis markers. +760 steps, +60 choice notes, +8 questions, +12 explanations. About 551 of the 772 remain to write. Corrected 2026-09-27 (Codex review): at least 567 slots are incomplete, counting 7 with a breakdown but only 3 or 4 notes; re-run gaps.py after a fresh pull for the true number.
 - [x] ~~**Full LSAT Lab audit flags (2026-09-27).**~~ 50 flags verified: 19 real, 29 false alarms, 2 unclear. Fixed in PR vnjkoxpl-42905/lsatu-684d89db#151 (11 stems, 3 choice sets, keys PT128-S2-Q5→C, PT139-S4-Q22→E, PT149-S4-Q14→B, Joshua approved) and #150 (PT101-S2-Q8 truncated stimulus). Verdicts: scratchpad flags/verdicts.json (not kept).
 - [x] ~~**PT128-S2-Q26 is a copy of PT124-S2-Q26 with the wrong key (E, real B); LSAT Lab's PT128 S2 has 25 questions.**~~ 2026-09-27: it is modern PT124-S2-Q26 (old PrepTest 41, S3, Q26), confirmed on 7Sage; 7Sage, LSAT Lab and the DB all end PT128 S2 at Q25. Zero attempts, runs or journal rows. Deleted from the bank (not `status: removed`, which means an LSAC-removed position) in PR vnjkoxpl-42905/lsatu-684d89db#153. Origin unknown: already present in the recovered 2026-09-05 snapshot, so git has no earlier history.
-- [ ] **Two unclear choice spellings, no PDF:** PT102-S4-Q2 C ("ensure" vs LSAT Lab "insure"), PT104-S4-Q8 A ("Packaging" vs "Packing"). Wrong answers, low stakes.
-- [ ] **Database carries LSAT Lab typos in 4 stimuli:** PT108-S2-Q18 "grass:", PT141-S2-Q5 "Lemaitre", PT143-S1-Q13 "Bums", PT143-S4-Q1 "Trinidadians". Bank is right; DB copy is not shown to students but feeds the guard fixture.
+- [ ] **Unresolved PT104 choice wording:** PT104-S1-Q4 A ("small" vs "smaller") still needs authoritative choice text; no `pt-104.pdf` exists in Drive or on disk (checked 2026-10-10), and LSAT Lab's public page truncates choice A to "Yasukawa compared the survival chances". PT104-S4-Q8 A: LSAT Lab's public page opens the choice "Packing and advertising triple the", matching live, so no change is proposed (secondary source, not the official PDF). PT102-S4-Q2 C was resolved from official PDF page 28 and corrected to "ensure" on 2026-10-10.
+- [x] ~~**Database carries LSAT Lab typos in 4 stimuli.**~~ 2026-10-10: guarded corrections for PT108-S2-Q18 "grass.", PT141-S2-Q5 "Lemaître" and "primeval atom", PT143-S1-Q13 "Burns", and PT143-S4-Q1 "Trinidadian". Published bank supports all four; PT108 also matches the original PDF. Burns spelling aligned in two choices, one step and three notes. [Evidence](step4-2026-10-10/README.md).
 - [x] ~~**Answer-key test fails on PT118's two removed questions** because it doesn't skip `status: removed`.~~ 2026-09-27: test skips them, PR #153 (PT118-S3-Q22 confirmed removed from scoring on 7Sage).
 - [ ] **~364 bank rows have hard PDF line breaks inside text** (rough count). Separate cleanup.
 - [x] ~~**Five explanations belong to a different question** (students see reasoning for the wrong question). PT108-S3-Q6 (whole explanation, even the stimulus), PT137-S3-Q25, PT143-S4-Q18, PT135-S4-Q25, PT133-S3-Q4. Highest priority. Detail: [[side-issues]] section 1.~~ 2026-09-27: PT108-S3-Q6 was the bank's fault (fixed by #146); the other four had wrong speaker names, corrected in the DB. Snapshot: raw/sources/lsatu-lr-snapshots/2026-09-27-wrong-speaker-rows-pre-fix.json.
@@ -34,17 +34,17 @@ The database is the source of truth for explanations, not the local `Explanation
 - [ ] **Revamp weak existing explanations: 523 found** (192 Revamp, 100 Weak, 231 Watch), plus ~136 unread rows that probably rate Weak. Joshua does this later, after the 772. Detail: [[revamp-list]]; scores in `revamp-inventory.csv`.
 - [ ] **Empty or partial explanations:** 2 with nothing, 16 with no choice notes, 8 with some notes missing, 2 placeholder correct-answer notes (PT147-S4-Q3 D, PT147-S4-Q4 A: written 2026-09-27, done). Detail: [[side-issues]] section 4.
 - [ ] **Existing explanations with defects found while building the model library (2026-09-27): 192 slot references.** Misread choices (PT146-S3-Q1 correct note reads "unlikely to be unrepresentative"; PT128-S2-Q19 B; PT101-S2-Q25 C/D describe choices not on the page), a Role explanation of the wrong claim (PT154-S2-Q18), Logic Games analogies in student copy (PT137-S4-Q3, PT107-S4-Q2 A), mocking lines, political examples, flattened diagrams. Revamp track. Detail: [[model-library-defects]].
-- [ ] **Bank/database answer-choice wording disagreements.** Twenty-one named slots repaired on 2026-09-28: fifteen bank slots (22 choice texts) in merged PRs #181, #182, and #183, plus six database slots (seven choice texts) with guarded updates and snapshots. Two further slots have documented source-version differences and no edit. PT104-S1-Q4 A and PT134-S1-Q12 E still need stronger wording sources; other differences remain to inspect. Detail: [[choice-adjudication-2026-09-28]]. PT148-S3-Q26 D was already fixed in PR #154.
+- [ ] **Bank/database answer-choice wording disagreements.** Twenty-one named slots repaired on 2026-09-28: fifteen bank slots (22 choice texts) in merged PRs #181, #182, and #183, plus six database slots (seven choice texts) with guarded updates and snapshots. Two further slots have documented source-version differences and no edit. PT134-S1-Q12 E was resolved from the official PDF and corrected on 2026-10-10; PT104-S1-Q4 A and PT104-S4-Q8 A remain unresolved. Other differences remain to inspect. Detail: [[choice-adjudication-2026-09-28]]. PT148-S3-Q26 D was already fixed in PR #154.
 - [ ] **Fix individual Choice Note problems.** Misquotes, reversed logic, typos, verdict-only notes. Detail: [[choice-note-issues]].
 
 ### Data and question bank
 - [x] ~~**Tag the 128 rebuilt questions.**~~ Done 2026-09-27: all 155 repaired slots tagged from LSAT Lab (the 27 moved ones also carried the wrong labels), PR vnjkoxpl-42905/lsatu-684d89db#147 merged. Tool: system/scripts/lsatlab-pull/.
 - [x] ~~**304 bank questions had labels that differ from LSAT Lab's current tags.**~~ Joshua chose LSAT Lab's; applied 2026-09-27, PR vnjkoxpl-42905/lsatu-684d89db#148.
 - [x] ~~**The question bank holds the wrong question in 155 slots** (verified 2026-09-27, replaces the "18 wrong keys" item). Whole blocks were copied from another section: PT113-S3 holds PT112-S3; PT117-S2 holds PT116-S2; PT119-S2/S3 hold PT113-S2/S3; PT129-S3 holds PT128-S3; PT148-S4 holds PT142-S4; PT149-S3 holds PT148-S3; smaller runs in PT101, PT116, PT117-S3, PT129-S2, PT130-S3, PT131-S2/S3, PT154-S4, PT155-S4. The app shows and grades from the bank, and shows explanations from the database, so in these slots the student answers one question and reads the explanation for another. The database text is right (web-checked PT113-S3-Q21 on 7Sage, LSAT Lab and LSAT Hacks). 28 correct questions already sit elsewhere in the bank and can be moved; 127 need their answer choices sourced.~~ Fixed 2026-09-27 in PR vnjkoxpl-42905/lsatu-684d89db#146 (27 moved, 128 rebuilt from the official PDFs, 5 nonexistent rows removed). Verified merged at 2026-09-27 06:51 UTC with `gh pr view` on 2026-09-28.
-- [ ] **Bank misalignment:** PT119-S2-Q19 is matched to a different question, and PT101-S3-Q1's bank text differs from the DB. Detail: [[side-issues]] section 3.
+- [x] ~~**Bank misalignment: PT119-S2-Q19 and PT101-S3-Q1.**~~ 2026-10-10: current published bank and DB agree on stimuli, stems, all choices and keys after typography/whitespace normalization. PT119's stale inventory match was corrected to difficulty 4 and no features; historical survey prose preserved. [Evidence](step4-2026-10-10/README.md).
 - [ ] **Transcription damage, LSAT Lab leftovers, and small typos in explanations.** Detail: [[side-issues]] sections 5, 6 and 8.
 - [ ] **Rename the "Games-y LR" feature tag.** There are no Logic Games on the LSAT.
-- [ ] **Question bank `questionType` is unreliable.** 110 raw variants, casing duplicates, some wrong (PT151-S2-Q13 is a Paradox, bank says Most Strongly Supported; PT143-S1-Q6 is a Paradox, bank says Strengthen). Needs a canonical ~25-type set.
+- [x] **Question bank `questionType` is unreliable.** 110 raw variants, casing duplicates, some wrong (PT151-S2-Q13 is a Paradox, bank says Most Strongly Supported; PT143-S1-Q6 is a Paradox, bank says Strengthen). Needs a canonical ~25-type set. **Fixed 2026-10-03** (type sweep, see below).
 - [ ] **110 explained questions have no match in the question bank** (`public/data/PT*-LR.json`), so they have no features or difficulty.
 - [ ] **Reasoning-type names don't match the glossary.** Data: "Conditional Reasoning". Glossary: "Conditional Logic".
 - [ ] **PT123 to PT138 are thin.** 362 words on average, 51% Complete. Check whether some "Complete" ones are too thin to count.
@@ -64,10 +64,92 @@ The database is the source of truth for explanations, not the local `Explanation
 - [x] ~~**Generator defaulted unloaded questions to type Flaw and could not add steps alone.**~~ 2026-10-01: `generate_batch_sql.py` now uses the draft's type and handles steps-only slots.
 
 ### Found in batch 05 (2026-10-01)
-- [ ] **PT119-S3-Q20 has two overlapping step sets.** Its standard explanation carries ten steps (two Conclusion/Evidence/Evaluate/Goal runs plus "The Argument"), and its notes sit under other styles. Decide which set to keep before adding anything.
-- [ ] **PT149-S4-Q16 stimulus is missing its blank.** The bank (what students see) ends at "...increase their savings rates." with no "Therefore, ___" line. Needs the printed wording from a screenshot.
-- [ ] **Bank type labels that disagree with the stem.** PT149-S4-Q16 (bank: Necessary Assumption; stem is a fill-in completion) and PT105-S1-Q12 (bank: Method; it is Parallel, and the database already says Parallel).
+- [x] ~~**PT119-S3-Q20 has two overlapping step sets.**~~ 2026-10-02: not duplicates; three styles (standard, brief, another_way). Five notes added to the standard explanation in batch 06, nothing deleted. Its standard explanation carries ten steps (two Conclusion/Evidence/Evaluate/Goal runs plus "The Argument"), and its notes sit under other styles. Decide which set to keep before adding anything.
+- [x] ~~**PT149-S4-Q16 stimulus is missing its blank.**~~ 2026-10-01: "Hence, _______." added in DB and bank (PR #187). The bank (what students see) ends at "...increase their savings rates." with no "Therefore, ___" line. Needs the printed wording from a screenshot.
+- [x] **Bank type labels that disagree with the stem.** PT149-S4-Q16 (bank: Necessary Assumption; stem is a fill-in completion) and PT105-S1-Q12 (bank: Method; it is Parallel, and the database already says Parallel). **Fixed 2026-10-02** in vnjkoxpl-42905/lsatu-684d89db#194 / #198, deployed.
 - [x] ~~**PT107-S3-Q11 "obscures the stars Many".**~~ 2026-10-01: period added in database and bank (PR #186).
+
+### Found in batch 06 (2026-10-02)
+- [x] ~~**Batch 06 loaded.**~~ 40/40 verified byte-identical 2026-10-02. Gap 307.
+- [x] **PT111-S3-Q7 DB stimulus runs speakers together** ("percent.Proponent of offshore oil drilling:"). The speaker regex skipped multi-word names. Low priority: students read the bank. **Fixed 2026-10-03** (type sweep, see below). The bank copy had the same defect; fixed in PR #200.
+
+### Found in batch 07 (2026-10-02)
+- [x] ~~**Batch 07 loaded.**~~ 40/40 verified byte-identical. Gap 267. Agree/Disagree has no gaps left.
+- [x] ~~**Bank text: PT117-S2-Q6, PT111-S4-Q26 speakers run together; PT156-S2-Q7 stem missing "Ms."**~~ Fixed in PR #188.
+- [x] **Bank type labels wrong:** PT156-S2-Q7 (bank: Agree/Disagree, is Method) and PT156-S2-Q21 (bank: Agree/Disagree, is Flaw). The database has the right types. **Fixed 2026-10-02** in vnjkoxpl-42905/lsatu-684d89db#194 / #198, deployed.
+- [x] ~~**Unloaded questions lose speaker line breaks in the database stimulus.**~~ 2026-10-02: generator fixed; the six batch-07 rows updated. `norm_text` joins single newlines, so batch-loaded dialogues read "...guidance. Miriam:". Students read the bank, so low priority; fix `generate_batch_sql.py` to keep a break before a speaker label.
+
+### Found in batch 08 (2026-10-02)
+- [x] ~~**Batch 08 loaded.**~~ 40/40 verified. Gap 227. Most Supported has no gaps left.
+- [x] ~~**Hyphenated words split at line wraps show a stray space to students** ("long- term").~~ PR #189 joined 18 plus "one- fourth".
+- [x] **Bank type labels wrong on PT156 and PT159 unloaded questions.** Bank says "Most Strongly Supported" for PT142-S1-Q9, PT143-S4-Q12, PT156-S2-Q3 (Paradox), PT156-S2-Q17 (Must Be True), PT156-S4-Q19 (SA), PT156-S4-Q21 (Principle), PT159-S1-Q8 (Strengthen). The database has the right types. Many PT140+ bank type labels look unreliable; worth a full audit. **Fixed 2026-10-02** in vnjkoxpl-42905/lsatu-684d89db#194 / #198, deployed.
+
+### Found in batch 09 (2026-10-02)
+- [x] ~~**Batch 09 loaded.**~~ 40/40 verified. Gap 187. Principle-Conform, "Principle Conform", plain "Principle" and Principle-PSA have no gaps left.
+- [x] ~~**PT119-S2-Q15 choice E showed "jalape�o".**~~ PR #190 restored the ñ. A full scan of the LR bank found no other replacement characters.
+- [x] **Bank type labels wrong on eight unloaded Principle questions.** Filed as Principle-Conform or Principle, but they ask for a justifying principle: PT132-S4-Q20, PT143-S3-Q3, PT144-S2-Q6, PT145-S4-Q1, PT156-S2-Q12, PT156-S4-Q26, PT159-S1-Q14, PT159-S3-Q1. Loaded as Principle-Strengthen; the database has the right type. Add to the PT140+ label audit. **Fixed 2026-10-02** in vnjkoxpl-42905/lsatu-684d89db#194 / #198, deployed.
+- [x] **DB stimulus defects on two loaded questions (students read the bank, so low priority):** PT118-S3-Q8 runs the speakers together ("inhabit them.Figorian Development Commission:"), and PT109-S3-Q6 says "asthetic" where the bank says "aesthetic". **Fixed 2026-10-03** (type sweep, see below).
+
+### Found in batch 10 (2026-10-02)
+- [x] ~~**Batch 10 loaded.**~~ 42/42 verified. Gap 145. Every Principle label and every Main Conclusion label now has no gaps.
+- [x] ~~**Three bank text defects.**~~ PR vnjkoxpl-42905/lsatu-684d89db#192: PT146-S3-Q6 "seize one's of these", PT124-S2-Q18 and PT138-S3-Q11 had hyphens or nothing where the dashes belong. Fixed before loading, so the two new DB rows carry the corrected text.
+- [x] **Bank type labels wrong on six more unloaded questions.** Loaded with the type the stem asks for: PT141-S2-Q4 ("PSA") and PT147-S4-Q13 ("Principle Justify") as Principle-Conform, PT146-S3-Q6 ("Principle Justify") as Principle-Strengthen, PT141-S4-Q4 ("Method of reasoning or descriptive (Principle)") as Method, PT147-S4-Q17 ("Identify The Conclusion") as Main Conclusion, PT156-S4-Q6 ("Main Conclusion", a role stem) as Role. Add to the PT140+ label audit. **Fixed 2026-10-02** in vnjkoxpl-42905/lsatu-684d89db#194 / #198, deployed.
+- [x] **DB stimulus defect, PT110-S2-Q20:** "society-largely" has a hyphen where the dash belongs, and the bank has "society— largely" with a stray space. Low priority. **Fixed 2026-10-03** (type sweep, see below). Both copies now read "society—largely".
+- [x] ~~**Tooling: `generate_batch_sql.py` reads the live DB pull.**~~ Fixed 2026-10-02: the first run copies the five tables into `work/batch-NN-inputs/db-frozen/` and later runs read that copy. Delete the folder to refreeze.
+
+### Found in batch 11 (2026-10-02)
+- [x] ~~**Batch 11 loaded.**~~ 45/45 verified. Gap 100. Every Must Be True label and the Weaken label now have no gaps.
+- [x] ~~**Bank soft hyphen, PT105-S4-Q9.**~~ Deployed 2026-10-02 with `726ca50` after Joshua cleared it (deployment `09a8bdf4`); confirmed live. "long ­established" carried a stray soft hyphen. PR vnjkoxpl-42905/lsatu-684d89db#193 merged as `1071efe`, **not deployed**: main also carries `726ca50` (Stripe session auto-credit, another session's work), so a deploy would ship non-LR work. Deploy once Joshua clears `726ca50`. The DB row for this question was already loaded and reads "long established" (no hyphen); low priority.
+- [x] ~~**Possible soft hyphen in PT106-S1 bank file.**~~ 2026-10-02: false alarm. No U+00AD in the file; the byte grep matched the second byte of "í" (C3 AD) in "Rodríguez".
+- [x] **Bank type labels wrong on six more unloaded questions.** Loaded with the type the stem asks for: PT144-S4-Q1, PT145-S4-Q24 ("Must be true"), PT156-S2-Q18, PT156-S2-Q25, PT156-S4-Q22 ("Must Be True") as Sufficient Assumption; PT156-S4-Q23 ("Must Be True") as Flaw. Add to the PT140+ label audit. **Fixed 2026-10-02** in vnjkoxpl-42905/lsatu-684d89db#194 / #198, deployed.
+- [x] ~~**Type label wrong, PT119-S3-Q5.**~~ 2026-10-02: filed wrongly as a DB label. The DB already said Main Conclusion; the bank said Weaken. Fixed in the bank, vnjkoxpl-42905/lsatu-684d89db#195.
+- [ ] **`gaps.json` state names read backwards.** "Steps-only" means the slot has steps and needs notes; "Notes-only" means it has notes and needs steps. The generator's names are the opposite. Rename in `gaps.py`.
+
+### Found in batch 12 (2026-10-02)
+- [x] ~~**Batch 12 loaded.**~~ 44/44 verified. Gap 56. Every Parallel and Parallel Flaw label (all spellings) now has no gaps. No bank text defects found, so no deploy needed.
+- [x] ~~**Merged remote branches deleted**~~ on Joshua's OK: `fix/lr-bank-batch02-text`, `-batch10-text`, `-batch11-text`, `fix/lr-bank-jalapeno` (PRs #184, #192, #193, #190, all merged).
+- [x] ~~**Type label wrong, PT105-S1-Q13.**~~ 2026-10-02: filed wrongly as a DB label. The DB already said Method; the bank said Parallel. Fixed in the bank, vnjkoxpl-42905/lsatu-684d89db#195.
+- [x] ~~**Bank type label wrong, PT137-S2-Q5.**~~ 2026-10-02: fixed in vnjkoxpl-42905/lsatu-684d89db#194. Filed as "Parallel Reasoning"; it's a fill-in-the-blank. Loaded as Most Strongly Supported. Add to the PT140+ label audit.
+
+### Found in batch 13 (2026-10-02)
+- [x] ~~**Batch 13 loaded.**~~ 56/56 verified. Gap 0: every LR question in the bank now has steps and A-E notes (Complete 3957).
+- [x] ~~**21 bank type labels wrong on batch 13 questions**~~ (Miscellaneous, Unknown, Flaw or descriptive weakening, role and completion variants). Fixed in vnjkoxpl-42905/lsatu-684d89db#196 to match the DB rows.
+- [x] **Label sweep: 516 bank-vs-DB type disagreements.** A family-level comparison of every bank `questionType` with the DB `question_type`. A stem check puts about 331 on the bank side, 113 on the DB side and 72 unclear. Both sources need a canonical taxonomy before a bulk fix; bank labels drive drill filters and bootcamp pools. Evidence: [label-sweep-2026-10-02.txt](label-sweep-2026-10-02.txt). **Fixed 2026-10-03** (type sweep, see below).
+- [x] **DB type label, PT122-S1-Q8.** Stored as Strengthen; the stem asks for an explanation (Paradox). Explained as Paradox. Part of the sweep above. **Fixed 2026-10-03** (type sweep, see below).
+- [x] **DB stimulus soft hyphen, PT133-S2-Q25.** "cross­ examined" carries U+00AD plus a space. Same defect class as PT105-S4-Q9. **Fixed 2026-10-03** (type sweep, see below). All 32 DB rows with U+00AD now carry the bank's rendering.
+- [x] **`is_explained` is false on 327 explained DB questions.** Nothing in `src/` reads it (only `types.ts`), so students see no effect. Set it in a later guarded UPDATE or drop it. **Fixed 2026-10-03** (type sweep, see below). 346 rows set; all 3958 now true.
+- [x] **Two bank records have no `questionType`.** One in `PT118-S1-LR.json` (has a `status` key) and one in `PT118-S3-LR.json`. 2026-10-03: no fix needed; both are `status: removed` (PT118-S1-Q5, PT118-S3-Q22) and never reach students.
+- [ ] **Bootcamp test failing on main.** `practiceDrillPools.test.ts`: the first-sentence pool lists PT131-S3-Q9 (difficulty 1) after PT128-S2-Q13 (difficulty 4). Unrelated to labels; spun off as its own task.
+- [x] ~~**Verifier missed multi-line stimuli.**~~ The batch verify script parsed the SQL line by line, so dialogue stimuli with a speaker break read as a mismatch (PT144-S4-Q2). Fixed in the scratch verifier; copy `verify13.py` forward, not `verify12.py`.
+
+### Type sweep and timed catalogs (2026-10-03)
+- [x] **Taxonomy decided:** the app's 18 `CANONICAL_QTYPES` are the standard. EXCEPT is the `EXCEPT` feature tag, not part of the type name. Where `TYPE_SYNONYMS` has an opinion, it rules: "best illustrates / conforms to" and "principle violated" are Principle-Conform; "justifies the application of the principle" is Principle-Strengthen; misinterpretation is Flaw. Per-question record: [type-sweep-2026-10-02-verdicts.json](type-sweep-2026-10-02-verdicts.json).
+- [x] **Bank:** 435 `questionType` values corrected, 88 stem-inferred labels made explicit, 12 EXCEPT tags added. PR vnjkoxpl-42905/lsatu-684d89db#199, deployed and confirmed live on 2026-10-03; all 156 live files match main. Record: [type-sweep-2026-10-02-bank-changes.json](type-sweep-2026-10-02-bank-changes.json).
+- [x] **DB:** 1081 `question_type` values set to canonical names plus " EXCEPT" (196 changed the type, 885 spelling only), applied with guarded batches. Record: [type-sweep-2026-10-02-db-changes.json](type-sweep-2026-10-02-db-changes.json).
+- [x] **Live regression found and fixed: timed PrepTests and timed sections.** The frozen catalogs pin each question's type and content hash. #194–#198 and the earlier text fixes left 28 timed LR sections failing "LR classification differs from the frozen manifest" in production. #199 rotated the catalogs to PT `a8d93989` and sections `17067cd1`, seeded insert-only, checked with `md5` per row, and activated after the deploy. Scripts: [timed-catalog-rotation/](timed-catalog-rotation/).
+- [x] **Bank stimulus typography:** 10 jammed speaker turns ("kind.Anna:") and 13 em dashes with a stray space. PR #200 rotates the catalogs again (PT `dae8f144`, sections `e3942b59`).
+- [x] **Last noncanonical DB type:** PT118-S3-Q22 (bank-removed) read "Must be True"; set to "Must Be True" with a guarded UPDATE on 2026-10-03. All 3958 `question_type` values are now canonical.
+- [x] **DB stimulus cleanup:** 32 soft hyphens, 8 named defects, and 13 more speaker or dash defects. All guarded UPDATEs.
+- [ ] **Joshua's own timed QA sittings are pinned to old catalogs.** Runs 246a92e0 (PT104) and 757f339d (PT106) are in progress, and the QA runs are on `cacaf2b0`. They may not reopen where their questions changed. No student sittings exist.
+- [x] **Relabels no longer break sealed sittings.** Joshua chose option (a) on 2026-10-07. PR #201 (`65c9c958`), deployed and confirmed live 2026-10-07: sealed PT and section sittings keep their frozen qtype and level. Text fixes still change content hashes, so they still need catalog rotation and still break older sittings.
+- [ ] ~~**Design question for Joshua:**~~ any future bank type or text fix breaks every sealed sitting that contains that question. That is harmless now, but once students have timed history it will not be. Options: (a) let verification accept the frozen classification and treat content hashes as the integrity check, or (b) freeze bank edits after go-live.
+- [ ] **2047 mid-sentence hard wraps in bank stimuli.** `normalizeProseHardWraps` joins them at render, so students see clean text. Cosmetic only.
+
+### Step 2: defect fixes applied (2026-10-08)
+- [x] **All verified step 2 edits are in the database.** Slices A, B, C, D1 to D3, the cross-slice reconciliations and the B2 rerun were proposed, independently verified, merged, and written as 849 guarded edits: 595 choice notes, 238 step bodies and 16 step labels. An earlier session applied part of the set; on 2026-10-08 the remaining 639 rows were written in 17 atomic batches. Each update matched the row's md5 against the old text and confirmed the result's md5 against the planned new text, and a batch would roll back on any mismatch. None did.
+- [x] **Verified after a fresh mirror pull:** 846 of 849 rows equal the planned text exactly. The other three (c2b6fc9c step, a3328c66 and bc96b75f notes) already held a hand-improved version that is better than the plan (the c2b6fc9c step also drops a gendered pronoun), so they were left alone.
+- [x] **Timed catalogs active:** both configs read `99a84478…` (PT) and `45ef6f55…` (sections), checked 2026-10-08.
+- Working files (old text kept as the snapshot): session scratchpad `step2/payload.json`, `verdicts-*.jsonl`, `sql*-final.json`.
+
+### Step 3: Revamp rewrites verified (2026-10-09)
+- [x] **192 Revamp inventory items accounted for:** 191 rewritten explanations plus the independently agreed skip PT126-S3-Q16. The prior 173 explanations were verified against live text before writing; batches 22 to 24 added the remaining 18. Full final comparison matched all 1,687 expected rows and all 191 question mappings, with zero missing, duplicate or extra slots.
+- [x] **Remaining batch writes verified:** 41 step updates, 90 note updates and 2 new steps, guarded atomically on ownership, question/choice snapshots, row identities, old MD5 and labels. One fresh content correction and a caught-and-repaired Windows line-ending defect are documented in the [durable evidence](step3-2026-10-09/README.md). No fresh student visual check. Broader Weak/Watch, step 4 and source disputes remain open.
+
+### Step 4: verified corrections and source reconciliation (2026-10-10)
+- [x] **25 guarded live edits verified after independent review:** four stimuli, six choice fields, seven steps and eight notes. This includes PT157-S3-Q25's two alternate notes that wrongly called placebo-group dietary vitamin C a strengthener; the corrected Standard note was preserved. Also repaired PT112-S3-Q8 E's serialized tag and two CRLF-only step bodies. All three atomic batches returned exact expected counts; fresh read-after audits found zero mismatches and preserved answer keys and untargeted choice text.
+- [x] **Two official-PDF wording disputes resolved:** PT102-S4-Q2 C "ensure" (PDF page 28) and PT134-S1-Q12 E "to do only" (page 7). Source IDs, hashes, snapshots, approved payloads and receipts are in [durable evidence](step4-2026-10-10/README.md).
+- [x] **PT132-S2-Q3 taxonomy and modality reconciled:** retained Strengthen under the recorded manual decision and strongest-support stem. Corrected four steps and notes A/B/C to preserve "generally" and "most likely" instead of guaranteeing capsule. Fresh audit matched 7/7 and preserved notes D/E, source, all choices and key B.
+- Still open: both PT104 wording disputes, broader Weak/Watch and unread quality work, source-version differences, student visual acceptance and whole-mirror freshness. Missing optional Brief notes and untagged PT102-S4-Q19 choices were not treated as correctness defects. Historical side-issue lists are not current completion counts.
 
 ### Repo housekeeping
 - [x] ~~**Codex's redundant repair branch and worktree.**~~ 2026-09-27: deleted on Joshua's OK. Its uncommitted changes kept at raw/sources/lsatu-lr-snapshots/2026-09-27-codex-repair-worktree-uncommitted.patch.
@@ -77,3 +159,18 @@ The database is the source of truth for explanations, not the local `Explanation
 - [ ] **Repo `CLAUDE.md` says commit straight to `main`; memory says branch + PR per session.** One should change.
 
 ## Done
+
+## Live status check, 2026-10-10
+Read directly from the LSAT U backend (project 53b9a6f2, ref atrcqxpmqrynmtvvyjju) via query_database. 3,958 of 3,958 questions have an explanation; 0 unexplained; every question has 5 choices and exactly one key. 236 questions carry all three styles (Standard, Brief, Another Way) with 5 choice notes each; 3,722 carry one explanation. 14 style rows (13 questions, e.g. PT104-S1-Q12 Brief, PT158-S2-Q1 Brief and Another Way) have choice notes but no steps; the question's other styles have steps. PT104-S1-Q4 A reads "a larger and a small species" in both the live DB and the in-app bank (same source, so not independent evidence); unresolved pending the official PDF.
+
+## Plan vs progress, 2026-10-10 (reconciled against handoffs/2026-10-07-lr-cloud-context.md)
+Approved plan: brainstorms/2026-10-07-finish-lr-explanations.md. Definition of finished: every correctness defect fixed + the 192 Revamp rewritten; 100 Weak, 231 Watch and ~136 unread stay queued.
+
+| Phase | State |
+|---|---|
+| 772 missing explanations (batches pilot, 01-13) | Done. 3,958/3,958 explained on the live DB. |
+| Housekeeping (#138/#141/#142, Games-y LR rename, sidecars, worktrees) | Verified 2026-10-10: PRs #138, #141, #142, #201, #202, #203 all merged; no unpushed local commits; Lovable head dc107de9 equals origin/main. Joshua published the frontend to lsatprep.study on 2026-10-10 (his statement; not independently confirmed from production). Checkboxes in Open above are stale. #203 production deploy and catalog activation were unconfirmed at the pause; catalogs confirmed enabled in Step 3. |
+| 192 Revamp rewrites | Done (Step 3): 191 live + PT126-S3-Q16 agreed skip. |
+| Correctness slices A, B, C, D (828 drafted edits, 772 unique rows, 300 questions) | RECONCILED 2026-10-10 against a fresh live pull of the backend (read-only, db_pull.py). 657 edits already live exactly as drafted. 108 rows sit in questions Step 3 rewrote (superseded). 14 match another slice's proposal. 11 rows (9 questions) differ from the draft but are already corrected in live wording (checked PT104-S1-Q17 and PT101-S2-Q21 against the question). 0 edits still needed. Flags: PT112-S3-Q8 E tag fixed in Step 4; PT102-S4-Q19 null tags and 15 Brief styles without choice notes (PT117-S3-Q2 through PT120-S4-Q17) are optional, none in a student-default style. |
+| Cleanup (typos, transcription damage, diagrams, hard-wrap rows) | Partly overlapped by Revamp and Step 4; remainder unmeasured. |
+| PT104-S1-Q4 A "small/smaller" | Open; needs official PT104 PDF. |

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="lsatu-interactive-lesson" content="lanae-2026-10-29-finding-the-conclusion">
+<title>Finding the Conclusion by Asking Why · Session recap</title>
+<style>  :root{
+    --cream:#FBF8F1; --ink:#1C1917; --ink-soft:#44403C; --ink-mute:#6F6A63;
+    --gold:#E8D08B; --gold-deep:#B8983F; --gold-text:#85650F; --gold-wash:rgba(232,208,139,.16);
+    --card:#FFFFFF; --line:#E7E0D2;
+    --green:#3F6212; --green-wash:rgba(63,98,18,.09);
+    --red:#9F1239; --red-wash:rgba(159,18,57,.07);
+    --serif:"Fraunces","Garamond","Georgia",serif;
+    --sans:"Outfit","Avenir Next","Helvetica Neue",sans-serif;
+    --mono:"JetBrains Mono","SF Mono",Menlo,monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--ink);font-family:var(--sans);line-height:1.65;font-size:17px}
+  .wrap{max-width:800px;margin:0 auto;padding:0 24px}
+
+  header.hero{padding:68px 0 44px;border-bottom:1px solid var(--line)}
+  .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-text);margin-bottom:18px}
+  h1{font-family:var(--serif);font-weight:600;font-size:clamp(36px,6vw,54px);line-height:1.06;letter-spacing:-.01em}
+  .hero p.lede{margin-top:20px;font-size:19px;color:var(--ink-soft);max-width:58ch}
+
+  section{padding:50px 0;border-bottom:1px solid var(--line)}
+  h2{font-family:var(--serif);font-weight:600;font-size:30px;line-height:1.15;margin-bottom:4px}
+  .sec-kicker{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-text);margin-bottom:10px}
+  p{margin:14px 0;color:var(--ink-soft)}
+  p strong{color:var(--ink)}
+
+  .callout{background:var(--gold-wash);border-left:3px solid var(--gold-deep);border-radius:0 12px 12px 0;padding:16px 20px;margin:24px 0;font-size:16.5px;color:var(--ink-soft)}
+  .callout .tag{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-text);display:block;margin-bottom:6px}
+  .callout strong{color:var(--ink)}
+
+  /* the three kinds */
+  .kinds{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:28px 0 8px}
+  .kind{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;box-shadow:0 1px 3px rgba(28,25,23,.06);transition:transform .18s,box-shadow .18s}
+  /* The colour carries the taxonomy, so it has to stay. A short rule inside
+     the padding does that without a 3px border running into a 14px corner. */
+  .kind .bar{display:block;width:32px;height:4px;border-radius:2px;background:var(--c);margin-bottom:14px}
+  .kind:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(28,25,23,.09)}
+  .kind.assume{--c:var(--gold-deep)}
+  .kind.object{--c:var(--red)}
+  .kind.describe{--c:var(--green)}
+  .kind .name{font-family:var(--serif);font-size:22px;color:var(--c);font-weight:600}
+  .kind .what{font-size:15px;margin:8px 0 0;color:var(--ink-soft)}
+  .kind .words{border-top:1px dashed var(--line);margin-top:14px;padding-top:12px}
+  .kind .words b{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--c);display:block;margin-bottom:7px}
+  .kind .words span{display:block;font-size:14px;color:var(--ink-mute);padding:2px 0}
+  .kind .test{margin-top:14px;background:var(--cream);border-radius:9px;padding:11px 13px;font-size:14.5px;color:var(--ink)}
+  .kind .test b{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-mute);display:block;margin-bottom:4px}
+
+  .opposite{display:flex;align-items:stretch;gap:0;margin:26px 0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--card)}
+  .opposite div{flex:1;padding:18px 20px;font-size:15.5px;color:var(--ink-soft)}
+  .opposite div:first-child{background:var(--gold-wash)}
+  .opposite div:last-child{background:var(--red-wash)}
+  .opposite b{display:block;font-family:var(--mono);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;margin-bottom:6px}
+  .opposite div:first-child b{color:var(--gold-text)}
+  .opposite div:last-child b{color:var(--red)}
+
+  ol.steps{margin:20px 0;padding-left:0;list-style:none;counter-reset:step}
+  ol.steps li{counter-increment:step;position:relative;padding:14px 0 14px 54px;border-bottom:1px dashed var(--line);font-size:16px;color:var(--ink-soft)}
+  ol.steps li:last-child{border-bottom:none}
+  ol.steps li::before{content:counter(step);position:absolute;left:0;top:12px;width:34px;height:34px;border-radius:50%;background:var(--ink);color:var(--cream);font-family:var(--serif);display:flex;align-items:center;justify-content:center;font-size:16px}
+  ol.steps li b{color:var(--ink)}
+
+  .flags{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 4px}
+  .flag{font-family:var(--mono);font-size:12.5px;letter-spacing:.04em;background:var(--red-wash);color:var(--red);border:1px solid rgba(159,18,57,.2);border-radius:999px;padding:6px 14px}
+
+  .drill{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;margin:26px 0;box-shadow:0 2px 8px rgba(28,25,23,.06)}
+  .drill h3{font-family:var(--serif);font-size:19px;margin-bottom:4px}
+  .drill p.hint{font-size:14px;color:var(--ink-mute);margin:0 0 14px}
+  .chips{display:flex;gap:8px;flex-wrap:wrap}
+  .chip{font-family:var(--mono);font-size:13px;background:var(--cream);border:1px solid var(--line);border-radius:999px;padding:8px 15px;cursor:pointer;transition:all .16s;color:var(--ink-soft)}
+  .chip:hover{border-color:var(--ink-mute)}
+  .chip.on[data-k="assume"]{background:var(--gold-wash);border-color:var(--gold-deep);color:var(--gold-text)}
+  .chip.on[data-k="object"]{background:var(--red-wash);border-color:var(--red);color:var(--red)}
+  .chip.on[data-k="describe"]{background:var(--green-wash);border-color:var(--green);color:var(--green)}
+  .chip .ans{display:none;font-weight:600}
+  .chip.on .ans{display:inline;margin-left:8px}
+
+  .quote{font-family:var(--serif);font-size:20px;line-height:1.45;color:var(--ink);border-left:3px solid var(--gold);padding:4px 0 4px 22px;margin:24px 0;font-style:italic}
+  .footer-note{padding:34px 0 56px}
+  .mark{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-mute)}
+  .chip.on[data-k="neutral"]{background:var(--gold-wash);border-color:var(--ink-mute);color:var(--ink)}
+  .kind.link{--c:var(--gold-deep)}
+  .kind.link .name,.kind.assume .name,.kind.link .words b,.kind.assume .words b{color:var(--gold-text)}
+  .kind.apply{--c:var(--green)}
+  .kind.warn{--c:var(--red)}
+  .rule{font-family:var(--serif);font-size:20px;color:var(--ink);margin:18px 0}
+  .rule .ar{color:var(--gold-text);font-weight:700;margin:0 6px}
+  table.t{width:100%;border-collapse:collapse;margin:20px 0;font-size:15.5px;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  table.t th{font-family:var(--mono);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold-text);text-align:left;padding:12px 16px;border-bottom:1px solid var(--line)}
+  table.t td{padding:11px 16px;border-bottom:1px dashed var(--line);color:var(--ink-soft);vertical-align:top}
+  table.t tr:last-child td{border-bottom:none}
+  table.t td:first-child{color:var(--ink);font-weight:600;white-space:nowrap}
+  pre{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;font-family:var(--serif);font-size:18px;overflow-x:auto}
+  @media (max-width:560px){.opposite{flex-direction:column}table.t td:first-child{white-space:normal}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+<style>
+  /* Small addition to the shared stylesheet: visible keyboard focus on the tap-to-check chips. */
+  .chip:focus-visible{outline:3px solid var(--gold-deep);outline-offset:2px}
+</style>
+</head>
+<body>
+
+<header class="hero"><div class="wrap">
+  <div class="kicker">Session recap · October 29</div>
+  <h1>Finding the Conclusion<br>by Asking Why</h1>
+  <p class="lede">Most students find the conclusion by hunting for a word like <em>but</em> or <em>therefore</em>. Those words help when they show up, but plenty of conclusions don't have one. A check that works on every argument is two questions. Is this sentence an opinion? And does another sentence tell me why to believe it?</p>
+</div></header>
+
+<section><div class="wrap">
+  <div class="sec-kicker">Read it first</div>
+  <h2>Say each sentence in plain words</h2>
+  <p>The LSAT is written awkwardly on purpose. Reading isn't sounding out the words. It's understanding them. If you can't say a sentence the way you'd explain it to a friend, you haven't read it yet.</p>
+  <ol class="steps">
+    <li><b>Say it in your own words, like a short story.</b> Who did what, and why? "Local shops typically run promotions to attract customers" becomes "Shops usually run sales to get people in." Don't hunt for fancier synonyms. Question it like a lawyer would: what are they really telling me?</li>
+    <li><b>Break long sentences down.</b> Start with the smallest piece you understand, even one word. Shorten long names too: "Dr. Okonkwo-Reyes's lab" can just be R.</li>
+    <li><b>Swap pointer words for what they point to.</b> <em>This</em>, <em>that</em>, <em>they</em> and <em>such</em> stand in for something said earlier. Find the closest noun that fits and put it back. "The school added a later bus. This was meant to help students in clubs" becomes "Adding a later bus was meant to help students in clubs."</li>
+    <li><b>Guess where it's going.</b> Reading actively means predicting where the stimulus is headed, not which answer is right. "Normally the bakery closes at six" tells you what's usual, and an author who points that out is typically setting up a twist. A wrong guess is fine. The next sentence shows you, and you update.</li>
+  </ol>
+  <div class="callout"><span class="tag">The process is what you're practicing</span>
+    Getting one practice question right matters less than how you got there. On test day you can't repeat a result. You can repeat a process.
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-kicker">Two kinds of sentences</div>
+  <h2>Fact or opinion?</h2>
+  <p>Sort every sentence first. On the LSAT these two words mean something narrower than they do in conversation.</p>
+
+  <div class="kinds">
+    <div class="kind apply">
+      <span class="bar"></span>
+      <div class="name">Fact</div>
+      <p class="what">Something you can measure or check. It describes the world as it is, so nobody argues with it.</p>
+      <div class="words"><b>Looks like</b>
+        <span>The painting sold for $20,000.</span>
+      </div>
+      <div class="test"><b>Test</b>Could I measure it or look it up?</div>
+    </div>
+
+    <div class="kind link">
+      <span class="bar"></span>
+      <div class="name">Opinion</div>
+      <p class="what">Someone's interpretation. You can't put it under a microscope.</p>
+      <div class="words"><b>Looks like</b>
+        <span>The painting is beautiful.</span>
+      </div>
+      <div class="test"><b>Test</b>Is someone interpreting?</div>
+    </div>
+  </div>
+
+  <p>A fact isn't something you prove. It's something you use as proof. So this test is really asking what the author is using as proof and what the author is trying to convince you of. Occasionally an author argues for something checkable, like a disputed claim about the past. That claim still needs a reason, so the second check below decides.</p>
+
+  <div class="callout"><span class="tag">Why someone did something is never a fact</span>
+    Maya moved her desk to the window. That's a fact. Maya <em>evidently</em> moved it for the daylight. That's an interpretation, because you can't measure a motive. The root of <em>evidently</em> is evidence: the author is reading it, not just reporting it.
+  </div>
+
+  <div class="callout"><span class="tag">Words like "effectively" can hide a number</span>
+    "The new bus route carries too few riders to run effectively" sounds like a judgment. Look for the number behind it. There's a count of riders it needs, and the route either reached it or didn't. You can check that, so it's a fact. "The new bus route is a waste of money" has no number behind it. That's an opinion.
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-kicker">The check</div>
+  <h2>What makes a sentence the conclusion</h2>
+  <p>An argument is a conclusion plus the premises that support it. The conclusion isn't a summary of the topic, like in English class. It's one specific claim you can point to.</p>
+  <ol class="steps">
+    <li><b>Is it an opinion?</b> Is the author interpreting something? If you could simply measure it or look it up, and the author is only reporting it, it's a fact.</li>
+    <li><b>Does another sentence answer "Why should I believe this?"</b> The reason has to be stated outright. It doesn't have to be a good one. The author has to be trying.</li>
+  </ol>
+  <div class="callout"><span class="tag">One check isn't enough</span>
+    An opinion with no reason behind it is only an opinion. <strong>It has to pass both.</strong>
+  </div>
+  <p>Link each sentence to what you've already read and ask why the author put it there. "The café tried three menus in March." Then: "It tracked sales of each one." The tracking explains the first sentence: the café was testing the menus. If the sentence you support also supports something further, keep going.</p>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-kicker">Keywords</div>
+  <h2>Pivot words turn the direction, nothing more</h2>
+  <p>Keywords are friends when they're there, but not every conclusion has one. You need a process that works without them.</p>
+  <div class="flags"><span class="flag">but</span><span class="flag">yet</span><span class="flag">however</span></div>
+  <p>These tell you the author is about to push back. They don't tell you the next sentence is the conclusion. Often it is. Not always. The LSAT is never black and white.</p>
+
+  <div class="callout"><span class="tag">The trap that costs the most</span>
+    Seeing <em>but</em> and picking the next sentence without checking it. <strong>The sentence after a pivot can be a plain fact the author uses as proof.</strong> The practice below has one.
+  </div>
+
+  <p>Not every sentence is a premise or a conclusion. Some are background. Some are the other side's view. A sentence that gives a reason for the conclusion is a premise, even after a <em>but</em>.</p>
+
+  <div class="quote">You said it yourself: pivot words don't always lead to the conclusion. And you asked whether the sentence with the <em>but</em> was a premise. That's the right question to ask about every sentence, and you were right.</div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-kicker">Try it</div>
+  <h2>Sort these sentences</h2>
+  <div class="drill">
+    <h3>Say it out loud, then tap to check</h3>
+    <p class="hint">Can you measure it or look it up, or is someone interpreting?</p>
+    <div class="chips">
+      <span class="chip" data-k="describe" role="button" tabindex="0" aria-expanded="false">The bus leaves at 8:15.<span class="ans">· Fact. You can look it up.</span></span>
+      <span class="chip" data-k="assume" role="button" tabindex="0" aria-expanded="false">The bus route is a waste of money.<span class="ans">· Opinion. Someone is judging.</span></span>
+      <span class="chip" data-k="assume" role="button" tabindex="0" aria-expanded="false">Maya evidently moved her desk for the daylight.<span class="ans">· Opinion. Moving the desk is a fact. Her reason is an interpretation.</span></span>
+      <span class="chip" data-k="describe" role="button" tabindex="0" aria-expanded="false">The new route carries too few riders to run effectively.<span class="ans">· Fact. A number sits behind it, and you can check it.</span></span>
+      <span class="chip" data-k="assume" role="button" tabindex="0" aria-expanded="false">The city should cap rent increases.<span class="ans">· Opinion. It's what someone thinks should happen.</span></span>
+    </div>
+  </div>
+
+  <div class="drill">
+    <h3>Which sentence is the conclusion?</h3>
+    <p class="hint">Run both checks on each sentence, then tap.</p>
+    <p><em>The council plans to widen Mill Road. But the road carried 9,000 cars a day five years ago and carries 6,000 now. Widening it would spend money on a problem that's going away.</em></p>
+    <div class="chips">
+      <span class="chip" data-k="neutral" role="button" tabindex="0" aria-expanded="false">The council plans to widen Mill Road.<span class="ans">· Not the conclusion. It's a fact about the plan, and it's what the author is answering.</span></span>
+      <span class="chip" data-k="neutral" role="button" tabindex="0" aria-expanded="false">But the road carried 9,000 cars a day five years ago and carries 6,000 now.<span class="ans">· Not the conclusion. It's a fact you can check against traffic counts, used as proof. Following a <em>but</em> doesn't change that.</span></span>
+      <span class="chip" data-k="assume" role="button" tabindex="0" aria-expanded="false">Widening it would spend money on a problem that's going away.<span class="ans">· The conclusion. It's an opinion, and the sentence before it gives the reason.</span></span>
+    </div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-kicker">On every argument</div>
+  <h2>Before you read the answer choices</h2>
+  <p>A vague sense that you know argument parts can give you false confidence. Pinning down the conclusion and its support exactly is the hard part, and most of what comes later gets easier once it's solid. On a main conclusion question, do this work in the stimulus, on the left side of your screen, before you look right.</p>
+  <ol class="steps">
+    <li><b>Say each sentence in your own words.</b> Put real names in for pointer words.</li>
+    <li><b>Guess where the argument is headed.</b> Change the guess as you read.</li>
+    <li><b>Ask fact or opinion, then "Why should I believe this?"</b></li>
+    <li><b>Label every sentence.</b> Conclusion, premise, or something else, like background or the other side's view.</li>
+    <li><b>Then read the choices.</b> On this question type you aren't searching them for the answer. You already have it. You're looking for the choice that matches the sentence you marked.</li>
+  </ol>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-kicker">Your work</div>
+  <h2>What to do next</h2>
+  <ol class="steps">
+    <li><b>Work through the boot camp.</b> It walks you through everything from this session, so you don't have to remember all of it. A couple of things we didn't reach, like background information, are meant to come through the work I assign.</li>
+    <li><b>Take notes and take your time.</b> Go slowly through the drills. Some repeat what we covered and some give you practice.</li>
+    <li><b>Send me a message on the platform if you have a question.</b> I'll be able to get back to you.</li>
+    <li><b>Your LSAT books are optional.</b> Look at them if you like. If you do the boot camp properly and take your time, you'll have everything you need.</li>
+  </ol>
+</div></section>
+
+<div class="footer-note"><div class="wrap">
+  <span class="mark">LSAT U</span>
+</div></div>
+
+<script>
+  document.querySelectorAll('.chip').forEach(function(c){
+    function toggle(){
+      var on = c.classList.toggle('on');
+      c.setAttribute('aria-expanded', on ? 'true' : 'false');
+    }
+    c.addEventListener('click', toggle);
+    c.addEventListener('keydown', function(e){
+      if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') { e.preventDefault(); toggle(); }
+    });
+  });
+</script>
+</body>
+</html>

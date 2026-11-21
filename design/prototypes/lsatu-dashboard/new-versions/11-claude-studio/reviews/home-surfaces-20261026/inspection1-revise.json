@@ -1,0 +1,143 @@
+{
+  "status": "completed",
+  "mode": "inspect",
+  "provider": "claude",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "claude",
+    "builder": "codex",
+    "inspector": "claude"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\ai-os",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os\\design\\prototypes\\lsatu-dashboard\\HOME-SURFACE-PLAN.md",
+  "plan_sha256": "5a4dda336dd55e2be8dd96428280d4a26c9a8b52a9cef9fa6ec7664368ee762b",
+  "requested_model": "claude-opus-5-5",
+  "requested_effort": "medium",
+  "base": "7e3a37c49aad80bc3d36352b796612425fe9b051",
+  "snapshot": {
+    "base": "7e3a37c49aad80bc3d36352b796612425fe9b051",
+    "files": [
+      {
+        "path": "design/prototypes/lsatu-dashboard/new-versions/11-claude-studio/style.css",
+        "kind": "file",
+        "sha256": "653a520d1b756a7ca24b18a58f4ce4c0b7e5ea3033464f783445d261d9264238"
+      }
+    ],
+    "diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "scope": [
+      "design/prototypes/lsatu-dashboard/new-versions/11-claude-studio/style.css"
+    ],
+    "sha256": "f7c329505a23211eb8c2f6da32db8a44110c1de54fb52c448990e44261ce74f8"
+  },
+  "previous": null,
+  "started_at": 1793008421.605367,
+  "artifacts": "C:\\Users\\Joshu\\.codex\\visualizations\\2026\\10\\25\\01a17081-6735-7fc2-b0e1-922ab635486c\\home-surface-20261026\\final-inspection\\claudex-5urbgwim",
+  "scope": [
+    "design/prototypes/lsatu-dashboard/new-versions/11-claude-studio/style.css"
+  ],
+  "cli_version": "2.1.309 (Claude Code)",
+  "executable": [
+    "C:\\Users\\Joshu\\.local\\bin\\claude.exe"
+  ],
+  "exit_code": 0,
+  "session_id": "b5cdf3b8-1d1c-42ab-95e5-15f886489c70",
+  "response": {
+    "verdict": "REVISE",
+    "summary": "The Home-scoped block in `style.css` (lines 477–545) follows the plan's structure well. All new component rules are scoped to `main[data-route=\"home\"]`. The page-ground rules are guarded with `:has` on html and body. Dialogs and the drawer sit outside `<main>` in `index.html`, so these rules cannot reach them. The rail separator directions match the base column breakpoints in all five ranges, and each range resets both border axes. The Home rules for the ledger rows and the current-row ::before outrank the old -24/-18/-16px offsets. The day-border rule fires only when both the media query and the container query give the seven-column strip, and the selected day keeps its charcoal border. I calculated these contrast ratios by hand: #616660 on #f7f4ee is about 5.3:1, on #eceee7 about 5.0:1 and on #e6e7e2 about 4.7:1; #596058 on the #e0e2db rail is about 5.0:1. All pass 4.5:1. The material problem is that the build shrinks several existing text sizes, although the plan's acceptance says \"Preserve existing font sizes/weights\". There are also smaller departures from the plan on the resume card, the preview rule, heading alignment and the day hover state.",
+    "findings": [
+      {
+        "id": "F1-text-size-reductions",
+        "severity": "medium",
+        "path": "design/prototypes/lsatu-dashboard/new-versions/11-claude-studio/style.css",
+        "evidence": "Several existing text sizes shrink. Lines 489 and 512 take section headings from 1.375rem (base line 106) to 1.25rem. Line 493 takes `.session-time strong` from 3rem (line 184) to 2.625rem. Line 494 takes `.session-day` from --control (.9375rem, 15px) to --meta (.875rem, 14px). The plan's acceptance says 'Preserve existing font sizes/weights', and decision 7 asks for 'consistent Newsreader sizing'. The ledger heading, though, is enlarged to 1.5rem (line 500) while the rail and week headings drop to 1.25rem, so the section headings end up neither preserved nor consistent.",
+        "fix": "Restore `.session-day` to var(--control) and `.session-time strong` to 3rem, or change the plan to explicitly authorise each reduction. Use one heading size for the coach, session, assignments and week sections (the existing 1.375rem is the default), or record in the plan that the assignments heading is deliberately larger and why."
+      },
+      {
+        "id": "F2-resume-radius-and-edge",
+        "severity": "low",
+        "path": "design/prototypes/lsatu-dashboard/new-versions/11-claude-studio/style.css",
+        "evidence": "Line 483 replaces the resume's entire box-shadow and also changes border-radius from 16px to 10px. The plan (decision 3) only authorises tightening the large ambient shadow and says to 'retain its light edge'. The replacement drops the `0 1px 0 rgb(255 255 255 / .12) inset` top highlight from line 135. Only the ::before hairline remains, and nothing in the plan covers the radius change on the focal workspace.",
+        "fix": "Keep radius 16px, or authorise the change in the plan. Keep the inset top highlight in the new shadow list, e.g. `0 1px 0 rgb(255 255 255 / .12) inset, 0 8px 18px -12px rgb(19 23 24 / .5)`."
+      },
+      {
+        "id": "F3-prep-preview-rule-not-dark",
+        "severity": "low",
+        "path": "design/prototypes/lsatu-dashboard/new-versions/11-claude-studio/style.css",
+        "evidence": "Decision 4 asks for the saved `.prep-preview` to have 'a single dark side rule'. Line 496 uses `border-left:2px solid #89967f`, a mid-grey that reaches only about 2.4:1 against the #e0e2db rail and about 2.8:1 against the #f7f4ee inset. It reads as a faint tint, which decision 6 warns against ('rather than carrying old faint tints blindly').",
+        "fix": "Use a darker existing neutral for the rule, such as #46513f (already used for the current-row marker at line 505) or var(--brass-text)."
+      },
+      {
+        "id": "F4-rail-week-heading-misalignment",
+        "severity": "low",
+        "path": "design/prototypes/lsatu-dashboard/new-versions/11-claude-studio/style.css",
+        "evidence": "Above 1279px, rail text starts 22px from the rail's left edge (line 486). Week text starts 1px border plus 24px padding (line 511), so 25px from its left edge. Both columns begin at the same track edge, so the two headings in the right-hand column are about 3px apart horizontally. Decision 6 requires the week's 'left rule/padding aligned with the upper rail'. Below 1279px the week text starts at 24px while the ledger text starts at 25px (border plus padding).",
+        "fix": "Above 1279px, set the week's padding-left to 21px (22px minus the 1px rule), or give the rail children a matching 25px. Below 1279px, use padding-inline 25px on the week, or let surfaces.cjs measure and record the heading x-offsets at 1366 and 1048."
+      },
+      {
+        "id": "F5-strip-day-hover-tint-only",
+        "severity": "low",
+        "path": "design/prototypes/lsatu-dashboard/new-versions/11-claude-studio/style.css",
+        "evidence": "Line 543 (`main[data-route=\"home\"] .week .day:not([aria-selected=true])`) outranks the base `.day:hover` border-color at line 215. In the seven-column strip, a hovered day therefore keeps the same #bcc4b5 edge and changes only its fill, from the transparent ground #e6e7e2 to #f2f1ec. That is tint-only state distinction, which decision 7 rules out ('Use weight/underline/edge, not tint alone').",
+        "fix": "Add a Home-scoped hover rule inside the same media and container block, e.g. `main[data-route=\"home\"] .week .day:not([aria-selected=true]):hover{border-color:#7c8972}`, so hover changes the edge as well."
+      }
+    ],
+    "coverage": [
+      "Read the whole plan, HOME-SURFACE-PLAN.md.",
+      "Read style.css lines 1–239 and 380–545, including all base rules the new Home block overrides (shared .card, .desk, .desk-side, session, ledger, assignment, week, day and agenda rules) and every responsive and container query.",
+      "Checked the Home markup that app.js generates (home(), coachCard(), sessionCard(), assignmentRows(), daysHTML(), agendaHTML(), render()) to confirm main.dataset.route, the class names, the order of the ledger's children for the :first-of-type/:last-child rules, and the aria-selected values.",
+      "Checked index.html to confirm that #modal and #drawer sit outside <main>, so the Home-scoped rules cannot reach them.",
+      "Confirmed that reviews/home-surfaces-before-20261026/style.css contains no Home-scoped rules, i.e. it is the pre-change baseline.",
+      "Traced specificity of the Home rules against the base media queries (1279/999/720/640/380), the 36rem and 12rem container queries, .day:hover, .day[aria-selected=true] and the is-current ::before offsets.",
+      "Calculated WCAG contrast by hand for: --muted on the sheet, current-row wash and ground; the rail-scoped --muted on the rail; the meter fill on the current-row wash; and the preview rule on the rail and inset."
+    ],
+    "limitations": [
+      "I could not run node, Playwright, Edge or any of the scripts in the verification contract (capture-11, calendar-internal, interactions, surfaces). No browser checks, overflow measurements, CIELAB comparisons or screenshot comparisons were done, and I am not claiming any tests passed.",
+      "I could not compute SHA-256 hashes. The manifest hash for style.css, the baseline hash fb067868… and the 'JS/HTML hashes unchanged' claim are not verified.",
+      "The tracked diff was empty (its hash is the empty-string hash). I identified the change by reading the Home-scoped block at the end of the current style.css. I did not diff the full file line by line against the baseline copy, so edits elsewhere in lines 1–476 were not ruled out.",
+      "I did not view the user's screenshot or any before/after renders, so I could not judge the visual result.",
+      "Everything outside style.css is unreviewed: app.js, index.html, the archive folders, the review log, thumbnails and the verification scripts were read only to trace callers, not reviewed. This is not approval of the whole repository.",
+      "Contrast ratios are hand calculations against flat parent colours, not measured renders. Where the top gradient or translucent fills overlap, the real values may differ slightly."
+    ]
+  },
+  "usage": {
+    "input_tokens": 16,
+    "cache_creation_input_tokens": 53737,
+    "cache_read_input_tokens": 283267,
+    "output_tokens": 12960,
+    "output_tokens_details": {
+      "thinking_tokens": 8222
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 53737,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 4328,
+        "cache_read_input_tokens": 57797,
+        "cache_creation_input_tokens": 444,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 444
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "permission_denials": [],
+  "total_cost_usd": 0.7458134000000001,
+  "elapsed_seconds": 137.63
+}

@@ -1,0 +1,78 @@
+{
+ "qid": "PT118-S1-Q9",
+ "type": "Principle-Conform",
+ "difficulty": "2",
+ "key_db": "E",
+ "stimulus_db": "The use of phrases like “as so-and-so said” or “as the saying goes” suggests that the quote that follows has just been illustrated. Such phrases are inappropriately used when an apparent counterexample has just been given.",
+ "stem_db": "Which one of the following contains an inappropriate usage of a phrase, according to the principle stated above?",
+ "choices_db": {
+  "A": "Fatima was a mathematician who often thought about unsolved problems of mathematics, although it was unpleasant to be reminded that most would probably remain unsolved in her lifetime. As the saying goes, “Strange how much you’ve got to know before you know how little you know.”",
+  "B": "Harold’s friends were surprised when he revealed that he had left his wallet at home and asked that someone lend him money. But he had done the same thing many times before. As Halliard said, “The force of selfishness is as inevitable and as calculable as the force of gravitation. ”",
+  "C": "The best model of vacuum cleaner was the most expensive on the market, but it would have made Roger unhappy to purchase it. For although he never wanted anything but the best, he was also quite frugal, and would never have forgiven himself for spending the money. As the saying goes, “A penny saved is a penny earned.”",
+  "D": "Sharon loved cats, but her husband was allergic to them. Still, he was occasionally willing to accompany her to cat shows. As the saying goes, “Shared lives mean shared loves. ”",
+  "E": "Raoul spent a year planning and preparing for a fantastic ski trip. He enjoyed his ski trip greatly until he broke his leg and had to spend two weeks in the hospital. As the saying goes, “All’s well that ends well.”"
+ },
+ "bank": {
+  "stimulus": "The use of phrases like \"as so-and-so said\" or \"as the saying goes\" suggests that the quote that follows has just been illustrated. Such phrases are inappropriately used when an apparent counterexample has just been given.",
+  "stem": "Which one of the following contains an inappropriate usage of a phrase, according to the principle stated above?",
+  "choices": {
+   "A": "Fatima was a mathematician who often thought about unsolved problems of mathematics, although it was unpleasant to be reminded that most would probably remain unsolved in her lifetime. As the saying goes, \"Strange how much you've got to know before you know how little you know.\"",
+   "B": "Harold's friends were surprised when he revealed that he had left his wallet at home and asked that someone lend him money. But he had done the same thing many times before. As Halliard said, \"The force of selfishness is as inevitable and as calculable as the force of gravitation.\"",
+   "C": "The best model of vacuum cleaner was the most expensive on the market, but it would have made Roger unhappy to purchase it. For although he never wanted anything but the best, he was also quite frugal, and would never have forgiven himself for spending the money. As the saying goes, \"A penny saved is a penny earned.\"",
+   "D": "Sharon loved cats, but her husband was allergic to them. Still, he was occasionally willing to accompany her to cat shows. As the saying goes, \"Shared lives mean shared loves.\"",
+   "E": "Raoul spent a year planning and preparing for a fantastic ski trip. He enjoyed his ski trip greatly until he broke his leg and had to spend two weeks in the hospital. As the saying goes, \"All's well that ends well.\""
+  },
+  "key": "E"
+ },
+ "explanation_id": "729c3586-c0e3-467a-bf5b-e4777357a59f",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "e97e6dfc-ab09-48ec-98b3-01348735ebe9",
+   "position": 0,
+   "label": "Principle (when)",
+   "body": "an apparent counterex → inappropriate to use has just been given saying like \"as they say\""
+  },
+  {
+   "row_id": "947254e3-8811-4acb-a129-4f94ec3d2649",
+   "position": 1,
+   "label": "Evaluate",
+   "body": "The right answer must contain a story whose events run *against* the saying that follows — i.e., the saying does not actually fit what just happened, so the introductory phrase (\"as the saying goes\") is being used inappropriately."
+  },
+  {
+   "row_id": "90e0aaee-c2b3-4e58-bde4-f30d4f92d8fe",
+   "position": 2,
+   "label": "Goal",
+   "body": "Find the choice where the situation described is the opposite (or at least not an example) of the saying that follows it."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "d00c8c91-11f8-4fe2-a9b4-d49d99046cb6",
+   "letter": "A",
+   "body": "Fatima knows enough mathematics to see how much will stay unsolved. That's the saying in action: you need to know a lot before you see how little you know. The story illustrates it, so the phrase is used properly."
+  },
+  {
+   "row_id": "3b5bc32b-2e4d-446c-bb7d-559f738d834e",
+   "letter": "B",
+   "body": "Harold has done the same thing many times before. That's selfishness as predictable as gravity, so the quote matches the story. The friends' surprise doesn't change that Harold's behavior was calculable."
+  },
+  {
+   "row_id": "c8e1214f-182c-45d9-970c-7cd03c222039",
+   "letter": "C",
+   "body": "Roger won't spend the money because Roger is frugal. \"A penny saved is a penny earned\" is the frugal person's motto. The story illustrates it."
+  },
+  {
+   "row_id": "77288382-68a7-4a80-bc42-a34e310b261c",
+   "letter": "D",
+   "body": "Sharon loves cats, and Sharon's husband, despite the allergy, still sometimes comes along to cat shows. Sharing a life with Sharon means sharing what Sharon loves, at least a little. The story illustrates the saying."
+  },
+  {
+   "row_id": "7bdb2eef-4417-4768-bb53-a07a7e234a49",
+   "letter": "E",
+   "body": "Raoul's trip ended with a broken leg and two weeks in the hospital. That didn't end well, so \"All's well that ends well\" has no illustration here. The story is an apparent counterexample, and putting \"as the saying goes\" after it is the misuse the principle describes."
+  }
+ ],
+ "known_problem": "Breakdown only; all five choice notes missing.",
+ "tags": "no-notes; very-short"
+}

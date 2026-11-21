@@ -1,8 +1,12 @@
 ---
 name: brand-guidelines
-description: Applies Anthropic's official brand colors and typography to any sort of artifact that may benefit from having Anthropic's look-and-feel. Use it when brand colors or style guidelines, visual formatting, or company design standards apply.
+description: "Apply Anthropic brand styling only when explicitly requested. Not for Joshua or LSAT U branding."
 license: Complete terms in LICENSE.txt
 ---
+
+## Current AI OS execution contract
+
+This palette describes Anthropic only. Apply it only when Anthropic visual identity is expressly requested. Joshua/LSAT U work follows its own selected brand and teaching standard.
 
 # Anthropic Brand Styling
 

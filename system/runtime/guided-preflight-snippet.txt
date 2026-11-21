@@ -1,0 +1,8 @@
+    const level = item.level !== undefined ? item.level : profile.proficiency_level;
+    const count = item.count ?? drill.question_count;
+    const pool = resolvePool(drill.bank_filter, bank).map((q: any) => ({ ...q, qtype: q.type }));
+    const resolved = resolveLeveledDrillQids({ pool, questionCount: count, drillQids: drill.question_qids, knownQids, level, rng: () => 0.5 });
+    if (resolved.qids.length !== count || resolved.outOfBandUsed > 0 || ['empty', 'out_of_level', 'partially_out_of_level'].includes(resolved.warning ?? '')) throw new Error('Insufficient in-level pool: ' + item.drill);
+    // With enough in-band questions the app never draws its out-of-band pool.
+    const eligible = resolved.source === 'pinned' ? resolved.qids.map(qid => ({ difficulty: bank.get(qid)?.questionDifficulty })) : level ? pool.filter((q: any) => isInBand(q.difficulty, levelBand(level))) : pool;
+    if (item.max_difficulty != null && eligible.some((q: any) => !Number.isFinite(q.difficulty) || q.difficulty > item.max_difficulty)) throw new Error('Drill pool exceeds difficulty ceiling: ' + item.drill);

@@ -1,0 +1,10 @@
+const root='https://lsatprep.study';
+const html=await(await fetch(root,{cache:'no-store'})).text();
+const entry=[...html.matchAll(/src="([^"]+\/assets\/[^" ]+\.js|\/assets\/[^" ]+\.js)"/g)].map(m=>new URL(m[1],root).href)[0];
+if(!entry)throw Error('App entry not found');
+const js=await(await fetch(entry,{cache:'no-store'})).text();
+const candidate=[...js.matchAll(/["']((?:assets\/|\.\/)?DossierSchedule-[^"']+\.js)["']/g)].map(m=>m[1])[0];
+if(!candidate)throw Error('DossierSchedule chunk not found');
+const asset=new URL(candidate.startsWith('./')?candidate:new URL('/'+candidate,root).href,entry).href;
+const code=await(await fetch(asset,{cache:'no-store'})).text();
+console.log(JSON.stringify({entry,asset,return_rpc:code.includes('admin_return_teacher_missed_credit'),missed_control:code.includes('I missed this session'),return_control:code.includes('Return 1 credit')}));

@@ -157,7 +157,7 @@ Calm on the door, then the largest type below the hero, at the decision point, i
 
 ## Part 3: Fix plan
 
-Ordered so each step is safe on its own and the student-facing truth is fixed first. Every step ends with `npm run typecheck` and the Activity Centre tests; the copy steps also need `npm run content:push` because `rules[0]` lives in Postgres (see [[lsatu-content-lives-in-postgres]]).
+Ordered so each step is safe on its own and the student-facing truth is fixed first. Every step ends with `npm run typecheck` and the Activity Centre tests; the copy steps also need `npm run content:push` because `rules[0]` lives in Postgres (see the automemory note `lsatu-content-lives-in-postgres`).
 
 **Step 1. One truth about pausing (P0, copy only, one hour).** Decision needed from Joshua: keep Pause. Assuming yes: replace the six statements with one sentence, "You can pause. The text hides and the clock stops while you are away, and you cannot go back to a stimulus." Files: `SectionLaunchFrame.tsx:553`, `SectionLibraryLaunch.tsx:58`, `SectionLaunch.tsx:148, :329`, `SectionBriefingPage.tsx:143`, `coach.ts:90`, `instructions.json rules[0]` then `content:push`. Add a test that greps rendered door and briefing text for "cannot pause" and "No pause". `$impeccable clarify`.
 

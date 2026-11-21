@@ -1,0 +1,643 @@
+# The Necessary Condition Trick
+
+Source: https://new.theloophole.com/training-camp/browse/concept-review/lr-question-types/the-necessary-condition-trick
+
+Captured: 2026-10-19T00:49:11.614Z. Displayed duration: 490.59057900000033.
+
+Caption origin: English (auto-generated). This is a complete native-caption extraction, not word-by-word listening verification. Caption wording is retained without editorial correction. Original cue bytes remain in source.vtt; rendered site transcript is preserved separately.
+
+[00:00:00.625 - 00:00:01.925]
+The necessary condition trick,
+
+[00:00:02.385 - 00:00:04.165]
+if I can adequately explain this
+
+[00:00:04.165 - 00:00:05.765]
+and even remotely get you on the hype train
+
+[00:00:05.765 - 00:00:07.325]
+for the necessary condition trick in this video,
+
+[00:00:07.465 - 00:00:09.485]
+it will be one of the single greatest accomplishments
+
+[00:00:09.485 - 00:00:11.925]
+of my life, um, because I've been trying
+
+[00:00:11.925 - 00:00:12.925]
+and failing to explain this
+
+[00:00:12.925 - 00:00:15.045]
+and get people on the hype train for like 10 plus years.
+
+[00:00:15.065 - 00:00:17.045]
+And so let's go. Today's the fricking day.
+
+[00:00:17.505 - 00:00:20.245]
+Um, so what we're gonna do is just a brief example.
+
+[00:00:20.405 - 00:00:22.765]
+I made like a baby stimulus of my own design just
+
+[00:00:22.765 - 00:00:24.245]
+to illustrate this concept and
+
+[00:00:24.405 - 00:00:26.725]
+'cause I, I honestly think it's the easiest way
+
+[00:00:26.725 - 00:00:27.765]
+to get someone on the hype train is
+
+[00:00:27.765 - 00:00:30.445]
+to see it actually in action, how effective this trick is.
+
+[00:00:30.445 - 00:00:32.085]
+And so I don't wanna give you too much explanation
+
+[00:00:32.085 - 00:00:33.445]
+first, I'd rather just show you.
+
+[00:00:33.445 - 00:00:35.205]
+So let me just translate quip clear the stimulus,
+
+[00:00:35.505 - 00:00:38.365]
+and then we'll get into sim juicy made up answer choices
+
+[00:00:38.365 - 00:00:39.645]
+that are hiding on the next page.
+
+[00:00:40.125 - 00:00:41.125]
+Um, alright.
+
+[00:00:41.515 - 00:00:44.365]
+Insulated mugs cost only a few dollars to produce. Okay?
+
+[00:00:44.365 - 00:00:45.285]
+So an insulated mug, it only
+
+[00:00:45.285 - 00:00:46.365]
+costs a couple of bucks to produce.
+
+[00:00:46.585 - 00:00:48.765]
+Um, which like, yeah, like Stanley cups are probably like
+
+[00:00:48.765 - 00:00:49.885]
+super cheap to make somewhere.
+
+[00:00:50.105 - 00:00:52.725]
+Um, but market manipulation has caused prices to rise far
+
+[00:00:52.725 - 00:00:54.205]
+beyond typical markups, okay?
+
+[00:00:54.205 - 00:00:56.405]
+But market manipulations cause price to rise like far
+
+[00:00:56.565 - 00:00:57.725]
+beyond a typical markup.
+
+[00:00:57.915 - 00:00:59.285]
+It's like, you know, going way, way up.
+
+[00:00:59.285 - 00:01:00.885]
+And it's like, yeah, these trendy Stanley cups,
+
+[00:01:00.885 - 00:01:02.565]
+they make like, you know, probably Mad bank
+
+[00:01:02.625 - 00:01:03.805]
+on the prices on these things.
+
+[00:01:03.805 - 00:01:05.165]
+They're super cheap to make. So
+
+[00:01:05.165 - 00:01:06.645]
+therefore the insulated mug market
+
+[00:01:06.705 - 00:01:07.765]
+has become untenable, okay?
+
+[00:01:07.765 - 00:01:09.645]
+So the insulated mug market, it's become untenable
+
+[00:01:09.645 - 00:01:11.765]
+and it's like what if it's super tenable
+
+[00:01:12.185 - 00:01:14.925]
+to just raise your prices on
+
+[00:01:14.925 - 00:01:16.605]
+and on down the line on something trendy, right?
+
+[00:01:16.795 - 00:01:19.645]
+Just because prices are going way up beyond what's typical,
+
+[00:01:19.675 - 00:01:22.525]
+that doesn't necessarily make it an untenable market like
+
+[00:01:22.525 - 00:01:24.805]
+you could have that be a super tenable business business
+
+[00:01:25.005 - 00:01:27.045]
+practice, you know, if until it doesn't
+
+[00:01:27.045 - 00:01:28.245]
+work, if it's working.
+
+[00:01:28.545 - 00:01:30.125]
+Um, but hypothetically it could work on
+
+[00:01:30.125 - 00:01:31.165]
+into infinity, so why not?
+
+[00:01:31.505 - 00:01:33.245]
+Um, alright, so that's my clear
+
+[00:01:33.625 - 00:01:37.805]
+and now we want to go into our pretend question
+
+[00:01:38.525 - 00:01:41.445]
+'cause we've got our lovely little clear, okay, wonderful.
+
+[00:01:41.665 - 00:01:44.545]
+Oh, iPad magic behave. Okay.
+
+[00:01:44.965 - 00:01:47.905]
+Um, so, alright, principle conform question.
+
+[00:01:48.085 - 00:01:49.345]
+Now I know it's principle conform.
+
+[00:01:49.465 - 00:01:50.545]
+I want something provable
+
+[00:01:50.805 - 00:01:53.425]
+and I'm thinking, okay, what would underlie the stimulus,
+
+[00:01:53.695 - 00:01:57.625]
+okay, in a given situation in which prices are rising
+
+[00:01:57.625 - 00:01:58.665]
+beyond what's typical.
+
+[00:01:59.205 - 00:02:02.465]
+Um, then that market in which that occurs may be untenable
+
+[00:02:02.465 - 00:02:03.465]
+or something, something like that.
+
+[00:02:03.765 - 00:02:07.625]
+Um, that kind of incorporates an underlying feeling, um,
+
+[00:02:07.625 - 00:02:10.025]
+underneath the premises and into the conclusion.
+
+[00:02:10.705 - 00:02:12.905]
+Remember, principle conform is different from just any
+
+[00:02:12.905 - 00:02:16.345]
+garden variety strengthen or sufficient assumption question.
+
+[00:02:16.405 - 00:02:18.825]
+It has to be provable underlying the stimulus,
+
+[00:02:19.125 - 00:02:22.665]
+not just any random thing that proves the stimulus, uh,
+
+[00:02:22.665 - 00:02:24.425]
+conclusion true as in sufficient assumption
+
+[00:02:24.445 - 00:02:26.065]
+or any random thing that makes the conclusion more
+
+[00:02:26.065 - 00:02:27.585]
+likely as in strengthen.
+
+[00:02:27.725 - 00:02:28.985]
+And so, all right,
+
+[00:02:28.985 - 00:02:31.985]
+let's go into our fake answer choices, everyone.
+
+[00:02:32.365 - 00:02:34.905]
+So a, if production costs increase,
+
+[00:02:35.185 - 00:02:36.585]
+a market is tenable, okay?
+
+[00:02:36.585 - 00:02:38.425]
+So if production costs go way up, then
+
+[00:02:38.425 - 00:02:39.545]
+that market is tenable.
+
+[00:02:39.645 - 00:02:42.145]
+And so ding ding, ding, ding, ding, there's something here
+
+[00:02:42.145 - 00:02:43.345]
+that I really wanna point out.
+
+[00:02:43.965 - 00:02:46.145]
+As soon as I see a market is tenable,
+
+[00:02:46.625 - 00:02:48.585]
+I absolutely know this answer is wrong.
+
+[00:02:48.965 - 00:02:50.505]
+100, 100, 100.
+
+[00:02:50.925 - 00:02:54.385]
+And the reason for that is my conclusion as
+
+[00:02:54.385 - 00:02:55.425]
+that was a really bad line.
+
+[00:02:55.765 - 00:02:58.185]
+My conclusion is that the market has become
+
+[00:02:58.615 - 00:02:59.615]
+Untenable.
+
+[00:02:59.625 - 00:03:02.725]
+And when that necessary condition doesn't match the
+
+[00:03:02.725 - 00:03:06.445]
+conclusion, it's the negation that answer has to be wrong.
+
+[00:03:06.825 - 00:03:07.885]
+Um, the really,
+
+[00:03:07.885 - 00:03:11.765]
+really cool thing about principle conform is the conclusion
+
+[00:03:11.865 - 00:03:13.485]
+and the necessary condition of the answer.
+
+[00:03:13.505 - 00:03:17.725]
+If the answer choice is conditional at all, will very, very,
+
+[00:03:17.805 - 00:03:18.805]
+very likely match.
+
+[00:03:19.105 - 00:03:20.605]
+And if they give you a conditional,
+
+[00:03:20.825 - 00:03:23.365]
+but it doesn't match, like they say,
+
+[00:03:23.385 - 00:03:24.725]
+put the conclusion in the sufficient
+
+[00:03:24.725 - 00:03:27.005]
+or they put a negation of the conclusion in, um,
+
+[00:03:27.025 - 00:03:29.885]
+the necessary condition, that answer will always be wrong.
+
+[00:03:30.065 - 00:03:32.725]
+And so here this stimulus was not trying to prove
+
+[00:03:32.725 - 00:03:35.165]
+that a given market was tenable, right?
+
+[00:03:35.465 - 00:03:38.085]
+And so it's absolutely impossible for this answer
+
+[00:03:38.265 - 00:03:39.405]
+to ever be right.
+
+[00:03:39.665 - 00:03:41.805]
+And the cool thing about this is it's a really nice
+
+[00:03:41.995 - 00:03:44.645]
+time-saving trick that you can be absolutely sure of
+
+[00:03:44.645 - 00:03:46.005]
+because it works by the rules of logic.
+
+[00:03:46.265 - 00:03:48.325]
+You know, it's not just some kind of like random
+
+[00:03:49.295 - 00:03:50.845]
+proxy metric that might work.
+
+[00:03:50.845 - 00:03:53.245]
+Most of the time it works by the rules of logic
+
+[00:03:53.435 - 00:03:56.965]
+that like if they put a negation of the conclusion in the,
+
+[00:03:57.065 - 00:03:59.565]
+um, necessary condition of an answer on principle conform,
+
+[00:04:00.155 - 00:04:01.485]
+it's wrong for sure.
+
+[00:04:01.485 - 00:04:03.885]
+And so here we aren't trying to prove in this conclusion
+
+[00:04:03.885 - 00:04:06.405]
+that a market was tenable and so this is not provable.
+
+[00:04:06.585 - 00:04:09.445]
+And then just to beat up on answer a, uh, a little bit more,
+
+[00:04:10.105 - 00:04:13.405]
+um, this sufficient condition that we've got right here,
+
+[00:04:13.465 - 00:04:16.725]
+if production costs increase is actually dormant, um,
+
+[00:04:16.875 - 00:04:18.965]
+that is a dormant conditional answer choice
+
+[00:04:18.965 - 00:04:21.605]
+because notice in our conclusion here about the production
+
+[00:04:21.605 - 00:04:24.385]
+costs, there was no increase, right?
+
+[00:04:24.565 - 00:04:26.065]
+It was just that production costs are low,
+
+[00:04:26.065 - 00:04:27.665]
+but there was actually no change whatsoever.
+
+[00:04:27.885 - 00:04:30.905]
+And so we cannot activate this sufficient condition
+
+[00:04:31.325 - 00:04:33.305]
+and if we can't activate the sufficient condition
+
+[00:04:33.305 - 00:04:35.985]
+with a premise from the stimulus, it's dormant
+
+[00:04:36.005 - 00:04:37.505]
+and it's again, always wrong.
+
+[00:04:37.505 - 00:04:40.105]
+And so we double, triple, quadruple now is incorrect.
+
+[00:04:40.525 - 00:04:42.345]
+Um, alright, let's go to B.
+
+[00:04:42.405 - 00:04:44.305]
+So if a market becomes untenable,
+
+[00:04:44.375 - 00:04:46.985]
+markups must have increased beyond what is typical, okay?
+
+[00:04:46.985 - 00:04:49.385]
+So if a market has become untenable, then markups, um,
+
+[00:04:49.805 - 00:04:51.985]
+on the products must have increased beyond what's typical.
+
+[00:04:52.205 - 00:04:55.585]
+And so here, I know this is wrong, as certainly
+
+[00:04:55.585 - 00:04:56.945]
+as I know that a is wrong.
+
+[00:04:57.165 - 00:04:59.185]
+Why? Because it placed the conclusion in
+
+[00:04:59.185 - 00:05:00.225]
+the sufficient condition.
+
+[00:05:00.445 - 00:05:02.465]
+And this is a big issue.
+
+[00:05:02.845 - 00:05:05.905]
+Um, because if I'm on approvable question
+
+[00:05:06.245 - 00:05:08.665]
+and you know, just really in any argument, um,
+
+[00:05:09.125 - 00:05:11.225]
+the conclusion is not a fact I can use
+
+[00:05:11.225 - 00:05:14.145]
+to go start activating conditionals in the answer choices.
+
+[00:05:14.485 - 00:05:16.185]
+And what does it mean to activate a conditional?
+
+[00:05:16.205 - 00:05:18.665]
+It means that I know that sufficient condition is true.
+
+[00:05:19.085 - 00:05:21.265]
+I'm activating it with a fact from the stimulus.
+
+[00:05:21.645 - 00:05:23.945]
+The conclusion is something I'm trying to prove.
+
+[00:05:23.965 - 00:05:25.585]
+But you can think of it as it's kind of in this like
+
+[00:05:26.105 - 00:05:28.105]
+nebulous am I proven state?
+
+[00:05:28.295 - 00:05:30.145]
+It's not a fact that I can then go
+
+[00:05:30.145 - 00:05:32.665]
+and use to activate other sufficient conditions.
+
+[00:05:32.965 - 00:05:36.425]
+Um, otherwise I am a dirty circular reasoner who's assuming
+
+[00:05:36.485 - 00:05:38.545]
+my conclusion is true to go and do other things.
+
+[00:05:38.765 - 00:05:39.905]
+My conclusion is the thing,
+
+[00:05:40.185 - 00:05:41.785]
+remember it's like the cake that I have to keep off the ground.
+
+[00:05:41.805 - 00:05:43.825]
+And so that cake is like pretty helpless.
+
+[00:05:44.055 - 00:05:45.705]
+It's not a fact that I could go
+
+[00:05:45.785 - 00:05:47.865]
+and use to activate sufficient conditions whatsoever.
+
+[00:05:48.205 - 00:05:51.985]
+And so here this, if a market becomes untenable, eh,
+
+[00:05:52.375 - 00:05:56.825]
+immediate, no, um, absolutely not. I cannot put my
+
+[00:05:56.825 - 00:05:58.205]
+Conclusion in the sufficient condition
+
+[00:05:58.505 - 00:05:59.885]
+and just for all my,
+
+[00:05:59.905 - 00:06:01.805]
+all my homies out there with deep knowledge.
+
+[00:06:02.025 - 00:06:04.405]
+Um, yes, this is a reversed.
+
+[00:06:04.545 - 00:06:07.605]
+If our premises then our conclusion answer choice, um,
+
+[00:06:07.605 - 00:06:09.645]
+that it put the conclusion in the sufficient
+
+[00:06:09.645 - 00:06:10.845]
+and the premises and the necessary
+
+[00:06:11.265 - 00:06:12.805]
+and you know, we can't do that.
+
+[00:06:12.945 - 00:06:15.005]
+If our premises then our conclusion is in the
+
+[00:06:15.005 - 00:06:16.045]
+order it's in for a reason.
+
+[00:06:16.505 - 00:06:19.125]
+If our premises sufficient condition premises,
+
+[00:06:19.275 - 00:06:21.845]
+then our conclusion necessary condition, conclusion
+
+[00:06:21.995 - 00:06:23.525]
+that placement is super important.
+
+[00:06:23.945 - 00:06:26.885]
+B's got it reversed. And so we say no to that. Alright?
+
+[00:06:27.105 - 00:06:28.245]
+So let's go to answer C.
+
+[00:06:28.465 - 00:06:30.605]
+If markups in a given market have increased beyond
+
+[00:06:30.605 - 00:06:33.165]
+what is typical said, market has become untenable.
+
+[00:06:33.165 - 00:06:34.645]
+Okay? So if markups have gone beyond
+
+[00:06:34.645 - 00:06:36.245]
+what is typical in a given market, then
+
+[00:06:36.315 - 00:06:37.685]
+that market has become untenable.
+
+[00:06:37.685 - 00:06:40.565]
+So thing to notice here, right? Market has become untenable.
+
+[00:06:40.915 - 00:06:44.285]
+This matches our conclusion, doesn't it?
+
+[00:06:44.555 - 00:06:45.685]
+Ding, ding, ding, ding, ding.
+
+[00:06:45.815 - 00:06:47.245]
+Check mark, check mark, check mark.
+
+[00:06:47.245 - 00:06:51.005]
+Victory for us, um, it matches our conclusion.
+
+[00:06:51.385 - 00:06:54.285]
+And I'm not saying like every single answer choice in which
+
+[00:06:54.305 - 00:06:57.165]
+the necessary condition matches the conclusion on principle
+
+[00:06:57.165 - 00:06:59.365]
+conform is always gonna be right no matter what.
+
+[00:06:59.685 - 00:07:02.005]
+'cause of course, yeah, we have to still, you know, have
+
+[00:07:02.595 - 00:07:06.605]
+this sufficient condition be activat, um, by the stimulus.
+
+[00:07:06.865 - 00:07:10.365]
+You know, if a sufficient condition we're here on answer C
+
+[00:07:10.365 - 00:07:12.565]
+down here, well then the,
+
+[00:07:12.595 - 00:07:14.325]
+that the answer c would be wrong if we
+
+[00:07:14.325 - 00:07:15.445]
+used a sufficient condition.
+
+[00:07:15.665 - 00:07:17.605]
+But the sufficient condition on answer A
+
+[00:07:18.125 - 00:07:20.205]
+actually can be activated by the stimulus, right?
+
+[00:07:20.205 - 00:07:22.405]
+Because answer c sufficient condition
+
+[00:07:22.625 - 00:07:23.765]
+is one of the premises.
+
+[00:07:23.905 - 00:07:25.885]
+And so here we have that nice if our premises
+
+[00:07:25.885 - 00:07:29.965]
+that our conclusion construction, um, which is, you know,
+
+[00:07:30.155 - 00:07:32.165]
+both powerful and provable, it's,
+
+[00:07:32.165 - 00:07:33.765]
+it's a wonderful, wonderful little hack.
+
+[00:07:34.025 - 00:07:36.805]
+Um, but I love the necessary condition trick as well
+
+[00:07:36.805 - 00:07:39.125]
+because of the impact it has on the wrong answers
+
+[00:07:39.385 - 00:07:41.245]
+and the certainty that you can have
+
+[00:07:41.245 - 00:07:43.725]
+that those answers are wrong within such a
+
+[00:07:43.725 - 00:07:44.805]
+quick period of time.
+
+[00:07:45.075 - 00:07:46.765]
+Okay, I hope that this helps.
+
+[00:07:47.005 - 00:07:49.285]
+I hope that you would feel also quite comfortable choosing
+
+[00:07:49.285 - 00:07:51.605]
+answer C if you were in the driver's seat of this iPad.
+
+[00:07:52.025 - 00:07:54.085]
+Um, but give me your feedback.
+
+[00:07:54.225 - 00:07:56.445]
+I'm always happy to make more videos about the necessary
+
+[00:07:56.445 - 00:07:59.205]
+condition trick if this one still didn't hit
+
+[00:07:59.205 - 00:08:02.325]
+and I'm, you know, in my infinite quest for, I dunno,
+
+[00:08:02.325 - 00:08:05.285]
+the fountain of youth, pot of gold, whatever,
+
+[00:08:05.725 - 00:08:06.805]
+a trail at the end of the rainbow.
+
+[00:08:07.225 - 00:08:10.125]
+Um, but I will see you very soon. Hope to hear from you.

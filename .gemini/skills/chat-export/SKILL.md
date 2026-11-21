@@ -1,12 +1,12 @@
 ---
 name: chat-export
-description: Save the current conversation as a structured markdown file and generate a handoff prompt for continuing in a new chat. Use this skill whenever the user says "export this chat", "save this conversation", "create a handoff", "save this for later", "export to my chat exports folder", or anything indicating they want to preserve a conversation and carry context into a new session. Always trigger this skill proactively when a conversation has been long, complex, or has produced decisions, files, or code — even if the user hasn't explicitly asked yet.
+description: "Export a conversation to a local Markdown file when explicitly asked to save or export the chat. Retrieve original session logs for a verbatim export; disclose missing ranges. Chat-only continuation uses session-handoff."
 ---
 
 # Chat Export Skill
 
 Saves the current conversation as a structured markdown file to
-`C:/Users/Joshu/dev/ai-os/handoffs/` with a full transcript,
+`C:/Users/Joshu/dev/ai-os/handoffs/` with a provenance-labeled transcript,
 summary, and a paste-ready handoff prompt.
 
 ## Output path
@@ -22,9 +22,7 @@ Example: `2026-04-28_claude-folder-cleanup-notebooklm.md`
 
 ## Steps
 
-1. **Reconstruct the full transcript** from the conversation in context.
-   Write every user message and every Claude reply verbatim under
-   `### User` and `### Claude` headings. Do not paraphrase or skip.
+1. **Retrieve transcript evidence.** Prefer the host's original conversation export/log for this exact session. Record source path, session identifier, available range and exclusions (tools/attachments). If unavailable, export only messages actually visible in context and label it `Visible-context export, incomplete history`. After compaction, a summary is not verbatim evidence: list unknown/missing ranges and never invent them. Use `### User` and `### Assistant` headings; preserve available message text exactly.
 
 2. **Write the structured summary** (see template below).
 
@@ -34,7 +32,7 @@ Example: `2026-04-28_claude-folder-cleanup-notebooklm.md`
    - State what was done
    - State what to do next (ask the user if unclear)
 
-4. **Save the file** using Desktop Commander's `write_file` to the
+4. **Save the file** using an available local file-writing tool to the
    output path above.
 
 5. **Tell the user**:
@@ -78,20 +76,26 @@ One paragraph. What was this chat about, what was the goal, what was accomplishe
 
 ---
 
-## Full transcript
+## Transcript coverage
+
+Source: <verified log/export or visible context>
+Available range: <known range>
+Missing sections: <none proven / explicit gaps / unknown earlier history>
+
+## Available transcript
 
 ### User
 [message]
 
-### Claude
+### Assistant
 [reply]
 
-[...repeat for every message in the conversation...]
+[Repeat for every retrieved message; list unavailable ranges above.]
 ```
 
 ## Notes
 
-- Never truncate the transcript. If it's long, write all of it.
+- Preserve all available verified messages, chunking file writes when needed. Do not call the export complete without original-history coverage evidence.
 - The "Open threads" section is the most important part for handoffs —
   be precise about what is unfinished.
 - If the user specifies a subfolder (e.g. "save this under lsat-u"),

@@ -4,6 +4,10 @@ description: Break a plan, spec, or PRD into independently-grabbable issues on t
 disable-model-invocation: true
 ---
 
+## Current AI OS execution contract
+
+Explicit GitHub-issue compatibility route, not a competing generic planner. Preserve GitHub parent/child relationships and approval semantics. Reuse the to-tickets vertical-slice planning concepts; publish issues only when explicitly authorized.
+
 # To Issues
 
 Break a plan into independently-grabbable issues using vertical slices (tracer bullets).

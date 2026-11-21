@@ -1,0 +1,1085 @@
+{
+  "title": "Conditional Flashcards",
+  "cards": [
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "What is a sufficient condition in conditional logic?"
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "A condition that is enough on its own to guarantee an outcome (the trigger)."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "What is a necessary condition in conditional logic?"
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "A condition that is strictly required for an outcome to occur (the requirement)."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "In the conditional statement \"If $A$, then $B$\", which variable represents the sufficient condition?"
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "$A$ (the condition attached to \"if\" on the left side of the arrow)."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "In the conditional statement \"If $A$, then $B$\", which variable represents the necessary condition?"
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "$B$ (the outcome on the right side of the arrow)."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "When visualizing a conditional statement with concentric circles, where is the sufficient condition placed?"
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "In the smaller inner circle contained entirely within the larger necessary condition circle."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "What does the directional arrow in a conditional diagram ($A \\rightarrow B$) signify?"
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "A one-way guarantee: if the left side ($A$) is true, the right side ($B$) must also be true."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "What are Group 1 (left-side) conditional indicator words?"
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "Keywords that introduce a sufficient condition, such as *if*, *when*, *whenever*, *all*, *every*, *each*, and *any*."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "What are Group 2 (right-side) conditional indicator words?"
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "Keywords that introduce a necessary condition, such as *only if*, *requires*, *must*, *prerequisite*, and *only*."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "How does the conditional indicator \"only if\" differ from \"if\"?"
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "\"If\" introduces a sufficient condition (left side), whereas \"only if\" introduces a necessary condition (right side)."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "What valid inference can be made when you learn that a sufficient condition is met?"
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "You can conclude that the necessary condition must also be true."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "What valid inference can be made when you learn that a necessary condition is NOT met?"
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "You can conclude that the sufficient condition is also not true (the contrapositive)."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "What is a contrapositive?"
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "A logically equivalent restatement of a conditional that flips the order and negates both conditions ($\\text{not } B \\rightarrow \\text{not } A$)."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "What invalid inference occurs when you infer the left side is true because the right side is true?"
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "Reversing the conditional (affirming the necessary condition)."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "What invalid inference occurs when you infer the right side is false because the left side is false?"
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "Inverting the conditional (denying the sufficient condition)."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "What logical flaw is committed when an argument treats a necessary condition as if it were sufficient?"
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "Confusing necessary and sufficient conditions."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "Does learning that a sufficient condition is false allow you to conclude that the necessary condition is false?"
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "No; when the trigger is false, the rule simply disappears and gives no information about the necessary condition."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "How do you diagram statements quantified by \"No\" (e.g., \"No $A$s are $B$s\")?"
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "Place the subject on the left and negate the second term on the right ($A \\rightarrow \\text{not } B$)."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "What is the \"if not\" translation method for the word \"unless\"?"
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "Replace \"unless\" with \"if not\" and place the attached idea, negated, on the left side of the arrow."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "What is the \"requirement\" translation method for the word \"unless\"?"
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "Place the idea following \"unless\" directly on the right side as a necessary condition, and negate the remaining idea on the left."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "Which keywords follow the exact same translation rules as \"unless\"?"
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "*Until* and *without*."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "How does the word \"and\" transform when taking the contrapositive of a conditional rule?"
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "\"And\" transforms into \"or\"."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "How does the word \"or\" transform when taking the contrapositive of a conditional rule?"
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "\"Or\" transforms into \"and\"."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "What is the contrapositive of $A \\text{ and } B \\rightarrow C$?"
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "$\\text{not } C \\rightarrow \\text{not } A \\text{ or } \\text{not } B$."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "What is the contrapositive of $X \\rightarrow Y \\text{ or } \\text{not } Z$?"
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "$\\text{not } Y \\text{ and } Z \\rightarrow \\text{not } X$."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "What is a biconditional statement?"
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "A conditional relationship that flows in both directions, indicated by phrases like \"if and only if\" ($A \\leftrightarrow B$)."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "What two scenarios are possible under the biconditional statement $A \\leftrightarrow B$?"
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "1. Both $A$ and $B$ occur.\n2. Neither $A$ nor $B$ occurs."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "How can the word \"otherwise\" create a biconditional statement?"
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "By providing a second condition that is the explicit logical opposite of the first rule."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "What structural condition is required to chain two conditional statements together?"
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "The necessary condition of one statement must match the sufficient condition of the other."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "Given the chain $A \\rightarrow B \\rightarrow C \\rightarrow D$, what main conclusion can be inferred?"
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "$A \\rightarrow D$ (and its contrapositive $\\text{not } D \\rightarrow \\text{not } A$)."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "What is the subset visual model for understanding conditionals?"
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "Visualizing the sufficient condition as a smaller subset category within a broader necessary condition category."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "What is the partial list of requirements model for understanding conditionals?"
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "Visualizing the necessary condition as one known ingredient required for a goal, alongside potentially other unknown requirements."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "What is the \"one of many paths\" model for understanding conditionals?"
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "Visualizing the sufficient condition as one specific path that leads to a destination (necessary condition), among other possible paths."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "How does LSAT interpretation of a conditional statement differ from real-life interpretation?"
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "The LSAT requires strict, literal interpretation without relying on conversational assumptions or unstated real-world context."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "Diagram the statement: \"Anyone in New York is in the USA.\""
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "$\\text{New York} \\rightarrow \\text{USA}$."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "Diagram the statement: \"You must study hard if you want to get a great LSAT score.\""
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "$\\text{Great LSAT Score} \\rightarrow \\text{Study Hard}$."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "Diagram the statement: \"Finishing in the top three guarantees winning a medal.\""
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "$\\text{Top Three} \\rightarrow \\text{Medal}$."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "Does the statement \"Finishing in the top three guarantees winning a medal\" mean that competitors outside the top three do not get medals?"
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "No; top three guarantees a medal, but the statement leaves open the possibility that others might also receive medals."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "Diagram the statement: \"Eddie can't go to Legoland until he feeds his rabbit.\""
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "$\\text{Legoland} \\rightarrow \\text{Feed Rabbit}$ (or $\\text{Not Feed Rabbit} \\rightarrow \\text{Not Legoland}$)."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "Diagram the statement: \"No camels attend law school.\""
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "$\\text{Camel} \\rightarrow \\text{Not Law School}$ (or $\\text{Law School} \\rightarrow \\text{Not Camel}$)."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "Diagram the statement: \"Happiness is never achieved unless love or passion is present.\""
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "$\\text{Happiness} \\rightarrow \\text{Love or Passion}$ (or $\\text{Not Love and Not Passion} \\rightarrow \\text{Not Happiness}$)."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "How do you translate the negative quantifier \"Few $A$s are $B$\" into a positive translation?"
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "Most $A$s are not $B$."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "How do you translate the negative quantifier \"Not all $A$s are $B$\" into a positive translation?"
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "Some $A$s are not $B$."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "Given the rule $A \\rightarrow B \\text{ or } C$, and the facts that $A$ is true and $C$ is false, what fact can be inferred?"
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "$B$ must be true."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "Given the rules $A \\text{ and } B \\rightarrow C$, and $C \\rightarrow D$, alongside the fact that $A$ is true, what additional fact is needed to guarantee $D$?"
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "$B$ must be true."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "What type of condition does the word \"prerequisite\" introduce?"
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "A necessary condition (Group 2 word, placed on the right side of the arrow)."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "Diagram the statement: \"Running requires that you've learned to walk.\""
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "$\\text{Run} \\rightarrow \\text{Learn to Walk}$."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "Diagram the statement: \"Enjoying fudge implies enjoying sugar.\""
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "$\\text{Enjoy Fudge} \\rightarrow \\text{Enjoy Sugar}$."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "Diagram the statement: \"Lou's golf balls are each covered in bird poop.\""
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "$\\text{Lou's Golf Ball} \\rightarrow \\text{Bird Poop}$."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "Diagram the statement: \"Real men never shy away from a yogurt parfait.\""
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "$\\text{Real Man} \\rightarrow \\text{Not Shy Away}$."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "Diagram the statement: \"Using breath strips instead of mints is done only by cool people.\""
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "$\\text{Breath Strips} \\rightarrow \\text{Cool Person}$."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "Diagram the statement: \"Vanessa can't work without tea and snacks.\""
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "$\\text{Work} \\rightarrow \\text{Tea and Snacks}$ (or $\\text{Not Tea or Not Snacks} \\rightarrow \\text{Not Work}$)."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "Why is standard conditional diagramming supplemented with mental visual models?"
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "Standard arrows do not visually explain why moving backward or negating both sides without flipping is invalid."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "When is explicit conditional diagramming most useful during the LSAT?"
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "When handling complex conditional chains, tricky indicator language (e.g., *unless*), or parallel reasoning questions."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "Is a conditional statement logically equivalent to its contrapositive?"
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "Yes; a conditional rule and its contrapositive express the exact same logical meaning."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "What happens to a multi-step conditional chain ($A \\rightarrow B \\rightarrow C$) when taking its contrapositive?"
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "The entire chain is reversed and every term is negated: $\\text{not } C \\rightarrow \\text{not } B \\rightarrow \\text{not } A$."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "What is the primary function of Group 1 conditional keywords?"
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "To signal that the attached concept acts as the trigger or sufficient condition."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "What is the primary function of Group 2 conditional keywords?"
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "To signal that the attached concept acts as a requirement or necessary condition."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "If performing an action out of self-interest means it should NOT be considered generous, does an action performed without self-interest prove it IS generous?"
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "No; concluding that it is generous commits the invalid flaw of inverting the conditional."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "In the statement \"A sidewalk is open to the public only if it has no ice,\" which condition is necessary?"
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "Having no ice on the sidewalk."
+          }
+        ]
+      }
+    },
+    {
+      "front": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "Diagram the statement: \"Jeff takes a vacation if, but only if, Trixie gets a promotion.\""
+          }
+        ]
+      },
+      "back": {
+        "flashcardContentBlock": [
+          {
+            "type": "text",
+            "content": "$\\text{Vacation} \\leftrightarrow \\text{Promotion}$."
+          }
+        ]
+      }
+    }
+  ]
+}

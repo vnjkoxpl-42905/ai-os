@@ -2,11 +2,55 @@
   "version": "0.0.1",
   "configurations": [
     {
+      "name": "dashboard-downloads-static",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8120",
+        "--bind",
+        "127.0.0.1",
+        "--directory",
+        "C:/Users/Joshu/Downloads"
+      ],
+      "port": 8120
+    },
+    {
+      "name": "lsatu-abstract-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "--prefix",
+        "../ai-os-projects/lsatu-abstract",
+        "run",
+        "dev",
+        "--",
+        "--port",
+        "8080",
+        "--strictPort"
+      ],
+      "port": 8080
+    },
+    {
+      "name": "lsatu-finder-open-lr",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "--prefix",
+        "../ai-os-projects/lsatu-finder-open-lr-20261029",
+        "run",
+        "dev",
+        "--",
+        "--port",
+        "8091",
+        "--strictPort"
+      ],
+      "port": 8091
+    },
+    {
       "name": "lsatu-dev",
       "runtimeExecutable": "npm",
       "runtimeArgs": [
         "--prefix",
-        "projects/lsatu",
+        "../ai-os-projects/lsatu",
         "run",
         "dev"
       ],
@@ -14,11 +58,26 @@
       "autoPort": true
     },
     {
+      "name": "lsatu-score-light-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "--prefix",
+        "projects/lsatu-score-light",
+        "run",
+        "dev",
+        "--",
+        "--port",
+        "8101",
+        "--strictPort"
+      ],
+      "port": 8101
+    },
+    {
       "name": "lsatu-preview",
       "runtimeExecutable": "npm",
       "runtimeArgs": [
         "--prefix",
-        "projects/lsatu",
+        "../ai-os-projects/lsatu",
         "run",
         "preview"
       ],
@@ -67,6 +126,21 @@
       "port": 8093
     },
     {
+      "name": "lsatu-conditional-full-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "--prefix",
+        "../ai-os-projects/lsatu-conditional-full-20261025",
+        "run",
+        "dev",
+        "--",
+        "--port",
+        "8099",
+        "--strictPort"
+      ],
+      "port": 8099
+    },
+    {
       "name": "lsatu-timed-launch-dev",
       "runtimeExecutable": "npm",
       "runtimeArgs": [
@@ -99,7 +173,7 @@
       "runtimeExecutable": "npm",
       "runtimeArgs": [
         "--prefix",
-        "projects/lsatu-home-v2",
+        "C:/Users/Joshu/dev/lsatu-home-v2",
         "run",
         "dev",
         "--",
@@ -122,6 +196,122 @@
         "--strictPort"
       ],
       "port": 8094
+    },
+    {
+      "name": "conditional-four-situations",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "--prefix",
+        "../ai-os-projects/lsatu-four-situations",
+        "run",
+        "dev",
+        "--",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "8098",
+        "--strictPort"
+      ],
+      "port": 8098
+    },
+    {
+      "name": "conditional-bootcamp",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "--prefix",
+        "../ai-os-projects/lsatu-conditional-bootcamp",
+        "run",
+        "dev:conditional"
+      ],
+      "port": 8097
+    },
+    {
+      "name": "lsatu-str-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "--prefix",
+        "../ai-os-projects/lsatu-str",
+        "run",
+        "dev",
+        "--",
+        "--port",
+        "8095",
+        "--strictPort"
+      ],
+      "port": 8095
+    },
+    {
+      "name": "reading-center-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "--prefix",
+        "../ai-os-projects/reading-center",
+        "run",
+        "dev",
+        "--",
+        "--port",
+        "8100",
+        "--strictPort"
+      ],
+      "port": 8100
+    },
+    {
+      "name": "lsatu-unless-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "--prefix",
+        "../ai-os-projects/lsatu-unless",
+        "run",
+        "dev",
+        "--",
+        "--port",
+        "8096",
+        "--strictPort"
+      ],
+      "port": 8096
+    },
+    {
+      "name": "lsatu-upnext-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "--prefix",
+        "../lsatu-upnext",
+        "run",
+        "dev",
+        "--",
+        "--port",
+        "8133",
+        "--strictPort"
+      ],
+      "port": 8133
+    },
+    {
+      "name": "teacher-home-static",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8134",
+        "--bind",
+        "127.0.0.1",
+        "--directory",
+        "C:/Users/Joshu/dev/ai-os/design/prototypes/teacher-home"
+      ],
+      "port": 8134
+    },
+    {
+      "name": "teacher-rail-v2-static",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8135",
+        "--bind",
+        "127.0.0.1",
+        "--directory",
+        "C:/Users/Joshu/dev/ai-os/design/prototypes/teacher-rail-v2"
+      ],
+      "port": 8135
     }
   ]
 }

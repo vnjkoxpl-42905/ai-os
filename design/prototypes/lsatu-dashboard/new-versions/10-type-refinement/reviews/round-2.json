@@ -1,0 +1,102 @@
+{
+  "status": "completed",
+  "mode": "review",
+  "provider": "claude",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "claude",
+    "builder": "codex",
+    "inspector": "claude"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\ai-os\\design\\prototypes\\lsatu-dashboard\\new-versions\\10-type-refinement",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os\\design\\prototypes\\lsatu-dashboard\\new-versions\\10-type-refinement\\REVIEW-BRIEF.md",
+  "plan_sha256": "d7289dc486fe90a160c500a5795219e7a6cdd96aaf532f3d41ae4121146e8d6c",
+  "requested_model": null,
+  "requested_effort": null,
+  "base": null,
+  "snapshot": null,
+  "previous": null,
+  "started_at": 1792918660.1171682,
+  "artifacts": "C:\\Users\\Joshu\\.codex\\visualizations\\2026\\10\\25\\01a17081-6735-7fc2-b0e1-922ab635486c\\claude-10-review\\claudex-_2__84jt",
+  "cli_version": "2.1.309 (Claude Code)",
+  "executable": [
+    "C:\\Users\\Joshu\\.local\\bin\\claude.exe"
+  ],
+  "exit_code": 0,
+  "session_id": "59a9cba4-1dc5-4ec8-8be7-858683047d8d",
+  "response": {
+    "verdict": "REVISE",
+    "summary": "The round-1 corrections are in the source and show in the captures. At the user's 1048x858 viewport (home-1048-viewport.png), the type is clearly easier to read than before: labels are in ordinary case, secondary text is legible, the only shortcut badge says \"Ctrl K\", \"Timed section\" stays on one line, and the coach, session and quick actions keep their labels whole. At 768 (home-768.png), the support panels now stack in one column and \"Prepare a note\", \"Mark as read\" and \"Eastern time\" no longer break mid-phrase. In app.js:109 the shortcut now matches only the modifier for the user's platform and is ignored while a dialog is open. teacherTable (app.js:60) is now a labelled, focusable region that scrolls sideways, and both the 1048 enlarged assignment dialog and the 390 enlarged preparation dialog stay usable. One material visible defect remains. At 768 with 200% text, the active \"Teacher workspace\" link is cut off at the sidebar's right edge, and the host's clipping check cannot detect this. One smaller problem: at 1048 with 200% text, an assignment title breaks in the middle of a word.",
+    "findings": [
+      {
+        "id": "T10-R2-01",
+        "severity": "medium",
+        "path": "style.css:5 (.sidebar overflow-y:auto; .navlink) with style.css:11 (.sidebar width:205px at max-width:1000px)",
+        "evidence": "In artifacts/teacher-768-text2.png and teacher-table-scroll-768-text2.png, the active nav link wraps to \"Teacher / workspace\" and the word \"workspace\" runs past the sidebar's right edge, so the end of it is cut off (\"workspac…\"). Setting overflow-y:auto on .sidebar makes the browser treat overflow-x as auto too, so anything wider than the 205px sidebar is hidden. At 200% text the single word \"workspace\" plus the icon and padding is wider than the space available. students-768-text2.png shows the same link, inactive, only just fitting. The regression suite misses this because its clipped selector (review-regressions.cjs:9) only checks button, p, h1–h3 and label elements that have their own overflow hidden or clip. It never checks nav links (a) inside a scrolling container, and its document-level overflow check reads documentElement.scrollWidth, which stays the same.",
+        "fix": "Let nav labels fit at large text. Options: allow overflow-wrap:anywhere/hyphens on .navlink, or widen the sidebar with rem units (e.g. width:clamp(205px,14rem,260px), with main's margin-left adjusted to match), or switch to the mobile bar/drawer when 200% text leaves the main column too narrow. Shortening the label to \"Today\" or \"Workspace\" would also work. Add overflow-x:hidden only if the labels are guaranteed to wrap. Extend the clipping check to any visible element whose text rects extend beyond the bounds of the nearest scroll/overflow ancestor, including the .navlink elements in #sidebar."
+      },
+      {
+        "id": "T10-R2-02",
+        "severity": "low",
+        "path": "style.css:5 (.assignment h3{overflow-wrap:anywhere}) and style.css:10 (.assignment layout at max-width:1200px)",
+        "evidence": "In artifacts/text-200-home-1048.png, the fourth assignment title appears as \"Conditiona / l Indicators Refresher\". The narrow assignment column, between the LR chip and the Open button, is narrower than the word \"Conditional\" at 200% text, and overflow-wrap:anywhere splits it after the \"a\". This is the same problem of labels breaking mid-word that round-1 fixed for controls, now in a title. The wrappedActions/clipped checks don't cover h3 line breaks inside words.",
+        "fix": "At narrow or enlarged widths, give the title the full row: reuse the ≤650px pattern (.assignment{flex-wrap:wrap} with .assignment-body{flex:1 1 10rem}) at all widths so the Open button drops below before a word has to split. Alternatively use overflow-wrap:break-word with hyphens:auto (lang=en is set) so any break that still happens is hyphenated."
+      }
+    ],
+    "coverage": [
+      "Source read in full: index.html, app.js (117 lines), style.css (17 lines). I did not compute hashes myself; reviews/round-2-source-hashes.json was read (index 6706D017…, app 83DE2555…, style 0EAECA97…).",
+      "Reviews read: reviews/round-1.json and reviews/DISPOSITIONS.md. Checked T10-01 to T10-04 against the source: .text-button nowrap with wrapping .message-actions/.session-row; .right-stack is one column at ≤1000px; .quick-actions uses flex-wrap with nowrap labels; .work-type, .unread-dot and .eventdot use rem/em; .count and .badge are nowrap; role options read Student/Teacher; the keydown handler matches only the platform modifier and requires !modal.open.",
+      "Images read: artifacts/home-1048-viewport.png, artifacts/home-768.png, artifacts/teacher-table-scroll-768-text2.png, artifacts/prepare-dialog-save-390-text2.png, artifacts/teacher-768-text2.png, artifacts/students-768-text2.png, artifacts/assignment-dialog-1048-text2.png, artifacts/teacher-1048-text1.png, artifacts/teacher-1048-text2.png, artifacts/text-200-home-1048.png.",
+      "Test script read: line 9 of artifacts/review-regressions.cjs (the measurement function), plus a grep for the verify() assertions and the teacher capture step.",
+      "Traced in source: shortcut detection and handler, finder() and drawer close, the dialog open/close and focus-return path, preservation of note/draft text on save failure, the teacherTable region (teacher page and Students search re-render), route guards, the exact-reference parser, the fixed Review history and totals, and work filters."
+    ],
+    "limitations": [
+      "This was a read-only review. I could not run a browser or the tests, and I did not compute file hashes. Every pass count and report result is host-reported; I did not verify any of them.",
+      "Report JSON not read this round: review-regressions-report.json, typography-report.json, interaction-report.json, features-10-report.json, motion-focus-report.json, offline-report.json, capture-report.json.",
+      "Images skipped this round: before-home-1048.png, before-home-390.png, home-390.png, home-1440.png, the practice/review/work-390 captures, the other text-200 routes, the 390 and 768 text1 teacher/students/dialog captures, prepare-dialog-768/1048, assignment-dialog-390/768, students-390-text2, teacher-390-text2, sidebar-200-1048.png, and the motion and mobile-finder captures. My before/after comparison at 1048 relies on round-1's reading plus home-1048-viewport.png.",
+      "I judged contrast by eye and from the hex values in the source. Nothing was measured.",
+      "I did not inspect the full repository diff, and the enclosing vault has unrelated changes. The user's own visual approval is still outstanding."
+    ]
+  },
+  "usage": {
+    "input_tokens": 16,
+    "cache_creation_input_tokens": 63921,
+    "cache_read_input_tokens": 273313,
+    "output_tokens": 7020,
+    "output_tokens_details": {
+      "thinking_tokens": 2183
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 63921,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 3122,
+        "cache_read_input_tokens": 67523,
+        "cache_creation_input_tokens": 902,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 902
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "permission_denials": [],
+  "total_cost_usd": 0.7064946000000001,
+  "elapsed_seconds": 73.49
+}

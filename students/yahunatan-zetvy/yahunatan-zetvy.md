@@ -23,6 +23,7 @@ lifecycle: active
 - [Open loops](open-loops.md)
 - [Assignment log](assignment-log.md)
 - [2026-09-16 recap, enriched on 2026-09-30](recaps/2026-09-16-recap.md)
+- [2026-11-16 session export](transcript-downloads/2026-11-16-yahunatan-zetvy-notes-by-gemini.md)
 
 ## Recap review
 

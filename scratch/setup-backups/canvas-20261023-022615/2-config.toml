@@ -1,0 +1,451 @@
+sandbox_mode = "danger-full-access"
+model_reasoning_summary = "concise"
+model = "gpt-6-luna"
+model_reasoning_effort = "medium"
+service_tier = "default"
+
+notify = [ "C:\\Users\\Joshu\\AppData\\Local\\OpenAI\\Codex\\runtimes\\cua_node\\2b841c3d44b123ec\\bin\\node_modules\\@oai\\sky\\bin\\windows\\codex-computer-use.exe", "turn-ended" ]
+[desktop]
+followUpQueueMode = "steer"
+conversationDetailMode = "STEPS_COMMANDS"
+sansFontSize = 14
+codeFontSize = 13
+ambient-suggestions-enabled = true
+composerPlainTextMode = false
+show-context-window-usage = true
+notifications-turn-mode = "always"
+toys-confetti-enabled = true
+external-agent-import-sync-item-types = "all"
+external-agent-import-sync-enabled = true
+appearanceTheme = "dark"
+enabled-reasoning-efforts = ["low", "medium", "high", "xhigh", "ultra", "persistent", "max"]
+keepRemoteControlAwakeWhilePluggedIn = true
+browser-show-full-url = true
+selected-avatar-id = "codex"
+browser-annotation-markers-visible = false
+localeOverride = "en-US"
+open-link-in-target-preference = "in-app-browser"
+default-workspace-full-view = true
+agent-usage-reset-enabled = false
+
+[desktop.open-in-target-preferences]
+global = "systemDefault"
+
+[marketplaces.openai-bundled]
+source_type = "local"
+source = '\\?\C:\Users\Joshu\.codex\.tmp\bundled-marketplaces\openai-bundled'
+
+[marketplaces.openai-primary-runtime]
+source_type = "local"
+source = '\\?\C:\Users\Joshu\.cache\codex-runtimes\codex-primary-runtime\plugins\openai-primary-runtime'
+
+[marketplaces.claude-plugins-official]
+source_type = "git"
+source = "https://github.com/anthropics/claude-plugins-official.git"
+
+[marketplaces.remotion]
+source_type = "git"
+source = "https://github.com/remotion-dev/claude-code-plugin.git"
+
+[marketplaces.claude-cowork]
+source_type = "local"
+source = '\\?\C:\Users\Joshu\.codex\plugins\cache\claude-cowork'
+
+[marketplaces.21st-dev]
+source_type = "git"
+source = "https://github.com/21st-dev/magic-mcp.git"
+
+[plugins."codex-app-tools@openai-bundled"]
+enabled = true
+
+[plugins."visualize@openai-bundled"]
+enabled = true
+
+[plugins."documents@openai-primary-runtime"]
+enabled = true
+
+[plugins."pdf@openai-primary-runtime"]
+enabled = true
+
+[plugins."spreadsheets@openai-primary-runtime"]
+enabled = true
+
+[plugins."presentations@openai-primary-runtime"]
+enabled = true
+
+[plugins."template-creator@openai-primary-runtime"]
+enabled = true
+
+[plugins."computer-use@openai-bundled"]
+enabled = true
+
+[plugins."chrome@openai-bundled"]
+enabled = true
+
+[plugins."anthropic-skills@claude-cowork"]
+enabled = true
+
+[plugins."cowork-plugin-management@claude-cowork"]
+enabled = true
+
+[plugins."design@claude-cowork"]
+enabled = true
+
+[plugins."desktop-commander@claude-cowork"]
+enabled = true
+
+[plugins."pdf-viewer@claude-cowork"]
+enabled = true
+
+[plugins."productivity@claude-cowork"]
+enabled = true
+
+[plugins."lovable@openai-curated"]
+enabled = true
+
+[plugins."gmail@openai-curated"]
+enabled = true
+
+[plugins."superpowers@openai-curated"]
+enabled = true
+
+[plugins."stripe@openai-curated"]
+enabled = true
+
+[plugins."codex-security@openai-curated"]
+enabled = true
+
+[plugins."google-calendar@openai-curated"]
+enabled = true
+
+[plugins."openai-developers@openai-curated"]
+enabled = true
+
+[plugins."build-web-apps@openai-curated"]
+enabled = true
+
+[plugins."hyperframes@openai-curated"]
+enabled = true
+
+[plugins."github@openai-curated"]
+enabled = true
+
+[plugins."plugin-eval@openai-curated"]
+enabled = true
+
+[plugins."browser@openai-bundled"]
+enabled = true
+
+[plugins."unified-computer-use@openai-bundled"]
+enabled = true
+
+[plugins."code-review@openai-bundled"]
+enabled = true
+
+[plugins."21st@21st-dev"]
+enabled = true
+
+[plugins."claude-security@claude-plugins-official"]
+enabled = true
+
+[mcp_servers.node_repl]
+args = []
+command = 'C:\Users\Joshu\AppData\Local\OpenAI\Codex\runtimes\cua_node\2b841c3d44b123ec\bin\node_repl.exe'
+env_vars = ["BROWSER_USE_ACCESS_EXECUTOR_ID", "BROWSER_USE_ACCESS_PIPE_PATH", "BROWSER_USE_ACCESS_VERIFYING_IDENTITY", "CODEX_WINDOWS_REGISTERED_CORE"]
+startup_timeout_sec = 120
+
+[mcp_servers.node_repl.env]
+NODE_REPL_NATIVE_PIPE_CONNECT_TIMEOUT_MS = "1000"
+NODE_REPL_NODE_MODULE_DIRS = 'C:\Users\Joshu\AppData\Local\OpenAI\Codex\runtimes\cua_node\2b841c3d44b123ec\bin\node_modules'
+NODE_REPL_NODE_PATH = 'C:\Users\Joshu\AppData\Local\OpenAI\Codex\runtimes\cua_node\2b841c3d44b123ec\bin\node.exe'
+NODE_REPL_TRUSTED_CODE_PATHS = 'C:\Users\Joshu\.codex;C:\Users\Joshu\AppData\Local\OpenAI\Codex\runtimes\cua_node\2b841c3d44b123ec\bin\node_modules'
+CODEX_HOME = 'C:\Users\Joshu\.codex'
+BROWSER_USE_AVAILABLE_BACKENDS = "chrome,iab,mcpapps"
+BROWSER_USE_TINYSKY_ENABLED = "1"
+NODE_REPL_INSTRUCTIONS_USE_CASE_BROWSER = ""
+NODE_REPL_INSTRUCTIONS_USE_CASE_CHROME = ""
+BROWSER_USE_CODEX_APP_BUILD_FLAVOR = "prod"
+BROWSER_USE_CODEX_APP_VERSION = "26.1016.62342"
+NODE_REPL_TRUSTED_SERVICES = '{"browser":"C:/Users/Joshu/.codex/plugins/cache/openai-bundled/browser/26.1016.62342/scripts/browser-service.mjs","sky":"@oai/sky/service"}'
+SKY_CUA_NATIVE_PIPE = "1"
+SKY_CUA_NATIVE_PIPE_DIRECTORY = '\\.\pipe\codex-computer-use-21c0c0ec-b748-4e25-805f-cd66070d6a4b'
+CODEX_CLI_PATH = 'C:\Users\Joshu\AppData\Local\OpenAI\Codex\bin\37f54d68e5533a51\codex.exe'
+NODE_REPL_UNTRUSTED_ENV_ALLOWLIST = "CODEX_WINDOWS_REGISTERED_CORE"
+
+[mcp_servers.lsat-u-lessons]
+command = 'C:\Program Files\nodejs\node.exe'
+args = ['C:\Users\Joshu\dev\ai-os\system\scripts\lsatu-lesson-mcp.mjs']
+
+[mcp_servers.kling]
+url = "https://kling.ai/mcp"
+
+[mcp_servers.rea]
+command = 'C:\Program Files\nodejs\node.exe'
+args = ['C:\Users\Joshu\dev\tools\node\node_modules\rea-agents\scripts\rea.mjs', "mcp"]
+startup_timeout_sec = 30.0
+
+[mcp_servers.pinterest]
+command = 'C:\Program Files\nodejs\node.exe'
+args = ["C:/Users/Joshu/dev/ai-os-projects/pinterest-mcp-server/dist/index.js"]
+
+[mcp_servers.motionsites]
+command = "npx"
+args = ["-y", "mcp-remote", "https://xgdzyqfalbibzelpdpvr.supabase.co/functions/v1/mcp"]
+
+[mcp_servers.godly]
+command = 'C:\Program Files\nodejs\node.exe'
+args = ["C:/Users/Joshu/dev/ai-os-projects/godly-mcp-server/dist/index.js"]
+
+[windows]
+sandbox = "elevated"
+
+[projects."c:\\users\\joshu\\documents\\codex\\2026-09-06\\j"]
+trust_level = "trusted"
+
+[projects."c:\\users\\joshu\\documents\\codex\\2026-09-06\\new-chat"]
+trust_level = "trusted"
+
+[projects."c:\\users\\joshu\\documents\\codex\\2026-09-06\\c"]
+trust_level = "trusted"
+
+[projects."c:\\users\\joshu\\documents\\codex\\2026-09-12\\create-an-image-of"]
+trust_level = "trusted"
+
+[projects."c:\\users\\joshu\\documents\\codex\\2026-09-12\\create-an-image-of-2"]
+trust_level = "trusted"
+
+[projects."c:\\users\\joshu\\documents\\codex\\2026-09-12\\create-an-image-of-3"]
+trust_level = "trusted"
+
+[projects."c:\\users\\joshu\\documents\\codex\\2026-09-12\\create-an-image-of-5"]
+trust_level = "trusted"
+
+[projects."c:\\users\\joshu\\documents\\codex\\2026-09-12\\create-an-image-of-6"]
+trust_level = "trusted"
+
+[projects.'c:\users\joshu\documents\codex\2026-09-12\create-an-image-of-7']
+trust_level = "trusted"
+
+[projects.'c:\users\joshu\dev\ai-os']
+trust_level = "trusted"
+
+[projects.'c:\users\joshu\dev\ai-os\projects\lsatu']
+trust_level = "trusted"
+
+[projects.'c:\users\joshu\documents\codex\2026-09-15\hatch-pet-c-users-joshu-codex']
+trust_level = "trusted"
+
+[projects.'c:\users\joshu\documents\codex\2026-09-17\create-a-scheduled-task-called-weekday']
+trust_level = "trusted"
+
+[projects.'c:\users\joshu\documents\codex\2026-09-17\gmail-plugin-gmail-openai-curated-remote']
+trust_level = "trusted"
+
+[projects.'c:\users\joshu\documents\codex\2026-09-19\slack-plugin-slack-openai-curated-remote']
+trust_level = "trusted"
+
+[projects.'c:\users\joshu\documents\codex\2026-09-19\notion-plugin-notion-openai-curated-remote']
+trust_level = "trusted"
+
+[projects.'c:\users\joshu\documents\codex\2026-09-19\google-drive-plugin-google-drive-openai']
+trust_level = "trusted"
+
+[projects.'c:\users\joshu\documents\codex\2026-09-19\chatgpt-for-chrome-plugin-browser-openai']
+trust_level = "trusted"
+
+[projects.'c:\users\joshu\documents\codex\2026-09-22\ef']
+trust_level = "trusted"
+
+[projects.'c:\users\joshu\documents\codex\2026-09-22\ef-2']
+trust_level = "trusted"
+
+[projects.'c:\users\joshu\documents\codex\2026-09-22\ef-3']
+trust_level = "trusted"
+
+[projects.'c:\users\joshu\documents\codex\2026-09-22\ef-4']
+trust_level = "trusted"
+
+[projects.'c:\users\joshu\documents\codex\2026-09-22\ef-5']
+trust_level = "trusted"
+
+[projects.'c:\users\joshu\documents\codex\2026-09-22\ef-6']
+trust_level = "trusted"
+
+[projects.'c:\users\joshu\documents\codex\2026-09-22\ef-7']
+trust_level = "trusted"
+
+[projects.'c:\users\joshu\appdata\local\temp\claude\c--users-joshu-dev-ai-os\fe553725-d881-4068-8809-1fb7b342eee9\scratchpad\codex-research']
+trust_level = "trusted"
+
+[projects.'c:\users\joshu\dev\ai-os-projects\lsatu']
+trust_level = "trusted"
+
+[features]
+hooks = true
+local_thread_store_compression = true
+memories = true
+
+[tui]
+screen_reader_detection_done = true
+
+[tui.model_availability_nux]
+gpt-6-astra = 1
+"gpt-6.1-sol" = 4
+
+[hooks.state]
+
+[hooks.state.'C:\Users\Joshu\.codex\hooks.json:session_start:0:0']
+trusted_hash = "sha256:e29e4b8b3af0746cbeecd46db2fe26ad64ce0a801023daf44c8422415074980b"
+enabled = true
+
+[hooks.state.'C:\Users\Joshu\dev\ai-os\.codex\hooks.json:pre_tool_use:0:0']
+trusted_hash = "sha256:5b9b60d6c01a01719ab80e949c6f77464d9ab91b8a7ede5838bd2ea3b22c5eaf"
+enabled = true
+
+[hooks.state.'C:\Users\Joshu\dev\ai-os\.codex\hooks.json:post_tool_use:0:0']
+trusted_hash = "sha256:59ab0fcf5eff343c60a3040b03c4625fedb23ee200747e8052c2159c1063f8b2"
+enabled = true
+
+[hooks.state.'C:\Users\Joshu\dev\ai-os\.codex\hooks.json:user_prompt_submit:0:0']
+trusted_hash = "sha256:1b6c4f02da8b0f1260e5453ceab432952203a3503df4702a381089ad87bc7023"
+enabled = true
+
+[hooks.state.'C:\Users\Joshu\dev\ai-os\.codex\hooks.json:subagent_start:0:0']
+trusted_hash = "sha256:f06750efe2ac83613a9159b152fcc5c54331c15f9c7940c36f2ad47421f9158c"
+enabled = true
+
+[hooks.state.'C:\Users\Joshu\dev\ai-os\.codex\hooks.json:subagent_stop:0:0']
+trusted_hash = "sha256:fe80f3f738c6f5a4eda9ebab7da92317302d69d1e36f80e8cbf57783b11caa3c"
+enabled = true
+
+[hooks.state.'C:\Users\Joshu\dev\ai-os\.codex\hooks.json:stop:0:0']
+trusted_hash = "sha256:8ad6963b37c5531dbfc5d5312ca1b5f526e502257ef868771a2c42036dd311ad"
+enabled = true
+
+[hooks.state."claude-security@claude-plugins-official:hooks/hooks.json:permission_request:0:0"]
+trusted_hash = "sha256:dd4e19c97a7675aeb156b5328f4a68e30595699a489b3f858cbadb8c97dd41a3"
+
+[hooks.state."claude-security@claude-plugins-official:hooks/hooks.json:post_tool_use:0:0"]
+trusted_hash = "sha256:48bce19ee2a0a5cdfd6065bd04c2206c4e1bad0287c6c67412acab803f92ed50"
+
+[hooks.state."claude-security@claude-plugins-official:hooks/hooks.json:post_tool_use:0:1"]
+trusted_hash = "sha256:9059af7de2e3625af5046114d0b3167226ac9bb37dd31d4719b6a9e18050b410"
+
+[hooks.state."claude-security@claude-plugins-official:hooks/hooks.json:post_tool_use:0:2"]
+trusted_hash = "sha256:1ab0520fe083433a48ba750ae8fd6bcfa1316fa4d5ccb115bd4b3d4a5b9d2dae"
+
+[hooks.state.'C:\Users\Joshu\dev\ai-os-projects\lsatu\.codex\hooks.json:session_start:0:0']
+trusted_hash = "sha256:51cb66a1840d1538fe526b6bc1f335982e0d84195c4f145ff56e3c00ebb080e6"
+
+[[skills.config]]
+path = 'C:\Users\Joshu\.codex\skills\hatch-pet\SKILL.md'
+enabled = false
+
+[memories]
+generate_memories = true
+use_memories = true
+
+[skills]
+max_context_tokens = 10000
+
+[hooks.state.'C:\Users\Joshu\.codex\hooks.json:session_start:1:0']
+enabled = true
+trusted_hash = "sha256:8768a35852c3f1857791f4dd41b81a46de2633de9b6ee37f96d7bd85530701c6"
+
+[hooks.state.'C:/Users/Joshu/.codex/hooks.json:session_start:1:0']
+enabled = true
+trusted_hash = "sha256:8768a35852c3f1857791f4dd41b81a46de2633de9b6ee37f96d7bd85530701c6"
+
+[hooks.state.'C:\Users\Joshu\.codex\hooks.json:user_prompt_submit:0:0']
+enabled = true
+trusted_hash = "sha256:4b3240a2187a492c9ab54ce99cd0b6b4f9074138d3736b1064e1eeb7c4edb265"
+
+[hooks.state.'C:/Users/Joshu/.codex/hooks.json:user_prompt_submit:0:0']
+enabled = true
+trusted_hash = "sha256:4b3240a2187a492c9ab54ce99cd0b6b4f9074138d3736b1064e1eeb7c4edb265"
+
+[hooks.state.'C:\Users\Joshu\.codex\hooks.json:pre_tool_use:0:0']
+enabled = true
+trusted_hash = "sha256:02909404416f44144d2caac2a57d3df57e8c47a089cbc63bb10f85b505cbf054"
+
+[hooks.state.'C:/Users/Joshu/.codex/hooks.json:pre_tool_use:0:0']
+enabled = true
+trusted_hash = "sha256:02909404416f44144d2caac2a57d3df57e8c47a089cbc63bb10f85b505cbf054"
+
+[hooks.state.'C:\Users\Joshu\.codex\hooks.json:permission_request:0:0']
+enabled = true
+trusted_hash = "sha256:fc9da078311c1e2c98893834a88c373f4b3725f8050190182899047940c1db5b"
+
+[hooks.state.'C:/Users/Joshu/.codex/hooks.json:permission_request:0:0']
+enabled = true
+trusted_hash = "sha256:fc9da078311c1e2c98893834a88c373f4b3725f8050190182899047940c1db5b"
+
+[hooks.state.'C:\Users\Joshu\.codex\hooks.json:post_tool_use:0:0']
+enabled = true
+trusted_hash = "sha256:f7fbdfea4d178019c4ce2fdad77cce78298f4db69604cc3c6747eee53f756aa2"
+
+[hooks.state.'C:/Users/Joshu/.codex/hooks.json:post_tool_use:0:0']
+enabled = true
+trusted_hash = "sha256:f7fbdfea4d178019c4ce2fdad77cce78298f4db69604cc3c6747eee53f756aa2"
+
+[hooks.state.'C:\Users\Joshu\.codex\hooks.json:subagent_start:0:0']
+enabled = true
+trusted_hash = "sha256:5861d42b1f3b3a21d6569c8ee7f999339978b26b59f05131f6a0a021bceeadab"
+
+[hooks.state.'C:/Users/Joshu/.codex/hooks.json:subagent_start:0:0']
+enabled = true
+trusted_hash = "sha256:5861d42b1f3b3a21d6569c8ee7f999339978b26b59f05131f6a0a021bceeadab"
+
+[hooks.state.'C:\Users\Joshu\.codex\hooks.json:subagent_stop:0:0']
+enabled = true
+trusted_hash = "sha256:7d130bb024af00140e6db9b1ee62d2963620bf9669e498b0ac7d99b09b7ca26c"
+
+[hooks.state.'C:/Users/Joshu/.codex/hooks.json:subagent_stop:0:0']
+enabled = true
+trusted_hash = "sha256:7d130bb024af00140e6db9b1ee62d2963620bf9669e498b0ac7d99b09b7ca26c"
+
+[hooks.state.'C:\Users\Joshu\.codex\hooks.json:stop:0:0']
+enabled = true
+trusted_hash = "sha256:3d9b0982a209d750701123364bb460fbefc92353279927de2d4acc64e243c3ea"
+
+[hooks.state.'C:/Users/Joshu/.codex/hooks.json:stop:0:0']
+enabled = true
+trusted_hash = "sha256:3d9b0982a209d750701123364bb460fbefc92353279927de2d4acc64e243c3ea"
+
+[hooks.state.'C:\Users\Joshu\.codex\hooks.json:interrupt:0:0']
+enabled = true
+trusted_hash = "sha256:51aae16975b8b19608b9ba8b2b42899a0162e2286995836d046f08161bdda207"
+
+[hooks.state.'C:/Users/Joshu/.codex/hooks.json:interrupt:0:0']
+enabled = true
+trusted_hash = "sha256:51aae16975b8b19608b9ba8b2b42899a0162e2286995836d046f08161bdda207"
+
+[projects."C:\\Users\\Joshu"]
+trust_level = "trusted"
+
+[projects."C:\\Users\\Joshu\\.codex\\worktrees\\message-spacing-fix\\ai-os"]
+trust_level = "trusted"
+
+[projects."C:\\Users\\Joshu\\.codex\\worktrees\\student-display-names\\ai-os"]
+trust_level = "trusted"
+
+[projects.'C:\Users\Joshu\dev\ai-os-projects\lsatu-rc-builder-layout']
+trust_level = "trusted"
+
+[projects.'C:\Users\Joshu\dev\ai-os-projects\lsatu-rc-focus-release']
+trust_level = "trusted"
+
+[projects.'C:\Users\Joshu\dev\ai-os-projects\lsatu-rc-final-release-20261021']
+trust_level = "trusted"
+
+[projects.'C:\Users\Joshu\dev\ai-os-projects\lsatu-role-home-20261022']
+trust_level = "trusted"
+
+# Keep the selected local grill-me; disable its older plugin-synced duplicate.
+[[skills.config]]
+path = 'C:\Users\Joshu\.agents\skills\synced\66ab068d-6d11-4b9b-bace-f3622629a61f_3264ecb8-7644-4b8c-9aed-94ea1fae19cc\grill-me\SKILL.md'
+enabled = false
+
+[mcp_servers.shadcn]
+command = "cmd"
+args = ["/c", "npx", "-y", "shadcn@4.22.1", "mcp"]

@@ -1,0 +1,24 @@
+{
+  "status": "failed",
+  "mode": "review",
+  "provider": "gemini",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "gemini",
+    "builder": "codex",
+    "inspector": "gemini"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-relationship-ui",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os\\brainstorms\\2026-10-16-spot-the-relationship-gemini-question-review.md",
+  "plan_sha256": "e57c7d7010a0fe674f1a1f028d7076daf50e273f278ed9a75cda5f086db43e81",
+  "requested_model": "gemini-4-argon",
+  "requested_effort": "medium",
+  "base": null,
+  "snapshot": null,
+  "previous": null,
+  "started_at": 1792196206.259581,
+  "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\handoffs\\geminex\\spot-relationship-2026-10-16\\geminex-gykaewhh",
+  "error": "Command '['powershell', '-NoProfile', '-Command', 'Get-CimInstance Win32_Process | Where-Object { $_.Name -eq \\'language_server.exe\\' } | ForEach-Object { $p = $_.ProcessId; $c = $_.CommandLine; $ports = (Get-NetTCPConnection -OwningProcess $p -State Listen -ErrorAction SilentlyContinue | Select-Object -ExpandProperty LocalPort) -join \\',\\'; Write-Output \"$p|$ports|$c\" }']' timed out after 15 seconds",
+  "elapsed_seconds": 15.44
+}

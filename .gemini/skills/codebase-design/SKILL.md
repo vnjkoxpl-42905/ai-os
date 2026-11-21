@@ -3,6 +3,10 @@ name: codebase-design
 description: Shared vocabulary for designing deep modules. Use when the user wants to design or improve a module's interface, find deepening opportunities, decide where a seam goes, make code more testable or AI-navigable, or when another skill needs the deep-module vocabulary.
 ---
 
+## Current AI OS execution contract
+
+Use this deep-module vocabulary to clarify mechanisms. Preserve established domain names and the project glossary; do not globally rename legitimate component, service or API terms just because the explanatory vocabulary differs.
+
 # Codebase Design
 
 Design **deep modules**: a lot of behaviour behind a small interface, placed at a clean seam, testable through that interface. Use this language and these principles wherever code is being designed or restructured. The aim is leverage for callers, locality for maintainers, and testability for everyone.

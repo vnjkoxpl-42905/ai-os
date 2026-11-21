@@ -1,0 +1,84 @@
+{
+ "qid": "PT158-S2-Q24",
+ "type": "Sufficient Assumption",
+ "difficulty": "3",
+ "key_db": "B",
+ "stimulus_db": "Filmmaker: Many people feel that independent films have more integrity as works of art than films produced by major studios, since independent films are typically less conventional than major studio films. However, like major studios, all independent filmmakers need to make profits on their films, and this affects the artistic decisions made in creating most independent films. Thus, most independent films do not have absolute integrity as works of art.",
+ "stem_db": "The filmmaker's conclusion is properly drawn if which one of the following is assumed?",
+ "choices_db": {
+  "A": "A creation has absolute integrity as a work of art if the artistic decisions made in creating it were unaffected by the need to make profits.",
+  "B": "If any of the artistic decisions made in creating something were affected by the need to make profits, then that creation does not have absolute integrity as a work of art.",
+  "C": "The creations of individuals have more integrity as works of art, on average, than those of groups.",
+  "D": "The unconventionality of a creation has no bearing on its integrity as a work of art.",
+  "E": "A creation has no integrity as a work of art unless the artistic decisions made in creating it were unaffected by views about what is conventional."
+ },
+ "bank": {
+  "stimulus": "Filmmaker: Many people feel that independent films\n have more integrity as works of art than films\n produced by major studios, since independent\n films are typically less conventional than major\n studio films. However, like major studios, all\n independent filmmakers need to make profits on\n their films, and this affects the artistic decisions\n made in creating most independent films. Thus,\n most independent films do not have absolute\n integrity as works of art.",
+  "stem": "The filmmaker’s conclusion is properly drawn if which\n one of the following is assumed?",
+  "choices": {
+   "A": "A creation has absolute integrity as a work of art if the artistic decisions made in creating it were unaffected by the need to make profits.",
+   "B": "If any of the artistic decisions made in creating something were affected by the need to make profits, then that creation does not have absolute integrity as a work of art.",
+   "C": "The creations of individuals have more integrity as works of art, on average, than those of groups.",
+   "D": "The unconventionality of a creation has no bearing on its integrity as a work of art.",
+   "E": "A creation has no integrity as a work of art unless the artistic decisions made in creating it were unaffected by views about what is conventional."
+  },
+  "key": "B"
+ },
+ "explanation_id": "18494ec2-006a-4d7f-a10a-c45d179021d5",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "37220740-954b-4be3-9d32-c798865c90a2",
+   "position": 0,
+   "label": "Conclusion (Thus)",
+   "body": "Most independent films do not have absolute integrity as works of art."
+  },
+  {
+   "row_id": "92a7120d-a905-4888-af02-7952b1411ea4",
+   "position": 1,
+   "label": "Evidence",
+   "body": "Indie filmmakers need to make profits, and this affects the artistic decisions made in creating most indie films."
+  },
+  {
+   "row_id": "278cae2d-f407-4a3e-bdb0-c3fd23a744a5",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "Like we always do on Sufficient Assumption, once we've found the conclusion we ask ourselves if there's a New Concept in the Conclusion (because, if so, 99% of the time the correct answer will have that new concept). This conclusion is trying to prove that most indie films \"do not have absolute integrity\". Cool, did they ever define the legal standard for \"absolute integrity\"? No? Okay, well then our correct answer must be a rule that allows us to prove that concept. What do we know about most indie films? Their artistic decisions are affected by profit considerations."
+  },
+  {
+   "row_id": "c1b89a6b-a22e-4291-b0ec-fb8a90405b87",
+   "position": 3,
+   "label": "Goal",
+   "body": "A classic missing link correct answer would sound like, \"If artistic decisions made in creating films are affected by the need to make profits, then a film doesn't have absolute integrity as a work of art\". They might surprise us with how the trigger is worded, but we're only interested in answers that provide a rule that puts \"not absolute integrity\" on the right side of the arrow. Naturally, we expect an illegal negation or reversal of this to be a trap answer, and the correct answer will probably write this rule in contrapositive form: \"If it does have absolute integrity, then its artistic decisions aren't affected by profit\"."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "d9cdebe3-e0a4-46d4-9924-66392367a670",
+   "letter": "A",
+   "body": "This answer says a creation has absolute integrity IF artistic decisions were not affected by profit. That is the wrong conditional direction. The argument needs: if artistic decisions WERE affected by profit, then the work LACKS absolute integrity. This answer provides the converse: if decisions were NOT affected by profit, then the work HAS integrity. The converse of a conditional is not logically equivalent to the conditional itself. This answer tells us what happens when profit is absent (integrity is present) but says nothing about what happens when profit is present. A film whose decisions were affected by profit might still have integrity under this principle — the principle simply does not address that case. The direction of the conditional matters enormously, and this answer points it the wrong way."
+  },
+  {
+   "row_id": "1f0b6a17-b66b-4526-b766-5a501bc4ba50",
+   "letter": "B",
+   "body": "This answer provides exactly the missing bridge. It states: if any artistic decisions in creating something were affected by the need to make money, then the creation does not have absolute integrity as a work of art. Now trace the logic: the premises establish that in most independent films, artistic decisions were affected by profit needs. This new assumption says any profit-affected artistic decisions means no absolute integrity. Apply the assumption to the premise: most independent films had profit-affected artistic decisions, so most independent films lack absolute integrity. The conclusion follows with certainty. Note how the qualifier \"any\" in this answer is crucial — it means even a single profit-motivated decision is sufficient to destroy absolute integrity. This makes the assumption powerful enough to guarantee the conclusion from the established premises."
+  },
+  {
+   "row_id": "97ab4149-56ab-4bc9-9e10-e57956186e0e",
+   "letter": "C",
+   "body": "Whether individual creations have more integrity than corporate ones on average is a comparative claim that does not connect the argument's evidence to its conclusion. The argument needs a principle that links profit-affected decisions to the loss of absolute integrity. This answer compares two categories of creators (individuals versus groups) on average integrity levels — a different dimension entirely. Even if individuals produce higher-integrity work on average, this tells us nothing about whether profit-influenced decisions specifically undermine absolute integrity. The argument is not comparing independent films to studio films in its conclusion; it is making a standalone claim about most independent films. This comparative principle cannot generate that standalone conclusion."
+  },
+  {
+   "row_id": "84f4327d-461a-45c8-8385-ed8094e5a009",
+   "letter": "D",
+   "body": "Unconventionality having no bearing on integrity eliminates one potential measure of integrity but does not establish what does determine integrity. The argument mentions unconventionality only in the background context (people think indie films have more integrity because they are less conventional). The argument's actual reasoning chain is about profit affecting decisions leading to loss of absolute integrity. Whether unconventionality matters to integrity is a side issue that does not connect profit influence to integrity loss. Removing unconventionality from the integrity equation does not establish that profit influence destroys integrity. The argument needs a positive principle connecting profit to integrity loss, not a negative principle removing an irrelevant factor."
+  },
+  {
+   "row_id": "7cb66323-c5d0-4c32-8b53-6ff70928c676",
+   "letter": "E",
+   "body": "This answer says a creation has no integrity unless artistic decisions were unaffected by profit. At first glance, this might seem similar to the correct answer, but the wording creates a critical difference. This answer uses \"no integrity\" rather than \"no absolute integrity.\" The argument's conclusion is specifically about \"absolute integrity\" — a particular, highest standard. This answer applies to integrity in general, which is a stronger claim than what the argument needs. More importantly, the argument only claims most independent films lack \"absolute\" integrity — preserving the possibility that they have some integrity. An assumption that profit influence means \"no integrity\" at all would overshoot the conclusion. The correct answer precisely targets \"absolute integrity\" to match the conclusion's specific qualifier."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (6.0 em-dashes per 1k words; wrong-answer notes average 117.0 words).",
+ "tags": "emdash-heavy; pt157-158-register; possible-misquote"
+}

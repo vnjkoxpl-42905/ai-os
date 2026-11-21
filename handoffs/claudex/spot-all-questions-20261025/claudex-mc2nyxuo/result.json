@@ -1,0 +1,198 @@
+{
+  "status": "completed",
+  "mode": "review",
+  "provider": "claude",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "claude",
+    "builder": "codex",
+    "inspector": "claude"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-spot-video-release-20261025",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os\\brainstorms\\2026-10-25-spot-all-questions-review.md",
+  "plan_sha256": "556ddc3df450d4e102146ebb0047b4c68f319448cac8debd7a1f301ce3c96d77",
+  "requested_model": "claude-opus-5-5",
+  "requested_effort": null,
+  "base": null,
+  "snapshot": null,
+  "previous": null,
+  "started_at": 1792979150.4045522,
+  "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\handoffs\\claudex\\spot-all-questions-20261025\\claudex-mc2nyxuo",
+  "cli_version": "2.1.309 (Claude Code)",
+  "executable": [
+    "C:\\Users\\Joshu\\.local\\bin\\claude.exe"
+  ],
+  "exit_code": 0,
+  "session_id": "d97eb418-3d0c-40d5-b2f0-20124898e84a",
+  "response": {
+    "verdict": "REVISE",
+    "summary": "I checked all 48 items one at a time. For each, I worked out the relationship types and indicators myself before comparing with its credited answer, structured key, explanation and traps. The bank is in good shape. In every item the type set and the main indicators match my own reading. Necessary versus sufficient direction is right throughout: only if, only when and only where are necessary; if, whenever, provided and when are sufficient; unless is negated correctly in Q21, Q30, Q35, Q41 and Q46. Requirement language is kept separate from causation, and the newer corrections hold (Q35 credits Because, Q40 treats provided as sufficient, Q46 handles offsets correctly, Q47 has the pressure feedback loop). I found no objective error in any item's type set.\n\nThe problems I found are in grading and consistency, ranked by priority:\n1. **F1 (medium).** The instant local grader marks an answer correct when the student pastes the whole sentence, or any long clause, after each type label. This also works with swapped labels. The student never has to isolate the indicator, and the answer is marked correct with no coach call. This affects every item.\n2. **F2 (medium).** The intro's own example format, 'Causal, caused' with no quotation marks, is not credited instantly on Q5. The local splitter reads 'caused' as a second type label, so the answer falls through to the paid, model-dependent coach.\n3. **F3 (medium).** Comparative adjectives with an unstated alternative are treated two ways. 'larger' is credited in Q31, but 'lower bolts' and 'lower field' are traps in Q7 and Q26.\n\nThe remaining findings are low-severity consistency and editorial points (F4 to F9). Overall, the bank is accurate and moves through four sensible stages. Its main teaching weakness is that Q29 to Q48 almost all follow one template, which encourages students to expect three types every time.",
+    "findings": [
+      {
+        "id": "F1",
+        "severity": "medium",
+        "path": "src/features/activity-centre/worlds/observatory/observatory.ts",
+        "evidence": "confidentPair (observatory.ts:335-377): validUnit accepts any span that is an exact substring of the normalized statement and contains any credited indicator (lines 357-358). matchesCredited is the ActivityItemView fastPath (registry.tsx:256; ActivityItemView.tsx:207-221), so a true result is an immediate, unreviewed 'correct'. Traced example for Q28: 'comparative, The northern kiln fires more evenly than the southern one, since its flue draws efficiently; causal, The northern kiln fires more evenly than the southern one, since its flue draws efficiently'. answerPairs splits only on ';' (the comma before 'since' is not followed by a type word). Each pair names one type. The full-sentence unit contains 'more evenly than' and also 'since', so both pairs pass, and the answer stays correct with the labels swapped. The same holds for Q5 ('causal, A blocked flue caused the smoke to back into the reading room.': the trailing period is trimmed and the unit is a source substring) and for every Q01-Q48. On Q34, the single span 'so masons reserve it for thresholds, but only if' is credited under both causal and conditional. The drill's goal ('quotes the exact word or words that signal it', coach.drill) and the rule 'check that the student pairs it with the right type' (rubric line 16) are both bypassed. The test at answerKey.test.ts:131-132 deliberately credits a clause, but it does not guard the whole-sentence or shared-span case. Classification: a statically proven local-grading defect, not a model prediction.",
+        "fix": "In validUnit, reject a wider span when it contains an indicator keyed to a different relationship type in the same item, and cap how far it can extend (for example, the indicator plus at most about 6 words, and never the whole prompt). That keeps clause quotations such as 'because the sluice was left open' while sending whole-sentence or shared-span answers to the coach. Add tests: Q28 whole sentence under both labels -> false; Q5 whole sentence -> false; Q34 shared span -> false; Q26 'causal, because the sluice was left open' -> true."
+      },
+      {
+        "id": "F2",
+        "severity": "medium",
+        "path": "src/features/activity-centre/worlds/observatory/observatory.ts",
+        "evidence": "Intro rule 1 (spot-the-relationship.json:43) teaches the format 'Causal, caused.' In answerPairs (observatory.ts:282), the boundary regex splits on a comma followed by a type word, and KIND_PATTERNS.causal's 'cause[sd]?' matches 'caused'. For Q5, 'Causal, caused' therefore becomes pairs 'Causal' and ' caused'. The first pair has an empty remainder, so confidentPair returns false (line 340), and matchesCredited returns false. The answer goes to the paid coach call, and readAnswer/matchedKinds would also report causal as not drawn. The keyed test passes only because it quotes the indicator ('causal, \"caused\"'): the quotation mark blocks the lookahead. Q5 is the only item whose indicator is itself a type word. Statically proven. The coach's verdict on the fallback is model-dependent and was not observed.",
+        "fix": "In answerPairs, do not split when the text after the comma is the remainder of a pair whose label already matched, for example by only splitting where the type word is followed by a separator or quoted indicator. A narrower fix is to exempt a type word that is also a keyed indicator for that item. Add the test matchesCredited(byOrder(5), 'Causal, caused') === true. Optionally change the rule 1 example to a non-type-word verb such as 'Causal, destroyed'."
+      },
+      {
+        "id": "F3",
+        "severity": "medium",
+        "path": "src/features/activity-centre/content/spot-the-relationship.json",
+        "evidence": "Q31 credits the attributive 'larger' ('the larger mould') as a comparative even though the sentence does not name the alternative mould (key, context_benchmark, rubric line 15: 'larger implies a smaller alternative mould'). Q7 ('the bridge's lower bolts') and Q26 ('the lower field') have the same structure: an attributive comparative picking out one member of an implied set. Yet both list 'Counting ... as a separate comparison' as a trap, so a student who names a comparative there is marked as having invented a type (grading_rubric: 'no invented type'; matchesCredited fails on named.size). Consequence: a student who applies the Q31 standard, which the rubric endorses, is marked partial on Q7 and Q26. Rule 3 ('A description like deep or efficient alone isn't a comparison') does not tell the cases apart, because 'lower' and 'larger' are both comparative forms.",
+        "fix": "Pick one rule and apply it to all three items. Recommended: comparative-form adjectives that only label which member of a set is meant are not comparisons unless the second term is stated or measured. Under that rule, remove 'larger' from Q31's indicators, credited answer, explanation, context_benchmark and rubric line 15, leaving 'heavier' (against the stated light one) and 'farther than'. Corrected Q31 credited answer: comparative, \"heavier\" and \"farther than\"; causal, \"which is why\". Corrected Q31 explanation: 'Heavier contrasts one bell with the light one, and farther than compares how far their sound carries. Either one shows the comparison. Which is why gives the reason for the foundry's mould choice.' Then add one sentence to Q7 and Q26 explaining that 'lower' here only says which bolts or field. Alternatively, keep 'larger' and stop treating 'lower' as a trap in Q7 and Q26."
+      },
+      {
+        "id": "F4",
+        "severity": "low",
+        "path": "src/features/activity-centre/content/spot-the-relationship.json",
+        "evidence": "The revealed 'Credited answer' (CoachFeedback.tsx:86-93) prints credited_answers[0] as written, with alternatives joined by 'and': Q11 'less time than' and 'less ... than'; Q27 'because' and 'accelerates'; and similarly Q29, Q31, Q36, Q37, Q38, Q39, Q40, Q43, Q44, Q45, Q46, Q47, Q48. grading_rubric line 30 says these are alternatives and one is enough, but only the Q31 and Q36 explanations tell the student that. A student reading the Q27, Q37 or Q48 reveal will reasonably conclude both quotations were required. The 'and' join is fixed by the GROUP regex (observatory.ts:31-32) and by the test's correct() helper (answerKey.test.ts:9).",
+        "fix": "Either render alternatives with 'or' (update GROUP to accept \\s+(?:and|or)\\s+ and update correct() in the test), or add a short phrase to each multi-indicator explanation, for example 'Either because or accelerates is enough for the causal type.' Q11 also has a redundant alternative: its explanation should mention that the split 'less ... than' is also accepted."
+      },
+      {
+        "id": "F5",
+        "severity": "low",
+        "path": "src/features/activity-centre/content/spot-the-relationship.json",
+        "evidence": "Student-facing intro rules (rendered at ActivityEditorialIntro.tsx:371-378) give away item answers before the drill starts. Rule 7 (json:49) says 'In item 36, when supplies the condition under which the stated durability result holds'. That reveals Q36's conditional and its indicator, and the item number means nothing to a student on the intro page. Rule 9 (json:51) quotes a cut-down Q30 sentence, 'Unless the primer is thinner, the finish will craze', which pre-teaches Q30's conditional reading. The coach rubric can keep item references. The student rules should not.",
+        "fix": "In instructions.rules, replace the item-36 reference with a neutral example such as 'In \"The glaze crackles when the kiln cools too fast\", when states a condition.' Replace the Q30-derived unless example with one that is not in the bank, such as 'Unless the gate is locked, the dog gets out' meaning not locked -> gets out. Keep coach.rubric and grading_rubric unchanged."
+      },
+      {
+        "id": "F6",
+        "severity": "low",
+        "path": "src/features/activity-centre/content/spot-the-relationship.json",
+        "evidence": "Q42's key says \"'Inflate' alone describes an increase without identifying its cause\", yet its connects field reads 'short series lengths -> increased spurious matches', which states the very causal attribution it denies to 'inflate'. Q41 has the same tension: 'follows' is deliberately not credited, but connects reads 'the gradient -> water movement along it'. The coach receives this key (grading.ts:127), so a student who writes 'causal, inflate' or 'causal, follows' faces an AI grader whose key contradicts itself. How the model resolves that is unknown (risk, not an observed result).",
+        "fix": "Rewrite connects so it describes what the connective explains. Q42: 'spurious matches inflating at short series lengths -> the threshold requirement for acceptance'. Q41: 'water following the osmotic gradient -> the requirement that interstitial osmolality exceed filtrate osmolality'."
+      },
+      {
+        "id": "F7",
+        "severity": "low",
+        "path": "src/features/activity-centre/content/spot-the-relationship.json",
+        "evidence": "Explanation wording issues. Q14 and Q18 say 'Same facts as the last sentence', but Q13 and Q17 state a requirement while Q14 and Q18 state a cause. They are different claims about the same things, and that difference is the lesson, so 'same facts' undercuts it. Q45 changes the modality: the sentence says a coarse assay 'produces nulls that mean nothing', but the explanation says it 'can produce a null'. Q15 claims 'requires' is 'the most-missed conditional word in this set' with no visible evidence, and its prompt has the ungrammatical 'an added lecithin'. Q38 says 'makes dense canopy a requirement' but drops the threshold (denser than sixty percent).",
+        "fix": "Q14: 'Same kiln and damper as the last sentence, but now the sentence says closing the damper makes the rise happen.' Q18: 'Same pledge and grant as the last sentence, but now the pledge brought the grant about.' Q45: 'a coarse assay produces nulls that tell us nothing'. Q15 prompt: 'A stable emulsion requires added lecithin.' Drop the 'most-missed' claim or support it with attempt data. Q38: 'makes a canopy denser than sixty percent a requirement for seedling survival.'"
+      },
+      {
+        "id": "F8",
+        "severity": "low",
+        "path": "src/features/activity-centre/content/spot-the-relationship.json",
+        "evidence": "Voice: several explanations end in short slogan fragments, against the plain-explanation standard (teaching-voice.md: plain professional diction, explain why using the sentence). Examples: Q3 'Reads like time, works like *if*.'; Q7 'Say the verb aloud and the causation is audible.'; Q12 'Equality, not superiority. Still comparative.'; Q21 'the pair students scramble most.'; Q23 'A clean comparative. Two named things...'; Q24 'Comparison of a capacity rather than a property.' (an unclear distinction). These are editorial, not errors.",
+        "fix": "Replace each fragment with one sentence tied to the item. Q3: 'Whenever works like if here: each recalibration is enough for the shift.' Q12: 'As strong as says the two are equal in strength, and equality is still a comparison.' Q24: 'Better than compares how well each soil holds water.'"
+      },
+      {
+        "id": "F9",
+        "severity": "low",
+        "path": "src/features/activity-centre/content/spot-the-relationship.json",
+        "evidence": "Progression. Rungs 1-2 (Q1-26) build single-type discrimination well, with useful contrast pairs at Q13/14, Q15/16, Q17/18 and Q19/20. But the rules teach two distinctions that no item ever tests: temporal 'when' with no conditional (rule 7) and argumentative or temporal 'since' and 'because'. 'Only where' first appears inside a three-type compound at Q38, with no single-type practice. From Q29 to Q48, 18 of 20 items carry all three types, and most use the same 'Only X ... -er than benchmark ..., because/since + verb' template (Q29, Q37, Q38, Q42, Q44, Q48). That rewards a 'three every time' reflex. Only Q31 and Q43 break it.",
+        "fix": "Optional: add or swap in a few items. A Rung 2 temporal-when distractor (for example 'The bell rang when the ferry docked', which is not conditional). A single-type 'only where' item before Q38. A Rung 3/4 compound with no causal clause or no comparison, beyond Q43. Vary the clause order in Rung 4."
+      }
+    ],
+    "coverage": [
+      "Repo HEAD per session git snapshot: e2600137 on branch codex/spot-video-release-20261025, clean. The content JSON has no version field. I identify it as slug spot-the-relationship, 48 items, 1728 lines. I could not compute a SHA without a shell.",
+      "Files read in full: CLAUDE.md; src/features/activity-centre/content/spot-the-relationship.json (all 1728 lines: instructions, coach rubric, grading_rubric, rules, worked_example, all 48 items); spot-the-relationship.answerKey.test.ts; worlds/observatory/observatory.ts; supabase/functions/activity-coach/answerKey.ts and grading.ts; components/CoachFeedback.tsx, ActivityItemView.tsx, StatementPanel.tsx; relationshipPresentation.ts; ActivityEditorialIntro.tsx lines 355-399. Grep only: registry.tsx (fastPath = matchesCredited), observatory.test.ts, wiki/teaching-voice.md.",
+      "Rendering traced: the category ('Rung N') is hidden from students (StatementPanel.tsx:27-28) but sent to the model as 'Item type' (grading.ts:124). The explanation's leading count is stripped before display (relationshipPresentation.ts:24). credited_answers[0] is shown on reveal. Rules are shown on the intro page. The first-hint leak guard (hintLeaks) replaces leaking feedback with SAFE_FIRST_HINT. The model is google/gemini-3.1-flash-lite (grading.ts:141). Its availability is not verified.",
+      "Q01 conditional 'only if' (vent opens -> 28 degrees, necessary). PASS.",
+      "Q02 conditional 'if' (sufficient). PASS.",
+      "Q03 conditional 'whenever' (sufficient). 'shift' is a change, not a comparison. PASS. F8 voice.",
+      "Q04 conditional 'required'. 'before' is temporal. Modality ('may be removed') kept. PASS.",
+      "Q05 causal 'caused'. PASS on content. F1 and F2 grading defects (unquoted 'Causal, caused' is not credited instantly).",
+      "Q06 causal 'destroyed'. 'late' and 'most' are not comparisons. PASS.",
+      "Q07 causal 'corroded'. F3: the trap rejects 'lower bolts', which is inconsistent with Q31's 'larger'.",
+      "Q08 causal 'produced'. 'new', 'measurable' and 'drop' are not comparisons. PASS.",
+      "Q09 comparative 'louder than'. PASS.",
+      "Q10 comparative 'lighter than' (explicit benchmark: last year's). PASS.",
+      "Q11 comparative 'less time than' / 'less ... than' (alternatives). PASS. F4 (the 'and' join reads as both required).",
+      "Q12 comparative 'as strong as' (equality). PASS. F8.",
+      "Q13 conditional 'only when' (necessary). PASS.",
+      "Q14 causal 'raises'. PASS. F7 ('same facts').",
+      "Q15 conditional 'requires'. PASS. F7 (grammar, unsupported claim).",
+      "Q16 causal 'stabilizes'. PASS.",
+      "Q17 conditional 'contingent on'. PASS.",
+      "Q18 causal 'secured'. PASS. F7.",
+      "Q19 conditional 'depends on'. PASS.",
+      "Q20 causal 'sank' (figurative). PASS.",
+      "Q21 conditional 'unless' (catalogued -> signed; the No...unless direction is right). PASS. Note: the prompt word 'condition' matches the conditional type pattern, so coach feedback that mentions 'condition report' can trip the generic-hint fallback. Minor, safe failure.",
+      "Q22 causal 'yields'. 'prolonged' and 'deep' are not comparisons. PASS.",
+      "Q23 comparative 'more extensive than'. PASS.",
+      "Q24 comparative 'better than'. PASS. F8 (unclear 'capacity vs property').",
+      "Q25 comparative 'stronger ... than' (split). PASS.",
+      "Q26 causal 'because' (an actual cause, not argument support). F3 ('lower field' trap).",
+      "Q27 conditional 'Only if' (viable -> 4 degrees); causal 'because'/'accelerates'. PASS. F4.",
+      "Q28 comparative 'more evenly than'; causal 'since' (reason, not time). 'efficiently' is not a comparison. PASS on content. F1 example.",
+      "Q29 conditional 'Only when'; comparative 'lower than' (8% benchmark); causal 'because'/'expands'. PASS. I did not judge wood-science plausibility.",
+      "Q30 conditional 'Unless' (not thinner -> craze); comparative 'thinner than'; causal 'since'. PASS. Optional: 'different rates' could be accepted as another comparative indicator, but the type is already credited. F5 (rule 9 reuses this sentence).",
+      "Q31 comparative 'heavier' / 'farther than' / 'larger'; causal 'which is why'. F3 ('larger' has no stated benchmark). The unstated step (a larger mould makes a heavier bell) goes unexplained. Editorial.",
+      "Q32 conditional 'only when'; comparative 'exceeds'; causal 'dampens'. PASS.",
+      "Q33 conditional 'Provided' (sufficient); comparative 'colder than'; causal 'because'. PASS.",
+      "Q34 comparative 'harder ... than'; causal 'so'; conditional 'only if' (reserve -> stain-free). PASS. F1 (shared span credited under two types).",
+      "Q35 causal 'Because'; comparative 'slower than' (earlier state); conditional 'unless' (grind -> dredged). PASS.",
+      "Q36 conditional 'when' (sufficient: softer -> lasts longer, matching the arrow direction in DIRECTION); comparative 'longer'/'softer than'; causal 'because'/'drives'. PASS. F5 (spoiled by intro rule 7).",
+      "Q37 conditional 'only if'; comparative 'more vigorous than'; causal 'since'/'starves'. PASS.",
+      "Q38 conditional 'Only where' (necessary); comparative 'denser than' (60%); causal 'because'/'dries'. PASS. F7 (wording drops the threshold).",
+      "Q39 conditional 'Only when'; comparative 'closer ... than' (three split forms); causal 'since'/'elevates'. PASS. Plausibility not judged.",
+      "Q40 causal 'passivates'/'so'; comparative 'thicker ... than'; conditional 'provided' (sufficient, necessity correctly not claimed). PASS.",
+      "Q41 conditional 'Unless' (concentrate -> exceeds); comparative 'exceeds'; causal 'because'. PASS on types. F6 (connects field).",
+      "Q42 conditional 'only if'; comparative 'higher than'; causal 'since'. PASS on types. F6 (connects contradicts the 'inflate' note).",
+      "Q43 causal 'lowers'/'which is why'; comparative 'faster ... than'. Correctly has no conditional ('at ambient temperature'). PASS.",
+      "Q44 conditional 'Only where'; comparative 'lower than'; causal 'because'/'homogenizes'. PASS.",
+      "Q45 conditional 'Provided' (sufficient); comparative 'finer than'; causal 'since'/'produces'. PASS on types. F7 (modality 'can').",
+      "Q46 causal 'raises'/'so'/'offsets'; comparative 'higher than'; conditional 'unless' (not offset -> height result; no converse). PASS.",
+      "Q47 conditional 'only when' (necessary); comparative 'above'/'higher still'; causal 'drives'. Feedback loop explained correctly. PASS.",
+      "Q48 conditional 'Only if' (trusted -> regional curve); comparative 'more regionally appropriate than'/'more ... than'; causal 'because'/'produces'. PASS. Note: an unquoted 'more than' is credited locally as the two halves. Consistent with the rubric."
+    ],
+    "limitations": [
+      "This was a source-only audit. I ran no tests, no browser session, no signed-in production check and no live coach or provider calls. Claims about model behaviour on fallback paths are risks, not observations.",
+      "The repository cannot prove what content or answer keys are currently in the production database or historical snapshots. relationshipExplanation shows canonical explanations only for snapshots whose prompts match.",
+      "I did not compute the content file's SHA256 or confirm HEAD beyond the session's git snapshot (e2600137).",
+      "Read only in part or by grep: ObservatoryStage.tsx, observatory.test.ts, response.ts, index.ts and request.ts of activity-coach, the SQL receipt functions, and lsat-teaching-voice-standard.md. Checks of model selection and canonical payload construction stop at grading.ts.",
+      "Traces of local matcher behaviour (F1, F2) were done by hand from the regex source, not by running it.",
+      "I did not judge scientific plausibility (Q29, Q39, Q41, Q47) except where it affected clarity. None did materially."
+    ]
+  },
+  "usage": {
+    "input_tokens": 28,
+    "cache_creation_input_tokens": 94514,
+    "cache_read_input_tokens": 881987,
+    "output_tokens": 29075,
+    "output_tokens_details": {
+      "thinking_tokens": 18250
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 94514,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 8404,
+        "cache_read_input_tokens": 97756,
+        "cache_creation_input_tokens": 343,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 343
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "permission_denials": [],
+  "total_cost_usd": 1.5141214,
+  "elapsed_seconds": 322.66
+}

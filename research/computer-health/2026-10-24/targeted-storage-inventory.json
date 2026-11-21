@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-24",
+  "mode": "targeted read-only filesystem metadata; no reparse traversal",
+  "paths_bytes": {
+    "recovery": 58050050007,
+    "Temp": 10459557923,
+    "Downloads": 5520157056,
+    ".cache": 4060218183,
+    "ai-os/.git": 9852584556
+  },
+  "cache_bytes": {
+    "codex-runtimes": 2535800090,
+    "puppeteer": 739714572,
+    "hyperframes": 636927111,
+    "huggingface": 147776390
+  },
+  "sync_temp_bytes": {
+    "github-sync-wjh_p4j_": 9384881675,
+    "github-sync-xpyg_vum": 473347197,
+    "drive-workspace-sync-auhsqoxi": 256216524
+  },
+  "active_sync_temp": "github-sync-wjh_p4j_",
+  "active_sync_pid": 44184,
+  "exact_download_duplicate": {
+    "names": [
+      "Antigravity IDE (1).exe",
+      "Antigravity IDE.exe"
+    ],
+    "bytes_each": 227712776,
+    "sha256": "a8c25631fd5e43bf217a6cf510ca796441817f4ad9c50b1d892282c7366edc4a"
+  },
+  "git_count_objects": {
+    "loose_count": 1607,
+    "loose_MiB": 755.55,
+    "packed_objects": 38739,
+    "packs": 5,
+    "pack_GiB": 8.27,
+    "prune_packable": 0,
+    "garbage_files": 23,
+    "garbage_MiB": 152.89
+  },
+  "coverage_errors": [
+    "Temp/WinSAT access denied"
+  ],
+  "limits": [
+    "Logical bytes, not allocated space",
+    "Recovery contains before-restore copies and conflict originals; disposal safety not established",
+    "No whole-C scan",
+    "No deletions or moves",
+    "Unreferenced temp ownership not established from absence of process arguments alone",
+    "Pack size alone does not establish safe Git pruning"
+  ]
+}

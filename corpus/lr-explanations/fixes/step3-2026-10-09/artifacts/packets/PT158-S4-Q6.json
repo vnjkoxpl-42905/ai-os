@@ -1,0 +1,84 @@
+{
+ "qid": "PT158-S4-Q6",
+ "type": "Flaw",
+ "difficulty": "4",
+ "key_db": "B",
+ "stimulus_db": "If the proposed air pollution measures were to be implemented, ozone levels in the city's air would be one fifth lower than current levels. Since the ozone in our air is currently responsible for over $5 billion in health costs, we would spend about a billion dollars less on these ozone-related health costs should the proposed measures be adopted.",
+ "stem_db": "The argument is most vulnerable to criticism on the grounds that it",
+ "choices_db": {
+  "A": "fails to consider the possibility that other types of pollution not involving ozone might rise, perhaps even producing an overall increase in health costs",
+  "B": "presumes, without providing evidence, that ozone-related health costs in the city vary roughly in proportion to ozone levels",
+  "C": "provides no explicit reason for believing that the proposed air pollution measures will in fact be adopted",
+  "D": "attempts to support its conclusion by making an appeal to emotions",
+  "E": "discusses air pollution in order to draw attention away from more significant sources of health-related costs"
+ },
+ "bank": {
+  "stimulus": "If the proposed air pollution measures were to be\n implemented, ozone levels in the city’s air would be one\n fifth lower than current levels. Since the ozone in our air\n is currently responsible for over $5 billion in health costs,\n we would spend about a billion dollars less on these\n ozone-related health costs should the proposed measures\n be adopted.",
+  "stem": "The argument is most vulnerable to criticism on the\n grounds that it",
+  "choices": {
+   "A": "fails to consider the possibility that other types of pollution not involving ozone might rise, perhaps even producing an overall increase in health costs",
+   "B": "presumes, without providing evidence, that ozone-related health costs in the city vary roughly in proportion to ozone levels",
+   "C": "provides no explicit reason for believing that the proposed air pollution measures will in fact be adopted",
+   "D": "attempts to support its conclusion by making an appeal to emotions",
+   "E": "discusses air pollution in order to draw attention away from more significant sources of health-related costs"
+  },
+  "key": "B"
+ },
+ "explanation_id": "b73e50b3-a8cb-427b-aca3-8d26d38a2281",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "e4ba3f07-62ae-44d9-99f4-08896cab079b",
+   "position": 0,
+   "label": "Conclusion",
+   "body": "If the proposed air pollution measures are adopted, it will save us about $1 billion in health costs."
+  },
+  {
+   "row_id": "04d03232-ed43-4784-a704-d1c3dc7f2ce6",
+   "position": 1,
+   "label": "Evidence",
+   "body": "If the proposed air pollution measures are adopted, ozone levels will be 1/5 what they currently are.\nThe ozone in our air currently costs us over $5 billion in health costs."
+  },
+  {
+   "row_id": "700f2f4d-2273-44df-b221-4909c2471829",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "The author is taking 1/5 of the $5+ billion price tag of ozone health costs and assuming that if we reduce ozone by 1/5, then we reduce those costs by 1/5.\nBut who said it would be a 1:1 ratio of ozone-reduction to cost-reduction? Maybe 80% of our current ozone (1/5 less) is functionally the same as 100% of our current ozone levels.\nPerhaps most of the health care costs kick in when even 20% of the current ozone levels are present. Maybe once ozone passes a certain threshold, we rack up health costs, and any additional ozone in the air after that point adds negligible additional costs."
+  },
+  {
+   "row_id": "06c62d20-4965-4cea-a503-b5cada434090",
+   "position": 3,
+   "label": "Goal",
+   "body": "Look for an answer saying \"just because ozone is reduced by 1/5 doesn't mean associated health costs will be reduced by 1/5\"."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "bffd12d7-ab84-4100-bc84-b6dac33c0d0c",
+   "letter": "A",
+   "body": "This answer suggests the flaw is failing to consider that other types of pollution might increase to compensate for ozone reduction. While that is a legitimate real-world concern, it does not identify the actual logical flaw in the argument's reasoning. The argument's error is mathematical, not environmental: it assumes that a one-fifth reduction in ozone levels translates directly to a one-fifth reduction in ozone-related health costs. This proportionality assumption would be flawed even if no other pollutants existed. The relationship between ozone concentration and health outcomes could be exponential, could involve threshold effects, or could follow any number of non-linear patterns. Pointing to other pollutants addresses a secondary, external concern while missing the glaring proportionality assumption at the argument's core."
+  },
+  {
+   "row_id": "7b3adbf5-ce82-444a-89e9-6a0888d37b9d",
+   "letter": "B",
+   "body": "The argument's structure is: ozone-related health costs total $5 billion; if ozone were one-fifth lower, health costs would decrease by one-fifth, saving $1 billion. This arithmetic only works if health costs scale in direct, linear proportion to ozone concentration levels — an assumption the argument makes without any justification. But dose-response relationships in environmental health are typically non-linear. Threshold effects are common: ozone may be relatively harmless below a certain concentration but severely damaging above it. Alternatively, there may be diminishing marginal effects at lower concentrations or accelerating damage at higher ones. A 20% reduction in ozone could produce anywhere from negligible savings to a dramatic drop in health costs, depending on where on the dose-response curve current levels fall. The argument treats a complex epidemiological relationship as simple division. This answer correctly identifies that unjustified proportionality assumption as the core flaw."
+  },
+  {
+   "row_id": "bc16125a-23d5-4830-b3a5-c92451a14cc0",
+   "letter": "C",
+   "body": "This answer points to a practical concern: perhaps the proposed measures to reduce ozone will never actually be implemented. While that is a legitimate real-world worry about policy feasibility, it is not a logical flaw in the argument's reasoning structure. The argument makes a conditional claim: IF ozone levels were one-fifth lower, THEN health costs would drop by about $1 billion. The logical flaw is in the \"then\" part — the assumed proportionality between ozone reduction and cost reduction. Whether the \"if\" part actually happens is a separate question about political or practical feasibility, not about the soundness of the reasoning. Even if the ozone-reducing measures were guaranteed to be adopted, the proportionality assumption would still be unjustified. This answer identifies an implementation obstacle rather than a reasoning error."
+  },
+  {
+   "row_id": "26867d8f-c1cd-426d-9948-f0ad3dc938da",
+   "letter": "D",
+   "body": "An appeal to emotions substitutes emotional persuasion for logical reasoning — using fear, sympathy, outrage, or other feelings instead of evidence and analysis. The argument here does the opposite: it relies entirely on numerical data and mathematical calculation. It cites $5 billion in costs, a one-fifth reduction in ozone, and computes $1 billion in savings. This is about as clinical and quantitative as an argument can get. The flaw is not that the argument appeals to feelings but that its quantitative reasoning contains an unjustified mathematical assumption — specifically, that health costs scale proportionally with ozone levels. The argument is too reliant on numbers, not too reliant on emotions; it just gets the numerical relationship wrong."
+  },
+  {
+   "row_id": "71a7fb4c-55ec-4137-8f2a-6c4ecdb78188",
+   "letter": "E",
+   "body": "Drawing attention away from a more significant issue (a red herring) involves introducing an irrelevant topic to distract from the real subject under discussion. The argument here stays squarely focused on ozone and health costs throughout. Every element of the argument — ozone levels, health cost figures, the proposed reduction, the projected savings — directly pertains to its central claim. There is no digression, no attempt to change the subject, and no irrelevant tangent introduced to distract from a more important source of pollution. The argument is focused but wrong: it maintains laser precision on the topic while embedding a flawed mathematical assumption in its reasoning. Staying on topic and being right are two different things, and this argument achieves the first while failing at the second."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (7.2 em-dashes per 1k words; wrong-answer notes average 124.0 words).",
+ "tags": "emdash-heavy; pt157-158-register; possible-misquote"
+}

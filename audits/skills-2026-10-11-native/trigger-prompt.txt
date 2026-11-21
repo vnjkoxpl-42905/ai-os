@@ -1,0 +1,8 @@
+Read-only native skill trigger test. Do not edit files, start agents, contact live systems, or run the workflows. For each of these user requests, select the appropriate skill using your initial skill descriptions. Explain the boundary briefly:
+1. "Ingest my newly clipped article about Codex workflows into my second brain."
+2. "Find what my second brain says about my web clipping workflow."
+3. "Lint my second brain for contradictions and orphan pages."
+4. "File a student's session transcript and reconcile their records."
+5. "Create a source-backed persona agent for a different educator."
+6. "Write a quick Python function that adds two numbers." (negative control: no second-brain skill)
+Then actually load the query and lint skills using your normal skill mechanism. If a user-level dispatcher loads first, follow it to the project's skill entrypoint by reading that file, but do not execute the workflow. Quote one distinctive operative instruction from each project entrypoint. Report failures honestly. Do not infer loading from a filename or listing alone.

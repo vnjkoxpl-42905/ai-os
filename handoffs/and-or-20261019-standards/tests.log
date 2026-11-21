@@ -1,0 +1,127 @@
+
+> vite_react_shadcn_ts@0.0.0 test
+> vitest run src/bootcamps/conditionals/components/AndOrLessonStandard.test.tsx src/bootcamps/conditionals/content/andOrItems.test.ts src/bootcamps/conditionals/components/AndOrPractice.test.tsx src/bootcamps/conditionals/components/AndOrTeachingRegressions.test.tsx src/bootcamps/conditionals/routes.andOr.test.tsx src/bootcamps/conditionals/components/OpeningCourse.test.tsx src/bootcamps/conditionals/progress.test.ts src/bootcamps/conditionals/routes.test.tsx --maxWorkers=1 --no-file-parallelism --testTimeout=90000
+
+
+ RUN  v3.2.4 C:/Users/Joshu/dev/ai-os-projects/lsatu-and-or-20261019
+
+Browserslist: browsers data (caniuse-lite) is 6 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+stderr | src/bootcamps/conditionals/routes.test.tsx > opens the same numbered Chapter 1 course at 
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/bootcamps/conditionals/routes.test.tsx (77 tests) 13185ms
+   ✓ opens the same numbered Chapter 1 course at   1075ms
+   ✓ opens the same numbered Chapter 1 course at /lessons  933ms
+   ✓ allows teacher preview through the same numbered course entry  456ms
+   ✓ keeps destinations in one course navigation and preserves assignment context  339ms
+   ✓ resumes a finished old run at the new work without losing its drafts, attempts, or timing  708ms
+   ✓ completes the available subset of a shared area practice run and keeps its other work  1057ms
+   ✓ completes the available subset of a shared phase practice run and keeps its other work  1085ms
+   ✓ completes the available subset of a shared area flashcards run and keeps its other work  1136ms
+   ✓ stamps the opening edition only when Mark lesson as read is clicked and keeps it after reloading practice  1651ms
+   ✓ filters the new course index by existing teacher authorization  401ms
+   ✓ keeps assignment context without recording legacy completion on new course navigation  315ms
+stderr | src/bootcamps/conditionals/components/OpeningCourse.test.tsx > offers five numbered lessons in Chapter 1 and eleven interleaved drill entries
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/bootcamps/conditionals/components/OpeningCourse.test.tsx (43 tests) 6620ms
+   ✓ offers five numbered lessons in Chapter 1 and eleven interleaved drill entries  982ms
+   ✓ renders the dedicated 'sufficient' destination without an old reader index  332ms
+   ✓ renders the dedicated 'necessary' destination without an old reader index  461ms
+   ✓ retains a corrected answer when returning from another dedicated lesson  520ms
+   ✓ starts mixed practice from concrete instructions and returns to the same instruction page  318ms
+   ✓ focuses the destination after drawer navigation and restores the trigger after Escape  320ms
+   ✓ continues the first unfinished course step without skipping prerequisites for a later draft  466ms
+stderr | src/bootcamps/conditionals/routes.andOr.test.tsx > shows the whole Chapter 2 to a teacher preview and to a full course assignment, after all of Chapter 1
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/bootcamps/conditionals/routes.andOr.test.tsx (14 tests) 3340ms
+   ✓ shows the whole Chapter 2 to a teacher preview and to a full course assignment, after all of Chapter 1  792ms
+   ✓ shows each Chapter 2 step to exactly the assignment targets whose real unit membership reaches its topic  613ms
+   ✓ lists the recorded legacy practice for And/Or alongside the numbered chapter without joining the opening edition  1056ms
+stderr | src/bootcamps/conditionals/components/AndOrPractice.test.tsx > runs each lesson’s Pop Quiz one question at a time with a specific hint
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/bootcamps/conditionals/components/AndOrPractice.test.tsx (8 tests) 1621ms
+   ✓ checks a built diagram by structure, hints at the mistake, and clears the build when the wording changes  429ms
+stderr | src/bootcamps/conditionals/components/AndOrTeachingRegressions.test.tsx > teaches that one known AND member leaves the group not established, not false
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ✓ src/bootcamps/conditionals/components/AndOrTeachingRegressions.test.tsx (14 tests) 1174ms
+   ✓ account-store path through the real course reducer > remembers a reveal through a wording edit and a later correct rebuild, and reloads it from the account  330ms
+ ✓ src/bootcamps/conditionals/content/andOrItems.test.ts (16 tests) 52ms
+ ✓ src/bootcamps/conditionals/progress.test.ts (25 tests) 15ms
+stderr | src/bootcamps/conditionals/components/AndOrLessonStandard.test.tsx > the approved seven-section lesson shape > puts 'and-or-both-or-either' in the standard order, with the film after the idea and before the procedure
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ ❯ src/bootcamps/conditionals/components/AndOrLessonStandard.test.tsx (18 tests | 2 failed) 626ms
+   ✓ the approved seven-section lesson shape > puts 'and-or-both-or-either' in the standard order, with the film after the idea and before the procedure 101ms
+   ✓ the approved seven-section lesson shape > puts 'and-or-either-side' in the standard order, with the film after the idea and before the procedure 30ms
+   ✓ the approved seven-section lesson shape > puts 'and-or-negate-group' in the standard order, with the film after the idea and before the procedure 43ms
+   ✓ the approved seven-section lesson shape > gives 'and-or-both-or-either' a user-started film with captions and a poster, and no always-open transcript 28ms
+   ✓ the approved seven-section lesson shape > gives 'and-or-either-side' a user-started film with captions and a poster, and no always-open transcript 15ms
+   × the approved seven-section lesson shape > gives 'and-or-negate-group' a user-started film with captions and a poster, and no always-open transcript 33ms
+     → expected <strong></strong> to be null
+   × the approved seven-section lesson shape > shows the written version only when it is opened, and also when the video fails 12ms
+     → fireEvent.toggle is not a function
+   ✓ the approved seven-section lesson shape > keeps each film script at a length that narrates in roughly 60 to 90 seconds 1ms
+   ✓ written procedure and operable demos > states bold numbered steps before the learner-operated explorer in lesson 2.2 42ms
+   ✓ written procedure and operable demos > names the click on every procedure control 70ms
+   ✓ written procedure and operable demos > shows a double negation cancelling in the second demo, not only saying so 64ms
+   ✓ slim Wrong and Right cards > gives every card in 'and-or-both-or-either' a status badge, one line and a diagram, with no stacked explanation 17ms
+   ✓ slim Wrong and Right cards > gives every card in 'and-or-either-side' a status badge, one line and a diagram, with no stacked explanation 11ms
+   ✓ slim Wrong and Right cards > gives every card in 'and-or-negate-group' a status badge, one line and a diagram, with no stacked explanation 23ms
+   ✓ slim Wrong and Right cards > writes the 2.2 cards as complete if/then rules, not shorthand 23ms
+   ✓ concise Pop Quiz feedback > answers in one natural sentence and drops the long reasoning from the quiz 40ms
+   ✓ concise Pop Quiz feedback > reads a conditional answer back as if/then, but leaves a status answer as a plain sentence 36ms
+   ✓ concise Pop Quiz feedback > keeps Not that one and a specific reason for a wrong choice 35ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/bootcamps/conditionals/components/AndOrLessonStandard.test.tsx > the approved seven-section lesson shape > gives 'and-or-negate-group' a user-started film with captions and a poster, and no always-open transcript
+AssertionError: expected <strong></strong> to be null
+
+- Expected: 
+null
+
++ Received: 
+<strong>
+  A parade float is approved if its brakes pass and its lights work.
+</strong>
+
+ ❯ src/bootcamps/conditionals/components/AndOrLessonStandard.test.tsx:38:68
+     36|     expect(track.getAttribute('src')).toBe(`/media/conditionals/and-or…
+     37|     const firstSentence = andOrLectures[id].scenes[0].sentences[0];
+     38|     expect(screen.queryByText(new RegExp(escaped(firstSentence)))).toB…
+       |                                                                    ^
+     39|   });
+     40| 
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  src/bootcamps/conditionals/components/AndOrLessonStandard.test.tsx > the approved seven-section lesson shape > shows the written version only when it is opened, and also when the video fails
+TypeError: fireEvent.toggle is not a function
+ ❯ src/bootcamps/conditionals/components/AndOrLessonStandard.test.tsx:47:15
+     45|     const sentence = andOrLectures[id].scenes[0].sentences[0];
+     46|     details.open = true;
+     47|     fireEvent.toggle(details);
+       |               ^
+     48|     expect(screen.getByText(new RegExp(escaped(sentence)))).toBeVisibl…
+     49|     cleanup();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+
+ Test Files  1 failed | 7 passed (8)
+      Tests  2 failed | 213 passed (215)
+   Start at  04:55:43
+   Duration  43.44s (transform 2.30s, setup 957ms, collect 8.07s, tests 26.63s, environment 4.93s, prepare 950ms)
+

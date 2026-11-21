@@ -1,0 +1,173 @@
+{
+  "status": "completed",
+  "mode": "review",
+  "provider": "claude",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "claude",
+    "builder": "codex",
+    "inspector": "claude"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-my-work-20261026",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-my-work-20261026\\docs\\plans\\my-work-assignment-sync-20261028.md",
+  "plan_sha256": "b7813e85149bd8f4b05cc6c14f5eaf3ad01bdaad67ef973ac5278b473afcbfe3",
+  "requested_model": "claude-opus-5-5",
+  "requested_effort": "medium",
+  "base": null,
+  "snapshot": null,
+  "previous": null,
+  "started_at": 1793184878.4145575,
+  "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\design\\reviews\\my-work-assignment-sync-20261028\\claudex-s0dh6j6g",
+  "cli_version": "2.1.309 (Claude Code)",
+  "executable": [
+    "C:\\Users\\Joshu\\.local\\bin\\claude.EXE"
+  ],
+  "exit_code": 0,
+  "session_id": "39462d44-8a92-44c0-988d-e9a620db3b37",
+  "response": {
+    "verdict": "REVISE",
+    "summary": "The plan's direction is sound: source rows stay authoritative, there is a durable outbox, read receipts are scoped to their owner, and acknowledgment waits for the destination to load. But it doesn't cover several assignment writers that exist in the repo today. Weekly plans, session recaps and announcements, the practice-test upsert/reactivate path, and five or more direct notifyStudentOfClassroomItem callers would get double, wrong or missing alerts. The migration is applied before the frontend is published, so the still-live old client double-notifies during that window. Inbox and email still go out immediately for scheduled work, which reveals locked future content. Some destinations (practice tests on /testing, duplicate bootcamp routes) have no per-item identity to acknowledge. The disposable-database tests would run against an index that the live database lacks. These are fixable by tightening the plan before implementation.",
+    "findings": [
+      {
+        "id": "F1",
+        "severity": "high",
+        "path": "src/lib/classroomNotify.ts",
+        "evidence": "Step 6 applies the migration (new insert triggers enqueue auto events) before step 7 publishes the frontend. Until publication, and for any student or teacher tab still running the cached bundle, assignWork.ts:620, teacherAssignResource.ts:164/232, AssignmentBuilder.tsx:270, TeacherBootcamps.tsx:108, StudentSchedulePanel.tsx:126, agentActions.ts:120 and publishSessionBundle.ts:135 still call notifyStudentOfClassroomItem, which inserts an unkeyed type='assignment' bell (classroomNotify.ts:111-118). Old clients don't send notification_policy, so the column default decides. If the default is 'auto', cron delivers a second bell for the same work. The plan bans title/substring dedup and the live unread unique index is absent, so nothing stops the duplicate. If the default is 'managed', rows from old clients wait for a finalize call that never comes.",
+        "fix": "Define a compatibility window. One option: have the migration default new rows to a 'legacy_client' policy, treated as already notified because the client inserts its own bell. Only the new frontend sets auto/managed explicitly, and the default flips to auto in a follow-up after publication is verified. The alternative is to publish the frontend first behind a feature flag. Add a test where a legacy client inserts a source row plus a bell and exactly one alert results."
+      },
+      {
+        "id": "F2",
+        "severity": "high",
+        "path": "src/lib/accessTierClient.ts",
+        "evidence": "The browser fallback for practice tests (lines 93-133) upserts practice_test_assignments on conflict (student_id, pt). When an existing classroom_items mirror exists it is UPDATEd from archived back to assigned/visible rather than inserted. So unassign followed by reassign of a PrepTest produces no INSERT, and the plan's 'new source/standalone inserts enqueue' never fires. Lifetime uniqueness keyed on student+source_table+source_id would also block a legitimate re-issue, since it reuses the same row. That contradicts both 'Reassignment instances remain distinct' and 'Auto writers (including existing practice-test edge paths) require no edge deployment'. The admin-manage-users edge path is likely the same upsert, but this review couldn't inspect it.",
+        "fix": "Treat a transition from archived/revoked/hidden to assigned+visible as an issuance event, with an event key that includes an issuance generation (e.g. an assigned_at epoch or a per-row issue counter), on both the source table and the mirror. Add PG tests for PT assign → unassign → reassign through both the edge and fallback paths."
+      },
+      {
+        "id": "F3",
+        "severity": "high",
+        "path": "src/pages/teacher/TeacherWeeklyPlans.tsx",
+        "evidence": "Weekly plans don't go through assignWorkBundle day bundles; that is curriculumSchedule.ts:418-434. useWeeklyPlanPublisher.ts:196 writes classroom_items directly via createClassroomItem with per-day unlock_at (weeklyPlanPublish.ts:185). TeacherWeeklyPlans.tsx:115-121 then immediately sends one inbox+bell+email summary to /my-work/to-do covering the whole week, future days included. The plan's evidence line conflates these two paths. Under auto-on-insert, each weekly-plan item would also queue its own per-item alert at unlock, which double-notifies against the summary and breaks the 'one summary per plan' UX that assignWork.ts:615-617 cites.",
+        "fix": "List the weekly-plan publisher explicitly as a managed or suppressed writer, with its own group identity. Decide whether the summary stays immediate (it reveals future items) or becomes per-day releases at unlock. Add a test that publishing a 7-day weekly plan produces exactly the intended alerts."
+      },
+      {
+        "id": "F4",
+        "severity": "medium",
+        "path": "src/lib/publishSessionBundle.ts",
+        "evidence": "Standalone classroom_items inserts include session_recap and announcement types (aiTAQueue.ts:22-58, RecapComposer.tsx:55, publishSessionBundle.ts:95/123). Session recaps already get a type='message' bell from sessionBundleNotify.ts:67-73. The plan says standalone inserts enqueue automatically with 'equivalent standalone Classroom metadata', but never says which classroom_items types count as assignment work. A recap or announcement would get an extra 'New assignment' alert, or a duplicate of the recap's message bell.",
+        "fix": "Add an explicit allow-list of deliverable classroom_items types (e.g. note/homework/drill/activity/bootcamp_module/practice_test/link). Default every other type to suppressed. Mark the recap path suppressed or managed so its existing message bell stays the only alert. Test each type."
+      },
+      {
+        "id": "F5",
+        "severity": "medium",
+        "path": "src/lib/assignWork.ts",
+        "evidence": "runAssign sends inbox and email right away through notifyStudentOfClassroomItem, including when scheduledForLocalDate sets a future unlockAt (lines 157-161, 618-628). The Reading Center path (line 413) does the same. The plan defers only in-app alerts ('new automatic delivery is in-app only'; 'do not double-send existing inbox/email') and says nothing about the immediate inbox/email. So the title and description of locked future work still reach the student's inbox and email, which contradicts 'cannot disclose locked future content'.",
+        "fix": "State the channel policy for scheduled work. Either suppress immediate inbox/email when unlockAt is in the future (and say whether email is ever sent at unlock), or explicitly accept and document the disclosure. Add a test that a future-dated bundle sends no immediate inbox/email/bell content."
+      },
+      {
+        "id": "F6",
+        "severity": "medium",
+        "path": "src/lib/assignWork.ts",
+        "evidence": "When a student's bundle fails partway, runAssign deletes the source rows and classroom items it already committed (rollback, lines 649-651 and 727-748). These are separate PostgREST requests, not one transaction. The plan adds a time-bounded recovery path for interrupted managed groups that 'may announce only rows actually committed'. If recovery or cron runs between a committed insert and the client's rollback delete, or the rollback delete itself fails and only logs (lines 737, 747), the group can be announced for work that is then removed or is a half-bundle. The plan's 'no record deletion' rule also conflicts with this existing deletion-based rollback and doesn't say what happens to outbox rows for deleted sources.",
+        "fix": "Make the outbox reference the source with ON DELETE CASCADE, or have a trigger that cancels pending events when the source is deleted. Recovery should require a minimum age well beyond the client timeout and must re-check that every row exists and is visible and published at release time. State that the existing rollback deletes of rows written in the same attempt are intentional and allowed. Add a test where rollback races recovery."
+      },
+      {
+        "id": "F7",
+        "severity": "medium",
+        "path": "src/lib/accessTierClient.ts",
+        "evidence": "Practice-test mirrors route to the shared href '/testing' (metadata_json {pt, href:'/testing'}, line 130), and the plan notes a live duplicate bootcamp route. The plan wires acknowledgment to 'practice-test destination readiness' and bootcamp routes, but loading /testing doesn't say which PT was opened. The hook would have to either acknowledge every assigned PT (false reads for the others) or none. The same ambiguity applies to two items sharing one bootcamp route.",
+        "fix": "Give the acknowledgment call the canonical work identity (e.g. pass the classroom item or source id through the route or query string, or acknowledge only when the PT runner loads a specific pt). Define how a load maps to duplicates that share a canonical route: mark the deterministic presented row plus its hidden duplicates, never unrelated PTs. Add tests with two assigned PTs."
+      },
+      {
+        "id": "F8",
+        "severity": "medium",
+        "path": "supabase/migrations/20260424000000_create_notifications.sql",
+        "evidence": "The repo migration creates notifications_unique_unread_assignment ON (user_id, link) WHERE type='assignment' AND read=false (lines 94-96), but the plan says that index is absent live. Disposable PostgreSQL tests (step 3) built from repo migrations will have it and live won't, so ON CONFLICT and retry behaviour differs between test and production. If the index exists, two unread bundle alerts both linking '/classroom' (assignWork.ts:678), or two weekly summaries to '/my-work/to-do', collide. The second either errors in cron or gets silently dropped.",
+        "fix": "Make the new migration reconcile schema drift explicitly: DROP INDEX IF EXISTS notifications_unique_unread_assignment and rely only on the outbox/event uniqueness key. Or, if the index is kept, prove group links are unique. Run the disposable tests against a schema dumped from live, not only the repo migrations."
+      },
+      {
+        "id": "F9",
+        "severity": "medium",
+        "path": "src/lib/markNoteRead.ts",
+        "evidence": "Existing unread assignment bells carry no event key. clearNoteNotifications matches by substring LIKE '%itemId%' (lines 64-70), and bundle bells link '/classroom' with no item id. The plan defers assignment bell read-clearing to destination acknowledgment, which clears only 'associated' keyed alerts, and it bans title/substring heuristics for legacy rows. Unless every legacy unread bell is backfilled with a link to an event or item, a student who clicks a legacy bell will never see it clear, and legacy '/classroom' bundle bells can't be linked to anything.",
+        "fix": "Specify the legacy backfill: parse exact route patterns (/classroom/<uuid>, /guided/<uuid>, /activities/<uuid>, /classroom/item/<uuid>) into event links. For alerts that can't be linked, such as '/classroom' bundles and weekly summaries, keep click-to-read behaviour. Add an audit query showing how many unread legacy assignment bells fall into each bucket before and after."
+      },
+      {
+        "id": "F10",
+        "severity": "low",
+        "path": "src/lib/assignWork.ts",
+        "evidence": "A bundle produces one alert for N items (notificationFor, lines 675-680). The plan says opening one work item 'clears only the appropriate item/delivery-group alert' but doesn't define when a group alert clears. Clearing it on the first opened item makes the bell claim the remaining items were read. Never clearing it leaves a stale alert.",
+        "fix": "Define the rule, e.g. a group alert clears when every currently visible item in the group has a receipt (or when the student opens /classroom from the bell), and test it with a 3-item bundle."
+      },
+      {
+        "id": "F11",
+        "severity": "low",
+        "path": "supabase/migrations/20260424000000_create_notifications.sql",
+        "evidence": "Students can DELETE their own notifications (lines 23-25). If the release or retry logic decides an event was delivered by checking whether its notification row exists, a student's deletion would trigger re-delivery. The plan says uniqueness is independent of read status but not of deletion.",
+        "fix": "Record delivered_at/notification_id on the event row and base retry decisions only on event state. Add a test where deleting a delivered alert produces no re-delivery."
+      }
+    ],
+    "coverage": [
+      "Plan document docs/plans/my-work-assignment-sync-20261028.md (full)",
+      "src/lib/assignWork.ts (full: planFor, runAssign, notificationFor, rollback)",
+      "src/lib/classroomNotify.ts (full)",
+      "src/lib/sessionBundleNotify.ts (full)",
+      "src/lib/markNoteRead.ts (full)",
+      "src/hooks/useNotifications.ts (full)",
+      "src/lib/studentWorkProjection.ts (full)",
+      "src/lib/aiTAQueue.ts (full)",
+      "src/lib/accessTierClient.ts lines 70-149 (practice-test assign fallback)",
+      "src/lib/curriculumSchedule.ts lines 405-444 (day bundles)",
+      "src/pages/teacher/TeacherWeeklyPlans.tsx lines 80-140 (weekly summary notify)",
+      "supabase/migrations/20260424000000_create_notifications.sql (full: RLS, guard trigger, unread unique index)",
+      "Grep-level tracing of every createClassroomItem/classroom_items insert caller, every notifyStudentOfClassroomItem caller, every assignWork/assignWorkBundle caller, notifications writers, and p_notify in MCP SQL migrations"
+    ],
+    "limitations": [
+      "No migration or code implementing the plan exists yet; this review covers the plan against the current repository only.",
+      "I didn't read the admin-manage-users edge function, the MCP SQL migration bodies beyond grep hits, the classroom_items guard trigger, or the live schema evidence in the shared design review folder. Practice-test edge behaviour and live index and policy state are inferred from the plan and the repo.",
+      "I didn't fully inspect the destination components (homework/TA/guided/activity/Reading Center/bootcamp/practice-test runners), useClassroomHome, useAssignedTodoFeed or the sidebar count hooks.",
+      "I couldn't run tests, typecheck, build or database queries; I make no claim that any test passes.",
+      "The dirty supabase/functions/mcp/index.ts was intentionally not reviewed."
+    ]
+  },
+  "usage": {
+    "input_tokens": 26,
+    "cache_creation_input_tokens": 53902,
+    "cache_read_input_tokens": 451888,
+    "output_tokens": 13393,
+    "output_tokens_details": {
+      "thinking_tokens": 5163
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 53902,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 6638,
+        "cache_read_input_tokens": 55836,
+        "cache_creation_input_tokens": 1651,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1651
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "permission_denials": [],
+  "total_cost_usd": 0.7895576,
+  "elapsed_seconds": 204.2
+}

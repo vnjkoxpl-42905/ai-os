@@ -3,6 +3,10 @@ name: booking-link
 description: Use whenever Joshua wants a one-off booking link for LSAT U — "make me a link for Dakota at 7:15 tomorrow", "send her a link to book tonight", "one-off link, $60", "short notice link", "I need a link she can schedule herself with". Mints a single-use URL that sells exactly one session at a price you set, optionally pinned to one exact time, and closes after she books. Also covers listing and revoking existing links.
 ---
 
+## Current AI OS execution contract
+
+Resolve this repository root from AGENTS.md and the application from its registered sibling project. Read credentials only through the central private .env loader. Legacy home-relative application or secret paths below are examples, not current authorities. Draft/send authority is unchanged.
+
 # One-off booking links
 
 A URL Joshua sends to one person. She opens it, books one session, pays, and
@@ -30,7 +34,7 @@ Everything else is optional. Ask for nothing you were not given.
 
 ## Running it
 
-From `~/ai-os-projects/lsatu`:
+From the LSAT U app checkout, `../ai-os-projects/lsatu` relative to the AI OS root:
 
 ```bash
 npm run booking:link -- --for "Dakota" --price 45 --at "2026-09-10 19:15"
@@ -117,6 +121,6 @@ Relevant files:
 
 ## Credentials
 
-`LSATPREP_ADMIN_EMAIL` / `LSATPREP_ADMIN_PASSWORD` from `~/ai-os/.env`, which is
+`LSATPREP_ADMIN_EMAIL` / `LSATPREP_ADMIN_PASSWORD` from the AI OS root `.env`, which is
 git-ignored. This repo's `.env` is tracked in git — never put a credential
 there.

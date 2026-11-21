@@ -1,0 +1,601 @@
+# Audience and Source Question Strategy
+
+Source: https://new.theloophole.com/training-camp/browse/stage/learn/video/audience-and-source-question-strategy?source=timeline&plan=rc-plan
+
+Duration: 7:51. Captured: 2026-10-14.
+
+Transcript origin: English auto-generated native captions. Complete caption extraction, not a human-verified verbatim transcript. Original wording retained.
+
+[00:00:00.260 - 00:00:02.305]
+Alright, source and audience questions.
+
+[00:00:02.525 - 00:00:04.305]
+So I really like these questions
+
+[00:00:04.305 - 00:00:08.505]
+because like purpose, like tone, they are a little bit more
+
+[00:00:08.505 - 00:00:10.505]
+between the lines, these sorts of questions.
+
+[00:00:10.525 - 00:00:13.905]
+But having the awareness, um, of the author's intentions,
+
+[00:00:13.905 - 00:00:15.825]
+of the author's vibe, of all of those different things
+
+[00:00:16.015 - 00:00:17.545]
+that we need for purpose
+
+[00:00:17.605 - 00:00:21.025]
+and tone questions, it really feeds our ability to just
+
+[00:00:21.865 - 00:00:24.985]
+absolutely make mince meat of an audience
+
+[00:00:25.165 - 00:00:26.305]
+or source question.
+
+[00:00:26.305 - 00:00:27.945]
+And so what's an audience or a source question?
+
+[00:00:28.065 - 00:00:29.945]
+I, I put these together 'cause they're quite linked.
+
+[00:00:30.055 - 00:00:31.745]
+Like if you know one, you kind of know the other.
+
+[00:00:31.885 - 00:00:33.985]
+And so an audience question is just basically asking,
+
+[00:00:34.175 - 00:00:36.025]
+okay, who did they write this for?
+
+[00:00:36.655 - 00:00:40.545]
+Like, who is the intended reader of this text?
+
+[00:00:40.805 - 00:00:42.345]
+And then a source question is asking
+
+[00:00:42.775 - 00:00:44.985]
+what source would this passage most likely
+
+[00:00:44.985 - 00:00:46.065]
+have been drawn from?
+
+[00:00:46.415 - 00:00:49.465]
+Like, is it an excerpt of a novel?
+
+[00:00:50.365 - 00:00:52.665]
+Is it from a research journal?
+
+[00:00:52.925 - 00:00:55.865]
+Is it a general audience magazine?
+
+[00:00:56.125 - 00:00:59.105]
+Is it a peer reviewed science study?
+
+[00:00:59.265 - 00:01:02.665]
+I don't, um, lot, lots of different, uh, options there for
+
+[00:01:02.895 - 00:01:03.985]
+what it could be from.
+
+[00:01:04.165 - 00:01:06.185]
+But of course the reason we link them together is
+
+[00:01:06.185 - 00:01:09.305]
+because, well, a, a given source is typically
+
+[00:01:09.405 - 00:01:11.185]
+for an intended audience.
+
+[00:01:11.325 - 00:01:12.945]
+And so if you know the audience,
+
+[00:01:12.945 - 00:01:14.065]
+you typically know the source.
+
+[00:01:14.125 - 00:01:15.425]
+And if you know the source, you
+
+[00:01:15.425 - 00:01:16.545]
+typically would know the audience.
+
+[00:01:16.885 - 00:01:19.465]
+But I don't wanna come across as telling you, all right,
+
+[00:01:19.485 - 00:01:20.545]
+for every single passage,
+
+[00:01:20.845 - 00:01:22.985]
+you better know the source of the audience.
+
+[00:01:23.265 - 00:01:25.625]
+'cause like, I don't want you consciously doing
+
+[00:01:25.625 - 00:01:26.825]
+that on every single passage.
+
+[00:01:27.265 - 00:01:28.225]
+'cause these questions don't come up
+
+[00:01:28.225 - 00:01:28.945]
+on every single passage.
+
+[00:01:29.045 - 00:01:30.065]
+And like, you don't need
+
+[00:01:30.065 - 00:01:31.865]
+to make it a conscious step every single time.
+
+[00:01:32.295 - 00:01:36.025]
+However, I do want you to have a really robust translation
+
+[00:01:36.025 - 00:01:38.185]
+where you're reading the vibe, reading the goals,
+
+[00:01:38.285 - 00:01:39.425]
+and feeling things out
+
+[00:01:39.525 - 00:01:42.585]
+as you're going in a really robust way, so that if you were
+
+[00:01:42.585 - 00:01:44.065]
+to come upon a source
+
+[00:01:44.205 - 00:01:45.305]
+or an audience question,
+
+[00:01:45.575 - 00:01:48.385]
+that wouldn't be like a big deal to answer.
+
+[00:01:48.805 - 00:01:51.665]
+Um, because these are the kinds of questions that
+
+[00:01:52.615 - 00:01:54.785]
+they are not so much Oh yeah, better look
+
+[00:01:54.785 - 00:01:57.305]
+that up in the second paragraph kinds of questions.
+
+[00:01:57.305 - 00:01:58.465]
+They're the kinds of questions
+
+[00:01:58.465 - 00:02:00.785]
+where the answer is really gonna be determined
+
+[00:02:00.785 - 00:02:03.025]
+by the little words, the little turns
+
+[00:02:03.045 - 00:02:04.625]
+of phrase, uh, throughout the passage.
+
+[00:02:05.245 - 00:02:08.585]
+My absolute favorite source slash audience question in the
+
+[00:02:08.585 - 00:02:10.505]
+history of the LSAT is on
+
+[00:02:10.505 - 00:02:12.545]
+what I lovingly call the bodybuilding passage.
+
+[00:02:12.725 - 00:02:14.065]
+And I won't say anything else.
+
+[00:02:14.565 - 00:02:16.345]
+Um, but I will say that it comes
+
+[00:02:16.365 - 00:02:19.745]
+before one of the all time hardest, um, LSAT passages,
+
+[00:02:19.805 - 00:02:21.745]
+at least in, you know, modern common memory.
+
+[00:02:22.205 - 00:02:23.905]
+Um, and this passage, you know,
+
+[00:02:23.925 - 00:02:25.065]
+it doesn't get a huge reputation,
+
+[00:02:25.065 - 00:02:28.225]
+but it has this one question that is just so tough.
+
+[00:02:28.845 - 00:02:32.625]
+And I, I will tell you that the reason why it's
+
+[00:02:32.625 - 00:02:33.825]
+so tough is not
+
+[00:02:33.825 - 00:02:35.905]
+because that passage is like so hard
+
+[00:02:35.905 - 00:02:36.985]
+to understand or anything.
+
+[00:02:37.255 - 00:02:40.065]
+It's because people don't pay attention to
+
+[00:02:40.065 - 00:02:41.705]
+what pronouns are being used,
+
+[00:02:42.595 - 00:02:44.385]
+which is a little weird, right?
+
+[00:02:44.645 - 00:02:48.225]
+Um, in this passage, um, they use the word you
+
+[00:02:48.645 - 00:02:52.185]
+or your many times, it's not like super subtle.
+
+[00:02:52.185 - 00:02:54.225]
+Like it comes up like a bunch of times in the passage.
+
+[00:02:54.645 - 00:02:56.865]
+And when I was reading, um, the Passage
+
+[00:02:56.965 - 00:02:58.865]
+for the first time, man, those, you
+
+[00:02:58.885 - 00:03:01.925]
+And yours really just like, you know,
+
+[00:03:01.975 - 00:03:04.645]
+where it was like neon lights slamming me in the face
+
+[00:03:04.645 - 00:03:07.245]
+where I was like, this is a little like offput.
+
+[00:03:07.345 - 00:03:10.525]
+You aren't used to an author in like a,
+
+[00:03:10.565 - 00:03:12.725]
+a reading comp passage, typically using second person
+
+[00:03:13.045 - 00:03:14.205]
+pronouns where they're like, oh, you
+
+[00:03:14.225 - 00:03:15.445]
+do this when you did that.
+
+[00:03:15.665 - 00:03:17.005]
+And you're like, huh, okay.
+
+[00:03:17.005 - 00:03:19.605]
+You're, you're talking directly to me. Interesting.
+
+[00:03:19.755 - 00:03:22.485]
+They're literally telling you the audience there, right?
+
+[00:03:22.945 - 00:03:26.005]
+And you would be so surprised how
+
+[00:03:26.005 - 00:03:29.565]
+that does not come forward in people's, uh, performance on
+
+[00:03:29.565 - 00:03:31.245]
+that particular question that I'm thinking of right now.
+
+[00:03:31.545 - 00:03:33.205]
+And if you know
+
+[00:03:33.395 - 00:03:35.325]
+that they're using those second person pronouns,
+
+[00:03:35.325 - 00:03:36.445]
+which you should, given
+
+[00:03:36.445 - 00:03:37.965]
+that they've said it many times in the passage
+
+[00:03:38.145 - 00:03:39.805]
+and it's, it's like interesting, right?
+
+[00:03:39.925 - 00:03:41.285]
+I mean, it's not that, it's interesting
+
+[00:03:41.285 - 00:03:43.125]
+because, well, this gave me the audience, so
+
+[00:03:43.125 - 00:03:44.325]
+that's why I wanted to pay attention.
+
+[00:03:44.665 - 00:03:47.045]
+No, it's that I am someone who cares about the author,
+
+[00:03:47.045 - 00:03:48.565]
+cares about their vibe, cares about their goals.
+
+[00:03:48.725 - 00:03:49.805]
+I want to be there with you.
+
+[00:03:50.025 - 00:03:51.365]
+You know, I'm right there with you author.
+
+[00:03:51.455 - 00:03:53.005]
+Let's like figure your s**t out together.
+
+[00:03:53.385 - 00:03:55.525]
+Um, and also I will be critiquing you
+
+[00:03:55.525 - 00:03:56.845]
+as I go 'cause I can't turn that off.
+
+[00:03:57.065 - 00:03:59.725]
+You know, that being really involved with the author
+
+[00:03:59.785 - 00:04:02.325]
+as you're going, you're naturally gonna notice there are fun
+
+[00:04:02.325 - 00:04:03.885]
+little nooks and crannies twists
+
+[00:04:03.885 - 00:04:07.245]
+and turns like using the second person constantly
+
+[00:04:07.355 - 00:04:09.125]
+that it's like, okay, you're telling me right now
+
+[00:04:09.265 - 00:04:10.365]
+who you are talking to.
+
+[00:04:10.505 - 00:04:12.605]
+You are going for it.
+
+[00:04:12.945 - 00:04:15.685]
+And so then when that really slaps you in the face,
+
+[00:04:15.835 - 00:04:18.445]
+that question is like real, real, real quick
+
+[00:04:18.445 - 00:04:21.525]
+because it's, it's very obvious, um, who they're talking to,
+
+[00:04:21.545 - 00:04:23.125]
+who the intended source is, um,
+
+[00:04:23.185 - 00:04:24.725]
+or who the intended audience is, and then
+
+[00:04:24.725 - 00:04:25.765]
+therefore gives you the source.
+
+[00:04:26.105 - 00:04:28.965]
+Um, but I also wanna talk a little bit more, not just about
+
+[00:04:28.965 - 00:04:30.205]
+how to deduce the audience, but how
+
+[00:04:30.205 - 00:04:31.965]
+to deduce the source independently.
+
+[00:04:31.965 - 00:04:33.365]
+Because like I said, they're linked,
+
+[00:04:33.365 - 00:04:36.085]
+but source, uh, you know, it has some particularities to it.
+
+[00:04:36.265 - 00:04:41.045]
+And so a source is defined by, you know, what big piece
+
+[00:04:41.045 - 00:04:42.565]
+of writing this could have come out of
+
+[00:04:42.705 - 00:04:44.165]
+or, you know, maybe it's a solo piece
+
+[00:04:44.165 - 00:04:45.365]
+of writing that that's the whole thing.
+
+[00:04:45.705 - 00:04:48.965]
+Um, how can you tell if a passage is meant
+
+[00:04:48.965 - 00:04:50.525]
+to come from a research article
+
+[00:04:50.865 - 00:04:54.165]
+or from a general knowledge magazine
+
+[00:04:54.305 - 00:04:56.085]
+or from a judge's opinion in a case?
+
+[00:04:56.435 - 00:05:00.405]
+Well, you use your real world knowledge to pattern match to
+
+[00:05:00.665 - 00:05:03.525]
+how you have generally thought those things
+
+[00:05:03.665 - 00:05:05.285]
+to sound throughout your life.
+
+[00:05:05.505 - 00:05:07.645]
+For instance, um, how casual
+
+[00:05:08.185 - 00:05:10.685]
+the languages throughout the passage, um,
+
+[00:05:11.065 - 00:05:12.885]
+is a big, big giveaway.
+
+[00:05:13.075 - 00:05:17.965]
+Like if, um, if they're in the passage saying, yo, get ready
+
+[00:05:17.985 - 00:05:20.685]
+to bulk up like, like you've been buffed
+
+[00:05:20.685 - 00:05:23.405]
+before, like, that doesn't really sound like nature.
+
+[00:05:23.905 - 00:05:26.005]
+The, you know, research journal magazine
+
+[00:05:26.005 - 00:05:27.405]
+or the New England Journal of Medicine,
+
+[00:05:27.555 - 00:05:29.325]
+like you've been buffed before.
+
+[00:05:29.945 - 00:05:34.005]
+Really? That's like, that's not a research article
+
+[00:05:34.235 - 00:05:35.725]
+that didn't go through peer review.
+
+[00:05:36.025 - 00:05:40.125]
+You know that when you are using really colloquial casual
+
+[00:05:40.645 - 00:05:43.205]
+language like that it's meant for a general audience.
+
+[00:05:43.205 - 00:05:44.405]
+It's meant to be a little bit fun, right?
+
+[00:05:44.505 - 00:05:46.845]
+And or maybe a particular enthusiast
+
+[00:05:46.845 - 00:05:48.005]
+or audience of some kind.
+
+[00:05:48.105 - 00:05:50.645]
+But it's not necessarily meant for professors
+
+[00:05:50.745 - 00:05:52.285]
+to be the ones reading it, right?
+
+[00:05:52.285 - 00:05:54.085]
+Because when you write something for professors,
+
+[00:05:54.085 - 00:05:55.565]
+just like in school or in articles
+
+[00:05:55.565 - 00:05:56.765]
+you've read for class, you'll
+
+[00:05:56.765 - 00:05:59.365]
+Notice that it's like pretty formal language, right?
+
+[00:05:59.625 - 00:06:02.165]
+Um, that they'll, they'll be typically using, you know,
+
+[00:06:02.165 - 00:06:03.365]
+more $5 words.
+
+[00:06:03.475 - 00:06:05.405]
+They won't, they won't be as fast
+
+[00:06:05.425 - 00:06:08.005]
+and loose with, you know, the fun side of writing.
+
+[00:06:08.425 - 00:06:11.485]
+Um, or for instance, uh, one of my other favorite, uh,
+
+[00:06:11.485 - 00:06:13.125]
+source slash audience questions, um,
+
+[00:06:14.245 - 00:06:17.285]
+involves whether something is a judge's opinion or not.
+
+[00:06:17.785 - 00:06:20.125]
+And in, in this passage that I'm thinking of, I mean,
+
+[00:06:20.125 - 00:06:22.165]
+they literally say the defendant in this case.
+
+[00:06:24.455 - 00:06:25.695]
+I mean, right?
+
+[00:06:26.005 - 00:06:29.415]
+Like if in this case like that we're, we're ruling.
+
+[00:06:30.955 - 00:06:35.895]
+But I think because those words are not seen as like
+
+[00:06:36.955 - 00:06:38.815]
+big highlights, you know, they're not key words.
+
+[00:06:38.965 - 00:06:41.255]
+They don't give away, I don't know an answer
+
+[00:06:41.255 - 00:06:44.375]
+where you can cite it as obviously it's not like, you know,
+
+[00:06:44.375 - 00:06:46.895]
+the answer is the defendant in this case, the answer is,
+
+[00:06:46.895 - 00:06:49.575]
+you know, different literal words that there's a bit
+
+[00:06:49.575 - 00:06:51.255]
+of an interpretive step there.
+
+[00:06:51.475 - 00:06:53.175]
+And I know that we're a lot of, you know, a lot
+
+[00:06:53.175 - 00:06:54.455]
+of the time we're afraid of interpretation.
+
+[00:06:54.455 - 00:06:57.335]
+We're like, oh, you know, but what if I interpret it wrong?
+
+[00:06:57.335 - 00:07:00.015]
+Or something like that. But you gotta use your common sense.
+
+[00:07:00.015 - 00:07:02.895]
+Yeah, like, I mean that it's not that big of a jump
+
+[00:07:02.895 - 00:07:05.055]
+to be like, oh, and I rule on the defendant in this case
+
+[00:07:05.055 - 00:07:07.455]
+that's like, this sounds like a judge's opinion, right?
+
+[00:07:07.645 - 00:07:11.615]
+That, but key thing is actually paying even amounts
+
+[00:07:11.735 - 00:07:13.175]
+of attention as you're going through the passage.
+
+[00:07:13.555 - 00:07:15.535]
+So those sorts of little references
+
+[00:07:15.755 - 00:07:16.815]
+or things like the pronouns
+
+[00:07:16.815 - 00:07:18.415]
+or how colloquial the language is,
+
+[00:07:18.715 - 00:07:21.735]
+are actually in your mental understanding.
+
+[00:07:21.795 - 00:07:23.735]
+You know, that they're actually being processed
+
+[00:07:23.875 - 00:07:25.015]
+and not being filtered out
+
+[00:07:25.015 - 00:07:26.375]
+because they quote unquote don't matter.
+
+[00:07:26.675 - 00:07:29.215]
+Um, because when you're just trying to read for structure
+
+[00:07:29.355 - 00:07:32.655]
+or get the gist, these are the first things that go.
+
+[00:07:32.995 - 00:07:37.095]
+And so hopefully this video can help you know why it is, uh,
+
+[00:07:37.115 - 00:07:39.135]
+for the millionth time as I scream into the wind.
+
+[00:07:39.555 - 00:07:42.255]
+So important to really translate the passage
+
+[00:07:42.255 - 00:07:44.255]
+because it will give you the answers to questions
+
+[00:07:44.255 - 00:07:46.415]
+that are unforgettable otherwise.
+
+[00:07:46.765 - 00:07:50.855]
+Alright, well I hope you've been buff before. Stay soon.

@@ -1,0 +1,84 @@
+{
+ "qid": "PT157-S3-Q3",
+ "type": "Agree/Disagree",
+ "difficulty": "1",
+ "key_db": "C",
+ "stimulus_db": "Bernard: We should not invite Carl to speak at the forum. Carl's views are clearly false, and worse, dangerous. To encourage their consideration will not only legitimize them but also help to promulgate them, both of which we should avoid, since we wish not to support their adoption.\n\nAyla: The best way to combat false views is to challenge them in public. Once Carl's views are subjected to the kind of public scrutiny the forum provides, people will see them for what they are because the forum will provide convincing arguments against them.",
+ "stem_db": "The dialogue provides the most support for the claim that Bernard and Ayla disagree about whether",
+ "choices_db": {
+  "A": "one should always avoid legitimizing a view whose adoption one wishes not to support",
+  "B": "people will see the falsity of every dangerous idea for which they are furnished with forceful counterarguments",
+  "C": "the best way to fight erroneous ideas involves allowing the public expression of these ideas",
+  "D": "people who hold false views tend to pose a danger to society",
+  "E": "one should not encourage the adoption of dangerous views"
+ },
+ "bank": {
+  "stimulus": "Bernard: We should not invite Carl to speak at the\n forum. Carl’s views are clearly false, and worse,\n dangerous. To encourage their consideration\n will not only legitimize them but also help to\n promulgate them, both of which we should avoid,\n since we wish not to support their adoption.\n Ayla: The best way to combat false views is to challenge\n them in public. Once Carl’s views are subjected\n to the kind of public scrutiny the forum provides,\n people will see them for what they are because\n the forum will provide convincing arguments\n against them.",
+  "stem": "The dialogue provides the most support for the claim\n that Bernard and Ayla disagree about whether",
+  "choices": {
+   "A": "one should always avoid legitimizing a view whose adoption one wishes not to support",
+   "B": "people will see the falsity of every dangerous idea for which they are furnished with forceful counterarguments",
+   "C": "the best way to fight erroneous ideas involves allowing the public expression of these ideas",
+   "D": "people who hold false views tend to pose a danger to society",
+   "E": "one should not encourage the adoption of dangerous views"
+  },
+  "key": "C"
+ },
+ "explanation_id": "2d151e76-e9f8-4f50-8b2e-942a76210432",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "c3bfcca6-8b51-4fbd-846a-54d9933477ed",
+   "position": 0,
+   "label": "Bernard's Claims",
+   "body": "  1. We should not invite Carl to speak at the forum.\n  2. Carl's views are clearly false, and worse, dangerous.\n  3. To encourage their consideration will not only legitimize them but also help to promulgate them.\n  4. We should avoid legitimizing or promulgating Carl's views, since we wish not to support their adoption."
+  },
+  {
+   "row_id": "56e60690-b422-443c-a616-309f3e170f8c",
+   "position": 1,
+   "label": "Ayla's Responses",
+   "body": "  1. Disagrees\n  2. no comment\n  3. Disagrees\n  4. no comment, possibly agrees"
+  },
+  {
+   "row_id": "14e65ffc-ff69-48f5-87a5-9db90da71be2",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "Ayla doesn't explicitly state that Carl should be invited to speak at the forum. However, her statements provide support for the idea that she disagrees with Bernard's first claim and believes that Carl should be allowed to speak. Ayla also doesn't explicitly state that that we should avoid legitimizing or promulgating Carl's views and not support their adoption. However, her statements provide some support for the idea that she agrees with Bernard about this. Ayla talks about combating \"false views\" and about seeing Carl's views for what they are. Bernard states that Carl's views are false. We can infer that Ayla agrees. They appear to disagree about allowing Carl to speak at the forum. Bernard states that Carl should not be invited, but Ayla appears to suggest that it would be best to allow Carl to speak so that people can publicly challenge his views. \"Promulgate\" means to promote an idea or make it widely known. If you didn't know this when reading Bernard's statements, but had a sense that it might mean \"promote\" or \"spread,\" that's totally fine."
+  },
+  {
+   "row_id": "22f33113-9385-489e-80e2-f4528e96a978",
+   "position": 3,
+   "label": "Goal",
+   "body": "We'll look for an answer that addresses claim #1 or #3."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "248a8c74-1ec6-40b3-93ae-a1e217b4b75e",
+   "letter": "A",
+   "body": "The word \"always\" makes this answer too strong to attribute to either speaker. Bernard argues that Carl's views should not be legitimized, but his argument is specifically about Carl's case. We cannot conclude that Bernard believes one should \"always\" avoid legitimizing views whose adoption one opposes. Furthermore, even if Bernard did hold this absolute position, Ayla might agree with the general principle — she just thinks that allowing Carl to speak will not actually legitimize his views but rather expose them. Their disagreement is about the consequences of public expression, not about whether one should avoid legitimizing harmful views as a general rule."
+  },
+  {
+   "row_id": "6d3a9470-f5b7-4dae-9568-a74e25ebcdfe",
+   "letter": "B",
+   "body": "The word \"every\" makes this answer too strong. Ayla suggests that public scrutiny at the forum will produce convincing arguments against Carl's views, allowing people to see them for what they are. But we cannot conclude that Ayla believes this works for \"every\" dangerous idea. She may only believe this about Carl's particular views or about the particular forum being discussed. Additionally, Ayla calls Carl's views \"false\" but never calls them \"dangerous\" — that is Bernard's characterization. We do not know whether Ayla considers Carl's views dangerous, so any answer involving \"dangerous\" ideas is at best a half-scope match for Ayla's position."
+  },
+  {
+   "row_id": "b068e848-36fb-4c3c-b345-001bd0e9d697",
+   "letter": "C",
+   "body": "This answer captures the core disagreement. Bernard believes that allowing Carl to speak at the forum would legitimize and help spread his views — meaning public expression of erroneous ideas is counterproductive. Ayla believes the opposite: \"the best way to combat false views is to challenge them in public,\" which requires allowing their public expression. Bernard opposes public expression of false views as a means of fighting them; Ayla endorses it. This is a clean disagreement where both speakers hold clear, opposing positions on whether allowing public expression of erroneous ideas is an effective strategy for combating them."
+  },
+  {
+   "row_id": "69dafa2e-e158-440c-baeb-409d650dd4ec",
+   "letter": "D",
+   "body": "Bernard says Carl's views are \"false, and worse, dangerous,\" but this does not mean he believes there is a general tendency for people with false views to pose a danger to society. He is making a specific claim about Carl, not a generalization about all people with false views. Even if we could attribute this general belief to Bernard, we do not know Ayla's position on it. Ayla acknowledges that Carl's views are false but never addresses whether false views generally make their holders dangerous to society. Without clear positions from both speakers, this cannot be the point at issue."
+  },
+  {
+   "row_id": "e766b047-89e1-46ff-aa38-4a6214ed3601",
+   "letter": "E",
+   "body": "Both Bernard and Ayla appear to agree with this statement, or at least neither clearly disagrees. Bernard argues against legitimizing and promulgating Carl's views \"since we wish not to support their adoption,\" which aligns with not encouraging adoption of dangerous views. Ayla discusses combating \"false views\" and seeing them \"for what they are,\" which also suggests she opposes their adoption. Since both speakers appear to be on the same side of this proposition, it is not a point of disagreement. Additionally, Ayla never uses the word \"dangerous\" — she discusses \"false views\" — so attributing a position about \"dangerous\" views to her is unsupported."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (6.6 em-dashes per 1k words; wrong-answer notes average 101.5 words).",
+ "tags": "emdash-heavy; pt157-158-register; possible-misquote"
+}

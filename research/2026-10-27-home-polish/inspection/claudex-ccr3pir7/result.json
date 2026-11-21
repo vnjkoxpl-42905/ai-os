@@ -1,0 +1,270 @@
+{
+  "status": "completed",
+  "mode": "inspect",
+  "provider": "claude",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "claude",
+    "builder": "codex",
+    "inspector": "claude"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-home-polish-20261027",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os\\brainstorms\\2026-10-27-home-polish.plan.md",
+  "plan_sha256": "d2b021d87f185b8ca49cd1b0f0470ee225c3c3657f0712345b58adaad2f6d82f",
+  "requested_model": null,
+  "requested_effort": null,
+  "base": "e4035d9c",
+  "snapshot": {
+    "base": "e4035d9c8ec97a3aaec01b0b3464533872328bc8",
+    "files": [
+      {
+        "path": ".gitignore",
+        "kind": "file",
+        "sha256": "b7c70acf32c1b37d49038c3f67687c536b5d673801c084c2c06574dbbb596080"
+      },
+      {
+        "path": "docs/verification/home-preview.vite.config.ts",
+        "kind": "file",
+        "sha256": "90049404d0677348e22a795869783bf5b53f14e6fb1195676f4e05ecaed295c0"
+      },
+      {
+        "path": "docs/verification/role-home-preview.html",
+        "kind": "file",
+        "sha256": "6ee8fa4ad613bd919693603121eb042faa2efd39a98248966481463be4277382"
+      },
+      {
+        "path": "docs/verification/role-home-preview.tsx",
+        "kind": "file",
+        "sha256": "8bd1c2843e90c032da8f0754560910965d247224614fc96ce6c4429d1f3d2445"
+      },
+      {
+        "path": "src/components/classroom/home/ClassroomHome.role.test.tsx",
+        "kind": "file",
+        "sha256": "0fea5c21514efaba6787d8a62c9c17cf0778cb1e5485f98d530ae95f99b6fa2b"
+      },
+      {
+        "path": "src/components/classroom/home/ClassroomHome.tsx",
+        "kind": "file",
+        "sha256": "e18f8dbe1fc834295af53298c0692ac122a24c70bdbcb0dd833cdde3d4c38caa"
+      },
+      {
+        "path": "src/components/classroom/home/ClassroomHomeView.test.tsx",
+        "kind": "file",
+        "sha256": "6582dbcb08d8e0c99b896ba8f1bb54cd18041f213f02e78d286006a3efdd061c"
+      },
+      {
+        "path": "src/components/classroom/home/ClassroomHomeView.tsx",
+        "kind": "file",
+        "sha256": "dc07236962723475c136d93960901f6b9cd0dc7fdb00bcca1cab182ab4e8db93"
+      },
+      {
+        "path": "src/components/classroom/home/HomeWeekStrip.test.tsx",
+        "kind": "file",
+        "sha256": "8bb09daed5ad38399b320f793afa422788676b893d4bf264e74f80c116e3fb2d"
+      },
+      {
+        "path": "src/components/classroom/home/HomeWeekStrip.tsx",
+        "kind": "file",
+        "sha256": "17966deacbe2ed87f9ff4410b5dc218edc9d552be181ac849916ab90718b3370"
+      },
+      {
+        "path": "src/components/classroom/home/assignedWorkPath.test.ts",
+        "kind": "file",
+        "sha256": "b7376b1def5dad14fc9bdd4ce92c6c2aafcb02f4230060c0369aa9a6f16247c2"
+      },
+      {
+        "path": "src/components/classroom/home/home.css",
+        "kind": "file",
+        "sha256": "69ce68794a8d9da8d6677bf01e7f2f8bb464f386f2d45e60467ec53dc5259780"
+      },
+      {
+        "path": "src/components/classroom/home/homeModel.ts",
+        "kind": "file",
+        "sha256": "6fc21ab54a129a24a0e6e31a4a95fb3113e4a7e90720c572a6b0f6b5017aa5c5"
+      },
+      {
+        "path": "src/components/classroom/home/teacher/TeacherHomeView.test.tsx",
+        "kind": "file",
+        "sha256": "5ce9ab23c8d0ac57994c0e59825c2232cce43ac2752083d8f2819ecd09a2b487"
+      },
+      {
+        "path": "src/components/classroom/home/teacher/TeacherHomeView.tsx",
+        "kind": "file",
+        "sha256": "2aa67756a67b62aa47929e04182f949e4e409b9b616afac4be7ef3151cb9cc1f"
+      },
+      {
+        "path": "src/components/classroom/home/teacher/teacherHomeModel.ts",
+        "kind": "file",
+        "sha256": "af1df879e4e984f0a8ce4a72cdddfe7017f29db8df68644cda0c7abb5d32e085"
+      },
+      {
+        "path": "src/components/classroom/home/teacher/useTeacherHome.ts",
+        "kind": "file",
+        "sha256": "e9e5c0785882eebd3b0389613de36e1f8e4c0a47612282ef26059ec38cd4cc98"
+      },
+      {
+        "path": "src/components/classroom/home/useClassroomHome.homeMessage.test.tsx",
+        "kind": "file",
+        "sha256": "a977774b46a6ef5728b4c38f92c73c3cf640d551c61288c76e22f10e00f0a258"
+      },
+      {
+        "path": "src/components/classroom/home/useClassroomHome.ts",
+        "kind": "file",
+        "sha256": "bf48fa331393cadc1855bc2f154238feea15affef4df6ce4b0a3428732cf8931"
+      },
+      {
+        "path": "src/components/classroom/home/useHomeEntrance.ts",
+        "kind": "file",
+        "sha256": "892b443e83de8c45d026d7d3f2c3d3bba88131ddaa7880559efe8b39f168bce4"
+      },
+      {
+        "path": "src/components/classroom/home/useHomeFeedback.ts",
+        "kind": "file",
+        "sha256": "59ad16ac869afae2c8a4aa3e0cabe87e51d0ab12872e148b2c58760c84416d88"
+      },
+      {
+        "path": "src/components/classroom/home/useHomeFreshness.test.tsx",
+        "kind": "file",
+        "sha256": "79d0260b0d799e8b44e4de78ab3ae172762013c8454e4748915a9490f30f7696"
+      },
+      {
+        "path": "src/components/classroom/home/useHomeFreshness.ts",
+        "kind": "file",
+        "sha256": "8dbaab8cb13559825b43364629eed19484c311c5e13777554db361336ce81850"
+      },
+      {
+        "path": "src/hooks/useInbox.summary.test.tsx",
+        "kind": "file",
+        "sha256": "15393d6ec15bc828966caab80675e495900477efb8879d14c9a26788a0bc5ed2"
+      },
+      {
+        "path": "src/hooks/useInbox.ts",
+        "kind": "file",
+        "sha256": "032d04c1f0cb1012a5539a26fc5a9ff024508044a6236683e9deab7ca85f096a"
+      },
+      {
+        "path": "src/hooks/useUserPermissions.resolved.test.tsx",
+        "kind": "file",
+        "sha256": "aba5405a284d7467d9b862a9e3686a106a99bb771801315c486aed13269a5bb1"
+      },
+      {
+        "path": "src/hooks/useUserPermissions.ts",
+        "kind": "file",
+        "sha256": "6018bf53f70724a3c9773545d7d8f4c2d0a396850fef648abdbef59a1c13ce87"
+      }
+    ],
+    "diff_sha256": "13d2dc64dab9ed7aff0baf8de8c2252c964ebb3d19ed0c16adbbb178ecfb71df",
+    "scope": [
+      ".gitignore",
+      "docs/verification/home-preview.vite.config.ts",
+      "docs/verification/role-home-preview.html",
+      "docs/verification/role-home-preview.tsx",
+      "src/components/classroom/home",
+      "src/hooks/useInbox.summary.test.tsx",
+      "src/hooks/useInbox.ts",
+      "src/hooks/useUserPermissions.resolved.test.tsx",
+      "src/hooks/useUserPermissions.ts"
+    ],
+    "sha256": "fb72890fd86c35a888607a1c78191bb9d0310cfdb915fa001f58a11e936bbd6e"
+  },
+  "previous": null,
+  "started_at": 1793103155.8214476,
+  "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\research\\2026-10-27-home-polish\\inspection\\claudex-ccr3pir7",
+  "scope": [
+    ".gitignore",
+    "docs/verification/home-preview.vite.config.ts",
+    "docs/verification/role-home-preview.html",
+    "docs/verification/role-home-preview.tsx",
+    "src/components/classroom/home",
+    "src/hooks/useInbox.summary.test.tsx",
+    "src/hooks/useInbox.ts",
+    "src/hooks/useUserPermissions.resolved.test.tsx",
+    "src/hooks/useUserPermissions.ts"
+  ],
+  "cli_version": "2.1.309 (Claude Code)",
+  "executable": [
+    "C:\\Users\\Joshu\\.local\\bin\\claude.EXE"
+  ],
+  "exit_code": 0,
+  "session_id": "e251e98b-1e89-4392-953d-81dcb68eb000",
+  "response": {
+    "verdict": "REVISE",
+    "summary": "I found two CSS defects in home.css and one low-severity item. I only partly reviewed the rest: I read the diff but did not trace every caller or run anything. The main problem is that five `@media (hover: hover) and (pointer: fine)` blocks in the working-tree home.css are malformed. Their hover rules never apply. The \"today\" cell styling is also gated behind the hover query.",
+    "findings": [
+      {
+        "id": "F1",
+        "severity": "high",
+        "path": "src/components/classroom/home/home.css:392",
+        "evidence": "I confirmed this with grep on the working-tree file. Five rules end like this: `width: 100%;` / `@media (hover: hover) and (pointer: fine) {` / `}`. The media block opens inside the base rule and is closed at once with an empty body. The base rule stays unclosed, so the `:hover` rule that follows nests inside it and the final `}` closes the outer rule. The same shape appears at lines 392, 507, 727, 799 and 1006. Affected selectors: row/thread-row/session-row/student-row, cta, action, message and search-clear. With CSS nesting, `.classroom-root .classroom-home-row:hover` nested without `&` becomes a descendant selector and never matches. Browsers without nesting support drop the whole base rule, which would also lose its layout. Either way the hover feedback the plan specifies does not work. The base rules may also be damaged, because later declarations such as `.classroom-home-cta` `transition` and `min-height` sit before the stray at-rule.",
+        "fix": "Close each base rule before the at-rule, then wrap the hover rule: `width:100%; }` / `@media (hover:hover) and (pointer:fine){ .selector:hover{...} }`. Add a CSS parse check, such as a stylelint or postcss parse step or a built-CSS assertion, so unbalanced blocks fail the build."
+      },
+      {
+        "id": "F2",
+        "severity": "medium",
+        "path": "src/components/classroom/home/home.css:862",
+        "evidence": "The `@media (hover: hover) and (pointer: fine)` block wraps the base `.classroom-home-day-today` rule (dark background, light text), not only the `:hover` variant. On touch devices (hover:none) the 'today' cell therefore gets no highlight. Its children are still styled `color: inherit` and the `.classroom-home-day` base colours. The 'today' cell is meant to be the visual anchor of the week strip.",
+        "fix": "Move `.classroom-root .classroom-home-day-today { ... }` out of the media query. Keep only `button.classroom-home-day-today:hover` (if it needs a distinct style) inside it."
+      },
+      {
+        "id": "F3",
+        "severity": "low",
+        "path": "src/components/classroom/home/useHomeEntrance.ts",
+        "evidence": "The plan says the old useHomeEntrance is replaced by scoped pointer and state feedback in useHomeFeedback. The file is still in the scope manifest. ClassroomHomeView now imports only useHomeFeedback, so useHomeEntrance may be dead code. I did not read the file or search for other callers, so this is unverified.",
+        "fix": "Search for remaining importers of useHomeEntrance. If there are none, delete the file so no page-entrance code remains. Otherwise confirm that nothing mounts it on Home."
+      }
+    ],
+    "coverage": [
+      "I read the plan and the full tracked diff, including ClassroomHome.tsx, ClassroomHomeView.tsx, homeModel.ts, useClassroomHome.ts, useInbox.ts, useUserPermissions.ts and home.css.",
+      "I grepped the working-tree home.css to confirm F1 and F2.",
+      "I did not open the untracked files: teacher/*, HomeWeekStrip, useHomeFeedback, useHomeFreshness, the new tests and the docs/verification harness."
+    ],
+    "limitations": [
+      "I did not review the untracked files named in coverage. Their absence is not an approval.",
+      "I did not run any tests, build or browser checks.",
+      "I did not trace callers outside the listed scope: ClassroomLayout, thread consumers, useUnreadCounters and the destinationAccess registry.",
+      "I did not verify that the ClassroomHomeView tests match the new markup beyond reading the diff.",
+      "The useInbox unread-preview logic looks plausible from the diff but is untested by me."
+    ]
+  },
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 78498,
+    "cache_read_input_tokens": 85966,
+    "output_tokens": 2218,
+    "output_tokens_details": {
+      "thinking_tokens": 476
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 78498,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 1946,
+        "cache_read_input_tokens": 81485,
+        "cache_creation_input_tokens": 1494,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1494
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "observed_models": [
+    "claude-sonnet-5-5"
+  ],
+  "permission_denials": [],
+  "total_cost_usd": 0.34477660000000004,
+  "elapsed_seconds": 51.58
+}

@@ -1,0 +1,72 @@
+{
+ "qid": "PT123-S3-Q7",
+ "type": "Agree/Disagree",
+ "difficulty": "2",
+ "key_db": "B",
+ "stimulus_db": "Antonio: One can live a life of moderation by never deviating from the middle course. But then one loses the joy of spontaneity and misses the opportunities that come to those who are occasionally willing to take great chances, or to go too far.\nMarla: But one who, in the interests of moderation, never risks going too far is actually failing to live a life of moderation: one must be moderate even in one’s moderation.",
+ "stem_db": "Antonio and Marla disagree over",
+ "choices_db": {
+  "A": "whether it is desirable for people occasionally to take great chances in life",
+  "B": "what a life of moderation requires of a person",
+  "C": "whether it is possible for a person to embrace other virtues along with moderation",
+  "D": "how often a person ought to deviate from the middle course in life",
+  "E": "whether it is desirable for people to be moderately spontaneous"
+ },
+ "bank": {
+  "stimulus": "Antonio: One can live a life of moderation by never deviating from the middle course. But then one loses the joy of spontaneity and misses the opportunities that come to those who are occasionally willing to take great chances, or to go too far.\nMarla: But one who, in the interests of moderation, never risks going too far is actually failing to live a life of moderation: one must be moderate even in one's moderation.",
+  "stem": "Antonio and Marla disagree over",
+  "choices": {
+   "A": "whether it is desirable for people occasionally to take great chances in life",
+   "B": "what a life of moderation requires of a person",
+   "C": "whether it is possible for a person to embrace other virtues along with moderation",
+   "D": "how often a person ought to deviate from the middle course in life",
+   "E": "whether it is desirable for people to be moderately spontaneous"
+  },
+  "key": "B"
+ },
+ "explanation_id": "5c91cbf0-d42a-460f-a52e-515517709794",
+ "style": "single",
+ "steps": [
+  {
+   "row_id": "1797f203-7405-4af3-b631-02670691d960",
+   "position": 0,
+   "label": "Antonio / Marla",
+   "body": "Antonio: One can live a life of moderation by never deviating from the middle course. But then one loses the joy of spontaneity and misses the opportunities that come to those who are occasionally willing to take great chances, or to go too far.\n\nMarla: But one who, in the interests of moderation, never risks going too far is actually failing to live a life of moderation: one must be moderate even in one’s moderation."
+  },
+  {
+   "row_id": "1ad1e6b3-76c4-4914-ae71-a90f8924b362",
+   "position": 1,
+   "label": "Evaluate",
+   "body": "Antonio and Marla disagree about whether one who never deviates from the middle course is living a life of moderation."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "cb3f070d-412c-49c6-bc57-107b5491fddb",
+   "letter": "A",
+   "body": "Antonio does suggest that occasional great chances are worth something: never deviating means one \"loses the joy of spontaneity\" and \"misses the opportunities.\" Marla does not dispute this. Marla's point is that a moderate life itself sometimes risks going too far. If anything, both leave room for occasional risk, so this is not their disagreement."
+  },
+  {
+   "row_id": "f66bca41-4b1b-4cd5-a668-68df25932c3d",
+   "letter": "B",
+   "body": "This points to the dispute about what really constitutes a life of moderation."
+  },
+  {
+   "row_id": "93bfb01f-501a-4983-9028-53a5635d57ac",
+   "letter": "C",
+   "body": "While Antonio addresses whether spontaneity and moderation can be embraced, but Marla does not address it."
+  },
+  {
+   "row_id": "415cc118-5333-43af-af8d-e2e49d451f1b",
+   "letter": "D",
+   "body": "Neither Antonio nor Marla address what a person ought to do."
+  },
+  {
+   "row_id": "2ea891a1-eb77-4526-b64e-1ed34a854950",
+   "letter": "E",
+   "body": "Marla would agree with this statement, but Antonio does not address it."
+  }
+ ],
+ "known_problem": "Two-speaker table flattened; A note (\"not discussed by neither\") is wrong, since Antonio does value taking chances; C note ungrammatical.",
+ "tags": "verdict-only; thin-correct-note; thin-notes; no-prediction; very-short"
+}

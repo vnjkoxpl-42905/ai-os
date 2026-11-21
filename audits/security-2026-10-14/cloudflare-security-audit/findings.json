@@ -1,0 +1,432 @@
+[
+  {
+    "verdict": "needs_validation",
+    "fingerprint": "booking-pass/email-auto-link-trusts-unverified-account-email",
+    "title": "Booking passes auto-attach to any account whose email matches, with no email-verification check",
+    "description": "Admins create booking passes by name and email with student_id NULL. student-booking runs activePassRow on every request: when the caller has no pass, it finds an active account-less pass whose student_email equals the JWT email claim, sets student_id to the caller, and the caller can then book sessions against that pass's paid credits. linkPassToAccount (public-booking book path, booking-pass-admin) and findAuthUserIdByEmail also match accounts by listUsers email without checking email_confirmed_at. If Auth issues sessions to unconfirmed emails, someone who registers with a student's address first takes over the pass, its Meet links, and the uploads and history tied to it.",
+    "claimed_root_cause": "Pass ownership is derived from the email string on an account rather than from a verified email (email_confirmed_at) or an explicit admin link.",
+    "trace": [
+      {
+        "kind": "entrypoint",
+        "file": "supabase/functions/student-booking/index.ts",
+        "line": 59,
+        "scope": "Deno.serve",
+        "description": "Authenticated request carrying a bearer JWT."
+      },
+      {
+        "kind": "propagation",
+        "file": "supabase/functions/student-booking/index.ts",
+        "line": 81,
+        "scope": "Deno.serve",
+        "description": "userEmail taken from the JWT email claim."
+      },
+      {
+        "kind": "propagation",
+        "file": "supabase/functions/student-booking/index.ts",
+        "line": 90,
+        "scope": "Deno.serve",
+        "description": "activePassRow(supabase, userId, userEmail) runs for every action."
+      },
+      {
+        "kind": "propagation",
+        "file": "supabase/functions/student-booking/index.ts",
+        "line": 38,
+        "scope": "activePassRow",
+        "description": "Service-role query for an active pass with student_id NULL and student_email ilike the claim email."
+      },
+      {
+        "kind": "propagation",
+        "file": "supabase/functions/student-booking/index.ts",
+        "line": 42,
+        "scope": "activePassRow",
+        "description": "Pass permanently updated to student_id = caller."
+      },
+      {
+        "kind": "sink",
+        "file": "supabase/functions/student-booking/index.ts",
+        "line": 209,
+        "scope": "Deno.serve action=book",
+        "description": "bookSession consumes a credit of that pass for the caller."
+      }
+    ],
+    "evidence": [
+      {
+        "file": "supabase/functions/_shared/linkPassToAccount.ts",
+        "line": 20,
+        "description": "findAuthUserIdByEmail matches listUsers by email only, with no email_confirmed_at check."
+      },
+      {
+        "file": "supabase/functions/_shared/linkPassToAccount.ts",
+        "line": 34,
+        "description": "linkPassToAccount writes student_id for the matched account."
+      },
+      {
+        "file": "src/contexts/AuthContext.tsx",
+        "line": 187,
+        "description": "Self-service email/password signUp is exposed; confirmation enforcement lives in Auth settings."
+      },
+      {
+        "file": "supabase/config.toml",
+        "line": 1,
+        "description": "No [auth] section or enable_confirmations setting exists in the repository."
+      }
+    ],
+    "blockers": [
+      "Lovable Cloud Auth 'confirm email' setting is not in source. If confirmation is required, an unconfirmed signup cannot get a JWT and the student-booking path is closed (linkPassToAccount would still attach the pass to an unusable account).",
+      "Edge function not executed locally.",
+      "Phase 3/5 independent verifier agent terminated on an API rate limit; the parent re-checked the cited source instead, so this record lacks a fully independent fresh-agent verification."
+    ],
+    "validation_plan": {
+      "local": "In a local Supabase with enable_confirmations=false, create an account-less active pass for victim@example.test, sign up a second user with that email, call student-booking action=info, and observe booking_passes.student_id set to that user's id; repeat with confirmations on.",
+      "deployment": "Owner check: in Lovable Cloud Auth settings, confirm whether email confirmation is required and whether unconfirmed users can sign in. Fix by requiring email_confirmed_at (and email_verified for OAuth identities) before any email-based pass link."
+    }
+  },
+  {
+    "verdict": "needs_validation",
+    "fingerprint": "lsatu:rls:conversation_participants-update-conversation_id-pivot",
+    "title": "Participant can move their conversation_participants row into any conversation and read its messages",
+    "description": "The UPDATE policy on conversation_participants checks only user_id = auth.uid() in USING and WITH CHECK. conversation_id remains writable because no column grant or trigger restricts it (20260826060000 explicitly relies on this policy for home_cleared_at). A student who UPDATEs their own participant row to another conversation's id becomes a participant of that conversation: is_conversation_participant then authorizes SELECT on its messages, message_attachments rows and message-attachments storage objects (folder = conversation id), INSERT of messages into it, and UPDATE of the conversation row (which has no WITH CHECK, so created_by can be rewritten and further participants added).",
+    "claimed_root_cause": "Self-row UPDATE policy binds only the user column and leaves the tenant key (conversation_id) mutable.",
+    "trace": [
+      {
+        "kind": "entrypoint",
+        "file": "supabase/migrations/20260416234013_49bfd508-03f2-4942-a636-2763f1f3af5b.sql",
+        "line": 99,
+        "scope": "policy 'Users can update own participant row' on public.conversation_participants",
+        "description": "PATCH /rest/v1/conversation_participants?id=eq.<own row> {conversation_id: '<target conversation>'} passes user_id = auth.uid()."
+      },
+      {
+        "kind": "propagation",
+        "file": "supabase/migrations/20260416234013_49bfd508-03f2-4942-a636-2763f1f3af5b.sql",
+        "line": 49,
+        "scope": "public.is_conversation_participant(uuid, uuid)",
+        "description": "Returns true for the target conversation because the moved row now matches."
+      },
+      {
+        "kind": "propagation",
+        "file": "supabase/migrations/20260416234013_49bfd508-03f2-4942-a636-2763f1f3af5b.sql",
+        "line": 105,
+        "scope": "policy 'Participants can view messages' on public.messages",
+        "description": "Authorizes reading every message in the target conversation."
+      },
+      {
+        "kind": "sink",
+        "file": "supabase/migrations/20260416234013_49bfd508-03f2-4942-a636-2763f1f3af5b.sql",
+        "line": 173,
+        "scope": "policy 'Participants can read attachment files' on storage.objects",
+        "description": "Authorizes downloading the target conversation's attachment files from bucket message-attachments."
+      }
+    ],
+    "evidence": [
+      {
+        "file": "supabase/migrations/20260416234013_49bfd508-03f2-4942-a636-2763f1f3af5b.sql",
+        "line": 77,
+        "description": "conversations UPDATE policy has USING only, no WITH CHECK, so a participant can also rewrite created_by and then add participants via the creator INSERT policy."
+      },
+      {
+        "file": "supabase/migrations/20260826060000_home_message_clear_state.sql",
+        "line": 39,
+        "description": "Migration comment relies on this UPDATE policy being scoped to user_id, confirming no column restriction was added."
+      }
+    ],
+    "blockers": [
+      "No local Postgres with the migrated schema and no OS sandbox on this host; RLS and grant behavior was not executed.",
+      "Deployed policy set unknown: whether every repository migration (including 20251022025825) was applied to the Lovable Cloud database cannot be checked without contacting it, which is out of scope.",
+      "Attacker must obtain a target conversation UUID; no source path reviewed in this unit was confirmed to leak other users' conversation ids to a student.",
+      "Phase 3/5 independent verifier agent terminated on an API rate limit; the parent re-checked the cited source instead, so this record lacks a fully independent fresh-agent verification."
+    ],
+    "validation_plan": {
+      "local": "On a disposable local Postgres with all migrations applied, create admin J, students A and B, conversations CA (J,A) and CB (J,B) with a message in CB; as A run UPDATE public.conversation_participants SET conversation_id = '<CB>' WHERE user_id = '<A>' AND conversation_id = '<CA>'; then SELECT body FROM public.messages WHERE conversation_id = '<CB>'. Update rejected or zero rows = safe.",
+      "deployment": "Owner checks read-only: SELECT column_name FROM information_schema.column_privileges WHERE table_name='conversation_participants' AND grantee='authenticated' AND privilege_type='UPDATE'; and lists triggers on public.conversation_participants. UPDATE on conversation_id with no guard trigger confirms the precondition."
+    }
+  },
+  {
+    "verdict": "needs_validation",
+    "fingerprint": "lsatu:rls:profiles-insert-unguarded-access-flags-self-grant",
+    "title": "New signup can self-grant every access flag by inserting its own profiles row",
+    "description": "Access to paid features is controlled by profiles.has_*_access, access_tier and archived_at, which the design reserves to admins (approve_signup, admin-manage-users). The guard trigger guard_profile_admin_fields fires BEFORE UPDATE only, and the column-scoped privilege fix in 20260612153001 revokes and re-grants UPDATE only. The student INSERT policy on profiles checks only class_id = auth.uid()::text. Profiles are created by the client's first upsert (OrientationCard/PrepSection), not by a server trigger, so a freshly signed-up user can POST /rest/v1/profiles with class_id = own uid and every has_*_access true and access_tier 'tier_1'. Server-side checks that read these flags (for example can_sit_practice_test reading has_practice_access, and edge functions that read the flags) then treat the user as approved.",
+    "claimed_root_cause": "Admin-controlled columns are protected on UPDATE only; INSERT keeps the default table privilege and the INSERT policy does not constrain those columns.",
+    "trace": [
+      {
+        "kind": "entrypoint",
+        "file": "supabase/migrations/20260406153113_2a71da51-b5d2-4154-aa2b-8b5bae10d4ad.sql",
+        "line": 23,
+        "scope": "policy 'Students can insert own profile' on public.profiles",
+        "description": "POST /rest/v1/profiles {class_id: '<self uid>', has_practice_access: true, ...} passes WITH CHECK class_id = auth.uid()::text."
+      },
+      {
+        "kind": "propagation",
+        "file": "supabase/migrations/20260511172245_00101794-a53b-4261-b60a-019a1afca5b2.sql",
+        "line": 34,
+        "scope": "trigger guard_profile_admin_fields_trg",
+        "description": "Defined BEFORE UPDATE ON public.profiles, so the access-flag guard does not run on INSERT (latest body in supabase/migrations/20260923010100_access_tiers_stage2_tier_column.sql is unchanged in timing)."
+      },
+      {
+        "kind": "propagation",
+        "file": "supabase/migrations/20260803160000_signup_approval_queue.sql",
+        "line": 86,
+        "scope": "trigger notify_admins_on_signup_trigger",
+        "description": "AFTER INSERT only notifies admins; nothing resets self-supplied flags."
+      },
+      {
+        "kind": "sink",
+        "file": "supabase/migrations/20260923010300_practice_test_assignments.sql",
+        "line": 41,
+        "scope": "public.can_sit_practice_test(uuid, integer)",
+        "description": "Grants practice-test access when profiles.has_practice_access is true, now self-set."
+      }
+    ],
+    "evidence": [
+      {
+        "file": "supabase/migrations/20260612153001_90a75534-9c9e-4470-adfc-92b55043121f.sql",
+        "line": 37,
+        "description": "REVOKE UPDATE ON public.profiles FROM authenticated with column-scoped GRANT UPDATE; no matching REVOKE INSERT exists in any migration."
+      },
+      {
+        "file": "src/components/classroom/OrientationCard.tsx",
+        "line": 349,
+        "description": "Client creates the profile with an upsert on class_id, showing the row is not pre-created server-side."
+      },
+      {
+        "file": "supabase/migrations/20260803160000_signup_approval_queue.sql",
+        "line": 1,
+        "description": "Signup approval queue documents that access is granted by an admin action that 'can never be self-served by the account being approved'."
+      },
+      {
+        "file": "src/hooks/useUserPermissions.ts",
+        "line": 193,
+        "description": "Client permission gate reads the same profile flags."
+      }
+    ],
+    "blockers": [
+      "No local Postgres with the migrated schema and no OS sandbox on this host; RLS and grant behavior was not executed.",
+      "Deployed policy set unknown: whether every repository migration (including 20251022025825) was applied to the Lovable Cloud database cannot be checked without contacting it, which is out of scope.",
+      "Whether the deployed profiles columns default to false and whether any dashboard-created trigger or default privilege revokes INSERT is not visible in the repository.",
+      "Phase 3/5 independent verifier agent terminated on an API rate limit; the parent re-checked the cited source instead, so this record lacks a fully independent fresh-agent verification."
+    ],
+    "validation_plan": {
+      "local": "On a disposable local Postgres with all migrations applied, create auth user C with no profiles row; as C (authenticated) INSERT INTO public.profiles (class_id, has_practice_access, has_classroom_access, access_tier) VALUES ('<C uid>', true, true, 'tier_1'); then SELECT public.can_sit_practice_test('<C uid>', 101). Insert rejected = safe; true = confirmed.",
+      "deployment": "Owner checks read-only: SELECT tgname, tgtype FROM pg_trigger WHERE tgrelid = 'public.profiles'::regclass; and SELECT privilege_type FROM information_schema.role_table_grants WHERE table_name='profiles' AND grantee='authenticated'. INSERT privilege plus no BEFORE INSERT guard confirms the precondition."
+    }
+  },
+  {
+    "verdict": "needs_validation",
+    "fingerprint": "lsatu:rls:students.class_id-self-writable-feeds-legacy-get_user_class_id-policies",
+    "title": "Student can read and alter another student's practice data by rewriting their own students.class_id",
+    "description": "Legacy RLS policies created in 20251022025825 ('Users can view own profile', 'Users can view own attempts', 'Users can view own WAJ entries', 'Users can view own session', 'Users can view own settings' and their INSERT/UPDATE siblings) authorize rows where class_id = get_user_class_id(auth.uid()). get_user_class_id returns students.class_id for the caller. The 20260406153113 rewrite dropped only policies named 'Students can ...', so these legacy policies still exist and are ORed with the newer class_id = auth.uid()::text policies. The students table lets any authenticated user INSERT or UPDATE their own row (checked on user_id only) with no restriction on class_id. A student who sets their students.class_id to another student's auth uid therefore satisfies the legacy policies for that student's profiles, attempts, wrong_answer_journal, sessions, settings, section_history, daily_stats, drill_templates, question_usage, voice and achievement rows, and can also insert or update rows under that class_id.",
+    "claimed_root_cause": "Owner identity for the legacy policies comes from a caller-writable column (students.class_id) instead of auth.uid(), and the legacy policies were never dropped because the cleanup migration dropped different policy names.",
+    "trace": [
+      {
+        "kind": "entrypoint",
+        "file": "supabase/migrations/20260406153113_2a71da51-b5d2-4154-aa2b-8b5bae10d4ad.sql",
+        "line": 9,
+        "scope": "policy 'Students can update own data' on public.students",
+        "description": "Authenticated PATCH /rest/v1/students?user_id=eq.<self> with {class_id: '<victim uid>'} passes USING/WITH CHECK user_id = auth.uid(); class_id is unconstrained."
+      },
+      {
+        "kind": "propagation",
+        "file": "supabase/migrations/20260329000000_fix_class_id_fallback.sql",
+        "line": 13,
+        "scope": "public.get_user_class_id(uuid)",
+        "description": "SECURITY DEFINER helper returns students.class_id for the caller, now the victim's uid."
+      },
+      {
+        "kind": "propagation",
+        "file": "supabase/migrations/20251022025825_79b98981-456d-4917-87e6-e4ce4ed8e8cb.sql",
+        "line": 35,
+        "scope": "policy 'Users can view own profile' on public.profiles",
+        "description": "USING (class_id = get_user_class_id(auth.uid())) matches the victim's profile row; same pattern at attempts (line 24), wrong_answer_journal (82), sessions (130), settings (144)."
+      },
+      {
+        "kind": "sink",
+        "file": "supabase/migrations/20251022025825_79b98981-456d-4917-87e6-e4ce4ed8e8cb.sql",
+        "line": 24,
+        "scope": "policy 'Users can view own attempts' on public.attempts",
+        "description": "GET /rest/v1/attempts?class_id=eq.<victim uid> returns the victim's full answer history; INSERT policy at line 27 accepts forged attempts under the victim's class_id."
+      }
+    ],
+    "evidence": [
+      {
+        "file": "supabase/migrations/20260406153113_2a71da51-b5d2-4154-aa2b-8b5bae10d4ad.sql",
+        "line": 1,
+        "description": "Cleanup migration states it drops existing permissive policies but only drops 'Students can ...' names (lines 5-23); the 'Users can ...' names from 20251022025825 are never dropped anywhere in the repository."
+      },
+      {
+        "file": "supabase/migrations/20260406153113_2a71da51-b5d2-4154-aa2b-8b5bae10d4ad.sql",
+        "line": 10,
+        "description": "students INSERT policy checks user_id only, so a user without a row can create one with any class_id."
+      },
+      {
+        "file": "supabase/migrations/20251022025825_79b98981-456d-4917-87e6-e4ce4ed8e8cb.sql",
+        "line": 160,
+        "description": "Legacy students UPDATE policy also checks user_id only."
+      },
+      {
+        "file": "supabase/migrations/20260612153001_90a75534-9c9e-4470-adfc-92b55043121f.sql",
+        "line": 54,
+        "description": "Only SELECT on students is column-restricted; no REVOKE UPDATE/INSERT or guard trigger exists for students.class_id."
+      },
+      {
+        "file": "src/contexts/AuthContext.tsx",
+        "line": 75,
+        "description": "Client provisioner writes class_id = user id, confirming class_id is the owner key and is client-supplied."
+      }
+    ],
+    "blockers": [
+      "No local Postgres with the migrated schema and no OS sandbox on this host; RLS and grant behavior was not executed.",
+      "Deployed policy set unknown: whether every repository migration (including 20251022025825) was applied to the Lovable Cloud database cannot be checked without contacting it, which is out of scope.",
+      "Attacker must know the victim's auth uid; no source path in this unit was confirmed to disclose other students' uids to a student.",
+      "Phase 3/5 independent verifier agent terminated on an API rate limit; the parent re-checked the cited source instead, so this record lacks a fully independent fresh-agent verification."
+    ],
+    "validation_plan": {
+      "local": "Apply all migrations in order to a disposable local Postgres with Supabase auth stubs; create users A and B with students rows class_id = own uid and an attempts row for B; as A (role authenticated, request.jwt.claims sub = A) run UPDATE public.students SET class_id = '<B uid>' WHERE user_id = '<A uid>'; then SELECT * FROM public.attempts WHERE class_id = '<B uid>' and SELECT * FROM public.profiles WHERE class_id = '<B uid>'. Expect zero rows if safe; rows returned confirms.",
+      "deployment": "Owner runs read-only SQL on the production database: SELECT policyname, tablename, qual FROM pg_policies WHERE qual ILIKE '%get_user_class_id%'; and SELECT grantee, privilege_type FROM information_schema.role_table_grants WHERE table_name = 'students' AND grantee = 'authenticated'. Any surviving 'Users can ...' policy plus UPDATE/INSERT grant confirms the precondition."
+    }
+  },
+  {
+    "verdict": "needs_validation",
+    "fingerprint": "lsatu:rpc:set_booking_availability_overrides-default-execute-no-admin-check",
+    "title": "Anyone with the anon key can rewrite booking availability overrides through set_booking_availability_overrides",
+    "description": "public.set_booking_availability_overrides(jsonb) is SECURITY DEFINER, performs no auth.uid() or has_role check, and no migration revokes EXECUTE from PUBLIC/anon/authenticated (every sibling booking RPC in the same feature is explicitly revoked and granted to service_role). It deletes every override dated today or later and inserts caller-supplied rows. booking_ranges_for_date treats override rows as replacing the weekly hours, so an anonymous caller can close every bookable day (null times) or open arbitrary hours, affecting public booking and pass redemption. The function also returns get_booking_availability(), which is otherwise service_role-only.",
+    "claimed_root_cause": "Admin-only SECURITY DEFINER mutation function created without an internal admin check and without revoking the default PUBLIC EXECUTE privilege.",
+    "trace": [
+      {
+        "kind": "entrypoint",
+        "file": "supabase/migrations/20260911000000_booking_policy_mirrors_calcom.sql",
+        "line": 148,
+        "scope": "public.set_booking_availability_overrides(jsonb)",
+        "description": "POST /rest/v1/rpc/set_booking_availability_overrides with anon key and body {_overrides: [{date: '<each day>'}]}; SECURITY DEFINER, no caller check, default PUBLIC EXECUTE."
+      },
+      {
+        "kind": "propagation",
+        "file": "supabase/migrations/20260911000000_booking_policy_mirrors_calcom.sql",
+        "line": 168,
+        "scope": "set_booking_availability_overrides body",
+        "description": "DELETE FROM booking_availability_overrides WHERE date >= today, then INSERT of caller rows, bypassing the admin-only table policy."
+      },
+      {
+        "kind": "sink",
+        "file": "supabase/migrations/20260911000000_booking_policy_mirrors_calcom.sql",
+        "line": 91,
+        "scope": "public.booking_ranges_for_date(date)",
+        "description": "Override rows replace weekly availability for that date; a null-time row closes the day."
+      }
+    ],
+    "evidence": [
+      {
+        "file": "supabase/migrations/20260911000000_booking_policy_mirrors_calcom.sql",
+        "line": 81,
+        "description": "Table policy limits booking_availability_overrides to admins, showing the intended authority."
+      },
+      {
+        "file": "supabase/migrations/20260911000000_booking_policy_mirrors_calcom.sql",
+        "line": 106,
+        "description": "get_booking_availability, returned by the function, is revoked from public/anon/authenticated elsewhere, confirming sibling RPCs are meant to be service_role-only."
+      }
+    ],
+    "blockers": [
+      "No local Postgres with the migrated schema and no OS sandbox on this host; RLS and grant behavior was not executed.",
+      "Whether the Lovable Cloud project retains Supabase's default EXECUTE grant for new public functions, or had it altered outside the repository, is not visible without contacting the database.",
+      "Phase 3/5 independent verifier agent terminated on an API rate limit; the parent re-checked the cited source instead, so this record lacks a fully independent fresh-agent verification."
+    ],
+    "validation_plan": {
+      "local": "On a disposable local Supabase stack with all migrations applied, call SET ROLE anon; SELECT public.set_booking_availability_overrides('[{\"date\":\"<tomorrow>\"}]'::jsonb); then SELECT * FROM public.booking_ranges_for_date('<tomorrow>'). Permission denied = safe; empty ranges = confirmed.",
+      "deployment": "Owner runs read-only: SELECT has_function_privilege('anon', 'public.set_booking_availability_overrides(jsonb)', 'EXECUTE'), has_function_privilege('authenticated', 'public.set_booking_availability_overrides(jsonb)', 'EXECUTE'); true confirms the precondition without calling the function."
+    }
+  },
+  {
+    "verdict": "needs_validation",
+    "fingerprint": "single-session/hold/booking_price_cents-keyed-on-unverified-caller-email",
+    "title": "Anonymous single-session hold gets a student's negotiated price by typing that student's email",
+    "description": "The public single-session booking (verify_jwt=false, Turnstile only) prices the hold with booking_price_cents(event_slug, email), where email is whatever the anonymous booker typed. booking_price_overrides holds per-student rates keyed by email. The quote is persisted from that same email and the Stripe webhook validates the payment against that quote, so a stranger who knows an override email can buy a session at that student's rate. The booker can also list their own address in guests, and the outbox puts guests on the Calendar invite, so they receive the Meet link. The hold response also reveals which emails carry an override.",
+    "claimed_root_cause": "A price entitlement is bound to an unverified, caller-supplied identifier (the booker email) instead of an authenticated principal or a server-issued capability.",
+    "trace": [
+      {
+        "kind": "entrypoint",
+        "file": "supabase/functions/single-session/index.ts",
+        "line": 393,
+        "scope": "Deno.serve action=hold",
+        "description": "Anonymous POST with name, email, guests, start_at and turnstile_token."
+      },
+      {
+        "kind": "propagation",
+        "file": "supabase/functions/single-session/index.ts",
+        "line": 395,
+        "scope": "Deno.serve action=hold",
+        "description": "email = normalizeEmail(body.email); no proof of ownership."
+      },
+      {
+        "kind": "propagation",
+        "file": "supabase/functions/single-session/index.ts",
+        "line": 403,
+        "scope": "Deno.serve action=hold",
+        "description": "booking_price_cents is called with the caller's email to set amountCents."
+      },
+      {
+        "kind": "propagation",
+        "file": "supabase/migrations/20260830010000_booking_event_types.sql",
+        "line": 90,
+        "scope": "public.booking_price_cents",
+        "description": "Override row selected where lower(o.email)=lower(_email)."
+      },
+      {
+        "kind": "propagation",
+        "file": "supabase/migrations/20260915170000_booking_confirmation_details.sql",
+        "line": 66,
+        "scope": "public.claim_single_session_slot",
+        "description": "quoted_amount_cents persisted from booking_price_cents(event_slug, booking.email)."
+      },
+      {
+        "kind": "propagation",
+        "file": "supabase/functions/single-session/index.ts",
+        "line": 560,
+        "scope": "Deno.serve action=hold",
+        "description": "Checkout fingerprint built with amountCents and the typed email."
+      },
+      {
+        "kind": "sink",
+        "file": "supabase/functions/single-session/index.ts",
+        "line": 581,
+        "scope": "Deno.serve action=hold",
+        "description": "Stripe Checkout session created at the override price; the webhook later accepts a payment matching quoted_amount_cents."
+      }
+    ],
+    "evidence": [
+      {
+        "file": "supabase/migrations/20260830010000_booking_event_types.sql",
+        "line": 52,
+        "description": "booking_price_overrides is keyed by email; the comment says the booker is not necessarily signed in."
+      },
+      {
+        "file": "supabase/functions/single-session/index.ts",
+        "line": 401,
+        "description": "The only gate before pricing is Turnstile, which proves a human, not email ownership."
+      },
+      {
+        "file": "supabase/functions/booking-commerce-webhook/index.ts",
+        "line": 280,
+        "description": "Webhook uses booking.quoted_amount_cents as the expected amount."
+      },
+      {
+        "file": "supabase/functions/_shared/singleSessionCore.ts",
+        "line": 91,
+        "description": "normalizeGuests accepts up to 10 arbitrary guest emails."
+      },
+      {
+        "file": "supabase/functions/single-session-outbox/index.ts",
+        "line": 180,
+        "description": "Guests are added as Calendar attendees, so the booker can receive the invite and Meet link."
+      }
+    ],
+    "blockers": [
+      "Edge function and SQL not executed locally (no OS sandbox available).",
+      "Whether production booking_price_overrides holds any rate below the event default is not visible in source.",
+      "Stripe Checkout handling of a prefilled customer_email is provider-side.",
+      "Phase 3/5 independent verifier agent terminated on an API rate limit; the parent re-checked the cited source instead, so this record lacks a fully independent fresh-agent verification."
+    ],
+    "validation_plan": {
+      "local": "In a local Supabase with the migrations applied, insert booking_price_overrides(email='student@example.test', event_slug='single-session', price_cents=1000), call claim_single_session_slot as service_role with _email='student@example.test', and confirm quoted_amount_cents=1000 while another email gets 4500.",
+      "deployment": "Owner check: query booking_price_overrides for rows with price_cents below the event default. Fix by binding overrides to an authenticated user id or a server-minted one-off link, and quote the default price for anonymous holds."
+    }
+  }
+]

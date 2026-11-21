@@ -1,12 +1,21 @@
 ---
 name: second-brain-ingest
 description: >
-  Compatibility name for ingest. When explicitly invoked, run the current
-  vault ingest workflow; it does not own a competing source-processing pipeline.
+  The single front door for adding sources to the current knowledge base. Use
+  for "ingest this", "process this source", "file these notes", "add this to
+  my second brain", "ingest the latest clips", or a supplied document meant
+  to become saved knowledge. Finds the input, checks content hashes, preserves
+  provenance, and compiles it into linked wiki pages. Session write-ups and
+  student-facing post-session recaps belong to post-session-recap. Student and
+  consultation session transcripts belong to transcript-intake, not this pipeline.
 allowed-tools: Bash Read Write Edit Glob Grep
 ---
 
-# Use the single ingest workflow
+# Ingest sources into the current brain
+
+One public skill owns discovery, duplicate checks, preservation, routing, and
+wiki compilation. It is the one ingest workflow; no separate alias exists. Read the internal
+`references/wiki-compilation.md` when processing knowledge sources.
 
 ## Resolve the vault and schema first
 
@@ -17,13 +26,174 @@ workflows. Do not assume a saved Windows or Mac path. If no schema exists in the
 target vault, report that gap before changing its structure; never initialize a
 second vault to solve a request about an existing one.
 
-Resolve the current vault, then read its active `ingest/SKILL.md` and follow it
-through completion, including `ingest/references/wiki-compilation.md`.
-If only catalog copies exist, use the matching runtime's `skills/<runtime>/ingest/`
-workflow. Existing global activation may use its sibling `ingest/` only after
-resolving the target vault and schema. If that dependency is missing, report the
-missing workflow rather than improvising a parallel intake procedure.
+## Route first
 
-Public activation phrases belong to `ingest`: "ingest this", "add this to my
-second brain", "file these notes", and "process this source". This old explicit
-name remains compatible without asking the user to invoke another skill.
+Identify what is being ingested, then jump to that section. If it is genuinely
+ambiguous, ask once. Do not guess and file it somewhere wrong.
+
+| Input | Where it lands | Section |
+|---|---|---|
+| Web clip from Obsidian Web Clipper (`.md` in `raw/inbox/`) | `raw/inbox/` | [Clips](#clips) |
+| A pasted URL: article, video or GitHub repository | captured into `raw/inbox/` first | [URLs](#urls), then [Clips](#clips) |
+| Public video or lecture clip | `raw/inbox/` | [Clips](#clips); acquire source captions if missing, never student intake |
+| Student or consultation session transcript, live or archival | Student records | Delegate to `transcript-intake`; do not compile through this pipeline |
+| Superwhisper `recordings/` dirs (`meta.json` + `output.wav`) or `settings.json` | wherever they were dropped | hand to `superwhisper`; not this skill's |
+| Student evidence: PT score report, screenshot, homework export | `~/Downloads`, chat attachment | [Student evidence](#student-evidence) |
+| A source document meant to become wiki knowledge | `raw/` | dedupe below, then read `references/wiki-compilation.md` |
+| Takeout or platform dump | `raw/data-about-me/` | [Bulk exports](#bulk-exports) |
+
+Student/session transcript intake is owned by `transcript-intake`.
+Knowledge-source compilation is this skill's internal reference. `post-session-recap`
+owns the complete student-facing session write-up workflow. A request only to
+retrieve or file a transcript stays narrow; a recap request goes directly to that
+skill without asking for a second activation.
+
+## Always, before any pipeline
+
+1. **Find the file without asking where it is.** Search newest-first:
+   ```
+   raw/inbox/   raw/sources/   ~/Downloads/   ~/Desktop/   students/*/transcript-downloads/
+   ```
+   Ask only if that comes up empty. He has answered "where is it" too many
+   times. `raw/inbox/` is the single intake queue; the old top-level
+   `Clippings/` folder was folded into `raw/sources/clips/` on 2026-09-08, so a
+   `Clippings/` path in an old note is stale.
+2. **Dedupe by SHA-256, not by name.** On Windows use `Get-FileHash` or
+   Python `hashlib`. Check existing archive manifests, source-page metadata,
+   and dated ingest entries. A matching filename alone is not proof. A matching
+   hash with completed wiki output means report the existing output and stop.
+   An archived hash without finished output means resume compilation, not
+   discard the source. Never delete duplicates.
+3. **Check the log and source summary.** Record whether the candidate was
+   previously processed and whether this is a new revision. Preserve both
+   generations when content changed. A deliberate re-ingest updates the
+   existing source page with revision provenance, not a duplicate truth.
+4. **Preserve the input byte-for-byte.** Copy external attachments or inbox
+   inputs to an appropriate `raw/sources/` archive and verify the SHA-256 before
+   citing the preserved copy. Record origin, URL/author/date when known,
+   capture date, archived date, filename, size, and hash. Do not move, delete,
+   overwrite, or edit original source bytes. Do not follow symlinks outside a
+   registered source root. Existing archived inputs can be read in place.
+   Windows paths stop near 260 characters: give an over-long filename a short
+   archive name and record the original name in `PROVENANCE.md`.
+5. **Stop on an empty source.** If the input has no body beyond frontmatter or
+   whitespace, report it and stop. Never write a summary of an empty capture.
+
+## URLs
+
+A pasted link becomes a file in `raw/inbox/` first, so every source takes the
+same preserved route.
+
+- **Article or web page:** capture it with the Firecrawl CLI (`firecrawl-scrape`)
+  as Markdown. Web reads use Firecrawl, not WebFetch.
+- **Public video:** fetch its native captions and description through the
+  `watch` skill or `yt-dlp`. No transcript means report limited coverage; never
+  summarize from a title or thumbnail.
+- **GitHub repository:** save the README, then read the files that carry the
+  method through `gh api`. Archive the files you relied on as a separate derived
+  snapshot with the commit SHA, so code-level claims cite saved bytes.
+
+Name the saved file after the page title, record the URL and capture date in
+its `PROVENANCE.md` when archiving, then continue with [Clips](#clips).
+
+## Clips
+
+Obsidian Web Clipper writes `.md` files to `raw/inbox/`. Anything else sitting
+there (a `recordings/` tree, a `settings.json`) is not a clip; route it by the
+table above and tell Joshua it was in the wrong place rather than processing it
+here.
+
+1. List source clips in `raw/inbox/` newest-first, excluding queue README and
+   other operating files. Honor a named file/topic first. For "latest new" or
+   "unprocessed" clips, check hash and completed outputs before choosing the
+   newest pending source; retained completed originals are not new work. Resume
+   an archived-but-uncompiled source. Process one source unless a batch was
+   requested; when several candidates remain ambiguous, show a short selection.
+2. Dedupe (above).
+3. Read the clip fully. For a public video with no transcript, obtain its
+   native captions or an authorized source-transcription route. Selected LSAT Lab
+   lectures use `lsat-lab-lecture-transcribe`; other public videos use available
+   caption tools following their reference instructions. Never send public video
+   sources to student `transcript-intake`. If acquisition is blocked, report the
+   missing transcript and limited coverage; do not infer content from a thumbnail.
+4. Copy and hash-verify the clip into `raw/sources/clips/<slug>/`, using
+   `PROVENANCE.md` and `SHA256SUMS`. Reuse an existing identical archive.
+   Preserve the inbox original. Processed status comes from its hash, source
+   page, and log, not from whether the original still exists in the inbox.
+5. Follow `references/wiki-compilation.md` through the source summary,
+   relevant existing pages, index update, log entry, and verification.
+6. **Queue everything the source says to do.** Normal ingest comes first; this
+   step adds to it. List every actionable item the source offers and route each:
+   - **AI workspace** (a skill, repository, automation, setting, workflow change,
+     product update to verify, prompt worth saving) goes to
+     `references/ai-workspace/action-queue.md`.
+   - **LSAT U** (a platform feature, drill format, teaching method to adopt, or
+     outside tool or platform to try) goes to `wiki/lsatu-idea-queue.md`. The
+     teaching knowledge itself still compiles into `corpus/`.
+
+   Write each item in the format the `second-brain-task` skill defines, with
+   clear steps ending in a `Check:` and a link to the source summary. Check the
+   vault first: something already in place is noted on the summary as "already
+   here", not queued. When an open item already proposes the same thing, add
+   this source's link to it instead of creating a second item. New items go
+   under `## New` with status `new`. Ingest never builds an item and never
+   changes another item's status. Name the added IDs in the ingest report.
+
+One source at a time unless Joshua explicitly asks for batch work. Discuss
+important takeaways as part of the work. An explicit instruction to implement,
+file, or ingest with a stated focus authorizes completing that scope; do not
+introduce an extra confirmation step. Ask when unresolved emphasis, identity,
+or contradictory evidence materially changes what should be written.
+
+## Session transcripts use a separate workflow
+
+Student and consultation transcripts go to the sibling
+`transcript-intake/SKILL.md`. Delegate the authorized lookup, filing, or
+reconciliation there without running this skill's source-summary, wiki-page, or
+index-compilation steps. A requested student-facing lesson instead goes directly
+to `post-session-recap/SKILL.md`. Do not ask the user to invoke a second skill.
+
+Public lecture transcripts and research interviews supplied as reusable knowledge
+remain knowledge sources for `second-brain-ingest`. Purpose determines the route.
+
+## Student evidence
+
+PT score reports, intake screenshots, homework exports, anything about one
+student that arrives as a file.
+
+1. Identify the student (filename, chat context, contents). Ask if unclear.
+2. Dedupe (above).
+3. Copy into the student folder under the matching standard subfolder from
+   `students/README.md`: score reports to `Practice_Test_Reports/`, assigned
+   work to `Student_Specific_Homework/`, otherwise the folder root with a dated
+   name. These are raw evidence: read for diagnosis, never edited.
+4. If it changes a judgment, append the judgment to `teaching-notes.md` with the
+   file as its cited source.
+5. Log it.
+
+## Bulk exports
+
+Takeout and platform dumps land in `raw/data-about-me/` and are git-ignored PII.
+
+- Never read one wholesale; it has blown the context window before.
+- Inventory first (file counts, types, date ranges), report, and let Joshua
+  pick what matters.
+- Duplicate exports are common and large. Report duplicates by hash and size;
+  do not delete without asking.
+- Analysis across many files goes to a sub-agent that returns a summary, not
+  file contents.
+
+## Hard rules
+
+- Never move, delete, or modify original sources. Preserve revisions and hashes.
+- Never create a student folder without resolving the relationship with Joshua.
+- Never hand-edit `*.generated.md`; use its owning generator.
+- Dedupe before ingesting. Distinguish archived from successfully compiled.
+- Process one source at a time unless batch work is explicitly requested.
+- Government IDs stay outside this OS. Do not ingest them.
+- Use the current machine's tools and paths, resolved from the vault root.
+- No email, platform publishing, or assignment is implied by local ingestion.
+- Ingest adds queue items; only `second-brain-task` approves, builds and clears them.
+- Read current target contents before changing pages. Automated writes only
+  modify generated files or fenced generated sections and compare their expected
+  hash before writing; on a mismatch, re-read and merge instead of overwriting.

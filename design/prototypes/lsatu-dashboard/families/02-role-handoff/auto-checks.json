@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-10-23T00:42:36.900Z",
+  "sourceRevision": "6a167c8555b4a404334310aad48a5d748b1b0861",
+  "includesUncommittedChanges": true,
+  "fixturesOnly": true,
+  "browserReview": "Not performed by this script. See REVIEW.md if supplied by the reviewer.",
+  "outputs": {
+    "student": {
+      "file": "student-dashboard.html",
+      "bytes": 2731611,
+      "sha256": "15ff9ce760bf615cf42885d4d6c9c15a1ed7ae8c79d5a5882fd6f8d983731dd7",
+      "checks": {
+        "document": true,
+        "roleLabel": true,
+        "bundledScripts": true,
+        "bundledStyles": true,
+        "networkBlocked": true,
+        "embeddedFonts": true,
+        "noBackendConfig": true,
+        "noLocalServerDependency": true,
+        "handoffIncluded": true,
+        "noExternalCssAssets": true
+      }
+    },
+    "teacher": {
+      "file": "teacher-dashboard.html",
+      "bytes": 2732781,
+      "sha256": "90e768698243d8176cc2a4221e2df98bd1d1d471cc2d4236ce04b5f78aa478d2",
+      "checks": {
+        "document": true,
+        "roleLabel": true,
+        "bundledScripts": true,
+        "bundledStyles": true,
+        "networkBlocked": true,
+        "embeddedFonts": true,
+        "noBackendConfig": true,
+        "noLocalServerDependency": true,
+        "handoffIncluded": true,
+        "noExternalCssAssets": true
+      }
+    }
+  }
+}

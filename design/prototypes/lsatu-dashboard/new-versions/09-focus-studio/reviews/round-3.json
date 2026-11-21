@@ -1,0 +1,108 @@
+{
+  "status": "completed",
+  "mode": "review",
+  "provider": "claude",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "claude",
+    "builder": "codex",
+    "inspector": "claude"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\ai-os\\design\\prototypes\\lsatu-dashboard\\new-versions\\09-focus-studio",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os\\design\\prototypes\\lsatu-dashboard\\new-versions\\09-focus-studio\\REVIEW-BRIEF.md",
+  "plan_sha256": "9328f67b430a6ec088e630abcc452479ce26bd7c9998b1472098720fe0c39d10",
+  "requested_model": null,
+  "requested_effort": null,
+  "base": null,
+  "snapshot": null,
+  "previous": null,
+  "started_at": 1792914432.7844827,
+  "artifacts": "C:\\Users\\Joshu\\.codex\\visualizations\\2026\\10\\25\\01a17081-6735-7fc2-b0e1-922ab635486c\\claude-09-review\\claudex-9todungw",
+  "cli_version": "2.1.309 (Claude Code)",
+  "executable": [
+    "C:\\Users\\Joshu\\.local\\bin\\claude.exe"
+  ],
+  "exit_code": 0,
+  "session_id": "67ce6970-e748-4b3b-ac22-12b56a9716e1",
+  "response": {
+    "verdict": "APPROVED",
+    "summary": "No material defects remain in the current source for the priority areas. I traced them in app.js and style.css. Result-to-question mapping: the five attempts reference the five unique questions by id, and the strip and row buttons carry the right ids. The two missed results are lr156 and rc156. The wrong-answer hints line up with their answer indices, and every correct answer is defensible. Derived totals: Review and Progress both use totals, which come from the attempts array (3 of 5 correct, 2 sets). Reference parsing: parseReference accepts the displayed \"PT 155 · Section 1 · Question 1\" form, comma variants and leading zeros, and it returns null for unsupported input. Unsupported input is escaped with esc() and nothing is substituted. Route safety: Object.hasOwn route validation is correct. Same-hash Practice navigation: route() re-renders when the hash is unchanged, so an open question returns to the finder. Draft and note persistence: save() only mutates state on a successful write, and workingDraft survives redraws. Visual assessment versus 08 (I did not open the 08 image, so this is from 09's captures and the brief): 09 keeps the compact Home and paper/ink look. It adds clearer assignment rows with LR/RC chips, 12 countable progress ticks, a non-clipped 4+3 phone calendar at 390 and 320, and a compact Practice console. Home does not turn into a console. Metadata is more legible. Three low-severity items remain below; none blocks approval. The host reports and the three source hashes are host assertions that I could not re-run or re-compute.",
+    "findings": [
+      {
+        "id": "R3-1",
+        "severity": "low",
+        "path": "app.js:62",
+        "evidence": "openDialog() only calls showModal() when the dialog is not already open. When a dialog opens from inside another one (student overview to \"Draft assignment\"), innerHTML is replaced and the focused button is destroyed. Focus drops to the body inside the modal, and keyboard and screen-reader users get no cue that the content changed.",
+        "fix": "After replacing modal content, focus #modal-title (give it tabindex=-1) or the first field, for example when wasOpen is true."
+      },
+      {
+        "id": "R3-2",
+        "severity": "low",
+        "path": "app.js:40,60",
+        "evidence": "The Home h1 is `Good evening,<br><em>Ada.</em>`. Its textContent is \"Good evening,Ada.\". render() uses that string for document.title and for the #announcer text, giving \"Good evening,Ada. page\" and \"Good evening,Ada. · LSAT U\".",
+        "fix": "Add a space before the <br>, or set title and announcer from a data-title attribute such as \"Home\"."
+      },
+      {
+        "id": "R3-3",
+        "severity": "low",
+        "path": "app.js:100",
+        "evidence": "The separate-fields form compares Number(data.get(...)) to the stored string. Number() accepts \"0x9B\", \"155.0\", \"+155\" and \"1.55e2\" as 155, so those inputs open PT155 even though the typed-reference path rejects non-decimal forms. The typed form and the field form therefore normalize differently.",
+        "fix": "Validate the fields with /^\\d+$/ after trim and strip leading zeros, as parseReference does, instead of Number()."
+      }
+    ],
+    "coverage": [
+      "Read the plan, BRIEF.md, ROUND-2-DISPOSITIONS.md, index.html, the full app.js and the full style.css.",
+      "Read features-09-report.json and final-source-hashes.json. I could not re-compute the hashes.",
+      "Images actually viewed: artifacts/home-1440.png, home-390.png, home-320.png, home-768.png, practice-1440.png and review-1440.png.",
+      "Traced app.js for question content and hint-to-answer alignment, result mapping, filter combinations, reference parsing, route validation, role and drawer handling, dialog and focus handling, and draft, note and storage-failure paths."
+    ],
+    "limitations": [
+      "I read the source and viewed images only. I did not run a browser or tests, and I did not re-compute the source hashes.",
+      "Not opened, though the brief lists them: practice-390.png, review-390.png, work-390.png, teacher-students-1440.png and the 08 baseline home-1440.png. Mobile Practice, Review and Work layouts, the teacher roster visual and the side-by-side comparison with 08 are therefore not independently verified.",
+      "I did not read capture-report.json, interaction-report.json, motion-focus-report.json or reviews/round-2.json. I read only features-09-report.json, so the other reports' claims on motion, reduced motion and focus return are unverified.",
+      "I did not read the version-08 runtime, so continuity versus 08 is judged from 09's own files and the brief.",
+      "CSS motion and reduced-motion behavior was read in source only. Real-browser behavior (Safari focus on button click, native dialog) is not verified."
+    ]
+  },
+  "usage": {
+    "input_tokens": 10,
+    "cache_creation_input_tokens": 64389,
+    "cache_read_input_tokens": 108913,
+    "output_tokens": 13217,
+    "output_tokens_details": {
+      "thinking_tokens": 10008
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 64389,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 1998,
+        "cache_read_input_tokens": 55249,
+        "cache_creation_input_tokens": 13644,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 13644
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "observed_models": [
+    "claude-sonnet-5-5"
+  ],
+  "permission_denials": [],
+  "total_cost_usd": 0.4006373,
+  "elapsed_seconds": 108.05
+}

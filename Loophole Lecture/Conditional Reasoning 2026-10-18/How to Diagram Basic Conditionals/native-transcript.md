@@ -1,0 +1,688 @@
+# How to Diagram Basic Conditionals
+
+Source: https://new.theloophole.com/training-camp/browse/concept-review/conditional-reasoning/how-to-diagram-basic-conditionals
+
+Captured: 2026-10-19T00:20:36.041Z. Displayed duration: 534.8014560000005.
+
+Caption origin: English (auto-generated). This is a complete native-caption extraction, not word-by-word listening verification. Caption wording is retained without editorial correction. Original cue bytes remain in source.vtt; rendered site transcript is preserved separately.
+
+[00:00:00.545 - 00:00:01.005]
+Hey y'all.
+
+[00:00:01.345 - 00:00:02.405]
+All right, I'm so excited.
+
+[00:00:02.415 - 00:00:04.565]
+We're actually going to diagram some things together,
+
+[00:00:04.705 - 00:00:07.325]
+as you can see from the fancy split screen.
+
+[00:00:07.785 - 00:00:09.245]
+Um, this is my iPad.
+
+[00:00:09.565 - 00:00:11.605]
+I wrote all of this stuff out before we started.
+
+[00:00:11.845 - 00:00:13.005]
+I know a lot of prep work.
+
+[00:00:13.385 - 00:00:17.285]
+Um, but I also wanted to, uh, give you all
+
+[00:00:17.285 - 00:00:20.005]
+of these sufficient necessary indicators right on this
+
+[00:00:20.005 - 00:00:22.525]
+screen, uh, so that you can see as we're going through
+
+[00:00:22.875 - 00:00:25.445]
+what the source material is, how I'm knowing you know
+
+[00:00:25.675 - 00:00:26.845]
+what to do at which points.
+
+[00:00:27.065 - 00:00:29.685]
+And also, you know, as another plug for memorize me,
+
+[00:00:29.745 - 00:00:32.085]
+you know, just, you know, to add onto my last video.
+
+[00:00:32.425 - 00:00:34.805]
+Um, but let's jump into our first example here
+
+[00:00:34.805 - 00:00:37.245]
+and I'm just gonna walk you through my mental monologue of
+
+[00:00:37.245 - 00:00:40.525]
+how I'm thinking about diagramming as I'm going through it.
+
+[00:00:40.745 - 00:00:43.245]
+And so here we go.
+
+[00:00:44.025 - 00:00:45.965]
+Um, I'm allowed into the club
+
+[00:00:46.565 - 00:00:48.725]
+whenever I bring a monstera cutting,
+
+[00:00:48.865 - 00:00:50.125]
+I'm looking at a monstera right now,
+
+[00:00:50.225 - 00:00:51.285]
+but I will not be cutting it.
+
+[00:00:51.585 - 00:00:52.845]
+Um, so this
+
+[00:00:53.165 - 00:00:55.045]
+whenever is the first thing I'm noticing here, right?
+
+[00:00:55.105 - 00:00:57.805]
+And this is the same thing as our
+
+[00:00:58.125 - 00:00:59.805]
+whenever in our sufficient indicator list.
+
+[00:00:59.905 - 00:01:02.365]
+And so now it's like, okay, well I recognize that word
+
+[00:01:02.565 - 00:01:04.325]
+'cause I know my indicator so well
+
+[00:01:04.705 - 00:01:06.765]
+and now I have to say to myself, okay, cool,
+
+[00:01:06.805 - 00:01:08.725]
+I found this word, but you know, what does that even mean?
+
+[00:01:08.725 - 00:01:10.485]
+What does, what does that imply? What do I now do?
+
+[00:01:10.705 - 00:01:11.925]
+So when um,
+
+[00:01:12.165 - 00:01:13.325]
+whenever you see a conditional indicator,
+
+[00:01:13.345 - 00:01:14.685]
+you wanna understand what
+
+[00:01:14.685 - 00:01:17.725]
+that conditional indicator is targeting in the sentence.
+
+[00:01:17.825 - 00:01:20.445]
+And sometimes this can take a fair amount of translation
+
+[00:01:20.625 - 00:01:22.285]
+and which is totally, totally fine.
+
+[00:01:22.585 - 00:01:25.005]
+Um, sometimes the word, um,
+
+[00:01:25.345 - 00:01:27.445]
+the conditional indicator is targeting uh,
+
+[00:01:27.465 - 00:01:29.765]
+or phrase will be directly after the indicator.
+
+[00:01:29.765 - 00:01:31.165]
+That'll happen the majority of the time.
+
+[00:01:31.545 - 00:01:33.845]
+But you wanna make sure you're translating the sentence
+
+[00:01:33.885 - 00:01:36.685]
+so you actually know what the, whenever here
+
+[00:01:36.825 - 00:01:39.565]
+or whatever indicator you may find is talking about.
+
+[00:01:39.745 - 00:01:42.205]
+So here, if we say like whenever, what happens?
+
+[00:01:42.355 - 00:01:44.765]
+Well whenever I bring 'em on stair cutting, right?
+
+[00:01:45.685 - 00:01:48.325]
+Bringing a monstera cutting is the thing that
+
+[00:01:48.605 - 00:01:49.805]
+whenever is targeting here.
+
+[00:01:50.225 - 00:01:52.965]
+Um, that is what whenever is talking about.
+
+[00:01:53.265 - 00:01:54.805]
+And so we're like, okay, well
+
+[00:01:55.005 - 00:01:56.885]
+whenever tells me I'm dealing with a sufficient condition,
+
+[00:01:57.055 - 00:01:59.245]
+seems like bring monstera cutting is
+
+[00:01:59.585 - 00:02:00.725]
+my sufficient condition.
+
+[00:02:00.985 - 00:02:03.565]
+And so I am just going to
+
+[00:02:04.215 - 00:02:06.365]
+start off my diagram conditional, just like
+
+[00:02:06.365 - 00:02:08.525]
+that BMC standing for bring monstera cutting.
+
+[00:02:08.705 - 00:02:11.205]
+So one quick thing before we move on.
+
+[00:02:11.265 - 00:02:14.445]
+Notice how I'm actually using that acronym BMC.
+
+[00:02:14.545 - 00:02:16.725]
+I'm not actually writing out bring monstera
+
+[00:02:16.835 - 00:02:18.405]
+Cutting or monstera.
+
+[00:02:18.705 - 00:02:21.125]
+I'm not putting the word if in front of this,
+
+[00:02:21.125 - 00:02:22.845]
+which I don't know where that came from,
+
+[00:02:22.945 - 00:02:25.005]
+why people keep on writing if at the front
+
+[00:02:25.065 - 00:02:27.245]
+of if then statements do not do that.
+
+[00:02:27.625 - 00:02:28.765]
+Um, that is not useful.
+
+[00:02:29.105 - 00:02:31.885]
+Um, the mere fact that this BMC is in front
+
+[00:02:31.905 - 00:02:33.565]
+of our conditional arrow, that is
+
+[00:02:33.565 - 00:02:35.005]
+what tells me it's a sufficient condition
+
+[00:02:35.005 - 00:02:36.965]
+because that's where our sufficient condition goes, right?
+
+[00:02:37.025 - 00:02:38.885]
+Our sufficient condition always goes in
+
+[00:02:38.885 - 00:02:40.445]
+front of our must arrow.
+
+[00:02:40.825 - 00:02:42.205]
+That's just what that means.
+
+[00:02:42.465 - 00:02:44.365]
+And so here I have my nice little acronym
+
+[00:02:44.385 - 00:02:46.525]
+and you, you might be objecting, oh well Ellen, you know,
+
+[00:02:46.525 - 00:02:48.165]
+I have trouble following the acronyms.
+
+[00:02:48.365 - 00:02:50.325]
+It's harder for me. I need to just write out the word.
+
+[00:02:50.545 - 00:02:52.005]
+You're just not used to it.
+
+[00:02:52.235 - 00:02:54.645]
+Give it a chance of actually writing out the acronyms.
+
+[00:02:54.865 - 00:02:57.525]
+And if you wanna have a more like three letter
+
+[00:02:57.555 - 00:02:58.765]
+acronym like I have here
+
+[00:02:58.765 - 00:02:59.845]
+Instead of just like m
+
+[00:02:59.845 - 00:03:02.205]
+or something for monstera, that's totally fine.
+
+[00:03:02.205 - 00:03:03.645]
+That can be kind of a meeting halfway
+
+[00:03:03.865 - 00:03:06.325]
+of making it a little bit more accessible for yourself so
+
+[00:03:06.325 - 00:03:08.365]
+that you're able to fall along more easily
+
+[00:03:08.685 - 00:03:10.685]
+'cause you have a little bit more of the phrase, um,
+
+[00:03:10.685 - 00:03:11.685]
+written out for yourself.
+
+[00:03:12.025 - 00:03:13.085]
+But let's get back to our diagram.
+
+[00:03:13.145 - 00:03:15.645]
+And so now I knew that bring a monstera cutting was
+
+[00:03:15.645 - 00:03:16.725]
+what whenever was modifying.
+
+[00:03:16.885 - 00:03:19.325]
+I put it here in my sufficient condition. Okay, great.
+
+[00:03:19.625 - 00:03:22.085]
+Now what's left? So the nice thing about conditional
+
+[00:03:22.085 - 00:03:24.645]
+diagramming is like they can only go one of two places.
+
+[00:03:25.065 - 00:03:27.285]
+Um, and so since my sufficient condition is filled up
+
+[00:03:27.285 - 00:03:29.845]
+with this half of the sentence, whatever is left just
+
+[00:03:29.845 - 00:03:31.045]
+goes straight in the necessary.
+
+[00:03:31.065 - 00:03:34.485]
+So I'm allowed into the club, allowed into club,
+
+[00:03:34.755 - 00:03:36.485]
+just goes in our necessary condition.
+
+[00:03:37.205 - 00:03:39.935]
+Boom. That's it. Not that big of a deal, right?
+
+[00:03:40.275 - 00:03:42.855]
+Um, just for fun, I'll take the contrapositive here.
+
+[00:03:43.035 - 00:03:45.375]
+Um, but remember, you don't actually have
+
+[00:03:45.375 - 00:03:47.455]
+to write out the contrapositive on every single
+
+[00:03:47.455 - 00:03:48.775]
+conditional that ever conditional.
+
+[00:03:49.175 - 00:03:51.495]
+Whatever you diagram, you are totally okay
+
+[00:03:51.495 - 00:03:54.295]
+to just read the contrapositive rather than write it
+
+[00:03:54.415 - 00:03:55.655]
+out every single time.
+
+[00:03:55.725 - 00:03:58.935]
+Writing it out every single time honestly doubles the amount
+
+[00:03:58.955 - 00:04:02.015]
+of conditional work that you're doing, doubles the amount
+
+[00:04:02.015 - 00:04:04.055]
+of writing on your paper and can make things a lot more
+
+[00:04:04.055 - 00:04:05.295]
+overwhelming and confusing.
+
+[00:04:05.735 - 00:04:07.935]
+I personally wouldn't want to deal with double the number
+
+[00:04:07.955 - 00:04:09.015]
+of conditional statements.
+
+[00:04:09.275 - 00:04:11.975]
+Um, and so that is why I don't recommend writing out the
+
+[00:04:11.975 - 00:04:13.495]
+contrapositive on every single
+
+[00:04:13.495 - 00:04:14.535]
+conditional you've ever diagram.
+
+[00:04:14.915 - 00:04:17.095]
+And so let me demo with you right now on how
+
+[00:04:17.095 - 00:04:19.455]
+to read the contrapositive of the statement I just drew.
+
+[00:04:19.555 - 00:04:20.855]
+And I'll also write it out for you
+
+[00:04:20.855 - 00:04:22.535]
+for clarity just so that you know what it is.
+
+[00:04:22.755 - 00:04:25.135]
+And so if I'm just gonna be reading the contrapositive
+
+[00:04:25.135 - 00:04:27.295]
+of this statement, what I would be saying is like, okay,
+
+[00:04:27.645 - 00:04:32.375]
+well if I don't have ac the A IC,
+
+[00:04:32.605 - 00:04:35.255]
+then I don't have BMC, right?
+
+[00:04:35.675 - 00:04:39.015]
+So like, if not this, then
+
+[00:04:39.715 - 00:04:40.895]
+not this.
+
+[00:04:41.555 - 00:04:44.335]
+And that's just reading the contrapositive
+
+[00:04:44.335 - 00:04:45.655]
+because when we take a contrapositive,
+
+[00:04:45.745 - 00:04:47.055]
+we're negating our necessary
+
+[00:04:47.055 - 00:04:50.135]
+and we're reading backwards toward our sufficient.
+
+[00:04:50.435 - 00:04:54.335]
+And so here to illustrate again in a different way,
+
+[00:04:55.275 - 00:05:00.175]
+um, if not AIC, then not
+
+[00:05:01.095 - 00:05:04.295]
+BMC, um, but what I was doing
+
+[00:05:04.295 - 00:05:06.975]
+before is the exact same thing I was saying in my eye.
+
+[00:05:06.975 - 00:05:10.735]
+You know, if not AIC, then not.
+
+[00:05:11.215 - 00:05:14.375]
+I dunno why it became a star. Not BMC.
+
+[00:05:14.685 - 00:05:16.015]
+It's the exact same meaning.
+
+[00:05:16.085 - 00:05:17.655]
+It's just the only difference is whether it's
+
+[00:05:17.655 - 00:05:18.695]
+written down or not.
+
+[00:05:18.915 - 00:05:21.015]
+Um, but anytime you have one
+
+[00:05:21.015 - 00:05:22.535]
+of the original statement conditionals here,
+
+[00:05:22.795 - 00:05:24.615]
+get in the habit of being able to read it
+
+[00:05:24.615 - 00:05:26.135]
+for a contrapositive as well.
+
+[00:05:26.395 - 00:05:28.975]
+Um, it's not as though the contrapositive is actually like
+
+[00:05:29.175 - 00:05:30.215]
+a separate statement.
+
+[00:05:30.285 - 00:05:32.215]
+It's really not. It's just a different way
+
+[00:05:32.215 - 00:05:33.695]
+of reading the original statement.
+
+[00:05:33.795 - 00:05:35.695]
+And so that's why we wanna get really comfortable
+
+[00:05:35.805 - 00:05:37.735]
+with understanding our conditional statements both
+
+[00:05:37.735 - 00:05:39.055]
+through the way they're originally written
+
+[00:05:39.275 - 00:05:40.735]
+and then trapped inside.
+
+[00:05:40.765 - 00:05:42.975]
+Each conditional statement is its contrapositive,
+
+[00:05:42.975 - 00:05:45.135]
+which is like a really nice way I think to think about it
+
+[00:05:45.135 - 00:05:47.575]
+because it makes it a little bit less doubled,
+
+[00:05:47.615 - 00:05:49.175]
+a little bit less complicated, a little more simple,
+
+[00:05:49.295 - 00:05:50.335]
+a little more succinct.
+
+[00:05:50.635 - 00:05:52.455]
+Um, and so let's go to our next one.
+
+[00:05:52.485 - 00:05:54.215]
+Alright, on this next one,
+
+[00:05:54.365 - 00:05:56.815]
+only if I water my plants, will I avoid being
+
+[00:05:57.015 - 00:05:58.015]
+Ostracized. Oh,
+
+[00:05:58.015 - 00:05:59.245]
+plant ostracization.
+
+[00:05:59.475 - 00:06:02.525]
+Okay, so first thing I'm noticing here from a conditional
+
+[00:06:02.525 - 00:06:05.645]
+standpoint, only if right, my only if is right down here,
+
+[00:06:05.665 - 00:06:08.165]
+and this is just a little commercial, please remember
+
+[00:06:08.395 - 00:06:11.565]
+that only if also the word only, uh,
+
+[00:06:11.565 - 00:06:14.485]
+that only if is a necessary indicator.
+
+[00:06:14.485 - 00:06:16.285]
+This is so, so, so, so, so important.
+
+[00:06:16.305 - 00:06:18.085]
+And it's one of the ones that people often forget.
+
+[00:06:18.525 - 00:06:21.125]
+I like to think of it like the word only here.
+
+[00:06:21.225 - 00:06:24.125]
+Yes, that can be a solo necessary, uh, condition indicator
+
+[00:06:24.145 - 00:06:27.685]
+as well that when that only is paired with the, if it's kind
+
+[00:06:27.685 - 00:06:29.685]
+of like a dominant gene coming in
+
+[00:06:29.785 - 00:06:31.445]
+and dominating that recessive gene,
+
+[00:06:31.445 - 00:06:33.965]
+and it's like as a brown haired person, you know,
+
+[00:06:34.685 - 00:06:37.005]
+I might have blonde recessive genes, like who knows?
+
+[00:06:37.205 - 00:06:38.685]
+'cause the brown hair won. Um,
+
+[00:06:38.905 - 00:06:41.605]
+and so the only given that the only is necessary,
+
+[00:06:41.945 - 00:06:44.285]
+it takes over and kind of cancels out that if,
+
+[00:06:44.425 - 00:06:47.125]
+and so if you see only if it's always a necessary indicator,
+
+[00:06:47.125 - 00:06:48.565]
+alright, back to our statement.
+
+[00:06:48.865 - 00:06:51.805]
+Um, so this only if, what's it modifying?
+
+[00:06:51.955 - 00:06:54.325]
+It's modifying I water my plants, right?
+
+[00:06:54.325 - 00:06:56.365]
+Because only if I water my plants,
+
+[00:06:56.515 - 00:07:00.365]
+only if it's talking about watering my plants.
+
+[00:07:01.145 - 00:07:03.085]
+And that tells me, okay, great.
+
+[00:07:03.505 - 00:07:06.365]
+Now I just have to do this next half
+
+[00:07:06.365 - 00:07:09.005]
+of my statement only if it's doing a necessary condition
+
+[00:07:09.055 - 00:07:12.045]
+indicating action there and water.
+
+[00:07:12.505 - 00:07:15.565]
+My plants just go straight in the necessary notice
+
+[00:07:15.715 - 00:07:17.325]
+that I'm diagramming my conditional
+
+[00:07:17.515 - 00:07:20.005]
+with whatever my indicator tells me first.
+
+[00:07:20.195 - 00:07:22.045]
+It's not like I always have to write the condition,
+
+[00:07:22.225 - 00:07:24.245]
+the sufficient condition is the first thing I put down.
+
+[00:07:24.505 - 00:07:26.165]
+Not necessary. I can just go ahead
+
+[00:07:26.165 - 00:07:28.805]
+and put whatever the indicator is telling me.
+
+[00:07:29.105 - 00:07:30.325]
+In this case, it was telling me
+
+[00:07:30.325 - 00:07:32.605]
+to put WMP in the necessary condition.
+
+[00:07:32.605 - 00:07:35.565]
+And so that's what I did. And now I've got a leftover,
+
+[00:07:35.575 - 00:07:37.885]
+again, I will avoid being ostracized.
+
+[00:07:38.275 - 00:07:41.405]
+Okay? So I'll just put avoid ostracized,
+
+[00:07:41.555 - 00:07:43.325]
+that goes straight into my sufficient condition.
+
+[00:07:43.795 - 00:07:45.005]
+Boom, my conditional is done. Right?
+
+[00:07:45.585 - 00:07:48.805]
+Not a big deal, I just take whatever my indicator was
+
+[00:07:48.805 - 00:07:52.645]
+modifying, I throw it into whatever the targeted condition
+
+[00:07:52.785 - 00:07:54.965]
+was, and then I fill in the rest
+
+[00:07:54.965 - 00:07:56.565]
+with whatever's left, left of the sentence.
+
+[00:07:56.905 - 00:07:58.485]
+Um, and so let's talk
+
+[00:07:58.485 - 00:07:59.725]
+through the contrapositive on this one too,
+
+[00:07:59.725 - 00:08:00.805]
+just for the completeness of it.
+
+[00:08:01.025 - 00:08:04.285]
+So here, it's okay, if I don't water my plants,
+
+[00:08:04.355 - 00:08:05.765]
+then I'm not gonna be ostracized.
+
+[00:08:05.865 - 00:08:08.605]
+And as I'm doing that, like how am I knowing that it's,
+
+[00:08:08.665 - 00:08:10.285]
+I'm looking at this and I'm like, okay,
+
+[00:08:10.305 - 00:08:12.245]
+if I don't water my plants, that's what this means.
+
+[00:08:12.705 - 00:08:17.365]
+Um, then I am not going to be ostracized
+
+[00:08:17.365 - 00:08:18.925]
+or I'm not going to avoid ostracizing.
+
+[00:08:19.015 - 00:08:20.645]
+Sorry if I said that wrong, I'm not gonna
+
+[00:08:20.645 - 00:08:21.925]
+avoid being ostracized.
+
+[00:08:22.305 - 00:08:26.125]
+And so I will write that down also for clarity.
+
+[00:08:26.705 - 00:08:31.045]
+So if not, WMP, if I don't water my plants,
+
+[00:08:31.275 - 00:08:33.845]
+then I don't avoid being ostracized.
+
+[00:08:34.075 - 00:08:37.525]
+Perfect. Okay? And so I can both read it and I can write it.
+
+[00:08:37.555 - 00:08:38.685]
+It's the exact same thing.
+
+[00:08:39.125 - 00:08:41.085]
+I hope that this beginning
+
+[00:08:41.145 - 00:08:43.885]
+of conditional diagramming world was not too traumatic.
+
+[00:08:44.205 - 00:08:47.765]
+I hope that it was, you know, somewhat, somewhat palatable.
+
+[00:08:48.005 - 00:08:50.245]
+Somewhat. Okay. We're doing fine, right? We're doing fine.
+
+[00:08:50.355 - 00:08:53.565]
+Alright, I love you. I'll see you very, very soon.

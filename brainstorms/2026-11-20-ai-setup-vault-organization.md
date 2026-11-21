@@ -6,7 +6,9 @@ Context sources: [wiki/second-brain-one-vault-vs-many.md](../wiki/second-brain-o
 ## Summary / key decisions
 Confirmed by Joshua: AI-setup material is mostly for agents, occasionally read by him (Q1). The 2026-10-14 separate-vaults decline is open.
 
-Agent recommendation (NOT confirmed; awaiting Joshua's yes), 2026-11-20:
+Joshua said "Yes, go ahead" (2026-11-20) to: backups first, then shrink the index and hide the Karpathy mirrors. Done the same day (steps 1 to 3 below, except the Drive sign-in, which needs Joshua, and the `skills/INDEX.md` split, not started). See `wiki/log.md`, 2026-11-20 system entry. Steps 4 to 6 not started.
+
+Agent recommendation (steps 4 to 6 still awaiting Joshua's yes), 2026-11-20:
 1. Keep ONE vault (`dev\ai-os`) as the system of record. Split inside it, not apart: a small AI-setup hub (promote `references/ai-workspace/index.md`) with its own short index, and a separate inbox subfolder for AI-setup clips. No bulk moves.
 2. Backups first (Drive sign-in; a backup commit of own work only).
 3. Shrink `wiki/index.md`: keep the 237 non-Karpathy lines (about 13,200 tokens), move the 3,842 Karpathy rows into a folder-level index, fix the generator. Measured: about 290,000 tokens now vs about 13,200.

@@ -1,0 +1,45 @@
+{
+  "plan_id": "lanae-intro-to-lr-2026-11-01",
+  "student": "Lanae",
+  "student_id": "be56faa7-58e2-4fd0-886f-251166d08b80",
+  "dry_run": false,
+  "verify_existing": false,
+  "results": [
+    {
+      "kind": "bootcamp",
+      "title": "Intro to LR",
+      "action": "assigned",
+      "day": null,
+      "due": null,
+      "assignment_id": null,
+      "classroom_item_id": "34934721-245c-40ff-9ebe-43d30aaf161e",
+      "route": "/bootcamp/intro-to-lr",
+      "notify": {
+        "inbox_ok": true,
+        "bell_ok": true,
+        "email_ok": true
+      },
+      "verified": true,
+      "bell_count": 1
+    }
+  ],
+  "metrics": {
+    "sign_ins": 1,
+    "student_lookups": 1,
+    "bank_reads": 0,
+    "planned": 1,
+    "assigned": 1,
+    "elapsed_ms": 4929
+  },
+  "runtime": {
+    "lock_ms": 8,
+    "fetch_ms": 2222,
+    "setup_ms": 566,
+    "execute_ms": 7706,
+    "total_ms": 10503,
+    "cache_hit": true,
+    "ops_commit": "12a97a3047117fefc5fb02c20de4c070b9036407",
+    "source_sha256": "1a88aac53391cfdb4c9b94159636a6a5c5bbb25379a75bdab2f7dc191334c403"
+  },
+  "audit_file": "C:\\Users\\Joshu\\dev\\ai-os\\system\\runtime\\lsatu-work\\lanae-intro-to-lr-2026-11-01\\2026-11-01T18-36-52-747Z-292bec7c.generated.json"
+}

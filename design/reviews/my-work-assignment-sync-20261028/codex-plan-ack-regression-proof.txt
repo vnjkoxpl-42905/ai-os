@@ -1,0 +1,5 @@
+2026-10-28T15:36:17.837Z
+Before correction: exit 1, ASSERTION: unrelated document does not clear plan publication
+After correction: exit 0
+PASS PostgreSQL baseline old-index=false: owner/RLS, source/mirror, gates, generation, receipts, group/schedule/recovery, seven-day flows, lifetime delivery and silent replay
+PASS PostgreSQL baseline old-index=true: owner/RLS, source/mirror, gates, generation, receipts, group/schedule/recovery, seven-day flows, lifetime delivery and silent replay

@@ -1,0 +1,327 @@
+[
+  {
+    "antipattern": "low-contrast",
+    "name": "Low contrast text",
+    "description": "Text does not meet WCAG AA contrast requirements (4.5:1 for body, 3:1 for large text). Increase the contrast between text and background.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "C:\\Users\\Joshu\\Downloads\\LSAT-U-Dashboard-Three-Directions-v2\\lamplight\\student.html",
+    "line": 0,
+    "snippet": "placeholder \"PT105 S2 Q14, or a question type\" 3.7:1 (need 4.5:1) — text #77746f on #181b25 (gradient on div.tool)",
+    "advisory": true
+  },
+  {
+    "antipattern": "radial-spotlight-glow",
+    "name": "Decorative radial spotlight glow",
+    "description": "An accent-colored radial gradient fading to transparent, dropped behind a hero or section as a \"spotlight\" and bright enough against that surface to read as a cloud floating over the copy. It is a reflex AI decoration — the translucent cousin of the saturated radial halo. Let the surface stand on its own, or light the composition with a deliberate material accent rather than a floating colored haze.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "C:\\Users\\Joshu\\Downloads\\LSAT-U-Dashboard-Three-Directions-v2\\lamplight\\student.html",
+    "line": 0,
+    "snippet": "radial-gradient spotlight glow \"cone\" (#ffdca5 a0.30 → transparent) on 1100x900 surface"
+  },
+  {
+    "antipattern": "dark-glow",
+    "name": "Glowing shadow accents",
+    "description": "Colored glow shadows — a zero-offset chromatic halo (box- or text-shadow) on any background, or any colored blurred shadow on a dark background — are the default \"cool\" look of AI-generated UIs. Use neutral elevation shadows and subtle, purposeful lighting instead.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "C:\\Users\\Joshu\\Downloads\\LSAT-U-Dashboard-Three-Directions-v2\\lamplight\\student.html",
+    "line": 0,
+    "snippet": "Zero-offset box-shadow glow (#f5b961)"
+  },
+  {
+    "antipattern": "radial-halo",
+    "name": "Radial-gradient background halo",
+    "description": "A chromatic radial-gradient wash — saturated at the center, fading to transparent — used as a decorative background glow on a dark page. Same tell as glowing shadows, drawn with a gradient instead of a shadow. Ground the surface with a solid or subtly shifted background instead.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "C:\\Users\\Joshu\\Downloads\\LSAT-U-Dashboard-Three-Directions-v2\\lamplight\\student.html",
+    "line": 0,
+    "snippet": "radial-gradient halo (#fff4dc → transparent) on dark page"
+  },
+  {
+    "antipattern": "repeating-stripes-gradient",
+    "name": "Repeating-gradient stripes",
+    "description": "Repeating-gradient stripes used as surface decoration are a recurring generated-UI signature. Reach for a deliberate texture or leave the surface plain.",
+    "severity": "advisory",
+    "category": "slop",
+    "file": "C:\\Users\\Joshu\\Downloads\\LSAT-U-Dashboard-Three-Directions-v2\\lamplight\\student.html",
+    "line": 0,
+    "snippet": "repeating-gradient decorative stripes",
+    "advisory": true
+  },
+  {
+    "antipattern": "low-contrast",
+    "name": "Low contrast text",
+    "description": "Text does not meet WCAG AA contrast requirements (4.5:1 for body, 3:1 for large text). Increase the contrast between text and background.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "C:\\Users\\Joshu\\Downloads\\LSAT-U-Dashboard-Three-Directions-v2\\lamplight\\teacher.html",
+    "line": 0,
+    "snippet": "placeholder \"Find a student\" 3.5:1 (need 4.5:1) — text #77746f on #222021 (gradient on body)"
+  },
+  {
+    "antipattern": "radial-spotlight-glow",
+    "name": "Decorative radial spotlight glow",
+    "description": "An accent-colored radial gradient fading to transparent, dropped behind a hero or section as a \"spotlight\" and bright enough against that surface to read as a cloud floating over the copy. It is a reflex AI decoration — the translucent cousin of the saturated radial halo. Let the surface stand on its own, or light the composition with a deliberate material accent rather than a floating colored haze.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "C:\\Users\\Joshu\\Downloads\\LSAT-U-Dashboard-Three-Directions-v2\\lamplight\\teacher.html",
+    "line": 0,
+    "snippet": "radial-gradient spotlight glow \"cone\" (#ffdca5 a0.30 → transparent) on 1100x900 surface"
+  },
+  {
+    "antipattern": "dark-glow",
+    "name": "Glowing shadow accents",
+    "description": "Colored glow shadows — a zero-offset chromatic halo (box- or text-shadow) on any background, or any colored blurred shadow on a dark background — are the default \"cool\" look of AI-generated UIs. Use neutral elevation shadows and subtle, purposeful lighting instead.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "C:\\Users\\Joshu\\Downloads\\LSAT-U-Dashboard-Three-Directions-v2\\lamplight\\teacher.html",
+    "line": 0,
+    "snippet": "Zero-offset box-shadow glow (#f5b961)"
+  },
+  {
+    "antipattern": "radial-halo",
+    "name": "Radial-gradient background halo",
+    "description": "A chromatic radial-gradient wash — saturated at the center, fading to transparent — used as a decorative background glow on a dark page. Same tell as glowing shadows, drawn with a gradient instead of a shadow. Ground the surface with a solid or subtly shifted background instead.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "C:\\Users\\Joshu\\Downloads\\LSAT-U-Dashboard-Three-Directions-v2\\lamplight\\teacher.html",
+    "line": 0,
+    "snippet": "radial-gradient halo (#fff4dc → transparent) on dark page"
+  },
+  {
+    "antipattern": "repeating-stripes-gradient",
+    "name": "Repeating-gradient stripes",
+    "description": "Repeating-gradient stripes used as surface decoration are a recurring generated-UI signature. Reach for a deliberate texture or leave the surface plain.",
+    "severity": "advisory",
+    "category": "slop",
+    "file": "C:\\Users\\Joshu\\Downloads\\LSAT-U-Dashboard-Three-Directions-v2\\lamplight\\teacher.html",
+    "line": 0,
+    "snippet": "repeating-gradient decorative stripes",
+    "advisory": true
+  },
+  {
+    "antipattern": "border-accent-on-rounded",
+    "name": "Border accent on rounded element",
+    "description": "Thick accent border on a rounded card — the border clashes with the rounded corners. Remove the border or the border-radius.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "C:\\Users\\Joshu\\Downloads\\LSAT-U-Dashboard-Three-Directions-v2\\carrel\\student.html",
+    "line": 0,
+    "snippet": "border-top: 4px + border-radius: 4px"
+  },
+  {
+    "antipattern": "border-accent-on-rounded",
+    "name": "Border accent on rounded element",
+    "description": "Thick accent border on a rounded card — the border clashes with the rounded corners. Remove the border or the border-radius.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "C:\\Users\\Joshu\\Downloads\\LSAT-U-Dashboard-Three-Directions-v2\\carrel\\student.html",
+    "line": 0,
+    "snippet": "border-top: 4px + border-radius: 4px"
+  },
+  {
+    "antipattern": "border-accent-on-rounded",
+    "name": "Border accent on rounded element",
+    "description": "Thick accent border on a rounded card — the border clashes with the rounded corners. Remove the border or the border-radius.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "C:\\Users\\Joshu\\Downloads\\LSAT-U-Dashboard-Three-Directions-v2\\carrel\\student.html",
+    "line": 0,
+    "snippet": "border-top: 4px + border-radius: 4px"
+  },
+  {
+    "antipattern": "low-contrast",
+    "name": "Low contrast text",
+    "description": "Text does not meet WCAG AA contrast requirements (4.5:1 for body, 3:1 for large text). Increase the contrast between text and background.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "C:\\Users\\Joshu\\Downloads\\LSAT-U-Dashboard-Three-Directions-v2\\carrel\\student.html",
+    "line": 0,
+    "snippet": "3.1:1 (need 4.5:1) — text #ffffff on #ff5a1f"
+  },
+  {
+    "antipattern": "low-contrast",
+    "name": "Low contrast text",
+    "description": "Text does not meet WCAG AA contrast requirements (4.5:1 for body, 3:1 for large text). Increase the contrast between text and background.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "C:\\Users\\Joshu\\Downloads\\LSAT-U-Dashboard-Three-Directions-v2\\carrel\\student.html",
+    "line": 0,
+    "snippet": "3.0:1 (need 4.5:1) — text #44473f on #87957f (gradient on body)"
+  },
+  {
+    "antipattern": "low-contrast",
+    "name": "Low contrast text",
+    "description": "Text does not meet WCAG AA contrast requirements (4.5:1 for body, 3:1 for large text). Increase the contrast between text and background.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "C:\\Users\\Joshu\\Downloads\\LSAT-U-Dashboard-Three-Directions-v2\\carrel\\student.html",
+    "line": 0,
+    "snippet": "3.0:1 (need 4.5:1) — text #44473f on #87957f (gradient on body)"
+  },
+  {
+    "antipattern": "low-contrast",
+    "name": "Low contrast text",
+    "description": "Text does not meet WCAG AA contrast requirements (4.5:1 for body, 3:1 for large text). Increase the contrast between text and background.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "C:\\Users\\Joshu\\Downloads\\LSAT-U-Dashboard-Three-Directions-v2\\carrel\\student.html",
+    "line": 0,
+    "snippet": "3.1:1 (need 4.5:1) — text #ffffff on #ff5a1f"
+  },
+  {
+    "antipattern": "low-contrast",
+    "name": "Low contrast text",
+    "description": "Text does not meet WCAG AA contrast requirements (4.5:1 for body, 3:1 for large text). Increase the contrast between text and background.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "C:\\Users\\Joshu\\Downloads\\LSAT-U-Dashboard-Three-Directions-v2\\carrel\\student.html",
+    "line": 0,
+    "snippet": "3.1:1 (need 4.5:1) — text #ffffff on #ff5a1f"
+  },
+  {
+    "antipattern": "low-contrast",
+    "name": "Low contrast text",
+    "description": "Text does not meet WCAG AA contrast requirements (4.5:1 for body, 3:1 for large text). Increase the contrast between text and background.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "C:\\Users\\Joshu\\Downloads\\LSAT-U-Dashboard-Three-Directions-v2\\carrel\\student.html",
+    "line": 0,
+    "snippet": "3.0:1 (need 4.5:1) — text #44473f on #87957f (gradient on body)"
+  },
+  {
+    "antipattern": "nested-cards",
+    "name": "Nested cards",
+    "description": "Cards inside cards create visual noise and excessive depth. Flatten the hierarchy — use spacing, typography, and dividers instead of nesting containers.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "C:\\Users\\Joshu\\Downloads\\LSAT-U-Dashboard-Three-Directions-v2\\carrel\\student.html",
+    "line": 0,
+    "snippet": "Card inside card (div)"
+  },
+  {
+    "antipattern": "repeating-stripes-gradient",
+    "name": "Repeating-gradient stripes",
+    "description": "Repeating-gradient stripes used as surface decoration are a recurring generated-UI signature. Reach for a deliberate texture or leave the surface plain.",
+    "severity": "advisory",
+    "category": "slop",
+    "file": "C:\\Users\\Joshu\\Downloads\\LSAT-U-Dashboard-Three-Directions-v2\\carrel\\student.html",
+    "line": 0,
+    "snippet": "repeating-gradient decorative stripes",
+    "advisory": true
+  },
+  {
+    "antipattern": "low-contrast",
+    "name": "Low contrast text",
+    "description": "Text does not meet WCAG AA contrast requirements (4.5:1 for body, 3:1 for large text). Increase the contrast between text and background.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "C:\\Users\\Joshu\\Downloads\\LSAT-U-Dashboard-Three-Directions-v2\\carrel\\teacher.html",
+    "line": 0,
+    "snippet": "3.1:1 (need 4.5:1) — text #ffffff on #ff5a1f"
+  },
+  {
+    "antipattern": "low-contrast",
+    "name": "Low contrast text",
+    "description": "Text does not meet WCAG AA contrast requirements (4.5:1 for body, 3:1 for large text). Increase the contrast between text and background.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "C:\\Users\\Joshu\\Downloads\\LSAT-U-Dashboard-Three-Directions-v2\\carrel\\teacher.html",
+    "line": 0,
+    "snippet": "3.0:1 (need 4.5:1) — text #44473f on #87957f (gradient on body)"
+  },
+  {
+    "antipattern": "low-contrast",
+    "name": "Low contrast text",
+    "description": "Text does not meet WCAG AA contrast requirements (4.5:1 for body, 3:1 for large text). Increase the contrast between text and background.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "C:\\Users\\Joshu\\Downloads\\LSAT-U-Dashboard-Three-Directions-v2\\carrel\\teacher.html",
+    "line": 0,
+    "snippet": "3.0:1 (need 4.5:1) — text #44473f on #87957f (gradient on body)"
+  },
+  {
+    "antipattern": "cramped-padding",
+    "name": "Cramped padding",
+    "description": "Text is too close to the edge of its container. Two shapes: (1) an element with its own text where the space between the rendered text and the border box is too small for the font size, and (2) a wrapper whose children's text lands flush against a visible boundary (border, outline, or non-transparent background) with nothing to inset it. Add at least 8px (ideally 12–16px) of space inside bordered, outlined, or colored containers.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "C:\\Users\\Joshu\\Downloads\\LSAT-U-Dashboard-Three-Directions-v2\\carrel\\teacher.html",
+    "line": 0,
+    "snippet": "<div> \"tape\": children flush against bg on top/bottom (no inset)"
+  },
+  {
+    "antipattern": "nested-cards",
+    "name": "Nested cards",
+    "description": "Cards inside cards create visual noise and excessive depth. Flatten the hierarchy — use spacing, typography, and dividers instead of nesting containers.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "C:\\Users\\Joshu\\Downloads\\LSAT-U-Dashboard-Three-Directions-v2\\carrel\\teacher.html",
+    "line": 0,
+    "snippet": "Card inside card (div)"
+  },
+  {
+    "antipattern": "skipped-heading",
+    "name": "Skipped heading level",
+    "description": "Heading levels should not skip (e.g. h1 then h3 with no h2). Screen readers use heading hierarchy for navigation. Skipping levels breaks the document outline.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "C:\\Users\\Joshu\\Downloads\\LSAT-U-Dashboard-Three-Directions-v2\\carrel\\teacher.html",
+    "line": 0,
+    "snippet": "<h1> \"Good evening, Joshua.\" followed by <h3> \"Work order\" (missing h2)"
+  },
+  {
+    "antipattern": "repeating-stripes-gradient",
+    "name": "Repeating-gradient stripes",
+    "description": "Repeating-gradient stripes used as surface decoration are a recurring generated-UI signature. Reach for a deliberate texture or leave the surface plain.",
+    "severity": "advisory",
+    "category": "slop",
+    "file": "C:\\Users\\Joshu\\Downloads\\LSAT-U-Dashboard-Three-Directions-v2\\carrel\\teacher.html",
+    "line": 0,
+    "snippet": "repeating-gradient decorative stripes",
+    "advisory": true
+  },
+  {
+    "antipattern": "low-contrast",
+    "name": "Low contrast text",
+    "description": "Text does not meet WCAG AA contrast requirements (4.5:1 for body, 3:1 for large text). Increase the contrast between text and background.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "C:\\Users\\Joshu\\Downloads\\LSAT-U-Dashboard-Three-Directions-v2\\marginalia\\student.html",
+    "line": 0,
+    "snippet": "2.9:1 (need 4.5:1) — text #8d9098 on #f6f5f0"
+  },
+  {
+    "antipattern": "cream-palette",
+    "name": "Cream / beige palette",
+    "description": "A warm cream or beige page background has become the default \"tasteful\" AI surface, reached for by reflex. Choose a background that comes from a deliberate palette, not the safe warm off-white.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "C:\\Users\\Joshu\\Downloads\\LSAT-U-Dashboard-Three-Directions-v2\\marginalia\\student.html",
+    "line": 0,
+    "snippet": "cream/beige page background rgb(246, 245, 240)"
+  },
+  {
+    "antipattern": "low-contrast",
+    "name": "Low contrast text",
+    "description": "Text does not meet WCAG AA contrast requirements (4.5:1 for body, 3:1 for large text). Increase the contrast between text and background.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "C:\\Users\\Joshu\\Downloads\\LSAT-U-Dashboard-Three-Directions-v2\\marginalia\\teacher.html",
+    "line": 0,
+    "snippet": "2.9:1 (need 4.5:1) — text #8d9098 on #f6f5f0"
+  },
+  {
+    "antipattern": "cream-palette",
+    "name": "Cream / beige palette",
+    "description": "A warm cream or beige page background has become the default \"tasteful\" AI surface, reached for by reflex. Choose a background that comes from a deliberate palette, not the safe warm off-white.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "C:\\Users\\Joshu\\Downloads\\LSAT-U-Dashboard-Three-Directions-v2\\marginalia\\teacher.html",
+    "line": 0,
+    "snippet": "cream/beige page background rgb(246, 245, 240)"
+  }
+]

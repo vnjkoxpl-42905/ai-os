@@ -1,0 +1,84 @@
+{
+ "qid": "PT157-S3-Q8",
+ "type": "Role",
+ "difficulty": "3",
+ "key_db": "A",
+ "stimulus_db": "Anthropologist: For early humans who moved from a hunter-gatherer lifestyle to agriculture, the transition must have been traumatic. There would have been increased incidence of disease and injury and a more homogeneous diet lacking vital nutrients more easily obtainable from the richly varied diet of hunter-gatherers. Thus, groups that made the transition were likely motivated by certain benefits that accompany the settled life of the agriculturist, such as opportunities for the accumulation of wealth by those with specialized social roles.",
+ "stem_db": "Which one of the following most accurately describes the role played in the anthropologist's overall argument by the statement that for early humans who moved from a hunter-gatherer lifestyle to agriculture, the transition must have been traumatic?",
+ "choices_db": {
+  "A": "It is a premise for which another premise is offered as support.",
+  "B": "It is background information that plays no logical role in the argument.",
+  "C": "It is a premise for which no support is offered.",
+  "D": "It is the conclusion of the argument as a whole.",
+  "E": "It is a claim that the rest of the argument seeks to rebut."
+ },
+ "bank": {
+  "stimulus": "Anthropologist: For early humans who moved from\n a hunter-gatherer lifestyle to agriculture, the\n transition must have been traumatic. There would\n have been increased incidence of disease and\n injury and a more homogeneous diet lacking vital\n nutrients more easily obtainable from the richly\n varied diet of hunter-gatherers. Thus, groups that\n made the transition were likely motivated by\n certain benefits that accompany the settled life\n of the agriculturist, such as opportunities for the\n accumulation of wealth by those with specialized\n social roles.",
+  "stem": "Which one of the following most accurately describes\n the role played in the anthropologist’s overall argument\n by the statement that for early humans who moved from\n a hunter-gatherer lifestyle to agriculture, the transition\n must have been traumatic?",
+  "choices": {
+   "A": "It is a premise for which another premise is offered as support.",
+   "B": "It is background information that plays no logical role in the argument.",
+   "C": "It is a premise for which no support is offered.",
+   "D": "It is the conclusion of the argument as a whole.",
+   "E": "It is a claim that the rest of the argument seeks to rebut."
+  },
+  "key": "A"
+ },
+ "explanation_id": "c455f175-2763-4d8b-972a-a61f7a8224a2",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "a84588ac-f5cf-47fb-baba-8273b9d1a1c3",
+   "position": 0,
+   "label": "Intermediate Conclusion",
+   "body": "For early humans who moved from a hunter-gatherer lifestyle to agriculture, the transition must have been traumatic."
+  },
+  {
+   "row_id": "76d93547-a7a7-4e3b-a9de-c3bba9acc8c9",
+   "position": 1,
+   "label": "Evidence",
+   "body": "There would have been increased incidence of disease and injury and a more homogeneous diet lacking vital nutrients more easily obtainable from the richly varied diet of hunter-gatherers."
+  },
+  {
+   "row_id": "e6dd2511-5ea7-4524-b09d-febae612b067",
+   "position": 2,
+   "label": "Main Conclusion",
+   "body": "Groups that made the transition were likely motivated by certain benefits that accompany the settled life of the agriculturist, such as opportunities for the accumulation of wealth by those with specialized social roles."
+  },
+  {
+   "row_id": "fdd643c6-3726-49f1-8a6a-62029db0a774",
+   "position": 3,
+   "label": "Evaluate",
+   "body": "The statement that is quoted in the question stem is an intermediate conclusion. It is supported by the evidence in the second sentence, and supports the main conclusion in the final sentence."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "c7d35b39-1bfc-4de0-87a3-2e104027f7f2",
+   "letter": "A",
+   "body": "The quoted statement supports the main conclusion and is itself supported by another premise (disease, injury, diet evidence). The LSAT's description — \"a premise for which another premise is offered as support\" — accurately captures both relationships. While we might call this an \"intermediate conclusion,\" calling it a \"premise\" is not technically wrong since it does support the main conclusion."
+  },
+  {
+   "row_id": "2309c2af-33c1-407c-9db0-5a56ed88f5a3",
+   "letter": "B",
+   "body": "The statement plays a direct logical role — it supports the main conclusion and is supported by evidence. Background information would be a neutral fact that sets the scene without participating in the argument's logic."
+  },
+  {
+   "row_id": "137068ef-561e-4692-946a-0472854e8cbf",
+   "letter": "C",
+   "body": "This claims no support is offered for the quoted statement. But the second sentence — increased disease, injury, and a less nutritious diet — directly supports the claim that the transition was traumatic. Support is clearly offered."
+  },
+  {
+   "row_id": "262a2098-25fa-4aaf-b88f-0f98301f3ba8",
+   "letter": "D",
+   "body": "The main conclusion is the final sentence, introduced by \"thus.\" The quoted statement supports this conclusion but is not the conclusion itself."
+  },
+  {
+   "row_id": "4b49ee3b-01e7-4ede-a0bc-82c964d16ac4",
+   "letter": "E",
+   "body": "The argument supports and builds upon the \"traumatic\" claim rather than seeking to rebut it. An opposing viewpoint would be contested by the argument, but this statement is firmly integrated into the argument's reasoning."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (16.9 em-dashes per 1k words; wrong-answer notes average 31.2 words).",
+ "tags": "no-prediction; emdash-heavy; pt157-158-register"
+}

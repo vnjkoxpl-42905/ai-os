@@ -1,0 +1,78 @@
+{
+ "qid": "PT157-S2-Q24",
+ "type": "Necessary Assumption",
+ "difficulty": "4",
+ "key_db": "D",
+ "stimulus_db": "The more profitable a corporation is, the more valuable its managers’ time is. As a result, it is especially costly for highly profitable corporations to have their managers spend time monitoring employees. Such corporations can save money by reducing this monitoring, as long as the employees are given strong incentives to keep working hard. So highly profitable corporations can save money by giving their employees expensive bonuses.",
+ "stem_db": "The argument requires the assumption that",
+ "choices_db": {
+  "A": "only a few corporations give their employees bonuses that provide strong enough incentives for the employees to keep working hard even when they are not being monitored",
+  "B": "if a highly profitable corporation could save money by giving its employees expensive bonuses, it is because giving such bonuses would reduce the amount of time its managers must spend monitoring those employees",
+  "C": "the more valuable the managers’ time is at a corporation, the less likely it is that the corporation will actually have those managers spend time monitoring employees",
+  "D": "for people who are employees of highly profitable corporations where monitoring is reduced, expensive bonuses constitute strong incentives to keep working hard",
+  "E": "a highly profitable corporation can save money by reducing its managers’ monitoring of employees only if its employees are given expensive bonuses"
+ },
+ "bank": {
+  "stimulus": "The more profitable a corporation is, the more valuable\n its managers’ time is. As a result, it is especially costly\n for highly profitable corporations to have their managers\n spend time monitoring employees. Such corporations can\n save money by reducing this monitoring, as long as the\n employees are given strong incentives to keep working\n hard. So highly profitable corporations can save money\n by giving their employees expensive bonuses.",
+  "stem": "The argument requires the assumption that",
+  "choices": {
+   "A": "only a few corporations give their employees bonuses that provide strong enough incentives for the employees to keep working hard even when they are not being monitored",
+   "B": "if a highly profitable corporation could save money by giving its employees expensive bonuses, it is because giving such bonuses would reduce the amount of time its managers must spend monitoring those employees",
+   "C": "the more valuable the managers’ time is at a corporation, the less likely it is that the corporation will actually have those managers spend time monitoring employees",
+   "D": "for people who are employees of highly profitable corporations where monitoring is reduced, expensive bonuses constitute strong incentives to keep working hard",
+   "E": "a highly profitable corporation can save money by reducing its managers’ monitoring of employees only if its employees are given expensive bonuses"
+  },
+  "key": "D"
+ },
+ "explanation_id": "e1ff871b-d20d-4367-a2a1-0536a6093a4b",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "25808854-6954-4ae0-9a57-3c9cbbd379d5",
+   "position": 0,
+   "label": "Evidence",
+   "body": "Highly profitable corporations can save money by reducing the monitoring done by managers, as long as the employees are given strong incentives to keep working hard."
+  },
+  {
+   "row_id": "1a6fa400-c691-4963-a153-167bbecb6efe",
+   "position": 1,
+   "label": "Conclusion",
+   "body": "Highly profitable corporations can save money by giving their employees expensive bonuses."
+  },
+  {
+   "row_id": "751b969f-db77-4aec-9fec-6b02b3217ff5",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "To reach this conclusion about the employees at these particular corporations, we need to assume that there is a relationship between giving them strong incentives to keep working hard and giving them expensive bonuses. We have to assume that these bonuses would motivate them to keep working hard even when the managers aren't watching them closely."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "250d31d6-6ab0-47cb-b1c0-b63dde4f4320",
+   "letter": "A",
+   "body": "This answer says only a few corporations currently give bonuses that provide strong enough incentives. The argument is about what highly profitable corporations could do to save money, not about what corporations currently do. Whether many or few corporations already use effective bonuses does not affect whether the strategy would work if implemented. The argument makes a prescriptive claim about a potential policy, and the current adoption rate of that policy is irrelevant to its potential effectiveness. Additionally, this answer does not specify whether the bonuses are expensive or whether the corporations are highly profitable."
+  },
+  {
+   "row_id": "c171f899-2ed0-4c1e-b522-b4c733420709",
+   "letter": "B",
+   "body": "This answer says if a corporation can save money by giving bonuses, it is because bonuses reduce monitoring time. Diagrammed: saves money via bonuses -> reduces monitoring. This uses the conclusion as the trigger (sufficient condition) and provides an explanation for why it works. But the argument needs to establish that the conclusion is true, not explain why it would be true if it were. A necessary assumption should be something that, if false, would destroy the argument. This answer, if negated (\"it is not necessarily because of reduced monitoring\"), does not destroy the argument — the argument has already established the monitoring-reduction mechanism in its premises."
+  },
+  {
+   "row_id": "d59a0789-6a22-45b1-aff3-e95dbc75ce67",
+   "letter": "C",
+   "body": "This answer says the more valuable managers' time is, the less likely the corporation will have managers monitor employees. At highly profitable corporations (where managers' time is most valuable), this suggests monitoring is already minimal. If monitoring is already low, there is little monitoring to reduce, which means less potential savings from the bonus strategy. This weakens rather than supports the argument. The argument depends on highly profitable corporations currently spending substantial manager time on monitoring, so there is something to save by reducing it. An answer suggesting they already do not monitor much undermines the premise that monitoring savings are available."
+  },
+  {
+   "row_id": "e18b806d-1d05-4ac2-9543-4cccf8e88403",
+   "letter": "D",
+   "body": "This answer states that for employees of highly profitable corporations where monitoring is reduced, expensive bonuses constitute strong incentives to keep working hard. This is the precise bridge the argument needs. The evidence says corporations can save money by reducing monitoring if employees get strong incentives. The conclusion says they can save money by giving expensive bonuses. This assumption connects the two by establishing that expensive bonuses are strong incentives for the relevant employees. Negation test: if expensive bonuses do not constitute strong incentives for these employees, then giving bonuses would not replace the need for monitoring, and no money would be saved. The argument collapses."
+  },
+  {
+   "row_id": "831eb0ef-227b-4cbb-9206-4d01df108da7",
+   "letter": "E",
+   "body": "This answer says corporations can save money by reducing monitoring only if employees receive expensive bonuses. The word \"only\" makes expensive bonuses the sole method for saving money through reduced monitoring. The argument only needs bonuses to be one effective method, not the only method. Maybe strong incentives could also come from stock options, promotions, or other rewards. The argument does not need to assume bonuses are the exclusive solution — it only needs to assume they are an effective one. Negation test: \"Corporations can also save money through reduced monitoring using incentives other than expensive bonuses.\" This does not destroy the argument because bonuses can still work even if alternatives also work."
+  }
+ ],
+ "known_problem": "Correct; negation tests present; long.",
+ "tags": "no-prediction; pt157-158-register; possible-misquote"
+}

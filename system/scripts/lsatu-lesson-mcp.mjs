@@ -1,6 +1,5 @@
 // Local MCP entry point. Content operations live in AI OS, so changing this
 // server never requires an LSAT U app deployment.
-import { projectPath } from './project-paths.mjs';
 import { createRequire } from 'node:module';
 import { pathToFileURL, fileURLToPath } from 'node:url';
 import { execFile } from 'node:child_process';
@@ -9,7 +8,7 @@ import path from 'node:path';
 import fs from 'node:fs';
 
 const vault = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
-const appRequire = createRequire(projectPath('lsatu', 'package.json'));
+const appRequire = createRequire(new URL('../runtime/lsatu-mcp/package.json', import.meta.url));
 const [{ McpServer }, { StdioServerTransport }, { z }] = await Promise.all([
   import(pathToFileURL(appRequire.resolve('@modelcontextprotocol/sdk/server/mcp.js')).href),
   import(pathToFileURL(appRequire.resolve('@modelcontextprotocol/sdk/server/stdio.js')).href),
@@ -119,5 +118,50 @@ server.registerTool('list_student_classroom_items', {
   inputSchema: { student: z.string().min(2) },
   annotations: { readOnlyHint: true },
 }, ({ student }) => command(['items', student]));
+
+async function workCommand(script, input) {
+  try {
+    const { stdout } = await run(process.execPath, [path.join(vault, 'system/scripts', script), '--json', JSON.stringify(input)], {
+      cwd: vault, windowsHide: true, maxBuffer: 4 * 1024 * 1024, timeout: 330000,
+    });
+    return { content: [{ type: 'text', text: stdout.trim() }], structuredContent: JSON.parse(stdout) };
+  } catch (error) {
+    return { isError: true, content: [{ type: 'text', text: String(error.stderr || error.message).trim() }] };
+  }
+}
+
+const assignmentFields = {
+  schedule: z.string().optional(),
+  due: z.string().optional(),
+};
+const workItem = z.discriminatedUnion('kind', [
+  z.object({ kind: z.literal('interactive_note'), html_file: z.string().min(1), title: z.string().min(1).max(300) }).strict(),
+  z.object({ kind: z.literal('activity'), activity: z.string().min(1), ...assignmentFields }).strict(),
+  z.object({ kind: z.literal('bootcamp'), bootcamp: z.string().min(1), conditional_target: z.string().optional(), ...assignmentFields }).strict(),
+  z.object({ ...guidedAssignment.shape, kind: z.literal('guided_drill') }).strict(),
+]);
+
+server.registerTool('assign_student_work', {
+  description: 'Preflight, assign and verify an approved LSAT U Classroom package for one student. Set dry_run or verify_existing for a read-only check.',
+  inputSchema: {
+    student: z.string().min(2),
+    id: z.string().optional(),
+    student_folder: z.string().optional(),
+    assignments: z.array(workItem).min(1).max(20),
+    dry_run: z.boolean().optional(),
+    verify_existing: z.boolean().optional(),
+  },
+  annotations: { readOnlyHint: false, idempotentHint: true },
+}, plan => workCommand('lsatu-work-plan.mjs', plan));
+
+server.registerTool('search_assignable_work', {
+  description: 'Search the live LSAT U assignment catalog.',
+  inputSchema: {
+    query: z.string().max(200),
+    kind: z.enum(['activity', 'bootcamp', 'guided_drill']).optional(),
+    limit: z.number().int().min(1).max(30).optional(),
+  },
+  annotations: { readOnlyHint: true },
+}, input => workCommand('lsatu-work-search.mjs', input));
 
 await server.connect(new StdioServerTransport());

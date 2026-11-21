@@ -1,0 +1,84 @@
+{
+ "qid": "PT158-S3-Q1",
+ "type": "Flaw",
+ "difficulty": "1",
+ "key_db": "B",
+ "stimulus_db": "In the previous two years, significantly more rain has fallen in Browning in September than in July. Therefore, this year in Browning more rain will probably fall in September than in July.",
+ "stem_db": "The reasoning in the argument is most vulnerable to criticism on the grounds that the argument",
+ "choices_db": {
+  "A": "contains a premise that presupposes the truth of the conclusion",
+  "B": "draws an inference about a future event on the basis of a very limited number of instances of related past events",
+  "C": "overemphasizes the possibility that average rainfall statistics could be skewed by large rainfall in one year",
+  "D": "concludes that two phenomena are associated merely from the claim that there are many instances in which both phenomena are present",
+  "E": "uses evidence drawn from a source whose reliability cannot readily be verified"
+ },
+ "bank": {
+  "stimulus": "In the previous two years, significantly more rain has\n fallen in Browning in September than in July. Therefore,\n this year in Browning more rain will probably fall in\n September than in July.",
+  "stem": "The reasoning in the argument is most vulnerable to\n criticism on the grounds that the argument",
+  "choices": {
+   "A": "contains a premise that presupposes the truth of the conclusion",
+   "B": "draws an inference about a future event on the basis of a very limited number of instances of related past events",
+   "C": "overemphasizes the possibility that average rainfall statistics could be skewed by large rainfall in one year",
+   "D": "concludes that two phenomena are associated merely from the claim that there are many instances in which both phenomena are present",
+   "E": "uses evidence drawn from a source whose reliability cannot readily be verified"
+  },
+  "key": "B"
+ },
+ "explanation_id": "66941fc1-7dc9-48c1-afd1-f5b26e9e9051",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "066501a5-1664-4f8e-8f00-9ac9a132b211",
+   "position": 0,
+   "label": "Conclusion (Therefore)",
+   "body": "More rain will probably fall in September than in July."
+  },
+  {
+   "row_id": "f403ce89-1855-44b9-a48f-7d7a1f4e28ce",
+   "position": 1,
+   "label": "Evidence",
+   "body": "In the past two years, significantly more rain has fallen in September than in July."
+  },
+  {
+   "row_id": "cd1342fe-bb3b-469c-a6a4-750b15d91103",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "This isn't a crazy sounding argument. The author is assuming that what's been true in the recent past will probably be true in the near future. For example, \"For the past two Christmas's, my neighbor has put a big snowflake over her front door. Therefore, this year she will probably hang a big snowflake over her front door.\" We know that \"just because it was true in past instances, it doesn't have to necessarily be true again in this instance.\" This argument is more responsible. It's only predicting that it will probably happen again in this instance. But that's still potentially an exaggeration. Maybe something was different about the last two years from this coming year."
+  },
+  {
+   "row_id": "f84a9bed-d622-4d14-9f81-6f71996ab903",
+   "position": 3,
+   "label": "Goal",
+   "body": "Look for an answer mentioning the \"if it was true before, it'll probably be true again\" reasoning move, or an answer pointing out the \"maybe this year is importantly different from the previous two years\" objection."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "715bd9b1-bdba-4a58-b4c1-347624aa2904",
+   "letter": "A",
+   "body": "Circular reasoning occurs when a premise already contains or presupposes the conclusion, such that the argument essentially proves itself by assuming what it set out to demonstrate. That is not what happens here. The premise — that September had more rain than July in the previous two years — is a factual observation about past events. The conclusion — that September will probably have more rain than July this year — is a prediction about the future. These are logically distinct claims: one is about what has already happened, the other about what will happen. The premise does not secretly assume the conclusion; it just provides inadequate evidence for it. The problem is insufficient data, not self-referential logic."
+  },
+  {
+   "row_id": "801a0124-4d13-4853-97cf-dfd866f167cd",
+   "letter": "B",
+   "body": "The argument observes a pattern over just two years and uses it to predict what will happen this year. Two instances is an extremely limited basis for drawing any general conclusion, let alone a prediction about future weather. Rainfall patterns can vary dramatically from year to year due to shifting weather systems, El Nino cycles, and countless other variables. The fact that September outpaced July for two consecutive years could easily be coincidental rather than indicative of any underlying trend. The argument treats this tiny sample as though it reveals a reliable pattern, when in reality it reveals almost nothing about what to expect going forward. This answer correctly identifies the core vulnerability: the inference about the future rests on far too few past observations to carry any real predictive weight."
+  },
+  {
+   "row_id": "c771334e-fe3c-4b6f-b518-b8f60f1d0252",
+   "letter": "C",
+   "body": "The argument does not discuss average rainfall statistics, nor does it rely on averages that could be distorted by outlier events. The evidence is simply that September had more rain than July in each of the previous two years. The concern about large storms skewing averages is a valid statistical consideration in other contexts, but it does not describe what is happening in this argument. The argument's problem is not that its data might be distorted by outliers; the problem is that there are only two data points in the first place. Even if each year's rainfall figures were perfectly representative and undistorted, two years would still be too few to support a predictive conclusion. This answer addresses a statistical concern that is not relevant to the argument's actual flaw."
+  },
+  {
+   "row_id": "34058bef-aa1d-4f1f-a642-9d0d1379bebc",
+   "letter": "D",
+   "body": "This answer describes a flaw in which someone observes that two things often co-occur and concludes they are associated. But the argument here is not about the association between two phenomena — it is about predicting future rainfall based on past rainfall. The argument does not claim that September and heavy rain are \"associated\" in some general sense; it observes a specific pattern over two years and predicts that pattern will continue. Additionally, this answer mentions \"many instances,\" which mischaracterizes the evidence. The argument relies on only two instances, which is precisely the problem. The flaw described here — correlating co-occurrence with association from many observations — simply does not match the structure of this argument."
+  },
+  {
+   "row_id": "3bd64a5f-7b4f-4cbc-ad3a-dff01f92d8de",
+   "letter": "E",
+   "body": "The argument does not rely on evidence from a source whose reliability is questionable. It simply states a factual claim about rainfall in the previous two years. There is no cited study, no unnamed expert, no secondhand report — just a direct observation about how much rain fell. The argument's problem has nothing to do with the trustworthiness of its evidence source and everything to do with the quantity of evidence. Even if the two-year rainfall data were obtained from the most reliable meteorological instruments on Earth, two years would still be too few data points to support a weather prediction. This answer raises a concern about evidence reliability that is simply not at issue in the argument."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (10.2 em-dashes per 1k words; wrong-answer notes average 119.5 words).",
+ "tags": "emdash-heavy; pt157-158-register; possible-misquote"
+}

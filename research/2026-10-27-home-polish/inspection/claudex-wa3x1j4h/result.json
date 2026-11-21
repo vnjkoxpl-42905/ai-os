@@ -1,0 +1,292 @@
+{
+  "status": "completed",
+  "mode": "inspect",
+  "provider": "claude",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "claude",
+    "builder": "codex",
+    "inspector": "claude"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-home-polish-20261027",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os\\brainstorms\\2026-10-27-home-polish.plan.md",
+  "plan_sha256": "d2b021d87f185b8ca49cd1b0f0470ee225c3c3657f0712345b58adaad2f6d82f",
+  "requested_model": null,
+  "requested_effort": null,
+  "base": "e4035d9c",
+  "snapshot": {
+    "base": "e4035d9c8ec97a3aaec01b0b3464533872328bc8",
+    "files": [
+      {
+        "path": ".gitignore",
+        "kind": "file",
+        "sha256": "b7c70acf32c1b37d49038c3f67687c536b5d673801c084c2c06574dbbb596080"
+      },
+      {
+        "path": "docs/verification/home-preview.vite.config.ts",
+        "kind": "file",
+        "sha256": "90049404d0677348e22a795869783bf5b53f14e6fb1195676f4e05ecaed295c0"
+      },
+      {
+        "path": "docs/verification/role-home-preview.html",
+        "kind": "file",
+        "sha256": "6ee8fa4ad613bd919693603121eb042faa2efd39a98248966481463be4277382"
+      },
+      {
+        "path": "docs/verification/role-home-preview.tsx",
+        "kind": "file",
+        "sha256": "8bd1c2843e90c032da8f0754560910965d247224614fc96ce6c4429d1f3d2445"
+      },
+      {
+        "path": "src/components/classroom/home/ClassroomHome.role.test.tsx",
+        "kind": "file",
+        "sha256": "0fea5c21514efaba6787d8a62c9c17cf0778cb1e5485f98d530ae95f99b6fa2b"
+      },
+      {
+        "path": "src/components/classroom/home/ClassroomHome.tsx",
+        "kind": "file",
+        "sha256": "e18f8dbe1fc834295af53298c0692ac122a24c70bdbcb0dd833cdde3d4c38caa"
+      },
+      {
+        "path": "src/components/classroom/home/ClassroomHomeView.test.tsx",
+        "kind": "file",
+        "sha256": "6582dbcb08d8e0c99b896ba8f1bb54cd18041f213f02e78d286006a3efdd061c"
+      },
+      {
+        "path": "src/components/classroom/home/ClassroomHomeView.tsx",
+        "kind": "file",
+        "sha256": "dc07236962723475c136d93960901f6b9cd0dc7fdb00bcca1cab182ab4e8db93"
+      },
+      {
+        "path": "src/components/classroom/home/HomeWeekStrip.test.tsx",
+        "kind": "file",
+        "sha256": "8bb09daed5ad38399b320f793afa422788676b893d4bf264e74f80c116e3fb2d"
+      },
+      {
+        "path": "src/components/classroom/home/HomeWeekStrip.tsx",
+        "kind": "file",
+        "sha256": "17966deacbe2ed87f9ff4410b5dc218edc9d552be181ac849916ab90718b3370"
+      },
+      {
+        "path": "src/components/classroom/home/assignedWorkPath.test.ts",
+        "kind": "file",
+        "sha256": "b7376b1def5dad14fc9bdd4ce92c6c2aafcb02f4230060c0369aa9a6f16247c2"
+      },
+      {
+        "path": "src/components/classroom/home/home.css",
+        "kind": "file",
+        "sha256": "94489979078964b473baba49d867cafd838e9c89884bf05350e88f1b4ea7651b"
+      },
+      {
+        "path": "src/components/classroom/home/homeModel.ts",
+        "kind": "file",
+        "sha256": "6fc21ab54a129a24a0e6e31a4a95fb3113e4a7e90720c572a6b0f6b5017aa5c5"
+      },
+      {
+        "path": "src/components/classroom/home/homeStyles.test.ts",
+        "kind": "file",
+        "sha256": "ef391eafdfb336350841390c02bed43ca24c0d3251feb91f36712b3a386251fd"
+      },
+      {
+        "path": "src/components/classroom/home/teacher/TeacherHomeView.test.tsx",
+        "kind": "file",
+        "sha256": "5ce9ab23c8d0ac57994c0e59825c2232cce43ac2752083d8f2819ecd09a2b487"
+      },
+      {
+        "path": "src/components/classroom/home/teacher/TeacherHomeView.tsx",
+        "kind": "file",
+        "sha256": "2aa67756a67b62aa47929e04182f949e4e409b9b616afac4be7ef3151cb9cc1f"
+      },
+      {
+        "path": "src/components/classroom/home/teacher/teacherHomeModel.ts",
+        "kind": "file",
+        "sha256": "af1df879e4e984f0a8ce4a72cdddfe7017f29db8df68644cda0c7abb5d32e085"
+      },
+      {
+        "path": "src/components/classroom/home/teacher/useTeacherHome.ts",
+        "kind": "file",
+        "sha256": "e9e5c0785882eebd3b0389613de36e1f8e4c0a47612282ef26059ec38cd4cc98"
+      },
+      {
+        "path": "src/components/classroom/home/useClassroomHome.homeMessage.test.tsx",
+        "kind": "file",
+        "sha256": "a977774b46a6ef5728b4c38f92c73c3cf640d551c61288c76e22f10e00f0a258"
+      },
+      {
+        "path": "src/components/classroom/home/useClassroomHome.ts",
+        "kind": "file",
+        "sha256": "bf48fa331393cadc1855bc2f154238feea15affef4df6ce4b0a3428732cf8931"
+      },
+      {
+        "path": "src/components/classroom/home/useHomeEntrance.ts",
+        "kind": "file",
+        "sha256": "ec2ce448f9fc7df3a9d30e8946e51a2a23cf56a096d052b08166b50aeae7689d"
+      },
+      {
+        "path": "src/components/classroom/home/useHomeFeedback.ts",
+        "kind": "file",
+        "sha256": "59ad16ac869afae2c8a4aa3e0cabe87e51d0ab12872e148b2c58760c84416d88"
+      },
+      {
+        "path": "src/components/classroom/home/useHomeFreshness.test.tsx",
+        "kind": "file",
+        "sha256": "79d0260b0d799e8b44e4de78ab3ae172762013c8454e4748915a9490f30f7696"
+      },
+      {
+        "path": "src/components/classroom/home/useHomeFreshness.ts",
+        "kind": "file",
+        "sha256": "8dbaab8cb13559825b43364629eed19484c311c5e13777554db361336ce81850"
+      },
+      {
+        "path": "src/hooks/useInbox.summary.test.tsx",
+        "kind": "file",
+        "sha256": "15393d6ec15bc828966caab80675e495900477efb8879d14c9a26788a0bc5ed2"
+      },
+      {
+        "path": "src/hooks/useInbox.ts",
+        "kind": "file",
+        "sha256": "032d04c1f0cb1012a5539a26fc5a9ff024508044a6236683e9deab7ca85f096a"
+      },
+      {
+        "path": "src/hooks/useUserPermissions.resolved.test.tsx",
+        "kind": "file",
+        "sha256": "aba5405a284d7467d9b862a9e3686a106a99bb771801315c486aed13269a5bb1"
+      },
+      {
+        "path": "src/hooks/useUserPermissions.ts",
+        "kind": "file",
+        "sha256": "6018bf53f70724a3c9773545d7d8f4c2d0a396850fef648abdbef59a1c13ce87"
+      }
+    ],
+    "diff_sha256": "13d662b057f3835f4de9198c6d1d1f30193f21de8f14bfe044652945f6796a47",
+    "scope": [
+      ".gitignore",
+      "docs/verification/home-preview.vite.config.ts",
+      "docs/verification/role-home-preview.html",
+      "docs/verification/role-home-preview.tsx",
+      "src/components/classroom/home",
+      "src/hooks/useInbox.summary.test.tsx",
+      "src/hooks/useInbox.ts",
+      "src/hooks/useUserPermissions.resolved.test.tsx",
+      "src/hooks/useUserPermissions.ts"
+    ],
+    "sha256": "6032ea0704cf99db33dad477b88f67533c85470bba7d7f0535658e5308b4f232"
+  },
+  "previous": null,
+  "started_at": 1793126060.0901859,
+  "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\research\\2026-10-27-home-polish\\inspection\\claudex-wa3x1j4h",
+  "scope": [
+    ".gitignore",
+    "docs/verification/home-preview.vite.config.ts",
+    "docs/verification/role-home-preview.html",
+    "docs/verification/role-home-preview.tsx",
+    "src/components/classroom/home",
+    "src/hooks/useInbox.summary.test.tsx",
+    "src/hooks/useInbox.ts",
+    "src/hooks/useUserPermissions.resolved.test.tsx",
+    "src/hooks/useUserPermissions.ts"
+  ],
+  "cli_version": "2.1.309 (Claude Code)",
+  "executable": [
+    "C:\\Users\\Joshu\\.local\\bin\\claude.EXE"
+  ],
+  "exit_code": 0,
+  "session_id": "1378f341-b0c2-4437-a463-3bca32bf9c45",
+  "response": {
+    "verdict": "REVISE",
+    "summary": "I found no security or role-gating defects in the dispatcher, permissions additions, teacher hooks or preview harness. Two defects in the new Home/inbox behavior should be fixed first: one (F1) can make the Up next \"new\" badge undercount the full dataset, the other (F2) widens a failure path in the shared inbox hook. Three low-severity items are also listed. I could not run tests, typecheck, build or any browser, and I made no claim that they pass. I did not open the test files, the full `useClassroomHome.ts` or the full `home.css`.",
+    "findings": [
+      {
+        "id": "F1",
+        "severity": "medium",
+        "path": "src/components/classroom/home/ClassroomHomeView.tsx",
+        "evidence": "`remainingNew = upNext.filter(row => row.isNew).length` counts only the rows `useClassroomHome` passes in, which is `rows.slice(0, 5)` minus the featured row. `model.newCount` is computed over every row and is no longer used for the badge. With more than five rows, the \"N new\" badge in Up next undercounts the full dataset. The plan says \"only visible list is capped, totals remain full dataset\" and \"counts coupled to rendered models\". The existing refetch test passes only because its model has two rows and a hand-set `newCount`, so it never exercises the cap.",
+        "fix": "Derive the badge from the full-dataset count. Use `model.newCount - (featuredRow?.isNew ? 1 : 0)`, clamped at 0. Or have the hook expose the uncapped new count explicitly. Add a test with more than 5 rows where some new rows fall outside the visible slice."
+      },
+      {
+        "id": "F2",
+        "severity": "medium",
+        "path": "src/hooks/useInbox.ts",
+        "evidence": "The new preview-body fetch (`.in('id', previewIds…)`) is treated as fatal. On error it calls `setError('Could not load your messages')` and returns, so `setConversations` and `setConversationOwner` never run. Every consumer of `useInbox` then keeps a stale list and unread count (rail badge, Inbox page, Home). The only data lost to a preview failure is a snippet. The teacher view already falls back to \"New message\" when `latest_unread_message` is null, and the attachment and name fetches in this same function are non-fatal. A transient failure or an RLS hiccup on this one extra query therefore blocks all inbox refreshes, including read-state reconciliation after acknowledgement.",
+        "fix": "Make the preview failure non-fatal. Log a warning, leave `unreadPreviewMap` empty for the failed batch, and continue to `setConversations`, so unread state stays accurate and only snippets degrade. Add a test where the preview query errors while the unread scan succeeds, and assert the conversations are still set and flagged unread."
+      },
+      {
+        "id": "F3",
+        "severity": "low",
+        "path": "src/hooks/useInbox.ts",
+        "evidence": "`readTimes` filters out non-finite values, but `lastReadMap` itself keeps NaN for an unparseable `last_read_at`. `timestamp <= (lastReadMap.get(id) ?? 0)` is then false against NaN, because `??` does not catch NaN. Every message in that thread counts as unread. The empty-map case is handled correctly. This is only a malformed-data edge.",
+        "fix": "Normalize at map construction: `const t = p.last_read_at ? new Date(p.last_read_at).getTime() : 0; Number.isFinite(t) ? t : 0`. Then the `readTimes` filter is unnecessary."
+      },
+      {
+        "id": "F4",
+        "severity": "low",
+        "path": "src/components/classroom/home/useHomeFreshness.ts",
+        "evidence": "The `focusManager` and `onlineManager` subscriptions invalidate eight key prefixes on every focus event with no throttle. Each tab switch triggers a refetch burst. `setRefreshing(true)` also flips the visible Refresh button to a disabled \"Refreshing\" state. Focus events can fire in rapid pairs (window and visibility), and overlapping calls set `refreshing` false when the first finishes while the second is still running.",
+        "fix": "Skip the focus-triggered refresh if one is already in flight (use a ref guard), or if the last refresh was under a few seconds ago. Alternatively, use a counter for `refreshing` instead of a boolean."
+      },
+      {
+        "id": "F5",
+        "severity": "low",
+        "path": "src/components/classroom/home/useHomeEntrance.ts",
+        "evidence": "The plan retires the page entrance and says the old `useHomeEntrance` is replaced. The host disposition kept the file as a \"compatibility export\" of `useHomeFeedback`. I found no importer in the files I read. A dead module with the old name invites re-adding entrance behavior.",
+        "fix": "Delete the file if nothing imports it, which a grep confirms. Otherwise state the remaining caller in the verification report."
+      }
+    ],
+    "coverage": [
+      "Fully read: teacher/useTeacherHome.ts, teacher/teacherHomeModel.ts, teacher/TeacherHomeView.tsx, useHomeFeedback.ts, useHomeFreshness.ts, HomeWeekStrip.tsx, docs/verification/role-home-preview.tsx, docs/verification/home-preview.vite.config.ts.",
+      "Read in the supplied diff and in the checkout: ClassroomHome.tsx (role dispatcher, role-error and stale-notice states), ClassroomHomeView.tsx, homeModel.ts changes, useClassroomHome.ts changes, home.css, .gitignore.",
+      "Read in the checkout: src/hooks/useInbox.ts lines 90-399 (load path, unread scan, newest-unread selection, preview fetch, acknowledgement, returned `loaded`). src/hooks/useUserPermissions.ts lines 75-285 (query, resolved/resolvedFor/isError/retry).",
+      "Checked that /teacher/library/assignments, the /teacher/students routes and the teacher inbox splat route exist in the source. Did not mount any route.",
+      "Role gating: neither role's hooks mount until `permissions.resolved`. The key `${role}:${resolvedFor}` remounts on an actor change. The teacher queries are enabled only when resolved and admin, and are keyed by actor id."
+    ],
+    "limitations": [
+      "I could not run tests, typecheck, build, the preview, or a browser. There is no visual, contrast, overflow, console, or motion verification, and nothing is claimed as passing.",
+      "I did not open any test files (ClassroomHome.role, TeacherHomeView, HomeWeekStrip, useHomeFreshness, assignedWorkPath, homeStyles, useInbox.summary, useUserPermissions.resolved, the Home view tests), so I did not check what they actually assert.",
+      "I did not read the full useClassroomHome.ts, the full home.css cascade (the diff showed late override blocks), or useHomeEntrance.ts.",
+      "I did not inspect the rest of the repo for other consumers of useInbox or useUserPermissions, ClassroomLayout, or the rail and sidebar unread-count paths. Out-of-scope files are unreviewed.",
+      "I did not verify the actual Edge Function admin enforcement for `admin-manage-users`, the `student_sessions` RLS, or live RLS and backend behavior. No real signed-in acceptance was possible or claimed.",
+      "Every tasteskill script and screenshot step in the plan was out of reach and unreviewed."
+    ]
+  },
+  "usage": {
+    "input_tokens": 12,
+    "cache_creation_input_tokens": 116999,
+    "cache_read_input_tokens": 492372,
+    "output_tokens": 8423,
+    "output_tokens_details": {
+      "thinking_tokens": 3915
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 116999,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 4626,
+        "cache_read_input_tokens": 117672,
+        "cache_creation_input_tokens": 2912,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 2912
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "observed_models": [
+    "claude-sonnet-5-5"
+  ],
+  "permission_denials": [],
+  "total_cost_usd": 0.6014872,
+  "elapsed_seconds": 81.37
+}

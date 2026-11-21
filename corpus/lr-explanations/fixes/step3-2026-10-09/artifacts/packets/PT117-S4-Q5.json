@@ -1,0 +1,84 @@
+{
+ "qid": "PT117-S4-Q5",
+ "type": "Weaken",
+ "difficulty": "1",
+ "key_db": "D",
+ "stimulus_db": "Barr: The National Tea Association cites tea’s recent visibility in advertising and magazine articles as evidence of tea’s increasing popularity. However, a neutral polling company, the Survey Group, has tracked tea sales at numerous stores for the last 20 years and has found no change in the amount of tea sold. We can thus conclude that tea is no more popular now than it ever was.",
+ "stem_db": "Which one of the following, if true, most seriously weakens Barr's argument?",
+ "choices_db": {
+  "A": "The National Tea Association has announced that it plans to carry out its own retail survey in the next year.",
+  "B": "A survey by an unrelated polling organization shows that the public is generally receptive to the idea of trying new types of tea.",
+  "C": "The Survey Group is funded by a consortium of consumer advocacy groups.",
+  "D": "The stores from which the Survey Group collected information about tea sales are all located in the same small region of the country.",
+  "E": "Tea has been the subject of an expensive and efficient advertising campaign funded, in part, by the National Tea Association."
+ },
+ "bank": {
+  "stimulus": "Barr: The National Tea Association cites tea’s recent visibility in advertising and magazine articles as evidence of tea’s increasing popularity. However, a neutral polling company, the Survey Group, has tracked tea sales at numerous stores for the last 20 years and has found no change in the amount of tea sold. We can thus conclude that tea is no more popular now than it ever was.",
+  "stem": "Which one of the following, if true, most seriously weakens Barr’s argument?",
+  "choices": {
+   "A": "The National Tea Association has announced that it plans to carry out its own retail survey in the next year.",
+   "B": "A survey by an unrelated polling organization shows that the public is generally receptive to the idea of trying new types of tea.",
+   "C": "The Survey Group is funded by a consortium of consumer advocacy groups.",
+   "D": "The stores from which the Survey Group collected information about tea sales are all located in the same small region of the country.",
+   "E": "Tea has been the subject of an expensive and efficient advertising campaign funded, in part, by the National Tea Association."
+  },
+  "key": "D"
+ },
+ "explanation_id": "990b6e7f-6fdd-4119-8d12-d4b060edd914",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "24a2a495-167d-44f5-9e03-53bc157b3d69",
+   "position": 0,
+   "label": "Conclusion (we can thus conclude)",
+   "body": "Tea is no more popular now than it ever was."
+  },
+  {
+   "row_id": "28cdc2ba-d384-4753-8f11-f5896a11438e",
+   "position": 1,
+   "label": "Evidence",
+   "body": "The Survey Group — a neutral polling company — has tracked tea sales at numerous stores for the last 20 years and has found no change in the amount of tea sold."
+  },
+  {
+   "row_id": "e2b40f22-3be4-4848-b01c-e1ad9068d728",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "We're trying to argue that tea **is** more popular than before.\nThe author will say, \"Then how come there's no change in the amount of tea sold at these numerous stores over the past 20 years?\" We could either try to make an excuse for that survey data (they measured wrong, etc.), or we could try to bring up other data that makes it sound like tea IS more popular.\nMaybe the stores that are selling the most tea weren't even open 20 years ago, so they're not involved in this comparison."
+  },
+  {
+   "row_id": "29918fbd-3405-4ee2-9e94-5dae46072266",
+   "position": 3,
+   "label": "Goal",
+   "body": "We either want an answer that helps us argue that tea is more popular than before or an answer that makes an excuse for the author's evidence (i.e. if tea is more popular than before, then why is this survey showing no change in the amount of tea sold at these stores?)"
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "289a4c15-33eb-490e-8a63-246409dd1bb3",
+   "letter": "A",
+   "body": "A survey the Association plans to run next year tells us nothing about now."
+  },
+  {
+   "row_id": "68183fc3-4093-4c1f-9ba6-751848661e58",
+   "letter": "B",
+   "body": "Being open to trying new teas is an attitude, not a purchase. It doesn't contradict flat sales."
+  },
+  {
+   "row_id": "c0fb0987-0d69-4438-a800-f3233a7b7e7d",
+   "letter": "C",
+   "body": "Funding by consumer groups doesn't show the sales data is biased. The stimulus already calls the polling company neutral."
+  },
+  {
+   "row_id": "132f3d4a-b8a5-4d21-94ed-1c6dea6bb1a7",
+   "letter": "D",
+   "body": "If every surveyed store is in one small region, the data shows nothing about the rest of the country."
+  },
+  {
+   "row_id": "8fa4ece0-ad52-4651-a9ac-1a8a959d82e4",
+   "letter": "E",
+   "body": "Advertising is effort, not results. It doesn't show sales rose."
+  }
+ ],
+ "known_problem": "Good breakdown and Goal; all five choice notes missing.",
+ "tags": "no-notes; very-short"
+}

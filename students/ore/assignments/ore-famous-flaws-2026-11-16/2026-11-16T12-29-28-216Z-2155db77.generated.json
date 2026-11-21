@@ -1,0 +1,56 @@
+{
+  "plan_id": "ore-famous-flaws-2026-11-16",
+  "student": "Ore",
+  "student_id": "37fc00a6-3c8a-4785-b005-fa277c72cbca",
+  "dry_run": true,
+  "verify_existing": false,
+  "results": [
+    {
+      "kind": "guided_drill",
+      "title": "Famous Flaws (Easier)",
+      "action": "would_assign",
+      "day": "2026-11-17",
+      "due": "2026-11-17",
+      "slug": "w10-famous-flaws-easier",
+      "level": "beginner",
+      "count": 5,
+      "pool_count": 121,
+      "difficulty_min": 1,
+      "difficulty_max": 2,
+      "verified": false
+    },
+    {
+      "kind": "guided_drill",
+      "title": "Famous Flaws (Medium) Set 1",
+      "action": "would_assign",
+      "day": "2026-11-19",
+      "due": "2026-11-19",
+      "slug": "w8-01-famous-flaws-medium-set-1",
+      "level": "intermediate",
+      "count": 5,
+      "pool_count": 114,
+      "difficulty_min": 3,
+      "difficulty_max": 4,
+      "verified": false
+    }
+  ],
+  "metrics": {
+    "sign_ins": 1,
+    "student_lookups": 1,
+    "bank_reads": 1,
+    "planned": 2,
+    "assigned": 0,
+    "elapsed_ms": 4404
+  },
+  "runtime": {
+    "lock_ms": 8,
+    "fetch_ms": 2386,
+    "setup_ms": 1330,
+    "execute_ms": 8854,
+    "total_ms": 12578,
+    "cache_hit": true,
+    "ops_commit": "258d41b5b261a89f2413c7639ede62553e311c49",
+    "source_sha256": "1a88aac53391cfdb4c9b94159636a6a5c5bbb25379a75bdab2f7dc191334c403"
+  },
+  "audit_file": "C:\\Users\\Joshu\\dev\\ai-os\\students\\ore\\assignments\\ore-famous-flaws-2026-11-16\\2026-11-16T12-29-28-216Z-2155db77.generated.json"
+}

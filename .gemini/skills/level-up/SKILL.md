@@ -3,6 +3,10 @@ name: level-up
 description: Use weekly (or when Joshua says "let's level up", "what should I automate next", "find me leverage this week") to surface and ship ONE new automation. Walks the 3Ms interview — Mindset (find the candidate) → Method (scope it) → Machine (build it). One run = one shipped artifact. Adapted for the ai-os EA workspace.
 ---
 
+## Current AI OS execution contract
+
+New shared skills require their matching catalog and project activation copies for Claude and Codex, with deliberate differences documented. Application code/dependencies live in sibling ai-os-projects. Eliminating an unnecessary workflow can be a completed result without creating a new artifact.
+
 > *Adapted from The Three Ms of AI™. © 2026 Nate Herk (MIT — github.com/nateherkai/AIS-OS).*
 > *The Three Ms of AI™ is a trademark of Nate Herk.*
 
@@ -26,8 +30,19 @@ Walks Joshua through the 3Ms each week to surface and ship one new automation fo
 - `decisions/log.md` — what's already shipped/considered (don't re-pitch)
 - `wiki/tasks.md` + latest `wiki/log.md` — recent activity
 - `.claude/skills/*/SKILL.md` frontmatter — existing capabilities
+- Recent session history, last 30 days: Claude Code transcripts in `~/.claude/projects/<vault-project>/`, Codex sessions in `~/.codex/sessions/`, and `handoffs/`. Have a sub-agent read only the user turns and report requests made three or more times and multi-step sequences done by hand. Those are Phase 1 candidates with evidence; never load whole transcripts.
 
 ## Execution — three phases
+
+### Coming from an audit
+
+If Joshua supplies an `/audit` finding or a recent report is available, carry its evidence, affected route/workflow, and completion check into Phase 1. Use that gap as the first candidate; ask only for missing context instead of restarting a generic interview. Do not chase points or assume an unverified connection is broken.
+
+For a routing-only fix, use `/link` when available and Joshua has requested the edit. For a selected workflow repair, improve that existing workflow rather than creating a duplicate skill. A verified repair counts as the one artifact for this run. Preserve the Method reasoning, relevant scope/permissions, and validation steps. A practical measure can be fewer failed retrievals, fewer missed runs, or less time finding a source.
+
+For repairs, skip creation-only scaffolding. The scaffold headers below apply to new workflow artifacts, never to operating manuals or routing indexes.
+
+Close with the repair's acceptance evidence and recommend `/audit` again. Do not claim a higher score until the new audit verifies it; repeated-use and due-run evidence must accumulate through actual use.
 
 ### Phase 1 — Mindset (find the candidate)
 Ask conversationally, in order:
@@ -62,7 +77,7 @@ Ask: *"How do you want to ship this?"* Ordered by Boring-is-Beautiful default:
 
 **Default = highest non-AI option that solves it.** More autonomy requires explicit choice.
 
-**Save-to-both (this OS's standing rule):** write every new skill/agent to BOTH `.claude/skills/<name>/SKILL.md` (activated) AND the DB `skills/claude/<name>/SKILL.md`, project-scoped. For a Codex twin, mirror to `.agents/skills/`. Then note it for `system/scripts/gen-skill-index.py`.
+**Save-to-both (this OS's standing rule):** write every new skill/agent to BOTH `.claude/skills/<name>/SKILL.md` (activated) AND the DB `skills/claude/<name>/SKILL.md`, project-scoped. For a Codex twin, write BOTH `skills/codex/<name>/SKILL.md` and `.agents/skills/<name>/SKILL.md`. Then note it for `system/scripts/gen-skill-index.py`.
 
 **Every scaffolded artifact ships with:**
 ```markdown

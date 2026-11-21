@@ -1,0 +1,10 @@
+# Inspection dispositions, round 1
+
+Receipt: handoffs/claudex/spot-intro-2026-10-16/claudex-upy71e44/result.json, Claude Sonnet5.5, REVISE. The finding about host CSS was correct and materially improved the implementation.
+
+- F1 Accept. Imported the real activity-centre.css in the fixture and explicitly scoped the established neutral Workroom light HSL values on the Spot act-home wrapper. Activity Centre is always light, including under a dark ancestor; no claim of production dark-mode support remains. Regenerated all four after screenshots and measurements, which now record hostStylesheetLoaded=true and hostColorScheme=light. Computed page252,252,252; card255,255,255; text/button18,18,18. Updated the plan and docs to replace the insufficient inheritance approach.
+- F2 Modify. The generated MCP diff existed before this task, documented in the plan and verified SHA256327469ab36fb3532171f68a37da6a34f6e6351f3239df5c1d19c3ccff4c57c23. It is unrelated user/worktree dirt, not this implementation. Do not restore/delete it. Explicit-path staging and commit-file readback exclude it from delivery; the runner manifest includes pre-existing dirt because it scans the checkout. Treat that documented manifest presence separately from actual commit contents. No intention to deploy it.
+- F3 Accept. Fixed dark video backdrop. Older root-dark fixture screenshot preserved and explicitly marked superseded/incomplete integration evidence; new after-host-root-resume.png proves the real host remains neutral light under dark root tokens. Focus retains a neutral outline and suppresses the inherited emerald halo.
+- F4 Modify. Keep viewport media rule as an intentional fallback alongside the dock-aware container query; added a comment. Fixed written-column indentation. No layout behavior removed.
+
+Host verification: actual host stylesheet loaded at390/520/768/1230px, no overflow,16px body,28/34px titles,44px action, Start before video in DOM, dark ancestor still neutral light, visible focus and no shadow. Unit tests/build/typecheck results are recorded separately. Review remains static; do not infer screenshot aesthetic approval or publication.

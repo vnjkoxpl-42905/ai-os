@@ -1,0 +1,5 @@
+
+> vite_react_shadcn_ts@0.0.0 typecheck
+> tsc --noEmit -p tsconfig.app.json
+
+src/bootcamps/conditionals/components/AndOrLessonStandard.test.tsx(47,15): error TS2339: Property 'toggle' does not exist on type 'FireFunction & FireObject'.

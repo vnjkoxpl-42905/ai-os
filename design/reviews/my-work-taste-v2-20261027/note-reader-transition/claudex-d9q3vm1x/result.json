@@ -1,0 +1,109 @@
+{
+  "status": "completed",
+  "mode": "review",
+  "provider": "claude",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "claude",
+    "builder": "codex",
+    "inspector": "claude"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-my-work-20261026",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-my-work-20261026\\docs\\plans\\my-work-note-reader-transition.md",
+  "plan_sha256": "17eaea83d33432e97f473ad60785abd4a955ef6fb60a49438423d2ef26f62a37",
+  "requested_model": "claude-opus-5-5",
+  "requested_effort": "medium",
+  "base": null,
+  "snapshot": null,
+  "previous": "C:/Users/Joshu/dev/ai-os/design/reviews/my-work-taste-v2-20261027/note-reader-transition/claudex-373buamr/result.json",
+  "started_at": 1793171180.6294415,
+  "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\design\\reviews\\my-work-taste-v2-20261027\\note-reader-transition\\claudex-d9q3vm1x",
+  "cli_version": "2.1.309 (Claude Code)",
+  "executable": [
+    "C:\\Users\\Joshu\\.local\\bin\\claude.EXE"
+  ],
+  "exit_code": 0,
+  "session_id": "7ddb78d3-4b73-492e-98e6-96cafa6c295d",
+  "response": {
+    "verdict": "APPROVED",
+    "summary": "I re-checked this revision against the earlier findings and the host's FIN-1, FIN-2, FIN-3 and NRT-6 dispositions. All of them are resolved in source. FIN-2: `play()` in `useNoteReaderTransition.ts` now only coordinates the stage and rail when it finds a matching reader marker or a matching `data-note-target-id` row in the real notes rail. An item it cannot confirm records its current geometry as the baseline and marks the shell as settled, so later confirmation reveals only the reader. A rail that mounts late because of permissions still starts from the last settled edge. The MutationObserver also watches `data-note-target-id`. The rail lists every note, so a note opened from deep in the archive is still confirmed. FIN-3: the shared heading, standfirst and article block markers are now conditional on note types. NRT-6: both Back buttons send `state: null` when there is no validated origin. FIN-1: plain arrow, Page, Home and End keys on ordinary links no longer lock list reveals off. The new files `WorkFilterSelect`, `useNotesSelectMotion` and `teachingNoteDates` are sound apart from one minor replay. I found two low-severity residuals and nothing material. This approval covers the source and plan only. Browser acceptance and the final build and test rerun remain host-side evidence that I did not verify.",
+    "findings": [
+      {
+        "id": "FIN-4",
+        "severity": "low",
+        "path": "src/hooks/useClassroomMotion.ts",
+        "evidence": "Line 273 treats `' '`/`'Spacebar'` on any `a[href]` (and on any `[data-motion-list] [data-motion-item]` row) as activation. That sets `keyboardInteraction = true` and permanently settles the lists. Native links activate on Enter, not Space: Space scrolls the page. Scenario: Back restores focus to an archive card `<Link>` (`TeachingNotesArchive.tsx:87`), and the student presses Space to page down. After that, a pointer Load more cannot re-enable reveals, because `handleIntent('paginate')` only clears `listInteraction` when `!keyboardInteraction` (line 263). This works against FIN-1's stated goal that pure scrolling on a restored card keeps pointer pagination eligible. The test at `useClassroomMotion.test.tsx:245` (`[' ', 'a']`) asserts this behaviour.",
+        "fix": "Treat Space as activation only for button-like targets (`button, [role=button], [role=menuitem]`, plus rows that are not native links). Treat Space or Shift+Space on `a[href]` as scrolling. Update the test matrix to match."
+      },
+      {
+        "id": "FIN-5",
+        "severity": "low",
+        "path": "src/components/my-work/WorkFilterSelect.tsx",
+        "evidence": "`setContentRef` depends on `motionRef`, which `useNotesSelectMotion` rebuilds whenever `open` or `modality` changes. Scenario: the student opens a filter with the keyboard, so modality is 'keyboard' and the menu opens without motion, then clicks an option with the mouse. `onPointerDownCapture` records 'pointer', the callback ref is re-invoked on the already-open node, and `fromTo` restarts the menu from opacity 0.6, scale 0.98 just as the selection is made. The menu visibly flickers as it closes. Replay on a modality change is not covered.",
+        "fix": "Animate only on the transition from closed to open, for example by keeping the open-time modality in a ref and tracking whether this open has already animated. Do not re-run the entrance when only the modality changes while the menu is open."
+      }
+    ],
+    "coverage": [
+      "docs/plans/my-work-note-reader-transition.md (current text, as provided)",
+      "docs/plans/my-work-scroll-filters-gemini-review.md (read in full)",
+      "src/hooks/useNoteReaderTransition.ts (current version, complete): the confirmation gate, unconfirmed baseline, late-rail synchronization, active-attribute lifecycle, observers, finish/reset/dispose",
+      "src/hooks/useNoteReaderTransition.test.tsx (complete): cases for confirmed and unknown items, delayed rail, rail opened in place, non-item toggles, archive reopen, reduced motion, completion and reset",
+      "src/hooks/useNotesSelectMotion.ts (complete)",
+      "src/components/my-work/WorkFilterSelect.tsx (complete)",
+      "src/components/my-work/teachingNoteDates.ts (complete)",
+      "src/styles/note-reader-transition.css (current, from the previous round; the host reported no change)",
+      "src/hooks/useClassroomMotion.ts keyboard classification in useList, plus the FIN-1 test matrix in useClassroomMotion.test.tsx",
+      "src/components/classroom/ClassroomRouteViews.tsx: block-marker conditionals, interactive reader and archiveReturnState",
+      "src/components/classroom/shell/ClassroomLayout.tsx: noteRows (all notes), data-note-target-id rows and the openRow origin chain",
+      "Searched for every data-note-reader/data-note-target-id producer and test"
+    ],
+    "limitations": [
+      "I could not run tests, typecheck, build or a browser, so nothing here claims that they pass. The hook tests mock GSAP, so real timeline timing, clearProps and immediateRender behaviour is checked only by reading the source.",
+      "I did not open the host's design-directory evidence (natural stage trace, the desktop and phone screenshots including local-reader-phone-calibrated.png), so proof items 3–4 are unverified from my side.",
+      "This round I did not re-read in full teachingNoteDates.test.ts, TeachingNotesArchive.tsx beyond the restore and card paths, useNotesArchiveScroll.ts, MyWorkPage.tsx, assignedWorkOrganization.ts, the My Work CSS files, select.tsx or scripts/verification/*. Earlier rounds covered them, or they are outside the changes the host lists.",
+      "The broader dirty checkout, including the unrelated supabase/functions/mcp/index.ts edit, was not reviewed.",
+      "The plan's own step 6 asks for a final source inspection in a fresh session, which this round does not replace."
+    ]
+  },
+  "usage": {
+    "input_tokens": 18,
+    "cache_creation_input_tokens": 31307,
+    "cache_read_input_tokens": 974712,
+    "output_tokens": 7194,
+    "output_tokens_details": {
+      "thinking_tokens": 3167
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 31307,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2607,
+        "cache_read_input_tokens": 133507,
+        "cache_creation_input_tokens": 1323,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1323
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "permission_denials": [],
+  "total_cost_usd": 2.2982262,
+  "elapsed_seconds": 89.4
+}

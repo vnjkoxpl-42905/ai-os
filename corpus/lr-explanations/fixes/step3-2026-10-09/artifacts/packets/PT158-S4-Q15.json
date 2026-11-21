@@ -1,0 +1,84 @@
+{
+ "qid": "PT158-S4-Q15",
+ "type": "Strengthen",
+ "difficulty": "5",
+ "key_db": "A",
+ "stimulus_db": "One should only buy a frying pan that has a manufacturer's warranty, even if it requires paying more, and even if one would never bother seeking reimbursement should the pan not work well or last long. Manufacturers will not offer a warranty on a product if doing so means that they will need to reimburse many customers because the product did not work well or last long.",
+ "stem_db": "The conclusion of the argument is strongly supported if which one of the following is assumed?",
+ "choices_db": {
+  "A": "Most people who buy a frying pan with a manufacturer's warranty would seek reimbursement should the pan fail to work well or last long.",
+  "B": "All of the frying pans currently on the market that are covered by a manufacturer's warranty work at least as well at the time of purchase as any of the frying pans not covered by a warranty.",
+  "C": "The more a frying pan costs, the more likely it is to be covered by a manufacturer's warranty.",
+  "D": "The most expensive frying pans are the ones most likely to work well for many years.",
+  "E": "Most frying pan manufacturers' warranties provide for full customer satisfaction."
+ },
+ "bank": {
+  "stimulus": "One should only buy a frying pan that has a\n manufacturer’s warranty, even if it requires paying\n more, and even if one would never bother seeking\n reimbursement should the pan not work well or last\n long. Manufacturers will not offer a warranty on\n a product if doing so means that they will need to\n reimburse many customers because the product did not\n work well or last long.",
+  "stem": "The conclusion of the argument is strongly supported if\n which one of the following is assumed?",
+  "choices": {
+   "A": "Most people who buy a frying pan with a manufacturer’s warranty would seek reimbursement should the pan fail to work well or last long.",
+   "B": "All of the frying pans currently on the market that are covered by a manufacturer’s warranty work at least as well at the time of purchase as any of the frying pans not covered by a warranty.",
+   "C": "The more a frying pan costs, the more likely it is to be covered by a manufacturer’s warranty.",
+   "D": "The most expensive frying pans are the ones most likely to work well for many years.",
+   "E": "Most frying pan manufacturers’ warranties provide for full customer satisfaction."
+  },
+  "key": "A"
+ },
+ "explanation_id": "9d8d0971-cd74-458c-a80a-77b82659a0c0",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "5c4abfab-2b1b-4bbf-9258-82fa55d4dbcc",
+   "position": 0,
+   "label": "Conclusion",
+   "body": "Even if you have to pay more and even if you would never follow through on making a warranty claim if your pan broke, you should only buy a pan that has a warranty."
+  },
+  {
+   "row_id": "1ab10e23-1eb9-4e72-9285-dcf5fc9ec0a8",
+   "position": 1,
+   "label": "Evidence",
+   "body": "If offering a warranty meant that a company would need to reimburse a bunch of customers when the product broke, then manufacturers wouldn't offer a warranty."
+  },
+  {
+   "row_id": "709e28bc-36a1-4abe-aa2a-c5b77ae40e96",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "This premise is conditional. By contrapositive, it tells us something we know about every frying pan that offers a warranty.\n```\nif manufacturers  →  company doesn't think they\noffer warranty       will have to reimburse many\n```\nSo our author is saying that we should only buy pans that offer a warranty, because that means the manufacturer isn't worried about having to pay out a bunch of warranty claims.\nOur author is assuming that \"if they aren't worried about paying out claims, it's because the frying pan is high quality and they don't expect it to break down for a lot of people\".\nBut maybe they're not worried because even though they anticipate many of them breaking, they don't think many customers will have the follow-through to claim the warranty."
+  },
+  {
+   "row_id": "c11586d4-6ad8-4cf4-bd8b-acd63bc0cd8b",
+   "position": 3,
+   "label": "Goal",
+   "body": "The answer will give us more reason to buy pans that offer warranties, or it will rule out a possible objection, such as \"What if the companies offering warranties are unafraid of having to pay out many claims, not because they trust the product's quality and longevity, but for some other reason?\""
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "926ede8d-cc27-4508-a22c-d276094388d5",
+   "letter": "A",
+   "body": "This assumption fills the argument's logical gap. The argument says you should buy warranted pans because manufacturers only warrant quality products. But why would manufacturers be selective about warranting products if most buyers (like the person addressed) would never seek reimbursement? Because — according to this answer — MOST people who buy warranted products WOULD seek reimbursement if the product failed.\n\nWith this assumption, the full chain works: (1) Most warranty buyers would actually use the warranty if the product fails. (2) Therefore, warranting a bad product exposes the manufacturer to real financial loss. (3) Therefore, manufacturers only warrant products they believe will perform well. (4) Therefore, a warranty reliably signals quality. (5) Therefore, you should buy warranted pans — even though YOU wouldn't use the warranty. You are free-riding on other customers' willingness to seek reimbursement. Their complaints keep manufacturers honest, and you benefit from the resulting quality assurance."
+  },
+  {
+   "row_id": "a8655c27-9884-4436-8064-4aa63507a69f",
+   "letter": "B",
+   "body": "If warranted pans perform exactly as well as non-warranted pans at the time of purchase, then the warranty provides no quality advantage. The argument's entire thesis is that you should prefer warranted pans because the warranty indicates superior quality. If quality is identical regardless of warranty status, the warranty is meaningless noise, and paying extra for a warranted pan is paying extra for nothing. This answer does not just fail to strengthen — it actively undermines the argument's recommendation."
+  },
+  {
+   "row_id": "500d8893-bc1c-41bb-b6c1-a0157417e472",
+   "letter": "C",
+   "body": "The relationship between price and warranty status does not establish that warranties indicate quality. A product can be expensive and warranted yet mediocre, or inexpensive and unwarranted yet excellent. The argument needs a connection between warranty status and product quality — specifically, that manufacturers only warrant good products. A correlation between price and warranty status provides no information about the quality-signaling function of warranties. The argument's gap is about WHY manufacturers warrant products, not about WHICH products happen to be warranted."
+  },
+  {
+   "row_id": "d3817786-71a8-4beb-babd-7fff4c5458c4",
+   "letter": "D",
+   "body": "This answer connects price to quality (expensive pans work well), but the argument needs a connection between warranty and quality (warranted pans work well). These are different variables. Even if every expensive pan performed brilliantly, that would not tell us whether a warranty on a moderately-priced pan indicates anything about its quality. The argument's recommendation is specifically to buy warranted pans — not expensive pans. The warranty, not the price tag, must be the reliable quality indicator."
+  },
+  {
+   "row_id": "513c2131-a3bf-416d-b267-cd5c95fcfeff",
+   "letter": "E",
+   "body": "\"Full customer satisfaction\" is an imprecise claim that does not address the argument's specific gap. The argument needs to establish WHY manufacturers selectively warrant products — specifically, that warranties impose real financial risk, making them reliable quality signals. \"Full satisfaction\" is a vague outcome claim that does not provide a mechanism. It does not explain why manufacturers would be reluctant to warrant bad products or why the warranty signals quality. If anything, it sounds like a marketing slogan rather than a logical premise."
+  }
+ ],
+ "known_problem": "Correct; padded.",
+ "tags": "emdash-heavy; pt157-158-register"
+}

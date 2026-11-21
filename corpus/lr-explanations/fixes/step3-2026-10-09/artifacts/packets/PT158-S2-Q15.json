@@ -1,0 +1,84 @@
+{
+ "qid": "PT158-S2-Q15",
+ "type": "Strengthen",
+ "difficulty": "4",
+ "key_db": "C",
+ "stimulus_db": "Psychologist: We measured the \"cognitive plasticity,\" or the willingness to accept new ideas, of a group of people of both genders and of all ages. The first-born children in the study consistently exhibited less cognitive plasticity than did their siblings. It is reasonable to think that those who are open to new ideas will be adventurous in other ways. Hence, our study suggests that siblings of first-born children will tend to be more adventurous than will the first-borns.",
+ "stem_db": "Which one of the following, if true, most strengthens the psychologist's argument?",
+ "choices_db": {
+  "A": "Some of the great creative geniuses in history were first-born children.",
+  "B": "In most cases, the more younger siblings one has, the greater one's cognitive plasticity.",
+  "C": "Other studies have shown a correlation between cognitive plasticity and the willingness to take risks.",
+  "D": "A study of business executives shows that several industry leaders have older siblings.",
+  "E": "Most of the participants in the study had characterized themselves as more adaptable than other people."
+ },
+ "bank": {
+  "stimulus": "Psychologist: We measured the “cognitive plasticity,” or\n the willingness to accept new ideas, of a group of\n people of both genders and of all ages. The first-born children in the study consistently exhibited\n less cognitive plasticity than did their siblings.\n It is reasonable to think that those who are open\n to new ideas will be adventurous in other ways.\n Hence, our study suggests that siblings of first-born children will tend to be more adventurous\n than will the first-borns.",
+  "stem": "Which one of the following, if true, most strengthens the\n psychologist’s argument?",
+  "choices": {
+   "A": "Some of the great creative geniuses in history were first-born children.",
+   "B": "In most cases, the more younger siblings one has, the greater one’s cognitive plasticity.",
+   "C": "Other studies have shown a correlation between cognitive plasticity and the willingness to take risks.",
+   "D": "A study of business executives shows that several industry leaders have older siblings.",
+   "E": "Most of the participants in the study had characterized themselves as more adaptable than other people."
+  },
+  "key": "C"
+ },
+ "explanation_id": "c3b3bcd7-41dc-4b17-af79-553885b637bd",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "af0caa12-4aa6-4ae6-9e87-c8e4cc7bdc4b",
+   "position": 0,
+   "label": "Conclusion (Hence)",
+   "body": "Our study suggests that siblings of first-born children will tend to be more adventurous than will the first-borns."
+  },
+  {
+   "row_id": "1316bb8b-f740-422a-9ab1-94498a72113c",
+   "position": 1,
+   "label": "Evidence",
+   "body": "First-born children consistently exhibit less cognitive plasticity than did their siblings. Cognitive plasticity is a willingness to accept new ideas. It's reasonable that those who are open to new ideas will be adventurous in other ways."
+  },
+  {
+   "row_id": "fba4670a-559d-475c-83e6-f8f64bafea7e",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "We know from the study that siblings of first-born children exhibit more cognitive plasticity. And we have the author's idea that having more cognitive plasticity will be more adventurous in other ways. So does that prove that younger siblings will tend to be more adventurous? Not totally. Perhaps our capacity for being adventurous is comprised of many factors ... cognitive plasticity might just be one of them."
+  },
+  {
+   "row_id": "b8a4b25a-b08c-4102-bb24-0a50fdc9a581",
+   "position": 3,
+   "label": "Goal",
+   "body": "It's hard to say how they'll strengthen this argument, but we can just look for more evidence that younger children (meaning \"not the oldest\" child) are more adventurous, or more evidence that cognitive plasticity is connected to being adventurous."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "cad3bc58-30f8-46b4-bd96-c44eda3d7dd0",
+   "letter": "A",
+   "body": "The existence of creative first-born geniuses, if anything, undermines the argument's conclusion rather than supporting it. The argument claims first-borns are less cognitively plastic and therefore less adventurous. Examples of highly creative first-borns suggest that the cognitive plasticity findings may not generalize as broadly as the psychologist claims, or that cognitive plasticity and creative genius are not as tightly linked as assumed. Moreover, \"some great creative geniuses\" is anecdotal evidence that does not establish a general pattern. It provides isolated counterexamples to the study's findings without supporting the bridge between cognitive plasticity and adventurousness. This pushes against the argument rather than strengthening it."
+  },
+  {
+   "row_id": "0f72952f-3234-4590-a999-2e62bc9da3c6",
+   "letter": "B",
+   "body": "This answer actually undermines the argument. If having more younger siblings increases cognitive plasticity, then the study's results could be confounded by family size rather than birth order per se. A first-born in a family of two might have only slightly less cognitive plasticity than their one sibling, while a first-born in a family of six would appear dramatically less plastic compared to siblings who benefit from having many younger peers. This suggests the relationship between birth order and cognitive plasticity is more nuanced than the psychologist presents, and the clean first-born-versus-sibling distinction may be an artifact of family size. Rather than strengthening the bridge to adventurousness, this answer complicates the underlying evidence."
+  },
+  {
+   "row_id": "8c287a05-313d-4912-90ac-6d6fdedb408e",
+   "letter": "C",
+   "body": "The argument's weakest link is the bridge from cognitive plasticity (willingness to accept new ideas) to adventurousness (willingness to take risks in behavior). The psychologist stated this connection as merely \"reasonable to think\" — an assertion without evidence. This answer provides exactly that missing evidence. If other studies have independently demonstrated a correlation between cognitive plasticity and willingness to take risks, the bridge is no longer speculation; it is empirically supported. The strengthening works in two steps: first, the study shows siblings have more cognitive plasticity than first-borns; second, this answer confirms that cognitive plasticity correlates with risk-taking (a form of adventurousness). Together, these make the conclusion — that siblings tend to be more adventurous — substantially more credible. This is the only answer that directly supports the inferential gap between the measured trait and the predicted behavior."
+  },
+  {
+   "row_id": "fee41ea0-9960-4d67-9405-01fc92a7d907",
+   "letter": "D",
+   "body": "A study of business executives showing that \"several\" industry leaders have older siblings is too limited and too narrow to meaningfully strengthen the argument. First, \"several\" is a vague, small number that does not establish a pattern. Second, business executives are a specific subset of the population, and leadership in business may not reflect adventurousness generally. Third, having older siblings makes someone a non-first-born, but the observation that some non-first-borns became leaders does not establish the cognitive plasticity-to-adventurousness link the argument needs. The evidence is anecdotal, narrowly drawn, and does not directly support the bridge between measured openness and predicted behavior. A few data points from one industry cannot carry the weight of a general behavioral conclusion."
+  },
+  {
+   "row_id": "f2fd641a-c78d-438d-b796-10441da62880",
+   "letter": "E",
+   "body": "How participants characterized themselves before the study began is irrelevant to whether cognitive plasticity actually correlates with adventurousness. Self-assessment of adaptability is not the same as measured cognitive plasticity, and people's beliefs about their own traits do not validate the bridge between openness-to-ideas and adventurous behavior. Moreover, the fact that most participants thought they were more adaptable than their siblings is a universal self-flattery bias that tells us nothing about actual behavior. The argument needs objective evidence linking cognitive plasticity to adventurousness; subjective self-assessments from participants provide neither the objectivity nor the specificity required."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (4.0 em-dashes per 1k words; wrong-answer notes average 111.5 words).",
+ "tags": "emdash-heavy; pt157-158-register; possible-misquote"
+}

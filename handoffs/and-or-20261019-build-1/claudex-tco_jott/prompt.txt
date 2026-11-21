@@ -1,0 +1,111 @@
+Implement the attached frozen work order within this checkout. Do not commit, push or publish. Resolve source paths relative to this checkout; never edit an original checkout named in the plan. Do not silently redesign an impossible requirement: report it and the proposed deviation. Run the agreed proof command: npm run typecheck
+Report files changed, proof output, denied/blocked actions, and deviations. Your report is advisory; another provider will independently review the final changes.
+
+PLAN PATH: C:\Users\Joshu\dev\ai-os\brainstorms\2026-10-18-conditional-and-or-chapter.build-spec.md
+PLAN SHA256: fba39e58c017bbf531646a8acf812bfb873fecd4a029a6876c7222d4b6599421
+<plan>
+# LSAT U Conditional Bootcamp: Chapter 2 And/Or
+
+## Authority, roles and boundaries
+
+Joshua's current request authorizes drafting and integrating a refined And/Or next chapter in the **LSAT U Conditional Bootcamp**, following the existing Conditional Vocabulary structure and the design/teaching standards he updated during that build. On 2026-10-19 he explicitly changed the builder to **Claude via claude-build**. Codex coordinates setup, source evidence and independent verification; Codex must not implement application code. Earlier discovery-only questions in the linked 2026-10-18 checkpoint remain historical, not a reason to restart an interview. New copy is an implementation draft, not Joshua-approved literal wording.
+
+Builder: Claude. Coordinator/final independent inspector: Codex. A Claude plan review may precede construction to honor the earlier claude-review request, but Claude's review of its own implementation is not independent inspection. Default CLI model/effort, no silent override. Maximum five plan-review rounds, two builder fix rounds and two final inspection rounds.
+
+Target isolated checkout: `C:/Users/Joshu/dev/ai-os-projects/lsatu-and-or-20261019`, branch `codex/conditional-and-or`, created from fetched `origin/main` at `2348f765` (resolve full SHA before build). Original checkout `C:/Users/Joshu/dev/ai-os-projects/lsatu` contains unrelated uncommitted MCP work and is not a build target. Do not touch it or old conditional checkouts. No commits, pushes, merges, deployments, assignments, remote data changes, paid grading/provider calls or paid media generation are authorized. Do not edit app AGENTS.md/CLAUDE.md, global settings or runtime trust. These task boundaries supersede stale repo guidance to push main automatically.
+
+Spec and log are outside the app checkout to preserve the delegated-build clean-state gate. Log: `C:/Users/Joshu/dev/ai-os/brainstorms/2026-10-18-conditional-and-or-chapter.build-log.md`. Runtime artifacts must also stay outside the app checkout.
+
+## Required reading before authoring
+
+Vault root: `C:/Users/Joshu/dev/ai-os`.
+
+- Existing checkpoint: `brainstorms/2026-10-18-conditional-and-or-chapter.md`. The new request supersedes its old discovery-only boundary for this And/Or scope; it does not authorize future Group 3/4 content.
+- FULL `.agents/skills/bootcamp-builder/references/teaching-preferences.md`, `wiki/teaching-voice.md`, `references/lsat-teaching-voice-standard.md`, and relevant `wiki/COPY-CORRECTIONS.md` entries. Later October 17–18 corrections override older source sequence/layout proposals. Read in bounded sections to avoid silently truncated outputs.
+- In the actual target checkout, read AGENTS.md, CLAUDE.md, **current DESIGN.md**, its linked applicable surface briefs and directory-scoped instructions. The target is newer than the older template checkout; do not import old palettes as universal design rules.
+- Inspect actual current `src/bootcamps/conditionals/` course, especially `openingCoursePath.ts`, `components/OpeningCourse.tsx`, `components/OpeningCourseContent.tsx`, current Contrapositive lesson, `ConditionalOpeningMedia.tsx`, `SufficientConditionFilm.tsx`, `DrillDemo.tsx`, `content/drillDemos.ts`, `SourceWorksheetDrill.tsx`, `StagedReasoningDrill.tsx`, `PracticeTaskRunner.tsx`, `courseProgress.tsx`, `progress.ts`, `routes.tsx`, and legacy `content/applications.source.ts`. Some names may differ; resolve actual symbols rather than inventing a parallel course.
+
+## Source evidence, not material to copy
+
+Read original source bodies from these vault locations. Preserve all source bytes and provenance; no new live Loophole capture is needed.
+
+1. `Loophole Lecture/Conditional Reasoning 2026-10-18/How to Diagram (and Contrapositive) And Or/`: complete `native-transcript.md`, `ellens-notes.txt`, `book-excerpt.md` and `inline-bootcamp.md`. Native captions are automatic, not listening-verified. The lecture covers complete indicator scope, grouped conditions, AND/OR contraposition, inclusive OR and readable notation. Vertical layout is a readability recommendation, not the only valid logic.
+2. `Loophole Lecture/Conditional Reasoning 2026-10-18/How to Diagram Basic Conditionals/native-transcript.md` and `How to Chain Conditionals/native-transcript.md` for prerequisite meaning, readable complete conditions and not chaining away an unmet conjunct.
+3. `corpus/loophole-online/bootcamps/conditional-reasoning/and-or-if-and-only-if-inclusion-and-exclusion/README.md`: full 14-question source, including observed feedback. It mixes other topics; do not import the whole mixed drill into Chapter 2. Final answer states do not independently verify every diagram image or unvisited response branch.
+4. `corpus/loophole-online/workouts/unofficial-diagramming-marathon/README.md`: relevant later application only. It is intermediate, previously-seen sections, untimed and assumes basic diagramming. Do not assign the entire Conditional Rehab routine as new beginner homework.
+
+Use independently written explanations and original examples. Do not reproduce Loophole prose/questions, textbook styling, book page references or source media as Joshua's teaching. Keep a developer-facing provenance/coverage note identifying what was adapted, refined and deferred. No source-planning jargon or competitor attribution clutter in the student flow.
+
+Author every new graded compound item as typed semantic data: member IDs with full canonical condition labels, AND/OR grouping, negation flags, original implication and correct contrapositive/case outcome. Derive displayed canonical readbacks and logical truth-table checks from that same structure. Learner-written condensed labels are separate drafts; never pretend arbitrary free text can be truth-evaluated or use unrelated handwritten test formulas as proof of the actual item. Include existing negative members and double-negation cancellation in the real item data.
+
+## Observable learning scope
+
+Build **Chapter 2: And/Or** after all existing Chapter 1 material, without renumbering existing lesson IDs or moving/removing existing lessons, drills, routes, videos or stored work.
+
+Organize three coherent written lessons, numbered 2.1–2.3, and four graduated practice sets. Use stable meaningful new IDs. A reasonable lesson split is (1) both versus at least one and complete scope, (2) compounds on either side of the must arrow, (3) negating a whole compound and taking the contrapositive. The practice sets target meaning, interpreting the four placements, whole-group negation, and fresh mixed diagram/contrapositive transfer. Each set needs enough independently reviewed items to test transfer (normally 6–8; avoid padding). Fresh practice must not reuse the worked example's answer.
+
+Teach through ordinary meaning before notation. Each lesson follows the **current approved Conditional template**, not a redesigned shell: concept/example → why it matters → useful supporting media when present → numbered learner-driven procedure/demo → concise tempting-error comparisons → useful habit → one-at-a-time four-item Pop Quiz. About 600 words per conceptual page is calibration rather than a quota; preserve intermediate reasoning. Reuse actual layout and controls from the current Vocabulary/Contrapositive implementation.
+
+Core coverage:
+
+- AND requires both members; OR requires at least one. Show all four A/B combinations through understandable facts. OR alone does not exclude both; another rule or explicit exclusion can do so.
+- Identify the complete sufficient side and complete necessary side, retaining subject, restrictions, negatives and modality.
+- `(A AND B) -> C`: both together suffice; either alone does not guarantee C **under this rule**.
+- `(A OR B) -> C`: either branch suffices.
+- `A -> (B AND C)`: A requires each member.
+- `A -> (B OR C)`: A guarantees at least one, not a particular branch without more evidence.
+- Derive negation from meaning: not both is different from neither. Negating a compound changes AND/OR and negates each member, including cancelling an existing negation when appropriate.
+- Derive all four equivalent contrapositives: NOT C -> (NOT A OR NOT B); NOT C -> (NOT A AND NOT B); (NOT B OR NOT C) -> NOT A; (NOT B AND NOT C) -> NOT A, respectively.
+- Do not confuse contraposition with negating an entire implication. Do not teach a free-floating instruction to flip AND/OR.
+- Show why invalidly splitting an AND trigger or choosing one OR result adds a guarantee. When another rule reaches only one conjunct, the other conjunct is still needed.
+- Explain when to use the work: mark a compound when multiple conditions must be tracked, test which whole side is established/refuted, write a contrapositive when a denied requirement or useful chain calls for it. Avoid requiring diagramming/contraposition of every simple sentence merely for ritual.
+
+Scope boundaries: preserve Chapter 1 concepts as prerequisites, no new Group 3/4, biconditional curriculum, quantity curriculum or advanced nesting course. Explicit exclusive OR is a brief meaning boundary, not a new parallel syllabus. Use a few clear familiar original examples; do not imply permission causes actual action. Replace risky source shorthand 'nothing happens' with the precise limit that this rule gives no additional conclusion.
+
+## Interaction, feedback and design contract
+
+- Reuse the existing course chrome, section hierarchy, typography, tokens, spacing, percentage progress, visual side labels, drill entry/demo/start flow and completion treatment. Chapter is the visible label, with existing internal `part` keys preserved.
+- Use learner-readable condensed conditions, not opaque letter inputs or squiggle negation. Plain-language diagram readbacks must remain available. Preserve complete qualifiers in any condensed labels.
+- Fresh writing fields start blank and genuine drafts resume. Editing condition wording clears dependent diagram placement, NOT choices and accepted grades, preserving the written text. One top question map; bottom Previous / Next question; `Next step` for actual persisted steps. No first/last-word condition-selection operation and no self-rating masquerading as grading.
+- Learner attempts precede answers. First wrong feedback gives a specific useful hint without revealing missing answers; preserve useful hint/answer when editing. Correct and explicit reveal states show full reasoning. A revealed item may be completed without being marked correct/mastered. No position-based 100%, fake semantic grades or generic feedback detached from the actual mistake.
+- Favor deterministic structural/case checks for this chapter. If a free-written rewrite is not reliably graded, say so appropriately and provide a compare/reveal learning flow instead of pretending semantic correctness. Do not introduce paid grading calls or new backend functions.
+- Preserve sufficient/necessary orientation at the actual content-panel width. Any semantic colors must agree with **current DESIGN.md** and existing Conditional styling; do not restore an older navy/amber/teal theme as a separate topic redesign.
+- Keyboard operation, visible focus, status beyond color, accessible progress labels, reduced-motion alternatives and sensible focus after feedback are required. Inspect at narrow mobile, 658px content beside the rail, mid and wide widths. Use container behavior where viewport breakpoints miss the docked panel.
+
+## Integration and ownership
+
+Use the current `openingCoursePath.ts` and derived course UI; do not create a second bootcamp. **The existing `and-or` and `de-morgan` IDs are access-topic IDs, not new storage identities.** New Chapter 2 steps have new unique step IDs, persist through `progress.course[stepId]`, and use those existing topic IDs only for legitimate access filtering. Extend the course-step/alsoAvailableIn type unions as needed, but **do not add these topics to CONDITIONAL_OPENING_UNIT_IDS**: that existing collection controls legacy expanded-edition review and legacy route membership, not merely permission to appear in the numbered path. Keep its four foundational members and existing edition semantics unchanged. No legacy read-mark, question-run or unit-progress migration is required or authorized because those legacy surfaces and keys remain intact.
+
+Keep the legacy `and-or` and `de-morgan` unit lesson/guided/practice routes and saved runs reachable alongside the new course steps. Retain explicit access to earlier assigned material (with truthful copy) rather than routing every old URL to the new chapter. A completed legacy read mark must neither mark new step IDs complete nor trigger a new old-edition review requirement. Test both a preexisting legacy lesson/read/question-run record and a fresh new step. Existing question IDs, options, correct keys and old earned grades remain unchanged. Audit explanatory copy carefully: an intentionally incorrect distractor is not a content defect. The alleged '(not B AND not C) ... full equivalent' claim in the legacy tuple is a wrong choice, not the answer; retain that legitimate distractor. A narrowly scoped fix to the legacy worked diagram's permission label ('may enter', not actual 'entry') and clarification that connector switching applies to negating a whole compound are allowed, through the authored-source generator, without changing stored question identity or verdict semantics.
+
+Difficulty/access policy: the four new practice sets are a teaching progression, not four new global difficulty levels. Their default curriculum difficulty remains the existing `medium` for the topic. For route authorization preserve the existing contract: use an explicit active assignment's difficulty when supplied, otherwise `getCurriculumDifficulty(unitId)`. Do not hard-code beginner for new And/Or drills or change the curriculum difficulty to work around permissions. Lesson/guided/practice restrictions must still be checked separately. Never grant new steps through `group-2` as a shortcut.
+
+Required access matrix: admin/dev preview sees the full local chapter; a full course assignment sees its current allowed topics; a v2 stage assignment sees new step IDs **only if its already-computed allowed unit set includes `and-or`/`de-morgan`**; legacy stage, skill, area and general-practice selections retain their existing unit and action restrictions. A group-2-only selection cannot see Chapter 2; an and-or-only selection sees its own new steps and retained legacy material but not de-morgan-only steps; a de-morgan-only selection is similarly scoped. Practice-only must not reveal learn-mode-only surfaces. Check beginner/medium/advanced explicitly assigned levels against the existing assignment contract. Do not change unit order, stage slicing, assignment schemas, catalog unit counts or remote assignment data merely to present the new chapter. Existing stage grants that already include these topics are respected, not treated as a reason to invent new grants or restrictions.
+
+Use existing account-backed course progress and drill persistence; preserve existing IDs/data and preview isolation. Preview completion must not alter student records. Update routing, summaries and the course completion denominator coherently while retaining legacy unit-revision membership and behavior unchanged. Do not alter unrelated navigation or old content except scoped wiring/regression fixes required to add Chapter 2.
+
+Integration checklist includes course-step unions, Chapter 1-only summary wording, chapter section headings, lesson numbering and drill-order assertions, filtered course-completion denominators, recorded legacy practice links, flashcard `allowed` gating, and previous/next navigation across the chapter boundary. Preserve old route/storage behavior while updating only assertions whose actual new visible course content has changed. No membership update may contradict the explicit legacy-edition boundary above.
+
+Authored sources, schema and generated data must follow existing ownership. Use `npm run content:conditionals` if a generated curriculum change is needed; never hand-edit generated curriculum independently of its source. Keep new authored data typed and logically reviewable. Avoid writing assertions that simply restate implementation keys; test learner outcomes and permission boundaries.
+
+## Media
+
+MP4s are permitted, not mandatory. Inspect the existing Conditional film and media pipeline before deciding. Reuse an available local/free, reproducible workflow only if it produces a useful original instructional film consistent with the current course: written teaching first, user-initiated playback, captions, poster and complete written fallback, accurate narrated statements and legible diagrams. No paid Kling/TTS/image calls are authorized. Do not add placeholder videos or silently substitute vendor footage. If no suitable supporting MP4 can be produced within these bounds, retain complete written teaching plus purposeful native interactions and record the media decision honestly. Verify any produced MP4 with ffprobe and actual playback; absence of a generated video is not evidence of a broken lesson.
+
+## Setup and proof
+
+Host preparation only: fetched origin, created this clean isolated worktree, and installed dependencies. Default `npm ci` failed on existing peer-dependency lock mismatch; `npm ci --legacy-peer-deps --no-audit --no-fund` completed with 1,168 packages and no tracked package/lock edits. npm reported install-script policy warnings; verify needed native tools rather than weakening that policy. Do not rewrite lock/package manifests to conceal a setup issue. If a required setup command is denied, stop that setup path and report the exact blocker. Do not weaken trust/permissions, reconstruct the repository file by file, commit scaffolding or install global dependencies.
+
+Existing dev-only preview: `/dev/conditional-opening-preview`; inspect `scripts/verification/start-conditional-preview.mjs` and the preview component for selection/query controls. Do not add a production authentication bypass. Host will operate the browser; CLI model screenshot review is not a signed-in runtime test.
+
+Builder must run and report separately:
+
+1. `npm run typecheck`.
+2. `npm run test -- src/bootcamps/conditionals` (or documented focused affected test paths if an unrelated baseline failure prevents the full subset; never hide it).
+3. `npm run build` including its existing content precheck.
+
+Proof command passed to the runner: `npm run typecheck`; the other checks remain required work-order tasks. Host reruns proof independently and checks running UI. Add meaningful regressions for all four original/contrapositive pairs over all eight Boolean assignments, inclusive OR/not-both-versus-neither, invalid split/partial-chain cases, hint-before-reveal and retry/correct/reveal states, progress/draft restoration, new chapter navigation and unit access restrictions. Use the real authored item data in logical checks rather than only separate handwritten formulas. Correctness and explanation quality need separate review.
+
+Acceptance evidence must name files actually changed, test counts and failures, preview URL, source coverage and remaining limits. Do not call unrun browser tests, authored copy or local builds published/student-approved. Leave a concrete reviewable local version for Joshua; no commit, push, merge or deployment.
+
+</plan>

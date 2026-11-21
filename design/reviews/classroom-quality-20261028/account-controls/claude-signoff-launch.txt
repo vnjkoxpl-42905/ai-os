@@ -1,0 +1,160 @@
+{"provider": "claude", "model": "CLI default (unresolved)", "mode": "inspect", "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\design\\reviews\\classroom-quality-20261028\\account-controls\\claude-signoff\\claudex-lqb0g_r_"}
+{
+  "status": "completed",
+  "mode": "inspect",
+  "provider": "claude",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "claude",
+    "builder": "codex",
+    "inspector": "claude"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-my-work-20261026",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os\\design\\reviews\\classroom-quality-20261028\\account-controls\\PLAN.md",
+  "plan_sha256": "13a7921ba4f2097c75d544844e28124d4aef6f9aeb3104fc6ca75714a6b14ab6",
+  "requested_model": null,
+  "requested_effort": null,
+  "base": "18fc8af7e1ff7d83defb62b9e0d8dd720f90b3a3",
+  "snapshot": {
+    "base": "18fc8af7e1ff7d83defb62b9e0d8dd720f90b3a3",
+    "files": [
+      {
+        "path": "scripts/verification/start-teacher-home-preview.mjs",
+        "kind": "file",
+        "sha256": "10e1b173bd492c5a73346173bab4701826025325fb93f3fc83e09704e923e2f1"
+      },
+      {
+        "path": "scripts/verification/teacher-home-preview.tsx",
+        "kind": "file",
+        "sha256": "617e6059d7913052a1375cde23033d1ea66efdc244a791d1890f2ea839050532"
+      },
+      {
+        "path": "src/components/classroom/home/home.css",
+        "kind": "file",
+        "sha256": "ac2f15fc6b4e898d6a232086f8ce449beb11f5ac7d0bb0b7947a355c72b02a41"
+      },
+      {
+        "path": "src/components/classroom/home/teacher/TeacherAccessBooking.tsx",
+        "kind": "file",
+        "sha256": "40f2c2e31623e1401b2068d9786c74f05657c2008730e8786e9465e68db25ab8"
+      },
+      {
+        "path": "src/components/classroom/home/teacher/TeacherHomeView.test.tsx",
+        "kind": "file",
+        "sha256": "295978d27d950f76f8250d78cfb807522a7564ab0d7af9c6f460b7f64ba64dbe"
+      },
+      {
+        "path": "src/components/classroom/home/teacher/TeacherHomeView.tsx",
+        "kind": "file",
+        "sha256": "cfc084de2a4d8251a4112b61f4e0e0fa3c86196c30072f6c50a96d9b2f88842a"
+      },
+      {
+        "path": "src/components/classroom/home/teacher/TeachingDesk.test.tsx",
+        "kind": "file",
+        "sha256": "4df105af37e0d981222aea293f322800613103da585af1a4e3c6a9f499c47948"
+      }
+    ],
+    "diff_sha256": "994ca2b3906523730344f8d488004ad59310a4e3ae7c388a52e004fe4e7e45ba",
+    "scope": [
+      "scripts/verification/start-teacher-home-preview.mjs",
+      "scripts/verification/teacher-home-preview.tsx",
+      "src/components/classroom/home/home.css",
+      "src/components/classroom/home/teacher/TeacherAccessBooking.tsx",
+      "src/components/classroom/home/teacher/TeacherHomeView.test.tsx",
+      "src/components/classroom/home/teacher/TeacherHomeView.tsx",
+      "src/components/classroom/home/teacher/TeachingDesk.test.tsx"
+    ],
+    "sha256": "183fa9159540d66617afd476caf883f374341fb5a1b432f2586414046600e312"
+  },
+  "previous": null,
+  "started_at": 1793224319.9280884,
+  "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\design\\reviews\\classroom-quality-20261028\\account-controls\\claude-signoff\\claudex-lqb0g_r_",
+  "scope": [
+    "scripts/verification/start-teacher-home-preview.mjs",
+    "scripts/verification/teacher-home-preview.tsx",
+    "src/components/classroom/home/home.css",
+    "src/components/classroom/home/teacher/TeacherAccessBooking.tsx",
+    "src/components/classroom/home/teacher/TeacherHomeView.test.tsx",
+    "src/components/classroom/home/teacher/TeacherHomeView.tsx",
+    "src/components/classroom/home/teacher/TeachingDesk.test.tsx"
+  ],
+  "cli_version": "2.1.309 (Claude Code)",
+  "executable": [
+    "C:\\Users\\Joshu\\.local\\bin\\claude.EXE"
+  ],
+  "exit_code": 0,
+  "session_id": "5ba629fe-b9b0-408e-8e5c-6adfa49ed8d8",
+  "response": {
+    "verdict": "APPROVED",
+    "summary": "I found no material defects in the account-controls changes. Credits mode, link mode, the account picker, access baseline handling, pending-receipt recovery and the preview launcher all hold up on source inspection. The one low-severity observation is that the add-sessions form stays armed after a successful add. I ran no tests and did no rendered or browser checks, so nothing here claims tests pass.",
+    "findings": [
+      {
+        "id": "L-1",
+        "severity": "low",
+        "path": "src/components/classroom/home/teacher/TeacherAccessBooking.tsx:508-630",
+        "evidence": "After a successful addition the form stays visible with the same amount, and 'Confirm add sessions' stays enabled. Each click calls prepareHomeTopUp again and gets a new operation key. A teacher who clicks twice after the success notice would add the credits twice. 'busy' only blocks clicks during the request. The 'Balance: X → X+amount' line does update to the new balance, so the second add is visible, but a reset would be safer.",
+        "fix": "After a verified add, set the amount back to 1 with custom mode off (or hide the form until the teacher explicitly chooses to add again), and keep the success notice."
+      }
+    ],
+    "coverage": [
+      "Read TeacherAccessBooking.tsx BookingSheet in full: open reset effect, pending restoration, unreadable recovery, credits versus link separation, creation validation, pass_exists handling, revoked and expired handling.",
+      "Read the AccountPicker and AccessSheet diffs: eligibility filtering, baseline-from-verified-save, no write on select.",
+      "Checked saveHomeAccess, createHomeBooking and loadHomeBooking in src/lib/teacherHomeActions.ts. The CAS expected flags are intact and the saved row is verified. Creation validates the amount and rejects a 'created: false' response as 'pass_exists'.",
+      "Checked the roster source in useTeachingDesk.ts: it already excludes admins and archived accounts, and its state values are loading, ready, error and setup.",
+      "Read the TeacherHomeView.tsx diff: trigger focus return, the accessOpen state and the More menu handoff.",
+      "Reviewed the home.css diff, including dark rules for the new account controls.",
+      "Read the full start-teacher-home-preview.mjs. A pre-load Vite plugin replaces the Supabase client with a stub that throws. The only other supabase usage in teacherHomeActions.ts goes through that client.",
+      "Skimmed the preview tsx and the test diffs. The synthetic actions are in-memory and the audit log is exposed on window."
+    ],
+    "limitations": [
+      "Did not run tests, the typecheck or the build, and did not render the page. I did not check the 390/320 phone widths, keyboard behaviour or the preview interaction, and none of that is verified here.",
+      "Some long lines in teacher-home-preview.tsx were omitted from my search output, so I did not read them line by line.",
+      "The calendar week strip, the post-session and payments changes, and the rest of the earlier teacher Home polish in the base diff were not reviewed in depth. The host says that work was approved separately.",
+      "Outside the listed scope: the server edge functions (admin-manage-users, booking-pass-admin), the receipt and idempotency internals in teacherHomeActions.ts, and the shared dropdown-menu and Sheet primitives.",
+      "The review is source-only. It says nothing about production deployment, live data or all-student behaviour."
+    ]
+  },
+  "usage": {
+    "input_tokens": 12,
+    "cache_creation_input_tokens": 59906,
+    "cache_read_input_tokens": 281051,
+    "output_tokens": 6543,
+    "output_tokens_details": {
+      "thinking_tokens": 3773
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 59906,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 1638,
+        "cache_read_input_tokens": 60881,
+        "cache_creation_input_tokens": 3506,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 3506
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "observed_models": [
+    "claude-sonnet-5-5"
+  ],
+  "permission_denials": [],
+  "total_cost_usd": 0.33318309999999995,
+  "elapsed_seconds": 68.93
+}
+
+EXIT_CODE=0

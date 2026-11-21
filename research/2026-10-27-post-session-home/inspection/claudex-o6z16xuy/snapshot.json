@@ -1,0 +1,119 @@
+{
+  "base": "e4035d9c8ec97a3aaec01b0b3464533872328bc8",
+  "files": [
+    {
+      "path": "docs/ops/teacher-post-session-acceptance.sql",
+      "kind": "file",
+      "sha256": "f794927e88499bf3876b95b18ae79210d4adaa6e8f6639f94d341056e260691e"
+    },
+    {
+      "path": "docs/ops/teacher-post-session-activation.sql",
+      "kind": "file",
+      "sha256": "b943675e672554adaaafdafd8c8d751dca50b8189b575607e7d916b620557f1a"
+    },
+    {
+      "path": "docs/ops/teacher-post-session-setup.md",
+      "kind": "file",
+      "sha256": "d3b895fa4ee5b3bcb7e1abddbda483ef74b95af6999490609fada97030cde437"
+    },
+    {
+      "path": "docs/verification/post-session-db-check.mjs",
+      "kind": "file",
+      "sha256": "20a097fad73e164c17a7fce465b78a7015debdcf9c2e87f15002698da520a680"
+    },
+    {
+      "path": "docs/verification/role-home-preview.tsx",
+      "kind": "file",
+      "sha256": "f1d97a78d2290d34ffcec3fe581a7af1079614891215455a18888e0d1b376030"
+    },
+    {
+      "path": "src/components/classroom/home/home.css",
+      "kind": "file",
+      "sha256": "5a2fcda41df37ee1c85aabc28cf26853528fb0a3b5d85d95e494888bca1e77fa"
+    },
+    {
+      "path": "src/components/classroom/home/teacher/PostSessionWork.test.tsx",
+      "kind": "file",
+      "sha256": "da9cfb7de7b7446d74d0cdd34229b93a0b14b66fb70a9b0960ffc52ad97562bf"
+    },
+    {
+      "path": "src/components/classroom/home/teacher/PostSessionWork.tsx",
+      "kind": "file",
+      "sha256": "56ebd8450ad99eb2b96c4e209bca72426c2f8fc3c2688b86650c3d16250822fb"
+    },
+    {
+      "path": "src/components/classroom/home/teacher/TeacherHomeView.test.tsx",
+      "kind": "file",
+      "sha256": "5ce9ab23c8d0ac57994c0e59825c2232cce43ac2752083d8f2819ecd09a2b487"
+    },
+    {
+      "path": "src/components/classroom/home/teacher/TeacherHomeView.tsx",
+      "kind": "file",
+      "sha256": "4882e668ae72808f3d11020ca35c72e29e511364f849fdbffb0d07f44793dfdc"
+    },
+    {
+      "path": "src/components/classroom/home/teacher/postSessionModel.ts",
+      "kind": "file",
+      "sha256": "4d30e028fffb65621f24eeb61ec537f7102720c1578579335e35419319855f1e"
+    },
+    {
+      "path": "src/components/classroom/home/teacher/teacherHomeModel.ts",
+      "kind": "file",
+      "sha256": "666332647ae7b648ac0a40de795ad2ef57399c1c2fb4fc692f4becbd289cdf45"
+    },
+    {
+      "path": "src/components/classroom/home/teacher/usePostSessionHome.test.tsx",
+      "kind": "file",
+      "sha256": "8a98433b035dbde729866a0929e806ad5529b8802adc8d4d9b6ff574adcad2f6"
+    },
+    {
+      "path": "src/components/classroom/home/teacher/usePostSessionHome.ts",
+      "kind": "file",
+      "sha256": "569ae25cac36af116de19fe0dda5a314e8d91c83a7dd2d20878af89e4147597a"
+    },
+    {
+      "path": "src/components/classroom/home/teacher/useTeacherHome.ts",
+      "kind": "file",
+      "sha256": "be4bc196220bc3e0a7e22e052425606c0c260ae704361017d575f68984c2c8ba"
+    },
+    {
+      "path": "supabase/config.toml",
+      "kind": "file",
+      "sha256": "adb67b9834d420f330ad0f19931b4f28484b553c4e8947ba6e4efec625cc56df"
+    },
+    {
+      "path": "supabase/functions/teacher-post-session-sync/index.ts",
+      "kind": "file",
+      "sha256": "c59f7f5f1b1048d536ab7cc04092bf70cb5a418712921892f12966f0e77ef5ed"
+    },
+    {
+      "path": "supabase/functions/teacher-post-session-sync/model.ts",
+      "kind": "file",
+      "sha256": "f64aa15f0bdc838f4e22c6288e3979d0645523d27cc5c1c42eaff85e05a0550d"
+    },
+    {
+      "path": "supabase/functions/teacher-post-session-sync/model_test.ts",
+      "kind": "file",
+      "sha256": "81437fb5ee44ac5585efe2ee17a5c0e59c548aa122749596878a79923eaa1235"
+    },
+    {
+      "path": "supabase/migrations/20261027190000_teacher_post_session.sql",
+      "kind": "file",
+      "sha256": "819842fd8e4e476326441a9d10351322811eb2fd4ca8b1bcb7dcc99633ffbe9c"
+    }
+  ],
+  "diff_sha256": "19e2c9fb8dc304721d47a96b53a3f190a5b6ac73283e646137503b33cfa5a0e8",
+  "scope": [
+    "docs/ops/teacher-post-session-acceptance.sql",
+    "docs/ops/teacher-post-session-activation.sql",
+    "docs/ops/teacher-post-session-setup.md",
+    "docs/verification/post-session-db-check.mjs",
+    "docs/verification/role-home-preview.tsx",
+    "src/components/classroom/home/home.css",
+    "src/components/classroom/home/teacher",
+    "supabase/config.toml",
+    "supabase/functions/teacher-post-session-sync",
+    "supabase/migrations/20261027190000_teacher_post_session.sql"
+  ],
+  "sha256": "76f5d6e82a35edefb303bd3506bd256347e55b69378fdd72b6d1253e51518d4f"
+}

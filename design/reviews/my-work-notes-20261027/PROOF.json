@@ -1,0 +1,342 @@
+{
+  "status": "Host-verified local result; final Claude verdict REVISE, later host fixes not independently reinspected",
+  "typecheck": "final fix run exit0",
+  "tests": "48 relevant cases across5 files: 39 passed in final combined run plus9 archive cases passed on corrected route-aware rerun. Initial simplistic anchor test consumed state in always-mounted test shell; replaced with actual Routes/detail/back flow, storage identity and focus assertions.",
+  "build": "Final host reduced-motion fix build/postbuild exit0; existing build warnings remain",
+  "diffcheck": "git diff --check exit0",
+  "matrix": [
+    {
+      "firstRowTop": 639.7201538085938,
+      "height": 844,
+      "rows": 12,
+      "scrollWidth": 297,
+      "scrollY": 0,
+      "searchWidth": 172.6119384765625,
+      "width": 320
+    },
+    {
+      "firstRowTop": 567.3507080078125,
+      "height": 844,
+      "rows": 12,
+      "scrollWidth": 367,
+      "scrollY": 0,
+      "searchWidth": 243.0596923828125,
+      "width": 390
+    },
+    {
+      "firstRowTop": 567.3507080078125,
+      "height": 1000,
+      "rows": 12,
+      "scrollWidth": 661,
+      "scrollY": 0,
+      "searchWidth": 536.791015625,
+      "width": 684
+    },
+    {
+      "firstRowTop": 510.7835693359375,
+      "height": 1000,
+      "rows": 12,
+      "scrollWidth": 746,
+      "scrollY": 0,
+      "searchWidth": 150.87686157226562,
+      "width": 768
+    },
+    {
+      "firstRowTop": 489.3469848632813,
+      "height": 1000,
+      "rows": 12,
+      "scrollWidth": 1001,
+      "scrollY": 0,
+      "searchWidth": 383.3768615722656,
+      "width": 1024
+    },
+    {
+      "firstRowTop": 501.69775390625,
+      "height": 1000,
+      "rows": 12,
+      "scrollWidth": 1258,
+      "scrollY": 0,
+      "searchWidth": 610.6529541015625,
+      "width": 1281
+    },
+    {
+      "firstRowTop": 506.95892333984375,
+      "height": 1000,
+      "rows": 12,
+      "scrollWidth": 1418,
+      "scrollY": 0,
+      "searchWidth": 761.4365234375,
+      "width": 1441
+    }
+  ],
+  "contrast": {
+    "light": [
+      {
+        "background": "rgb(247, 244, 238)",
+        "contrast": 5.807721284650426,
+        "fontSize": "15px",
+        "foreground": "rgb(98, 95, 87)",
+        "selector": ".teaching-notes-intro p"
+      },
+      {
+        "background": "rgb(247, 242, 233)",
+        "contrast": 12.586617118321472,
+        "fontSize": "28px",
+        "foreground": "rgb(40, 45, 40)",
+        "selector": ".teaching-note-title"
+      },
+      {
+        "background": "rgb(247, 242, 233)",
+        "contrast": 5.717433994095707,
+        "fontSize": "12px",
+        "foreground": "rgb(98, 95, 87)",
+        "selector": ".teaching-note-meta"
+      },
+      {
+        "background": "rgb(247, 242, 233)",
+        "contrast": 5.717433994095707,
+        "fontSize": "12px",
+        "foreground": "rgb(98, 95, 87)",
+        "selector": ".teaching-note-card time"
+      },
+      {
+        "background": "rgb(247, 242, 233)",
+        "contrast": 5.717433994095707,
+        "fontSize": "15px",
+        "foreground": "rgb(98, 95, 87)",
+        "selector": ".teaching-note-excerpt"
+      },
+      {
+        "background": "rgb(242, 237, 228)",
+        "contrast": 12.036623028104048,
+        "fontSize": "12px",
+        "foreground": "rgb(40, 45, 40)",
+        "selector": ".teaching-note-unread"
+      },
+      {
+        "background": "rgb(242, 237, 228)",
+        "contrast": 5.467600788048346,
+        "fontSize": "12px",
+        "foreground": "rgb(98, 95, 87)",
+        "selector": ".teaching-notes-filter-count"
+      },
+      {
+        "background": "rgb(247, 244, 238)",
+        "contrast": 12.785379632770514,
+        "fontSize": "14px",
+        "foreground": "rgb(40, 45, 40)",
+        "selector": ".teaching-notes-personal-link"
+      },
+      {
+        "background": "rgb(40, 45, 40)",
+        "contrast": 13.806527627251688,
+        "fontSize": "14px",
+        "foreground": "rgb(255, 253, 248)",
+        "selector": ".teaching-note-read"
+      }
+    ],
+    "dark": [
+      {
+        "background": "rgb(19, 23, 24)",
+        "contrast": 9.817173388372751,
+        "fontSize": "15px",
+        "foreground": "rgb(194, 191, 182)",
+        "selector": ".teaching-notes-intro p"
+      },
+      {
+        "background": "rgb(48, 54, 48)",
+        "contrast": 10.679459558071684,
+        "fontSize": "22px",
+        "foreground": "rgb(241, 238, 230)",
+        "selector": ".teaching-note-title"
+      },
+      {
+        "background": "rgb(48, 54, 48)",
+        "contrast": 6.734384571110608,
+        "fontSize": "12px",
+        "foreground": "rgb(194, 191, 182)",
+        "selector": ".teaching-note-meta"
+      },
+      {
+        "background": "rgb(48, 54, 48)",
+        "contrast": 6.734384571110608,
+        "fontSize": "12px",
+        "foreground": "rgb(194, 191, 182)",
+        "selector": ".teaching-note-card time"
+      },
+      {
+        "background": "rgb(48, 54, 48)",
+        "contrast": 6.734384571110608,
+        "fontSize": "15px",
+        "foreground": "rgb(194, 191, 182)",
+        "selector": ".teaching-note-excerpt"
+      },
+      {
+        "background": "rgb(44, 50, 45)",
+        "contrast": 11.311697159884504,
+        "fontSize": "12px",
+        "foreground": "rgb(241, 238, 230)",
+        "selector": ".teaching-note-unread"
+      },
+      {
+        "background": "rgb(44, 50, 45)",
+        "contrast": 7.1330687112369855,
+        "fontSize": "12px",
+        "foreground": "rgb(194, 191, 182)",
+        "selector": ".teaching-notes-filter-count"
+      },
+      {
+        "background": "rgb(19, 23, 24)",
+        "contrast": 15.568179255081391,
+        "fontSize": "14px",
+        "foreground": "rgb(241, 238, 230)",
+        "selector": ".teaching-notes-personal-link"
+      },
+      {
+        "background": "rgb(241, 238, 230)",
+        "contrast": 13.08998935483011,
+        "fontSize": "14px",
+        "foreground": "rgb(34, 39, 36)",
+        "selector": ".teaching-note-read"
+      }
+    ],
+    "fonts": "Registered loaded Fraunces and Outfit; theme animations settled."
+  },
+  "zoom": [
+    {
+      "buttons": [
+        {
+          "right": 157.0522346496582,
+          "width": 105.87686157226562
+        },
+        {
+          "right": 316.5858154296875,
+          "width": 151.5485076904297
+        }
+      ],
+      "root": "32px",
+      "scrollWidth": 367,
+      "search": "28px",
+      "transition": "0s",
+      "width": 390
+    },
+    {
+      "buttons": [
+        {
+          "right": 714.1230926513672,
+          "width": 133.99253845214844
+        },
+        {
+          "right": 901.399185180664,
+          "width": 179.29103088378906
+        }
+      ],
+      "root": "32px",
+      "scrollWidth": 1001,
+      "search": "28px",
+      "transition": "0s",
+      "width": 1024
+    }
+  ],
+  "interactions": {
+    "olderBodySearch": true,
+    "searchReturnAndFocus": true,
+    "noResultsAndClear": true,
+    "unreadNoLead": true,
+    "loadMore16Rows": true,
+    "latestTitleOnce": true,
+    "personalSyntheticSave": true,
+    "keyboardOutline": true,
+    "forcedColorSelectionBorderAndUnderline": true,
+    "runtimeErrors": []
+  },
+  "limits": [
+    "Synthetic fixture uses representative sidebar, not full ClassroomLayout",
+    "Empty/loading/error branches unit-tested, not all visually captured this pass",
+    "No production account writes, RLS acceptance or release",
+    "Known excerpt title repetition deliberately unchanged",
+    "Initial calibration screenshots are unusable thumbnails; use before-phone-readable and after screenshots",
+    "Actual widths may differ by1 CSSpx due zoom calibration",
+    "Actual-font default light/dark captures are final; older search/unread/forcedcolor captures are interim fallback-font interaction evidence.",
+    "Font fixture now uses same public Google Fonts mechanism/families as app, transmitting no note content.",
+    "PNG nonuniform check verifies not blank; manual image reading supplies semantic visual check."
+  ],
+  "generatedBackendRestored": true,
+  "files": {
+    "src/pages/myWorkNotes.css": "e122ede79763950948763a17c6915b3ef8415d9f6e808e92722438d908392376",
+    "src/components/my-work/TeachingNotesArchive.tsx": "1321cbe23acb49e19e25070563ea8b79e4d7d4f5267916b1b2252b230ce3f2b9",
+    "src/components/my-work/TeachingNotesArchive.test.tsx": "2faed7194aa0427fa1034af5676c90d638530d0ac41a663ffdd9cae173713907",
+    "src/pages/MyWorkNotesPage.tsx": "986b8a8ae62e0d259e7fa83900964099cb83251072ad6acf398606d2b8f9ce0d",
+    "scripts/verification/my-work-preview.html": "853b4ad8981923902faa1667fb1f5a8248b4a0a5f566f824af7be289da45c334"
+  },
+  "finalFixes": "F1-F6 accepted: personal class-only affordances, notices, neutral focus, lead hover, cleanup, semantic names and lead route-anchor regression",
+  "inspection": {
+    "planRounds": 4,
+    "codeInspections": 2,
+    "lastVerdict": "REVISE",
+    "limits": "Inspection2 found invalid default screenshots, fallback fixture fonts and button reduced motion. Host corrected all3 after inspection limit; no final provider approval claimed."
+  },
+  "captureRootCause": "Document-coordinate clip targeted page top while restored scrollY was1486.56; scroll reset after reflow, theme/font settling, captures visually read and PNG nonuniformity checked.",
+  "fonts": [
+    {
+      "family": "Fraunces",
+      "status": "loaded",
+      "weight": "300 700"
+    },
+    {
+      "family": "Outfit",
+      "status": "loaded",
+      "weight": "400"
+    },
+    {
+      "family": "Outfit",
+      "status": "loaded",
+      "weight": "500"
+    },
+    {
+      "family": "Outfit",
+      "status": "loaded",
+      "weight": "600"
+    },
+    {
+      "family": "Outfit",
+      "status": "loaded",
+      "weight": "700"
+    }
+  ],
+  "captures": [
+    {
+      "file": "after-desktop.png",
+      "width": 1440,
+      "height": 1000,
+      "compressedBytes": 127241,
+      "scanlineByteVariety": 256,
+      "nonuniform": true
+    },
+    {
+      "file": "after-phone.png",
+      "width": 390,
+      "height": 843,
+      "compressedBytes": 57079,
+      "scanlineByteVariety": 256,
+      "nonuniform": true
+    },
+    {
+      "file": "after-dark-desktop.png",
+      "width": 1440,
+      "height": 1000,
+      "compressedBytes": 128475,
+      "scanlineByteVariety": 256,
+      "nonuniform": true
+    },
+    {
+      "file": "after-dark-phone.png",
+      "width": 390,
+      "height": 843,
+      "compressedBytes": 57862,
+      "scanlineByteVariety": 256,
+      "nonuniform": true
+    }
+  ],
+  "reducedMotion": "All Notes buttons/classroom-button and card transitions0s under emulated reduce"
+}

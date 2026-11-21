@@ -1,0 +1,66 @@
+{
+ "qid": "PT124-S3-Q19",
+ "type": "Must Be True",
+ "difficulty": "2",
+ "key_db": "A",
+ "stimulus_db": "An editor is compiling a textbook containing essays by several different authors. The book will contain essays by Lind, Knight, or Jones, but it will not contain essays by all three. If the textbook contains an essay by Knight, then it will also contain an essay by Jones.",
+ "stem_db": "If the statements above are true, which one of the following must be true?",
+ "choices_db": {
+  "A": "If the textbook contains an essay by Lind, then it will not contain an essay by Knight.",
+  "B": "The textbook will contain an essay by only one of Lind, Knight, and Jones.",
+  "C": "The textbook will not contain an essay by Knight.",
+  "D": "If the textbook contains an essay by Lind, then it will also contain an essay by Jones.",
+  "E": "The textbook will contain an essay by Lind."
+ },
+ "bank": {
+  "stimulus": "An editor is compiling a textbook containing essays by several different authors. The book will contain essays by Lind, Knight, or Jones, but it will not contain essays by all three. If the textbook contains an essay by Knight, then it will also contain an essay by Jones.",
+  "stem": "If the statements above are true, which one of the following must be true?",
+  "choices": {
+   "A": "If the textbook contains an essay by Lind, then it will not contain an essay by Knight.",
+   "B": "The textbook will contain an essay by only one of Lind, Knight, and Jones.",
+   "C": "The textbook will not contain an essay by Knight.",
+   "D": "If the textbook contains an essay by Lind, then it will also contain an essay by Jones.",
+   "E": "The textbook will contain an essay by Lind."
+  },
+  "key": "A"
+ },
+ "explanation_id": "3937fc73-7987-4439-80cc-6b64375df558",
+ "style": "single",
+ "steps": [
+  {
+   "row_id": "7285cc2f-730b-43ea-9b38-8bee4d9fa61f",
+   "position": 0,
+   "label": "Evaluate",
+   "body": "Given that the book can't have all three authors, if we include Knight (and thus have to include Jones), then we definitely won't be including Lind. That ends up looking like K → ~L or by contrapositive L → ~K"
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "056ef2d1-49b7-4b02-9413-37c76abe8f04",
+   "letter": "A",
+   "body": "This follows from the 1st and 2nd statements.\nK → J\nK + J → ~L\n∴ L → ~K\n\nIf Lind were one of the two we were picking, then Knight can't be the other one we pick (because when we pick Knight we **also** have to pick Jones!)"
+  },
+  {
+   "row_id": "3da72e13-099e-4e71-8017-9ce07d568803",
+   "letter": "B",
+   "body": "The textbook could contain entries by both Knight and Jones"
+  },
+  {
+   "row_id": "bfd9faf1-42e7-437a-8694-114278eaf426",
+   "letter": "C",
+   "body": "The textbook could contain entries by both Knight and Jones."
+  },
+  {
+   "row_id": "4aea2107-e33a-476a-8976-9d0a8ff528dd",
+   "letter": "D",
+   "body": "The textbook could contain an essay by only Lind."
+  },
+  {
+   "row_id": "505588b9-5225-42bd-b00f-be2dd5519c9d",
+   "letter": "E",
+   "body": "The textbook could contain essays by both Knight and Jones, but not Lind."
+  }
+ ],
+ "known_problem": "Stray \"- paragraph\" markup in C note; B and C notes identical; no statement of the \"not all three\" rule as a diagram.",
+ "tags": "short-breakdown; verdict-only; thin-notes; no-prediction; damage; very-short"
+}

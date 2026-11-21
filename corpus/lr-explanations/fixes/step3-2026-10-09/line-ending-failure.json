@@ -1,0 +1,459 @@
+{
+  "audit": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"rows\": [\n    {\n      \"audit\": {\n        \"batch\": \"e22\",\n        \"duplicate_slots\": 0,\n        \"expected_rows\": 73,\n        \"extra_slots\": [],\n        \"final_rows\": 57,\n        \"mismatches\": [\n          {\n            \"actual\": [\n              {\n                \"label\": null,\n                \"md5\": \"aa39b1d20b479d7baf7e1772347cf4d6\",\n                \"rid\": \"e97313c9-6429-4e0a-b101-fdd6098e6e02\"\n              }\n            ],\n            \"expected_id\": \"e97313c9-6429-4e0a-b101-fdd6098e6e02\",\n            \"expected_md5\": \"429d68aa189be560c5879bf5b4b09b81\",\n            \"kind\": \"note\",\n            \"matches\": 1,\n            \"old_matches\": 0,\n            \"qid\": \"PT127-S2-Q8\",\n            \"slot\": \"D\"\n          },\n          {\n            \"actual\": [\n              {\n                \"label\": \"Evaluate\",\n                \"md5\": \"412ba52fff952730b099c92881286870\",\n                \"rid\": \"114c6613-8f3a-454f-8f2e-e40c2085209b\"\n              }\n            ],\n            \"expected_id\": \"114c6613-8f3a-454f-8f2e-e40c2085209b\",\n            \"expected_md5\": \"8435a2cd503a86be8fce38bb469b7384\",\n            \"kind\": \"step\",\n            \"matches\": 1,\n            \"old_matches\": 0,\n            \"qid\": \"PT127-S2-Q8\",\n            \"slot\": \"2\"\n          },\n          {\n            \"actual\": [\n              {\n                \"label\": null,\n                \"md5\": \"a464ca22dd04afd3476db387ace566f8\",\n                \"rid\": \"30f37111-d65c-4381-92c1-e5bdabace383\"\n              }\n            ],\n            \"expected_id\": \"30f37111-d65c-4381-92c1-e5bdabace383\",\n            \"expected_md5\": \"f667408008a4ade32646011fc7be019d\",\n            \"kind\": \"note\",\n            \"matches\": 1,\n            \"old_matches\": 0,\n            \"qid\": \"PT156-S2-Q19\",\n            \"slot\": \"B\"\n          },\n          {\n            \"actual\": [\n              {\n                \"label\": \"Evaluate\",\n                \"md5\": \"5cc903808f503f14cae30ee00b796d56\",\n                \"rid\": \"5bed442a-0871-4c85-b185-6b44a3002a69\"\n              }\n            ],\n            \"expected_id\": \"5bed442a-0871-4c85-b185-6b44a3002a69\",\n            \"expected_md5\": \"fa39bc84b8e42f7ff13db6ad87f34d4a\",\n            \"kind\": \"step\",\n            \"matches\": 1,\n            \"old_matches\": 0,\n            \"qid\": \"PT156-S2-Q19\",\n            \"slot\": \"2\"\n          },\n          {\n            \"actual\": [\n              {\n                \"label\": null,\n                \"md5\": \"9c3592f567a1195eea6f5150ef621744\",\n                \"rid\": \"3ac71c80-1166-4628-9d88-c266bfb4759b\"\n              }\n            ],\n            \"expected_id\": \"3ac71c80-1166-4628-9d88-c266bfb4759b\",\n            \"expected_md5\": \"272778202d593e578f16e696fc48a260\",\n            \"kind\": \"note\",\n            \"matches\": 1,\n            \"old_matches\": 0,\n            \"qid\": \"PT157-S2-Q10\",\n            \"slot\": \"D\"\n          },\n          {\n            \"actual\": [\n              {\n                \"label\": \"Evaluate\",\n                \"md5\": \"cad86a89b71d03dbff3448a492d99c47\",\n                \"rid\": \"24081875-5063-47eb-a9f4-a2c4a0095108\"\n              }\n            ],\n            \"expected_id\": \"24081875-5063-47eb-a9f4-a2c4a0095108\",\n            \"expected_md5\": \"a47833b4db8c9aa5d8542e9ca8d1ea13\",\n            \"kind\": \"step\",\n            \"matches\": 1,\n            \"old_matches\": 0,\n            \"qid\": \"PT157-S2-Q10\",\n            \"slot\": \"2\"\n          },\n          {\n            \"actual\": [\n              {\n                \"label\": null,\n                \"md5\": \"840ef46c453a484cc60c9eb4ae4609b0\",\n                \"rid\": \"fecb34aa-1af3-4979-9429-e60201e67705\"\n              }\n            ],\n            \"expected_id\": \"fecb34aa-1af3-4979-9429-e60201e67705\",\n            \"expected_md5\": \"316d700940eedebe1ce66272f4c61e0b\",\n            \"kind\": \"note\",\n            \"matches\": 1,\n            \"old_matches\": 0,\n            \"qid\": \"PT157-S2-Q2\",\n            \"slot\": \"A\"\n          },\n          {\n            \"actual\": [\n              {\n                \"label\": \"Evaluate\",\n                \"md5\": \"b415af37f04f4b4474599b85ef61c943\",\n                \"rid\": \"2a173cf6-f9f7-4074-b0d7-31bd805631d4\"\n              }\n            ],\n            \"expected_id\": \"2a173cf6-f9f7-4074-b0d7-31bd805631d4\",\n            \"expected_md5\": \"a9ec2a04e924273249ae4fc2bf737ee1\",\n            \"kind\": \"step\",\n            \"matches\": 1,\n            \"old_matches\": 0,\n            \"qid\": \"PT157-S2-Q2\",\n            \"slot\": \"2\"\n          },\n          {\n            \"actual\": [\n              {\n                \"label\": null,\n                \"md5\": \"d532a03d619137908dd233d872ffdd53\",\n                \"rid\": \"1e6f0245-6555-4164-b894-ac48aa65573c\"\n              }\n            ],\n            \"expected_id\": \"1e6f0245-6555-4164-b894-ac48aa65573c\",\n            \"expected_md5\": \"289844d4735ff4c2369b241137c59e75\",\n            \"kind\": \"note\",\n            \"matches\": 1,\n            \"old_matches\": 0,\n            \"qid\": \"PT157-S2-Q4\",\n            \"slot\": \"B\"\n          },\n          {\n            \"actual\": [\n              {\n                \"label\": \"Evaluate\",\n                \"md5\": \"484415ccfdb2714c244e0b2c32ab6c22\",\n                \"rid\": \"a0e0bee0-1faf-4a65-bea8-ec3c897f4ec8\"\n              }\n            ],\n            \"expected_id\": \"a0e0bee0-1faf-4a65-bea8-ec3c897f4ec8\",\n            \"expected_md5\": \"e92efb36ecd6018ab4200bd5ff645b46\",\n            \"kind\": \"step\",\n            \"matches\": 1,\n            \"old_matches\": 0,\n            \"qid\": \"PT157-S2-Q4\",\n            \"slot\": \"3\"\n          },\n          {\n            \"actual\": [\n              {\n                \"label\": null,\n                \"md5\": \"26a56f34c12e70e93dab4fdd2d13f99b\",\n                \"rid\": \"7682f35c-a461-48ce-816d-b08cb8b4790a\"\n              }\n            ],\n            \"expected_id\": \"7682f35c-a461-48ce-816d-b08cb8b4790a\",\n            \"expected_md5\": \"63965f64b571a989a242452d45365474\",\n            \"kind\": \"note\",\n            \"matches\": 1,\n            \"old_matches\": 0,\n            \"qid\": \"PT157-S3-Q15\",\n            \"slot\": \"C\"\n          },\n          {\n            \"actual\": [\n              {\n                \"label\": \"Goal\",\n                \"md5\": \"3c2162738e30dc3bb3f0412eede5cd12\",\n                \"rid\": \"538dd554-512a-414f-90be-474ab36025b9\"\n              }\n            ],\n            \"expected_id\": \"538dd554-512a-414f-90be-474ab36025b9\",\n            \"expected_md5\": \"470dd0254ae4bf8d3b46863b5f617232\",\n            \"kind\": \"step\",\n            \"matches\": 1,\n            \"old_matches\": 0,\n            \"qid\": \"PT157-S3-Q15\",\n            \"slot\": \"2\"\n          },\n          {\n            \"actual\": [\n              {\n                \"label\": null,\n                \"md5\": \"12bbb9868f5ec9b818a3fcabf0cfcfd7\",\n                \"rid\": \"333af76a-9d2e-463a-89b1-af6de01cb2d9\"\n              }\n            ],\n            \"expected_id\": \"333af76a-9d2e-463a-89b1-af6de01cb2d9\",\n            \"expected_md5\": \"0b122feb320c3d1dc400ffe08553f352\",\n            \"kind\": \"note\",\n            \"matches\": 1,\n            \"old_matches\": 0,\n            \"qid\": \"PT157-S3-Q25\",\n            \"slot\": \"A\"\n          },\n          {\n            \"actual\": [\n              {\n                \"label\": \"Evaluate\",\n                \"md5\": \"e05b688f08935074ed4e89b9db2b71b7\",\n                \"rid\": \"5b90d24d-3bc5-4de9-9096-fbd5e6b4df0d\"\n              }\n            ],\n            \"expected_id\": \"5b90d24d-3bc5-4de9-9096-fbd5e6b4df0d\",\n            \"expected_md5\": \"9581bfca71910d9712314a833078dce0\",\n            \"kind\": \"step\",\n            \"matches\": 1,\n            \"old_matches\": 0,\n            \"qid\": \"PT157-S3-Q25\",\n            \"slot\": \"3\"\n          },\n          {\n            \"actual\": [\n              {\n                \"label\": null,\n                \"md5\": \"cd3101c7d299e9048ab3626a8da02a5a\",\n                \"rid\": \"dd8204b9-7a09-4650-81d9-f5617f203182\"\n              }\n            ],\n            \"expected_id\": \"dd8204b9-7a09-4650-81d9-f5617f203182\",\n            \"expected_md5\": \"16bf394b708fe3684f1edbcfd3194e39\",\n            \"kind\": \"note\",\n            \"matches\": 1,\n            \"old_matches\": 0,\n            \"qid\": \"PT157-S3-Q6\",\n            \"slot\": \"C\"\n          },\n          {\n            \"actual\": [\n              {\n                \"label\": \"Evaluate\",\n                \"md5\": \"2074d5315244a65c04c4b57de72cb4bf\",\n                \"rid\": \"e636f5a1-765a-49c7-994b-f5129fddd592\"\n              }\n            ],\n            \"expected_id\": \"e636f5a1-765a-49c7-994b-f5129fddd592\",\n            \"expected_md5\": \"5ffb55e05eda6e0fdeb68d99430c0a09\",\n            \"kind\": \"step\",\n            \"matches\": 1,\n            \"old_matches\": 0,\n            \"qid\": \"PT157-S3-Q6\",\n            \"slot\": \"2\"\n          }\n        ],\n        \"missing\": 0,\n        \"old_rows\": 16\n      }\n    }\n  ]\n}"
+      }
+    ],
+    "structuredContent": {
+      "rows": [
+        {
+          "audit": {
+            "batch": "e22",
+            "duplicate_slots": 0,
+            "expected_rows": 73,
+            "extra_slots": [],
+            "final_rows": 57,
+            "mismatches": [
+              {
+                "actual": [
+                  {
+                    "label": null,
+                    "md5": "aa39b1d20b479d7baf7e1772347cf4d6",
+                    "rid": "e97313c9-6429-4e0a-b101-fdd6098e6e02"
+                  }
+                ],
+                "expected_id": "e97313c9-6429-4e0a-b101-fdd6098e6e02",
+                "expected_md5": "429d68aa189be560c5879bf5b4b09b81",
+                "kind": "note",
+                "matches": 1,
+                "old_matches": 0,
+                "qid": "PT127-S2-Q8",
+                "slot": "D"
+              },
+              {
+                "actual": [
+                  {
+                    "label": "Evaluate",
+                    "md5": "412ba52fff952730b099c92881286870",
+                    "rid": "114c6613-8f3a-454f-8f2e-e40c2085209b"
+                  }
+                ],
+                "expected_id": "114c6613-8f3a-454f-8f2e-e40c2085209b",
+                "expected_md5": "8435a2cd503a86be8fce38bb469b7384",
+                "kind": "step",
+                "matches": 1,
+                "old_matches": 0,
+                "qid": "PT127-S2-Q8",
+                "slot": "2"
+              },
+              {
+                "actual": [
+                  {
+                    "label": null,
+                    "md5": "a464ca22dd04afd3476db387ace566f8",
+                    "rid": "30f37111-d65c-4381-92c1-e5bdabace383"
+                  }
+                ],
+                "expected_id": "30f37111-d65c-4381-92c1-e5bdabace383",
+                "expected_md5": "f667408008a4ade32646011fc7be019d",
+                "kind": "note",
+                "matches": 1,
+                "old_matches": 0,
+                "qid": "PT156-S2-Q19",
+                "slot": "B"
+              },
+              {
+                "actual": [
+                  {
+                    "label": "Evaluate",
+                    "md5": "5cc903808f503f14cae30ee00b796d56",
+                    "rid": "5bed442a-0871-4c85-b185-6b44a3002a69"
+                  }
+                ],
+                "expected_id": "5bed442a-0871-4c85-b185-6b44a3002a69",
+                "expected_md5": "fa39bc84b8e42f7ff13db6ad87f34d4a",
+                "kind": "step",
+                "matches": 1,
+                "old_matches": 0,
+                "qid": "PT156-S2-Q19",
+                "slot": "2"
+              },
+              {
+                "actual": [
+                  {
+                    "label": null,
+                    "md5": "9c3592f567a1195eea6f5150ef621744",
+                    "rid": "3ac71c80-1166-4628-9d88-c266bfb4759b"
+                  }
+                ],
+                "expected_id": "3ac71c80-1166-4628-9d88-c266bfb4759b",
+                "expected_md5": "272778202d593e578f16e696fc48a260",
+                "kind": "note",
+                "matches": 1,
+                "old_matches": 0,
+                "qid": "PT157-S2-Q10",
+                "slot": "D"
+              },
+              {
+                "actual": [
+                  {
+                    "label": "Evaluate",
+                    "md5": "cad86a89b71d03dbff3448a492d99c47",
+                    "rid": "24081875-5063-47eb-a9f4-a2c4a0095108"
+                  }
+                ],
+                "expected_id": "24081875-5063-47eb-a9f4-a2c4a0095108",
+                "expected_md5": "a47833b4db8c9aa5d8542e9ca8d1ea13",
+                "kind": "step",
+                "matches": 1,
+                "old_matches": 0,
+                "qid": "PT157-S2-Q10",
+                "slot": "2"
+              },
+              {
+                "actual": [
+                  {
+                    "label": null,
+                    "md5": "840ef46c453a484cc60c9eb4ae4609b0",
+                    "rid": "fecb34aa-1af3-4979-9429-e60201e67705"
+                  }
+                ],
+                "expected_id": "fecb34aa-1af3-4979-9429-e60201e67705",
+                "expected_md5": "316d700940eedebe1ce66272f4c61e0b",
+                "kind": "note",
+                "matches": 1,
+                "old_matches": 0,
+                "qid": "PT157-S2-Q2",
+                "slot": "A"
+              },
+              {
+                "actual": [
+                  {
+                    "label": "Evaluate",
+                    "md5": "b415af37f04f4b4474599b85ef61c943",
+                    "rid": "2a173cf6-f9f7-4074-b0d7-31bd805631d4"
+                  }
+                ],
+                "expected_id": "2a173cf6-f9f7-4074-b0d7-31bd805631d4",
+                "expected_md5": "a9ec2a04e924273249ae4fc2bf737ee1",
+                "kind": "step",
+                "matches": 1,
+                "old_matches": 0,
+                "qid": "PT157-S2-Q2",
+                "slot": "2"
+              },
+              {
+                "actual": [
+                  {
+                    "label": null,
+                    "md5": "d532a03d619137908dd233d872ffdd53",
+                    "rid": "1e6f0245-6555-4164-b894-ac48aa65573c"
+                  }
+                ],
+                "expected_id": "1e6f0245-6555-4164-b894-ac48aa65573c",
+                "expected_md5": "289844d4735ff4c2369b241137c59e75",
+                "kind": "note",
+                "matches": 1,
+                "old_matches": 0,
+                "qid": "PT157-S2-Q4",
+                "slot": "B"
+              },
+              {
+                "actual": [
+                  {
+                    "label": "Evaluate",
+                    "md5": "484415ccfdb2714c244e0b2c32ab6c22",
+                    "rid": "a0e0bee0-1faf-4a65-bea8-ec3c897f4ec8"
+                  }
+                ],
+                "expected_id": "a0e0bee0-1faf-4a65-bea8-ec3c897f4ec8",
+                "expected_md5": "e92efb36ecd6018ab4200bd5ff645b46",
+                "kind": "step",
+                "matches": 1,
+                "old_matches": 0,
+                "qid": "PT157-S2-Q4",
+                "slot": "3"
+              },
+              {
+                "actual": [
+                  {
+                    "label": null,
+                    "md5": "26a56f34c12e70e93dab4fdd2d13f99b",
+                    "rid": "7682f35c-a461-48ce-816d-b08cb8b4790a"
+                  }
+                ],
+                "expected_id": "7682f35c-a461-48ce-816d-b08cb8b4790a",
+                "expected_md5": "63965f64b571a989a242452d45365474",
+                "kind": "note",
+                "matches": 1,
+                "old_matches": 0,
+                "qid": "PT157-S3-Q15",
+                "slot": "C"
+              },
+              {
+                "actual": [
+                  {
+                    "label": "Goal",
+                    "md5": "3c2162738e30dc3bb3f0412eede5cd12",
+                    "rid": "538dd554-512a-414f-90be-474ab36025b9"
+                  }
+                ],
+                "expected_id": "538dd554-512a-414f-90be-474ab36025b9",
+                "expected_md5": "470dd0254ae4bf8d3b46863b5f617232",
+                "kind": "step",
+                "matches": 1,
+                "old_matches": 0,
+                "qid": "PT157-S3-Q15",
+                "slot": "2"
+              },
+              {
+                "actual": [
+                  {
+                    "label": null,
+                    "md5": "12bbb9868f5ec9b818a3fcabf0cfcfd7",
+                    "rid": "333af76a-9d2e-463a-89b1-af6de01cb2d9"
+                  }
+                ],
+                "expected_id": "333af76a-9d2e-463a-89b1-af6de01cb2d9",
+                "expected_md5": "0b122feb320c3d1dc400ffe08553f352",
+                "kind": "note",
+                "matches": 1,
+                "old_matches": 0,
+                "qid": "PT157-S3-Q25",
+                "slot": "A"
+              },
+              {
+                "actual": [
+                  {
+                    "label": "Evaluate",
+                    "md5": "e05b688f08935074ed4e89b9db2b71b7",
+                    "rid": "5b90d24d-3bc5-4de9-9096-fbd5e6b4df0d"
+                  }
+                ],
+                "expected_id": "5b90d24d-3bc5-4de9-9096-fbd5e6b4df0d",
+                "expected_md5": "9581bfca71910d9712314a833078dce0",
+                "kind": "step",
+                "matches": 1,
+                "old_matches": 0,
+                "qid": "PT157-S3-Q25",
+                "slot": "3"
+              },
+              {
+                "actual": [
+                  {
+                    "label": null,
+                    "md5": "cd3101c7d299e9048ab3626a8da02a5a",
+                    "rid": "dd8204b9-7a09-4650-81d9-f5617f203182"
+                  }
+                ],
+                "expected_id": "dd8204b9-7a09-4650-81d9-f5617f203182",
+                "expected_md5": "16bf394b708fe3684f1edbcfd3194e39",
+                "kind": "note",
+                "matches": 1,
+                "old_matches": 0,
+                "qid": "PT157-S3-Q6",
+                "slot": "C"
+              },
+              {
+                "actual": [
+                  {
+                    "label": "Evaluate",
+                    "md5": "2074d5315244a65c04c4b57de72cb4bf",
+                    "rid": "e636f5a1-765a-49c7-994b-f5129fddd592"
+                  }
+                ],
+                "expected_id": "e636f5a1-765a-49c7-994b-f5129fddd592",
+                "expected_md5": "5ffb55e05eda6e0fdeb68d99430c0a09",
+                "kind": "step",
+                "matches": 1,
+                "old_matches": 0,
+                "qid": "PT157-S3-Q6",
+                "slot": "2"
+              }
+            ],
+            "missing": 0,
+            "old_rows": 16
+          }
+        }
+      ]
+    },
+    "isError": false
+  },
+  "confirmation": [
+    {
+      "id": "114c6613-8f3a-454f-8f2e-e40c2085209b",
+      "onlyCRLF": true,
+      "kind": "step"
+    },
+    {
+      "id": "24081875-5063-47eb-a9f4-a2c4a0095108",
+      "onlyCRLF": true,
+      "kind": "step"
+    },
+    {
+      "id": "2a173cf6-f9f7-4074-b0d7-31bd805631d4",
+      "onlyCRLF": true,
+      "kind": "step"
+    },
+    {
+      "id": "538dd554-512a-414f-90be-474ab36025b9",
+      "onlyCRLF": true,
+      "kind": "step"
+    },
+    {
+      "id": "5b90d24d-3bc5-4de9-9096-fbd5e6b4df0d",
+      "onlyCRLF": true,
+      "kind": "step"
+    },
+    {
+      "id": "5bed442a-0871-4c85-b185-6b44a3002a69",
+      "onlyCRLF": true,
+      "kind": "step"
+    },
+    {
+      "id": "a0e0bee0-1faf-4a65-bea8-ec3c897f4ec8",
+      "onlyCRLF": true,
+      "kind": "step"
+    },
+    {
+      "id": "e636f5a1-765a-49c7-994b-f5129fddd592",
+      "onlyCRLF": true,
+      "kind": "step"
+    },
+    {
+      "id": "1e6f0245-6555-4164-b894-ac48aa65573c",
+      "onlyCRLF": true,
+      "kind": "note"
+    },
+    {
+      "id": "30f37111-d65c-4381-92c1-e5bdabace383",
+      "onlyCRLF": true,
+      "kind": "note"
+    },
+    {
+      "id": "333af76a-9d2e-463a-89b1-af6de01cb2d9",
+      "onlyCRLF": true,
+      "kind": "note"
+    },
+    {
+      "id": "3ac71c80-1166-4628-9d88-c266bfb4759b",
+      "onlyCRLF": true,
+      "kind": "note"
+    },
+    {
+      "id": "7682f35c-a461-48ce-816d-b08cb8b4790a",
+      "onlyCRLF": true,
+      "kind": "note"
+    },
+    {
+      "id": "dd8204b9-7a09-4650-81d9-f5617f203182",
+      "onlyCRLF": true,
+      "kind": "note"
+    },
+    {
+      "id": "e97313c9-6429-4e0a-b101-fdd6098e6e02",
+      "onlyCRLF": true,
+      "kind": "note"
+    },
+    {
+      "id": "fecb34aa-1af3-4979-9429-e60201e67705",
+      "onlyCRLF": true,
+      "kind": "note"
+    }
+  ],
+  "live": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"rows\": [\n    {\n      \"body\": \"Start with the curious fact: a volcanic boulder is sitting in an area where all the other rock is sedimentary. Something brought it here.\\r\\n\\r\\nThe author's explanation is a glacier. That story comes with a direction built in. The glaciers in this area moved south, so a glacier could only have carried the boulder down from somewhere north of here. The explanation quietly needs a volcanic birthplace to the north.\\r\\n\\r\\nGiven that, how could we argue the glacier did not bring it? Two routes. Take away the starting point: if there is nowhere to the north the boulder could have come from, the southward glacier had nothing to pick up. Or offer a different way the boulder got here.\",\n      \"id\": \"114c6613-8f3a-454f-8f2e-e40c2085209b\",\n      \"kind\": \"step\"\n    },\n    {\n      \"body\": \"The argument makes a significant leap. The evidence is about mathematical computations. The conclusion is about \\\"our most important intellectual skills.\\\" Those are only the same thing if computation is one of our most important intellectual skills.\\r\\n\\r\\nGiven the evidence, how could we argue the most important skills will not be devalued? Easy: the skills we value most could be ones a computer cannot do, like judgment, writing, or the kind of reasoning tested on the LSAT. Computers taking over arithmetic would then devalue a skill, just not the important ones.\\r\\n\\r\\nThere is a second, weaker opening in the analogy. The Industrial Revolution and electronic data processing might differ in ways that matter, or intellectual skills might lose value differently than physical labor did. But the computation-to-most-important-skills leap is the cleanest target.\",\n      \"id\": \"24081875-5063-47eb-a9f4-a2c4a0095108\",\n      \"kind\": \"step\"\n    },\n    {\n      \"body\": \"The evidence in this argument is pretty flimsy, leaving it open to several objections. Were the assistants skilled enough to sculpt Sonora the way Barajas would have? Did three sketches give them enough information about how Barajas wanted the finished statue to look? And what if Barajas's statues often ended up looking quite different from the early sketches?\\r\\n\\r\\nThat last one is the sharpest. The whole argument leans on the sketches standing in for the finished statue. Given that the assistants followed the sketches, how could the statue still look different from what Barajas would have made? It could, if the sketches were only an early draft of an idea that Barajas would have kept changing.\",\n      \"id\": \"2a173cf6-f9f7-4074-b0d7-31bd805631d4\",\n      \"kind\": \"step\"\n    },\n    {\n      \"body\": \"Our task is an alternate explanation for the correlation between housing ants and being a healthier orchid. We are not asked to attack the nutrient story, only to give another story that would also explain the fact.\\r\\n\\r\\nWhenever we need an alternate explanation for a correlation, check the usual routes.\\r\\n\\r\\nReverse cause: maybe the healthier orchids come first, and ants prefer to move into healthy roots.\\r\\n\\r\\nThird factor: maybe something that comes with the ants, such as a damp spot in the soil, is what makes those orchids healthier.\\r\\n\\r\\nSame cause, different mechanism: maybe the ants do help the orchids, just not through nutrients. They could protect the roots, for example.\\r\\n\\r\\nSo look for an answer that explains why ant-housing orchids are healthier without relying on the stored organic matter. An answer that only makes the nutrient story weaker, or adds detail to it, is not an alternative.\",\n      \"id\": \"538dd554-512a-414f-90be-474ab36025b9\",\n      \"kind\": \"step\"\n    },\n    {\n      \"body\": \"Let's be clear about which groups are being compared. Overall, the vitamin C group had less severe acne than the placebo group. Then it turned out that half of each group knew which pill they had, and half could not tell.\\r\\n\\r\\nAmong the subjects who could not tell, there was no difference in acne. So the overall gap came from the subjects who knew. The author's reading: knowing you got the vitamin made the difference, not the vitamin. The blind comparison is treated as the fair test, and that test found nothing.\\r\\n\\r\\nThat reading depends on the blind comparison really being fair. Finding \\\"no difference in the severity of acne\\\" means both blind groups ended up in the same place during the study. It only shows the vitamin did nothing if both groups started in the same place too.\\r\\n\\r\\nGiven that, how could we argue vitamin C did help? Suppose the vitamin C subjects started with worse acne. Then ending up equal to the placebo group means they improved more. The \\\"no difference\\\" result would hide a real benefit.\",\n      \"id\": \"5b90d24d-3bc5-4de9-9096-fbd5e6b4df0d\",\n      \"kind\": \"step\"\n    },\n    {\n      \"body\": \"The physics is given to us, and we should not fight it: a smaller radius means faster spin. The geologist's real claim is about Earth. More earthquakes meant more plate movement toward the center, which shrank the radius, which sped up the spin.\\r\\n\\r\\nLook at what the evidence actually shows. Right after each earthquake, the plates move inward. That is one push on the radius. It does not tell us the radius ended the decade smaller overall. If something else pushed outward at the same time, the inward movement could be cancelled.\\r\\n\\r\\nSo, given that earthquakes increased and the plates move inward after each one, how could we argue earthquakes do not explain the faster spin? Show that the radius did not actually shrink, because some other force offset the movement.\",\n      \"id\": \"5bed442a-0871-4c85-b185-6b44a3002a69\",\n      \"kind\": \"step\"\n    },\n    {\n      \"body\": \"There isn't a huge gap in logic between needing as much capital as possible (the evidence) and not wanting any reduction in the existing amount of capital (the intermediate conclusion).\\r\\n\\r\\nBut there is a significant gap between the intermediate conclusion and the main conclusion. Wanting to avoid any reduction in investments does not automatically support the idea that we should pass laws making it more difficult for investors to remove their capital.\\r\\n\\r\\nThis main conclusion is a recommendation. Plans and recommendations tend to be vulnerable to a variety of objections, and the correct answer to a Weaken question might focus on any one of them. It helps to think about the kinds of objections that this argument is particularly vulnerable to.\\r\\n\\r\\nFor example, a recommendation might have the opposite effect. Maybe these laws would discourage investors from making future investments, which would prevent us from acquiring \\\"as much capital as possible.\\\" Or there might be some reason why this particular recommendation can't be implemented, or won't be effective. Maybe these types of laws are almost impossible to enforce, and therefore tend to be ineffective.\",\n      \"id\": \"a0e0bee0-1faf-4a65-bea8-ec3c897f4ec8\",\n      \"kind\": \"step\"\n    },\n    {\n      \"body\": \"The conclusion makes a recommendation about building a new library. It does this by introducing a new concept of better meeting residents' needs. A couple of assumptions are required to reach this conclusion. First, the argument assumes that one large library would better meet residents' needs than several smaller ones. We can easily envision a situation where it's convenient for residents to visit the branch libraries that are close to their neighborhoods, while a single main library would be farther away and therefore less accessible. The argument also assumes that a broader and more current selection of books would better meet residents' needs. But people use libraries for many reasons other than borrowing books. Libraries often have computers, study rooms, and meeting rooms that residents can use. Libraries often offer classes and events. And people are likely to borrow older books from libraries, not just current ones.\\r\\n\\r\\nSo, given that one big library would have better books, how could we argue residents would be worse off? Show that the new library would fail them in some other way, most likely because they could not easily get to it.\",\n      \"id\": \"e636f5a1-765a-49c7-994b-f5129fddd592\",\n      \"kind\": \"step\"\n    },\n    {\n      \"body\": \"The economist wants \\\"as much capital as possible\\\" from overseas investors. B says these laws \\\"would strongly discourage them from investing any additional capital.\\\" The laws might stop some money from leaving, but they would choke off new money coming in. The plan works against its own goal.\\r\\n\\r\\nThis is the standard way to attack a recommendation: show it backfires on the very thing it was meant to protect.\",\n      \"id\": \"1e6f0245-6555-4164-b894-ac48aa65573c\",\n      \"kind\": \"note\"\n    },\n    {\n      \"body\": \"The geologist's chain needs the inward plate movement to leave Earth with a smaller radius. B says that during the past decade \\\"other geological events have counteracted the movements\\\" that follow earthquakes. If the movement was cancelled, the radius need not have shrunk, and the earthquakes no longer explain the faster spin.\\r\\n\\r\\nThe reusable move: a cause can only explain an effect if it actually operated. An answer that cancels the cause's effect cuts the explanation at its middle link.\",\n      \"id\": \"30f37111-d65c-4381-92c1-e5bdabace383\",\n      \"kind\": \"note\"\n    },\n    {\n      \"body\": \"The conclusion rests on the blind comparison showing \\\"no difference in the severity of acne\\\" between the groups. A says the vitamin C subjects \\\"had a history of suffering from more severe acne\\\" than the placebo subjects. If the vitamin C group started worse and ended up equal, it improved more than the placebo group did. That is a benefit, hidden inside a result of no difference.\\r\\n\\r\\nThe reusable test for study arguments: before trusting a comparison, ask whether the two groups started out alike. If they didn't, equal results can mean unequal effects.\",\n      \"id\": \"333af76a-9d2e-463a-89b1-af6de01cb2d9\",\n      \"kind\": \"note\"\n    },\n    {\n      \"body\": \"The evidence is about computations. The conclusion is about \\\"our most important intellectual skills.\\\" The argument needs computation to be among those skills. D says the skills society values most \\\"are not computational ones,\\\" so computers taking over computation leaves the most valued skills untouched.\\r\\n\\r\\nThis is the move: when the evidence talks about one thing and the conclusion about a bigger or different thing, look for the answer that pries the two apart.\",\n      \"id\": \"3ac71c80-1166-4628-9d88-c266bfb4759b\",\n      \"kind\": \"note\"\n    },\n    {\n      \"body\": \"C keeps the ants as the cause but changes how they help. The ants \\\"prey on an insect species whose members eat the orchids’ roots.\\\" Orchids with ants lose fewer roots to those insects, so they are healthier for a reason that has nothing to do with stored nutrients. That is a full second explanation for the same fact.\\r\\n\\r\\nThe move to repeat: on alternate-explanation questions, look for a different path from the same two facts, here the ants and the orchids' health.\",\n      \"id\": \"7682f35c-a461-48ce-816d-b08cb8b4790a\",\n      \"kind\": \"note\"\n    },\n    {\n      \"body\": \"The argument assumes better books means better service. C says \\\"The only possible site for a new library is not readily accessible to most Winchester residents.\\\" A library most residents can't easily reach does not meet their needs, however good its books are. The branches, poorly stocked as they are, at least sit nearby.\\r\\n\\r\\nThe move to repeat: when an argument recommends a plan for one benefit, look for the cost it ignored.\",\n      \"id\": \"dd8204b9-7a09-4650-81d9-f5617f203182\",\n      \"kind\": \"note\"\n    },\n    {\n      \"body\": \"The glacier explanation only works if the boulder started north of here, because the glaciers were moving south. D says there are no volcanic sources north of the boulder at all. Then the glacier had nowhere to pick the boulder up, and the author's explanation loses the one thing it needed.\\r\\n\\r\\nThis is the move to repeat: when an argument explains a fact with a mechanism, ask what the mechanism requires, then look for the answer that removes that requirement.\",\n      \"id\": \"e97313c9-6429-4e0a-b101-fdd6098e6e02\",\n      \"kind\": \"note\"\n    },\n    {\n      \"body\": \"The argument treats three sketches as a reliable picture of the finished statue. A says Barajas's ideas \\\"were revised substantially throughout a series of dozens of preliminary sketches.\\\" Three sketches are then an early draft, not the final design, and the statue Barajas would have finished could look very different.\\r\\n\\r\\nThe move to repeat: find the piece of evidence the conclusion leans on, then look for the answer that shows it is not a reliable guide.\",\n      \"id\": \"fecb34aa-1af3-4979-9429-e60201e67705\",\n      \"kind\": \"note\"\n    }\n  ]\n}"
+      }
+    ],
+    "structuredContent": {
+      "rows": [
+        {
+          "body": "Start with the curious fact: a volcanic boulder is sitting in an area where all the other rock is sedimentary. Something brought it here.\r\n\r\nThe author's explanation is a glacier. That story comes with a direction built in. The glaciers in this area moved south, so a glacier could only have carried the boulder down from somewhere north of here. The explanation quietly needs a volcanic birthplace to the north.\r\n\r\nGiven that, how could we argue the glacier did not bring it? Two routes. Take away the starting point: if there is nowhere to the north the boulder could have come from, the southward glacier had nothing to pick up. Or offer a different way the boulder got here.",
+          "id": "114c6613-8f3a-454f-8f2e-e40c2085209b",
+          "kind": "step"
+        },
+        {
+          "body": "The argument makes a significant leap. The evidence is about mathematical computations. The conclusion is about \"our most important intellectual skills.\" Those are only the same thing if computation is one of our most important intellectual skills.\r\n\r\nGiven the evidence, how could we argue the most important skills will not be devalued? Easy: the skills we value most could be ones a computer cannot do, like judgment, writing, or the kind of reasoning tested on the LSAT. Computers taking over arithmetic would then devalue a skill, just not the important ones.\r\n\r\nThere is a second, weaker opening in the analogy. The Industrial Revolution and electronic data processing might differ in ways that matter, or intellectual skills might lose value differently than physical labor did. But the computation-to-most-important-skills leap is the cleanest target.",
+          "id": "24081875-5063-47eb-a9f4-a2c4a0095108",
+          "kind": "step"
+        },
+        {
+          "body": "The evidence in this argument is pretty flimsy, leaving it open to several objections. Were the assistants skilled enough to sculpt Sonora the way Barajas would have? Did three sketches give them enough information about how Barajas wanted the finished statue to look? And what if Barajas's statues often ended up looking quite different from the early sketches?\r\n\r\nThat last one is the sharpest. The whole argument leans on the sketches standing in for the finished statue. Given that the assistants followed the sketches, how could the statue still look different from what Barajas would have made? It could, if the sketches were only an early draft of an idea that Barajas would have kept changing.",
+          "id": "2a173cf6-f9f7-4074-b0d7-31bd805631d4",
+          "kind": "step"
+        },
+        {
+          "body": "Our task is an alternate explanation for the correlation between housing ants and being a healthier orchid. We are not asked to attack the nutrient story, only to give another story that would also explain the fact.\r\n\r\nWhenever we need an alternate explanation for a correlation, check the usual routes.\r\n\r\nReverse cause: maybe the healthier orchids come first, and ants prefer to move into healthy roots.\r\n\r\nThird factor: maybe something that comes with the ants, such as a damp spot in the soil, is what makes those orchids healthier.\r\n\r\nSame cause, different mechanism: maybe the ants do help the orchids, just not through nutrients. They could protect the roots, for example.\r\n\r\nSo look for an answer that explains why ant-housing orchids are healthier without relying on the stored organic matter. An answer that only makes the nutrient story weaker, or adds detail to it, is not an alternative.",
+          "id": "538dd554-512a-414f-90be-474ab36025b9",
+          "kind": "step"
+        },
+        {
+          "body": "Let's be clear about which groups are being compared. Overall, the vitamin C group had less severe acne than the placebo group. Then it turned out that half of each group knew which pill they had, and half could not tell.\r\n\r\nAmong the subjects who could not tell, there was no difference in acne. So the overall gap came from the subjects who knew. The author's reading: knowing you got the vitamin made the difference, not the vitamin. The blind comparison is treated as the fair test, and that test found nothing.\r\n\r\nThat reading depends on the blind comparison really being fair. Finding \"no difference in the severity of acne\" means both blind groups ended up in the same place during the study. It only shows the vitamin did nothing if both groups started in the same place too.\r\n\r\nGiven that, how could we argue vitamin C did help? Suppose the vitamin C subjects started with worse acne. Then ending up equal to the placebo group means they improved more. The \"no difference\" result would hide a real benefit.",
+          "id": "5b90d24d-3bc5-4de9-9096-fbd5e6b4df0d",
+          "kind": "step"
+        },
+        {
+          "body": "The physics is given to us, and we should not fight it: a smaller radius means faster spin. The geologist's real claim is about Earth. More earthquakes meant more plate movement toward the center, which shrank the radius, which sped up the spin.\r\n\r\nLook at what the evidence actually shows. Right after each earthquake, the plates move inward. That is one push on the radius. It does not tell us the radius ended the decade smaller overall. If something else pushed outward at the same time, the inward movement could be cancelled.\r\n\r\nSo, given that earthquakes increased and the plates move inward after each one, how could we argue earthquakes do not explain the faster spin? Show that the radius did not actually shrink, because some other force offset the movement.",
+          "id": "5bed442a-0871-4c85-b185-6b44a3002a69",
+          "kind": "step"
+        },
+        {
+          "body": "There isn't a huge gap in logic between needing as much capital as possible (the evidence) and not wanting any reduction in the existing amount of capital (the intermediate conclusion).\r\n\r\nBut there is a significant gap between the intermediate conclusion and the main conclusion. Wanting to avoid any reduction in investments does not automatically support the idea that we should pass laws making it more difficult for investors to remove their capital.\r\n\r\nThis main conclusion is a recommendation. Plans and recommendations tend to be vulnerable to a variety of objections, and the correct answer to a Weaken question might focus on any one of them. It helps to think about the kinds of objections that this argument is particularly vulnerable to.\r\n\r\nFor example, a recommendation might have the opposite effect. Maybe these laws would discourage investors from making future investments, which would prevent us from acquiring \"as much capital as possible.\" Or there might be some reason why this particular recommendation can't be implemented, or won't be effective. Maybe these types of laws are almost impossible to enforce, and therefore tend to be ineffective.",
+          "id": "a0e0bee0-1faf-4a65-bea8-ec3c897f4ec8",
+          "kind": "step"
+        },
+        {
+          "body": "The conclusion makes a recommendation about building a new library. It does this by introducing a new concept of better meeting residents' needs. A couple of assumptions are required to reach this conclusion. First, the argument assumes that one large library would better meet residents' needs than several smaller ones. We can easily envision a situation where it's convenient for residents to visit the branch libraries that are close to their neighborhoods, while a single main library would be farther away and therefore less accessible. The argument also assumes that a broader and more current selection of books would better meet residents' needs. But people use libraries for many reasons other than borrowing books. Libraries often have computers, study rooms, and meeting rooms that residents can use. Libraries often offer classes and events. And people are likely to borrow older books from libraries, not just current ones.\r\n\r\nSo, given that one big library would have better books, how could we argue residents would be worse off? Show that the new library would fail them in some other way, most likely because they could not easily get to it.",
+          "id": "e636f5a1-765a-49c7-994b-f5129fddd592",
+          "kind": "step"
+        },
+        {
+          "body": "The economist wants \"as much capital as possible\" from overseas investors. B says these laws \"would strongly discourage them from investing any additional capital.\" The laws might stop some money from leaving, but they would choke off new money coming in. The plan works against its own goal.\r\n\r\nThis is the standard way to attack a recommendation: show it backfires on the very thing it was meant to protect.",
+          "id": "1e6f0245-6555-4164-b894-ac48aa65573c",
+          "kind": "note"
+        },
+        {
+          "body": "The geologist's chain needs the inward plate movement to leave Earth with a smaller radius. B says that during the past decade \"other geological events have counteracted the movements\" that follow earthquakes. If the movement was cancelled, the radius need not have shrunk, and the earthquakes no longer explain the faster spin.\r\n\r\nThe reusable move: a cause can only explain an effect if it actually operated. An answer that cancels the cause's effect cuts the explanation at its middle link.",
+          "id": "30f37111-d65c-4381-92c1-e5bdabace383",
+          "kind": "note"
+        },
+        {
+          "body": "The conclusion rests on the blind comparison showing \"no difference in the severity of acne\" between the groups. A says the vitamin C subjects \"had a history of suffering from more severe acne\" than the placebo subjects. If the vitamin C group started worse and ended up equal, it improved more than the placebo group did. That is a benefit, hidden inside a result of no difference.\r\n\r\nThe reusable test for study arguments: before trusting a comparison, ask whether the two groups started out alike. If they didn't, equal results can mean unequal effects.",
+          "id": "333af76a-9d2e-463a-89b1-af6de01cb2d9",
+          "kind": "note"
+        },
+        {
+          "body": "The evidence is about computations. The conclusion is about \"our most important intellectual skills.\" The argument needs computation to be among those skills. D says the skills society values most \"are not computational ones,\" so computers taking over computation leaves the most valued skills untouched.\r\n\r\nThis is the move: when the evidence talks about one thing and the conclusion about a bigger or different thing, look for the answer that pries the two apart.",
+          "id": "3ac71c80-1166-4628-9d88-c266bfb4759b",
+          "kind": "note"
+        },
+        {
+          "body": "C keeps the ants as the cause but changes how they help. The ants \"prey on an insect species whose members eat the orchids’ roots.\" Orchids with ants lose fewer roots to those insects, so they are healthier for a reason that has nothing to do with stored nutrients. That is a full second explanation for the same fact.\r\n\r\nThe move to repeat: on alternate-explanation questions, look for a different path from the same two facts, here the ants and the orchids' health.",
+          "id": "7682f35c-a461-48ce-816d-b08cb8b4790a",
+          "kind": "note"
+        },
+        {
+          "body": "The argument assumes better books means better service. C says \"The only possible site for a new library is not readily accessible to most Winchester residents.\" A library most residents can't easily reach does not meet their needs, however good its books are. The branches, poorly stocked as they are, at least sit nearby.\r\n\r\nThe move to repeat: when an argument recommends a plan for one benefit, look for the cost it ignored.",
+          "id": "dd8204b9-7a09-4650-81d9-f5617f203182",
+          "kind": "note"
+        },
+        {
+          "body": "The glacier explanation only works if the boulder started north of here, because the glaciers were moving south. D says there are no volcanic sources north of the boulder at all. Then the glacier had nowhere to pick the boulder up, and the author's explanation loses the one thing it needed.\r\n\r\nThis is the move to repeat: when an argument explains a fact with a mechanism, ask what the mechanism requires, then look for the answer that removes that requirement.",
+          "id": "e97313c9-6429-4e0a-b101-fdd6098e6e02",
+          "kind": "note"
+        },
+        {
+          "body": "The argument treats three sketches as a reliable picture of the finished statue. A says Barajas's ideas \"were revised substantially throughout a series of dozens of preliminary sketches.\" Three sketches are then an early draft, not the final design, and the statue Barajas would have finished could look very different.\r\n\r\nThe move to repeat: find the piece of evidence the conclusion leans on, then look for the answer that shows it is not a reliable guide.",
+          "id": "fecb34aa-1af3-4979-9429-e60201e67705",
+          "kind": "note"
+        }
+      ]
+    },
+    "isError": false
+  }
+}

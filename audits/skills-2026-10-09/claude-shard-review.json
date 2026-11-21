@@ -1,0 +1,352 @@
+[
+  {
+    "name": "ask-matt",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\ask-matt\\SKILL.md",
+    "hash": "1371f5ce005de0992a44b137748bfb960a56948aa9871b405fe9d90b24332e3c",
+    "semantic_review": "full body reviewed",
+    "disposition": "fix",
+    "reason": "Router says grill-me is stateless although current Claude body checkpoints brainstorms; reconcile summaries and actual sibling routes.",
+    "confidence": "high for cited instruction defect; runtime unverified",
+    "support_coverage": "body full; support trees selectively inspected, no side-effecting/paid execution"
+  },
+  {
+    "name": "canvas-design",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\canvas-design\\SKILL.md",
+    "hash": "a1f288079624402f30682753c1d43920b6664785698d21d3e7aa197450a6448b",
+    "semantic_review": "full body reviewed",
+    "disposition": "keep",
+    "reason": "Distinct static-art composition workflow, separate from UI and image generation; full body reviewed.",
+    "confidence": "medium; static body review",
+    "support_coverage": "body full; support trees selectively inspected, no side-effecting/paid execution"
+  },
+  {
+    "name": "chat-export",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\chat-export\\SKILL.md",
+    "hash": "ca235b11b0c81a82b288f30488a3b9f81d69371286e75db6d5cb1070b62c4818",
+    "semantic_review": "full body reviewed",
+    "disposition": "fix",
+    "reason": "Verbatim full-chat promise reconstructs only current context; use actual logs/export and report missing turns after compaction; narrow proactive handoff overlap.",
+    "confidence": "high for cited instruction defect; runtime unverified",
+    "support_coverage": "body full; support trees selectively inspected, no side-effecting/paid execution"
+  },
+  {
+    "name": "debug-optimize-lcp",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\debug-optimize-lcp\\SKILL.md",
+    "hash": "47813dff4b3943138345b775c6f610c7cbe0621b08b57dfbdc15459f497db55b",
+    "semantic_review": "full body reviewed",
+    "disposition": "keep",
+    "reason": "Focused trace/subpart measurement and rerun comparison; Chrome DevTools tool names require host availability discovery, not assumed Codex callable.",
+    "confidence": "medium; static body review",
+    "support_coverage": "body full; support trees selectively inspected, no side-effecting/paid execution"
+  },
+  {
+    "name": "diagnosing-bugs",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\diagnosing-bugs\\SKILL.md",
+    "hash": "849198df88cdb65fd0d97236604c1fca7ff2f22d2f705f9724a800d0266b118d",
+    "semantic_review": "full body reviewed",
+    "disposition": "keep",
+    "reason": "Strong red-capable repro, minimization, falsifiable predictions and regression seam discipline; preserve scope and explicit deletion authorization during cleanup.",
+    "confidence": "medium; static body review",
+    "support_coverage": "body full; support trees selectively inspected, no side-effecting/paid execution"
+  },
+  {
+    "name": "discernment-nudge",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\discernment-nudge\\SKILL.md",
+    "hash": "9191177c4a8ef11a20dace786d708506b22d43e748c71287bb823de0dc812dad",
+    "semantic_review": "full body reviewed",
+    "disposition": "keep",
+    "reason": "Broad metadata is bounded by one-per-conversation, educational/verification/user-material opt-outs; not a substitute for actual evidence verification.",
+    "confidence": "medium; static body review",
+    "support_coverage": "body full; support trees selectively inspected, no side-effecting/paid execution"
+  },
+  {
+    "name": "discord-access",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\discord-access\\SKILL.md",
+    "hash": "c89501ae933e5f564c7ff2d35a122792dd95db2c0f26883f8a47ca0d8743a1a6",
+    "semantic_review": "full body reviewed",
+    "disposition": "keep",
+    "reason": "Explicit trusted-user pairing input and read-before-write allowlist safeguards; Claude-channel specialist, not generic Codex runtime feature.",
+    "confidence": "medium; static body review",
+    "support_coverage": "body full; support trees selectively inspected, no side-effecting/paid execution"
+  },
+  {
+    "name": "discord-configure",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\discord-configure\\SKILL.md",
+    "hash": "cd685d5befd75a98b03df6fba39badd0d903fdea1f92c3ac8cbc59392a9fb0f5",
+    "semantic_review": "full body reviewed",
+    "disposition": "fix",
+    "reason": "Do not print first six token characters or solicit token in chat; central secret policy requires private credential entry with explicit channel loader exception.",
+    "confidence": "high for cited instruction defect; runtime unverified",
+    "support_coverage": "body full; support trees selectively inspected, no side-effecting/paid execution"
+  },
+  {
+    "name": "dispatching-parallel-agents",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\dispatching-parallel-agents\\SKILL.md",
+    "hash": "f0df13f584049059cc5619f90061405b89dcc6e28ab3f2a8517d27d99c7a46a6",
+    "semantic_review": "full body reviewed",
+    "disposition": "keep",
+    "reason": "Useful independent domain ownership and integration checks; preserve current runtime delegation authorization and capacity.",
+    "confidence": "medium; static body review",
+    "support_coverage": "body full; support trees selectively inspected, no side-effecting/paid execution"
+  },
+  {
+    "name": "docx",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\docx\\SKILL.md",
+    "hash": "8017469ea95fb7d28225c62daf8e2f3492a7b516fc64c18c28977cbf8980b7fe",
+    "semantic_review": "full body reviewed",
+    "disposition": "keep",
+    "reason": "Distinct Word XML/render/validate workflow; discover actual dependencies and use sibling project environment rather than assume preinstalled package.",
+    "confidence": "medium; static body review",
+    "support_coverage": "body full; support trees selectively inspected, no side-effecting/paid execution"
+  },
+  {
+    "name": "executing-plans",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\executing-plans\\SKILL.md",
+    "hash": "bbd8d28bb655a52817cc129ce49f9e46fa7c6303f72ed5de95bfe914ef8e0ce8",
+    "semantic_review": "full body reviewed",
+    "disposition": "keep",
+    "reason": "Useful written-plan execution checkpoints; adapt namespace invocation and avoid treating every routine failure as a user-only blocker.",
+    "confidence": "medium; static body review",
+    "support_coverage": "body full; support trees selectively inspected, no side-effecting/paid execution"
+  },
+  {
+    "name": "extract-design",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\extract-design\\SKILL.md",
+    "hash": "0523d33cadab98ad082d52b68effe0e35103d5453e98b301891f52cae63b5640",
+    "semantic_review": "full body reviewed",
+    "disposition": "keep",
+    "reason": "Distinct token extraction and preview utility; package/dependency availability and generated output need explicit target directory, no install was run.",
+    "confidence": "medium; static body review",
+    "support_coverage": "body full; support trees selectively inspected, no side-effecting/paid execution"
+  },
+  {
+    "name": "frontend-design",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\frontend-design\\SKILL.md",
+    "hash": "d91970639e9f5c37682ac7ab60094d35f1c7c1f38d731bd56396563aee10c1d3",
+    "semantic_review": "full body reviewed",
+    "disposition": "keep",
+    "reason": "Brief-led layout, user vocabulary, accessibility and screenshot critique; useful general design owner, preserves user requested aesthetic.",
+    "confidence": "medium; static body review",
+    "support_coverage": "body full; support trees selectively inspected, no side-effecting/paid execution"
+  },
+  {
+    "name": "grill-me",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\grill-me\\SKILL.md",
+    "hash": "c5b993bf86af7e88b10ccd67bd773ac541caac15307c8a8e1ba1d8c905a2fad5",
+    "semantic_review": "full body reviewed",
+    "disposition": "fix",
+    "reason": "Useful checkpointed interview; reconcile Codex stateless wrapper and ask-matt stateless description or declare deliberate divergence.",
+    "confidence": "high for cited instruction defect; runtime unverified",
+    "support_coverage": "body full; support trees selectively inspected, no side-effecting/paid execution"
+  },
+  {
+    "name": "high-end-visual-design",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\high-end-visual-design\\SKILL.md",
+    "hash": "e1e32f5e2d420872c6c7332b53d5ff7721946766b78c4822b424c2d512c8fdbc",
+    "semantic_review": "full body reviewed",
+    "disposition": "fix",
+    "reason": "Make selected aesthetic preset only: conflicts with impeccable on nested cards and frontend-design on labels, mandates scroll reveals without reduced-motion fallback.",
+    "confidence": "high for cited instruction defect; runtime unverified",
+    "support_coverage": "body full; support trees selectively inspected, no side-effecting/paid execution"
+  },
+  {
+    "name": "imessage-access",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\imessage-access\\SKILL.md",
+    "hash": "18fd8eca7303229e6277826d102570c91fd18b597d6ee15b7a91e67db45b505a",
+    "semantic_review": "full body reviewed",
+    "disposition": "keep",
+    "reason": "Explicit Claude/macOS channel access specialist with trusted-user-only policy; keep inert vendor capability for Mac use, not Windows failure.",
+    "confidence": "medium; static body review",
+    "support_coverage": "body full; support trees selectively inspected, no side-effecting/paid execution"
+  },
+  {
+    "name": "imessage-configure",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\imessage-configure\\SKILL.md",
+    "hash": "6a4b0f6bf837270171e84c42d9300a4fd5310994519b906481f9278855dd7b00",
+    "semantic_review": "full body reviewed",
+    "disposition": "keep",
+    "reason": "Explicit macOS personal chat.db/FDA specialist; keep inert Mac capability, do not claim available on Windows.",
+    "confidence": "medium; static body review",
+    "support_coverage": "body full; support trees selectively inspected, no side-effecting/paid execution"
+  },
+  {
+    "name": "impeccable",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\impeccable\\SKILL.md",
+    "hash": "e034374978326b564a86b7ebc580ab587e750f14f9984bd095e203f86da11fb7",
+    "semantic_review": "full body reviewed",
+    "disposition": "fix",
+    "reason": "Loader path assumes project activation .agents/skills/impeccable; actual availability must be discovered. Do not impose new confirmation for already authorized brief.",
+    "confidence": "high for cited instruction defect; runtime unverified",
+    "support_coverage": "body full; support trees selectively inspected, no side-effecting/paid execution"
+  },
+  {
+    "name": "improve-codebase-architecture",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\improve-codebase-architecture\\SKILL.md",
+    "hash": "552240a5ab5cec6b67c15dd1ad6e9f6962b1bca6ce870059a8c2713760c20392",
+    "semantic_review": "full body reviewed",
+    "disposition": "keep",
+    "reason": "Distinct deepening survey and evidence-driven before/after report; host wrapper must read sibling references when Skill tool unavailable.",
+    "confidence": "medium; static body review",
+    "support_coverage": "body full; support trees selectively inspected, no side-effecting/paid execution"
+  },
+  {
+    "name": "level-up",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\level-up\\SKILL.md",
+    "hash": "0ebf38fcf474ed4ed4e86d2bca5559e5383d5ec41d740fa5b5fe1ee0af541269",
+    "semantic_review": "full body reviewed",
+    "disposition": "fix",
+    "reason": "Save-to-both Codex instructions omit skills/codex catalog twin; ensure application scripts/dependencies are outside vault and align output on eliminate/no-artifact exit.",
+    "confidence": "high for cited instruction defect; runtime unverified",
+    "support_coverage": "body full; support trees selectively inspected, no side-effecting/paid execution"
+  },
+  {
+    "name": "loop-me",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\loop-me\\SKILL.md",
+    "hash": "e44d1cc3e760fb86ac42964c2a5f1fcac511715db50fb375f3f7be814de1eaa7",
+    "semantic_review": "full body reviewed",
+    "disposition": "fix",
+    "reason": "Create/edit/delete workflow specs requires explicit deletion authorization; reuse existing canonical notes rather than assume root NOTES.md ownership.",
+    "confidence": "high for cited instruction defect; runtime unverified",
+    "support_coverage": "body full; support trees selectively inspected, no side-effecting/paid execution"
+  },
+  {
+    "name": "lovable-migrate",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\lovable-migrate\\SKILL.md",
+    "hash": "7cf39f1ad0bc9ca1435a3b6aa9e482f4010b306c54cfe7667605584c884fb0b6",
+    "semantic_review": "full body reviewed",
+    "disposition": "keep",
+    "reason": "Useful exact-backend DDL relay with read-after-apply probe, destructive approval and direct data-operation distinction; verify current access before use.",
+    "confidence": "medium; static body review",
+    "support_coverage": "body full; support trees selectively inspected, no side-effecting/paid execution"
+  },
+  {
+    "name": "lsat-lab-lecture-transcribe",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\lsat-lab-lecture-transcribe\\SKILL.md",
+    "hash": "52030e32dc2c7e710200b0e78cdd4d5f5ccd4cc728e355b4fafdefecf4831319",
+    "semantic_review": "full body reviewed",
+    "disposition": "keep",
+    "reason": "Distinct bounded lecture capture, immutable evidence, timestamp/frame mapping and content verification; supporting helpers not exhaustively executed.",
+    "confidence": "medium; static body review",
+    "support_coverage": "body full; support trees selectively inspected, no side-effecting/paid execution"
+  },
+  {
+    "name": "lsat-u-architecture",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\lsat-u-architecture\\SKILL.md",
+    "hash": "d0c1f55ff2b350e536566b8e5ac1bf1717876e53f197bc5cfcd379c051845a22",
+    "semantic_review": "full body reviewed",
+    "disposition": "fix",
+    "reason": "Wrong backend qodidbkoqrmqhdfwvcmk versus current atrcqxpmqrynmtvvyjju, stale Mac paths and outdated template authority; ground rules in current app scoped manual.",
+    "confidence": "high for cited instruction defect; runtime unverified",
+    "support_coverage": "body full; support trees selectively inspected, no side-effecting/paid execution"
+  },
+  {
+    "name": "lsatu-cc-handoff",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\lsatu-cc-handoff\\SKILL.md",
+    "hash": "087ce8303dba247e773e450e1d3845bbcf0c3951f85570c64c00b41723651a92",
+    "semantic_review": "full body reviewed",
+    "disposition": "fix",
+    "reason": "Writes and archives under immutable raw/sources and unconditionally directs main commits/push each step; use brainstorms/project plan home and authorized Git scope.",
+    "confidence": "high for cited instruction defect; runtime unverified",
+    "support_coverage": "body full; support trees selectively inspected, no side-effecting/paid execution"
+  },
+  {
+    "name": "migrate-to-shoehorn",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\migrate-to-shoehorn\\SKILL.md",
+    "hash": "de4da4c11d924fac79c924b2ee3d2db4a5cb98386eb490a599119463d036ae72",
+    "semantic_review": "full body reviewed",
+    "disposition": "keep",
+    "reason": "Focused test-only TypeScript partial-fixture migration; package install should be dev dependency in actual app repo and preserve package manager.",
+    "confidence": "medium; static body review",
+    "support_coverage": "body full; support trees selectively inspected, no side-effecting/paid execution"
+  },
+  {
+    "name": "minimalist-ui",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\minimalist-ui\\SKILL.md",
+    "hash": "36bc7328f085405f43b476938e62460fa573bf7e984e949e072bcf014831a44c",
+    "semantic_review": "full body reviewed",
+    "disposition": "fix",
+    "reason": "Use explicit style preset instead of every frontend task; no-gradients rule conflicts radial-gradient instructions, no reduced-motion fallback for mandatory reveals.",
+    "confidence": "high for cited instruction defect; runtime unverified",
+    "support_coverage": "body full; support trees selectively inspected, no side-effecting/paid execution"
+  },
+  {
+    "name": "morning-brief",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\morning-brief\\SKILL.md",
+    "hash": "27da6ef12753c27ed73811d51d75a543161d79394c93f2bf7831f757aef52efe",
+    "semantic_review": "full body reviewed",
+    "disposition": "fix",
+    "reason": "Repeated sweep creates drafts without checking existing Gmail drafts/thread state; add dedupe and fresh authoritative sent-state check before ledger status changes.",
+    "confidence": "high for cited instruction defect; runtime unverified",
+    "support_coverage": "body full; support trees selectively inspected, no side-effecting/paid execution"
+  },
+  {
+    "name": "obsidian-cli",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\obsidian-cli\\SKILL.md",
+    "hash": "b54257cdc0e5d04488b35b0c797bfe427b24359f0848d3c73924dcacf8da6358",
+    "semantic_review": "full body reviewed",
+    "disposition": "fix",
+    "reason": "Pin verified AI OS vault identity/path before commands; latest focused vault default can modify older vault. CLI help is availability check, not proof installed.",
+    "confidence": "high for cited instruction defect; runtime unverified",
+    "support_coverage": "body full; support trees selectively inspected, no side-effecting/paid execution"
+  },
+  {
+    "name": "playground",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\playground\\SKILL.md",
+    "hash": "521a3d62211e5f47b65ed17b660e001b15cf8d88d058cbf31bc00e889bcb63cc",
+    "semantic_review": "full body reviewed",
+    "disposition": "fix",
+    "reason": "Use host-aware open_in_codex/browser instead of Mac open command; keep self-contained interactive explorer mechanism.",
+    "confidence": "high for cited instruction defect; runtime unverified",
+    "support_coverage": "body full; support trees selectively inspected, no side-effecting/paid execution"
+  },
+  {
+    "name": "ponytail",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\ponytail\\SKILL.md",
+    "hash": "d11df477b1a4e807155a7e578b135a4d9c52beef06eb3a44322940c331a06942",
+    "semantic_review": "full body reviewed",
+    "disposition": "keep",
+    "reason": "Useful explicitly selected simplicity discipline; body preserves requested full scope, validation/security/accessibility and runnable nontrivial checks.",
+    "confidence": "medium; static body review",
+    "support_coverage": "body full; support trees selectively inspected, no side-effecting/paid execution"
+  },
+  {
+    "name": "research-deep",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\research-deep\\SKILL.md",
+    "hash": "e1c16a8da85f963f511b8fefb793e9625043035f92f34456ad45a86774cbad36",
+    "semantic_review": "full body reviewed",
+    "disposition": "fix",
+    "reason": "Mandatory ~/ai-os/skills/claude/research validator path is wrong on Windows; resolve registered skill directory, scope outline explicitly, bounded authorized batches.",
+    "confidence": "high for cited instruction defect; runtime unverified",
+    "support_coverage": "body full; support trees selectively inspected, no side-effecting/paid execution"
+  },
+  {
+    "name": "research-report",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\research-report\\SKILL.md",
+    "hash": "3f338b814cda64564170b821eb9d9f597126639d8330b0d9b43dff9fbcbb945b",
+    "semantic_review": "full body reviewed",
+    "disposition": "fix",
+    "reason": "Generated helper belongs sibling application workspace, not research vault folder; preserve uncertainty appendix and citation provenance rather than silently hide uncertain fields.",
+    "confidence": "high for cited instruction defect; runtime unverified",
+    "support_coverage": "body full; support trees selectively inspected, no side-effecting/paid execution"
+  },
+  {
+    "name": "review",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\review\\SKILL.md",
+    "hash": "0f1c3edf07b730ae7644c68d716faaa43be0fd81a27c06e13baf6b55712e7edb",
+    "semantic_review": "full body reviewed",
+    "disposition": "fix",
+    "reason": "WIP trigger only diffs merge-base...HEAD, omitting unstaged/staged/untracked; include intended current-working-tree scope explicitly. Merge alias with identical code-review entry only after retained capability confirmed.",
+    "confidence": "high for cited instruction defect; runtime unverified",
+    "support_coverage": "body full; support trees selectively inspected, no side-effecting/paid execution"
+  },
+  {
+    "name": "scaffold-exercises",
+    "path": "C:\\Users\\Joshu\\dev\\ai-os\\skills\\claude\\scaffold-exercises\\SKILL.md",
+    "hash": "75f5c9d771606fb9762f16522efc954df11c324f87148d8ff069bce166257de9",
+    "semantic_review": "full body reviewed",
+    "disposition": "fix",
+    "reason": "Scope to actual AI Hero exercise repo with installed lint command; do not commit automatically after generic scaffold request.",
+    "confidence": "high for cited instruction defect; runtime unverified",
+    "support_coverage": "body full; support trees selectively inspected, no side-effecting/paid execution"
+  }
+]

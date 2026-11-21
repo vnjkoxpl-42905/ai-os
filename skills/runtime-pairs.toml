@@ -5,3 +5,11 @@ codex-review = "claude-review"
 codex-build = "claude-build"
 grill-me-codex = "grill-me-claude"
 grill-with-docs-codex = "grill-with-docs-claude"
+
+# Codex-host Geminex calls Gemini; the inverse entry points live in Gemini,
+# not Claude. Keeping the host pair explicit prevents false missing-skill errors.
+[codex_gemini_pairs]
+gemini-review = "codex-review"
+gemini-build = "codex-build"
+grill-me-gemini = "grill-me-codex"
+grill-with-docs-gemini = "grill-with-docs-codex"

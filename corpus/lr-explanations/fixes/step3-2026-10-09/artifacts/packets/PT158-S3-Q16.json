@@ -1,0 +1,78 @@
+{
+ "qid": "PT158-S3-Q16",
+ "type": "Must Be True",
+ "difficulty": "4",
+ "key_db": "E",
+ "stimulus_db": "If a belief is based on information from a reliable source, then it is reasonable to maintain that belief. Furthermore, some beliefs are based on information from a reliable source and yet are neither self-evident nor grounded in observable evidence.",
+ "stem_db": "If all the statements above are true, which one of the following statements must be true?",
+ "choices_db": {
+  "A": "Beliefs for which a person does not have observable evidence are unreasonable.",
+  "B": "Beliefs based on information from a reliable source are self-evident.",
+  "C": "All reasonable beliefs for which a person has no observable evidence are based on information from a reliable source.",
+  "D": "If a belief is not grounded in observable evidence, then it is not self-evident either.",
+  "E": "Among reasonable beliefs that are not self-evident, there are some beliefs that are not grounded in observable evidence."
+ },
+ "bank": {
+  "stimulus": "If a belief is based on information from a reliable source,\n then it is reasonable to maintain that belief. Furthermore,\n some beliefs are based on information from a reliable\n source and yet are neither self-evident nor grounded in\n observable evidence.",
+  "stem": "If all the statements above are true, which one of the\n following statements must be true?",
+  "choices": {
+   "A": "Beliefs for which a person does not have observable evidence are unreasonable.",
+   "B": "Beliefs based on information from a reliable source are self-evident.",
+   "C": "All reasonable beliefs for which a person has no observable evidence are based on information from a reliable source.",
+   "D": "If a belief is not grounded in observable evidence, then it is not self-evident either.",
+   "E": "Among reasonable beliefs that are not self-evident, there are some beliefs that are not grounded in observable evidence."
+  },
+  "key": "E"
+ },
+ "explanation_id": "d1ab2627-f141-4169-a237-b8dd1036a2eb",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "994af839-0cfb-4afe-a4f6-d898ea77c2e1",
+   "position": 0,
+   "label": "Statements",
+   "body": "```\nconditional (If = left side)\nBelief based on info → reasonable to\nfrom reliable source   maintain that belief\nquantifier (some)\n              based on info from reliable\nSome beliefs = and\n              not self-evident\n              and\n              not grounded in observable evid\n```"
+  },
+  {
+   "row_id": "7ffd282a-12bf-4803-81b1-20487a2d66ae",
+   "position": 1,
+   "label": "Evaluate",
+   "body": "The first sentence was conditional. Whenever we get a Conditional on Must Be True or Most Supported we ask ourselves two questions:\n1. Are there any other conditionals that we can chain this up with?\n2. Are there any facts that trigger the conditional (or the contrapositive)?\nIn this case, there isn't any other conditional besides the first sentence. So #1 is not applicable. For #2, we're asking if there were any facts about a \"belief based on info from a reliable source\" or about \"a belief it would be unreasonable to maintain\" (because that would trigger the contrapositive). The last sentence is talking about some beliefs that are based on info from a reliable source, so we automatically know that those beliefs are \"reasonable to maintain\". Thus, it is likely that they're testing our ability to pair up \"reasonable to maintain\" with one of the other two traits described in the last sentence."
+  },
+  {
+   "row_id": "99fa7637-eddf-47b6-bba2-a652c22a630f",
+   "position": 2,
+   "label": "Goal",
+   "body": "Look for an answer saying \"Some beliefs are not self-evident but they are reasonable to maintain\" or saying \"Some beliefs are not grounded in observable evidence but they are reasonable to maintain\"."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "79776865-8d4b-4b95-bf94-665de1d5b8b4",
+   "letter": "A",
+   "body": "The passage says nothing about beliefs without observable evidence being unreasonable. The first statement tells us beliefs from reliable sources ARE reasonable — but it does not tell us that beliefs WITHOUT observable evidence are unreasonable. A belief could lack observable evidence, lack a reliable source, and still be reasonable for some other reason not discussed in the passage. This answer makes a sweeping claim about all beliefs without observable evidence that the passage provides no basis for. The passage identifies one sufficient condition for reasonableness (reliable source) but never identifies any condition for unreasonableness."
+  },
+  {
+   "row_id": "5ac3e540-b9bb-4d34-920e-33fcea124682",
+   "letter": "B",
+   "body": "The passage explicitly states the opposite for at least some beliefs: the second statement says some beliefs are based on reliable sources and are NOT self-evident. If those beliefs were self-evident, the second statement would be contradicted. Nothing in the passage supports the claim that reliable-source beliefs are self-evident. The passage treats \"reliable source\" and \"self-evident\" as independent properties — a belief can have one without the other. This answer incorrectly conflates two properties the passage carefully keeps separate."
+  },
+  {
+   "row_id": "6b221977-e312-4303-8fab-e3861fa7b159",
+   "letter": "C",
+   "body": "This answer claims that ALL reasonable beliefs without observable evidence are based on information from a reliable source. The passage only establishes that being based on a reliable source is one sufficient condition for reasonableness. There could be other paths to reasonableness that the passage does not mention — perhaps logical coherence, widespread agreement, or some other factor. The passage tells us reliable-source beliefs are reasonable, but it never says reliable sources are the ONLY way to be reasonable without observable evidence. This answer converts a one-way sufficient condition into an exhaustive claim about all reasonable beliefs lacking observable evidence."
+  },
+  {
+   "row_id": "df219328-2674-438e-9f17-2b4ff1f8a6af",
+   "letter": "D",
+   "body": "This answer claims: if a belief is not grounded in observable evidence, then it is not self-evident either. The passage provides no basis for linking these two properties in this way. Observable evidence and self-evidence are treated as independent properties in the passage. The second statement mentions beliefs that lack BOTH properties, but that does not mean lacking one entails lacking the other. A belief could be self-evident (like a basic logical truth) without being grounded in observable evidence, or grounded in observable evidence without being self-evident. The passage's description of beliefs lacking both properties does not establish a conditional relationship between the two."
+  },
+  {
+   "row_id": "21b9fc7c-c685-4555-9802-c12811a5ff77",
+   "letter": "E",
+   "body": "Combine the two statements. The second statement tells us: some beliefs are based on a reliable source, are not self-evident, and are not grounded in observable evidence. The first statement tells us: beliefs based on a reliable source are reasonable. Therefore, those beliefs from the second statement are reasonable. This gives us beliefs that are (1) reasonable, (2) not self-evident, and (3) not grounded in observable evidence. This answer captures exactly that conclusion: among reasonable beliefs that are not self-evident, there exist some that are not grounded in observable evidence. Every step follows necessarily from the stated facts with no additional assumptions required."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (4.2 em-dashes per 1k words; wrong-answer notes average 96.5 words).",
+ "tags": "emdash-heavy; pt157-158-register"
+}

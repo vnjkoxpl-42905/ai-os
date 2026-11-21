@@ -1,0 +1,173 @@
+{"provider": "claude", "model": "CLI default (unresolved)", "mode": "inspect", "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\design\\reviews\\classroom-quality-20261028\\account-controls\\claude-final\\claudex-rfmvrbxb"}
+{
+  "status": "failed",
+  "mode": "inspect",
+  "provider": "claude",
+  "roles": {
+    "host": "codex",
+    "planner": "codex",
+    "reviewer": "claude",
+    "builder": "codex",
+    "inspector": "claude"
+  },
+  "repo": "C:\\Users\\Joshu\\dev\\ai-os-projects\\lsatu-my-work-20261026",
+  "plan": "C:\\Users\\Joshu\\dev\\ai-os\\design\\reviews\\classroom-quality-20261028\\account-controls\\PLAN.md",
+  "plan_sha256": "13a7921ba4f2097c75d544844e28124d4aef6f9aeb3104fc6ca75714a6b14ab6",
+  "requested_model": null,
+  "requested_effort": null,
+  "base": "18fc8af7e1ff7d83defb62b9e0d8dd720f90b3a3",
+  "snapshot": {
+    "base": "18fc8af7e1ff7d83defb62b9e0d8dd720f90b3a3",
+    "files": [
+      {
+        "path": "scripts/verification/teacher-home-preview.tsx",
+        "kind": "file",
+        "sha256": "617e6059d7913052a1375cde23033d1ea66efdc244a791d1890f2ea839050532"
+      },
+      {
+        "path": "src/components/classroom/home/home.css",
+        "kind": "file",
+        "sha256": "ac2f15fc6b4e898d6a232086f8ce449beb11f5ac7d0bb0b7947a355c72b02a41"
+      },
+      {
+        "path": "src/components/classroom/home/teacher/TeacherAccessBooking.tsx",
+        "kind": "file",
+        "sha256": "9dd61eb2b9761d4a03b93e0f3b5b000ea4bf6f2ad7cf2a4436a230cb5c9e173f"
+      },
+      {
+        "path": "src/components/classroom/home/teacher/TeacherHomeView.test.tsx",
+        "kind": "file",
+        "sha256": "90d1b7786c512eed93905fe5ea448f88dddb040bf9d8d070153fce06042b7080"
+      },
+      {
+        "path": "src/components/classroom/home/teacher/TeacherHomeView.tsx",
+        "kind": "file",
+        "sha256": "2ab4d8ff93d2ad8b5c8a3bf201601921b36f0eb74b50e279d0954175a35606e7"
+      },
+      {
+        "path": "src/components/classroom/home/teacher/TeachingDesk.test.tsx",
+        "kind": "file",
+        "sha256": "0163169c8f3837eeb6406d88f18d4c7854c3e1829670d2e4934ad9535b628c21"
+      }
+    ],
+    "diff_sha256": "136bb5533e4e521bebcbef9a392c6b089aaf45b565a65c806f5037e6bf2f0bd4",
+    "scope": [
+      "scripts/verification/teacher-home-preview.tsx",
+      "src/components/classroom/home/home.css",
+      "src/components/classroom/home/teacher/TeacherAccessBooking.tsx",
+      "src/components/classroom/home/teacher/TeacherHomeView.test.tsx",
+      "src/components/classroom/home/teacher/TeacherHomeView.tsx",
+      "src/components/classroom/home/teacher/TeachingDesk.test.tsx"
+    ],
+    "sha256": "8d62b687e22e2790a28ed2b6152ba590003aa6f29fc64149e94c4f1e264fb9c5"
+  },
+  "previous": null,
+  "started_at": 1793222021.710469,
+  "artifacts": "C:\\Users\\Joshu\\dev\\ai-os\\design\\reviews\\classroom-quality-20261028\\account-controls\\claude-final\\claudex-rfmvrbxb",
+  "scope": [
+    "scripts/verification/teacher-home-preview.tsx",
+    "src/components/classroom/home/home.css",
+    "src/components/classroom/home/teacher/TeacherAccessBooking.tsx",
+    "src/components/classroom/home/teacher/TeacherHomeView.test.tsx",
+    "src/components/classroom/home/teacher/TeacherHomeView.tsx",
+    "src/components/classroom/home/teacher/TeachingDesk.test.tsx"
+  ],
+  "cli_version": "2.1.309 (Claude Code)",
+  "executable": [
+    "C:\\Users\\Joshu\\.local\\bin\\claude.EXE"
+  ],
+  "exit_code": 0,
+  "session_id": "8fa4fb93-40bf-4ec4-911f-0efe81224d83",
+  "response": {
+    "verdict": "REVISE",
+    "summary": "The four host fixes (F1–F4) are mostly sound, and I found no way to write to the account from open, select or cancel. The reset-on-open effect runs before the pending-restore effect, so a pending receipt still wins. The verified-row baseline for access saves is correct, and the existing-link and no-pass flows are separated. One real regression remains: choosing the blank option in the access picker closes the sheet when it was opened from a student row. There are also two smaller gaps in recovery and test coverage. I could not run tests or the browser, so I make no claim that anything passes.",
+    "findings": [
+      {
+        "id": "R1",
+        "severity": "medium",
+        "path": "src/components/classroom/home/teacher/TeacherHomeView.tsx (AccessSheet props) with src/components/classroom/home/teacher/TeacherAccessBooking.tsx:97",
+        "evidence": "The sheet is opened with `open={accessOpen || !!access}`. The 'Edit access' and pending-decision buttons set `access` but leave `accessOpen` false. AccessSheet now always renders the AccountPicker, because `onSelect` is always passed. Picking the 'Choose a student' blank option calls `onSelect(null)`, which sets `access` to null. Then `open` becomes false and the sheet vanishes with no message and no focus return, because the Sheet's own onOpenChange/onClose path is bypassed. The plan requires direct selected-person paths to keep working. This path now has an undeclared exit, and none of the added tests exercise it.",
+        "fix": "Set `accessOpen` to true whenever a person is opened from a row, so the sheet only closes through onClose. Alternatively, make the picker ignore a blank selection, or have the blank option clear the person without closing. Add a test for the blank-option case in the direct-entry path."
+      },
+      {
+        "id": "R2",
+        "severity": "low",
+        "path": "src/components/classroom/home/teacher/TeacherAccessBooking.tsx:243,401,339",
+        "evidence": "`target` comes only from `eligibleAccounts(students)`. The unreadable-pending recovery block needs `target`, and the 'Retry pending addition' button sits inside `loaded && target`. If a pending operation names an account that is missing from the roster, the recovery controls disappear. That happens when the roster is errored, loading or stale, or when the account has since been archived. The restored `studentId` then has no matching option, and the picker is disabled in non-ready states, so the user has no way to see or resolve the exact pending target. 'Check pending add' still renders. The unreadable-record discard and the retry button do not.",
+        "fix": "Resolve `target` for a pending or restored studentId from the unfiltered roster, or show the recovery controls with the studentId when the roster is unavailable. Do not make recovery depend on picker eligibility."
+      },
+      {
+        "id": "R3",
+        "severity": "low",
+        "path": "src/components/classroom/home/teacher/TeachingDesk.test.tsx; src/components/classroom/home/teacher/TeacherHomeView.test.tsx",
+        "evidence": "The plan lists these checks, and the diff contains no test for them: actor change while a top-up is pending, picker search filtering, direct-entry AccessSheet focus return to its row trigger (host fix F3), a blank-option selection, and phone or keyboard behaviour. The access test uses a bare `onSelect` mock, so it never covers the real parent wiring where R1 occurs.",
+        "fix": "Add component tests for those cases. Include a TeacherHomeView-level test that clicks 'Edit access', picks the blank option, saves, closes, and asserts focus lands on the trigger."
+      },
+      {
+        "id": "R4",
+        "severity": "low",
+        "path": "scripts/verification/teacher-home-preview.tsx",
+        "evidence": "The plan says 'production client blocked'. This file passes in-memory DeskActions, but it imports TeacherHomeView, which transitively imports the real supabase client and the default action functions. Nothing in the file blocks network or auth calls if some path falls back to the default actions. A block, if one exists, would be in start-teacher-home-preview.mjs, which is outside my scope.",
+        "fix": "Stub or alias the supabase client module in the preview build, or assert that no production requests are made. Confirm this in the launcher script."
+      }
+    ],
+    "coverage": [
+      "Read TeacherAccessBooking.tsx in full (AccountPicker, AccessSheet, BookingSheet).",
+      "Read the full diff of TeacherHomeView.tsx, home.css and both test files.",
+      "Read scripts/verification/teacher-home-preview.tsx in full.",
+      "Traced saveHomeAccess, prepareHomeTopUp, addHomeBookingCredits and resolvePendingHomeTopUp in src/lib/teacherHomeActions.ts for CAS and idempotency semantics.",
+      "Confirmed that the removed header links (email, Payments and history) still exist elsewhere in TeacherHomeView.tsx.",
+      "Checked the home.css account-control rules (light and dark selectors) by reading them, not by rendering."
+    ],
+    "limitations": [
+      "I did not run any tests, typecheck, build or browser, so no pass claims are made.",
+      "Contrast, phone fit at 390/320 and focus visibility were judged from the CSS source only, not from a render.",
+      "src/lib/teacherHomeActions.ts, useTeachingDesk.ts, the supabase edge functions, the preview launcher script and the shared Sheet/DropdownMenu primitives are outside the scope list. Only partial portions of them were read, and they are not approved.",
+      "The unrelated calendar-week and More-menu polish in the same diff received only a light review. That includes `TeacherWeek`, the `postSessionModel` import and the dropdown focus handling.",
+      "Whether the roster in `desk.access.data` actually includes every eligible account was not verified in useTeachingDesk.ts."
+    ]
+  },
+  "usage": {
+    "input_tokens": 10,
+    "cache_creation_input_tokens": 59069,
+    "cache_read_input_tokens": 202314,
+    "output_tokens": 8912,
+    "output_tokens_details": {
+      "thinking_tokens": 5701
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 59069,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 3080,
+        "cache_read_input_tokens": 60318,
+        "cache_creation_input_tokens": 3232,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 3232
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "observed_models": [
+    "claude-sonnet-5-5"
+  ],
+  "permission_denials": [],
+  "total_cost_usd": 0.3456474,
+  "error": "Code changed during inspection; inspect the final code again.",
+  "elapsed_seconds": 120.34
+}
+
+EXIT_CODE=1

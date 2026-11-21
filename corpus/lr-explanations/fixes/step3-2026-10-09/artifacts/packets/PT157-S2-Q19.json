@@ -1,0 +1,72 @@
+{
+ "qid": "PT157-S2-Q19",
+ "type": "Must Be True",
+ "difficulty": "5",
+ "key_db": "C",
+ "stimulus_db": "Committee chairperson: No new course will be approved for next year’s schedule unless a proposal for it has already been received either by this committee or by Dean Wilson. Dean Wilson has received only one new course proposal, and all of the new course proposals that this committee has received are for upper-level courses. It has been decided that, beginning next year, all upper-level courses will have prerequisites.",
+ "stem_db": "Which one of the following can be properly inferred if the chairperson’s statements are true?",
+ "choices_db": {
+  "A": "If there are no new upper-level courses next year, then there will be no new courses next year that have prerequisites.",
+  "B": "If all of the new courses next year are upper-level courses, then all of the new course proposals submitted to the committee will have been approved.",
+  "C": "If there is more than one new course next year, at least one of them will be a course that has a prerequisite.",
+  "D": "If the new course proposal that Dean Wilson received is for an upper-level course, then all courses offered next year will have prerequisites.",
+  "E": "If there are no new upper-level courses next year, then the new course proposal that was submitted to Dean Wilson will have been approved."
+ },
+ "bank": {
+  "stimulus": "Committee chairperson: No new course will be approved\n for next year’s schedule unless a proposal for it has\n already been received either by this committee or\n by Dean Wilson. Dean Wilson has received only\n one new course proposal, and all of the new course\n proposals that this committee has received are\n for upper-level courses. It has been decided that,\n beginning next year, all upper-level courses will\n have prerequisites.",
+  "stem": "Which one of the following can be properly inferred if the\n chairperson’s statements are true?",
+  "choices": {
+   "A": "If there are no new upper-level courses next year, then there will be no new courses next year that have prerequisites.",
+   "B": "If all of the new courses next year are upper-level courses, then all of the new course proposals submitted to the committee will have been approved.",
+   "C": "If there is more than one new course next year, at least one of them will be a course that has a prerequisite.",
+   "D": "If the new course proposal that Dean Wilson received is for an upper-level course, then all courses offered next year will have prerequisites.",
+   "E": "If there are no new upper-level courses next year, then the new course proposal that was submitted to Dean Wilson will have been approved."
+  },
+  "key": "C"
+ },
+ "explanation_id": "4e360875-0755-4a5a-850a-ef5d076a133c",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "6909eea9-13b1-407d-acb8-597c73c737a2",
+   "position": 0,
+   "label": "Given",
+   "body": "No new course will be approved for next year's schedule unless a proposal for it has already been received either by this committee or by Dean Wilson. (NCA → PRC or PRDW) Dean Wilson has received only one new course proposal. (PRDW = 1) All of the new course proposals that this committee has received are for upper-level courses. (PRC → UL) Beginning next year, all upper-level courses will have prerequisites. (UL → P)"
+  },
+  {
+   "row_id": "e5034862-ccee-462e-a917-35aeaee2425b",
+   "position": 1,
+   "label": "Evaluate",
+   "body": "We can combine the final two conditional statements to conclude that all of the new course proposals that this committee has received will have prerequisites. (PRC → P)"
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "d47c8c6b-221a-4a00-9d9f-c447fe693dd8",
+   "letter": "A",
+   "body": "This answer says if there are no new upper-level courses, then no new courses will have prerequisites. We know upper-level courses have prerequisites (UL -> P), but this answer assumes the reverse: non-upper-level courses do not have prerequisites (~UL -> ~P). That is an illegal negation of the conditional. A lower-level course could also have prerequisites for reasons not discussed in the stimulus. The premises only tell us upper-level courses will have prerequisites, not that they are the only courses with prerequisites."
+  },
+  {
+   "row_id": "7bd23a4a-b955-457c-90dd-70007458c0ea",
+   "letter": "B",
+   "body": "This answer says if all new courses are upper-level, then all committee proposals were approved. We know the committee's proposals are for upper-level courses (PRC -> UL), but this answer assumes the reverse: upper-level courses came from the committee (UL -> PRC). That is an illegal reversal. Dean Wilson's proposal could also be for an upper-level course. Additionally, the committee could have received proposals without approving them. Nothing guarantees that receiving a proposal leads to approval."
+  },
+  {
+   "row_id": "a4e83439-c86a-406c-b25d-1dddae4c3d10",
+   "letter": "C",
+   "body": "If more than one new course is approved, at least two proposals were submitted. Dean Wilson received only one proposal, so he can account for at most one approved course. Any additional approved courses must have had proposals submitted to the committee. All committee proposals are for upper-level courses, and all upper-level courses have prerequisites. Therefore, at least one of the approved courses (the one that came through the committee) will have prerequisites. This follows directly from combining the premises without any unsupported inferences."
+  },
+  {
+   "row_id": "1fd9e53a-a5df-4562-8a5d-524d1b387185",
+   "letter": "D",
+   "body": "This answer says if Dean Wilson's proposal is for an upper-level course, then all courses offered next year will have prerequisites. \"All courses\" goes far beyond what the premises support. The premises only tell us that new upper-level courses will have prerequisites — not that existing courses will have prerequisites. There could be many continuing lower-level courses on the schedule without prerequisites. This answer massively overgeneralizes from a rule about new upper-level courses to a claim about every course offered."
+  },
+  {
+   "row_id": "7c47b190-8749-4b29-a5f6-eb66b57784ce",
+   "letter": "E",
+   "body": "This answer says if no new upper-level courses are approved, then Dean Wilson's proposal will have been approved. There is no logical connection between the absence of upper-level courses and Dean Wilson's proposal being approved. If no upper-level courses are approved, the committee proposals were rejected. But that tells us nothing about whether Dean Wilson's proposal was accepted or rejected — those are independent decisions. Dean Wilson's proposal could be rejected regardless of what happens with the committee's proposals."
+  }
+ ],
+ "known_problem": "Correct; tight for this register.",
+ "tags": "no-prediction; pt157-158-register"
+}

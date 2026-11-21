@@ -1,0 +1,292 @@
+# What is RC?
+
+Source: https://new.theloophole.com/training-camp/browse/stage/learn/video/what-is-rc?source=timeline&plan=rc-plan
+
+Duration: 5:15. Captured: 2026-10-14.
+
+Transcript origin: English auto-generated native captions. Complete caption extraction, not a human-verified verbatim transcript. Original wording retained.
+
+[00:00:00.960 - 00:00:04.860]
+Welcome to RC. I have been asked for so many years whether I
+
+[00:00:04.920 - 00:00:08.830]
+do RC, and yes, I do, and you're about to watch a bunch of videos
+
+[00:00:08.880 - 00:00:11.840]
+with old stuff I know about RC. So yay, selling.
+
+[00:00:12.360 - 00:00:14.400]
+Okay, so what is RC?
+
+[00:00:15.580 - 00:00:19.200]
+RC is four passages with five to eight questions after them that test whether you
+
+[00:00:19.280 - 00:00:21.080]
+know what you just read at a high level.
+
+[00:00:22.500 - 00:00:22.960]
+And
+
+[00:00:24.360 - 00:00:26.440]
+honestly, they test two things in RC.
+
+[00:00:26.520 - 00:00:29.700]
+They test translation skills, and they test your ability to utilize powerful
+
+[00:00:29.760 - 00:00:33.680]
+provable. And so that's why I really recommend that you only engage in
+
+[00:00:33.720 - 00:00:37.570]
+this video series after you've read "The Loophole" and
+
+[00:00:37.680 - 00:00:40.620]
+really gotten to the end of chapter 12, especially with all those answer choice
+
+[00:00:40.660 - 00:00:44.160]
+types, because all that powerful provable stuff from "The Loophole"
+
+[00:00:44.440 - 00:00:48.400]
+still pertains and is actually better on RC than it is on LR.
+
+[00:00:48.720 - 00:00:50.060]
+But we'll get to that in some later videos.
+
+[00:00:51.460 - 00:00:55.200]
+First off, though, I just want to give you a brief introduction to
+
+[00:00:55.600 - 00:00:59.100]
+how I came to RC and how that informs my perspective on what makes us better at
+
+[00:00:59.240 - 00:01:02.460]
+RC, how it varies according to what you've probably experienced before.
+
+[00:01:02.520 - 00:01:06.320]
+Because the one thing about RC on the LSAT is it looks more like the
+
+[00:01:06.400 - 00:01:09.950]
+stuff that we know from other standardized tests than any other part of the LSAT,
+
+[00:01:10.000 - 00:01:13.340]
+right? Logical reasoning, there isn't really an analog for it, and back in the day
+
+[00:01:13.380 - 00:01:15.980]
+of logic games, there definitely wasn't an analog for logic games.
+
+[00:01:16.280 - 00:01:19.860]
+But RC has always been the thing where people have said you can't improve,
+
+[00:01:20.580 - 00:01:21.680]
+which is nonsense.
+
+[00:01:22.980 - 00:01:26.740]
+At RC, you would only assume you can't improve if you can't improve how well you
+
+[00:01:26.840 - 00:01:30.340]
+read and reason, and you can do both those things, and so you can improve at RC.
+
+[00:01:30.840 - 00:01:33.920]
+But people say you can't improve on it, and people say, "Oh, it's just whatever you
+
+[00:01:33.940 - 00:01:37.920]
+got on the SAT" or whatever. And so I am here to tell you that
+
+[00:01:37.930 - 00:01:41.120]
+you actually can improve, and I improved at RC.
+
+[00:01:41.240 - 00:01:45.040]
+So I will tell you my personal prep thing for a
+
+[00:01:45.060 - 00:01:45.800]
+second.
+
+[00:01:46.740 - 00:01:50.300]
+I did RC last, and I had such a big ego because of how
+
+[00:01:50.420 - 00:01:53.720]
+comfortable I was with RC on other standardized tests.
+
+[00:01:53.800 - 00:01:56.060]
+I was like, "Oh, RC is going to be nothing.
+
+[00:01:56.180 - 00:01:57.960]
+I'm going to run a zero." I
+
+[00:01:59.300 - 00:02:02.800]
+was a total idiot. And then I did my first RC
+
+[00:02:02.900 - 00:02:04.430]
+section, and this was after I'd
+
+[00:02:05.340 - 00:02:08.970]
+done pretty well at LG and LR, and I was like, "Oh,
+
+[00:02:09.120 - 00:02:13.060]
+yeah, now RC, whatever. I'm calculating 97
+
+[00:02:13.080 - 00:02:13.810]
+already."
+
+[00:02:14.640 - 00:02:17.850]
+Don't stop. I go to minus five on the first one I did, and I was like,
+
+[00:02:18.010 - 00:02:21.520]
+"But me? My life?" I was so
+
+[00:02:21.700 - 00:02:25.380]
+surprised that I did not do as well as I had done
+
+[00:02:25.480 - 00:02:27.620]
+on other reading standardized tests.
+
+[00:02:27.640 - 00:02:31.460]
+And so I was like, "Oh, man, I got to fix this." And I spent a week just
+
+[00:02:31.580 - 00:02:34.410]
+experimenting with lots of different methodologies, spending more time on the
+
+[00:02:34.420 - 00:02:37.840]
+passage, less time on the passage, marking things up, not marking things up,
+
+[00:02:38.160 - 00:02:41.390]
+highlighting the main points, the author's attitude, the author's voice, the other
+
+[00:02:41.420 - 00:02:42.980]
+whatever. None of that did anything.
+
+[00:02:43.900 - 00:02:45.200]
+And it was only
+
+[00:02:46.200 - 00:02:48.670]
+when I'd been at it about a week, I was banging my head up against the wall and
+
+[00:02:48.740 - 00:02:52.300]
+getting a bunch of fives and sixes, that I looked at one of my wrong
+
+[00:02:52.360 - 00:02:55.880]
+answers, and I went to a friend, and I was like, "Look at this.
+
+[00:02:56.060 - 00:02:59.269]
+I'm right." And it was
+
+[00:03:00.160 - 00:03:03.920]
+obstinate versus displeased. And this might be a powerful, I might have changed one
+
+[00:03:03.960 - 00:03:06.090]
+of them, but let's pretend it's obstinate and displeased.
+
+[00:03:06.290 - 00:03:08.590]
+And it was an author's attitude, like how does the author feel about modern art?
+
+[00:03:08.650 - 00:03:10.650]
+And this author was all p****d off about modern art.
+
+[00:03:10.670 - 00:03:11.960]
+They were seething about it or whatever.
+
+[00:03:12.020 - 00:03:15.740]
+So I was like, "I chose obstinate, and now I'm right." And of
+
+[00:03:15.780 - 00:03:18.950]
+course, my friend looked at me and they're like, "But aren't they really obsolete,
+
+[00:03:19.020 - 00:03:22.960]
+though?" And I was like, "Well, yeah." And I'm an excitable,
+
+[00:03:23.040 - 00:03:26.700]
+bombastic person in real life, and so I'm like, "Yes, it is obstinate,"
+
+[00:03:27.420 - 00:03:31.230]
+getting that way. And it's like, "Yeah, but round down, though." And
+
+[00:03:31.420 - 00:03:32.480]
+I was like, "Hmm."
+
+[00:03:33.760 - 00:03:36.900]
+And then I go back over to my-- I used to study on my couch, and I'm just sitting
+
+[00:03:36.920 - 00:03:39.580]
+there, I'm like, "Round down. Round down. Hmm.
+
+[00:03:39.840 - 00:03:41.010]
+Okay." And
+
+[00:03:42.140 - 00:03:45.980]
+so then I was like, "All right, I will round down on all of these
+
+[00:03:45.990 - 00:03:49.700]
+answers." Maybe if there's a meter that is
+
+[00:03:50.020 - 00:03:53.900]
+neutral, displeased, obstinate, and obstinate is really far down the line, maybe
+
+[00:03:53.960 - 00:03:57.000]
+this author got to here, and obstinate's over here.
+
+[00:03:57.230 - 00:04:00.200]
+And so maybe they aren't quite obstinate, but they're definitely displeased.
+
+[00:04:00.250 - 00:04:04.200]
+And if I round down, okay. And then did one more section, I rounded down, I got
+
+[00:04:04.260 - 00:04:06.280]
+a minus one. And I was like, "Wait a second.
+
+[00:04:06.520 - 00:04:10.180]
+Okay." And that was me discovering pronoun powerful provable,
+
+[00:04:10.440 - 00:04:14.320]
+and then taking, what, five, six more years to discover
+
+[00:04:14.380 - 00:04:15.580]
+it in real life?
+
+[00:04:16.851 - 00:04:20.820]
+And so I was practicing what ended up being the powerful provable
+
+[00:04:20.880 - 00:04:21.840]
+spectrum in
+
+[00:04:22.660 - 00:04:24.930]
+a much less refined way
+
+[00:04:26.040 - 00:04:29.100]
+for a long time, and that was what was responsible for my RC improvement.
+
+[00:04:29.340 - 00:04:33.219]
+My theory being my translation skills were probably fine, and so I wasn't getting
+
+[00:04:33.240 - 00:04:35.660]
+much improvement from changing anything regarding the translation.
+
+[00:04:35.900 - 00:04:39.300]
+But when I changed the way I was thinking about powerful provable, and I really
+
+[00:04:39.380 - 00:04:43.300]
+started enacting a provable standard on RC, my score immediately
+
+[00:04:43.340 - 00:04:46.500]
+went up, and then basically was like that from then on.
+
+[00:04:46.790 - 00:04:50.469]
+And so I tell you this to let you know, first off, I
+
+[00:04:50.980 - 00:04:54.800]
+make mistakes, and that is okay because we are all people, and I am like you.
+
+[00:04:56.660 - 00:04:56.900]
+But
+
+[00:04:57.820 - 00:05:01.780]
+I also tell you to let you know the power of powerful provable on RC
+
+[00:05:01.880 - 00:05:04.620]
+and let you know what we're going to be getting into in all these later videos.
+
+[00:05:04.680 - 00:05:07.260]
+And so I'm so excited to finally
+
+[00:05:08.500 - 00:05:12.260]
+rip open this package and actually show you what RC is all about.
+
+[00:05:12.320 - 00:05:14.640]
+And so I will talk to you in just a second.

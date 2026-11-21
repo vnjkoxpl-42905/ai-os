@@ -1,52 +1,40 @@
-# Assign guided drills through the local MCP
+# Guided-drill selection for the unified batch
 
-Use this branch for guided-drill selection, difficulty matching, or a multi-day schedule. Other LSAT U operations keep their existing global skill route.
+Use the authoritative [one-call workflow](../../../../references/lsatu-work-batch.md). Normal delivery is one `assign_student_work` call that preflights every item, assigns serially, verifies and saves generated evidence. A separate preview is optional. Existing guided-only tool names are compatibility routes to the same engine, not an extra required stage.
 
-## Before executing
+## Select without rebuilding content
 
-1. Reuse the student's verified identity, dates and teaching goal from this chat. One explicitly named student is authorized; reads and preview do not need approval. Retrieve student context only when the teaching goal is unclear. Check live existing assignments through batch preview rather than repeatedly reading every ledger or transcript.
-2. Search `search_guided_drills` on the existing local `lsat-u-lessons` MCP. Send a short query and return a small candidate list. The generated [catalog](../../../../references/lsatu-guided-drill-catalog.md) maps every drill; its JSON holds complete cards and filters. Refresh with `node system/scripts/refresh-guided-drill-catalog.mjs` when the snapshot is old, content changed, or no suitable candidate appears. Assignment preflight always reads live records and the deployed merged question bank.
-3. Prefer existing drills. Match the actual eligible pool and difficulty ceiling, not only “Easier,” “Medium,” or a catalog level. Beginner is 1–3; intermediate is 2–4; advanced is 3–5. With sufficient in-band questions the app selects only that band. Example: a native 3–4 drill at beginner becomes difficulty 3 only. Preview refuses insufficient in-band pools and any selectable question above `max_difficulty`.
-4. Build one structured plan containing the exact student and all dates/slugs. Keep the native question count unless Joshua specifies a shorter drill. A count override does not rewrite the existing instruction card. Exact catalog pins override level/count, so preview verifies their actual content. Pool drills redraw on reattempt and can overlap other drills; do not promise unique questions across days.
-5. Run `preview_guided_drill_batch` once. Completion criterion: every item resolves to the intended student, published content, enough eligible questions, correct effective difficulty/count, valid unlock/due dates, and either a new assignment or a matching existing one. Preflight all entries before any write. Use one writer at a time against the operational checkout.
+1. Reuse the exact student, teaching goal, dates and approvals established in the conversation. One student's assignment request authorizes that work and its normal app notifications, not unrelated messages or other students.
+2. Prefer live `search_assignable_work` for current content and renamed activities. `search_guided_drills` and the generated `references/lsatu-guided-drill-catalog.md` can narrow candidates by difficulty/pool metadata, but their snapshot is not live authority. The unified engine rechecks published rows and the deployed bank. Routine mixed work does not need a manual catalog refresh.
+3. Match the actual eligible pool, not the word Easier or the catalog level. Beginner is 1-3, intermediate 2-4 and advanced 3-5. The engine rejects insufficient in-band pools or any selectable question above `max_difficulty`. Pinned content is validated directly and its pins override level/count selection.
+4. Keep native counts unless Joshua asks otherwise. A count override does not rewrite the instruction card. Pool reattempts redraw and can overlap other work; do not promise unique questions across days.
+5. Put all approved guided drills and companion work/notes in the same plan. Each guided entry includes `kind: guided_drill`, exact slug, schedule, due and any requested level/ceiling. Respect stated exclusions and session days. Do not invent a larger workload.
 
-## Execute and verify
+## Execute once
 
-Call `assign_guided_drill_batch` once with the same plan. It syncs the pinned operational checkout once, signs in once, resolves the student once, reads the catalog and deployed bank once, and calls the app's own `assignWork()` serially. It verifies source rows, Classroom visibility, local unlock/due dates, and bell count. Each new assignment retains normal inbox, bell and email notification behavior.
+Call `assign_student_work` after authorization. Its internal preflight validates every entry before any write. Reuse matching existing rows without another notification. Stop on ambiguous/conflicting existing content. Partial results preserve saved IDs; an email failure does not justify reassignment. Email OK means platform acceptance, not independently confirmed receipt.
 
-A repeat returns matching existing rows without notifying again. Conflicting existing content, unexpected assignment pins, duplicates, or ambiguous identity fail explicitly. Partial failures preserve completed assignment IDs and notification results. Inspect uncertain state before retrying. A failed notification channel does not justify reassignment. Email OK is platform send acceptance, not independently verified receipt. Headless verification is not a browser runner launch.
+Use `dry_run: true` only for an optional preview or unresolved plan. Use `verify_existing: true` for a mutation-free audit that refuses any missing/changed item. Neither mode authorizes a later write.
 
-New tools may need a fresh chat/MCP connection before appearing in the model's tool list. Immediate fallback uses the same local MCP, without a browser:
+If the chat has older MCP definitions, call the same new MCP immediately:
 
 ```powershell
-node system/scripts/lsatu-mcp-call.mjs preview_guided_drill_batch --file students/<student>/assignments/<plan>.json
-node system/scripts/lsatu-mcp-call.mjs assign_guided_drill_batch --file students/<student>/assignments/<plan>.json
+node system/scripts/lsatu-mcp-call.mjs assign_student_work --file students/<student>/assignments/<plan>.json
 ```
-
-Plan shape:
 
 ```json
 {
-  "id": "student-conditionals-YYYY-MM-DD",
-  "student": "Exact platform name",
-  "assignments": [
-    {
-      "drill": "exact-existing-slug",
-      "schedule": "YYYY-MM-DD",
-      "due": "YYYY-MM-DD",
-      "level": "beginner",
-      "max_difficulty": 3
-    }
+  "id":"student-conditionals-YYYY-MM-DD",
+  "student":"Exact platform email",
+  "student_folder":"students/<existing-student-folder>",
+  "assignments":[
+    {"kind":"guided_drill","drill":"exact-published-slug","schedule":"YYYY-MM-DD","due":"YYYY-MM-DD","level":"beginner","max_difficulty":3}
   ]
 }
 ```
 
-Store plans and result evidence under the student's `assignments/` folder. Log assignments and notification sends once; update the session handoff. Keep Friday/day-off dates and session-day exclusions explicit.
-
-## After executing
-
-Report assigned work, effective difficulty/count, dates and material notification limitations. Use returned metrics to review the pathway: repeated setup, broad retrieval, custom content that an existing drill could cover, or duplicate verification. Fix deterministic mistakes in the tool; add only a short new instruction for a judgment rule. Prefer one shared batch operation and a catalog pointer over more per-day commands or copied drill metadata.
+The generated `audit_file` is the machine delivery evidence. Do not create another student-specific transport or repeat successful operational checks. Add relevant human context to the existing ledger rather than copying the whole result across several documents.
 
 ## Authored content exception
 
-Only when existing drills cannot meet the requested content, use the existing `--guided-spec <absolute JSON path>` alongside `--drill <matching slug>`. This authored-spec path currently validates conditional Must Be True questions; it is not the general conditionals catalog path. Use the app's assignment function, then `verify-guided-spec.mjs`. Do not hand-write assignment rows or claim browser QA. No Lovable/app deployment is needed for these local content operations.
+Only when no existing drill meets the request, use the existing `--guided-spec` route documented by the global skill. It currently validates authored conditional Must Be True content, not arbitrary question types. Prefer existing published drills; do not hand-write assignment rows or claim browser QA. No Lovable deployment is needed for normal assignment operations.

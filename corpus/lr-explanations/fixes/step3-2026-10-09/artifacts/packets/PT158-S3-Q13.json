@@ -1,0 +1,84 @@
+{
+ "qid": "PT158-S3-Q13",
+ "type": "Necessary Assumption",
+ "difficulty": "5",
+ "key_db": "D",
+ "stimulus_db": "Psychotherapist: The troubles from which a patient seeks relief through psychotherapy do not have purely internal causes; rather, those troubles result in part from the patient's relationships with other people. Hence, to help the patient heal, the psychotherapist must focus on the need for positive change in those relationships.",
+ "stem_db": "Which one of the following is an assumption the psychotherapist's argument requires?",
+ "choices_db": {
+  "A": "Psychotherapists cannot help change their patients' relationships unless those patients focus on other people's troubles.",
+  "B": "At least some psychotherapy patients cannot be healed if a psychotherapist helps them change their relationships with other people.",
+  "C": "Those psychotherapy patients who change their relationships with other people will thereby find relief from at least some of their troubles.",
+  "D": "No psychotherapist can help a patient heal solely by addressing the internal causes of the patient's troubles.",
+  "E": "If a psychotherapist helps patients focus on troubles that are purely internal, then that psychotherapist thereby provides them the relief they seek."
+ },
+ "bank": {
+  "stimulus": "Psychotherapist: The troubles from which a patient\n seeks relief through psychotherapy do not have\n purely internal causes; rather, those troubles\n result in part from the patient’s relationships with\n other people. Hence, to help the patient heal,\n the psychotherapist must focus on the need for\n positive change in those relationships.",
+  "stem": "Which one of the following is an assumption the\n psychotherapist’s argument requires?",
+  "choices": {
+   "A": "Psychotherapists cannot help change their patients’ relationships unless those patients focus on other people’s troubles.",
+   "B": "At least some psychotherapy patients cannot be healed if a psychotherapist helps them change their relationships with other people.",
+   "C": "Those psychotherapy patients who change their relationships with other people will thereby find relief from at least some of their troubles.",
+   "D": "No psychotherapist can help a patient heal solely by addressing the internal causes of the patient’s troubles.",
+   "E": "If a psychotherapist helps patients focus on troubles that are purely internal, then that psychotherapist thereby provides them the relief they seek."
+  },
+  "key": "D"
+ },
+ "explanation_id": "fa822d0d-41d9-4020-b2b7-b73b0fe61fd6",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "b4b8b69d-4ef4-4a15-9566-6f09f9727a25",
+   "position": 0,
+   "label": "Conclusion (Hence)",
+   "body": "To help a patient heal, the psychotherapist must focus on the need for positive change in the patient's relationships with other people."
+  },
+  {
+   "row_id": "c0b527ac-8c98-416c-9627-6bf94d203b8a",
+   "position": 1,
+   "label": "Evidence",
+   "body": "The trouble from which a patient seeks to heal do not have purely internal causes. They result in part form the patient's relationships with other people."
+  },
+  {
+   "row_id": "cb1ac25c-0240-4bce-9f4b-2cfe240c85b0",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "The logic of this argument seems to be that, \"Since the causes of the problems are partly relationships with other people, then it's impossible to help alleviate those problems unless you focus on positively changing those relationships.\" So the author is assuming, \"If a problem is caused in part by X, then helping to solve the problem requires addressing X.\" We could potentially argue that merely helping a patient work on the internal causes (increase their self-esteem / decrease their anxiety) could do enough good that they heal somewhat, even though we never forced them to work on their relationships."
+  },
+  {
+   "row_id": "ea1ad4ea-d0c6-4783-b43d-fa8052cf888b",
+   "position": 3,
+   "label": "Goal",
+   "body": "Whenever a conclusion takes the form of, \"in order to do X, you must do Y\", we are assuming two things: Y in fact would help with X; nothing else would otherwise help with X. So let's look for an answer saying \"focusing on positive change in those relationships could potentially reduce those relationships' being a cause of a patient's troubles\" or \"it is not possible to help a problem partly caused by relationships without addressing relationships\""
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "7d84100c-80c4-43e1-bc44-ff2c8ec3860b",
+   "letter": "A",
+   "body": "This answer makes two problematic claims. First, it introduces a requirement that patients \"focus on other people's troubles,\" which is not what the argument discusses. The argument is about patients' own relationships, not about focusing on other people's troubles. Second, the claim that psychotherapists \"cannot help change\" patients' relationships without this focus goes far beyond what the argument needs to assume. The argument needs only the assumption that internal-only treatment is insufficient for healing — it does not need any specific claim about what prevents therapists from changing relationships. This answer mischaracterizes the relational focus the argument describes and imposes a requirement the argument does not demand."
+  },
+  {
+   "row_id": "e4d05c13-b86a-4864-b263-f4266815e4d7",
+   "letter": "B",
+   "body": "This answer says some patients cannot be healed even if a therapist helps them change their relationships. The argument's conclusion is that therapists must focus on relational change; the assumption needed is about why that focus is necessary. Knowing that relational change sometimes fails to produce healing does not help establish that relational focus is necessary — if anything, it suggests that relational focus might not be sufficient, which is a different concern entirely. The argument needs the assumption that internal-only treatment is insufficient, not the claim that relational treatment is sometimes insufficient too. This answer addresses the potential limitations of the proposed approach rather than establishing why the approach is necessary in the first place."
+  },
+  {
+   "row_id": "b67988ae-1e3d-4acb-afad-fbffc64d9a30",
+   "letter": "C",
+   "body": "This answer claims that patients who change their relationships will \"thereby find relief from at least some of their troubles.\" This is a guarantee — if you change the relationships, healing follows. But the argument does not need this strong a claim. The argument needs only that therapy cannot succeed by addressing internal causes alone — it needs the relational focus to be necessary, not to be sufficient by itself. The argument's conclusion is that therapists must focus on relational change, not that relational change will definitely cure patients. Negate this answer: \"some patients who change their relationships will not find relief from any of their troubles.\" The argument survives this negation perfectly well — even if relational change is not guaranteed to work, it could still be a necessary component of therapy. The argument does not promise success; it identifies a necessary focus area."
+  },
+  {
+   "row_id": "28a1ff5c-7464-4313-8318-d58d89134328",
+   "letter": "D",
+   "body": "This answer states that no psychotherapist can help a patient heal solely by addressing internal causes. This is exactly the assumption that bridges the gap between the evidence (troubles are partly relational) and the conclusion (therapy must focus on relationships). If a therapist COULD heal a patient by addressing only internal causes, then the relational focus would not be necessary — it might be helpful but not required. But if internal-only treatment cannot achieve healing, then the relational component becomes essential, and the therapist \"must\" focus on it. Apply the negation test: \"some psychotherapist CAN help a patient heal solely by addressing internal causes.\" If this were true, the conclusion that therapists must focus on relationships would collapse — internal-only treatment could suffice, making relational focus optional rather than mandatory. The negation destroys the argument, confirming this is a necessary assumption."
+  },
+  {
+   "row_id": "8db59f5c-2b7f-4f67-a145-5d923bdc865c",
+   "letter": "E",
+   "body": "This answer is about what happens when a therapist helps patients focus on \"troubles that are purely internal\": it says that focus \"thereby provides them the relief they seek.\" That is a claim about when internal-only therapy succeeds, and the argument does not need it. If anything, it points the other way, since the psychotherapist says the troubles \"do not have purely internal causes\" and that the therapist must focus on relationships. The argument needs the assumption that internal-only treatment cannot achieve healing. Negate this answer, \"focusing on purely internal troubles does not provide the relief they seek,\" and the argument is untouched."
+  }
+ ],
+ "known_problem": "E note argues against \"will not help patients address any difficulties they have in their relationships\", which is not in E; B note restates B loosely.",
+ "tags": "emdash-heavy; pt157-158-register; possible-misquote"
+}

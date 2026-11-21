@@ -1,0 +1,24 @@
+# Fresh final visual review: LSAT U Studio dashboard
+
+Independent read-only review of implemented local prototype, not a plan approval gate. User authorized the design and wants exceptional memorable visual craft plus useful student workflows. Palette observed in previous screenshots: warm paper, cobalt hero, coral session, yellow review, lilac question library. Preserve expressive creativity. No generic decolorization. Read actual pixels before judging. Do not edit anything.
+
+Read EXACT final images with Read:
+C:/Users/Joshu/Downloads/LSAT-U-Dashboard-New-Directions/05-studio/artifacts/pass-3-1440.png
+C:/Users/Joshu/Downloads/LSAT-U-Dashboard-New-Directions/05-studio/artifacts/pass-3-hero-390.png
+C:/Users/Joshu/Downloads/LSAT-U-Dashboard-New-Directions/05-studio/artifacts/pass-3-library-390.png
+C:/Users/Joshu/Downloads/LSAT-U-Dashboard-New-Directions/05-studio/artifacts/pass-3-768.png
+
+Read current source at C:/Users/Joshu/Downloads/LSAT-U-Dashboard-New-Directions/05-studio/: index.html, style.css, app.js, sculpture.js.
+
+Read reference lenses:
+C:/Users/Joshu/.codex/plugins/cache/claude-cowork/design/1.2.0/skills/design-critique/SKILL.md
+C:/Users/Joshu/dev/ai-os/.agents/skills/impeccable/reference/product.md
+C:/Users/Joshu/dev/ai-os/.agents/skills/impeccable/reference/color-and-contrast.md
+C:/Users/Joshu/dev/ai-os/.agents/skills/impeccable/reference/typeset.md
+C:/Users/Joshu/dev/ai-os/.agents/skills/impeccable/reference/animate.md
+
+Prior critique dispositions from coordinator: enlarged practical copy throughout; calendar moved immediately after hero with task labels; session CTA outline and prominent 7:15; explicit 12 tick progress; removed false trend chart, now per-skill selectable results; work count filter dynamic and nav count removed; mobile text spacing fixed; sculpture now pale ceramic with its dedicated stage. Keep expressive palette intentionally. Verify these changes by actual screenshots/source rather than trusting this description.
+
+Focus remaining actual defects and highest-value final polish. Are the hierarchy, color, component craft, desktop/tablet/phone composition, planning utility and navigation coherent now? Is it compelling to look at and easy to use? Parent suspects phone session CTA container clipping and is investigating, so independently examine it. Report actual severity, no invented quota. Mark any source changes after screenshot as uncertainty. Use structured runner format: verdict, summary, findings with path/evidence/fix, coverage, limits. Coverage must name all PNGs actually read. If no material issue, APPROVED is valid; don't equate design taste differences with defects.
+
+You do not have live browser tools. These are real headless Microsoft Edge screenshots. Codex native browser bridge failed (no native host pipe); user-facing preview queued in Codex. Do not claim you or host performed live Codex browser interaction. Source-based interaction/motion review must be distinguished from observed motion. No edits or approval request. This is second/final independent review budget.

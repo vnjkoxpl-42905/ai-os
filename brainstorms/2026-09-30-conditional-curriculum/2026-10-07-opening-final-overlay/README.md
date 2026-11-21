@@ -1,0 +1,18 @@
+# Recover the final local Conditional opening
+
+This source snapshot preserves the 2026-10-07 local build if its worktree is lost. It contains 31 final overlay files. `manifest.json` records their SHA256 hashes and byte lengths, plus a 65-file final source inventory. Source hashes were captured before copying, copied bytes matched, and all source hashes were checked again after copying. Evidence documents have a separate manifest because final verification records may be updated after the source freeze.
+
+The source is local work, not a published release. No commit, push, deployment, student assignment or backend write was performed. Final verification passed: 237 tests across 19 files plus 11 isolated library assignment tests, totaling 248 tests across 20 files; launcher preflight with full app typecheck; scoped lint, zero errors and ten existing Fast Refresh warnings. After the last summary-copy refinement, eight overlapping mixed-runner tests passed again, the direct Vite build was regenerated with 7,160 modules in 48.53s, and canonical exclusion again passed across 770 files with zero matches. The distinct test count remains 248. A concurrent aggregate timeout passed in the serial rerun without changing assertions or timeouts. The two authorized final source entries were refreshed and all source hashes reverified. Authenticated production persistence remains unverified.
+
+Restore in this order:
+
+1. Create a separate checkout at Git commit `67230dfae74a1466515d570fcb7b8a96ab5cb9c5`. Preserve current main and other worktrees. Read the restored checkout's instruction files.
+2. Restore all 45 frozen inputs from `../claude-pacing-20261004/input/`, following `input-hashes.json`. Verify their bytes before using them.
+3. Apply the four historical pacing changes from `../claude-pacing-20261004/authored.diff`. The original patch includes unprefixed empty separators; `evidence/pacing-normalized.patch` is the verified normalized version. Restore CRLF endings in `ConditionalReferenceSequence.tsx` if needed to match the historical final hash. Verify the 47-file checkpoint against `evidence/hash-verification.json` before applying the new overlay.
+4. Copy each file listed in `manifest.json` from `files/` to the same repository-relative path in the restored checkout. Verify every SHA256 and byte length. Then verify the entire `finalSourceInventory`, including unchanged prerequisite files. Preserve any unexpected conflict for review instead of silently replacing another version.
+5. Install dependencies and configure credentials through the existing machine setup process. This snapshot intentionally excludes dependencies, credentials, generated bank copies and instruction file edits.
+6. Run `npm run dev:conditional -- --check`, the focused and full required checks recorded in the evidence, a direct production build, canonical-content exclusion and browser verification before presenting the result. Use `npm run dev:conditional` to launch the fixed local port after preflight passes.
+
+The local lesson harness is `/dev/conditional-opening-preview`; the proper authenticated app course is `/bootcamp/conditionals/lessons`. The harness has no assignment or account persistence. Starting the local server does not publish these changes to LSAT U.
+
+The missing final 2026-10-04 audit text was not recovered. The user's handoff and surviving hot/log entries supplied its six corrections and Activity integration scope. Existing teacher assignments, progress histories, approved card content and indicator inventories remain preserved by the source prerequisites and final inventory.

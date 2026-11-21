@@ -1,0 +1,84 @@
+{
+ "qid": "PT136-S4-Q26",
+ "type": "Main Conclusion",
+ "difficulty": "3",
+ "key_db": "B",
+ "stimulus_db": "Anthropologist: Many people think that if human language evolved, then something like it must be present in those species most closely related to humans, such as chimpanzees. They reason that since new traits evolve gradually, something like human language, albeit cruder, must exist in some species from which humans evolved. This general line of argument may be reasonable, but it simply does not follow that chimpanzees have anything like human language, because humans did not evolve from chimpanzees. While chimpanzees are indeed closely related to humans, this is because both evolved from a common ancestor. The evolution of human language might easily have begun after the extinction of that common ancestor.",
+ "stem_db": "Which one of the following most accurately expresses the main conclusion of the anthropologist's argument?",
+ "choices_db": {
+  "A": "Humans did not evolve from chimpanzees, but rather from some extinct species.",
+  "B": "The assumption that something like human language must exist in some species from which humans evolved has no clearcut linguistic implications for chimpanzees.",
+  "C": "The communicative systems of chimpanzees are cruder than human language.",
+  "D": "Human language is a by-product of human intelligence, which chimpanzees lack.",
+  "E": "The evolution of human language began after the disappearance of an extinct species from which both humans and chimpanzees evolved."
+ },
+ "bank": {
+  "stimulus": "Anthropologist: Many people think that if human language evolved, then something like it must be present in those species most closely related to humans, such as chimpanzees. They reason that since new traits evolve gradually, something like human language, albeit cruder, must exist in some species from which humans evolved. This general line of argument may be reasonable, but it simply does not follow that chimpanzees have anything like human language, because humans did not evolve from chimpanzees. While chimpanzees are indeed closely related to humans, this is because both evolved from a common ancestor. The evolution of human language might easily have begun after the extinction of that common ancestor.",
+  "stem": "Which one of the following most accurately expresses the main conclusion of the anthropologist's argument?",
+  "choices": {
+   "A": "Humans did not evolve from chimpanzees, but rather from some extinct species.",
+   "B": "The assumption that something like human language must exist in some species from which humans evolved has no clearcut linguistic implications for chimpanzees.",
+   "C": "The communicative systems of chimpanzees are cruder than human language.",
+   "D": "Human language is a by-product of human intelligence, which chimpanzees lack.",
+   "E": "The evolution of human language began after the disappearance of an extinct species from which both humans and chimpanzees evolved."
+  },
+  "key": "B"
+ },
+ "explanation_id": "1da55640-b0da-40a2-bb51-02ea734fb642",
+ "style": "single",
+ "steps": [
+  {
+   "row_id": "dbdd8c0f-ffab-4046-b111-38329719d11b",
+   "position": 0,
+   "label": "Opposing Evidence",
+   "body": "Both humans and chimpanzees evolved from a common ancestor."
+  },
+  {
+   "row_id": "60c18f69-02c7-4cfc-bd71-ecc476c46302",
+   "position": 1,
+   "label": "Opposing Point",
+   "body": "Chimpanzees are indeed closely related to humans."
+  },
+  {
+   "row_id": "f649ca28-ceb7-4917-9196-ccc1cdf772f1",
+   "position": 2,
+   "label": "Evidence",
+   "body": "Humans did not evolve from chimpanzees."
+  },
+  {
+   "row_id": "742572f9-a5a5-45c3-902a-e374fcf00f4d",
+   "position": 3,
+   "label": "Conclusion",
+   "body": "It simply does not follow that chimpanzees have anything like human language."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "e00544fe-c9b3-49e1-92d0-1bc34d06b6fb",
+   "letter": "A",
+   "body": "This is a premise that supports the argument’s main point."
+  },
+  {
+   "row_id": "527489d4-3984-4b3b-b8a1-138eb0b59331",
+   "letter": "B",
+   "body": "This best paraphrases the argument's main conclusion."
+  },
+  {
+   "row_id": "0cde3694-2ad7-4343-bc7c-ddebd59c30eb",
+   "letter": "C",
+   "body": "This is the point the argument opposes."
+  },
+  {
+   "row_id": "8a58237e-e393-40fd-adfa-7115846762d7",
+   "letter": "D",
+   "body": "Human intelligence is not discussed in the argument."
+  },
+  {
+   "row_id": "7666980f-7c18-42f6-8c30-dadb4ef8cf00",
+   "letter": "E",
+   "body": "A point similar to this serves as a premise in the argument. But the premise says only that human language \"might easily have begun\" after the extinction of that common ancestor. This answer says it did begin then, which is stronger than the premise, and a premise is not the main conclusion anyway."
+  }
+ ],
+ "known_problem": "Breakdown labels the author's own premises as \"Opposing Evidence/Point\"; E note contradicts itself.",
+ "tags": "short-breakdown; verdict-only; thin-correct-note; thin-notes; no-prediction; very-short"
+}

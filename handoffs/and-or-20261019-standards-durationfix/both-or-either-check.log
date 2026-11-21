@@ -1,0 +1,70 @@
+
+> check
+> npx --yes hyperframes@0.8.149 check
+
+◆  Checking both-or-either
+[hyperframes] browserGpuMode probe → hardware (WebGL renderer vendor="Google Inc. (AMD)" renderer="ANGLE (AMD, AMD Radeon (TM) Graphics (0x000015E7) Direct3D11 vs_5_0 ps_5_0, D3D11)")
+
+Lint
+  ⚠ studio_missing_editable_id: <div class="bg" data-start="0" data-track-index="0"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.
+    C:\Users\Joshu\dev\ai-os-projects\conditional-and-or-video-20261019\both-or-either\index.html [data-composition-id] t=0s
+    Fix: Add a stable, human-readable id such as id="hero-title" or id="scene-1-card" to every timeline-visible element you want agents or Studio to edit.
+  ⚠ studio_missing_editable_id: <div class="chrome" data-start="0" data-track-index="1"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.
+    C:\Users\Joshu\dev\ai-os-projects\conditional-and-or-video-20261019\both-or-either\index.html [data-composition-id] t=0s
+    Fix: Add a stable, human-readable id such as id="hero-title" or id="scene-1-card" to every timeline-visible element you want agents or Studio to edit.
+  ⚠ nested_structure_needs_subcomposition: <div> is a timeline element that contains nested <div id="orbA">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.
+    C:\Users\Joshu\dev\ai-os-projects\conditional-and-or-video-20261019\both-or-either\index.html [data-composition-id] t=0s
+    Fix: Move <div> and its contents into a sub-composition file and mount it with data-composition-src.
+  ⚠ nested_structure_needs_subcomposition: <div> is a timeline element that contains nested <div id="kicker">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.
+    C:\Users\Joshu\dev\ai-os-projects\conditional-and-or-video-20261019\both-or-either\index.html [data-composition-id] t=0s
+    Fix: Move <div> and its contents into a sub-composition file and mount it with data-composition-src.
+  ⚠ nested_structure_needs_subcomposition: <div id="s-rule"> is a timeline element that contains nested <div id="i-rule">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.
+    C:\Users\Joshu\dev\ai-os-projects\conditional-and-or-video-20261019\both-or-either\index.html #s-rule t=0s
+    Fix: Move <div id="s-rule"> and its contents into a sub-composition file and mount it with data-composition-src.
+  ⚠ nested_structure_needs_subcomposition: <div id="s-and"> is a timeline element that contains nested <div id="i-and">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.
+    C:\Users\Joshu\dev\ai-os-projects\conditional-and-or-video-20261019\both-or-either\index.html #s-and t=0s
+    Fix: Move <div id="s-and"> and its contents into a sub-composition file and mount it with data-composition-src.
+  ⚠ nested_structure_needs_subcomposition: <div id="s-or"> is a timeline element that contains nested <div id="i-or">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.
+    C:\Users\Joshu\dev\ai-os-projects\conditional-and-or-video-20261019\both-or-either\index.html #s-or t=0s
+    Fix: Move <div id="s-or"> and its contents into a sub-composition file and mount it with data-composition-src.
+  ⚠ nested_structure_needs_subcomposition: <div id="s-habit"> is a timeline element that contains nested <div id="i-habit">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.
+    C:\Users\Joshu\dev\ai-os-projects\conditional-and-or-video-20261019\both-or-either\index.html #s-habit t=0s
+    Fix: Move <div id="s-habit"> and its contents into a sub-composition file and mount it with data-composition-src.
+  0 error(s), 8 warning(s), 0 info(s)
+
+Runtime
+  ◇ 0 errors, 0 warnings
+
+Layout
+  ℹ t=3.6, 10.801, 18.001, 25.201, 32.402, 39.602, 46.802, 54.003, 61.203s panel_out_of_canvas #orbA inside #root overflowed left 138.78px, top 159.32px — Painted panel extends outside the composition canvas.
+        Fix: Move the panel inward, or mark intentional off-canvas animation with data-layout-allow-overflow.
+  ℹ t=3.6, 10.801, 18.001, 25.201, 32.402, 39.602, 46.802, 54.003, 61.203s panel_out_of_canvas #orbT inside #root overflowed right 178.63px, bottom 219.16px — Painted panel extends outside the composition canvas.
+        Fix: Move the panel inward, or mark intentional off-canvas animation with data-layout-allow-overflow.
+  ℹ t=20.103s content_overlap #i-and > div:nth-of-type(7) inside #i-and > div:nth-of-type(8) "✓ YES" — Two text blocks overlap and may render unreadable.
+        Fix: Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.
+  ℹ t=23.849s content_overlap #i-and > div:nth-of-type(9) inside #i-and > div:nth-of-type(10) "GROUP ESTABLISHED" — Two text blocks overlap and may render unreadable.
+        Fix: Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.
+  ℹ t=35.461s content_overlap #i-and > div:nth-of-type(5) inside #i-and > div:nth-of-type(6) "✓ YES" — Two text blocks overlap and may render unreadable.
+        Fix: Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.
+  ℹ t=37.209s content_overlap #i-and > div:nth-of-type(10) inside #i-and > div:nth-of-type(11) "NOT ESTABLISHED YET" — Two text blocks overlap and may render unreadable.
+        Fix: Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.
+  ℹ t=52.192s content_overlap #i-or > div:nth-of-type(6) inside #i-or > div:nth-of-type(7) "✓ YES" — Two text blocks overlap and may render unreadable.
+        Fix: Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.
+  ℹ t=52.192s content_overlap #i-or > div:nth-of-type(8) inside #i-or > div:nth-of-type(9) "✓ YES" — Two text blocks overlap and may render unreadable.
+        Fix: Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.
+  ℹ t=53.565s content_overlap #i-or > div:nth-of-type(10) inside #i-or > div:nth-of-type(11) "GROUP ESTABLISHED" — Two text blocks overlap and may render unreadable.
+        Fix: Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.
+  ℹ t=59.809s content_overlap #i-habit > div:nth-of-type(2) inside #i-habit > div:nth-of-type(3) "Find the whole group" — Two text blocks overlap and may render unreadable.
+        Fix: Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.
+  0 error(s), 0 warning(s), 10 info(s)
+
+Motion
+  ◇ 0 errors, 0 warnings
+
+Contrast
+  ◇ 30/30 text checks pass WCAG AA
+
+Snapshots
+  ◇ disabled
+
+◇  Check passed

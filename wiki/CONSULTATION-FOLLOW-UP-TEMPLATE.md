@@ -5,7 +5,7 @@ five identical sends in Gmail between 2026-08-08 and 2026-09-08 (Reet, Fernande,
 Avneet, Whitney, Cameron). This is the source of truth; the February 2026 PDF in
 `raw/sources/personal/email-templates/` (two numbered steps + Google Form) is retired.
 
-Used by [[consultation-followup-drafts]]. Voice rules: [[teaching-voice]].
+Used by [consultation-followup-drafts](../skills/codex/consultation-followup-drafts/SKILL.md). Voice rules: [[teaching-voice]]. Earlier July rules (personalized lines, auto-send) and why they no longer apply: [July follow-up workflow memory](sources/consultation-followup-workflow-memory-2026-07-07.md).
 
 ## The template (standard rate)
 

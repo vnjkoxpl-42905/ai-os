@@ -1,0 +1,454 @@
+{
+  "rows": [
+    {
+      "column_name": "id",
+      "data_type": "uuid",
+      "table_name": "classroom_items"
+    },
+    {
+      "column_name": "student_id",
+      "data_type": "uuid",
+      "table_name": "classroom_items"
+    },
+    {
+      "column_name": "class_id",
+      "data_type": "uuid",
+      "table_name": "classroom_items"
+    },
+    {
+      "column_name": "created_by",
+      "data_type": "uuid",
+      "table_name": "classroom_items"
+    },
+    {
+      "column_name": "type",
+      "data_type": "text",
+      "table_name": "classroom_items"
+    },
+    {
+      "column_name": "title",
+      "data_type": "text",
+      "table_name": "classroom_items"
+    },
+    {
+      "column_name": "description",
+      "data_type": "text",
+      "table_name": "classroom_items"
+    },
+    {
+      "column_name": "content_html",
+      "data_type": "text",
+      "table_name": "classroom_items"
+    },
+    {
+      "column_name": "content_markdown",
+      "data_type": "text",
+      "table_name": "classroom_items"
+    },
+    {
+      "column_name": "source_table",
+      "data_type": "text",
+      "table_name": "classroom_items"
+    },
+    {
+      "column_name": "source_id",
+      "data_type": "text",
+      "table_name": "classroom_items"
+    },
+    {
+      "column_name": "status",
+      "data_type": "text",
+      "table_name": "classroom_items"
+    },
+    {
+      "column_name": "unlock_at",
+      "data_type": "timestamp with time zone",
+      "table_name": "classroom_items"
+    },
+    {
+      "column_name": "due_at",
+      "data_type": "timestamp with time zone",
+      "table_name": "classroom_items"
+    },
+    {
+      "column_name": "completed_at",
+      "data_type": "timestamp with time zone",
+      "table_name": "classroom_items"
+    },
+    {
+      "column_name": "priority",
+      "data_type": "integer",
+      "table_name": "classroom_items"
+    },
+    {
+      "column_name": "visible_to_student",
+      "data_type": "boolean",
+      "table_name": "classroom_items"
+    },
+    {
+      "column_name": "metadata_json",
+      "data_type": "jsonb",
+      "table_name": "classroom_items"
+    },
+    {
+      "column_name": "created_at",
+      "data_type": "timestamp with time zone",
+      "table_name": "classroom_items"
+    },
+    {
+      "column_name": "updated_at",
+      "data_type": "timestamp with time zone",
+      "table_name": "classroom_items"
+    },
+    {
+      "column_name": "id",
+      "data_type": "uuid",
+      "table_name": "messages"
+    },
+    {
+      "column_name": "conversation_id",
+      "data_type": "uuid",
+      "table_name": "messages"
+    },
+    {
+      "column_name": "sender_id",
+      "data_type": "uuid",
+      "table_name": "messages"
+    },
+    {
+      "column_name": "body",
+      "data_type": "text",
+      "table_name": "messages"
+    },
+    {
+      "column_name": "created_at",
+      "data_type": "timestamp with time zone",
+      "table_name": "messages"
+    },
+    {
+      "column_name": "id",
+      "data_type": "uuid",
+      "table_name": "notifications"
+    },
+    {
+      "column_name": "user_id",
+      "data_type": "uuid",
+      "table_name": "notifications"
+    },
+    {
+      "column_name": "type",
+      "data_type": "text",
+      "table_name": "notifications"
+    },
+    {
+      "column_name": "title",
+      "data_type": "text",
+      "table_name": "notifications"
+    },
+    {
+      "column_name": "body",
+      "data_type": "text",
+      "table_name": "notifications"
+    },
+    {
+      "column_name": "link",
+      "data_type": "text",
+      "table_name": "notifications"
+    },
+    {
+      "column_name": "read",
+      "data_type": "boolean",
+      "table_name": "notifications"
+    },
+    {
+      "column_name": "created_at",
+      "data_type": "timestamp with time zone",
+      "table_name": "notifications"
+    },
+    {
+      "column_name": "class_id",
+      "data_type": "text",
+      "table_name": "profiles"
+    },
+    {
+      "column_name": "overall_answered",
+      "data_type": "integer",
+      "table_name": "profiles"
+    },
+    {
+      "column_name": "overall_correct",
+      "data_type": "integer",
+      "table_name": "profiles"
+    },
+    {
+      "column_name": "overall_avg_ms",
+      "data_type": "integer",
+      "table_name": "profiles"
+    },
+    {
+      "column_name": "by_qtype_json",
+      "data_type": "jsonb",
+      "table_name": "profiles"
+    },
+    {
+      "column_name": "by_level_json",
+      "data_type": "jsonb",
+      "table_name": "profiles"
+    },
+    {
+      "column_name": "streak_current",
+      "data_type": "integer",
+      "table_name": "profiles"
+    },
+    {
+      "column_name": "xp_total",
+      "data_type": "integer",
+      "table_name": "profiles"
+    },
+    {
+      "column_name": "daily_goal_streak",
+      "data_type": "integer",
+      "table_name": "profiles"
+    },
+    {
+      "column_name": "updated_at",
+      "data_type": "timestamp with time zone",
+      "table_name": "profiles"
+    },
+    {
+      "column_name": "last_practice_date",
+      "data_type": "date",
+      "table_name": "profiles"
+    },
+    {
+      "column_name": "longest_streak",
+      "data_type": "integer",
+      "table_name": "profiles"
+    },
+    {
+      "column_name": "daily_goal_questions",
+      "data_type": "integer",
+      "table_name": "profiles"
+    },
+    {
+      "column_name": "level",
+      "data_type": "integer",
+      "table_name": "profiles"
+    },
+    {
+      "column_name": "display_name",
+      "data_type": "text",
+      "table_name": "profiles"
+    },
+    {
+      "column_name": "has_bootcamp_access",
+      "data_type": "boolean",
+      "table_name": "profiles"
+    },
+    {
+      "column_name": "has_classroom_access",
+      "data_type": "boolean",
+      "table_name": "profiles"
+    },
+    {
+      "column_name": "has_analytics_access",
+      "data_type": "boolean",
+      "table_name": "profiles"
+    },
+    {
+      "column_name": "has_schedule_access",
+      "data_type": "boolean",
+      "table_name": "profiles"
+    },
+    {
+      "column_name": "has_seen_tour",
+      "data_type": "boolean",
+      "table_name": "profiles"
+    },
+    {
+      "column_name": "has_practice_access",
+      "data_type": "boolean",
+      "table_name": "profiles"
+    },
+    {
+      "column_name": "has_drill_access",
+      "data_type": "boolean",
+      "table_name": "profiles"
+    },
+    {
+      "column_name": "has_waj_access",
+      "data_type": "boolean",
+      "table_name": "profiles"
+    },
+    {
+      "column_name": "has_flagged_access",
+      "data_type": "boolean",
+      "table_name": "profiles"
+    },
+    {
+      "column_name": "has_chat_access",
+      "data_type": "boolean",
+      "table_name": "profiles"
+    },
+    {
+      "column_name": "has_export_access",
+      "data_type": "boolean",
+      "table_name": "profiles"
+    },
+    {
+      "column_name": "last_seen_at",
+      "data_type": "timestamp with time zone",
+      "table_name": "profiles"
+    },
+    {
+      "column_name": "has_ta_access",
+      "data_type": "boolean",
+      "table_name": "profiles"
+    },
+    {
+      "column_name": "has_journal_access",
+      "data_type": "boolean",
+      "table_name": "profiles"
+    },
+    {
+      "column_name": "has_activity_access",
+      "data_type": "boolean",
+      "table_name": "profiles"
+    },
+    {
+      "column_name": "layout_prefs",
+      "data_type": "jsonb",
+      "table_name": "profiles"
+    },
+    {
+      "column_name": "onboarding",
+      "data_type": "jsonb",
+      "table_name": "profiles"
+    },
+    {
+      "column_name": "onboarding_completed_at",
+      "data_type": "timestamp with time zone",
+      "table_name": "profiles"
+    },
+    {
+      "column_name": "test_date",
+      "data_type": "date",
+      "table_name": "profiles"
+    },
+    {
+      "column_name": "proficiency_level",
+      "data_type": "text",
+      "table_name": "profiles"
+    },
+    {
+      "column_name": "onboarding_notified_at",
+      "data_type": "timestamp with time zone",
+      "table_name": "profiles"
+    },
+    {
+      "column_name": "lsat_accommodation",
+      "data_type": "text",
+      "table_name": "profiles"
+    },
+    {
+      "column_name": "archived_at",
+      "data_type": "timestamp with time zone",
+      "table_name": "profiles"
+    },
+    {
+      "column_name": "archived_reason",
+      "data_type": "text",
+      "table_name": "profiles"
+    },
+    {
+      "column_name": "access_tier",
+      "data_type": "text",
+      "table_name": "profiles"
+    },
+    {
+      "column_name": "id",
+      "data_type": "uuid",
+      "table_name": "ta_assignments"
+    },
+    {
+      "column_name": "student_id",
+      "data_type": "uuid",
+      "table_name": "ta_assignments"
+    },
+    {
+      "column_name": "interaction_id",
+      "data_type": "uuid",
+      "table_name": "ta_assignments"
+    },
+    {
+      "column_name": "title",
+      "data_type": "text",
+      "table_name": "ta_assignments"
+    },
+    {
+      "column_name": "content_html",
+      "data_type": "text",
+      "table_name": "ta_assignments"
+    },
+    {
+      "column_name": "asset_ids",
+      "data_type": "ARRAY",
+      "table_name": "ta_assignments"
+    },
+    {
+      "column_name": "pdf_url",
+      "data_type": "text",
+      "table_name": "ta_assignments"
+    },
+    {
+      "column_name": "status",
+      "data_type": "text",
+      "table_name": "ta_assignments"
+    },
+    {
+      "column_name": "assigned_by",
+      "data_type": "uuid",
+      "table_name": "ta_assignments"
+    },
+    {
+      "column_name": "assigned_at",
+      "data_type": "timestamp with time zone",
+      "table_name": "ta_assignments"
+    },
+    {
+      "column_name": "viewed_at",
+      "data_type": "timestamp with time zone",
+      "table_name": "ta_assignments"
+    },
+    {
+      "column_name": "completed_at",
+      "data_type": "timestamp with time zone",
+      "table_name": "ta_assignments"
+    },
+    {
+      "column_name": "created_at",
+      "data_type": "timestamp with time zone",
+      "table_name": "ta_assignments"
+    },
+    {
+      "column_name": "response_schema",
+      "data_type": "jsonb",
+      "table_name": "ta_assignments"
+    },
+    {
+      "column_name": "response_data",
+      "data_type": "jsonb",
+      "table_name": "ta_assignments"
+    },
+    {
+      "column_name": "response_saved_at",
+      "data_type": "timestamp with time zone",
+      "table_name": "ta_assignments"
+    },
+    {
+      "column_name": "answer_key_html",
+      "data_type": "text",
+      "table_name": "ta_assignments"
+    }
+  ]
+}

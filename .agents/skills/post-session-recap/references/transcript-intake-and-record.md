@@ -26,15 +26,19 @@ Use `gws calendar events list` on the primary calendar for the date window. Matc
 
 The Drive result can include Markdown copies uploaded by an earlier intake. Count native
 Google Docs as source transcripts and use the file ID to deduplicate. Do not count an
-uploaded `YYYY-MM-DD-<slug>-notes-by-gemini.md` copy as another session. Reconcile the
-full week against Calendar before exporting so unattached docs and events with no doc
-both remain visible in the report.
+uploaded `YYYY-MM-DD-<slug>-notes-by-gemini.md` copy as another session. For a requested reconciliation, compare the requested person/date window
+against Calendar before exporting so unattached docs and events with no doc
+both remain visible in the report. A single-session lookup stays within that
+session and reads the source without filing or distillation.
 
 File to `students/<slug>/transcript-downloads/YYYY-MM-DD-<slug>-notes-by-gemini.md`.
 Resolve the person with `students/_aliases.md`; for a "Meeting started" doc, count
 speaker labels in the transcript (use `rg -o "^[A-Z][a-z]+( [A-Z][a-z]+)?:"` and count the labels).
 Consultations and people without a folder go to `students/_other-sessions/`.
-**Never create a student folder without asking.** Skip anything already on disk.
+**Never create a student folder without asking.** Reuse preserved exports already
+on disk, inspect completion, and resume only missing authorized outputs. Do not
+overwrite source bytes; preserve changed generations with provenance. An existing
+file alone does not establish completed processing.
 
 The Google Classroom calendars (`c_classroom...`) have been empty since 2026; the
 primary calendar holds every session.

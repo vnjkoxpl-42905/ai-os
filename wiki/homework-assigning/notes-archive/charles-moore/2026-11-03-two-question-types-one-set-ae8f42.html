@@ -1,0 +1,128 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="lsatu-interactive-lesson" content="charles-parallel-day2-blended-v1"><title>Two Question Types, One Set</title><style>  :root{
+    --cream:#FBF8F1; --ink:#1C1917; --ink-soft:#44403C; --ink-mute:#78716C;
+    --gold:#E8D08B; --gold-deep:#B8983F; --gold-wash:rgba(232,208,139,.16);
+    --card:#FFFFFF; --line:#E7E0D2;
+    --green:#3F6212; --green-wash:rgba(63,98,18,.09);
+    --red:#9F1239; --red-wash:rgba(159,18,57,.07);
+    --serif:"Fraunces","Garamond","Georgia",serif;
+    --sans:"Outfit","Avenir Next","Helvetica Neue",sans-serif;
+    --mono:"JetBrains Mono","SF Mono",Menlo,monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--ink);font-family:var(--sans);line-height:1.65;font-size:17px}
+  .wrap{max-width:800px;margin:0 auto;padding:0 24px}
+
+  header.hero{padding:68px 0 44px;border-bottom:1px solid var(--line)}
+  .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:18px}
+  h1{font-family:var(--serif);font-weight:600;font-size:clamp(36px,6vw,54px);line-height:1.06;letter-spacing:-.01em}
+  .hero p.lede{margin-top:20px;font-size:19px;color:var(--ink-soft);max-width:58ch}
+
+  section{padding:50px 0;border-bottom:1px solid var(--line)}
+  h2{font-family:var(--serif);font-weight:600;font-size:30px;line-height:1.15;margin-bottom:4px}
+  h3{font-family:var(--serif);font-weight:600;font-size:21px;line-height:1.2;margin:30px 0 4px;color:var(--ink)}
+  p{margin:14px 0;color:var(--ink-soft)}
+  p strong{color:var(--ink)}
+  ul{margin:14px 0 14px 22px;color:var(--ink-soft)}
+  ul li{margin:6px 0}
+
+  .callout{background:var(--gold-wash);border-left:3px solid var(--gold-deep);border-radius:0 12px 12px 0;padding:16px 20px;margin:24px 0;font-size:16.5px;color:var(--ink-soft)}
+  .callout strong{color:var(--ink)}
+  .callout p{margin:8px 0}
+
+  ol.steps{margin:20px 0;padding-left:0;list-style:none;counter-reset:step}
+  ol.steps li{counter-increment:step;position:relative;padding:14px 0 14px 54px;border-bottom:1px dashed var(--line);font-size:16px;color:var(--ink-soft)}
+  ol.steps li:last-child{border-bottom:none}
+  ol.steps li::before{content:counter(step);position:absolute;left:0;top:12px;width:34px;height:34px;border-radius:50%;background:var(--ink);color:var(--cream);font-family:var(--serif);display:flex;align-items:center;justify-content:center;font-size:16px}
+  ol.steps li b{color:var(--ink)}
+  ol.steps li span.say{display:block;margin-top:4px}
+
+  table.t{width:100%;border-collapse:collapse;margin:20px 0;font-size:15.5px;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  table.t th{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold-deep);text-align:left;padding:12px 16px;border-bottom:1px solid var(--line)}
+  table.t td{padding:11px 16px;border-bottom:1px dashed var(--line);color:var(--ink-soft);vertical-align:top}
+  table.t tr:last-child td{border-bottom:none}
+  table.t td:first-child{color:var(--ink);font-weight:600;white-space:nowrap}
+
+  .strength{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:22px 0}
+  .strength div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;text-align:center;font-family:var(--serif);font-size:22px;color:var(--ink);box-shadow:0 1px 3px rgba(28,25,23,.06)}
+  .strength div:nth-child(1){border-top:4px solid var(--gold)}
+  .strength div:nth-child(2){border-top:4px solid var(--gold-deep)}
+  .strength div:nth-child(3){border-top:4px solid var(--ink)}
+
+  .diagram{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 22px;margin:20px 0;font-family:var(--serif);font-size:22px;line-height:2;color:var(--ink)}
+  .diagram .ar{color:var(--gold-deep);font-weight:700;margin:0 8px}
+  .neg{position:relative;display:inline-block;padding:0 3px;line-height:1.15}
+  .neg::after{content:"";position:absolute;left:0;right:0;top:0;bottom:0;background:linear-gradient(to bottom left,transparent calc(50% - 1.25px),currentColor calc(50% - 1.25px),currentColor calc(50% + 1.25px),transparent calc(50% + 1.25px))}
+  .quote{font-family:var(--serif);font-size:19px;line-height:1.5;color:var(--ink);border-left:3px solid var(--gold);padding:4px 0 4px 22px;margin:24px 0;font-style:italic}
+  .quote p{color:var(--ink);margin:6px 0}
+
+  .wrong{border:1px solid rgba(159,18,57,.25);background:var(--red-wash);border-radius:12px;padding:12px 16px;margin:10px 0;color:var(--ink-soft)}
+  .wrong b{color:var(--red)}
+
+  .footer-note{padding:34px 0 56px}
+  .mark{font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-mute);opacity:.7}
+  @media (max-width:560px){table.t td:first-child{white-space:normal}.strength{grid-template-columns:1fr}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+  .ok{border:1px solid rgba(63,98,18,.28);background:var(--green-wash);border-radius:12px;padding:12px 16px;margin:10px 0;color:var(--ink-soft)}
+  .ok b{color:var(--green)}
+  details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:10px 0}
+  details summary{cursor:pointer;color:var(--ink)}
+  details p{margin:10px 0 2px}
+</style></head><body>
+<header class="hero"><div class="wrap"><div class="kicker">Tuesday · Goes with BLENDED SET: Parallel + Paradox</div><h1>Two Question Types, One Set</h1><p class="lede">The mix is the skill. Before you read the stimulus, say which question you are in and what the right answer has to do.</p></div></header>
+
+<section><div class="wrap"><h2>Say the task first</h2>
+<p>A parallel question and a paradox question can open with a similar paragraph. They want opposite things from you, and reading one the way you read the other is how time disappears.</p>
+<table class="t"><thead><tr><th>Question</th><th>The right answer must</th><th>So you read for</th></tr></thead><tbody>
+<tr><td>Parallel</td><td>Be built the same way as the stimulus.</td><td>Types, strengths and the copycat idea. The topic is noise.</td></tr>
+<tr><td>Paradox</td><td>Let two facts that seem to clash both be true.</td><td>The two facts. There is no conclusion to find.</td></tr>
+</tbody></table>
+<p>Read the question line first. Then say the task in your own words: <i>match the build</i>, or <i>explain the clash</i>.</p>
+</div></section>
+
+<section><div class="wrap"><h2>Paradox in four steps</h2>
+<ol class="steps">
+<li><b>Find the two facts that seem to clash.</b> Write each as one short line. If you can only find one, you are probably in a different question.</li>
+<li><b>Say what would let both be true.</b> Almost always it is a difference: something that applies to one fact and not the other, or applies in different amounts.</li>
+<li><b>Go to the answers and look for that difference.</b> You are not hunting for a fact you like. You are hunting for one that bridges the two lines you wrote.</li>
+<li><b>Test the survivor against both lines.</b> It has to explain the first fact and the second. An answer that explains only one has solved half of it.</li>
+</ol>
+<h3>One example</h3>
+<div class="quote"><p>Last year a city added protected bike lanes to its busiest roads. Over the same year, the number of cyclists injured on those roads went up.</p></div>
+<div class="diagram">
+<div>Fact 1: lanes were built to make riding safer</div>
+<div>Fact 2: injuries on those roads went up</div>
+</div>
+<p>What would let both be true? Either the lanes did not help, or something else grew so much that the total rose anyway. The second is the one the answers can build on.</p>
+<table class="t"><thead><tr><th>Answer</th><th>What it does</th></tr></thead><tbody>
+<tr><td>The number of cyclists on those roads tripled.</td><td>Right. More riders can mean more injuries in total even if each rider is safer. Both facts hold.</td></tr>
+<tr><td>Drivers in the city are generally careful.</td><td>Explains neither fact. It does not touch the rise.</td></tr>
+<tr><td>Injuries also went up on roads without lanes.</td><td>Makes the puzzle bigger. Now it is about the whole city.</td></tr>
+<tr><td>The lanes cost more than the city planned.</td><td>True and irrelevant. Cost has nothing to do with injuries.</td></tr>
+</tbody></table>
+<div class="callout"><p><strong>Wrong paradox answers come in a few shapes.</strong> They explain only one fact, they repeat the puzzle in new words, they make it bigger, or they bring in something that has nothing to do with either line. Spotting the shape lets you cut quickly.</p></div>
+</div></section>
+
+<section><div class="wrap"><h2>Parallel, in three lines</h2>
+<p>You have the full steps in your Parallel Reasoning note. In a blended set, keep these three where you can see them.</p>
+<ul>
+<li>Tag the conclusion by <strong>type</strong> and by <strong>strength</strong>, exactly.</li>
+<li>Decide <strong>valid or flawed</strong>. A flawed stimulus needs a flawed answer.</li>
+<li>Cut on the conclusions of all five answers before you read any premise.</li>
+</ul>
+<p>The common slip in a mixed set is carrying parallel habits into a paradox. Do not look for a conclusion in a paradox stimulus. And do not look for a gap to bridge in a parallel one.</p>
+</div></section>
+
+<section><div class="wrap"><h2>Try it before the drill</h2>
+<p>Name the task, then open the answer.</p>
+<h3>1</h3>
+<p>A restaurant raised its prices by ten percent, yet it served more meals this quarter than last. What does the right answer have to do?</p>
+<details><summary><b>Open the answer</b></summary><p><strong>Explain the clash.</strong> Higher prices usually mean fewer meals. An answer has to bring in a difference, such as a new office opening nearby, that lets both be true.</p></details>
+<h3>2</h3>
+<p>If the ferry is delayed, the market opens late. If the market opens late, the bakery sells out. So if the ferry is delayed, the bakery sells out. Which task is this?</p>
+<details><summary><b>Open the answer</b></summary><p><strong>Match the build.</strong> It is a parallel question: two conditionals chained into a conditional conclusion. Tag the conclusion and cut the answers on it.</p></details>
+</div></section>
+
+<div class="footer-note"><div class="wrap"><span class="mark">LSAT U</span></div></div>
+</body></html>

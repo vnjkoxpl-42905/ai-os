@@ -1,0 +1,228 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="lsatu-interactive-lesson" content="sofia-2026-11-01-session-recap"><title>Ask How Much the Answer Needs · Session recap</title><style>  :root{
+    --cream:#FBF8F1; --ink:#1C1917; --ink-soft:#44403C; --ink-mute:#6F6A63;
+    --gold:#E8D08B; --gold-deep:#B8983F; --gold-text:#85650F; --gold-wash:rgba(232,208,139,.16);
+    --card:#FFFFFF; --line:#E7E0D2;
+    --green:#3F6212; --green-wash:rgba(63,98,18,.09);
+    --red:#9F1239; --red-wash:rgba(159,18,57,.07);
+    --serif:"Fraunces","Garamond","Georgia",serif;
+    --sans:"Outfit","Avenir Next","Helvetica Neue",sans-serif;
+    --mono:"JetBrains Mono","SF Mono",Menlo,monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--ink);font-family:var(--sans);line-height:1.65;font-size:17px}
+  .wrap{max-width:800px;margin:0 auto;padding:0 24px}
+
+  header.hero{padding:68px 0 44px;border-bottom:1px solid var(--line)}
+  .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-text);margin-bottom:18px}
+  h1{font-family:var(--serif);font-weight:600;font-size:clamp(36px,6vw,54px);line-height:1.06;letter-spacing:-.01em}
+  .hero p.lede{margin-top:20px;font-size:19px;color:var(--ink-soft);max-width:58ch}
+
+  section{padding:50px 0;border-bottom:1px solid var(--line)}
+  h2{font-family:var(--serif);font-weight:600;font-size:30px;line-height:1.15;margin-bottom:4px}
+  .sec-kicker{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-text);margin-bottom:10px}
+  p{margin:14px 0;color:var(--ink-soft)}
+  p strong{color:var(--ink)}
+
+  .callout{background:var(--gold-wash);border-left:3px solid var(--gold-deep);border-radius:0 12px 12px 0;padding:16px 20px;margin:24px 0;font-size:16.5px;color:var(--ink-soft)}
+  .callout .tag{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-text);display:block;margin-bottom:6px}
+  .callout strong{color:var(--ink)}
+
+  /* the three kinds */
+  .kinds{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:28px 0 8px}
+  .kind{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;box-shadow:0 1px 3px rgba(28,25,23,.06);transition:transform .18s,box-shadow .18s}
+  /* The colour carries the taxonomy, so it has to stay. A short rule inside
+     the padding does that without a 3px border running into a 14px corner. */
+  .kind .bar{display:block;width:32px;height:4px;border-radius:2px;background:var(--c);margin-bottom:14px}
+  .kind:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(28,25,23,.09)}
+  .kind.assume{--c:var(--gold-deep)}
+  .kind.object{--c:var(--red)}
+  .kind.describe{--c:var(--green)}
+  .kind .name{font-family:var(--serif);font-size:22px;color:var(--c);font-weight:600}
+  .kind .what{font-size:15px;margin:8px 0 0;color:var(--ink-soft)}
+  .kind .words{border-top:1px dashed var(--line);margin-top:14px;padding-top:12px}
+  .kind .words b{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--c);display:block;margin-bottom:7px}
+  .kind .words span{display:block;font-size:14px;color:var(--ink-mute);padding:2px 0}
+  .kind .test{margin-top:14px;background:var(--cream);border-radius:9px;padding:11px 13px;font-size:14.5px;color:var(--ink)}
+  .kind .test b{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-mute);display:block;margin-bottom:4px}
+
+  .opposite{display:flex;align-items:stretch;gap:0;margin:26px 0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--card)}
+  .opposite div{flex:1;padding:18px 20px;font-size:15.5px;color:var(--ink-soft)}
+  .opposite div:first-child{background:var(--gold-wash)}
+  .opposite div:last-child{background:var(--red-wash)}
+  .opposite b{display:block;font-family:var(--mono);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;margin-bottom:6px}
+  .opposite div:first-child b{color:var(--gold-text)}
+  .opposite div:last-child b{color:var(--red)}
+
+  ol.steps{margin:20px 0;padding-left:0;list-style:none;counter-reset:step}
+  ol.steps li{counter-increment:step;position:relative;padding:14px 0 14px 54px;border-bottom:1px dashed var(--line);font-size:16px;color:var(--ink-soft)}
+  ol.steps li:last-child{border-bottom:none}
+  ol.steps li::before{content:counter(step);position:absolute;left:0;top:12px;width:34px;height:34px;border-radius:50%;background:var(--ink);color:var(--cream);font-family:var(--serif);display:flex;align-items:center;justify-content:center;font-size:16px}
+  ol.steps li b{color:var(--ink)}
+
+  .flags{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 4px}
+  .flag{font-family:var(--mono);font-size:12.5px;letter-spacing:.04em;background:var(--red-wash);color:var(--red);border:1px solid rgba(159,18,57,.2);border-radius:999px;padding:6px 14px}
+
+  .drill{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;margin:26px 0;box-shadow:0 2px 8px rgba(28,25,23,.06)}
+  .drill h3{font-family:var(--serif);font-size:19px;margin-bottom:4px}
+  .drill p.hint{font-size:14px;color:var(--ink-mute);margin:0 0 14px}
+  .chips{display:flex;gap:8px;flex-wrap:wrap}
+  .chip{font-family:var(--mono);font-size:13px;background:var(--cream);border:1px solid var(--line);border-radius:999px;padding:8px 15px;cursor:pointer;transition:all .16s;color:var(--ink-soft)}
+  .chip:hover{border-color:var(--ink-mute)}
+  .chip.on[data-k="assume"]{background:var(--gold-wash);border-color:var(--gold-deep);color:var(--gold-text)}
+  .chip.on[data-k="object"]{background:var(--red-wash);border-color:var(--red);color:var(--red)}
+  .chip.on[data-k="describe"]{background:var(--green-wash);border-color:var(--green);color:var(--green)}
+  .chip .ans{display:none;font-weight:600}
+  .chip.on .ans{display:inline;margin-left:8px}
+
+  .quote{font-family:var(--serif);font-size:20px;line-height:1.45;color:var(--ink);border-left:3px solid var(--gold);padding:4px 0 4px 22px;margin:24px 0;font-style:italic}
+  .footer-note{padding:34px 0 56px}
+  .mark{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-mute)}
+  .chip.on[data-k="neutral"]{background:var(--gold-wash);border-color:var(--ink-mute);color:var(--ink)}
+  .kind.link{--c:var(--gold-deep)}
+  .kind.link .name,.kind.assume .name,.kind.link .words b,.kind.assume .words b{color:var(--gold-text)}
+  .kind.apply{--c:var(--green)}
+  .kind.warn{--c:var(--red)}
+  .rule{font-family:var(--serif);font-size:20px;color:var(--ink);margin:18px 0}
+  .rule .ar{color:var(--gold-text);font-weight:700;margin:0 6px}
+  table.t{width:100%;border-collapse:collapse;margin:20px 0;font-size:15.5px;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  table.t th{font-family:var(--mono);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold-text);text-align:left;padding:12px 16px;border-bottom:1px solid var(--line)}
+  table.t td{padding:11px 16px;border-bottom:1px dashed var(--line);color:var(--ink-soft);vertical-align:top}
+  table.t tr:last-child td{border-bottom:none}
+  table.t td:first-child{color:var(--ink);font-weight:600;white-space:nowrap}
+  pre{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;font-family:var(--serif);font-size:18px;overflow-x:auto}
+  @media (max-width:560px){.opposite{flex-direction:column}table.t td:first-child{white-space:normal}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+button.chip{appearance:none;-webkit-appearance:none;line-height:1.3;text-align:left}.chip:focus-visible{outline:3px solid #315b54;outline-offset:3px}@media(max-width:600px){.wrap{overflow-wrap:anywhere}}
+</style></head><body>
+<header class="hero"><div class="wrap"><div class="kicker">Session recap · November 1</div><h1>Ask How Much<br>the Answer Needs</h1><p class="lede">Must Be True and Necessary Assumption questions both reward the answer that needs the least from the passage. The hard ones catch you in two ways. A rule gets run backwards, or a big, confident answer looks like it says more than it can.</p></div></header>
+
+<section><div class="wrap"><div class="sec-kicker">Start here</div><h2>Two jobs a conditional question can give you</h2>
+<p>When a passage is built from rules, the question usually asks you to do one of two things. Name the job first. It tells you what to look for.</p>
+<div class="kinds">
+<article class="kind assume"><span class="bar"></span><h3 class="name">Apply a fact to a rule</h3><p class="what">You get a rule and a fact about one case. The question is what the rule lets you say about that case.</p><div class="words"><b>Looks like</b><span>a rule, then a sentence about one named person, thing or place</span></div><div class="test"><b>Test</b>Does the fact match the starting side of the rule, or the opposite of its result? If neither, nothing follows.</div></article>
+<article class="kind describe"><span class="bar"></span><h3 class="name">Combine the rules</h3><p class="what">There is no named case. Two rules share an idea, and you work out what follows when you connect them.</p><div class="words"><b>Looks like</b><span>two rules and no single case</span></div><div class="test"><b>Test</b>Which idea ends one rule and starts another? Join them there.</div></article>
+</div>
+<p>A rule is a general sentence: when this happens, that follows. A fact is what is true about one case. A rule does nothing until a fact starts it. As you read, mark each sentence as a rule or a fact and keep them apart.</p>
+<p>The opposite of the result works because of the contrapositive. It is the same rule said another way: if the result did not happen, the starting side did not happen either.</p></div></section>
+
+<section><div class="wrap"><div class="sec-kicker">Rules and facts</div><h2>A rule runs one way</h2>
+<p>Here is a rule: every book in the rare room is catalogued online.</p>
+<div class="rule">In the rare room <span class="ar">→</span> catalogued online</div>
+<table class="t"><tr><th>You learn</th><th>You can say</th></tr>
+<tr><td>A book is in the rare room</td><td>It is catalogued online</td></tr>
+<tr><td>A book is catalogued online</td><td>Nothing about the rare room</td></tr>
+<tr><td>A book is not in the rare room</td><td>Nothing about whether it is catalogued</td></tr>
+<tr><td>A book is not catalogued online</td><td>It is not in the rare room</td></tr></table>
+<p>Being in the rare room guarantees a catalogue entry. Seeing a catalogue entry guarantees nothing about the room. The second row is the one wrong answers are built from.</p>
+<p>It happened in our session. A museum shop sold prints of a painting. Wrong answers read that as news about the original: that it was on display, or on loan. A shop can sell posters of the Mona Lisa without owning it. All you know is that a print exists.</p>
+<div class="callout"><span class="tag">The trap that costs the most</span>A fact about the copy is not a fact about the original. The first rule in that passage was about works on display. Nothing said this painting was on display, so that rule never started.</div>
+<div class="quote">When I asked what we actually knew about that painting, you gave me both facts right away: it's a print, and it isn't in the permanent collection. Start from what the passage really tells you. You did.</div></div></section>
+
+<section><div class="wrap"><div class="sec-kicker">Combining rules</div><h2>The OR was put there on purpose</h2>
+<p>If a rule has an OR or an AND in it, expect the question to test it. Test writers rarely add one for decoration. Here is what an OR can hide.</p>
+<div class="rule">If you got into the gala <span class="ar">→</span> you have a ticket or a membership</div>
+<ol class="steps">
+<li><b>Start with the rule.</b> Everyone who got into the gala has a ticket or a membership.</li>
+<li><b>Add a fact.</b> Priya got in, and she has no ticket.</li>
+<li><b>Cross out one half.</b> The OR says at least one of the two is true. The ticket is out, so the membership has to be true.</li>
+<li><b>Add a second rule.</b> Every member gets a parking pass. Priya has a membership, so she has a parking pass.</li>
+</ol>
+<p>Put the two rules together and you get a new one: anyone who got in without a ticket has a parking pass. A hard question hides a conclusion like that behind the OR.</p>
+<div class="callout"><span class="tag">Remember</span>When one half of an OR is ruled out, the other half has to be true. When both halves are out, the rule's starting side did not happen.</div></div></section>
+
+<section><div class="wrap"><div class="sec-kicker">Before the answers</div><h2>Say what you do not know</h2>
+<p>Knowing what you don't know is almost as important as knowing what you do. The answers that sound like what you know are the ones that catch you.</p>
+<ol class="steps">
+<li>Hold on to one rule until you could say it without looking. If a rule has an OR or an AND, pick that one.</li>
+<li>Say the wrong version out loud. For the gala rule: "Having a ticket or a membership does not tell me anyone got in."</li>
+<li>Now read the answers. The ones that sound like your wrong version are easy to spot.</li>
+</ol></div></section>
+
+<section><div class="wrap"><div class="sec-kicker">Strength</div><h2>Pick the safer bet</h2>
+<p>Must Be True and Necessary Assumption sound like two different questions. They reward the same instinct: the answer that needs the least.</p>
+<p>Say I pick a random student and bet on her LSAT score. Is a bet on 150 safer, or a bet on 180? The 150. The higher the guess, the more evidence it needs. Answer choices work the same way. The bigger the claim, the more the passage has to give you.</p>
+<div class="opposite"><div><b>A weak answer</b>Asks for little. The passage can back it easily.</div><div><b>A strong answer</b>Asks for a lot. The passage has to back all of it, and one exception ends it.</div></div>
+<p>Words that make a claim big:</p>
+<div class="flags"><span class="flag">only</span><span class="flag">never</span><span class="flag">always</span><span class="flag">all</span><span class="flag">every</span><span class="flag">not possible</span></div>
+<p>Before you test any answer, sort all five from weakest to strongest. On Must Be True and Necessary Assumption, the right answer is more often near the weak end than the strong end.</p>
+<div class="callout"><span class="tag">Strength is how much the answer needs</span>The words are a clue, not the test. In our session one answer said "every work" and was correct, because a rule in the passage already covered every case. Another answer was wrong because of its scope: it was about any entity in the world, when the argument only needed one situation. Ask how much the passage must give you for this answer to be true.</div>
+<div class="quote">On the obligation question, you said the answer you first picked was too strong, and that the conclusion was about cutting trees down, so the answer had to stay there. That is the scope check.</div>
+<p>Two limits. A weak answer still has to matter to the argument. Soft wording about an unrelated idea is still wrong. Strengthen and weaken questions treat strength differently, so know which question you are in before you judge an answer's strength.</p>
+<div class="callout"><span class="tag">Must Be False</span>The right answer contradicts something the passage gives you, or something you can work out by combining two claims. In PT127 Section 1, Question 25, "it is not possible to raise cacti" tempted. The passage never ruled that out, so it could be true, which means it cannot be the answer.</div></div></section>
+
+<section><div class="wrap"><div class="sec-kicker">Necessary assumption</div><h2>A duty about a thing is not a duty to the thing</h2>
+<p>Take this argument. A statue cannot have rights. An obligation can only be owed to something that has rights. So we have no obligation not to damage the statue.</p>
+<p>The evidence is about who we owe something to. The conclusion is about whether we have any obligation at all. Those are different. If I have a duty not to smash my neighbor's car with a bat, I don't owe that duty to the car. I owe it to my neighbor.</p>
+<ol class="steps">
+<li><b>The missing idea.</b> The author is assuming that any duty not to damage the statue would have to be owed to the statue.</li>
+<li><b>Negate it.</b> A duty not to damage the statue could be owed to someone else, such as the person who made it.</li>
+<li><b>Does the argument survive?</b> No. If that duty exists, the conclusion is false even though the evidence is true.</li>
+</ol>
+<div class="quote">You took the "not" out of the answer, read it straight, and saw that the argument fell apart. That is the negation test working the way it should.</div></div></section>
+
+<section><div class="wrap"><div class="sec-kicker">Role questions</div><h2>Name the conclusion before you answer</h2>
+<p>On the last question, the hard part was finding the conclusion, not choosing the answer. Get the conclusion right and the answer is much easier to see.</p>
+<ol class="steps">
+<li>Look for the claim the whole passage builds toward. It is often in the last sentence, after a word like "thus" or "so".</li>
+<li>Test every other claim: why should I believe this? A claim the author supports and then uses to support something else is a middle step, not the main conclusion.</li>
+<li>Only then ask what the underlined phrase does for those claims.</li>
+</ol>
+<p>Here is a small one. Tractors once looked too complicated for ordinary farmers, yet farms everywhere use them now. This shows that complicated machines can spread. So today's drones, which also look complicated, may spread too.</p>
+<p>The main conclusion is that drones may spread. "Complicated machines can spread" is a middle step. The phrase "which also look complicated" puts the drones in the same starting spot the tractors were in. It is the barrier, not proof that the barrier can be crossed. The proof is the tractors.</p>
+<div class="callout"><span class="tag">A phrase inside the conclusion</span>A descriptive phrase inside a conclusion is presented as a fact. "Therefore Dan's attorney, who went to Harvard, can solve this tax problem." The author treats the Harvard part as given. What the argument is trying to prove is the tax problem.</div>
+<div class="quote">You told me you understood why the right answer was right, and that finding the conclusion was where it slipped. Knowing exactly where it slips is what we work on.</div>
+<p>We'll come back to this one in a later session so we don't rush it.</p></div></section>
+
+<section><div class="wrap"><div class="sec-kicker">Check yourself</div><h2>What follows?</h2>
+<div class="drill"><h3>Tap each fact to check yourself</h3><p class="hint">Rule: if the lab is open, the lights are on. Say what follows first, then tap. "Nothing" counts as an answer.</p>
+<div class="chips">
+<button type="button" class="chip" data-k="describe" aria-expanded="false">The lab is open<span class="ans">· The lights are on</span></button>
+<button type="button" class="chip" data-k="object" aria-expanded="false">The lights are on<span class="ans">· Nothing about the lab</span></button>
+<button type="button" class="chip" data-k="object" aria-expanded="false">The lab is closed<span class="ans">· Nothing about the lights</span></button>
+<button type="button" class="chip" data-k="describe" aria-expanded="false">The lights are off<span class="ans">· The lab is not open</span></button>
+</div></div></div></section>
+
+<section><div class="wrap"><div class="sec-kicker">Check yourself</div><h2>Cross out one half</h2>
+<div class="drill"><h3>Tap each fact to check yourself</h3><p class="hint">Rule: if you got in, you have a ticket or a membership. What follows?</p>
+<div class="chips">
+<button type="button" class="chip" data-k="describe" aria-expanded="false">You got in and have no ticket<span class="ans">· You have a membership</span></button>
+<button type="button" class="chip" data-k="describe" aria-expanded="false">You got in and have no membership<span class="ans">· You have a ticket</span></button>
+<button type="button" class="chip" data-k="object" aria-expanded="false">You have a ticket<span class="ans">· Nothing about whether you got in</span></button>
+<button type="button" class="chip" data-k="describe" aria-expanded="false">You have no ticket and no membership<span class="ans">· You did not get in</span></button>
+</div></div></div></section>
+
+<section><div class="wrap"><div class="sec-kicker">Check yourself</div><h2>How much does it need?</h2>
+<div class="drill"><h3>Tap each phrase to check yourself</h3><p class="hint">Strong wording is only safe when the passage says something just as strong.</p>
+<div class="chips">
+<button type="button" class="chip" data-k="describe" aria-expanded="false">at least one<span class="ans">· Needs little</span></button>
+<button type="button" class="chip" data-k="object" aria-expanded="false">every<span class="ans">· Needs a lot</span></button>
+<button type="button" class="chip" data-k="describe" aria-expanded="false">can<span class="ans">· Needs little</span></button>
+<button type="button" class="chip" data-k="object" aria-expanded="false">never<span class="ans">· Needs a lot</span></button>
+<button type="button" class="chip" data-k="describe" aria-expanded="false">some<span class="ans">· Needs little</span></button>
+<button type="button" class="chip" data-k="object" aria-expanded="false">not possible<span class="ans">· Needs a lot</span></button>
+</div></div></div></section>
+
+<section><div class="wrap"><div class="sec-kicker">The order to follow</div><h2>On every Must Be True, Necessary Assumption or Must Be False</h2>
+<ol class="steps">
+<li>Mark each sentence as a rule or a fact.</li>
+<li>Decide the job: apply a fact to a rule, or combine rules.</li>
+<li>Read any OR or AND slowly. Cross out one half of an OR and see what the other half has to be.</li>
+<li>Say out loud what you do not know.</li>
+<li>Sort the answers from weakest to strongest. For each big word or wide scope, ask how much the passage must give you.</li>
+<li>On a Necessary Assumption question, negate the answer. If there is a "not", take it out and read it straight. Does the argument fall apart?</li>
+</ol>
+<div class="quote">You told me that on your last section you missed only level 4 and 5 questions, and that levels 2 and 3 are getting easier. Missing a few of the hardest ones is a good place to be.</div></div></section>
+
+<section><div class="wrap"><div class="sec-kicker">Your work this week</div><h2>Before we meet tomorrow</h2>
+<ol class="steps">
+<li>I'll send you a short note on answer strength, with practice to go with it. Read the note and do the practice before our session tomorrow, Monday, November 2. We'll reinforce it then.</li>
+<li>When you do the practice, sort the answers from weakest to strongest before you test any of them.</li>
+<li>Tomorrow we'll look again at the question with the "some" sentences that we set aside (PT127 Section 1, Question 22).</li>
+<li>Later, we'll go back to the role question where finding the conclusion was the hard part.</li><li>Everything we worked on came from PT127, Section 1: Question 17 (the museum), Question 19 (the trees), Question 21 (Newton), and tomorrow's Question 22.</li>
+</ol></div></section>
+
+<footer class="footer-note"><div class="wrap"><span class="mark">LSAT U</span></div></footer>
+<script>document.querySelectorAll('.chip').forEach(function(c){c.addEventListener('click',function(){var on=c.classList.toggle('on');c.setAttribute('aria-expanded',String(on));});});</script>
+</body></html>

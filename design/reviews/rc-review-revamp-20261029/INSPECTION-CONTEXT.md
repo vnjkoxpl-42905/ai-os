@@ -1,0 +1,11 @@
+# Final inspection context
+
+Inspect the complete app diff against ed5f56ab076254b2f3cc9af6f722c682160c61d0, including untracked sources. Codex implemented; Gemini independently inspects. Do not run commands, write, message, schedule, ask questions, delegate, manage tasks or call generic MCP tools. Use read-only file tools and return valid JSON. Prior plan approval is not code approval.
+
+Additional explicitly scoped out-of-repo source: C:/Users/Joshu/dev/ai-os/.agents/skills/geminex-loop/scripts/runner.py and test_runner_audit.py; ../references/runtime.md. Read RUNNER-VERIFICATION.md in this review directory for file hashes and 4-copy parity. These external files are manually hash-bound; app manifest cannot certify their state. Inspect normalization, nested invocation detection, metadata false positives and post-run-only boundary. No historical offending invocation is claimed.
+
+Host evidence, not inspector-run: 237 focused tests pass, npm run typecheck pass, npm run build including pre/post checks pass. Targeted ESLint zero errors,5 existing hook warnings. Taste lint flags existing checkmark, setup eyebrow, order zero-padding and purposeful contact shadows; these are advisory exceptions to generic style rules under the user material/depth brief. Do not claim lint fully clean.
+
+CUA host checks: exact PT111 S2 P4 launch Dworkin/6Q; actual player navigation, pause/resume, exit; fresh PT136 S3 P2 Narrative/6Q launch, exit landing and resume retain same identity and clock. Synthetic backend only. Reveal/collapse, comparative A/B headings, Save success, one Save panel, exposure-once failure hidden then retry success. 320 CSSpx title fits above reserved Start bar after entry scroll;390 and768 no horizontal overflow. Dark docked rendered with light heading on rgb19,23,24 host, Save summary14px; real font CDP confirms custom Newsreader. Reading prose18px. Full completion/results and physical AT/phones unverified. Remaining browser matrix checks are coordinator work, not reviewer-run.
+
+Challenge actual code for scope leakage, exposure-owner remounts, stale response handling, launch recovery, Start/Save guards and truthful timer/summary, CSS specificity/container/mobile/sticky focus. Prior valid plan result C:/Users/Joshu/AppData/Local/Temp/geminex-gnqvlnb1/result.json. PLAN.md frozen since approval.

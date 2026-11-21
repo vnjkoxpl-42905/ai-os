@@ -1,0 +1,22 @@
+{
+  "result": "PASS",
+  "original": "present and hash matched",
+  "archive_sha256": "d3bccce4040bc05ad1747670e21568da227d748fcfbc6f2fcd35fe962f200ffd",
+  "archive_bytes": 250496,
+  "hash_checks": "original/archive/manifest/provenance matched; recorded size matched",
+  "routes": {
+    "AGENTS.md": {
+      "before": 466,
+      "after": 466
+    },
+    "CLAUDE.md": {
+      "before": 466,
+      "after": 466
+    }
+  },
+  "links": "all relative paths and Markdown fragments in target docs checked in canonical vault; inert before/ excluded",
+  "script": "C:/Users/Joshu/.codex/visualizations/2026/10/25/01a17081-6735-7fc2-b0e1-922ab635486c/material-guidance-proof.py",
+  "catalog": "python system/scripts/design-catalog.py ran successfully; 169 document candidates",
+  "index": "python system/scripts/wiki-maintenance.py --index ran successfully; 3959 pages",
+  "wiki_log": "wiki/log.md contains 2026-10-27 Claudex hardening entry"
+}

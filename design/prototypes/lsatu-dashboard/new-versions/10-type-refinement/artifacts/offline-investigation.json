@@ -1,0 +1,9 @@
+{
+  "originalFailure": {"source":"Parent final offline rerun, session 25073", "stage":"exact-question", "symptom":"waitForFunction timed out waiting for LSATPreview.inspect().question === lr155", "diagnosticsAvailable":false},
+  "runtimeFilesChanged":false,
+  "scriptChanges":["Explicitly wait for Practice route before entering the exact reference", "Record API/navigation/submission/question stage", "Record page errors, failed requests, console errors, current URL, preview state, input and feedback on failure", "Always write latest offline report, including failure; retain a separate failure report"],
+  "freshOfflinePasses":4,
+  "lastFreshPassUTC":"2026-10-25T09:11:27.341Z",
+  "freshPassResults":{"archiveLinksTo10":2,"exactReference":"lr155","pageErrors":[],"failedRequests":[],"consoleErrors":[]},
+  "classification":"Original timeout not reproduced in four fresh file/offline contexts. No runtime bug established. Root cause remains unconfirmed; route synchronization was strengthened without weakening exact lookup assertions."
+}

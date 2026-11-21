@@ -1,0 +1,84 @@
+{
+ "qid": "PT157-S3-Q24",
+ "type": "Parallel Reasoning",
+ "difficulty": "5",
+ "key_db": "B",
+ "stimulus_db": "A smaller number of short documentary films than of full-length science-fiction films are commercially successful, even though there are more short documentary films than there are science-fiction films. Therefore, a higher proportion of full-length science-fiction films than of short documentary films are commercially successful.",
+ "stem_db": "Which one of the following arguments is most similar in its pattern of reasoning to the argument above?",
+ "choices_db": {
+  "A": "A greater number of small modern apartments than of large Victorian apartments have freestanding bathtubs. Hence, a smaller percentage of large Victorian apartments than of small modern apartments have freestanding bathtubs.",
+  "B": "A greater number of large Victorian apartments than of modern apartments have freestanding bathtubs, even though there are more modern apartments than there are Victorian apartments. Thus, a higher proportion of large Victorian apartments than of modern apartments have freestanding bathtubs.",
+  "C": "A smaller number of small modern apartments than of large Victorian apartments have freestanding bathtubs. For even though there are more small modern apartments than there are Victorian apartments, a higher proportion of large Victorian apartments than of small modern apartments have freestanding bathtubs.",
+  "D": "A greater number of large Victorian apartments than of small modern apartments have freestanding bathtubs, so there are more small modern apartments than there are large Victorian apartments, since a higher percentage of large Victorian apartments than of small modern apartments have freestanding bathtubs.",
+  "E": "A smaller number of modern apartments than of Victorian apartments have freestanding bathtubs, even though there are fewer modern apartments than there are large Victorian apartments. This establishes that a higher proportion of Victorian apartments than of modern apartments have freestanding bathtubs."
+ },
+ "bank": {
+  "stimulus": "A smaller number of short documentary films than\n of full-length science-fiction films are commercially\n successful, even though there are more short\n documentary films than there are science-fiction films.\n Therefore, a higher proportion of full-length science-fiction films than of short documentary films are\n commercially successful.",
+  "stem": "Which one of the following arguments is most similar in\n its pattern of reasoning to the argument above?",
+  "choices": {
+   "A": "A greater number of small modern apartments than of large Victorian apartments have freestanding bathtubs. Hence, a smaller percentage of large Victorian apartments than of small modern apartments have freestanding bathtubs.",
+   "B": "A greater number of large Victorian apartments than of modern apartments have freestanding bathtubs, even though there are more modern apartments than there are Victorian apartments. Thus, a higher proportion of large Victorian apartments than of modern apartments have freestanding bathtubs.",
+   "C": "A smaller number of small modern apartments than of large Victorian apartments have freestanding bathtubs. For even though there are more small modern apartments than there are Victorian apartments, a higher proportion of large Victorian apartments than of small modern apartments have freestanding bathtubs.",
+   "D": "A greater number of large Victorian apartments than of small modern apartments have freestanding bathtubs, so there are more small modern apartments than there are large Victorian apartments, since a higher percentage of large Victorian apartments than of small modern apartments have freestanding bathtubs.",
+   "E": "A smaller number of modern apartments than of Victorian apartments have freestanding bathtubs, even though there are fewer modern apartments than there are large Victorian apartments. This establishes that a higher proportion of Victorian apartments than of modern apartments have freestanding bathtubs."
+  },
+  "key": "B"
+ },
+ "explanation_id": "508f6291-c10d-483d-b35a-7546bdccbc54",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "ee1f4ac1-07bf-45ec-a81e-9d953417b8a7",
+   "position": 0,
+   "label": "Evidence",
+   "body": "The number of commercially successful short documentary films is smaller than the number of commercially successful full-length science-fiction films. There are more short documentary films than there are science-fiction films."
+  },
+  {
+   "row_id": "1c56b3ae-ebf1-4678-8be1-fa0edbd01ed0",
+   "position": 1,
+   "label": "Conclusion",
+   "body": "The proportion of full-length science-fiction films that are commercially successful is higher the proportion of short documentary films that are commercially successful."
+  },
+  {
+   "row_id": "30307406-fc89-436d-8539-c1da8d142d60",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "It can be helpful to rephrase the statements in this argument as we've done here, hopefully stating them in a clearer way. When dealing with a question like this, we might also take some notes: `# com succ short doc < # com succ FL sci-fi`, `# short doc > # sci-fi`, Therefore, `% com succ FL sci-fi > % com succ short doc`. Notice that the argument starts with evidence based on the number of films of each type, then switches to a conclusion about proportions of films in each type. This could indicate a flaw, but let's not worry about that for a moment. We should also note that the evidence first mentions full-length science-fiction films, then switches to discussing science-fiction films in general."
+  },
+  {
+   "row_id": "47672b3d-99ba-4d1d-8cf3-8d7d7f683885",
+   "position": 3,
+   "label": "Goal",
+   "body": "We'll look for answers that contain these same patterns in the evidence and conclusion. We can dig deeper to identify any flaws in this argument so we can match those to the correct answer choice, but let's only do that if we need to."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "da9fcf0a-8518-4d18-8935-7dcd34f8cf35",
+   "letter": "A",
+   "body": "This answer has only one numerical comparison in its evidence: more small modern apartments than large Victorian apartments have freestanding bathtubs. It is missing the second comparison about total numbers that the original argument includes. The original has two premises (fewer successful, more total) leading to a proportion conclusion. This answer jumps from one premise to a proportion conclusion, making it structurally incomplete as a parallel."
+  },
+  {
+   "row_id": "4666020b-1f36-4811-9787-5a6417d73926",
+   "letter": "B",
+   "body": "This answer replicates the original's structure precisely. First premise: more large Victorian apartments than modern apartments have freestanding bathtubs (parallel to: more full-length sci-fi films than short documentaries are successful). Second premise: there are more modern apartments than there are Victorian apartments (parallel to: there are more short documentaries than science-fiction films). Conclusion: a higher proportion of large Victorian apartments have freestanding bathtubs (parallel to: a higher proportion of full-length sci-fi films are successful). The modifier shift is also preserved: \"large Victorian apartments\" in the first premise becomes \"Victorian apartments\" in the second — mirroring the shift from \"full-length science-fiction films\" to \"science-fiction films.\""
+  },
+  {
+   "row_id": "858c22e1-bb09-4f0c-bd88-bd22e9649f32",
+   "letter": "C",
+   "body": "This answer reverses the relationship between evidence and conclusion. The word \"for\" in the second sentence is a premise indicator, meaning the proportion comparison and the total count comparison are both premises, while the raw number comparison is the conclusion. The original argument uses raw numbers and totals as premises to reach a proportion conclusion. This answer uses proportions as a premise to reach a number conclusion — the reasoning runs in the opposite direction."
+  },
+  {
+   "row_id": "1113f185-7505-4226-9877-9816aecdd551",
+   "letter": "D",
+   "body": "The conclusion indicator \"so\" and premise indicator \"since\" reveal the structure: the number comparison and the proportion comparison are premises, while the total count comparison is the conclusion. The original argument concludes with proportions; this answer concludes with total counts. The logical direction is different: the original uses totals as evidence for proportions, while this answer uses proportions as evidence for totals."
+  },
+  {
+   "row_id": "ab7439ea-1472-49d0-9e63-d697f2fe2b15",
+   "letter": "E",
+   "body": "This answer has several structural mismatches. The modifier shift goes in the wrong direction: it moves from \"Victorian apartments\" to \"large Victorian apartments\" in the evidence, whereas the original moves from \"full-length science-fiction films\" to \"science-fiction films\" (dropping the modifier). Also, the conclusion refers to \"Victorian apartments\" broadly rather than the modified form \"large Victorian apartments,\" which is the opposite of the original's pattern where the conclusion restores the modifier. The overall numbers-to-proportions pattern is present, but the term shift pattern is reversed."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (3.2 em-dashes per 1k words; wrong-answer notes average 72.5 words).",
+ "tags": "pt157-158-register"
+}

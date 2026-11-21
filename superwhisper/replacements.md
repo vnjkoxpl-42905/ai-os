@@ -11,7 +11,6 @@ Applied by Superwhisper after transcription, before any AI step. Matching is cas
 | Heard | Wanted | Added | Note |
 |---|---|---|---|
 | cloud code | Claude Code | 2026-09-11 | every dictation, Joshua: "always" |
-| cloud | Claude | 2026-09-11 | Joshua: "cloud should say claude" |
 | super whisperer | Superwhisper | 2026-09-11 | |
 | superwhisperer | Superwhisper | 2026-09-11 | |
 | super whisper | Superwhisper | 2026-09-11 | |
@@ -659,7 +658,6 @@ Applied by Superwhisper after transcription, before any AI step. Matching is cas
 | open ai codex | OpenAI Codex | 2026-09-11 |  |
 | l s a t | LSAT | 2026-09-11 |  |
 | elsat | LSAT | 2026-09-11 |  |
-| lsat you | LSAT U | 2026-09-11 |  |
 | lsat u | LSAT U | 2026-09-11 | casing pin |
 | logical reasoning | Logical Reasoning | 2026-09-11 | casing pin |
 | reading comprehension | Reading Comprehension | 2026-09-11 | casing pin |
@@ -840,7 +838,6 @@ Applied by Superwhisper after transcription, before any AI step. Matching is cas
 | superwhusperer | Superwhisper | 2026-09-23 | scan 2026-09-23 |
 | superwhiskersco | Superwhisper | 2026-09-23 | scan 2026-09-23 |
 | superwhispers | Superwhisper | 2026-09-23 | scan 2026-09-23 |
-| coex | Codex | 2026-09-23 | scan 2026-09-23 |
 | codex6 | Codex | 2026-09-23 | scan 2026-09-23 |
 | gbt-6 | GPT-6 | 2026-09-23 | scan 2026-09-23 |
 | gbt 6 | GPT-6 | 2026-09-23 | scan 2026-09-23 |
@@ -879,9 +876,7 @@ Applied by Superwhisper after transcription, before any AI step. Matching is cas
 | yohunatan | Yahunatan | 2026-09-23 | scan 2026-09-23 |
 | suprabase | Supabase | 2026-09-23 | scan 2026-09-23 |
 | lovible | Lovable | 2026-09-23 | scan 2026-09-23 |
-| scale | skill | 2026-09-26 | dictation hears skill as scale |
 | scales | skills | 2026-09-26 | dictation hears skill as scale |
-| scale. | skill | 2026-09-26 | dictation hears skill as scale |
 | skilled set | skill set | 2026-09-26 | dictation hears skill as scale |
 | scale set | skill set | 2026-09-26 | dictation hears skill as scale |
 | scale creator | /skill-creator | 2026-09-26 | dictation hears skill as scale |

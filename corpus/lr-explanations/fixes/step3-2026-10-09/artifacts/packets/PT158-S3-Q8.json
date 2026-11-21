@@ -1,0 +1,84 @@
+{
+ "qid": "PT158-S3-Q8",
+ "type": "Flaw",
+ "difficulty": "1",
+ "key_db": "C",
+ "stimulus_db": "Student: My paper was not graded in accordance with the professor's stated criteria. The professor said that she would give A's only to papers whose conclusions were supported by reliable statistical evidence. The professor acknowledges that my conclusions were supported by reliable statistical evidence, but she gave my paper a B.",
+ "stem_db": "The reasoning in the student's argument is flawed in that the argument",
+ "choices_db": {
+  "A": "discusses the professor's stated criteria in order to draw attention away from the shortcomings of the student's paper",
+  "B": "attempts to draw an evaluative conclusion solely on the basis of factual claims",
+  "C": "takes a condition that is among the requirements for a particular grade to be a condition that is enough to guarantee that grade",
+  "D": "is based on the report of a biased participant in the controversy",
+  "E": "fails to make a necessary distinction between the professor's grading criteria and the objective criteria of a paper's quality"
+ },
+ "bank": {
+  "stimulus": "Student: My paper was not graded in accordance with\n the professor’s stated criteria. The professor said\n that she would give A’s only to papers whose\n conclusions were supported by reliable statistical\n evidence. The professor acknowledges that my\n conclusions were supported by reliable statistical\n evidence, but she gave my paper a B.",
+  "stem": "The reasoning in the student’s argument is flawed in that\n the argument",
+  "choices": {
+   "A": "discusses the professor’s stated criteria in order to draw attention away from the shortcomings of the student’s paper",
+   "B": "attempts to draw an evaluative conclusion solely on the basis of factual claims",
+   "C": "takes a condition that is among the requirements for a particular grade to be a condition that is enough to guarantee that grade",
+   "D": "is based on the report of a biased participant in the controversy",
+   "E": "fails to make a necessary distinction between the professor’s grading criteria and the objective criteria of a paper’s quality"
+  },
+  "key": "C"
+ },
+ "explanation_id": "ebab0850-a191-40dd-8625-868f6c76b1d1",
+ "style": "standard",
+ "steps": [
+  {
+   "row_id": "b7198622-653d-4052-8991-af7d94443dd0",
+   "position": 0,
+   "label": "Conclusion",
+   "body": "My paper wasn't graded in accordance with the professor's stated criteria."
+  },
+  {
+   "row_id": "542f69a1-1945-43b7-8afc-9f50da21f625",
+   "position": 1,
+   "label": "Evidence",
+   "body": "The professor said that she would only give A's to papers whose conclusions were supported by reliable statistical evidence. My conclusions were supported by reliable statistical evidence, but I got a B."
+  },
+  {
+   "row_id": "db12ab11-af52-46c2-a683-ab4d5b3b4340",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "Whenever we're dong Flaw and we see conditional logic (only), we immediately suspect we're dealing with the #1 Famous Flaw, Necessary vs. Sufficient, in which an author provides a conditional logic rule but thinks about the rule in the style of an illegal negation or reversal. The word \"only / only if\" always signifies a necessary condition, so the rule the professor gave is this:\n```\nGive A → Conc supported w/ good evidence\n```\n    An illegal negation would sound like this: \"My paper didn't get an A. Thus, its conclusions must not have been supported with good evidence.\" An illegal reversal would sound like this: \"My conclusions were supported with good evidence. Thus, my paper will get an A.\" And that's just what the author did. He is thinking that having well supported conclusions is sufficient, like as long as he had well supported conclusion he should be getting an A. But the professor said that well supported conclusion were required, not that they were all you need. There might be other requirements too. For example the professor might say, \"I go on dates only with men who are at least 5' 8\" in height.\" Does that mean that the professor is going to be willing to go on a date with every single man whose 5'8\" or taller? Of course not. She's saying that's a requirement, not a guarantee."
+  },
+  {
+   "row_id": "2aa2772e-075c-454e-93da-387d3cc3a000",
+   "position": 3,
+   "label": "Goal",
+   "body": "Let's look for something calling out the formal Necessary vs. Sufficient error, or look for an answer otherwise saying that the students is failing to consider that there might be other benchmarks you need to hit to get an A, in addition to just having well supported conclusions."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "dc667a9b-ed68-44e6-bace-b383a5cf854d",
+   "letter": "A",
+   "body": "The student is not using the grading criteria as a distraction from the paper's shortcomings. The student genuinely believes the criteria were violated and is making a logical argument — albeit a flawed one — to support that belief. \"Drawing attention away from shortcomings\" describes a rhetorical tactic of deliberate misdirection, but the student's error is logical, not rhetorical. The student sincerely misunderstands the logical structure of the professor's criteria, treating a necessary condition as sufficient. There is no evidence of intentional deflection or strategic manipulation. The flaw is in the reasoning, not in the motives behind the reasoning."
+  },
+  {
+   "row_id": "a694fcf5-b88b-4605-bd29-74ca5e19a713",
+   "letter": "B",
+   "body": "Drawing evaluative conclusions from factual claims is not inherently flawed — it is how most arguments work. The student observes factual conditions (the professor's stated criteria, the paper's characteristics, and the grade received) and draws an evaluative conclusion (the grading was inconsistent). The problem is not the type of conclusion drawn but the logical error in getting there. The student treats a necessary condition as sufficient, which is a specific structural flaw in the reasoning. This answer describes a general argumentative pattern (facts leading to evaluations) that is perfectly legitimate in most contexts and does not identify the specific logical error that makes this particular argument flawed."
+  },
+  {
+   "row_id": "c6682ca3-987b-4577-91cf-6217ea53ce46",
+   "letter": "C",
+   "body": "This answer precisely identifies the student's logical error. The professor said she would give A's \"only to\" papers with reliable statistical evidence. The word \"only\" establishes a necessary condition: you need reliable statistical evidence to get an A. It does not establish a sufficient condition: having reliable statistical evidence does not guarantee you an A. The student takes this necessary condition — one requirement among potentially many — and treats it as a sufficient condition, assuming that meeting it alone should produce an A. But the professor could have additional unstated criteria: quality of writing, depth of analysis, originality, methodological rigor, or any number of other standards. The student's paper met one necessary condition while potentially failing others, making the B grade perfectly consistent with the stated criteria. The student's complaint is built entirely on a logical confusion between what is required and what is enough."
+  },
+  {
+   "row_id": "2002da55-9b52-4313-b63b-21c1276408f6",
+   "letter": "D",
+   "body": "The student is a participant in the controversy, but calling the report \"biased\" does not identify the logical flaw in the argument. Even if we grant that the student has a personal stake in the outcome, the argument's flaw is structural, not motivational. The student's reasoning would be equally flawed if a disinterested third party made the exact same argument. The necessary-sufficient confusion exists regardless of who makes it. Additionally, dismissing an argument solely because the arguer has a personal interest is itself an ad hominem approach. The student could be biased and still correct, or biased and logically wrong — but the wrongness comes from the logic, not the bias."
+  },
+  {
+   "row_id": "8ec51bb9-82db-43ab-a252-5ded8f9b8d41",
+   "letter": "E",
+   "body": "The distinction between the professor's subjective grading criteria and some external \"objective criteria for evaluating papers\" is not relevant to the student's logical error. The professor announced her criteria and graded accordingly; whether those criteria are objective or subjective is a separate issue entirely. The student's argument fails because it confuses a necessary condition for an A (reliable statistical evidence is required) with a sufficient condition (reliable statistical evidence is all that is needed). This confusion exists whether the criteria are perfectly objective, entirely subjective, or some combination. The philosophical nature of the grading standards has no bearing on the structural flaw in the student's reasoning."
+  }
+ ],
+ "known_problem": "Explicit-Standard register (6.8 em-dashes per 1k words; wrong-answer notes average 105.0 words).",
+ "tags": "emdash-heavy; pt157-158-register; possible-misquote"
+}

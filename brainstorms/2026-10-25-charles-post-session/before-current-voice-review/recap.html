@@ -1,0 +1,150 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="lsatu-interactive-lesson" content="charles-2026-10-02-sufficient-assumption-recap"><title>Build the missing connection · Session recap</title><style>  :root{
+    --cream:#FBF8F1; --ink:#1C1917; --ink-soft:#44403C; --ink-mute:#78716C;
+    --gold:#E8D08B; --gold-deep:#B8983F; --gold-wash:rgba(232,208,139,.16);
+    --card:#FFFFFF; --line:#E7E0D2;
+    --green:#3F6212; --green-wash:rgba(63,98,18,.09);
+    --red:#9F1239; --red-wash:rgba(159,18,57,.07);
+    --serif:"Fraunces","Garamond","Georgia",serif;
+    --sans:"Outfit","Avenir Next","Helvetica Neue",sans-serif;
+    --mono:"JetBrains Mono","SF Mono",Menlo,monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--ink);font-family:var(--sans);line-height:1.65;font-size:17px}
+  .wrap{max-width:800px;margin:0 auto;padding:0 24px}
+
+  header.hero{padding:68px 0 44px;border-bottom:1px solid var(--line)}
+  .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:18px}
+  h1{font-family:var(--serif);font-weight:600;font-size:clamp(36px,6vw,54px);line-height:1.06;letter-spacing:-.01em}
+  .hero p.lede{margin-top:20px;font-size:19px;color:var(--ink-soft);max-width:58ch}
+
+  section{padding:50px 0;border-bottom:1px solid var(--line)}
+  h2{font-family:var(--serif);font-weight:600;font-size:30px;line-height:1.15;margin-bottom:4px}
+  .sec-kicker{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:10px}
+  p{margin:14px 0;color:var(--ink-soft)}
+  p strong{color:var(--ink)}
+
+  .callout{background:var(--gold-wash);border-left:3px solid var(--gold-deep);border-radius:0 12px 12px 0;padding:16px 20px;margin:24px 0;font-size:16.5px;color:var(--ink-soft)}
+  .callout .tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-deep);display:block;margin-bottom:6px}
+  .callout strong{color:var(--ink)}
+
+  /* the three kinds */
+  .kinds{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:28px 0 8px}
+  .kind{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;box-shadow:0 1px 3px rgba(28,25,23,.06);transition:transform .18s,box-shadow .18s}
+  /* The colour carries the taxonomy, so it has to stay. A short rule inside
+     the padding does that without a 3px border running into a 14px corner. */
+  .kind .bar{display:block;width:32px;height:4px;border-radius:2px;background:var(--c);margin-bottom:14px}
+  .kind:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(28,25,23,.09)}
+  .kind.assume{--c:var(--gold-deep)}
+  .kind.object{--c:var(--red)}
+  .kind.describe{--c:var(--green)}
+  .kind .name{font-family:var(--serif);font-size:22px;color:var(--c);font-weight:600}
+  .kind .what{font-size:15px;margin:8px 0 0;color:var(--ink-soft)}
+  .kind .words{border-top:1px dashed var(--line);margin-top:14px;padding-top:12px}
+  .kind .words b{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--c);display:block;margin-bottom:7px}
+  .kind .words span{display:block;font-size:14px;color:var(--ink-mute);padding:2px 0}
+  .kind .test{margin-top:14px;background:var(--cream);border-radius:9px;padding:11px 13px;font-size:14.5px;color:var(--ink)}
+  .kind .test b{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-mute);display:block;margin-bottom:4px}
+
+  .opposite{display:flex;align-items:stretch;gap:0;margin:26px 0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--card)}
+  .opposite div{flex:1;padding:18px 20px;font-size:15.5px;color:var(--ink-soft)}
+  .opposite div:first-child{background:var(--gold-wash)}
+  .opposite div:last-child{background:var(--red-wash)}
+  .opposite b{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;margin-bottom:6px}
+  .opposite div:first-child b{color:var(--gold-deep)}
+  .opposite div:last-child b{color:var(--red)}
+
+  ol.steps{margin:20px 0;padding-left:0;list-style:none;counter-reset:step}
+  ol.steps li{counter-increment:step;position:relative;padding:14px 0 14px 54px;border-bottom:1px dashed var(--line);font-size:16px;color:var(--ink-soft)}
+  ol.steps li:last-child{border-bottom:none}
+  ol.steps li::before{content:counter(step);position:absolute;left:0;top:12px;width:34px;height:34px;border-radius:50%;background:var(--ink);color:var(--cream);font-family:var(--serif);display:flex;align-items:center;justify-content:center;font-size:16px}
+  ol.steps li b{color:var(--ink)}
+
+  .flags{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 4px}
+  .flag{font-family:var(--mono);font-size:12.5px;letter-spacing:.04em;background:var(--red-wash);color:var(--red);border:1px solid rgba(159,18,57,.2);border-radius:999px;padding:6px 14px}
+
+  .drill{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;margin:26px 0;box-shadow:0 2px 8px rgba(28,25,23,.06)}
+  .drill h3{font-family:var(--serif);font-size:19px;margin-bottom:4px}
+  .drill p.hint{font-size:14px;color:var(--ink-mute);margin:0 0 14px}
+  .chips{display:flex;gap:8px;flex-wrap:wrap}
+  .chip{font-family:var(--mono);font-size:13px;background:var(--cream);border:1px solid var(--line);border-radius:999px;padding:8px 15px;cursor:pointer;transition:all .16s;color:var(--ink-soft)}
+  .chip:hover{border-color:var(--ink-mute)}
+  .chip.on[data-k="assume"]{background:var(--gold-wash);border-color:var(--gold-deep);color:var(--gold-deep)}
+  .chip.on[data-k="object"]{background:var(--red-wash);border-color:var(--red);color:var(--red)}
+  .chip.on[data-k="describe"]{background:var(--green-wash);border-color:var(--green);color:var(--green)}
+  .chip .ans{display:none;font-weight:600}
+  .chip.on .ans{display:inline;margin-left:8px}
+
+  .quote{font-family:var(--serif);font-size:20px;line-height:1.45;color:var(--ink);border-left:3px solid var(--gold);padding:4px 0 4px 22px;margin:24px 0;font-style:italic}
+  .footer-note{padding:34px 0 56px}
+  .mark{font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-mute);opacity:.7}
+  .chip.on[data-k="neutral"]{background:var(--gold-wash);border-color:var(--ink-mute);color:var(--ink)}
+  .kind.link{--c:var(--gold-deep)}
+  .kind.apply{--c:var(--green)}
+  .kind.warn{--c:var(--red)}
+  .rule{font-family:var(--serif);font-size:20px;color:var(--ink);margin:18px 0}
+  .rule .ar{color:var(--gold-deep);font-weight:700;margin:0 6px}
+  table.t{width:100%;border-collapse:collapse;margin:20px 0;font-size:15.5px;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  table.t th{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold-deep);text-align:left;padding:12px 16px;border-bottom:1px solid var(--line)}
+  table.t td{padding:11px 16px;border-bottom:1px dashed var(--line);color:var(--ink-soft);vertical-align:top}
+  table.t tr:last-child td{border-bottom:none}
+  table.t td:first-child{color:var(--ink);font-weight:600;white-space:nowrap}
+  pre{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;font-family:var(--serif);font-size:18px;overflow-x:auto}
+  @media (max-width:560px){.opposite{flex-direction:column}table.t td:first-child{white-space:normal}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+summary{cursor:pointer;font-weight:600}summary:focus-visible{outline:3px solid var(--green);outline-offset:5px}td,th{overflow-wrap:anywhere}@media(max-width:560px){.t{font-size:14px}.t td,.t th{padding:8px 5px}}</style></head><body><header class="hero"><div class="wrap"><div class="kicker">Session recap · October 2</div><h1>Build the missing<br>connection</h1><p class="lede">A sufficient assumption is an added premise that makes the conclusion follow from the evidence. It has to finish the reasoning. An answer that sounds relevant, repeats the conclusion&#x27;s vocabulary, or makes the conclusion more likely has not necessarily done that job.</p></div></header><section><div class="wrap"><div class="sec-kicker">Step zero</div><h2>Start with the exact conclusion</h2><p>Say who or what the conclusion is about, then say what the author claims about it. These are the naming part and the telling part. “Leah qualifies for the workshop” names Leah and tells us that she qualifies.</p>
+<p>If the conclusion says “that view is wrong,” write out the view it rejects. You cannot test whether an answer proves the conclusion while leaving the conclusion vague.</p>
+<p>Then collect what the premises actually tell you. Keep names, groups, quantities and certainty intact. Evidence about one version of a theory does not automatically cover the entire field.</p></div></section><section><div class="wrap"><div class="sec-kicker">Session recap</div><h2>Are you missing a rule or a fact?</h2><p>These are two common patterns from our session. Use them to locate the gap, then test the whole argument. They are a framework for these questions, rather than an exhaustive account of every argument.</p>
+<h3>Missing rule</h3>
+<p>Given: Leah completed the safety course.</p>
+<p>Conclusion: Leah qualifies for the workshop.</p>
+<p>We have a fact about Leah, but no rule connecting that fact to qualification. Add: <strong>Anyone who completed the safety course qualifies for the workshop.</strong></p>
+<p>Now the reasoning works: Leah completed the course; everyone who did qualifies; therefore Leah qualifies.</p>
+<h3>Missing fact</h3>
+<p>Given: Anyone who completed the safety course qualifies for the workshop.</p>
+<p>Conclusion: Leah qualifies for the workshop.</p>
+<p>This time the rule is present. We need a fact that puts Leah within it. Add: <strong>Leah completed the safety course.</strong></p>
+<p>The same conclusion can be supported by different missing pieces. First check what you already have.</p></div></section><section><div class="wrap"><div class="sec-kicker">Session recap</div><h2>Make the arrow reach the conclusion</h2><p>For the missing-rule example, the needed connection is:</p>
+<p><strong>Completed the safety course → qualifies for the workshop</strong></p>
+<p>Put the supplied evidence on the left side of the arrow and the result you need on the right. The wrong direction would be:</p>
+<p><strong>Qualifies for the workshop → completed the safety course</strong></p>
+<p>That rule tells us what qualified people must have done. It does not tell us that everyone who completed the course qualifies. Leah might have completed it and still lack another qualification. All the premises and that reversed answer could be true while the conclusion is false.</p>
+<p>That is the test. Do not ask whether the words look right. Ask whether the conclusion now has to follow.</p>
+<p>You identified the conclusion's subject and predicate in the sound-change question. That gave us a specific question to answer: how does the evidence about one account reach the broader conclusion?</p></div></section><section><div class="wrap"><div class="sec-kicker">Session recap</div><h2>Predict the connection, then read the answers</h2><p>Before reading choices, finish this sentence: <strong>I know ___, and I need to prove ___.</strong></p>
+<p>For Leah, you know she completed the course and need to prove she qualifies. That gives you a direction to check. It also explains why a rule about an unrelated person does nothing for this conclusion unless it actually connects back to Leah.</p>
+<p>Watch for a genuinely new idea in the conclusion. If the evidence has no route to “qualifies,” the added premise must supply one. Look for that idea or its equivalent meaning. Matching an exact word is not the final test: a definition or a contrapositive can express the needed connection differently.</p>
+<p>Use all the relevant evidence. The sentence nearest the conclusion may help you find the gap, but its position does not make the other premises disappear.</p></div></section><section><div class="wrap"><div class="sec-kicker">Session recap</div><h2>Enough is the test, not the strongest wording</h2><p>Suppose an answer says: “Most people who completed the course qualify.” That leaves room for Leah to be an exception. It helps, but does not finish this argument.</p>
+<p>“Anyone who completed the course qualifies” does finish it. Its strength matters because of what this conclusion needs. Do not select the strongest-sounding answer by default. A strong rule about the wrong group can be completely useless.</p>
+<p>Nor must a sufficient assumption be necessary. We could prove Leah qualifies by adding a different fact, such as that she meets another qualification rule already supplied. The question asks whether the proposed addition works, not whether it is the only possible addition.</p></div></section><section><div class="wrap"><div class="sec-kicker">Session recap</div><h2>Keep the question tasks separate</h2><table class="t">
+<thead>
+<tr>
+<th>Task</th>
+<th>What you do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Must Be True</td>
+<td>Use the supplied information to find what follows. Do not add a premise.</td>
+</tr>
+<tr>
+<td>Sufficient Assumption</td>
+<td>Add the answer as a premise. The conclusion must follow from the combined information.</td>
+</tr>
+<tr>
+<td>Necessary Assumption</td>
+<td>Find a premise the argument requires. Something required may still be too little to prove the conclusion by itself.</td>
+</tr>
+</tbody>
+</table>
+<p>Read the whole question stem. The word “assumption” alone does not tell you which test to run.</p></div></section><section><div class="wrap"><div class="sec-kicker">Session recap</div><h2>Try the connection</h2><p>Say what is missing before checking each explanation.</p><details class="drill"><summary>Every item on the approved list can be ordered. The spare battery is on the approved list. Conclusion: the spare battery can be ordered. Is another premise needed?</summary><p>No. The supplied fact already meets the supplied rule. The conclusion follows without another assumption.</p></details><details class="drill"><summary>Nia submitted the application before noon. Conclusion: Nia met the deadline. What rule would be enough?</summary><p>Everyone who submitted the application before noon met the deadline. Reversing this rule would not prove that Nia met it.</p></details><details class="drill"><summary>Every archive volunteer has completed training. Conclusion: Eli has completed training. What fact would be enough?</summary><p>Eli is an archive volunteer. The rule then applies to Eli. “Everyone who completed training is a volunteer” would not supply the needed fact about Eli.</p></details></div></section><section><div class="wrap"><div class="sec-kicker">Session recap</div><h2>When two answers remain</h2><ol>
+<li>Put one answer into the argument as an additional premise.</li>
+<li>Trace the actual route from the evidence to the exact conclusion, including its scope and strength.</li>
+<li>Try to keep every premise and the answer true while making the conclusion false. If you can, the answer is not enough.</li>
+<li>Check the other answer the same way. Write one sentence explaining the failure of the rejected answer.</li>
+</ol></div></section><section><div class="wrap"><div class="sec-kicker">Session recap</div><h2>Your next work</h2><ol>
+<li>Start with Missing Links: First Taste. It mixes Sufficient Assumption, Necessary Assumption and Principle Strengthen questions. Read the stem first and use the test it asks for. For sufficient-assumption items, write what is given, what must be proved, and the missing connection.</li>
+<li>Keep the Sufficient Assumption reference beside you. Check direction whenever the answer supplies a rule. Preserve the full conditions rather than shortening them into something easier to connect.</li>
+<li>PrepTest 107 is now in your assigned work. Open it in the Testing Centre and choose Untimed before starting. This is a full test with two LR sections and one RC section, not a timed single-section drill. The assignment itself does not choose the pace for you. Complete it untimed and bring your reasoning and result for review.</li>
+<li>Mark one question where an answer helped but did not finish the argument. We will use it to check the difference between stronger evidence and a sufficient assumption.</li>
+</ol></div></section><div class="footer-note"><div class="wrap"><span class="mark">LSAT U</span></div></div></body></html>

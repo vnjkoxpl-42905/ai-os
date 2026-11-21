@@ -1,0 +1,169 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="lsatu-interactive-lesson" content="sofia-2026-11-05-session-recap"><title>Weakening a Causal Argument · Session recap</title><style>  :root{
+    --cream:#FBF8F1; --ink:#1C1917; --ink-soft:#44403C; --ink-mute:#6F6A63;
+    --gold:#E8D08B; --gold-deep:#B8983F; --gold-text:#85650F; --gold-wash:rgba(232,208,139,.16);
+    --card:#FFFFFF; --line:#E7E0D2;
+    --green:#3F6212; --green-wash:rgba(63,98,18,.09);
+    --red:#9F1239; --red-wash:rgba(159,18,57,.07);
+    --serif:"Fraunces","Garamond","Georgia",serif;
+    --sans:"Outfit","Avenir Next","Helvetica Neue",sans-serif;
+    --mono:"JetBrains Mono","SF Mono",Menlo,monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--ink);font-family:var(--sans);line-height:1.65;font-size:17px}
+  .wrap{max-width:800px;margin:0 auto;padding:0 24px}
+
+  header.hero{padding:68px 0 44px;border-bottom:1px solid var(--line)}
+  .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-text);margin-bottom:18px}
+  h1{font-family:var(--serif);font-weight:600;font-size:clamp(36px,6vw,54px);line-height:1.06;letter-spacing:-.01em}
+  .hero p.lede{margin-top:20px;font-size:19px;color:var(--ink-soft);max-width:58ch}
+
+  section{padding:50px 0;border-bottom:1px solid var(--line)}
+  h2{font-family:var(--serif);font-weight:600;font-size:30px;line-height:1.15;margin-bottom:4px}
+  .sec-kicker{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-text);margin-bottom:10px}
+  p{margin:14px 0;color:var(--ink-soft)}
+  p strong{color:var(--ink)}
+
+  .callout{background:var(--gold-wash);border-left:3px solid var(--gold-deep);border-radius:0 12px 12px 0;padding:16px 20px;margin:24px 0;font-size:16.5px;color:var(--ink-soft)}
+  .callout .tag{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-text);display:block;margin-bottom:6px}
+  .callout strong{color:var(--ink)}
+
+  /* the three kinds */
+  .kinds{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:28px 0 8px}
+  .kind{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;box-shadow:0 1px 3px rgba(28,25,23,.06);transition:transform .18s,box-shadow .18s}
+  /* The colour carries the taxonomy, so it has to stay. A short rule inside
+     the padding does that without a 3px border running into a 14px corner. */
+  .kind .bar{display:block;width:32px;height:4px;border-radius:2px;background:var(--c);margin-bottom:14px}
+  .kind:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(28,25,23,.09)}
+  .kind.assume{--c:var(--gold-deep)}
+  .kind.object{--c:var(--red)}
+  .kind.describe{--c:var(--green)}
+  .kind .name{font-family:var(--serif);font-size:22px;color:var(--c);font-weight:600}
+  .kind .what{font-size:15px;margin:8px 0 0;color:var(--ink-soft)}
+  .kind .words{border-top:1px dashed var(--line);margin-top:14px;padding-top:12px}
+  .kind .words b{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--c);display:block;margin-bottom:7px}
+  .kind .words span{display:block;font-size:14px;color:var(--ink-mute);padding:2px 0}
+  .kind .test{margin-top:14px;background:var(--cream);border-radius:9px;padding:11px 13px;font-size:14.5px;color:var(--ink)}
+  .kind .test b{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-mute);display:block;margin-bottom:4px}
+
+  .opposite{display:flex;align-items:stretch;gap:0;margin:26px 0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--card)}
+  .opposite div{flex:1;padding:18px 20px;font-size:15.5px;color:var(--ink-soft)}
+  .opposite div:first-child{background:var(--gold-wash)}
+  .opposite div:last-child{background:var(--red-wash)}
+  .opposite b{display:block;font-family:var(--mono);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;margin-bottom:6px}
+  .opposite div:first-child b{color:var(--gold-text)}
+  .opposite div:last-child b{color:var(--red)}
+
+  ol.steps{margin:20px 0;padding-left:0;list-style:none;counter-reset:step}
+  ol.steps li{counter-increment:step;position:relative;padding:14px 0 14px 54px;border-bottom:1px dashed var(--line);font-size:16px;color:var(--ink-soft)}
+  ol.steps li:last-child{border-bottom:none}
+  ol.steps li::before{content:counter(step);position:absolute;left:0;top:12px;width:34px;height:34px;border-radius:50%;background:var(--ink);color:var(--cream);font-family:var(--serif);display:flex;align-items:center;justify-content:center;font-size:16px}
+  ol.steps li b{color:var(--ink)}
+
+  .flags{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 4px}
+  .flag{font-family:var(--mono);font-size:12.5px;letter-spacing:.04em;background:var(--red-wash);color:var(--red);border:1px solid rgba(159,18,57,.2);border-radius:999px;padding:6px 14px}
+
+  .drill{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;margin:26px 0;box-shadow:0 2px 8px rgba(28,25,23,.06)}
+  .drill h3{font-family:var(--serif);font-size:19px;margin-bottom:4px}
+  .drill p.hint{font-size:14px;color:var(--ink-mute);margin:0 0 14px}
+  .chips{display:flex;gap:8px;flex-wrap:wrap}
+  .chip{font-family:var(--mono);font-size:13px;background:var(--cream);border:1px solid var(--line);border-radius:999px;padding:8px 15px;cursor:pointer;transition:all .16s;color:var(--ink-soft)}
+  .chip:hover{border-color:var(--ink-mute)}
+  .chip.on[data-k="assume"]{background:var(--gold-wash);border-color:var(--gold-deep);color:var(--gold-text)}
+  .chip.on[data-k="object"]{background:var(--red-wash);border-color:var(--red);color:var(--red)}
+  .chip.on[data-k="describe"]{background:var(--green-wash);border-color:var(--green);color:var(--green)}
+  .chip .ans{display:none;font-weight:600}
+  .chip.on .ans{display:inline;margin-left:8px}
+
+  .quote{font-family:var(--serif);font-size:20px;line-height:1.45;color:var(--ink);border-left:3px solid var(--gold);padding:4px 0 4px 22px;margin:24px 0;font-style:italic}
+  .footer-note{padding:34px 0 56px}
+  .mark{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-mute)}
+  .chip.on[data-k="neutral"]{background:var(--gold-wash);border-color:var(--ink-mute);color:var(--ink)}
+  .kind.link{--c:var(--gold-deep)}
+  .kind.link .name,.kind.assume .name,.kind.link .words b,.kind.assume .words b{color:var(--gold-text)}
+  .kind.apply{--c:var(--green)}
+  .kind.warn{--c:var(--red)}
+  .rule{font-family:var(--serif);font-size:20px;color:var(--ink);margin:18px 0}
+  .rule .ar{color:var(--gold-text);font-weight:700;margin:0 6px}
+  table.t{width:100%;border-collapse:collapse;margin:20px 0;font-size:15.5px;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  table.t th{font-family:var(--mono);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold-text);text-align:left;padding:12px 16px;border-bottom:1px solid var(--line)}
+  table.t td{padding:11px 16px;border-bottom:1px dashed var(--line);color:var(--ink-soft);vertical-align:top}
+  table.t tr:last-child td{border-bottom:none}
+  table.t td:first-child{color:var(--ink);font-weight:600;white-space:nowrap}
+  pre{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;font-family:var(--serif);font-size:18px;overflow-x:auto}
+  @media (max-width:560px){.opposite{flex-direction:column}table.t td:first-child{white-space:normal}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+button.chip{appearance:none;-webkit-appearance:none;line-height:1.3;text-align:left}.chip:focus-visible{outline:3px solid #315b54;outline-offset:3px}@media(max-width:600px){.wrap{overflow-wrap:anywhere}}
+</style></head><body>
+<header class="hero"><div class="wrap"><div class="kicker">Session recap · November 5</div><h1>Weakening a<br>Causal Argument</h1><p class="lede">Most weaken questions are causal. The author says one thing caused another, and your job is to find a reason the story might not hold. Students stall when they judge an answer by how strong its words sound instead of what it does to the author's cause.</p></div></header>
+
+<section><div class="wrap"><div class="sec-kicker">Start here</div><h2>Find the suspect, then the alternative</h2>
+<p>A causal argument is a crime scene. Something happened, and the author names a suspect. Sometimes the author names two and clears one. Your job is to cast doubt on the suspect the author chose, or to point at another one.</p>
+<ol class="steps">
+<li><b>Start from the top.</b> What is the conclusion?</li>
+<li><b>Name the suspects.</b> What does the author say caused it? If one suspect is cleared, what is the reason?</li>
+<li><b>Ask what would break the story.</b> Another cause, or a reason the named cause could not have done it.</li>
+<li><b>Hold each answer against that.</b> Does it change what we should believe about the cause?</li>
+</ol>
+<div class="callout"><span class="tag">The rule to remember</span>An alternative cause is the main way to weaken a causal argument. There are other ways, but this is the best place to start.</div>
+<p>Here is the idea in a new setting. A bakery's sales rose after it launched a loyalty app, and the owner says the app caused the rise. The suspect is the app. A new office building opening across the street the same month is another suspect.</p>
+<div class="quote">You said it before I did: this is a causal argument, and you bring in another factor to weaken it.</div></div></section>
+
+<section><div class="wrap"><div class="sec-kicker">Two suspects</div><h2>When the author clears one, go after the cleared one</h2>
+<p>Say the author gives two possible causes and rules one out. To weaken, show the cleared suspect could have done it, or show the chosen suspect could not have. Either one weakens the author's case.</p>
+<p>A pond's fish die. The author says the farm runoff was too small to matter, so the factory spill must have done it. An answer that shows the runoff was big enough weakens the argument.</p>
+<div class="callout"><span class="tag">The trap that costs the most</span>An answer can sound like a new cause and still leave the author's cause doing the work. "The spill left the fish too weak to survive the runoff" blames the runoff, but the spill is still the root cause. Ask what would happen if the author's cause were removed. If the outcome goes away, the answer usually has not weakened anything, because the author's cause is still the mastermind.</div>
+<div class="quote">You asked yourself whether that answer was leaning too hard on the author's cause. It was, and you were right to ask.</div></div></section>
+
+<section><div class="wrap"><div class="sec-kicker">Quantity words</div><h2>Few can say a lot</h2>
+<p>Weak words like some and few are usually too weak to weaken an argument. But don't judge by the word. Read what the answer says about its group and what that does to the author's cause.</p>
+<p>Say the author thinks a flu outbreak, not a new factory, made residents cough. Now read this answer: "Very few residents who live far from the factory have a cough."</p>
+<ol class="steps">
+<li><b>Name the group.</b> Residents who live far from the factory. The answer says nothing about the residents who live near it.</li>
+<li><b>Say what it means for that group.</b> Very few have a cough, so most of them don't.</li>
+<li><b>Ask what the author's cause would do.</b> A flu spreads. It would reach far-away residents too, so most of them should be coughing. They aren't, which points back to the factory.</li>
+</ol>
+<div class="callout"><span class="tag">Why the contrast matters</span>"Only a few people can do it" means most people can't. A word like few can set up a sharp line between two groups. Don't hunt for the word itself. Read how the answer uses it.</div>
+<div class="quote">You restated it exactly: very few that were not hunted went extinct, so most that were not hunted survived. You also saw we know nothing about the other group.</div></div></section>
+
+<section><div class="wrap"><div class="sec-kicker">Order and groups</div><h2>Check the order of events, and find the two groups</h2>
+<p><b>A cause has to come first.</b> Test the story in the real world: could a glass shatter before you push it? If most of the rise in sales came before the loyalty app launched, the app can't explain most of the rise.</p>
+<p><b>A study means two groups.</b> Say clearly which is which. Then find the group the author leans on for the result. When the claim is that nothing changed, that is usually the group that never got the treatment.</p>
+<p>A school finds that students in a tutoring program and students outside it improved by the same amount. The author says tutoring does nothing. The group the author leans on is the students outside the program. So look for an answer that reaches that group anyway: they study with friends in the program and use the same worksheets.</p>
+<div class="opposite">
+<div><b>The author says</b>The group that never got tutoring did just as well, so tutoring does nothing.</div>
+<div><b>The weakener says</b>That group did get some tutoring, just indirectly. It was never a clean comparison.</div>
+</div>
+<p>The exposure doesn't have to be direct. It only has to reach the group in some way. An answer about a different group, like the parents, almost never helps, because it doesn't touch the evidence the author used.</p>
+<div class="quote">You said it ruins their being an isolated group that isn't affected, and that's the problem.</div></div></section>
+
+<section><div class="wrap"><div class="sec-kicker">Check yourself</div><h2>Does the answer weaken the app story?</h2>
+<div class="drill"><h3>Tap to check yourself</h3><p class="hint">Argument: a bakery's sales rose after it launched a loyalty app, so the app caused the rise. Say whether each answer weakens it.</p>
+<div class="chips">
+<button type="button" class="chip" data-k="describe" aria-expanded="false">A new office building opened across the street that same month.<span class="ans">· Weakens. It brings in another cause for the rise</span></button>
+<button type="button" class="chip" data-k="describe" aria-expanded="false">Most of the rise in sales came before the app launched.<span class="ans">· Weakens. The effect came before the cause, so the app can't explain most of the rise</span></button>
+<button type="button" class="chip" data-k="object" aria-expanded="false">Many customers say they like the app.<span class="ans">· Out. Liking the app does not show it brought in any extra sales</span></button>
+</div></div></div></section>
+
+<section><div class="wrap"><div class="sec-kicker">Check yourself</div><h2>What does the quantity word do?</h2>
+<div class="drill"><h3>Tap to check yourself</h3><p class="hint">Argument: a flu outbreak, not the new factory, made residents cough. Say what each answer does to the flu story.</p>
+<div class="chips">
+<button type="button" class="chip" data-k="describe" aria-expanded="false">Very few residents who live far from the factory have a cough.<span class="ans">· Weakens. Most far-away residents are fine, but a flu would have reached them too</span></button>
+<button type="button" class="chip" data-k="object" aria-expanded="false">Very few residents who live near the factory have a cough.<span class="ans">· Out. Most people near the factory are fine, which hurts the factory story and helps the flu</span></button>
+<button type="button" class="chip" data-k="object" aria-expanded="false">Some residents who live far from the factory have a cough.<span class="ans">· Out. Some could be two people, and a flu would explain them</span></button>
+</div></div></div></section>
+
+<section><div class="wrap"><div class="sec-kicker">Where we start next</div><h2>Strengthening begins with the same story</h2>
+<p>Strengthening felt harder to you, and that is common. Weakening is easier because you can see a flaw. There are many ways to help an argument, so you have to know what the argument needs.</p>
+<p>When an author predicts the future, the author is making an assumption that isn't proven. Look at the ingredients the author lists, and ask what has to be true for them to produce the result. Whatever the ingredients need in order to produce the result, the answer that supplies it helps the prediction.</p></div></section>
+
+<section><div class="wrap"><div class="sec-kicker">Your work this week</div><h2>What you have, and what is coming</h2>
+<ol class="steps">
+<li><b>Finish the four sets you lined up.</b> Quantifiers Set 2, Must Be False (Harder) Set 2, Abstract + Flaw (set 2), and Famous Flaws (Medium) Set 1. That was your plan, and they are in LSAT U.</li>
+<li><b>Weakening practice.</b> I said I would assign it, on top of what you have. Do it if you have the time. If not, we still have the next session.</li>
+<li><b>Next session.</b> We open with strengthening.</li></ol></div></section>
+
+<footer class="footer-note"><div class="wrap"><span class="mark">LSAT U</span></div></footer>
+<script>document.querySelectorAll('.chip').forEach(function(c){c.addEventListener('click',function(){var on=c.classList.toggle('on');c.setAttribute('aria-expanded',String(on));});});</script>
+</body></html>

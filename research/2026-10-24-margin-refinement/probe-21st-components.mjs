@@ -1,0 +1,7 @@
+import fs from 'node:fs';
+import {Client} from 'file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-role-home-20261022/node_modules/@modelcontextprotocol/sdk/dist/esm/client/index.js';
+import {StreamableHTTPClientTransport} from 'file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-role-home-20261022/node_modules/@modelcontextprotocol/sdk/dist/esm/client/streamableHttp.js';
+const out='research/2026-10-24-margin-refinement/21st-mcp-components.json';
+const env=fs.readFileSync('.env','utf8');const m=env.match(/^\s*(?:export\s+)?API_KEY_21ST\s*=\s*(.*?)\s*$/m);const key=m?.[1].replace(/^['"]|['"]$/g,'');
+const c=new Client({name:'bounded-design-research',version:'1.0'});const result={};
+try{if(!key)throw Error('Saved21st key missing');await c.connect(new StreamableHTTPClientTransport(new URL('https://21st.dev/api/mcp'),{requestInit:{headers:{'x-api-key':key}}})); const list=await c.listTools();result.tools=list.tools.map(t=>({name:t.name,inputSchema:t.inputSchema}));fs.writeFileSync(out,JSON.stringify(result,null,2));result.search=await c.callTool({name:'search',arguments:{query:'recent activity tabs',type:'component',limit:4}});fs.writeFileSync(out,JSON.stringify(result,null,2));console.log(JSON.stringify(result.search));}catch(e){result.error=String(e);fs.writeFileSync(out,JSON.stringify(result,null,2));console.log(result.error)}finally{await c.close()}

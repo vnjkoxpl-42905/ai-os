@@ -3,6 +3,10 @@ name: defuddle
 description: Extract clean markdown content from web pages using Defuddle CLI, removing clutter and navigation to save tokens. Use instead of WebFetch when the user provides a URL to read or analyze, for online documentation, articles, blog posts, or any standard web page. Do NOT use for URLs ending in .md — those are already markdown, use WebFetch directly.
 ---
 
+## Current AI OS execution contract
+
+Check the installed executable before considering installation. Extract to a task-owned location. Extraction is not durable knowledge ingestion; invoke existing ingest when asked to file the source.
+
 # Defuddle
 
 Use Defuddle CLI to extract clean readable content from web pages. Prefer over WebFetch for standard web pages — it removes navigation, ads, and clutter, reducing token usage.

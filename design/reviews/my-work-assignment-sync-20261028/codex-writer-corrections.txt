@@ -1,0 +1,224 @@
+
+[1m[46m RUN [49m[22m [36mv3.2.7 [39m[90mC:/Users/Joshu/dev/ai-os-projects/lsatu-my-work-20261026[39m
+
+ [32m✓[39m src/lib/sessionBundleNotify.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32m✓[39m src/lib/readingCenterAccess.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+[90mstderr[2m | src/lib/classroomNotify.test.ts[2m > [22m[2massignment delivery channels[2m > [22m[2mpublishes the one generic plan summary and retries only its bell
+[22m[39m[classroomNotify:inbox] failed {
+  studentId: [32m'student'[39m,
+  error: Error: inbox unavailable
+      at Object.<anonymous> [90m(C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\[39msrc\lib\classroomNotify.test.ts:7:218[90m)[39m
+      at Object.mockCall (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/[4m@vitest/spy[24m/dist/index.js:96:15)
+      at Object.from (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/[4mtinyspy[24m/dist/index.js:47:80)
+      at findOrCreateThread [90m(C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\[39msrc\lib\classroomNotify.ts:52:6[90m)[39m
+      at Module.notifyStudentOfClassroomItem [90m(C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\[39msrc\lib\classroomNotify.ts:132:34[90m)[39m
+  [90m    at processTicksAndRejections (node:internal/process/task_queues:104:5)[39m
+      at [90mC:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\[39msrc\lib\classroomNotify.test.ts:18:20
+      at file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/[4m@vitest/runner[24m/dist/chunk-hooks.js:752:20
+}
+
+[90mstderr[2m | src/lib/classroomNotify.test.ts[2m > [22m[2massignment delivery channels[2m > [22m[2moffers retry for the same durable bell group without repeating email or inbox
+[22m[39m[classroomNotify:inbox] failed {
+  studentId: [32m'student'[39m,
+  error: Error: inbox unavailable
+      at Object.<anonymous> [90m(C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\[39msrc\lib\classroomNotify.test.ts:7:218[90m)[39m
+      at Object.mockCall (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/[4m@vitest/spy[24m/dist/index.js:96:15)
+      at Object.from (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/[4mtinyspy[24m/dist/index.js:47:80)
+      at findOrCreateThread [90m(C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\[39msrc\lib\classroomNotify.ts:52:6[90m)[39m
+      at Module.notifyStudentOfClassroomItem [90m(C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\[39msrc\lib\classroomNotify.ts:132:34[90m)[39m
+  [90m    at processTicksAndRejections (node:internal/process/task_queues:104:5)[39m
+      at [90mC:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\[39msrc\lib\classroomNotify.test.ts:38:20
+      at file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/[4m@vitest/runner[24m/dist/chunk-hooks.js:752:20
+}
+
+[90mstderr[2m | src/lib/classroomNotify.test.ts[2m > [22m[2massignment delivery channels[2m > [22m[2mrecords thrown email failures without throwing away committed assignment success
+[22m[39m[classroomNotify:inbox] failed {
+  studentId: [32m'student'[39m,
+  error: Error: inbox unavailable
+      at Object.<anonymous> [90m(C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\[39msrc\lib\classroomNotify.test.ts:7:218[90m)[39m
+      at Object.mockCall (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/[4m@vitest/spy[24m/dist/index.js:96:15)
+      at Object.from (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/[4mtinyspy[24m/dist/index.js:47:80)
+      at findOrCreateThread [90m(C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\[39msrc\lib\classroomNotify.ts:52:6[90m)[39m
+      at Module.notifyStudentOfClassroomItem [90m(C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\[39msrc\lib\classroomNotify.ts:132:34[90m)[39m
+  [90m    at processTicksAndRejections (node:internal/process/task_queues:104:5)[39m
+      at [90mC:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\[39msrc\lib\classroomNotify.test.ts:45:20
+      at file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/[4m@vitest/runner[24m/dist/chunk-hooks.js:752:20
+}
+
+ [32m✓[39m src/lib/classroomNotify.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 26[2mms[22m[39m
+[90mstderr[2m | src/lib/publishSessionBundle.test.ts[2m > [22m[2mpublishSessionBundle — idempotency and partial failure[2m > [22m[2mleaves a failed part unposted so a retry can pick it up
+[22m[39m[publishSessionBundle] part failed {
+  part: [32m'session_note'[39m,
+  error: Error: RLS denied
+      at [90mC:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\[39msrc\lib\publishSessionBundle.test.ts:146:47
+      at file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/[4m@vitest/runner[24m/dist/chunk-hooks.js:155:11
+      at file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/[4m@vitest/runner[24m/dist/chunk-hooks.js:752:26
+      at file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/[4m@vitest/runner[24m/dist/chunk-hooks.js:1897:20
+      at new Promise (<anonymous>)
+      at runWithTimeout (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/[4m@vitest/runner[24m/dist/chunk-hooks.js:1863:10)
+      at runTest (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/[4m@vitest/runner[24m/dist/chunk-hooks.js:1574:12)
+  [90m    at processTicksAndRejections (node:internal/process/task_queues:104:5)[39m
+      at runSuite (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/[4m@vitest/runner[24m/dist/chunk-hooks.js:1729:8)
+      at runSuite (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/[4m@vitest/runner[24m/dist/chunk-hooks.js:1729:8)
+}
+
+[90mstderr[2m | src/lib/publishSessionBundle.test.ts[2m > [22m[2mpublishSessionBundle — idempotency and partial failure[2m > [22m[2mdoes not touch the draft row when every part failed
+[22m[39m[publishSessionBundle] part failed {
+  part: [32m'session_note'[39m,
+  error: Error: boom
+      at [90mC:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\[39msrc\lib\publishSessionBundle.test.ts:154:43
+      at file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/[4m@vitest/runner[24m/dist/chunk-hooks.js:155:11
+      at file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/[4m@vitest/runner[24m/dist/chunk-hooks.js:752:26
+      at file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/[4m@vitest/runner[24m/dist/chunk-hooks.js:1897:20
+      at new Promise (<anonymous>)
+      at runWithTimeout (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/[4m@vitest/runner[24m/dist/chunk-hooks.js:1863:10)
+      at runTest (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/[4m@vitest/runner[24m/dist/chunk-hooks.js:1574:12)
+  [90m    at processTicksAndRejections (node:internal/process/task_queues:104:5)[39m
+      at runSuite (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/[4m@vitest/runner[24m/dist/chunk-hooks.js:1729:8)
+      at runSuite (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/[4m@vitest/runner[24m/dist/chunk-hooks.js:1729:8)
+}
+
+[90mstderr[2m | src/lib/publishSessionBundle.test.ts[2m > [22m[2matomic session-part retry[2m > [22m[2mreuses a part after its committed RPC response is lost without repeating optional messages
+[22m[39m[publishSessionBundle] part failed {
+  part: [32m'homework'[39m,
+  error: Error: response lost after commit
+      at [90mC:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\[39msrc\lib\publishSessionBundle.test.ts:178:13
+      at mockCall (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/[4m@vitest/spy[24m/dist/index.js:96:15)
+      at mockMaterializePart (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/[4mtinyspy[24m/dist/index.js:47:80)
+      at Object.rpc [90m(C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\[39msrc\lib\publishSessionBundle.test.ts:29:155[90m)[39m
+      at materialize [90m(C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\[39msrc\lib\publishSessionBundle.ts:77:44[90m)[39m
+      at Module.publishSessionBundle [90m(C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\[39msrc\lib\publishSessionBundle.ts:127:41[90m)[39m
+      at publish [90m(C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\[39msrc\lib\publishSessionBundle.test.ts:52:10[90m)[39m
+      at [90mC:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\[39msrc\lib\publishSessionBundle.test.ts:181:25
+      at file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/[4m@vitest/runner[24m/dist/chunk-hooks.js:155:11
+      at file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/[4m@vitest/runner[24m/dist/chunk-hooks.js:752:26
+}
+
+ [32m✓[39m src/lib/publishSessionBundle.test.ts [2m([22m[2m14 tests[22m[2m)[22m[32m 39[2mms[22m[39m
+ [32m✓[39m src/lib/agentActions.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 21[2mms[22m[39m
+[90mstderr[2m | src/lib/assignWork.test.ts[2m > [22m[2massignWork[2m > [22m[2mrolls the row back when the classroom item cannot be created
+[22m[39m[assignWork] student failed {
+  studentId: [32m'student-a'[39m,
+  written: [
+    {
+      assignmentId: [32m'guided_drill_assignments-row-1'[39m,
+      classroomItemId: [1mnull[22m,
+      table: [32m'guided_drill_assignments'[39m,
+      kind: [32m'guided_drill'[39m
+    }
+  ],
+  error: Error: rls said no
+      at [90mC:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\[39msrc\lib\assignWork.test.ts:132:51
+      at file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/[4m@vitest/runner[24m/dist/chunk-hooks.js:155:11
+      at file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/[4m@vitest/runner[24m/dist/chunk-hooks.js:752:26
+      at file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/[4m@vitest/runner[24m/dist/chunk-hooks.js:1897:20
+      at new Promise (<anonymous>)
+      at runWithTimeout (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/[4m@vitest/runner[24m/dist/chunk-hooks.js:1863:10)
+      at runTest (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/[4m@vitest/runner[24m/dist/chunk-hooks.js:1574:12)
+  [90m    at processTicksAndRejections (node:internal/process/task_queues:104:5)[39m
+      at runSuite (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/[4m@vitest/runner[24m/dist/chunk-hooks.js:1729:8)
+      at runSuite (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/[4m@vitest/runner[24m/dist/chunk-hooks.js:1729:8)
+}
+
+[90mstderr[2m | src/lib/assignWork.test.ts[2m > [22m[2massignWork[2m > [22m[2misolates one student failing from the rest of the batch
+[22m[39m[assignWork] student failed {
+  studentId: [32m'student-b'[39m,
+  written: [
+    {
+      assignmentId: [32m'guided_drill_assignments-row-2'[39m,
+      classroomItemId: [1mnull[22m,
+      table: [32m'guided_drill_assignments'[39m,
+      kind: [32m'guided_drill'[39m
+    }
+  ],
+  error: Error: rls said no
+      at [90mC:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\[39msrc\lib\assignWork.test.ts:180:30
+      at file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/[4m@vitest/runner[24m/dist/chunk-hooks.js:155:11
+      at file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/[4m@vitest/runner[24m/dist/chunk-hooks.js:752:26
+      at file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/[4m@vitest/runner[24m/dist/chunk-hooks.js:1897:20
+      at new Promise (<anonymous>)
+      at runWithTimeout (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/[4m@vitest/runner[24m/dist/chunk-hooks.js:1863:10)
+      at runTest (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/[4m@vitest/runner[24m/dist/chunk-hooks.js:1574:12)
+  [90m    at processTicksAndRejections (node:internal/process/task_queues:104:5)[39m
+      at runSuite (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/[4m@vitest/runner[24m/dist/chunk-hooks.js:1729:8)
+      at runSuite (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/[4m@vitest/runner[24m/dist/chunk-hooks.js:1729:8)
+}
+
+[90mstderr[2m | src/lib/assignWork.test.ts[2m > [22m[2massignWorkBundle[2m > [22m[2mrolls the earlier items back when a later one fails
+[22m[39m[assignWork] student failed {
+  studentId: [32m'student-a'[39m,
+  written: [
+    {
+      assignmentId: [32m'guided_drill_assignments-row-1'[39m,
+      classroomItemId: [32m'item-1'[39m,
+      table: [32m'guided_drill_assignments'[39m,
+      kind: [32m'guided_drill'[39m
+    },
+    {
+      assignmentId: [1mnull[22m,
+      classroomItemId: [1mnull[22m,
+      table: [32m'homework_assignments'[39m,
+      kind: [32m'homework_set'[39m
+    }
+  ],
+  error: Error: insert blew up
+      at Object.single [90m(C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\[39msrc\lib\assignWork.test.ts:85:92[90m)[39m
+      at Object.insertRow [90m(C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\[39msrc\lib\assignWork.ts:200:14[90m)[39m
+      at runAssign [90m(C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\[39msrc\lib\assignWork.ts:603:42[90m)[39m
+  [90m    at processTicksAndRejections (node:internal/process/task_queues:104:5)[39m
+      at [90mC:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\[39msrc\lib\assignWork.test.ts:356:20
+      at file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/[4m@vitest/runner[24m/dist/chunk-hooks.js:752:20
+}
+
+[90mstderr[2m | src/lib/assignWork.test.ts[2m > [22m[2massignWorkBundle[2m > [22m[2mkeeps one student's bundle failing from costing the next student theirs
+[22m[39m[assignWork] student failed {
+  studentId: [32m'student-a'[39m,
+  written: [
+    {
+      assignmentId: [32m'guided_drill_assignments-row-1'[39m,
+      classroomItemId: [1mnull[22m,
+      table: [32m'guided_drill_assignments'[39m,
+      kind: [32m'guided_drill'[39m
+    }
+  ],
+  error: Error: classroom item refused
+      at [90mC:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\[39msrc\lib\assignWork.test.ts:374:15
+      at mockCall (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/[4m@vitest/spy[24m/dist/index.js:96:15)
+      at mockCreateClassroomItem (file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/[4mtinyspy[24m/dist/index.js:47:80)
+      at Proxy.createClassroomItem [90m(C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\[39msrc\lib\assignWork.test.ts:10:43[90m)[39m
+      at runAssign [90m(C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\[39msrc\lib\assignWork.ts:610:37[90m)[39m
+  [90m    at processTicksAndRejections (node:internal/process/task_queues:104:5)[39m
+      at [90mC:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\[39msrc\lib\assignWork.test.ts:378:20
+      at file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/[4m@vitest/runner[24m/dist/chunk-hooks.js:752:20
+}
+
+[90mstderr[2m | src/lib/assignWork.test.ts[2m > [22m[2massignWork — student level on guided drills[2m > [22m[2mstill assigns, unlevelled, if the column is not deployed to this DB yet
+[22m[39m[assignWork] profiles.proficiency_level is not deployed yet; assigning unlevelled
+
+[90mstderr[2m | src/lib/assignWork.test.ts[2m > [22m[2mstops a student bundle at its shared deadline and rolls back only this attempt before notification
+[22m[39m[assignWork] student failed {
+  studentId: [32m'student-a'[39m,
+  written: [
+    {
+      assignmentId: [32m'guided_drill_assignments-row-1'[39m,
+      classroomItemId: [32m'item-1'[39m,
+      table: [32m'guided_drill_assignments'[39m,
+      kind: [32m'guided_drill'[39m
+    }
+  ],
+  error: Error: Assignment write timed out. Refresh before trying again.
+      at runAssign [90m(C:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\[39msrc\lib\assignWork.ts:591:35[90m)[39m
+  [90m    at processTicksAndRejections (node:internal/process/task_queues:104:5)[39m
+      at [90mC:\Users\Joshu\dev\ai-os-projects\lsatu-my-work-20261026\[39msrc\lib\assignWork.test.ts:688:24
+      at file:///C:/Users/Joshu/dev/ai-os-projects/lsatu-spot-video-release-20261025/node_modules/[4m@vitest/runner[24m/dist/chunk-hooks.js:752:20
+}
+
+ [32m✓[39m src/lib/assignWork.test.ts [2m([22m[2m44 tests[22m[2m)[22m[32m 71[2mms[22m[39m
+ [32m✓[39m src/lib/assignmentWriterInventory.test.ts [2m([22m[2m1 test[22m[2m)[22m[33m 1541[2mms[22m[39m
+   [33m[2m✓[22m[39m assignment writer coverage[2m > [22minventories each native insert and shared Classroom writer, and requires an explicit persisted policy on native payloads [33m 1539[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m7 passed[39m[22m[90m (7)[39m
+[2m      Tests [22m [1m[32m83 passed[39m[22m[90m (83)[39m
+[2m   Start at [22m 11:50:26
+[2m   Duration [22m 5.45s[2m (transform 1.75s, setup 2.17s, collect 4.42s, tests 1.72s, environment 12.62s, prepare 3.27s)[22m
+

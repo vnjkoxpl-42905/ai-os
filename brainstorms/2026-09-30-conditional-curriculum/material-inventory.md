@@ -58,3 +58,105 @@ Packaging gaps are the unified home, teaching sequence, independently assignable
 Content gaps requiring closer question review are beginner rule/fact/invalid-move contrast reps; no-link/shared-result contrasts; enough fresh items for each advanced AND/OR, negation, biconditional and mixed-chain skill; and application teaching beyond the well-supported MBT/SA examples. These are unproven sufficiency gaps, not claims that all such material is absent. Legacy truncated sources need recovery before counting them.
 
 Do not use question count, a named stage, a difficulty band, or successful repetition of an explained structure as proof of mastery. The next discovery decision is what a student must demonstrate independently in each area before advancing, and whether quantifiers enter this curriculum or a separate linked pathway.
+
+## Desktop final-set audit, 2026-10-11
+Reviewed all 11 files in the user-named Desktop Group 1 and 2 - EVERYTHING folder: 42 PDF pages plus the complete DOCX. See [integration audit](2026-10-11-desktop-group-1-2-integration-audit.md), its three item-level/source reports, and [SHA256 manifest](source-audit-2026-10-11/manifest.json). 133 worksheet task instances include deliberate repeats;108 is the sum of within-set distinct statement entries, not a globally deduplicated new bank. The new keys expose correctness, modality, scope and classification defects. This is source analysis and version reconciliation, not formal ingestion, application import or deployment. Originals unchanged.
+
+## 2026-10-25: organize the whole bootcamp from the source material
+
+Joshua clarified that “scored” was a typo. The request is complete topic coverage and purposeful organization using his other conditional notes, specifically Groups 3/4 and linking drills. No grading redesign is requested. The chapter map below is a source-backed recommendation, not a claim that the remaining chapters are built or that exact titles/divisions have been approved.
+
+### Proposed chapter and lesson homes
+
+| Chapter | Lessons and learning purpose | Practice that earns a place |
+|---|---|---|
+| 1. Conditional basics | Preserve current 1.1–1.5: conditional meaning; sufficient and Group 1; necessary and Group 2; must arrow; contrapositive. Include complete conditions, all four fact/rule situations, unsupported converse/inverse, natural readback and when diagramming helps within these existing homes. | Existing reviewed foundation/translation/contrapositive work. Audit overlap before adding or deleting drills. Do not revive the rejected first/last-word operation or retired placement drill. |
+| 2. AND and OR | Preserve the local three-lesson draft: both/at least one; compounds on either side; whole-group negation and all four contrapositives. Existing negatives and scope remain attached to full ideas. | Existing four local practice sets: meaning, placements, negation, mixed original/contrapositive production. Nested transfer comes after these basics. |
+| 3. Group 3 and Group 4 | Proposed 3.1 Unless/until/without and contextual except; 3.2 no/none/never/cannot and exclusion; 3.3 mixed negative wording, double negatives and the differences among no, not all and not both. Explain meaning before conversion procedure. | Purposeful targeted Group 3 and Group 4 translation, then fresh mixed translation. Use recovered worksheet items only after checking their complete wording and keys; a filename is not a complete bank. |
+| 4. Two-way rules and negating rules | Proposed 4.1 if and only if and two independently established implications; 4.2 contextual otherwise and mixed formulations; 4.3 negating an entire universal rule versus writing its equivalent contrapositive. | Distinguish one-way/two-way statements, construct faithful paired rules, and give a counterexample that falsifies a universal. Whole-rule negation must not be hidden inside the AND/OR negation lesson. |
+| 5. Use facts and connect rules | Proposed 5.1 rule + fact -> new fact versus rule + rule -> new rule; 5.2 direct and negative chains; 5.3 contrapose before linking; 5.4 shared beginnings/endings and other invalid connections; 5.5 find a missing link, including compound restrictions. | Separate tasks: infer from given rules; apply a supplied fact; decide whether a connection follows; supply an additional rule. Combine targeted sets only when doing so preserves the distinct reasoning task. |
+| 6. Some, most and all | Proposed explicit related chapter, because the requested whole-note audit finds substantial quantity material: meaning/existence; valid reversals and exact negations; quantity-through-all chains; majority overlap and fixed comparison groups; invalid chains. These are not all ordinary universal conditionals. | Reuse reviewed Some/Most exercises and the newer complete teaching source. Keep headcount, probability, overlap and universal guarantees distinct. Full inclusion versus a linked quantity course remains a scope decision; the material must have an explicit destination either way. |
+| 7. Apply the reasoning | Proposed final application chapter: MBT/MSS; sufficient versus necessary assumption uses; principle; parallel/flaw/parallel flaw. Finish with unseen mixed translation, fact use and linking in context. Teach the relevant conditional move rather than duplicate entire question-type bootcamps. | Reviewed official-question applications and independent mixed transfer. Preserve separate untimed accuracy and later fluency. The existing timed lists need canonical question mapping and suitability review. |
+
+Lesson numbers after Chapter 2 are proposed homes, not newly assigned persistence IDs. Chapters 1 and 2 retain their stable IDs. This seven-chapter recommendation expands the earlier six-chapter proposal solely to give the substantive quantity notes an explicit destination before final applications; no app restructure has happened.
+
+### Source-to-chapter evidence and limits
+
+- **Foundations:** [selected opening source map](2026-10-02-opening-lessons-source-map.md) and [desktop source audit](2026-10-11-desktop-group-1-2-integration-audit.md). Later approved five-lesson structure supersedes the earlier thirteen-section presentation, but each conceptual beat still needs a home.
+- **AND/OR:** [current chapter checkpoint](../2026-10-18-conditional-and-or-chapter.md), build-spec, build-log and linked October 19 verification. Local three lessons, four sets/24 items, twelve quiz checks and three films are recorded. Local implementation is not publication proof.
+- **Group 3/4:** [assigned cheat sheet](../../students/asia/conditional-logic-cheat-sheet-2026-08-24.html), sections cs-negleft/cs-negright; [legacy note extracts](../../corpus/Curriculum/Conditional%20Logic/Notes/_megadoc_notes_conditionals.md), sources Conditional LOGIC Group 3 & 4.pdf and Logic (3+4).pdf; [homework extracts](../../corpus/Curriculum/Conditional%20Logic/Notes/homework_conditionals.md), Group3&4 homework PT 1.pdf. Several legacy extracts stop mid-sentence; do not count them as fully recovered exercises.
+- **Two-way rules/otherwise:** [assigned breakdown](../../students/asia/conditional-logic-the-breakdown-2026-08-24.html), bd-7. Its otherwise counterexample explicitly prevents assuming that every otherwise sentence states a biconditional.
+- **Facts/chains:** same breakdown bd-10/bd-11; [Core MBT teaching brief](../../corpus/lectures/logical-reasoning/must-be-true/core/2026-08-27-33013/teaching-brief.md) and teleprompter; legacy Conditional Chains.pdf/Chaining .pdf extracts; current local app direct-linking/no-link/triggering units and Activity Centre banks.
+- **Quantity:** [complete newer teaching text](../2026-09-28-recap-format/09-quantity-statements-classroom.md), read in full by the source auditor; existing Some & Most homework is supplementary and truncated. The newer text qualifies few/many contextually, superseding unsafe fixed-cutoff reuse from the older breakdown.
+- **Applications:** Core MBT package, Conditional Logic Theory By Question Types.pdf and timed-set passages in the legacy notes, existing SA material and guided-drill catalog. Source presence does not prove every application has enough suitable independent examples.
+
+### Linking drills: preserve the actual task, avoid duplicate counting
+
+Read-only inspection of lsatu-and-or-20261019 finds Activity Centre questions.json has 22 Missing Link and 10 MBT items; content.ts adds eight Linking items. The eight Linking items also ask for a missing link, so their title does not establish a separate direct-chain inference bank. Reused bridge templates and intentional equivalent photo pairs are not independent skill coverage. Existing legacy direct-linking, no-link and triggering units can supply distinct teaching/practice candidates, but are not yet integrated into the numbered course.
+
+Each relevant current legacy direct-linking/no-link/triggering/MBT/SA unit has a guided item and nine practice entries. Candidate examples include MBT1/7 direct inference, MBT2/8 contrapose-before-link, MBT3 negative facts, MBT4 partial AND trigger and MBT5 disjunctive result with an eliminated alternative. Inspect actual items before selecting them. The historical separate sufficient-assumption/content.ts ten-chapter/twelve-exercise asset is absent from this checkout; do not count it as currently integrated. Its older inventory pointer remains historical evidence only.
+
+Audit each candidate against the actual operation: matching a valid join, deriving first-to-last, contraposing before a join, rejecting shared-result/shared-trigger inferences, applying a fact, satisfying a complete compound trigger, or supplying a missing rule. One mixed set can cover several operations; no fixed number of new drills is approved.
+
+### Corrections and completion criteria
+
+1. Group labels vary across older sources. Preserve the verified assigned-note lineage and explain every expression contextually. In particular, permission is not actual entry; cannot and until retain modal/temporal scope; only and the only are different constructions.
+2. Do not teach that a rule disappears when its trigger is absent, or that diagramming is useful only when multiple rules can link. Do not turn every otherwise into a two-way rule or every even-if into AND.
+3. Maintain an item-level topic map: exact teaching source -> lesson -> worked example -> learner operation -> independent practice -> later application. A topic is unverified until those homes have been checked; a heading or large question count is not completion.
+4. Reconcile existing local Chapter 2 against current main before further integration. Preserve routes, assignments, historical work and media. No app edits, provider calls or publication were performed by this query.
+5. Remaining gaps: full source recovery for truncated Group 3/4 and chaining worksheets; independent-example sufficiency by operation; final placement of the full quantity chapter; reviewed official-question mapping; exact later lesson/drill consolidation. These are concrete follow-up work, not reasons to omit the topics from the curriculum map.
+
+## 2026-10-25: screenshot resources and full Loophole source audit
+
+Joshua supplied screenshots of Unless Drill, Conditional Reasoning Activity Centre and Conditional Indicators Refresher, and explicitly requested gathering all sources into a rounded bootcamp. [Full build specification](full-bootcamp.build-spec.md) and [Claude review log](full-bootcamp.review-log.md) own the concrete next work. No application build or release is established by this audit.
+
+### Exact app resources behind the screenshots
+
+Inspected root: C:/Users/Joshu/dev/ai-os-projects/lsatu-and-or-20261019.
+
+| Resource | Code/data owner | Reuse and qualifications |
+|---|---|---|
+| Unless Drill | src/features/quick-drills/unless-drill/UnlessDrill.tsx, UnlessDrillPage.tsx, unlessProgress.ts; conditional-refresher/content.ts helpers | Four randomized sign/order patterns,10s then5s unlock; existing records preserved. This is fluency after instruction, not a substitute for meaning. Refresher embeds the same component. Account fallback/save-error and timeout lock semantics need review before adopting a chapter prerequisite. |
+| Conditional Indicators | src/features/conditional-refresher/ConditionalIndicatorsRefresher.tsx, content.ts, Notation.tsx |22sort entries,16diagram entries,12flashcards. Data/control reuse is possible, but old immediate reveal, correct-state retry, exact order checking and browser-local progress differ from refined bootcamp standards. f11 overstates until equivalence. |
+| Conditional Reasoning hub | src/features/activity-centre/conditionals/ConditionalPractice.tsx, content.ts, questions.json, DrillEntrance.tsx, practiceStore.ts |62General translation items plus8Linking/22MissingLink/10MBT entries; keep snapshot IDs/history/assignments. Linking/MissingLink overlap in task. General rubric contains contradictory blanket negative placement guidance. |
+| Existing Group3/4 teaching | src/bootcamps/conditionals/content/foundations.source.ts:373–434 and generated curriculum | Substantive lesson/method/worked/guided+nine-question units. Better starting point than copying the refresher page wholesale. Use authored sources/generator. |
+
+### Loophole sources read for curriculum purposes
+
+Root: [saved conditional lecture archive](../../Loophole%20Lecture/Conditional%20Reasoning%202026-10-18/README.md). Retrieval used search/open and full source bodies, not just titles. Core auditor read full rendered transcripts and available written notes for Unless, Inclusion, Exclusion, If and Only If, Chaining, Worst Conditional Habit, Why You Shouldn't Diagram the Contrapositive for No Reason, Diagramming Drama and How to Watch. Advanced auditor read full native transcripts for nested conditional conclusions, Some/Most, valid quantity inferences, Not All, Few, SA strategy, Necessary Condition Trick and causal/conditional contrast, with selected parallel-flaw notes. Complete automatic transcripts are not listening verification; diagram-only quiz images were not visually independently checked.
+
+- **Inclusion/exclusion:** give at-least-one, at-most-one and exactly-one explicit homes. Inclusion permits both; exclusion permits neither; together they require exactly one. Their two single-arrow forms can be contrapositives rather than a positive biconditional.
+- **Whole-rule denial:** an argument concluding a conditional is falsified by its trigger true and requirement false. Do not confuse this with an outer/inner syntactically nested rule. Explain the actual task rather than reproduce the vendor's ambiguous nested terminology.
+- **SA/principle:** keep premises, added assumption and target conclusion separate. A bridge is added, not inferred. Necessary-condition wording is not an answer-location shortcut; a contrapositive can reverse visible placement. A matched result without an established trigger does not apply a principle.
+- **Quantity:** include existence, reversible overlap, directional most, exact negations, same-reference-group majority overlap, valid quantity-through-all chains and invalid unrelated-witness/serial-most/different-denominator patterns. Three taught patterns are not all possible quantity reasoning.
+- **Strategic diagrams:** meaning before notation; write contrapositives when useful rather than mechanically; diagrams may clarify a single complex rule as well as connect several rules. Causal claims are not automatically invalid, and conditional sufficiency alone does not establish causation.
+
+### Captured practice and routines
+
+[Book Extras conditional sets](../../corpus/loophole-online/bootcamps/conditional-reasoning/README.md):7foundation,14compound/pair/two-way,10Unless,16Some/Most and5integrated questions. These are vendor source entries, not automatically reusable LSAT U questions. Core auditor read full question/choice/final observed feedback bodies for14compound,10Unless and5integrated entries. Final observed site success does not independently validate every key or feedback branch; gated official stimuli are not reconstructed.
+
+[Unless Practice Routine](../../corpus/loophole-online/workouts/unless-practice-routine/README.md) and [Conditional Rehab Routine](../../corpus/loophole-online/routines/the-conditional-rehab-routine/README.md) were retrieved with complete instructions, one page each and no missing linked workout routes. Vendor warmup selects3of4forms, varies letters/selection and derives rather than memorizes; LSAT U's existing drill uses all4. Vendor targets under5s/item and15s/3 are optional fluency advice, not approved gates. Rehab order is Unless -> Question Stem Training3+sections -> Acronym -> Unofficial Diagramming Marathon using previously seen sections untimed. It is remediation, not four new compulsory chapters; protect unseen answer choices.
+
+### Concrete source defects to correct rather than copy
+
+- Unless narration slips between strict/inclusive thresholds before correcting it; preserve exact boundaries.
+- Unless source quiz Q8 assumes not-faux means live without an explicit exhaustive category premise; Q9 confuses should with occurrence; Q10 treats typically as universal. Replace with clean original cases.
+- Few source alternates some-but-not-most and strict-minority; exactly half separates them. Do not teach a fixed1–49% definition or derive most-not from not-most. Use the newer context-qualified quantity source and explicit quantities.
+- Exclusion examples can split subjects awkwardly. Keep the same subject/domain in both conditions.
+- Do not import the vendor's blanket all-causal-reasoning-is-bad claim, keyword-only iff shortcut or a universal ban on set visualizations. Label source disagreement and use sound original explanations.
+
+This audit expands the earlier source map rather than replacing Joshua's teaching with vendor doctrine. It does not certify every saved lecture or all question-bank entries; named full reads and remaining limits are the evidence boundary.
+
+### Intake ratings for the expanded course
+
+| Tier | Input | Use |
+|---|---|---|
+| S for governing structure | Joshua's approved five-lesson Chapter1 decisions, Contrapositive template and later corrections | Preserve exact approved wording where specified. This is governing authority, not proof new pages passed. |
+| A for reuse after reconciliation | Current Group3/4/direct-linking/no-link/triggering authored units; local Chapter2 draft and films | Starting point for chapter assembly, with selected-item and behavior review and preserved IDs. |
+| A for teaching concepts | Assigned notes, newer full quantity text, corrected MBT guide, complete relevant Loophole lectures | Independently write student lessons; retain source corrections and vendor/Joshua distinction. |
+| B for selected practice | General62, linking/missing/MBT40,16refresher diagrams,12recall cards and Book Extras sources | Select by operation, correct feedback and avoid counting duplicates as fresh transfer. Vendor questions are not copied into the app. |
+| B for optional fluency/repair | Existing Unless Drill and captured warmup/rehab/marathon procedures | Use after understanding, with safe timer/storage semantics; no compulsory new speed gate. |
+| C until recovered | Truncated legacy worksheet/PDF snippets | Use complete individual passages only; do not invent missing keys or count a full bank. |
+
+No collection alone earns a complete-course readiness verdict. Every required skill needs actual teaching, fresh attempts, useful feedback and transfer before acceptance.
+

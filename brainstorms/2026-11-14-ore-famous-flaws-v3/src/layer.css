@@ -1,0 +1,140 @@
+/* ---------- Famous Flaws layer (additive; the shell style above is untouched) ---------- */
+:root{--ev:#E3E9CF;--ev-line:#3F6212;--con:#F1E3BC;--con-line:#B8983F}
+
+/* hero: Joshua's bridge drawing with the title set in its open sky */
+header.hero.art{display:block;padding:56px 0 34px}
+.hero-img{position:relative;margin:0;border-radius:28px;overflow:hidden;background:#F3EDE2;box-shadow:var(--lift-1)}
+.hero-img img{display:block;width:100%;height:auto}
+.hero-title{position:absolute;left:clamp(22px,4.5vw,44px);top:clamp(22px,5vw,48px);max-width:46%}
+.hero-title .kicker{margin-bottom:14px}
+.hero-title h1{font-size:clamp(44px,7vw,76px)}
+.hero.art .lede{margin:26px 4px 0;max-width:62ch;font-size:19.5px}
+@media (max-width:760px){
+  header.hero.art{padding:40px 0 18px}
+  .hero-img{border-radius:20px}
+  .hero-title{position:static;max-width:none;padding:18px 18px 20px;background:var(--plane)}
+  .hero-title h1{font-size:44px}
+  .hero.art .lede{margin:16px 2px 0;font-size:17.5px}
+}
+
+/* how-to: legend and the flaw index */
+.legend{font-size:15.5px;color:var(--ink-mute);margin-top:6px}
+.ev{background:var(--ev);box-shadow:inset 0 -2px 0 rgba(63,98,18,.35);border-radius:3px;padding:0 2px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.con{background:var(--con);box-shadow:inset 0 -2px 0 rgba(184,152,63,.55);border-radius:3px;padding:0 2px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.jump{color:var(--red);font-weight:600;font-style:normal}
+.legend .ev,.legend .con{font-weight:500;color:var(--ink)}
+/* The sheet keeps each category together and each entry easy to scan. */
+.fi-progress{font-family:var(--mono);font-size:12px;color:var(--ink-mute)}
+.sheet-group + .sheet-group{margin-top:36px}
+.sheet-group h2{font-size:28px;margin-bottom:18px}
+.sheet-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;list-style:none;padding:0;margin:0}
+.sheet-cards li{margin:0;padding:0;max-width:none;min-width:0}
+.sheet-cards li::before{display:none}
+.flaw-card{display:flex;flex-direction:column;height:100%;box-sizing:border-box;padding:20px;background:var(--card);border:1px solid var(--line);border-radius:18px;color:var(--ink);text-decoration:none;box-shadow:var(--lift-0)}
+.flaw-card:hover{background:var(--plane)}
+.flaw-card:focus-visible{outline:3px solid var(--green);outline-offset:4px}
+.card-heading{display:flex;align-items:center;gap:10px}
+.card-heading h3{flex:1;font-size:21px;margin:0;line-height:1.2}
+.fi-n{flex:none;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--plane);background:var(--char)}
+.fi-dot{flex:none;width:10px;height:10px;border-radius:50%;background:var(--well)}
+.fi-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.flaw-card.done .fi-n,.flaw-card.done .fi-dot{background:var(--green)}
+.flaw-card.done .fi-dot{box-shadow:0 0 0 3px var(--green-wash)}
+.card-definition{font-size:15px;line-height:1.5;margin:14px 0 18px}
+.flaw-image{display:block;width:100%;height:150px;object-fit:contain;border-radius:12px;background:var(--plane);margin-top:auto}
+.placeholder{display:flex;align-items:center;justify-content:center;color:var(--brass-text);font-family:var(--serif);font-size:44px;border:1px solid var(--line)}
+.flaw-image.small{float:right;width:80px;height:64px;margin:0 0 12px 16px;font-size:26px}
+.entry-link{display:block;font-size:13px;margin-top:14px;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:760px){.sheet-cards{grid-template-columns:1fr}.flaw-card{padding:18px}}
+
+/* tier dividers: Joshua's drawings across the top of the section */
+section.tier{padding-top:0;overflow:hidden}
+.tier-img{margin:0 -50px 30px;background:#F3EDE2;border-bottom:1px solid var(--line)}
+.tier-img img{display:block;width:100%;height:auto;aspect-ratio:16/7;object-fit:cover}
+#tier-common .tier-img img{object-position:50% 52%}
+#tier-less .tier-img img{object-position:70% 45%}
+section.tier h2{font-size:clamp(30px,4.6vw,42px)}
+@media (max-width:760px){.tier-img{margin:0 -22px 22px}.tier-img img{aspect-ratio:16/9}}
+
+/* a flaw section */
+section.flaw h2{font-size:clamp(32px,5vw,44px);margin-bottom:10px}
+.what{font-family:var(--serif);font-size:clamp(20px,2.6vw,23px);line-height:1.45;color:var(--ink);max-width:40ch;margin:4px 0 6px}
+figure.dg{margin:26px 0 8px;background:var(--card);border-radius:20px;padding:20px 18px 14px;box-shadow:var(--lift-1)}
+.dg-svg{display:block;width:100%;max-width:540px;height:auto;margin:0 auto}
+.part{margin-top:34px}
+.plabel{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--brass-text);margin-bottom:10px}
+.plabel::after{content:"";flex:1;height:1px;background:var(--line)}
+.passage.ex{margin:14px 4px 18px;font-size:18.5px}
+.passage.ex + .passage.ex{transform:rotate(.4deg)}
+.passage.ex + .passage.ex::before{left:30%}
+.part p{margin:10px 0}
+
+ul.wording{list-style:none;margin:6px 0 0;display:grid;gap:10px}
+ul.wording li{padding:13px 18px 13px 18px;background:var(--card);border-radius:14px;font-family:var(--serif);font-style:italic;font-size:17.5px;line-height:1.4;color:var(--ink);max-width:none;box-shadow:inset 3px 0 0 var(--green),var(--lift-0)}
+ul.wording li::before{display:none}
+.callout.trap{margin-top:30px}
+.ll-quote{font-family:var(--serif);font-style:italic;font-size:17.5px;color:var(--ink);margin:4px 0 8px}
+.ll-tell{margin:0;font-size:16px}
+
+/* a real question */
+.q{background:var(--card);border-radius:22px;padding:24px 26px 22px;margin:36px 0 4px;box-shadow:var(--lift-2)}
+.q .hint{margin:0 0 4px}
+.q .passage{font-size:17.5px;margin:22px 4px 16px;transform:rotate(-.3deg)}
+.qstem{font-weight:600;color:var(--ink);margin:6px 0 14px;max-width:none}
+.choices{display:grid;gap:9px}
+.choice{display:flex;align-items:flex-start;gap:14px;width:100%;text-align:left;font:inherit;font-size:16px;line-height:1.45;color:var(--ink);background:var(--plane);border:0;border-radius:14px;padding:13px 16px;cursor:pointer;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.9),0 1px 0 var(--edge),0 3px 0 var(--edge),0 10px 14px -10px rgba(60,45,20,.45);transition:transform .14s var(--ease),box-shadow .14s var(--ease),background .2s}
+.choice:hover{transform:translateY(-1px)}
+.choice:active{transform:translateY(2px);box-shadow:inset 0 2px 4px rgba(60,45,20,.16)}
+.cl{flex:none;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:600;font-size:14px;color:var(--ink-soft);background:var(--card);box-shadow:inset 0 0 0 1.5px var(--edge)}
+.choice.wrong{background:#F3E4E2}
+.choice.wrong .cl{background:var(--red);color:#fff;box-shadow:none}
+.choice.right{background:#E9EED9}
+.choice.right .cl{background:var(--green);color:#fff;box-shadow:none}
+.q.solved .choice:not(.right){opacity:.62}
+.qfb:empty{display:none}
+.qfb{margin-top:14px;border-radius:14px;padding:14px 18px;font-size:16px;line-height:1.55;color:var(--ink-soft)}
+.qfb b{color:var(--ink)}
+.qfb.is-right{background:var(--green-wash);box-shadow:inset 0 0 0 1px rgba(63,98,18,.25)}
+.qfb.is-wrong{background:var(--red-wash);box-shadow:inset 0 0 0 1px rgba(159,18,57,.2)}
+.qactions{display:flex;gap:10px;margin-top:12px}
+.qactions:empty{display:none}
+.qbtn{font:inherit;font-size:14.5px;font-weight:500;color:var(--ink);background:var(--plane);border:0;border-radius:999px;padding:9px 16px;cursor:pointer;box-shadow:inset 0 0 0 1.5px var(--edge),0 2px 0 var(--edge)}
+.qbtn:hover{background:var(--well)}
+.others{margin-top:18px}
+.others ul{margin:0}
+.others li{font-size:15.5px}
+.others li b{font-family:var(--serif);color:var(--ink)}
+
+/* rail: tier labels and done marks */
+@media (min-width:1280px){
+  .rail{max-height:92vh;overflow:auto}
+  .rail li.rail-tier{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--brass-text);padding:10px 10px 2px}
+  .rail a.flaw-link{padding:5px 10px 5px 18px;font-size:12.5px}
+  .rail a.flaw-link.done::before{background:var(--green)}
+}
+
+@media (max-width:760px){
+  .q{padding:18px 14px 16px;border-radius:18px;margin-left:-6px;margin-right:-6px}
+  figure.dg{padding:14px 8px 10px;margin-left:-6px;margin-right:-6px}
+  .passage.ex{font-size:17px;padding:24px 18px 18px}
+  .q .passage{padding:24px 16px 18px;font-size:16.5px}
+  .choice{padding:12px 12px;gap:10px;font-size:15.5px}
+  ul.wording li{font-size:16.5px;padding:12px 14px}
+}
+@media (prefers-reduced-motion:reduce){.choice:hover{transform:none}}
+
+/* credit lines from the session */
+.said{margin:24px 0 4px;background:var(--card);border-radius:16px;padding:16px 20px 14px;box-shadow:inset 3px 0 0 var(--brass),var(--lift-0)}
+.said .tag{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--brass-text);margin-bottom:6px}
+.said p{margin:0;font-family:var(--serif);font-size:18px;line-height:1.5;color:var(--ink);max-width:none}
+
+/* sheet cards: image on top, the odd fifth card runs full width (Claude) */
+.flaw-card > .flaw-image:not(.small){order:-1;margin:-20px -20px 16px;width:calc(100% + 40px);height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:17px 17px 0 0;border-bottom:1px solid var(--line)}
+.flaw-card .card-definition{margin-bottom:12px}
+@media(min-width:761px){
+  .sheet-cards > li:last-child:nth-child(odd){grid-column:1/-1}
+  .sheet-cards > li:last-child:nth-child(odd) .flaw-card{display:grid;grid-template-columns:42% 1fr;column-gap:22px;align-content:start}
+  .sheet-cards > li:last-child:nth-child(odd) .flaw-card > .flaw-image:not(.small){grid-row:1/span 4;margin:-20px 0 -20px -20px;width:calc(100% + 20px);height:calc(100% + 40px);aspect-ratio:auto;border-radius:17px 0 0 17px;border-bottom:0;border-right:1px solid var(--line)}
+}
+@media(max-width:760px){.flaw-card > .flaw-image:not(.small){margin:-18px -18px 14px;width:calc(100% + 36px)}}

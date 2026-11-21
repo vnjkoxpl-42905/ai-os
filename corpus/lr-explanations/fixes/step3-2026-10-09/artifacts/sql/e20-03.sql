@@ -1,0 +1,4 @@
+insert into lr_explanation_steps (explanation_id,position,label,body) select v.e,v.p,v.l,v.b from (values
+('fb8ddc3c-c341-45cf-99e1-83bd347de5f2'::uuid,3,'Goal','Look for an answer that says being resented, or causing resentment, is imprudent. The contrapositive would work too: anything prudent does not cause resentment. Reject answers that start from imprudent (a reversal), or that talk about acting instead of appearing, or being liked instead of being resented.'),
+('76988d38-839f-4b5e-a212-48d3dece30c8'::uuid,3,'Goal','Look for SI → RL: there is no social integrity without the rule of law. Expect traps that use the right terms with an arrow pointing the wrong way: the link reversed (RL → SI), a premise reversed, or the conclusion reversed. Check the direction of every arrow.')
+) v(e,p,l,b) where not exists (select 1 from lr_explanation_steps x where x.explanation_id=v.e and x.position=v.p) returning id;

@@ -1,0 +1,84 @@
+{
+ "qid": "PT147-S4-Q6",
+ "type": "Necessary Assumption",
+ "difficulty": "2",
+ "key_db": "B",
+ "stimulus_db": "Scientist: Laboratory animals have access to ample food, and they get relatively little exercise. These factors can skew the results of research using animals, since such studies often rely on the assumption that the animal subjects are healthy. For instance, animal studies that purport to show that extreme caloric restriction can extend lifespans take for granted that their subjects were not overfed to begin with.",
+ "stem_db": "The scientist's argument requires assuming which one of the following?",
+ "choices_db": {
+  "A": "Laboratory animals are healthy if they are fed a carefully restricted diet and get plenty of exercise.",
+  "B": "Laboratory conditions that provide animals with ample food but relatively little exercise can be unhealthy for the animals.",
+  "C": "It is not unusual for animals outside of laboratory settings to have access to ample food and get relatively little exercise.",
+  "D": "Some animal studies take into consideration the differences between the living conditions of laboratory animals and those of other animals.",
+  "E": "When provided with unlimited food over a long period of time, animals show little day-to-day variation in their eating habits."
+ },
+ "bank": {
+  "stimulus": "Scientist: Laboratory animals have access to ample food, and they get relatively little exercise. These factors can skew the results of research using animals, since such studies often rely on the assumption that the animal subjects are healthy. For instance, animal studies that purport to show that extreme caloric restriction can extend lifespans take for granted that their subjects were not overfed to begin with.",
+  "stem": "The scientist’s argument requires assuming which one of the following?",
+  "choices": {
+   "A": "Laboratory animals are healthy if they are fed a carefully restricted diet and get plenty of exercise.",
+   "B": "Laboratory conditions that provide animals with ample food but relatively little exercise can be unhealthy for the animals.",
+   "C": "It is not unusual for animals outside of laboratory settings to have access to ample food and get relatively little exercise.",
+   "D": "Some animal studies take into consideration the differences between the living conditions of laboratory animals and those of other animals.",
+   "E": "When provided with unlimited food over a long period of time, animals show little day-to-day variation in their eating habits."
+  },
+  "key": "B"
+ },
+ "explanation_id": "45d92455-5b00-4472-bb31-9a00e8dc6c24",
+ "style": "single",
+ "steps": [
+  {
+   "row_id": "59f38650-9061-45b7-bf88-dded829d06dd",
+   "position": 0,
+   "label": "Conclusion",
+   "body": "Ample food and little exercise can skew the results of animal research."
+  },
+  {
+   "row_id": "6b347fd3-189c-46ec-b328-17d5d44896df",
+   "position": 1,
+   "label": "Evidence",
+   "body": "Lab animals get ample food and little exercise. Many studies assume their subjects are healthy. The caloric restriction studies, for example, assume their animals were not overfed to begin with."
+  },
+  {
+   "row_id": "4f3e4aca-04cf-45ce-9d7f-d0d0d71eeca5",
+   "position": 2,
+   "label": "Evaluate",
+   "body": "The skewing only happens if lab conditions make the animals *unhealthy*. If eating freely and exercising little left them perfectly healthy, the studies' assumption would be true, and nothing would be skewed. The scientist never says the conditions are bad for the animals."
+  },
+  {
+   "row_id": "f660ba3d-c14b-4e22-a4a5-e485d80a4b49",
+   "position": 3,
+   "label": "Goal",
+   "body": "A link: ample food and little exercise can be unhealthy for lab animals."
+  }
+ ],
+ "notes": [
+  {
+   "row_id": "0c6d5556-a811-4bc3-baf7-ce13b161f6d5",
+   "letter": "A",
+   "body": "This is the most popular wrong answer. It flips the scientist's idea: the scientist needs bad conditions to *cause* poor health, not good conditions to *guarantee* good health. A restricted diet and plenty of exercise could still leave an animal unhealthy for other reasons, and the argument would be fine."
+  },
+  {
+   "row_id": "9afe9cb1-0652-4a44-948f-90b0bac54314",
+   "letter": "B",
+   "body": "Negate it: \"these conditions *cannot* be unhealthy for the animals.\" Then the animals are healthy, the studies' assumption holds, and there is nothing to skew the results."
+  },
+  {
+   "row_id": "9659c2e3-53c6-426d-b6e9-c52b170844b2",
+   "letter": "C",
+   "body": "Animals outside the lab are not part of the argument."
+  },
+  {
+   "row_id": "141cd8cd-9fab-4f13-bc3a-c50ea68c1e6d",
+   "letter": "D",
+   "body": "What some studies take into account does not affect whether the conditions can skew results."
+  },
+  {
+   "row_id": "4cfc1100-804b-40eb-a325-b3203c009063",
+   "letter": "E",
+   "body": "How steady their eating habits are says nothing about whether the habits are healthy."
+  }
+ ],
+ "known_problem": "Explanation row exists but has no steps and no choice notes.",
+ "tags": "no-breakdown; no-notes; very-short"
+}

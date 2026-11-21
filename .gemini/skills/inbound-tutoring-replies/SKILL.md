@@ -3,6 +3,10 @@ name: inbound-tutoring-replies
 description: Draft warm, concise replies to inbound LSAT tutoring leads. Use when Joshua receives a direct message, Facebook/Messenger message, Superprof/TutorOcean inquiry, Reddit DM, email inquiry, or asks to "make a response" to a prospective LSAT student asking whether tutoring is available, how to start, or how to book.
 ---
 
+## Current AI OS execution contract
+
+Verify recipient, current thread and the current offer/template authority before drafting. The saved reference is not authority for fresh operational status. Sending remains separately authorized.
+
 # Inbound Tutoring Replies
 
 Use this skill for direct inbound leads who have already shown interest in LSAT tutoring.
