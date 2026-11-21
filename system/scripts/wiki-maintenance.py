@@ -56,17 +56,25 @@ def catalog(pages):
     before = path.read_bytes()
     text = before.decode("utf-8")
     groups = {}
+    collapsed = 0
     for page in pages:
         if page == path:
             continue
         relative = page.relative_to(WIKI)
+        # Generated Karpathy captures are listed in their own per-folder catalog.generated.md,
+        # so the master index carries one row per folder instead of thousands (2026-11-20).
+        rel = relative.as_posix()
+        if rel.startswith("sources/karpathy/") and rel.count("/") >= 3 and not rel.endswith("/catalog.generated.md"):
+            collapsed += 1
+            continue
         group = relative.parts[0] if len(relative.parts) > 1 else "Operating pages"
         label, summary = description(page)
         groups.setdefault(group, []).append(
             f"- [[wiki/{relative.with_suffix('').as_posix()}|{label}]]: {summary}"
         )
     block = [START, "", "## Complete wiki catalog", "",
-             "Every Markdown page under `wiki/` is listed below; this index is the catalog itself.",
+             "Every Markdown page under `wiki/` is listed below, except generated captures under `wiki/sources/karpathy/*/`,",
+             f"which are listed in their folder's `catalog.generated` page ({collapsed} pages collapsed here).",
              "Regenerate this section after page changes with `py system/scripts/wiki-maintenance.py --index`.", ""]
     for group, rows in sorted(groups.items()):
         block += [f"### {group.capitalize()}", "", *rows, ""]
@@ -127,7 +135,7 @@ def lint(pages):
             good, dest = resolve(page, target, by_name)
             if not good:
                 # The log is append-only history; its old links record what existed then.
-                if rel_page == "wiki/log.md":
+                if rel_page == "wiki/log.md" or rel_page.startswith("wiki/log-archive-"):
                     continue
                 issues.append(("broken-or-ambiguous-link", page.relative_to(ROOT).as_posix(), target))
             elif dest and page.name != "index.md" and dest != page.resolve():
